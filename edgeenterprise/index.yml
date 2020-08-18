@@ -1,0 +1,102 @@
+### YamlMime:Landing
+
+title: Microsoft Edge documentation 
+summary: Microsoft Edge enhances and extends the browser experience. It runs on Windows, macOS, iOS and Android devices. # < 160 chars
+
+metadata:
+  title: Microsoft Edge # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft Edge enhances and extends the browser experience. It runs on Windows, macOS, iOS and Android devices. # Required; article description that is displayed in search results. < 160 chars.
+  services: service
+  ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: subservice
+  ms.topic: landing-page # Required
+  ms.collection: collection
+  author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kvice #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/28/2020 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (col 1, 1st row)
+  - title: Learn about Microsoft Edge in the enterprise
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Microsoft Edge channel overview
+            url: microsoft-edge-channels.md
+          - text: Download a Microsoft Edge channel
+            url: "https://aka.ms/EdgeEnterprise"
+          - text: Use enterprise features
+            url: edge-ie-mode.md
+          - text: Video - Microsoft Edge and Microsoft Search
+            url: microsoft-edge-video-search.md
+  # Card (col 2, 1st row)
+  - title: Deploy and update Microsoft Edge
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Plan your deployment of Microsoft Edge
+            url: deploy-edge-plan-deployment.md
+          - text: Video - Deploy Microsoft Edge
+            url: microsoft-edge-video-deploy.md
+          - text: Deploy to Windows
+            url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+          - text: Deploy to macOS
+            url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+ # Card 3 (col 3, 1st row)
+  - title: Configure Microsoft Edge
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure Microsoft Edge on Windows
+            url: configure-microsoft-edge.md
+          - text: Configure Microsoft Edge on macOS
+            url: configure-microsoft-edge-on-mac.md
+          - text: Set Microsoft Edge as the default browser
+            url: edge-default-browser.md
+
+  # Card 4 (col 1, 2nd row)
+  - title: Manage security and privacy
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Video - Security, compatibility, and manageability
+            url: microsoft-edge-video-security-compatibility-manageability.md
+          - text: Security
+            url: security-overview.md
+          - text: Privacy
+            url: microsoft-edge-enterprise-privacy-settings.md
+ # Card 4 (col 1, 2nd row)
+#  - title: Use enterprise features
+#    linkLists:
+#      - linkListType: learn
+#        links:
+#          - text: Use Microsoft Edge in IE mode
+#            url: edge-ie-mode.md
+ # Card 5 (col 2, 2nd row)
+  - title: Policy reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Browser policy reference
+            url: microsoft-edge-policies.md
+          - text: Update policy reference
+            url: microsoft-edge-update-policies.md
+          - text: Policy mapping overview
+            url: microsoft-edge-policy-map-overview.md
+          - text: Microsoft Security Baselines Blog
+            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
+  # Card 6 (col 3, 2nd row)
+  - title: Engage with enterprise community or get help
+    linkLists:
+       - linkListType: get-started
+         links:
+           - text: Enterprise tech community
+             url: "https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise"
+           - text: Contact Microsoft Edge support
+             url: "https://microsoftedgesupport.microsoft.com/hc/"
+#           - text: Troubleshoot Microsoft Edge
+#             url: microsoft-edge-troubleshooting.md
