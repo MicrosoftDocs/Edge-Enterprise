@@ -1,2 +1,174 @@
-- name: Index
-  href: index.md
+# last revised 08/03/2020
+- name: Microsoft Edge documentation 
+  href: index.yml
+- name: Microsoft Edge content updates
+  href: microsoft-edge-content-updates.md
+# GET STARTED
+- name: Get started with Microsoft Edge
+  items:
+   - name: Learn about Microsoft Edge Channels
+     href: microsoft-edge-channels.md
+   - name: See what's new
+     href: https://www.microsoftedgeinsider.com/whats-new
+   - name: Customer adoption materials
+     href: microsoft-edge-customer-adoption-kit.md
+   - name: Explore documentation resources
+     href: https://docs.microsoft.com/microsoft-edge/
+   - name: Microsoft Edge hands-on deployment lab
+     href: deploy-edge-hands-on-lab.md
+   - name: Windows Blogs - Microsoft Edge Developer
+     href: https://blogs.windows.com/msedgedev/
+# PLAN
+- name: Plan for Microsoft Edge
+  items:
+   - name: Microsoft Edge Enterprise Roadmap
+     href: microsoft-edge-roadmap.md
+   - name: Plan your deployment of Microsoft Edge
+     href: deploy-edge-plan-deployment.md
+   - name: Release information
+     items:
+      - name: Release schedule
+        href: microsoft-edge-release-schedule.md
+      - name: Beta Channel Release Notes
+        href: microsoft-edge-relnote-beta-channel.md
+      - name: Stable Channel Release Notes
+        href: microsoft-edge-relnote-stable-channel.md
+      - name: Security updates
+        href: microsoft-edge-relnotes-security.md
+   - name: Microsoft Edge policy mapping
+     items:
+      - name: Policy mapping overview
+        href: microsoft-edge-policy-map-overview.md
+      - name: Microsoft Edge Legacy to Microsoft Edge policy mapping
+        href: microsoft-edge-policy-map-legacy-to-newedge.md
+      - name: Google Chrome to Microsoft Edge policy mapping
+        href: microsoft-edge-policy-map-chrome-to-newedge.md
+#      - name: Internet Explorer to Microsoft Edge policy mapping
+#        href: microsoft-edge-policy-map-ie-to-newedge.md
+   - name: Supported Operating Systems
+     href: microsoft-edge-supported-operating-systems.md
+   - name: Lifecycle Policy
+     href: microsoft-edge-support-lifecycle.md
+   - name: Supported languages
+     href: microsoft-edge-supported-languages.md
+   - name: System updates for Microsoft Edge
+     items:
+      - name: Blocker Toolkit for Microsoft Edge updates
+        href: microsoft-edge-blocker-toolkit.md
+      - name: How to access the old version of Microsoft Edge
+        href: microsoft-edge-sysupdate-access-old-edge.md
+      - name: Windows updates to support Microsoft Edge
+        href: microsoft-edge-sysupdate-windows-updates.md
+# DEPLOY
+- name: Deploy Microsoft Edge
+  items:
+   - name: Video - Deploy Microsoft Edge
+     href: microsoft-edge-video-deploy.md
+   - name: Deploy to Windows with Configuration Manager 
+#     href: deploy-edge-with-configuration-manager.md
+     href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+   - name: Deploy to Windows with Intune
+#    href: deploy-edge-with-intune.md
+     href: https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+   - name: Deploy to macOS with Jamf
+     href: deploy-edge-mac-jamf.md
+   - name: Deploy to macOS with Intune
+#    href: deploy-edge-mac-intune.md
+     href: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+# CONFIGURE
+- name: Configure Microsoft Edge
+  items:
+   - name: Configure for Windows
+     href: configure-microsoft-edge.md
+   - name: Configure for Windows with Intune
+     href: configure-edge-with-intune.md
+   - name: Configure for Windows with Mobile Device Management
+     href: configure-edge-with-mdm.md
+   - name: Configure for macOS using a .plist
+     href: configure-microsoft-edge-on-mac.md
+   - name: Configure for macOS with Jamf
+     href: configure-microsoft-edge-on-mac-jamf.md
+# USE ENTERPRISE FEATURES
+- name: Use Microsoft Edge enterprise features 
+  items:
+   - name: Video - Microsoft Edge and Microsoft Search
+     href: microsoft-edge-video-search.md
+   - name: Configurations and experimentation
+     href: edge-configuration-and-experiments.md
+   - name: Identity support and configuration
+     href: microsoft-edge-security-identity.md
+   - name: Microsoft Edge and Enterprise State Roaming
+     href: microsoft-edge-enterprise-state-roaming.md
+   - name: Microsoft Edge kiosk mode
+     href: microsoft-edge-kiosk-mode.md
+   - name: Microsoft Edge Sync
+     href: microsoft-edge-enterprise-sync.md
+   - name: PDF reader in Microsoft Edge
+     href: microsoft-edge-pdf.md
+   - name: Set Microsoft Edge as the default browser
+     href: edge-default-browser.md
+   - name: Use Microsoft Edge in IE mode
+     items:
+      - name: About IE mode
+        href: edge-ie-mode.md
+      - name: Configure Sites on the Enterprise Mode Site List
+        href: edge-ie-mode-sitelist.md
+      - name: Configure IE mode Policies
+        href: edge-ie-mode-policies.md
+      - name: Enterprise Site Discovery Step-by-Step Guide
+        href: edge-ie-mode-site-discovery.md
+      - name: IE mode FAQ
+        href: edge-ie-mode-faq.md
+# SECURITY AND PRIVACY
+- name: Microsoft Edge Security
+  items:
+   - name: Video - Security, compatibility, and manageability
+     href: microsoft-edge-video-security-compatibility-manageability.md     
+   - name: Security overview
+     href: security-overview.md
+   - name: Allow list for Microsoft Edge endpoints
+     href: microsoft-edge-security-endpoints.md
+   - name: Protect against potentially unwanted applications
+     href: microsoft-edge-potentially-unwanted-apps.md
+   - name: Support for Application Guard
+     href: microsoft-edge-security-windows-defender-application-guard.md
+   - name: Support for Microsoft Defender SmartScreen
+     href: microsoft-edge-security-smartscreen.md
+   - name: Support for Windows Information Protection
+     href: microsoft-edge-security-windows-information-protection.md
+- name: Microsoft Edge Privacy
+  items:  
+   - name: Configure privacy settings
+     href: microsoft-edge-enterprise-privacy-settings.md
+   - name: Microsoft Edge Privacy Whitepaper
+     href: https://docs.microsoft.com/microsoft-edge/privacy-whitepaper
+# REFERENCE
+- name: Microsoft Edge Reference
+  items:
+   - name: Browser policy reference
+     href: microsoft-edge-policies.md
+   - name: Update policy reference
+     href: microsoft-edge-update-policies.md
+   - name: Learn more reference
+     items:
+      - name: ClickOnce and DirectInvoke
+        href: edge-learn-more-co-di.md
+      - name: Command-line options to configure proxy settings
+        href: edge-learnmore-cmdline-options-proxy-settings.md
+      - name: Configurable sites in IE mode
+        href: edge-learnmore-configurable-sites-ie-mode.md
+      - name: Filter format for URL list-based policies
+        href: edge-learnmmore-url-list-filter format.md
+      - name: Keep in-page navigation in IE mode
+        href: edge-learnmore-inpage-nav.md
+      - name: Mixed content downloads
+        href: edge-learnmore-mixed-content-downloads.md
+      - name: Progressive rollouts for Stable channel updates
+        href: microsoft-edge-update-progressive-rollout.md
+      - name: Regular Expression 2 (re2.h) syntax
+        href: edge-learnmore-regex.md
+      - name: User data directory variables
+        href: edge-learnmore-create-user-directory-vars.md
+- name: Frequently asked questions
+  href: faqs-edge-in-the-enterprise.md
+
