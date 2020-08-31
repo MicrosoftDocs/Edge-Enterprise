@@ -61,7 +61,7 @@ Tells Microsoft Edge to use a custom proxy configuration. You can specify a cust
 Tells Microsoft Edge to bypass any specified proxy for the specified semicolon-separated list of hosts. This flag must be used with `--proxy-server`.
 
 >[!NOTE]
->Trailing-domain matching doesn't require "." separators, "\*microsoft.com" will match "imicrosoft.com". For example, `--proxy-server="proxy2:8080" --proxy-bypass-list="\*.microsoft.com;\*example.com;127.0.0.1:8080"` will use the proxy server "proxy2" on port 8080 for all hosts except requests for \*.microsoft.com, example.com, and 127.0.0.1 on port 8080. In the previous example, imicrosoft.com requests will still be proxied. However, iexample.com requests will bypass the proxy because \*example.com was specified instead of \*.example.com.
+>Trailing-domain matching doesn't require "." separators, "\*microsoft.com" will match "imicrosoft.com". For example, `--proxy-server="proxy2:8080" --proxy-bypass-list="*.microsoft.com;*example.com;127.0.0.1:8080"` will use the proxy server "proxy2" on port 8080 for all hosts except requests for \*.microsoft.com, example.com, and 127.0.0.1 on port 8080. In the previous example, imicrosoft.com requests will still be proxied. However, iexample.com requests will bypass the proxy because \*example.com was specified instead of \*.example.com.
 
 **`--proxy-pac-url=<pac-file-url>`**
 

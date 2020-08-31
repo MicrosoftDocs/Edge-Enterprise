@@ -50,6 +50,11 @@ You should also understand the **pre-requisites** for features you're interested
 
 With these answers in mind, you're ready to planning your Microsoft Edge deployment.
 <!--bookmark -->
+
+## Make sure your Windows 10 devices are ready
+
+The Edge Stable channel requires the Latest Cumulative Update (LCU) from October 2019 (or later). If you attempt to deploy to a Windows 10 device that has an older LCU, then the installation will fail. For more details about the minimum LCU that must be applied before deploying Edge, see [Windows updates to support the next version of Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
+
 ## Determine your deployment methodology
 
 After you know your desired end state, you're ready to start planning how to get there. The two main ways to deploy Microsoft Edge are by role, and by site.
@@ -182,3 +187,4 @@ After a finishing the pilot and updating your deployment plan with lessons learn
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Video - Deploy Microsoft Edge](microsoft-edge-video-deploy.md)
+
