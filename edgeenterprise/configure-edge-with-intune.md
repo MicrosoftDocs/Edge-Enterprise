@@ -33,7 +33,6 @@ Using Administrative Templates in Microsoft Intune, you can manage Microsoft Edg
 ### Prerequisites
 
 - Windows 10 with the following minimum system requirements:
-  - Windows 10, version 1909
   - Windows 10, version 1903 with [KB4512941](https://support.microsoft.com/kb/4512941) installed
   - Windows 10, version 1809 with [KB4512534](https://support.microsoft.com/kb/4512534) installed
   - Windows 10, version 1803 with [KB4512509](https://support.microsoft.com/kb/4512509) installed
