@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 07/29/2020
+ms.date: 08/25/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,16 +19,34 @@ These release notes provide information about new features and non-security upda
 > [!IMPORTANT]
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
+## Version 85.0.564.41: August 25
+
+Fixed various bugs and performance issues.
+
+## Version 85.0.564.40: August 21
+
+Fixed various bugs and performance issues.
+
+## Version 85.0.564.36: August 17
+
+Fixed various bugs and performance issues.
+
+## Version 85.0.564.30: August 10
+
+Fixed various bugs and performance issues.
+
+## Version 85.0.564.23: August 3
+
+Fixed various bugs and performance issues.
+
 <!--- BEGIN 85 ---->
 ## Version 85.0.564.18: July 28
 
 ### Feature updates
 
-- **On-premise synchronization of Favorites and Settings**. Now you synchronize browser favorites and settings between Active Directory profiles within your own environment without the need for cloud sync.
+- **On-premises synchronization of Favorites and Settings**. Now you synchronize browser favorites and settings between Active Directory profiles within your own environment without the need for cloud sync.
 
-- **Internet Explorer mode update**.
-
-   - Microsoft Edge group policy support for trusting site + app combos to launch without a confirmation prompt. Group policy support added that lets administrators add site + app combos that are trusted to launch without the confirmation prompt. This adds the ability for administrators to configure trusted protocol/origin combinations (such as Microsoft 365 apps) for their end-users to suppress the confirmation prompt when navigating to a URL that contains an app protocol.
+- **Microsoft Edge group policy support for trusting site + app combos to launch without a confirmation prompt.** Group policy support added that lets administrators add site + app combos that are trusted to launch without the confirmation prompt. This adds the ability for administrators to configure trusted protocol/origin combinations (such as Microsoft 365 apps) for their end-users to suppress the confirmation prompt when navigating to a URL that contains an app protocol.
 
 - **PDF Highlighter tool**. This tool can be added to the toolbar for PDFs to easily highlight important text.
 
