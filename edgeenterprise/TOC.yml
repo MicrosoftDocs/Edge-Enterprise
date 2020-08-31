@@ -1,6 +1,8 @@
-# last revised 07/28/2020
-- name: Microsoft Edge documentation 
+# last revised 08/21/2020
+- name: Microsoft Edge Enterprise documentation 
   href: index.yml
+- name: Microsoft Edge documentation
+  href: https://docs.microsoft.com/microsoft-edge/
 - name: Microsoft Edge content updates
   href: microsoft-edge-content-updates.md
 # GET STARTED
@@ -103,6 +105,10 @@
      href: microsoft-edge-kiosk-mode.md
    - name: Microsoft Edge Sync
      href: microsoft-edge-enterprise-sync.md
+   - name: On-premises sync for Active Directory users
+     href: microsoft-edge-on-premises-sync.md
+   - name: PDF reader in Microsoft Edge
+     href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
    - name: Use Microsoft Edge in IE mode

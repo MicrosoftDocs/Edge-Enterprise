@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: Microsoft Edge documentation 
+title: Microsoft Edge Enterprise documentation 
 summary: Microsoft Edge enhances and extends the browser experience. It runs on Windows, macOS, iOS and Android devices. # < 160 chars
 
 metadata:
@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/28/2020 #Required; mm/dd/yyyy format.
+  ms.date: 08/21/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
