@@ -3,7 +3,7 @@ title: "Frequently asked questions about Edge in the enterprise"
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 10/25/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,7 @@ In the upper right corner of Microsoft Edge, click the ellipses icon (**...**), 
 
 ## Will Internet Explorer 11 continue to receive updates?
 
-We're committed to keeping Internet Explorer a supported, reliable, and safe browser. Internet Explorer is still a component of Windows and follows the support lifecycle of the OS on which it's installed. For more information, see [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/). While we continue to support and update Internet Explorer, the latest features and platform updates will be available only in Microsoft Edge.
+We’re committed to keeping Internet Explorer a supported, reliable, and safe browser. Internet Explorer is still a component of Windows and follows the support lifecycle of the OS on which it’s installed. For more information, see [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/). While we continue to support and update Internet Explorer, the latest features and platform updates will be available only in Microsoft Edge.
 
 ## Can I run the current version of Microsoft Edge (Microsoft Edge Legacy) side by side when I'm trying the new version?
 
@@ -31,7 +31,7 @@ Yes, you can. After January 15th, 2020 the new version of Microsoft Edge (Chromi
 
 ## Does Microsoft Edge (Chromium-based) support ActiveX controls or BHOs like Silverlight or Java?
 
-No. Microsoft Edge doesn't support ActiveX controls and BHOs like Silverlight or Java. However, if you're running web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer 11, you can configure them to run in IE mode on the new Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+No. Microsoft Edge doesn’t support ActiveX controls and BHOs like Silverlight or Java. However, if you’re running web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer 11, you can configure them to run in IE mode on the new Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
 
 ## Will favorites be ported over from the current version of Microsoft Edge or will I have to re-add?
 
@@ -51,7 +51,7 @@ Yes. Configuring Microsoft Edge on Windows 10 using Microsoft Intune and Mobile 
 
 ## Does WSUS support the initial deployment of the new Microsoft Edge?
 
-No. WSUS supports updating existing MSI installs of Microsoft Edge, but it cannot be used for the initial deployment. If the intent is to ultimately manage updates via WSUS then the initial deployment can be done through a management tool, such as [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+No. WSUS supports updating existing MSI installs of Microsoft Edge, but it cannot be used for the initial deployment. If the intent is to ultimatley manage updates via WSUS then the initial deployment can be done through a management tool, such as [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
 ## See also
 
