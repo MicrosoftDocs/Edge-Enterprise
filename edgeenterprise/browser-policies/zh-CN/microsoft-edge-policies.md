@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/27/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -13,413 +13,1422 @@ ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
-# Microsoft Edge - Policies
-The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
+# Microsoft Edge - 策略
+最新版本的 Microsoft Edge 包括以下策略。你可以使用这些策略配置 Microsoft Edge 在组织中的运行方式。
 
-For information about an additional set of policies used to control how and when Microsoft Edge is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
+有关用于控制 Microsoft Edge 的更新方式和时间的其他策略，请查看 [Microsoft Edge 更新策略引用](microsoft-edge-update-policies.md)。
 
-You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
+你可以下载 [Microsoft 安全合规性工具包](https://www.microsoft.com/download/details.aspx?id=55319)，以获取建议的 Microsoft Edge 安全配置基准设置。有关更多信息，请参阅 [Microsoft 安全基准博客](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)。
 
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
+> [!注意]
+> 本文适用于 Microsoft Edge 版本 77 或更高版本。
 
-## Available policies
-These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
+## 可用策略
+这些表列出了此版本的 Microsoft Edge 中提供的所有与浏览器相关的组策略。使用表中的链接获取有关特定策略的详细信息。
 
 |||
 |-|-|
-|[Application Guard settings](#application-guard-settings)|[Cast](#cast)|
-|[Content settings](#content-settings)|[Default search provider](#default-search-provider)|
-|[Extensions](#extensions)|[HTTP authentication](#http-authentication)|
-|[Native Messaging](#native-messaging)|[Password manager and protection](#password-manager-and-protection)|
-|[Printing](#printing)|[Proxy server](#proxy-server)|
-|[SmartScreen settings](#smartscreen-settings)|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|
+|[Cast](#cast)|[HTTP 身份验证](#http-身份验证)|
+|[Smartscreen 设置](#smartscreen-设置)|[代理服务器](#代理服务器)|
+|[内容设置](#内容设置)|[启动、主页和新选项卡页](#启动、主页和新选项卡页)|
+|[密码管理器和保护](#密码管理器和保护)|[应用程序防护设置](#应用程序防护设置)|
+|[打印](#打印)|[扩展](#扩展)|
+|[本机消息](#本机消息)|[默认的搜索提供程序](#默认的搜索提供程序)|
 |[Additional](#additional)|
 
-### [*Application Guard settings*](#application-guard-settings-policies)
-|Policy Name|Caption|
-|-|-|
-|[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard Container Proxy|
 ### [*Cast*](#cast-policies)
-|Policy Name|Caption|
+|策略名称|描述|
 |-|-|
-|[EnableMediaRouter](#enablemediarouter)|Enable Google Cast|
-|[ShowCastIconInToolbar](#showcasticonintoolbar)|Show the cast icon in the toolbar|
-### [*Content settings*](#content-settings-policies)
-|Policy Name|Caption|
+|[EnableMediaRouter](#enablemediarouter)|启用 Google Cast|
+|[ShowCastIconInToolbar](#showcasticonintoolbar)|在工具栏中显示投放图标|
+### [*HTTP 身份验证*](#http-身份验证-policies)
+|策略名称|描述|
 |-|-|
-|[AutoSelectCertificateForUrls](#autoselectcertificateforurls)|Automatically select client certificates for these sites|
-|[CookiesAllowedForUrls](#cookiesallowedforurls)|Allow cookies on specific sites|
-|[CookiesBlockedForUrls](#cookiesblockedforurls)|Block cookies on specific sites|
-|[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limit cookies from specific websites to the current session|
-|[DefaultCookiesSetting](#defaultcookiessetting)|Configure cookies|
-|[DefaultGeolocationSetting](#defaultgeolocationsetting)|Default geolocation setting|
-|[DefaultImagesSetting](#defaultimagessetting)|Default images setting|
-|[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Control use of insecure content exceptions|
-|[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Default JavaScript setting|
-|[DefaultNotificationsSetting](#defaultnotificationssetting)|Default notification setting|
-|[DefaultPluginsSetting](#defaultpluginssetting)|Default Adobe Flash setting|
-|[DefaultPopupsSetting](#defaultpopupssetting)|Default pop-up window setting|
-|[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
-|[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
-|[ImagesAllowedForUrls](#imagesallowedforurls)|Allow images on these sites|
-|[ImagesBlockedForUrls](#imagesblockedforurls)|Block images on specific sites|
-|[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Allow insecure content on specified sites|
-|[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Block insecure content on specified sites|
-|[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Allow JavaScript on specific sites|
-|[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Block JavaScript on specific sites|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting|
-|[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revert to legacy SameSite behavior for cookies on specified sites|
-|[NotificationsAllowedForUrls](#notificationsallowedforurls)|Allow notifications on specific sites|
-|[NotificationsBlockedForUrls](#notificationsblockedforurls)|Block notifications on specific sites|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|Allow the Adobe Flash plug-in on specific sites|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|Block the Adobe Flash plug-in on specific sites|
-|[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
-|[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
-|[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|允许跨源 HTTP 基本身份验证提示|
+|[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|指定 Microsoft Edge 可以将用户凭据委派给的服务器列表|
+|[AuthSchemes](#authschemes)|支持的身份验证方案|
+|[AuthServerAllowlist](#authserverallowlist)|配置允许的身份验证服务器列表|
+|[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|协商 Kerberos 身份验证时禁用 CNAME 查找|
+|[EnableAuthNegotiatePort](#enableauthnegotiateport)|在 Kerberos SPN 中包含非标准端口|
+|[NtlmV2Enabled](#ntlmv2enabled)|控制是否启用 NTLMv2 身份验证|
+### [*Smartscreen 设置*](#smartscreen-设置-policies)
+|策略名称|描述|
+|-|-|
+|[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|阻止绕过 Microsoft Defender SmartScreen 对站点的提示|
+|[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|阻止绕过有关下载的 Microsoft Defender SmartScreen 警告|
+|[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|配置 Microsoft Defender SmartScreen 将不会为其触发警告的域的列表|
+|[SmartScreenEnabled](#smartscreenenabled)|配置 Microsoft Defender SmartScreen|
+|[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|强制对来自受信任源的下载执行 Microsoft Defender SmartScreen 检查|
+|[SmartScreenPuaEnabled](#smartscreenpuaenabled)|配置 Microsoft Defender SmartScreen 以阻止可能不需要的应用|
+### [*代理服务器*](#代理服务器-policies)
+|策略名称|描述|
+|-|-|
+|[ProxyBypassList](#proxybypasslist)|配置代理绕过规则|
+|[ProxyMode](#proxymode)|配置代理服务器设置|
+|[ProxyPacUrl](#proxypacurl)|设置代理 .pac 文件的 URL|
+|[ProxyServer](#proxyserver)|配置代理服务器的地址或 URL|
+|[ProxySettings](#proxysettings)|代理服务器设置|
+### [*内容设置*](#内容设置-policies)
+|策略名称|描述|
+|-|-|
+|[AutoSelectCertificateForUrls](#autoselectcertificateforurls)|自动为这些站点选择客户端证书|
+|[CookiesAllowedForUrls](#cookiesallowedforurls)|在特定站点上允许 Cookie|
+|[CookiesBlockedForUrls](#cookiesblockedforurls)|在特定站点上阻止 Cookie|
+|[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|将特定网站的 Cookie 限制为当前会话|
+|[DefaultCookiesSetting](#defaultcookiessetting)|配置 Cookie|
+|[DefaultGeolocationSetting](#defaultgeolocationsetting)|默认地理位置设置|
+|[DefaultImagesSetting](#defaultimagessetting)|默认图像设置|
+|[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|控制不安全内容例外的使用|
+|[DefaultJavaScriptSetting](#defaultjavascriptsetting)|默认 JavaScript 设置|
+|[DefaultNotificationsSetting](#defaultnotificationssetting)|默认通知设置|
+|[DefaultPluginsSetting](#defaultpluginssetting)|默认 Adobe Flash 设置|
+|[DefaultPopupsSetting](#defaultpopupssetting)|默认的弹出窗口设置|
+|[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|控制 Web 蓝牙 API 的使用|
+|[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|控制 WebUSB API 的使用|
+|[ImagesAllowedForUrls](#imagesallowedforurls)|允许使用这些站点上的图像|
+|[ImagesBlockedForUrls](#imagesblockedforurls)|在特定站点上阻止图像|
+|[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|对指定站点允许不安全内容|
+|[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|对指定站点阻止不安全内容|
+|[JavaScriptAllowedForUrls](#javascriptallowedforurls)|在特定站点上允许 JavaScript|
+|[JavaScriptBlockedForUrls](#javascriptblockedforurls)|在特定站点上阻止 JavaScript|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|启用默认的旧 SameSite cookie 行为设置|
+|[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|针对指定站点上的 cookie 恢复为旧 SameSite 行为|
+|[NotificationsAllowedForUrls](#notificationsallowedforurls)|在特定站点上允许通知|
+|[NotificationsBlockedForUrls](#notificationsblockedforurls)|在特定站点上阻止通知|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|允许对特定站点使用 Adobe Flash 插件|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|阻止特定站点上的 Adobe Flash 插件|
+|[PopupsAllowedForUrls](#popupsallowedforurls)|在特定站点上允许弹出窗口|
+|[PopupsBlockedForUrls](#popupsblockedforurls)|在特定站点上阻止弹出窗口|
+|[RegisteredProtocolHandlers](#registeredprotocolhandlers)|注册协议处理程序|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services|
-|[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
-|[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
-|[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
-### [*Default search provider*](#default-search-provider-policies)
-|Policy Name|Caption|
+|[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|授予特定站点访问权限以连接到特定 USB 设备|
+|[WebUsbAskForUrls](#webusbaskforurls)|在特定站点上允许 WebUSB|
+|[WebUsbBlockedForUrls](#webusbblockedforurls)|在特定站点上阻止 WebUSB|
+### [*启动、主页和新选项卡页*](#启动、主页和新选项卡页-policies)
+|策略名称|描述|
 |-|-|
-|[DefaultSearchProviderEnabled](#defaultsearchproviderenabled)|Enable the default search provider|
-|[DefaultSearchProviderEncodings](#defaultsearchproviderencodings)|Default search provider encodings|
-|[DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)|Specifies the search-by-image feature for the default search provider|
-|[DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)|Parameters for an image URL that uses POST|
-|[DefaultSearchProviderKeyword](#defaultsearchproviderkeyword)|Default search provider keyword|
-|[DefaultSearchProviderName](#defaultsearchprovidername)|Default search provider name|
-|[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|Default search provider search URL|
-|[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
-|[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
-### [*Extensions*](#extensions-policies)
-|Policy Name|Caption|
+|[HomepageIsNewTabPage](#homepageisnewtabpage)|将新标签页设置为主页|
+|[HomepageLocation](#homepagelocation)|配置主页 URL|
+|[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|配置允许用于新选项卡页面布局的背景类型|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|设置新的选项卡页公司徽标 (已弃用)|
+|[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|从新选项卡页中隐藏默认的热门站点|
+|[NewTabPageLocation](#newtabpagelocation)|配置新的选项卡页 URL|
+|[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|设置新标签页快速链接|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|启用新标签页的预加载以提高呈现速度|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|配置 Microsoft Edge 新标签页体验|
+|[RestoreOnStartup](#restoreonstartup)|要在启动时执行的操作|
+|[RestoreOnStartupURLs](#restoreonstartupurls)|浏览器启动时打开的站点|
+|[ShowHomeButton](#showhomebutton)|在工具栏上显示“主页”按钮|
+### [*密码管理器和保护*](#密码管理器和保护-policies)
+|策略名称|描述|
 |-|-|
-|[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
-|[ExtensionInstallAllowlist](#extensioninstallallowlist)|Allow specific extensions to be installed|
-|[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
-|[ExtensionInstallForcelist](#extensioninstallforcelist)|Control which extensions are installed silently|
-|[ExtensionInstallSources](#extensioninstallsources)|Configure extension and user script install sources|
-|[ExtensionSettings](#extensionsettings)|Configure extension management settings|
-### [*HTTP authentication*](#http-authentication-policies)
-|Policy Name|Caption|
+|[PasswordManagerEnabled](#passwordmanagerenabled)|启用将密码保存到密码管理器|
+|[PasswordMonitorAllowed](#passwordmonitorallowed)|如果发现用户的密码不安全，则向用户发出警报|
+|[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|配置更改密码 URL|
+|[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|配置密码保护服务应捕获密码加盐哈希的企业登录 URL 列表|
+|[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|配置密码保护警告触发器|
+### [*应用程序防护设置*](#应用程序防护设置-policies)
+|策略名称|描述|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Basic Auth prompts|
-|[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Specifies a list of servers that Microsoft Edge can delegate user credentials to|
-|[AuthSchemes](#authschemes)|Supported authentication schemes|
-|[AuthServerAllowlist](#authserverallowlist)|Configure list of allowed authentication servers|
-|[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Disable CNAME lookup when negotiating Kerberos authentication|
-|[EnableAuthNegotiatePort](#enableauthnegotiateport)|Include non-standard port in Kerberos SPN|
-|[NtlmV2Enabled](#ntlmv2enabled)|Control whether NTLMv2 authentication is enabled|
-### [*Native Messaging*](#native-messaging-policies)
-|Policy Name|Caption|
+|[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|应用程序防护容器代理|
+### [*打印*](#打印-policies)
+|策略名称|描述|
 |-|-|
-|[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
-|[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
-|[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
-### [*Password manager and protection*](#password-manager-and-protection-policies)
-|Policy Name|Caption|
+|[DefaultPrinterSelection](#defaultprinterselection)|默认打印机选择规则|
+|[PrintHeaderFooter](#printheaderfooter)|打印页眉和页脚|
+|[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|将系统的默认打印机设置为默认打印机|
+|[PrintingEnabled](#printingenabled)|启用打印|
+|[UseSystemPrintDialog](#usesystemprintdialog)|使用系统打印对话框打印|
+### [*扩展*](#扩展-policies)
+|策略名称|描述|
 |-|-|
-|[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
-|[PasswordMonitorAllowed](#passwordmonitorallowed)|Allow users to be alerted if their passwords are found to be unsafe|
-|[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
-|[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
-|[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
-### [*Printing*](#printing-policies)
-|Policy Name|Caption|
+|[ExtensionAllowedTypes](#extensionallowedtypes)|配置允许的扩展类型|
+|[ExtensionInstallAllowlist](#extensioninstallallowlist)|允许安装特定扩展|
+|[ExtensionInstallBlocklist](#extensioninstallblocklist)|控制哪些扩展不能安装|
+|[ExtensionInstallForcelist](#extensioninstallforcelist)|控制无提示安装的扩展|
+|[ExtensionInstallSources](#extensioninstallsources)|配置扩展和用户脚本安装源|
+|[ExtensionSettings](#extensionsettings)|配置扩展管理设置|
+### [*本机消息*](#本机消息-policies)
+|策略名称|描述|
 |-|-|
-|[DefaultPrinterSelection](#defaultprinterselection)|Default printer selection rules|
-|[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
-|[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
-|[PrintingEnabled](#printingenabled)|Enable printing|
-|[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
-### [*Proxy server*](#proxy-server-policies)
-|Policy Name|Caption|
+|[NativeMessagingAllowlist](#nativemessagingallowlist)|控制用户可以使用的本机消息传递主机|
+|[NativeMessagingBlocklist](#nativemessagingblocklist)|配置本机消息传递阻止名单|
+|[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|允许用户级本机消息传递主机(安装时不带管理员权限)|
+### [*默认的搜索提供程序*](#默认的搜索提供程序-policies)
+|策略名称|描述|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Configure proxy bypass rules|
-|[ProxyMode](#proxymode)|Configure proxy server settings|
-|[ProxyPacUrl](#proxypacurl)|Set the proxy .pac file URL|
-|[ProxyServer](#proxyserver)|Configure address or URL of proxy server|
-|[ProxySettings](#proxysettings)|Proxy settings|
-### [*SmartScreen settings*](#smartscreen-settings-policies)
-|Policy Name|Caption|
-|-|-|
-|[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
-|[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
-|[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings|
-|[SmartScreenEnabled](#smartscreenenabled)|Configure Microsoft Defender SmartScreen|
-|[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Force Microsoft Defender SmartScreen checks on downloads from trusted sources|
-|[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configure Microsoft Defender SmartScreen to block potentially unwanted apps|
-### [*Startup&comma; home page and new tab page*](#startup-home-page-and-new-tab-page-policies)
-|Policy Name|Caption|
-|-|-|
-|[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
-|[HomepageLocation](#homepagelocation)|Configure the home page URL|
-|[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (deprecated)|
-|[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
-|[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
-|[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
-|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience|
-|[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
-|[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
-|[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
+|[DefaultSearchProviderEnabled](#defaultsearchproviderenabled)|启用默认搜索提供程序|
+|[DefaultSearchProviderEncodings](#defaultsearchproviderencodings)|默认的搜索提供程序编码|
+|[DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)|为默认搜索提供程序指定“按图像搜索”功能|
+|[DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)|使用 POST 的图像 URL 的参数|
+|[DefaultSearchProviderKeyword](#defaultsearchproviderkeyword)|默认的搜索提供程序关键字|
+|[DefaultSearchProviderName](#defaultsearchprovidername)|默认的搜索提供程序名称|
+|[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|默认的搜索提供程序搜索 URL|
+|[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|建议的默认搜索提供程序 URL|
+|[NewTabPageSearchBox](#newtabpagesearchbox)|配置新的选项卡页搜索框体验|
 ### [*Additional*](#additional-policies)
-|Policy Name|Caption|
+|策略名称|描述|
 |-|-|
-|[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
-|[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
-|[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
-|[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading|
-|[AllowSurfGame](#allowsurfgame)|Allow surf game|
-|[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (deprecated)|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
-|[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
-|[AlternateErrorPagesEnabled](#alternateerrorpagesenabled)|Suggest similar pages when a webpage can't be found|
-|[AlwaysOpenPdfExternally](#alwaysopenpdfexternally)|Always open PDF files externally|
-|[AmbientAuthenticationInPrivateModesEnabled](#ambientauthenticationinprivatemodesenabled)|Enable Ambient Authentication for InPrivate and Guest profiles|
-|[AppCacheForceEnabled](#appcacheforceenabled)|Allows the AppCache feature to be re-enabled, even if it's turned off by default|
-|[ApplicationLocaleValue](#applicationlocalevalue)|Set application locale|
-|[AudioCaptureAllowed](#audiocaptureallowed)|Allow or block audio capture|
-|[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|Sites that can access audio capture devices without requesting permission|
-|[AudioSandboxEnabled](#audiosandboxenabled)|Allow the audio sandbox to run|
-|[AutoImportAtFirstRun](#autoimportatfirstrun)|Automatically import another browser's data and settings at first run|
-|[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Define a list of protocols that can launch an external application from listed origins without prompting the user|
-|[AutoOpenAllowedForURLs](#autoopenallowedforurls)|URLs where AutoOpenFileTypes can apply|
-|[AutoOpenFileTypes](#autoopenfiletypes)|List of file types that should be automatically opened on download|
-|[AutofillAddressEnabled](#autofilladdressenabled)|Enable AutoFill for addresses|
-|[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for credit cards|
-|[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
-|[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
-|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates|
-|[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
-|[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
-|[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
-|[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
-|[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
-|[BrowserSignin](#browsersignin)|Browser sign-in settings|
-|[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
-|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)|
-|[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
-|[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
-|[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
-|[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Microsoft Edge closes|
-|[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Microsoft Edge closes|
-|[ClickOnceEnabled](#clickonceenabled)|Allow users to open files using the ClickOnce protocol|
-|[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
-|[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
-|[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
-|[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
-|[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account|
-|[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
-|[ConfigureShare](#configureshare)|Configure the Share experience|
-|[CustomHelpLink](#customhelplink)|Specify custom help link|
-|[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
-|[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
-|[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
+|[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|在地址栏中启用必应中的 Microsoft 搜索建议|
+|[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|具有干扰性广告的站点的广告设置|
+|[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|启用删除浏览器和下载历史记录|
+|[AllowFileSelectionDialogs](#allowfileselectiondialogs)|允许文件选择对话框|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|允许页面在卸载期间显示弹出窗口|
+|[AllowSurfGame](#allowsurfgame)|允许冲浪游戏|
+|[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|允许页面在关闭过程中发送同步 XHR 请求 (已弃用)|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|配置 Microsoft Edge 将尝试为其建立令牌绑定的网站列表。|
+|[AllowTrackingForUrls](#allowtrackingforurls)|为特定站点配置跟踪保护例外|
+|[AlternateErrorPagesEnabled](#alternateerrorpagesenabled)|找不到网页时建议类似的页面|
+|[AlwaysOpenPdfExternally](#alwaysopenpdfexternally)|始终在外部打开 PDF 文件|
+|[AmbientAuthenticationInPrivateModesEnabled](#ambientauthenticationinprivatemodesenabled)|针对 InPrivate 和来宾用户配置启用环境身份验证|
+|[AppCacheForceEnabled](#appcacheforceenabled)|允许重新启用 AppCache 功能，即使它默认处于关闭状态|
+|[ApplicationLocaleValue](#applicationlocalevalue)|设置应用程序的区域设置|
+|[AudioCaptureAllowed](#audiocaptureallowed)|允许或阻止音频捕获|
+|[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|无需请求许可即可访问音频捕获设备的站点|
+|[AudioSandboxEnabled](#audiosandboxenabled)|允许音频沙盒运行|
+|[AutoImportAtFirstRun](#autoimportatfirstrun)|首次运行时自动导入其他浏览器的数据和设置|
+|[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|定义可以在不提示用户的情况下从列出的源启动外部应用程序的协议列表|
+|[AutoOpenAllowedForURLs](#autoopenallowedforurls)|AutoOpenFileTypes 可应用的 URL|
+|[AutoOpenFileTypes](#autoopenfiletypes)|应在下载时自动打开的文件类型列表|
+|[AutofillAddressEnabled](#autofilladdressenabled)|启用地址自动填充|
+|[AutofillCreditCardEnabled](#autofillcreditcardenabled)|启用信用卡的自动填充功能|
+|[AutoplayAllowed](#autoplayallowed)|允许网站自动播放媒体|
+|[BackgroundModeEnabled](#backgroundmodeenabled)|Microsoft Edge 关闭后，继续运行后台应用|
+|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|对集锦和其他使用模板的功能的可用模板列表启用后台更新|
+|[BingAdsSuppression](#bingadssuppression)|阻止必应搜索结果中的所有广告|
+|[BlockThirdPartyCookies](#blockthirdpartycookies)|阻止第三方 Cookie|
+|[BrowserAddProfileEnabled](#browseraddprofileenabled)|从“标识”浮出菜单或“设置”页面启用用户配置创建|
+|[BrowserGuestModeEnabled](#browserguestmodeenabled)|启用来宾模式|
+|[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|允许查询浏览器网络时间服务|
+|[BrowserSignin](#browsersignin)|浏览器登录设置|
+|[BuiltInDnsClientEnabled](#builtindnsclientenabled)|使用内置 DNS 客户端|
+|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|确定是否将使用内置证书验证器验证服务器证书 (已弃用)|
+|[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|对 subjectPublicKeyInfo 哈希列表禁用强制证书透明度|
+|[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|对列出的旧证书颁发机构禁用证书透明度强制|
+|[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|对特定 URL 禁用强制证书透明度|
+|[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Microsoft Edge 关闭时清除浏览数据|
+|[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Microsoft Edge 关闭时清除缓存的图像和文件|
+|[ClickOnceEnabled](#clickonceenabled)|允许用户使用 ClickOnce 协议打开文件|
+|[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|阻止访问集锦中指定的服务列表和导出目标|
+|[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|为命令行标志启用安全警告|
+|[ComponentUpdatesEnabled](#componentupdatesenabled)|在 Microsoft Edge 中启用组件更新|
+|[ConfigureDoNotTrack](#configuredonottrack)|配置“禁止跟踪”|
+|[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|配置用 Active Directory 域帐户(如果没有 Azure AD 域帐户)进行的自动登录|
+|[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|配置在线文本到语音转换|
+|[ConfigureShare](#configureshare)|配置共享体验|
+|[CustomHelpLink](#customhelplink)|指定自定义帮助链接|
+|[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|已启用 DNS 拦截检查|
+|[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|将 Microsoft Edge 设置为默认浏览器|
+|[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|允许默认搜索提供程序上下文菜单搜索访问|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
-|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
-|[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
-|[DeleteDataOnMigration](#deletedataonmigration)|Delete old browser data on migration|
-|[DeveloperToolsAvailability](#developertoolsavailability)|Control where developer tools can be used|
-|[DiagnosticData](#diagnosticdata)|Send required and optional diagnostic data about browser usage|
-|[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
-|[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
-|[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
-|[DiskCacheDir](#diskcachedir)|Set disk cache directory|
-|[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
-|[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
-|[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
-|[DownloadDirectory](#downloaddirectory)|Set download directory|
-|[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
-|[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
-|[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time|
-|[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
-|[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)|
-|[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
-|[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
-|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
-|[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
-|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety|
-|[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
-|[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
-|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
-|[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
-|[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (deprecated)|
-|[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|控制串行 API 的使用|
+|[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|要求在选项卡导航之前企业模式站点列表可用|
+|[DeleteDataOnMigration](#deletedataonmigration)|迁移时删除旧浏览器数据|
+|[DeveloperToolsAvailability](#developertoolsavailability)|控制可以使用开发人员工具的位置|
+|[DiagnosticData](#diagnosticdata)|发送有关浏览器使用情况的必需和可选诊断数据|
+|[DirectInvokeEnabled](#directinvokeenabled)|允许用户使用 DirectInvoke 协议打开文件|
+|[Disable3DAPIs](#disable3dapis)|禁用对 3D 图形 API 的支持|
+|[DisableScreenshots](#disablescreenshots)|禁用进行屏幕截图|
+|[DiskCacheDir](#diskcachedir)|设置磁盘缓存目录|
+|[DiskCacheSize](#diskcachesize)|设置磁盘缓存大小(字节)|
+|[DnsOverHttpsMode](#dnsoverhttpsmode)|控制 DNS-over-HTTPS 的模式|
+|[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|指定所需的 IP-HTTPS DNS 解析程序的 URI 模板|
+|[DownloadDirectory](#downloaddirectory)|设置下载目录|
+|[DownloadRestrictions](#downloadrestrictions)|允许使用下载限制|
+|[EdgeCollectionsEnabled](#edgecollectionsenabled)|启用集锦功能|
+|[EditFavoritesEnabled](#editfavoritesenabled)|允许用户编辑收藏夹|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|在有限的时间内重新启用弃用的 Web 平台功能|
+|[EnableDomainActionsDownload](#enabledomainactionsdownload)|启用从 Microsoft 进行域操作下载 (过时)|
+|[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|启用联机 OCSP/CRL 检查|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|由本地信任锚颁发时，允许使用 SHA-1 签名的证书 (已弃用)|
+|[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|允许托管扩展使用企业硬件平台 API|
+|[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|允许访问 Enterprise Mode Site List Manager 工具|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|对域上的指定文件类型禁用基于下载文件类型扩展名的警告|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|控制与实验和配置服务的通信|
+|[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|在外部协议对话框中显示“始终打开”复选框|
+|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|允许用户配置“Family Safety”|
+|[FavoritesBarEnabled](#favoritesbarenabled)|启用收藏夹栏|
+|[ForceBingSafeSearch](#forcebingsafesearch)|强制执行必应安全搜索|
+|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|配置当使用 "AutoSelectCertificateForUrls" 配置的站点拥有多个证书匹配项时，Microsoft Edge 是否应自动选择证书|
+|[ForceEphemeralProfiles](#forceephemeralprofiles)|启用临时用户配置|
+|[ForceGoogleSafeSearch](#forcegooglesafesearch)|强制执行 Google 安全搜索|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|使用 no-referrer-when-downgrade 的默认引用站点策略 (已弃用)|
+|[ForceNetworkInProcess](#forcenetworkinprocess)|强制网络代码在浏览器进程中运行 (过时)|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
-|[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
-|[FullscreenAllowed](#fullscreenallowed)|Allow full screen mode|
-|[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Enable globally scoped HTTP auth cache|
-|[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)|Force direct intranet site navigation instead of searching on single word entries in the Address Bar|
-|[HSTSPolicyBypassList](#hstspolicybypasslist)|Configure the list of names that will bypass the HSTS policy check|
-|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Use hardware acceleration when available|
-|[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
-|[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
-|[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
-|[ImportCookies](#importcookies)|Allow importing of Cookies|
-|[ImportExtensions](#importextensions)|Allow importing of extensions|
-|[ImportFavorites](#importfavorites)|Allow importing of favorites|
-|[ImportHistory](#importhistory)|Allow importing of browsing history|
-|[ImportHomepage](#importhomepage)|Allow importing of home page settings|
-|[ImportOpenTabs](#importopentabs)|Allow importing of open tabs|
-|[ImportPaymentInfo](#importpaymentinfo)|Allow importing of payment info|
-|[ImportSavedPasswords](#importsavedpasswords)|Allow importing of saved passwords|
-|[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
-|[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
-|[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
+|[ForceYouTubeRestrict](#forceyoutuberestrict)|实施最小 YouTube 受限模式|
+|[FullscreenAllowed](#fullscreenallowed)|允许全屏模式|
+|[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|启用全局范围的 HTTP 身份验证缓存|
+|[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)|强制进行直接 Intranet 站点导航而不是在地址栏中对单个词条进行搜索|
+|[HSTSPolicyBypassList](#hstspolicybypasslist)|配置将绕过 HSTS 策略检查的名称列表|
+|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|使用硬件加速(如可用)|
+|[HideFirstRunExperience](#hidefirstrunexperience)|隐藏首次运行体验和初始屏幕|
+|[ImportAutofillFormData](#importautofillformdata)|允许导入自动填充表单数据|
+|[ImportBrowserSettings](#importbrowsersettings)|允许导入浏览器设置|
+|[ImportCookies](#importcookies)|允许导入 Cookie|
+|[ImportExtensions](#importextensions)|允许导入扩展|
+|[ImportFavorites](#importfavorites)|允许导入收藏夹|
+|[ImportHistory](#importhistory)|允许导入浏览历史记录|
+|[ImportHomepage](#importhomepage)|允许导入主页设置|
+|[ImportOpenTabs](#importopentabs)|允许导入打开的标签页|
+|[ImportPaymentInfo](#importpaymentinfo)|允许导入付款信息|
+|[ImportSavedPasswords](#importsavedpasswords)|允许导入保存的密码|
+|[ImportSearchEngine](#importsearchengine)|允许导入搜索引擎设置|
+|[ImportShortcuts](#importshortcuts)|允许导入快捷方式|
+|[InPrivateModeAvailability](#inprivatemodeavailability)|配置 InPrivate 模式可用性|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
-|[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
-|[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
-|[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
-|[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
-|[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
+|[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|控制 IntensiveWakeUpThrottling 功能|
+|[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|为 Internet Explorer 模式配置增强型挂起检测|
+|[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|配置 Internet Explorer 集成|
+|[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|配置企业模式站点列表|
+|[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|指定从 Internet Explorer 模式页面启动时，到未配置站点的“页面内”导航的行为方式|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
-|[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
-|[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
-|[ManagedFavorites](#managedfavorites)|Configure favorites|
-|[ManagedSearchEngines](#managedsearchengines)|Manage Search Engines|
-|[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
-|[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (deprecated)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion|
-|[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
-|[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
-|[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
-|[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, search and news by sending browsing history to Microsoft|
-|[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication|
-|[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
-|[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
-|[QuicAllowed](#quicallowed)|Allow QUIC protocol|
-|[RelaunchNotification](#relaunchnotification)|Notify a user that a browser restart is recommended or required for pending updates|
-|[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Set the time period for update notifications|
-|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
-|[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
-|[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
-|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used as Microsoft Edge primary accounts|
-|[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
-|[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content|
-|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
-|[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
-|[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
-|[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
-|[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
-|[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
-|[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (deprecated)|
+|[IsolateOrigins](#isolateorigins)|对特定来源启用站点隔离|
+|[LocalProvidersEnabled](#localprovidersenabled)|允许来自本地提供商的建议|
+|[ManagedFavorites](#managedfavorites)|配置收藏夹|
+|[ManagedSearchEngines](#managedsearchengines)|管理搜索引擎|
+|[MaxConnectionsPerProxy](#maxconnectionsperproxy)|到代理服务器的最大并发连接数|
+|[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|允许 Google Cast 连接到所有 IP 地址上的强制转换设备|
+|[MetricsReportingEnabled](#metricsreportingenabled)|启用使用情况和崩溃相关的数据报告 (已弃用)|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|启用本机窗口封闭|
+|[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|为企业模式站点列表的选项卡导航设置延迟超时|
+|[NetworkPredictionOptions](#networkpredictionoptions)|启用网络预测|
+|[NonRemovableProfileEnabled](#nonremovableprofileenabled)|配置用户是否始终具有使用其工作或学校帐户自动登录的默认用户配置|
+|[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|控制针对不安全源的安全限制的适用范围|
+|[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|允许网站查询可用的付款方式|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|允许向 Microsoft 发送浏览历史记录以对广告、搜索和新闻进行个性化设置|
+|[PinningWizardAllowed](#pinningwizardallowed)|允许使用“固定到任务栏”向导|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|启用主动身份验证|
+|[PromotionalTabsEnabled](#promotionaltabsenabled)|启用完整标签页促销内容|
+|[PromptForDownloadLocation](#promptfordownloadlocation)|询问所下载文件的保存位置|
+|[QuicAllowed](#quicallowed)|允许 QUIC 协议|
+|[RelaunchNotification](#relaunchnotification)|通知用户推荐或需要对挂起的更新重启浏览器|
+|[RelaunchNotificationPeriod](#relaunchnotificationperiod)|设置更新通知的时间段|
+|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|启用呈现器代码完整性|
+|[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|指定本地信任密钥是否需要联机 OCSP/CRL 检查|
+|[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|启用使用 Web 服务解决导航错误|
+|[RestrictSigninToPattern](#restrictsignintopattern)|限制哪些帐户可用作 Microsoft Edge 主帐户|
+|[RoamingProfileLocation](#roamingprofilelocation)|设置漫游用户配置目录|
+|[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|启用对 Microsoft Edge 用户配置数据使用漫游副本|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|将 Adobe Flash 内容设置扩展到所有内容|
+|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|允许用户从 HTTPS 警告页继续|
+|[SSLVersionMin](#sslversionmin)|已启用的最低 TLS 版本|
+|[SaveCookiesOnExit](#savecookiesonexit)|当 Microsoft Edge 关闭时保存 Cookie|
+|[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|禁用保存浏览器历史记录|
+|[ScreenCaptureAllowed](#screencaptureallowed)|允许或拒绝屏幕捕获|
+|[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|启用滚动到 URL 片段中的指定文本|
+|[SearchSuggestEnabled](#searchsuggestenabled)|启用搜索建议|
+|[SecurityKeyPermitAttestation](#securitykeypermitattestation)|无需许可即可使用直接安全密钥证明的网站或域|
+|[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|将所有 Intranet 站点发送到 Internet Explorer|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|发送站点信息来改进 Microsoft 服务 (已弃用)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
-|[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
-|[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar|
-|[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
-|[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
-|[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
-|[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
-|[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (deprecated)|
-|[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suppress the unsupported OS warning|
-|[SyncDisabled](#syncdisabled)|Disable synchronization of data using Microsoft sync services|
-|[SyncTypesListDisabled](#synctypeslistdisabled)|Configure the list of types that are excluded from synchronization|
-|[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
-|[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
-|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs|
-|[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
-|[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
-|[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
-|[TranslateEnabled](#translateenabled)|Enable Translate|
-|[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
-|[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
-|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (deprecated)|
-|[UserDataDir](#userdatadir)|Set the user data directory|
-|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
-|[UserFeedbackAllowed](#userfeedbackallowed)|Allow user feedback|
-|[VideoCaptureAllowed](#videocaptureallowed)|Allow or block video capture|
-|[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
-|[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
-|[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
-|[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
-|[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
-|[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
-|[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
+|[SerialAskForUrls](#serialaskforurls)|在特定网站上允许串行 API|
+|[SerialBlockedForUrls](#serialblockedforurls)|在特定网站上阻止串行 API|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式|
+|[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|启用签名 HTTP Exchange (SXG) 支持|
+|[SitePerProcess](#siteperprocess)|为每个站点启用站点隔离|
+|[SpellcheckEnabled](#spellcheckenabled)|启用拼写检查|
+|[SpellcheckLanguage](#spellchecklanguage)|启用特定拼写检查语言|
+|[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|强制禁用拼写检查功能的语言|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|针对混合内容启用更严格的处理 (已弃用)|
+|[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|禁止不支持的操作系统警告|
+|[SyncDisabled](#syncdisabled)|使用 Microsoft 同步服务禁用数据同步|
+|[SyncTypesListDisabled](#synctypeslistdisabled)|配置从同步中排除的类型列表|
+|[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|对本地信任密钥启用 TLS 1.3 安全功能。 (过时)|
+|[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|指定要禁用的 TLS 密码套件|
+|[TabFreezingEnabled](#tabfreezingenabled)|允许冻结后台标签页|
+|[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|启用在浏览器任务管理器中结束进程|
+|[TotalMemoryLimitMb](#totalmemorylimitmb)|设置单个 Microsoft Edge 实例可以使用的内存限制(MB)。|
+|[TrackingPrevention](#trackingprevention)|阻止跟踪用户的 Web 浏览活动|
+|[TranslateEnabled](#translateenabled)|启用翻译|
+|[URLAllowlist](#urlallowlist)|定义允许的 URL 列表|
+|[URLBlocklist](#urlblocklist)|阻止访问 URL 列表|
+|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|启用用户代理客户端提示功能 (已弃用)|
+|[UserDataDir](#userdatadir)|设置用户数据目录|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|限制保留的用于紧急回退的用户数据快照的数量|
+|[UserFeedbackAllowed](#userfeedbackallowed)|允许用户反馈|
+|[VideoCaptureAllowed](#videocaptureallowed)|允许或阻止视频捕获|
+|[VideoCaptureAllowedUrls](#videocaptureallowedurls)|无需请求许可即可访问视频捕获设备的站点|
+|[WPADQuickCheckEnabled](#wpadquickcheckenabled)|设置 WPAD 优化|
+|[WebAppInstallForceList](#webappinstallforcelist)|配置强制安装的 Web 应用列表|
+|[WebComponentsV0Enabled](#webcomponentsv0enabled)|在 M84 之前重新启用 Web 组件 v0 API (过时)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|允许 WebDriver 覆盖不兼容的策略 (过时)|
+|[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|管理 WebRTC 的本地 IP 地址公开|
+|[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|限制 WebRTC 的本地 IP 地址公开|
+|[WebRtcUdpPortRange](#webrtcudpportrange)|限制 WebRTC 使用的本地 UDP 端口的范围|
+|[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|使用 Windows 代理解析程序 (已弃用)|
 
 
 
 
-  ## Application Guard settings policies
+  ## Cast policies
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### ApplicationGuardContainerProxy
-  #### Application Guard Container Proxy
+  ### EnableMediaRouter
+  #### 启用 Google Cast
   
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures the proxy settings for Microsoft Edge Application Guard.
-If you enable this policy, Microsoft Edge Application Guard ignores other sources of proxy configurations.
+  #### 描述
+  启用此策略以启用 Google Cast。用户将能够从应用程序菜单、页面上下文菜单、启用强制转换的网站上的媒体控件以及（如果显示）强制转换工具栏图标启动它。
 
-If you don't configure this policy, Microsoft Edge Application Guard uses the proxy configuration of the host.
+         停用此策略可停用 Google Cast。
 
-This policy does not affect the proxy configuration of Microsoft Edge outside of Application Guard (on the host).
+         默认情况下，Google Cast 已启用。
 
-The ProxyMode field lets you specify the proxy server used by Microsoft Edge Application Guard.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-The ProxyPacUrl field is a URL to a proxy .pac file.
+  #### 数据类型:
+  - 布尔
 
-The ProxyServer field is a URL for the proxy server.
-
-If you choose the 'direct' value as 'ProxyMode', all other fields are ignored.
-
-If you choose the 'auto_detect' value as 'ProxyMode', all other fields are ignored.
-
-If you choose the 'fixed_servers' value as 'ProxyMode', the 'ProxyServer' field is used.
-
-If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' field is used.
-
-For more information about identifying Application Guard traffic via dual proxy, visit [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Dictionary
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ApplicationGuardContainerProxy
-  - GP name: Application Guard Container Proxy
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Application Guard settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ApplicationGuardContainerProxy
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableMediaRouter
+  - GP 名称: 启用 Google Cast
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Cast
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnableMediaRouter
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableMediaRouter
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ShowCastIconInToolbar
+  #### 在工具栏中显示投放图标
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  将此策略设置为 true 可在工具栏或溢出菜单上显示“强制转换”工具栏图标。用户将无法将其删除。
+
+如果未配置或禁用此策略，则用户可以使用其上下文菜单来固定或删除图标。
+
+如果已将 [EnableMediaRouter](#enablemediarouter) 策略设置为 false，则会忽略此策略，并且不显示该工具栏图标。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ShowCastIconInToolbar
+  - GP 名称: 在工具栏中显示投放图标
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Cast
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ShowCastIconInToolbar
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: ShowCastIconInToolbar
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## HTTP 身份验证 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### AllowCrossOriginAuthPrompt
+  #### 允许跨源 HTTP 基本身份验证提示
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  控制页面上的第三方子内容是否可以打开 HTTP 基本身份验证对话框。
+
+通常，此项作为钓鱼防御功能处于禁用状态。如果未配置此策略，则会禁用该策略，并且第三方子内容无法打开 HTTP 基本身份验对话框。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowCrossOriginAuthPrompt
+  - GP 名称: 允许跨源 HTTP 基本身份验证提示
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowCrossOriginAuthPrompt
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowCrossOriginAuthPrompt
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### AuthNegotiateDelegateAllowlist
+  #### 指定 Microsoft Edge 可以将用户凭据委派给的服务器列表
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  配置 Microsoft Edge 可委派的服务器列表。
+
+请用逗号分隔多个服务器名称。允许使用通配符(*)。
+
+如果你未配置此策略，则 Microsoft Edge 将不会委派用户凭据，即使检测到服务器为 Intranet 服务器也不例外。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AuthNegotiateDelegateAllowlist
+  - GP 名称: 指定 Microsoft Edge 可以将用户凭据委派给的服务器列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AuthNegotiateDelegateAllowlist
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"contoso.com"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: AuthNegotiateDelegateAllowlist
+  - 示例值:
+``` xml
+<string>contoso.com</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### AuthSchemes
+  #### 支持的身份验证方案
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定受支持的 HTTP 身份验证方案。
+
+可用于配置该策略的值: "basic"、"digest"、"ntlm" 和 "negotiate"。用逗号分隔多个值。
+
+如果未配置此策略，则会使用所有四个方案。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AuthSchemes
+  - GP 名称: 支持的身份验证方案
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AuthSchemes
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"basic,digest,ntlm,negotiate"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: AuthSchemes
+  - 示例值:
+``` xml
+<string>basic,digest,ntlm,negotiate</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### AuthServerAllowlist
+  #### 配置允许的身份验证服务器列表
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定为集成身份验证启用的服务器。仅当 Microsoft Edge 从代理或此列表中的服务器收到身份验证质询时，才启用集成身份验证。
+
+用逗号分隔多个服务器名称。允许使用通配符(*)。
+
+如果未配置此策略，则 Microsoft Edge 尝试检测服务器是否位于 Intranet 上 - 直到那时，它才将响应 IWA 请求。如果服务器在 Internet 上，Microsoft Edge 会忽略来自该服务器的 IWA 请求。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AuthServerAllowlist
+  - GP 名称: 配置允许的身份验证服务器列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AuthServerAllowlist
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"*contoso.com,contoso.com"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: AuthServerAllowlist
+  - 示例值:
+``` xml
+<string>*contoso.com,contoso.com</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### DisableAuthNegotiateCnameLookup
+  #### 协商 Kerberos 身份验证时禁用 CNAME 查找
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  确定生成的 Kerberos SPN 是否基于规范的 DNS 名称(CNAME)或输入的原始名称。
+
+如果启用此策略，将跳过 CNAME 查找，使用服务器名称(作为输入)。
+
+如果禁用或未配置此策略，则使用服务器的规范名称。这通过 CNAME 查找来确定。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DisableAuthNegotiateCnameLookup
+  - GP 名称: 协商 Kerberos 身份验证时禁用 CNAME 查找
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DisableAuthNegotiateCnameLookup
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: DisableAuthNegotiateCnameLookup
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### EnableAuthNegotiatePort
+  #### 在 Kerberos SPN 中包含非标准端口
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定生成的 Kerberos SPN 是否应包括非标准端口。
+
+如果启用此策略，并且用户在 URL 中包含非标准端口(非 80 或 443 的端口)，则该端口包含在生成的 Kerberos SPN 中。
+
+如果不配置或禁用此策略，生成的 Kerberos SPN 在任何情况下都不包含端口。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableAuthNegotiatePort
+  - GP 名称: 在 Kerberos SPN 中包含非标准端口
+  - GP 路径 (强制): 管理模板/Microsoft Edge/HTTP 身份验证
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnableAuthNegotiatePort
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableAuthNegotiatePort
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NtlmV2Enabled
+  #### 控制是否启用 NTLMv2 身份验证
+  
+  
+  #### 支持的版本:
+  - 在 macOS 自 77 或之后
+
+  #### 描述
+  控制是否启用 NTLMv2。
+
+所有最新版本的 Samba 和 Windows 服务器都支持 NTLMv2。你应该只禁用 NTLMv2 来解决向后兼容性问题，因为它会降低身份验证的安全性。
+
+如果未配置此策略，则默认情况下会启用 NTLMv2。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NtlmV2Enabled
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## Smartscreen 设置 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PreventSmartScreenPromptOverride
+  #### 阻止绕过 Microsoft Defender SmartScreen 对站点的提示
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  此策略让你确定用户是否可以覆盖有关潜在恶意网站的 Microsoft Defender SmartScreen 警告。
+
+如果启用此设置，则用户无法忽略 Microsoft Defender SmartScreen 警告，并且会阻止用户继续访问该站点。
+
+如果禁用或未配置此设置，则用户可以忽略 Microsoft Defender SmartScreen 警告并继续访问该站点。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为进行设备管理而注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PreventSmartScreenPromptOverride
+  - GP 名称: 阻止绕过 Microsoft Defender SmartScreen 对站点的提示
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PreventSmartScreenPromptOverride
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PreventSmartScreenPromptOverride
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PreventSmartScreenPromptOverrideForFiles
+  #### 阻止绕过有关下载的 Microsoft Defender SmartScreen 警告
+  
+  
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
+  - 在 macOS 自 79 或之后
+
+  #### 描述
+  此策略让你确定用户是否可以覆盖有关未验证下载的 Microsoft Defender SmartScreen 警告。
+
+如果启用此策略，组织中的用户无法忽略 Microsoft Defender SmartScreen 警告，并且用户无法完成未验证的下载。
+
+如果禁用或未配置此策略，用户可以忽略 Microsoft Defender SmartScreen 警告并完成未验证的下载。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为进行设备管理而注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PreventSmartScreenPromptOverrideForFiles
+  - GP 名称: 阻止绕过有关下载的 Microsoft Defender SmartScreen 警告
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PreventSmartScreenPromptOverrideForFiles
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PreventSmartScreenPromptOverrideForFiles
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### SmartScreenAllowListDomains
+  #### 配置 Microsoft Defender SmartScreen 将不会为其触发警告的域的列表
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  配置 Microsoft Defender SmartScreen 受信任的域列表。这意味着:
+如果源 URL 与这些域匹配，Microsoft Defender SmartScreen 不会检查可能的恶意资源，例如钓鱼软件和其他恶意软件。
+Microsoft Defender SmartScreen 下载保护服务不会检查在这些域上托管的下载。
+
+如果启用此策略，Microsoft Defender SmartScreen 将信任这些域。
+如果禁用或未设置此策略，默认的 Microsoft Defender SmartScreen 保护将适用于所有资源。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为进行设备管理而注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+另请注意，如果你的组织已启用 Microsoft Defender 高级威胁防护，则此策略不适用。你必须在 Microsoft Defender 安全中心中配置允许和阻止名单。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SmartScreenAllowListDomains
+  - GP 名称: 配置 Microsoft Defender SmartScreen 将不会为其触发警告的域的列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: SmartScreenAllowListDomains
+  - 示例值:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### SmartScreenEnabled
+  #### 配置 Microsoft Defender SmartScreen
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  此策略设置允许你配置是否开启 Microsoft Defender SmartScreen。Microsoft Defender SmartScreen 提供警告消息，以帮助保护用户免受潜在的钓鱼诈骗和恶意软件的侵害。默认情况下，Microsoft Defender SmartScreen 处于开启状态。
+
+如果启用此设置，则将开启 Microsoft Defender SmartScreen。
+
+如果禁用此设置，则将关闭 Microsoft Defender SmartScreen。
+
+如果未配置此设置，则用户可以选择是否使用 Microsoft Defender SmartScreen。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SmartScreenEnabled
+  - GP 名称: 配置 Microsoft Defender SmartScreen
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/Smartscreen 设置
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: SmartScreenEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: SmartScreenEnabled
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### SmartScreenForTrustedDownloadsEnabled
+  #### 强制对来自受信任源的下载执行 Microsoft Defender SmartScreen 检查
+  
+  
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
+
+  #### 描述
+  此策略设置允许你配置 Microsoft Defender SmartScreen 是否检查来自受信任源的下载内容的声誉。
+
+如果启用或未配置此设置，则无论来源如何，Microsoft Defender SmartScreen 都将检查下载内容的声誉。
+
+如果禁用此设置，则从受信任源下载时，Microsoft Defender SmartScreen 不会检查下载内容的声誉。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SmartScreenForTrustedDownloadsEnabled
+  - GP 名称: 强制对来自受信任源的下载执行 Microsoft Defender SmartScreen 检查
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/Smartscreen 设置
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: SmartScreenForTrustedDownloadsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### SmartScreenPuaEnabled
+  #### 配置 Microsoft Defender SmartScreen 以阻止可能不需要的应用
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
+
+  #### 描述
+  此策略设置允许你配置是否使用 Microsoft Defender SmartScreen 开启对可能不需要的应用的阻止功能。使用 Microsoft Defender SmartScreen 阻止可能不需要的应用可提供警告消息，以帮助保护用户防范广告程序、挖矿病毒、捆绑软件和其他由网站托管的信誉度较低的应用。默认关闭使用 Microsoft Defender SmartScreen 阻止可能不需要的应用。
+
+如果启用此设置，则会开启使用 Microsoft Defender SmartScreen 阻止可能不需要的应用。
+
+如果禁用此设置，则会关闭使用 Microsoft Defender SmartScreen 阻止可能不需要的应用。
+
+如果未配置此设置，则用户可以选择是否使用 Microsoft Defender SmartScreen 阻止可能不需要的应用。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SmartScreenPuaEnabled
+  - GP 名称: 配置 Microsoft Defender SmartScreen 以阻止可能不需要的应用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/Smartscreen 设置
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/Smartscreen 设置
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: SmartScreenPuaEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: SmartScreenPuaEnabled
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## 代理服务器 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ProxyBypassList
+  #### 配置代理绕过规则
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  定义 Microsoft Edge 将会为其绕过任何代理的主机列表。
+
+仅当在 [ProxyMode](#proxymode) 策略中选择“使用固定代理服务器”时才应用此策略。如果已选择任何其他模式来配置代理策略，请不要启用或配置此策略。
+
+如果启用此策略，则可以创建主机列表，使 Microsoft Edge 不对这些主机使用代理。
+
+如果未配置此策略，则不会创建 Microsoft Edge 为其绕过代理的主机列表。如果已指定任何其他代理策略设置方法，请不要配置此策略。
+
+有关更详细的示例，请转到 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProxyBypassList
+  - GP 名称: 配置代理绕过规则
+  - GP 路径 (强制): 管理模板/Microsoft Edge/代理服务器
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProxyBypassList
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"https://www.contoso.com, https://www.fabrikam.com"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProxyBypassList
+  - 示例值:
+``` xml
+<string>https://www.contoso.com, https://www.fabrikam.com</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ProxyMode
+  #### 配置代理服务器设置
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定 Microsoft Edge 所使用的代理服务器设置。如果启用此策略，则用户将无法更改代理设置。
+
+如果选择从不使用代理服务器并且始终直接连接，则会忽略所有其他选项。
+
+如果选择使用系统代理设置，则会忽略所有其他选项。
+
+如果选择自动检测代理服务器，则会忽略所有其他选项。
+
+如果选择固定服务器代理模式，则可以在 [ProxyServer](#proxyserver) 和“以逗号分隔的代理跳过规则列表”中指定更多选项。
+
+如果选择使用 .pac 代理脚本，则必须在“指向代理 .pac 文件的 URL”中指定指向脚本的 URL。
+
+有关详细示例，请转到 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)。
+
+如果启用此策略，则 Microsoft Edge 将忽略从命令行指定的所有代理相关选项。
+
+如果未配置此策略，则用户可以选择自己的代理设置。
+
+策略选项映射：
+
+* ProxyDisabled (direct) = 从不使用代理
+
+* ProxyAutoDetect (auto_detect) = 自动检测代理设置
+
+* ProxyPacScript (pac_script) = 使用 .pac 代理脚本
+
+* ProxyFixedServers (fixed_servers) = 使用固定的代理服务器
+
+* ProxyUseSystem (system) = 使用系统代理设置
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProxyMode
+  - GP 名称: 配置代理服务器设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/代理服务器
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProxyMode
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"direct"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProxyMode
+  - 示例值:
+``` xml
+<string>direct</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ProxyPacUrl
+  #### 设置代理 .pac 文件的 URL
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定代理自动配置(PAC)文件的 URL。
+
+仅当你在 [ProxyMode](#proxymode) 策略中选择了“使用 .pac 代理脚本”时才会应用此策略。如果你选择了任何其他模式来配置代理策略，请不要启用或配置此策略。
+
+如果启用此策略，则可以指定 PAC 文件的 URL，该文件定义浏览器如何自动选择适当的代理服务器来获取特定网站。
+
+如果禁用或未配置此策略，则不会指定 PAC 文件。如果已指定任何其他代理策略设置方法，请不要配置此策略。
+
+有关详细示例，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProxyPacUrl
+  - GP 名称: 设置代理 .pac 文件的 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/代理服务器
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProxyPacUrl
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"https://internal.contoso.com/example.pac"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProxyPacUrl
+  - 示例值:
+``` xml
+<string>https://internal.contoso.com/example.pac</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ProxyServer
+  #### 配置代理服务器的地址或 URL
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  指定代理服务器的 URL。
+
+仅当你在 [ProxyMode](#proxymode) 策略中选择了“使用固定代理服务器”时才会应用此策略。如果选择了任何其他模式来配置代理策略，请不要启用或配置此策略。
+
+如果启用此策略，则此策略配置的代理服务器将用于所有 URL。
+
+如果禁用或未配置此策略，则用户可以在处于此代理模式时选择自己的代理设置。如果已指定任何其他代理策略设置方法，请不要配置此策略。
+
+有关更多选项和详细示例，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProxyServer
+  - GP 名称: 配置代理服务器的地址或 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/代理服务器
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProxyServer
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"123.123.123.123:8080"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProxyServer
+  - 示例值:
+``` xml
+<string>123.123.123.123:8080</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ProxySettings
+  #### 代理服务器设置
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  配置 Microsoft Edge 的代理设置。
+
+如果启用此策略，则 Microsoft Edge 会忽略从命令行指定的所有代理相关选项。
+
+如果未配置此策略，则用户可以选择自己的代理设置。
+
+此策略将替代以下各个策略:
+
+[ProxyMode](#proxymode)
+[ProxyPacUrl](#proxypacurl)
+[ProxyServer](#proxyserver)
+[ProxyBypassList](#proxybypasslist)
+
+使用 ProxyMode 字段可以指定 Microsoft Edge 所使用的代理服务器，并阻止用户更改代理设置。
+
+ProxyPacUrl 字段是指向代理 .pac 文件的 URL。
+
+ProxyServer 字段是代理服务器的 URL。
+
+ProxyBypassList 字段是 Microsoft Edge 绕过的代理主机列表。
+
+如果选择 "direct" 值作为 [ProxyMode](#proxymode)，则将永远不会使用代理并且会忽略所有其他字段。
+
+如果选择 "system" 值作为 [ProxyMode](#proxymode)，则使用系统的代理并忽略所有其他字段。
+
+如果选择 "auto_detect" 值作为 [ProxyMode](#proxymode)，则会忽略所有其他字段。
+
+如果选择 "fixed_server" 值作为 [ProxyMode](#proxymode)，则将使用 [ProxyServer](#proxyserver) 和 [ProxyBypassList](#proxybypasslist) 字段。
+
+如果选择 "pac_script" 值作为 [ProxyMode](#proxymode)，则将使用 [ProxyPacUrl](#proxypacurl) 和 [ProxyBypassList](#proxybypasslist) 字段。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字典
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProxySettings
+  - GP 名称: 代理服务器设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/代理服务器
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProxySettings
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
   "ProxyMode": "direct", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
@@ -427,162 +1436,74 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 ```
 
 
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## Cast policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### EnableMediaRouter
-  #### Enable Google Cast
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Enable this policy to enable Google Cast. Users will be able to launch it from the app menu, page context menus, media controls on Cast-enabled websites, and (if shown) the Cast toolbar icon.
-
-Disable this policy to disable Google Cast.
-
-By default, Google Cast is enabled.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableMediaRouter
-  - GP name: Enable Google Cast
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Cast
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnableMediaRouter
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: EnableMediaRouter
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProxySettings
+  - 示例值:
 ``` xml
-<true/>
+<key>ProxySettings</key>
+<dict>
+  <key>ProxyBypassList</key>
+  <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
+  <key>ProxyMode</key>
+  <string>direct</string>
+  <key>ProxyPacUrl</key>
+  <string>https://internal.site/example.pac</string>
+  <key>ProxyServer</key>
+  <string>123.123.123.123:8080</string>
+</dict>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### ShowCastIconInToolbar
-  #### Show the cast icon in the toolbar
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  ## 内容设置 policies
 
-  #### Description
-  Set this policy to true to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
-
-If you don't configure this policy or if you disable it, users can pin or remove the icon by using its contextual menu.
-
-If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, then this policy is ignored, and the toolbar icon isn't shown.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ShowCastIconInToolbar
-  - GP name: Show the cast icon in the toolbar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Cast
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ShowCastIconInToolbar
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ShowCastIconInToolbar
-  - Example value:
-``` xml
-<false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## Content settings policies
-
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoSelectCertificateForUrls
-  #### Automatically select client certificates for these sites
+  #### 自动为这些站点选择客户端证书
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify a list of sites, based on URL patterns, for which Microsoft Edge should automatically select a client certificate, if the site requests one.
+  #### 描述
+  根据 URL 模式指定站点列表，当这些站点请求客户端证书时，Microsoft Edge 应自动为其选择。
 
-The value must be an array of stringified JSON dictionaries. Each dictionary must have the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts from which client certificates the browser will automatically select. Independent of the filter, only certificates will be selected that match the server's certificate request. For example, if $FILTER has the form { "ISSUER": { "CN": "$ISSUER_CN" } }, additionally only client certificates are selected that are issued by a certificate with the CommonName $ISSUER_CN. If $FILTER contains an "ISSUER" and a "SUBJECT" section, a client certificate must satisfy both conditions to be selected. If $FILTER specifies an organization ("O"), a certificate must have at least one organization which matches the specified value to be selected. If $FILTER specifies an organization unit ("OU"), a certificate must have at least one organization unit which matches the specified value to be selected. If $FILTER is the empty dictionary {}, the selection of client certificates is not additionally restricted.
+该值必须是字符串化的 JSON 词典数组。每个词典的形式必须为 { "pattern": "$URL_PATTERN", "filter" : $FILTER }，其中 $URL_PATTERN 为内容设置模式。$FILTER 限制浏览器可自动从中选择的客户端证书。只能选择与服务器的证书请求匹配的证书，而与筛选器无关。例如，如果 $FILTER 的形式为 { "ISSUER": { "CN": "$ISSUER_CN" } }，则只能额外选择由具有 CommonName $ISSUER_CN 的证书所颁发的客户端证书。如果 $FILTER 包含 "ISSUER" 和 "SUBJECT" 部分，则客户端证书必须同时满足两个条件才能被选择。如果 $FILTER 指定了组织("O")，则证书必须至少具有一个与指定值匹配的组织才能被选择。如果 $FILTER 指定了组织单位("OU")，则证书必须至少具有一个与指定值匹配的组织单位才能被选择。如果 $FILTER 为空词典 {}，则不会对客户端证书选择产生额外限制。
 
-If you don't configure this policy, auto-selection isn't done for any site.
+如果未配置此策略，则不会对任何站点执行自动选择。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoSelectCertificateForUrls
-  - GP name: Automatically select client certificates for these sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoSelectCertificateForUrls
+  - GP 名称: 自动为这些站点选择客户端证书
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoSelectCertificateForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoSelectCertificateForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>{"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}</string>
@@ -590,23 +1511,23 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CookiesAllowedForUrls
-  #### Allow cookies on specific sites
+  #### 在特定站点上允许 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that are allowed to set cookies.
+  #### 描述
+  根据 URL 模式定义允许设置 Cookie 的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultCookiesSetting](#defaultcookiessetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-See the [CookiesBlockedForUrls](#cookiesblockedforurls) and [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls) policies for more information.
+有关详细信息，请参阅 [CookiesBlockedForUrls](#cookiesblockedforurls) 和 [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls) 策略。
 
-Note there cannot be conflicting URL patterns set between these three policies:
+请注意，这三个策略之间不能设置冲突的 URL 模式:
 
 - [CookiesBlockedForUrls](#cookiesblockedforurls)
 
@@ -614,29 +1535,29 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
+若要排除 cookie 以防退出时被删除，请配置 [SaveCookiesOnExit](#savecookiesonexit) 策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CookiesAllowedForUrls
-  - GP name: Allow cookies on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CookiesAllowedForUrls
+  - GP 名称: 在特定站点上允许 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
@@ -644,9 +1565,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CookiesAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CookiesAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -655,23 +1576,23 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CookiesBlockedForUrls
-  #### Block cookies on specific sites
+  #### 在特定站点上阻止 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can't set cookies.
+  #### 描述
+  根据 URL 模式定义无法设置 Cookie 的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultCookiesSetting](#defaultcookiessetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-See the [CookiesAllowedForUrls](#cookiesallowedforurls) and [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls) policies for more information.
+有关详细信息，请参阅 [CookiesAllowedForUrls](#cookiesallowedforurls) 和 [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls) 策略。
 
-Note there cannot be conflicting URL patterns set between these three policies:
+请注意，这三个策略之间不能设置冲突的 URL 模式:
 
 - CookiesBlockedForUrls
 
@@ -679,27 +1600,27 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CookiesBlockedForUrls
-  - GP name: Block cookies on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CookiesBlockedForUrls
+  - GP 名称: 在特定站点上阻止 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
@@ -707,9 +1628,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CookiesBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CookiesBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -718,25 +1639,25 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CookiesSessionOnlyForUrls
-  #### Limit cookies from specific websites to the current session
+  #### 将特定网站的 Cookie 限制为当前会话
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Cookies created by websites that match a URL pattern you define are deleted when the session ends (when the window closes).
+  #### 描述
+  当会话结束时(窗口关闭时)，由与定义的 URL 模式匹配的网站所创建的 Cookie 将被删除。
 
-Cookies created by websites that don't match the pattern are controlled by the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or by the user's personal configuration. This is also the default behavior if you don't configure this policy.
+与模式不匹配的网站所创建的 Cookie 由 [DefaultCookiesSetting](#defaultcookiessetting) 策略(如果已设置)或用户个人配置所控制。如果未配置此策略，那么这也是默认行为。
 
-If Microsoft Edge is running in background mode, the session might not close when the last window is closed, meaning the cookies won't be cleared when the window closes. See the [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about configuring what happens when Microsoft Edge runs in background mode.
+如果 Microsoft Edge 在后台模式下运行，则在最后一个窗口关闭时，会话可能不会关闭，这意味着窗口关闭时不会清除 Cookie。有关配置 Microsoft Edge 在后台模式下运行时所发生情况的信息，请参阅 [BackgroundModeEnabled](#backgroundmodeenabled) 策略。
 
-You can also use the [CookiesAllowedForUrls](#cookiesallowedforurls) and [CookiesBlockedForUrls](#cookiesblockedforurls) policies to control which websites can create cookies.
+你还可以使用 [CookiesAllowedForUrls](#cookiesallowedforurls) 和 [CookiesBlockedForUrls](#cookiesblockedforurls) 策略控制哪些网站可以创建 Cookie。
 
-Note there cannot be conflicting URL patterns set between these three policies:
+请注意，三个策略之间不能设置冲突的 URL 模式:
 
 - [CookiesBlockedForUrls](#cookiesblockedforurls)
 
@@ -744,29 +1665,29 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - CookiesSessionOnlyForUrls
 
-If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from previous sessions, this policy is ignored, and cookies are stored permanently for those sites.
+如果你设置 [RestoreOnStartup](#restoreonstartup) 策略以从以前的会话中恢复 URL，则会忽略此策略，并且会永久为那些站点存储 Cookie。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CookiesSessionOnlyForUrls
-  - GP name: Limit cookies from specific websites to the current session
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CookiesSessionOnlyForUrls
+  - GP 名称: 将特定网站的 Cookie 限制为当前会话
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
@@ -774,9 +1695,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CookiesSessionOnlyForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CookiesSessionOnlyForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -785,615 +1706,615 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultCookiesSetting
-  #### Configure cookies
+  #### 配置 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Control whether websites can create cookies on the user's device. This policy is all or nothing - you can let all websites create cookies, or no websites create cookies. You can't use this policy to enable cookies from specific websites.
+  #### 描述
+  控制网站是否可以在用户的设备上创建 Cookie。此策略要求全部应用或者全部不应用 - 你可以允许所有网站创建 Cookie，或者不允许任何网站创建 Cookie。无法使用此策略启用来自特定网站的 Cookie。
 
-Set the policy to 'SessionOnly' to clear cookies when the session closes. If Microsoft Edge is running in background mode, the session might not close when the last window is closed, meaning the cookies won't be cleared when the window closes. See [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about configuring what happens when Microsoft Edge runs in background mode.
+将该策略设置为“SessionOnly”可在会话关闭时清除 Cookie。如果 Microsoft Edge 在后台模式下运行，则在最后一个窗口关闭时，会话可能不会关闭，这意味着窗口关闭时不会清除 Cookie。有关配置 Microsoft Edge 在后台模式下运行时所发生情况的信息，请参阅 [BackgroundModeEnabled](#backgroundmodeenabled) 策略。
 
-If you don't configure this policy, the default 'AllowCookies' is used, and users can change this setting in Microsoft Edge Settings. (If you don't want users to be able to change this setting, set the policy.)
+如果未配置此策略，将使用默认的“AllowCookies”，并且用户可以在 Microsoft Edge 的“设置”中更改此设置。(如果不希望用户能够更改此设置，请设置该策略。)
 
-Policy options mapping:
+策略选项映射：
 
-* AllowCookies (1) = Let all sites create cookies
+* AllowCookies (1) = 允许所有站点创建 Cookie
 
-* BlockCookies (2) = Don't let any site create cookies
+* BlockCookies (2) = 不允许任何站点创建 Cookie
 
-* SessionOnly (4) = Keep cookies for the duration of the session, except ones listed in [SaveCookiesOnExit](#savecookiesonexit)
+* SessionOnly (4) = 在会话持续时间内保留 cookie，[SaveCookiesOnExit](#savecookiesonexit) 中列出的内容除外
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultCookiesSetting
-  - GP name: Configure cookies
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultCookiesSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultCookiesSetting
+  - GP 名称: 配置 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultCookiesSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultCookiesSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultCookiesSetting
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultGeolocationSetting
-  #### Default geolocation setting
+  #### 默认地理位置设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can track users' physical locations. You can allow tracking by default ('AllowGeolocation'), deny it by default ('BlockGeolocation'), or ask the user each time a website requests their location ('AskGeolocation').
+  #### 描述
+  设置网站是否可以跟踪用户的物理位置。你可以默认允许跟踪(“AllowGeolocation”)，默认拒绝跟踪(“BlockGeolocation”)，或者在每次网站请求用户位置时询问用户(“AskGeolocation”)。
 
-If you don't configure this policy, 'AskGeolocation' is used and the user can change it.
+如果未配置此策略，将使用“AskGeolocation”策略，并且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowGeolocation (1) = Allow sites to track users' physical location
+* AllowGeolocation (1) = 允许站点跟踪用户的实际位置
 
-* BlockGeolocation (2) = Don't allow any site to track users' physical location
+* BlockGeolocation (2) = 不允许任何站点跟踪用户的物理位置
 
-* AskGeolocation (3) = Ask whenever a site wants to track users' physical location
+* AskGeolocation (3) = 每当站点要跟踪用户的实际位置时都进行询问
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultGeolocationSetting
-  - GP name: Default geolocation setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultGeolocationSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultGeolocationSetting
+  - GP 名称: 默认地理位置设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultGeolocationSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultGeolocationSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultGeolocationSetting
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultImagesSetting
-  #### Default images setting
+  #### 默认图像设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can display images. You can allow images on all sites ('AllowImages') or block them on all sites ('BlockImages').
+  #### 描述
+  设置网站是否可以显示图像。可以对所有站点允许(“AllowImages”)或阻止(“BlockImages”)图像。
 
-If you don't configure this policy, images are allowed by default, and the user can change this setting.
+如果未配置此策略，默认情况下允许显示图像，而且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowImages (1) = Allow all sites to show all images
+* AllowImages (1) = 允许所有站点显示所有图像
 
-* BlockImages (2) = Don't allow any site to show images
+* BlockImages (2) = 不允许任何站点显示图像
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultImagesSetting
-  - GP name: Default images setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultImagesSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultImagesSetting
+  - GP 名称: 默认图像设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultImagesSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultImagesSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultImagesSetting
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultInsecureContentSetting
-  #### Control use of insecure content exceptions
+  #### 控制不安全内容例外的使用
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Allows you to set whether users can add exceptions to allow mixed content for specific sites.
+  #### 描述
+  允许你设置用户是否可以添加例外以允许特定站点显示混合内容。
 
-This policy can be overridden for specific URL patterns using the [InsecureContentAllowedForUrls](#insecurecontentallowedforurls) and [InsecureContentBlockedForUrls](#insecurecontentblockedforurls) policies.
+针对特定 URL 模式，可使用 [InsecureContentAllowedForUrls](#insecurecontentallowedforurls) 和 [InsecureContentBlockedForUrls](#insecurecontentblockedforurls) 策略替代此策略。
 
-If this policy isn't set, users will be allowed to add exceptions to allow blockable mixed content and disable autoupgrades for optionally blockable mixed content.
+如果未设置此策略，则将允许用户添加例外以允许可阻止混合内容并禁止自动升级可选择阻止的混合内容。
 
-Policy options mapping:
+策略选项映射：
 
-* BlockInsecureContent (2) = Do not allow any site to load mixed content
+* BlockInsecureContent (2) = 不允许任何站点加载混合内容
 
-* AllowExceptionsInsecureContent (3) = Allow users to add exceptions to allow mixed content
+* AllowExceptionsInsecureContent (3) = 允许用户添加例外以允许混合内容
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultInsecureContentSetting
-  - GP name: Control use of insecure content exceptions
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultInsecureContentSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultInsecureContentSetting
+  - GP 名称: 控制不安全内容例外的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultInsecureContentSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultInsecureContentSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultInsecureContentSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultJavaScriptSetting
-  #### Default JavaScript setting
+  #### 默认 JavaScript 设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can run JavaScript. You can allow it for all sites ('AllowJavaScript') or block it for all sites ('BlockJavaScript').
+  #### 描述
+  设置网站是否可以运行 JavaScript。可以对所有站点允许(“AllowJavaScript”)或阻止(“BlockJavaScript”)。
 
-If you don't configure this policy, all sites can run JavaScript by default, and the user can change this setting.
+如果未配置此策略，所有站点默认都可以运行 JavaScript，而且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowJavaScript (1) = Allow all sites to run JavaScript
+* AllowJavaScript (1) = 允许所有站点运行 JavaScript
 
-* BlockJavaScript (2) = Don't allow any site to run JavaScript
+* BlockJavaScript (2) = 不允许任何站点运行 JavaScript
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultJavaScriptSetting
-  - GP name: Default JavaScript setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultJavaScriptSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultJavaScriptSetting
+  - GP 名称: 默认 JavaScript 设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultJavaScriptSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultJavaScriptSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultJavaScriptSetting
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultNotificationsSetting
-  #### Default notification setting
+  #### 默认通知设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can display desktop notifications. You can allow them by default ('AllowNotifications'), deny them by default ('BlockNotifications'), or have the user be asked each time a website wants to show a notification ('AskNotifications').
+  #### 描述
+  设置网站是否可以显示桌面通知。你可以默认允许通知(“AllowNotifications'”)，默认拒绝通知(“BlockNotifications”)，或者在每次网站要显示通知时询问用户(“AskNotifications”)。
 
-If you don't configure this policy, notifications are allowed by default, and the user can change this setting.
+如果未配置此策略，则默认允许通知，而且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowNotifications (1) = Allow sites to show desktop notifications
+* AllowNotifications (1) = 允许站点显示桌面通知
 
-* BlockNotifications (2) = Don't allow any site to show desktop notifications
+* BlockNotifications (2) = 不允许任何站点显示桌面通知
 
-* AskNotifications (3) = Ask every time a site wants to show desktop notifications
+* AskNotifications (3) = 每次站点要显示桌面通知时都询问
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultNotificationsSetting
-  - GP name: Default notification setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultNotificationsSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultNotificationsSetting
+  - GP 名称: 默认通知设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultNotificationsSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultNotificationsSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultNotificationsSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultPluginsSetting
-  #### Default Adobe Flash setting
+  #### 默认 Adobe Flash 设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  #### 描述
+  首先检查 [PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls)，然后检查此策略。选项为“ClickToPlay”和“BlockPlugins”。如果将此策略设置为“BlockPlugins”，则所有网站都将拒绝此插件。“ClickToPlay”允许 Flash 插件运行，但用户可单击占位符启动它。
 
-If you don't set this policy, it uses BlockPlugins and users can change this setting.
+如果未设置此策略，则它将使用 BlockPlugins，并且用户可以更改此设置。
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+注意: 自动播放仅适用于 [PluginsAllowedForUrls](#pluginsallowedforurls) 策略中明确列出的域。若要为所有网站打开自动播放功能，请将 http://* 和 https://* 添加到允许的 URL 列表中。
 
-Policy options mapping:
+策略选项映射：
 
-* BlockPlugins (2) = Block the Adobe Flash plugin
+* BlockPlugins (2) = 阻止 Adobe Flash 插件
 
-* ClickToPlay (3) = Click to play
+* ClickToPlay (3) = 单击以播放
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultPluginsSetting
-  - GP name: Default Adobe Flash setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultPluginsSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultPluginsSetting
+  - GP 名称: 默认 Adobe Flash 设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultPluginsSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultPluginsSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultPluginsSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultPopupsSetting
-  #### Default pop-up window setting
+  #### 默认的弹出窗口设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can show pop-up windows. You can allow them on all websites ('AllowPopups') or block them on all sites ('BlockPopups').
+  #### 描述
+  设置网站是否可显示弹出窗口。可以对所有站点允许(“AllowPopups”)或阻止(“BlockPopups”)。
 
-If you don't configure this policy, pop-up windows are blocked by default, and users can change this setting.
+如果未配置此策略，则默认阻止弹出窗口，而且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowPopups (1) = Allow all sites to show pop-ups
+* AllowPopups (1) = 允许所有站点显示弹出窗口
 
-* BlockPopups (2) = Do not allow any site to show popups
+* BlockPopups (2) = 不允许任何站点显示弹出窗口
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultPopupsSetting
-  - GP name: Default pop-up window setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultPopupsSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultPopupsSetting
+  - GP 名称: 默认的弹出窗口设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultPopupsSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultPopupsSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultPopupsSetting
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultWebBluetoothGuardSetting
-  #### Control use of the Web Bluetooth API
+  #### 控制 Web 蓝牙 API 的使用
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Control whether websites can access nearby Bluetooth devices. You can completely block access or require the site to ask the user each time it wants to access a Bluetooth device.
+  #### 描述
+  控制网站是否可以访问附近的蓝牙设备。你可以完全阻止访问或要求站点在每次要访问蓝牙设备时都询问用户。
 
-If you don't configure this policy, the default value ('AskWebBluetooth', meaning users are asked each time) is used and users can change it.
+如果不配置此策略，则使用默认值(“AskWebBluetooth”，表示每次都询问用户)，用户可以更改此值。
 
-Policy options mapping:
+策略选项映射：
 
-* BlockWebBluetooth (2) = Do not allow any site to request access to Bluetooth devices via the Web Bluetooth API
+* BlockWebBluetooth (2) = 不允许任何站点通过 Web 蓝牙 API 请求对蓝牙设备的访问
 
-* AskWebBluetooth (3) = Allow sites to ask the user to grant access to a nearby Bluetooth device
+* AskWebBluetooth (3) = 允许站点请求用户授予对附近蓝牙设备的访问权限
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultWebBluetoothGuardSetting
-  - GP name: Control use of the Web Bluetooth API
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultWebBluetoothGuardSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultWebBluetoothGuardSetting
+  - GP 名称: 控制 Web 蓝牙 API 的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultWebBluetoothGuardSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultWebBluetoothGuardSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultWebBluetoothGuardSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultWebUsbGuardSetting
-  #### Control use of the WebUSB API
+  #### 控制 WebUSB API 的使用
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether websites can access connected USB devices. You can completely block access or ask the user each time a website wants to get access to connected USB devices.
+  #### 描述
+  设置网站是否可以访问连接的 USB 设备。你可以完全阻止访问，或让网站在每次希望访问连接的 USB 时询问用户。
 
-You can override this policy for specific URL patterns by using the [WebUsbAskForUrls](#webusbaskforurls) and [WebUsbBlockedForUrls](#webusbblockedforurls) policies.
+你可以对特定的 URL 模式覆盖此策略，方法是使用 [WebUsbAskForUrls](#webusbaskforurls) 和 [WebUsbBlockedForUrls](#webusbblockedforurls) 策略。
 
-If you don't configure this policy, sites can ask users whether they can access the connected USB devices ('AskWebUsb') by default, and users can change this setting.
+如果未配置此策略，默认情况下站点可以询问用户是否可以访问连接的 USB 设备(“AskWebUsb”)，并且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* BlockWebUsb (2) = Do not allow any site to request access to USB devices via the WebUSB API
+* BlockWebUsb (2) = 不允许任何站点通过 WebUSB API 请求对 USB 设备的访问
 
-* AskWebUsb (3) = Allow sites to ask the user to grant access to a connected USB device
+* AskWebUsb (3) = 允许站点请求用户授予对已连接 USB 设备的访问权限
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultWebUsbGuardSetting
-  - GP name: Control use of the WebUSB API
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultWebUsbGuardSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultWebUsbGuardSetting
+  - GP 名称: 控制 WebUSB API 的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultWebUsbGuardSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultWebUsbGuardSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultWebUsbGuardSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImagesAllowedForUrls
-  #### Allow images on these sites
+  #### 允许使用这些站点上的图像
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can display images.
+  #### 描述
+  根据 URL 模式定义可显示图像的站点列表。
 
-If you don't configure this policy, the global default value is used for all sites either from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration.
+如果未配置此策略，则对所有站点使用 [DefaultImagesSetting](#defaultimagessetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImagesAllowedForUrls
-  - GP name: Allow images on these sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImagesAllowedForUrls
+  - GP 名称: 允许使用这些站点上的图像
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
@@ -1401,9 +2322,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImagesAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImagesAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1412,41 +2333,41 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImagesBlockedForUrls
-  #### Block images on specific sites
+  #### 在特定站点上阻止图像
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that aren't allowed to display images.
+  #### 描述
+  根据 URL 模式定义不允许其显示图像的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultImagesSetting](#defaultimagessetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImagesBlockedForUrls
-  - GP name: Block images on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImagesBlockedForUrls
+  - GP 名称: 在特定站点上阻止图像
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
@@ -1454,9 +2375,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImagesBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImagesBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1465,41 +2386,41 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InsecureContentAllowedForUrls
-  #### Allow insecure content on specified sites
+  #### 对指定站点允许不安全内容
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Create a list of URL patterns to specify sites that can display insecure mixed content (that is, HTTP content on HTTPS sites).
+  #### 描述
+  创建 URL 模式列表，以指定可以显示不安全混合内容(即 HTTPS 站点上的 HTTP 内容)的站点。
 
-If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
+如果未配置此策略，可阻止的混合内容将被阻止，而可选择阻止的混合内容将得以升级。但是，用户可以设置例外，允许特定站点显示不安全的混合内容。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InsecureContentAllowedForUrls
-  - GP name: Allow insecure content on specified sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InsecureContentAllowedForUrls
+  - GP 名称: 对指定站点允许不安全内容
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
@@ -1507,9 +2428,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: InsecureContentAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: InsecureContentAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.example.com</string>
@@ -1518,41 +2439,41 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InsecureContentBlockedForUrls
-  #### Block insecure content on specified sites
+  #### 对指定站点阻止不安全内容
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Create a list of URL patterns to specify sites that aren't allowed to display blockable (i.e. active) mixed content (that is, HTTP content on HTTPS sites) and for which optionally blockable mixed content upgrades will be disabled.
+  #### 描述
+  创建 URL 模式列表，以指定不允许显示可阻止的(即活动的)混合内容(即 HTTPS 站点上的 HTTP 内容)的站点，以及将对其禁用可选择阻止的混合内容升级的站点。
 
-If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
+如果未配置此策略，可阻止的混合内容将被阻止，而可选择阻止的混合内容将得以升级。但是，用户可以设置例外，允许特定站点显示不安全的混合内容。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InsecureContentBlockedForUrls
-  - GP name: Block insecure content on specified sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InsecureContentBlockedForUrls
+  - GP 名称: 对指定站点阻止不安全内容
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
@@ -1560,9 +2481,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: InsecureContentBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: InsecureContentBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.example.com</string>
@@ -1571,41 +2492,41 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### JavaScriptAllowedForUrls
-  #### Allow JavaScript on specific sites
+  #### 在特定站点上允许 JavaScript
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that are allowed to run JavaScript.
+  #### 描述
+  根据 URL 模式定义允许运行 JavaScript 的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultJavaScriptSetting](#defaultjavascriptsetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: JavaScriptAllowedForUrls
-  - GP name: Allow JavaScript on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: JavaScriptAllowedForUrls
+  - GP 名称: 在特定站点上允许 JavaScript
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
@@ -1613,9 +2534,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: JavaScriptAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: JavaScriptAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1624,41 +2545,41 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### JavaScriptBlockedForUrls
-  #### Block JavaScript on specific sites
+  #### 在特定站点上阻止 JavaScript
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that aren't allowed to run JavaScript.
+  #### 描述
+  根据 URL 模式定义不允许其运行 JavaScript 的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultJavaScriptSetting](#defaultjavascriptsetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: JavaScriptBlockedForUrls
-  - GP name: Block JavaScript on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: JavaScriptBlockedForUrls
+  - GP 名称: 在特定站点上阻止 JavaScript
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
@@ -1666,9 +2587,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: JavaScriptBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: JavaScriptBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1677,103 +2598,103 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### LegacySameSiteCookieBehaviorEnabled
-  #### Enable default legacy SameSite cookie behavior setting
+  #### 启用默认的旧 SameSite cookie 行为设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", and removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute.
+  #### 描述
+  允许你将所有 cookie 恢复为旧的 SameSite 行为。如果恢复为旧行为，则会导致未指定 SameSite 属性的 cookie 被视为“SameSite=None”，并且会删除对于“SameSite=None”cookie 的具有“Secure”属性的要求。
 
-If you don't set this policy, the default behavior for cookies that don't specify a SameSite attribute will depend on other configuration sources for the SameSite-by-default feature. This feature might be set by a field trial or by enabling the same-site-by-default-cookies flag in edge://flags.
+如果未设置此策略，则未指定 SameSite 属性的 cookie 的默认行为将取决于 SameSite-by-default 功能的其他配置源。可以通过现场试用或通过在 edge://flags 中启用 same-site-by-default-cookies 标志来设置此功能。
 
-Policy options mapping:
+策略选项映射：
 
-* DefaultToLegacySameSiteCookieBehavior (1) = Revert to legacy SameSite behavior for cookies on all sites
+* DefaultToLegacySameSiteCookieBehavior (1) = 针对所有站点上的 cookie 都恢复为旧 SameSite 行为
 
-* DefaultToSameSiteByDefaultCookieBehavior (2) = Use SameSite-by-default behavior for cookies on all sites
+* DefaultToSameSiteByDefaultCookieBehavior (2) = 针对所有站点上的 cookie 都使用 SameSite-by-default 行为
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: LegacySameSiteCookieBehaviorEnabled
-  - GP name: Enable default legacy SameSite cookie behavior setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: LegacySameSiteCookieBehaviorEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: LegacySameSiteCookieBehaviorEnabled
+  - GP 名称: 启用默认的旧 SameSite cookie 行为设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: LegacySameSiteCookieBehaviorEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: LegacySameSiteCookieBehaviorEnabled
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### LegacySameSiteCookieBehaviorEnabledForDomainList
-  #### Revert to legacy SameSite behavior for cookies on specified sites
+  #### 针对指定站点上的 cookie 恢复为旧 SameSite 行为
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Cookies set for domains match specified patterns will revert to legacy SameSite behavior.
+  #### 描述
+  为域匹配指定模式而设置的 cookie 将恢复为旧的 SameSite 行为。
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", and removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute.
+如果恢复为旧行为，则会导致未指定 SameSite 属性的 cookie 被视为 "SameSite=None"，并且会删除对于 "SameSite=None" cookie 的具有 "Secure" 属性的要求。
 
-If you don't set this policy, the global default value will be used. The global default will also be used for cookies on domains not covered by the patterns you specify.
+如果未设置此策略，则将使用全局默认值。全局默认值还将用于你所指定模式未涵盖的域中的 cookie。
 
-The global default value can be configured using the [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
+可以使用 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) 策略来配置全局默认值。如果未设置 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)，则将转向其他配置源来获取全局默认值。
 
-Note that patterns you list in this policy are treated as domains, not URLs, so you should not specify a scheme or port.
+请注意，你在此策略中列出的模式被视为域，而不是 URL，因此，你不应指定方案或端口。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: LegacySameSiteCookieBehaviorEnabledForDomainList
-  - GP name: Revert to legacy SameSite behavior for cookies on specified sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: LegacySameSiteCookieBehaviorEnabledForDomainList
+  - GP 名称: 针对指定站点上的 cookie 恢复为旧 SameSite 行为
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
@@ -1781,9 +2702,9 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: LegacySameSiteCookieBehaviorEnabledForDomainList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: LegacySameSiteCookieBehaviorEnabledForDomainList
+  - 示例值:
 ``` xml
 <array>
   <string>www.example.com</string>
@@ -1792,41 +2713,41 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NotificationsAllowedForUrls
-  #### Allow notifications on specific sites
+  #### 在特定站点上允许通知
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to create a list of url patterns to specify sites that are allowed to display notifications.
+  #### 描述
+  可用于创建 URL 模式的列表，以便指定允许显示通知的站点。
 
-If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+如果未设置此策略，则将对所有站点使用全局默认值。此默认值将来自 [DefaultNotificationsSetting](#defaultnotificationssetting) 策略(如果已设置)或用户的个人配置。有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NotificationsAllowedForUrls
-  - GP name: Allow notifications on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NotificationsAllowedForUrls
+  - GP 名称: 在特定站点上允许通知
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -1834,9 +2755,9 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NotificationsAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NotificationsAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1845,41 +2766,41 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NotificationsBlockedForUrls
-  #### Block notifications on specific sites
+  #### 在特定站点上阻止通知
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to create a list of url patterns to specify sites that are not allowed to display notifications.
+  #### 描述
+  可用于创建 URL 模式的列表，以便指定不允许显示通知的站点。
 
-If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+如果未设置此策略，则将对所有站点使用全局默认值。此默认值将来自 [DefaultNotificationsSetting](#defaultnotificationssetting) 策略(如果已设置)或用户的个人配置。有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NotificationsBlockedForUrls
-  - GP name: Block notifications on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NotificationsBlockedForUrls
+  - GP 名称: 在特定站点上阻止通知
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -1887,9 +2808,9 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NotificationsBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NotificationsBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1898,43 +2819,43 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PluginsAllowedForUrls
-  #### Allow the Adobe Flash plug-in on specific sites
+  #### 允许对特定站点使用 Adobe Flash 插件
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can run the Adobe Flash plug-in.
+  #### 描述
+  根据 URL 模式定义可运行 Adobe Flash 插件的网站列表。
 
-If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有用户使用 [DefaultPluginsSetting](#defaultpluginssetting) 策略的全局默认值(如果已设置)或用户的个人配置。
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
+有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。但是，从 M85 开始，此策略不再支持主机中带有“* 和“[*.]”通配符的模式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PluginsAllowedForUrls
-  - GP name: Allow the Adobe Flash plug-in on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PluginsAllowedForUrls
+  - GP 名称: 允许对特定站点使用 Adobe Flash 插件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
@@ -1942,9 +2863,9 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PluginsAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PluginsAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -1953,43 +2874,43 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PluginsBlockedForUrls
-  #### Block the Adobe Flash plug-in on specific sites
+  #### 阻止特定站点上的 Adobe Flash 插件
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that are blocked from running Adobe Flash.
+  #### 描述
+  根据 URL 模式定义阻止运行 Adobe Flash 的网站列表。
 
-If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有用户使用 [DefaultPluginsSetting](#defaultpluginssetting) 策略的全局默认值(如果已设置)或用户的个人配置。
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
+有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。但是，从 M85 开始，此策略不再支持主机中带有“* 和“[*.]”通配符的模式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PluginsBlockedForUrls
-  - GP name: Block the Adobe Flash plug-in on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PluginsBlockedForUrls
+  - GP 名称: 阻止特定站点上的 Adobe Flash 插件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
@@ -1997,9 +2918,9 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PluginsBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PluginsBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -2008,41 +2929,41 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PopupsAllowedForUrls
-  #### Allow pop-up windows on specific sites
+  #### 在特定站点上允许弹出窗口
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can open pop-up windows.
+  #### 描述
+  根据 URL 模式定义可打开弹出窗口的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultPopupsSetting](#defaultpopupssetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PopupsAllowedForUrls
-  - GP name: Allow pop-up windows on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PopupsAllowedForUrls
+  - GP 名称: 在特定站点上允许弹出窗口
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -2050,9 +2971,9 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PopupsAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PopupsAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -2061,41 +2982,41 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PopupsBlockedForUrls
-  #### Block pop-up windows on specific sites
+  #### 在特定站点上阻止弹出窗口
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows.
+  #### 描述
+  根据 URL 模式定义被阻止打开弹出窗口的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultPopupsSetting](#defaultpopupssetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PopupsBlockedForUrls
-  - GP name: Block pop-up windows on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PopupsBlockedForUrls
+  - GP 名称: 在特定站点上阻止弹出窗口
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2103,9 +3024,9 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PopupsBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PopupsBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -2114,46 +3035,46 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RegisteredProtocolHandlers
-  #### Register protocol handlers
+  #### 注册协议处理程序
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set this policy (recommended only) to register a list of protocol handlers. This list is merged with ones registered by the user and both are available to use.
+  #### 描述
+  设置此策略(仅推荐)以注册协议处理程序列表。此列表与用户注册的列表进行合并，并且都可使用。
 
-To register a protocol handler:
+要注册协议处理程序，请执行以下操作:
 
-- Set the protocol property to the scheme (for example, "mailto")
-- Set the URL property to the URL property of the application that handlers the scheme specified in the "protocol" field. The pattern can include a "%s" placeholder, which the handled URL replaces.
+- 将协议属性设置为方案(例如 "mailto")
+- 将 URL 属性设置为处理“协议”字段中指定方案的应用程序的 URL 属性。该模式可以包括已处理的 URL 所替换的“%s”占位符。
 
-Users can't remove a protocol handler registered by this policy. However, they can install a new default protocol handler to override the existing protocol handlers.
+用户不能删除此策略注册的协议处理程序。但是，他们可以安装一个新的默认协议处理程序来替代现有的协议处理程序。
 
-  #### Supported features:
-  - Can be mandatory: No
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 否
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RegisteredProtocolHandlers
-  - GP name: Register protocol handlers
-  - GP path (Mandatory): N/A
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Content settings
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): N/A
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: RegisteredProtocolHandlers
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RegisteredProtocolHandlers
+  - GP 名称: 注册协议处理程序
+  - GP 路径 (强制): 不适用
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/内容设置
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): 不适用
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: RegisteredProtocolHandlers
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
@@ -2165,9 +3086,9 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: RegisteredProtocolHandlers
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RegisteredProtocolHandlers
+  - 示例值:
 ``` xml
 <key>RegisteredProtocolHandlers</key>
 <array>
@@ -2183,45 +3104,45 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
   #### Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
   
   
-  #### Supported versions:
-  - On Windows since 86 or later
+  #### 支持的版本:
+  - 在 Windows 自 86 或之后
 
-  #### Description
+  #### 描述
   Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
 
 If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
 
 If you disable this setting, spotlight experiences and recommendations are turned off.
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SpotlightExperiencesAndRecommendationsEnabled
-  - GP name: Choose whether users can receive customized background images and text, suggestions, notifications,
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SpotlightExperiencesAndRecommendationsEnabled
+  - GP 名称: Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SpotlightExperiencesAndRecommendationsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SpotlightExperiencesAndRecommendationsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -2229,45 +3150,45 @@ and tips for Microsoft services
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebUsbAllowDevicesForUrls
-  #### Grant access to specific sites to connect to specific USB devices
+  #### 授予特定站点访问权限以连接到特定 USB 设备
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to set a list of urls that specify which sites will automatically be granted permission to access a USB device with the given vendor and product IDs. Each item in the list must contain both devices and urls in order for the policy to be valid. Each item in devices can contain a vendor ID and product ID field. Any ID that is omitted is treated as a wildcard with one exception, and that exception is that a product ID cannot be specified without a vendor ID also being specified. Otherwise, the policy will not be valid and will be ignored.
+  #### 描述
+  允许你设置 URL 列表，指定为哪些站点自动授予具有给定供应商和产品 ID 的 USB 设备的访问权限。为了使策略有效，列表中的每个项目都必须包含设备和 URL。设备中的每个项目都可以包含供应商 ID 和产品 ID 字段。任何被省略的 ID 均视为通配符，但有一个例外: 必须同时指定供应商 ID，才能指定产品 ID，否则策略将无效并被忽略。
 
-The USB permission model uses the URL of the requesting site ("requesting URL") and the URL of the top-level frame site ("embedding URL") to grant permission to the requesting URL to access the USB device. The requesting URL may be different than the embedding URL when the requesting site is loaded in an iframe. Therefore, the "urls" field can contain up to two URL strings delimited by a comma to specify the requesting and embedding URL respectively. If only one URL is specified, then access to the corresponding USB devices will be granted when the requesting site's URL matches this URL regardless of embedding status. The URLs in "urls" must be valid URLs, otherwise the policy will be ignored.
+USB 权限模型使用请求站点的 URL (“请求 URL”)和顶级框架网站的 URL (“嵌入 URL”)为请求 URL 授予 USB 设备的访问权限。当请求的网站加载到 iframe 中时，请求 URL 可能不同于嵌入 URL。因此，"urls" 字段最多可包含两个以逗号分隔的 URL 字符串，以便分别指定请求和嵌入 URL。如果仅指定了一个 URL，则当请求站点的 URL 与此 URL 匹配时，将向相应的 USB 设备授予访问权限，而无论嵌入状态如何。"urls" 中的 URL 必须是有效的 URL，否则将忽略该策略。
 
-If this policy is left not set, the global default value will be used for all sites either from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy if it is set, or the user's personal configuration otherwise.
+如果未设置此策略，则将对所有站点使用 [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-URL patterns in this policy should not clash with the ones configured via [WebUsbBlockedForUrls](#webusbblockedforurls). If there is a clash, this policy will take precedence over [WebUsbBlockedForUrls](#webusbblockedforurls) and [WebUsbAskForUrls](#webusbaskforurls).
+此策略中的 URL 模式不应与通过 [WebUsbBlockedForUrls](#webusbblockedforurls) 配置的 URL 冲突。如果存在冲突，此策略将优先于 [WebUsbBlockedForUrls](#webusbblockedforurls) 和 [WebUsbAskForUrls](#webusbaskforurls)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebUsbAllowDevicesForUrls
-  - GP name: Grant access to specific sites to connect to specific USB devices
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebUsbAllowDevicesForUrls
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebUsbAllowDevicesForUrls
+  - GP 名称: 授予特定站点访问权限以连接到特定 USB 设备
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebUsbAllowDevicesForUrls
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
@@ -2286,9 +3207,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebUsbAllowDevicesForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebUsbAllowDevicesForUrls
+  - 示例值:
 ``` xml
 <key>WebUsbAllowDevicesForUrls</key>
 <array>
@@ -2312,43 +3233,43 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebUsbAskForUrls
-  #### Allow WebUSB on specific sites
+  #### 在特定站点上允许 WebUSB
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can ask the user for access to a USB device.
+  #### 描述
+  根据 URL 模式定义可以请求用户提供 USB 设备访问权限的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-The URL patterns defined in this policy can't conflict with those configured in the [WebUsbBlockedForUrls](#webusbblockedforurls) policy - you can't both allow and block a URL. For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+此策略中定义的 URL 模式不能与 [WebUsbBlockedForUrls](#webusbblockedforurls) 策略中配置的 URL 模式冲突 - 不能同时允许和阻止 URL。有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebUsbAskForUrls
-  - GP name: Allow WebUSB on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebUsbAskForUrls
+  - GP 名称: 在特定站点上允许 WebUSB
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
@@ -2356,9 +3277,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebUsbAskForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebUsbAskForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -2367,43 +3288,43 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebUsbBlockedForUrls
-  #### Block WebUSB on specific sites
+  #### 在特定站点上阻止 WebUSB
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can't ask the user to grant them access to a USB device.
+  #### 描述
+  根据 URL 模式定义无法请求用户授予 USB 设备访问权限的站点列表。
 
-If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则对所有站点使用 [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) 策略(如果已设置)或用户个人配置中的全局默认值。
 
-URL patterns in this policy can't conflict with those configured in the [WebUsbAskForUrls](#webusbaskforurls) policy. You can't both allow and block a URL.  For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+此策略中的 URL 模式不能与 [WebUsbAskForUrls](#webusbaskforurls) 策略中配置的 URL 模式冲突。不能同时允许和阻止 URL。有关有效 URL 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebUsbBlockedForUrls
-  - GP name: Block WebUSB on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebUsbBlockedForUrls
+  - GP 名称: 在特定站点上阻止 WebUSB
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2411,9 +3332,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebUsbBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebUsbBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -2422,585 +3343,1412 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## Default search provider policies
+  ## 启动、主页和新选项卡页 policies
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderEnabled
-  #### Enable the default search provider
+  ### HomepageIsNewTabPage
+  #### 将新标签页设置为主页
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables the ability to use a default search provider.
+  #### 描述
+  在 Microsoft Edge 中配置默认主页。你可以将主页设置为你指定的 URL 或新标签页。
 
-If you enable this policy, a user can search for a term by typing in the address bar (as long as what they type isn't a URL).
+如果启用此策略，则新标签页将始终用作主页，并且会忽略主页 URL 位置。
 
-You can specify the default search provider to use by enabling the rest of the default search policies. If these are left empty (not configured) or configured incorrectly, the user can choose the default provider.
+如果禁用此策略，则用户的主页不能是新标签页，除非 URL 设置为 "edge://newtab"。
 
-If you disable this policy, the user can't search from the address bar.
+如果未配置，则用户可以选择新标签页是否是其主页。
 
-If you enable or disable this policy, users can't change or override it.
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-If you don't configure this policy, the default search provider is enabled, and the user can choose the default search provider and set the search provider list.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX..
+  #### 数据类型:
+  - 布尔
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderEnabled
-  - GP name: Enable the default search provider
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: HomepageIsNewTabPage
+  - GP 名称: 将新标签页设置为主页
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: HomepageIsNewTabPage
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: HomepageIsNewTabPage
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderEncodings
-  #### Default search provider encodings
+  ### HomepageLocation
+  #### 配置主页 URL
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify the character encodings supported by the search provider. Encodings are code page names like UTF-8, GB2312, and ISO-8859-1. They are tried in the order provided.
+  #### 描述
+  在 Microsoft Edge 中配置默认主页 URL。
 
-This policy is optional. If not configured, the default, UTF-8, is used.
+主页是通过主页按钮打开的页面。启动时打开的页面由 [RestoreOnStartup](#restoreonstartup) 策略进行控制。
 
-This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
+你可以在此处设置 URL 或设置主页以打开新标签页。如果选择打开新标签页，则此策略不会生效。
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+如果启用此策略，则用户无法更改其主页 URL，但可以选择使用新标签页作为主页。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+如果禁用或未配置此策略，则只要未启用 [HomepageIsNewTabPage](#homepageisnewtabpage) 策略，用户就可以自行选择主页。
 
-  #### Data Type:
-  - List of strings
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderEncodings
-  - GP name: Default search provider encodings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\DefaultSearchProviderEncodings
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: HomepageLocation
+  - GP 名称: 配置主页 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: HomepageLocation
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
-
+"https://www.contoso.com"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderEncodings
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: HomepageLocation
+  - 示例值:
 ``` xml
+<string>https://www.contoso.com</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NewTabPageAllowedBackgroundTypes
+  #### 配置允许用于新选项卡页面布局的背景类型
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  你可以在 Microsoft Edge 中配置新选项卡页面布局上允许使用的背景图像类型。
+
+如果未配置此策略，则会启用新选项卡页上的所有背景图像类型。
+
+策略选项映射：
+
+* DisableImageOfTheDay (1) = 禁用每日背景图像类型
+
+* DisableCustomImage (2) = 禁用自定义背景图像类型
+
+* DisableAll (3) = 禁用所有背景图像类型
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageAllowedBackgroundTypes
+  - GP 名称: 配置允许用于新选项卡页面布局的背景类型
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NewTabPageAllowedBackgroundTypes
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000002
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageAllowedBackgroundTypes
+  - 示例值:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NewTabPageCompanyLogo
+  #### 设置新的选项卡页公司徽标 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
+
+  #### 描述
+  此策略已弃用，因为它无法按预期使用，因此建议不要使用它。它将无法在 Microsoft Edge 版本 86 中正常使用。
+
+指定要在 Microsoft Edge 中的新标签页上使用的公司徽标。
+
+此策略应配置为以 JSON 格式表示徽标的字符串。例如: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+
+你可以通过指定 URL 来配置此策略，Microsoft Edge 可以通过此 URL 下载徽标以及用于验证下载完整性的加密哈希(SHA-256)。徽标必须采用 PNG 或 SVG 格式，并且文件大小不得超过 16 MB。下载并缓存徽标后，只要 URL 或哈希发生更改，就会重新下载徽标。此 URL 必须可访问，并且无需进行任何身份验证。
+
+"default_logo" 是必需的，将在没有背景图像时使用。如果提供了 "light_logo"，则将在用户的新标签页具有背景图像时使用。我们建议使用具有左对齐且垂直居中的透明背景的水平徽标。徽标的最小高度应为 32 像素，纵横比为 1:1 到 4:1。"default_logo" 应与黑/白背景具有适当的对比度，而 "light_logo" 应与背景图像具有适当的对比度。
+
+如果启用此策略，则 Microsoft Edge 将下载指定的徽标并在新标签页上显示此徽标。用户不能覆盖或隐藏徽标。
+
+如果禁用或未配置此策略，则 Microsoft Edge 将不在新标签页上显示公司徽标或 Microsoft 徽标。
+
+有关确定 SHA-256 哈希的帮助，请参阅 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字典
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageCompanyLogo
+  - GP 名称: 设置新的选项卡页公司徽标 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NewTabPageCompanyLogo
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
+  "default_logo": {
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
+    "url": "https://www.contoso.com/logo.png"
+  }, 
+  "light_logo": {
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
+    "url": "https://www.contoso.com/light_logo.png"
+  }
+}
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageCompanyLogo
+  - 示例值:
+``` xml
+<key>NewTabPageCompanyLogo</key>
+<dict>
+  <key>default_logo</key>
+  <dict>
+    <key>hash</key>
+    <string>cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29</string>
+    <key>url</key>
+    <string>https://www.contoso.com/logo.png</string>
+  </dict>
+  <key>light_logo</key>
+  <dict>
+    <key>hash</key>
+    <string>517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737</string>
+    <key>url</key>
+    <string>https://www.contoso.com/light_logo.png</string>
+  </dict>
+</dict>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NewTabPageHideDefaultTopSites
+  #### 从新选项卡页中隐藏默认的热门站点
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  在 Microsoft Edge 中的新标签页中隐藏默认热门站点。
+
+如果将此策略设置为 True，则默认热门站点磁贴将隐藏。
+
+如果将此策略设置为 False 或未配置此策略，则默认热门站点磁贴将保持可见。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageHideDefaultTopSites
+  - GP 名称: 从新选项卡页中隐藏默认的热门站点
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NewTabPageHideDefaultTopSites
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageHideDefaultTopSites
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NewTabPageLocation
+  #### 配置新的选项卡页 URL
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  为新标签页配置默认 URL。
+
+此策略可决定创建新标签页时(包括打开新窗口时)打开的页面。如果启动页面设置为打开新标签页，则此策略也会影响启动页面。
+
+此策略无法决定启动时打开哪个页面；启动时打开哪个页面由 [RestoreOnStartup](#restoreonstartup) 策略控制。如果主页设置为打开新标签页，则它也不会影响主页。
+
+如果未配置此策略，则使用默认的新标签页。
+
+如果配置此策略*以及* [NewTabPageSetFeedType](#newtabpagesetfeedtype) 策略，则此策略优先。
+
+如果提供的 URL 无效，新标签页将打开 about://blank。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageLocation
+  - GP 名称: 配置新的选项卡页 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NewTabPageLocation
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"https://www.fabrikam.com"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageLocation
+  - 示例值:
+``` xml
+<string>https://www.fabrikam.com</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### NewTabPageManagedQuickLinks
+  #### 设置新标签页快速链接
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
+
+  #### 描述
+  默认情况下，Microsoft Edge 在新标签页上显示快速链接，包括用户添加的快捷方式和基于浏览历史记录的热门站点。使用此策略，可以在新标签页上配置最多三个快速链接磁贴，以 JSON 对象的形式表示:
+
+[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
+
+"URL" 字段为必填字段；“标题”和“已固定”为可选字段。如果未提供“标题”，则将 URL 用作默认标题。如果未提供“已固定”，则默认值为 false。
+
+Microsoft Edge 按所列顺序从左到右显示这些项，并将所有已固定的磁贴排在未固定的磁贴之前。
+
+如果此策略设置为强制执行，则会忽略“已固定”字段，并固定所有磁贴。用户无法删除磁贴，磁贴将始终显示在快速链接列表的前面。
+
+如果此策略设置为推荐，则已固定的磁贴将保留在列表中，但用户可以编辑和删除它们。未固定的快速链接磁贴的使用方式与默认的热门站点类似，如果用户访问其他网站次数更多，则会将其从列表中清除。通过此策略将未固定的链接应用到现有浏览器用户配置时，链接可能根本不会显示，具体取决于它们在用户的浏览历史记录中的排名情况。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字典
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageManagedQuickLinks
+  - GP 名称: 设置新标签页快速链接
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NewTabPageManagedQuickLinks
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
+  {
+    "pinned": true, 
+    "title": "Contoso Portal", 
+    "url": "https://contoso.com"
+  }, 
+  {
+    "title": "Fabrikam", 
+    "url": "https://fabrikam.com"
+  }
+]
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageManagedQuickLinks
+  - 示例值:
+``` xml
+<key>NewTabPageManagedQuickLinks</key>
 <array>
-  <string>UTF-8</string>
-  <string>UTF-16</string>
-  <string>GB2312</string>
-  <string>ISO-8859-1</string>
+  <dict>
+    <key>pinned</key>
+    <true/>
+    <key>title</key>
+    <string>Contoso Portal</string>
+    <key>url</key>
+    <string>https://contoso.com</string>
+  </dict>
+  <dict>
+    <key>title</key>
+    <string>Fabrikam</string>
+    <key>url</key>
+    <string>https://fabrikam.com</string>
+  </dict>
 </array>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderImageURL
-  #### Specifies the search-by-image feature for the default search provider
+  ### NewTabPagePrerenderEnabled
+  #### 启用新标签页的预加载以提高呈现速度
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  Specifies the URL to the search engine used for image search. Search requests are sent using the GET method.
+  #### 描述
+  如果配置此策略，则会启用预加载“新建”选项卡页面，并且用户无法更改此设置。如果未配置此策略，则将启用预加载，并且用户可以更改此设置。
 
-This policy is optional. If you don't configure it, image search isn't available.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-Specify Bing's Image Search URL as:
-'{bing:baseURL}images/detail/search?iss=sbiupload&FORM=ANCMS1#enterInsights'.
+  #### 数据类型:
+  - 布尔
 
-Specify Google's Image Search URL as: '{google:baseURL}searchbyimage/upload'.
-
-See [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams) policy to finish configuring image search.
-
-This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
-
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderImageURL
-  - GP name: Specifies the search-by-image feature for the default search provider
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderImageURL
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPagePrerenderEnabled
+  - GP 名称: 启用新标签页的预加载以提高呈现速度
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NewTabPagePrerenderEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"https://search.contoso.com/searchbyimage/upload"
+0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderImageURL
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPagePrerenderEnabled
+  - 示例值:
 ``` xml
-<string>https://search.contoso.com/searchbyimage/upload</string>
+<true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderImageURLPostParams
-  #### Parameters for an image URL that uses POST
+  ### NewTabPageSetFeedType
+  #### 配置 Microsoft Edge 新标签页体验
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  If you enable this policy, it specifies the parameters used when an image search that uses POST is performed. The policy consists of comma-separated name/value pairs. If a value is a template parameter, like {imageThumbnail} in the preceding example, it's replaced with real image thumbnail data. This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
+  #### 描述
+  允许你为新标签页选择 Microsoft 资讯或是 Office 365 信息提要体验。
 
-Specify Bing's Image Search URL Post Params as:
-'imageBin={google:imageThumbnailBase64}'.
+将此策略设置为“News”时，用户将在新标签页上获得 Microsoft 资讯信息提要体验。
 
-Specify Google's Image Search URL Post Params as:
-'encoded_image={google:imageThumbnail},image_url={google:imageURL},sbisrc={google:imageSearchSource},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight}'.
+将此策略设置为“Office”时，通过 Azure Active Directory 登录浏览器的用户将在新标签页上获得 Office 365 信息提要体验。
 
-If you don't set this policy, image search requests are sent using the GET method.
+如果禁用或未配置此策略:
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+- 通过 Azure Active Directory 登录浏览器的用户将获得 Office 365 新标签页信息提要体验，以及标准的新标签页信息提要体验。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+- 未通过 Azure Active Directory 登录浏览器的用户将获得标准的新标签页体验。
 
-  #### Data Type:
-  - String
+如果配置此策略 *以及* [NewTabPageLocation](#newtabpagelocation) 策略，则 [NewTabPageLocation](#newtabpagelocation) 优先。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderImageURLPostParams
-  - GP name: Parameters for an image URL that uses POST
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderImageURLPostParams
-  - Value Type: REG_SZ
-  ##### Example value:
+默认设置: 已禁用或未配置。
+
+策略选项映射：
+
+* News (0) = Microsoft 资讯信息提要体验
+
+* Office (1) = Office 365 信息提要体验
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageSetFeedType
+  - GP 名称: 配置 Microsoft Edge 新标签页体验
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NewTabPageSetFeedType
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
+0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderImageURLPostParams
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageSetFeedType
+  - 示例值:
 ``` xml
-<string>content={imageThumbnail},url={imageURL},sbisrc={SearchSource}</string>
+<integer>0</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderKeyword
-  #### Default search provider keyword
+  ### RestoreOnStartup
+  #### 要在启动时执行的操作
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies the keyword, which is the shortcut used in the Address Bar to trigger the search for this provider.
+  #### 描述
+  指定 Microsoft Edge 在启动时的行为方式。
 
-This policy is optional. If you don't configure it, no keyword activates the search provider.
+如果希望在启动时始终打开新标签页，请选择“RestoreOnStartupIsNewTabPage”。
 
-This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
+如果要重新打开上次 Microsoft Edge 关闭时打开的 URL，请选择“RestoreOnStartupIsLastSession”。浏览会话将按原样还原。请注意，此选项将禁用某些依赖会话或在退出时执行操作的设置(如“退出时清除浏览数据”或仅限于会话的 cookie)。
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+如果要打开一组特定的 URL，请选择“RestoreOnStartupIsURLs”。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+禁用此设置相当于未配置此设置。用户将能够在 Microsoft Edge 中对其进行更改。
 
-  #### Data Type:
-  - String
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderKeyword
-  - GP name: Default search provider keyword
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderKeyword
-  - Value Type: REG_SZ
-  ##### Example value:
+策略选项映射：
+
+* RestoreOnStartupIsNewTabPage (5) = 打开新标签页
+
+* RestoreOnStartupIsLastSession (1) = 还原上一个会话
+
+* RestoreOnStartupIsURLs (4) = 打开 URL 列表
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RestoreOnStartup
+  - GP 名称: 要在启动时执行的操作
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: RestoreOnStartup
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"mis"
+0x00000004
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderKeyword
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RestoreOnStartup
+  - 示例值:
 ``` xml
-<string>mis</string>
+<integer>4</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderName
-  #### Default search provider name
+  ### RestoreOnStartupURLs
+  #### 浏览器启动时打开的站点
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies the name of the default search provider.
+  #### 描述
+  指定要在浏览器启动时自动打开的网站的列表。如果未配置此策略，则在启动时不打开任何站点。
 
-If you enable this policy, you set the name of the default search provider.
+此策略仅在将 [RestoreOnStartup](#restoreonstartup) 策略设置为“打开 URL 列表”(4)时有效。
 
-If you don't enable this policy or if you leave it empty, the host name specified by the search URL is used.
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-'DefaultSearchProviderName' should be set to an organization-approved encrypted search provider that corresponds to the encrypted search provider set in DTBC-0008. This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+  #### 数据类型:
+  - 字符串列表
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderName
-  - GP name: Default search provider name
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderName
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RestoreOnStartupURLs
+  - GP 名称: 浏览器启动时打开的站点
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐\RestoreOnStartupURLs
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
-"My Intranet Search"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
+
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderName
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RestoreOnStartupURLs
+  - 示例值:
 ``` xml
-<string>My Intranet Search</string>
+<array>
+  <string>https://contoso.com</string>
+  <string>https://www.fabrikam.com</string>
+</array>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderSearchURL
-  #### Default search provider search URL
+  ### ShowHomeButton
+  #### 在工具栏上显示“主页”按钮
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies the URL of the search engine used for a default search. The URL contains the string '{searchTerms}', which is replaced at query time by the terms the user is searching for.
+  #### 描述
+  在 Microsoft Edge 的工具栏上显示主页按钮。
 
-Specify Bing's search URL as:
+启用此策略可始终显示主页按钮。禁用此策略将从不显示此按钮。
 
-'{bing:baseURL}search?q={searchTerms}'.
+如果未配置此策略，则用户可以选择是否显示主页按钮。
 
-Specify Google's search URL as: '{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}'.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-This policy is required when you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy; if you don't enable the latter policy, this policy is ignored.
+  #### 数据类型:
+  - 布尔
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderSearchURL
-  - GP name: Default search provider search URL
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderSearchURL
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ShowHomeButton
+  - GP 名称: 在工具栏上显示“主页”按钮
+  - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/启动、主页和新选项卡页
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ShowHomeButton
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"https://search.contoso.com/search?q={searchTerms}"
+0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderSearchURL
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ShowHomeButton
+  - 示例值:
 ``` xml
-<string>https://search.contoso.com/search?q={searchTerms}</string>
+<true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### DefaultSearchProviderSuggestURL
-  #### Default search provider URL for suggestions
+  ## 密码管理器和保护 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PasswordManagerEnabled
+  #### 启用将密码保存到密码管理器
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies the URL for the search engine used to provide search suggestions. The URL contains the string '{searchTerms}', which is replaced at query time by the text the user has entered so far.
+  #### 描述
+  启用 Microsoft Edge 以保存用户密码。
 
-This policy is optional. If you don't configure it, users won't see search suggestions; they will see suggestions from their browsing history and favorites.
+如果启用此策略，则用户可以保存其在 Microsoft Edge 中的密码。他们下次访问站点时，Microsoft Edge 将自动输入密码。
 
-Bing's suggest URL can be specified as:
+如果禁用此策略，则用户将无法保存新的密码，但仍可使用以前保存的密码。
 
-'{bing:baseURL}qbox?query={searchTerms}'.
+如果启用或禁用此策略，则用户不能在 Microsoft Edge 中更改或覆盖它。如果未配置此策略，则用户可以保存密码，也可以关闭此功能。
 
-Google's suggest URL can be specified as: '{google:baseURL}complete/search?output=chrome&q={searchTerms}'.
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
+  #### 数据类型:
+  - 布尔
 
-Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderSuggestURL
-  - GP name: Default search provider URL for suggestions
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DefaultSearchProviderSuggestURL
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PasswordManagerEnabled
+  - GP 名称: 启用将密码保存到密码管理器
+  - GP 路径 (强制): 管理模板/Microsoft Edge/密码管理器和保护
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/密码管理器和保护
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: PasswordManagerEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"https://search.contoso.com/suggest?q={searchTerms}"
+0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderSuggestURL
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PasswordManagerEnabled
+  - 示例值:
 ``` xml
-<string>https://search.contoso.com/suggest?q={searchTerms}</string>
+<true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### NewTabPageSearchBox
-  #### Configure the new tab page search box experience
+  ### PasswordMonitorAllowed
+  #### 如果发现用户的密码不安全，则向用户发出警报
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 在 Windows 自 85 或之后
 
-  #### Description
-  You can configure the new tab page search box to use "Search box (Recommended)" or "Address bar" to search on new tabs. This policy only works if you set the search engine to a value other than Bing by setting the following two policies: [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl).
+  #### 描述
+  允许 Microsoft Edge 监视用户密码。
 
- If you disable or don't configure this policy and:
+如果你启用此策略，并且用户同意启用该策略，则如果发现存储在 Microsoft Edge 中的任何密码不安全，则会向用户发出警报。Microsoft Edge 将显示警报，并且此信息也将在“设置”>“密码”>“密码监视器”中提供。
 
-- If the address bar default search engine is Bing, the new tab page uses the search box to search on new tabs.
-- If the address bar default search engine is not Bing, users are offered an additional choice (use "Address bar") when searching on new tabs.
+如果禁用此策略，则不会要求用户授予启用此功能的权限。他们的密码不会被扫描，也不会收到警报。
 
+如果启用或未配置该策略，则用户可以打开或关闭此功能。
 
-If you enable this policy and set it to:
+若要了解有关 Microsoft Edge 如何找到不安全密码的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2133833](https://go.microsoft.com/fwlink/?linkid=2133833)
 
-- "Search box (Recommended)" ('bing'), the new tab page uses the search box to search on new tabs.
-- "Address bar" ('redirect'), the new tab page search box uses the address bar to search on new tabs.
+其他指南:
 
-Policy options mapping:
+可以将此政策设置为“推荐”和“强制”两种，但是带有重要标注。
 
-* bing (bing) = Search box (Recommended)
+强制启用: 鉴于个人用户同意是为给定用户启用此功能的前提，因此此策略没有强制启用设置。如果将该策略设置为强制启用，则“设置”中的 UI 不会更改，并且以下错误消息将显示在 edge://policy 中
 
-* redirect (redirect) = Address bar
+示例错误状态消息:“此策略值将被忽略，因为密码监视器器需要个人用户同意才能打开它。你可以要求组织中的用户转至“设置”>“用户配置”>“密码”并打开功能。”
 
-Use the preceding information when configuring this policy.
+建议启用: 如果将策略设置为建议启用，则“设置”中的用户界面将保持“关闭”状态，但旁边会出现一个公文包图标，并在悬停时显示此说明:“你的组织建议为此设置指定一个特定值，而你选择了其他值”
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+强制和建议禁用: 这两种状态都将正常工作，并向用户显示常用标题。
 
-  #### Data Type:
-  - String
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageSearchBox
-  - GP name: Configure the new tab page search box experience
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NewTabPageSearchBox
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PasswordMonitorAllowed
+  - GP 名称: 如果发现用户的密码不安全，则向用户发出警报
+  - GP 路径 (强制): 管理模板/Microsoft Edge/密码管理器和保护
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/密码管理器和保护
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: PasswordMonitorAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
-"bing"
+0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageSearchBox
-  - Example value:
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PasswordProtectionChangePasswordURL
+  #### 配置更改密码 URL
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  配置更改密码 URL (仅限 HTTP 和 HTTPS 方案)。
+
+密码保护服务会将用户定向到此 URL，以便用户在浏览器中看到警告后更改其密码。
+
+如果启用此策略，则密码保护服务会将用户定向到此 URL 以便其更改密码。
+
+如果禁用或未配置此策略，则密码保护服务不会将用户重定向到更改密码 URL。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PasswordProtectionChangePasswordURL
+  - GP 名称: 配置更改密码 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/密码管理器和保护
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PasswordProtectionChangePasswordURL
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"https://contoso.com/change_password.html"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PasswordProtectionChangePasswordURL
+  - 示例值:
 ``` xml
-<string>bing</string>
+<string>https://contoso.com/change_password.html</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## Extensions policies
+  ### PasswordProtectionLoginURLs
+  #### 配置密码保护服务应捕获密码加盐哈希的企业登录 URL 列表
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  [Back to top](#microsoft-edge---policies)
+  #### 描述
+  配置企业登录 URL 列表（仅限 HTTP 和 HTTPS 方案），其中 Microsoft Edge 应捕获密码盐渍哈希并将其用于密码重用检测。
+
+如果启用此策略，则密码保护服务将捕获已定义 URL 上的密码指纹。
+
+如果禁用或未配置此策略，则不会捕获密码指纹。
+
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PasswordProtectionLoginURLs
+  - GP 名称: 配置密码保护服务应捕获密码加盐哈希的企业登录 URL 列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/密码管理器和保护
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PasswordProtectionLoginURLs
+  - 示例值:
+``` xml
+<array>
+  <string>https://contoso.com/login.html</string>
+  <string>https://login.contoso.com</string>
+</array>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PasswordProtectionWarningTrigger
+  #### 配置密码保护警告触发器
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  允许你控制何时触发密码保护警告。用户在潜在可疑站点上重复使用受保护的密码时，密码保护功能会提醒用户。
+
+你可以使用 [PasswordProtectionLoginURLs](#passwordprotectionloginurls) 和 [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) 策略来配置要保护的密码。
+
+例外: [PasswordProtectionLoginURLs](#passwordprotectionloginurls) 和 [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) 中所列站点以及 [SmartScreenAllowListDomains](#smartscreenallowlistdomains) 中所列站点的密码不会触发密码保护警告。
+
+如果设置为“PasswordProtectionWarningOff”，则不会显示密码保护警告。
+
+如果设置为“PasswordProtectionWarningOnPasswordReuse”，则当用户在未列入允许列表的站点上重复使用受保护的密码时，会显示密码保护警告。
+
+如果禁用或未配置此策略，则不显示警告触发器。
+
+策略选项映射：
+
+* PasswordProtectionWarningOff (0) = 密码保护警告处于关闭状态
+
+* PasswordProtectionWarningOnPasswordReuse (1) = 密码重用将触发密码保护警告
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PasswordProtectionWarningTrigger
+  - GP 名称: 配置密码保护警告触发器
+  - GP 路径 (强制): 管理模板/Microsoft Edge/密码管理器和保护
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PasswordProtectionWarningTrigger
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PasswordProtectionWarningTrigger
+  - 示例值:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## 应用程序防护设置 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### ApplicationGuardContainerProxy
+  #### 应用程序防护容器代理
+  
+  
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
+
+  #### 描述
+  配置 Microsoft Edge 应用程序防护的代理设置。
+ 如果启用此策略，Microsoft Edge 应用程序防护会忽略代理配置的其他来源。
+
+如果未配置此策略，Microsoft Edge 应用程序防护将使用主机的代理配置。
+
+此策略不会影响应用程序防护(主机)外部的 Microsoft Edge 代理配置。
+
+在 ProxyMode 字段中，可指定 Microsoft Edge 应用程序防护使用的代理服务器。
+
+ProxyPacUrl 字段是指向代理 .pac 文件的 URL。
+
+ProxyServer 字段是代理服务器的 URL。
+
+如果选择“direct”值作为“ProxyMode”，则所有其他字段都将被忽略。
+
+如果选择“auto_detect”值作为“ProxyMode”，则所有其他字段都将被忽略。
+
+如果选择“fixed_servers”值作为“ProxyMode”，则将使用“ProxyServer”字段。
+
+如果选择“pac_script”值作为“ProxyMode”，则将使用“ProxyPacUrl”字段。
+
+有关通过双重代理确定应用程序防护流量的更多信息，请访问 [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653)。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 字典
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ApplicationGuardContainerProxy
+  - GP 名称: 应用程序防护容器代理
+  - GP 路径 (强制): 管理模板/Microsoft Edge/应用程序防护设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ApplicationGuardContainerProxy
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
+  "ProxyMode": "direct", 
+  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyServer": "123.123.123.123:8080"
+}
+```
+
+
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## 打印 policies
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### DefaultPrinterSelection
+  #### 默认打印机选择规则
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  替代 Microsoft Edge 默认打印机选择规则。此策略确定在 Microsoft Edge 中选择默认打印机的规则，用户首次尝试打印页面时需要进行此操作。
+
+设置此策略后，Microsoft Edge 会尝试查找与所有指定属性都匹配的打印机，并将其用作默认打印机。如果有多台打印机符合条件，则使用第一台匹配的打印机。
+
+如果未配置此策略或在超时期限内未找到匹配的打印机，则打印机默认为内置 PDF 打印机，如果 PDF 打印机不可用，则默认为没有打印机。
+
+该值被解析为 JSON 对象，遵循以下架构: { "type": "object", "properties": { "idPattern": { "description": "Regular expression to match printer id.", "type": "string" }, "namePattern": { "description": "Regular expression to match printer display name.", "type": "string" } } }
+
+省略字段意味着所有值都匹配；例如，如果未指定连接，则“打印预览”将开始发现各种本地打印机。正则表达式模式必须遵循 JavaScript RegExp 语法，并且匹配项区分大小写。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultPrinterSelection
+  - GP 名称: 默认打印机选择规则
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultPrinterSelection
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultPrinterSelection
+  - 示例值:
+``` xml
+<string>{ "idPattern": ".*public", "namePattern": ".*Color" }</string>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PrintHeaderFooter
+  #### 打印页眉和页脚
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  在打印对话框中强制开启或关闭“页眉和页脚”。
+
+如果未配置此策略，则用户可以决定是否打印页眉和页脚。
+
+如果禁用此策略，则用户无法打印页眉和页脚。
+
+如果启用此策略，则用户始终打印页眉和页脚。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PrintHeaderFooter
+  - GP 名称: 打印页眉和页脚
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/打印
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: PrintHeaderFooter
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PrintHeaderFooter
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PrintPreviewUseSystemDefaultPrinter
+  #### 将系统的默认打印机设置为默认打印机
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  告诉 Microsoft Edge 使用系统默认打印机作为“打印预览”中的默认选项，而不是使用最近使用过的打印机。
+
+如果禁用或未配置此策略，则“打印预览”使用最近使用过的打印机作为默认目标选项。
+
+如果启用此策略，则“打印预览”使用 OS 系统默认打印机作为默认目标选项。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PrintPreviewUseSystemDefaultPrinter
+  - GP 名称: 将系统的默认打印机设置为默认打印机
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/打印
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: PrintPreviewUseSystemDefaultPrinter
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PrintPreviewUseSystemDefaultPrinter
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PrintingEnabled
+  #### 启用打印
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  允许在 Microsoft Edge 中进行打印，并阻止用户更改此设置。
+
+如果启用此策略或未配置此策略，则用户可以打印。
+
+如果禁用此策略，则用户无法通过 Microsoft Edge 进行打印。在扳手菜单、扩展、JavaScript 应用程序等位置中禁用了打印。用户仍然可以通过打印时绕过 Microsoft Edge 的插件进行打印。例如，某些 Adobe Flash 应用程序的上下文菜单中具有打印选项，此策略未涵盖此选项。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PrintingEnabled
+  - GP 名称: 启用打印
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PrintingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000001
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PrintingEnabled
+  - 示例值:
+``` xml
+<true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### UseSystemPrintDialog
+  #### 使用系统打印对话框打印
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
+
+  #### 描述
+  显示系统打印对话框而不是打印预览。
+
+如果启用此策略，那么当用户打印页面时，Microsoft Edge 将打开系统打印对话框而不是内置打印预览。
+
+如果未配置或禁用此策略，则打印命令会触发 Microsoft Edge 打印预览屏幕。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: UseSystemPrintDialog
+  - GP 名称: 使用系统打印对话框打印
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: UseSystemPrintDialog
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: UseSystemPrintDialog
+  - 示例值:
+``` xml
+<false/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ## 扩展 policies
+
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionAllowedTypes
-  #### Configure allowed extension types
+  #### 配置允许的扩展类型
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Controls which extension types can be installed and limits runtime access.
+  #### 描述
+  控制可以安装哪些扩展类型并限制运行时访问。
 
-This setting defines the allowed types of extensions and which hosts they can interact with. The value is a list of strings, each of which should be one of the following: "extension", "theme", "user_script", and "hosted_app". See the Microsoft Edge extensions documentation for more information on these types.
+此设置定义允许的扩展类型以及它们可以与之交互的主机。值是一个字符串列表，每个字符串都应为以下其中一项: "extension"、"theme"、"user_script" 和 "hosted_app"。有关这些类型的详细信息，请参阅 Microsoft Edge 扩展文档。
 
-Note that this policy also affects extensions to be force-installed by using [ExtensionInstallForcelist](#extensioninstallforcelist) policy.
+请注意，此策略还影响将要使用 [ExtensionInstallForcelist](#extensioninstallforcelist) 策略强制安装的扩展。
 
-If you enable this policy, only extensions that match a type in the list are installed.
+如果启用此策略，则仅安装与列表中的类型匹配的扩展。
 
-If you don't configure this policy, no restrictions on the acceptable extension types are enforced.
+如果未配置此策略，则不会强制实施针对可接受扩展类型的限制。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionAllowedTypes
-  - GP name: Configure allowed extension types
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionAllowedTypes
+  - GP 名称: 配置允许的扩展类型
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionAllowedTypes
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionAllowedTypes
+  - 示例值:
 ``` xml
 <array>
   <string>hosted_app</string>
@@ -3008,39 +4756,39 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionInstallAllowlist
-  #### Allow specific extensions to be installed
+  #### 允许安装特定扩展
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  By default, all extensions are allowed. However, if you block all extensions by setting the 'ExtensionInstallBlockList' policy to "*," users can only install extensions defined in this policy.
+  #### 描述
+  默认情况下允许所有扩展。但是，如果通过将 "ExtensionInstallBlockList" 策略设置为 "*" 来阻止所有扩展，则用户只能安装此策略中定义的扩展。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionInstallAllowlist
-  - GP name: Allow specific extensions to be installed
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionInstallAllowlist
+  - GP 名称: 允许安装特定扩展
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
@@ -3048,9 +4796,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionInstallAllowlist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionInstallAllowlist
+  - 示例值:
 ``` xml
 <array>
   <string>extension_id1</string>
@@ -3059,43 +4807,43 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionInstallBlocklist
-  #### Control which extensions cannot be installed
+  #### 控制哪些扩展不能安装
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  List specific extensions that users can NOT install in Microsoft Edge. When you deploy this policy, any extensions on this list that were previously installed will be disabled, and the user won't be able to enable them. If you remove an item from the list of blocked extensions, that extension is automatically re-enabled anywhere it was previously installed.
+  #### 描述
+  列出用户不能在 Microsoft Edge 中安装的特定扩展。部署此策略时，此列表中以前安装的任何扩展都将被禁用，并且用户将无法启用它们。如果从被阻止的扩展列表中删除某个项目，该扩展将在以前安装的任何位置自动重新启用。
 
-Use "*" to block all extensions that aren't explicitly listed in the allow list.
+使用 "*" 可阻止允许列表中未明确列出的所有扩展。
 
-If you don't configure this policy, users can install any extension in Microsoft Edge.
+如果未配置此策略，则用户可以在 Microsoft Edge 中安装任何扩展。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionInstallBlocklist
-  - GP name: Control which extensions cannot be installed
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionInstallBlocklist
+  - GP 名称: 控制哪些扩展不能安装
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
@@ -3103,9 +4851,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionInstallBlocklist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionInstallBlocklist
+  - 示例值:
 ``` xml
 <array>
   <string>extension_id1</string>
@@ -3114,59 +4862,59 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionInstallForcelist
-  #### Control which extensions are installed silently
+  #### 控制无提示安装的扩展
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies extensions that are installed silently, without user interaction, and that the users can't uninstall or disable ("force-installed"). All permissions requested by the extensions are granted implicitly, without user interaction, including any additional permissions requested by future versions of the extension. Furthermore, permissions are granted for the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. (These two APIs are only available to extensions that are force-installed.)
+  #### 描述
+  指定静默安装、无需用户交互以及用户无法卸载或禁用(“强制安装”)的扩展。系统会隐式授予扩展请求的所有权限，包括将来版本的扩展所请求的任何附加权限，无需用户进行交互。此外，系统还会为 enterprise.deviceAttributes 和 enterprise.platformKeys 扩展 API 授予权限。(这两个 API 仅对强制安装的扩展可用。)
 
-This policy takes precedence over a potentially conflicting [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. When you take an extension off of the force-installed list it's automatically uninstalled by Microsoft Edge.
+此策略优先于可能存在冲突的 [ExtensionInstallBlocklist](#extensioninstallblocklist) 策略。当你从强制安装列表中取消某个扩展时，Microsoft Edge 将自动卸载该扩展。
 
-Forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website for instances that aren't one of the following: Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management, and macOS instances that are managed via MDM or joined to a domain via MCX.
+对于非以下任一项的实例，强制安装仅限于 Microsoft Edge 加载项网站中列出的应用和扩展: 已加入 Microsoft Active Directory 域的 Windows 实例或已注册用于设备管理的 Windows 10 专业版或企业版实例，以及通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-Note that users can modify the source code of any extension by using Developer Tools, potentially rendering the extension dysfunctional. If this is a concern, set the [DeveloperToolsAvailability](#developertoolsavailability) policy.
+请注意，用户可以使用开发人员工具(可能会显示扩展功能异常)修改任何扩展的源代码。如果你担心这一点，请设置 [DeveloperToolsAvailability](#developertoolsavailability) 策略。
 
-Use the following format to add an extension to the list:
+使用以下格式将扩展添加到列表中:
 
 [extensionID];[updateURL]
 
-- extensionID - the 32-letter string found on edge://extensions when in developer mode.
+- extensionID - 开发人员模式下在 edge://extensions 上找到的 32 个字母的字符串。
 
-- updateURL (optional) is the address of the Update Manifest XML document for the app or extension, as described at [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043). If you want to install an extension from the Chrome Web Store, provide the Chrome Web Store update URL, https://clients2.google.com/service/update2/crx. Note that the update URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL indicated in the extension's manifest. If you don't set the updateURL, the extension is assumed to be hosted in Microsoft Store and the following update URL is used (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
+- updateURL (可选)是应用或扩展的更新清单 XML 文档的地址，如 [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) 中所述。如果要从 Chrome Web Store 安装扩展，请提供 Chrome Web Store 更新 URL: https://clients2.google.com/service/update2/crx。请注意，此策略中设置的更新 URL 仅用于初始安装；此扩展的后续更新使用扩展清单中指示的更新 URL。如果未设置 updateURL，则假定扩展位于 Microsoft Store 中，并使用以下更新 URL (https://edge.microsoft.com/extensionwebstorebase/v1/crx)。
 
-For example, gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx installs the Microsoft Online app from the Microsoft Store "update" URL. For more information about hosting extensions, see: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
+例如，gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx 从 Microsoft Store“更新”URL 安装 Microsoft Online 应用。有关托管扩展的详细信息，请参阅: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044)。
 
-If you don't configure this policy, no extensions are installed automatically, and users can uninstall any extension in Microsoft Edge.
+如果未配置此策略，则不会自动安装扩展，并且用户可以卸载 Microsoft Edge 中的任何扩展。
 
-Note that this policy doesn't apply to InPrivate mode.
+请注意，此策略不适用于 InPrivate 模式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionInstallForcelist
-  - GP name: Control which extensions are installed silently
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionInstallForcelist
+  - GP 名称: 控制无提示安装的扩展
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
@@ -3174,9 +4922,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionInstallForcelist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionInstallForcelist
+  - 示例值:
 ``` xml
 <array>
   <string>gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx</string>
@@ -3185,54 +4933,54 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionInstallSources
-  #### Configure extension and user script install sources
+  #### 配置扩展和用户脚本安装源
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define URLs that can install extensions and themes.
+  #### 描述
+  定义可以安装扩展和主题的 URL。
 
-By default, users have to download a *.crx file for each extension or script they want to install, and then drag it onto the Microsoft Edge settings page. This policy lets specific URLs use install the extension or script for the user.
+默认情况下，用户必须为要安装的每个扩展或脚本下载 *.crx 文件，然后将其拖到 Microsoft Edge 设置页面上。此策略允许特定 URL 针对用户使用/安装扩展或脚本。
 
-Each item in this list is an extension-style match pattern (see [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (in other words, the referrer) must be allowed by these patterns.
+此列表中的每个项目都是扩展样式匹配模式(请参阅 [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039))。用户可以从任何与此列表中的项匹配的 URL 轻松安装项目。这些模式必须允许 *.crx 文件的位置，以及从中开始下载的页面(也就是引用站点)。
 
-The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precedence over this policy. Any extensions that's on the block list won't be installed, even if it comes from a site on this list.
+[ExtensionInstallBlocklist](#extensioninstallblocklist) 策略优先于此策略。阻止名单中的任何扩展都不会安装，即使来自此列表中的站点也不例外。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionInstallSources
-  - GP name: Configure extension and user script install sources
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionInstallSources
+  - GP 名称: 配置扩展和用户脚本安装源
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionInstallSources
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionInstallSources
+  - 示例值:
 ``` xml
 <array>
   <string>https://corp.contoso.com/*</string>
@@ -3240,43 +4988,43 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExtensionSettings
-  #### Configure extension management settings
+  #### 配置扩展管理设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures extension management settings for Microsoft Edge.
+  #### 描述
+  配置 Microsoft Edge 的扩展管理设置。
 
-This policy controls multiple settings, including settings controlled by any existing extension-related policies. This policy overrides any legacy policies if both are set.
+此策略控制多个设置，包括任何现有扩展相关策略所控制的设置。如果同时设置了此策略和任何旧策略，则此策略将替代旧策略。
 
-This policy maps an extension ID or an update URL to its configuration. With an extension ID, the configuration is applied only to the specified extension. Set a default configuration for the special ID "*", to apply to all extensions that aren't specifically listed in this policy. With an update URL, the configuration is applied to all extensions with the exact update URL stated in manifest of this extension, as described at [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
+此策略会将扩展 ID 或更新 URL 映射到其配置。对于扩展 ID，此配置仅应用于指定的扩展。请设置特殊 ID "*" 的默认配置，以应用于此策略中未明确列出的所有扩展。对于更新 URL，此配置将应用于在此扩展的清单中明确声明的更新 URL 的所有扩展，如 [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) 中所述。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExtensionSettings
-  - GP name: Configure extension management settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ExtensionSettings
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExtensionSettings
+  - GP 名称: 配置扩展管理设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/扩展
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ExtensionSettings
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
@@ -3344,9 +5092,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExtensionSettings
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExtensionSettings
+  - 示例值:
 ``` xml
 <key>ExtensionSettings</key>
 <dict>
@@ -3446,381 +5194,45 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## HTTP authentication policies
+  ## 本机消息 policies
 
-  [Back to top](#microsoft-edge---policies)
-
-  ### AllowCrossOriginAuthPrompt
-  #### Allow cross-origin HTTP Basic Auth prompts
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Controls whether third-party sub-content on a page can open an HTTP Basic Auth dialog box.
-
-Typically, this is disabled as a phishing defense. If you don't configure this policy, it's disabled and third-party sub-content can't open a HTTP Basic Auth dialog box.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowCrossOriginAuthPrompt
-  - GP name: Allow cross-origin HTTP Basic Auth prompts
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowCrossOriginAuthPrompt
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: AllowCrossOriginAuthPrompt
-  - Example value:
-``` xml
-<false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### AuthNegotiateDelegateAllowlist
-  #### Specifies a list of servers that Microsoft Edge can delegate user credentials to
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configure the list of servers that Microsoft Edge can delegate to.
-
-Separate multiple server names with commas. Wildcards (*) are allowed.
-
-If you don't configure this policy Microsoft Edge won't delegate user credentials even if a server is detected as Intranet.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AuthNegotiateDelegateAllowlist
-  - GP name: Specifies a list of servers that Microsoft Edge can delegate user credentials to
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AuthNegotiateDelegateAllowlist
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"contoso.com"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: AuthNegotiateDelegateAllowlist
-  - Example value:
-``` xml
-<string>contoso.com</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### AuthSchemes
-  #### Supported authentication schemes
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specifies which HTTP authentication schemes are supported.
-
-You can configure the policy by using these values: 'basic', 'digest', 'ntlm', and 'negotiate'. Separate multiple values with commas.
-
-If you don't configure this policy, all four schemes are used.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AuthSchemes
-  - GP name: Supported authentication schemes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AuthSchemes
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"basic,digest,ntlm,negotiate"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: AuthSchemes
-  - Example value:
-``` xml
-<string>basic,digest,ntlm,negotiate</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### AuthServerAllowlist
-  #### Configure list of allowed authentication servers
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specifies which servers to enable for integrated authentication. Integrated authentication is only enabled when Microsoft Edge receives an authentication challenge from a proxy or from a server in this list.
-
-Separate multiple server names with commas. Wildcards (*) are allowed.
-
-If you don't configure this policy, Microsoft Edge tries to detect if a server is on the intranet - only then will it respond to IWA requests. If the server is on the internet, IWA requests from it are ignored by Microsoft Edge.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AuthServerAllowlist
-  - GP name: Configure list of allowed authentication servers
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AuthServerAllowlist
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"*contoso.com,contoso.com"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: AuthServerAllowlist
-  - Example value:
-``` xml
-<string>*contoso.com,contoso.com</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### DisableAuthNegotiateCnameLookup
-  #### Disable CNAME lookup when negotiating Kerberos authentication
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Determines whether the generated Kerberos SPN is based on the canonical DNS name (CNAME) or on the original name entered.
-
-If you enable this policy, CNAME lookup is skipped and the server name (as entered) is used.
-
-If you disable this policy or don't configure it, the canonical name of the server is used.  This is determined through CNAME lookup.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DisableAuthNegotiateCnameLookup
-  - GP name: Disable CNAME lookup when negotiating Kerberos authentication
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DisableAuthNegotiateCnameLookup
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: DisableAuthNegotiateCnameLookup
-  - Example value:
-``` xml
-<false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### EnableAuthNegotiatePort
-  #### Include non-standard port in Kerberos SPN
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specifies whether the generated Kerberos SPN should include a non-standard port.
-
-If you enable this policy, and a user includes a non-standard port (a port other than 80 or 443) in a URL, that port is included in the generated Kerberos SPN.
-
-If you don't configure or disable this policy, the generated Kerberos SPN won't include a port in any case.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableAuthNegotiatePort
-  - GP name: Include non-standard port in Kerberos SPN
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnableAuthNegotiatePort
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: EnableAuthNegotiatePort
-  - Example value:
-``` xml
-<false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NtlmV2Enabled
-  #### Control whether NTLMv2 authentication is enabled
-  
-  
-  #### Supported versions:
-  - On macOS since 77 or later
-
-  #### Description
-  Controls whether NTLMv2 is enabled.
-
-All recent versions of Samba and Windows servers support NTLMv2. You should only disable NTLMv2 to address issues with backwards compatibility as it reduces the security of authentication.
-
-If you don't configure this policy, NTLMv2 is enabled by default.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  
-
-  #### Mac information and settings
-  - Preference Key Name: NtlmV2Enabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## Native Messaging policies
-
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NativeMessagingAllowlist
-  #### Control which native messaging hosts users can use
+  #### 控制用户可以使用的本机消息传递主机
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  List specific native messaging hosts that users can use in Microsoft Edge.
+  #### 描述
+  列出用户可以在 Microsoft Edge 中使用的特定本地消息传递主机。
 
-By default, all native messaging hosts are allowed. If you set the [NativeMessagingBlocklist](#nativemessagingblocklist) policy to *, all native messaging hosts are blocked, and only native messaging hosts listed in here are loaded.
+默认情况下，允许使用所有本地消息传递主机。如果将 [NativeMessagingBlocklist](#nativemessagingblocklist) 策略设置为 *，则将阻止所有本地消息传递主机，并且仅加载此处列出的本地消息传递主机。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NativeMessagingAllowlist
-  - GP name: Control which native messaging hosts users can use
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NativeMessagingAllowlist
+  - GP 名称: 控制用户可以使用的本机消息传递主机
+  - GP 路径 (强制): 管理模板/Microsoft Edge/本机消息
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
@@ -3828,9 +5240,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NativeMessagingAllowlist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NativeMessagingAllowlist
+  - 示例值:
 ``` xml
 <array>
   <string>com.native.messaging.host.name1</string>
@@ -3839,43 +5251,43 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NativeMessagingBlocklist
-  #### Configure native messaging block list
+  #### 配置本机消息传递阻止名单
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies which native messaging hosts that shouldn't be used.
+  #### 描述
+  指定不应使用的本机消息传递主机。
 
-Use '*' to block all native messaging hosts unless they are explicitly listed in the allow list.
+使用 "*" 阻止所有本机消息传递主机，除非允许列表中明确列出了它们。
 
-If you don't configure this policy, Microsoft Edge will load all installed native messaging hosts.
+如果未配置此策略，则 Microsoft Edge 将加载所有已安装的本机消息传递主机。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NativeMessagingBlocklist
-  - GP name: Configure native messaging block list
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NativeMessagingBlocklist
+  - GP 名称: 配置本机消息传递阻止名单
+  - GP 路径 (强制): 管理模板/Microsoft Edge/本机消息
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
@@ -3883,9 +5295,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NativeMessagingBlocklist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NativeMessagingBlocklist
+  - 示例值:
 ``` xml
 <array>
   <string>com.native.messaging.host.name1</string>
@@ -3894,2396 +5306,984 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NativeMessagingUserLevelHosts
-  #### Allow user-level native messaging hosts (installed without admin permissions)
+  #### 允许用户级本机消息传递主机(安装时不带管理员权限)
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables user-level installation of native messaging hosts.
+  #### 描述
+  启用本机消息传递主机的用户级别安装。
 
-If you disable this policy, Microsoft Edge will only use native messaging hosts installed on the system level.
+如果禁用此策略，则 Microsoft Edge 将只使用在系统级别安装的本机消息传递主机。
 
-By default, if you don't configure this policy, Microsoft Edge will allow usage of user-level native messaging hosts.
+默认情况下，如果未配置此策略，则 Microsoft Edge 将允许使用用户级别的本机消息传递主机。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NativeMessagingUserLevelHosts
-  - GP name: Allow user-level native messaging hosts (installed without admin permissions)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NativeMessagingUserLevelHosts
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NativeMessagingUserLevelHosts
+  - GP 名称: 允许用户级本机消息传递主机(安装时不带管理员权限)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/本机消息
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NativeMessagingUserLevelHosts
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NativeMessagingUserLevelHosts
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NativeMessagingUserLevelHosts
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## Password manager and protection policies
+  ## 默认的搜索提供程序 policies
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PasswordManagerEnabled
-  #### Enable saving passwords to the password manager
+  ### DefaultSearchProviderEnabled
+  #### 启用默认搜索提供程序
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enable Microsoft Edge to save user passwords.
+  #### 描述
+  启用使用默认搜索提供程序的功能。
 
-If you enable this policy, users can save their passwords in Microsoft Edge. The next time they visit the site, Microsoft Edge will enter the password automatically.
+如果启用此策略，用户可通过在地址栏中键入来搜索术语(只要键入的不是 URL)。
 
-If you disable this policy, users can't save new passwords, but they can still use previously saved passwords.
+通过启用其余默认搜索策略，你可以指定要使用的默认搜索提供程序。如果留空(未配置)或配置不正确，用户可以选择默认提供程序。
 
-If you enable or disable this policy, users can't change or override it in Microsoft Edge. If you don't configure it, users can save passwords, as well as turn this feature off.
+如果禁用此策略，用户不能从地址栏中搜索。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+如果启用或禁用此策略，则用户无法更改或覆盖它。
 
-  #### Data Type:
-  - Boolean
+如果未配置此策略，将启用默认搜索提供程序，用户可以选择默认搜索提供程序并设置搜索提供程序列表。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PasswordManagerEnabled
-  - GP name: Enable saving passwords to the password manager
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: PasswordManagerEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+此策略仅适用于加入到 Microsoft Active Directory 域的 Windows 实例，注册用于设备管理的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
+
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 布尔
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderEnabled
+  - GP 名称: 启用默认搜索提供程序
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PasswordManagerEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PasswordMonitorAllowed
-  #### Allow users to be alerted if their passwords are found to be unsafe
+  ### DefaultSearchProviderEncodings
+  #### 默认的搜索提供程序编码
   
   
-  #### Supported versions:
-  - On Windows since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allow Microsoft Edge to monitor user passwords.
+  #### 描述
+  指定搜索提供程序支持的字符编码。编码是代码页名称，例如 UTF-8、GB2312 和 ISO-8859-1。将按照提供的顺序尝试它们。
 
-If you enable this policy and a user consents to enabling the policy, the user will get alerted if any of their passwords stored in Microsoft Edge are found to be unsafe. Microsoft Edge will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
+此策略是可选的。如果未配置，则使用默认值 UTF-8。
 
-If you disable this policy, users will not be asked for permission to enable this feature. Their passwords will not be scanned and they will not be alerted either.
+此策略仅在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时应用。
 
-If you enable or don't configure the policy, users can turn this feature on or off.
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
 
-To learn more about how Microsoft Edge finds unsafe passwords see [https://go.microsoft.com/fwlink/?linkid=2133833](https://go.microsoft.com/fwlink/?linkid=2133833)
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-Additional guidance:
+  #### 数据类型:
+  - 字符串列表
 
-This policy can be set as both Recommended as well as Mandatory, however with an important callout.
-
-Mandatory enabled: Given that individual user consent is a pre-condition to enabling this feature for a given user, this policy does not have a Mandatory enabled setting. If the policy is set to Mandatory enabled, the UI in Settings will not change and the following error message will be displayed in edge://policy
-
-Example Error state message: "This policy value is ignored because Password Monitor requires the consent of the individual user for it to be turned on. You can ask users in your Organization to go to Settings > Profile > Password and turn on the feature."
-
-Recommended enabled: If the policy is set to Recommended enabled, the UI in Settings will remain in 'Off' state, but a briefcase icon will be made visible next to it with this description displayed on hover - "Your organization recommends a specific value for this setting and you have chosen a different value"
-
-Mandatory and Recommended disabled: Both these states will work the normal way, with the usual captions being shown to users.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PasswordMonitorAllowed
-  - GP name: Allow users to be alerted if their passwords are found to be unsafe
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: PasswordMonitorAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderEncodings
+  - GP 名称: 默认的搜索提供程序编码
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐\DefaultSearchProviderEncodings
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
-0x00000001
-```
-
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### PasswordProtectionChangePasswordURL
-  #### Configure the change password URL
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configures the change password URL (HTTP and HTTPS schemes only).
-
-Password protection service will send users to this URL to change their password after seeing a warning in the browser.
-
-If you enable this policy, then password protection service sends users to this URL to change their password.
-
-If you disable this policy or don't configure it, then password protection service will not redirect users to a change password URL.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PasswordProtectionChangePasswordURL
-  - GP name: Configure the change password URL
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PasswordProtectionChangePasswordURL
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"https://contoso.com/change_password.html"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: PasswordProtectionChangePasswordURL
-  - Example value:
-``` xml
-<string>https://contoso.com/change_password.html</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### PasswordProtectionLoginURLs
-  #### Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configure the list of enterprise login URLs (HTTP and HTTPS schemes only) where Microsoft Edge should capture the salted hashes of passwords and use it for password reuse detection.
-
-If you enable this policy, the password protection service captures fingerprints of passwords on the defined URLs.
-
-If you disable this policy or don't configure it, no password fingerprints are captured.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - List of strings
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PasswordProtectionLoginURLs
-  - GP name: Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PasswordProtectionLoginURLs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderEncodings
+  - 示例值:
 ``` xml
 <array>
-  <string>https://contoso.com/login.html</string>
-  <string>https://login.contoso.com</string>
+  <string>UTF-8</string>
+  <string>UTF-16</string>
+  <string>GB2312</string>
+  <string>ISO-8859-1</string>
 </array>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PasswordProtectionWarningTrigger
-  #### Configure password protection warning trigger
+  ### DefaultSearchProviderImageURL
+  #### 为默认搜索提供程序指定“按图像搜索”功能
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to control when to trigger password protection warning. Password protection alerts users when they reuse their protected password on potentially suspicious sites.
+  #### 描述
+  指定用于图像搜索的搜索引擎 URL。使用 GET 方法发送搜索请求。
 
-You can use the [PasswordProtectionLoginURLs](#passwordprotectionloginurls) and [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) policies to configure which passwords to protect.
+此策略是可选的。如果未配置此策略，则图像搜索不可用。
 
-Exemptions: Passwords for the sites listed in [PasswordProtectionLoginURLs](#passwordprotectionloginurls) and [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl), as well as for the sites listed in [SmartScreenAllowListDomains](#smartscreenallowlistdomains), will not trigger a password-protection warning.
+必应的图像搜索 URL 可以指定为:
+“{bing:baseURL}images/detail/search?iss=sbiupload&FORM=ANCMS1#enterInsights”。
 
-Set to 'PasswordProtectionWarningOff' to not show password protection warningss.
+Google 的图像搜索 URL 可以指定为:“{google:baseURL}searchbyimage/upload”。
 
-Set to 'PasswordProtectionWarningOnPasswordReuse' to show password protection warnings when the user reuses their protected password on a non-allowlisted site.
+请参阅 [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams) 策略，以完成图像搜索配置。
 
-If you disable or don't configure this policy, then the warning trigger is not shown.
+此策略仅在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时应用。
 
-Policy options mapping:
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
 
-* PasswordProtectionWarningOff (0) = Password protection warning is off
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-* PasswordProtectionWarningOnPasswordReuse (1) = Password protection warning is triggered by password reuse
+  #### 数据类型:
+  - 字符串
 
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Integer
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PasswordProtectionWarningTrigger
-  - GP name: Configure password protection warning trigger
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PasswordProtectionWarningTrigger
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderImageURL
+  - GP 名称: 为默认搜索提供程序指定“按图像搜索”功能
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderImageURL
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-0x00000001
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PasswordProtectionWarningTrigger
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderImageURL
+  - 示例值:
 ``` xml
-<integer>1</integer>
+<string>https://search.contoso.com/searchbyimage/upload</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## Printing policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### DefaultPrinterSelection
-  #### Default printer selection rules
+  ### DefaultSearchProviderImageURLPostParams
+  #### 使用 POST 的图像 URL 的参数
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Overrides Microsoft Edge default printer selection rules. This policy determines the rules for selecting the default printer in Microsoft Edge, which happens the first time a user tries to print a page.
+  #### 描述
+  如果启用此策略，它将指定在执行使用 POST 的图像搜索时使用的参数。该策略包含以逗号分隔的名称/值对。如果值为模板参数(例如前面示例中的 {imageThumbnail})，它将替换为实际图像缩略图数据。此策略仅在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时应用。
 
-When this policy is set, Microsoft Edge tries to find a printer that matches all of the specified attributes and uses it as default printer. If there are multiple printers that meet the criteria, the first printer that matches is used.
+必应的图像搜索 URL 发布参数可以指定为:
+“imageBin={google:imageThumbnailBase64}”。
 
-If you don't configure this policy or no matching printers are found within the timeout, the printer defaults to the built-in PDF printer or no printer, if the PDF printer isn't available.
+Google 的图像搜索 URL Post 参数可以指定为:
+“encoded_image={google:imageThumbnail},image_url={google:imageURL},sbisrc={google:imageSearchSource},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight}”
 
-The value is parsed as a JSON object, conforming to the following schema: { "type": "object", "properties": { "idPattern": { "description": "Regular expression to match printer id.", "type": "string" }, "namePattern": { "description": "Regular expression to match printer display name.", "type": "string" } } }
+如果未设置此策略，则会使用 GET 方法发送图像搜索请求。
 
-Omitting a field means all values match; for example, if you don't specify connectivity Print Preview starts discovering all kinds of local printers. Regular expression patterns must follow the JavaScript RegExp syntax and matches are case sensitive.
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultPrinterSelection
-  - GP name: Default printer selection rules
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultPrinterSelection
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderImageURLPostParams
+  - GP 名称: 使用 POST 的图像 URL 的参数
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderImageURLPostParams
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultPrinterSelection
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderImageURLPostParams
+  - 示例值:
 ``` xml
-<string>{ "idPattern": ".*public", "namePattern": ".*Color" }</string>
+<string>content={imageThumbnail},url={imageURL},sbisrc={SearchSource}</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PrintHeaderFooter
-  #### Print headers and footers
+  ### DefaultSearchProviderKeyword
+  #### 默认的搜索提供程序关键字
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Force 'headers and footers' to be on or off in the printing dialog.
+  #### 描述
+  指定关键字，它是在地址栏中用于触发搜索此提供程序的快捷方式。
 
-If you don't configure this policy, users can decide whether to print headers and footers.
+此策略是可选的。如果未配置此策略，则不会有关键字激活搜索提供程序。
 
-If you disable this policy, users can't print headers and footers.
+仅当启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时，才应用此策略。
 
-If you enable this policy, users always print headers and footers.
+从 Microsoft Edge 84 开始，你可以将此策略设置为建议的策略。如果用户已设置默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可以从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PrintHeaderFooter
-  - GP name: Print headers and footers
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: PrintHeaderFooter
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderKeyword
+  - GP 名称: 默认的搜索提供程序关键字
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderKeyword
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-0x00000000
+"mis"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PrintHeaderFooter
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderKeyword
+  - 示例值:
 ``` xml
-<false/>
+<string>mis</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PrintPreviewUseSystemDefaultPrinter
-  #### Set the system default printer as the default printer
+  ### DefaultSearchProviderName
+  #### 默认的搜索提供程序名称
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Tells Microsoft Edge to use the system default printer as the default choice in Print Preview instead of the most recently used printer.
+  #### 描述
+  指定默认搜索提供程序的名称。
 
-If you disable this policy or don't configure it, Print Preview uses the most recently used printer as the default destination choice.
+如果启用此策略，请设置默认搜索提供程序的名称。
 
-If you enable this policy, Print Preview uses the OS system default printer as the default destination choice.
+如果未启用此策略或将其留空，则将使用由搜索 URL 指定的主机名称。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+“DefaultSearchProviderName”应设置为组织批准的已加密搜索提供程序，并与在 DTBC-0008 中设置的已加密搜索提供程序相对应。此策略仅在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时应用。
 
-  #### Data Type:
-  - Boolean
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PrintPreviewUseSystemDefaultPrinter
-  - GP name: Set the system default printer as the default printer
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: PrintPreviewUseSystemDefaultPrinter
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderName
+  - GP 名称: 默认的搜索提供程序名称
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderName
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-0x00000000
+"My Intranet Search"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PrintPreviewUseSystemDefaultPrinter
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderName
+  - 示例值:
 ``` xml
-<false/>
+<string>My Intranet Search</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### PrintingEnabled
-  #### Enable printing
+  ### DefaultSearchProviderSearchURL
+  #### 默认的搜索提供程序搜索 URL
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables printing in Microsoft Edge and prevents users from changing this setting.
+  #### 描述
+  指定用于默认搜索的搜索引擎 URL。该 URL 包含字符串“{searchTerms}”，该字符串将在查询时替换为用户搜索的术语。
 
-If you enable this policy or don't configure it, users can print.
+必应的搜索 URL 可以指定为:
 
-If you disable this policy, users can't print from Microsoft Edge. Printing is disabled in the wrench menu, extensions, JavaScript applications, and so on. Users can still print from plug-ins that bypass Microsoft Edge while printing. For example, certain Adobe Flash applications have the print option in their context menu, which isn't covered by this policy.
+“{bing:baseURL}search?q={searchTerms}”。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+Google 的搜索 URL 可以指定为:“{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}”。
 
-  #### Data Type:
-  - Boolean
+此策略在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 策略时是必需的；如果未启用后者策略，则此策略将被忽略。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PrintingEnabled
-  - GP name: Enable printing
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PrintingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderSearchURL
+  - GP 名称: 默认的搜索提供程序搜索 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderSearchURL
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-0x00000001
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PrintingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderSearchURL
+  - 示例值:
 ``` xml
-<true/>
+<string>https://search.contoso.com/search?q={searchTerms}</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ### UseSystemPrintDialog
-  #### Print using system print dialog
+  ### DefaultSearchProviderSuggestURL
+  #### 建议的默认搜索提供程序 URL
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Shows the system print dialog instead of print preview.
+  #### 描述
+  指定用于提供搜索建议的搜索引擎 URL。该 URL 包含字符串“{searchTerms}”，该字符串在查询时被用户实时输入的文本所替换。
 
-If you enable this policy, Microsoft Edge opens the system print dialog instead of the built-in print preview when a user prints a page.
+此策略是可选的。如果未配置此策略，用户将看不到搜索建议，而将看到来自浏览历史记录和收藏夹的建议。
 
-If you don't configure or disable this policy, print commands trigger the Microsoft Edge print preview screen.
+必应的建议 URL 可以指定为:
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+“{bing:baseURL}qbox?query={searchTerms}”。
 
-  #### Data Type:
-  - Boolean
+Google 的建议 URL 可以指定为:“{google:baseURL}complete/search?output=chrome&q={searchTerms}”。
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: UseSystemPrintDialog
-  - GP name: Print using system print dialog
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: UseSystemPrintDialog
-  - Value Type: REG_DWORD
-  ##### Example value:
+此策略仅在启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略时应用。
+
+从 Microsoft Edge 84 开始，可以将此策略设置为推荐策略。如果用户已设置了默认搜索提供程序，则此建议策略配置的默认搜索提供程序将不会添加到用户可从中选择的搜索提供程序列表中。如果这是所需的行为，请使用 [ManagedSearchEngines](#managedsearchengines) 策略。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderSuggestURL
+  - GP 名称: 建议的默认搜索提供程序 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DefaultSearchProviderSuggestURL
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-0x00000000
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: UseSystemPrintDialog
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderSuggestURL
+  - 示例值:
 ``` xml
-<false/>
+<string>https://search.contoso.com/suggest?q={searchTerms}</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
-  ## Proxy server policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ProxyBypassList
-  #### Configure proxy bypass rules
+  ### NewTabPageSearchBox
+  #### 配置新的选项卡页搜索框体验
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  Defines a list of hosts for which Microsoft Edge bypasses any proxy.
+  #### 描述
+  你可以配置新选项卡页搜索框，以使用“搜索框(推荐)”或“地址栏”在新选项卡上搜索。只有当你通过设置以下两个策略将搜索引擎设置为除必应以外的值时，此策略才起作用: [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)。
 
-This policy is applied only if you have selected 'Use fixed proxy servers' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
+ 如果禁用或未配置此策略，并且:
 
-If you enable this policy, you can create a list of hosts for which Microsoft Edge doesn't use a proxy.
+- 如果地址栏默认搜索引擎为必应，则新选项卡页将使用搜索框在新选项卡上搜索。
+- 如果地址栏默认搜索引擎不是必应，则在新选项卡上搜索时，用户还可以获得一个附加选项(使用“地址栏”)。
 
-If you don't configure this policy, no list of hosts is created for which Microsoft Edge bypasses a proxy. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
 
-For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+如果启用此策略并将其设置为:
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+-“搜索框(推荐)”(“bing”)，则新选项卡页将使用搜索框在新选项卡上搜索。
+-“地址栏”(“redirect”)，新选项卡页搜索框使用地址栏在新选项卡上搜索。
 
-  #### Data Type:
-  - String
+策略选项映射：
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProxyBypassList
-  - GP name: Configure proxy bypass rules
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProxyBypassList
-  - Value Type: REG_SZ
-  ##### Example value:
+* bing (bing) = 搜索框(推荐)
+
+* redirect (redirect) = 地址栏
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NewTabPageSearchBox
+  - GP 名称: 配置新的选项卡页搜索框体验
+  - GP 路径 (强制): 管理模板/Microsoft Edge/默认的搜索提供程序
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/默认的搜索提供程序
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NewTabPageSearchBox
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
-"https://www.contoso.com, https://www.fabrikam.com"
+"bing"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ProxyBypassList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NewTabPageSearchBox
+  - 示例值:
 ``` xml
-<string>https://www.contoso.com, https://www.fabrikam.com</string>
+<string>bing</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
-
-  ### ProxyMode
-  #### Configure proxy server settings
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specify the proxy server settings used by Microsoft Edge. If you enable this policy, users can't change the proxy settings.
-
-If you choose to never use a proxy server and to always connect directly, all other options are ignored.
-
-If you choose to use system proxy settings, all other options are ignored.
-
-If you choose to auto detect the proxy server, all other options are ignored.
-
-If you choose fixed server proxy mode, you can specify further options in [ProxyServer](#proxyserver) and 'Comma-separated list of proxy bypass rules'.
-
-If you choose to use a .pac proxy script, you must specify the URL to the script in 'URL to a proxy .pac file'.
-
-For detailed examples, go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-If you enable this policy, Microsoft Edge will ignore all proxy-related options specified from the command line.
-
-If you don't configure this policy users can choose their own proxy settings.
-
-Policy options mapping:
-
-* ProxyDisabled (direct) = Never use a proxy
-
-* ProxyAutoDetect (auto_detect) = Auto detect proxy settings
-
-* ProxyPacScript (pac_script) = Use a .pac proxy script
-
-* ProxyFixedServers (fixed_servers) = Use fixed proxy servers
-
-* ProxyUseSystem (system) = Use system proxy settings
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProxyMode
-  - GP name: Configure proxy server settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProxyMode
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"direct"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ProxyMode
-  - Example value:
-``` xml
-<string>direct</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ProxyPacUrl
-  #### Set the proxy .pac file URL
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specifies the URL for a proxy auto-config (PAC) file.
-
-This policy is applied only if you selected 'Use a .pac proxy script' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
-
-If you enable this policy, you can specify the URL for a PAC file, which defines how the browser automatically chooses the appropriate proxy server for fetching a particular website.
-
-If you disable or don't configure this policy, no PAC file is specified. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
-
-For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProxyPacUrl
-  - GP name: Set the proxy .pac file URL
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProxyPacUrl
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"https://internal.contoso.com/example.pac"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ProxyPacUrl
-  - Example value:
-``` xml
-<string>https://internal.contoso.com/example.pac</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ProxyServer
-  #### Configure address or URL of proxy server
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specifies the URL of the proxy server.
-
-This policy is applied only if you have selected 'Use fixed proxy servers' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
-
-If you enable this policy, the proxy server configured by this policy will be used for all URLs.
-
-If you disable or don't configure this policy, users can choose their own proxy settings while in this proxy mode. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
-
-For more options and detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProxyServer
-  - GP name: Configure address or URL of proxy server
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProxyServer
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"123.123.123.123:8080"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ProxyServer
-  - Example value:
-``` xml
-<string>123.123.123.123:8080</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ProxySettings
-  #### Proxy settings
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configures the proxy settings for Microsoft Edge.
-
-If you enable this policy, Microsoft Edge ignores all proxy-related options specified from the command line.
-
-If you don't configure this policy, users can choose their own proxy settings.
-
-This policy overrides the following individual policies:
-
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
-
-The ProxyMode field lets you specify the proxy server used by Microsoft Edge and prevents users from changing proxy settings.
-
-The ProxyPacUrl field is a URL to a proxy .pac file.
-
-The ProxyServer field is a URL for the proxy server.
-
-The ProxyBypassList field is a list of proxy hosts that Microsoft Edge bypasses.
-
-If you choose the 'direct' value as 'ProxyMode', a proxy is never used and all other fields are ignored.
-
-If you choose the 'system' value as 'ProxyMode', the systems's proxy is used and all other fields are ignored.
-
-If you choose the 'auto_detect' value as 'ProxyMode', all other fields are ignored.
-
-If you choose the 'fixed_server' value as 'ProxyMode', the 'ProxyServer' and 'ProxyBypassList' fields are used.
-
-If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' and 'ProxyBypassList' fields are used.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Dictionary
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProxySettings
-  - GP name: Proxy settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProxySettings
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
-  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
-  "ProxyServer": "123.123.123.123:8080"
-}
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ProxySettings
-  - Example value:
-``` xml
-<key>ProxySettings</key>
-<dict>
-  <key>ProxyBypassList</key>
-  <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
-  <key>ProxyMode</key>
-  <string>direct</string>
-  <key>ProxyPacUrl</key>
-  <string>https://internal.site/example.pac</string>
-  <key>ProxyServer</key>
-  <string>123.123.123.123:8080</string>
-</dict>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## SmartScreen settings policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### PreventSmartScreenPromptOverride
-  #### Prevent bypassing Microsoft Defender SmartScreen prompts for sites
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  This policy setting lets you decide whether users can override the Microsoft Defender SmartScreen warnings about potentially malicious websites.
-
-If you enable this setting, users can't ignore Microsoft Defender SmartScreen warnings and they are blocked from continuing to the site.
-
-If you disable or don't configure this setting, users can ignore Microsoft Defender SmartScreen warnings and continue to the site.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PreventSmartScreenPromptOverride
-  - GP name: Prevent bypassing Microsoft Defender SmartScreen prompts for sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PreventSmartScreenPromptOverride
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: PreventSmartScreenPromptOverride
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### PreventSmartScreenPromptOverrideForFiles
-  #### Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
-  
-  
-  #### Supported versions:
-  - On Windows since 77 or later
-  - On macOS since 79 or later
-
-  #### Description
-  This policy lets you determine whether users can override Microsoft Defender SmartScreen warnings about unverified downloads.
-
-If you enable this policy, users in your organization can't ignore Microsoft Defender SmartScreen warnings, and they're prevented from completing the unverified downloads.
-
-If you disable or don't configure this policy, users can ignore Microsoft Defender SmartScreen warnings and complete unverified downloads.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PreventSmartScreenPromptOverrideForFiles
-  - GP name: Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PreventSmartScreenPromptOverrideForFiles
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: PreventSmartScreenPromptOverrideForFiles
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### SmartScreenAllowListDomains
-  #### Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configure the list of Microsoft Defender SmartScreen trusted domains. This means:
-Microsoft Defender SmartScreen won't check for potentially malicious resources like phishing software and other malware if the source URLs match these domains.
-The Microsoft Defender SmartScreen download protection service won't check downloads hosted on these domains.
-
-If you enable this policy, Microsoft Defender SmartScreen trusts these domains.
-If you disable or don't set this policy, default Microsoft Defender SmartScreen protection is applied to all resources.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-Also note that this policy does not apply if your organization has enabled Microsoft Defender Advanced Threat Protection. You must configure your allow and block lists in Microsoft Defender Security Center instead.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - List of strings
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SmartScreenAllowListDomains
-  - GP name: Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
-
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: SmartScreenAllowListDomains
-  - Example value:
-``` xml
-<array>
-  <string>mydomain.com</string>
-  <string>myuniversity.edu</string>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### SmartScreenEnabled
-  #### Configure Microsoft Defender SmartScreen
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  This policy setting lets you configure whether to turn on Microsoft Defender SmartScreen. Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
-
-If you enable this setting, Microsoft Defender SmartScreen is turned on.
-
-If you disable this setting, Microsoft Defender SmartScreen is turned off.
-
-If you don't configure this setting, users can choose whether to use Microsoft Defender SmartScreen.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SmartScreenEnabled
-  - GP name: Configure Microsoft Defender SmartScreen
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: SmartScreenEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: SmartScreenEnabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### SmartScreenForTrustedDownloadsEnabled
-  #### Force Microsoft Defender SmartScreen checks on downloads from trusted sources
-  
-  
-  #### Supported versions:
-  - On Windows since 78 or later
-
-  #### Description
-  This policy setting lets you configure whether Microsoft Defender SmartScreen checks download reputation from a trusted source.
-
-If you enable or don't configure this setting, Microsoft Defender SmartScreen checks the download's reputation regardless of source.
-
-If you disable this setting, Microsoft Defender SmartScreen doesn't check the download's reputation when downloading from a trusted source.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SmartScreenForTrustedDownloadsEnabled
-  - GP name: Force Microsoft Defender SmartScreen checks on downloads from trusted sources
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: SmartScreenForTrustedDownloadsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### SmartScreenPuaEnabled
-  #### Configure Microsoft Defender SmartScreen to block potentially unwanted apps
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
-
-  #### Description
-  This policy setting lets you configure whether to turn on blocking for potentially unwanted apps with Microsoft Defender SmartScreen. Potentially unwanted app blocking with Microsoft Defender SmartScreen provides warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking with Microsoft Defender SmartScreen is turned off by default.
-
-If you enable this setting, potentially unwanted app blocking with Microsoft Defender SmartScreen is turned on.
-
-If you disable this setting, potentially unwanted app blocking with Microsoft Defender SmartScreen is turned off.
-
-If you don't configure this setting, users can choose whether to use potentially unwanted app blocking with Microsoft Defender SmartScreen.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SmartScreenPuaEnabled
-  - GP name: Configure Microsoft Defender SmartScreen to block potentially unwanted apps
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: SmartScreenPuaEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: SmartScreenPuaEnabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## Startup&comma; home page and new tab page policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### HomepageIsNewTabPage
-  #### Set the new tab page as the home page
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configures the default home page in Microsoft Edge. You can set the home page to a URL you specify or to the new tab page.
-
-If you enable this policy, the new tab page is always used for the home page, and the home page URL location is ignored.
-
-If you disable this policy, the user's home page can't be the new tab page, unless the URL is set to 'edge://newtab'.
-
-If not configured users can choose whether the new tab page is their home page.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: HomepageIsNewTabPage
-  - GP name: Set the new tab page as the home page
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: HomepageIsNewTabPage
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: HomepageIsNewTabPage
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### HomepageLocation
-  #### Configure the home page URL
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configures the default home page URL in Microsoft Edge.
-
-The home page is the page opened by the Home button. The pages that open on startup are controlled by the [RestoreOnStartup](#restoreonstartup) policies.
-
-You can either set a URL here or set the home page to open the new tab page. If you select to open the new tab page, then this policy doesn't take effect.
-
-If you enable this policy, users can't change their home page URL, but they can choose to use the new tab page as their home page.
-
-If you disable or don't configure this policy, users can choose their own home page, as long as the [HomepageIsNewTabPage](#homepageisnewtabpage) policy isn't enabled.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: HomepageLocation
-  - GP name: Configure the home page URL
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: HomepageLocation
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"https://www.contoso.com"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: HomepageLocation
-  - Example value:
-``` xml
-<string>https://www.contoso.com</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageAllowedBackgroundTypes
-  #### Configure the background types allowed for the new tab page layout
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
-
-  #### Description
-  You can configure which types of background image that are allowed on the new tab page layout in Microsoft Edge.
-
-If you don't configure this policy, all background image types on the new tab page are enabled.
-
-Policy options mapping:
-
-* DisableImageOfTheDay (1) = Disable daily background image type
-
-* DisableCustomImage (2) = Disable custom background image type
-
-* DisableAll (3) = Disable all background image types
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Integer
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageAllowedBackgroundTypes
-  - GP name: Configure the background types allowed for the new tab page layout
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NewTabPageAllowedBackgroundTypes
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000002
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageAllowedBackgroundTypes
-  - Example value:
-``` xml
-<integer>2</integer>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageCompanyLogo
-  #### Set new tab page company logo (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
-
-  #### Description
-  This policy is deprecated because it doesn't work as expected and recommend that it not be used. It won't work in Microsoft Edge version 86.
-
-Specifies the company logo to use on the new tab page in Microsoft Edge.
-
-The policy should be configured as a string that expresses the logo(s) in JSON format. For example: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
-
-You configure this policy by specifying the URL from which Microsoft Edge can download the logo and its cryptographic hash (SHA-256), which is used to verify the integrity of the download. The logo must be in PNG or SVG format, and its file size must not exceed 16 MB. The logo is downloaded and cached, and it will be redownloaded whenever the URL or the hash changes. The URL must be accessible without any authentication.
-
-The 'default_logo' is required and will be used when there's no background image. If 'light_logo' is provided, it will be used when the user's new tab page has a background image. We recommend a horizontal logo with a transparent background that is left-aligned and vertically centered. The logo should have a minimum height of 32 pixels and an aspect ratio from 1:1 to 4:1. The 'default_logo' should have proper contrast against a white/black background while the 'light_logo' should have proper contrast against a background image.
-
-If you enable this policy, Microsoft Edge downloads and shows the specified logo(s) on the new tab page. Users can't override or hide the logo(s).
-
-If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
-
-For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Dictionary
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageCompanyLogo
-  - GP name: Set new tab page company logo (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NewTabPageCompanyLogo
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
-  "default_logo": {
-    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
-    "url": "https://www.contoso.com/logo.png"
-  }, 
-  "light_logo": {
-    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
-    "url": "https://www.contoso.com/light_logo.png"
-  }
-}
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageCompanyLogo
-  - Example value:
-``` xml
-<key>NewTabPageCompanyLogo</key>
-<dict>
-  <key>default_logo</key>
-  <dict>
-    <key>hash</key>
-    <string>cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29</string>
-    <key>url</key>
-    <string>https://www.contoso.com/logo.png</string>
-  </dict>
-  <key>light_logo</key>
-  <dict>
-    <key>hash</key>
-    <string>517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737</string>
-    <key>url</key>
-    <string>https://www.contoso.com/light_logo.png</string>
-  </dict>
-</dict>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageHideDefaultTopSites
-  #### Hide the default top sites from the new tab page
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Hides the default top sites from the new tab page in Microsoft Edge.
-
-If you set this policy to true, the default top site tiles are hidden.
-
-If you set this policy to false or don't configure it, the default top site tiles remain visible.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageHideDefaultTopSites
-  - GP name: Hide the default top sites from the new tab page
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NewTabPageHideDefaultTopSites
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageHideDefaultTopSites
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageLocation
-  #### Configure the new tab page URL
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Configures the default URL for the new tab page.
-
-This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page.
-
-This policy doesn't determine which page opens on startup; that's controlled by the [RestoreOnStartup](#restoreonstartup) policy. It also doesn't affect the home page if that's set to open to the new tab page.
-
-If you don't configure this policy, the default new tab page is used.
-
-If you configure this policy *and* the [NewTabPageSetFeedType](#newtabpagesetfeedtype) policy, this policy has precedence.
-
-If an invalid URL is provided, new tabs will open about://blank.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - String
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageLocation
-  - GP name: Configure the new tab page URL
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NewTabPageLocation
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-"https://www.fabrikam.com"
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageLocation
-  - Example value:
-``` xml
-<string>https://www.fabrikam.com</string>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageManagedQuickLinks
-  #### Set new tab page quick links
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
-
-  #### Description
-  By default, Microsoft Edge displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
-
-[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
-
-The 'url' field is required; 'title' and 'pinned' are optional. If 'title' is not provided, the URL is used as the default title. If 'pinned' is not provided, the default value is false.
-
-Microsoft Edge presents these in the order listed, from left to right, with all pinned tiles displayed ahead of non-pinned tiles.
-
-If the policy is set as mandatory, the 'pinned' field will be ignored and all tiles will be pinned. The tiles can't be deleted by the user and will always appear at the front of the quick links list.
-
-If the policy is set as recommended, pinned tiles will remain in the list but the user has the ability to edit and delete them. Quick link tiles that aren't pinned behave like default top sites and are pushed off the list if other websites are visited more frequently. When applying non-pinned links via this policy to an existing browser profile, the links may not appear at all, depending on how they rank compared to the user's browsing history.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Dictionary
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageManagedQuickLinks
-  - GP name: Set new tab page quick links
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NewTabPageManagedQuickLinks
-  - Value Type: REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
-  {
-    "pinned": true, 
-    "title": "Contoso Portal", 
-    "url": "https://contoso.com"
-  }, 
-  {
-    "title": "Fabrikam", 
-    "url": "https://fabrikam.com"
-  }
-]
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageManagedQuickLinks
-  - Example value:
-``` xml
-<key>NewTabPageManagedQuickLinks</key>
-<array>
-  <dict>
-    <key>pinned</key>
-    <true/>
-    <key>title</key>
-    <string>Contoso Portal</string>
-    <key>url</key>
-    <string>https://contoso.com</string>
-  </dict>
-  <dict>
-    <key>title</key>
-    <string>Fabrikam</string>
-    <key>url</key>
-    <string>https://fabrikam.com</string>
-  </dict>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPagePrerenderEnabled
-  #### Enable preload of the new tab page for faster rendering
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
-
-  #### Description
-  If you configure this policy, preloading the New tab page is enabled, and users can't change this setting. If you don't configure this policy, preloading is enabled and a user can change this setting.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPagePrerenderEnabled
-  - GP name: Enable preload of the new tab page for faster rendering
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NewTabPagePrerenderEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPagePrerenderEnabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### NewTabPageSetFeedType
-  #### Configure the Microsoft Edge new tab page experience
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
-
-  #### Description
-  Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
-
-When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
-
-When you set this policy to 'Office', users with an Azure Active Directory browser sign-in will see the Office 365 feed experience on the new tab page.
-
-If you disable or don't configure this policy:
-
-- Users with an Azure Active Directory browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.
-
-- Users without an Azure Active Directory browser sign-in will see the standard new tab page experience.
-
-If you configure this policy *and* the [NewTabPageLocation](#newtabpagelocation) policy, [NewTabPageLocation](#newtabpagelocation) has precedence.
-
-Default setting:  Disabled or not configured.
-
-Policy options mapping:
-
-* News (0) = Microsoft News feed experience
-
-* Office (1) = Office 365 feed experience
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Integer
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NewTabPageSetFeedType
-  - GP name: Configure the Microsoft Edge new tab page experience
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NewTabPageSetFeedType
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: NewTabPageSetFeedType
-  - Example value:
-``` xml
-<integer>0</integer>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### RestoreOnStartup
-  #### Action to take on startup
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specify how Microsoft Edge behaves when it starts.
-
-If you want a new tab to always open on startup, choose 'RestoreOnStartupIsNewTabPage'.
-
-If you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'RestoreOnStartupIsLastSession'. The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).
-
-If you want to open a specific set of URLs, choose 'RestoreOnStartupIsURLs'.
-
-Disabling this setting is equivalent to leaving it not configured. Users will be able to change it in Microsoft Edge.
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-Policy options mapping:
-
-* RestoreOnStartupIsNewTabPage (5) = Open a new tab
-
-* RestoreOnStartupIsLastSession (1) = Restore the last session
-
-* RestoreOnStartupIsURLs (4) = Open a list of URLs
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Integer
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RestoreOnStartup
-  - GP name: Action to take on startup
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: RestoreOnStartup
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000004
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: RestoreOnStartup
-  - Example value:
-``` xml
-<integer>4</integer>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### RestoreOnStartupURLs
-  #### Sites to open when the browser starts
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Specify a list of websites to open automatically when the browser starts. If you don't configure this policy, no site is opened on startup.
-
-This policy only works if you also set the [RestoreOnStartup](#restoreonstartup) policy to 'Open a list of URLs' (4).
-
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - List of strings
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RestoreOnStartupURLs
-  - GP name: Sites to open when the browser starts
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\RestoreOnStartupURLs
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
-```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
-
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: RestoreOnStartupURLs
-  - Example value:
-``` xml
-<array>
-  <string>https://contoso.com</string>
-  <string>https://www.fabrikam.com</string>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ShowHomeButton
-  #### Show Home button on toolbar
-  
-  
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
-
-  #### Description
-  Shows the Home button on Microsoft Edge's toolbar.
-
-Enable this policy to always show the Home button. Disable it to never show the button.
-
-If you don't configure the policy, users can choose whether to show the home button.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ShowHomeButton
-  - GP name: Show Home button on toolbar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ShowHomeButton
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000001
-```
-
-
-  #### Mac information and settings
-  - Preference Key Name: ShowHomeButton
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ## Additional policies
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AddressBarMicrosoftSearchInBingProviderEnabled
-  #### Enable Microsoft Search in Bing suggestions in the address bar
+  #### 在地址栏中启用必应中的 Microsoft 搜索建议
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Azure AD account for that organization.
-If you disable this policy, users can't see internal results in the Microsoft Edge address bar suggestion list.
-If you have enabled the set of policies which forces a default search provider ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)), and the search provider specified is not Bing, then this policy is not applicable and there will be no Microsoft Search in Bing suggestions in the address bar's suggestion list.
+  #### 描述
+  启用以下功能: 当用户在地址栏中键入搜索字符串时，在地址栏建议列表中显示相关的必应中的 Microsoft 搜索建议。如果启用或未配置此策略，则用户可以在 Microsoft Edge 地址栏建议列表中查看由必应中的 Microsoft 搜索支持的内部结果。要查看必应中的 Microsoft 搜索结果，用户必须通过组织的 Azure AD 帐户登录到 Microsoft Edge。
+如果禁用此策略，则用户无法在 Microsoft Edge 地址栏建议列表中查看内部结果。
+如果已启用强制使用默认搜索提供程序的策略集([DefaultSearchProviderEnabled](#defaultsearchproviderenabled)、[DefaultSearchProviderName](#defaultsearchprovidername) 和 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl))，并且指定的搜索提供程序不是必应，则此策略不适用，且地址栏的建议列表中不会显示必应中的 Microsoft 搜索建议。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AddressBarMicrosoftSearchInBingProviderEnabled
-  - GP name: Enable Microsoft Search in Bing suggestions in the address bar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AddressBarMicrosoftSearchInBingProviderEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AddressBarMicrosoftSearchInBingProviderEnabled
+  - GP 名称: 在地址栏中启用必应中的 Microsoft 搜索建议
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AddressBarMicrosoftSearchInBingProviderEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AddressBarMicrosoftSearchInBingProviderEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AddressBarMicrosoftSearchInBingProviderEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AdsSettingForIntrusiveAdsSites
-  #### Ads setting for sites with intrusive ads
+  #### 具有干扰性广告的站点的广告设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Controls whether ads are blocked on sites with intrusive ads.
+  #### 描述
+  控制是否在具有入侵广告的网站上阻止广告。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowAds (1) = Allow ads on all sites
+* AllowAds (1) = 在所有站点上允许广告
 
-* BlockAds (2) = Block ads on sites with intrusive ads. (Default value)
+* BlockAds (2) = 在具有干扰性广告的站点上阻止广告。（默认值）
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AdsSettingForIntrusiveAdsSites
-  - GP name: Ads setting for sites with intrusive ads
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AdsSettingForIntrusiveAdsSites
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AdsSettingForIntrusiveAdsSites
+  - GP 名称: 具有干扰性广告的站点的广告设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AdsSettingForIntrusiveAdsSites
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AdsSettingForIntrusiveAdsSites
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AdsSettingForIntrusiveAdsSites
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowDeletingBrowserHistory
-  #### Enable deleting browser and download history
+  #### 启用删除浏览器和下载历史记录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables deleting browser history and download history and prevents users from changing this setting.
+  #### 描述
+  启用浏览器历史记录和下载历史记录删除，并防止用户更改此设置。
 
-Note that even with this policy is disabled, the browsing and download history aren't guaranteed to be retained: users can edit or delete the history database files directly, and the browser itself may remove (based on expiration period) or archive any or all history items at any time.
+请注意，即使禁用此策略，也不能保证会保留浏览和下载历史记录: 用户可以直接编辑或删除历史记录数据库文件，浏览器本身可能会(根据过期期限)随时删除或存档任何或所有历史记录项目。
 
-If you enable this policy or don't configure it, users can delete the browsing and download history.
+如果启用或未配置此策略，则用户可以删除浏览和下载历史记录。
 
-If you disable this policy, users can't delete browsing and download history.
+如果禁用此策略，则用户无法删除浏览和下载历史记录。
 
-If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how this policy is configured.
+如果启用此策略，则不要启用 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 策略，因为它们都会执行数据删除。如果二者都启用，则 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 策略优先并且会在 Microsoft Edge 关闭时删除所有数据，无论你如何配置此策略都是如此。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowDeletingBrowserHistory
-  - GP name: Enable deleting browser and download history
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowDeletingBrowserHistory
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowDeletingBrowserHistory
+  - GP 名称: 启用删除浏览器和下载历史记录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowDeletingBrowserHistory
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowDeletingBrowserHistory
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowDeletingBrowserHistory
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowFileSelectionDialogs
-  #### Allow file selection dialogs
+  #### 允许文件选择对话框
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allow access to local files by letting Microsoft Edge display file selection dialogs.
+  #### 描述
+  允许 Microsoft Edge 显示文件选择对话框，从而允许访问本地文件。
 
-If you enable or don't configure this policy, users can open file selection dialogs as normal.
+如果启用或未配置此策略，则用户可以正常打开文件选择对话框。
 
-If you disable this policy, whenever the user performs an action that triggers a file selection dialog (like importing favorites, uploading files, or saving links), a message is displayed instead, and the user is assumed to have clicked Cancel on the file selection dialog.
+如果禁用此策略，那么每当用户执行触发文件选择对话框的操作(如导入收藏夹、上传文件或保存链接)时，就会显示一条消息，并且会假定用户在文件选择对话框中单击了“取消”。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowFileSelectionDialogs
-  - GP name: Allow file selection dialogs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowFileSelectionDialogs
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowFileSelectionDialogs
+  - GP 名称: 允许文件选择对话框
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowFileSelectionDialogs
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowFileSelectionDialogs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowFileSelectionDialogs
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowPopupsDuringPageUnload
-  #### Allows a page to show popups during its unloading
+  #### 允许页面在卸载期间显示弹出窗口
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  This policy allows an admin to specify that a page can show popups during its unloading.
+  #### 描述
+  通过此策略，管理员可以指定页面在卸载时是否可以显示弹出窗口。
 
-When the policy is set to enabled, pages are allowed to show popups while they're being unloaded.
+如果将策略设置为“启用”，则将允许页面在卸载时显示弹出窗口。
 
-When the policy is set to disabled or unset, pages aren't allowed to show popups while they're being unloaded. This is as per the spec: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
+如果将策略设置为“禁用”或未设置，则将不允许页面在卸载时显示弹出窗口。此策略基于规范: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name)。
 
-This policy will be removed in the future.
+此策略将在未来删除。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowPopupsDuringPageUnload
-  - GP name: Allows a page to show popups during its unloading
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowPopupsDuringPageUnload
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowPopupsDuringPageUnload
+  - GP 名称: 允许页面在卸载期间显示弹出窗口
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowPopupsDuringPageUnload
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowPopupsDuringPageUnload
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowPopupsDuringPageUnload
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowSurfGame
-  #### Allow surf game
+  #### 允许冲浪游戏
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  If you disable this policy, users won't be able to play the surf game when the device is offline or if the user navigates to edge://surf.
+  #### 描述
+  如果禁用此策略，则当设备处于离线状态或者用户导航到 edge://surf 时，用户将无法玩冲浪游戏。
 
-If you enable or don't configure this policy, users can play the surf game.
+如果启用或未配置此策略，用户可以玩冲浪游戏。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowSurfGame
-  - GP name: Allow surf game
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowSurfGame
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowSurfGame
+  - GP 名称: 允许冲浪游戏
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowSurfGame
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowSurfGame
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowSurfGame
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowSyncXHRInPageDismissal
-  #### Allow pages to send synchronous XHR requests during page dismissal (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 允许页面在关闭过程中发送同步 XHR 请求 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It won't work in Microsoft Edge version 88.
+  #### 描述
+  此策略已弃用，因为它旨在仅作为一种短期机制，让企业在发现它与不允许在页面关闭过程中同步 XHR 请求的更改不兼容时，有更多时间更新其 Web 内容。它将无法在 Microsoft Edge 版本 88 中正常使用。
 
-This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
+此策略让你可以指定页面是否可以在页面关闭过程中发送同步 XHR 请求。
 
-If you enable this policy, pages can send synchronous XHR requests during page dismissal.
+如果启用此策略，则页面可以在页面关闭过程中发送同步 XHR 请求。
 
-If you disable this policy or don't configure this policy, pages aren't allowed to send synchronous XHR requests during page dismissal.
+如果禁用此策略或未配置此策略，则不允许页面在页面关闭过程中发送同步 XHR 请求。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowSyncXHRInPageDismissal
-  - GP name: Allow pages to send synchronous XHR requests during page dismissal (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AllowSyncXHRInPageDismissal
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowSyncXHRInPageDismissal
+  - GP 名称: 允许页面在关闭过程中发送同步 XHR 请求 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AllowSyncXHRInPageDismissal
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowSyncXHRInPageDismissal
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowSyncXHRInPageDismissal
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowTokenBindingForUrls
-  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+  #### 配置 Microsoft Edge 将尝试为其建立令牌绑定的网站列表。
   
   
-  #### Supported versions:
-  - On Windows since 83 or later
+  #### 支持的版本:
+  - 在 Windows 自 83 或之后
 
-  #### Description
-  Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
-For the domains on this list, the browser will send the Token Binding ClientHello in the TLS handshake (See https://tools.ietf.org/html/rfc8472).
-If the server responds with a valid ServerHello response, the browser will create and send Token Binding messages on subsequent https requests. See https://tools.ietf.org/html/rfc8471 for more info.
+  #### 描述
+  配置浏览器将尝试通过其执行令牌绑定协议的网站的 URL 模式列表。
+对于此列表中的域，浏览器将在 TLS 握手中发送令牌绑定 ClientHello (请参阅 https://tools.ietf.org/html/rfc8472)。
+如果服务器通过有效的 ServerHello 响应进行响应，则浏览器将在后续的 https 请求中创建并发送令牌绑定消息。有关详细信息，请参阅 https://tools.ietf.org/html/rfc8471。
 
-If this list is empty, Token Binding will be disabled.
+如果此列表为空，则将禁用令牌绑定。
 
-This policy is only available on Windows 10 devices with Virtual Secure Mode capability.
+此策略仅在具有虚拟安全模式功能的 Windows 10 设备上可用。
 
-Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
+从 Microsoft Edge 86 开始，此策略不再支持动态刷新。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowTokenBindingForUrls
-  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowTokenBindingForUrls
+  - GP 名称: 配置 Microsoft Edge 将尝试为其建立令牌绑定的网站列表。
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
@@ -6294,43 +6294,43 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AllowTrackingForUrls
-  #### Configure tracking prevention exceptions for specific sites
+  #### 为特定站点配置跟踪保护例外
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Configure the list of URL patterns that are excluded from tracking prevention.
+  #### 描述
+  配置从跟踪保护中排除的 URL 模式的列表。
 
-If you configure this policy, the list of configured URL patterns is excluded from tracking prevention.
+如果配置此策略，则会从跟踪保护中排除配置的 URL 模式列表。
 
-If you don't configure this policy, the global default value from the "Block tracking of users' web-browsing activity" policy (if set) or the user's personal configuration is used for all sites.
+如果未配置此策略，则将对所有站点使用“阻止跟踪用户的 Web 浏览活动”策略中的全局默认值(如果已设置)或用户个人配置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AllowTrackingForUrls
-  - GP name: Configure tracking prevention exceptions for specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AllowTrackingForUrls
+  - GP 名称: 为特定站点配置跟踪保护例外
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
@@ -6338,9 +6338,9 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AllowTrackingForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AllowTrackingForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -6349,266 +6349,266 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AlternateErrorPagesEnabled
-  #### Suggest similar pages when a webpage can't be found
+  #### 找不到网页时建议类似的页面
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Allow Microsoft Edge to issue a connection to a web service to generate URL and search suggestions for connectivity issues such as DNS errors.
+  #### 描述
+  允许 Microsoft Edge 发出 Web 服务连接以针对 DNS 错误等连接问题生成 URL 和搜索建议。
 
-If you enable this policy, a web service is used to generate url and search suggestions for network errors.
+如果启用此策略，则 Web 服务用于针对网络错误生成 URL 和搜索建议。
 
-If you disable this policy, no calls to the web service are made and a standard error page is shown.
+如果禁用此策略，则不会调用 Web 服务，并显示标准错误页面。
 
-If you don't configure this policy, Microsoft Edge respects the user preference that's set under Services at edge://settings/privacy.
-Specifically, there's a **Suggest similar pages when a webpage can't be found** toggle, which the user can switch on or off. Note that if you have enable this policy (AlternateErrorPagesEnabled), the Suggest similar pages when a webpage can't be found setting is turned on, but the user can't change the setting by using the toggle. If you disable this policy, the Suggest similar pages when a webpage can't be found setting is turned off, and the user can't change the setting by using the toggle.
+如果未配置此策略，则 Microsoft Edge 会遵守在 edge://settings/privacy 的“服务”下设置的用户首选项。
+具体来说，存在用户可以打开或关闭的**找不到网页时建议类似的页面**切换开关。请注意，如果启用了此策略(AlternateErrorPagesEnabled)，则会打开“找不到网页时建议类似的页面”设置，但是用户无法使用切换开关来更改此设置。如果禁用此策略，则会关闭“找不到网页时建议类似的页面”设置，并且用户无法使用切换开关来更改此设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AlternateErrorPagesEnabled
-  - GP name: Suggest similar pages when a webpage can't be found
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: AlternateErrorPagesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AlternateErrorPagesEnabled
+  - GP 名称: 找不到网页时建议类似的页面
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: AlternateErrorPagesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AlternateErrorPagesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AlternateErrorPagesEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AlwaysOpenPdfExternally
-  #### Always open PDF files externally
+  #### 始终在外部打开 PDF 文件
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables the internal PDF viewer in Microsoft Edge.
+  #### 描述
+  在 Microsoft Edge 中禁用内部 PDF 查看器。
 
-If you enable this policy Microsoft Edge treats PDF files as downloads and lets users open them with the default application.
+如果启用此策略，Microsoft Edge 会将 PDF 文件视为下载内容，并允许用户使用默认应用程序打开它们。
 
-If you don't configure this policy or disable it, Microsoft Edge will open PDF files (unless the user disables it).
+如果未配置此策略或禁用此策略，则 Microsoft Edge 将打开 PDF 文件(除非用户禁用此文件)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AlwaysOpenPdfExternally
-  - GP name: Always open PDF files externally
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AlwaysOpenPdfExternally
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AlwaysOpenPdfExternally
+  - GP 名称: 始终在外部打开 PDF 文件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AlwaysOpenPdfExternally
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AlwaysOpenPdfExternally
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AlwaysOpenPdfExternally
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AmbientAuthenticationInPrivateModesEnabled
-  #### Enable Ambient Authentication for InPrivate and Guest profiles
+  #### 针对 InPrivate 和来宾用户配置启用环境身份验证
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Microsoft Edge.
+  #### 描述
+  配置此策略以允许/禁止在 Microsoft Edge 中针对 InPrivate 和来宾用户配置进行环境身份验证。
 
-Ambient Authentication is http authentication with default credentials when explicit credentials aren't provided via NTLM/Kerberos/Negotiate challenge/response schemes.
+环境身份验证是未通过 NTLM/Kerberos/协商质询/响应方案提供显式凭据时使用默认凭据进行的 http 身份验证。
 
-If you set the policy to 'RegularOnly', it allows ambient authentication for Regular sessions only. InPrivate and Guest sessions won't be allowed to ambiently authenticate.
+如果将策略设置为“RegularOnly”，则仅允许定期会话进行环境身份验证。将不允许 InPrivate 和来宾会话进行环境身份验证。
 
-If you set the policy to 'InPrivateAndRegular', it allows ambient authentication for InPrivate and Regular sessions. Guest sessions won't be allowed to ambiently authenticate.
+如果将策略设置为“InPrivateAndRegular”，则允许 InPrivate 和定期会话进行环境身份验证。将不允许来宾会话进行环境身份验证。
 
-If you set the policy to 'GuestAndRegular', it allows ambient authentication for Guest and Regular sessions. InPrivate sessions won't be allowed to ambiently authenticate
+如果将策略设置为“GuestAndRegular”，则允许来宾和定期会话进行环境身份验证。将不允许 InPrivate 会话进行环境身份验证
 
-If you set the policy to 'All', it allows ambient authentication for all sessions.
+如果将策略设置为“All”，则将允许所有会话进行环境身份验证。
 
-Note that ambient authentication is always allowed on regular profiles.
+请注意，始终允许对定期用户配置进行环境身份验证。
 
-In Microsoft Edge version 81 and later, if the policy is left not set, ambient authentication will be enabled in regular sessions only.
+在 Microsoft Edge 版本 81 及更高版本中，如果策略保留为未设置，则仅在定期会话中启用环境身份验证。
 
-Policy options mapping:
+策略选项映射：
 
-* RegularOnly (0) = Enable ambient authentication in regular sessions only
+* RegularOnly (0) = 仅在定期会话中启用环境身份验证
 
-* InPrivateAndRegular (1) = Enable ambient authentication in InPrivate and regular sessions
+* InPrivateAndRegular (1) = 在 InPrivate 和定期会话中启用环境身份验证
 
-* GuestAndRegular (2) = Enable ambient authentication in guest and regular sessions
+* GuestAndRegular (2) = 在来宾和定期会话中启用环境身份验证
 
-* All (3) = Enable ambient authentication in regular, InPrivate and guest sessions
+* All (3) = 在定期 InPrivate 和来宾会话中启用环境身份验证
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AmbientAuthenticationInPrivateModesEnabled
-  - GP name: Enable Ambient Authentication for InPrivate and Guest profiles
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AmbientAuthenticationInPrivateModesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AmbientAuthenticationInPrivateModesEnabled
+  - GP 名称: 针对 InPrivate 和来宾用户配置启用环境身份验证
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AmbientAuthenticationInPrivateModesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AmbientAuthenticationInPrivateModesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AmbientAuthenticationInPrivateModesEnabled
+  - 示例值:
 ``` xml
 <integer>0</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AppCacheForceEnabled
-  #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
+  #### 允许重新启用 AppCache 功能，即使它默认处于关闭状态
   
   
-  #### Supported versions:
-  - On Windows and macOS since 84 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 84
 
-  #### Description
-  If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
+  #### 描述
+  如果将此策略设置为 true，AppCache 将启用，即使 Microsoft Edge 中的 AppCache 默认情况下不可用。
 
-If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
+如果将此策略设置为 false 或未设置，AppCache 将遵循 Microsoft Edge 的默认设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AppCacheForceEnabled
-  - GP name: Allows the AppCache feature to be re-enabled, even if it's turned off by default
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AppCacheForceEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AppCacheForceEnabled
+  - GP 名称: 允许重新启用 AppCache 功能，即使它默认处于关闭状态
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AppCacheForceEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AppCacheForceEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AppCacheForceEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ApplicationLocaleValue
-  #### Set application locale
+  #### 设置应用程序的区域设置
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  Configures the application locale in Microsoft Edge and prevents users from changing the locale.
+  #### 描述
+  在 Microsoft Edge 中配置应用程序区域设置，并阻止用户更改区域设置。
 
-If you enable this policy, Microsoft Edge uses the specified locale. If the configured locale isn't supported, 'en-US' is used instead.
+如果启用此策略，则 Microsoft Edge 使用指定的区域设置。如果不支持配置的区域设置，则改用 "en-US"。
 
-If you disable or don't configure this setting, Microsoft Edge uses either the user-specified preferred locale (if configured) or the fallback locale 'en-US'.
+如果禁用或未配置此设置，则 Microsoft Edge 使用用户指定的首选区域设置(如果已配置)或回退区域设置 "en-US"。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ApplicationLocaleValue
-  - GP name: Set application locale
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ApplicationLocaleValue
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ApplicationLocaleValue
+  - GP 名称: 设置应用程序的区域设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ApplicationLocaleValue
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "en"
 ```
@@ -6616,91 +6616,91 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AudioCaptureAllowed
-  #### Allow or block audio capture
+  #### 允许或阻止音频捕获
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to set whether a user is prompted to grant a website access to their audio capture device. This policy applies to all URLs except for those configured in the [AudioCaptureAllowedUrls](#audiocaptureallowedurls) list.
+  #### 描述
+  允许你设置是否提示用户为网站授予其音频捕获设备的访问权限。此策略适用于除 [AudioCaptureAllowedUrls](#audiocaptureallowedurls) 列表中配置的 URL 以外的所有 URL。
 
-If you enable this policy or don't configure it (the default setting), the user is prompted for audio capture access except from the URLs in the [AudioCaptureAllowedUrls](#audiocaptureallowedurls) list. These listed URLs are granted access without prompting.
+如果启用或未配置此策略(默认设置)，则会提示用户提供音频捕获访问权限，但这不适用于 [AudioCaptureAllowedUrls](#audiocaptureallowedurls) 列表中的 URL。这些列出的 URL 已被授予访问权限，但未给出任何提示。
 
-If you disable this policy, the user is not prompted, and audio capture is accessible only to the URLs configured in [AudioCaptureAllowedUrls](#audiocaptureallowedurls).
+如果禁用此策略，则不会提示用户，并且只有 [AudioCaptureAllowedUrls](#audiocaptureallowedurls) 中配置的 URL 才能访问音频捕获。
 
-This policy affects all types of audio inputs, not only the built-in microphone.
+此策略会影响所有类型的音频输入，而不仅仅是内置麦克风。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AudioCaptureAllowed
-  - GP name: Allow or block audio capture
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AudioCaptureAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AudioCaptureAllowed
+  - GP 名称: 允许或阻止音频捕获
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AudioCaptureAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AudioCaptureAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AudioCaptureAllowed
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AudioCaptureAllowedUrls
-  #### Sites that can access audio capture devices without requesting permission
+  #### 无需请求许可即可访问音频捕获设备的站点
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify websites, based on URL patterns, that can use audio capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to audio capture devices.
+  #### 描述
+  根据 URL 模式指定无需用户许可即可使用音频捕获设备的网站。该列表中的模式将与请求 URL 的安全来源进行匹配。如果匹配，站点将自动获得音频捕获设备的访问权限。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AudioCaptureAllowedUrls
-  - GP name: Sites that can access audio capture devices without requesting permission
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AudioCaptureAllowedUrls
+  - GP 名称: 无需请求许可即可访问音频捕获设备的站点
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
@@ -6708,9 +6708,9 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AudioCaptureAllowedUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AudioCaptureAllowedUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com/</string>
@@ -6719,209 +6719,209 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AudioSandboxEnabled
-  #### Allow the audio sandbox to run
+  #### 允许音频沙盒运行
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  This policy controls the audio process sandbox.
+  #### 描述
+  此策略控制音频进程沙盒。
 
-If you enable this policy, the audio process will run sandboxed.
+如果启用此策略，则音频进程将在沙盒化环境中运行。
 
-If you disable this policy, the audio process will run unsandboxed and the WebRTC audio-processing module will run in the renderer process.
-This leaves users open to security risks related to running the audio subsystem unsandboxed.
+如果禁用此策略，则音频进程将在非沙盒化环境中运行，WebRTC 音频处理模块将在呈现器进程中运行。
+这会使用户面临与在非沙盒化环境中运行音频子系统相关的安全风险。
 
-If you don't configure this policy, the default configuration for the audio sandbox will be used, which might differ based on the platform.
+如果未配置此策略，则将使用音频沙盒的默认配置，这可能会因平台而异。
 
-This policy is intended to give enterprises flexibility to disable the audio sandbox if they use security software setups that interfere with the sandbox.
+此策略旨在使企业能够灵活地禁用音频沙盒(如果他们使用干扰沙盒的安全软件设置)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AudioSandboxEnabled
-  - GP name: Allow the audio sandbox to run
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AudioSandboxEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AudioSandboxEnabled
+  - GP 名称: 允许音频沙盒运行
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AudioSandboxEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AudioSandboxEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AudioSandboxEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoImportAtFirstRun
-  #### Automatically import another browser's data and settings at first run
+  #### 首次运行时自动导入其他浏览器的数据和设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  If you enable this policy, all supported datatypes and settings from the specified browser will be silently and automatically imported at first run. During the First Run Experience, the import section will also be skipped.
+  #### 描述
+  如果启用此策略，则在首次运行时会无提示地自动导入指定浏览器中的所有受支持的数据类型和设置。在首次运行体验期间，将跳过导入部分。
 
-The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
+无论此策略的值如何，来自旧版 Microsoft Edge 的浏览器数据始终会在首次运行时无提示地进行迁移。
 
-If this policy is set to 'FromDefaultBrowser', then the datatypes corresponding to the default browser on the managed device will be imported.
+如果此策略设置为“FromDefaultBrowser”，则将导入与托管设备上的默认浏览器相对应的数据类型。
 
-If the browser specified as the value of this policy is not present in the managed device, Microsoft Edge will simply skip the import without any notification to the user.
+如果指定为此策略值的浏览器在托管设备中不存在，则 Microsoft Edge 只是跳过导入，而不向用户发送任何通知。
 
-If you set this policy to 'DisabledAutoImport', the import section of the first-run experience is skipped entirely and Microsoft Edge doesn't import browser data and settings automatically.
+如果将此策略设置为“DisabledAutoImport”，则会完全跳过首次运行体验的导入部分，并且 Microsoft Edge 不会自动导入浏览器数据和设置。
 
-If this policy is set to the value of 'FromInternetExplorer', the following datatypes will be imported from Internet Explorer:
-1. Favorites or bookmarks
-2. Saved passwords
-3. Search engines
-4. Browsing history
-5. Home page
+如果此策略设置为值“FromInternetExplorer”，则会从 Internet Explorer 导入以下数据类型:
+1. 收藏夹或书签
+2. 保存的密码
+3. 搜索引擎
+4. 浏览历史记录
+5. 主页
 
-If this policy is set to the value of 'FromGoogleChrome', the following datatypes will be imported from Google Chrome:
-1. Favorites
-2. Saved passwords
-3. Addresses and more
-4. Payment info
-5. Browsing history
-6. Settings
-7. Pinned and Open tabs
-8. Extensions
-9. Cookies
+如果此策略设置为值“FromGoogleChrome”，则会从 Google Chrome 导入以下数据类型:
+1. 收藏夹
+2. 保存的密码
+3. 地址及更多
+4. 付款信息
+5. 浏览历史记录
+6. 设置
+7. 固定和打开的选项卡
+8. 扩展
+9. Cookie
 
-Note: For more details on what is imported from Google Chrome, please see [https://go.microsoft.com/fwlink/?linkid=2120835](https://go.microsoft.com/fwlink/?linkid=2120835)
+注意: 要更详细地了解从 Google Chrome 导入的内容，请参阅 [https://go.microsoft.com/fwlink/?linkid=2120835](https://go.microsoft.com/fwlink/?linkid=2120835)
 
-If this policy is set to the value of 'FromSafari', user data is no longer imported into Microsoft Edge. This is due to the way Full Disk Access works on Mac.
-On macOS Mojave and above, it's no longer possible to have automated and unattended import of Safari data into Microsoft Edge.
+如果此策略设置为值 Safari (3)，则用户数据不再导入到 Microsoft Edge 中。这是由于 Mac 上“完全磁盘访问”的工作方式所致。
+在 macOS Mojave 及更高版本上，不再可能自动和无人值守地将 Safari 数据导入 Microsoft Edge。
 
-Starting with Microsoft Edge version 83, if this policy is set to the value of 'FromMozillaFirefox', the following datatypes will be imported from Mozilla Firefox:
-1. Favorites or bookmarks
-2. Saved passwords
-3. Addresses and more
-4. Browsing History
+从 Microsoft Edge 版本 83 开始，如果此策略设置为值 Mozilla Firefox (5)，则会从 Mozilla Firefox 导入以下数据类型:
+1. 收藏夹或书签
+2. 保存的密码
+3. 地址及更多
+4. 浏览历史记录
 
-If you want to restrict specific datatypes from getting imported on the managed devices, you can use this policy with other policies such as [ImportAutofillFormData](#importautofillformdata), [ImportBrowserSettings](#importbrowsersettings), [ImportFavorites](#importfavorites), and etc.
+如果要限制托管设备上特定数据类型的导入，则可以将此策略与其他策略(如 [ImportAutofillFormData](#importautofillformdata)、[ImportBrowserSettings](#importbrowsersettings)、[ImportFavorites](#importfavorites) 等)结合使用。
 
-Policy options mapping:
+策略选项映射：
 
-* FromDefaultBrowser (0) = Automatically imports all supported datatypes and settings from the default browser
+* FromDefaultBrowser (0) = 自动从默认浏览器导入所有受支持的数据类型和设置
 
-* FromInternetExplorer (1) = Automatically imports all supported datatypes and settings from Internet Explorer
+* FromInternetExplorer (1) = 自动从 Internet Explorer 导入所有受支持的数据类型和设置
 
-* FromGoogleChrome (2) = Automatically imports all supported datatypes and settings from Google Chrome
+* FromGoogleChrome (2) = 自动从 Google Chrome 中导入所有受支持的数据类型和设置
 
-* FromSafari (3) = Automatically imports all supported datatypes and settings from Safari
+* FromSafari (3) = 自动从 Safari 中导入所有受支持的数据类型和设置
 
-* DisabledAutoImport (4) = Disables automatic import, and the import section of the first-run experience is skipped
+* DisabledAutoImport (4) = 禁用自动导入，跳过首次运行体验的导入部分
 
-* FromMozillaFirefox (5) = Automatically imports all supported datatypes and settings from Mozilla Firefox
+* FromMozillaFirefox (5) = 自动从 Mozilla Firefox 中导入所有受支持的数据类型和设置
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoImportAtFirstRun
-  - GP name: Automatically import another browser's data and settings at first run
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AutoImportAtFirstRun
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoImportAtFirstRun
+  - GP 名称: 首次运行时自动导入其他浏览器的数据和设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AutoImportAtFirstRun
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoImportAtFirstRun
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoImportAtFirstRun
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoLaunchProtocolsFromOrigins
-  #### Define a list of protocols that can launch an external application from listed origins without prompting the user
+  #### 定义可以在不提示用户的情况下从列出的源启动外部应用程序的协议列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  Allows you to set a list of protocols, and for each protocol an associated list of allowed origin patterns, that can launch an external application without prompting the user. The trailing separator should not be included when listing the protocol. For example, list "skype" instead of "skype:" or "skype://".
+  #### 描述
+  允许设置协议列表并为每个协议设置一个关联的允许源模式列表，该列表可以在不提示用户的情况下启动外部应用程序。在列出协议时不应包含尾部分隔符。例如，请列出 "skype"，而不是 "skype:" 或 "skype://"。
 
-If you configure this policy, a protocol will only be permitted to launch an external application without prompting by policy if:
+如果配置了此策略，则只有在以下条件下，才允许协议在不通过策略提示的情况下启动外部应用程序:
 
-- the protocol is listed
+- 该协议已列出
 
-- the origin of the site trying to launch the protocol matches one of the origin patterns in that protocol's allowed_origins list.
+- 尝试启动协议的网站源与该协议的 allowed_origins 列表中的一个源模式相匹配。
 
-If either condition is false, the external protocol launch prompt will not be omitted by policy.
+如果其中任一条件为 false，策略都不会省略外部协议启动提示。
 
-If you don't configure this policy, no protocols can launch without a prompt. Users can opt out of prompts on a per-protocol/per-site basis unless the [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) policy is set to Disabled. This policy has no impact on per-protocol/per-site prompt exemptions set by users.
+如果未配置此策略，则在没有提示的情况下不能启动任何协议。除非将 [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) 策略设置为“已禁用”，否则用户可以根据协议/站点选择不显示提示。此策略对用户设置的每协议/每站点的提示豁免没有影响。
 
-The origin matching patterns use a similar format to those for the [URLBlocklist](#urlblocklist) policy, which are documented at [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+源匹配模式使用与 [URLBlocklist](#urlblocklist) 策略类似的格式，相关介绍，请访问 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
+但是，此策略的源匹配模式不能包含 "/path" 或 "@query" 元素。任何包含 "/path" 或 "@query" 元素的模式都将被忽略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoLaunchProtocolsFromOrigins
-  - GP name: Define a list of protocols that can launch an external application from listed origins without prompting the user
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AutoLaunchProtocolsFromOrigins
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoLaunchProtocolsFromOrigins
+  - GP 名称: 定义可以在不提示用户的情况下从列出的源启动外部应用程序的协议列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AutoLaunchProtocolsFromOrigins
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
@@ -6948,9 +6948,9 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoLaunchProtocolsFromOrigins
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoLaunchProtocolsFromOrigins
+  - 示例值:
 ``` xml
 <key>AutoLaunchProtocolsFromOrigins</key>
 <array>
@@ -6984,45 +6984,45 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoOpenAllowedForURLs
-  #### URLs where AutoOpenFileTypes can apply
+  #### AutoOpenFileTypes 可应用的 URL
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  A list of URLs to which [AutoOpenFileTypes](#autoopenfiletypes) will apply to. This policy has no impact on automatically open values set by users via the download shelf ... > "Always open files of this type" menu entry.
+  #### 描述
+  [AutoOpenFileTypes](#autoopenfiletypes) 将应用于的 URL 列表。此策略不会影响用户通过下载架设置的自动打开值...> “始终打开这种类型的文件”菜单条目。
 
-If you set URLs in this policy, files will only automatically open by policy if the URL is part of this set and the file type is listed in [AutoOpenFileTypes](#autoopenfiletypes). If either condition is false, the download won't automatically open by policy.
+如果在此策略中设置 URL，则只有当 URL 是此设置的一部分并且文件类型在 [AutoOpenFileTypes](#autoopenfiletypes) 中列出时，文件才会按策略自动打开。如果任一条件为 false，则下载不会按策略自动打开。
 
-If you don't set this policy, all downloads where the file type is in [AutoOpenFileTypes](#autoopenfiletypes) will automatically open.
+如果未设置此策略，文件类型为 [AutoOpenFileTypes](#autoopenfiletypes) 的所有下载将自动打开。
 
-A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+必须根据 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 设置 URL 模式的格式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoOpenAllowedForURLs
-  - GP name: URLs where AutoOpenFileTypes can apply
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoOpenAllowedForURLs
+  - GP 名称: AutoOpenFileTypes 可应用的 URL
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
@@ -7033,9 +7033,9 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoOpenAllowedForURLs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoOpenAllowedForURLs
+  - 示例值:
 ``` xml
 <array>
   <string>example.com</string>
@@ -7047,49 +7047,49 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoOpenFileTypes
-  #### List of file types that should be automatically opened on download
+  #### 应在下载时自动打开的文件类型列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  This policy sets a list of file types that should be automatically opened on download. Note: The leading separator should not be included when listing the file type, so list "txt" instead of ".txt".
+  #### 描述
+  此策略设置应在下载时自动打开的文件类型列表。注意: 列出文件类型时不应包含前导分隔符，因此应列出“txt”而不是“.txt”。
 
-By default, these file types will be automatically opened on all URLs. You can use the [AutoOpenAllowedForURLs](#autoopenallowedforurls) policy to restrict the URLs for which these file types will be automatically opened on.
+默认情况下，这些文件类型将在所有 URL 上自动打开。你可以使用 [AutoOpenAllowedForURLs](#autoopenallowedforurls) 策略来限制将对其自动打开这些文件类型的 URL。
 
-Files with types that should be automatically opened will still be subject to the enabled Microsoft Defender SmartScreen checks and won't be opened if they fail those checks.
+具有应自动打开的类型的文件仍将受启用的 Microsoft Defender SmartScreen 检查约束，如果未通过检查，则这些文件不会打开。
 
-File types that a user has already specified to automatically be opened will continue to do so when downloaded. The user will continue to be able to specify other file types to be automatically opened.
+用户已指定为自动打开的类型在下载时将继续打开。用户将继续能够指定要自动打开的其他文件类型。
 
-If you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.
+如果未设置此策略，则只有用户已指定为自动打开的文件类型将在下载时自动打开。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+为使此策略应用于 Windows 设备，设备必须加入 Microsoft Active Directory 域，注册了设备管理的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoOpenFileTypes
-  - GP name: List of file types that should be automatically opened on download
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoOpenFileTypes
+  - GP 名称: 应在下载时自动打开的文件类型列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
@@ -7097,9 +7097,9 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoOpenFileTypes
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoOpenFileTypes
+  - 示例值:
 ``` xml
 <array>
   <string>exe</string>
@@ -7108,202 +7108,201 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutofillAddressEnabled
-  #### Enable AutoFill for addresses
+  #### 启用地址自动填充
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables the AutoFill feature and allows users to auto-complete address information in web forms using previously stored information.
+  #### 描述
+  启用自动填充功能，并允许用户使用以前存储的信息在 Web 窗体中自动完成地址信息。
 
-If you disable this policy, AutoFill never suggests or fills in address information, nor does it save additional address information that the user might submit while browsing the web.
+如果禁用此策略，自动填充不会建议或填充地址信息，也不会保存用户在浏览 Web 时可能提交的其他地址信息。
 
-If you enable this policy or don't configure it, users can control AutoFill for addresses in the user interface.
+如果启用或未配置此策略，则用户可以在用户界面中控制地址自动填充。
 
-Note that if you disable this policy you also stop all activity for all web forms, except payment and password forms. No further entries are saved, and Microsoft Edge won't suggest or AutoFill any previous entries.
+请注意，如果禁用此策略，则还会停止除付款和密码窗体之外的所有其他 Web 窗体的所有活动。不再保存任何条目，Microsoft Edge 不会建议或自动填充任何以前的条目。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutofillAddressEnabled
-  - GP name: Enable AutoFill for addresses
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: AutofillAddressEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutofillAddressEnabled
+  - GP 名称: 启用地址自动填充
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: AutofillAddressEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutofillAddressEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutofillAddressEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutofillCreditCardEnabled
-  #### Enable AutoFill for credit cards
+  #### 启用信用卡的自动填充功能
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables Microsoft Edge's AutoFill feature and lets users auto complete credit card information in web forms using previously stored information.
+  #### 描述
+  启用 Microsoft Edge 的自动填充功能，并允许用户使用以前存储的信息在 Web 窗体中自动填写信用卡信息。
 
-If you disable this policy, AutoFill never suggests or fills credit card information, nor will it save additional credit card information that users might submit while browsing the web.
+如果禁用此策略，则自动填充绝对不会建议或填充信用卡信息，也不会保存用户在浏览 Web 时可能提交的其他信用卡信息。
 
-If you enable this policy or don't configure it, users can control AutoFill for credit cards.
+如果启用或未配置此策略，则用户可以控制信用卡信息的自动填充。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutofillCreditCardEnabled
-  - GP name: Enable AutoFill for credit cards
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: AutofillCreditCardEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutofillCreditCardEnabled
+  - GP 名称: 启用信用卡的自动填充功能
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: AutofillCreditCardEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutofillCreditCardEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutofillCreditCardEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### AutoplayAllowed
-  #### Allow media autoplay for websites
+  #### 允许网站自动播放媒体
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  This policy sets the media autoplay policy for websites.
+  #### 描述
+  此策略为网站设置媒体自动播放策略。
 
-The default setting, "Not configured" respects the current media autoplay settings and lets users configure their autoplay settings.
+默认设置“未配置”遵循当前媒体自动播放设置，并允许用户配置其自动播放设置。
 
-Setting to "Enabled" sets media autoplay to "Allow".  All websites are allowed to autoplay media. Users can't override this policy.
+如果设置为“已启用”，则会将媒体自动播放设置为“允许”。允许所有网站自动播放媒体。用户无法覆盖此策略。
 
-Setting to "Disabled" sets media autoplay to "Block".  No websites are allowed to autoplay media. Users can't override this policy.
+如果设置为“已禁用”，则会将媒体自动播放设置为“阻止”。不允许任何网站自动播放媒体。用户无法覆盖此策略。
 
-A tab will need to be closed and re-opened for this policy to take effect.
+需要关闭并重新打开标签页才能使此策略生效。
 
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 数据类型:
+  - 布尔
 
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: AutoplayAllowed
-  - GP name: Allow media autoplay for websites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: AutoplayAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: AutoplayAllowed
+  - GP 名称: 允许网站自动播放媒体
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: AutoplayAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: AutoplayAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: AutoplayAllowed
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BackgroundModeEnabled
-  #### Continue running background apps after Microsoft Edge closes
+  #### Microsoft Edge 关闭后，继续运行后台应用
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  Allows Microsoft Edge processes to start at OS sign-in and keep running after the last browser window is closed. In this scenario, background apps and the current browsing session remain active, including any session cookies. An open background process displays an icon in the system tray and can always be closed from there.
+  #### 描述
+  允许 Microsoft Edge 进程在操作系统登录时启动，并在最后一个浏览器窗口关闭后继续运行。在此场景中，后台应用和当前浏览会话保持活动状态，包括任何会话 cookie。打开的后台进程会在系统托盘中显示一个图标，并且始终可以从系统托盘中将其关闭。
 
-If you enable this policy, background mode is turned on.
+如果启用此策略，则将开启后台模式。
 
-If you disable this policy, background mode is turned off.
+如果禁用此策略，则将关闭后台模式。
 
-If you don't configure this policy, background mode is initially turned off, and the user can configure its behavior in edge://settings/system.
+如果未配置此策略，则将先关闭后台模式，并且用户可以在 edge://settings/system 中配置其行为。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BackgroundModeEnabled
-  - GP name: Continue running background apps after Microsoft Edge closes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: BackgroundModeEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BackgroundModeEnabled
+  - GP 名称: Microsoft Edge 关闭后，继续运行后台应用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: BackgroundModeEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -7311,512 +7310,511 @@ If you don't configure this policy, background mode is initially turned off, and
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BackgroundTemplateListUpdatesEnabled
-  #### Enables background updates to the list of available templates for Collections and other features that use templates
+  #### 对集锦和其他使用模板的功能的可用模板列表启用后台更新
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
+  #### 描述
+  允许你对集锦和其他使用模板的功能的可用模板列表启用或禁用后台更新。模板用于在将页面保存到集锦时从网页中提取丰富的元数据。
 
-If you enable this setting or the setting is unconfigured, the list of available templates will be downloaded in the background from a Microsoft service every 24 hours.
+如果启用此设置或未配置此设置，则将在后台每隔 24 小时从 Microsoft 服务下载可用模板的列表。
 
-If you disable this setting the list of available templates will be downloaded on demand. This type of download might result in small performance penalties for Collections and other features.
+如果禁用此设置，则将按需下载可用模板的列表。此类型的下载可能会导致集锦和其他功能的性能受到细微影响。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BackgroundTemplateListUpdatesEnabled
-  - GP name: Enables background updates to the list of available templates for Collections and other features that use templates
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BackgroundTemplateListUpdatesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BackgroundTemplateListUpdatesEnabled
+  - GP 名称: 对集锦和其他使用模板的功能的可用模板列表启用后台更新
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BackgroundTemplateListUpdatesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BackgroundTemplateListUpdatesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BackgroundTemplateListUpdatesEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BingAdsSuppression
-  #### Block all ads on Bing search results
+  #### 阻止必应搜索结果中的所有广告
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  Enables an ad-free search experience on Bing.com
+  #### 描述
+  在 Bing.com 上实现无广告搜索体验
 
-If you enable this policy, then a user can search on bing.com and have an ad-free search experience. At the same time, the SafeSearch setting will be set to 'Strict' and can't be changed by the user.
+如果启用此策略，则用户可以在 bing.com 上搜索并获得无广告搜索体验。同时，安全搜索设置将设置为“严格”，并且用户无法进行更改。
 
-If you don't configure this policy, then the default experience will have ads in the search results on bing.com. SafeSearch will be set to 'Moderate' by default and can be changed by the user.
+ 如果未配置此策略，则默认体验将在 bing.com 上的搜索结果中显示广告。安全搜索将设置为“中等”，并且用户可以进行更改。
 
-This policy is only available for K-12 SKUs that are identified as EDU tenants by Microsoft.
+ 此策略仅适用于被 Microsoft 标识为 EDU 租户的 K-12 SKU。
 
-Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) to learn more about this policy or if the following scenarios apply to you:
+ 请参阅 [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) 以了解有关此策略的详细信息，或者如果以下情况适用于你:
 
-* You have an EDU tenant, but the policy doesn't work.
+ * 你拥有 EDU 租户，但策略不起作用。
 
-* You had your IP whitelisted for having an ad free search experience.
+ * 你的 IP 已列入核准清单，因为它具有无广告搜索体验。
 
-* You were experiencing an ad-free search experience on Microsoft Edge Legacy and want to upgrade to the new version of Microsoft Edge.
+ * 你正在体验旧版 Microsoft Edge 的无广告搜索体验，并且想要升级到 Microsoft Edge 的新版本。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BingAdsSuppression
-  - GP name: Block all ads on Bing search results
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BingAdsSuppression
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BingAdsSuppression
+  - GP 名称: 阻止必应搜索结果中的所有广告
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BingAdsSuppression
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BingAdsSuppression
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BingAdsSuppression
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BlockThirdPartyCookies
-  #### Block third party cookies
+  #### 阻止第三方 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Block web page elements that aren't from the domain that's in the address bar from setting cookies.
+  #### 描述
+  阻止不是来自地址栏中的域的网页元素设置 Cookie。
 
-If you enable this policy, web page elements that are not from the domain that is in the address bar can't set cookies
+如果启用此策略，则不是来自地址栏中的域的网页元素无法设置 Cookie。
 
-If you disable this policy, web page elements from domains other than in the address bar can set cookies.
+如果禁用此策略，则来自地址栏以外的域的网页元素可以设置 Cookie。
 
-If you don't configure this policy, third-party cookies are enabled but users can change this setting.
+如果未配置此策略，则启用第三方 Cookie，但用户可以更改此设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BlockThirdPartyCookies
-  - GP name: Block third party cookies
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: BlockThirdPartyCookies
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BlockThirdPartyCookies
+  - GP 名称: 阻止第三方 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: BlockThirdPartyCookies
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BlockThirdPartyCookies
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BlockThirdPartyCookies
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BrowserAddProfileEnabled
-  #### Enable profile creation from the Identity flyout menu or the Settings page
+  #### 从“标识”浮出菜单或“设置”页面启用用户配置创建
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to create new profiles, using the **Add profile** option.
-If you enable this policy or don't configure it, Microsoft Edge allows users to use **Add profile** on the Identity flyout menu or the Settings page to create new profiles.
+  #### 描述
+  允许用户使用**添加用户配置**选项创建新用户配置。
+如果启用或未配置此策略，则 Microsoft Edge 允许用户使用“标识”浮出控件菜单或“设置”页上的**添加用户配置**创建新用户配置。
 
-If you disable this policy, users cannot add new profiles from the Identity flyout menu or the Settings page.
+如果禁用此策略，则用户无法从“标识”浮出控件菜单或“设置”页中添加新用户配置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BrowserAddProfileEnabled
-  - GP name: Enable profile creation from the Identity flyout menu or the Settings page
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BrowserAddProfileEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BrowserAddProfileEnabled
+  - GP 名称: 从“标识”浮出菜单或“设置”页面启用用户配置创建
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BrowserAddProfileEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BrowserAddProfileEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BrowserAddProfileEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BrowserGuestModeEnabled
-  #### Enable guest mode
+  #### 启用来宾模式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enable the option to allow the use of guest profiles in Microsoft Edge. In a guest profile, the browser doesn't import browsing data from existing profiles, and it deletes browsing data when all guest profiles are closed.
+  #### 描述
+  启用此选项可允许在 Microsoft Edge 中使用来宾用户配置。在来宾用户配置中，浏览器不会从现有用户配置中导入浏览数据，并且在关闭所有来宾用户配置后，它会删除浏览数据。
 
-If you enable this policy or don't configure it, Microsoft Edge lets users browse in guest profiles.
+如果启用或未配置此策略，则 Microsoft Edge 允许用户在来宾用户配置中浏览。
 
-If you disable this policy, Microsoft Edge doesn't let users browse in guest profiles.
+如果禁用此策略，则 Microsoft Edge 不允许用户在来宾用户配置中浏览。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BrowserGuestModeEnabled
-  - GP name: Enable guest mode
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BrowserGuestModeEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BrowserGuestModeEnabled
+  - GP 名称: 启用来宾模式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BrowserGuestModeEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BrowserGuestModeEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BrowserGuestModeEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BrowserNetworkTimeQueriesEnabled
-  #### Allow queries to a Browser Network Time service
+  #### 允许查询浏览器网络时间服务
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Prevents Microsoft Edge from occasionally sending queries to a browser network time service to retrieve an accurate timestamp.
+  #### 描述
+  阻止 Microsoft Edge 偶尔向浏览器网络时间服务发送查询以检索准确的时间戳。
 
-If you disable this policy, Microsoft Edge will stop sending queries to a browser network time service.
+如果禁用此策略，则 Microsoft Edge 将停止向浏览器网络时间服务发送查询。
 
-If you enable this policy or don't configure it, Microsoft Edge will occasionally send queries to a browser network time service.
+如果启用或未配置此策略，则 Microsoft Edge 会偶尔向浏览器网络时间服务发送查询。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BrowserNetworkTimeQueriesEnabled
-  - GP name: Allow queries to a Browser Network Time service
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BrowserNetworkTimeQueriesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BrowserNetworkTimeQueriesEnabled
+  - GP 名称: 允许查询浏览器网络时间服务
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BrowserNetworkTimeQueriesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BrowserNetworkTimeQueriesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BrowserNetworkTimeQueriesEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BrowserSignin
-  #### Browser sign-in settings
+  #### 浏览器登录设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify whether a user can sign into Microsoft Edge with their account and use account-related services like sync and single sign on. To control the availability of sync, use the [SyncDisabled](#syncdisabled) policy instead.
+  #### 描述
+  指定用户是否可以使用其帐户登录 Microsoft Edge 并使用与帐户相关的服务，例如同步和单一登录。若要控制同步的可用性，请改用 [SyncDisabled](#syncdisabled) 策略。
 
-If you set this policy to 'Disable', make sure that you also set the [NonRemovableProfileEnabled](#nonremovableprofileenabled) policy to disabled because [NonRemovableProfileEnabled](#nonremovableprofileenabled) disables the creation of an automatically signed in browser profile. If both policies are set, Microsoft Edge will use the 'Disable browser sign-in' policy and behave as if [NonRemovableProfileEnabled](#nonremovableprofileenabled) is set to disabled.
+如果将此策略设置为“Disable”，请确保将 [NonRemovableProfileEnabled](#nonremovableprofileenabled) 策略也设置为“已禁用”，因为 [NonRemovableProfileEnabled](#nonremovableprofileenabled) 会禁止创建自动登录浏览器用户配置。如果同时设置了这两个策略，则 Microsoft Edge 将使用“禁用浏览器登录”策略，其行为方式等同于将 [NonRemovableProfileEnabled](#nonremovableprofileenabled) 设置为“已禁用”。
 
-If you set this policy to 'Enable', users can sign into the browser. Signing into the browser doesn't mean that sync is turned on by default; the user must separately opt-in to use this feature.
+如果将此策略设置为“Enable”，则用户可以登录浏览器。登录浏览器并不意味着默认情况下打开同步；用户必须单独选择使用此功能。
 
-If you set this policy to 'Force', users must sign into a profile to use the browser. By default, this will allow the user to choose whether they want to sync to their account, unless sync is disabled by the domain admin or with the [SyncDisabled](#syncdisabled) policy. The default value of [BrowserGuestModeEnabled](#browserguestmodeenabled) policy is set to false.
+如果将此策略设置为“Force”，则用户必须登录用户配置才能使用浏览器。默认情况下，这将允许用户选择是否要同步到他们的帐户，除非由域管理员或通过 [SyncDisabled](#syncdisabled) 策略禁用了同步。[BrowserGuestModeEnabled](#browserguestmodeenabled) 策略的默认值被设置为 false。
 
-If you don't configure this policy users can decide if they want to enable the browser sign-in option and use it as they see fit.
+如果未配置此策略，则用户可以确定是否要启用浏览器登录选项并在合适时使用它。
 
-Policy options mapping:
+策略选项映射：
 
-* Disable (0) = Disable browser sign-in
+* Disable (0) = 禁用浏览器登录
 
-* Enable (1) = Enable browser sign-in
+* Enable (1) = 启用浏览器登录
 
-* Force (2) = Force users to sign-in to use the browser
+* Force (2) = 强制用户通过登录使用浏览器
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BrowserSignin
-  - GP name: Browser sign-in settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BrowserSignin
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BrowserSignin
+  - GP 名称: 浏览器登录设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BrowserSignin
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BrowserSignin
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BrowserSignin
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BuiltInDnsClientEnabled
-  #### Use built-in DNS client
+  #### 使用内置 DNS 客户端
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Controls whether to use the built-in DNS client.
+  #### 描述
+  控制是否使用内置 DNS 客户端。
 
-This does not affect which DNS servers are used; just the software stack which is used to communicate with them. For example if the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It is however possible that the built-in DNS client will address servers in different ways by using more modern DNS-related protocols such as DNS-over-TLS.
+这不会对使用哪个 DNS 服务器有影响；只影响用于与它们通信的软件堆栈。例如，如果操作系统配置为使用企业 DNS 服务器，则内置 DNS 客户端将使用该服务器。但是，内置 DNS 客户端可能会使用更新型的 DNS 相关协议(例如 DNS-over-TLS)以不同方式对服务器进行寻址。
 
-If you enable this policy, the built-in DNS client is used, if it's available.
+如果启用此策略，则使用内置 DNS 客户端(如果可用)。
 
-If you disable this policy, the client is never used.
+如果禁用此策略，则从不使用客户端。
 
-If you don't configure this policy, the built-in DNS client is enabled by default on MacOS, and users can change whether to use the built-in DNS client by editing edge://flags or by specifying a command-line flag.
+如果未配置此策略，则默认情况下在 MacOS 上启用内置 DNS 客户端，用户可通过编辑 edge://flags 或指定命令行标志，对是否使用内置 DNS 客户端进行更改。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: BuiltInDnsClientEnabled
-  - GP name: Use built-in DNS client
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: BuiltInDnsClientEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: BuiltInDnsClientEnabled
+  - GP 名称: 使用内置 DNS 客户端
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: BuiltInDnsClientEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: BuiltInDnsClientEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BuiltInDnsClientEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### BuiltinCertificateVerifierEnabled
-  #### Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 确定是否将使用内置证书验证器验证服务器证书 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On macOS since 83 or later
+  #### 支持的版本:
+  - 在 macOS 自 83 或之后
 
-  #### Description
-  This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
+  #### 描述
+  此策略已弃用，因为它旨在仅作为一种短期机制，如果发现企业与内置证书验证程序不兼容，则可以让他们有更多时间更新环境并报告问题。
 
-It won't work in Microsoft Edge version 87, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+当计划删除对 Mac 操作系统 X 上的旧版证书验证程序的支持时，它将无法在 Microsoft Edge 版本 87 中正常使用。
 
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
   
 
-  #### Mac information and settings
-  - Preference Key Name: BuiltinCertificateVerifierEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: BuiltinCertificateVerifierEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CertificateTransparencyEnforcementDisabledForCas
-  #### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
+  #### 对 subjectPublicKeyInfo 哈希列表禁用强制证书透明度
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables enforcement of Certificate Transparency requirements for a list of subjectPublicKeyInfo hashes.
+  #### 描述
+  对列出的 subjectPublicKeyInfo 哈希禁用强制的证书透明度要求。
 
-This policy lets you disable Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted because they were not properly publicly disclosed to still be used for Enterprise hosts.
+此策略允许你对包含具有指定 subjectPublicKeyInfo 哈希之一的证书的证书链禁用证书透明度公开要求。这允许证书继续用于企业主机，否则这些证书因未被适当公开而不受信任。
 
-To disable Certificate Transparency enforcement when this policy is set, one of the following sets of conditions must be met:
-1. The hash is of the server certificate's subjectPublicKeyInfo.
-2. The hash is of a subjectPublicKeyInfo that appears in a CA certificate in the certificate chain, that CA certificate is constrained via the X.509v3 nameConstraints extension, one or more directoryName nameConstraints are present in the permittedSubtrees, and the directoryName contains an organizationName attribute.
-3. The hash is of a subjectPublicKeyInfo that appears in a CA certificate in the certificate chain, the CA certificate has one or more organizationName attributes in the certificate Subject, and the server's certificate contains the same number of organizationName attributes, in the same order, and with byte-for-byte identical values.
+为了在设置此策略时禁用强制证书透明度，必须满足以下条件集之一:
+1. 哈希具有服务器证书的 subjectPublicKeyInfo。
+2. 哈希具有出现在证书链中的 CA 证书的 subjectPublicKeyInfo，该 CA 证书通过 X.509v3 nameConstraints 扩展进行约束，permittedSubtrees 中包含一个或多个 directoryName nameConstraints，且 directoryName 包含一个 organizationName 属性。
+3. 哈希具有出现在证书链中的 CA 证书的 subjectPublicKeyInfo，该 CA 证书在证书使用者中有一个或多个 organizationName 属性，并且服务器的证书包含相同数量的 organizationName 属性，顺序相同，并且具有逐字节相同的值。
 
-A subjectPublicKeyInfo hash is specified by concatenating the hash algorithm name, the "/" character, and the Base64 encoding of that hash algorithm applied to the DER-encoded subjectPublicKeyInfo of the specified certificate. This Base64 encoding is the same format as an SPKI Fingerprint, as defined in RFC 7469, Section 2.4. Unrecognized hash algorithms are ignored. The only supported hash algorithm at this time is "sha256".
+指定 subjectPublicKeyInfo 哈希的方式是: 拼接哈希算法名称、"/" 字符和用于指定证书的 DER 编码 subjectPublicKeyInfo 的哈希算法的 Base64 编码。该 Base64 编码与 SPKI 指纹的格式相同，如 RFC 7469 第 2.4 节所定义。无法识别的哈希算法将被忽略。目前唯一支持的哈希算法是 "sha256"。
 
-If you disable this policy or don't configure it, any certificate that's required to be disclosed via Certificate Transparency will be treated as untrusted if it's not disclosed according to the Certificate Transparency policy.
+如果禁用或未配置此策略，则任何需要通过证书透明度公开的证书，如果没有根据证书透明度策略公开，将被视为不受信任。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CertificateTransparencyEnforcementDisabledForCas
-  - GP name: Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CertificateTransparencyEnforcementDisabledForCas
+  - GP 名称: 对 subjectPublicKeyInfo 哈希列表禁用强制证书透明度
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
@@ -7824,9 +7822,9 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CertificateTransparencyEnforcementDisabledForCas
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CertificateTransparencyEnforcementDisabledForCas
+  - 示例值:
 ``` xml
 <array>
   <string>sha256/AAAAAAAAAAAAAAAAAAAAAA==</string>
@@ -7835,47 +7833,47 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CertificateTransparencyEnforcementDisabledForLegacyCas
-  #### Disable Certificate Transparency enforcement for a list of legacy certificate authorities
+  #### 对列出的旧证书颁发机构禁用证书透明度强制
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables enforcing Certificate Transparency requirements for a list of legacy certificate authorities (Cas).
+  #### 描述
+  针对旧证书颁发机构(Ca)列表禁用实施证书透明度要求。
 
-This policy lets you disable Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted because they were not properly publicly disclosed, continue to be used for enterprise hosts.
+此策略允许你对包含具有所指定 subjectPublicKeyInfo 哈希之一的证书的证书链禁用证书透明度公开要求。这样，你可以使用原来因未被正确公开但却继续用于企业主机而不受信任的证书。
 
-In order for Certificate Transparency enforcement to be disabled, you must set the hash to a subjectPublicKeyInfo appearing in a CA certificate that is recognized as a legacy certificate authority (CA). A legacy CA is a CA that has been publicly trusted by default by one or more operating systems supported by Microsoft Edge.
+为了禁用证书透明度实施要求，必须将哈希设置为出现在 CA 证书中并且被识别为旧证书颁发机构(CA)的 subjectPublicKeyInfo。旧 CA 是默认情况下已被 Microsoft Edge 所支持的一个或多个操作系统公开信任的 CA。
 
-You specify a subjectPublicKeyInfo hash by concatenating the hash algorithm name, the "/" character, and the Base64 encoding of that hash algorithm applied to the DER-encoded subjectPublicKeyInfo of the specified certificate. This Base64 encoding is the same format as an SPKI Fingerprint, as defined in RFC 7469, Section 2.4. Unrecognized hash algorithms are ignored. The only supported hash algorithm at this time is "sha256".
+通过连接哈希算法名称、"/" 字符和对指定证书的 DER 编码 subjectPublicKeyInfo 应用的哈希算法的 Base64 编码，可以指定 subjectPublicKeyInfo 哈希。此 Base64 编码与 SPKI 指纹的格式相同，如 RFC 7469 第 2.4 节中所定义。无法识别的哈希算法会被忽略。目前唯一支持的哈希算法是 "sha256"。
 
-If you don't configure this policy, any certificate that's required to be disclosed via Certificate Transparency will be treated as untrusted if it isn't disclosed according to the Certificate Transparency policy.
+如果未配置此策略，则任何需要通过证书透明度公开的证书在未根据证书透明度策略公开的情况下，都将被视为不受信任。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CertificateTransparencyEnforcementDisabledForLegacyCas
-  - GP name: Disable Certificate Transparency enforcement for a list of legacy certificate authorities
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CertificateTransparencyEnforcementDisabledForLegacyCas
+  - GP 名称: 对列出的旧证书颁发机构禁用证书透明度强制
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
@@ -7883,9 +7881,9 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CertificateTransparencyEnforcementDisabledForLegacyCas
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CertificateTransparencyEnforcementDisabledForLegacyCas
+  - 示例值:
 ``` xml
 <array>
   <string>sha256/AAAAAAAAAAAAAAAAAAAAAA==</string>
@@ -7894,45 +7892,45 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CertificateTransparencyEnforcementDisabledForUrls
-  #### Disable Certificate Transparency enforcement for specific URLs
+  #### 对特定 URL 禁用强制证书透明度
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables enforcing Certificate Transparency requirements for the listed URLs.
+  #### 描述
+  为列出的 URL 禁用强制执行证书透明度要求。
 
-This policy lets you not disclose certificates for the hostnames in the specified URLs via Certificate Transparency. This lets you use certificates that would otherwise be untrusted, because they weren't properly publicly disclosed, but it makes it harder to detect mis-issued certificates for those hosts.
+此策略允许你不通过证书透明度公开指定 URL 中的主机名证书。这样，你可以使用原来因未被正确公开而不受信任的证书，但这却更难检测到为那些主机误颁发的证书。
 
-Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Because certificates are valid for a given hostname, independent of the scheme, port, or path, only the hostname part of the URL is considered. Wildcard hosts are not supported.
+根据 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 形成 URL 模式。由于证书对给定主机名有效，而与方案、端口或路径无关，因此仅考虑了 URL 的主机名部分。不支持使用通配符主机。
 
-If you don't configure this policy, any certificate that should be disclosed via Certificate Transparency is treated as untrusted if it's not disclosed.
+如果未配置此策略，则任何应通过证书透明度公开的证书在未公开的情况下，都会被视为不受信任。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CertificateTransparencyEnforcementDisabledForUrls
-  - GP name: Disable Certificate Transparency enforcement for specific URLs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CertificateTransparencyEnforcementDisabledForUrls
+  - GP 名称: 对特定 URL 禁用强制证书透明度
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
@@ -7940,9 +7938,9 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CertificateTransparencyEnforcementDisabledForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CertificateTransparencyEnforcementDisabledForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>contoso.com</string>
@@ -7951,157 +7949,157 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ClearBrowsingDataOnExit
-  #### Clear browsing data when Microsoft Edge closes
+  #### Microsoft Edge 关闭时清除浏览数据
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Microsoft Edge doesn't clear the browsing data by default when it closes. Browsing data includes information entered in forms, passwords, and even the websites visited.
+  #### 描述
+  Microsoft Edge 关闭时不会默认清除浏览数据。浏览数据包括在表单、密码甚至是所访问网站中输入的信息。
 
-If you enable this policy, all browsing data is deleted each time Microsoft Edge closes. Note that if you enable this policy, it takes precedence over how you configured [DefaultCookiesSetting](#defaultcookiessetting)
+如果启用此策略，则每次 Microsoft Edge 关闭时都会删除所有浏览数据。请注意，如果启用此策略，它将优先于你配置 [DefaultCookiesSetting](#defaultcookiessetting) 的方式
 
-If you disable or don't configure this policy, users can configure the Clear browsing data option in Settings.
+如果禁用或未配置此策略，则用户可以在“设置”中配置“清除浏览数据”选项。
 
-If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Microsoft Edge closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
+如果启用此策略，请不要配置 [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) 或 [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) 策略，因为它们都会执行数据删除。如果同时配置了上述策略和此策略，则会在 Microsoft Edge 关闭时删除所有数据，无论你如何配置 [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) 或 [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)。
 
-To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
+若要排除 cookie 以防退出时被删除，请配置 [SaveCookiesOnExit](#savecookiesonexit) 策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ClearBrowsingDataOnExit
-  - GP name: Clear browsing data when Microsoft Edge closes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ClearBrowsingDataOnExit
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ClearBrowsingDataOnExit
+  - GP 名称: Microsoft Edge 关闭时清除浏览数据
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ClearBrowsingDataOnExit
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ClearBrowsingDataOnExit
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ClearBrowsingDataOnExit
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ClearCachedImagesAndFilesOnExit
-  #### Clear cached images and files when Microsoft Edge closes
+  #### Microsoft Edge 关闭时清除缓存的图像和文件
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  Microsoft Edge doesn't clear cached images and files by default when it closes.
+  #### 描述
+  Microsoft Edge 关闭时不会默认清除缓存的图像和文件。
 
-If you enable this policy, cached images and files will be deleted each time Microsoft Edge closes.
+如果启用此策略，则会在每次 Microsoft Edge 关闭时删除缓存的图像和文件。
 
-If you disable this policy, users cannot configure the cached images and files option in edge://settings/clearBrowsingDataOnClose.
+如果禁用此策略，则用户无法在 edge://settings/clearBrowsingDataOnClose 中配置缓存的图像和文件选项。
 
-If you don't configure this policy, users can choose whether cached images and files are cleared on exit.
+如果未配置此策略，则用户可以选择是否在退出时清除缓存的图像和文件。
 
-If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you configure both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how you configured [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
+如果禁用此策略，则不要启用 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 策略，因为它们都涉及删除数据。如果同时配置这两者，则 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 策略将优先并在 Microsoft Edge 关闭时删除所有数据，而无论你是如何配置 [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) 的。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ClearCachedImagesAndFilesOnExit
-  - GP name: Clear cached images and files when Microsoft Edge closes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ClearCachedImagesAndFilesOnExit
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ClearCachedImagesAndFilesOnExit
+  - GP 名称: Microsoft Edge 关闭时清除缓存的图像和文件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ClearCachedImagesAndFilesOnExit
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ClearCachedImagesAndFilesOnExit
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ClearCachedImagesAndFilesOnExit
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ClickOnceEnabled
-  #### Allow users to open files using the ClickOnce protocol
+  #### 允许用户使用 ClickOnce 协议打开文件
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  Allow users to open files using the ClickOnce protocol. The ClickOnce protocol allows websites to request that the browser open files from a specific URL using the ClickOnce file handler on the user's computer or device.
+  #### 描述
+  允许用户使用 ClickOnce 协议打开文件。通过 ClickOnce 协议，网站可以请求浏览器使用用户的计算机或设备上的 ClickOnce 文件处理程序打开特定 URL 中的文件。
 
-If you enable this policy, users can open files using the ClickOnce protocol. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
+如果启用此策略，则用户可以使用 ClickOnce 协议打开文件。此策略将替代 edge://flags/ 页面中用户的 ClickOnce 设置。
 
-If you disable this policy, users can't open files using the ClickOnce protocol. Instead, the file will be saved to the file system using the browser. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
+如果禁用此策略，则用户无法使用 ClickOnce 协议打开文件。文件将通过浏览器保存到文件系统。此策略将替代 edge://flags/ 页面中用户的 ClickOnce 设置。
 
-If you don't configure this policy, users with Microsoft Edge versions before Microsoft Edge 87 can't open files using the ClickOnce protocol by default. However, they have the option to enable the use of the ClickOnce protocol with the edge://flags/ page. Users with Microsoft Edge versions 87 and later can open files using the ClickOnce protocol by default but have the option to disable the ClickOnce protocol with edge://flags/ page.
+如果未配置此策略，则默认情况下，Microsoft Edge 版本在 Microsoft Edge 87 之前的用户无法使用 ClickOnce 协议打开文件。但是，他们可以选择允许将 ClickOnce 协议与 edge://flags/ 页面搭配使用。默认情况下，具有 Microsoft Edge 版本 87 和更高版本的用户可以使用 ClickOnce 协议打开文件，但可以选择使用 edge://flags/ 页面禁用 ClickOnce 协议。
 
-Disabling ClickOnce may prevent ClickOnce applications (.application files) from launching properly.
+禁用 ClickOnce 可能会阻止 ClickOnce 应用程序(.application 文件)正常启动。
 
-For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+有关 ClickOnce 的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 和 [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ClickOnceEnabled
-  - GP name: Allow users to open files using the ClickOnce protocol
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ClickOnceEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ClickOnceEnabled
+  - GP 名称: 允许用户使用 ClickOnce 协议打开文件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ClickOnceEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -8109,58 +8107,58 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CollectionsServicesAndExportsBlockList
-  #### Block access to a specified list of services and export targets in Collections
+  #### 阻止访问集锦中指定的服务列表和导出目标
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  List specific services and export targets that users can't access in the Collections feature in Microsoft Edge. This includes displaying additional data from Bing and exporting collections to Microsoft products or external partners.
+  #### 描述
+  在 Microsoft Edge 的集锦功能中列出用户无法访问的特定服务和导出目标。这包括显示来自必应的其他数据以及将集锦导出到 Microsoft 产品或外部合作伙伴。
 
-If you enable this policy, services and export targets that match the given list are blocked.
+如果启用此策略，则与给定列表匹配的服务和导出目标将被阻止。
 
-If you don't configure this policy, no restrictions on the acceptable services and export targets are enforced.
+如果未配置此政策，则不对可接受的服务和导出目标实施任何限制。
 
-Policy options mapping:
+策略选项映射：
 
-* pinterest_suggestions (pinterest_suggestions) = Pinterest suggestions
+* pinterest_suggestions (pinterest_suggestions) = Pinterest 建议
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CollectionsServicesAndExportsBlockList
-  - GP name: Block access to a specified list of services and export targets in Collections
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CollectionsServicesAndExportsBlockList
+  - GP 名称: 阻止访问集锦中指定的服务列表和导出目标
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CollectionsServicesAndExportsBlockList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CollectionsServicesAndExportsBlockList
+  - 示例值:
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
@@ -8168,207 +8166,207 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CommandLineFlagSecurityWarningsEnabled
-  #### Enable security warnings for command-line flags
+  #### 为命令行标志启用安全警告
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  If disabled, this policy prevents security warnings from appearing when Microsoft Edge is launched with potentially dangerous command-line flags.
+  #### 描述
+  如果禁用，则使用具有潜在危险的命令行标志启动 Microsoft Edge 时，此策略会阻止出现安全警告。
 
-If enabled or unset, security warnings are displayed when these command-line flags are used to launch Microsoft Edge.
+如果启用或取消设置，则使用这些命令行标志启动 Microsoft Edge 时，会显示安全警告。
 
-For example, the --disable-gpu-sandbox flag generates this warning:  You're using an unsupported command-line flag: --disable-gpu-sandbox. This poses stability and security risks.
+例如，--disable-gpu-sandbox 标志将生成以下警告: 你使用的是不受支持的命令行标志: --disable-gpu-sandbox。这会带来稳定性和安全风险。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版(或企业版)实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CommandLineFlagSecurityWarningsEnabled
-  - GP name: Enable security warnings for command-line flags
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: CommandLineFlagSecurityWarningsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CommandLineFlagSecurityWarningsEnabled
+  - GP 名称: 为命令行标志启用安全警告
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: CommandLineFlagSecurityWarningsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CommandLineFlagSecurityWarningsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CommandLineFlagSecurityWarningsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ComponentUpdatesEnabled
-  #### Enable component updates in Microsoft Edge
+  #### 在 Microsoft Edge 中启用组件更新
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  If you enable or don't configure this policy, component updates are enabled in Microsoft Edge.
+  #### 描述
+  如果启用或未配置此策略，则会在 Microsoft Edge 中启用组件更新。
 
-If you disable this policy or set it to false, component updates are disabled for all components in Microsoft Edge.
+如果禁用此策略或将其设置为 false，则将对 Microsoft Edge 中的所有组件禁用组件更新。
 
-However, some components are exempt from this policy. This includes any component that doesn't contain executable code, that doesn't significantly alter the behavior of the browser, or that's critical for security. That is, updates that are deemed "critical for security" are still applied even if you disable this policy.
+但是，某些组件不受此策略控制。这包括任何不含可执行代码的组件、不会明显改变浏览器行为的组件，或对安全性至关重要的组件。即，即使禁用此策略，也仍会应用被视为“对安全至关重要”的更新。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ComponentUpdatesEnabled
-  - GP name: Enable component updates in Microsoft Edge
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ComponentUpdatesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ComponentUpdatesEnabled
+  - GP 名称: 在 Microsoft Edge 中启用组件更新
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ComponentUpdatesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ComponentUpdatesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ComponentUpdatesEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ConfigureDoNotTrack
-  #### Configure Do Not Track
+  #### 配置“禁止跟踪”
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify whether to send Do Not Track requests to websites that ask for tracking info. Do Not Track requests let the websites you visit know that you don't want your browsing activity to be tracked. By default, Microsoft Edge doesn't send Do Not Track requests, but users can turn on this feature to send them.
+  #### 描述
+  指定是否向请求跟踪信息的网站发送“禁止跟踪”请求。“禁止跟踪”请求让你访问的网站知道你不希望你的浏览活动被跟踪。默认情况下，Microsoft Edge 不会发送“禁止跟踪”请求，但用户可以打开此功能来发送它们。
 
-If you enable this policy, Do Not Track requests are always sent to websites asking for tracking info.
+如果启用此策略，则将始终向请求跟踪信息的网站发送“禁止跟踪”请求。
 
-If you disable this policy, requests are never sent.
+如果禁用此策略，则从不会发送请求。
 
-If you don't configure this policy, users can choose whether to send these requests.
+如果未配置此策略，则用户可以选择是否发送这些请求。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ConfigureDoNotTrack
-  - GP name: Configure Do Not Track
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ConfigureDoNotTrack
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ConfigureDoNotTrack
+  - GP 名称: 配置“禁止跟踪”
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ConfigureDoNotTrack
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ConfigureDoNotTrack
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ConfigureDoNotTrack
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ConfigureOnPremisesAccountAutoSignIn
-  #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
+  #### 配置用 Active Directory 域帐户(如果没有 Azure AD 域帐户)进行的自动登录
   
   
-  #### Supported versions:
-  - On Windows since 81 or later
+  #### 支持的版本:
+  - 在 Windows 自 81 或之后
 
-  #### Description
-  Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
+  #### 描述
+  如果你的用户计算机加入了域并且你的环境未进行混合联接，则启用使用 Active Directory 帐户自动登录。如果希望用户使用其 Azure Active Directory 帐户自动登录，请以 Azure AD 联接方式(请参阅 [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) 以获取更多信息)或混合联接方式(请参阅 [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) 以获取更多信息)联接环境。
 
-If you have configured the [BrowserSignin](#browsersignin) policy to disabled, this policy will not take any effect.
+如果已经将 [BrowserSignin](#browsersignin) 策略配置为“已禁用”，则此策略将不会生效。
 
-If you enable this policy and set it to 'SignInAndMakeDomainAccountNonRemovable', Microsoft Edge will automatically sign in users that are on domain joined machines using their Active Directory accounts.
+如果启用此策略并将其设置为“SignInAndMakeDomainAccountNonRemovable”，则 Microsoft Edge 将使计算机加入到域中的用户使用其 Active Directory 帐户自动登录。
 
-If you set this policy to 'Disabled' or don't set it, Microsoft Edge will not automatically sign in users that are on domain joined machines with Active Directory accounts.
+如果将此策略设置为“Disabled”或未设置此策略，则 Microsoft Edge 将不会使计算机加入到域中的用户使用其 Active Directory 帐户自动登录。
 
-Policy options mapping:
+策略选项映射：
 
-* Disabled (0) = Disabled
+* Disabled (0) = 已禁用
 
-* SignInAndMakeDomainAccountNonRemovable (1) = Sign in and make domain account non-removable
+* SignInAndMakeDomainAccountNonRemovable (1) = 登录并将域帐户设为无法删除
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ConfigureOnPremisesAccountAutoSignIn
-  - GP name: Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ConfigureOnPremisesAccountAutoSignIn
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ConfigureOnPremisesAccountAutoSignIn
+  - GP 名称: 配置用 Active Directory 域帐户(如果没有 Azure AD 域帐户)进行的自动登录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ConfigureOnPremisesAccountAutoSignIn
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -8376,103 +8374,103 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ConfigureOnlineTextToSpeech
-  #### Configure Online Text To Speech
+  #### 配置在线文本到语音转换
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether the browser can leverage Online Text to Speech voice fonts, part of Azure Cognitive Services. These voice fonts are higher quality than the pre-installed system voice fonts.
+  #### 描述
+  设置浏览器是否可以利用在线文本到语音转换的语音字体，这是 Azure 认知服务的一部分。这些语音字体比预先安装的系统语音字体质量更高。
 
-If you enable or don't configure this policy, web-based applications that use the SpeechSynthesis API can use Online Text to Speech voice fonts.
+如果启用或未配置此策略，则使用 SpeechSynthesis API 的基于 Web 的应用程序可以使用在线文本到语音转换的语音字体。
 
-If you disable this policy, the voice fonts aren't available.
+如果禁用此策略，则语音字体不可用。
 
-Read more about this feature here:
+可在此处了解有关此功能的详细信息:
 SpeechSynthesis API: [https://go.microsoft.com/fwlink/?linkid=2110038](https://go.microsoft.com/fwlink/?linkid=2110038)
-Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go.microsoft.com/fwlink/?linkid=2110141)
+认知服务: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go.microsoft.com/fwlink/?linkid=2110141)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ConfigureOnlineTextToSpeech
-  - GP name: Configure Online Text To Speech
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ConfigureOnlineTextToSpeech
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ConfigureOnlineTextToSpeech
+  - GP 名称: 配置在线文本到语音转换
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ConfigureOnlineTextToSpeech
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ConfigureOnlineTextToSpeech
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ConfigureOnlineTextToSpeech
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ConfigureShare
-  #### Configure the Share experience
+  #### 配置共享体验
   
   
-  #### Supported versions:
-  - On Windows since 83 or later
+  #### 支持的版本:
+  - 在 Windows 自 83 或之后
 
-  #### Description
-  If you set this policy to 'ShareAllowed' (the default), users will be able to access the Windows 10 Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.
+  #### 描述
+  如果将此策略设置为“ShareAllowed”(默认值)，用户能够在 Microsoft Edge 中从“设置及更多”菜单访问 Windows 10“共享”体验，以便与系统上的其他应用共享。
 
-If you set this policy to 'ShareDisallowed', users won't be able to access the Windows 10 Share experience. If the Share button is on the toolbar, it will also be hidden.
+如果将此策略设置为“ShareDisallowed”，则用户无法访问 Windows 10“共享”体验。如果“共享”按钮位于工具栏上，则它也会隐藏。
 
-Policy options mapping:
+策略选项映射：
 
-* ShareAllowed (0) = Allow using the Share experience
+* ShareAllowed (0) = 允许使用共享体验
 
-* ShareDisallowed (1) = Don't allow using the Share experience
+* ShareDisallowed (1) = 不允许使用共享体验
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ConfigureShare
-  - GP name: Configure the Share experience
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ConfigureShare
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ConfigureShare
+  - GP 名称: 配置共享体验
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ConfigureShare
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -8480,224 +8478,224 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### CustomHelpLink
-  #### Specify custom help link
+  #### 指定自定义帮助链接
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  Specify a link for the Help menu or the F1 key.
+  #### 描述
+  指定 "帮助" 菜单或 F1 键的链接。
 
-If you enable this policy, an admin can specify a link for the Help menu or the F1 key.
+如果启用此策略，则管理员可以指定 "帮助" 菜单或 F1 键的链接。
 
-If you disable or don't configure this policy, the default link for the Help menu or the F1 key is used.
+如果禁用或不配置此策略，将使用 "帮助" 菜单或 F1 键的默认链接。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+此策略仅适用于已加入到 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或者是通过 MDM 管理或通过 MCX 加入到域的 macOS 实例。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: CustomHelpLink
-  - GP name: Specify custom help link
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: CustomHelpLink
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: CustomHelpLink
+  - GP 名称: 指定自定义帮助链接
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: CustomHelpLink
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: CustomHelpLink
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: CustomHelpLink
+  - 示例值:
 ``` xml
 <string>https://go.microsoft.com/fwlink/?linkid=2080734</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DNSInterceptionChecksEnabled
-  #### DNS interception checks enabled
+  #### 已启用 DNS 拦截检查
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  This policy configures a local switch that can be used to disable DNS interception checks. These checks attempt to discover whether the browser is behind a proxy that redirects unknown host names.
+  #### 描述
+  此策略配置可用于禁用 DNS 拦截检查的本地交换机。这些检查意图了解浏览器是否在重定向未知主机名的代理后面。
 
-This detection might not be necessary in an enterprise environment where the network configuration is known. It can be disabled to avoid additional DNS and HTTP traffic on start-up and each DNS configuration change.
+在已知网络配置的企业环境中，可能不需要此检测。可以禁用它，以避免在启动时以及在每次 DNS 配置更改时出现额外的 DNS 和 HTTP 流量。
 
-If you enable or don't set this policy, the DNS interception checks are performed.
+如果启用或未设置此策略，则会执行 DNS 拦截检查。
 
-If you disable this policy, DNS interception checks aren't performed.
+如果禁用此策略，则不会执行 DNS 拦截检查。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DNSInterceptionChecksEnabled
-  - GP name: DNS interception checks enabled
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DNSInterceptionChecksEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DNSInterceptionChecksEnabled
+  - GP 名称: 已启用 DNS 拦截检查
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DNSInterceptionChecksEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DNSInterceptionChecksEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DNSInterceptionChecksEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultBrowserSettingEnabled
-  #### Set Microsoft Edge as default browser
+  #### 将 Microsoft Edge 设置为默认浏览器
   
   
-  #### Supported versions:
-  - On Windows 7 and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 7 或更高版本，macOS 和 77
 
-  #### Description
-  If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
+  #### 描述
+  如果将此策略设置为 True，则 Microsoft Edge 在启动时会始终检查它是否是默认浏览器，并且如有可能，会自动进行注册。
 
-If you set this policy to False, Microsoft Edge is stopped from ever checking if it's the default and turns user controls off for this option.
+如果将此策略设置为 False，Microsoft Edge 将停止检查其是否为默认设置，并关闭用户对此选项的控制。
 
-If you don't set this policy, Microsoft Edge lets users control whether it's the default and, if not, whether user notifications should appear.
+如果未设置此策略，则 Microsoft Edge 允许用户控制它是否为默认设置，如果不是，则控制是否应显示用户通知。
 
-Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Microsoft Edge the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) for more information.
+Windows 管理员注意事项: 此策略仅适用于运行 Windows 7 的电脑。对于较高版本的 Windows，必须部署“默认应用程序关联”文件，使 Microsoft Edge 成为 https 和 http 协议(以及 FTP 协议和文件格式(可选)，如 .html、.htm、.pdf、.svg、.webp)的处理程序。有关详细信息，请访问 [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultBrowserSettingEnabled
-  - GP name: Set Microsoft Edge as default browser
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultBrowserSettingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultBrowserSettingEnabled
+  - GP 名称: 将 Microsoft Edge 设置为默认浏览器
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultBrowserSettingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultBrowserSettingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultBrowserSettingEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultSearchProviderContextMenuAccessAllowed
-  #### Allow default search provider context menu search access
+  #### 允许默认搜索提供程序上下文菜单搜索访问
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  Enables the use of a default search provider on the context menu.
+  #### 描述
+  允许在上下文菜单上使用默认搜索提供程序。
 
-If you set this policy to disabled the search context menu item that relies on your default search provider and sidebar search will not be available.
+如果将此策略设置为已禁用，则依赖于默认搜索提供程序和边栏搜索的搜索上下文菜单项将不可用，
 
-If this policy is set to enabled or not set, the context menu item for your default search provider and sidebar search will be available.
+如果将此策略设置为已启用或未设置，则默认搜索提供程序和边栏搜索的上下文菜单项将可用。
 
-The policy value is only appled when the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy is enabled, and is not applicable otherwise.
+仅当已启用 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 策略时才会应用该策略值，否则不适用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSearchProviderContextMenuAccessAllowed
-  - GP name: Allow default search provider context menu search access
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultSearchProviderContextMenuAccessAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSearchProviderContextMenuAccessAllowed
+  - GP 名称: 允许默认搜索提供程序上下文菜单搜索访问
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultSearchProviderContextMenuAccessAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSearchProviderContextMenuAccessAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSearchProviderContextMenuAccessAllowed
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultSensorsSetting
   #### Default sensors setting
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
+  #### 描述
   Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
 
 Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
@@ -8706,161 +8704,160 @@ You can override this policy for specific URL patterns by using the [SensorsAllo
 
 If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
 
-Policy options mapping:
+策略选项映射：
 
 * AllowSensors (1) = Allow sites to access sensors
 
 * BlockSensors (2) = Do not allow any site to access sensors
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSensorsSetting
-  - GP name: Default sensors setting
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultSensorsSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSensorsSetting
+  - GP 名称: Default sensors setting
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultSensorsSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSensorsSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSensorsSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DefaultSerialGuardSetting
-  #### Control use of the Serial API
+  #### 控制串行 API 的使用
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  
-Set whether websites can access serial ports. You can completely block access or ask the user each time a website wants to get access to a serial port.
+  #### 描述
+  设置网站是否可以访问串行端口。你可以完全阻止访问，也可以在每次网站想要访问串行端口时询问用户。
 
-Setting the policy to 3 lets websites ask for access to serial ports. Setting the policy to 2 denies access to serial ports.
+将该策略设置为 3 将使网站请求访问串行端口。将该策略设置为 2 将拒绝访问串行端口。
 
-You can override this policy for specific URL patterns by using the [SerialAskForUrls](#serialaskforurls) and [SerialBlockedForUrls](#serialblockedforurls) policies.
+可以使用 [SerialAskForUrls](#serialaskforurls) 和 [SerialBlockedForUrls](#serialblockedforurls) 策略针对特定 URL 模式覆盖此策略。
 
-If you don't configure this policy, by default, websites can ask users whether they can access a serial port, and users can change this setting.
+如果未配置此策略，默认情况下，网站可以询问用户是否可以访问串行端口，并且用户可以更改此设置。
 
-Policy options mapping:
+策略选项映射：
 
-* BlockSerial (2) = Do not allow any site to request access to serial ports via the Serial API
+* BlockSerial (2) = 不允许任何网站通过串行 API 请求对串行端口的访问
 
-* AskSerial (3) = Allow sites to ask for user permission to access a serial port
+* AskSerial (3) = 允许网站请求访问串行端口的用户权限
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DefaultSerialGuardSetting
-  - GP name: Control use of the Serial API
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DefaultSerialGuardSetting
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultSerialGuardSetting
+  - GP 名称: 控制串行 API 的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultSerialGuardSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DefaultSerialGuardSetting
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultSerialGuardSetting
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DelayNavigationsForInitialSiteListDownload
-  #### Require that the Enterprise Mode Site List is available before tab navigation
+  #### 要求在选项卡导航之前企业模式站点列表可用
   
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
 
-  #### Description
-  Lets you specify whether Microsoft Edge tabs wait to navigate until the browser has downloaded the initial Enterprise Mode Site List. This setting is intended for the scenario where the browser home page should load in Internet Explorer mode, and it is important that is does so on browser first run after IE mode is enabled. If this scenario does not exist, we recommend not enabling this setting because it can negatively impact the performance of loading the home page. The setting only applies when Microsoft Edge does not have a cached Enterprise Mode Site List, such as on browser first run after IE mode is enabled.
+  #### 描述
+  允许你指定 Microsoft Edge 选项卡是否等待浏览，直到浏览器下载了初始企业模式站点列表。此设置适用于浏览器主页应在 Internet Explorer 模式下加载的情形，在启用 IE 模式后首次运行浏览器时，执行此操作非常重要。如果不存在这种情况，建议不要启用此设置，因为它可能会对加载主页的性能产生负面影响。仅当 Microsoft Edge 没有缓存的企业模式站点列表时(例如，在启用 IE 模式后浏览器首次运行时)，此设置才适用。
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+此设置可与以下各项结合使用:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 设置为“IEMode”
+以及
+列表中至少有一个条目的 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 策略。
 
-The timeout behavior of this policy can be configured with the [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout) policy.
+可以使用 [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout) 策略配置此策略的超时行为。
 
-If you set this policy to 'All', when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs delay navigating until the browser has downloaded the site list. Sites configured to open in Internet Explorer mode by the site list will load in Internet Explorer mode, even during the initial navigation of the browser. Sites that cannot possibly be configured to open in Internet Explorer, such as any site with a scheme other than http:, https:, file:, or ftp: do not delay navigating and load immediately in Edge mode.
+如果将此策略设置为“All”，则当 Microsoft Edge 没有企业模式站点列表的缓存版本时，选项卡会延迟导航，直到浏览器下载了站点列表。配置为通过站点列表在 Internet Explorer 模式下打开的站点将以 Internet Explorer 模式加载，即使在浏览器的初始导航期间也是如此。不能配置为在 Internet Explorer 中打开的站点(例如，使用 http:、https:、file: 或 ftp: 以外的其他方案的任何站点)不会延迟浏览，会立即在 Edge 模式下加载。
 
-If you set this policy to 'None' or don't configure it, when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs will navigate immediately, and not wait for the browser to download the Enterprise Mode Site List. Sites configured to open in Internet Explorer mode by the site list will open in Microsoft Edge mode until the browser has finished downloading the Enterprise Mode Site List.
+如果将此策略设置为“None”或未配置，则当 Microsoft Edge 没有企业模式站点列表的缓存版本时，选项卡将立即导航，而不会等待浏览器下载企业模式站点列表。配置为通过站点列表在 Internet Explorer 模式下打开的站点将在 Microsoft Edge 模式下打开，直到浏览器完成下载企业模式站点列表。
 
-Policy options mapping:
+策略选项映射：
 
-* None (0) = None
+* None (0) = 无
 
-* All (1) = All eligible navigations
+* All (1) = 所有符合条件的导航
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DelayNavigationsForInitialSiteListDownload
-  - GP name: Require that the Enterprise Mode Site List is available before tab navigation
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DelayNavigationsForInitialSiteListDownload
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DelayNavigationsForInitialSiteListDownload
+  - GP 名称: 要求在选项卡导航之前企业模式站点列表可用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DelayNavigationsForInitialSiteListDownload
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -8868,43 +8865,43 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DeleteDataOnMigration
-  #### Delete old browser data on migration
+  #### 迁移时删除旧浏览器数据
   
   
-  #### Supported versions:
-  - On Windows since 83 or later
+  #### 支持的版本:
+  - 在 Windows 自 83 或之后
 
-  #### Description
-  This policy determines whether user browsing data from Microsoft Edge Legacy will be deleted after migrating to the Microsoft Edge version 81 or later.
+  #### 描述
+  此策略确定迁移到 Microsoft Edge 版本 81 或更高版本后，是否删除旧版 Microsoft Edge 中的用户浏览数据。
 
-If you set this policy to "Enabled", all browsing data from Microsoft Edge Legacy after migrating to the Microsoft Edge version 81 or later will be deleted. This policy must be set before migrating to the Microsoft Edge version 81 or later to have any effect on existing browsing data.
+如果将此策略设置为“已启用”，则迁移到 Microsoft Edge 版本 81 或更高版本后，旧版 Microsoft Edge 中的所有浏览数据都将被删除。必须在迁移到 Microsoft Edge 版本 81 或更高版本之前设置此策略，这样才能对现有浏览数据产生影响。
 
-If you set this policy to "Disabled", or the policy is not configured, user browsing data isn't deleted after migrating to the Microsoft Edge version 83 or later.
+如果将此策略设置为“已禁用”，或者未配置此策略，则在迁移到 Microsoft Edge 版本 83 或更高版本后，不会删除用户浏览数据。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DeleteDataOnMigration
-  - GP name: Delete old browser data on migration
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DeleteDataOnMigration
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DeleteDataOnMigration
+  - GP 名称: 迁移时删除旧浏览器数据
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DeleteDataOnMigration
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -8912,183 +8909,183 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DeveloperToolsAvailability
-  #### Control where developer tools can be used
+  #### 控制可以使用开发人员工具的位置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Control where developer tools can be used.
+  #### 描述
+  控制可以使用开发人员工具的位置。
 
-If you set this policy to 'DeveloperToolsDisallowedForForceInstalledExtensions' (the default), users can access the developer tools and the JavaScript console in general, but not in the context of extensions installed by enterprise policy.
+如果将此策略设置为“DeveloperToolsDisallowedForForceInstalledExtensions”(默认值)，则用户通常可以访问开发人员工具和 JavaScript 控制台，但不能在按企业策略安装的扩展环境中访问。
 
-If you set this policy to 'DeveloperToolsAllowed', users can access the developer tools and the JavaScript console in all contexts, including extensions installed by enterprise policy.
+如果将此策略设置为“DeveloperToolsAllowed”，则用户可以在所有环境中访问开发人员工具和 JavaScript 控制台，还能在按企业策略安装的扩展中访问。
 
-If you set this policy to 'DeveloperToolsDisallowed', users can't access the developer tools or inspect website elements. Keyboard shortcuts and menu or context menu entries that open the developer tools or the JavaScript Console are disabled.
+如果将此策略设置为“DeveloperToolsDisallowed”，则用户无法访问开发人员工具或检查网站元素。用于打开开发人员工具或 JavaScript 控制台的键盘快捷方式和菜单或上下文菜单条目处于禁用状态。
 
-Policy options mapping:
+策略选项映射：
 
-* DeveloperToolsDisallowedForForceInstalledExtensions (0) = Block the developer tools on extensions installed by enterprise policy, allow in other contexts
+* DeveloperToolsDisallowedForForceInstalledExtensions (0) = 在按企业策略安装的扩展上阻止开发人员工具，允许在其他上下文中使用
 
-* DeveloperToolsAllowed (1) = Allow using the developer tools
+* DeveloperToolsAllowed (1) = 允许使用开发人员工具
 
-* DeveloperToolsDisallowed (2) = Don't allow using the developer tools
+* DeveloperToolsDisallowed (2) = 不允许使用开发人员工具
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DeveloperToolsAvailability
-  - GP name: Control where developer tools can be used
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DeveloperToolsAvailability
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DeveloperToolsAvailability
+  - GP 名称: 控制可以使用开发人员工具的位置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DeveloperToolsAvailability
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DeveloperToolsAvailability
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DeveloperToolsAvailability
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DiagnosticData
-  #### Send required and optional diagnostic data about browser usage
+  #### 发送有关浏览器使用情况的必需和可选诊断数据
   
   
-  #### Supported versions:
-  - On Windows 7 and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 7 或更高版本，macOS 和 86
 
-  #### Description
-  This policy controls sending required and optional diagnostic data about browser usage to Microsoft.
+  #### 描述
+  此策略控制向 Microsoft 发送有关浏览器使用情况的必需和可选诊断数据。
 
-Required diagnostic data is collected keep Microsoft Edge secure, up to date and performing as expected.
+收集必要的诊断数据以确保 Microsoft Edge 安全、最新并按预期运行。
 
-Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.
+可选诊断数据包括有关使用浏览器的方式、访问的网站以及为改进产品和服务而向 Microsoft 发送的崩溃报告的数据。
 
-This policy is not supported on Windows 10 devices. To control this data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+此策略在 Windows 10 设备上不受支持。若要在 Windows 10 上控制此数据收集，IT 管理员必须使用 Windows 诊断数据组策略。此策略将为“允许遥测”或“允许诊断数据”，具体取决于 Windows 版本。详细了解 Windows 10 诊断数据收集: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
-Use one of the following settings to configure this policy:
+使用以下设置之一来配置此策略:
 
-'Off' turns off required and optional diagnostic data collection. This option is not recommended.
+“Off”会关闭必需和可选诊断数据收集。不建议使用此选项。
 
-'RequiredData' sends required diagnostic data but turns off optional diagnostic data collection. Microsoft Edge will send required diagnostic data to keep Microsoft Edge secure, up to date and performing as expected.
+必需数据(1)会发送必需的诊断数据，但会关闭可选诊断数据收集。Microsoft Edge 将发送必需的诊断数据以确保 Microsoft Edge 安全、最新并按预期运行。
 
-'OptionalData' sends optional diagnostic data includes data about browser usage, websites that are visited, crash reports sent to Microsoft for product and service improvement.
+“可选数据”将发送可选诊断数据，其中包括有关浏览器使用情况、访问的网站以及为改进产品和服务而向 Microsoft 发送的崩溃报告的数据。
 
-On Windows 7/macOS, this policy controls sending required and optional data to Microsoft.
+在 Windows 7/macOS 上，此策略控制向 Microsoft 发送必需和可选数据。
 
-If you don't configure this policy or disable it, Microsoft Edge will default to the user's preference.
+ 如果你未配置此策略或禁用它，则 Microsoft Edge 将默认为用户的首选项。
 
-Policy options mapping:
+策略选项映射：
 
-* Off (0) = Off (Not recommended)
+* Off (0) = 关闭(不推荐)
 
-* RequiredData (1) = Required data
+* RequiredData (1) = 必需数据
 
-* OptionalData (2) = Optional data
+* OptionalData (2) = 可选数据
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DiagnosticData
-  - GP name: Send required and optional diagnostic data about browser usage
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DiagnosticData
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DiagnosticData
+  - GP 名称: 发送有关浏览器使用情况的必需和可选诊断数据
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DiagnosticData
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DiagnosticData
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DiagnosticData
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DirectInvokeEnabled
-  #### Allow users to open files using the DirectInvoke protocol
+  #### 允许用户使用 DirectInvoke 协议打开文件
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  Allow users to open files using the DirectInvoke protocol. The DirectInvoke protocol allows websites to request that the browser open files from a specific URL using a specific file handler on the user's computer or device.
+  #### 描述
+  允许用户使用 DirectInvoke 协议打开文件。DirectInvoke 协议允许网站使用用户的计算机或设备上的特定文件处理程序请求浏览器打开特定 URL 中的文件。
 
-If you enable or don't configure this policy, users can open files using the DirectInvoke protocol.
+如果启用或未配置此策略，则用户可以使用 DirectInvoke 协议打开文件。
 
-If you disable this policy, users can't open files using the DirectInvoke protocol. Instead, the file will be saved to the file system.
+如果禁用此策略，则用户无法使用 DirectInvoke 协议打开文件。文件将被保存到文件系统中。
 
-Note: Disabling DirectInvoke may prevent certain Microsoft SharePoint Online features from working as expected.
+注意：禁用 DirectInvoke 可能会阻止某些 Microsoft Office SharePoint Online 功能按预期方式工作。
 
-For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
+有关 DirectInvoke 的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 和 [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DirectInvokeEnabled
-  - GP name: Allow users to open files using the DirectInvoke protocol
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DirectInvokeEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DirectInvokeEnabled
+  - GP 名称: 允许用户使用 DirectInvoke 协议打开文件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DirectInvokeEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -9096,379 +9093,379 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### Disable3DAPIs
-  #### Disable support for 3D graphics APIs
+  #### 禁用对 3D 图形 API 的支持
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Prevent web pages from accessing the graphics processing unit (GPU). Specifically, web pages can't access the WebGL API and plug-ins can't use the Pepper 3D API.
+  #### 描述
+  防止网页访问图形处理单元(GPU)。具体而言，网页不能访问 WebGL API 并且插件不能使用 Pepper 3D API。
 
-If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Microsoft Edge might, by default, still require command line arguments to be passed in order to use these APIs.
+如果未配置或禁用此策略，则可能会允许网页使用 WebGL API 并允许插件使用 Pepper 3D API。默认情况下，Microsoft Edge 可能仍需要传递命令行参数才能使用这些 API。
 
-If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to true.
+如果 [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) 策略设置为 false，则 [Disable3DAPIs](#disable3dapis) 策略的设置会被忽略 - 这等同于将 [Disable3DAPIs](#disable3dapis) 策略设置为 true。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: Disable3DAPIs
-  - GP name: Disable support for 3D graphics APIs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: Disable3DAPIs
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: Disable3DAPIs
+  - GP 名称: 禁用对 3D 图形 API 的支持
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: Disable3DAPIs
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: Disable3DAPIs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: Disable3DAPIs
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DisableScreenshots
-  #### Disable taking screenshots
+  #### 禁用进行屏幕截图
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Controls if users can take screenshots of the browser page.
+  #### 描述
+  控制用户是否可以截取浏览器页面的屏幕截图。
 
-If enabled, user can't take screenshots by using keyboard shortcuts or extension APIs.
+如果启用，则用户无法使用键盘快捷方式或扩展 API 截取屏幕截图。
 
-If disabled or don't configure this policy, users can take screenshots.
+如果禁用或不配置此策略，则用户可以截取屏幕截图。
 
-Please note this policy controls screenshots taken from within the browser itself. Even if you enable this policy, users might still be able to take screenshots using some method outside of the browser (like using an operating system feature or another application).
+请注意，此策略控制从浏览器本身内部截取的屏幕截图。即使启用此策略，用户或许仍可以在浏览器之外使用某些方法（例如使用操作系统功能或其他应用程序）截取屏幕截图。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DisableScreenshots
-  - GP name: Disable taking screenshots
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DisableScreenshots
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DisableScreenshots
+  - GP 名称: 禁用进行屏幕截图
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DisableScreenshots
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DisableScreenshots
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DisableScreenshots
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DiskCacheDir
-  #### Set disk cache directory
+  #### 设置磁盘缓存目录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures the directory to use to store cached files.
+  #### 描述
+  配置用于存储缓存文件的目录。
 
-If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified the '--disk-cache-dir' flag. To avoid data loss or other unexpected errors, don't configure this policy to a volume's root directory or to a directory used for other purposes, because Microsoft Edge manages its contents.
+如果启用此策略，那么无论用户是否已指定 "--disk-cache-dir" 标志，Microsoft Edge 都将使用提供的目录。为避免数据丢失或其他意外错误，请不要将此策略配置为使用卷的根目录或用于其他用途的目录，因为 Microsoft Edge 会管理其内容。
 
-See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables you can use when specifying directories and paths.
+有关在指定目录和路径时可以使用的变量列表，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041)。
 
-If you don't configure this policy, the default cache directory is used, and users can override that default with the '--disk-cache-dir' command line flag.
+如果你未配置此策略，则使用默认缓存目录，用户可以使用 "--disk-cache-dir" 命令行标志替代该默认值。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DiskCacheDir
-  - GP name: Set disk cache directory
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DiskCacheDir
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DiskCacheDir
+  - GP 名称: 设置磁盘缓存目录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DiskCacheDir
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "${user_home}/Edge_cache"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DiskCacheDir
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DiskCacheDir
+  - 示例值:
 ``` xml
 <string>${user_home}/Edge_cache</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DiskCacheSize
-  #### Set disk cache size, in bytes
+  #### 设置磁盘缓存大小(字节)
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures the size of the cache, in bytes, used to store files on the disk.
+  #### 描述
+  配置用于在磁盘上存储文件的缓存的大小(以字节为单位)。
 
-If you enable this policy, Microsoft Edge uses the provided cache size regardless of whether the user has specified the '--disk-cache-size' flag. The value specified in this policy isn't a hard boundary but rather a suggestion to the caching system; any value below a few megabytes is too small and will be rounded up to a reasonable minimum.
+如果启用此策略，那么无论用户是否指定了 "--disk-cache-size" 标志，Microsoft Edge 都会使用提供的缓存大小。此策略中指定的值不是严格界限，而是针对缓存系统的建议；低于几兆字节的任何值都太小，将被舍入为合理的最小值。
 
-If you set the value of this policy to 0, the default cache size is used, and users can't change it.
+如果将此策略的值设置为 0，则将使用默认缓存大小，而且用户无法更改它。
 
-If you don't configure this policy, the default size is used, but users can override it with the '--disk-cache-size' flag.
+如果未配置此策略，则将使用默认大小，但用户可以使用 "--disk-cache-size" 标志替代它。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DiskCacheSize
-  - GP name: Set disk cache size, in bytes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DiskCacheSize
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DiskCacheSize
+  - GP 名称: 设置磁盘缓存大小(字节)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DiskCacheSize
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x06400000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DiskCacheSize
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DiskCacheSize
+  - 示例值:
 ``` xml
 <integer>104857600</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DnsOverHttpsMode
-  #### Control the mode of DNS-over-HTTPS
+  #### 控制 DNS-over-HTTPS 的模式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  Control the mode of the DNS-over-HTTPS resolver. Note that this policy will only set the default mode for each query. The mode can be overridden for special types of queries such as requests to resolve a DNS-over-HTTPS server hostname.
+  #### 描述
+  控制 DNS-over-HTTPS 解析程序的模式。请注意，此策略将仅为每个查询设置默认模式。对于特殊类型的查询（例如，请求解析 DNS-over-HTTPS  服务器主机名的请求），可以覆盖此模式。
 
-The "off" mode will disable DNS-over-HTTPS.
+"off" 模式将禁用 DNS-over-HTTPS。
 
-The "automatic" mode will send DNS-over-HTTPS queries first if a DNS-over-HTTPS server is available and may fallback to sending insecure queries on error.
+如果 DNS-over-HTTPS 服务器可用，则 "automatic" 模式将首先发送 DNS-over-HTTPS 查询，并且可能会回退到因错误而发送不安全的查询。
 
-The "secure" mode will only send DNS-over-HTTPS queries and will fail to resolve on error.
+"secure" 模式将仅发送 DNS-over-HTTPS 查询，将无法解决错误。
 
-If you don't configure this policy, the browser might send DNS-over-HTTPS requests to a resolver associated with the user's configured system resolver.
+ 如果您未配置此策略，则浏览器可能会将 DNS-over-HTTPS 请求发送到与用户配置的系统解析程序关联的解析程序。
 
-Policy options mapping:
+策略选项映射：
 
-* off (off) = Disable DNS-over-HTTPS
+* off (off) = 禁用 DNS-over-HTTPS
 
-* automatic (automatic) = Enable DNS-over-HTTPS with insecure fallback
+* automatic (automatic) = 启用具有不安全回退功能的 DNS-over-HTTPS
 
-* secure (secure) = Enable DNS-over-HTTPS without insecure fallback
+* secure (secure) = 启用不带不安全回退功能的 DNS-over-HTTPS
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DnsOverHttpsMode
-  - GP name: Control the mode of DNS-over-HTTPS
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DnsOverHttpsMode
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DnsOverHttpsMode
+  - GP 名称: 控制 DNS-over-HTTPS 的模式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DnsOverHttpsMode
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "off"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DnsOverHttpsMode
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DnsOverHttpsMode
+  - 示例值:
 ``` xml
 <string>off</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DnsOverHttpsTemplates
-  #### Specify URI template of desired DNS-over-HTTPS resolver
+  #### 指定所需的 IP-HTTPS DNS 解析程序的 URI 模板
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  The URI template of the desired DNS-over-HTTPS resolver. To specify multiple DNS-over-HTTPS resolvers, separate the corresponding URI templates with spaces.
+  #### 描述
+  所需的 DNS-over-HTTPS 解析程序的 URI 模板。若要指定多个 DNS-over-HTTPS 解析程序，请用空格分隔相应的 URI 模板。
 
-If you set [DnsOverHttpsMode](#dnsoverhttpsmode) to "secure" then this policy must be set and cannot be empty.
+如果已将 [DnsOverHttpsMode](#dnsoverhttpsmode) 设置为 "secure"，则必须设置此策略并且它不能为空。
 
-If you set [DnsOverHttpsMode](#dnsoverhttpsmode) to "automatic" and this policy is set then the URI templates specified will be used. If you don't set this policy, then hardcoded mappings will be used to attempt to upgrade the user's current DNS resolver to a DoH resolver operated by the same provider.
+如果已将 [DnsOverHttpsMode](#dnsoverhttpsmode) 设置为 "automatic" 并且已设置此策略，则将使用指定的 URI 模板。如果未设置此策略，则将使用硬编码映射来尝试将用户当前的 DNS 解析程序升级到由同一提供商运营的 DoH 解析程序。
 
-If the URI template contains a dns variable, requests to the resolver will use GET; otherwise requests will use POST.
+如果 URI 模板包含 dns 变量，则对解析程序的请求将使用 GET；否则，请求将使用 POST。
 
-Incorrectly formatted templates will be ignored.
+将忽略格式不正确的模板。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DnsOverHttpsTemplates
-  - GP name: Specify URI template of desired DNS-over-HTTPS resolver
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DnsOverHttpsTemplates
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DnsOverHttpsTemplates
+  - GP 名称: 指定所需的 IP-HTTPS DNS 解析程序的 URI 模板
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DnsOverHttpsTemplates
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "https://dns.example.net/dns-query{?dns}"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DnsOverHttpsTemplates
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DnsOverHttpsTemplates
+  - 示例值:
 ``` xml
 <string>https://dns.example.net/dns-query{?dns}</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DownloadDirectory
-  #### Set download directory
+  #### 设置下载目录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures the directory to use when downloading files.
+  #### 描述
+  配置下载文件时要使用的目录。
 
-If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified one or chosen to be prompted for download location every time. See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
+如果启用此策略，Microsoft Edge 将使用提供的目录，无论用户是已指定目录还是选择每次都提示提供下载位置。有关可以使用的变量列表，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041)。
 
-If you disable or don't configure this policy, the default download directory is used, and the user can change it.
+如果禁用或未配置此策略，则使用默认下载目录，但用户可以更改它。
 
-If you set an invalid path, Microsoft Edge will default to the user's default download directory.
+如果设置了无效路径，Microsoft Edge 将默认使用用户的默认下载目录。
 
-If the folder specified by the path doesn't exist, the download will trigger a prompt that asks the user where they want to save their download.
+如果路径指定的文件夹不存在，则下载将触发提示，询问用户他们想要保存下载的位置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DownloadDirectory
-  - GP name: Set download directory
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DownloadDirectory
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DownloadDirectory
+  - GP 名称: 设置下载目录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DownloadDirectory
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DownloadDirectory
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DownloadDirectory
+  - 示例值:
 ``` xml
 <string>
       Linux-based OSes (including Mac): /home/${user_name}/Downloads
@@ -9476,230 +9473,230 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### DownloadRestrictions
-  #### Allow download restrictions
+  #### 允许使用下载限制
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures the type of downloads that Microsoft Edge completely blocks, without letting users override the security decision.
+  #### 描述
+  配置 Microsoft Edge 完全阻止的下载类型，不让用户覆盖安全决策。
 
-Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings.
+设置“BlockDangerousDownloads”可以允许所有下载，但带有 Microsoft Defender SmartScreen 警告的下载除外。
 
-Set 'BlockPotentiallyDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of potentially dangerous or unwanted downloads.
+设置“BlockPotentiallyDangerousDownloads”可以允许所有下载，但带有 Microsoft Defender SmartScreen 潜在危险或不需要的下载警告的下载除外。
 
-Set 'BlockAllDownloads' to block all downloads.
+设置“BlockAllDownloads”可以阻止所有下载。
 
-If you don't configure this policy or set the 'DefaultDownloadSecurity' option, the downloads go through the usual security restrictions based on Microsoft Defender SmartScreen analysis results.
+如果未配置此策略或者设置“DefaultDownloadSecurity”选项，则下载将根据 Microsoft Defender SmartScreen 的分析结果受到普通安全限制。
 
-Note that these restrictions apply to downloads from web page content, as well as the 'download link...' context menu option. These restrictions don't apply to saving or downloading the currently displayed page, nor do they apply to the Save as PDF option from the printing options.
+请注意，这些限制适用于网页内容下载以及“下载链接...”上下文菜单选项。这些限制不适用于保存或下载当前显示的页面，也不适用于打印选项中的“另存为 PDF”选项。
 
-See [https://go.microsoft.com/fwlink/?linkid=2094934](https://go.microsoft.com/fwlink/?linkid=2094934) for more info on Microsoft Defender SmartScreen.
+有关 Microsoft Defender SmartScreen 的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094934](https://go.microsoft.com/fwlink/?linkid=2094934)。
 
-Policy options mapping:
+策略选项映射：
 
-* DefaultDownloadSecurity (0) = No special restrictions
+* DefaultDownloadSecurity (0) = 无特殊限制
 
-* BlockDangerousDownloads (1) = Block dangerous downloads
+* BlockDangerousDownloads (1) = 阻止危险的下载
 
-* BlockPotentiallyDangerousDownloads (2) = Block potentially dangerous or unwanted downloads
+* BlockPotentiallyDangerousDownloads (2) = 阻止可能导致危险或不需要的下载
 
-* BlockAllDownloads (3) = Block all downloads
+* BlockAllDownloads (3) = 阻止所有下载
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: DownloadRestrictions
-  - GP name: Allow download restrictions
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: DownloadRestrictions
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DownloadRestrictions
+  - GP 名称: 允许使用下载限制
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: DownloadRestrictions
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: DownloadRestrictions
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: DownloadRestrictions
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EdgeCollectionsEnabled
-  #### Enable the Collections feature
+  #### 启用集锦功能
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Lets you allow users to access the Collections feature, where they can collect, organize, share, and export content more efficiently and with Office integration.
+  #### 描述
+  使你能够支持用户访问集锦功能，利用此功能，他们可以通过 Office 集成更高效地收集、组织、共享和导出内容。
 
-If you enable or don't configure this policy, users can access and use the Collections feature in Microsoft Edge.
+如果启用或未配置此策略，则用户可以在 Microsoft Edge 中访问和使集锦功能。
 
-If you disable this policy, users can't access and use Collections in Microsoft Edge.
+如果禁用此策略，则用户无法在 Microsoft Edge 中访问和使集锦。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EdgeCollectionsEnabled
-  - GP name: Enable the Collections feature
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EdgeCollectionsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EdgeCollectionsEnabled
+  - GP 名称: 启用集锦功能
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EdgeCollectionsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EdgeCollectionsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EdgeCollectionsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EditFavoritesEnabled
-  #### Allows users to edit favorites
+  #### 允许用户编辑收藏夹
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enable this policy to let users add, remove, and modify favorites. This is the default behavior if you don't configure the policy.
+  #### 描述
+  启用此策略可让用户添加、删除和修改收藏夹。如果未配置此策略，则这是默认行为。
 
-Disable this policy to stop users from adding, removing, or modifying favorites. They can still use existing favorites.
+禁用此策略可阻止用户添加、删除或修改收藏夹。他们仍可使用现有收藏夹。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EditFavoritesEnabled
-  - GP name: Allows users to edit favorites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EditFavoritesEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EditFavoritesEnabled
+  - GP 名称: 允许用户编辑收藏夹
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EditFavoritesEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EditFavoritesEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EditFavoritesEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Re-enable deprecated web platform features for a limited time
+  #### 在有限的时间内重新启用弃用的 Web 平台功能
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify a list of deprecated web platform features to temporarily re-enable.
+  #### 描述
+  指定要暂时重新启用的弃用 Web 平台功能列表。
 
-This policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.
+此策略允许你在有限的时间内重新启用弃用的 Web 平台功能。这些功能由字符串标签标识。
 
-If you don't configure this policy, if the list is empty, or if a feature doesn't match one of the supported string tags, all deprecated web platform features remain disabled.
+如果不配置此策略，或者列表为空，或者某个功能不能与某一受支持的字符串标签匹配，则所有弃用的 Web 平台功能将仍是禁用的。
 
-While the policy itself is supported on the above platforms, the feature it's enabling might not be available on all of those platforms. Not all deprecated Web Platform features can be re-enabled. Only those explicitly listed below can be re-enabled, and only for a limited period of time, which differs per feature. You can review the intent behind the Web Platform feature changes at https://bit.ly/blinkintents.
+虽然上述平台支持此策略，但它启用的功能可能并不在所有这些平台上都可用。并非所有弃用的 Web 平台功能都可以重新启用。只有下面明确列出的功能才能重新启用，并且只能在有限的时间内重新启用，具体取决于每项功能。你可以查看 https://bit.ly/blinkintents 了解网站平台功能变化背后的意图。
 
-The general format of the string tag is [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+字符串标记的常规格式为 [DeprecatedFeatureName] _EffectiveUntil [yyyymmdd]。
 
-Policy options mapping:
+策略选项映射：
 
-* ExampleDeprecatedFeature (ExampleDeprecatedFeature_EffectiveUntil20080902) = Enable ExampleDeprecatedFeature API through 2008/09/02
+* ExampleDeprecatedFeature (ExampleDeprecatedFeature_EffectiveUntil20080902) = 启用 ExampleDeprecatedFeature API 直至 2008 年 9 月 2 日
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableDeprecatedWebPlatformFeatures
+  - GP 名称: 在有限的时间内重新启用弃用的 Web 平台功能
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EnableDeprecatedWebPlatformFeatures
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableDeprecatedWebPlatformFeatures
+  - 示例值:
 ``` xml
 <array>
   <string>ExampleDeprecatedFeature_EffectiveUntil20080902</string>
@@ -9707,251 +9704,251 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnableDomainActionsDownload
-  #### Enable Domain Actions Download from Microsoft (obsolete)
+  #### 启用从 Microsoft 进行域操作下载 (过时)
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
-  #### Supported versions:
-  - On Windows and macOS since 77, until 84
+  >过时: 此策略已过时，在 Microsoft Edge 84 之后无法使用。
+  #### 支持的版本:
+  - 在 Windows 后，在 macOS 和 77 上 84
 
-  #### Description
-  This policy doesn't work because conflicting states should be avoided. This policy was used to enable/disable download of the domain actions list, but it didn't always achieve the desired state. The Experimentation and Configuration Service, which handles the download, has its own policy to configure what is downloaded from the service. Use the [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) policy instead.
+  #### 描述
+  该政策无效，因为应避免发生冲突的状态。此策略用于启用/禁用域操作列表的下载，不过它并不会始终实现所需状态。处理下载的试验和配置服务使用自己的策略配置从服务下载的内容。请改用 [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) 策略。
 
-In Microsoft Edge, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
+在 Microsoft Edge 中，域操作表示一系列兼容性功能，这些功能可帮助浏览器在 Web 上正常工作。
 
-Microsoft keeps a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+出于兼容性原因，Microsoft 会保留针对某些域采取的操作的列表。例如，如果某个网站由于 Microsoft Edge 上的新用户代理字符串而中断，则浏览器可能会覆盖该网站上的用户代理字符串。在 Microsoft 尝试与站点所有者一起解决问题时，所有这些操作都是临时性操作。
 
-When the browser starts up and then periodically afterwards, the browser will contact the Experimentation and Configuration Service that contains the most up to date list of compatibility actions to perform. This list is saved locally after it is first retrieved so that subsequent requests will only update the list if the server's copy has changed.
+当浏览器启动后，浏览器会定期与包含最新待执行兼容性操作列表的试验和配置服务联系。此列表在第一次被检索后保存在本地，以便后续请求仅在服务器的副本发生更改时才会更新列表。
 
-If you enable this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
+如果启用此策略，将继续通过试验和配置服务下载域操作列表。
 
-If you disable this policy, the list of Domain Actions will no longer be downloaded from the Experimentation and Configuration Service.
+如果禁用此策略，则不再通过试验和配置服务下载域操作列表。
 
-If you don't configure this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
+如果未配置此策略，则将继续通过试验和配置服务下载域操作列表。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableDomainActionsDownload
-  - GP name: Enable Domain Actions Download from Microsoft (obsolete)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnableDomainActionsDownload
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableDomainActionsDownload
+  - GP 名称: 启用从 Microsoft 进行域操作下载 (过时)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnableDomainActionsDownload
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EnableDomainActionsDownload
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableDomainActionsDownload
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnableOnlineRevocationChecks
-  #### Enable online OCSP/CRL checks
+  #### 启用联机 OCSP/CRL 检查
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Online revocation checks don't provide a significant security benefit and are disabled by default.
+  #### 描述
+  联机吊销检查并不具备显著的安全优势，并且默认情况下将其禁用。
 
-If you enable this policy, Microsoft Edge will perform soft-fail, online OCSP/CRL checks. "Soft fail" means that if the revocation server can't be reached, the certificate will be considered valid.
+如果启用此策略，则 Microsoft Edge 将执行软失败的联机 OCSP/CRL 检查。“软失败”是指如果无法访问吊销服务器，则该证书将被视为有效。
 
-If you disable the policy or don't configure it, Microsoft Edge won't perform online revocation checks.
+如果禁用或未配置此策略，则 Microsoft Edge 不会执行联机吊销检查。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableOnlineRevocationChecks
-  - GP name: Enable online OCSP/CRL checks
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnableOnlineRevocationChecks
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableOnlineRevocationChecks
+  - GP 名称: 启用联机 OCSP/CRL 检查
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnableOnlineRevocationChecks
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EnableOnlineRevocationChecks
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableOnlineRevocationChecks
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnableSha1ForLocalAnchors
-  #### Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 由本地信任锚颁发时，允许使用 SHA-1 签名的证书 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  When this setting is enabled, Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.
+  #### 描述
+  启用此设置后，只要证书链接到本地安装的根证书且有效，则 Microsoft Edge 允许受 SHA-1 签名证书保护的连接。
 
-Note that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Microsoft Edge 92 releasing in mid 2021.
+请注意，此策略取决于允许 SHA-1 签名的操作系统(OS)证书验证堆栈。如果操作系统更新更改了处理 SHA-1 证书的操作系统，则此策略可能不再有效。此外，此策略旨在用作临时解决方法，让企业有更多时间迁离 SHA-1。我们将在 2021 年年中发布的 Microsoft Edge 92 中删除此策略。
 
-If you don't set this policy or set it to false, or the SHA-1 certificate chains to a publicly trusted certificate root, then Microsoft Edge won't allow certificates signed by SHA-1.
+如果你未设置此策略或将其设置为 false，或者将 SHA-1 证书链接到了公开信任的根证书，则 Microsoft Edge 将不允许使用 SHA-1 签名的证书。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+此策略仅在已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例上可用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnableSha1ForLocalAnchors
-  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnableSha1ForLocalAnchors
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnableSha1ForLocalAnchors
+  - GP 名称: 由本地信任锚颁发时，允许使用 SHA-1 签名的证书 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnableSha1ForLocalAnchors
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EnableSha1ForLocalAnchors
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnableSha1ForLocalAnchors
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnterpriseHardwarePlatformAPIEnabled
-  #### Allow managed extensions to use the Enterprise Hardware Platform API
+  #### 允许托管扩展使用企业硬件平台 API
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  When this policy is set to enabled, extensions installed by enterprise policy are allowed to use the Enterprise Hardware Platform API.
-When this policy is set to disabled or isn't set, no extensions are allowed to use the Enterprise Hardware Platform API.
-This policy also applies to component extensions.
+  #### 描述
+  如果将此策略设置为“已启用”，则允许通过企业策略安装的扩展使用企业硬件平台 API。
+如果此策略设置为“已禁用”，或者未设置此策略，则不允许扩展使用企业硬件平台 API。
+此策略也适用于组件扩展。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnterpriseHardwarePlatformAPIEnabled
-  - GP name: Allow managed extensions to use the Enterprise Hardware Platform API
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnterpriseHardwarePlatformAPIEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnterpriseHardwarePlatformAPIEnabled
+  - GP 名称: 允许托管扩展使用企业硬件平台 API
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnterpriseHardwarePlatformAPIEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: EnterpriseHardwarePlatformAPIEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: EnterpriseHardwarePlatformAPIEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### EnterpriseModeSiteListManagerAllowed
-  #### Allow access to the Enterprise Mode Site List Manager tool
+  #### 允许访问 Enterprise Mode Site List Manager 工具
   
   
-  #### Supported versions:
-  - On Windows since 86 or later
+  #### 支持的版本:
+  - 在 Windows 自 86 或之后
 
-  #### Description
-  Allows you to set whether Enterprise Mode Site List Manager is available to users.
+  #### 描述
+  允许你设置用户是否可以使用 Enterprise Mode Site List Manager。
 
-If you enable this policy, users can see the Enterprise Mode Site List Manager nav button on edge://compat page, navigate to the tool and use it.
+如果启用此策略，则用户可以在 edge://compat 页面上看到 Enterprise Mode Site List Manager 导航按钮，导航至该工具并使用它。
 
-If you disable or don't configure this policy, users won't see the Enterprise Mode Site List Manager nav button and won't be able to use it.
+如果禁用或未配置此策略，则用户将看不到 Enterprise Mode Site List Manager 导航按钮，也将无法使用它。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: EnterpriseModeSiteListManagerAllowed
-  - GP name: Allow access to the Enterprise Mode Site List Manager tool
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnterpriseModeSiteListManagerAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: EnterpriseModeSiteListManagerAllowed
+  - GP 名称: 允许访问 Enterprise Mode Site List Manager 工具
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: EnterpriseModeSiteListManagerAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -9959,30 +9956,30 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  #### Disable download file type extension-based warnings for specified file types on domains
+  #### 对域上的指定文件类型禁用基于下载文件类型扩展名的警告
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
+  #### 描述
+  你可以启用此策略来创建文件类型扩展名的字典，其相应的域列表将免于基于文件类型扩展名的下载警告。这使企业管理员可以阻止与列出的域关联的文件的基于文件扩展名的下载警告。例如，如果“jnlp”扩展名与“website1.com”关联，则用户从“website1.com”下载“jnlp”文件时不会看到警告，但从“website2.com”下载“jnlp”文件时会看到下载警告。
 
-Files with file type extensions specified for domains identified by this policy will still be subject to non-file type extension-based security warnings such as mixed-content download warnings and Microsoft Defender SmartScreen warnings.
+具有为此策略标识的域指定的文件类型扩展名的文件仍将受到基于非文件类型扩展名的安全警告，例如混合内容下载警告和 Microsoft Defender SmartScreen 警告。
 
-If you disable this policy or don't configure it, file types that trigger extension-based download warnings will show warnings to the user.
+如果你禁用或未配置此策略，则触发基于扩展名的下载警告的文件类型将向用户显示警告。
 
-If you enable this policy:
+如果启用此策略：
 
-* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
-* The file type extension entered must be in lower-cased ASCII. The leading separator should not be included when listing the file type extension, so list "jnlp" should be used instead of ".jnlp".
+* URL 模式应根据 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 设置格式。
+* 输入的文件扩展名必须使用小写 ASCII。 列出文件类型扩展名时，不应包括前导分隔符，因此应使用列表“jnlp”代替“.jnlp”。
 
-Example:
+示例：
 
-The following example value would prevent file type extension-based download warnings on swf, exe, and jnlp extensions for *.contoso.com domains. It will show the user a file type extension-based download warning on any other domain for exe and jnlp files, but not for swf files.
+以下示例值将防止 *.contoso.com 域在 swf、exe 和 jnlp扩展名上出现基于文件类型扩展名的下载警告。 它将在其他任何域上为用户显示 exe 和 jnlp 文件基于文件扩展名的下载警告，而不显示 swf 文件。
 
 [
   { "file_extension": "jnlp", "domains": ["contoso.com"] },
@@ -9990,29 +9987,29 @@ The following example value would prevent file type extension-based download war
   { "file_extension": "swf", "domains": ["*"] }
 ]
 
-Note that while the preceding example shows the suppression of file type extension-based download warnings for "swf" files for all domains, applying suppression of such warnings for all domains for any dangerous file type extension is not recommended due to security concerns. It is shown in the example merely to demonstrate the ability to do so.
+请注意，尽管前面的示例显示了针对所有域的“swf”文件的基于文件类型扩展名的下载警告的抑制，但是出于安全考虑，建议不要针对所有危险文件类型扩展名对所有域应用此类警告的抑制。 在示例中仅显示了这样做的能力。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - GP name: Disable download file type extension-based warnings for specified file types on domains
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - GP 名称: 对域上的指定文件类型禁用基于下载文件类型扩展名的警告
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
@@ -10020,9 +10017,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - 示例值:
 ``` xml
 <array>
   <string>{'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}</string>
@@ -10031,541 +10028,541 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExperimentationAndConfigurationServiceControl
-  #### Control communication with the Experimentation and Configuration Service
+  #### 控制与实验和配置服务的通信
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  In Microsoft Edge, the Experimentation and Configuration Service is used to deploy Experimentation and Configuration payload.
+  #### 描述
+  Microsoft Edge 使用试验和配置服务来部署试验和配置有效负载。
 
-Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
+试验有效负载由一系列 Microsoft 为测试和反馈而启用的处于早期开发阶段的功能组成。
 
-Configuration payload consists of a list of settings that Microsoft wants to deploy to Microsoft Edge to optimize user experience. For example, configuration payload may specify how often Microsoft Edge sends requests to the Experimentation and Configuration Service to retrieve the newest payload.
+配置有效负载由一系列 Microsoft 希望部署到 Microsoft Edge 以优化用户体验的设置组成。例如，配置有效负载可以指定 Microsoft Edge 将请求发送到试验和配置服务以检索最新有效负载的频率。
 
-Additionaly, configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+此外，配置有效负载还可以包含由于兼容性原因而要对特定域执行的操作的列表。例如，如果某个网站由于 Microsoft Edge 上的新用户代理字符串而中断，则浏览器可能会覆盖该网站上的用户代理字符串。在 Microsoft 尝试与站点所有者一起解决问题时，所有这些操作都是临时性操作。
 
-If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.
+如果将此策略设置为“FullMode”，则将从试验和配置服务下载完整有效负载，包括试验有效负载和配置有效负载。
 
-If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is delivered.
+如果将此策略设置为“ConfigurationsOnlyMode”，则仅提供配置有效负载。
 
-If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely.
+如果将此策略设置为“RestrictedMode”，则与试验和配置服务的通信将完全停止。
 
-If you don't configure this policy, on a managed device on Stable and Beta channels the behavior is the same as the 'ConfigurationsOnlyMode'.
+如果未配置此策略，则位于稳定通道和测试通道的托管设备上的行为与“ConfigurationsOnlyMode”相同。
 
-If you don't configure this policy, on an unmanaged device the behavior is the same as the 'FullMode'.
+如果未配置此策略，则非托管设备上的行为与“FullMode”相同。
 
-Policy options mapping:
+策略选项映射：
 
-* FullMode (2) = Retrieve configurations and experiments
+* FullMode (2) = 检索配置和试验
 
-* ConfigurationsOnlyMode (1) = Retrieve configurations only
+* ConfigurationsOnlyMode (1) = 仅检索配置
 
-* RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
+* RestrictedMode (0) = 禁止与实验和配置服务通信
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExperimentationAndConfigurationServiceControl
-  - GP name: Control communication with the Experimentation and Configuration Service
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ExperimentationAndConfigurationServiceControl
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExperimentationAndConfigurationServiceControl
+  - GP 名称: 控制与实验和配置服务的通信
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ExperimentationAndConfigurationServiceControl
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExperimentationAndConfigurationServiceControl
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExperimentationAndConfigurationServiceControl
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ExternalProtocolDialogShowAlwaysOpenCheckbox
-  #### Show an "Always open" checkbox in external protocol dialog
+  #### 在外部协议对话框中显示“始终打开”复选框
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  This policy controls whether the "Always allow this site to open links of this type" checkbox is shown on external protocol launch confirmation prompts. This policy only applies to https:// links.
+  #### 描述
+  此策略控制“始终允许该站点打开此类型的链接”复选框是否在外部协议启动确认提示上显示。此策略仅适用于 https:// links。
 
-If you enable this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
+ 如果启用此策略，则显示外部协议确认提示时，用户可以选择“始终允许”以跳过此站点上该协议将来的所有确认提示。
 
-If you disable this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
+ 如果禁用此策略，则不会显示“始终允许”复选框。每次调用外部协议时，系统都将提示用户进行确认。
 
-Prior to Microsoft Edge 83, if you don't configure this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
+ 在 Microsoft Edge 83之前，如果未配置此策略，则不会显示“始终允许”复选框。每次调用外部协议时，都会提示用户进行确认。
 
-On Microsoft Edge 83, if you don't configure this policy, the checkbox visibility is controlled by the "Enable remembering protocol launch prompting preferences" flag in edge://flags
+ 在 Microsoft Edge 83上，如果未配置此策略，则复选框的可见性由 edge://flags 中的“启用记住协议启动提示首选项”标志控制
 
-As of Microsoft Edge 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
+从 Microsoft Edge 84开始，如果未配置此策略，则在显示外部协议确认提示时，用户可以选择“始终允许”以跳过以后在此站点上对该协议进行的所有确认提示。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ExternalProtocolDialogShowAlwaysOpenCheckbox
-  - GP name: Show an "Always open" checkbox in external protocol dialog
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ExternalProtocolDialogShowAlwaysOpenCheckbox
+  - GP 名称: 在外部协议对话框中显示“始终打开”复选框
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ExternalProtocolDialogShowAlwaysOpenCheckbox
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ExternalProtocolDialogShowAlwaysOpenCheckbox
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### FamilySafetySettingsEnabled
-  #### Allow users to configure Family safety
+  #### 允许用户配置“Family Safety”
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  This policy disables and completely hides the Family safety page in Settings. Navigation to edge://settings/familysafety will also be blocked. The Family safety page describes what features are available for family groups and how to join a family group. Learn more about family safety here: ([https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)).
+  #### 描述
+  此策略在“设置”中禁用并完全隐藏“Family Safety”页面。也将阻止导航到 edge://settings/familysafety。“Family Safety”页面描述了家庭组可以使用的具体功能以及如何加入家庭组。请在此处了解有关家庭安全的更多信息: ([https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432))。
 
-If you enable this policy or don't configure it, the Family safety page will be shown.
+如果启用或未配置此策略，则将显示“Family Safety”页面。
 
-If you disable this policy, the Family safety page will not be shown.
+如果禁用此策略，则不会显示“Family Safety”页面。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: FamilySafetySettingsEnabled
-  - GP name: Allow users to configure Family safety
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: FamilySafetySettingsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FamilySafetySettingsEnabled
+  - GP 名称: 允许用户配置“Family Safety”
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: FamilySafetySettingsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: FamilySafetySettingsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: FamilySafetySettingsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### FavoritesBarEnabled
-  #### Enable favorites bar
+  #### 启用收藏夹栏
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables or disables the favorites bar.
+  #### 描述
+  启用或禁用收藏夹栏。
 
-If you enable this policy, users will see the favorites bar.
+如果启用此策略，则用户将看到收藏夹栏。
 
-If you disable this policy, users won't see the favorites bar.
+如果禁用此策略，则用户将看不到收藏夹栏。
 
-If this policy is not configured, then the user can decide to use the favorites bar or not.
+如果未配置此策略，则用户可以决定是否使用收藏夹栏。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: FavoritesBarEnabled
-  - GP name: Enable favorites bar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: FavoritesBarEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FavoritesBarEnabled
+  - GP 名称: 启用收藏夹栏
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: FavoritesBarEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: FavoritesBarEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: FavoritesBarEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceBingSafeSearch
-  #### Enforce Bing SafeSearch
+  #### 强制执行必应安全搜索
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Ensure that queries in Bing web search are done with SafeSearch set to the value specified. Users can't change this setting.
+  #### 描述
+  确保必应 Web 搜索中的查询是在将安全搜索设置为指定值后完成的。用户无法更改此设置。
 
-If you configure this policy to 'BingSafeSearchNoRestrictionsMode', SafeSearch in Bing search falls back to the bing.com value.
+如果将此策略配置为“BingSafeSearchNoRestrictionsMode”，则必应搜索中的安全搜索将恢复为 bing.com 值。
 
-If you configure this policy to 'BingSafeSearchModerateMode', the moderate setting is used in SafeSearch. The moderate setting filters adult videos and images but not text from search results.
+如果将此策略配置为“BingSafeSearchModerateMode”，则在安全搜索中使用适中的设置。适中的设置会从搜索结果中筛选成人视频和图像，但不筛选文本。
 
-If you configure this policy to 'BingSafeSearchStrictMode', the strict setting in SafeSearch is used. The strict setting filters adult text, images, and videos.
+如果将此策略配置为“BingSafeSearchStrictMode”，则使用安全搜索中的严格设置。严格设置会筛选成人文本、图像和视频。
 
-If you disable this policy or don't configure it, SafeSearch in Bing search isn't enforced, and users can set the value they want on bing.com.
+如果禁用此策略或者未对其进行配置，则不会强制在必应搜索中执行安全搜索，用户可以在 bing.com 上设置他们想要的值。
 
-Policy options mapping:
+策略选项映射：
 
-* BingSafeSearchNoRestrictionsMode (0) = Don't configure search restrictions in Bing
+* BingSafeSearchNoRestrictionsMode (0) = 不在必应中配置搜索限制
 
-* BingSafeSearchModerateMode (1) = Configure moderate search restrictions in Bing
+* BingSafeSearchModerateMode (1) = 在必应中配置适中的搜索限制
 
-* BingSafeSearchStrictMode (2) = Configure strict search restrictions in Bing
+* BingSafeSearchStrictMode (2) = 在必应中配置严格的搜索限制
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceBingSafeSearch
-  - GP name: Enforce Bing SafeSearch
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceBingSafeSearch
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceBingSafeSearch
+  - GP 名称: 强制执行必应安全搜索
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceBingSafeSearch
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceBingSafeSearch
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceBingSafeSearch
+  - 示例值:
 ``` xml
 <integer>0</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceCertificatePromptsOnMultipleMatches
-  #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
+  #### 配置当使用 "AutoSelectCertificateForUrls" 配置的站点拥有多个证书匹配项时，Microsoft Edge 是否应自动选择证书
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
+  #### 描述
+  当有多个可用证书并且站点配置有 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 时，切换是否提示用户选择证书。如果未为站点配置 [AutoSelectCertificateForUrls](#autoselectcertificateforurls)，将始终提示用户选择证书。
 
-If you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls) if and only if there is more than one certificate.
+如果将此策略设置为 True，Microsoft Edge 将提示用户为 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 中定义的列表上的站点选择证书，前提是如果且仅当存在多个证书。
 
-If you set this policy to False or don't configure it, Microsoft Edge will automatically select a certificate even if there are multiple matches for a certificate. The user will not be prompted to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
+如果将此策略设置为 False 或未配置此策略，则即使有多个证书匹配项，Microsoft Edge 也将自动选择证书。将不会提示用户为 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 中定义的列表上的站点选择证书。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceCertificatePromptsOnMultipleMatches
-  - GP name: Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceCertificatePromptsOnMultipleMatches
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceCertificatePromptsOnMultipleMatches
+  - GP 名称: 配置当使用 "AutoSelectCertificateForUrls" 配置的站点拥有多个证书匹配项时，Microsoft Edge 是否应自动选择证书
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceCertificatePromptsOnMultipleMatches
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceCertificatePromptsOnMultipleMatches
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceCertificatePromptsOnMultipleMatches
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceEphemeralProfiles
-  #### Enable use of ephemeral profiles
+  #### 启用临时用户配置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Controls whether user profiles are switched to ephemeral mode. An ephemeral profile is created when a session begins, is deleted when the session ends, and is associated with the user's original profile.
+  #### 描述
+  控制是否将用户用户配置切换到临时模式。临时用户配置在会话开始时创建，在会话结束时被删除，并且与用户的原始用户配置相关联。
 
-If you enable this policy, profiles run in ephemeral mode. This lets users work from their own devices without saving browsing data to those devices. If you enable this policy as an OS policy (by using GPO on Windows, for example), it applies to every profile on the system.
+如果启用此策略，则用户配置将在临时模式下运行。这样，用户就可以在自己的设备上工作，而无需将浏览数据保存到这些设备。如果将此策略启用为 OS 策略（例如，通过使用 Windows 上的 GPO），则该策略将应用于系统上的每个用户配置。
 
-If you disable this policy or don't configure it, users get their regular profiles when they sign in to the browser.
+如果禁用或未配置此策略，则用户在登录到浏览器时将获取常规用户配置。
 
-In ephemeral mode, profile data is saved on disk only for the length of the user session. Features like browser history, extensions and their data, web data like cookies, and web databases aren't saved after the browser is closed. This doesn't prevent a user from manually downloading any data to disk, or from saving pages or printing them. If the user has enabled sync, all data is preserved in their sync accounts just like with regular profiles. Users can also use InPrivate browsing in ephemeral mode unless you explicitly disable this.
+在临时模式下，用户配置数据仅在用户会话期间保存在磁盘上。浏览器关闭后，浏览器历史记录、扩展及其数据、Cookie 等 Web 数据和 Web 数据库等功能不会保存。这不会阻碍用户将任何数据手动下载到磁盘，也不会阻止用户保存或打印页面。如果用户启用了同步，则所有数据将与常规用户配置一样保留在其同步帐户中。用户也可以在临时模式下使用 InPrivate 浏览，除非你明确禁用此功能。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceEphemeralProfiles
-  - GP name: Enable use of ephemeral profiles
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceEphemeralProfiles
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceEphemeralProfiles
+  - GP 名称: 启用临时用户配置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceEphemeralProfiles
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceEphemeralProfiles
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceEphemeralProfiles
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceGoogleSafeSearch
-  #### Enforce Google SafeSearch
+  #### 强制执行 Google 安全搜索
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Forces queries in Google Web Search to be performed with SafeSearch set to active, and prevents users from changing this setting.
+  #### 描述
+  强制执行 Google Web 搜索中的查询并将安全搜索设置为活动，以及阻止用户更改此设置。
 
-If you enable this policy, SafeSearch in Google Search is always active.
+如果启用此策略，Google 搜索中的安全搜索将始终处于活动状态。
 
-If you disable this policy or don't configure it, SafeSearch in Google Search isn't enforced.
+如果禁用或未配置此策略，将不执行 Google 搜索中的安全搜索。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceGoogleSafeSearch
-  - GP name: Enforce Google SafeSearch
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceGoogleSafeSearch
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceGoogleSafeSearch
+  - GP 名称: 强制执行 Google 安全搜索
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceGoogleSafeSearch
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceGoogleSafeSearch
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceGoogleSafeSearch
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceLegacyDefaultReferrerPolicy
-  #### Use a default referrer policy of no-referrer-when-downgrade (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 使用 no-referrer-when-downgrade 的默认引用站点策略 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the current default referrer policy. It won't work in Microsoft Edge version 86.
+  #### 描述
+  此策略已弃用，因为它旨在仅作为一种短期机制，让企业在发现它与当前默认应用站点策略不兼容时，有更多时间更新其 Web 内容。它将无法在 Microsoft Edge 版本 86 中正常工作。
 
-Microsoft Edge's default referrer policy is being strengthened from its current value of no-referrer-when-downgrade to the more secure strict-origin-when-cross-origin through a gradual rollout.
+通过逐步推出，Microsoft Edge 的默认引用站点策略正在加强安全性，其 no-referr-when-downgrade 当前值会变为更安全的 strict-origin-when-cross-origin。
 
-Before the rollout, this enterprise policy will have no effect. After the rollout, when this enterprise policy is enabled, Microsoft Edge's default referrer policy will be set to its old value of no-referrer-when-downgrade.
+在推出之前，此企业策略将无效。推出后，如果启用此企业策略，则 Microsoft Edge 的默认引用站点策略将设置为之前的值 no-referrer-when-downgrade。
 
-This enterprise policy is disabled by default.
+此企业策略默认处于禁用状态。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceLegacyDefaultReferrerPolicy
-  - GP name: Use a default referrer policy of no-referrer-when-downgrade (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceLegacyDefaultReferrerPolicy
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceLegacyDefaultReferrerPolicy
+  - GP 名称: 使用 no-referrer-when-downgrade 的默认引用站点策略 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceLegacyDefaultReferrerPolicy
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceLegacyDefaultReferrerPolicy
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceLegacyDefaultReferrerPolicy
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceNetworkInProcess
-  #### Force networking code to run in the browser process (obsolete)
+  #### 强制网络代码在浏览器进程中运行 (过时)
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
-  #### Supported versions:
-  - On Windows since 78, until 83
+  >过时: 此策略已过时，在 Microsoft Edge 83 之后无法使用。
+  #### 支持的版本:
+  - 在 Windows 从 78 到 83
 
-  #### Description
-  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to migrate to 3rd party software that doesn't depend on hooking networking APIs. Proxy servers are recommended over LSPs and Win32 API patching.
+  #### 描述
+  此策略无效，因为它旨在仅作为一种短期机制，为企业提供更多时间来迁移到不依赖于挂钩网络 API 的第三方软件。建议使用代理服务器，而不是 LSP 和 Win32 API 修补程序。
 
-This policy forces networking code to run in the browser process.
+此策略强制网络代码在浏览器进程中运行。
 
-This policy is disabled by default. If enabled, users are open to security issues when the networking process is sandboxed.
+此策略默认禁用。如果启用，则在对网络进程进行沙盒处理时，用户会遇到安全问题。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceNetworkInProcess
-  - GP name: Force networking code to run in the browser process (obsolete)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceNetworkInProcess
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceNetworkInProcess
+  - GP 名称: 强制网络代码在浏览器进程中运行 (过时)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceNetworkInProcess
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -10573,16 +10570,16 @@ This policy is disabled by default. If enabled, users are open to security issue
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceSync
   #### Force synchronization of browser data and do not show the sync consent prompt
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
+  #### 描述
   Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
 
 If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
@@ -10595,141 +10592,141 @@ For this policy to work as intended,
 0 = Do not automatically start sync and show the sync consent (default)
 1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceSync
-  - GP name: Force synchronization of browser data and do not show the sync consent prompt
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceSync
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceSync
+  - GP 名称: Force synchronization of browser data and do not show the sync consent prompt
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceSync
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceSync
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceSync
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ForceYouTubeRestrict
-  #### Force minimum YouTube Restricted Mode
+  #### 实施最小 YouTube 受限模式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enforces a minimum Restricted Mode on YouTube and prevents users from picking a less restricted mode.
+  #### 描述
+  在 YouTube 上实施最小受限模式，并阻止用户选取较低的限制模式。
 
-Set to 'Strict' to enforce Strict Restricted Mode on YouTube.
+设置为“Strict”以在 YouTube 上实施严格受限模式。
 
-Set to 'Moderate' to enforce the user to only use Moderate Restricted Mode and Strict Restricted Mode on YouTube. They can't disable Restricted Mode.
+ 设置为“Moderate”以强制用户在 YouTube 上仅使用中等受限模式和严格受限模式。用户不能禁用限制模式。
 
-Set to 'Off' or don't configure this policy to not enforce Restricted Mode on YouTube. External policies such as YouTube policies might still enforce Restricted Mode.
+设置为“Off”或不配置此策略，则不会在 YouTube 上实施受限模式。YouTube 策略等外部策略可能仍然会实施限制模式。
 
-Policy options mapping:
+策略选项映射：
 
-* Off (0) = Do not enforce Restricted Mode on YouTube
+* Off (0) = 不在 YouTube 上实施最小受限模式
 
-* Moderate (1) = Enforce at least Moderate Restricted Mode on YouTube
+* Moderate (1) = 在 YouTube 上至少强制中等受限模式
 
-* Strict (2) = Enforce Strict Restricted Mode for YouTube
+* Strict (2) = 对 YouTube 强制严格受限模式
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ForceYouTubeRestrict
-  - GP name: Force minimum YouTube Restricted Mode
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ForceYouTubeRestrict
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ForceYouTubeRestrict
+  - GP 名称: 实施最小 YouTube 受限模式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ForceYouTubeRestrict
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ForceYouTubeRestrict
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ForceYouTubeRestrict
+  - 示例值:
 ``` xml
 <integer>0</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### FullscreenAllowed
-  #### Allow full screen mode
+  #### 允许全屏模式
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  Set the availability of full screen mode - all Microsoft Edge UI is hidden and only web content is visible.
+  #### 描述
+  设置全屏模式的可用性 - 整个 Microsoft Edge UI 处于隐藏状态，只有 Web 内容可见。
 
-If you enable this policy or don't configure it, the user, apps, and extensions with appropriate permissions can enter full screen mode.
+如果启用或未配置此策略，则具有适当权限的用户、应用和扩展可以进入全屏模式。
 
-If you disable this policy, users, apps, and extensions can't enter full screen mode.
+如果禁用此策略，则用户、应用和扩展将无法进入全屏模式。
 
-Opening Microsoft Edge in kiosk mode using the command line is unavailable when full screen mode is disabled.
+在禁用全屏模式时，无法使用命令行在展台模式下打开 Microsoft Edge。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: FullscreenAllowed
-  - GP name: Allow full screen mode
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: FullscreenAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FullscreenAllowed
+  - GP 名称: 允许全屏模式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: FullscreenAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -10737,158 +10734,158 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### GloballyScopeHTTPAuthCacheEnabled
-  #### Enable globally scoped HTTP auth cache
+  #### 启用全局范围的 HTTP 身份验证缓存
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  This policy configures a single global per profile cache with HTTP server authentication credentials.
+  #### 描述
+  此策略使用 HTTP 服务器身份验证凭据为每个用户配置缓存配置单个全局设置。
 
-If you disable or don't set this policy, the browser will use the default behavior of cross-site auth, which as of version 80, will be to scope HTTP server authentication credentials by top-level site. So, if two sites use resources from the same authenticating domain, credentials will need to be provided independently in the context of both sites. Cached proxy credentials will be reused across sites.
+如果禁用或未设置此策略，则浏览器将使用默认的跨站点身份验证行为，自版本 80 开始，此操作通过顶级站点审查 HTTP 服务器身份验证凭据。因此，如果两个站点使用来自同一身份验证域的资源，则需要在两个站点的上下文中独立提供凭据。缓存的代理凭据将在各个站点之间重用。
 
-If you enable this policy HTTP auth credentials entered in the context of one site will automatically be used in the context of another site.
+如果启用此策略，则在一个站点的上下文中输入的 HTTP 身份验证凭据将自动用于另一个站点的上下文中。
 
-Enabling this policy leaves sites open to some types of cross-site attacks, and allows users to be tracked across sites even without cookies by adding entries to the HTTP auth cache using credentials embedded in URLs.
+启用此策略会使站点面临某些类型的跨站点攻击，并且通过使用 URL 中嵌入的凭据将条目添加到 HTTP 身份验证缓存中，甚至可以在没有 Cookie 的情况下也可以跨站点跟踪用户。
 
-This policy is intended to give enterprises depending on the legacy behavior a chance to update their login procedures and will be removed in the future.
+此策略旨在根据传统行为使企业能够更新其登录程序，并且以后将被删除。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: GloballyScopeHTTPAuthCacheEnabled
-  - GP name: Enable globally scoped HTTP auth cache
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: GloballyScopeHTTPAuthCacheEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: GloballyScopeHTTPAuthCacheEnabled
+  - GP 名称: 启用全局范围的 HTTP 身份验证缓存
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: GloballyScopeHTTPAuthCacheEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: GloballyScopeHTTPAuthCacheEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: GloballyScopeHTTPAuthCacheEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### GoToIntranetSiteForSingleWordEntryInAddressBar
-  #### Force direct intranet site navigation instead of searching on single word entries in the Address Bar
+  #### 强制进行直接 Intranet 站点导航而不是在地址栏中对单个词条进行搜索
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  If you enable this policy, the top auto-suggest result in the address bar suggestion list will navigate to intranet sites if the text entered in the address bar is a single word without punctuation.
+  #### 描述
+  如果启用此策略，在地址栏中输入不含标点的单个字词文本后，则地址栏建议列表中的第一项自动建议结果将导航到 Intranet 站点。
 
-Default navigation when typing a single word without punctuation will conduct a navigation to an intranet site matching the entered text.
+键入不含标点的单个字词后，将导航到与输入的文本匹配的 Intranet 站点。
 
-If you enable this policy, the second auto-suggest result in the address bar suggestion list will conduct a web search exactly as it was entered, provided that this text is a single word without punctuation. The default search provider will be used unless a policy to prevent web search is also enabled.
+如果启用此策略，在此文本为不含标点的单个字词的情况下，地址栏建议列表中的第二项自动建议结果将按照所输入内容精确进行 Web 搜索。除非还启用了可阻止 Web 搜索的策略，否则将使用默认搜索提供程序。
 
-Two effects of enabling this policy are:
+启用此策略可达到两种效果:
 
-Navigation to sites in response to single word queries that would typically resolve to a history item will no longer happen. Instead, the browser will attempt navigate to internal sites that may not exist in an organization's intranet. This will result in a 404 error.
+针对通常解析为历史项目的单个字词查询的站点导航将不再发生。相反，浏览器将尝试导航到组织的 Intranet 中可能不存在的内部站点。这将导致出现 404 错误。
 
-Popular, single-word search terms will require manual selection of search suggestions to properly conduct a search.
+热门的单个字词搜索词将需要手动选择搜索建议，才能正确执行搜索。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: GoToIntranetSiteForSingleWordEntryInAddressBar
-  - GP name: Force direct intranet site navigation instead of searching on single word entries in the Address Bar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: GoToIntranetSiteForSingleWordEntryInAddressBar
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: GoToIntranetSiteForSingleWordEntryInAddressBar
+  - GP 名称: 强制进行直接 Intranet 站点导航而不是在地址栏中对单个词条进行搜索
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: GoToIntranetSiteForSingleWordEntryInAddressBar
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: GoToIntranetSiteForSingleWordEntryInAddressBar
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: GoToIntranetSiteForSingleWordEntryInAddressBar
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### HSTSPolicyBypassList
-  #### Configure the list of names that will bypass the HSTS policy check
+  #### 配置将绕过 HSTS 策略检查的名称列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  Hostnames specified in this list will be exempt from the HSTS policy check that could potentially upgrade requests from "http://" to "https://". Only single-label hostnames are allowed in this policy. Hostnames must be canonicalized. Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific hostnames specified; it doesn't apply to subdomains of the names in the list.
+  #### 描述
+  此列表中指定的主机名将不接受 HSTS 策略检查，该检查可能会将请求从 "http://" 升级到 "https://"。此策略仅允许使用单一标签主机名。主机名必须规范化。任何 IDN 都必须转换为其 A 标签格式，并且所有 ASCII 字母都必须小写。此策略仅适用于指定的特定主机名；它不适用于列表中名称的子域。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: HSTSPolicyBypassList
-  - GP name: Configure the list of names that will bypass the HSTS policy check
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: HSTSPolicyBypassList
+  - GP 名称: 配置将绕过 HSTS 策略检查的名称列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: HSTSPolicyBypassList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: HSTSPolicyBypassList
+  - 示例值:
 ``` xml
 <array>
   <string>meet</string>
@@ -10896,77 +10893,77 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### HardwareAccelerationModeEnabled
-  #### Use hardware acceleration when available
+  #### 使用硬件加速(如可用)
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify to use hardware acceleration, if it's available. If you enable this policy or don't configure it, hardware acceleration is enabled unless a GPU feature is explicitly blocked.
+  #### 描述
+  指定要使用硬件加速(如果可用)。如果启用或未配置此策略，将启用硬件加速，除非已显式阻止 GPU 功能。
 
-If you disable this policy, hardware acceleration is disabled.
+如果禁用此策略，将禁用硬件加速。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: HardwareAccelerationModeEnabled
-  - GP name: Use hardware acceleration when available
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: HardwareAccelerationModeEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: HardwareAccelerationModeEnabled
+  - GP 名称: 使用硬件加速(如可用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: HardwareAccelerationModeEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: HardwareAccelerationModeEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: HardwareAccelerationModeEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### HideFirstRunExperience
-  #### Hide the First-run experience and splash screen
+  #### 隐藏首次运行体验和初始屏幕
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  If you enable this policy, the First-run experience and the splash screen will not be shown to users when they run Microsoft Edge for the first time.
+  #### 描述
+  如果启用此策略，则当用户第一次运行 Microsoft Edge 时，不会向用户显示首次运行体验和初始屏幕。
 
-For the configuration options shown in the First Run Experience, the browser will default to the following:
+对于首次运行体验中显示的配置选项，浏览器将默认使用以下设置:
 
--On the New Tab Page, the feed type will be set to MSN News and the layout to Inspirational.
+- 在新标签页上，源类型将设置为“MSN 资讯”，布局将设置为“灵感”。
 
--The user will still be automatically signed into Microsoft Edge if the Windows account is of Azure AD or MSA type.
+- 如果 Windows 帐户是 Azure AD 或 MSA 类型，则用户仍将自动登录到 Microsoft Edge。
 
--Sync will not be enabled by default and users will be able to turn on sync from the sync settings.
+- 默认情况下不会启用同步，并且用户将可以通过同步设置打开同步。
 
-If you disable or don't configure this policy, the First-run experience and the Splash screen will be shown.
+如果禁用或未配置此策略，则会显示首次运行体验和初始屏幕。
 
-Note: The specific configuration options shown to the user in the First Run Experience, can also be managed by using other specific policies. You can use the HideFirstRunExperience policy in combination with these policies to configure a specific browser experience on your managed devices. Some of these other policies are:
+注意: 也可以使用其他特定策略管理首次运行体验中向用户显示的特定配置选项。可以将 HideFirstRunExperience 策略与这些策略结合使用，以在托管设备上配置特定的浏览器体验。其中一些其他策略包括:
 
 -[AutoImportAtFirstRun](#autoimportatfirstrun)
 
@@ -10980,927 +10977,926 @@ Note: The specific configuration options shown to the user in the First Run Expe
 
 -[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: HideFirstRunExperience
-  - GP name: Hide the First-run experience and splash screen
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: HideFirstRunExperience
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: HideFirstRunExperience
+  - GP 名称: 隐藏首次运行体验和初始屏幕
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: HideFirstRunExperience
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: HideFirstRunExperience
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: HideFirstRunExperience
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportAutofillFormData
-  #### Allow importing of autofill form data
+  #### 允许导入自动填充表单数据
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import autofill form data from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的自动填充表单数据导入 Microsoft Edge。
 
-If you enable this policy, the option to manually import autofill data is automatically selected.
+如果启用此策略，则会自动选择用于手动导入自动填充数据的选项。
 
-If you disable this policy, autofill form data isn't imported at first run, and users can't import it manually.
+如果禁用此策略，则首次运行时不会导入自动填充表单数据，并且用户无法手动导入它。
 
-If you don't configure this policy, autofill data is imported at first run, and users can choose whether to import this data manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入自动填充数据，并且用户可以选择是否在以后的浏览会话期间手动导入此数据。
 
-You can set this policy as a recommendation. This means that Microsoft Edge will import autofill data on first run, but users can select or clear **autofill data** option during manual import.
+你可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入自动填充数据，但用户可以在手动导入期间选择或清除**自动填充数据**选项。
 
-**Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS) and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
+**注意**: 此策略目前管理从 Google Chrome (Windows 7、8 和 10 以及 macOS 上)和 Mozilla Firefox (Windows 7、8 和 10 以及 macOS 上)浏览器中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportAutofillFormData
-  - GP name: Allow importing of autofill form data
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportAutofillFormData
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportAutofillFormData
+  - GP 名称: 允许导入自动填充表单数据
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportAutofillFormData
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportAutofillFormData
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportAutofillFormData
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportBrowserSettings
-  #### Allow importing of browser settings
+  #### 允许导入浏览器设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Allows users to import browser settings from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的浏览器设置导入 Microsoft Edge。
 
-If you enable this policy, the **Browser settings** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则**导入浏览器数据**中的**浏览器设置**复选框会自动选中。
 
-If you disable this policy, browser settings aren't imported at first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入浏览器设置，并且用户无法手动导入它们。
 
-If you don't configure this policy, browser settings are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入浏览器设置，并且用户可以选择是否在以后的浏览会话期间手动导入此设置。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports the settings on first run, but users can select or clear the **browser settings** option during manual import.
+你也可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入设置，但用户可以在手动导入期间选择或清除**浏览器设置**选项。
 
-**Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略目前管理从 Google Chrome (Windows 7、8 和 10 以及 macOS 上)中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportBrowserSettings
-  - GP name: Allow importing of browser settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportBrowserSettings
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportBrowserSettings
+  - GP 名称: 允许导入浏览器设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportBrowserSettings
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportBrowserSettings
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportBrowserSettings
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportCookies
-  #### Allow importing of Cookies
+  #### 允许导入 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Allows users to import Cookies from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的 Cookie 导入 Microsoft Edge。
 
-If you disable this policy, Cookies aren't imported on first run.
+如果禁用此策略，则首次运行时不会导入 Cookie。
 
-If you don't configure this policy, Cookies are imported on first run.
+如果未配置此策略，则会在首次运行时导入 Cookie。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports Cookies on first run.
+你也可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入 Cookie。
 
-**Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略目前管理从 Google Chrome 进行的导入(在 Windows 7、8、10 和 macOS 上)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportCookies
-  - GP name: Allow importing of Cookies
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportCookies
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportCookies
+  - GP 名称: 允许导入 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportCookies
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportCookies
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportCookies
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportExtensions
-  #### Allow importing of extensions
+  #### 允许导入扩展
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Allows users to import extensions from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的扩展导入 Microsoft Edge。
 
-If you enable this policy, the **Extensions** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则会在**导入浏览器数据**对话框中自动选中**扩展**复选框。
 
-If you disable this policy, extensions aren't imported at first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入扩展，并且用户无法手动导入它们。
 
-If you don't configure this policy, extensions are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入扩展，并且用户可以选择是否在以后的浏览会话期间手动导入它们。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports extensions on first run, but users can select or clear the **favorites** option during manual import.
+你还可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入扩展，但用户可以在手动导入期间选择或清除**收藏夹**选项。
 
-**Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略目前仅支持从 Google Chrome 进行导入(在 Windows 7、8、10 和 macOS 上)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportExtensions
-  - GP name: Allow importing of extensions
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportExtensions
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportExtensions
+  - GP 名称: 允许导入扩展
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportExtensions
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportExtensions
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportExtensions
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportFavorites
-  #### Allow importing of favorites
+  #### 允许导入收藏夹
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import favorites from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的收藏夹导入 Microsoft Edge。
 
-If you enable this policy, the **Favorites** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则会在**导入浏览器数据**对话框中自动选中**收藏夹**复选框。
 
-If you disable this policy, favorites aren't imported at first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入收藏夹，并且用户无法手动导入收藏夹。
 
-If you don't configure this policy, favorites are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入收藏夹，并且用户可以选择是否在以后的浏览会话期间手动导入它们。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports favorites on first run, but users can select or clear the **favorites** option during manual import.
+你还可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入收藏夹，但用户可以在手动导入期间选择或清除**收藏夹**选项。
 
-**Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (on macOS) browsers.
+**注意**: 此策略目前管理从 Internet Explorer (Windows 7、8 和 10 上)、Google Chrome (Windows 7、8 和 10 以及 macOS 上)、Mozilla Firefox (Windows 7、8 和 10 以及 macOS 上)和 Apple Safari (macOS) 浏览器中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportFavorites
-  - GP name: Allow importing of favorites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportFavorites
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportFavorites
+  - GP 名称: 允许导入收藏夹
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportFavorites
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportFavorites
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportFavorites
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportHistory
-  #### Allow importing of browsing history
+  #### 允许导入浏览历史记录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import their browsing history from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的浏览历史记录导入 Microsoft Edge。
 
-If you enable this policy, the **Browsing history** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则会在**导入浏览器数据**对话框中自动选中**浏览历史记录**复选框。
 
-If you disable this policy, browsing history data isn't imported at first run, and users can't import this data manually.
+如果禁用此策略，则首次运行时不会导入浏览历史记录数据，并且用户无法手动导入此数据。
 
-If you don't configure this policy, browsing history data is imported at first run, and users can choose whether to import it manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入浏览历史记录数据，并且用户可以选择是否在以后的浏览会话期间手动导入它们。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports browsing history on first run, but users can select or clear the **history** option during manual import.
+你还可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入浏览历史记录，但用户可以在手动导入期间选择或清除**历史记录**选项。
 
-**Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (macOS) browsers.
+**注意**: 此策略目前管理从 Internet Explorer (Windows 7、8 和 10 上)、Google Chrome (Windows 7、8 和 10 以及 macOS 上)、Mozilla Firefox (Windows 7、8 和 10 以及 macOS 上)和 Apple Safari (macOS) 浏览器中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportHistory
-  - GP name: Allow importing of browsing history
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportHistory
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportHistory
+  - GP 名称: 允许导入浏览历史记录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportHistory
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportHistory
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportHistory
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportHomepage
-  #### Allow importing of home page settings
+  #### 允许导入主页设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import their home page setting from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的主页设置导入 Microsoft Edge。
 
-If you enable this policy, the option to manually import the home page setting is automatically selected.
+如果启用此策略，则会自动选择用于手动导入主页设置的选项。
 
-If you disable this policy, the home page setting isn't imported at first run, and users can't import it manually.
+如果禁用此策略，则首次运行时不会导入主页设置，并且用户无法手动导入它。
 
-If you don't configure this policy, the home page setting is imported at first run, and users can choose whether to import this data manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入主页设置，并且用户可以选择是否在以后的浏览会话期间手动导入此数据。
 
-You can set this policy as a recommendation. This means that Microsoft Edge imports the home page setting on first run, but users can select or clear the **home page** option during manual import.
+你可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入主页设置，但用户可以在手动导入期间选择或清除**主页**选项。
 
-**Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
+**注意**: 此策略目前管理从(Windows 7、8 和 10 上) Internet Explorer 中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportHomepage
-  - GP name: Allow importing of home page settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ImportHomepage
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportHomepage
+  - GP 名称: 允许导入主页设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ImportHomepage
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportHomepage
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportHomepage
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportOpenTabs
-  #### Allow importing of open tabs
+  #### 允许导入打开的标签页
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  Allows users to import open and pinned tabs from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中打开和固定的标签页导入 Microsoft Edge。
 
-If you enable this policy, the **Open tabs** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则会在**导入浏览器数据**对话框中自动选中**打开的标签页**复选框。
 
-If you disable this policy, open tabs aren't imported at first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入打开的标签页，并且用户无法手动导入它们。
 
-If you don't configure this policy, open tabs are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入打开的标签页，并且用户可以选择是否在以后的浏览会话期间手动导入它们。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports open tabs on first run, but users can select or clear the **Open tabs** option during manual import.
+你还可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入打开的标签页，但用户可以在手动导入期间选择或清除**打开的标签页**选项。
 
-**Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略目前仅支持从(Windows 7、8、10 和 macOS 上) Google Chrome 中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportOpenTabs
-  - GP name: Allow importing of open tabs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportOpenTabs
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportOpenTabs
+  - GP 名称: 允许导入打开的标签页
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportOpenTabs
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportOpenTabs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportOpenTabs
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportPaymentInfo
-  #### Allow importing of payment info
+  #### 允许导入付款信息
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import payment info from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的付款信息导入 Microsoft Edge。
 
-If you enable this policy, the **payment info** check box is automatically selected in the **Import browser data** dialog box.
+如果启用此策略，则会在**导入浏览器数据**对话框中自动选中**付款信息**复选框。
 
-If you disable this policy, payment info isn't imported at first run, and users can't import it manually.
+如果禁用此策略，则首次运行时不会导入付款信息，并且用户无法手动导入它。
 
-If you don't configure this policy, payment info is imported at first run, and users can choose whether to import it manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入付款信息，并且用户可以选择是否在以后的浏览会话期间手动导入此信息。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports payment info on first run, but users can select or clear the **payment info** option during manual import.
+你还可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入付款信息，但用户可以在手动导入期间选择或清除**付款信息**选项。
 
-**Note:** This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略目前管理从 Google Chrome (Windows 7、8 、10 和 macOS 上)中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportPaymentInfo
-  - GP name: Allow importing of payment info
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportPaymentInfo
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportPaymentInfo
+  - GP 名称: 允许导入付款信息
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportPaymentInfo
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportPaymentInfo
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportPaymentInfo
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportSavedPasswords
-  #### Allow importing of saved passwords
+  #### 允许导入保存的密码
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import saved passwords from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中保存的密码导入 Microsoft Edge。
 
-If you enable this policy, the option to manually import saved passwords is automatically selected.
+如果启用此策略，则会自动选择用于手动导入已保存密码的选项。
 
-If you disable this policy, saved passwords aren't imported on first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入保存的密码，并且用户无法手动导入它们。
 
-If you don't configure this policy, passwords are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入密码，并且用户可以选择是否在以后的浏览会话期间手动导入它们。
 
-You can set this policy as a recommendation. This means that Microsoft Edge imports passwords on first run, but users can select or clear the **passwords** option during manual import.
+你可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入密码，但用户可以在手动导入期间选择或清除**密码**选项。
 
-**Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
+**注意**: 此策略目前管理从 Internet Explorer (Windows 7、8 和 10 上)、Google Chrome (Windows 7、8 和 10 以及 macOS 上)和 Mozilla Firefox (Windows 7、8 和 10 以及 macOS 上)浏览器中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportSavedPasswords
-  - GP name: Allow importing of saved passwords
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportSavedPasswords
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportSavedPasswords
+  - GP 名称: 允许导入保存的密码
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportSavedPasswords
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportSavedPasswords
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportSavedPasswords
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportSearchEngine
-  #### Allow importing of search engine settings
+  #### 允许导入搜索引擎设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows users to import search engine settings from another browser into Microsoft Edge.
+  #### 描述
+  允许用户将其他浏览器中的搜索引擎设置导入 Microsoft Edge。
 
-If you enable, this policy, the option to import search engine settings is automatically selected.
+如果启用此策略，则会自动选择用于导入搜索引擎设置的选项。
 
-If you disable this policy, search engine settings aren't imported at first run, and users can't import them manually.
+如果禁用此策略，则首次运行时不会导入搜索引擎设置，并且用户无法手动导入它们。
 
-If you don't configure this policy, search engine settings are imported at first run, and users can choose whether to import this data manually during later browsing sessions.
+如果未配置此策略，则会在首次运行时导入搜索引擎设置，并且用户可以选择是否在以后的浏览会话期间手动导入此数据。
 
-You can set this policy as a recommendation. This means that Microsoft Edge imports search engine settings on first run, but users can select or clear the **search engine** option during manual import.
+你可以将此策略设置为建议。这意味着 Microsoft Edge 会在首次运行时导入搜索引擎设置，但用户可以在手动导入期间选择或清除**搜索引擎**选项。
 
-**Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
+**注意**: 此策略目前管理从 Internet Explorer (Windows 7、8 和 10 上)中的导入。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportSearchEngine
-  - GP name: Allow importing of search engine settings
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportSearchEngine
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportSearchEngine
+  - GP 名称: 允许导入搜索引擎设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportSearchEngine
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportSearchEngine
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportSearchEngine
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ImportShortcuts
-  #### Allow importing of shortcuts
+  #### 允许导入快捷方式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  Allows users to import Shortcuts from another browser into Microsoft Edge.
+  #### 描述
+  允许用户从另一个浏览器将快捷方式导入到Microsoft Edge 中。
 
-If you disable this policy, Shortcuts aren't imported on first run.
+如果禁用此策略，则不会在首次运行时导入快捷方式。
 
-If you don't configure this policy, Shortcuts are imported on first run.
+如果未配置此策略，则在首次运行时会导入快捷方式。
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports Shortcuts on first run.
+也可以将此策略设置为建议。这意味着 Microsoft Edge 在首次运行时会导入快捷方式。
 
-**Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
+**注意**: 此策略当前管理从 Google Chrome 进行的导入(在 Windows 7、8 和 10 以及 macOS 上)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ImportShortcuts
-  - GP name: Allow importing of shortcuts
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ImportShortcuts
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ImportShortcuts
+  - GP 名称: 允许导入快捷方式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ImportShortcuts
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ImportShortcuts
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ImportShortcuts
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InPrivateModeAvailability
-  #### Configure InPrivate mode availability
+  #### 配置 InPrivate 模式可用性
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies whether the user can open pages in InPrivate mode in Microsoft Edge.
+  #### 描述
+  指定用户是否可以在 Microsoft Edge 中以 InPrivate 模式打开页面。
 
-If you don't configure this policy or set it to 'Enabled', users can open pages in InPrivate mode.
+如果未配置此策略或将其设置为“Enabled”，则用户可以在 InPrivate 模式下打开页面。
 
-Set this policy to 'Disabled' to stop users from using InPrivate mode.
+将此策略设置为“Disabled”可以阻止用户使用 InPrivate 模式。
 
-Set this policy to 'Forced' to always use InPrivate mode.
+将此策略设置为“Forced”可以始终使用 InPrivate 模式。
 
-Policy options mapping:
+策略选项映射：
 
-* Enabled (0) = InPrivate mode available
+* Enabled (0) = InPrivate 模式可用
 
-* Disabled (1) = InPrivate mode disabled
+* Disabled (1) = InPrivate 模式已禁用
 
-* Forced (2) = InPrivate mode forced
+* Forced (2) = 强制的 InPrivate 模式
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InPrivateModeAvailability
-  - GP name: Configure InPrivate mode availability
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InPrivateModeAvailability
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InPrivateModeAvailability
+  - GP 名称: 配置 InPrivate 模式可用性
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InPrivateModeAvailability
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: InPrivateModeAvailability
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: InPrivateModeAvailability
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InsecureFormsWarningsEnabled
   #### Enable warnings for insecure forms
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
+  #### 描述
   This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
 If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
 If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InsecureFormsWarningsEnabled
-  - GP name: Enable warnings for insecure forms
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InsecureFormsWarningsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InsecureFormsWarningsEnabled
+  - GP 名称: Enable warnings for insecure forms
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InsecureFormsWarningsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: InsecureFormsWarningsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: InsecureFormsWarningsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### IntensiveWakeUpThrottlingEnabled
-  #### Control the IntensiveWakeUpThrottling feature
+  #### 控制 IntensiveWakeUpThrottling 功能
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  When enabled the IntensiveWakeUpThrottling feature causes Javascript timers in background tabs to be aggressively throttled and coalesced, running no more than once per minute after a page has been backgrounded for 5 minutes or more.
+  #### 描述
+  启用后，IntensiveWakeUpThrottling 功能会导致后台选项卡中的 Javascript 计时器受到严重限制和合并，当页面在后台 5 分钟或更长时间后，计时器每分钟运行不超过一次。
 
-This is a web standards compliant feature, but it may break functionality on some websites by causing certain actions to be delayed by up to a minute. However, it results in significant CPU and battery savings when enabled. See https://bit.ly/30b1XR4 for more details.
+这是一个符合 Web 标准的功能，但可能会导致某些网站上的功能中断，最长可延迟一分钟。但是，启用后可显著节省 CPU 和电池开销。有关更多详细信息，请参阅 https://bit.ly/30b1XR4。
 
-If you enable this policy, the feature will be force enabled, and users will not be able to override this setting.
-If you disable this policy, the feature will be force disabled, and users will not be able to override this setting.
-If you don't configure this policy, the feature will be controlled by its own internal logic. Users can manually configure this setting.
+如果启用此策略，则将强制启用该功能，用户将无法覆盖此设置。
+如果禁用此策略，则将强制禁用该功能。用户将无法覆盖此设置。
+如果未配置此策略，则该功能将由其自身的内部逻辑控制。用户可以手动配置此设置。
 
-Note that the policy is applied per renderer process, with the most recent value of the policy setting in force when a renderer process starts. A full restart is required to ensure that all the loaded tabs receive a consistent policy setting. It is harmless for processes to be running with different values of this policy.
+请注意，策略是按呈现器进程应用的，策略设置的最新值将在呈现器进程启动时有效。需要完全重新启动，以确保所有加载的选项卡都收到一致的策略设置。使用此策略的不同值运行进程没有什么害处。
 
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 数据类型:
+  - 布尔
 
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: IntensiveWakeUpThrottlingEnabled
-  - GP name: Control the IntensiveWakeUpThrottling feature
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: IntensiveWakeUpThrottlingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: IntensiveWakeUpThrottlingEnabled
+  - GP 名称: 控制 IntensiveWakeUpThrottling 功能
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: IntensiveWakeUpThrottlingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: IntensiveWakeUpThrottlingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: IntensiveWakeUpThrottlingEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InternetExplorerIntegrationEnhancedHangDetection
-  #### Configure enhanced hang detection for Internet Explorer mode
+  #### 为 Internet Explorer 模式配置增强型挂起检测
   
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
 
-  #### Description
-  Enhanced hang detection is a more granular approach to detecting hung webpages in Internet Explorer mode than what standalone Internet Explorer uses. When a hung webpage is detected, the browser will apply a mitigation to prevent the rest of the browser from hanging.
+  #### 描述
+  增强型挂起检测可在 Internet Explorer 模式下检测挂起的网页，这种检测方法比独立 Internet Explorer 使用的方法更精细。检测到挂起的网页时，浏览器将应用缓解措施，防止浏览器的其余部分挂起。
 
-This setting allows you to configure the use of enhanced hang detection in case you run into incompatible issues with any of your websites. We recommend disabling this policy only if you see notifications such as "(website) is not responding" in Internet Explorer mode but not in standalone Internet Explorer.
+通过此设置，可以配置使用增强型挂起检测，以防遇到任何网站的不兼容问题。建议仅在 Internet Explorer 模式下看到“(网站)未响应”之类的通知时，才禁用此策略，而不要在独立 Internet Explorer 中禁用。
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+此设置可与以下各项结合使用:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 设置为“IEMode”
+以及
+列表中至少有一个条目的 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 策略。
 
-If you set this policy to 'Enabled' or don't configure it, websites running in Internet Explorer mode will use enhanced hang detection.
+如果将此策略设置为“Enabled”或不对其进行配置，则在 Internet Explorer 模式下运行的网站将使用增强型挂起检测。
 
-If you set this policy to 'Disabled', enhanced hang detection is disabled, and users will get the basic Internet Explorer hang detection behavior.
+如果将此策略设置为“Disabled”，则将禁用增强型挂起检测，因此用户将获得基本 Internet Explorer 挂起检测行为。
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+若要了解有关 Internet Explorer 模式的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-Policy options mapping:
+策略选项映射：
 
-* Disabled (0) = Enhanced hang detection disabled
+* Disabled (0) = 已禁用增强型挂起检测
 
-* Enabled (1) = Enhanced hang detection enabled
+* Enabled (1) = 已启用增强型挂起检测
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InternetExplorerIntegrationEnhancedHangDetection
-  - GP name: Configure enhanced hang detection for Internet Explorer mode
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InternetExplorerIntegrationEnhancedHangDetection
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InternetExplorerIntegrationEnhancedHangDetection
+  - GP 名称: 为 Internet Explorer 模式配置增强型挂起检测
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InternetExplorerIntegrationEnhancedHangDetection
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -11908,49 +11904,49 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InternetExplorerIntegrationLevel
-  #### Configure Internet Explorer integration
+  #### 配置 Internet Explorer 集成
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  #### 描述
+  有关为 Internet Explorer 模式配置最佳体验的指南，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-Policy options mapping:
+策略选项映射：
 
-* None (0) = None
+* None (0) = 无
 
-* IEMode (1) = Internet Explorer mode
+* IEMode (1) = Internet Explorer 模式
 
 * NeedIE (2) = Internet Explorer 11
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InternetExplorerIntegrationLevel
-  - GP name: Configure Internet Explorer integration
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InternetExplorerIntegrationLevel
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InternetExplorerIntegrationLevel
+  - GP 名称: 配置 Internet Explorer 集成
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InternetExplorerIntegrationLevel
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -11958,39 +11954,39 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InternetExplorerIntegrationSiteList
-  #### Configure the Enterprise Mode Site List
+  #### 配置企业模式站点列表
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  #### 描述
+  有关为 Internet Explorer 模式配置最佳体验的指南，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InternetExplorerIntegrationSiteList
-  - GP name: Configure the Enterprise Mode Site List
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InternetExplorerIntegrationSiteList
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InternetExplorerIntegrationSiteList
+  - GP 名称: 配置企业模式站点列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InternetExplorerIntegrationSiteList
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
@@ -11998,66 +11994,117 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### InternetExplorerIntegrationSiteRedirect
-  #### Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
+  #### 指定从 Internet Explorer 模式页面启动时，到未配置站点的“页面内”导航的行为方式
   
   
-  #### Supported versions:
-  - On Windows since 81 or later
+  #### 支持的版本:
+  - 在 Windows 自 81 或之后
 
-  #### Description
-  An "in-page" navigation is started from a link, a script, or a form on the current page. It can also be a server-side redirect of a previous "in-page" navigation attempt. Conversely, a user can start a navigation that isn't "in-page" that's independent of the current page in several ways by using the browser controls. For example, using the address bar, the back button, or a favorite link.
+  #### 描述
+  从当前页面上的链接、脚本或表单中启动“页面内”导航。它也可以是上次“页面内”导航尝试的服务器端重定向。反过来，用户可以使用多种浏览器控件来启动独立于当前页面的非“页面内”导航，例如地址栏、“后退”按钮或收藏夹链接。
 
-This setting lets you specify whether navigations from pages loaded in Internet Explorer mode to unconfigured sites (that are not configured in the Enterprise Mode Site List) switch back to Microsoft Edge or remain in Internet Explorer mode.
+通过此设置，你可以指定从以 Internet Explorer 模式加载的页面导航到未配置站点(即未在企业模式站点列表中配置的站点)时是切换回 Microsoft Edge 还是保持 Internet Explorer 模式。
+
+此设置可与以下各项结合使用:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 设置为“IEMode”
+以及
+列表中至少有一个条目的 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 策略。
+
+如果禁用或未配置此策略，则只有配置为以 Internet Explorer 模式打开的站点才会在该模式下打开。任何未配置为以 Internet Explorer 模式打开的站点都将重定向回 Microsoft Edge。
+
+如果将此策略设置为“Default”，则只有配置为以 Internet Explorer 模式打开的站点才会在该模式下打开。任何未配置为以 Internet Explorer 模式打开的站点都将重定向回 Microsoft Edge。
+
+如果将此策略设置为“AutomaticNavigationsOnly”，则会获得默认体验，只不过所有到未配置站点的自动导航(如 302 重定向)都将保持 Internet Explorer 模式。
+
+如果将此策略设置为“AllInPageNavigations”，则所有从以 IE 模式加载的页面到未配置站点的导航都将保持 Internet Explorer 模式(最不推荐)。
+
+要了解有关 Internet Explorer 模式的详细信息，请访问 [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+
+策略选项映射：
+
+* Default (0) = 默认值
+
+* AutomaticNavigationsOnly (1) = 仅在 Internet Explorer 模式下保留自动导航
+
+* AllInPageNavigations (2) = 在 Internet Explorer 模式下保留所有“页面内”导航
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InternetExplorerIntegrationSiteRedirect
+  - GP 名称: 指定从 Internet Explorer 模式页面启动时，到未配置站点的“页面内”导航的行为方式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InternetExplorerIntegrationSiteRedirect
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000000
+```
+
+
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Allow Internet Explorer mode testing
+  
+  
+  #### 支持的版本:
+  - 在 Windows 自 86 或之后
+
+  #### 描述
+  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
 and
 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
 
-If you disable or don't configure this policy, only sites configured to open in Internet Explorer mode will open in that mode. Any site not configured to open in Internet Explorer mode will be redirected back to Microsoft Edge.
+If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
 
-If you set this policy to 'Default', only sites configured to open in Internet Explorer mode will open in that mode. Any site not configured to open in Internet Explorer mode will be redirected back to Microsoft Edge.
+If you disable this policy, users can't see the UI option in the menu directly.
 
-If you set this policy to 'AutomaticNavigationsOnly', you get the default experience except that all automatic navigations (such as 302 redirects) to unconfigured sites will be kept in Internet Explorer mode.
+If you don't configure this policy, you can set up the ie-mode-test flag manually.
 
-If you set this policy to 'AllInPageNavigations', all navigations from pages loaded in IE mode to unconfigured sites are kept in Internet Explorer mode (Least Recommended).
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+  #### 数据类型:
+  - 布尔
 
-Policy options mapping:
-
-* Default (0) = Default
-
-* AutomaticNavigationsOnly (1) = Keep only automatic navigations in Internet Explorer mode
-
-* AllInPageNavigations (2) = Keep all in-page navigations in Internet Explorer mode
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Integer
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InternetExplorerIntegrationSiteRedirect
-  - GP name: Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InternetExplorerIntegrationSiteRedirect
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: InternetExplorerIntegrationTestingAllowed
+  - GP 名称: Allow Internet Explorer mode testing
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: InternetExplorerIntegrationTestingAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -12065,202 +12112,151 @@ Use the preceding information when configuring this policy.
 
   
 
-  [Back to top](#microsoft-edge---policies)
-
-  ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
-  
-  
-  #### Supported versions:
-  - On Windows since 86 or later
-
-  #### Description
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
-
-       This setting works in conjunction with:
-       [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-       and
-       [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
-
-       If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
-
-       If you disable this policy, users can't see the UI option in the menu directly.
-
-       If you don't configure this policy, you can set up the ie-mode-test flag manually.
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: InternetExplorerIntegrationTestingAllowed
-  - GP name: Allow Internet Explorer mode testing
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: InternetExplorerIntegrationTestingAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  
-
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### IsolateOrigins
-  #### Enable site isolation for specific origins
+  #### 对特定来源启用站点隔离
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify origins to run in isolation, in their own process.
-This policy also isolates origins named by subdomains - for example, specifying https://contoso.com/ will cause https://foo.contoso.com/ to be isolated as part of the https://contoso.com/ site.
-If the policy is enabled, each of the named origins in a comma-separated list will run in its own process.
-If you disable this policy, then both the 'IsolateOrigins' and 'SitePerProcess' features are disabled. Users can still enable 'IsolateOrigins' policy manually, via command line flags.
-If you don't configure the policy, the user can change this setting.
+  #### 描述
+  指定要在自身进程中隔离运行的来源。
+该策略还隔离由子域命名的来源 - 例如，指定 https://contoso.com/ 将导致 https://foo.contoso.com/ 作为 https://contoso.com/ 站点的一部分被隔离。
+如果启用此策略，每个以逗号分隔的列表中指定的来源将在其自身进程中运行。
+如果禁用此策略，将同时禁用 [IsolateOrigins](#isolateorigins) 和 [SitePerProcess](#siteperprocess) 功能。用户仍然可以通过命令行标志手动启用 [IsolateOrigins](#isolateorigins) 策略。
+如果未配置此策略，则用户可以更改此设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: IsolateOrigins
-  - GP name: Enable site isolation for specific origins
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: IsolateOrigins
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: IsolateOrigins
+  - GP 名称: 对特定来源启用站点隔离
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: IsolateOrigins
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: IsolateOrigins
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: IsolateOrigins
+  - 示例值:
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### LocalProvidersEnabled
-  #### Allow suggestions from local providers
+  #### 允许来自本地提供商的建议
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  Allow suggestions from suggestion providers on the device (local providers), for example, Favorites and Browsing History, in Microsoft Edge's Address Bar and Auto-Suggest List.
+  #### 描述
+  允许在 Microsoft Edge 地址栏和自动建议列表中的设备上提供建议，如收藏夹和浏览历史记录。
 
-If you enable this policy, suggestions from local providers are used.
+     如果启用此策略，将使用来自本地提供商的建议。
 
-If you disable this policy, suggestions from local providers are never used. Local history and local favorites suggestions will not appear.
+如果禁用此策略，则从不使用来自本地提供商的建议。本地历史记录和本地收藏夹建议将不会显示。
 
-If you do not configure this policy, suggestions from local providers are allowed but the user can change that using the settings toggle.
+     如果未配置此策略，则允许本地提供商提出建议，用户可以使用“设置”切换进行更改。
 
-Note that some features may not be available if a policy to disable this feature has been applied. For example, Browsing History suggestions will not be available if you enable the [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled) policy.
+     请注意，如果已应用禁用此功能的策略，则某些功能可能不可用。例如，如果启用 [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled) 策略，浏览历史记录建议将不可用。
 
-This policy requires a browser restart to finish applying.
+     此策略需要浏览器重新启动才能完成应用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: LocalProvidersEnabled
-  - GP name: Allow suggestions from local providers
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: LocalProvidersEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: LocalProvidersEnabled
+  - GP 名称: 允许来自本地提供商的建议
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: LocalProvidersEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: LocalProvidersEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: LocalProvidersEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ManagedFavorites
-  #### Configure favorites
+  #### 配置收藏夹
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Configures a list of managed favorites.
+  #### 描述
+  配置托管收藏夹列表。
 
-The policy creates a list of favorites. Each favorite contains the keys "name" and "url," which hold the favorite's name and its target. You can configure a subfolder by defining a favorites without an "url" key but with an additional "children" key that contains a list of favorites as defined above (some of which may be folders again). Microsoft Edge amends incomplete URLs as if they were submitted via the Address Bar, for example "microsoft.com" becomes "https://microsoft.com/".
+此策略会创建收藏夹列表。每个收藏夹都包含 "name"和 "url" 关键值，这些关键值表示收藏夹的名称和目标地址。你可以通过定义不带 "url" 关键值但带有附加 "children" 关键值的收藏夹来配置子文件夹，此 "children" 关键值包含上面定义的收藏夹列表(其中一些可能还是文件夹)。Microsoft Edge 会修改不完整的 URL，就好像它们是通过地址栏提交的一样，例如 "microsoft.com" 会变为 "https://microsoft.com/"。
 
-These favorites are placed in a folder that can't be modified by the user (but the user can choose to hide it from the favorites bar). By default the folder name is "Managed favorites" but you can change it by adding to the list of favorites a dictionary containing the key "toplevel_name" with the desired folder name as the value.
+这些收藏夹放在用户无法修改的文件夹中(但用户可以选择在收藏夹栏中将其隐藏)。默认情况下，文件夹名称为“托管收藏夹”，但是，通过向收藏夹列表添加一个包含 "toplevel_name" 关键值并且以所需文件夹名称为值的词典，你可以更改此名称。
 
-Managed favorites are not synced to the user account and can't be modified by extensions.
+托管收藏夹未同步到用户帐户，无法通过扩展进行修改。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ManagedFavorites
-  - GP name: Configure favorites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ManagedFavorites
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ManagedFavorites
+  - GP 名称: 配置收藏夹
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ManagedFavorites
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
@@ -12291,9 +12287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ManagedFavorites
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ManagedFavorites
+  - 示例值:
 ``` xml
 <key>ManagedFavorites</key>
 <array>
@@ -12336,48 +12332,48 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ManagedSearchEngines
-  #### Manage Search Engines
+  #### 管理搜索引擎
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Lets you configure a list of up to 10 search engines, one of which must be marked as the default search engine.
-You do not need to specify the encoding. Starting in Microsoft Edge 80, the suggest_url and image_search_url parameters are optional. The optional parameter, image_search_post_params (consists of comma-separated name/value pairs), is available starting in Microsoft Edge 80.
+  #### 描述
+  允许你配置一个可列出最多 10 个搜索引擎的列表，其中一个搜索引擎必须标记为默认搜索引擎。
+不需要指定编码。从 Microsoft Edge 80 开始，suggest_url 和 image_search_url 参数是可选参数。从 Microsoft Edge 80 开始，可以使用可选参数 image_search_post_params (包含以逗号分隔的名称/值对)。
 
-Starting in Microsoft Edge 83, you can enable search engine discovery with the allow_search_engine_discovery optional parameter. This parameter must be the first item in the list. If allow_search_engine_discovery is not specified, search engine discovery will be disabled by default. Starting in Microsoft Edge 84, you can set this policy as a recommended policy to allow search provider discovery. You do not need to add the allow_search_engine_discovery optional parameter.
+从 Microsoft Edge 83 开始，你可以使用 allow_search_engine_discovery 可选参数启用搜索引擎发现。此参数必须是列表中的第一项。如果未指定 allow_search_engine_discovery，则默认情况下禁用搜索引擎发现。从 Microsoft Edge 84 开始，你可以将此策略设置为推荐策略，以允许搜索提供程序发现。无需添加 allow_search_engine_discovery 可选参数。
 
-If you enable this policy, users can't add, remove, or change any search engine in the list. Users can set their default search engine to any search engine in the list.
+如果启用此策略，用户将无法在列表中添加、删除或更改任何搜索引擎。用户可以将其默认搜索引擎设置为列表中的任何搜索引擎。
 
-If you disable or don't configure this policy, users can modify the search engines list as desired.
+如果禁用或未配置此策略，则用户可以根据需要修改搜索引擎列表。
 
-If the [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policy is set, this policy (ManagedSearchEngines) is ignored. The user must restart their browser to finish applying this policy.
+如果设置了 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 策略，则将忽略此策略 (ManagedSearchEngines)。用户必须重启浏览器才能完成应用此策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ManagedSearchEngines
-  - GP name: Manage Search Engines
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ManagedSearchEngines
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ManagedSearchEngines
+  - GP 名称: 管理搜索引擎
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ManagedSearchEngines
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
@@ -12415,9 +12411,9 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ManagedSearchEngines
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ManagedSearchEngines
+  - 示例值:
 ``` xml
 <key>ManagedSearchEngines</key>
 <array>
@@ -12477,209 +12473,209 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### MaxConnectionsPerProxy
-  #### Maximum number of concurrent connections to the proxy server
+  #### 到代理服务器的最大并发连接数
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies the maximum number of simultaneous connections to the proxy server.
+  #### 描述
+  指定与代理服务器的最大同时连接数。
 
-Some proxy servers can't handle a high number of concurrent connections per client - you can solve this by setting this policy to a lower value.
+有些代理服务器不能处理每个客户端的大量并发连接，你可以通过将此策略设置为较低的值来解决这个问题。
 
-The value of this policy should be lower than 100 and higher than 6. The default value is 32.
+此策略的值应小于 100 并大于 6。默认值为 32。
 
-Some web apps are known to consume many connections with hanging GETs - lowering the maximum connections below 32 may lead to browser networking hangs if too many of these kind of web apps are open.
+已知一些网络应用程序会消耗很多挂起的 GET 的连接，如果这类 Web 应用打开太多，将最大连接降低到 32 以下可能会导致浏览器网络挂起。
 
-If you don't configure this policy, the default value (32) is used.
+如果未配置此策略，将使用默认值(32)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: MaxConnectionsPerProxy
-  - GP name: Maximum number of concurrent connections to the proxy server
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: MaxConnectionsPerProxy
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: MaxConnectionsPerProxy
+  - GP 名称: 到代理服务器的最大并发连接数
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: MaxConnectionsPerProxy
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000020
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: MaxConnectionsPerProxy
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: MaxConnectionsPerProxy
+  - 示例值:
 ``` xml
 <integer>32</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### MediaRouterCastAllowAllIPs
-  #### Allow Google Cast to connect to Cast devices on all IP addresses
+  #### 允许 Google Cast 连接到所有 IP 地址上的强制转换设备
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enable this policy to let Google Cast connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses.
+  #### 描述
+  启用此策略可让 Google Cast 连接到所有 IP 地址上的强制转换设备，而不仅仅是 RFC1918/RFC4193 专用地址。
 
-Disable this policy to restrict Google Cast to Cast devices on RFC1918/RFC4193 private addresses.
+禁用此策略以限制 Google Cast 连接到 RFC1918/RFC4193 专用地址上的强制转换设备。
 
-If you don't configure this policy, Google Cast connects to Cast devices on RFC1918/RFC4193 private addresses only, unless you enable the CastAllowAllIPs feature.
+如果未配置此策略，则 Google Cast 仅会连接到 RFC1918/RFC4193 专用地址上的强制转换设备，除非你启用 CastAllowAllIPs 功能。
 
-If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this policy has no effect.
+如果禁用了 [EnableMediaRouter](#enablemediarouter) 策略，则此策略不起作用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: MediaRouterCastAllowAllIPs
-  - GP name: Allow Google Cast to connect to Cast devices on all IP addresses
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: MediaRouterCastAllowAllIPs
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: MediaRouterCastAllowAllIPs
+  - GP 名称: 允许 Google Cast 连接到所有 IP 地址上的强制转换设备
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: MediaRouterCastAllowAllIPs
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: MediaRouterCastAllowAllIPs
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: MediaRouterCastAllowAllIPs
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### MetricsReportingEnabled
-  #### Enable usage and crash-related data reporting (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 启用使用情况和崩溃相关的数据报告 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  This policy is deprecated. It is currently supported but will become obsolete in Microsoft Edge 89. This policy is replaced by the new policy:  [DiagnosticData](#diagnosticdata)for Windows 7, Windows 8, and macOS. This policy is replaced by Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  #### 描述
+  此策略已被弃用。它目前受支持，但在 Microsoft Edge 89 中将不再使用。对于 Windows 7、Windows 8 和 macOS，此策略将替换为新策略: [DiagnosticData](#diagnosticdata)。在 Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))上，此策略将替换为“允许遥测”。
 
-This policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
+通过此策略，可向 Microsoft 报告与 Microsoft Edge 的使用情况和故障相关的数据。
 
-Enable this policy to send reporting of usage and crash-related data to Microsoft. Disable this policy to not send the data to Microsoft. In both cases, users can't change or override the setting.
+启用此策略可将与使用情况和故障相关的数据发送给 Microsoft。禁用此策略则不会将数据发送给 Microsoft。在这两种情况下，用户都不能更改或替代设置。
 
-On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If you enable this policy, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+对于 Windows 10，如果未配置此策略，Microsoft Edge 将默认为 Windows 诊断数据设置。如果启用此策略，Microsoft Edge 将仅在“Windows 诊断数据设置”设置为“增强”或“全部”时发送使用情况数据。如果禁用此策略，Microsoft Edge 将不会发送使用情况数据，而是根据 Windows 诊断数据设置发送故障相关数据。访问 [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)，了解有关 Windows 诊断数据设置的详细信息
 
-On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
+对于 Windows 7、8 和 macOS，此策略控制使用情况和故障相关数据的发送。如果未配置此策略，Microsoft Edge 将默认为用户的首选项。
 
-To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
+若要启用此策略，必须将 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 设置为“已启用”，如果未配置或已禁用 [MetricsReportingEnabled](#metricsreportingenabled) 或 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)，则系统不会将此数据发送给 Microsoft。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版或企业版实例，或通过 MDM 管理或通过 MCX 加入域的 macOS 实例。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: MetricsReportingEnabled
-  - GP name: Enable usage and crash-related data reporting (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: MetricsReportingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: MetricsReportingEnabled
+  - GP 名称: 启用使用情况和崩溃相关的数据报告 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: MetricsReportingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: MetricsReportingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: MetricsReportingEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NativeWindowOcclusionEnabled
-  #### Enable Native Window Occlusion
+  #### 启用本机窗口封闭
   
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
 
-  #### Description
-  Enables native window occlusion in Microsoft Edge.
+  #### 描述
+  在 Microsoft Edge 中启用本机窗口封闭。
 
-If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
+如果启用此设置，为减少 CPU 和功耗，Microsoft Edge 将检测窗口何时被其他窗口覆盖，并且将暂停工作绘制像素。
 
-If you disable this setting Microsoft Edge will not detect when a window is covered by other windows.
+如果禁用此设置，Microsoft Edge 将不会检测窗口何时被其他窗口覆盖。
 
-If this policy is left not set, window hiding detection will be enabled.
+如果未设置此策略，则将启用窗口隐藏检测。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NativeWindowOcclusionEnabled
-  - GP name: Enable Native Window Occlusion
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NativeWindowOcclusionEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NativeWindowOcclusionEnabled
+  - GP 名称: 启用本机窗口封闭
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NativeWindowOcclusionEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -12687,52 +12683,52 @@ If this policy is left not set, window hiding detection will be enabled.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NavigationDelayForInitialSiteListDownloadTimeout
-  #### Set a timeout for delay of tab navigation for the Enterprise Mode Site List
+  #### 为企业模式站点列表的选项卡导航设置延迟超时
   
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
 
-  #### Description
-  Allows you to set a timeout, in seconds, for Microsoft Edge tabs waiting to navigate until the browser has downloaded the initial Enterprise Mode Site List.
+  #### 描述
+  允许你以秒为单位设置一个超时值，以便 Microsoft Edge 选项卡等待导航，直到浏览器下载了初始企业模式站点列表。
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry
-and
-[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload) is set to "All eligible navigations" (1).
+此设置可与以下各项结合使用:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 设置为“IEMode”
+以及
+列表中至少有一个条目的 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 策略
+以及
+[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload) 设置为“所有符合条件的导航”(1)。
 
-Tabs will not wait longer than this timeout for the Enterprise Mode Site List to download. If the browser has not finished downloading the Enterprise Mode Site List when the timeout expires, Microsoft Edge tabs will continue navigating anyway. The value of the timeout should be no greater than 20 seconds and no fewer than 1 second.
+选项卡等待企业模式站点列表下载的时间不会超过此超时值。如果超时过期后浏览器尚未完成下载企业模式站点列表，则 Microsoft Edge 选项卡仍将继续导航。超时值不应大于 20 秒且不应少于 1 秒。
 
-If you set the timeout in this policy to a value greater than the default of 2 seconds, an information bar is shown to the user after 2 seconds. The information bar contains a button that allows the user to quit waiting for the Enterprise Mode Site List download to complete.
+如果将此策略中的超时设置为大于默认值 2 秒的值，则 2 秒后将向用户显示一个信息栏。该信息栏包含一个按钮，允许用户退出等待企业模式站点列表下载完成。
 
-If you don't configure this policy, the default timeout of 2 seconds is used. This default is subject to change in the future.
+如果未配置此策略，则使用默认超时 2 秒。此默认值将来可能会更改。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NavigationDelayForInitialSiteListDownloadTimeout
-  - GP name: Set a timeout for delay of tab navigation for the Enterprise Mode Site List
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NavigationDelayForInitialSiteListDownloadTimeout
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NavigationDelayForInitialSiteListDownloadTimeout
+  - GP 名称: 为企业模式站点列表的选项卡导航设置延迟超时
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NavigationDelayForInitialSiteListDownloadTimeout
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x0000000a
 ```
@@ -12740,107 +12736,107 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NetworkPredictionOptions
-  #### Enable network prediction
+  #### 启用网络预测
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables network prediction and prevents users from changing this setting.
+  #### 描述
+  启用网络预测，并阻止用户更改此设置。
 
-This controls DNS prefetching, TCP and SSL preconnection, and prerendering of web pages.
+此策略控制 DNS 预取、TCP 和 SSL 预连接及网页的预呈现。
 
-If you don't configure this policy, network prediction is enabled but the user can change it.
+如果未配置此策略，则启用网络预测，但用户可以更改此项设置。
 
-Policy options mapping:
+策略选项映射：
 
-* NetworkPredictionAlways (0) = Predict network actions on any network connection
+* NetworkPredictionAlways (0) = 预测任何网络连接上的网络操作
 
-* NetworkPredictionWifiOnly (1) = Not supported, if this value is used it will be treated as if 'Predict network actions on any network connection' (0) was set
+* NetworkPredictionWifiOnly (1) = 不支持，如果使用此值，它将被视为已设置“预测任何网络连接上的网络操作”(0)
 
-* NetworkPredictionNever (2) = Don't predict network actions on any network connection
+* NetworkPredictionNever (2) = 不要对任何网络连接预测网络操作
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NetworkPredictionOptions
-  - GP name: Enable network prediction
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: NetworkPredictionOptions
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NetworkPredictionOptions
+  - GP 名称: 启用网络预测
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: NetworkPredictionOptions
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: NetworkPredictionOptions
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: NetworkPredictionOptions
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### NonRemovableProfileEnabled
-  #### Configure whether a user always has a default profile automatically signed in with their work or school account
+  #### 配置用户是否始终具有使用其工作或学校帐户自动登录的默认用户配置
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  This policy determines if a user can remove the Microsoft Edge profile automatically signed in with a user's work or school account.
+  #### 描述
+  此策略确定用户是否可以删除通过用户工作或学校帐户自动登录的 Microsoft Edge 用户配置。
 
-If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed.
+如果启用此策略，则将使用用户的工作或学校帐户在 Windows 上创建不可删除的用户配置。此用户配置无法注销或删除。
 
-If you disable or don't configure this policy, the profile automatically signed in with a user's work or school account on Windows can be signed out or removed by the user.
+如果禁用或未配置此策略，则用户可以注销或删除 Windows 中通过用户的工作或学校帐户自动登录的用户配置。
 
-If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
+如果要配置浏览器登录，请使用 [BrowserSignin](#browsersignin) 策略。
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
+     此策略仅适用于已加入 Microsoft Active Directory 域的 Windows 实例、为设备管理注册的 Windows 10 专业版(或企业版)实例，
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: NonRemovableProfileEnabled
-  - GP name: Configure whether a user always has a default profile automatically signed in with their work or school account
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: NonRemovableProfileEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: NonRemovableProfileEnabled
+  - GP 名称: 配置用户是否始终具有使用其工作或学校帐户自动登录的默认用户配置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: NonRemovableProfileEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -12848,45 +12844,45 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
-  #### Control where security restrictions on insecure origins apply
+  #### 控制针对不安全源的安全限制的适用范围
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies a list of origins (URLs) or hostname patterns (like "*.contoso.com") for which security restrictions on insecure origins don't apply.
+  #### 描述
+  指定来源(URL)或主机名模式(如 "*.contoso.com")的列表，对于这些模式，针对不安全来源的安全限制不适用。
 
-This policy lets you specify allowed origins for legacy applications that can't deploy TLS or set up a staging server for internal web development so that developers can test out features requiring secure contexts without having to deploy TLS on the staging server. This policy also prevents the origin from being labeled "Not Secure" in the omnibox.
+此策略让你可以针对无法部署 TLS 或为内部 Web 开发设置暂存服务器的旧版应用程序指定允许的来源，以便开发人员可以测试需要安全上下文的功能，而不必在暂存服务器上部署 TLS。此策略还可防止来源在多功能地址栏中被标记为“不安全”。
 
-Setting a list of URLs in this policy has the same effect as setting the command-line flag '--unsafely-treat-insecure-origin-as-secure' to a comma-separated list of the same URLs. If you enable this policy, it overrides the command-line flag.
+在此策略中设置 URL 列表的效果与将命令行标志 "--unsafely-treat-insecure-origin-as-secure" 设置为相同 URL 的逗号分隔列表的效果相同。如果启用此策略，它将覆盖命令行标志。
 
-For more information on secure contexts, see https://www.w3.org/TR/secure-contexts/.
+有关安全上下文的详细信息，请参阅 https://www.w3.org/TR/secure-contexts/。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: OverrideSecurityRestrictionsOnInsecureOrigin
-  - GP name: Control where security restrictions on insecure origins apply
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: OverrideSecurityRestrictionsOnInsecureOrigin
+  - GP 名称: 控制针对不安全源的安全限制的适用范围
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
@@ -12894,9 +12890,9 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: OverrideSecurityRestrictionsOnInsecureOrigin
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: OverrideSecurityRestrictionsOnInsecureOrigin
+  - 示例值:
 ``` xml
 <array>
   <string>http://testserver.contoso.com/</string>
@@ -12905,145 +12901,145 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PaymentMethodQueryEnabled
-  #### Allow websites to query for available payment methods
+  #### 允许网站查询可用的付款方式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Allows you to set whether websites can check if the user has payment methods saved.
+  #### 描述
+  允许你设置网站能否检查用户是否已保存付款方式。
 
-If you disable this policy, websites that use PaymentRequest.canMakePayment or PaymentRequest.hasEnrolledInstrument API will be informed that no payment methods are available.
+如果禁用此策略，则使用 PaymentRequest.canMakePayment 或 PaymentRequest.hasEnrolledInstrument API 的网站将收到没有可用支付方式的通知。
 
-If you enable this policy or don't set this policy, websites can check if the user has payment methods saved.
+如果启用此策略或未设置此策略，则网站可以检查用户是否保存了付款方式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PaymentMethodQueryEnabled
-  - GP name: Allow websites to query for available payment methods
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PaymentMethodQueryEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PaymentMethodQueryEnabled
+  - GP 名称: 允许网站查询可用的付款方式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PaymentMethodQueryEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PaymentMethodQueryEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PaymentMethodQueryEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PersonalizationReportingEnabled
-  #### Allow personalization of ads, search and news by sending browsing history to Microsoft
+  #### 允许向 Microsoft 发送浏览历史记录以对广告、搜索和新闻进行个性化设置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history to be used for personalizing advertising, search, news and other Microsoft services.
+  #### 描述
+  此策略阻止 Microsoft 收集用户的 Microsoft Edge 浏览历史记录以用于提供个性化广告、搜索、新闻和其他 Microsoft 服务。
 
-This setting is only available for users with a Microsoft account. This setting is not available for child accounts or enterprise accounts.
+此设置仅适用于具有 Microsoft 帐户的用户。此设置不适用于子帐户或企业帐户。
 
-If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Microsoft Edge will default to the user's preference.
+如果禁用此策略，则用户无法更改或替代此设置。如果启用或未配置此策略，则 Microsoft Edge 将默认使用用户的首选项。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PersonalizationReportingEnabled
-  - GP name: Allow personalization of ads, search and news by sending browsing history to Microsoft
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PersonalizationReportingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PersonalizationReportingEnabled
+  - GP 名称: 允许向 Microsoft 发送浏览历史记录以对广告、搜索和新闻进行个性化设置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PersonalizationReportingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PersonalizationReportingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PersonalizationReportingEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PinningWizardAllowed
-  #### Allow Pin to taskbar wizard
+  #### 允许使用“固定到任务栏”向导
   
   
-  #### Supported versions:
-  - On Windows since 80 or later
+  #### 支持的版本:
+  - 在 Windows 自 80 或之后
 
-  #### Description
-  Microsoft Edge uses the Pin to taskbar wizard to help users pin suggested sites to the taskbar. The Pin to taskbar wizard feature is enabled by default and accessible to the user through the Settings and more menu.
+  #### 描述
+  Microsoft Edge 使用“固定到任务栏”向导来帮助用户将建议的站点固定到任务栏。默认情况下，“固定到任务栏”向导功能处于启用状态，用户可以通过“设置及更多”菜单使用此功能。
 
-If you enable this policy or don't configure it, users can call the Pin to taskbar wizard from the Settings and More menu. The wizard can also be called via a protocol launch.
+如果启用或未配置此策略，则用户可以从“设置及更多”菜单中调用“固定到任务栏”向导。也可以通过协议启动来调用该向导。
 
-If you disable this policy, the Pin to taskbar wizard is disabled in the menu and cannot be called via a protocol launch.
+如果禁用此策略，则“固定到任务栏”向导在菜单中被禁用，并且无法通过协议启动来调用。
 
-User settings to enable or disable the Pin to taskbar wizard aren't available.
+用于启用或禁用“固定到任务栏”向导的用户设置不可用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PinningWizardAllowed
-  - GP name: Allow Pin to taskbar wizard
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PinningWizardAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PinningWizardAllowed
+  - GP 名称: 允许使用“固定到任务栏”向导
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PinningWizardAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -13051,357 +13047,357 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ProactiveAuthEnabled
-  #### Enable Proactive Authentication
+  #### 启用主动身份验证
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Lets you configure whether to turn on Proactive Authentication.
+  #### 描述
+  允许你配置是否开启主动身份验证。
 
-If you enable this policy, Microsoft Edge tries to proactively authenticate the signed-in user with Microsoft services. At regular intervals, Microsoft Edge checks with an online service for an updated manifest that contains the configuration that governs how to do this.
+如果启用此策略，Microsoft Edge 会尝试使用 Microsoft 服务主动验证登录用户的身份。Microsoft Edge 将定期通过联机服务检查更新的清单，该清单包含管理如何执行此操作的配置。
 
-If you disable this policy, Microsoft Edge doesn't try to proactively authenticate the signed-in user with Microsoft services. Microsoft Edge no longer checks with an online service for an updated manifest that contains the configuration for doing this.
+如果禁用此策略，则 Microsoft Edge 不会尝试使用 Microsoft 服务对已登录用户进行主动身份验证。Microsoft Edge 不再通过联机服务检查更新的清单，该清单包含用于执行此操作的配置。
 
-If you don't configure this policy, Proactive Authentication is turned on.
+如果未配置此策略，则会开启主动身份验证。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ProactiveAuthEnabled
-  - GP name: Enable Proactive Authentication
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ProactiveAuthEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ProactiveAuthEnabled
+  - GP 名称: 启用主动身份验证
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ProactiveAuthEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ProactiveAuthEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ProactiveAuthEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PromotionalTabsEnabled
-  #### Enable full-tab promotional content
+  #### 启用完整标签页促销内容
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features.
+  #### 描述
+  控制完整标签页的宣传内容或教育内容的呈现。此设置控制欢迎页面的呈现，以帮助用户登录 Microsoft Edge、选择其默认浏览器或了解产品功能。
 
-If you enable this policy (set it true) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
+如果启用此策略(将其设置为 true)或未对其进行配置，则 Microsoft Edge 可能会向用户显示完整标签页内容以提供产品信息。
 
-If you disable (set to false) this policy, Microsoft Edge can't show full-tab content to users.
+如果禁用(设置为 false)此策略，则 Microsoft Edge 无法向用户显示完整标签页内容。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PromotionalTabsEnabled
-  - GP name: Enable full-tab promotional content
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PromotionalTabsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PromotionalTabsEnabled
+  - GP 名称: 启用完整标签页促销内容
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PromotionalTabsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PromotionalTabsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PromotionalTabsEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### PromptForDownloadLocation
-  #### Ask where to save downloaded files
+  #### 询问所下载文件的保存位置
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set whether to ask where to save a file before downloading it.
+  #### 描述
+  设置下载文件前是否询问文件保存位置。
 
-If you enable this policy, the user is asked where to save each file before downloading; if you don't configure it, files are saved automatically to the default location, without asking the user.
+如果启用此策略，系统将在下载前询问用户每个文件的保存位置；如果不进行配置，文件会自动保存到默认位置，而不会询问用户。
 
-If you don't configure this policy, the user will be able to change this setting.
+如果未配置此策略，用户将能够更改此设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: PromptForDownloadLocation
-  - GP name: Ask where to save downloaded files
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PromptForDownloadLocation
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PromptForDownloadLocation
+  - GP 名称: 询问所下载文件的保存位置
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PromptForDownloadLocation
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: PromptForDownloadLocation
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: PromptForDownloadLocation
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### QuicAllowed
-  #### Allow QUIC protocol
+  #### 允许 QUIC 协议
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows use of the QUIC protocol in Microsoft Edge.
+  #### 描述
+  允许在 Microsoft Edge 中使用 QUIC 协议。
 
-If you enable this policy or don't configure it, the QUIC protocol is allowed.
+如果启用此策略或未配置此策略，则允许使用 QUIC 协议。
 
-If you disable this policy, the QUIC protocol is blocked.
+如果禁用此策略，则会阻止 QUIC 协议。
 
-QUIC is a transport layer network protocol that can improve performance of web applications that currently use TCP.
+QUIC 是一种传输层网络协议，可以提高当前使用 TCP 的 Web 应用程序的性能。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: QuicAllowed
-  - GP name: Allow QUIC protocol
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: QuicAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: QuicAllowed
+  - GP 名称: 允许 QUIC 协议
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: QuicAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: QuicAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: QuicAllowed
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RelaunchNotification
-  #### Notify a user that a browser restart is recommended or required for pending updates
+  #### 通知用户推荐或需要对挂起的更新重启浏览器
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Notify users that they need to restart Microsoft Edge to apply a pending update.
+  #### 描述
+  通知用户需要重启 Microsoft Edge 以应用待处理的更新。
 
-If you don't configure this policy, Microsoft Edge adds a recycle icon at the far right of the top menu bar to prompt users to restart the browser to apply the update.
+如果未配置此策略，Microsoft Edge 会在顶部菜单栏的最右侧添加一个回收站图标，提示用户重启浏览器以应用更新。
 
-If you enable this policy and set it to 'Recommended', a recurring warning prompts users that a restart is recommended. Users can dismiss this warning and defer the restart.
+如果启用此策略并将其设置为“Recommended”，则定期警告会提示用户系统建议重启。用户可以消除此警告并推迟重启。
 
-If you set the policy to 'Required', a recurring warning prompts users that the browser will be restarted automatically as soon as a notification period passes. The default period is seven days. You can configure this period with the [RelaunchNotificationPeriod](#relaunchnotificationperiod) policy.
+如果将该策略设置为“Required”，则定期警告会提示用户: 当通知期过后，浏览器将立即自动重启。默认期限为七天。你可以使用 [RelaunchNotificationPeriod](#relaunchnotificationperiod) 策略配置此期限。
 
-The user's session is restored when the browser restarts.
+当浏览器重启时，将还原用户的会话。
 
-Policy options mapping:
+策略选项映射：
 
-* Recommended (1) = Recommended - Show a recurring prompt to the user indicating that a restart is recommended
+* Recommended (1) = 推荐 - 向用户显示重复提示，指示建议重启
 
-* Required (2) = Required - Show a recurring prompt to the user indicating that a restart is required
+* Required (2) = 需要 - 向用户显示重复提示，指示需要重启
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RelaunchNotification
-  - GP name: Notify a user that a browser restart is recommended or required for pending updates
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RelaunchNotification
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RelaunchNotification
+  - GP 名称: 通知用户推荐或需要对挂起的更新重启浏览器
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RelaunchNotification
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: RelaunchNotification
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RelaunchNotification
+  - 示例值:
 ``` xml
 <integer>1</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RelaunchNotificationPeriod
-  #### Set the time period for update notifications
+  #### 设置更新通知的时间段
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to set the time period, in milliseconds, over which users are notified that Microsoft Edge must be relaunched to apply a pending update.
+  #### 描述
+  允许设置时间段（以毫秒为单位），在该时间段内，将通知用户必须重新启动Microsoft Edge才能应用挂起的更新。
 
-Over this time period, the user will be repeatedly informed of the need for an update. In Microsoft Edge the app menu changes to indicate that a relaunch is needed once one third of the notification period passes. This notification changes color once two thirds of the notification period passes, and again once the full notification period has passed. The additional notifications enabled by the [RelaunchNotification](#relaunchnotification) policy follow this same schedule.
+在此时间段内，将反复通知用户需要更新。在 Microsoft Edge 中，应用程序菜单更改，以指示通知时间过去三分之一后，需要重新启动。通知时间过去三分之二后，此通知将更改颜色，而整个通知时间结束后再次更改。[RelaunchNotification](#relaunchnotification) 策略所启用的附加通知采用此相同的计划。
 
-If not set, the default period of 604800000 milliseconds (one week) is used.
+如果未设置，则使用默认时间段 604800000 毫秒（一周）。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RelaunchNotificationPeriod
-  - GP name: Set the time period for update notifications
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RelaunchNotificationPeriod
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RelaunchNotificationPeriod
+  - GP 名称: 设置更新通知的时间段
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RelaunchNotificationPeriod
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x240c8400
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: RelaunchNotificationPeriod
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RelaunchNotificationPeriod
+  - 示例值:
 ``` xml
 <integer>604800000</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RendererCodeIntegrityEnabled
-  #### Enable renderer code integrity
+  #### 启用呈现器代码完整性
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  If this policy is enabled or left unset, then Renderer Code Integrity is enabled. This policy should only be disabled if compatibility issues are encountered with third party software that must run inside Microsoft Edge's renderer processes.
+  #### 描述
+  如果启用或未设置此策略，则会启用呈现器代码完整性。仅当必须在 Microsoft Edge 的呈现器进程中运行的第三方软件存在兼容性问题时，才应禁用此策略。
 
-Disabling this policy has a detrimental effect on Microsoft Edge's security and stability because unknown and potentially hostile code will be allowed to load inside Microsoft Edge's renderer processes.
+禁用此策略对 Microsoft Edge 的安全和稳定性有不利影响，因为 Microsoft Edge 的呈现器进程内部可能因此允许加载未知和可能有害的代码。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RendererCodeIntegrityEnabled
-  - GP name: Enable renderer code integrity
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RendererCodeIntegrityEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RendererCodeIntegrityEnabled
+  - GP 名称: 启用呈现器代码完整性
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RendererCodeIntegrityEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -13409,43 +13405,43 @@ Disabling this policy has a detrimental effect on Microsoft Edge's security and 
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RequireOnlineRevocationChecksForLocalAnchors
-  #### Specify if online OCSP/CRL checks are required for local trust anchors
+  #### 指定本地信任密钥是否需要联机 OCSP/CRL 检查
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  Control whether online revocation checks (OCSP/CRL checks) are required. If Microsoft Edge can't get revocation status information, these certificates are treated as revoked ("hard-fail").
+  #### 描述
+  控制是否需要进行在线吊销检查(OCSP/CRL 检查)。如果 Microsoft Edge 无法获取吊销状态信息，则会将这些证书视为已吊销(“硬故障”)。
 
-If you enable this policy, Microsoft Edge always performs revocation checking for server certificates that successfully validate and are signed by locally-installed CA certificates.
+如果启用此策略，则 Microsoft Edge 始终对成功验证并由本地安装的 CA 证书签名的服务器证书执行吊销检查。
 
-If you don't configure or disable this policy, then Microsoft Edge uses the existing online revocation checking settings.
+如果未配置或禁用此策略，则 Microsoft Edge 将使用现有的在线吊销检查设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RequireOnlineRevocationChecksForLocalAnchors
-  - GP name: Specify if online OCSP/CRL checks are required for local trust anchors
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RequireOnlineRevocationChecksForLocalAnchors
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RequireOnlineRevocationChecksForLocalAnchors
+  - GP 名称: 指定本地信任密钥是否需要联机 OCSP/CRL 检查
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RequireOnlineRevocationChecksForLocalAnchors
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
@@ -13453,150 +13449,150 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ResolveNavigationErrorsUseWebService
-  #### Enable resolution of navigation errors using a web service
+  #### 启用使用 Web 服务解决导航错误
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allow Microsoft Edge to issue a dataless connection to a web service to probe networks for connectivity in cases like hotel and airport Wi-Fi.
+  #### 描述
+  允许 Microsoft Edge 发布到 Web 服务的无数据连接，以便在旅馆和机场 WLAN 等情况下探测网络的连接性。
 
-If you enable this policy, a web service is used for network connectivity tests.
+如果启用此策略，则使用 Web 服务进行网络连接测试。
 
-If you disable this policy, Microsoft Edge uses native APIs to try to resolve network connectivity and navigation issues.
+如果禁用此策略，则 Microsoft Edge 使用本机 API 尝试解决网络连接和导航问题。
 
-**Note**: Except on Windows 8 and later versions of Windows, Microsoft Edge *always* uses native APIs to resolve connectivity issues.
+**注意**: 除在 Windows 8 和更高版本的 Windows 上外，Microsoft Edge *始终*使用本机 API 解决连接问题。
 
-If you don't configure this policy, Microsoft Edge respects the user preference that's set under Services at edge://settings/privacy.
-Specifically, there's a **Use a web service to help resolve navigation errors** toggle, which the user can switch on or off. Be aware that if you have enabled this policy (ResolveNavigationErrorsUseWebService), the **Use a web service to help resolve navigation errors** setting is turned on, but the user can't change the setting by using the toggle. If you have disabled this policy, the **Use a web service to help resolve navigation errors** setting is turned off, and the user can't change the setting by using the toggle.
+如果未配置此策略，则 Microsoft Edge 会采用位于 edge://settings/privacy 的“服务”下设置的用户首选项。
+具体来说，用户可以打开或关闭名为**使用 Web 服务帮助解决导航错误**的切换开关。请注意，如果已启用此策略(ResolveNavigationErrorsUseWebService)，则**使用 Web 服务帮助解决导航错误**设置处于开启状态，但用户无法使用该切换开关来更改此设置。如果已禁用此策略，则**使用 Web 服务帮助解决导航错误**设置处于关闭状态，用户无法使用该切换开关更改此设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ResolveNavigationErrorsUseWebService
-  - GP name: Enable resolution of navigation errors using a web service
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: ResolveNavigationErrorsUseWebService
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ResolveNavigationErrorsUseWebService
+  - GP 名称: 启用使用 Web 服务解决导航错误
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: ResolveNavigationErrorsUseWebService
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ResolveNavigationErrorsUseWebService
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ResolveNavigationErrorsUseWebService
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RestrictSigninToPattern
-  #### Restrict which accounts can be used as Microsoft Edge primary accounts
+  #### 限制哪些帐户可用作 Microsoft Edge 主帐户
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Determines which accounts can be set as browser primary accounts in Microsoft Edge (the account that is chosen during the Sync opt-in flow).
+  #### 描述
+  确定可以在 Microsoft Edge 中将哪些帐户设置为浏览器主帐户(在同步选择加入流程中选择的帐户)。
 
-If a user tries to configure a browser primary account with a username that doesn't match this pattern, they are blocked and will get the appropriate error message. You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
+如果用户尝试使用与此模式不匹配的用户名配置浏览器主帐户，则他们将被阻止，并会收到相应的错误消息。你可以使用该模式的 Perl 样式正则表达式将此策略配置为匹配多个帐户。请注意，模式匹配区分大小写。有关所使用的正则表达式规则的详细信息，请参阅 https://go.microsoft.com/fwlink/p/?linkid=2133903。
 
-If you don't configure this policy or leave it blank, users can set any account as a browser primary account in Microsoft Edge.
+如果未配置此策略或将其留空，则用户可以在 Microsoft Edge 中将任何帐户设置为浏览器主帐户。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RestrictSigninToPattern
-  - GP name: Restrict which accounts can be used as Microsoft Edge primary accounts
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RestrictSigninToPattern
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RestrictSigninToPattern
+  - GP 名称: 限制哪些帐户可用作 Microsoft Edge 主帐户
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RestrictSigninToPattern
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 ".*@contoso.com"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: RestrictSigninToPattern
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RestrictSigninToPattern
+  - 示例值:
 ``` xml
 <string>.*@contoso.com</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RoamingProfileLocation
-  #### Set the roaming profile directory
+  #### 设置漫游用户配置目录
   
   
-  #### Supported versions:
-  - On Windows since 85 or later
+  #### 支持的版本:
+  - 在 Windows 自 85 或之后
 
-  #### Description
-  Configures the directory to use to store the roaming copy of profiles.
+  #### 描述
+  配置用于存储用户配置漫游副本的目录。
 
-If you enable this policy, Microsoft Edge uses the provided directory to store a roaming copy of the profiles, as long as you've also enabled the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy. If you disable the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy or don't configure it, the value stored in this policy isn't used.
+如果启用此策略，那么只要你还启用了 [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) 策略，Microsoft Edge 就会使用提供的目录存储用户配置的漫游副本。如果禁用 [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) 策略或未对其进行配置，则不会使用此策略中存储的值。
 
-See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables you can use.
+请参阅 [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) 以获取可以使用的变量列表。
 
-If you don't configure this policy, the default roaming profile path is used.
+如果未配置此策略，则使用默认漫游用户配置路径。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RoamingProfileLocation
-  - GP name: Set the roaming profile directory
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RoamingProfileLocation
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RoamingProfileLocation
+  - GP 名称: 设置漫游用户配置目录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RoamingProfileLocation
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "${roaming_app_data}\\edge-profile"
 ```
@@ -13604,45 +13600,45 @@ If you don't configure this policy, the default roaming profile path is used.
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RoamingProfileSupportEnabled
-  #### Enable using roaming copies for Microsoft Edge profile data
+  #### 启用对 Microsoft Edge 用户配置数据使用漫游副本
   
   
-  #### Supported versions:
-  - On Windows since 85 or later
+  #### 支持的版本:
+  - 在 Windows 自 85 或之后
 
-  #### Description
-  Enable this policy to use roaming profiles on Windows. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator through the [RoamingProfileLocation](#roamingprofilelocation) policy).
+  #### 描述
+  启用此策略可在 Windows 上使用漫游用户配置。存储在 Microsoft Edge 用户配置中的设置(收藏夹和首选项)也将保存到一个文件中，该文件存储在漫游用户的用户配置文件夹中(或管理员通过 [RoamingProfileLocation](#roamingprofilelocation) 策略指定的位置)。
 
-If you disable this policy or don't configure it, only the regular local profiles are used.
+如果禁用或未配置此策略，则仅使用常规的本地用户配置。
 
-The [SyncDisabled](#syncdisabled) policy disables all data synchronization, overriding policy.
+[SyncDisabled](#syncdisabled) 策略将禁用所有数据同步，覆盖该策略。
 
-See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles for more information on using roaming user profiles.
+有关使用漫游用户用户配置的详细信息，请参阅 https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RoamingProfileSupportEnabled
-  - GP name: Enable using roaming copies for Microsoft Edge profile data
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RoamingProfileSupportEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RoamingProfileSupportEnabled
+  - GP 名称: 启用对 Microsoft Edge 用户配置数据使用漫游副本
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RoamingProfileSupportEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -13650,121 +13646,121 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### RunAllFlashInAllowMode
-  #### Extend Adobe Flash content setting to all content
+  #### 将 Adobe Flash 内容设置扩展到所有内容
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  If you enable this policy, all Adobe Flash content embedded in websites that are set to allow Adobe Flash in the content settings -- either by the user or by enterprise policy -- will run. This includes content from other origins and/or small content.
+  #### 描述
+  如果启用此策略，则将运行嵌入在网站中的所有 Adobe Flash 内容，前提是此类网站已由用户或通过企业策略在内容设置中设置为允许运行 Adobe Flash。内容包括其他来源中的内容和/或较小内容。
 
-To control which websites are allowed to run Adobe Flash, see the specifications in the [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls), and [PluginsBlockedForUrls](#pluginsblockedforurls) policies.
+若要控制允许哪些网站运行 Adobe Flash，请参阅 [DefaultPluginsSetting](#defaultpluginssetting)、[PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls) 策略中的规范。
 
-If you disable this policy or don't configure it, Adobe Flash content from other origins (from sites that aren't specified in the three policies mentioned immediately above) or small content might be blocked.
+如果禁用或未配置此策略，则可能会阻止其他来源(来自未在上述三个策略中指定的站点)的 Adobe Flash 内容或较小内容。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: RunAllFlashInAllowMode
-  - GP name: Extend Adobe Flash content setting to all content
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RunAllFlashInAllowMode
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: RunAllFlashInAllowMode
+  - GP 名称: 将 Adobe Flash 内容设置扩展到所有内容
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: RunAllFlashInAllowMode
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: RunAllFlashInAllowMode
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: RunAllFlashInAllowMode
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SSLErrorOverrideAllowed
-  #### Allow users to proceed from the HTTPS warning page
+  #### 允许用户从 HTTPS 警告页继续
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Microsoft Edge shows a warning page when users visit sites that have SSL errors.
+  #### 描述
+  当用户访问具有 SSL 错误的站点时，Microsoft Edge 会显示警告页面。
 
-If you enable or don't configure (default) this policy, users can click through these warning pages.
+如果启用或未配置(默认)此策略，则用户能够以单击方式浏览这些警告页面。
 
-If you disable this policy, users are blocked from clicking through any warning page.
+如果禁用此策略，则会阻止用户以单击方式浏览任何警告页面。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SSLErrorOverrideAllowed
-  - GP name: Allow users to proceed from the HTTPS warning page
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SSLErrorOverrideAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SSLErrorOverrideAllowed
+  - GP 名称: 允许用户从 HTTPS 警告页继续
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SSLErrorOverrideAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SSLErrorOverrideAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SSLErrorOverrideAllowed
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SSLVersionMin
-  #### Minimum TLS version enabled
+  #### 已启用的最低 TLS 版本
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Sets the minimum supported version of SSL. If you don't configure this policy, Microsoft Edge uses a default minimum version, TLS 1.0.
+  #### 描述
+  设置受支持的最低 SSL 版本。如果未配置此策略，则 Microsoft Edge 会使用默认的最低版本，即 TLS 1.0。
 
-If you enable this policy, you can set the minimum version to one of the following values: 'TLSv1', 'TLSv1.1' or 'TLSv1.2'. When set, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Any unrecognized value is ignored.
+如果启用此策略，则可以将最低版本设置为以下值之一:“TLSv1”、“TLSv1.1”或“TLSv1.2”。设置后，Microsoft Edge 不会使用低于指定版本的任何 SSL/TLS 版本。任何无法识别的值都会被忽略。
 
-Policy options mapping:
+策略选项映射：
 
 * TLSv1 (tls1) = TLS 1.0
 
@@ -13772,86 +13768,86 @@ Policy options mapping:
 
 * TLSv1.2 (tls1.2) = TLS 1.2
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SSLVersionMin
-  - GP name: Minimum TLS version enabled
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SSLVersionMin
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SSLVersionMin
+  - GP 名称: 已启用的最低 TLS 版本
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SSLVersionMin
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "tls1"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SSLVersionMin
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SSLVersionMin
+  - 示例值:
 ``` xml
 <string>tls1</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SaveCookiesOnExit
-  #### Save cookies when Microsoft Edge closes
+  #### 当 Microsoft Edge 关闭时保存 Cookie
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  When this policy is enabled, the specified set of cookies is exempt from deletion when the browser closes. This policy is only effective when:
-- The 'Cookies and other site data' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
-- The policy [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) is enabled or
-- The policy [DefaultCookiesSetting](#defaultcookiessetting) is set to 'Keep cookies for the duration of the session'.
+  #### 描述
+  如果启用此策略，则当浏览器关闭时，指定的 Cookie 集将免于删除。此策略仅在以下情况下有效:
+- 已在“设置”/“隐私和服务”/“关闭时清除浏览数据”中配置“Cookie 和其他网站数据”切换，或者
+- 已启用策略 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 或
+- 已将策略 [DefaultCookiesSetting](#defaultcookiessetting) 设置为“在会话期间保留 Cookie”。
 
-You can define a list of sites, based on URL patterns, that will have their cookies preserved across sessions.
+你可以根据 URL 模式定义网站列表，它将在各个会话之间保留 Cookie。
 
-Note: Users can still edit the cookie site list to add or remove URLs. However, they can't remove URLs that have been added by an Admin.
+注意：用户仍可以编辑 Cookie 网站列表以添加或删除 URL。但是，他们不能删除已由管理员添加的 URL。
 
-If you enable this policy, the list of cookies won't be cleared when the browser closes.
+如果你启用此策略，则关闭浏览器时不会清除 Cookie 列表。
 
-If you disable or don't configure this policy, the user's personal configuration is used.
+如果你禁用或未配置此策略，则将使用用户的个人配置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SaveCookiesOnExit
-  - GP name: Save cookies when Microsoft Edge closes
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SaveCookiesOnExit
+  - GP 名称: 当 Microsoft Edge 关闭时保存 Cookie
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
@@ -13859,9 +13855,9 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SaveCookiesOnExit
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SaveCookiesOnExit
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -13870,249 +13866,249 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SavingBrowserHistoryDisabled
-  #### Disable saving browser history
+  #### 禁用保存浏览器历史记录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables saving browser history and prevents users from changing this setting.
+  #### 描述
+  禁用保存浏览器历史记录，并阻止用户更改此设置。
 
-If you enable this policy, browsing history isn't saved. This also disables tab syncing.
+如果启用此策略，浏览历史记录将不会保存。这还将禁用标签页同步。
 
-If you disable this policy or don't configure it, browsing history is saved.
+如果禁用或未配置此策略，浏览历史记录将被保存。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SavingBrowserHistoryDisabled
-  - GP name: Disable saving browser history
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SavingBrowserHistoryDisabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SavingBrowserHistoryDisabled
+  - GP 名称: 禁用保存浏览器历史记录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SavingBrowserHistoryDisabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SavingBrowserHistoryDisabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SavingBrowserHistoryDisabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ScreenCaptureAllowed
-  #### Allow or deny screen capture
+  #### 允许或拒绝屏幕捕获
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
-If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.
+  #### 描述
+  如果启用此策略，或者未配置此策略，则网页可以使用屏幕共享 API（如 getDisplayMedia() 或桌面捕获扩展 API）进行屏幕捕获。
+如果禁用此策略，则对屏幕共享 API 的调用将失败。例如，如果你使用的是基于 Web 的联机会议，则视频或屏幕共享将无法工作。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ScreenCaptureAllowed
-  - GP name: Allow or deny screen capture
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ScreenCaptureAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ScreenCaptureAllowed
+  - GP 名称: 允许或拒绝屏幕捕获
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ScreenCaptureAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ScreenCaptureAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ScreenCaptureAllowed
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ScrollToTextFragmentEnabled
-  #### Enable scrolling to text specified in URL fragments
+  #### 启用滚动到 URL 片段中的指定文本
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  This feature lets hyperlink and address bar URL navigations target specific text on a web page, which will be scrolled to after the web page finishes loading.
+  #### 描述
+  此功能允许超链接和地址栏 URL 导航以网页上的特定文本为目标，网页完成加载后将滚动到该文本。
 
-If you enable or don't configure this policy, web page scrolling to specific text fragments via a URL will be enabled.
+如果启用或未配置此策略，则将允许网页通过 URL 滚动至特定文本片段。
 
-If you disable this policy, web page scrolling to specific text fragments via a URL will be disabled.
+如果禁用此策略，则不允许网页通过 URL 滚动到特定文本片段。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ScrollToTextFragmentEnabled
-  - GP name: Enable scrolling to text specified in URL fragments
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ScrollToTextFragmentEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ScrollToTextFragmentEnabled
+  - GP 名称: 启用滚动到 URL 片段中的指定文本
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ScrollToTextFragmentEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ScrollToTextFragmentEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ScrollToTextFragmentEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SearchSuggestEnabled
-  #### Enable search suggestions
+  #### 启用搜索建议
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables web search suggestions in Microsoft Edge's Address Bar and Auto-Suggest List and prevents users from changing this policy.
+  #### 描述
+  在 Microsoft Edge 的地址栏和自动建议列表中启用 Web 搜索建议，并阻止用户更改此策略。
 
-If you enable this policy, web search suggestions are used.
+如果启用此策略，将使用 Web 搜索建议。
 
-If you disable this policy, web search suggestions are never used, however local history and local favorites suggestions still appear. If you disable this policy, neither the typed characters, nor the URLs visited will be included in telemetry to Microsoft.
+如果禁用此策略，则永远不会使用 Web 搜索建议，但仍会显示本地历史记录和本地收藏夹建议。如果禁用此策略，则键入的字符和访问的 URL 不会包含在发送给 Microsoft 的遥测信息中。
 
-If this policy is left not set, search suggestions are enabled but the user can change that.
+如果未设置此策略，则会启用搜索建议，但用户可以对其进行更改。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SearchSuggestEnabled
-  - GP name: Enable search suggestions
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: SearchSuggestEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SearchSuggestEnabled
+  - GP 名称: 启用搜索建议
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: SearchSuggestEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SearchSuggestEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SearchSuggestEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SecurityKeyPermitAttestation
-  #### Websites or domains that don't need permission to use direct Security Key attestation
+  #### 无需许可即可使用直接安全密钥证明的网站或域
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies websites and domains that don't need explicit user permission when attestation certificates from security keys are requested. Additionally, a signal is sent to the security key indicating that it can use individual attestation. Without this, users are prompted each time a site requests attestation of security keys.
+  #### 描述
+  指定当请求来自安全密钥的证明证书时不需要显式用户许可的网站和域。此外，向安全密钥发送一个信号，指示它可以使用单独的证明。如果不这样做，每次站点请求安全密钥证明时都会提示用户。
 
-Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (like contoso.com) only match as webauthn RP IDs. To cover both U2F and webauthn APIs for a given site, you need to list both the appID URL and domain.
+网站(如 https://contoso.com/some/path)仅作为 U2F appID 匹配。域(如 contoso.com)仅作为 webauthn RP ID 匹配。对于指定站点，要涵盖 U2F 和 webauthn API，需要列出 appID URL 和域。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SecurityKeyPermitAttestation
-  - GP name: Websites or domains that don't need permission to use direct Security Key attestation
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SecurityKeyPermitAttestation
+  - GP 名称: 无需许可即可使用直接安全密钥证明的网站或域
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SecurityKeyPermitAttestation
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SecurityKeyPermitAttestation
+  - 示例值:
 ``` xml
 <array>
   <string>https://contoso.com</string>
@@ -14120,39 +14116,39 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SendIntranetToInternetExplorer
-  #### Send all intranet sites to Internet Explorer
+  #### 将所有 Intranet 站点发送到 Internet Explorer
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  #### 描述
+  有关为 Internet Explorer 模式配置最佳体验的指南，请参阅 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SendIntranetToInternetExplorer
-  - GP name: Send all intranet sites to Internet Explorer
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SendIntranetToInternetExplorer
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SendIntranetToInternetExplorer
+  - GP 名称: 将所有 Intranet 站点发送到 Internet Explorer
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SendIntranetToInternetExplorer
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -14160,72 +14156,72 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SendSiteInfoToImproveServices
-  #### Send site information to improve Microsoft services (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 发送站点信息来改进 Microsoft 服务 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  This policy is deprecated. It is currently supported but will become obsolete in Microsoft Edge 89. This policy is replaced by the new policy:  [DiagnosticData](#diagnosticdata)for Windows 7, Windows 8, and macOS. This policy is replaced by Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  #### 描述
+  此策略已被弃用。它目前受支持，但在 Microsoft Edge 89 中将不再使用。对于 Windows 7、Windows 8 和 macOS，此策略将替换为新策略: [DiagnosticData](#diagnosticdata)。在 Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))上，此策略将替换为“允许遥测”。
 
-This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
+此策略允许向 Microsoft 发送有关在 Microsoft Edge 中访问的网站的信息，以改进搜索等服务。
 
-Enable this policy to send info about websites visited in Microsoft Edge to Microsoft. Disable this policy to not send info about websites visited in Microsoft Edge to Microsoft. In both cases, users can't change or override the setting.
+启用此策略会向 Microsoft 发送有关在 Microsoft Edge 中访问的网站的信息。禁用此策略不会向 Microsoft 发送有关在 Microsoft Edge 中访问的网站的信息。在这两种情况下，用户都不能更改或覆盖设置。
 
-On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+在 Windows 10 上，如果你未配置此策略，Microsoft Edge 将默认为 Windows 诊断数据设置。如果已启用此策略，Microsoft Edge 将仅发送有关在 Microsoft Edge 中访问的网站的信息(如果将 Windows 诊断数据设置设为“全部”)。如果已禁用此策略，Microsoft Edge 不会发送有关访问的网站的信息。详细了解 Windows 诊断数据设置: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
-On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
+在 Windows 7、windows 8 和 macOS 上，此策略控制发送有关访问的网站的信息。如果你未配置此策略，Microsoft Edge 将默认为用户的首选项。
 
-To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
+若要启用此策略，必须将 [MetricsReportingEnabled](#metricsreportingenabled) 设置为“已启用”。如果未配置或已禁用 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 或 [MetricsReportingEnabled](#metricsreportingenabled)，则系统不会将此数据发送给 Microsoft。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SendSiteInfoToImproveServices
-  - GP name: Send site information to improve Microsoft services (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SendSiteInfoToImproveServices
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SendSiteInfoToImproveServices
+  - GP 名称: 发送站点信息来改进 Microsoft 服务 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SendSiteInfoToImproveServices
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SendSiteInfoToImproveServices
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SendSiteInfoToImproveServices
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SensorsAllowedForUrls
   #### Allow access to sensors on specific sites
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
+  #### 描述
   Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
 
 If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14236,27 +14232,27 @@ The URL patterns defined in this policy can't conflict with those configured in 
 
 For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SensorsAllowedForUrls
-  - GP name: Allow access to sensors on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SensorsAllowedForUrls
+  - GP 名称: Allow access to sensors on specific sites
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -14264,9 +14260,9 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SensorsAllowedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SensorsAllowedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -14275,16 +14271,16 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SensorsBlockedForUrls
   #### Block access to sensors on specific sites
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
+  #### 描述
   Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
 
 If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14295,27 +14291,27 @@ The URL patterns defined in this policy can't conflict with those configured in 
 
 For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SensorsBlockedForUrls
-  - GP name: Block access to sensors on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SensorsBlockedForUrls
+  - GP 名称: Block access to sensors on specific sites
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -14323,9 +14319,9 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SensorsBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SensorsBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -14334,47 +14330,47 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SerialAskForUrls
-  #### Allow the Serial API on specific sites
+  #### 在特定网站上允许串行 API
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can ask the user for access to a serial port.
+  #### 描述
+  根据 URL 模式定义不能要求用户授予其串行端口访问权限的网站列表。
 
-If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果不配置此策略，则所有网站都将使用来自 [DefaultSerialGuardSetting](#defaultserialguardsetting) 策略(如果已设置)的全局默认值或用户的个人配置。
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SerialBlockedForUrls](#serialblockedforurls) policy (if there is a match), the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set), or the user's personal settings.
+对于与此策略不匹配的 URL 模式，将使用以下优先顺序: [SerialBlockedForUrls](#serialblockedforurls)策略(如果存在匹配项)、[DefaultSerialGuardSetting](#defaultserialguardsetting) 策略(如果已设置)或用户的个人设置。
 
-The URL patterns defined in this policy can't conflict with those configured in the [SerialBlockedForUrls](#serialblockedforurls) policy. You can't allow and block a URL.
+此策略中定义的 URL 模式不能与 [SerialBlockedForUrls](#serialblockedforurls) 策略中配置的 URL 模式冲突。您无法允许和阻止 URL。
 
-For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+有关有效 URL 模式的详细信息，请参见 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SerialAskForUrls
-  - GP name: Allow the Serial API on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SerialAskForUrls
+  - GP 名称: 在特定网站上允许串行 API
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
@@ -14382,9 +14378,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SerialAskForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SerialAskForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -14393,47 +14389,47 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SerialBlockedForUrls
-  #### Block the Serial API on specific sites
+  #### 在特定网站上阻止串行 API
   
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  Define a list of sites, based on URL patterns, that can't ask the user to grant them access to a serial port.
+  #### 描述
+  根据 URL 模式定义不能要求用户授予其串行端口访问权限的网站列表。
 
-If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+如果不配置此策略，则所有网站都将使用来自 [DefaultSerialGuardSetting](#defaultserialguardsetting) 策略(如果已设置)的全局默认值或用户的个人配置。
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SerialAskForUrls](#serialaskforurls) policy (if there is a match), the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set), or the user's personal settings.
+对于与此策略不匹配的 URL 模式，将使用以下优先顺序: [SerialAskForUrls](#serialaskforurls)策略(如果存在匹配项)、[DefaultSerialGuardSetting](#defaultserialguardsetting) 策略(如果已设置)或用户的个人设置。
 
-The URL patterns in this policy can't conflict with those configured in the [SerialAskForUrls](#serialaskforurls) policy. You can't allow and block a URL.
+此策略中的 URL 模式不能与 [SerialAskForUrls](#serialaskforurls) 策略中配置的 URL 模式冲突。您无法允许和阻止 URL。
 
-For detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+有关有效 URL 模式的详细信息，请参见 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SerialBlockedForUrls
-  - GP name: Block the Serial API on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SerialBlockedForUrls
+  - GP 名称: 在特定网站上阻止串行 API
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
@@ -14441,9 +14437,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SerialBlockedForUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SerialBlockedForUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -14452,247 +14448,245 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Show Microsoft Office shortcut in favorites bar
+  #### 在收藏夹栏中显示 Microsoft Office 快捷方式
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
+  #### 描述
+  指定是否在收藏夹栏中包含 Office.com 的快捷方式。对于登录到 Microsoft Edge 的用户，该快捷方式会向用户显示其 Microsoft Office 应用和文档。
 
-If this policy is enabled or not configure, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+如果启用或未配置此策略，则用户可以在收藏夹栏上下文菜单中更改切换开关，以选择是否查看快捷方式。
 
-If the policy is disabled, the shortcut won't be shown.
+如果禁用该策略，将不会显示该快捷方式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ShowOfficeShortcutInFavoritesBar
-  - GP name: Show Microsoft Office shortcut in favorites bar
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ShowOfficeShortcutInFavoritesBar
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: ShowOfficeShortcutInFavoritesBar
+  - GP 名称: 在收藏夹栏中显示 Microsoft Office 快捷方式
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: ShowOfficeShortcutInFavoritesBar
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: ShowOfficeShortcutInFavoritesBar
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: ShowOfficeShortcutInFavoritesBar
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SignedHTTPExchangeEnabled
-  #### Enable Signed HTTP Exchange (SXG) support
+  #### 启用签名 HTTP Exchange (SXG) 支持
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Enable support for Signed HTTP Exchange (SXG).
+  #### 描述
+  启用对已签名 HTTP Exchange (SXG)的支持。
 
-If this policy isn't set or enabled, Microsoft Edge will accept web contents served as Signed HTTP Exchanges.
+如果未设置或未启用此策略，则 Microsoft Edge 将接受作为已签名 HTTP Exchange 提供的 Web 内容。
 
-If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
+如果将此策略设置为“已禁用”，则无法加载已签名 HTTP Exchange。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SignedHTTPExchangeEnabled
-  - GP name: Enable Signed HTTP Exchange (SXG) support
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SignedHTTPExchangeEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SignedHTTPExchangeEnabled
+  - GP 名称: 启用签名 HTTP Exchange (SXG) 支持
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SignedHTTPExchangeEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SignedHTTPExchangeEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SignedHTTPExchangeEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SitePerProcess
-  #### Enable site isolation for every site
+  #### 为每个站点启用站点隔离
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  
-The 'SitePerProcess' policy can be used to prevent users from opting out of the default behavior of isolating all sites. Note that you can also use the [IsolateOrigins](#isolateorigins) policy to isolate additional, finer-grained origins.
-If you enable this policy, users can't opt out of the default behavior where each site runs in its own process.
-If you disable or don't configure this policy, a user can opt out of site isolation.  (For example, by using "Disable site isolation" entry in edge://flags.)  Disabling the policy or not configuring the policy doesn't turn off Site Isolation.
+  #### 描述
+  [SitePerProcess](#siteperprocess) 策略可用于阻止用户选择不采取隔离所有站点这一默认行为。请注意，你还可以使用 [IsolateOrigins](#isolateorigins) 策略隔离其他更细粒度的来源。
+如果启用此策略，则用户只能选择采取默认行为，即每个站点在自身进程中运行。
+如果禁用或未配置此策略，则用户可以选择不采取站点隔离。(例如，通过在 edge://flags 中使用“禁用站点隔离”项来实现)。禁用或未配置此策略不会导致站点隔离关闭。
 
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 数据类型:
+  - 布尔
 
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SitePerProcess
-  - GP name: Enable site isolation for every site
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SitePerProcess
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SitePerProcess
+  - GP 名称: 为每个站点启用站点隔离
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SitePerProcess
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SitePerProcess
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SitePerProcess
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SpellcheckEnabled
-  #### Enable spellcheck
+  #### 启用拼写检查
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  If you enable or don't configure this policy, the user can use spellcheck.
+  #### 描述
+  如果启用或未配置此策略，则用户可以使用拼写检查。
 
-If you disable this policy, the user can't use spellcheck and the [SpellcheckLanguage](#spellchecklanguage) and [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) policies are also disabled.
+如果禁用此策略，则用户不能使用拼写检查，并且 [SpellcheckLanguage](#spellchecklanguage) 和 [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) 策略也将被禁用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SpellcheckEnabled
-  - GP name: Enable spellcheck
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SpellcheckEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SpellcheckEnabled
+  - GP 名称: 启用拼写检查
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SpellcheckEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SpellcheckEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SpellcheckEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SpellcheckLanguage
-  #### Enable specific spellcheck languages
+  #### 启用特定拼写检查语言
   
   
-  #### Supported versions:
-  - On Windows since 77 or later
+  #### 支持的版本:
+  - 在 Windows 自 77 或之后
 
-  #### Description
-  Enables different languages for spellcheck. Any language that you specify that isn't recognized is ignored.
+  #### 描述
+  启用不同的语言以进行拼写检查。任何所指定的无法识别的语言都将被忽略。
 
-If you enable this policy, spellcheck is enabled for the languages specified, as well as any languages the user has enabled.
+如果启用此策略，则会对指定的语言以及用户启用的任何语言启用拼写检查。
 
-If you don't configure or disable this policy, there's no change to the user's spellcheck preferences.
+如果未配置或禁用此策略，则用户的拼写检查首选项没有变化。
 
-If the [SpellcheckEnabled](#spellcheckenabled) policy is disabled, this policy will have no effect.
+如果禁用 [SpellcheckEnabled](#spellcheckenabled) 策略，则此策略将不起作用。
 
-If a language is included in both the 'SpellcheckLanguage' and the [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) policy, the spellcheck language is enabled.
+如果 [SpellcheckLanguage](#spellchecklanguage) 和 [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) 策略中都包含某种语言，则将启用该拼写检查语言。
 
-The supported languages are: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
+支持的语言包括: af、bg、ca、cs、cy、da、de、el、en-AU、en-CA、en-GB、en-US、es、es-419、es-AR、es-ES、es-MX、es-US、et、fa、fo、fr、he、hi、hr、hu、id、it、ko、lt、lv、nb、nl、pl、pt-BR、pt-PT、ro、ru、sh、sk、sl、sq、sr、sv、ta、tg、tr、uk、vi。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SpellcheckLanguage
-  - GP name: Enable specific spellcheck languages
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SpellcheckLanguage
+  - GP 名称: 启用特定拼写检查语言
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
@@ -14702,49 +14696,49 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SpellcheckLanguageBlocklist
-  #### Force disable spellcheck languages
+  #### 强制禁用拼写检查功能的语言
   
   
-  #### Supported versions:
-  - On Windows since 78 or later
+  #### 支持的版本:
+  - 在 Windows 自 78 或之后
 
-  #### Description
-  Force-disables spellcheck languages. Unrecognized languages in that list will be ignored.
+  #### 描述
+  强制禁用拼写检查语言。该列表中无法识别的语言将被忽略。
 
-If you enable this policy, spellcheck will be disabled for the languages specified. The user can still enable or disable spellcheck for languages not in the list.
+如果启用此策略，将对指定语言禁用拼写检查。用户仍然可以对不在列表中的语言启用或禁用拼写检查。
 
-If you do not set this policy, or disable it, there will be no change to the user's spellcheck preferences.
+如果未设置或禁用此策略，则用户的拼写检查首选项将不会更改。
 
-If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, this policy will have no effect.
+如果 [SpellcheckEnabled](#spellcheckenabled) 策略设置为“已禁用”，则此策略将不起作用。
 
-If a language is included in both the [SpellcheckLanguage](#spellchecklanguage) and the 'SpellcheckLanguageBlocklist' policy, the spellcheck language is enabled.
+如果在 [SpellcheckLanguage](#spellchecklanguage) 和 [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) 策略中都包含某种语言，则将启用该拼写检查语言。
 
-The currently supported languages are: af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
+当前支持的语言包括: af、bg、ca、cs、da、de、el、en-AU、en-CA、en-GB、en-US、es、es-419、es-AR、es-ES、es-MX、es-US、et、fa、fo、fr、he、hi、hr、hu、id、it、ko、lt、lv、nb、nl、pl、pt-BR、pt-PT、ro、ru、sh、sk、sl、sq、sr、sv、ta、tg、tr、uk、vi。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SpellcheckLanguageBlocklist
-  - GP name: Force disable spellcheck languages
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SpellcheckLanguageBlocklist
+  - GP 名称: 强制禁用拼写检查功能的语言
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
@@ -14754,202 +14748,202 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### StricterMixedContentTreatmentEnabled
-  #### Enable stricter treatment for mixed content (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 针对混合内容启用更严格的处理 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 81 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 81
 
-  #### Description
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with stricter mixed content treatment. It won't work in Microsoft Edge version 85.
+  #### 描述
+  此策略已弃用，因为它旨在仅作为一种短期机制，让企业在发现它与更严格的混合内容处理不兼容时，有更多时间更新其 Web 内容。它将无法在 Microsoft Edge 版本 85 中正常使用。
 
-This policy controls the treatment for mixed content (HTTP content in HTTPS sites) in the browser.
+此策略控制浏览器中的混合内容 (HTTPS 站点中的 HTTP 内容) 的处理。
 
-If you set this policy to true or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
+如果将此策略设置为“true”或未设置，则音频和视频混合内容将自动升级到 HTTPS (即，URL 将被重写为 HTTPS; 如果资源在 HTTPS 上不可用，则无回退)，并且图像混合内容的 URL 栏中将显示“不安全”警告。
 
-If you set the policy to false, auto upgrades will be disabled for audio and video, and no warning will be shown for images.
+如果将策略设置为“false”，将禁用音频和视频的自动升级，并且不会针对图像显示警告。
 
-This policy does not affect other types of mixed content other than audio, video, and images.
+此策略不会影响音频、视频和图像以外的其他混合内容类型。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: StricterMixedContentTreatmentEnabled
-  - GP name: Enable stricter treatment for mixed content (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: StricterMixedContentTreatmentEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: StricterMixedContentTreatmentEnabled
+  - GP 名称: 针对混合内容启用更严格的处理 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: StricterMixedContentTreatmentEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: StricterMixedContentTreatmentEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: StricterMixedContentTreatmentEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SuppressUnsupportedOSWarning
-  #### Suppress the unsupported OS warning
+  #### 禁止不支持的操作系统警告
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Suppresses the warning that appears when Microsoft Edge is running on a computer or operating system that is no longer supported.
+  #### 描述
+  取消当 Microsoft Edge 运行于不再受支持的计算机或操作系统上时显示的警告。
 
-If this policy is false or unset, the warnings will appear on such unsupported computers or operating systems.
+如果此策略为 False 或未设置，则将在此类不受支持的计算机或操作系统上显示警告。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SuppressUnsupportedOSWarning
-  - GP name: Suppress the unsupported OS warning
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: SuppressUnsupportedOSWarning
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SuppressUnsupportedOSWarning
+  - GP 名称: 禁止不支持的操作系统警告
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: SuppressUnsupportedOSWarning
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SuppressUnsupportedOSWarning
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SuppressUnsupportedOSWarning
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SyncDisabled
-  #### Disable synchronization of data using Microsoft sync services
+  #### 使用 Microsoft 同步服务禁用数据同步
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Disables data synchronization in Microsoft Edge. This policy also prevents the sync consent prompt from appearing.
+  #### 描述
+  在 Microsoft Edge 中禁用数据同步。此策略还会阻止弹出关于同意进行同步的提示。
 
-If you don't set this policy or apply it as recommended, users will be able to turn sync on or off. If you apply this policy as mandatory, users will not be able to turn sync on.
+如果未设置此策略或未按照建议应用此策略，则用户将可以打开或关闭同步。如果作为强制性策略应用此策略，则用户将无法打开同步。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SyncDisabled
-  - GP name: Disable synchronization of data using Microsoft sync services
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: SyncDisabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SyncDisabled
+  - GP 名称: 使用 Microsoft 同步服务禁用数据同步
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: SyncDisabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SyncDisabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SyncDisabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### SyncTypesListDisabled
-  #### Configure the list of types that are excluded from synchronization
+  #### 配置从同步中排除的类型列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 83 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 83
 
-  #### Description
-  If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Microsoft Edge synchronization service.
+  #### 描述
+  如果启用此策略，则所有指定的数据类型都将从同步中排除。此策略可用于限制上传到 Microsoft Edge 同步服务的数据类型。
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". Note that these data type names are case sensitive.
+你可以为此策略提供以下数据类型之一：“集锦夹”、“设置”、“密码”、“addressesAndMore”、“扩展”、“历史记录”、“openTabs”和“集合”。请注意，这些数据类型名称区分大小写。
 
-Users will not be able to override the disabled data types.
+用户将无法覆盖禁用的数据类型。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: SyncTypesListDisabled
-  - GP name: Configure the list of types that are excluded from synchronization
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: SyncTypesListDisabled
+  - GP 名称: 配置从同步中排除的类型列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: SyncTypesListDisabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: SyncTypesListDisabled
+  - 示例值:
 ``` xml
 <array>
   <string>favorites</string>
@@ -14957,103 +14951,103 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TLS13HardeningForLocalAnchorsEnabled
-  #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
+  #### 对本地信任密钥启用 TLS 1.3 安全功能。 (过时)
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
-  #### Supported versions:
-  - On Windows and macOS since 81, until 85
+  >过时: 此策略已过时，在 Microsoft Edge 85 之后无法使用。
+  #### 支持的版本:
+  - 在 Windows 后，在 macOS 和 81 上 85
 
-  #### Description
-  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to upgrade affected proxies.
+  #### 描述
+  此策略仅为短期机制，旨在为企业提供更多时间升级受影响的代理。因此，目前已不再工作。
 
-This policy controls a security feature in TLS 1.3 that protects connections against downgrade attacks. It is backwards-compatible and will not affect connections to compliant TLS 1.2 servers or proxies. However, older versions of some TLS-intercepting proxies have an implementation flaw which causes them to be incompatible.
+此策略控制 TLS 1.3 中的安全功能，该功能可保护连接免遭降级攻击。它向后兼容，不会影响与兼容的 TLS 1.2 服务器或代理的连接。但是，某些较旧版本的拦截 TLS 代理有实现缺陷，导致它们不兼容。
 
-If you enable this policy or don't set it, Microsoft Edge will enable these security protections for all connections.
+如果启用此策略或不对其进行设置，Microsoft Edge 将为所有连接启用这些安全保护。
 
-If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
+如果禁用此策略，Microsoft Edge 会针对通过本地安装的 CA 证书进行身份验证的连接禁用这些安全保护。对于通过公共信任的 CA 证书进行身份验证的连接，将始终启用这些保护。
 
-This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
+此策略可用于测试任何受影响的代理并对其进行升级。受影响的代理预期会导致连接失败，错误代码为“ERR_TLS13_DOWNGRADE_DETECTED”。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TLS13HardeningForLocalAnchorsEnabled
-  - GP name: Enable a TLS 1.3 security feature for local trust anchors (obsolete)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: TLS13HardeningForLocalAnchorsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TLS13HardeningForLocalAnchorsEnabled
+  - GP 名称: 对本地信任密钥启用 TLS 1.3 安全功能。 (过时)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: TLS13HardeningForLocalAnchorsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TLS13HardeningForLocalAnchorsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TLS13HardeningForLocalAnchorsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TLSCipherSuiteDenyList
-  #### Specify the TLS cipher suites to disable
+  #### 指定要禁用的 TLS 密码套件
   
   
-  #### Supported versions:
-  - On Windows and macOS since 85 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 85
 
-  #### Description
-  Configure the list of cipher suites that are disabled for TLS connections.
+  #### 描述
+  配置为 TLS 连接禁用的密码套件的列表。
 
-If you configure this policy, the list of configured cipher suites will not be used when establishing TLS connections.
+ 如果配置此策略，则不会在建立 TLS 连接时使用配置的密码套件列表。
 
-If you don't configure this policy, the browser will choose which TLS cipher suites to use.
+ 如果未配置此策略，则浏览器将选择要使用的 TLS 密码套件。
 
-Cipher suite values to be disabled are specified as 16-bit hexadecimal values. The values are assigned by the Internet Assigned Numbers Authority (IANA) registry.
+要禁用的密码套件值被指定为 16 位十六进制值。这些值由 Internet 分配的号码颁发机构（IANA）注册表指定。
 
-The TLS 1.3 cipher suite TLS_AES_128_GCM_SHA256 (0x1301) is required for TLS 1.3 and can't be disabled by this policy.
+ TLS 1.3 需要 TLS 1.3 密码套件 TLS_AES_128_GCM_SHA256（0x1301），并且无法通过此策略禁用。
 
-This policy does not affect QUIC-based connections. QUIC can be turned off via the [QuicAllowed](#quicallowed) policy.
+ 此策略不会影响基于QUIC的连接。可以通过 [QuicAllowed](#quicallowed) 策略关闭 QUIC。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TLSCipherSuiteDenyList
-  - GP name: Specify the TLS cipher suites to disable
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TLSCipherSuiteDenyList
+  - GP 名称: 指定要禁用的 TLS 密码套件
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
@@ -15062,9 +15056,9 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TLSCipherSuiteDenyList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TLSCipherSuiteDenyList
+  - 示例值:
 ``` xml
 <array>
   <string>0x1303</string>
@@ -15074,311 +15068,311 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TabFreezingEnabled
-  #### Allow freezing of background tabs
+  #### 允许冻结后台标签页
   
   
-  #### Supported versions:
-  - On Windows and macOS since 79 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 79
 
-  #### Description
-  Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
+  #### 描述
+  控制 Microsoft Edge 是否可以将后台中的标签页至少冻结 5 分钟。
 
-Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
+标签页冻结可减少 CPU、电池和内存的使用量。Microsoft Edge 使用试探法来避免冻结在后台执行有用工作(例如显示通知、播放声音和流式传输视频)的标签页。
 
-If you enable or don't configure this policy, tabs that have been in the background for at least 5 minutes might be frozen.
+如果启用此策略或未配置此策略，则后台中已至少存在 5 分钟的标签页可能会被冻结。
 
-If you disable this policy, no tabs will be frozen.
+如果禁用此策略，则不会冻结任何标签页。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TabFreezingEnabled
-  - GP name: Allow freezing of background tabs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: TabFreezingEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TabFreezingEnabled
+  - GP 名称: 允许冻结后台标签页
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: TabFreezingEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TabFreezingEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TabFreezingEnabled
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TaskManagerEndProcessEnabled
-  #### Enable ending processes in the Browser task manager
+  #### 启用在浏览器任务管理器中结束进程
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  If you enable or don't configure this policy, users can end processes in the Browser task manager. If you disable it, users can't end processes, and the End process button is disabled in the Browser task manager.
+  #### 描述
+  如果启用或未配置此策略，用户可以在浏览器任务管理器中结束进程。如果禁用此策略，用户将无法结束进程，并且浏览器任务管理器中的“结束进程”按钮将被禁用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TaskManagerEndProcessEnabled
-  - GP name: Enable ending processes in the Browser task manager
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: TaskManagerEndProcessEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TaskManagerEndProcessEnabled
+  - GP 名称: 启用在浏览器任务管理器中结束进程
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: TaskManagerEndProcessEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TaskManagerEndProcessEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TaskManagerEndProcessEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TotalMemoryLimitMb
-  #### Set limit on megabytes of memory a single Microsoft Edge instance can use
+  #### 设置单个 Microsoft Edge 实例可以使用的内存限制(MB)。
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Configures the amount of memory that a single Microsoft Edge instance can use before tabs start getting discarded to save memory. The memory used by the tab will be freed and the tab will have to be reloaded when switched to.
+  #### 描述
+  配置在标签页开始被放弃以节省内存之前，单个 Microsoft Edge 实例可以使用的内存量。将释放该标签页所使用的内存，并且当切换到该标签页时，必须对其重新加载。
 
-If you enable this policy, the browser will start to discard tabs to save memory once the limitation is exceeded. However, there is no guarantee that the browser is always running under the limit. Any value under 1024 will be rounded up to 1024.
+如果启用此策略，则当超出限制时，浏览器将开始放弃标签页以节省内存。但不能保证浏览器始终在限制下运行。低于 1024 的任何值都将舍入为 1024。
 
-If you don't set this policy, the browser will only attempt to save memory when it has detected that the amount of physical memory on its machine is low.
+如果未设置此策略，则在检测到计算机上的物理内存较少时，浏览器将仅尝试节省内存。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TotalMemoryLimitMb
-  - GP name: Set limit on megabytes of memory a single Microsoft Edge instance can use
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: TotalMemoryLimitMb
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TotalMemoryLimitMb
+  - GP 名称: 设置单个 Microsoft Edge 实例可以使用的内存限制(MB)。
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: TotalMemoryLimitMb
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000800
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TotalMemoryLimitMb
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TotalMemoryLimitMb
+  - 示例值:
 ``` xml
 <integer>2048</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TrackingPrevention
-  #### Block tracking of users' web-browsing activity
+  #### 阻止跟踪用户的 Web 浏览活动
   
   
-  #### Supported versions:
-  - On Windows and macOS since 78 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 78
 
-  #### Description
-  Lets you decide whether to block websites from tracking users' web-browsing activity.
+  #### 描述
+  允许决定是否阻止网站跟踪用户的 Web 浏览活动。
 
-If you disable this policy or don't configure it, users can set their own level of tracking prevention.
+如果禁用或不配置此策略，则用户可以设置自己的跟踪保护的级别。
 
-Policy options mapping:
+策略选项映射：
 
-* TrackingPreventionOff (0) = Off (no tracking prevention)
+* TrackingPreventionOff (0) = 关(无跟踪保护)
 
-* TrackingPreventionBasic (1) = Basic (blocks harmful trackers, content and ads will be personalized)
+* TrackingPreventionBasic (1) = 基本（阻止有害的跟踪器，内容和广告将被个性化）
 
-* TrackingPreventionBalanced (2) = Balanced (blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)
+* TrackingPreventionBalanced (2) = 平衡(阻止有害跟踪器以及来自用户尚未访问的站点的跟踪器；内容和广告的个性化程度将较低)
 
-* TrackingPreventionStrict (3) = Strict (blocks harmful trackers and majority of trackers from all sites; content and ads will have minimal personalization. Some parts of sites might not work)
+* TrackingPreventionStrict (3) = 严格(阻止有害的跟踪器以及来自所有站点的大多数跟踪器；内容和广告将具有最低的个性化程度。站点的某些部分可能不起作用)
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TrackingPrevention
-  - GP name: Block tracking of users' web-browsing activity
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: TrackingPrevention
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TrackingPrevention
+  - GP 名称: 阻止跟踪用户的 Web 浏览活动
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: TrackingPrevention
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000002
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TrackingPrevention
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TrackingPrevention
+  - 示例值:
 ``` xml
 <integer>2</integer>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### TranslateEnabled
-  #### Enable Translate
+  #### 启用翻译
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Enables the integrated Microsoft translation service on Microsoft Edge.
+  #### 描述
+  在 Microsoft Edge 上启用集成式 Microsoft 翻译服务。
 
-If you enable this policy, Microsoft Edge offers translation functionality to the user by showing an integrated translate flyout when appropriate, and a translate option on the right-click context menu.
+如果启用此策略，则 Microsoft Edge 会在适当的情况下显示集成式翻译浮出控件，以及右键单击上下文菜单中的翻译选项，来为用户提供翻译功能。
 
-Disable this policy to disable all built-in translate features.
+禁用此策略可以禁用所有内置翻译功能。
 
-If you don't configure the policy, users can choose whether to use the translation functionality or not.
+如果未配置此策略，则用户可以选择是否使用翻译功能。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 是
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: TranslateEnabled
-  - GP name: Enable Translate
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: TranslateEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: TranslateEnabled
+  - GP 名称: 启用翻译
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 管理模板/Microsoft Edge - 默认设置（用户可以覆盖）/
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): SOFTWARE\Policies\Microsoft\Edge\推荐
+  - 值名称: TranslateEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: TranslateEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: TranslateEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### URLAllowlist
-  #### Define a list of allowed URLs
+  #### 定义允许的 URL 列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allow access to the listed URLs, as exceptions to the URL block list.
+  #### 描述
+  允许访问列出的 URL，作为 URL 阻止名单的例外。
 
-Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+根据 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 设置 URL 模式的格式。
 
-You can use this policy to open exceptions to restrictive block lists. For example, you can include '*' in the block list to block all requests, and then use this policy to allow access to a limited list of URLs. You can use this policy to open exceptions to certain schemes, subdomains of other domains, ports, or specific paths.
+可以使用此策略对限制性阻止名单设置例外。例如，可以在阻止名单中包含 "*" 以阻止所有请求，然后使用此策略允许访问受限制的 URL 列表。可以使用此策略对某些方案、其他域的子域、端口或特定路径设置例外。
 
-The most specific filter determines if a URL is blocked or allowed. The allowed list takes precedence over the block list.
+最具体的筛选器会确定是阻止还是允许 URL。允许列表优先于阻止名单。
 
-This policy is limited to 1000 entries; subsequent entries are ignored.
+此策略不得超过 1000 个条目；后续条目将被忽略。
 
-This policy also allows the browser to automatically invoke external applications registered as protocol handlers for protocols like "tel:" or "ssh:".
+此策略还允许浏览器自动调用注册为“tel:”或“ssh:”等协议的协议处理程序的外部应用程序。
 
-If you don't configure this policy, there are no exceptions to the block list in the [URLBlocklist](#urlblocklist) policy.
+如果未配置此策略，则 [URLBlocklist](#urlblocklist) 策略中的阻止名单没有例外。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: URLAllowlist
-  - GP name: Define a list of allowed URLs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\URLAllowlist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: URLAllowlist
+  - GP 名称: 定义允许的 URL 列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\URLAllowlist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
@@ -15389,9 +15383,9 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: URLAllowlist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: URLAllowlist
+  - 示例值:
 ``` xml
 <array>
   <string>contoso.com</string>
@@ -15403,49 +15397,49 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### URLBlocklist
-  #### Block access to a list of URLs
+  #### 阻止访问 URL 列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Define a list of sites, based on URL patterns, that are blocked (your users can't load them).
+  #### 描述
+  根据 URL 模式定义被阻止的站点列表(你的用户无法加载它们)。
 
-Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+根据 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 设置 URL 模式格式。
 
-You can define exceptions in the [URLAllowlist](#urlallowlist) policy. These policies are limited to 1000 entries; subsequent entries are ignored.
+你可以在 [URLAllowlist](#urlallowlist) 策略中定义例外。这些策略不得超过 1000 个条目；后续条目将被忽略。
 
-Note that blocking internal 'edge://*' URLs isn't recommended - this may lead to unexpected errors.
+请注意，不建议阻止内部 "edge://*" URL - 这可能会导致意外错误。
 
-This policy doesn't prevent the page from updating dynamically through JavaScript. For example, if you block 'contoso.com/abc', users might still be able to visit 'contoso.com' and click on a link to visit 'contoso.com/abc', as long as the page doesn't refresh.
+此策略不会阻止页面通过 JavaScript 动态更新。例如，如果你阻止 "contoso.com/abc"，那么只要页面不刷新，用户或许仍然可以访问 "contoso.com" 并单击链接来访问 "contoso.com/abc"。
 
-If you don't configure this policy, no URLs are blocked.
+如果你未配置此策略，则不会阻止任何 URL。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: URLBlocklist
-  - GP name: Block access to a list of URLs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\URLBlocklist
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: URLBlocklist
+  - GP 名称: 阻止访问 URL 列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\URLBlocklist
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
@@ -15459,9 +15453,9 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: URLBlocklist
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: URLBlocklist
+  - 示例值:
 ``` xml
 <array>
   <string>contoso.com</string>
@@ -15476,149 +15470,149 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### UserAgentClientHintsEnabled
-  #### Enable the User-Agent Client Hints feature (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 启用用户代理客户端提示功能 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows and macOS since 86 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
 
-  #### Description
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the User-Agent Client Hints feature. It won't work in Microsoft Edge version 89.
+  #### 描述
+  已弃用此策略，因为它仅为短期机制，旨在为企业提供更多时间升级其 Web 内容(如果发现与“用户代理客户端提示”功能不兼容的话)。它将无法在 Microsoft Edge 版本 89 中起作用。
 
-When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
+启用此策略时，“用户代理客户端提示”功能会发送粒度请求标题，提供与用户浏览器相关的信息(例如，浏览器版本)和环境(例如，系统体系结构)。
 
-This is an additive feature, but the new headers may break some websites that restrict the characters that requests may contain.
+此策略虽然是累加功能，但新标题可能破坏某些限制请求可能包含的字符的网站。
 
-If you enable or don't configure this policy, the User-Agent Client Hints feature is enabled. If you disable this policy, this feature is unavailable.
+如果启用或未配置此策略，将启用“用户代理客户端提示”功能。如果禁用此策略，则此功能不可用。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: UserAgentClientHintsEnabled
-  - GP name: Enable the User-Agent Client Hints feature (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: UserAgentClientHintsEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: UserAgentClientHintsEnabled
+  - GP 名称: 启用用户代理客户端提示功能 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: UserAgentClientHintsEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: UserAgentClientHintsEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: UserAgentClientHintsEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### UserDataDir
-  #### Set the user data directory
+  #### 设置用户数据目录
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Set the directory to use for storing user data.
+  #### 描述
+  设置用于存储用户数据的目录。
 
-If you enable this policy, Microsoft Edge uses the specified directory regardless of whether the user has set the '--user-data-dir' command-line flag.
+如果启用此策略，那么无论用户是否已设置了 "--user-data-dir" 命令行标志，Microsoft Edge 都会使用指定的目录。
 
-If you don't enable this policy, the default profile path is used, but the user can override it by using the '--user-data-dir' flag. Users can find the directory for the profile at edge://version/ under profile path.
+如果未启用此策略，则使用默认用户配置路径，但用户可以使用 "--user-data-dir" 标志覆盖它。用户可以在用户配置路径下的 edge://version/ 中找到该用户配置的目录。
 
-To avoid data loss or other errors, don't configure this policy to a volume's root directory or to a directory that's used for other purposes, because Microsoft Edge manages its contents.
+为避免数据丢失或其他错误，请不要将此策略配置为卷的根目录或用于其他用途的目录，因为 Microsoft Edge 会管理其内容。
 
-See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
+有关可以使用的变量列表，请参阅 [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041)。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: UserDataDir
-  - GP name: Set the user data directory
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: UserDataDir
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: UserDataDir
+  - GP 名称: 设置用户数据目录
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: UserDataDir
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "${users}/${user_name}/Edge"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: UserDataDir
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: UserDataDir
+  - 示例值:
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### UserDataSnapshotRetentionLimit
-  #### Limits the number of user data snapshots retained for use in case of emergency rollback
+  #### 限制保留的用于紧急回退的用户数据快照的数量
   
   
-  #### Supported versions:
-  - On Windows since 86 or later
+  #### 支持的版本:
+  - 在 Windows 自 86 或之后
 
-  #### Description
-  Following each major version update, Microsoft Edge will create a snapshot of parts of the user's browsing data to use in case of a later emergency that requires a temporary version rollback. If a temporary rollback is performed to a version for which a user has a corresponding snapshot, the data in the snapshot is restored. This lets users keep settings such as bookmarks and autofill data.
+  #### 描述
+  在每个主要版本更新之后，Microsoft Edge 将创建用户部分浏览数据的快照，以便在以后遇到需要临时回退版本的紧急情况时使用。如果对用户具有相应快照的版本执行临时回退，则会还原快照中的数据。这可让用户保留书签和自动填充数据等设置。
 
-If you don't set this policy, the default value of 3 snapshots is used.
+如果不设置此策略，则会使用 3 个快照的默认值。
 
-If you set this policy, old snapshots are deleted as needed to respect the limit you set. If you set this policy to 0, no snapshots are taken.
+如果你设置了此策略，则会根据需要删除旧快照以遵守你设置的限制。如果将此策略设置为 0，则不会使用任何快照。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Integer
+  #### 数据类型:
+  - 整数
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: UserDataSnapshotRetentionLimit
-  - GP name: Limits the number of user data snapshots retained for use in case of emergency rollback
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: UserDataSnapshotRetentionLimit
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: UserDataSnapshotRetentionLimit
+  - GP 名称: 限制保留的用于紧急回退的用户数据快照的数量
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: UserDataSnapshotRetentionLimit
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000003
 ```
@@ -15626,141 +15620,141 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### UserFeedbackAllowed
-  #### Allow user feedback
+  #### 允许用户反馈
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Microsoft Edge uses the Edge Feedback feature (enabled by default) to allow users to send feedback, suggestions or customer surveys and to report any issues with the browser. Also, by default, users can't disable (turn off) the Edge Feedback feature.
+  #### 描述
+  Microsoft Edge 使用 Microsoft Edge 反馈功能(默认情况下已启用)来允许用户发送反馈、建议或客户调查，以及报告任何浏览器问题。另外，默认情况下，用户不能禁用(关闭) Microsoft Edge 反馈功能。
 
-If you enable this policy or don't configure it, users can invoke Edge Feedback.
+如果启用或未配置此策略，则用户可以调用 Microsoft Edge 反馈。
 
-If you disable this policy, users can't invoke Edge Feedback.
+如果禁用此策略，则用户不能调用 Microsoft Edge 反馈。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: UserFeedbackAllowed
-  - GP name: Allow user feedback
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: UserFeedbackAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: UserFeedbackAllowed
+  - GP 名称: 允许用户反馈
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: UserFeedbackAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: UserFeedbackAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: UserFeedbackAllowed
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### VideoCaptureAllowed
-  #### Allow or block video capture
+  #### 允许或阻止视频捕获
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Control whether sites can capture video.
+  #### 描述
+  控制站点是否可以捕获视频。
 
-If enabled or not configured (default), the user will be asked about video capture access for all sites except those with URLs configured in the [VideoCaptureAllowedUrls](#videocaptureallowedurls) policy list, which will be granted access without prompting.
+如果已启用或未配置(默认)，则将询问用户有关所有站点的视频捕获访问权限的信息，但在 [VideoCaptureAllowedUrls](#videocaptureallowedurls) 策略列表中配置了 URL 的站点除外，这些站点将被授予访问权限而不进行提示。
 
-If you disable this policy, the user isn't prompted, and video capture is only available to URLs configured in [VideoCaptureAllowedUrls](#videocaptureallowedurls) policy.
+如果禁用此策略，则不会提示用户，且视频捕获仅适用于 [VideoCaptureAllowedUrls](#videocaptureallowedurls) 策略中配置的 URL。
 
-This policy affects all types of video inputs, not only the built-in camera.
+此策略影响所有类型的视频输入，而不只是内置摄像头。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: VideoCaptureAllowed
-  - GP name: Allow or block video capture
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: VideoCaptureAllowed
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: VideoCaptureAllowed
+  - GP 名称: 允许或阻止视频捕获
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: VideoCaptureAllowed
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000000
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: VideoCaptureAllowed
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: VideoCaptureAllowed
+  - 示例值:
 ``` xml
 <false/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### VideoCaptureAllowedUrls
-  #### Sites that can access video capture devices without requesting permission
+  #### 无需请求许可即可访问视频捕获设备的站点
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Specify websites, based on URL patterns, that can use video capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to video capture devices.
+  #### 描述
+  根据 URL 模式指定无需用户许可即可使用视频捕获设备的网站。该列表中的模式将与请求 URL 的安全来源进行匹配。如果匹配，站点将自动获得视频捕获设备的访问权限。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: VideoCaptureAllowedUrls
-  - GP name: Sites that can access video capture devices without requesting permission
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: VideoCaptureAllowedUrls
+  - GP 名称: 无需请求许可即可访问视频捕获设备的站点
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
@@ -15768,9 +15762,9 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: VideoCaptureAllowedUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: VideoCaptureAllowedUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com/</string>
@@ -15779,100 +15773,100 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WPADQuickCheckEnabled
-  #### Set WPAD optimization
+  #### 设置 WPAD 优化
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to turn off WPAD (Web Proxy Auto-Discovery) optimization in Microsoft Edge.
+  #### 描述
+  允许你在 Microsoft Edge 中关闭 WPAD (Web 代理自动发现)优化。
 
-If you disable this policy, WPAD optimization is disabled, which makes the browser wait longer for DNS-based WPAD servers.
+如果禁用此策略，则会禁用 WPAD 优化，这会使浏览器等待基于 DNS 的 WPAD 服务器更长时间。
 
-If you enable or don't configure the policy, WPAD optimization is enabled.
+如果启用或未配置此策略，则会启用 WPAD 优化。
 
-Independent of whether or how this policy is enabled, the WPAD optimization setting cannot be changed by users.
+无论是否或如何启用此策略，用户都无法更改 WPAD 优化设置。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WPADQuickCheckEnabled
-  - GP name: Set WPAD optimization
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WPADQuickCheckEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WPADQuickCheckEnabled
+  - GP 名称: 设置 WPAD 优化
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WPADQuickCheckEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WPADQuickCheckEnabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WPADQuickCheckEnabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebAppInstallForceList
-  #### Configure list of force-installed Web Apps
+  #### 配置强制安装的 Web 应用列表
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Specifies a list of websites that are installed silently, without user interaction, and which can't be uninstalled or disabled by the user.
+  #### 描述
+  指定静默安装、无需用户交互、用户无法卸载或禁用的网站列表。
 
-Each list item of the policy is an object with the following members:
-  - "url", which is mandatory. "url" should be the URL of the web app to install.
+该策略的每个列表项都是一个具有以下成员的对象:
+  - "url"，这是必需的。"url" 应为要安装的 Web 应用的 URL。
 
-Values for the optional members are:
-  - "launch_container" should be either "window" or "tab" to indicate how the Web App will be opened after it's installed.
-  - "create_desktop_shortcut" should be true if a desktop shortcut should be created on Windows.
+可选成员的值包括:
+  - "launch_container" 应为 "window" 或 "tab"，以指示安装 Web 应用后如何将其打开。
+  - 如果应在 Windows 上创建桌面快捷方式，则 "create_desktop_shortcut" 应为 true。
 
-If "default_launch_container" is omitted, the app will open in a tab by default. Regardless of the value of "default_launch_container", users can change which container the app will open in. If "create_desktop_shortcuts" is omitted, no desktop shortcuts will be created.
+如果省略 "default_launch_container"，则默认情况下将在标签页中打开应用。无论 "default_launch_container" 的值如何，用户都可以更改将在其中打开该应用的容器。如果省略 "create_desktop_shortcuts"，将不会创建桌面快捷方式。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
 
-  #### Data Type:
-  - Dictionary
+  #### 数据类型:
+  - 字典
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebAppInstallForceList
-  - GP name: Configure list of force-installed Web Apps
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebAppInstallForceList
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebAppInstallForceList
+  - GP 名称: 配置强制安装的 Web 应用列表
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebAppInstallForceList
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
@@ -15888,9 +15882,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebAppInstallForceList
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebAppInstallForceList
+  - 示例值:
 ``` xml
 <key>WebAppInstallForceList</key>
 <array>
@@ -15912,154 +15906,153 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebComponentsV0Enabled
-  #### Re-enable Web Components v0 API until M84 (obsolete)
+  #### 在 M84 之前重新启用 Web 组件 v0 API (过时)
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
-  #### Supported versions:
-  - On Windows and macOS since 80, until 84
+  >过时: 此策略已过时，在 Microsoft Edge 84 之后无法使用。
+  #### 支持的版本:
+  - 在 Windows 后，在 macOS 和 80 上 84
 
-  #### Description
-  This policy doesn't work because this policy allowed these features to be selectively re-enabled until Microsoft Edge version 85. The Web Components v0 APIs (Shadow DOM v0, Custom Elements v0, and HTML Imports) were deprecated in 2018, and have been disabled by default starting in Microsoft Edge version 80.
+  #### 描述
+  此策略不起作用，因为此策略允许在 Microsoft Edge 版本 85 之前选择性地重新启用这些功能。Web 组件 v0 API (影子 DOM v0、自定义元素 v0 和 HTML 导入)已于 2018 年弃用，默认情况下，自 Microsoft Edge 版本 80 开始禁用。
 
-If you set this policy is set to True, the Web Components v0 features will be enabled for all sites.
+如果将此策略设置为“True”，则将对所有站点启用 Web 组件 v0 功能。
 
-If you set this policy to False or don't set this policy, the Web Components v0 features will be disabled by default, starting in Microsoft Edge version 80.
+如果将此策略设置为“False”或未设置此策略，自 Microsoft Edge 版本 80 开始，默认将禁用 Web 组件 v0 功能。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebComponentsV0Enabled
-  - GP name: Re-enable Web Components v0 API until M84 (obsolete)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebComponentsV0Enabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebComponentsV0Enabled
+  - GP 名称: 在 M84 之前重新启用 Web 组件 v0 API (过时)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebComponentsV0Enabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebComponentsV0Enabled
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebComponentsV0Enabled
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebDriverOverridesIncompatiblePolicies
-  #### Allow WebDriver to Override Incompatible Policies (obsolete)
+  #### 允许 WebDriver 覆盖不兼容的策略 (过时)
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
-  #### Supported versions:
-  - On Windows and macOS since 77, until 84
+  >过时: 此策略已过时，在 Microsoft Edge 84 之后无法使用。
+  #### 支持的版本:
+  - 在 Windows 后，在 macOS 和 77 上 84
 
-  #### Description
-  
-This policy doesn't work because WebDriver is now compatible with all existing policies.
+  #### 描述
+  此策略不起作用，因为 WebDriver 现在与所有现有策略兼容。
 
-This policy allows users of the WebDriver feature to override
-policies which can interfere with its operation.
+此策略允许使用 WebDriver 功能的用户覆盖
+可能干扰该其运行的策略。
 
-Currently this policy disables [SitePerProcess](#siteperprocess) and [IsolateOrigins](#isolateorigins) policies.
+目前此策略禁用 [SitePerProcess](#siteperprocess) 和 [IsolateOrigins](#isolateorigins) 策略。
 
-If the policy is enabled, WebDriver will be able to override incomaptible
-policies.
-If the policy is disabled or not configured, WebDriver will not be allowed
-to override incompatible policies.
+如果启用该策略，WebDriver 将能够覆盖不兼容的
+策略。
+如果禁用或未配置此策略，则 WebDriver 将无法
+覆盖不兼容的策略。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebDriverOverridesIncompatiblePolicies
-  - GP name: Allow WebDriver to Override Incompatible Policies (obsolete)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebDriverOverridesIncompatiblePolicies
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebDriverOverridesIncompatiblePolicies
+  - GP 名称: 允许 WebDriver 覆盖不兼容的策略 (过时)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebDriverOverridesIncompatiblePolicies
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebDriverOverridesIncompatiblePolicies
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebDriverOverridesIncompatiblePolicies
+  - 示例值:
 ``` xml
 <true/>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebRtcLocalIpsAllowedUrls
-  #### Manage exposure of local IP addressess by WebRTC
+  #### 管理 WebRTC 的本地 IP 地址公开
   
   
-  #### Supported versions:
-  - On Windows and macOS since 80 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 80
 
-  #### Description
-  Specifies a list of origins (URLs) or hostname patterns (like "*contoso.com*") for which local IP address should be exposed by WebRTC.
+  #### 描述
+  指定本地 IP 地址应由 WebRTC 公开的源(URL)或主机名模式(如 "*contoso.com*")的列表。
 
-If you enable this policy and set a list of origins (URLs) or hostname patterns, when edge://flags/#enable-webrtc-hide-local-ips-with-mdns is Enabled, WebRTC will expose the local IP address for cases that match patterns in the list.
+如果启用此策略并设置源(URL)或主机名模式列表，那么当启用 edge://flags/#enable-webrtc-hide-local-ips-with-mdns 时，对于与列表中的模式匹配的情况，WebRTC 将公开本地 IP 地址。
 
-If you disable or don't configure this policy, and edge://flags/#enable-webrtc-hide-local-ips-with-mdns is Enabled, WebRTC will not expose local IP addresses. The local IP address is concealed with an mDNS hostname.
+如果禁用或未配置此策略，并且启用了 edge://flags/#enable-webrtc-hide-local-ips-with-mdns，则 WebRTC 将不会公开本地 IP 地址。本地 IP 地址用 mDNS 主机名隐藏。
 
-If you enable, disable, or don't configure this policy, and edge://flags/#enable-webrtc-hide-local-ips-with-mdns is Disabled, WebRTC will expose local IP addresses.
+如果启用、禁用或未配置此策略，并且禁用了 edge://flags/#enable-webrtc-hide-local-ips-with-mdns，则 WebRTC 将公开本地 IP 地址。
 
-Please note that this policy weakens the protection of local IP addresses that might be needed by administrators.
+请注意，此策略会削弱管理员可能需要的本地 IP 地址保护。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - List of strings
+  #### 数据类型:
+  - 字符串列表
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebRtcLocalIpsAllowedUrls
-  - GP name: Manage exposure of local IP addressess by WebRTC
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebRtcLocalIpsAllowedUrls
+  - GP 名称: 管理 WebRTC 的本地 IP 地址公开
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
@@ -16067,9 +16060,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebRtcLocalIpsAllowedUrls
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebRtcLocalIpsAllowedUrls
+  - 示例值:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -16078,161 +16071,161 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebRtcLocalhostIpHandling
-  #### Restrict exposure of local IP address by WebRTC
+  #### 限制 WebRTC 的本地 IP 地址公开
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Allows you to set whether or not WebRTC exposes the user's local IP address.
+  #### 描述
+  允许你设置 WebRTC 是否公开用户的本地 IP 地址。
 
-If you set this policy to "AllowAllInterfaces" or "AllowPublicAndPrivateInterfaces", WebRTC exposes the local IP address.
+如果将此策略设置为“AllowAllInterfaces”或“AllowPublicAndPrivateInterfaces”，则 WebRTC 将公开本地 IP 地址。
 
-If you set this policy to "AllowPublicInterfaceOnly" or "DisableNonProxiedUdp", WebRTC doesn't expose the local IP address.
+如果将此策略设置为“AllowPublicInterfaceOnly”或“DisableNonProxiedUdp”，则 WebRTC 不会公开本地 IP 地址。
 
-If you don't set this policy, or if you disable it, WebRTC exposes the local IP address.
+如果未设置此策略，或者如果禁用它，则 WebRTC 将公开本地 IP 地址。
 
-Policy options mapping:
+策略选项映射：
 
-* AllowAllInterfaces (default) = Allow all interfaces. This exposes the local IP address
+* AllowAllInterfaces (default) = 允许使用所有接口。这会公开本地 IP 地址
 
-* AllowPublicAndPrivateInterfaces (default_public_and_private_interfaces) = Allow public and private interfaces over http default route. This exposes the local IP address
+* AllowPublicAndPrivateInterfaces (default_public_and_private_interfaces) = 允许通过 http 默认路由使用公共和专用接口。这会公开本地 IP 地址
 
-* AllowPublicInterfaceOnly (default_public_interface_only) = Allow public interface over http default route. This doesn't expose the local IP address
+* AllowPublicInterfaceOnly (default_public_interface_only) = 允许通过 http 默认路由使用公共接口。这不会公开本地 IP 地址
 
-* DisableNonProxiedUdp (disable_non_proxied_udp) = Use TCP unless proxy server supports UDP. This doesn't expose the local IP address
+* DisableNonProxiedUdp (disable_non_proxied_udp) = 除非代理服务器支持 UDP，否则，请使用 TCP。这不会公开本地 IP 地址
 
-Use the preceding information when configuring this policy.
+配置此策略时，请使用上述信息。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebRtcLocalhostIpHandling
-  - GP name: Restrict exposure of local IP address by WebRTC
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebRtcLocalhostIpHandling
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebRtcLocalhostIpHandling
+  - GP 名称: 限制 WebRTC 的本地 IP 地址公开
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebRtcLocalhostIpHandling
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "default"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebRtcLocalhostIpHandling
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebRtcLocalhostIpHandling
+  - 示例值:
 ``` xml
 <string>default</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WebRtcUdpPortRange
-  #### Restrict the range of local UDP ports used by WebRTC
+  #### 限制 WebRTC 使用的本地 UDP 端口的范围
   
   
-  #### Supported versions:
-  - On Windows and macOS since 77 or later
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 77
 
-  #### Description
-  Restricts the UDP port range used by WebRTC to a specified port interval (endpoints included).
+  #### 描述
+  将 WebRTC 使用的 UDP 端口范围限制在指定的端口间隔(包括终结点)。
 
-By configuring this policy, you specify the range of local UDP ports that WebRTC can use.
+通过配置此策略，可以指定 Webrtc 可以使用的本地 UDP 端口的范围。
 
-If you don't configure this policy, or if you set it to an empty string or invalid port range, WebRTC can use any available local UDP port.
+如果不配置此策略或将其设置为空字符串或无效端口范围，WebRTC 可以使用任何可用的本地 UDP 端口。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - String
+  #### 数据类型:
+  - 字符串
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WebRtcUdpPortRange
-  - GP name: Restrict the range of local UDP ports used by WebRTC
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebRtcUdpPortRange
-  - Value Type: REG_SZ
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WebRtcUdpPortRange
+  - GP 名称: 限制 WebRTC 使用的本地 UDP 端口的范围
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WebRtcUdpPortRange
+  - 值类型: REG_SZ
+  ##### 示例值:
 ```
 "10000-11999"
 ```
 
 
-  #### Mac information and settings
-  - Preference Key Name: WebRtcUdpPortRange
-  - Example value:
+  #### Mac 信息和设置
+  - 首选项密钥名称: WebRtcUdpPortRange
+  - 示例值:
 ``` xml
 <string>10000-11999</string>
 ```
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
   ### WinHttpProxyResolverEnabled
-  #### Use Windows proxy resolver (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### 使用 Windows 代理解析程序 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
-  #### Supported versions:
-  - On Windows since 84 or later
+  #### 支持的版本:
+  - 在 Windows 自 84 或之后
 
-  #### Description
-  This policy is deprecated because it will be superseded by a similar feature in a future release, see https://crbug.com/1032820.
+  #### 描述
+  此策略已弃用。在将来的版本中，它将被类似功能取代，请参阅 https://crbug.com/1032820。
 
-Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Microsoft Edge. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
+使用 Windows 解析所有浏览器网络的代理，而不是 Microsoft Edge 中内置的代理解析程序。Windows 代理解析程序可启用诸如 DirectAccess/NRPT 之类的 Windows 代理功能。
 
-This policy comes with the problems described by https://crbug.com/644030. It causes PAC files to be fetched and executed by Windows code, including PAC files set via the [ProxyPacUrl](#proxypacurl) policy. Since Network Fetches for the PAC file happen via Windows instead of Microsoft Edge code, network policies such as [DnsOverHttpsMode](#dnsoverhttpsmode) will not apply to network fetches for a PAC file.
+此策略附带了 https://crbug.com/644030 描述的问题，它会导致 Windows 代码提取和执行 PAC 文件，包括通过 [ProxyPacUrl](#proxypacurl) 策略设置的 PAC 文件。由于 PAC 文件的网络提取是通过 Windows 而不是 Microsoft Edge 代码执行的，因此诸如 [DnsOverHttpsMode](#dnsoverhttpsmode) 之类的网络策略不适用于 PAC 文件的网络提取。
 
-If you enable this policy, the Windows proxy resolver will be used.
+如果启用此策略，则将使用 Windows 代理解析程序。
 
-If you disable or don't configure this policy, the Microsoft Edge proxy resolver will be used.
+如果禁用或未配置此策略，则将使用 Microsoft Edge 代理解析程序。
 
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 否 - 需要重启浏览器
 
-  #### Data Type:
-  - Boolean
+  #### 数据类型:
+  - 布尔
 
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: WinHttpProxyResolverEnabled
-  - GP name: Use Windows proxy resolver (deprecated)
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WinHttpProxyResolverEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: WinHttpProxyResolverEnabled
+  - GP 名称: 使用 Windows 代理解析程序 (已弃用)
+  - GP 路径 (强制): 管理模板/Microsoft Edge/
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: WinHttpProxyResolverEnabled
+  - 值类型: REG_DWORD
+  ##### 示例值:
 ```
 0x00000001
 ```
@@ -16240,10 +16233,10 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 
   
 
-  [Back to top](#microsoft-edge---policies)
+  [返回顶部](#microsoft-edge---策略)
 
 
-## See also
-- [Configuring Microsoft Edge](configure-microsoft-edge.md)
-- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)
+## 另请参阅
+- [正在配置 Microsoft Edge](configure-microsoft-edge.md)
+- [Microsoft Edge 企业登陆页](https://aka.ms/EdgeEnterprise)
+- [Microsoft 安全基准博客](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)
