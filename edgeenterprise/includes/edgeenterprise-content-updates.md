@@ -8,12 +8,12 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 8/25/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 8/27/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 8/27/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 8/27/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 8/28/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 8/28/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 8/25/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Updated for Beta minor version 85.0.564.40. | modified |
+| 8/27/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security release to Stable minor version  84.0.522.63.| modified |
+| 8/27/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)Updated for August 20 security release to Stable minor version 84.0.522.63. | modified |
+| 8/27/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule)<br>Updated to reflect major update (85.0.564.41) to Stable channel.| modified |
+| 8/28/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) <br>Updated for Beta minor version 85.0.564.41.| modified |
+| 8/28/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update for Stable major version 85.0.564.41. Includes a security fix, new and updated features, and new group policies. | modified |
 
 
 ## Week of August 17, 2020
