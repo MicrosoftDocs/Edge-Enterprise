@@ -171,10 +171,10 @@
         href: microsoft-edge-update-progressive-rollout.md
       - name: Regular Expression 2 (re2.h) syntax
         href: edge-learnmore-regex.md
-      - name: Using Microsoft Edge rollback for enterprises
-        href: edge-learnmore-rollback.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
+      - name: Using Microsoft Edge rollback for enterprises
+        href: edge-learnmore-rollback.md
 - name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
 
