@@ -3,13 +3,13 @@ title: "Microsoft Edge rollback for enterprises"
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 07/21/2020
+ms.date: 09/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "How to rollback Microsoft Edge to a previous version"
+description: "How to roll back Microsoft Edge to a previous version"
 ---
 
 # How to roll back Microsoft Edge to a previous version
@@ -74,12 +74,11 @@ Use the following steps to enable rollback with Microsoft Edge update and Group 
 
    - Always allow updates
    - Automatic silent updates only
-   - Manual updates only  
 
-5. Rollback will happen the next time Microsoft Edge Update checks for an update.
+     > [!NOTE]
+     > To force a group policy update, type `dsregcmd /status` at the Windows administrator Command Prompt (Run as administrator).
 
-   > [!NOTE]
-   > If you want rollback to happen right away you have to change the Microsoft Edge Update polling interval or enable rollback using an MSI.
+5. Click **OK** to save the policy settings. Rollback will happen the next time Microsoft Edge Update checks for an update. If you want the update to happen sooner, you can change the Microsoft Edge Update polling interval or enable rollback using an MSI.
 
 ### Common rollback errors
 
@@ -104,6 +103,12 @@ We recommend forcing a restart on users after rollback is enabled.
 
 - Enable *Notify a user that a browser restart is recommended or required for pending updates*. Under Options, select **Required**.
 - Enable *Set the time period for update notifications* and then set the desired time in milliseconds.
+
+## Snapshot
+
+A snapshot is a version stamped copy of the user data folder. During a version upgrade, a snapshot of the previous version is made and stored in the snapshot folder. After rollback occurs, a version matched snapshot will be copied into the new user data folder and deleted from the snapshot folder. If no version matched snapshot is available upon downgrade, rollback will rely on Sync to populate user data into the new Microsoft Edge version.
+
+The [UserDataSnapshotRetentionLimit] group policy allows you to set a limit for the number of snapshots that can be retained at any given time. By default, three snapshots are kept. You can configure this policy to keep from 0-5 snapshots.
 
 ## Frequently asked questions
 
@@ -140,28 +145,15 @@ Some common errors that prevent rollback are:
   - Target version override is set to a non-existent target version.
   - Target version override input is incorrectly formatted.
 
-- If Update policy override is set to "Updates disabled", Microsoft Edge Update won't accept any updates. This results in rollback not getting executed.
+- If Update policy override is set to "Updates disabled", Microsoft Edge Update won't accept any updates and rollback isn't executed.
 
 ### I set all the group policies correctly, but rollback didn't execute. What happened?
 
-Microsoft Edge Update hasn't run a check for updates yet. By default, auto-update checks for updates every 10 hours. You can fix this by changing Microsoft Edge Update's polling interval with the Auto-update check period override group policy. For more information, see the [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) policy.
+Microsoft Edge Update hasn't run a check for updates yet. By default, auto-update checks for updates every 10 hours. You can fix this issue by changing Microsoft Edge Update's polling interval with the Auto-update check period override group policy. For more information, see the [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) policy.
 
 ### As an IT admin, I followed all the steps for rollback correctly. Only a portion of my user group was rolled back. Why haven't the other users been rolled back yet?
 
-The group policy setting hasn't synced to all the clients yet. When admins set a group policy, clients don't receive these settings instantaneously.
-
-<!--
-You can update all users' group policy with the  
-
-When admins set all users don't get this setting instantaneously 
-
-GP Update force group policy – link to this 
-
--->
-
-
-
-
+The group policy setting hasn't synced to all the clients yet. When admins set a group policy, clients don't receive these settings instantaneously. You can [Force a Remote Group Policy Refresh](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
 ## See also
 
