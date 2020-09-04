@@ -19,11 +19,12 @@ These release notes provide information about new features and non-security upda
 > [!IMPORTANT]
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
-## Version 86.0.999.99: September 8
+## Version 86.0.622.xx: September 9
 
 ### Feature updates
 
 * Internet Explorer mode:
+
    * Let users use the Microsoft Edge User Interface (UI) to test sites in Internet Explorer mode. Beginning with Microsoft Edge version 86, administrators can enable a UI option for their users to load a tab in Internet Explorer mode for testing purposes or as a stopgap until sites are added to the site list XML.
    * Let users provide feedback on sites that require IE mode. Users can send feedback to you using a Microsoft Edge UI option. You can configure this UI option to be visible through group policy and choose how you want to receive this information (via email or with a custom form).
 
@@ -37,6 +38,7 @@ These release notes provide information about new features and non-security upda
 * Enforce enabling Sync by default across the enterprise.  Administrators can enable synchronization for Azure Active Directory (Azure AD) accounts by default with the [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync) policy.
 
 * PDF updates:
+
   * Table of contents for PDF Documents. Beginning with version 86, Microsoft Edge has added support for table of contents that lets users easily navigate through PDF documents.
   * Access all PDF functionalities on small form factor screens. Access all the capabilities of the Microsoft Edge PDF reader on devices with small screen sizes.
   * Pen support for highlighter on PDF files. With this update, users can use their digital pen to directly highlight text on PDF files, in the same way they would with a physical highlighter and paper.
@@ -49,6 +51,7 @@ These release notes provide information about new features and non-security upda
 * Remove the HTML5 Application Cache API.  Beginning with Microsoft Edge version 86, the legacy Application Cache API that enables offline use of web pages is being removed from Microsoft Edge. Web Developers should review the [WebDev documentation](https://web.dev/appcache-removal/) for information on replacing  the Application Cache API with Service Workers.  Important: You can request an [AppCache OriginTrial Token](https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673) that allows sites to continue to use the deprecated Application Cache API until Microsoft Edge version 90.
 
 * Security:
+
   * Secure DNS (DNS-over-HTTPS) Support.  Beginning with Microsoft Edge version 86, settings to control Secure DNS on un-managed devices is available. These settings aren't accessible to users on managed devices, but IT admins can enable or disable Secure DNS using the [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) group policy.
   * Microsoft Edge alerts you if your passwords are found in an online leak. Microsoft Edge checks your passwords against a repository of known-breached credentials and alerts you if a match is found.
 
