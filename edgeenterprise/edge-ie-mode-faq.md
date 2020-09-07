@@ -77,6 +77,12 @@ There is no explicit command line in Microsoft Edge to mirror the *nomerge* opti
 
 If neither of the above options works for your scenario, reach out through one of our feedback channels:  Microsoft support, [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise), or [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
 
+### Can I open a site in IE mode without an Enterprise Mode Site list?
+
+Yes, for testing purposes IE mode can toggle for a particular browser instance.
+
+Run Microsoft Edge with the `--ie-mode-test` command line flag eg. `msedge.exe --ie-mode-test`, then select ... -> More Tools -> "Open sites in Internet Explorer mode".
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
