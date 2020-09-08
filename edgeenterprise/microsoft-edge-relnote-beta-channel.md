@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/08/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,7 +31,7 @@ These release notes provide information about new features and non-security upda
 * **Delete downloads from disk using download manager.** Users are now able to delete their downloaded files from their disk without leaving the browser. The new Delete downloads functionality exists within the context menu of downloads shelf or the downloads page.
 
 * **Roll back to previous Microsoft Edge version.** The rollback feature lets administrators revert to a known good version of Microsoft Edge if there's an issue in the latest version of Microsoft Edge.
-[Learn more](edge-learnmore-rollback.md) .
+[Learn more](edge-learnmore-rollback.md).
 
 * **Kiosk mode privacy features enabled.** Beginning with Microsoft Edge version 86 we are enabling kiosk mode features that will help enterprises with the privacy of user data. These features will enable experiences such as: clear the user data on exit, delete the downloaded files, and to reset the configured start experience after a specified amount of idle time. Kiosk mode is an ongoing investment.
 
