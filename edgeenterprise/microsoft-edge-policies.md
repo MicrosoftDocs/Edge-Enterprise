@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -77,6 +77,8 @@ These tables list all of the browser-related group policies available in this re
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
+and tips for Microsoft services|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
@@ -219,6 +221,8 @@ These tables list all of the browser-related group policies available in this re
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
 |[DeleteDataOnMigration](#deletedataonmigration)|Delete old browser data on migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Control where developer tools can be used|
@@ -251,6 +255,7 @@ These tables list all of the browser-related group policies available in this re
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (deprecated)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
+|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
 |[FullscreenAllowed](#fullscreenallowed)|Allow full screen mode|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Enable globally scoped HTTP auth cache|
@@ -271,11 +276,13 @@ These tables list all of the browser-related group policies available in this re
 |[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
 |[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
 |[ManagedFavorites](#managedfavorites)|Configure favorites|
@@ -314,6 +321,10 @@ These tables list all of the browser-related group policies available in this re
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (deprecated)|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
+|[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
@@ -335,6 +346,7 @@ These tables list all of the browser-related group policies available in this re
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (deprecated)|
 |[UserDataDir](#userdatadir)|Set the user data directory|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Allow user feedback|
 |[VideoCaptureAllowed](#videocaptureallowed)|Allow or block video capture|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
@@ -563,7 +575,7 @@ If you don't configure this policy, auto-selection isn't done for any site.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
@@ -626,8 +638,8 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -689,8 +701,8 @@ Note there cannot be conflicting URL patterns set between these three policies:
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -756,8 +768,8 @@ If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1129,13 +1141,13 @@ Use the preceding information when configuring this policy.
   - On Windows and macOS since 77 or later
 
   #### Description
-  Determines whether websites that aren't covered by [PluginsAllowedForUrls](#pluginsallowedforurls) or [PluginsBlockedForUrls](#pluginsblockedforurls) can automatically run the Adobe Flash plug-in. You can select 'BlockPlugins' to block Adobe Flash on all sites, or you can select 'ClickToPlay' to let Adobe Flash run but require the user to click the placeholder to start it. In any case, the [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) policies take precedence over 'DefaultPluginsSetting'.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Automatic playback is only allowed for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. If you want to enable automatic playback for all sites, consider adding http://* and https://* to this list.
+																																																											
 
-If you don't configure this policy, the user can change this setting manually.
+If you don't set this policy, it uses BlockPlugins and users can change this setting.
 
-The former '1' option set allow-all, but this functionality is now only handled by the [PluginsAllowedForUrls](#pluginsallowedforurls) policy.  Existing policies using '1' will operate in 'ClickToPlay' mode.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Policy options mapping:
 
@@ -1385,8 +1397,8 @@ If you don't configure this policy, the global default value is used for all sit
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1438,8 +1450,8 @@ If you don't configure this policy, the global default value from the [DefaultIm
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1491,8 +1503,8 @@ If you don't configure this policy, blockable mixed content will be blocked and 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1544,8 +1556,8 @@ If you don't configure this policy, blockable mixed content will be blocked and 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1597,8 +1609,8 @@ If you don't configure this policy, the global default value from the [DefaultJa
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1650,8 +1662,8 @@ If you don't configure this policy, the global default value from the [DefaultJa
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1765,8 +1777,8 @@ Note that patterns you list in this policy are treated as domains, not URLs, so 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
@@ -1818,8 +1830,8 @@ If you don't set this policy, the global default value will be used for all site
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1871,8 +1883,8 @@ If you don't set this policy, the global default value will be used for all site
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1926,8 +1938,8 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1981,8 +1993,8 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2034,8 +2046,8 @@ If you don't configure this policy, the global default value from the [DefaultPo
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2087,8 +2099,8 @@ If you don't configure this policy, the global default value from the [DefaultPo
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2171,6 +2183,52 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### Choose whether users can receive customized background images and text, suggestions, notifications,
+and tips for Microsoft services
+  
+  
+  #### Supported versions:
+  - On Windows since 86 or later
+
+  #### Description
+  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+
+If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+
+If you disable this setting, spotlight experiences and recommendations are turned off.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SpotlightExperiencesAndRecommendationsEnabled
+  - GP name: Choose whether users can receive customized background images and text, suggestions, notifications,
+and tips for Microsoft services
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SpotlightExperiencesAndRecommendationsEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -2294,8 +2352,8 @@ The URL patterns defined in this policy can't conflict with those configured in 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2349,8 +2407,8 @@ URL patterns in this policy can't conflict with those configured in the [WebUsbA
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2470,10 +2528,10 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2538,7 +2596,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2594,7 +2652,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2646,7 +2704,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-mis
+"mis"
 ```
 
 
@@ -2700,7 +2758,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2756,7 +2814,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2814,7 +2872,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2850,7 +2908,7 @@ If you enable this policy and set it to:
 - "Address bar" ('redirect'), the new tab page search box uses the address bar to search on new tabs.
 
 Policy options mapping:
-		
+  
 
 * bing (bing) = Search box (Recommended)
 
@@ -2880,7 +2938,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-bing
+"bing"
 ```
 
 
@@ -2938,7 +2996,7 @@ If you don't configure this policy, no restrictions on the acceptable extension 
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
@@ -2987,8 +3045,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3042,8 +3100,8 @@ If you don't configure this policy, users can install any extension in Microsoft
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
@@ -3073,7 +3131,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 This policy takes precedence over a potentially conflicting [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. When you take an extension off of the force-installed list it's automatically uninstalled by Microsoft Edge.
 
-For Windows devices that aren't joined to a Microsoft Active Directory domain, forced installation is limited to extensions available in the Microsoft Store.
+Forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website for instances that aren't one of the following: Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management, and macOS instances that are managed via MDM or joined to a domain via MCX.
 
 Note that users can modify the source code of any extension by using Developer Tools, potentially rendering the extension dysfunctional. If this is a concern, set the [DeveloperToolsAvailability](#developertoolsavailability) policy.
 
@@ -3113,8 +3171,8 @@ Note that this policy doesn't apply to InPrivate mode.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
@@ -3170,7 +3228,7 @@ The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precede
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3481,7 +3539,7 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
   - Value Type: REG_SZ
   ##### Example value:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3531,7 +3589,7 @@ If you don't configure this policy, all four schemes are used.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3581,7 +3639,7 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
   - Value Type: REG_SZ
   ##### Example value:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3767,8 +3825,8 @@ By default, all native messaging hosts are allowed. If you set the [NativeMessag
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3822,8 +3880,8 @@ If you don't configure this policy, Microsoft Edge will load all installed nativ
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4053,7 +4111,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4105,8 +4163,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4232,7 +4290,7 @@ Omitting a field means all values match; for example, if you don't specify conne
   - Value Type: REG_SZ
   ##### Example value:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4492,7 +4550,7 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4568,7 +4626,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-direct
+"direct"
 ```
 
 
@@ -4622,7 +4680,7 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4676,7 +4734,7 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
   - Value Type: REG_SZ
   ##### Example value:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
@@ -4929,8 +4987,8 @@ Also note that this policy does not apply if your organization has enabled Micro
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
@@ -5202,7 +5260,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5221,18 +5279,18 @@ https://www.contoso.com
   
   
   #### Supported versions:
-  - On Windows and macOS since 85 or later
+  - On Windows and macOS since 86 or later
 
   #### Description
   You can configure which types of background image that are allowed on the new tab page layout in Microsoft Edge.
 
 If you don't configure this policy, all background image types on the new tab page are enabled.
 
-										   
+			 
 
-											
+		   
 
-										  
+			
 
 Policy options mapping:
 
@@ -5459,7 +5517,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5771,8 +5829,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -6244,9 +6302,9 @@ Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6291,8 +6349,8 @@ If you don't configure this policy, the global default value from the "Block tra
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -6569,7 +6627,7 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
   - Value Type: REG_SZ
   ##### Example value:
 ```
-en
+"en"
 ```
 
 
@@ -6661,8 +6719,8 @@ This policy affects all types of audio inputs, not only the built-in microphone.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6747,17 +6805,17 @@ This policy is intended to give enterprises flexibility to disable the audio san
 
  
 
-												
+			
 
-					   
+		
 
-						
+	  
 
-					   
+		
 
-				   
+	   
 
-						 
+	   
 
 The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
 
@@ -6998,11 +7056,11 @@ A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7041,7 +7099,7 @@ File types that a user has already specified to automatically be opened will con
 
 If you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.
 
-																																																		   
+													 
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -7067,8 +7125,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7798,8 +7856,8 @@ If you disable this policy or don't configure it, any certificate that's require
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7857,8 +7915,8 @@ If you don't configure this policy, any certificate that's required to be disclo
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7914,8 +7972,8 @@ If you don't configure this policy, any certificate that should be disclosed via
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8105,7 +8163,7 @@ If you enable this policy, services and export targets that match the given list
 
 If you don't configure this policy, no restrictions on the acceptable services and export targets are enforced.
 
-													 
+			  
 
 Policy options mapping:
 
@@ -8135,7 +8193,7 @@ Use the preceding information when configuring this policy.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
@@ -8502,7 +8560,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8576,7 +8634,7 @@ If you disable this policy, DNS interception checks aren't performed.
   - On Windows 7 and macOS since 77 or later
 
   #### Description
-	  
+   
 
   If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
 
@@ -8669,6 +8727,127 @@ The policy value is only appled when the [DefaultSearchProviderEnabled](#default
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### Default sensors setting
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+
+Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+
+You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+
+If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Policy options mapping:
+
+* AllowSensors (1) = Allow sites to access sensors
+
+* BlockSensors (2) = Do not allow any site to access sensors
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Integer
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: DefaultSensorsSetting
+  - GP name: Default sensors setting
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultSensorsSetting
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000002
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: DefaultSensorsSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### Control use of the Serial API
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  
+Set whether websites can access serial ports. You can completely block access or ask the user each time a website wants to get access to a serial port.
+
+Setting the policy to 3 lets websites ask for access to serial ports. Setting the policy to 2 denies access to serial ports.
+
+You can override this policy for specific URL patterns by using the [SerialAskForUrls](#serialaskforurls) and [SerialBlockedForUrls](#serialblockedforurls) policies.
+
+If you don't configure this policy, by default, websites can ask users whether they can access a serial port, and users can change this setting.
+
+Policy options mapping:
+
+* BlockSerial (2) = Do not allow any site to request access to serial ports via the Serial API
+
+* AskSerial (3) = Allow sites to ask for user permission to access a serial port
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Integer
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: DefaultSerialGuardSetting
+  - GP name: Control use of the Serial API
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultSerialGuardSetting
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000002
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: DefaultSerialGuardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9101,7 +9280,7 @@ If you don't configure this policy, the default cache directory is used, and use
   - Value Type: REG_SZ
   ##### Example value:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
@@ -9217,7 +9396,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-off
+"off"
 ```
 
 
@@ -9271,7 +9450,7 @@ Incorrectly formatted templates will be ignored.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9326,8 +9505,8 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   ##### Example value:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+											  
 ```
 
 
@@ -9557,7 +9736,7 @@ Use the preceding information when configuring this policy.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9576,8 +9755,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Enable Domain Actions Download from Microsoft (obsolete)
-					   
 		
+  
   
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -9882,8 +10061,8 @@ Note that while the preceding example shows the suppression of file type extensi
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10401,8 +10580,8 @@ This enterprise policy is disabled by default.
 
   ### ForceNetworkInProcess
   #### Force networking code to run in the browser process (obsolete)
-					   
 		
+  
   
   
   
@@ -10447,6 +10626,62 @@ This policy is disabled by default. If enabled, users are open to security issue
 ```
 
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ForceSync
+  #### Force synchronization of browser data and do not show the sync consent prompt
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+
+If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+
+For this policy to work as intended,
+[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+
+[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+
+0 = Do not automatically start sync and show the sync consent (default)
+1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: ForceSync
+  - GP name: Force synchronization of browser data and do not show the sync consent prompt
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceSync
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: ForceSync
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -10701,7 +10936,7 @@ Popular, single-word search terms will require manual selection of search sugges
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
@@ -11566,6 +11801,54 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### Enable warnings for insecure forms
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
+If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
+If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: InsecureFormsWarningsEnabled
+  - GP name: Enable warnings for insecure forms
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InsecureFormsWarningsEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: InsecureFormsWarningsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### Control the IntensiveWakeUpThrottling feature
   
@@ -11764,7 +12047,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11840,6 +12123,57 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Allow Internet Explorer mode testing
+  
+  
+  #### Supported versions:
+  - On Windows since 86 or later
+
+  #### Description
+  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+
+       This setting works in conjunction with:
+       [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
+       and
+       [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+
+       If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+
+       If you disable this policy, users can't see the UI option in the menu directly.
+
+       If you don't configure this policy, you can set up the ie-mode-test flag manually.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: InternetExplorerIntegrationTestingAllowed
+  - GP name: Allow Internet Explorer mode testing
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationTestingAllowed
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000000
+```
+
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### Enable site isolation for specific origins
   
@@ -11876,7 +12210,7 @@ If you don't configure the policy, the user can change this setting.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12328,7 +12662,7 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
-																																												
+											
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -12661,8 +12995,8 @@ For more information on secure contexts, see https://www.w3.org/TR/secure-contex
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13319,7 +13653,7 @@ If you don't configure this policy or leave it blank, users can set any account 
   - Value Type: REG_SZ
   ##### Example value:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13371,15 +13705,15 @@ If you don't configure this policy, the default roaming profile path is used.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-		   
-			  
-	  
+	 
+	 
+   
+ 
 	
-			 
    
   
 
@@ -13427,11 +13761,11 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 ```
 
 
-		   
-			  
-	  
-	
-	
+	 
+	 
+   
+ 
+ 
    
   
 
@@ -13581,7 +13915,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13638,8 +13972,8 @@ If you disable or don't configure this policy, the user's personal configuration
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13890,7 +14224,7 @@ Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (li
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
@@ -13969,7 +14303,7 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
-																																											
+										   
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -14002,6 +14336,242 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### Allow access to sensors on specific sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+
+If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+
+The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+
+For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SensorsAllowedForUrls
+  - GP name: Allow access to sensors on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: SensorsAllowedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### Block access to sensors on specific sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+
+If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+
+The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+
+For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SensorsBlockedForUrls
+  - GP name: Block access to sensors on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: SensorsBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### Allow the Serial API on specific sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Define a list of sites, based on URL patterns, that can ask the user for access to a serial port.
+
+If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For URL patterns that don't match this policy, the following order of precedence is used: The [SerialBlockedForUrls](#serialblockedforurls) policy (if there is a match), the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set), or the user's personal settings.
+
+The URL patterns defined in this policy can't conflict with those configured in the [SerialBlockedForUrls](#serialblockedforurls) policy. You can't allow and block a URL.
+
+For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SerialAskForUrls
+  - GP name: Allow the Serial API on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: SerialAskForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### Block the Serial API on specific sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Define a list of sites, based on URL patterns, that can't ask the user to grant them access to a serial port.
+
+If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For URL patterns that don't match this policy, the following order of precedence is used: The [SerialAskForUrls](#serialaskforurls) policy (if there is a match), the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set), or the user's personal settings.
+
+The URL patterns in this policy can't conflict with those configured in the [SerialAskForUrls](#serialaskforurls) policy. You can't allow and block a URL.
+
+For detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SerialBlockedForUrls
+  - GP name: Block the Serial API on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: SerialBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14247,8 +14817,8 @@ The supported languages are: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14299,8 +14869,8 @@ The currently supported languages are: af, bg, ca, cs, da, de, el, en-AU, en-CA,
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14499,7 +15069,7 @@ Users will not be able to override the disabled data types.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
@@ -14533,9 +15103,9 @@ If you enable this policy or don't set it, Microsoft Edge will enable these secu
 
 If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
 
-																																																													  
+															   
 
-																																																			 
+													
 
 This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -14617,9 +15187,9 @@ This policy does not affect QUIC-based connections. QUIC can be turned off via t
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14944,11 +15514,11 @@ If you don't configure this policy, there are no exceptions to the block list in
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -15011,14 +15581,14 @@ If you don't configure this policy, no URLs are blocked.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15134,7 +15704,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
   - Value Type: REG_SZ
   ##### Example value:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15144,6 +15714,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### Limits the number of user data snapshots retained for use in case of emergency rollback
+  
+  
+  #### Supported versions:
+  - On Windows since 86 or later
+
+  #### Description
+  Following each major version update, Microsoft Edge will create a snapshot of parts of the user's browsing data to use in case of a later emergency that requires a temporary version rollback. If a temporary rollback is performed to a version for which a user has a corresponding snapshot, the data in the snapshot is restored. This lets users keep settings such as bookmarks and autofill data.
+
+If you don't set this policy, the default value of 3 snapshots is used.
+
+If you set this policy, old snapshots are deleted as needed to respect the limit you set. If you set this policy to 0, no snapshots are taken.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+  - Integer
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: UserDataSnapshotRetentionLimit
+  - GP name: Limits the number of user data snapshots retained for use in case of emergency rollback
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UserDataSnapshotRetentionLimit
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000003
+```
+
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15282,8 +15896,8 @@ This policy affects all types of video inputs, not only the built-in camera.
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -15436,8 +16050,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### Re-enable Web Components v0 API until M84 (obsolete)
-					   
 		
+  
   
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -15489,8 +16103,8 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
-					   
 		
+  
   
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -15588,8 +16202,8 @@ Please note that this policy weakens the protection of local IP addresses that m
   - Value Type: list of REG_SZ
   ##### Example value:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15657,7 +16271,7 @@ Use the preceding information when configuring this policy.
   - Value Type: REG_SZ
   ##### Example value:
 ```
-default
+"default"
 ```
 
 
@@ -15707,7 +16321,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
   - Value Type: REG_SZ
   ##### Example value:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
@@ -15729,7 +16343,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
   - On Windows since 84 or later
 
   #### Description
-  This policy is deprecated becuase it will be superseded by a similar feature in a future release, see https://crbug.com/1032820. It won't work in Microsoft Edge version 87.
+  This policy is deprecated because it will be superseded by a similar feature in a future release, see https://crbug.com/1032820.
 
 Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Microsoft Edge. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
 
