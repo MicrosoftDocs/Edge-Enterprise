@@ -33,8 +33,6 @@ These release notes provide information about new features and non-security upda
 * **Roll back to previous Microsoft Edge version.** The rollback feature lets administrators revert to a known good version of Microsoft Edge if there's an issue in the latest version of Microsoft Edge.
 [Learn more](edge-learnmore-rollback.md).
 
-* **Kiosk mode privacy features enabled.** Beginning with Microsoft Edge version 86 we are enabling kiosk mode features that will help enterprises with the privacy of user data. These features will enable experiences such as: clear the user data on exit, delete the downloaded files, and to reset the configured start experience after a specified amount of idle time. Kiosk mode is an ongoing investment.
-
 * **Enforce enabling Sync by default across the enterprise.**  Administrators can enable synchronization for Azure Active Directory (Azure AD) accounts by default with the [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync) policy.
 
 * **PDF updates:**
