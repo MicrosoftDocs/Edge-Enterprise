@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -88,7 +88,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|새 탭 페이지를 홈 페이지로 설정|
 |[HomepageLocation](#homepagelocation)|홈 페이지 URL 구성|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|새 탭 페이지 레이아웃에 허용되는 배경 종류 구성|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|새 탭 페이지 회사 로고 설정 (사용되지 않음)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|새 탭 페이지 회사 로고 설정 (사용하지 않음)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|새 탭 페이지에서 기본 상위 사이트 숨기기|
 |[NewTabPageLocation](#newtabpagelocation)|새 탭 페이지 URL 구성|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|새 탭 페이지 빠른 연결 설정|
@@ -112,6 +112,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[PrintHeaderFooter](#printheaderfooter)|머리글 및 바닥글 인쇄|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|시스템 기본 프린터를 기본 프린터로 설정|
 |[PrintingEnabled](#printingenabled)|인쇄 사용|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|기본 인쇄 페이지 크기|
 |[UseSystemPrintDialog](#usesystemprintdialog)|시스템 대화 상자를 사용하여 인쇄|
 ### [*콘텐츠 설정*](#콘텐츠-설정-policies)
 |정책 이름|설명|
@@ -121,6 +122,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|특정 사이트에서 쿠키 차단|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|특정 웹 사이트의 쿠키를 현재 세션으로 제한|
 |[DefaultCookiesSetting](#defaultcookiessetting)|쿠키 구성|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|읽기용 파일 시스템 API의 사용 제어|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|쓰기용 파일 시스템 API의 사용 제어|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|기본 지리적 위치 설정|
 |[DefaultImagesSetting](#defaultimagessetting)|기본 이미지 설정|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|안전하지 않은 콘텐츠 예외 사용 제어|
@@ -130,6 +133,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[DefaultPopupsSetting](#defaultpopupssetting)|기본 팝업 창 설정|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Bluetooth 웹 API의 사용 제어|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|WebUSB API의 사용 제어|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|이 사이트에서 파일 시스템 API를 통한 읽기 권한 허용|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|이 사이트에서 파일 시스템 API를 통한 읽기 권한 차단|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 허용|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 차단|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|이 사이트의 이미지 허용|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|특정 사이트에서 이미지 차단|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|지정된 사이트에서 안전하지 않은 콘텐츠 허용|
@@ -145,8 +152,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[PopupsAllowedForUrls](#popupsallowedforurls)|특정 사이트에서 팝업 창 허용|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|특정 사이트에서 팝업 창 차단|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|프로토콜 처리기 등록|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|사용자가 사용자 정의 된 배경 이미지와 텍스트, 제안, 알림,
+및 Microsoft 서비스에 대한 팁을 받을 수 있는지 여부를 선택합니다.|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|특정 USB 장치에 연결하기 위해 특정 사이트에 대한 액세스 권한 부여|
 |[WebUsbAskForUrls](#webusbaskforurls)|특정 사이트에서 WebUSB 허용|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|특정 사이트에서 WebUSB 차단|
@@ -221,7 +228,7 @@ and tips for Microsoft services|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS 가로채기 검사 사용|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge를 기본 브라우저로 설정|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|기본 검색 공급자 컨텍스트 메뉴 검색 허용|
-|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSensorsSetting](#defaultsensorssetting)|기본 센서 설정|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|직렬 API의 사용 제어|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|탭 탐색 이전에 엔터프라이즈 모드 사이트 목록을 사용할 수 있어야 합니다.|
 |[DeleteDataOnMigration](#deletedataonmigration)|마이그레이션 시 이전 브라우저 데이터 삭제|
@@ -255,7 +262,7 @@ and tips for Microsoft services|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google 유해 정보 차단 적용|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|다운그레이드 시 참조 페이지 없음'의 기본 참조 페이지 정책을 사용합니다 (사용되지 않음)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|네트워킹 코드가 브라우저 프로세스에서 실행되도록 강제 (사용하지 않음)|
-|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSync](#forcesync)|브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시하지 않음|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|최소 YouTube 제한 모드 강제 적용|
 |[FullscreenAllowed](#fullscreenallowed)|전체 화면 모드 허용|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|전역 범위의 HTTP 인증 캐시 사용|
@@ -276,13 +283,13 @@ and tips for Microsoft services|
 |[ImportSearchEngine](#importsearchengine)|검색 엔진 설정 가져오기 허용|
 |[ImportShortcuts](#importshortcuts)|바로 가기 가져오기 허용|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|InPrivate 모드 가용성 구성|
-|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|안전하지 않은 양식에 대한 경고 사용|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 기능 제어|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer 모드에 대한 향상된 정지 감지 구성|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 통합 구성|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|엔터프라이즈 모드 사이트 목록 구성|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer 모드 페이지에서 시작할 때 구성되지 않은 사이트에 대한 "페이지 내" 탐색 작동 방식 지정|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalProvidersEnabled](#localprovidersenabled)|현지 공급자의 제안 허용|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
@@ -321,8 +328,8 @@ and tips for Microsoft services|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|직접 보안 키 증명 사용 권한이 필요하지 않은 웹 사이트 또는 도메인|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|모든 인트라넷 사이트를 Internet Explorer로 보내기|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Microsoft 서비스 개선을 위해 사이트 정보 보내기 (사용되지 않음)|
-|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
-|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|특정 사이트의 센서에 대한 액세스 허용|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
 |[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시|
@@ -2053,28 +2060,28 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### NewTabPageCompanyLogo
-  #### 새 탭 페이지 회사 로고 설정 (사용되지 않음)
-  >사용되지 않음: 이 정책은 더 이상 사용되지 않습니다. 현재 지원되고 있으나 향후 릴리스에서는 사용되지 않을 예정입니다.
+  #### 새 탭 페이지 회사 로고 설정 (사용하지 않음)
   
+  >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 85 이후에는 작동되지 않습니다.
   #### 지원되는 버전:
-  - Windows 및 macOS 이후 79 이상
+  - Windows macOS 79 이후 85
 
   #### 설명
-  이 정책은 예상대로 작동하지 않으므로 사용이 중단되었으며 사용하지 않는 것이 좋습니다. Microsoft Edge 버전 86에서는 작동하지 않게 됩니다.
+  이 정책은 운영 요구 사항의 변경으로 인해 예상대로 작동하지 않았습니다. 따라서 더 이상 사용되지 않으며 사용해서는 안됩니다.
 
 Microsoft Edge의 새 탭 페이지에서 사용할 회사 로고를 지정합니다.
 
-이 정책은 로고를 JSON 형식으로 나타내는 문자열로 구성해야 합니다. 예: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+정책은 로고를 표현하는 문자열로 구성되어야 합니다(s) JSON 형식으로. 예: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" }}
 
-Microsoft Edge에서 로고 및 해당 암호화 해시 (SHA-256)를 다운로드 할 수 있는 URL을 지정하여 이 정책을 구성합니다. 로고는 PNG 또는 SVG 형식이어야 하며 파일 크기는 16MB를 초과하지 않아야 합니다. 로고가 다운로드 및 캐시되며 URL 또는 해시가 변경될 때마다 다시 다운로드됩니다. URL은 인증 없이 액세스할 수 있어야 합니다.
+Microsoft Edge이 로고를 다운로드할 수 있는 URL과 해당 암호화 해시(SHA-256)를 지정하여 이 정책을 구성하며 이 작업은 다운로드의 무결성을 확인하는 데 사용됩니다. 로고는 PNG 또는 SVG 형식이어야 하며 파일 크기는 16MB를 초과할 수 없습니다. 로고는 다운로드 및 캐시되며 URL 또는 해시가 변경될 때마다 다시 다운로드됩니다. URL은 인증없이 액세스할 수 있어야 합니다.
 
- 'default_logo'는 필수이며 배경 이미지가 없을 때 사용됩니다. 'light_logo'가 제공되면 사용자의 새 탭 페이지에 배경 이미지가 있을 때 사용됩니다. 투명 배경이 왼쪽 맞춤 및 세로로 가운데에 배치되는 가로 로고를 사용하는 것이 좋습니다. 로고의 최소 높이는 32 픽셀이고 가로 세로 비율은 1:1에서 4:1 사이여야 합니다. 'default_logo'는 흰색/검은색 배경과의 대비가 있으며 'light_logo'는 배경 이미지에 대해 적절하게 대비되어야 합니다.
+   'default_logo'는 필수 항목이며 배경 이미지가 없을 때 사용됩니다. 'light_logo'가 제공되면 사용자의 새 탭 페이지에 배경 이미지가있을 때 사용됩니다. 투명한 배경이 왼쪽에 정렬되고 세로로 가운데에 배치된 가로 로고를 사용하는 것이 좋습니다. 로고는 최소 높이가 32픽셀이고 가로 세로 비율이 1:1 ~ 4:1이어야 합니다. 'default_logo'는 흰색/검은색 배경과 적절한 대비를 가져야 하며 'light_logo'는 배경 이미지와 적절한 대비를 가져야 합니다.
 
- 이 정책을 사용하도록 설정하는 경우 Microsoft Edge는 새 탭 페이지에 지정된 로고를 다운로드하여 표시합니다. 사용자는 로고를 무시하거나 숨길 수 없습니다.
+이 정책을 사용하면 Microsoft Edge이(가) 지정된 로고를 다운로드하여 새 탭 페이지에서 표시합니다(s). 사용자는 로고를 무시하거나 숨길 수 없습니다.
 
- 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge가 회사 로고나 Microsoft 로고를 새 탭 페이지에 표시하지 않습니다.
+이 정책을 사용 중지하거나 구성하지 않을 경우 Microsoft Edge의 새 탭 페이지에 회사 로고나 Microsoft 로고가 표시되지 않습니다.
 
- SHA-256 해시 결정에 대한 도움말은 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash를 참조하세요.
+SHA-256 해시 결정에 대한 도움말은 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash를 참조하세요.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -2087,7 +2094,7 @@ Microsoft Edge에서 로고 및 해당 암호화 해시 (SHA-256)를 다운로�
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: NewTabPageCompanyLogo
-  - GP 이름: 새 탭 페이지 회사 로고 설정 (사용되지 않음)
+  - GP 이름: 새 탭 페이지 회사 로고 설정 (사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/시작, 홈 페이지 및 새 탭 페이지
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -3113,6 +3120,73 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [맨 위로 이동](#microsoft-edge---정책)
 
+  ### PrintingPaperSizeDefault
+  #### 기본 인쇄 페이지 크기
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  기본 인쇄 페이지 크기를 재정의합니다.
+
+name은 나열된 형식 중 하나를 포함하거나 필요한 용지 크기가 목록에 없는 경우 'custom’을 포함해야 합니다. 'custom' 값을 제공하는 경우 custom_size 속성을 지정해야 합니다. 이는 원하는 높이와 너비(마이크로미터)를 설명합니다. 그렇지 않으면 custom_size 속성을 지정하면 안 됩니다. 이 규칙을 위반하는 정책은 무시됩니다.
+
+사용자가 선택한 프린터에서 해당 페이지 크기를 사용할 수 없으면 이 정책이 무시됩니다.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 사전
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: PrintingPaperSizeDefault
+  - GP 이름: 기본 인쇄 페이지 크기
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄 중
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: PrintingPaperSizeDefault
+  - 값 형식: REG_SZ
+  ##### 예제 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: PrintingPaperSizeDefault
+  - 예제 값:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
   ### UseSystemPrintDialog
   #### 시스템 대화 상자를 사용하여 인쇄
   
@@ -3470,6 +3544,118 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 예제 값:
 ``` xml
 <integer>1</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### DefaultFileSystemReadGuardSetting
+  #### 읽기용 파일 시스템 API의 사용 제어
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 3으로 설정하면 웹 사이트에서 파일 시스템 API를 사용하여 호스트 운영 체제의 파일 시스템에 대한 읽기 권한을 요청할 수 있습니다. 이 정책을 2로 설정하면 액세스가 거부됩니다.
+
+이 정책을 설정하지 않으면 웹 사이트에서 액세스를 요청할 수 있습니다. 사용자는 이 설정을 변경할 수 있습니다.
+
+정책 옵션 매핑:
+
+* BlockFileSystemRead (2) = 사이트에서 파일 시스템 API를 통해 파일 및 디렉터리에 대한 읽기 권한을 요청하는 것을 허용 안 함
+
+* AskFileSystemRead (3) = 사이트에서 사용자에게 파일 시스템 API를 통해 파일 및 디렉터리에 대한 읽기 권한을 부여하도록 요청하는 것을 허용
+
+이 정책을 구성할 때 이전 정보를 사용합니다.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 정수
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: DefaultFileSystemReadGuardSetting
+  - GP 이름: 읽기용 파일 시스템 API의 사용 제어
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: DefaultFileSystemReadGuardSetting
+  - 값 형식: REG_DWORD
+  ##### 예제 값:
+```
+0x00000002
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: DefaultFileSystemReadGuardSetting
+  - 예제 값:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### 쓰기용 파일 시스템 API의 사용 제어
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 3으로 설정하면 웹 사이트에서 파일 시스템 API를 사용하여 호스트 운영 체제의 파일 시스템에 대한 쓰기 권한을 요청할 수 있습니다. 이 정책을 2로 설정하면 액세스가 거부됩니다.
+
+이 정책을 설정하지 않으면 웹 사이트에서 액세스를 요청할 수 있습니다. 사용자는 이 설정을 변경할 수 있습니다.
+
+정책 옵션 매핑:
+
+* BlockFileSystemWrite (2) = 사이트에서 파일 및 디렉터리에 대한 쓰기 권한을 요청하는 것을 허용 안 함
+
+* AskFileSystemWrite (3) = 사이트에서 사용자에게 파일 및 디렉터리에 대한 쓰기 권한을 부여하도록 요청하는 것을 허용
+
+이 정책을 구성할 때 이전 정보를 사용합니다.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 정수
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: DefaultFileSystemWriteGuardSetting
+  - GP 이름: 쓰기용 파일 시스템 API의 사용 제어
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: DefaultFileSystemWriteGuardSetting
+  - 값 형식: REG_DWORD
+  ##### 예제 값:
+```
+0x00000002
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: DefaultFileSystemWriteGuardSetting
+  - 예제 값:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -3984,6 +4170,234 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 예제 값:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### FileSystemReadAskForUrls
+  #### 이 사이트에서 파일 시스템 API를 통한 읽기 권한 허용
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 설정하면 사용자에게 파일 시스템 API를 통해 호스트 운영 체제의 파일이나 디렉터리에 대한 읽기 권한을 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
+
+이 정책을 설정하지 않으면 설정된 경우 모든 사이트에 [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)이 적용됩니다. 그렇지 않으면 사용자의 개인 설정이 적용됩니다.
+
+URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)와 충돌할 수 없습니다. URL이 둘 다와 일치하면 두 정책 모두 우선하지 않습니다.
+
+유효한 url 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns를 참조하세요.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: FileSystemReadAskForUrls
+  - GP 이름: 이 사이트에서 파일 시스템 API를 통한 읽기 권한 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예제 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: FileSystemReadAskForUrls
+  - 예제 값:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### FileSystemReadBlockedForUrls
+  #### 이 사이트에서 파일 시스템 API를 통한 읽기 권한 차단
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 설정하면 사용자에게 파일 시스템 API를 통해 호스트 운영 체제의 파일이나 디렉터리에 대한 읽기 권한을 부여하도록 요청할 수 없는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
+
+이 정책을 설정하지 않으면 설정된 경우 모든 사이트에 [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)이 적용됩니다. 그렇지 않으면 사용자의 개인 설정이 적용됩니다.
+
+URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)와 충돌할 수 없습니다. URL이 둘 다와 일치하면 두 정책 모두 우선하지 않습니다.
+
+유효한 url 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns를 참조하세요.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: FileSystemReadBlockedForUrls
+  - GP 이름: 이 사이트에서 파일 시스템 API를 통한 읽기 권한 차단
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예제 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: FileSystemReadBlockedForUrls
+  - 예제 값:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### FileSystemWriteAskForUrls
+  #### 이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 허용
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 설정하면 사용자에게 호스트 운영 체제의 파일 시스템에 있는 파일이나 디렉터리에 대한 쓰기 권한을 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
+
+이 정책을 설정하지 않으면 설정된 경우 모든 사이트에 [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)이 적용됩니다. 그렇지 않으면 사용자의 개인 설정이 적용됩니다.
+
+URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)와 충돌할 수 없습니다. URL이 둘 다와 일치하면 두 정책 모두 우선하지 않습니다.
+
+유효한 url 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns를 참조하세요.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: FileSystemWriteAskForUrls
+  - GP 이름: 이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예제 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: FileSystemWriteAskForUrls
+  - 예제 값:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### FileSystemWriteBlockedForUrls
+  #### 이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 차단
+  
+  
+  #### 지원되는 버전:
+  - Windows 및 macOS 이후 86 이상
+
+  #### 설명
+  이 정책을 설정하면 사용자에게 호스트 운영 체제의 파일 시스템에 있는 파일이나 디렉터리에 대한 쓰기 권한을 부여하도록 요청할 수 없는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
+
+이 정책을 설정하지 않으면 설정된 경우 모든 사이트에 [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)이 적용됩니다. 그렇지 않으면 사용자의 개인 설정이 적용됩니다.
+
+URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)와 충돌할 수 없습니다. URL이 둘 다와 일치하면 두 정책 모두 우선하지 않습니다.
+
+유효한 url 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns를 참조하세요.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: FileSystemWriteBlockedForUrls
+  - GP 이름: 이 사이트의 파일 및 디렉터리에 대한 쓰기 권한 차단
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예제 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: FileSystemWriteBlockedForUrls
+  - 예제 값:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -4814,19 +5228,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### 사용자가 사용자 정의 된 배경 이미지와 텍스트, 제안, 알림,
+및 Microsoft 서비스에 대한 팁을 받을 수 있는지 여부를 선택합니다.
   
   
   #### 지원되는 버전:
   - Windows 86 이상부터
 
   #### 설명
-  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+  사용자가 Microsoft 서비스에 대한 맞춤 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부를 선택합니다.
 
-If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+이 설정을 사용하거나 구성하지 않으면 스포트라이트 환경 및 권장 사항이 사용 설정됩니다.
 
-If you disable this setting, spotlight experiences and recommendations are turned off.
+이 설정을 비활성화하면 스포트라이트 경험과 추천이 꺼집니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -4839,8 +5253,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: SpotlightExperiencesAndRecommendationsEnabled
-  - GP 이름: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - GP 이름: 사용자가 사용자 정의 된 배경 이미지와 텍스트, 제안, 알림,
+및 Microsoft 서비스에 대한 팁을 받을 수 있는지 여부를 선택합니다.
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -8689,26 +9103,26 @@ Windows 관리자 참고 사항: 이 정책은 Windows 7을 실행하는 PC에�
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### DefaultSensorsSetting
-  #### Default sensors setting
+  #### 기본 센서 설정
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 86 이상
 
   #### 설명
-  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+  웹 사이트가 모션 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는지 여부를 설정합니다. 웹 사이트에서 센서에 대한 액세스를 완전히 차단하거나 허용할 수 있습니다.
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+정책을 1로 설정하면 웹 사이트에서 센서에 액세스하고 사용할 수 있습니다. 정책을 2로 설정하면 센서에 대한 액세스가 거부됩니다.
 
-You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+[SensorsAllowedForUrls](#sensorsallowedforurls) 및 [SensorsBlockedForUrls](#sensorsblockedforurls) 정책을 사용하여 특정 URL 패턴에 대해 이 정책을 재정의 할 수 있습니다.
 
-If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+이를 구성하지 않는 경우 정책에 따라 웹 사이트에서 센서에 액세스하고 사용할 수 있으며 사용자는 이 설정을 변경할 수 있습니다. 이 설정은 [SensorsAllowedForUrls](#sensorsallowedforurls) 및 [SensorsBlockedForUrls](#sensorsblockedforurls)의 전역 기본값입니다.
 
 정책 옵션 매핑:
 
-* AllowSensors (1) = Allow sites to access sensors
+* AllowSensors (1) = 사이트에서 센서에 액세스하도록 허용
 
-* BlockSensors (2) = Do not allow any site to access sensors
+* BlockSensors (2) = 어떤 사이트도 센서에 액세스하도록 허용하지 않습니다.
 
 이 정책을 구성할 때 이전 정보를 사용합니다.
 
@@ -8723,7 +9137,7 @@ If you don't configure this policy, websites can access and use sensors, and use
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: DefaultSensorsSetting
-  - GP 이름: Default sensors setting
+  - GP 이름: 기본 센서 설정
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -10573,24 +10987,24 @@ Microsoft Edge 84를 기준으로 이 정책을 구성하지 않는면 외부 �
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### ForceSync
-  #### Force synchronization of browser data and do not show the sync consent prompt
+  #### 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시하지 않음
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 86 이상
 
   #### 설명
-  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+  Microsoft Edge에서 데이터 동기화를 강제합니다. 또한 이 정책은 사용자가 동기화를 끄는 것을 방지합니다.
 
-If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+이 정책을 구성하지 않으면 사용자가 동기화를 켜거나 끌 수 있습니다. 이 정책을 사용하면 사용자가 동기화를 사용 중지할 수 없습니다.
 
-For this policy to work as intended,
-[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+이 정책이 의도대로 작동하려면
+[BrowserSignin](#browsersignin) 정책을 구성하지 않거나 사용하도록 설정해야합니다. [ForceSync](#forcesync)을(를) 사용 안함으로 설정하면 [BrowserSignin](#browsersignin)이 적용되지 않습니다.
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+[SyncDisabled](#syncdisabled)을 구성하지 않거나 False로 설정해야 합니다. True로 설정하면 [ForceSync](#forcesync)이(가) 적용되지 않습니다.
 
-0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+0 = 자동으로 동기화를 시작하지 않고 동기화 동의 표시 (기본값)
+1 = Azure AD에 대해 강제로 동기화 설정/Azure AD-Degraded 사용자 프로필 및 동기화 동의 프롬프트를 표시하지 않음
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -10603,7 +11017,7 @@ For this policy to work as intended,
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: ForceSync
-  - GP 이름: Force synchronization of browser data and do not show the sync consent prompt
+  - GP 이름: 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시하지 않음
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -11744,16 +12158,16 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### InsecureFormsWarningsEnabled
-  #### Enable warnings for insecure forms
+  #### 안전하지 않은 양식에 대한 경고 사용
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 86 이상
 
   #### 설명
-  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
-If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
-If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+  이 정책은 브라우저의 보안 (HTTPS) 사이트에 포함된 안전하지 않은 양식 (HTTP를 통해 제출된 양식)의 처리를 제어합니다.
+이 정책을 사용하거나 설정하지 않으면 안전하지 않은 양식이 제출된 경우 전체 페이지 경고가 표시됩니다. 또한 양식 필드에 초점이 맞춰지면 경고 풍선이 양식 필드 옆에 표시되고 해당 양식에 대해 자동 완성이 비활성화됩니다.
+이 정책을 비활성화하면 안전하지 않은 양식에 대한 경고가 표시되지 않고 자동 완성이 정상적으로 작동합니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -11766,7 +12180,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: InsecureFormsWarningsEnabled
-  - GP 이름: Enable warnings for insecure forms
+  - GP 이름: 안전하지 않은 양식에 대한 경고 사용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -12064,25 +12478,25 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
+  #### Internet Explorer 모드 테스트 허용
   
   
   #### 지원되는 버전:
   - Windows 86 이상부터
 
   #### 설명
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  이 정책은 ie-mode-test 플래그 정책을 대체합니다. 사용자가 UI 메뉴 옵션에서 IE 모드 탭을 열 수 있습니다.
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+      이 설정은 다음과 함께 작동합니다.
+      [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)이(가) 'IEMode'로 설정
+       및
+       [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책 목록에 항목이 하나 이상 있습니다.
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+      이 정책을 사용하면 사용자가 UI 옵션에서 IE 모드 탭을 열고 현재 사이트를 IE 모드 사이트로 이동할 수 있습니다.
 
-If you disable this policy, users can't see the UI option in the menu directly.
+사용 중지하면 이 정책을 사용하면 사용자가 메뉴에서 UI 옵션을 직접 볼 수 없습니다.
 
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+      이 정책을 구성하지 않으면 ie-mode-test 플래그를 수동으로 설정할 수 있습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -12095,7 +12509,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: InternetExplorerIntegrationTestingAllowed
-  - GP 이름: Allow Internet Explorer mode testing
+  - GP 이름: Internet Explorer 모드 테스트 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -14215,22 +14629,22 @@ Windows 7, Windows 8, MacOS에서 이 정책은 방문한 웹 사이트에 대�
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### SensorsAllowedForUrls
-  #### Allow access to sensors on specific sites
+  #### 특정 사이트의 센서에 대한 액세스 허용
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 86 이상
 
   #### 설명
-  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+  URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는 사이트 목록을 정의합니다.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+이 정책을 구성하지 않는 경우 [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 구성이 모든 사이트에 사용됩니다.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SensorsBlockedForUrls](#sensorsblockedforurls) 정책(일치하는 경우), [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 설정.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+이 정책에 정의된 URL 패턴은 [SensorsBlockedForUrls](#sensorsblockedforurls) 정책에 구성된 패턴과 충돌할 수 없습니다. URL을 허용 및 차단할 수 없습니다.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)를 참조하세요.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -14243,7 +14657,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: SensorsAllowedForUrls
-  - GP 이름: Allow access to sensors on specific sites
+  - GP 이름: 특정 사이트의 센서에 대한 액세스 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -14274,22 +14688,22 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### SensorsBlockedForUrls
-  #### Block access to sensors on specific sites
+  #### 특정 사이트의 센서에 대한 액세스 차단
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 86 이상
 
   #### 설명
-  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+  URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스 할 수없는 사이트 목록을 정의합니다.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+이 정책을 구성하지 않으면 [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 구성이 모든 사이트에 사용됩니다.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SensorsAllowedForUrls](#sensorsallowedforurls) 정책(일치하는 결과가 있을 경우), [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 설정.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+이 정책에 정의된 URL 패턴은 [SensorsAllowedForUrls](#sensorsallowedforurls) 정책에 구성된 패턴과 충돌 할 수 없습니다. URL을 허용 및 차단할 수 없습니다.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)를 참조하세요.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -14302,7 +14716,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: SensorsBlockedForUrls
-  - GP 이름: Block access to sensors on specific sites
+  - GP 이름: 특정 사이트의 센서에 대한 액세스 차단
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
