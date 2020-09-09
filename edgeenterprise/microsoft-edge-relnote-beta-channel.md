@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!IMPORTANT]
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
-## Version 86.0.622.xx: September 9
+## Version 86.0.622.11: September 9
 
 ### Feature updates
 
