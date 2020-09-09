@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -80,6 +80,8 @@ En estas tablas se muestra una lista de todas las directivas de grupo relacionad
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Bloquear cookies en sitios específicos|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limitar las cookies de sitios web específicos a la sesión actual|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configurar cookies|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Controlar el uso de la API del sistema de archivos para leer|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Controlar el uso de la API del sistema de archivos para escribir|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Configuración de geolocalización predeterminada|
 |[DefaultImagesSetting](#defaultimagessetting)|Configuración predeterminada de imágenes|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Controlar el uso de excepciones de contenido no seguro|
@@ -89,6 +91,10 @@ En estas tablas se muestra una lista de todas las directivas de grupo relacionad
 |[DefaultPopupsSetting](#defaultpopupssetting)|Configuración de ventana emergente predeterminada|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Controlar el uso de la API Web Bluetooth|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Controlar el uso de la API WebUSB|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Permitir el acceso de lectura mediante la API del sistema de archivos en estos sitios|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Bloquear el acceso de lectura mediante la API del sistema de archivos en estos sitios|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Permitir el acceso de escritura de archivos y directorios en estos sitios|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Bloquear el acceso de escritura de archivos y directorios en estos sitios|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Permitir imágenes en estos sitios|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Bloquear imágenes en sitios específicos|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Permitir contenido no seguro en sitios especificados|
@@ -125,6 +131,7 @@ y consejos para los servicios Microsoft|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir encabezados y pies de página|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Establecer la impresora predeterminada del sistema como la impresora predeterminada|
 |[PrintingEnabled](#printingenabled)|Habilitar la impresión|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamaño de página de impresión predeterminado|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando el cuadro de diálogo de impresión|
 ### [*Inicio&comma; página principal y página de la nueva pestaña*](#inicio-página-principal-y-página-de-la-nueva-pestaña-policies)
 |Nombre de directiva|Título|
@@ -132,7 +139,7 @@ y consejos para los servicios Microsoft|
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Establecer la página de la nueva pestaña como página principal|
 |[HomepageLocation](#homepagelocation)|Configurar la dirección URL de la página principal|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configurar los tipos de fondo permitidos para el nuevo diseño de página de pestañas|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Establecer el logotipo de la empresa en la nueva ficha (en desuso)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Establecer el logotipo de la empresa en la nueva ficha (obsoleto)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ocultar los sitios principales predeterminados de la página de la nueva pestaña|
 |[NewTabPageLocation](#newtabpagelocation)|Configurar la dirección URL de la página de la nueva pestaña|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Establecer vínculos rápidos a la página de la nueva pestaña|
@@ -1796,6 +1803,118 @@ Usa la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge:-directivas)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Controlar el uso de la API del sistema de archivos para leer
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Si establece esta directiva en 3, los sitios web pueden solicitar acceso de lectura al sistema de archivos del sistema operativo host mediante la API del sistema de archivos. Si establece esta directiva en 2, se deniega el acceso.
+
+Si no establece esta directiva, los sitios web pueden pedir acceso. Los usuarios pueden cambiar esta configuración.
+
+Asignación de opciones de directiva:
+
+* BlockFileSystemRead (2) = No permitir que ningún sitio solicite acceso de lectura de archivos y directorios mediante la API del sistema de archivos
+
+* AskFileSystemRead (3) = Permitir que los sitios soliciten al usuario que conceda acceso de lectura de archivos y directorios mediante la API del sistema de archivos
+
+Usa la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Entero
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: DefaultFileSystemReadGuardSetting
+  - Nombre de la directiva de grupos: Controlar el uso de la API del sistema de archivos para leer
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: DefaultFileSystemReadGuardSetting
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000002
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: DefaultFileSystemReadGuardSetting
+  - Valor de ejemplo:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Controlar el uso de la API del sistema de archivos para escribir
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Si establece esta directiva en 3, los sitios web pueden solicitar acceso de escritura al sistema de archivos del sistema operativo host mediante la API del sistema de archivos. Si establece esta directiva en 2, se deniega el acceso.
+
+Si no establece esta directiva, los sitios web pueden pedir acceso. Los usuarios pueden cambiar esta configuración.
+
+Asignación de opciones de directiva:
+
+* BlockFileSystemWrite (2) = No permitir que ningún sitio solicite acceso de escritura de archivos y directorios
+
+* AskFileSystemWrite (3) = Permitir que los sitios soliciten al usuario que conceda acceso de escritura de los archivos y directorios
+
+Usa la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Entero
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: DefaultFileSystemWriteGuardSetting
+  - Nombre de la directiva de grupos: Controlar el uso de la API del sistema de archivos para escribir
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: DefaultFileSystemWriteGuardSetting
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000002
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: DefaultFileSystemWriteGuardSetting
+  - Valor de ejemplo:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
   ### DefaultGeolocationSetting
   #### Configuración de geolocalización predeterminada
   
@@ -2305,6 +2424,234 @@ Usa la información anterior al configurar esta directiva.
   - Valor de ejemplo:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### FileSystemReadAskForUrls
+  #### Permitir el acceso de lectura mediante la API del sistema de archivos en estos sitios
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Establecer la directiva le permite enumerar los patrones de dirección URL que especifican qué sitios pueden pedir a los usurarios la concesión de acceso de lectura de archivos o directorios del sistema de archivos del sistema operativo host mediante la API del sistema de archivos.
+
+Si no establece esta directiva, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) se aplica a todos los sitios, si se ha establecido. Si no, se aplica la configuración personal de los usuarios.
+
+Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Ninguna directiva tiene prioridad si una dirección URL coincide con ambos.
+
+Para obtener información detallada sobre patrones de url válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: FileSystemReadAskForUrls
+  - Nombre de la directiva de grupos: Permitir el acceso de lectura mediante la API del sistema de archivos en estos sitios
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+  ##### Valor de ejemplo:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: FileSystemReadAskForUrls
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### FileSystemReadBlockedForUrls
+  #### Bloquear el acceso de lectura mediante la API del sistema de archivos en estos sitios
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Si establece esta directiva, puede enumerar los patrones de dirección URL que especifican qué sitios no pueden pedir a los usurarios la concesión de acceso de lectura de archivos o directorios del sistema de archivos del sistema operativo host mediante la API del sistema de archivos.
+
+Si no establece esta directiva, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) se aplica a todos los sitios, si se ha establecido. Si no, se aplica la configuración personal de los usuarios.
+
+Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadAskForUrls](#filesystemreadaskforurls). Ninguna directiva tiene prioridad si una dirección URL coincide con ambos.
+
+Para obtener información detallada sobre patrones de url válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: FileSystemReadBlockedForUrls
+  - Nombre de la directiva de grupos: Bloquear el acceso de lectura mediante la API del sistema de archivos en estos sitios
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+  ##### Valor de ejemplo:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: FileSystemReadBlockedForUrls
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### FileSystemWriteAskForUrls
+  #### Permitir el acceso de escritura de archivos y directorios en estos sitios
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Si establece esta directiva, puede enumerar los patrones de dirección URL que especifican qué sitios pueden pedir a los usurarios la concesión de acceso de escritura de archivos o directorios del sistema de archivos del sistema operativo host.
+
+Si no establece esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) se aplica a todos los sitios, si se ha establecido. Si no, se aplica la configuración personal de los usuarios.
+
+Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Ninguna directiva tiene prioridad si una dirección URL coincide con ambos.
+
+Para obtener información detallada sobre patrones de url válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: FileSystemWriteAskForUrls
+  - Nombre de la directiva de grupos: Permitir el acceso de escritura de archivos y directorios en estos sitios
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+  ##### Valor de ejemplo:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: FileSystemWriteAskForUrls
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Bloquear el acceso de escritura de archivos y directorios en estos sitios
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Si establece esta directiva, puede enumerar los patrones de dirección URL que especifican qué sitios no pueden pedir a los usurarios la concesión de acceso de escritura de archivos o directorios del sistema de archivos del sistema operativo host.
+
+Si no establece esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) se aplica a todos los sitios, si se ha establecido. Si no, se aplica la configuración personal de los usuarios.
+
+Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Ninguna directiva tiene prioridad si una dirección URL coincide con ambos.
+
+Para obtener información detallada sobre patrones de url válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: FileSystemWriteBlockedForUrls
+  - Nombre de la directiva de grupos: Bloquear el acceso de escritura de archivos y directorios en estos sitios
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+  ##### Valor de ejemplo:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: FileSystemWriteBlockedForUrls
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -4082,6 +4429,73 @@ Si se deshabilita esta directiva, los usuarios no podrán imprimir desde Microso
 
   [Volver al principio](#microsoft-edge:-directivas)
 
+  ### PrintingPaperSizeDefault
+  #### Tamaño de página de impresión predeterminado
+  
+  
+  #### Versiones admitidas:
+  - En Windows y macOS desde 86 o posterior
+
+  #### Descripción
+  Invalida el tamaño de página de impresión predeterminado.
+
+name debe contener uno de los formatos de la lista o el valor "personalizado" si el tamaño de papel requerido no está en la lista. Si se proporciona el valor "personalizado", se debe especificar la propiedad custom_size. Describe la altura y anchura deseadas en micras. De lo contrario, no se debe especificar la propiedad custom_size. Se ignoran las directivas que violan estas reglas.
+
+Si el tamaño de página no está disponible en la impresora elegida por el usuario, se ignora esta directiva.
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Diccionario
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: PrintingPaperSizeDefault
+  - Nombre de la directiva de grupos: Tamaño de página de impresión predeterminado
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Imprimir
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: PrintingPaperSizeDefault
+  - Tipo de valor: REG_SZ
+  ##### Valor de ejemplo:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Información y configuración de Mac
+  - Nombre de clave de preferencia: PrintingPaperSizeDefault
+  - Valor de ejemplo:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
   ### UseSystemPrintDialog
   #### Imprimir usando el cuadro de diálogo de impresión
   
@@ -4305,28 +4719,28 @@ Usa la información anterior al configurar esta directiva.
   [Volver al principio](#microsoft-edge:-directivas)
 
   ### NewTabPageCompanyLogo
-  #### Establecer el logotipo de la empresa en la nueva ficha (en desuso)
-  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero será obsoleta en una versión futura.
+  #### Establecer el logotipo de la empresa en la nueva ficha (obsoleto)
   
+  >OBSOLETO: Esta directiva es obsoleta y no funciona después de la versión 85 de Microsoft Edge.
   #### Versiones admitidas:
-  - En Windows y macOS desde 79 o posterior
+  - En Windows y macOS desde 79, hasta 85
 
   #### Descripción
-  Esta directiva está en desuso porque no funciona según lo esperado y recomendamos que no se use. No funciona en Microsoft Edge, versión 86.
+  Esta directiva no ha funcionado según lo esperado debido a cambios en los requisitos operativos. Por lo tanto, está en desuso.
 
-Especifica el logotipo de la empresa que se usará en la página de la nueva pestaña en Microsoft Edge.
+     Especifica el logotipo de la empresa que se usará en la página de la nueva pestaña en Microsoft Edge.
 
-La directiva se debe configurar como una cadena que expresa los logotipos en formato JSON. Por ejemplo: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+     La directiva se debe configurar como una cadena que expresa los logotipos en formato JSON. Por ejemplo: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
 
-Para configurar esta directiva, debes especificar la dirección URL desde la que Microsoft Edge puede descargar el logotipo y su hash de cifrado (SHA-256), que se usa para comprobar la integridad de la descarga. El logotipo debe estar en formato PNG o SVG y el tamaño de archivo no debe superar los 16 MB. El logotipo se descarga y se almacena en la caché, y se volverá a descargar cada vez que cambie la dirección URL o el hash. La dirección URL debe ser accesible sin ninguna autenticación.
+     Para configurar esta directiva, debes especificar la dirección URL desde la que Microsoft Edge puede descargar el logotipo y su hash de cifrado (SHA-256), que se usa para comprobar la integridad de la descarga. El logotipo debe estar en formato PNG o SVG y el tamaño de archivo no debe superar los 16 MB. El logotipo se descarga y se almacena en la caché, y se volverá a descargar cada vez que cambie la dirección URL o el hash. La dirección URL debe ser accesible sin ninguna autenticación.
 
-Es necesario el 'default_logo' y se usará cuando no haya ninguna imagen de fondo. Si se proporciona el 'light_logo', se usará cuando la página de la nueva pestaña del usuario tenga una imagen de fondo. Recomendamos usar un logotipo horizontal con un fondo transparente que esté alineado a la izquierda y centrado verticalmente. El logotipo debe tener una altura mínima de 32 píxeles y una relación de aspecto de 1:1 a 4:1. El 'default_logo' debe tener un contraste adecuado con un fondo blanco o negro, mientras que el 'light_logo' debe tener un contraste adecuado con una imagen de fondo.
+     El "default_logo'' es necesario y se usará cuando no haya ninguna imagen de fondo. Si se proporciona el ''light_logo'', se usará cuando la página de la nueva pestaña del usuario tenga una imagen de fondo. Recomendamos usar un logotipo horizontal con un fondo transparente que esté alineado a la izquierda y centrado verticalmente. El logotipo debe tener una altura mínima de 32 píxeles y una relación de aspecto de 1:1 a 4:1. El "default_logo" debe tener un contraste adecuado con un fondo blanco o negro, mientras que el "light_logo" debe tener un contraste adecuado con una imagen de fondo.
 
-Si se habilita esta directiva, Microsoft Edge descarga y muestra los logotipos especificados en la página de la nueva pestaña. Los usuarios no pueden invalidar ni ocultar los logotipos.
+     Si habilitas esta directiva, Microsoft Edge se descargará y mostrará los logotipos especificados en la página de la nueva pestaña. Los usuarios no pueden invalidar ni ocultar los logotipos.
 
-Si se deshabilita o no se configura esta directiva, Microsoft Edge no mostrará ningún logotipo de la empresa ni ningún logotipo de Microsoft en la página de la nueva pestaña.
+     Si deshabilitas o no configuras esta directiva, Microsoft Edge no mostrará ningún logotipo de la empresa ni de Microsoft en la página de la nueva pestaña.
 
-Si necesitas ayuda para determinar el hash SHA-256, consulta https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+     Si necesitas ayuda para determinar el hash SHA-256, consulta https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Características admitidas:
   - Puede ser obligatorio: Sí
@@ -4339,7 +4753,7 @@ Si necesitas ayuda para determinar el hash SHA-256, consulta https://docs.micros
   #### Información y configuración de Windows
   ##### Información de la directiva de grupos (ADMX)
   - Nombre único de la directiva de grupos: NewTabPageCompanyLogo
-  - Nombre de la directiva de grupos: Establecer el logotipo de la empresa en la nueva ficha (en desuso)
+  - Nombre de la directiva de grupos: Establecer el logotipo de la empresa en la nueva ficha (obsoleto)
   - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/Inicio, página principal y página de la nueva pestaña
   - Ruta de acceso de GP (Recomendada): N/D
   - Nombre del archivo ADMX de GP: MSEdge.admx
