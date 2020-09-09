@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -76,6 +76,8 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|在特定站点上阻止 Cookie|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|将特定网站的 Cookie 限制为当前会话|
 |[DefaultCookiesSetting](#defaultcookiessetting)|配置 Cookie|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|控制用于读取的文件系统 API 的使用|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|控制用于编写的文件系统 API 的使用|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|默认地理位置设置|
 |[DefaultImagesSetting](#defaultimagessetting)|默认图像设置|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|控制不安全内容例外的使用|
@@ -85,6 +87,10 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[DefaultPopupsSetting](#defaultpopupssetting)|默认的弹出窗口设置|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|控制 Web 蓝牙 API 的使用|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|控制 WebUSB API 的使用|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|在这些网站上允许通过文件系统 API 进行读取访问|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|在这些网站上禁止通过文件系统 API 进行读取访问|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|在这些网站上允许对文件和目录的写入访问|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|在这些网站上阻止对文件和目录的写入访问|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|允许使用这些站点上的图像|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|在特定站点上阻止图像|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|对指定站点允许不安全内容|
@@ -100,8 +106,8 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[PopupsAllowedForUrls](#popupsallowedforurls)|在特定站点上允许弹出窗口|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|在特定站点上阻止弹出窗口|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|注册协议处理程序|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|选择用户是否可以接收 Microsoft 服务的自定义背景图像和文本、建议、通知、
+和提示|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|授予特定站点访问权限以连接到特定 USB 设备|
 |[WebUsbAskForUrls](#webusbaskforurls)|在特定站点上允许 WebUSB|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|在特定站点上阻止 WebUSB|
@@ -111,7 +117,7 @@ and tips for Microsoft services|
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|将新标签页设置为主页|
 |[HomepageLocation](#homepagelocation)|配置主页 URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|配置允许用于新选项卡页面布局的背景类型|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|设置新的选项卡页公司徽标 (已弃用)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|设置新的选项卡页公司徽标 (过时)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|从新选项卡页中隐藏默认的热门站点|
 |[NewTabPageLocation](#newtabpagelocation)|配置新的选项卡页 URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|设置新标签页快速链接|
@@ -139,6 +145,7 @@ and tips for Microsoft services|
 |[PrintHeaderFooter](#printheaderfooter)|打印页眉和页脚|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|将系统的默认打印机设置为默认打印机|
 |[PrintingEnabled](#printingenabled)|启用打印|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|默认打印页面大小|
 |[UseSystemPrintDialog](#usesystemprintdialog)|使用系统打印对话框打印|
 ### [*扩展*](#扩展-policies)
 |策略名称|描述|
@@ -221,7 +228,7 @@ and tips for Microsoft services|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|已启用 DNS 拦截检查|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|将 Microsoft Edge 设置为默认浏览器|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|允许默认搜索提供程序上下文菜单搜索访问|
-|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSensorsSetting](#defaultsensorssetting)|默认传感器设置|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|控制串行 API 的使用|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|要求在选项卡导航之前企业模式站点列表可用|
 |[DeleteDataOnMigration](#deletedataonmigration)|迁移时删除旧浏览器数据|
@@ -255,7 +262,7 @@ and tips for Microsoft services|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|强制执行 Google 安全搜索|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|使用 no-referrer-when-downgrade 的默认引用站点策略 (已弃用)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|强制网络代码在浏览器进程中运行 (过时)|
-|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSync](#forcesync)|强制同步浏览器数据，但不显示同步许可提示|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|实施最小 YouTube 受限模式|
 |[FullscreenAllowed](#fullscreenallowed)|允许全屏模式|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|启用全局范围的 HTTP 身份验证缓存|
@@ -276,13 +283,13 @@ and tips for Microsoft services|
 |[ImportSearchEngine](#importsearchengine)|允许导入搜索引擎设置|
 |[ImportShortcuts](#importshortcuts)|允许导入快捷方式|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|配置 InPrivate 模式可用性|
-|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|为不安全的表单启用警告|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|控制 IntensiveWakeUpThrottling 功能|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|为 Internet Explorer 模式配置增强型挂起检测|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|配置 Internet Explorer 集成|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|配置企业模式站点列表|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|指定从 Internet Explorer 模式页面启动时，到未配置站点的“页面内”导航的行为方式|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|允许 Internet Explorer 模式测试|
 |[IsolateOrigins](#isolateorigins)|对特定来源启用站点隔离|
 |[LocalProvidersEnabled](#localprovidersenabled)|允许来自本地提供商的建议|
 |[ManagedFavorites](#managedfavorites)|配置收藏夹|
@@ -321,8 +328,8 @@ and tips for Microsoft services|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|无需许可即可使用直接安全密钥证明的网站或域|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|将所有 Intranet 站点发送到 Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|发送站点信息来改进 Microsoft 服务 (已弃用)|
-|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
-|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|允许访问特定网站上的传感器|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|阻止访问特定网站上的传感器|
 |[SerialAskForUrls](#serialaskforurls)|在特定网站上允许串行 API|
 |[SerialBlockedForUrls](#serialblockedforurls)|在特定网站上阻止串行 API|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式|
@@ -1768,6 +1775,118 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [返回顶部](#microsoft-edge---策略)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### 控制用于读取的文件系统 API 的使用
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果将此策略设置为 3，则网站可以使用文件系统 API 请求对主机操作系统的文件系统进行读取访问。如果将此策略设置为 2，则拒绝访问。
+
+如果未设置此策略，则网站可以请求访问。用户可以更改此设置。
+
+策略选项映射：
+
+* BlockFileSystemRead (2) = 不允许任何网站通过文件系统 API 请求对文件和目录的读取访问权限
+
+* AskFileSystemRead (3) = 允许网站通过文件系统 API 要求用户授予对文件和目录的读取访问权限
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultFileSystemReadGuardSetting
+  - GP 名称: 控制用于读取的文件系统 API 的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultFileSystemReadGuardSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000002
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultFileSystemReadGuardSetting
+  - 示例值:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### 控制用于编写的文件系统 API 的使用
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果将此策略设置为 3，则网站可以使用文件系统 API 请求对主机操作系统的文件系统进行写入访问。如果将此策略设置为 2，则拒绝访问。
+
+如果未设置此策略，则网站可以请求访问。用户可以更改此设置。
+
+策略选项映射：
+
+* BlockFileSystemWrite (2) = 不允许任何网站请求对文件和目录的写入访问权限
+
+* AskFileSystemWrite (3) = 允许网站要求用户授予对文件和目录的写入访问权限
+
+配置此策略时，请使用上述信息。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 整数
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: DefaultFileSystemWriteGuardSetting
+  - GP 名称: 控制用于编写的文件系统 API 的使用
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: DefaultFileSystemWriteGuardSetting
+  - 值类型: REG_DWORD
+  ##### 示例值:
+```
+0x00000002
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: DefaultFileSystemWriteGuardSetting
+  - 示例值:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
   ### DefaultGeolocationSetting
   #### 默认地理位置设置
   
@@ -2277,6 +2396,234 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 示例值:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### FileSystemReadAskForUrls
+  #### 在这些网站上允许通过文件系统 API 进行读取访问
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果设置该策略，则可以列出 URL 模式，指定哪些网站可以通过文件系统 API 要求用户授予他们对主机操作系统的文件系统中的文件或目录的读取访问权限。
+
+如果未设置此策略，[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) 适用于所有网站(如果已设置)。否则，用户的个人设置将适用。
+
+URL 式不能与 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) 冲突。如果 URL 与两者都匹配，则这两个策略都不优先。
+
+有关有效 url 模式的详细信息，请参阅 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FileSystemReadAskForUrls
+  - GP 名称: 在这些网站上允许通过文件系统 API 进行读取访问
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: FileSystemReadAskForUrls
+  - 示例值:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### FileSystemReadBlockedForUrls
+  #### 在这些网站上禁止通过文件系统 API 进行读取访问
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果设置此策略，则可以列出 URL 模式，指定哪些网站可以通过文件系统 API 要求用户授予他们对主机操作系统的文件系统中的文件或目录的读取访问权限。
+
+如果未设置此策略，[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) 适用于所有网站(如果已设置)。否则，用户的个人设置将适用。
+
+URL 式不能与 [FileSystemReadAskForUrls](#filesystemreadaskforurls) 冲突。如果 URL 与两者都匹配，则这两个策略都不优先。
+
+有关有效 url 模式的详细信息，请参阅 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FileSystemReadBlockedForUrls
+  - GP 名称: 在这些网站上禁止通过文件系统 API 进行读取访问
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: FileSystemReadBlockedForUrls
+  - 示例值:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### FileSystemWriteAskForUrls
+  #### 在这些网站上允许对文件和目录的写入访问
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果设置此策略，则可以列出 URL 模式，指定哪些网站可以要求用户授予他们对主机操作系统的文件系统中的文件或目录的写入访问权限。
+
+如果未设置此策略，[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) 将应用于所有网站(如果已设置)。否则，用户的个人设置将适用。
+
+URL 式不能与 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) 冲突。如果 URL 与两者都匹配，则这两个策略都不优先。
+
+有关有效 url 模式的详细信息，请参阅 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FileSystemWriteAskForUrls
+  - GP 名称: 在这些网站上允许对文件和目录的写入访问
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: FileSystemWriteAskForUrls
+  - 示例值:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### FileSystemWriteBlockedForUrls
+  #### 在这些网站上阻止对文件和目录的写入访问
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  如果设置此策略，则可以列出 URL 模式，指定哪些网站不能要求用户授予他们对主机操作系统的文件系统中的文件或目录的写入访问权限。
+
+如果未设置此策略，[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) 将应用于所有网站(如果已设置)。否则，用户的个人设置将适用。
+
+URL 式不能与 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) 冲突。如果 URL 与两者都匹配，则这两个策略都不优先。
+
+有关有效 url 模式的详细信息，请参阅 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字符串列表
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: FileSystemWriteBlockedForUrls
+  - GP 名称: 在这些网站上阻止对文件和目录的写入访问
+  - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - 路径 (推荐): 不适用
+  - 值名称: 1, 2, 3, ...
+  - 值类型: REG_SZ 列表
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: FileSystemWriteBlockedForUrls
+  - 示例值:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -3107,19 +3454,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [返回顶部](#microsoft-edge---策略)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### 选择用户是否可以接收 Microsoft 服务的自定义背景图像和文本、建议、通知、
+和提示
   
   
   #### 支持的版本:
   - 在 Windows 自 86 或之后
 
   #### 描述
-  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+  选择用户是否可以接收 Microsoft 服务的自定义背景图片和文本、建议、通知和提示。
 
-If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+如果启用或未配置此设置，则将打开聚焦体验和建议。
 
-If you disable this setting, spotlight experiences and recommendations are turned off.
+如果禁用此设置，则聚焦体验和建议将关闭。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -3132,8 +3479,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: SpotlightExperiencesAndRecommendationsEnabled
-  - GP 名称: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - GP 名称: 选择用户是否可以接收 Microsoft 服务的自定义背景图像和文本、建议、通知、
+和提示
   - GP 路径 (强制): 管理模板/Microsoft Edge/内容设置
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -3518,26 +3865,26 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   [返回顶部](#microsoft-edge---策略)
 
   ### NewTabPageCompanyLogo
-  #### 设置新的选项卡页公司徽标 (已弃用)
-  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
+  #### 设置新的选项卡页公司徽标 (过时)
   
+  >过时: 此策略已过时，在 Microsoft Edge 85 之后无法使用。
   #### 支持的版本:
-  - 由于 Windows 或更高版本，macOS 和 79
+  - 在 Windows 后，在 macOS 和 79 上 85
 
   #### 描述
-  此策略已弃用，因为它无法按预期使用，因此建议不要使用它。它将无法在 Microsoft Edge 版本 86 中正常使用。
+  由于操作要求发生变化，此策略无法按预期发挥作用。因此，它已过时，不应使用。
 
-指定要在 Microsoft Edge 中的新标签页上使用的公司徽标。
+指定要在 Microsoft Edge 中的新选项卡页上使用的公司徽标。
 
 此策略应配置为以 JSON 格式表示徽标的字符串。例如: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
 
 你可以通过指定 URL 来配置此策略，Microsoft Edge 可以通过此 URL 下载徽标以及用于验证下载完整性的加密哈希(SHA-256)。徽标必须采用 PNG 或 SVG 格式，并且文件大小不得超过 16 MB。下载并缓存徽标后，只要 URL 或哈希发生更改，就会重新下载徽标。此 URL 必须可访问，并且无需进行任何身份验证。
 
-"default_logo" 是必需的，将在没有背景图像时使用。如果提供了 "light_logo"，则将在用户的新标签页具有背景图像时使用。我们建议使用具有左对齐且垂直居中的透明背景的水平徽标。徽标的最小高度应为 32 像素，纵横比为 1:1 到 4:1。"default_logo" 应与黑/白背景具有适当的对比度，而 "light_logo" 应与背景图像具有适当的对比度。
+"default_logo" 是必需的，将在没有背景图像时使用。如果提供了 "light_logo"，则将在用户的新选项卡页具有背景图像时使用。我们建议使用具有左对齐且垂直居中的透明背景的水平徽标。徽标的最小高度应为 32 像素，纵横比为 1:1 到 4:1。"default_logo" 应与黑/白背景具有适当的对比度，而 "light_logo" 应与背景图像具有适当的对比度。
 
-如果启用此策略，则 Microsoft Edge 将下载指定的徽标并在新标签页上显示此徽标。用户不能覆盖或隐藏徽标。
+如果启用此策略，则 Microsoft Edge 将下载指定的徽标并在新选项卡页上显示此徽标。用户不能覆盖或隐藏徽标。
 
-如果禁用或未配置此策略，则 Microsoft Edge 将不在新标签页上显示公司徽标或 Microsoft 徽标。
+如果禁用或未配置此策略，则 Microsoft Edge 将不在新选项卡页上显示公司徽标或 Microsoft 徽标。
 
 有关确定 SHA-256 哈希的帮助，请参阅 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash。
 
@@ -3552,7 +3899,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: NewTabPageCompanyLogo
-  - GP 名称: 设置新的选项卡页公司徽标 (已弃用)
+  - GP 名称: 设置新的选项卡页公司徽标 (过时)
   - GP 路径 (强制): 管理模板/Microsoft Edge/启动、主页和新选项卡页
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -4642,6 +4989,73 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - 示例值:
 ``` xml
 <true/>
+```
+  
+
+  [返回顶部](#microsoft-edge---策略)
+
+  ### PrintingPaperSizeDefault
+  #### 默认打印页面大小
+  
+  
+  #### 支持的版本:
+  - 由于 Windows 或更高版本，macOS 和 86
+
+  #### 描述
+  覆盖默认打印页面大小。
+
+如果列表中没有所需的纸张尺寸，name 应包含其中一种列出的格式或“自定义”格式。如果提供了“自定义”值，则应指定 custom_size 属性。它描述了所需的高度和宽度(以千分尺为单位)。否则不应指定 custom_size 属性。违反这些规则的策略将被忽略。
+
+如果页面大小在用户选择的打印机上不可用，则忽略此策略。
+
+  #### 支持的功能:
+  - 可以为必填字段: 是
+  - 可以推荐: 否
+  - 动态策略刷新: 是
+
+  #### 数据类型:
+  - 字典
+
+  #### Windows 信息和设置
+  ##### 组策略(ADMX)信息
+  - GP 唯一名称: PrintingPaperSizeDefault
+  - GP 名称: 默认打印页面大小
+  - GP 路径 (强制): 管理模板/Microsoft Edge/打印
+  - GP 路径 (推荐): 不适用
+  - GP ADMX 文件名: MSEdge.admx
+  ##### Windows 注册表设置
+  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
+  - 路径 (推荐): 不适用
+  - 值名称: PrintingPaperSizeDefault
+  - 值类型: REG_SZ
+  ##### 示例值:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Mac 信息和设置
+  - 首选项密钥名称: PrintingPaperSizeDefault
+  - 示例值:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
 ```
   
 
@@ -8689,26 +9103,26 @@ Windows 管理员注意事项: 此策略仅适用于运行 Windows 7 的电脑�
   [返回顶部](#microsoft-edge---策略)
 
   ### DefaultSensorsSetting
-  #### Default sensors setting
+  #### 默认传感器设置
   
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 86
 
   #### 描述
-  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+  设置网站是否可以访问和使用诸如运动和光线传感器之类的传感器。你可以完全阻止或允许网站访问传感器。
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+将策略设置为 1 可允许网站访问和使用传感器。将策略设置为 2 会拒绝访问传感器。
 
-You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+可使用 [SensorsAllowedForUrls](#sensorsallowedforurls) 和 [SensorsBlockedForUrls](#sensorsblockedforurls) 策略覆盖特定 URL 模式的此策略。
 
-If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+如果未配置此策略，网站可以访问和使用传感器，用户可以更改此设置。这是 [SensorsAllowedForUrls](#sensorsallowedforurls) 和 [SensorsBlockedForUrls](#sensorsblockedforurls) 的全局默认值。
 
 策略选项映射：
 
-* AllowSensors (1) = Allow sites to access sensors
+* AllowSensors (1) = 允许网站访问传感器
 
-* BlockSensors (2) = Do not allow any site to access sensors
+* BlockSensors (2) = 不允许任何网站访问传感器
 
 配置此策略时，请使用上述信息。
 
@@ -8723,7 +9137,7 @@ If you don't configure this policy, websites can access and use sensors, and use
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: DefaultSensorsSetting
-  - GP 名称: Default sensors setting
+  - GP 名称: 默认传感器设置
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -10573,24 +10987,24 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   [返回顶部](#microsoft-edge---策略)
 
   ### ForceSync
-  #### Force synchronization of browser data and do not show the sync consent prompt
+  #### 强制同步浏览器数据，但不显示同步许可提示
   
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 86
 
   #### 描述
-  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+  在 Microsoft Edge 中强制进行数据同步。此策略还可以防止用户关闭同步。
 
-If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+如果未配置此策略，则用户将可以打开或关闭同步。如果启用此策略，则用户将无法关闭同步。
 
-For this policy to work as intended,
-[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+为使此策略按预期工作，
+[BrowserSignin](#browsersignin) 策略必须未配置或必须设置为启用。如果将 [ForceSync](#forcesync) 设置为禁用，则 [BrowserSignin](#browsersignin) 将不起作用。
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+[SyncDisabled](#syncdisabled) 不得配置或必须设置为 False。如果将其设置为 True，则 [ForceSync](#forcesync) 不会生效。
 
-0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+0 = 不自动开始同步并显示同步许可(默认)
+1 = 强制为 Azure AD/Azure AD 降级的用户配置文件启用同步，并且不显示同步许可提示
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -10603,7 +11017,7 @@ For this policy to work as intended,
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: ForceSync
-  - GP 名称: Force synchronization of browser data and do not show the sync consent prompt
+  - GP 名称: 强制同步浏览器数据，但不显示同步许可提示
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -11744,16 +12158,16 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   [返回顶部](#microsoft-edge---策略)
 
   ### InsecureFormsWarningsEnabled
-  #### Enable warnings for insecure forms
+  #### 为不安全的表单启用警告
   
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 86
 
   #### 描述
-  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
-If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
-If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+  此策略控制对浏览器中安全(HTTPS)网站内嵌入的不安全表单(通过 HTTP 提交的表单)的处理。
+如果启用或未设置此策略，则在提交不安全的表单时将显示完整页面警告。此外，当表单字段处于焦点时，它们旁边将显示一个警告气泡，并且将对这些表单禁用自动填充。
+如果禁用此策略，则不会对不安全的表单显示警告，并且自动填充将正常工作。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -11766,7 +12180,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: InsecureFormsWarningsEnabled
-  - GP 名称: Enable warnings for insecure forms
+  - GP 名称: 为不安全的表单启用警告
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -12064,25 +12478,25 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   [返回顶部](#microsoft-edge---策略)
 
   ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
+  #### 允许 Internet Explorer 模式测试
   
   
   #### 支持的版本:
   - 在 Windows 自 86 或之后
 
   #### 描述
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  此策略取代了 ie-mode-test 标志策略。它使用户可以从 UI 菜单选项中打开 IE 模式选项卡。
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+此设置与以下各项结合使用
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 设置为“IEMode”
+和
+[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 策略，其中列表至少包含一个条目。
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+如果启用此策略，则用户可以从 UI 选项打开 IE 模式选项卡，然后将当前网站导航到 IE 模式网站。
 
-If you disable this policy, users can't see the UI option in the menu directly.
+如果禁用此策略，用户将无法直接在菜单中看到 UI 选项。
 
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+如果未配置此策略，则可以手动设置 ie-mode-test 标志。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -12095,7 +12509,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: InternetExplorerIntegrationTestingAllowed
-  - GP 名称: Allow Internet Explorer mode testing
+  - GP 名称: 允许 Internet Explorer 模式测试
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -14215,22 +14629,22 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   [返回顶部](#microsoft-edge---策略)
 
   ### SensorsAllowedForUrls
-  #### Allow access to sensors on specific sites
+  #### 允许访问特定网站上的传感器
   
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 86
 
   #### 描述
-  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+  根据 URL 模式定义一个网站列表，这些网站可以访问和使用诸如运动和光线传感器之类的传感器。
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果不配置此策略，则所有网站都将使用来自 [DefaultSensorsSetting](#defaultsensorssetting) 策略(如果已设置)的全局默认值或用户的个人配置。
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+对于与此策略不匹配的 URL 模式，将使用以下优先顺序: [SensorsBlockedForUrls](#sensorsblockedforurls)策略(如果存在匹配项)、[DefaultSensorsSetting](#defaultsensorssetting) 策略(如果已设置)或用户的个人设置。
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+此策略中定义的 URL 模式不能与 [SensorsBlockedForUrls](#sensorsblockedforurls) 策略中配置的 URL 模式冲突。您无法允许和阻止 URL。
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+有关有效 URL 模式的详细信息，请参见 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -14243,7 +14657,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: SensorsAllowedForUrls
-  - GP 名称: Allow access to sensors on specific sites
+  - GP 名称: 允许访问特定网站上的传感器
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
@@ -14274,22 +14688,22 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   [返回顶部](#microsoft-edge---策略)
 
   ### SensorsBlockedForUrls
-  #### Block access to sensors on specific sites
+  #### 阻止访问特定网站上的传感器
   
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 86
 
   #### 描述
-  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+  根据 URL 模式定义一个网站列表，这些网站可以访问诸如运动和光线传感器之类的传感器。
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+如果不配置此策略，则所有网站都将使用来自 [DefaultSensorsSetting](#defaultsensorssetting) 策略(如果已设置)的全局默认值或用户的个人配置。
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+对于与此策略不匹配的 URL 模式，将使用以下优先顺序: [SensorsAllowedForUrls](#sensorsallowedforurls)策略(如果存在匹配项)、[DefaultSensorsSetting](#defaultsensorssetting) 策略(如果已设置)或用户的个人设置。
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+此策略中定义的 URL 模式不能与 [SensorsAllowedForUrls](#sensorsallowedforurls) 策略中配置的 URL 模式冲突。您无法允许和阻止 URL。
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+有关有效 URL 模式的详细信息，请参见 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -14302,7 +14716,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: SensorsBlockedForUrls
-  - GP 名称: Block access to sensors on specific sites
+  - GP 名称: 阻止访问特定网站上的传感器
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
