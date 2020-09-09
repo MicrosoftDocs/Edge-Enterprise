@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -57,7 +57,7 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Définir la page Nouvel onglet comme page d’accueil|
 |[HomepageLocation](#homepagelocation)|Configurer l’URL de la page d’accueil|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configurer les types d’arrière-plan autorisés pour la mise en page du nouvel onglet|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Définir un nouvel onglet pour le logo de l'entreprise (déconseillé)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Définir un nouvel onglet pour le logo de l'entreprise (obsolète)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Masquer les sites populaires par défaut à partir du nouvel onglet|
 |[NewTabPageLocation](#newtabpagelocation)|Configurer l’URL du nouvel onglet|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Définir les liens rapides du nouvel onglet|
@@ -90,6 +90,7 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 |[PrintHeaderFooter](#printheaderfooter)|Imprimer des en-têtes et des pieds de page|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Définir l’imprimante système par défaut en tant qu’imprimante par défaut|
 |[PrintingEnabled](#printingenabled)|Activer l’impression|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Taille de la page d’impression par défaut|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimer à l’aide de la boîte de dialogue d’impression système|
 ### [*Messagerie native*](#messagerie-native-policies)
 |Nom de la stratégie|Sous-titre|
@@ -126,6 +127,8 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Bloquer les cookies sur des sites spécifiques|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limiter les cookies provenant de sites web spécifiques à la session active|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configurer les cookies|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Contrôler l’utilisation de l’API du système de fichiers pour la lecture|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Contrôler l’utilisation de l’API du système de fichiers pour l’écriture|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Paramètre de géolocalisation par défaut|
 |[DefaultImagesSetting](#defaultimagessetting)|Paramètres des images par défaut|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Contrôler l’utilisation des exceptions de contenu non sécurisé|
@@ -135,6 +138,10 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 |[DefaultPopupsSetting](#defaultpopupssetting)|Paramètres de fenêtre contextuelle par défaut|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Contrôler l’utilisation de l’API web Bluetooth|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Contrôler l’utilisation de l’API WebUSB|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Autoriser l’accès en lecture via l’API du système de fichiers sur ces sites|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Bloquer l’accès en lecture via l’API du système de fichiers sur ces sites|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Autoriser l’accès en écriture aux fichiers et aux répertoires sur ces sites|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Bloquer l’accès en écriture aux fichiers et aux répertoires sur ces sites|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Autoriser les images sur ces sites|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Bloquer les images sur des sites spécifiques|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Autoriser le contenu non sécurisé sur les sites spécifiés|
@@ -150,8 +157,8 @@ Ces tableaux répertorient toutes les stratégies de groupe liées au navigateur
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Autoriser les fenêtres contextuelles sur des sites spécifiques|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquer les fenêtres contextuelles sur des sites spécifiques|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Inscrire les gestionnaires de protocole|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Déterminez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications
+et des conseils pour les services Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Accorder l’accès à des sites spécifiques pour se connecter à des périphériques USB spécifiques|
 |[WebUsbAskForUrls](#webusbaskforurls)|Autoriser WebUSB sur des sites spécifiques|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Bloquer WebUSB sur des sites spécifiques|
@@ -221,7 +228,7 @@ and tips for Microsoft services|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Vérifications d’interception DNS activées|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Définir Microsoft Edge comme navigateur par défaut|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Autoriser l’accès de recherche au menu contextuel du fournisseur de recherche par défaut|
-|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Paramètre des capteurs par défaut|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Contrôler l’utilisation de l’API série|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Exiger que la Liste des sites en Mode entreprise soit disponible avant la navigation d’onglets|
 |[DeleteDataOnMigration](#deletedataonmigration)|Supprimer les anciennes données de navigateur lors de la migration|
@@ -255,7 +262,7 @@ and tips for Microsoft services|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Appliquer Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Utilisez une stratégie de renvoi par défaut no-referrer-when-downgrade (déconseillé)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Forcer le code de mise en réseau à s’exécuter dans le processus du navigateur (obsolète)|
-|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSync](#forcesync)|Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Forcer le mode Limité YouTube minimal|
 |[FullscreenAllowed](#fullscreenallowed)|Autoriser le mode plein écran|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Activer le cache d'autorisation HTTP globalement étendu|
@@ -276,13 +283,13 @@ and tips for Microsoft services|
 |[ImportSearchEngine](#importsearchengine)|Autoriser l’importation des paramètres du moteur de recherche|
 |[ImportShortcuts](#importshortcuts)|Autoriser l’importation des raccourcis|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurer la disponibilité du mode InPrivate|
-|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Activer les avertissements pour les formulaires non sécurisés|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Contrôler la fonctionnalité IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurez la détection de blocage améliorée pour le mode Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurer l’intégration d’Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurer la liste des sites en Mode entreprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Spécifier le type de comportement des navigations « entre les pages » vers des sites non configurés lorsqu’elles commencent sur des pages en mode Internet Explorer|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Autoriser le test du mode Internet Explorer|
 |[IsolateOrigins](#isolateorigins)|Activer l’isolation de site pour des origines spécifiques|
 |[LocalProvidersEnabled](#localprovidersenabled)|Autoriser les suggestions des fournisseurs locaux|
 |[ManagedFavorites](#managedfavorites)|Configurer les favoris|
@@ -321,8 +328,8 @@ and tips for Microsoft services|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sites web ou domaines qui ne nécessitent pas l'autorisation d'utiliser l’attestation de clé de sécurité directe|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Envoyer tous les sites intranet vers Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Envoyer les informations de site pour améliorer les services Microsoft (déconseillé)|
-|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
-|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Autoriser l’accès aux capteurs sur des sites spécifiques|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
 |[SerialAskForUrls](#serialaskforurls)|Autoriser l’API série sur des sites spécifiques|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API série sur des sites spécifiques|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher les raccourcis Microsoft Office dans la barre des favoris|
@@ -975,28 +982,28 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### NewTabPageCompanyLogo
-  #### Définir un nouvel onglet pour le logo de l'entreprise (déconseillé)
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
+  #### Définir un nouvel onglet pour le logo de l'entreprise (obsolète)
   
+  >OBSOLÈTE : cette stratégie est obsolète et ne fonctionne pas après Microsoft Edge85.
   #### Versions prises en charge :
-  - Sur Windows et macOS dans la mesure où 79 ou version ultérieure
+  - Sur Windows et macOS depuis le 79, jusqu’au 85
 
   #### Description
-  Cette stratégie est déconseillée, car elle ne fonctionne pas comme prévu et nous recommandons de ne pas l'utiliser. Elle ne fonctionne pas avec la version 86 de Microsoft Edge.
+  Cette stratégie ne fonctionnait comme prévu en raison de modifications apportées aux exigences opérationnelles. Elle est donc déconseillée et nous recommandons de ne pas l'utiliser.
 
- Spécifie le logo de la société à utiliser sur le nouvel onglet dans Microsoft Edge.
+Spécifie le logo de la société à utiliser sur le nouvel onglet dans Microsoft Edge.
 
- La stratégie doit être configurée en tant que chaîne qui exprime le(s) logo(s) au format JSON. Par exemple : { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+La stratégie doit être configurée en tant que chaîne qui exprime le(s) logo(s) au format JSON. Par exemple : { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo" : { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
 
-Pour configurer cette stratégie, spécifiez l’URL à partir de laquelle Microsoft Edge peut télécharger le logo et son hachage de chiffrement (SHA-256), qui permet de vérifier l’intégrité du téléchargement. Le logo doit être au format PNG ou SVG et sa taille de fichier ne doit pas dépasser 256 Mo. Le logo est téléchargé et mis en cache. Il est téléchargé de nouveau à chaque modification de l’URL ou du hachage. L’URL doit être accessible sans authentification.
+Pour configurer cette stratégie, spécifiez l’URL à partir de laquelle Microsoft Edge peut télécharger le logo et son hachage de chiffrement (SHA-256), qui permet de vérifier l’intégrité du téléchargement. Le logo doit être au format PNG ou SVG et sa taille de fichier ne doit pas dépasser 16 Mo. Le logo est téléchargé et mis en cache. Il est téléchargé de nouveau lors de chaque modification de l’URL ou du hachage. L’URL doit être accessible sans authentification.
 
- Le « default_logo » est obligatoire et est utilisé lorsqu’il n’y a pas d’image d’arrière-plan. Si « light_logo » est spécifié, il est utilisé lorsque le nouvel onglet de l’utilisateur a une image d’arrière-plan. Nous vous conseillons d’utiliser un logo horizontal avec un arrière-plan transparent aligné à gauche et centré verticalement. Le logo doit avoir une hauteur minimale de 16 pixels et des proportions de 32 à 1:1. Le « default_logo » doit avoir un contraste approprié avec un arrière-plan blanc/noir, tandis que le « light_logo » doit avoir un contraste correct par rapport à une image d’arrière-plan.
+Le « default_logo » est obligatoire et est utilisé lorsqu’il n’y a pas d’image d’arrière-plan. Si « light_logo » est spécifié, il est utilisé lorsque le nouvel onglet de l’utilisateur a une image d’arrière-plan. Nous vous conseillons d’utiliser un logo horizontal avec un arrière-plan transparent aligné à gauche et centré verticalement. Le logo doit avoir une hauteur minimale de 32pixels et des proportions de 1:1 à 4:1. Le « default_logo » doit avoir un contraste approprié avec un arrière-plan blanc/noir, tandis que le « light_logo » doit avoir un contraste correct par rapport à une image d’arrière-plan.
 
- Si vous activez cette stratégie, Microsoft Edge télécharge et affiche le(s) logo(s) spécifié(s) sur le nouvel onglet. Les utilisateurs ne peuvent pas remplacer ni masquer le(s) logo(s).
+Si vous activez cette stratégie, Microsoft Edge télécharge et affiche le(s) logo(s) spécifié(s) sur le nouvel onglet. Les utilisateurs ne peuvent pas remplacer ni masquer le(s) logo(s).
 
- Si vous désactivez cette stratégie ou si vous ne la configurez pas, Microsoft Edge n’affiche pas de logo de la société ni de logo Microsoft sur le nouvel onglet.
+Si vous désactivez cette stratégie ou si vous ne la configurez pas, Microsoft Edge n’affiche pas de logo de la société ni de logo Microsoft sur le nouvel onglet.
 
- Pour obtenir de l’aide sur la détermination du hachage SHA-4:1, voir https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Pour obtenir de l’aide sur la détermination du hachage SHA-256, voir https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -1009,7 +1016,7 @@ Pour configurer cette stratégie, spécifiez l’URL à partir de laquelle Micro
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: NewTabPageCompanyLogo
-  - Nom de la stratégie de groupe: Définir un nouvel onglet pour le logo de l'entreprise (déconseillé)
+  - Nom de la stratégie de groupe: Définir un nouvel onglet pour le logo de l'entreprise (obsolète)
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Démarrage, page d’accueil et page Nouvel onglet
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -2533,6 +2540,73 @@ Si vous activez cette stratégie, les utilisateurs peuvent toujours imprimer les
 
   [Revenir au début](#microsoft-edge---stratégies)
 
+  ### PrintingPaperSizeDefault
+  #### Taille de la page d’impression par défaut
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Remplace la taille de la page d’impression par défaut.
+
+name doit contenir l’un des formats répertoriés ou « personnalisé » si la taille de papier requise ne figure pas dans la liste. Si la valeur « personnalisé » est indiquée, propriété custom_size doit être spécifiée. Il décrit la hauteur et la largeur souhaitées en micromètres. Sinon propriété custom_size ne doit pas être spécifiée. La stratégie qui viole ces règles est ignorée.
+
+Si la taille de page n’est pas disponible sur l’imprimante choisie par l’utilisateur, cette stratégie est ignorée.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Dictionnaire
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: PrintingPaperSizeDefault
+  - Nom de la stratégie de groupe: Taille de la page d’impression par défaut
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Impression
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: PrintingPaperSizeDefault
+  - Type de la valeur: REG_SZ
+  ##### Exemple de valeur :
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: PrintingPaperSizeDefault
+  - Exemple de valeur :
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
   ### UseSystemPrintDialog
   #### Imprimer à l’aide de la boîte de dialogue d’impression système
   
@@ -3904,6 +3978,118 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
 
   [Revenir au début](#microsoft-edge---stratégies)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Contrôler l’utilisation de l’API du système de fichiers pour la lecture
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Si vous définissez cette stratégie sur 3, les sites web peuvent demander l’accès en lecture au système de fichiers du système d’exploitation hôte à l’aide de l’API du système de fichiers. Si vous définissez cette stratégie sur 2, l’accès est refusé.
+
+Si vous ne définissez pas cette stratégie, les sites web peuvent demander l’accès. Les utilisateurs peuvent modifier ce paramètre.
+
+Mappage des options de stratégie :
+
+* BlockFileSystemRead (2) = Ne pas autoriser les sites à demander l’accès en lecture aux fichiers et aux répertoires via l’API du système de fichiers
+
+* AskFileSystemRead (3) = Autoriser les sites à demander à l’utilisateur d’octroyer l’accès en lecture aux fichiers et aux répertoires via l’API du système de fichiers
+
+Utilisez les informations ci-dessus lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Entier
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: DefaultFileSystemReadGuardSetting
+  - Nom de la stratégie de groupe: Contrôler l’utilisation de l’API du système de fichiers pour la lecture
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: DefaultFileSystemReadGuardSetting
+  - Type de la valeur: REG_DWORD
+  ##### Exemple de valeur :
+```
+0x00000002
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: DefaultFileSystemReadGuardSetting
+  - Exemple de valeur :
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Contrôler l’utilisation de l’API du système de fichiers pour l’écriture
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Si vous définissez cette stratégie sur 3, les sites web peuvent demander l’accès en écriture au système de fichiers du système d’exploitation hôte à l’aide de l’API du système de fichiers. Si vous définissez cette stratégie sur 2, l’accès est refusé.
+
+Si vous ne définissez pas cette stratégie, les sites web peuvent demander l’accès. Les utilisateurs peuvent modifier ce paramètre.
+
+Mappage des options de stratégie :
+
+* BlockFileSystemWrite (2) = Ne pas autoriser les sites à demander l’accès en écriture aux fichiers et aux répertoires
+
+* AskFileSystemWrite (3) = Autoriser les sites à demander à l’utilisateur d’accorder l’accès en écriture aux fichiers et aux répertoires
+
+Utilisez les informations ci-dessus lors de la configuration de cette stratégie.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Entier
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: DefaultFileSystemWriteGuardSetting
+  - Nom de la stratégie de groupe: Contrôler l’utilisation de l’API du système de fichiers pour l’écriture
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: DefaultFileSystemWriteGuardSetting
+  - Type de la valeur: REG_DWORD
+  ##### Exemple de valeur :
+```
+0x00000002
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: DefaultFileSystemWriteGuardSetting
+  - Exemple de valeur :
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
   ### DefaultGeolocationSetting
   #### Paramètre de géolocalisation par défaut
   
@@ -4413,6 +4599,234 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   - Exemple de valeur :
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### FileSystemReadAskForUrls
+  #### Autoriser l’accès en lecture via l’API du système de fichiers sur ces sites
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  La configuration de cette stratégie vous permet de répertorier les modèles d’URL qui spécifient les sites qui peuvent demander aux utilisateurs de leur accorder l’accès en lecture aux fichiers ou aux répertoires du système de fichiers du système d’exploitation hôte via l’API du système de fichiers.
+
+Si vous laissez la stratégie non définie, cela signifie que [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) s’applique à tous les sites, s’il est défini. Si ce n’est pas le cas, les paramètres personnels des utilisateurs s’appliquent.
+
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Aucune des stratégies n’est prioritaire si une URL correspond aux deux.
+
+Pour obtenir des informations détaillées sur les modèles de url valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Liste de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: FileSystemReadAskForUrls
+  - Nom de la stratégie de groupe: Autoriser l’accès en lecture via l’API du système de fichiers sur ces sites
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de la valeur: liste de REG_SZ
+  ##### Exemple de valeur :
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: FileSystemReadAskForUrls
+  - Exemple de valeur :
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### FileSystemReadBlockedForUrls
+  #### Bloquer l’accès en lecture via l’API du système de fichiers sur ces sites
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Si vous définissez cette stratégie, vous pouvez répertorier les modèles d’URL qui spécifient les sites qui ne peuvent pas demander aux utilisateurs de leur accorder l’accès en lecture aux fichiers ou aux répertoires du système de fichiers du système d’exploitation hôte via l’API du système de fichiers.
+
+Si vous ne définissez pas cette stratégie, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) s’applique à tous les sites, s’il est défini. Si ce n’est pas le cas, les paramètres personnels des utilisateurs s’appliquent.
+
+Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemReadAskForUrls](#filesystemreadaskforurls). Aucune des stratégies n’est prioritaire si une URL correspond aux deux.
+
+Pour obtenir des informations détaillées sur les modèles de url valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Liste de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: FileSystemReadBlockedForUrls
+  - Nom de la stratégie de groupe: Bloquer l’accès en lecture via l’API du système de fichiers sur ces sites
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de la valeur: liste de REG_SZ
+  ##### Exemple de valeur :
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: FileSystemReadBlockedForUrls
+  - Exemple de valeur :
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### FileSystemWriteAskForUrls
+  #### Autoriser l’accès en écriture aux fichiers et aux répertoires sur ces sites
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Si vous définissez cette stratégie, vous pouvez répertorier les modèles d’URL qui spécifient les sites qui peuvent demander aux utilisateurs de leur accorder l’accès en écriture aux fichiers ou aux répertoires du système de fichiers du système d’exploitation hôte.
+
+     Si vous ne définissez pas cette stratégie, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) s’applique à tous les sites, s’il est défini. Si ce n’est pas le cas, les paramètres personnels des utilisateurs s’appliquent.
+
+     Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Aucune des stratégies n’est prioritaire si une URL correspond aux deux.
+url      Pour obtenir des informations détaillées sur les modèles de
+valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Liste de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: FileSystemWriteAskForUrls
+  - Nom de la stratégie de groupe: Autoriser l’accès en écriture aux fichiers et aux répertoires sur ces sites
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de la valeur: liste de REG_SZ
+  ##### Exemple de valeur :
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: FileSystemWriteAskForUrls
+  - Exemple de valeur :
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Revenir au début](#microsoft-edge---stratégies)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Bloquer l’accès en écriture aux fichiers et aux répertoires sur ces sites
+  
+  
+  #### Versions prises en charge :
+  - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
+
+  #### Description
+  Si vous définissez cette stratégie, vous pouvez répertorier les modèles d’URL qui spécifient les sites qui ne peuvent pas demander aux utilisateurs de leur accorder l’accès en écriture aux fichiers ou aux répertoires du système de fichiers du système d’exploitation hôte.
+
+     Si vous ne définissez pas cette stratégie, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) s’applique à tous les sites, s’il est défini. Si ce n’est pas le cas, les paramètres personnels des utilisateurs s’appliquent.
+
+     Les modèles d’URL ne peuvent pas entrer en conflit avec [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Aucune des stratégies n’est prioritaire si une URL correspond aux deux.
+url      Pour obtenir des informations détaillées sur les modèles de
+valides, consultez https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Fonctionnalités prises en charge :
+  - Peut être obligatoire: Oui
+  - Peut être recommandé(e): Non
+  - Actualisation de la stratégie dynamique: Oui
+
+  #### Type de données:
+  - Liste de chaînes
+
+  #### Informations et paramètres Windows
+  ##### Informations sur la stratégie de groupe (ADMX)
+  - Nom unique de stratégie de groupe: FileSystemWriteBlockedForUrls
+  - Nom de la stratégie de groupe: Bloquer l’accès en écriture aux fichiers et aux répertoires sur ces sites
+  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
+  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
+  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
+  ##### Paramètres du Registre Windows
+  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Chemin (Recommandé): N/A
+  - Nom de la valeur: 1, 2, 3, ...
+  - Type de la valeur: liste de REG_SZ
+  ##### Exemple de valeur :
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Paramètres et informations Mac
+  - Nom de la clé de préférence: FileSystemWriteBlockedForUrls
+  - Exemple de valeur :
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -5243,19 +5657,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### Déterminez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications
+et des conseils pour les services Microsoft
   
   
   #### Versions prises en charge :
   - Sur Windows depuis 86 ou ultérieur
 
   #### Description
-  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+  Déterminez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications et des conseils pour les services Microsoft.
 
-If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+              Si vous activez ce paramètre ou ne le configurez pas, les expériences et recommandations à la une sont activées.
 
-If you disable this setting, spotlight experiences and recommendations are turned off.
+Si vous désactivez ce paramètre, les expériences et recommandations à la une sont désactivées.
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -5268,8 +5682,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: SpotlightExperiencesAndRecommendationsEnabled
-  - Nom de la stratégie de groupe: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - Nom de la stratégie de groupe: Déterminez si les utilisateurs peuvent recevoir des images d’arrière-plan et du texte personnalisés, des suggestions, des notifications
+et des conseils pour les services Microsoft
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/Paramètres de contenu
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -8688,26 +9102,26 @@ La valeur de la stratégie est appliquée uniquement lorsque la stratégie de [D
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### DefaultSensorsSetting
-  #### Default sensors setting
+  #### Paramètre des capteurs par défaut
   
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
 
   #### Description
-  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+  Déterminez si les sites web peuvent accéder et utiliser des capteurs comme les capteurs de mouvement et de luminosité. Vous pouvez bloquer ou autoriser complètement l’accès aux capteurs pour les sites web.
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+Définir la stratégie sur 1 permet aux sites web d’accéder aux capteurs et de les utiliser. Définir la stratégie sur 2 refuse l’autorisation aux capteurs.
 
-You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+Vous pouvez remplacer cette stratégie pour des modèles d’URL spécifiques en utilisant les stratégies [SensorsAllowedForUrls](#sensorsallowedforurls) et [SensorsBlockedForUrls](#sensorsblockedforurls).
 
-If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+Si vous ne configurez pas cette stratégie, les sites web peuvent accéder aux capteurs et les utiliser, et les utilisateurs peuvent modifier ce paramètre. Il s’agit de la valeur par défaut globale pour [SensorsAllowedForUrls](#sensorsallowedforurls) et [SensorsBlockedForUrls](#sensorsblockedforurls).
 
 Mappage des options de stratégie :
 
-* AllowSensors (1) = Allow sites to access sensors
+* AllowSensors (1) = Autoriser les sites à accéder aux capteurs
 
-* BlockSensors (2) = Do not allow any site to access sensors
+* BlockSensors (2) = Ne pas autoriser les sites à accéder aux capteurs
 
 Utilisez les informations ci-dessus lors de la configuration de cette stratégie.
 
@@ -8722,7 +9136,7 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: DefaultSensorsSetting
-  - Nom de la stratégie de groupe: Default sensors setting
+  - Nom de la stratégie de groupe: Paramètre des capteurs par défaut
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -10572,24 +10986,24 @@ Cette stratégie est désactivée par défaut. Si cette option est activée, les
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### ForceSync
-  #### Force synchronization of browser data and do not show the sync consent prompt
+  #### Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation
   
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
 
   #### Description
-  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+  Force la synchronisation des données dans Microsoft Edge. Cette stratégie empêche également l’utilisateur de désactiver la synchronisation.
 
-If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+Si vous ne configurez pas cette stratégie, les utilisateurs peuvent activer ou désactiver la synchronisation. Si vous activez cette stratégie, les utilisateurs ne peuvent pas désactiver la synchronisation.
 
-For this policy to work as intended,
-[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+Pour que cette stratégie fonctionne correctement, la stratégie
+[BrowserSignin](#browsersignin) ne doit pas être configurée, ou doit être activée. Si [ForceSync](#forcesync) est désactivée, [BrowserSignin](#browsersignin) ne sera pas prise en compte.
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+[SyncDisabled](#syncdisabled) ne doit pas être configurée ou doit être définie sur False. Si elle est définie sur True, [ForceSync](#forcesync) ne sera pas prise en compte.
 
-0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+0 = ne pas démarrer automatiquement la synchronisation et afficher le consentement de synchronisation (par défaut)
+1 = forcer la synchronisation pour Azure AD/Azure AD-dégradation du profil utilisateur et ne pas afficher l’invite de consentement de synchronisation
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -10602,7 +11016,7 @@ For this policy to work as intended,
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: ForceSync
-  - Nom de la stratégie de groupe: Force synchronization of browser data and do not show the sync consent prompt
+  - Nom de la stratégie de groupe: Forcer la synchronisation des données du navigateur et ne pas afficher l’invite de consentement de synchronisation
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -11743,16 +12157,16 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### InsecureFormsWarningsEnabled
-  #### Enable warnings for insecure forms
+  #### Activer les avertissements pour les formulaires non sécurisés
   
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
 
   #### Description
-  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
-If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
-If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+  Cette stratégie contrôle la gestion des formulaires non sécurisés (formulaires envoyés via HTTP), incorporés dans des sites sécurisés (HTTPs) dans le navigateur.
+Si vous activez cette stratégie ou si vous ne la définissez pas, un avertissement s’affiche sur la page entière lorsqu’un formulaire non sécurisé est envoyé. De plus, une bulle d’avertissement s’affiche en regard des champs de formulaire lorsqu’ils sont sélectionnés, et la saisie automatique est désactivée pour ces formulaires.
+Si vous désactivez cette stratégie, les avertissements ne s’affichent pas pour les formulaires non sécurisés et la saisie automatique fonctionne normalement.
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -11765,7 +12179,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: InsecureFormsWarningsEnabled
-  - Nom de la stratégie de groupe: Enable warnings for insecure forms
+  - Nom de la stratégie de groupe: Activer les avertissements pour les formulaires non sécurisés
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -12063,25 +12477,25 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
+  #### Autoriser le test du mode Internet Explorer
   
   
   #### Versions prises en charge :
   - Sur Windows depuis 86 ou ultérieur
 
   #### Description
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  Cette stratégie remplace la stratégie d’indicateur de test en mode Internet Explorer. Elle permet aux utilisateurs d’ouvrir un onglet mode Internet Explorer à partir de l’option de menu de l’interface utilisateur.
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+Ce paramètre fonctionne conjointement avec :
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) est définie sur « IEMode »
+et
+[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) la stratégie  pour laquelle la liste comporte au moins une entrée.
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+Si vous activez cette stratégie, les utilisateurs peuvent ouvrir l’onglet mode Internet Explorer à partir de l’option d’interface utilisateur et naviguer dans le site actif vers un site en mode IE.
 
-If you disable this policy, users can't see the UI option in the menu directly.
+Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas afficher l’option interface utilisateur directement dans le menu.
 
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+Si vous ne configurez pas cette stratégie, vous pouvez définir manuellement l’indicateur de test de mode Internet Explorer.
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -12094,7 +12508,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: InternetExplorerIntegrationTestingAllowed
-  - Nom de la stratégie de groupe: Allow Internet Explorer mode testing
+  - Nom de la stratégie de groupe: Autoriser le test du mode Internet Explorer
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -14216,22 +14630,22 @@ pour activer cette stratégie, [MetricsReportingEnabled](#metricsreportingenable
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### SensorsAllowedForUrls
-  #### Allow access to sensors on specific sites
+  #### Autoriser l’accès aux capteurs sur des sites spécifiques
   
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
 
   #### Description
-  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+  Définissez une liste de sites, basée sur des modèles d’URL, qui peuvent accéder et utiliser des capteurs comme les capteurs de mouvement et de luminosité.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Si vous ne configurez pas cette stratégie, la valeur par défaut globale de la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si elle est définie) ou de la configuration personnelle de l’utilisateur est utilisée pour tous les sites.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé : la stratégie [SensorsBlockedForUrls](#sensorsblockedforurls) (s’il existe une correspondance), la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si elle est définie) ou les paramètres personnels de l’utilisateur.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsBlockedForUrls](#sensorsblockedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Pour obtenir des informations détaillées sur les modèles d’URL valides, rendez-vous à l’adresse [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -14244,7 +14658,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: SensorsAllowedForUrls
-  - Nom de la stratégie de groupe: Allow access to sensors on specific sites
+  - Nom de la stratégie de groupe: Autoriser l’accès aux capteurs sur des sites spécifiques
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
@@ -14275,22 +14689,22 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### SensorsBlockedForUrls
-  #### Block access to sensors on specific sites
+  #### Bloquer l’accès aux capteurs sur des sites spécifiques
   
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 86 ou version ultérieure
 
   #### Description
-  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+  Définissez une liste de sites, basée sur des modèles d’URL, qui ne peuvent pas accéder aux capteurs tels que les capteurs de mouvement et de luminosité.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Si vous ne configurez pas cette stratégie, la valeur par défaut globale de la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si elle est définie) ou de la configuration personnelle de l’utilisateur est utilisée pour tous les sites.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+      Pour les modèles d’URL qui ne correspondent pas à cette stratégie, l’ordre de priorité suivant est utilisé : la stratégie [SensorsAllowedForUrls](#sensorsallowedforurls) (s’il existe une correspondance), la stratégie [DefaultSensorsSetting](#defaultsensorssetting) (si elle est définie) ou les paramètres personnels de l’utilisateur.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+Les modèles d’URL définis dans cette stratégie ne peuvent pas entrer en conflit avec ceux configurés dans la stratégie [SensorsAllowedForUrls](#sensorsallowedforurls). Vous ne pouvez pas autoriser et bloquer une URL.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Pour obtenir des informations détaillées sur les modèles d’URL valides, voir [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -14303,7 +14717,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: SensorsBlockedForUrls
-  - Nom de la stratégie de groupe: Block access to sensors on specific sites
+  - Nom de la stratégie de groupe: Bloquer l’accès aux capteurs sur des sites spécifiques
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
