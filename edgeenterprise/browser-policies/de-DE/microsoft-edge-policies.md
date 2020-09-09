@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -52,6 +52,7 @@ In diesen Tabellen werden alle browserbezogenen Gruppenrichtlinien aufgelistet, 
 |[PrintHeaderFooter](#printheaderfooter)|Kopf- und Fußzeilen drucken|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Den Systemstandarddrucker als Standarddrucker festlegen|
 |[PrintingEnabled](#printingenabled)|Drucken ermöglichen|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Standard-Seitenformat für den Druck|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Über Systemdruckdialogfeld drucken|
 ### [*Erweiterungen*](#erweiterungen-policies)
 |Richtlinienname|Beschriftung|
@@ -80,6 +81,8 @@ In diesen Tabellen werden alle browserbezogenen Gruppenrichtlinien aufgelistet, 
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Cookies auf bestimmten Websites blockieren|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Cookies von bestimmten Websites auf die aktuelle Sitzung beschränken|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Cookies konfigurieren|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Verwendung der Dateisystem-API für Lesezugriff steuern|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Verwendung der Dateisystem-API für Schreibzugriff steuern|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Standardeinstellung für Geolocation|
 |[DefaultImagesSetting](#defaultimagessetting)|Standardeinstellung für Bilder|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Nutzung von Ausnahmen für unsicheren Inhalt steuern|
@@ -89,6 +92,10 @@ In diesen Tabellen werden alle browserbezogenen Gruppenrichtlinien aufgelistet, 
 |[DefaultPopupsSetting](#defaultpopupssetting)|Standardeinstellung für Popupfenster|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Verwendung der Web-Bluetooth-API steuern|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Verwendung der WebUSB-API steuern|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Lesezugriff über die Dateisystem-API auf diesen Websites zulassen|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Lesezugriff über die Dateisystem-API auf diesen Websites blockieren|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites zulassen|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites blockieren|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Bilder auf diesen Websites zulassen|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Bilder auf bestimmten Websites blockieren|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Unsicheren Inhalt auf angegebenen Websites zulassen|
@@ -104,8 +111,8 @@ In diesen Tabellen werden alle browserbezogenen Gruppenrichtlinien aufgelistet, 
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Popupfenster auf bestimmten Websites zulassen|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Popupfenster auf bestimmten Websites blockieren|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Protokollhandler registrieren|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Entscheiden Sie, ob Benutzer benutzerdefinierte Hintergrundbilder, Texte, Vorschläge, Benachrichtigungen
+und Tipps für Microsoft-Dienste erhalten können.|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Gewährt bestimmten Websites Zugriff, damit eine Verbindung mit bestimmten USB-Geräten hergestellt werden kann.|
 |[WebUsbAskForUrls](#webusbaskforurls)|WebUSB auf bestimmten Websites zulassen|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|WebUSB auf bestimmten Websites blockieren|
@@ -221,7 +228,7 @@ and tips for Microsoft services|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Überprüfungen auf DNS-Abfangvorgänge aktiviert|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge als Standardbrowser festlegen|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Standardsuchanbieter Zugriff auf die Suche im Kontextmenü gestatten|
-|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Standardeinstellung für Sensoren|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Verwendung der API für den seriellen Anschluss steuern|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Voraussetzen, dass die Website-Liste zum Unternehmensmodus vor der Registerkartennavigation verfügbar ist|
 |[DeleteDataOnMigration](#deletedataonmigration)|Alte Browserdaten bei der Migration löschen|
@@ -255,7 +262,7 @@ and tips for Microsoft services|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google SafeSearch erzwingen|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Verwenden Sie eine Referrer-Standardrichtlinie vom Typ „no-referrer-when-downgrade“ (veraltet)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Ausführung von Netzwerkcode im Browserprozess erzwingen (veraltet)|
-|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSync](#forcesync)|Synchronisierung von Browserdaten erzwingen und die Zustimmungsaufforderung zur Synchronisierung nicht anzeigen|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Minimalen eingeschränkten Modus für YouTube erzwingen|
 |[FullscreenAllowed](#fullscreenallowed)|Vollbildmodus zulassen|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Globalen bereichsbezogenen HTTP-Authentifizierungscache aktivieren|
@@ -282,7 +289,7 @@ and tips for Microsoft services|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer-Integration konfigurieren|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Enterprise Mode Site List konfigurieren|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Angeben des Verhaltens von seiteninternen Navigationsvorgängen zu nicht konfigurierten Websites, wenn diese über Seiten im Internet Explorer-Modus gestartet werden|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Testen des Internet Explorer-Modus zulassen|
 |[IsolateOrigins](#isolateorigins)|Websiteisolation für bestimmte Ursprünge aktivieren|
 |[LocalProvidersEnabled](#localprovidersenabled)|Vorschläge von lokalen Anbietern zulassen|
 |[ManagedFavorites](#managedfavorites)|Favoriten konfigurieren|
@@ -740,6 +747,73 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer in Microsoft Edge nicht
   - Beispielwert:
 ``` xml
 <true/>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### PrintingPaperSizeDefault
+  #### Standard-Seitenformat für den Druck
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Überschreibt das Standard-Seitenformat für den Druck.
+
+name sollte eines der aufgelisteten Formate oder "Benutzerdefiniert" enthalten, wenn das erforderliche Papierformat nicht in der Liste enthalten ist. Wenn der Wert "Benutzerdefiniert" angegeben ist, sollte die Eigenschaft custom_size angegeben werden. Sie beschreibt die gewünschte Höhe und Breite in Mikrometer. Andernfalls sollte die Eigenschaft custom_size nicht angegeben werden. Richtlinien, die diese Regeln verletzen, werden ignoriert.
+
+Wenn das Seitenformat auf dem vom Benutzer ausgewählten Drucker nicht verfügbar ist, wird diese Richtlinie ignoriert.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Wörterbuch
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: PrintingPaperSizeDefault
+  - Gruppenrichtlinienname: Standard-Seitenformat für den Druck
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Drucken
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: PrintingPaperSizeDefault
+  - Werttyp: REG_SZ
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: PrintingPaperSizeDefault
+  - Beispielwert:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
 ```
   
 
@@ -1942,6 +2016,118 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
 
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Verwendung der Dateisystem-API für Lesezugriff steuern
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie diese Richtlinie auf "3" festlegen, können Websites Lesezugriff auf das Dateisystem des Hostbetriebssystems über die Dateisystem-API anfordern. Wenn Sie diese Richtlinie auf "2" festlegen, wird der Zugriff verweigert.
+
+Wenn Sie diese Richtlinie nicht festlegen, können Websites Zugriff anfordern. Benutzer können diese Einstellung ändern.
+
+Zuordnung der Richtlinienoptionen:
+
+* BlockFileSystemRead (2) = Keiner Website erlauben, Lesezugriff auf Dateien und Verzeichnisse über die Dateisystem-API anzufordern
+
+* AskFileSystemRead (3) = Websites erlauben, vom Benutzer Lesezugriff auf Dateien und Verzeichnisse über die Dateisystem-API anzufordern
+
+Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Ganze Zahl
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: DefaultFileSystemReadGuardSetting
+  - Gruppenrichtlinienname: Verwendung der Dateisystem-API für Lesezugriff steuern
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: DefaultFileSystemReadGuardSetting
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000002
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: DefaultFileSystemReadGuardSetting
+  - Beispielwert:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Verwendung der Dateisystem-API für Schreibzugriff steuern
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie diese Richtlinie auf "3" festlegen, können Websites Schreibzugriff auf das Dateisystem des Hostbetriebssystems über die Dateisystem-API anfordern. Wenn Sie diese Richtlinie auf "2" festlegen, wird der Zugriff verweigert.
+
+Wenn Sie diese Richtlinie nicht festlegen, können Websites Zugriff anfordern. Benutzer können diese Einstellung ändern.
+
+Zuordnung der Richtlinienoptionen:
+
+* BlockFileSystemWrite (2) = Keiner Website erlauben, Schreibzugriff auf Dateien und Verzeichnisse anzufordern
+
+* AskFileSystemWrite (3) = Websites erlauben, vom Benutzer Schreibzugriff auf Dateien und Verzeichnisse anzufordern
+
+Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Ganze Zahl
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: DefaultFileSystemWriteGuardSetting
+  - Gruppenrichtlinienname: Verwendung der Dateisystem-API für Schreibzugriff steuern
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: DefaultFileSystemWriteGuardSetting
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000002
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: DefaultFileSystemWriteGuardSetting
+  - Beispielwert:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
   ### DefaultGeolocationSetting
   #### Standardeinstellung für Geolocation
   
@@ -2451,6 +2637,234 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   - Beispielwert:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### FileSystemReadAskForUrls
+  #### Lesezugriff über die Dateisystem-API auf diesen Websites zulassen
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie die Richtlinie festlegen, können Sie die URL-Muster auflisten, mit denen angegeben wird, welche Websites Benutzer um Lesezugriff auf Dateien oder Verzeichnisse im Dateisystem des Hostbetriebssystems über die Dateisystem-API fragen dürfen.
+
+Wenn Sie diese Richtlinie nicht festlegen, gilt [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) für alle Websites, sofern diese festgelegt ist. Ist dies nicht der Fall, werden die persönlichen Einstellungen der Benutzer übernommen.
+
+URL-Muster dürfen nicht mit [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls) in Konflikt stehen. Keine Richtlinie hat Vorrang, wenn eine URL mit beidem übereinstimmt.
+
+Ausführliche Informationen zu gültigen url-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste der Zeichenfolgen
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: FileSystemReadAskForUrls
+  - Gruppenrichtlinienname: Lesezugriff über die Dateisystem-API auf diesen Websites zulassen
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: Liste von REG_SZ
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: FileSystemReadAskForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### FileSystemReadBlockedForUrls
+  #### Lesezugriff über die Dateisystem-API auf diesen Websites blockieren
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie diese Richtlinie festlegen, können Sie die URL-Muster auflisten, mit denen angegeben wird, welche Websites Benutzer nicht um Lesezugriff auf Dateien oder Verzeichnisse im Dateisystem des Hostbetriebssystems über die Dateisystem-API fragen dürfen.
+
+Wenn Sie diese Richtlinie nicht festlegen, gilt [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) für alle Websites, sofern diese festgelegt ist. Ist dies nicht der Fall, werden die persönlichen Einstellungen der Benutzer übernommen.
+
+     URL-Muster dürfen nicht mit [FileSystemReadAskForUrls](#filesystemreadaskforurls) in Konflikt stehen. Keine Richtlinie hat Vorrang, wenn eine URL mit beidem übereinstimmt.
+
+     Ausführliche Informationen zu gültigen url-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste der Zeichenfolgen
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: FileSystemReadBlockedForUrls
+  - Gruppenrichtlinienname: Lesezugriff über die Dateisystem-API auf diesen Websites blockieren
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: Liste von REG_SZ
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: FileSystemReadBlockedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### FileSystemWriteAskForUrls
+  #### Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites zulassen
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie diese Richtlinie festlegen, können Sie die URL-Muster auflisten, mit denen angegeben wird, welche Websites Benutzer um Schreibzugriff auf Dateien oder Verzeichnisse im Dateisystem des Hostbetriebssystems fragen dürfen.
+
+Wenn Sie diese Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) für alle Websites, sofern diese festgelegt ist. Ist dies nicht der Fall, werden die persönlichen Einstellungen der Benutzer übernommen.
+
+     URL-Muster dürfen nicht mit [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls) in Konflikt stehen. Keine Richtlinie hat Vorrang, wenn eine URL mit beidem übereinstimmt.
+
+     Ausführliche Informationen zu gültigen url-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste der Zeichenfolgen
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: FileSystemWriteAskForUrls
+  - Gruppenrichtlinienname: Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites zulassen
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: Liste von REG_SZ
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: FileSystemWriteAskForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites blockieren
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 86 oder höher
+
+  #### Beschreibung
+  Wenn Sie diese Richtlinie festlegen, können Sie die URL-Muster auflisten, mit denen angegeben wird, welche Websites Benutzer nicht um Schreibzugriff auf Dateien oder Verzeichnisse im Dateisystem des Hostbetriebssystems fragen dürfen.
+
+Wenn Sie diese Richtlinie nicht festlegen, gilt [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) für alle Websites, sofern diese festgelegt ist. Ist dies nicht der Fall, werden die persönlichen Einstellungen der Benutzer übernommen.
+
+     URL-Muster dürfen nicht mit [FileSystemWriteAskForUrls](#filesystemwriteaskforurls) in Konflikt stehen. Keine Richtlinie hat Vorrang, wenn eine URL mit beidem übereinstimmt.
+
+     Ausführliche Informationen zu gültigen url-Mustern finden Sie unter https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Liste der Zeichenfolgen
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: FileSystemWriteBlockedForUrls
+  - Gruppenrichtlinienname: Schreibzugriff auf Dateien und Verzeichnisse auf diesen Websites blockieren
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: 1, 2, 3, ...
+  - Werttyp: Liste von REG_SZ
+  ##### Beispielwert:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: FileSystemWriteBlockedForUrls
+  - Beispielwert:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -3281,19 +3695,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### Entscheiden Sie, ob Benutzer benutzerdefinierte Hintergrundbilder, Texte, Vorschläge, Benachrichtigungen
+und Tipps für Microsoft-Dienste erhalten können.
   
   
   #### Unterstützte Versionen:
   - Unter Windows seit Version 86 oder höher
 
   #### Beschreibung
-  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+  Wählen Sie aus, ob Benutzer benutzerdefinierte Hintergrundbilder, Texte, Vorschläge, Benachrichtigungen und Tipps für Microsoft-Dienste erhalten.
 
-If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+Wenn Sie diese Einstellung aktivieren oder nicht konfigurieren, werden Spotlight-erleb nisse und Empfehlungen aktiviert.
 
-If you disable this setting, spotlight experiences and recommendations are turned off.
+Wenn Sie diese Einstellung deaktivieren, werden Spotlighterfahrungen und Empfehlungen deaktiviert.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -3306,8 +3720,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: SpotlightExperiencesAndRecommendationsEnabled
-  - Gruppenrichtlinienname: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - Gruppenrichtlinienname: Entscheiden Sie, ob Benutzer benutzerdefinierte Hintergrundbilder, Texte, Vorschläge, Benachrichtigungen
+und Tipps für Microsoft-Dienste erhalten können.
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/Inhaltseinstellungen
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
@@ -5325,27 +5739,27 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
 
   ### NewTabPageCompanyLogo
   #### Neues Firmenlogo auf der Registerkartenseite festlegen (veraltet)
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird gegenwärtig noch unterstützt, aber in einem zukünftigen Release ausgemustert.
   
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach Microsoft Edge Version 85 nicht mehr.
   #### Unterstützte Versionen:
-  - Bei Windows und macOS seit 79 oder höher
+  - Bei Windows und macOS seit 79, bis 85
 
   #### Beschreibung
-  Diese Richtlinie ist veraltet, da sie nicht wie erwartet funktioniert. Wir empfehlen Ihnen, sie nicht zu verwenden. Sie funktioniert in Microsoft Edge Version 86 nicht.
+  Diese Richtlinie hat aufgrund von Änderungen bei betrieblichen Anforderungen nicht wie erwartet funktioniert. Sie ist deshalb veraltet und sollte nicht verwendet werden.
 
-Gibt das Firmenlogo an, das auf der neuen Tabseite in Microsoft Edge verwendet werden soll.
+  Gibt das Firmenlogo an, das auf der neuen Tabseite in Microsoft Edge verwendet werden soll.
 
-Die Richtlinie muss als Zeichenfolge konfiguriert werden, die die Logos im JSON-Format ausdrückt. Beispiel: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+  Die Richtlinie muss als Zeichenfolge konfiguriert werden, die die Logos im JSON-Format ausdrückt. Beispiel: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
 
-Sie konfigurieren diese Richtlinie durch Angeben der URL, von der Microsoft Edge das Logo und den zugehörigen kryptographischen Hash (SHA-256) herunterladen kann, der zur Überprüfung der Integrität des Downloads verwendet wird. Das Logo muss im PNG- oder SVG-Format vorliegen und darf maximal 16 MB groß sein. Das Logo wird heruntergeladen und zwischengespeichert, und es wird erneut heruntergeladen, wenn sich die URL oder der Hash ändern. Die URL muss ohne jegliche Authentifizierung zugänglich sein.
+  Sie konfigurieren diese Richtlinie durch Angeben der URL, von der Microsoft Edge das Logo und den zugehörigen kryptographischen Hash (SHA-256) herunterladen kann, der zur Überprüfung der Integrität des Downloads verwendet wird. Das Logo muss im PNG- oder SVG-Format vorliegen und darf maximal 16 MB groß sein. Das Logo wird heruntergeladen und zwischengespeichert, und es wird erneut heruntergeladen, wenn sich die URL oder der Hash ändert. Die URL muss ohne jegliche Authentifizierung zugänglich sein.
 
-Die Datei “default_logo“ ist erforderlich und wird verwendet, wenn kein Hintergrundbild vorhanden ist. Wenn “light_logo“ angegeben ist, wird es verwendet, wenn die neue Registerkartenseite des Benutzers ein Hintergrundbild besitzt. Wir empfehlen ein horizontales Logo mit transparentem Hintergrund, das linksbündig ausgerichtet und vertikal zentriert ist. Das Logo muss eine Mindesthöhe von 32 Pixeln und ein Seitenverhältnis zwischen 1:1 und 4:1 aufweisen. “default_logo“ muss sich angemessen von einem weißen/schwarzen Hintergrund abheben, während sich “light_logo“ angemessen von einem Hintergrundbild abheben muss.
+  "default_logo" ist erforderlich und wird verwendet, wenn kein Hintergrundbild vorhanden ist. Wenn "light_logo" angegeben ist, wird es verwendet, wenn die neue Tabseite des Benutzers ein Hintergrundbild aufweist. Wir empfehlen ein horizontales Logo mit transparentem Hintergrund, das linksbündig ausgerichtet und vertikal zentriert ist. Das Logo sollte eine Mindesthöhe von 32 Pixel und ein Seitenverhältnis zwischen 1:1 und 4:1 aufweisen. "default_logo" sollte sich angemessen von einem weiß/schwarzen Hintergrund abheben, während sich "light_logo" angemessen von einem Hintergrundbild abheben sollte.
 
-Wenn Sie diese Richtlinie aktivieren, lädt Microsoft Edge die angegebenen Logos herunter und zeigt sie auf der neuen Registerkartenseite an. Benutzer können die Logos nicht überschreiben oder ausblenden.
+Wenn Sie diese Richtlinie aktivieren, lädt Microsoft Edge die angegebenen Logos herunter und zeigt sie auf der neuen Tabseite an. Benutzer können die Logos nicht überschreiben oder ausblenden.
 
-Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigt Microsoft Edge auf der neuen Registerkartenseite entweder kein Firmenlogo oder ein Microsoft-Logo an.
+  Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, zeigt  Microsoft Edge auf der neuen Tabseite entweder kein Firmenlogo oder ein Microsoft-Logo an.
 
-Hilfe zum Ermitteln des SHA-256-Hash finden Sie unter “https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash“.
+ Hilfe zum Ermitteln des SHA-256-Hash finden Sie unter "https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash".
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -8689,26 +9103,26 @@ Der Richtlinienwert wird nur angewendet, wenn die Richtlinie “[DefaultSearchPr
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### DefaultSensorsSetting
-  #### Default sensors setting
+  #### Standardeinstellung für Sensoren
   
   
   #### Unterstützte Versionen:
   - Bei Windows und macOS seit 86 oder höher
 
   #### Beschreibung
-  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+  Legt fest, ob Websites auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen und diese verwenden können. Sie können den Zugriff von Websites auf Sensoren vollständig blockieren oder zulassen.
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+Wenn Sie die Richtlinie auf “1” festlegen, können Websites auf Sensoren zugreifen und sie verwenden. Durch Festlegen der Richtlinie auf “2” wird der Zugriffs auf Sensoren verweigert.
 
-You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+Sie können diese Richtlinie für bestimmte URL-Muster mithilfe der Richtlinien [SensorsAllowedForUrls](#sensorsallowedforurls) und [SensorsBlockedForUrls](#sensorsblockedforurls) außer Kraft setzen.
 
-If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+Wenn Sie diese Richtlinie nicht konfigurieren, können Websites auf Sensoren zugreifen und sie verwenden, und Benutzer können diese Einstellung ändern. Dies ist die globale Standardeinstellung für [SensorsAllowedForUrls](#sensorsallowedforurls) und [SensorsBlockedForUrls](#sensorsblockedforurls).
 
 Zuordnung der Richtlinienoptionen:
 
-* AllowSensors (1) = Allow sites to access sensors
+* AllowSensors (1) = Zugriff auf Sensoren auf Websites zulassen
 
-* BlockSensors (2) = Do not allow any site to access sensors
+* BlockSensors (2) = Nicht zulassen, dass Websites auf Sensoren zugreifen
 
 Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
 
@@ -8723,7 +9137,7 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: DefaultSensorsSetting
-  - Gruppenrichtlinienname: Default sensors setting
+  - Gruppenrichtlinienname: Standardeinstellung für Sensoren
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
@@ -10573,24 +10987,24 @@ Diese Richtlinie ist standardmäßig deaktiviert. Wenn sie aktiviert ist, sind B
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### ForceSync
-  #### Force synchronization of browser data and do not show the sync consent prompt
+  #### Synchronisierung von Browserdaten erzwingen und die Zustimmungsaufforderung zur Synchronisierung nicht anzeigen
   
   
   #### Unterstützte Versionen:
   - Bei Windows und macOS seit 86 oder höher
 
   #### Beschreibung
-  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+  Erzwingt die Datensynchronisierung in Microsoft Edge. Durch diese Richtlinie wird auch verhindert, dass Benutzer die Synchronisierung deaktiviert können.
 
-If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer die Synchronisierung aktivieren oder deaktivieren. Wenn Sie diese Richtlinie aktivieren, können Benutzer die Synchronisierung nicht ausschalten.
 
-For this policy to work as intended,
-[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+Damit diese Richtlinie ordnungsgemäß funktioniert, darf die Richtlinie
+[BrowserSignin](#browsersignin) nicht konfiguriert werden oder auf "aktiviert" festgelegt sein. Wenn [ForceSync](#forcesync) auf "deaktiviert" festgelegt ist, wird [BrowserSignin](#browsersignin) nicht wirksam.
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+[SyncDisabled](#syncdisabled) darf nicht konfiguriert oder auf “Falsch” festgelegt werden. Wenn sie auf "Wahr" festgelegt ist, wird [ForceSync](#forcesync) nicht wirksam.
 
-0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+0 = Synchronisierung nicht automatisch starten und die Zustimmung zur Synchronisierung anzeigen (Standard)
+1 = Synchronisierung für heruntergestufte Azure AD/Azure AD-Benutzerprofile erzwingen und die Zustimmungsaufforderung zur Synchronisierung nicht anzeigen
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -10603,7 +11017,7 @@ For this policy to work as intended,
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: ForceSync
-  - Gruppenrichtlinienname: Force synchronization of browser data and do not show the sync consent prompt
+  - Gruppenrichtlinienname: Synchronisierung von Browserdaten erzwingen und die Zustimmungsaufforderung zur Synchronisierung nicht anzeigen
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
@@ -11751,9 +12165,9 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   - Bei Windows und macOS seit 86 oder höher
 
   #### Beschreibung
-  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
-If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
-If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+  Diese Richtlinie steuert die Behandlung unsicherer Formulare (Formulare, die über HTTP übermittelt werden), die in sichere (HTTPS-)Sites im Browser eingebettet sind.
+Wenn Sie diese Richtlinie aktivieren oder nicht festlegen, wird eine vollständige Seitenwarnung angezeigt, wenn ein unsicheres Formular übermittelt wird. Darüber hinaus wird eine Warnmeldung neben den Formularfeldern angezeigt, wenn diese markiert sind, und Autofill wird für diese Formulare deaktiviert.
+Wenn Sie diese Richtlinie deaktivieren, werden für unsichere Formulare keine Warnungen angezeigt, und Autofill funktioniert normal.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -12064,25 +12478,25 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
+  #### Testen des Internet Explorer-Modus zulassen
   
   
   #### Unterstützte Versionen:
   - Unter Windows seit Version 86 oder höher
 
   #### Beschreibung
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  Diese Richtlinie ersetzt die Richtlinie für das IE-Modus-Testkennzeichen. Sie ermöglicht Benutzern, als Menüoption der Benutzeroberfläche eine "IE-Modus"-Registerkarte zu öffnen.
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+Diese Einstellung funktioniert zusammen mit:
+.        [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) ist auf "IEMode"
+und die Richtlinie
+ [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) festgelegt, deren Liste mindestens einen Eintrag enthalten muss.
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+Wenn Sie diese Richtlinie aktivieren, können Benutzer die Registerkarte "IE-Modus" als Option auf der Benutzeroberflächen öffnen und die aktuelle Website im IE-Modus aufrufen.
 
-If you disable this policy, users can't see the UI option in the menu directly.
+Wenn Sie diese Richtlinie deaktivieren, wird Benutzern die Option nicht direkt im Menü der Benutzeroberfläche angezeigt.
 
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+Wenn Sie diese Richtlinie nicht konfigurieren, können Sie das IE-Modus-Testkennzeichen manuell einrichten.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -12095,7 +12509,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: InternetExplorerIntegrationTestingAllowed
-  - Gruppenrichtlinienname: Allow Internet Explorer mode testing
+  - Gruppenrichtlinienname: Testen des Internet Explorer-Modus zulassen
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
@@ -14222,15 +14636,15 @@ Um diese Richtlinie zu aktivieren, muss [MetricsReportingEnabled](#metricsreport
   - Bei Windows und macOS seit 86 oder höher
 
   #### Beschreibung
-  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+  Definiert eine auf URL-Mustern basierende Liste mit Websites, die auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen und diese verwenden können.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Wenn Sie diese Richtlinie nicht konfigurieren, wird für alle Websites der globale Standardwert aus der Richtlinie [DefaultSensorsSetting](#defaultsensorssetting) (falls festgelegt) oder die persönliche Konfiguration des Benutzers verwendet.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+Für URL-Muster, die nicht mit dieser Richtlinie übereinstimmen, wird die Prioritätsreihenfolge verwendet: Richtlinie [SensorsBlockedForUrls](#sensorsblockedforurls) (falls eine Übereinstimmung besteht), Richtlinie [DefaultSensorsSetting](#defaultsensorssetting) (falls festgelegt) oder die persönlichen Einstellungen des Benutzers.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit denen in der Richtlinie [SensorsBlockedForUrls](#sensorsblockedforurls) konfigurierten in Konflikt stehen. Sie können eine URL nicht gleichzeitig zulassen und blockieren.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -14281,15 +14695,15 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   - Bei Windows und macOS seit 86 oder höher
 
   #### Beschreibung
-  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+  Definiert eine auf URL-Mustern basierende Liste mit Websites, die nicht auf Sensoren wie Bewegungs- und Lichtsensoren zugreifen können.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Wenn Sie diese Richtlinie nicht konfigurieren, wird für alle Websites der globale Standardwert aus der Richtlinie [DefaultSensorsSetting](#defaultsensorssetting) (falls festgelegt) oder die persönliche Konfiguration des Benutzers verwendet.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+Für URL-Muster, die nicht mit dieser Richtlinie übereinstimmen, wird die Prioritätsreihenfolge verwendet: Richtlinie [SensorsAllowedForUrls](#sensorsallowedforurls) (falls eine Übereinstimmung besteht), Richtlinie [DefaultSensorsSetting](#defaultsensorssetting) (falls festgelegt) oder die persönlichen Einstellungen des Benutzers.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+Die in dieser Richtlinie definierten URL-Muster dürfen nicht mit denen in der Richtlinie [SensorsAllowedForUrls](#sensorsallowedforurls) konfigurierten in Konflikt stehen. Sie können eine URL nicht gleichzeitig zulassen und blockieren.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Ausführliche Informationen zu gültigen URL-Mustern finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
