@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -55,7 +55,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Назначить страницу новой вкладки домашней страницей|
 |[HomepageLocation](#homepagelocation)|Настроить URL-адрес домашней страницы|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Настройка фоновых типов, разрешенных для макета страницы новой вкладки|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Настройка логотипа компании на странице новой вкладки (не рекомендуется)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Настройка логотипа компании на странице новой вкладки (устарела)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Скрыть популярные сайты по умолчанию со страницы новой вкладки|
 |[NewTabPageLocation](#newtabpagelocation)|Настроить URL-адрес страницы новой вкладки|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Настройка быстрых ссылок для страницы новой вкладки|
@@ -85,6 +85,8 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Блокировать файлы cookie на определенных сайтах|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Ограничить файлы cookie от определенных веб-сайтов для текущего сеанса|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Настройка файлов cookie|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Управление использованием API файловой системы для чтения|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Управление использованием API файловой системы для записи|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Настройка географического положения по умолчанию|
 |[DefaultImagesSetting](#defaultimagessetting)|Настройка изображений по умолчанию|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Контролировать использование исключений для небезопасного содержимого|
@@ -94,6 +96,10 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[DefaultPopupsSetting](#defaultpopupssetting)|Настройка всплывающего окна по умолчанию|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Управление использованием веб-API Bluetooth|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Управление использованием API WebUSB|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Разрешить доступ на чтение через API файловой системы на этих сайтах|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Блокировать доступ на чтение через API файловой системы на этих сайтах|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Разрешить доступ на запись к файлам и каталогам на этих сайтах|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Блокировать доступ на запись к файлам и каталогам на этих сайтах|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Разрешить изображения на этих сайтах|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Блокировать изображения на определенных сайтах|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Разрешить небезопасное содержимое на указанных сайтах|
@@ -109,8 +115,8 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Разрешить всплывающие окна на определенных сайтах|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Блокировать всплывающие окна на определенных сайтах|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Регистрация обработчиков протоколов|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления,
+и советы для служб Майкрософт|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Разрешить для определенных сайтов доступ к определенным USB-устройствам|
 |[WebUsbAskForUrls](#webusbaskforurls)|Разрешить WebUSB на определенных сайтах|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Блокировать WebUSB на определенных сайтах|
@@ -121,6 +127,7 @@ and tips for Microsoft services|
 |[PrintHeaderFooter](#printheaderfooter)|Печать колонтитулов|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Задать системный принтер по умолчанию в качестве принтера по умолчанию|
 |[PrintingEnabled](#printingenabled)|Включить печать|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Размер страницы печати по умолчанию|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Печать с помощью системного диалогового окна печати|
 ### [*Проверка подлинности HTTP*](#проверка-подлинности-http-policies)
 |Имя политики|Заголовок|
@@ -221,7 +228,7 @@ and tips for Microsoft services|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Проверки перехвата DNS включены|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Назначить Microsoft Edge стандартным браузером|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Разрешить поиск в контекстном меню службы поиска по умолчанию|
-|[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Стандартный параметр для датчиков|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Управлять использованием API Serial|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Требуется доступность списка сайтов в режиме предприятия перед переходом на вкладку|
 |[DeleteDataOnMigration](#deletedataonmigration)|Удалить старые данные браузера при переносе|
@@ -255,7 +262,7 @@ and tips for Microsoft services|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Принудительно применить функцию "Безопасный поиск Google"|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Использовать стандартную политику источника ссылки "нет источника ссылки при понижении версии". (не рекомендуется)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Принудительно выполнять сетевой код в процессе браузера (устарела)|
-|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSync](#forcesync)|Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Принудительное применение минимального режима ограниченного доступа на YouTube|
 |[FullscreenAllowed](#fullscreenallowed)|Разрешить работу в полноэкранном режиме|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Включить кэш проверки подлинности HTTP глобальной области|
@@ -276,13 +283,13 @@ and tips for Microsoft services|
 |[ImportSearchEngine](#importsearchengine)|Разрешить импортировать настройки поисковой системы|
 |[ImportShortcuts](#importshortcuts)|Разрешить импорт ярлыков|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Настроить доступность режима InPrivate|
-|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Включить предупреждения для небезопасных форм|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Управление функцией IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Настройка расширенного определения зависания для режима Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Настройка интеграции с Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Настроить список сайтов для режима предприятия|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Укажите способ обработки переходов "на странице" для ненастроенных сайтов, выполненных со страниц в режиме Internet Explorer|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer|
 |[IsolateOrigins](#isolateorigins)|Включить изоляцию сайта для определенных источников|
 |[LocalProvidersEnabled](#localprovidersenabled)|Разрешить предложения локальных поставщиков|
 |[ManagedFavorites](#managedfavorites)|Настроить "Избранное"|
@@ -321,8 +328,8 @@ and tips for Microsoft services|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Веб-сайты и домены, которые не требуют разрешения на использование прямой аттестации ключа безопасности|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Отправка всех сайтов интрасети в Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Отправлять сведения о сайте для улучшения служб Майкрософт (не рекомендуется)|
-|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
-|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Разрешить доступ к датчикам на определенных сайтах|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчикам на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное"|
@@ -930,14 +937,14 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   [В начало](#microsoft-edge:-политики)
 
   ### NewTabPageCompanyLogo
-  #### Настройка логотипа компании на странице новой вкладки (не рекомендуется)
-  >УСТАРЕЛО. Эта политика устарела. В настоящее время она поддерживается, но станет устаревшей в будущем выпуске.
+  #### Настройка логотипа компании на странице новой вкладки (устарела)
   
+  >УСТАРЕВШАЯ: эта политика устарела. Она не действует в версиях Microsoft Edge, следующих за версией 85.
   #### Поддерживаемые версии:
-  - На Windows и macOS с 79 или более поздней версии
+  - На Windows и macOS с 79 до 85
 
   #### Описание
-  Применение этой политики не рекомендуется, поскольку она работает неправильно. Она не будет работать в Microsoft Edge версии 86.
+  Эта политика работала неправильно из-за изменений операционных требований. Поэтому она является устаревшей, и ее не следует использовать.
 
 Определяет логотип компании, который будет использоваться на странице новой вкладки в Microsoft Edge.
 
@@ -945,7 +952,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 Этот параметр политики настраивается путем указания URL-адреса, с которого Microsoft Edge может загрузить требуемый логотип, и хэша шифрования (SHA-256), который используется для проверки целостности загрузки. Логотип должен быть сохранен в формате PNG или SVG, а размер файла логотипа не должен превышать 16 МБ. Логотип загружается и хэшируется, и будет повторно загружаться при каждом изменении URL-адреса или хэша. URL-адрес должен быть доступен без какой-либо проверки подлинности.
 
-Элемент "default_logo" является обязательным. Он будет использоваться в случае отсутствия фонового изображения. Если предоставлен элемент "light_logo", он будет использоваться в случаях, когда у страницы новой вкладки пользователя есть фоновое изображение. Рекомендуется использовать горизонтальный логотип с прозрачным фоном, выровненный по левому краю и отцентрированный по вертикали. Высота логотипа должна составлять не меньше 32 пикселей, а соотношение сторон от 1:1 до 4:1. Элемент "default_logo" должен быть достаточно контрастным на черном/белом фоне, а элемент "light_logo" должен выглядеть достаточно контрастным на фоновом изображении.
+Элемент "default_logo" является обязательным. Он будет использоваться в случае отсутствия фонового изображения. Если предоставлен элемент "light_logo", он будет использоваться в случаях, когда у страницы новой вкладки пользователя есть фоновое изображение. Рекомендуется использовать горизонтальный логотип с прозрачным фоном, выровненный по левому краю и вертикально по центру. Высота логотипа должна составлять не меньше 32 пикселей, а соотношение сторон от 1:1 до 4:1. Элемент "default_logo" должен быть достаточно контрастным на черном/белом фоне, а элемент "light_logo" должен выглядеть достаточно контрастным на фоновом изображении.
 
 Если этот параметр политики включен, Microsoft Edge загружает и отображает указанный логотип на странице новой вкладки. Пользователи не могут скрыть или переопределить его.
 
@@ -964,7 +971,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: NewTabPageCompanyLogo
-  - Имя групповой политики: Настройка логотипа компании на странице новой вкладки (не рекомендуется)
+  - Имя групповой политики: Настройка логотипа компании на странице новой вкладки (устарела)
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Запуск, домашняя страница и страница новой вкладки
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -2192,6 +2199,118 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [В начало](#microsoft-edge:-политики)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Управление использованием API файловой системы для чтения
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Если присвоить этой политике значение "3", веб-сайты смогут запрашивать доступ на чтение к файловой системе главной ОС с помощью API файловой системы. Если присвоить этой политике значение "2", доступ будет запрещен.
+
+Если не настроить эту политику, веб-сайты смогут запрашивать доступ. Пользователи могут изменить этот параметр.
+
+Сопоставление параметров политики:
+
+* BlockFileSystemRead (2) = Запретить всем сайтам запрашивать доступ на чтение файлов и каталогов через API файловой системы
+
+* AskFileSystemRead (3) = Разрешить сайтам запрашивать у пользователя доступ на чтение файлов и каталогов через API файловой системы
+
+Используйте предоставленную выше информацию при настройке этой политики.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Целое
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: DefaultFileSystemReadGuardSetting
+  - Имя групповой политики: Управление использованием API файловой системы для чтения
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: DefaultFileSystemReadGuardSetting
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000002
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: DefaultFileSystemReadGuardSetting
+  - Пример значения:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Управление использованием API файловой системы для записи
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Если присвоить этой политике значение "3", веб-сайты смогут запрашивать доступ на запись к файловой системе главной ОС с помощью API файловой системы. Если присвоить этой политике значение "2", доступ будет запрещен.
+
+Если не настроить эту политику, веб-сайты смогут запрашивать доступ. Пользователи могут изменить этот параметр.
+
+Сопоставление параметров политики:
+
+* BlockFileSystemWrite (2) = Запретить всем сайтам запрашивать доступ на запись к файлам и каталогам
+
+* AskFileSystemWrite (3) = Разрешить сайтам запрашивать у пользователя доступ на запись к файлам и каталогам
+
+Используйте предоставленную выше информацию при настройке этой политики.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Целое
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: DefaultFileSystemWriteGuardSetting
+  - Имя групповой политики: Управление использованием API файловой системы для записи
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: DefaultFileSystemWriteGuardSetting
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000002
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: DefaultFileSystemWriteGuardSetting
+  - Пример значения:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
   ### DefaultGeolocationSetting
   #### Настройка географического положения по умолчанию
   
@@ -2701,6 +2820,234 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - Пример значения:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### FileSystemReadAskForUrls
+  #### Разрешить доступ на чтение через API файловой системы на этих сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Настройка этой политики позволяет вам перечислять шаблоны URL-адресов, указывающие, какие сайты могут запрашивать у пользователей доступ на чтение файлов или каталогов в файловой системе главной ОС посредством API файловой системы.
+
+В случае отсутствия настройки этой политики ко всем сайтам применяется политика [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting), если она задана. В противном случае применяются личные параметры пользователей.
+
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+
+Подробные сведения о допустимых шаблонах url см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: FileSystemReadAskForUrls
+  - Имя групповой политики: Разрешить доступ на чтение через API файловой системы на этих сайтах
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: Список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: FileSystemReadAskForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### FileSystemReadBlockedForUrls
+  #### Блокировать доступ на чтение через API файловой системы на этих сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Если настроить эту политику, вы сможете перечислять шаблоны URL-адресов, указывающие, какие сайты не могут запрашивать у пользователей доступ на чтение файлов или каталогов в файловой системе главной ОС посредством API файловой системы.
+
+Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
+
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadAskForUrls](#filesystemreadaskforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+
+Подробные сведения о допустимых шаблонах url см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: FileSystemReadBlockedForUrls
+  - Имя групповой политики: Блокировать доступ на чтение через API файловой системы на этих сайтах
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: Список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: FileSystemReadBlockedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### FileSystemWriteAskForUrls
+  #### Разрешить доступ на запись к файлам и каталогам на этих сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Если настроить эту политику, вы сможете перечислять шаблоны URL-адресов, указывающие, какие сайты могут запрашивать у пользователей доступ на запись к файлам или каталогам в файловой системе главной ОС.
+
+Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
+
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+
+Подробные сведения о допустимых шаблонах url см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: FileSystemWriteAskForUrls
+  - Имя групповой политики: Разрешить доступ на запись к файлам и каталогам на этих сайтах
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: Список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: FileSystemWriteAskForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Блокировать доступ на запись к файлам и каталогам на этих сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Если настроить эту политику, вы сможете перечислять шаблоны URL-адресов, указывающие, какие сайты не могут запрашивать у пользователей доступ на запись к файлам или каталогам в файловой системе главной ОС.
+
+Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
+
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+
+Подробные сведения о допустимых шаблонах url см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: FileSystemWriteBlockedForUrls
+  - Имя групповой политики: Блокировать доступ на запись к файлам и каталогам на этих сайтах
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: Список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: FileSystemWriteBlockedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -3531,19 +3878,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [В начало](#microsoft-edge:-политики)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления,
+и советы для служб Майкрософт
   
   
   #### Поддерживаемые версии:
   - На Windows с 86 или более поздней версии
 
   #### Описание
-  Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
+  Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления, и советы для служб Майкрософт.
 
-If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
+Если включить или не настроить этот параметр, функции выделения важного и рекомендации будут включены.
 
-If you disable this setting, spotlight experiences and recommendations are turned off.
+Если этот параметр отключен, функции выделения важного и рекомендации будут отключены.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -3556,8 +3903,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: SpotlightExperiencesAndRecommendationsEnabled
-  - Имя групповой политики: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - Имя групповой политики: Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления,
+и советы для служб Майкрософт
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -3974,6 +4321,73 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   - Пример значения:
 ``` xml
 <true/>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### PrintingPaperSizeDefault
+  #### Размер страницы печати по умолчанию
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 86 или более поздней версии
+
+  #### Описание
+  Переопределяет размер страницы печати, используемый по умолчанию.
+
+Параметр name должен содержать один из указанных форматов или значение "custom", если нужный размер бумаги отсутствует в списке. Если присвоено значение "custom", следует указать свойство custom_size. Оно описывает нужную высоту и ширину в микрометрах. В противном случае свойство custom_size указывать не следует. Политика, нарушающая эти правила, игнорируется.
+
+Если соответствующий размер страницы недоступен на принтере, выбранном пользователем, эта политика игнорируется.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Словарь
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: PrintingPaperSizeDefault
+  - Имя групповой политики: Размер страницы печати по умолчанию
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/Печать
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: PrintingPaperSizeDefault
+  - Тип значения: REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: PrintingPaperSizeDefault
+  - Пример значения:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
 ```
   
 
@@ -8689,26 +9103,26 @@ API SpeechSynthesis: [https://go.microsoft.com/fwlink/?linkid=2110038](https://g
   [В начало](#microsoft-edge:-политики)
 
   ### DefaultSensorsSetting
-  #### Default sensors setting
+  #### Стандартный параметр для датчиков
   
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 86 или более поздней версии
 
   #### Описание
-  Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
+  Укажите, могут ли веб-сайты получать доступ к датчикам, например к датчикам движения и света. Вы можете полностью заблокировать или разрешить веб-сайтам доступ к датчикам.
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+Присвоение политике значения "1" разрешает веб-сайтам доступ и использование датчиков. Присвоение политике значения "2" запрещает доступ к датчикам.
 
-You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
+Вы можете переопределить эту политику для определенных шаблонов URL-адресов с помощью политик [SensorsAllowedForUrls](#sensorsallowedforurls) и [SensorsBlockedForUrls](#sensorsblockedforurls).
 
-If you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls).
+Если эта политика не настроена, веб-сайты смогут получать доступ к датчикам и использовать их, а пользователи смогут изменять этот параметр. Это глобальное значение по умолчанию для [SensorsAllowedForUrls](#sensorsallowedforurls) и [SensorsBlockedForUrls](#sensorsblockedforurls).
 
 Сопоставление параметров политики:
 
-* AllowSensors (1) = Allow sites to access sensors
+* AllowSensors (1) = Разрешить сайтам доступ к датчикам
 
-* BlockSensors (2) = Do not allow any site to access sensors
+* BlockSensors (2) = Запретить доступ к датчикам для всех сайтов
 
 Используйте предоставленную выше информацию при настройке этой политики.
 
@@ -8723,7 +9137,7 @@ If you don't configure this policy, websites can access and use sensors, and use
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: DefaultSensorsSetting
-  - Имя групповой политики: Default sensors setting
+  - Имя групповой политики: Стандартный параметр для датчиков
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -10573,24 +10987,24 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   [В начало](#microsoft-edge:-политики)
 
   ### ForceSync
-  #### Force synchronization of browser data and do not show the sync consent prompt
+  #### Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации
   
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 86 или более поздней версии
 
   #### Описание
-  Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
+  Принудительно синхронизирует данные в Microsoft Edge. Эта политика также запрещает пользователям отключать синхронизацию.
 
-If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
+Если эта политика не настроена, пользователи смогут включать и отключать синхронизацию. Если включить эту политику, пользователи не смогут отключить синхронизацию.
 
-For this policy to work as intended,
-[BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [ForceSync](#forcesync) is set to disabled, then [BrowserSignin](#browsersignin) will not take affect.
+Для правильной работы этой политики,
+политика [BrowserSignin](#browsersignin) не должна быть настроена или должна быть включена. Если политика [ForceSync](#forcesync) отключена, то политика [BrowserSignin](#browsersignin) не будет применяться.
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+Политика [SyncDisabled](#syncdisabled) не должна быть настроена или ей должно быть присвоено значение False. Если ей присвоено значение True, то политика [ForceSync](#forcesync) не будет применяться.
 
-0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+0 = не запускать синхронизацию автоматически и отображать запрос разрешения на синхронизацию (по умолчанию)
+1 = принудительная синхронизация будет включена для профиля пользователя Azure AD/устаревшей службы Azure AD и не будет отображаться запрос на разрешение синхронизации
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -10603,7 +11017,7 @@ For this policy to work as intended,
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: ForceSync
-  - Имя групповой политики: Force synchronization of browser data and do not show the sync consent prompt
+  - Имя групповой политики: Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -11744,16 +12158,16 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   [В начало](#microsoft-edge:-политики)
 
   ### InsecureFormsWarningsEnabled
-  #### Enable warnings for insecure forms
+  #### Включить предупреждения для небезопасных форм
   
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 86 или более поздней версии
 
   #### Описание
-  This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
-If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
-If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
+  Эта политика управляет обработкой небезопасных форм (форм, отправляемых по протоколу HTTP), внедренных в безопасные (HTTPS) сайты в браузере.
+Если включить или не настроить эту политику, при отправке небезопасной формы будет отображаться предупреждение на всю страницу. Кроме того, будет отображаться пузырек предупреждения рядом с полями формы при наведении на них фокуса, и для этих форм будет отключено автозаполнение.
+Если отключить эту политику, предупреждения не будут отображаться для небезопасных форм, а автозаполнение будет работать нормально.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -11766,7 +12180,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: InsecureFormsWarningsEnabled
-  - Имя групповой политики: Enable warnings for insecure forms
+  - Имя групповой политики: Включить предупреждения для небезопасных форм
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -12064,25 +12478,25 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   [В начало](#microsoft-edge:-политики)
 
   ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
+  #### Разрешить тестирование режима Internet Explorer
   
   
   #### Поддерживаемые версии:
   - На Windows с 86 или более поздней версии
 
   #### Описание
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  Эта политика заменяет политику флага ie-mode-test. Она позволяет пользователям открыть вкладку режима IE из параметра меню пользовательского интерфейса.
 
-This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+Этот параметр работает совместно с:
+политикой [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) с установленным значением "IEMode"
+и
+политикой [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), список которой содержит минимум одну запись.
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+Если эта политика включена, пользователи могут открыть вкладку режима IE из параметра пользовательского интерфейса и перевести текущий сайт в режим IE.
 
-If you disable this policy, users can't see the UI option in the menu directly.
+Если эта политика отключена, пользователи не увидят параметр пользовательского интерфейса непосредственно в меню.
 
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+Если не настроить эту политику, вы сможете настроить флаг ie-mode-test вручную.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -12095,7 +12509,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: InternetExplorerIntegrationTestingAllowed
-  - Имя групповой политики: Allow Internet Explorer mode testing
+  - Имя групповой политики: Разрешить тестирование режима Internet Explorer
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -14215,22 +14629,22 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   [В начало](#microsoft-edge:-политики)
 
   ### SensorsAllowedForUrls
-  #### Allow access to sensors on specific sites
+  #### Разрешить доступ к датчикам на определенных сайтах
   
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 86 или более поздней версии
 
   #### Описание
-  Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
+  На основании шаблонов URL-адресов определите список сайтов, которые могут получать доступ к датчикам и использовать их, например датчики движения и света.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личная конфигурация пользователя.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsBlockedForUrls](#sensorsblockedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SensorsBlockedForUrls](#sensorsblockedforurls) (если существует совпадение), политика [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личные параметры пользователя.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
+Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsBlockedForUrls](#sensorsblockedforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о допустимых шаблонах URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -14243,7 +14657,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: SensorsAllowedForUrls
-  - Имя групповой политики: Allow access to sensors on specific sites
+  - Имя групповой политики: Разрешить доступ к датчикам на определенных сайтах
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -14274,22 +14688,22 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   [В начало](#microsoft-edge:-политики)
 
   ### SensorsBlockedForUrls
-  #### Block access to sensors on specific sites
+  #### Блокировать доступ к датчикам на определенных сайтах
   
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 86 или более поздней версии
 
   #### Описание
-  Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
+  На основании шаблонов URL-адресов определите список сайтов, которые не могут получать доступ к датчикам, например к датчикам движения и света.
 
-If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личная конфигурация пользователя.
 
-For URL patterns that don't match this policy, the following order of precedence is used: The [SensorsAllowedForUrls](#sensorsallowedforurls) policy (if there is a match), the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set), or the user's personal settings.
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SensorsAllowedForUrls](#sensorsallowedforurls) (если существует совпадение), политика [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личные параметры пользователя.
 
-The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
+Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsAllowedForUrls](#sensorsallowedforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о допустимых шаблонах URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -14302,7 +14716,7 @@ For detailed information about valid URL patterns, please see [https://go.micros
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: SensorsBlockedForUrls
-  - Имя групповой политики: Block access to sensors on specific sites
+  - Имя групповой политики: Блокировать доступ к датчикам на определенных сайтах
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
