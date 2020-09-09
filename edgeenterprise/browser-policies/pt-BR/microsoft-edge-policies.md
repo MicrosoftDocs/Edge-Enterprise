@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/07/2020
+ms.date: 09/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -59,6 +59,8 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Bloquear cookies em sites específicos|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limitar cookies de sites específicos para a sessão atual|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configurar cookies|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Controlar o uso da API do Sistema de Arquivos para leitura|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Controlar o uso da API do Sistema de Arquivos para escrita|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Configuração de geolocalização padrão|
 |[DefaultImagesSetting](#defaultimagessetting)|Configuração de imagens padrão|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Controlar uso de exceções de conteúdo não seguro|
@@ -68,6 +70,10 @@ Estas tabelas listam todas as políticas de grupo relacionadas ao navegador disp
 |[DefaultPopupsSetting](#defaultpopupssetting)|Configuração de janela pop-up padrão|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Controlar o uso da API Web Bluetooth|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Controlar o uso da API WebUSB|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Permitir acesso de leitura através da API do Sistema de Arquivos nesses sites|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Bloquear o acesso de leitura pela API do Sistema de Arquivos nestes sites|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Permitir o acesso de gravação a arquivos e diretórios nesses sites|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Bloquear o acesso de gravação a arquivos e diretórios nesses sites|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Permitir imagens nestes sites|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Bloquear imagens em sites específicos|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Permitir conteúdo não seguro em sites especificados|
@@ -125,6 +131,7 @@ e dicas para serviços Microsoft|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir cabeçalhos e rodapés|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Definir a impressora padrão do sistema como a impressora padrão|
 |[PrintingEnabled](#printingenabled)|Habilitar impressão|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamanho da página de impressão padrão|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando a caixa de diálogo de impressão do sistema|
 ### [*Inicialização&comma; página inicial e página nova guia*](#inicialização-página-inicial-e-página-nova-guia-policies)
 |Nome da Política|Legenda|
@@ -132,7 +139,7 @@ e dicas para serviços Microsoft|
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Definir a página nova guia como a home page|
 |[HomepageLocation](#homepagelocation)|Configurar a URL da home page|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configurar os tipos de plano de fundo permitidos para o novo layout de página de guia|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Definir o logotipo da empresa da página Nova guia (preterida)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Definir o logotipo da empresa da página Nova guia (obsoleto)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ocultar os sites principais padrão da página de nova guia|
 |[NewTabPageLocation](#newtabpagelocation)|Configurar a URL da página de nova guia|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Definir links rápidos da página de nova guia|
@@ -1114,6 +1121,118 @@ Use as informações anteriores ao configurar essa política.
 
   [Voltar ao início](#microsoft-edge---políticas)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Controlar o uso da API do Sistema de Arquivos para leitura
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Se você definir essa política como 3, os sites poderão solicitar acesso de leitura ao sistema de arquivos do sistema operacional do host usando a API do sistema de arquivos. Se você definir esta política como 2, o acesso será negado.
+
+Se você não definir essa política, os sites poderão pedir acesso. Os usuários podem alterar essa configuração.
+
+Mapeamento das opções da política:
+
+* BlockFileSystemRead (2) = Não permitir que nenhum site solicite o acesso de leitura a arquivos e diretórios por meio da API do Sistema de Arquivos
+
+* AskFileSystemRead (3) = Permitir que os sites peçam ao usuário para conceder acesso de leitura a arquivos e diretórios por meio da API do Sistema de Arquivos
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Número inteiro
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: DefaultFileSystemReadGuardSetting
+  - Nome da GP: Controlar o uso da API do Sistema de Arquivos para leitura
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: DefaultFileSystemReadGuardSetting
+  - Tipo de Valor: REG_DWORD
+  ##### Exemplo de valor:
+```
+0x00000002
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: DefaultFileSystemReadGuardSetting
+  - Exemplo de valor:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Controlar o uso da API do Sistema de Arquivos para escrita
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Se você definir essa política como 3, os sites poderão solicitar acesso de leitura ao sistema de arquivos do sistema operacional do host usando a API do sistema de arquivos. Se você definir esta política como 2, o acesso será negado.
+
+Se você não definir essa política, os sites poderão pedir acesso. Os usuários podem alterar essa configuração.
+
+Mapeamento das opções da política:
+
+* BlockFileSystemWrite (2) = Não permitir que nenhum site solicite o acesso de gravação a arquivos e diretórios
+
+* AskFileSystemWrite (3) = Permitir que os sites peçam ao usuário para conceder acesso de gravação a arquivos e diretórios
+
+Use as informações anteriores ao configurar essa política.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Número inteiro
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: DefaultFileSystemWriteGuardSetting
+  - Nome da GP: Controlar o uso da API do Sistema de Arquivos para escrita
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: DefaultFileSystemWriteGuardSetting
+  - Tipo de Valor: REG_DWORD
+  ##### Exemplo de valor:
+```
+0x00000002
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: DefaultFileSystemWriteGuardSetting
+  - Exemplo de valor:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
   ### DefaultGeolocationSetting
   #### Configuração de geolocalização padrão
   
@@ -1623,6 +1742,234 @@ Use as informações anteriores ao configurar essa política.
   - Exemplo de valor:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### FileSystemReadAskForUrls
+  #### Permitir acesso de leitura através da API do Sistema de Arquivos nesses sites
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  A configuração da política permite listar os padrões de URL que especificam quais sites podem fazer com que os usuários os concedas a eles o acesso de leitura a arquivos ou diretórios no sistema de arquivos do sistema operacional do host pela API do sistema de arquivos.
+
+Deixando a política sem definição significa, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) se aplica a todos os sites, se ela estiver definida. Caso contrário, as configurações pessoais dos usuários serão aplicadas. os padrões de URL do
+
+não podem entrar em conflito com [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Nenhuma política tem prioridade se uma URL corresponder a ambos.
+
+Para obter informações detalhadas sobre os padrões de url válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: FileSystemReadAskForUrls
+  - Nome da GP: Permitir acesso de leitura através da API do Sistema de Arquivos nesses sites
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: 1, 2, 3, ...
+  - Tipo de Valor: lista de REG_SZ
+  ##### Exemplo de valor:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: FileSystemReadAskForUrls
+  - Exemplo de valor:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### FileSystemReadBlockedForUrls
+  #### Bloquear o acesso de leitura pela API do Sistema de Arquivos nestes sites
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Se você definir essa política, poderá listar os padrões de URL que especificam quais sites não podem solicitar que os usuários os concedas a eles o acesso de leitura a arquivos ou diretórios no sistema de arquivos do sistema operacional do host pela API do Sistema de Arquivos.
+
+Se você não definir essa política, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) será aplicada a todos os sites, se ela estiver definida. Caso contrário, as configurações pessoais dos usuários serão aplicadas.
+
+Os padrões de URL do não podem entrar em conflito com [FileSystemReadAskForUrls](#filesystemreadaskforurls). Nenhuma política tem prioridade se uma URL corresponder a ambos.
+
+Para obter informações detalhadas sobre os padrões de url válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: FileSystemReadBlockedForUrls
+  - Nome da GP: Bloquear o acesso de leitura pela API do Sistema de Arquivos nestes sites
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: 1, 2, 3, ...
+  - Tipo de Valor: lista de REG_SZ
+  ##### Exemplo de valor:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: FileSystemReadBlockedForUrls
+  - Exemplo de valor:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### FileSystemWriteAskForUrls
+  #### Permitir o acesso de gravação a arquivos e diretórios nesses sites
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Se você definir essa política, poderá listar os padrões de URL que especificam quais sites podem solicitar aos usuários que lhes conceda acesso de gravação a arquivos ou diretórios no sistema de arquivos do sistema operacional do host.
+
+Se você não definir essa política, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) será aplicada a todos os sites, se ela estiver definida. Caso contrário, as configurações pessoais dos usuários serão aplicadas.
+
+Os padrões de URL não podem entrar em conflito com [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Nenhuma política terá precedência se uma URL corresponder com ambas.
+
+Para obter informações detalhadas sobre padrões url válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: FileSystemWriteAskForUrls
+  - Nome da GP: Permitir o acesso de gravação a arquivos e diretórios nesses sites
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: 1, 2, 3, ...
+  - Tipo de Valor: lista de REG_SZ
+  ##### Exemplo de valor:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: FileSystemWriteAskForUrls
+  - Exemplo de valor:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Bloquear o acesso de gravação a arquivos e diretórios nesses sites
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Se você definir essa política, poderá listar os padrões de URL que especificam quais sites não podem solicitar que os usuários os concedas a eles o acesso de gravação a arquivos ou diretórios no sistema de arquivos do sistema operacional do host.
+
+Se você não definir essa política, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) será aplicada a todos os sites, se ela estiver definida. Caso contrário, as configurações pessoais dos usuários serão aplicadas. Os padrões de URL do
+
+não podem entrar em conflito com [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Nenhuma política tem prioridade se uma URL corresponder a ambos.
+
+Para obter informações detalhadas sobre os padrões de url válidos, confira https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Lista de cadeias de caracteres
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: FileSystemWriteBlockedForUrls
+  - Nome da GP: Bloquear o acesso de gravação a arquivos e diretórios nesses sites
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Configurações de conteúdo
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: 1, 2, 3, ...
+  - Tipo de Valor: lista de REG_SZ
+  ##### Exemplo de valor:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: FileSystemWriteBlockedForUrls
+  - Exemplo de valor:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -4082,6 +4429,73 @@ Se você desabilitar essa política, os usuários não poderão imprimir usando 
 
   [Voltar ao início](#microsoft-edge---políticas)
 
+  ### PrintingPaperSizeDefault
+  #### Tamanho da página de impressão padrão
+  
+  
+  #### Versões com suporte:
+  - Em Windows e macOS desde 86 ou posterior
+
+  #### Descrição
+  Substituições do tamanho da página de impressão padrão.
+
+name devem conter um dos formatos listados ou "personalizado" se o tamanho do papel necessário não estiver na lista. Se o valor "personalizado" for fornecido custom_size a propriedade deve ser especificada. Ela descreve a altura e a largura desejadas em micrometros. Caso contrário, a propriedade custom_size não deve ser especificada. As políticas que violem essas regras serão ignoradas.
+
+Se o tamanho da página não estiver disponível na impressora escolhida pelo usuário essa política será ignorada.
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Dicionário
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: PrintingPaperSizeDefault
+  - Nome da GP: Tamanho da página de impressão padrão
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Impressão
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: PrintingPaperSizeDefault
+  - Tipo de Valor: REG_SZ
+  ##### Exemplo de valor:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Informações e configurações do Mac
+  - Nome da chave de preferência: PrintingPaperSizeDefault
+  - Exemplo de valor:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
   ### UseSystemPrintDialog
   #### Imprimir usando a caixa de diálogo de impressão do sistema
   
@@ -4305,28 +4719,28 @@ Use as informações anteriores ao configurar essa política.
   [Voltar ao início](#microsoft-edge---políticas)
 
   ### NewTabPageCompanyLogo
-  #### Definir o logotipo da empresa da página Nova guia (preterida)
-  >PRETERIDA: essa política foi preterida. No momento, ela tem suporte, mas ficará obsoleta em uma versão futura.
+  #### Definir o logotipo da empresa da página Nova guia (obsoleto)
   
+  >OBSOLETO: Essa política é obsoleta e não funciona após o Microsoft Edge 85.
   #### Versões com suporte:
-  - Em Windows e macOS desde 79 ou posterior
+  - No Windows e macOS desde 79, até 85
 
   #### Descrição
-  Esta política está obsoleta porque ela não funciona conforme o esperado, e recomendamos que ela não seja usada. Não funcionará na versão 86 do Microsoft Edge.
+  Essa política não funcionou conforme o esperado devido a alterações nos requisitos operacionais. Portanto, ela é obsoleta e não deve ser usada.
 
-Especifica o logotipo da empresa a ser usado na página de nova guia no Microsoft Edge.
+Especifica o logotipo da empresa a ser usado na página nova guia no Microsoft Edge.
 
-A política deve ser configurada como uma cadeia de caracteres que expressa os logotipos em formato JSON. Por exemplo: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo":  { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" }}
+A política deve ser configurada como uma cadeia de caracteres que expressa o logotipo (s) no formato JSON. Por exemplo: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" }}
 
-Configure essa política especificando a URL da qual o Microsoft Edge pode baixar o logotipo e seu hash criptográfico (SHA-256), que é usado para verificar a integridade do download. O logotipo deve estar em formato PNG ou SVG, e seu tamanho de arquivo não deve exceder 16 MB. O logotipo é baixado e armazenado em cache, e o download será repetido sempre que a URL ou o hash mudar. A URL deve ser acessível sem qualquer autenticação.
+Você configura essa política especificando a URL de onde Microsoft Edge pode baixar o logotipo e seu hash criptográfico (SHA-256), que é usado para verificar a integridade do download. O logotipo deve estar no formato PNG ou SVG, e o tamanho do arquivo não deve exceder 16 MB. O logotipo é baixado e armazenado em cache e será baixado sempre que a URL ou o hash for alterado. A URL deve estar acessível sem qualquer autenticação.
 
-O "default_logo" é obrigatório e será usado quando não houver imagem de fundo. Se o "light_logo" for fornecido, ele será usado quando a página de nova guia do usuário tiver uma imagem de fundo. Recomendamos um logotipo horizontal com um fundo transparente que seja alinhado à esquerda e centralizado verticalmente. O logotipo deve ter uma altura mínima de 32 pixels e uma taxa de proporção de 1:1 a 4:1. O "default_logo" deve ter um contraste adequado contra um fundo branco/preto, enquanto o "light_logo" deve ter um contraste adequado contra uma imagem de fundo.
+'default_logo' é necessário e será usado quando não houver nenhuma imagem de tela de fundo. Se 'light_logo' for fornecido, ele será usado quando a nova guia do usuário tiver uma imagem de tela de fundo. Recomendamos um logotipo horizontal com um plano de fundo transparente, alinhado à esquerda e centralizado verticalmente. O logotipo deve ter uma altura mínima de 32 pixels e uma taxa de proporção de 1:1 a 4:1. O 'default_logo' deve ter o contraste apropriado contra um plano de fundo branco ou preto, enquanto o 'light_logo' deve ter o contraste correto contra uma imagem de fundo.
 
-Se você habilitar essa política, o Microsoft Edge baixará e mostrará os logotipos especificados na página de nova guia. Os usuários não podem substituir ou ocultar os logotipos.
+se habilitar essa política, Microsoft Edge downloads e exibir os logotipos especificados na página nova guia. Os usuários não podem substituir nem ocultar os logotipos do.
 
-Se você desabilitar ou não configurar essa política, o Microsoft Edge não mostrará o logotipo da empresa ou um logotipo da Microsoft na página de nova guia.
+Se você desabilitar ou não configurar essa política, Microsoft Edge não mostrará logotipo da empresa ou um logotipo da Microsoft na página nova guia.
 
-Para obter ajuda na determinação do hash SHA-256, consulte https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Para obter ajuda na determinação do hash SHA-256, confira https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Recursos com suporte:
   - Pode ser obrigatório: Sim
@@ -4339,7 +4753,7 @@ Para obter ajuda na determinação do hash SHA-256, consulte https://docs.micros
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome exclusivo da GP: NewTabPageCompanyLogo
-  - Nome da GP: Definir o logotipo da empresa da página Nova guia (preterida)
+  - Nome da GP: Definir o logotipo da empresa da página Nova guia (obsoleto)
   - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/Inicialização, página inicial e página nova guia
   - Caminho da GP (Recomendações): N/A
   - Nome do arquivo da GP ADMX: MSEdge.admx
