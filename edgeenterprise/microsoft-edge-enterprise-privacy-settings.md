@@ -39,7 +39,7 @@ If the [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-pol
 
 Required diagnostic data is collected to keep Microsoft Edge secure, up to date and performing as expected.
 
-Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft to help keep Microsoft Edge secure, up to date, and performing as expected and is used to improve Microsoft Edge and other Microsoft products and services for all users.
+Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to help keep Microsoft Edge secure, up to date, and performing as expected and is used to improve Microsoft Edge and other Microsoft products and services for all users.
 
 > [!NOTE]
 > This policy isn't supported on Windows 10 devices. To control data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be to **Allow Telemetry** or to **Allow Diagnostic Data**, depending on the version of Windows. Learn more about [Windows 10 diagnostic data collection](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
@@ -58,7 +58,7 @@ If you don't configure this policy or disable it Microsoft Edge will default to 
 
 The **MetricsReportingEnabled** policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
 
-Microsoft Edge collects a set of required data that's necessary to keep the product up to date, secure, and performing properly. This data includes basic device connectivity and configuration information from Microsoft Edge about the current data collection consent, app version, and installation state about your installation of Microsoft Edge. This data collection can be turned off by disabling the policy.
+Microsoft Edge collects a set of required data that's necessary to keep the product up to date, secure, and performing as expected. This data includes basic device connectivity and configuration information from Microsoft Edge about the current data collection consent, app version, and installation state about your installation of Microsoft Edge. This data collection can be turned off by disabling the policy.
 
 Enable this policy to send reporting of usage and crash-related data to Microsoft. Disable this policy to not send the data to Microsoft. In both cases, users can't change or override the setting.
 
@@ -106,17 +106,6 @@ For Windows 10 to understand our implementation with the dependency on the Windo
 | Basic                           | Sent                                      | Not sent                                            |
 | Enhanced                        | Sent                                          | Not sent                                            |
 | Full                            | Sent                                          | Sent                                                |
-
-### Implementation example
-
-If your configurations for Windows 10 are misconfigured based on the preceding table, we will fall back to the lesser data collection setting.
-
-For example:
-
-- You set the "Enable usage and crash-related data reporting" policy to **Enabled** but the Windows Diagnostic data setting is set to **Basic**. We won't send usage and crash-related data.
-- You set the "Send site information to improve Microsoft services" policy to **Disabled** but the Windows Diagnostic data setting is set to **Full**. We won't send information about the sites that are visited.
-
-The correct implementation for the previous settings is to set the "Enable usage and crash-related data reporting" policy to **Enabled** and set the Windows Diagnostic data setting to **Enhanced** or **Full**.
 
 > [!IMPORTANT]
 > Microsoft Edge will support **MetricsReportingEnabled** and **SendSiteInfoToImproveServices** for Microsoft Edge versions 86 – 88 inclusive. In Microsoft Edge version 89, **MetricsReportingEnabled** and **SendSiteInfoToImproveServices** will no longer be supported and will default to **DiagnosticData** on non-Windows 10 platforms or the **Allow Telemetry** policy for Windows 10.
