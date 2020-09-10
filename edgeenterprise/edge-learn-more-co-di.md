@@ -3,7 +3,7 @@ title: "ClickOnce and DirectInvoke in Microsoft Edge"
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -50,13 +50,12 @@ DirectInvoke use cases depend on the intent of the website requesting DirectInvo
 
 Support for ClickOnce and DirectInvoke:
 
-- DirectInvoke is supported out of the box for all Windows users but ClickOnce is disabled for all Windows users.
+- ClickOnce and DirectInvoke are supported out of the box for all Windows users.
 
   > [!NOTE]
-  > Users that need ClickOnce support can go to edge://flags/#edge-click-once and select **Enable** from the dropdown list. You'll have to **Restart** the browser.
+  > Users that want to disable ClickOnce support can go to *edge://flags/#edge-click-once* and select **Disabled** from the dropdown list. You'll have to **Restart** the browser.
 
 - ClickOnce and DirectInvoke aren't supported on any platforms other than Windows.
-- Because ClickOnce is an enterprise-focused feature that's used by a specific group of power users and not intended for general use, ClickOnce is disabled by default.
 
 ## ClickOnce and DirectInvoke file handling security
 
