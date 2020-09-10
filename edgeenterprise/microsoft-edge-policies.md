@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/01/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -53,6 +53,8 @@ These tables list all of the browser-related group policies available in this re
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Block cookies on specific sites|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limit cookies from specific websites to the current session|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configure cookies|
+|[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Control use of the File System API for reading|
+|[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Control use of the File System API for writing|
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Default geolocation setting|
 |[DefaultImagesSetting](#defaultimagessetting)|Default images setting|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Control use of insecure content exceptions|
@@ -62,6 +64,10 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultPopupsSetting](#defaultpopupssetting)|Default pop-up window setting|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Allow read access via the File System API on these sites|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Allow write access to files and directories on these sites|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Block write access to files and directories on these sites|
 |[ImagesAllowedForUrls](#imagesallowedforurls)|Allow images on these sites|
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Block images on specific sites|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Allow insecure content on specified sites|
@@ -134,6 +140,7 @@ and tips for Microsoft services|
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintingEnabled](#printingenabled)|Enable printing|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
 ### [*Proxy server*](#proxy-server-policies)
 |Policy Name|Caption|
@@ -158,7 +165,7 @@ and tips for Microsoft services|
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (deprecated)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
@@ -847,6 +854,118 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefaultFileSystemReadGuardSetting
+  #### Control use of the File System API for reading
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  If you set this policy to 3, websites can ask for read access to the host operating system's filesystem using the File System API. If you set this policy to 2, access is denied.
+
+If you don't set this policy, websites can ask for access. Users can change this setting.
+
+Policy options mapping:
+
+* BlockFileSystemRead (2) = Don't allow any site to request read access to files and directories via the File System API
+
+* AskFileSystemRead (3) = Allow sites to ask the user to grant read access to files and directories via the File System API
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Integer
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: DefaultFileSystemReadGuardSetting
+  - GP name: Control use of the File System API for reading
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultFileSystemReadGuardSetting
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000002
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: DefaultFileSystemReadGuardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultFileSystemWriteGuardSetting
+  #### Control use of the File System API for writing
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  If you set this policy to 3, websites can ask for write access to the host operating system's filesystem using the File System API. If you set this policy to 2, access is denied.
+
+If you don't set this policy, websites can ask for access. Users can change this setting.
+
+Policy options mapping:
+
+* BlockFileSystemWrite (2) = Don't allow any site to request write access to files and directories
+
+* AskFileSystemWrite (3) = Allow sites to ask the user to grant write access to files and directories
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Integer
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: DefaultFileSystemWriteGuardSetting
+  - GP name: Control use of the File System API for writing
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultFileSystemWriteGuardSetting
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000002
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: DefaultFileSystemWriteGuardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DefaultGeolocationSetting
   #### Default geolocation setting
   
@@ -1143,7 +1262,7 @@ Use the preceding information when configuring this policy.
   #### Description
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-																																																											
+                                                                                                                                                                                                                                                    
 
 If you don't set this policy, it uses BlockPlugins and users can change this setting.
 
@@ -1358,6 +1477,234 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FileSystemReadAskForUrls
+  #### Allow read access via the File System API on these sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Setting the policy lets you list the URL patterns that specify which sites can ask users to grant them read access to files or directories in the host operating system's file system via the File System API.
+
+Leaving the policy unset means [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+URL patterns can't conflict with [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Neither policy takes precedence if a URL matches with both.
+
+For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: FileSystemReadAskForUrls
+  - GP name: Allow read access via the File System API on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: FileSystemReadAskForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FileSystemReadBlockedForUrls
+  #### Block read access via the File System API on these sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  If you set this policy, you can list the URL patterns that specify which sites can't ask users to grant them read access to files or directories in the host operating system's file system via the File System API.
+
+If you don't set this policy, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+URL patterns can't conflict with [FileSystemReadAskForUrls](#filesystemreadaskforurls). Neither policy takes precedence if a URL matches with both.
+
+For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: FileSystemReadBlockedForUrls
+  - GP name: Block read access via the File System API on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: FileSystemReadBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FileSystemWriteAskForUrls
+  #### Allow write access to files and directories on these sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  If you set this policy, you can list the URL patterns that specify which sites can ask users to grant them write access to files or directories in the host operating system's file system.
+
+If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+URL patterns can't conflict with [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Neither policy takes precedence if a URL matches with both.
+
+For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: FileSystemWriteAskForUrls
+  - GP name: Allow write access to files and directories on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: FileSystemWriteAskForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FileSystemWriteBlockedForUrls
+  #### Block write access to files and directories on these sites
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  If you set this policy, you can list the URL patterns that specify which sites can't ask users to grant them write access to files or directories in the host operating system's file system.
+
+If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+URL patterns can't conflict with [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Neither policy takes precedence if a URL matches with both.
+
+For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - List of strings
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: FileSystemWriteBlockedForUrls
+  - GP name: Block write access to files and directories on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: FileSystemWriteBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -4456,6 +4803,73 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintingPaperSizeDefault
+  #### Default printing page size
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 86 or later
+
+  #### Description
+  Overrides default printing page size.
+
+name should contain one of the listed formats or 'custom' if required paper size is not in the list. If 'custom' value is provided custom_size property should be specified. It describes the desired height and width in micrometers. Otherwise custom_size property shouldn't be specified. Policy that violates these rules is ignored.
+
+If the page size is unavailable on the printer chosen by the user this policy is ignored.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Dictionary
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: PrintingPaperSizeDefault
+  - GP name: Default printing page size
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintingPaperSizeDefault
+  - Value Type: REG_SZ
+  ##### Example value:
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
+  "custom_size": {
+    "height": 297000, 
+    "width": 210000
+  }, 
+  "name": "custom"
+}
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: PrintingPaperSizeDefault
+  - Example value:
+``` xml
+<key>PrintingPaperSizeDefault</key>
+<dict>
+  <key>custom_size</key>
+  <dict>
+    <key>height</key>
+    <integer>297000</integer>
+    <key>width</key>
+    <integer>210000</integer>
+  </dict>
+  <key>name</key>
+  <string>custom</string>
+</dict>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### UseSystemPrintDialog
   #### Print using system print dialog
   
@@ -5286,11 +5700,11 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 If you don't configure this policy, all background image types on the new tab page are enabled.
 
-			 
+    
 
-		   
+     
 
-			
+   
 
 Policy options mapping:
 
@@ -5339,14 +5753,15 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageCompanyLogo
-  #### Set new tab page company logo (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### Set new tab page company logo (obsolete)
+                                                                                                                 
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
-  - On Windows and macOS since 79 or later
+  - On Windows and macOS since 79, until 85
 
   #### Description
-  This policy is deprecated because it doesn't work as expected and recommend that it not be used. It won't work in Microsoft Edge version 86.
+  This policy didn't work as expected due to changes in operational requirements. Therefore it's obsolete and should not be used.
 
 Specifies the company logo to use on the new tab page in Microsoft Edge.
 
@@ -5373,7 +5788,7 @@ For help with determining the SHA-256 hash, see https://docs.microsoft.com/power
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: NewTabPageCompanyLogo
-  - GP name: Set new tab page company logo (deprecated)
+  - GP name: Set new tab page company logo (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -6805,17 +7220,17 @@ This policy is intended to give enterprises flexibility to disable the audio san
 
  
 
-			
+   
 
-		
+  
 
-	  
+   
 
-		
+  
 
-	   
+    
 
-	   
+    
 
 The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
 
@@ -7099,7 +7514,7 @@ File types that a user has already specified to automatically be opened will con
 
 If you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.
 
-													 
+              
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -8163,7 +8578,7 @@ If you enable this policy, services and export targets that match the given list
 
 If you don't configure this policy, no restrictions on the acceptable services and export targets are enforced.
 
-			  
+     
 
 Policy options mapping:
 
@@ -9506,7 +9921,7 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 ```
 
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-											  
+             
 ```
 
 
@@ -9755,7 +10170,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Enable Domain Actions Download from Microsoft (obsolete)
-		
+  
   
   
   
@@ -10580,7 +10995,7 @@ This enterprise policy is disabled by default.
 
   ### ForceNetworkInProcess
   #### Force networking code to run in the browser process (obsolete)
-		
+  
   
   
   
@@ -12662,7 +13077,7 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
-											
+           
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -13709,11 +14124,11 @@ If you don't configure this policy, the default roaming profile path is used.
 ```
 
 
-	 
-	 
+  
+  
    
  
-	
+ 
    
   
 
@@ -13761,8 +14176,8 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 ```
 
 
-	 
-	 
+  
+  
    
  
  
@@ -14303,7 +14718,7 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
-										   
+             
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -15103,9 +15518,9 @@ If you enable this policy or don't set it, Microsoft Edge will enable these secu
 
 If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
 
-															   
+                                                            
 
-													
+             
 
 This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -16050,7 +16465,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### Re-enable Web Components v0 API until M84 (obsolete)
-		
+  
   
   
   
@@ -16103,7 +16518,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
-		
+  
   
   
   
