@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,9 +14,9 @@ description: "Microsoft Edge customer adoption materials"
 
 # Customer adoption materials for Microsoft Edge
 
-To support the deployment and adoption of the new Microsoft Edge, look at the following collected materials and resources below.
+To support the deployment and adoption of the new Microsoft Edge, please see the collected materials and resources below. A collected zip file is provided for you to download.
 
-Check back for additional materials as they become available.
+Please check back for additional materials as they are available.
 
 ## Customer adoption kit
 
@@ -24,31 +24,36 @@ The customer adoption kit contains the following material:
 
 - IT Deployment Guide
 - How to Get Started User Guide
+- Announcement Email
+- Tips & Tricks Email
 - Digital Signage
 
-## IT Deployment Guide
+[Download Adoption Kit - Microsoft Edge](https://www.microsoft.com/edge/business)
+
+### IT Deployment Guide
 
 Use this guide to begin planning deployment and learn how to get started deploying Microsoft Edge in your environment.
 
-[Get the IT Deployment Guide](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
-
-## How to Get Started User Guide
+### How to Get Started User Guide
 
 Use this guide to educate users on the new Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
 
-[Get the How to Get Started User Guide](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+### Email templates
 
-## Digital Signage
+Use these email templates to announce that the new Microsoft Edge is available for users and to provide tips and tricks on how to get the most out of the browser.
 
-Use the following digital signage to inform users about the new Microsoft Edge.
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Email template for tips and tricks":::
 
-[Microsoft Edge – Enterprise new tab page](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+### Digital Signage
 
-[Microsoft Edge – Multiple Profiles and Cross Platform](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+Use the following digital signage to inform users about the new Microsoft Edge:
 
-[Microsoft Edge – Microsoft Search in Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+- Enterprise new tab page
+- Multiple Profiles and Cross Platform
+- Microsoft Search in Bing
+- Security
 
-[Microsoft Edge - Security](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="New tab page":::
 
 ## Other learning resources
 
