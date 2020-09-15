@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise Sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/03/2020
+ms.date: 09/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,6 +28,8 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Addresses and more (form-fill)
 - Collections
 - Settings
+- Browsing history
+- Open tabs
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
@@ -36,38 +38,22 @@ Sync functionality is enabled via user consent and users can turn sync on or off
 
 ## Prerequisites
 
-Currently Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for the following subscriptions:
+Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for the following subscriptions:
 
 - Azure AD Premium (P1 and P2)
 - M365 Business Premium
 - Office 365 E3 and above
 - Azure Information Protection (AIP) (P1& P2)
-- All EDU subscriptions (O365 A1 or above, M365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
+- All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, M365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
 
-> [!NOTE]
-> Sync has a dependency on the protection service offered by Azure Information Protection (AIP) to protect sync data. This service is currently available to the preceding subscriptions. To see the full list of SKUs with AIP, see [Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection/).
+## Configuring Microsoft Edge sync
 
-## Configuration options for Microsoft Edge sync
+Azure Information Protection (AIP) service. When AIP is enabled for a tenant, all users can sync Microsoft Edge data, regardless of licensing. Instructions on how to enable AIP can be found here. Instructions on how to enable AIP can be found [here](https://docs.microsoft.com/azure/information-protection/activate-office365).
 
-The following configuration options are available for enabling Microsoft Edge sync:
-
-- Azure Information Protection (AIP)
-- Azure AD Enterprise State Roaming (ESR)
-
-If both AIP and ESR are disabled, users will see an error message indicating that sync is not available for their account.
-
-### Azure Information Protection (AIP)
-
-If the Azure Information Protection (AIP) service is enabled for a tenant, all users can sync Microsoft Edge data, regardless of licensing. Instructions on how to enable AIP can be found [here](https://docs.microsoft.com/azure/information-protection/activate-office365).
-
-To restrict sync to certain set of users, you can enable the [AADRM onboarding control policy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) for those users. If sync is still not available after ensuring that all necessary users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/Get-AipServiceIPCv3?view=azureipps) PowerShell cmdlet.
+To restrict sync to certain set of users, you can enable the [AIP onboarding control policy](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) for those users. If sync still isn't available after ensuring that all necessary users are onboarded, ensure that the IPCv3Service is enabled using [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps) PowerShell cmdlet.
 
 > [!CAUTION]
-> Activating Azure Information Protection will also restrict access for other applications using AIP, such as Microsoft Word or Microsoft Outlook.
-
-### Azure AD Enterprise State Roaming (ESR)
-
-If the Azure Active Directory [Enterprise State Roaming](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview) (ESR) feature is enabled for any user or tenant, they can use the Microsoft Edge sync feature regardless of the onboarding control policy setting.
+> Activating Azure Information Protection will allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. In addition, any onboarding control policy used to restrict Edge sync will also restrict other applications from protecting content using AIP.
 
 ## Microsoft Edge and Enterprise State Roaming
 
@@ -80,14 +66,16 @@ The following group policies impact Microsoft Edge sync:
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): Disables sync completely.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): Disables saving browsing history and sync. This policy also disables open-tabs sync.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Configure the list of types that are excluded from synchronization.
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): Allow Active Directory (AD) profiles to use on-premises storage. For more information, see [On-premises sync for Active Directory (AD)Users](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): Turn sync on by default and do not require user consent to sync.
 
 ## Frequently Asked Questions
 
 ### SECURITY and SERVER/DATA COMPLIANCE
 
-#### Is the synced data encrypted? 
+#### Is the synced data encrypted?
 
-The data is encrypted in transport using TLS 1.2 or greater, and additionally at rest in Microsoft's service using AES256.
+The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256. The exceptions are the browser history and open tabs data types. To prevent these data types from syncing, you can apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) policy.
 
 #### Where is Microsoft Edge sync data stored?
 
