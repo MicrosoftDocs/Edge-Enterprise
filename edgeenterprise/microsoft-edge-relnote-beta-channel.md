@@ -30,7 +30,6 @@ Fixed various bugs and performance issues.
 * **Internet Explorer mode:**
 
    * Let users use the Microsoft Edge User Interface (UI) to test sites in Internet Explorer mode. Beginning with Microsoft Edge version 86, administrators can enable a UI option for their users to load a tab in Internet Explorer mode for testing purposes or as a stopgap until sites are added to the site list XML.
-   * Let users provide feedback on sites that require IE mode. Users can send feedback to you using a Microsoft Edge UI option. You can configure this UI option to be visible through group policy and choose how you want to receive this information (via email or with a custom form).
 
 * **Delete downloads from disk using download manager.** Users are now able to delete their downloaded files from their disk without leaving the browser. The new Delete downloads functionality exists within the context menu of downloads shelf or the downloads page.
 
