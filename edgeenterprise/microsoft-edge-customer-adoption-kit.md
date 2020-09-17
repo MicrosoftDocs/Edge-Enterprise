@@ -34,7 +34,7 @@ The customer adoption kit contains the following material:
 
 Use this guide to begin planning deployment and learn how to get started deploying Microsoft Edge in your environment.
 
-:::image type="content" source="media/customer-adoption-not-md/deploy-guide-2.png" alt-text="Microsoft Edge deployment guide about Channels":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics video series":::
 
 ### How to Get Started User Guide
 
