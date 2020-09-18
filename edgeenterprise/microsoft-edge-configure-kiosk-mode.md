@@ -1,9 +1,9 @@
 ---
-title: "Configure Microsoft Edge kiosk mode "
+title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/17/2020
+ms.date: 09/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -75,16 +75,16 @@ Microsoft Edge kiosk mode with assigned access is currently available for testin
 
 **How do I get the Windows Insiders preview?**
 
-To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/at-home/get-started).
+To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/en-us/windows-insider/get-started).
 
 ### Configure using Windows Settings
 
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select **Set up a kiosk (assigned access)**.
-2. On the **Set up a kiosk** page, click **Get started**. [insert screenshot].
+2. On the **Set up a kiosk** page, click **Get started**. [insert screenshot].
 3. Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**. [insert screenshot]
-4. On the **Choose a kiosk app** page, select **Microsoft Edge*** and then click **Next**. [insert screenshot]
+4. On the **Choose a kiosk app** page, select **Microsoft Edge*** and then click **Next**. [insert screenshot]
 5. Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
    - Full screen - Displays a specific site in full-screen mode, running Microsoft Edge.[insert screenshot]
@@ -124,14 +124,9 @@ We'll add the following features:
 
 We'll add the following support and features:
 
-- General availability of Microsoft Edge kiosk mode with assigned access single app on:  
-
-  - Windows 10, version 2004
-  - Windows 10, version 1909
-
+- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows.
 - Additional features for parity with Microsoft Edge Legacy.
 - Integration with Intune to configure devices using kiosk mode profile UX.
-
 
 ## See also
 
