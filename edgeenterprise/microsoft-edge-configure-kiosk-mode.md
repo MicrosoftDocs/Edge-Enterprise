@@ -17,7 +17,7 @@ description: "Configure Microsoft Edge kiosk mode"
 This article describes how to configure Microsoft Edge kiosk mode options that you can pilot. There's also a roadmap of features we are targeting.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
+> This article applies to Microsoft Edge version 87 or later.
 
 For information about Microsoft Edge Legacy kiosk mode (version 45 and earlier) see [Deploy Microsoft Edge kiosk mode](https://aka.ms/edgekioskmode).
 
@@ -82,19 +82,45 @@ To install a Windows 10 Insider Preview Build on a PC, follow the instructions i
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select **Set up a kiosk (assigned access)**.
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Set up kiosk with assigned access":::
+
 2. On the **Set up a kiosk** page, click **Get started**. [insert screenshot].
-3. Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**. [insert screenshot]
-4. On the **Choose a kiosk app** page, select **Microsoft Edge*** and then click **Next**. [insert screenshot]
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Kiosk page -get started":::
+
+3. Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**. 
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Kiosk mode - create account":::
+
+4. On the **Choose a kiosk app** page, select **Microsoft Edge*** and then click **Next**.
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
+
 5. Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
-   - Full screen - Displays a specific site in full-screen mode, running Microsoft Edge.[insert screenshot]
-   - Public browser - Runs a limited multi-tab version of Microsoft Edge. [insert screenshot]
+   - Full screen - Displays a specific site in full-screen mode, running Microsoft Edge.
+
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
+
+   - Public browser - Runs a limited multi-tab version of Microsoft Edge.
+
+      :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5b-public-browser.png" alt-text="Kiosk mode display - public browser":::
 
 6. Select **Next**.
-7. Type the URL to load when the kiosk launches. [insert screenshot]
-8. Accept the default value of 5 minutes for the idle time or provide a value of your own.[insert screenshot]
+7. Type the URL to load when the kiosk launches.
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Kiosk mode - enter URL":::
+
+8. Accept the default value of 5 minutes for the idle time or provide a value of your own.
+
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Kiosk mode - enter idle time":::
+
 9. Click **Next**.
-10. Close the **Settings** window to save and apply your choices. [insert screenshot]
+10. Close the **Settings** window to save and apply your choices.
+
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Kiosk mode - finish set up":::
+
 11. Restart the kiosk computer and sign in with the local kiosk account to validate the configuration.
 
 ## Functional limitations and known issues
