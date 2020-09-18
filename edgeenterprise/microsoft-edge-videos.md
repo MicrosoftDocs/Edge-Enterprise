@@ -20,9 +20,9 @@ The videos described in this article cover many different aspects of deploying, 
 
 The Microsoft Mechanics video series, shown in the following page of the "*MSFT Edge Enterprise Deployment Guide - 2020*", is part of the Microsoft Edge collection of videos for related events and announcements, solutions, and conferences.
 
-:::image type="content" source="media/microsoft-edge-videos/mechanics-video-series.png" alt-text="Examples of  Mechanics video series":::
+:::image type="content" source="media/microsoft-edge-videos/mechanics-video-series.png" alt-text="Examples of the Microsoft Mechanics video series":::
 
-You can view the [Mechanics video series playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) and other Microsoft Edge YouTube videos at [Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA).
+You can view them as part of the [Mechanics's Microsoft Edge playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) or on the [Microsoft Edge YouTube channel](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA) alongside other videos.
 
 ## See also
 
