@@ -3,7 +3,7 @@ title: "Microsoft Edge videos"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 07/18/2020
+ms.date: 09/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,7 +22,7 @@ The Microsoft Mechanics video series, shown in the following page of the "*MSFT 
 
 :::image type="content" source="media/microsoft-edge-videos/mechanics-video-series.png" alt-text="Examples of  Mechanics video series":::
 
-You can view the [Mechanics video series playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) and other YouTube videos at [Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA).
+You can view the [Mechanics video series playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) and other Microsoft Edge YouTube videos at [Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA).
 
 ## See also
 
