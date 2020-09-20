@@ -64,8 +64,8 @@
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
-   - name: Video - Deploy Microsoft Edge
-     href: microsoft-edge-video-deploy.md
+#   - name: Video - Deploy Microsoft Edge
+#     href: microsoft-edge-video-deploy.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
      href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
@@ -93,8 +93,8 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-   - name: Video - Microsoft Edge and Microsoft Search
-     href: microsoft-edge-video-search.md
+#   - name: Video - Microsoft Edge and Microsoft Search
+#     href: microsoft-edge-video-search.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
    - name: Identity support and configuration
@@ -126,8 +126,8 @@
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
-   - name: Video - Security, compatibility, and manageability
-     href: microsoft-edge-video-security-compatibility-manageability.md     
+#   - name: Video - Security, compatibility, and manageability
+#     href: microsoft-edge-video-security-compatibility-manageability.md     
    - name: Security overview
      href: security-overview.md
    - name: Allow list for Microsoft Edge endpoints
@@ -179,6 +179,12 @@
   items:
    - name: Microsoft Edge video collection
      href: microsoft-edge-videos.md
+   - name: Video - Deploy Microsoft Edge
+     href: microsoft-edge-video-deploy.md
+   - name: Video - Microsoft Edge and Microsoft Search
+     href: microsoft-edge-video-search.md
+   - name: Video - Security, compatibility, and manageability
+     href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
 
