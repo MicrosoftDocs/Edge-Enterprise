@@ -3,7 +3,7 @@ title: "Microsoft Edge videos"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/18/2020
+ms.date: 09/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
