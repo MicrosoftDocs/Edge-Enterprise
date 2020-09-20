@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/17/2020
+ms.date: 09/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,7 +28,10 @@ The customer adoption kit contains the following material:
 - Tips & Tricks Email
 - Digital Signage
 
-[Download customer adoption kit](https://download.microsoft.com/download/0/4/2/0426ffdf-e33c-4177-b0f8-a13a43719c63/Commercial%Adoption%Kit%-%Microsoft%Edge.zip)
+> [!NOTE]
+> Adoption kit materials are being updated and the download will be available when the update is finished.
+<!--
+[Download customer adoption kit](https://download.microsoft.com/download/0/4/2/0426ffdf-e33c-4177-b0f8-a13a43719c63/Commercial%Adoption%Kit%-%Microsoft%Edge.zip)-->
 
 ### IT Deployment Guide
 
