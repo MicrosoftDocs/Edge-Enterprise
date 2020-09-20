@@ -178,7 +178,7 @@
 - name: Microsoft Edge Videos
   items:
    - name: Microsoft Edge video collection
-     href: microsoft.edge.videos.md
+     href: microsoft-edge-videos.md
 - name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
 
