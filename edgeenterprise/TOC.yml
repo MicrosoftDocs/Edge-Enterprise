@@ -103,6 +103,8 @@
      href: microsoft-edge-enterprise-state-roaming.md
    - name: Microsoft Edge kiosk mode
      href: microsoft-edge-kiosk-mode.md
+   - name: Configure Microsoft Edge kiosk mode
+     href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
      href: microsoft-edge-enterprise-sync.md
    - name: On-premises sync for Active Directory users
