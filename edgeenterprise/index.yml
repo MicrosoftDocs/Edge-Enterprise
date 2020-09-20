@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/21/2020 #Required; mm/dd/yyyy format.
+  ms.date: 09/20/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -25,6 +25,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Microsoft Edge Videos
+            url: microsoft-edge-videos.md
           - text: Microsoft Edge channel overview
             url: microsoft-edge-channels.md
           - text: Download a Microsoft Edge channel
