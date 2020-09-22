@@ -64,8 +64,8 @@ You can invoke Microsoft Edge kiosk mode features can be invoked with the follow
 - `--kiosk-idle-timeout-minutes` : Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. The following values are supported:
 
   - Default values
-    - Full screen - 5 minutes
-    - Public browsing - turned off
+    - Full screen - turned off
+    - Public browsing - 5 minutes
   - Allowed values
     - 0 - turns off the timer
     - 1-1440 minutes for reset on idle timer
@@ -134,7 +134,7 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
 With the release of this preview version of kiosk mode we're continuing work on improving the product and adding new features.
 
-Currently, kiosk mode doesn't support the following functionality:
+Although kiosk mode doesn't currently support the following functionality, work is underway on the following features:
 
 - Collections
 - Extensions
@@ -148,21 +148,15 @@ Currently, kiosk mode doesn't support the following functionality:
 We'll add the following features:
 
 - End session button
-- Read only omnibox
-
-  - Configurable with group policy
-  - When enabled, users will be prevented from navigating away from the configured URL.
-
 - Read only URL address bar  
   - Configurable with group policy
-  - When enabled, users will be prevented from editing the address bar URL to try navigating away to another page
-
+  - When enabled, users will be prevented from editing the address bar URL to try navigating away to another page.
 
 - More lockdown functions:
 
   - Additional accelerators will be blocked (for example, CTRL+N)
   - The "…" settings menu will enable only required options (for example, Print, Help,  Feedback, and Read aloud)
-  - Additional *edge://* pages lockdown (for example, *edge://downloads*)
+  - Additional *edge://* pages lockdown (for example, *edge://settings*)
   - Configure print options UI
   - Limiting file explorer to the download folder only.
 
