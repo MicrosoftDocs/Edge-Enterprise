@@ -76,7 +76,7 @@ Microsoft Edge kiosk mode with assigned access is currently available for testin
 
 **How do I get the Windows Insiders preview?**
 
-To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/en-us/windows-insider/get-started).
+To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
 
 ### Configure using Windows Settings
 
