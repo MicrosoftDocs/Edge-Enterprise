@@ -1,4 +1,4 @@
-# last revised 09/20/2020
+# last revised 09/21/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -129,7 +129,9 @@
 - name: Microsoft Edge Security
   items:
 #   - name: Video - Security, compatibility, and manageability
-#     href: microsoft-edge-video-security-compatibility-manageability.md     
+#     href: microsoft-edge-video-security-compatibility-manageability.md 
+   - name: Security for your business
+     href: ms-edge-security-for-business.md    
    - name: Security overview
      href: security-overview.md
    - name: Allow list for Microsoft Edge endpoints
