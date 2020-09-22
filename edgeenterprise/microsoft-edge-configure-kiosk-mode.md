@@ -153,6 +153,11 @@ We'll add the following features:
   - Configurable with group policy
   - When enabled, users will be prevented from navigating away from the configured URL.
 
+- Read only URL address bar  
+  - Configurable with group policy
+  - When enabled, users will be prevented from editing the address bar URL to try navigating away to another page
+
+
 - More lockdown functions:
 
   - Additional accelerators will be blocked (for example, CTRL+N)
