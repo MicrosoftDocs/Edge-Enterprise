@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/14/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,6 +216,7 @@ e dicas para serviços Microsoft|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Desabilitar a imposição de Transparência de Certificado para URLs específicas|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Limpar dados de navegação quando o Microsoft Edge for fechado|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Limpar arquivos e imagens armazenados em cache quando Microsoft Edge for fechado|
+|[ClickOnceEnabled](#clickonceenabled)|Permitir que os usuários abram arquivos usando o protocolo ClickOnce|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Bloquear o acesso a uma lista especificada de serviços e exportar destinos em Coleções|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Habilitar avisos de segurança para sinalizadores de linha de comando|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Habilitar atualizações de componentes no Microsoft Edge|
@@ -331,7 +332,7 @@ e dicas para serviços Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear o acesso a sensores em sites específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API serial em sites específicos|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar o atalho do Microsoft Office na barra Favoritos|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilitar isolamento de sites para todos os sites|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
@@ -1526,11 +1527,11 @@ Use as informações anteriores ao configurar essa política.
   - Em Windows e macOS desde 77 ou posterior
 
   #### Descrição
-  [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, essa política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir esta política como 'BlockPlugins', este plug-in será negado para todos os sites. 'ClickToPlay' permite que o plug-in Flash seja executado, mas os usuários clicam no espaço reservado para iniciá-lo.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Se você não definir essa política, ela usará BlockPlugins e os usuários poderão alterar essa configuração.
+If you don't configure this policy, the user can change this setting manually.
 
- Observação: a reprodução automática é somente para domínios listados explicitamente na política de [PluginsAllowedForUrls](#pluginsallowedforurls) . Para ativar a reprodução automática para todos os sites, adicione http://* e https://* à lista de URLs permitidas.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Mapeamento das opções da política:
 
@@ -8472,6 +8473,56 @@ Se você desabilitar essa política, não habilite a política [ClearBrowsingDat
 
   [Voltar ao início](#microsoft-edge---políticas)
 
+  ### ClickOnceEnabled
+  #### Permitir que os usuários abram arquivos usando o protocolo ClickOnce
+  
+  
+  #### Versões com suporte:
+  - No Windows desde a versão 78 ou posterior
+
+  #### Descrição
+  Permitir que os usuários abram arquivos usando o protocolo ClickOnce. O protocolo ClickOnce permite que sites solicitem que o navegador abra arquivos de uma URL específica usando o manipulador de arquivo ClickOnce no computador ou dispositivo do usuário.
+
+Se você habilitar essa política, os usuários poderão abrir arquivos usando o protocolo ClickOnce. Essa política substitui a configuração de ClickOnce do usuário na página edge://flags/.
+
+Se você desabilitar essa política, os usuários não poderão abrir arquivos usando o protocolo ClickOnce. Em vez disso, o arquivo será salvo no sistema de arquivos usando o navegador. Essa política substitui a configuração de ClickOnce do usuário na página edge://flags/.
+
+Se você não configurar essa política, os usuários com versões do Microsoft Edge antes de Microsoft Edge 87 não poderão abrir arquivos usando o protocolo ClickOnce por padrão. No entanto, eles terão a opção de habilitar o uso do protocolo ClickOnce na página edge://flags/. Usuários com versões 87 e posteriores do Microsoft Edge podem abrir arquivos usando o protocolo ClickOnce por padrão, mas têm a opção de desativar o protocolo ClickOnce na página edge://flags/
+
+.     Desabilitar o ClickOnce pode impedir que os aplicativos ClickOnce (arquivos .application) sejam iniciados corretamente.
+
+Para obter mais informações sobre o ClickOnce, consulte [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) e [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+
+  #### Recursos com suporte:
+  - Pode ser obrigatório: Sim
+  - Pode ser recomendado: Não
+  - Atualização de política dinâmica: Sim
+
+  #### Tipo de Dados:
+  - Booliano
+
+  #### Informações e configurações do Windows
+  ##### Informações da Política de Grupo (ADMX)
+  - Nome exclusivo da GP: ClickOnceEnabled
+  - Nome da GP: Permitir que os usuários abram arquivos usando o protocolo ClickOnce
+  - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/
+  - Caminho da GP (Recomendações): N/A
+  - Nome do arquivo da GP ADMX: MSEdge.admx
+  ##### Configurações do Registro do Windows
+  - Caminho (Obrigatório): SOFTWARE\Policies\Microsoft\Edge
+  - Caminho (Recomendações): N/A
+  - Nome do Valor: ClickOnceEnabled
+  - Tipo de Valor: REG_DWORD
+  ##### Exemplo de valor:
+```
+0x00000000
+```
+
+
+  
+
+  [Voltar ao início](#microsoft-edge---políticas)
+
   ### CollectionsServicesAndExportsBlockList
   #### Bloquear o acesso a uma lista especificada de serviços e exportar destinos em Coleções
   
@@ -14814,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Voltar ao início](#microsoft-edge---políticas)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Mostrar o atalho do Microsoft Office na barra Favoritos
-  
+  #### Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)
+  >PRETERIDA: essa política foi preterida. No momento, ela tem suporte, mas ficará obsoleta em uma versão futura.
   
   #### Versões com suporte:
   - Em Windows e macOS desde 77 ou posterior
 
   #### Descrição
-  Especifica se deve-se incluir um atalho para Office.com na barra de favoritos. Para usuários conectados ao Microsoft Edge, o atalho leva-os para seus documentos e aplicativos do Microsoft Office.
+  Esta política não funcionou conforme o esperado devido a alterações nos requisitos operacionais. Portanto, ela foi preterida e não deve ser usada.
 
-Se essa política estiver habilitada ou não estiver configurada, os usuários poderão optar por ver o atalho. Basta alterar a alternância no menu de contexto da barra de favoritos.
-
-Se a política estiver desabilitada, o atalho não será mostrado.
+Especifica se deve ser incluído um atalho para o Office.com na barra de favoritos. Para usuários conectados ao Microsoft Edge, o atalho leva os usuários aos seus aplicativos e documentos do Microsoft Office.
+  Se você habilitar ou não configurar essa política, os usuários poderão escolher se desejam ver o atalho alterando a alternância no menu de contexto da barra de favoritos.
+  Se você desabilitar essa política, o atalho não será exibido.
 
   #### Recursos com suporte:
   - Pode ser obrigatório: Sim
@@ -14838,7 +14889,7 @@ Se a política estiver desabilitada, o atalho não será mostrado.
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome exclusivo da GP: ShowOfficeShortcutInFavoritesBar
-  - Nome da GP: Mostrar o atalho do Microsoft Office na barra Favoritos
+  - Nome da GP: Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)
   - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da GP (Recomendações): N/A
   - Nome do arquivo da GP ADMX: MSEdge.admx
