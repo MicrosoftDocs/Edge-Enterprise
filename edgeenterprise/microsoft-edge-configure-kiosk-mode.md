@@ -171,6 +171,6 @@ We'll add the following support and features:
 ## See also
 
 - [Configure kiosks and digital signs on Windows desktop editions](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Deploy Microsoft Edge Legacy kiosk mode](https://aka.ms/edgekioskmode) 
+- [Deploy Microsoft Edge Legacy kiosk mode](https://aka.ms/edgekioskmode)
 - [Plan your deployment of Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
