@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/23/2020
+ms.date: 09/14/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,7 +216,6 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Отключить обязательную проверку прозрачности сертификатов для определенных URL-адресов|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Удалять данные о просмотре веб-страниц при закрытии Microsoft Edge|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Удалять кэшированные изображения и файлы при закрытии Microsoft Edge|
-|[ClickOnceEnabled](#clickonceenabled)|Разрешить пользователям открыть файлы с помощью протокола ClickOnce|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Блокировка доступа к указанному списку служб и целям экспорта в коллекциях|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Включить предупреждения системы безопасности для флагов командной строки|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Включить обновления компонентов в Microsoft Edge|
@@ -332,7 +331,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчикам на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное"|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписи HTTP exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию для каждого сайта|
 |[SpellcheckEnabled](#spellcheckenabled)|Включить проверку орфографии|
@@ -2605,11 +2604,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - На Windows и macOS с 77 или более поздней версии
 
   #### Описание
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  Сначала проверяются [PluginsAllowedForUrls](#pluginsallowedforurls) и [PluginsBlockedForUrls](#pluginsblockedforurls), а затем эта политика. Возможные значения: "ClickToPlay" и "BlockPlugins". Если присвоить этому параметру политики значение "BlockPlugins", этот подключаемый модуль определяется для всех веб-сайтов. "ClickToPlay" позволяет запустить подключаемый модуль Flash, но пользователи нажимают заполнитель для его запуска.
 
-If you don't configure this policy, the user can change this setting manually.
+Если данный параметр политики не задан, он будет использовать BlockPlugins, и пользователи смогут изменять его.
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+Примечание. автоматическое воспроизведение можно только для доменов, явно перечисленных в политике [PluginsAllowedForUrls](#pluginsallowedforurls). Чтобы включить автоматическое воспроизведение для всех сайтов, добавьте http://* и https://* в список разрешенных URL-адресов.
 
 Сопоставление параметров политики:
 
@@ -8469,56 +8468,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ``` xml
 <true/>
 ```
-  
-
-  [В начало](#microsoft-edge:-политики)
-
-  ### ClickOnceEnabled
-  #### Разрешить пользователям открыть файлы с помощью протокола ClickOnce
-  
-  
-  #### Поддерживаемые версии:
-  - На Windows с 78 или более поздней версии
-
-  #### Описание
-  Разрешить пользователям открывать файлы с помощью протокола ClickOnce. Протокол ClickOnce позволяет веб-сайтам запрашивать открытие файлов с определенного URL-адреса в браузере с помощью обработчика файлов ClickOnce на компьютере или другом устройстве пользователя.
-
-Если эта политика включена, пользователи могут открывать файлы с помощью протокола ClickOnce. Эта политика переопределяет настройку ClickOnce, заданную пользователем на странице edge://flags/.
-
-Если эта политика отключена, пользователи не могут открыть файлы с помощью протокола ClickOnce. В этом случае файл сохраняется в файловой системе через браузер. Эта политика переопределяет настройку ClickOnce, заданную пользователем на странице edge://flags/.
-
-Если эта политика не настроена, пользователи с Microsoft Edge версии ниже Microsoft Edge 87 по умолчанию не могут открывать файлы с помощью протокола ClickOnce. Однако они могут включить протокол ClickOnce на странице edge://flags/. Пользователи с Microsoft Edge версии 87 или более поздней по умолчанию могут открывать файлы с помощью протокола ClickOnce. Однако они могут отключить протокол ClickOnce на странице edge://flags/.
-
-Отключение ClickOnce может препятствовать нормальному запуску приложений ClickOnce (файлов с расширением ".application").
-
-Дополнительные сведения о ClickOnce см. на страницах [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) и [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
-
-  #### Поддерживаемые функции:
-  - Может быть обязательной: Да
-  - Может быть рекомендованной: Нет
-  - Динамическое обновление политики: Да
-
-  #### Тип данных:
-  - Логическое
-
-  #### Настройки и сведения Windows
-  ##### Сведения о групповой политике (ADMX)
-  - Уникальное имя групповой политики: ClickOnceEnabled
-  - Имя групповой политики: Разрешить пользователям открыть файлы с помощью протокола ClickOnce
-  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
-  - Путь групповой политики (Рекомендовано): Н/Д
-  - Имя файла групповой политики ADMX: MSEdge.admx
-  ##### Настройки реестра Windows
-  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge
-  - Путь (Рекомендовано): Н/Д
-  - Имя значения: ClickOnceEnabled
-  - Тип значения: REG_DWORD
-  ##### Пример значения:
-```
-0x00000000
-```
-
-
   
 
   [В начало](#microsoft-edge:-политики)
@@ -14865,18 +14814,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [В начало](#microsoft-edge:-политики)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)
-  >УСТАРЕЛО. Эта политика устарела. В настоящее время она поддерживается, но станет устаревшей в будущем выпуске.
+  #### Показать ярлык Microsoft Office на панели "Избранное"
+  
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 77 или более поздней версии
 
   #### Описание
-  Эта политика работала неправильно из-за изменений операционных требований. Поэтому она является нерекомендуемой, и ее не следует использовать.
+  Отображение ярлыка для Office.com на панели "Избранное". Пользователи, выполнившие вход в Microsoft Edge, могут через этот ярлык переходить к документам и приложениям Microsoft Office.
 
-Указывает, следует ли добавлять ярлык Office.com в панель избранного. Пользователей, вошедших в Microsoft Edge, ярлык направляет к их приложениям и документам Microsoft Office.
-  Если включить или не настроить эту политику, пользователи смогут выбрать, следует ли отображать этот ярлык, изменив положение переключателя в контекстном меню панели избранного.
-  Если отключить эту политику, ярлык не отображается.
+Если этот параметр политики включен или не настроен, пользователи могут отобразить или скрыть этот ярлык, изменив положение переключателя в контекстном меню панели избранного.
+
+Если этот параметр политики отключен, ярлык не отображается.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -14889,7 +14838,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: ShowOfficeShortcutInFavoritesBar
-  - Имя групповой политики: Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)
+  - Имя групповой политики: Показать ярлык Microsoft Office на панели "Избранное"
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
