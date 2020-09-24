@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчикам на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное"|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписи HTTP exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию для каждого сайта|
 |[SpellcheckEnabled](#spellcheckenabled)|Включить проверку орфографии|
@@ -2605,11 +2605,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - На Windows и macOS с 77 или более поздней версии
 
   #### Описание
-  Сначала проверяются [PluginsAllowedForUrls](#pluginsallowedforurls) и [PluginsBlockedForUrls](#pluginsblockedforurls), а затем эта политика. Возможные значения: "ClickToPlay" и "BlockPlugins". Если присвоить этому параметру политики значение "BlockPlugins", этот подключаемый модуль определяется для всех веб-сайтов. "ClickToPlay" позволяет запустить подключаемый модуль Flash, но пользователи нажимают заполнитель для его запуска.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Если данный параметр политики не задан, он будет использовать BlockPlugins, и пользователи смогут изменять его.
+If you don't configure this policy, the user can change this setting manually.
 
-Примечание. автоматическое воспроизведение можно только для доменов, явно перечисленных в политике [PluginsAllowedForUrls](#pluginsallowedforurls). Чтобы включить автоматическое воспроизведение для всех сайтов, добавьте http://* и https://* в список разрешенных URL-адресов.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Сопоставление параметров политики:
 
@@ -14865,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [В начало](#microsoft-edge:-политики)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Показать ярлык Microsoft Office на панели "Избранное"
-  
+  #### Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)
+  >УСТАРЕЛО. Эта политика устарела. В настоящее время она поддерживается, но станет устаревшей в будущем выпуске.
   
   #### Поддерживаемые версии:
   - На Windows и macOS с 77 или более поздней версии
 
   #### Описание
-  Отображение ярлыка для Office.com на панели "Избранное". Пользователи, выполнившие вход в Microsoft Edge, могут через этот ярлык переходить к документам и приложениям Microsoft Office.
+  Эта политика работала неправильно из-за изменений операционных требований. Поэтому она является нерекомендуемой, и ее не следует использовать.
 
-Если этот параметр политики включен или не настроен, пользователи могут отобразить или скрыть этот ярлык, изменив положение переключателя в контекстном меню панели избранного.
-
-Если этот параметр политики отключен, ярлык не отображается.
+Указывает, следует ли добавлять ярлык Office.com в панель избранного. Пользователей, вошедших в Microsoft Edge, ярлык направляет к их приложениям и документам Microsoft Office.
+  Если включить или не настроить эту политику, пользователи смогут выбрать, следует ли отображать этот ярлык, изменив положение переключателя в контекстном меню панели избранного.
+  Если отключить эту политику, ярлык не отображается.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -14889,7 +14889,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: ShowOfficeShortcutInFavoritesBar
-  - Имя групповой политики: Показать ярлык Microsoft Office на панели "Избранное"
+  - Имя групповой политики: Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
