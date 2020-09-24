@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ e dicas para serviços Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear o acesso a sensores em sites específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir a API serial em sites específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear a API serial em sites específicos|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar o atalho do Microsoft Office na barra Favoritos|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar o suporte para o Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilitar isolamento de sites para todos os sites|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar verificação ortográfica|
@@ -1527,11 +1527,11 @@ Use as informações anteriores ao configurar essa política.
   - Em Windows e macOS desde 77 ou posterior
 
   #### Descrição
-  [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) são verificados primeiro e, em seguida, essa política. As opções são 'ClickToPlay' e 'BlockPlugins'. Se você definir esta política como 'BlockPlugins', este plug-in será negado para todos os sites. 'ClickToPlay' permite que o plug-in Flash seja executado, mas os usuários clicam no espaço reservado para iniciá-lo.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Se você não definir essa política, ela usará BlockPlugins e os usuários poderão alterar essa configuração.
+If you don't configure this policy, the user can change this setting manually.
 
- Observação: a reprodução automática é somente para domínios listados explicitamente na política de [PluginsAllowedForUrls](#pluginsallowedforurls) . Para ativar a reprodução automática para todos os sites, adicione http://* e https://* à lista de URLs permitidas.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Mapeamento das opções da política:
 
@@ -14865,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Voltar ao início](#microsoft-edge---políticas)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Mostrar o atalho do Microsoft Office na barra Favoritos
-  
+  #### Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)
+  >PRETERIDA: essa política foi preterida. No momento, ela tem suporte, mas ficará obsoleta em uma versão futura.
   
   #### Versões com suporte:
   - Em Windows e macOS desde 77 ou posterior
 
   #### Descrição
-  Especifica se deve-se incluir um atalho para Office.com na barra de favoritos. Para usuários conectados ao Microsoft Edge, o atalho leva-os para seus documentos e aplicativos do Microsoft Office.
+  Esta política não funcionou conforme o esperado devido a alterações nos requisitos operacionais. Portanto, ela foi preterida e não deve ser usada.
 
-Se essa política estiver habilitada ou não estiver configurada, os usuários poderão optar por ver o atalho. Basta alterar a alternância no menu de contexto da barra de favoritos.
-
-Se a política estiver desabilitada, o atalho não será mostrado.
+Especifica se deve ser incluído um atalho para o Office.com na barra de favoritos. Para usuários conectados ao Microsoft Edge, o atalho leva os usuários aos seus aplicativos e documentos do Microsoft Office.
+  Se você habilitar ou não configurar essa política, os usuários poderão escolher se desejam ver o atalho alterando a alternância no menu de contexto da barra de favoritos.
+  Se você desabilitar essa política, o atalho não será exibido.
 
   #### Recursos com suporte:
   - Pode ser obrigatório: Sim
@@ -14889,7 +14889,7 @@ Se a política estiver desabilitada, o atalho não será mostrado.
   #### Informações e configurações do Windows
   ##### Informações da Política de Grupo (ADMX)
   - Nome exclusivo da GP: ShowOfficeShortcutInFavoritesBar
-  - Nome da GP: Mostrar o atalho do Microsoft Office na barra Favoritos
+  - Nome da GP: Mostrar o atalho do Microsoft Office na barra Favoritos (preterida)
   - Caminho da GP (Obrigatório): Modelos Administrativos/Microsoft Edge/
   - Caminho da GP (Recomendações): N/A
   - Nome do arquivo da GP ADMX: MSEdge.admx
