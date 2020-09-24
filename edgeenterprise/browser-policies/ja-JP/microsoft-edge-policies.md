@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/14/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,6 +216,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|特定の URL に対する証明書の透明性の適用を無効にする|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Microsoft Edge を閉じるときに閲覧データを消去する|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Microsoft Edge を閉じるときに、キャッシュされた画像とファイルを消去する|
+|[ClickOnceEnabled](#clickonceenabled)|ユーザーが ClickOnce プロトコルを使用してファイルを開くことを許可する|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|コレクション内の指定されたサービス リストとエクスポート対象へのアクセスをブロック|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|コマンドライン フラグのセキュリティ警告を有効にする|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Microsoft Edge でのコンポーネントの更新を有効にする|
@@ -331,7 +332,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|特定のサイトのセンサーへのアクセスをブロック|
 |[SerialAskForUrls](#serialaskforurls)|特定のサイトでシリアル API を許可する|
 |[SerialBlockedForUrls](#serialblockedforurls)|特定のサイトでシリアル API をブロックする|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office のショートカットをお気に入りバーに表示する|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office のショートカットをお気に入りバーに表示する (非推奨)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでサイト分離を有効にする|
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
@@ -1917,11 +1918,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - Windows 以降の macOS と 77
 
   #### 説明
-  [PluginsAllowedForUrls](#pluginsallowedforurls) および [PluginsBlockedForUrls](#pluginsblockedforurls) が最初に確認されてから、このポリシーが確認されます。オプションは、 'ClickToPlay' と 'BlockPlugins' です。'BlockPlugins' に設定すると、このプラグインはすべての Web サイトで拒否されます。'ClickToPlay' に設定すると、Flash プラグインが実行され、ユーザーはプレースホルダーをクリックして開始します。
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-このポリシーを設定しない場合は、BlockPlugins が設定されますが、ユーザーはこの設定を変更できます。
+If you don't configure this policy, the user can change this setting manually.
 
-注: 自動再生は [PluginsAllowedForUrls](#pluginsallowedforurls) ポリシーに明示的にリストされているドメインでのみ使用されます。自動再生をすべてのサイトに適用するには、http://* and https://* を URL の許可リストに追加します。
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 ポリシー オプションのマッピング:
 
@@ -8472,6 +8473,56 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   [トップに戻る](#microsoft-edge---ポリシー)
 
+  ### ClickOnceEnabled
+  #### ユーザーが ClickOnce プロトコルを使用してファイルを開くことを許可する
+  
+  
+  #### サポートされているバージョン:
+  - Windows 以降の 78
+
+  #### 説明
+  ユーザーが ClickOnce プロトコルを使用してファイルを開くことを許可します。ClickOnce プロトコルを使用すると、ユーザーのコンピューターまたはデバイス上の ClickOnce ファイル ハンドラーを使用して特定の URL からファイルをブラウザーで開くように、Web サイトから要求できます。
+
+ このポリシーを有効にした場合、ユーザーは ClickOnce プロトコルを使用してファイルを開くことができます。このポリシーは、edge://flags/ ページのユーザーの ClickOnce 設定をオーバーライドします。
+
+ このポリシーを無効にした場合、ユーザーは ClickOnce プロトコルを使用してファイルを開くことはできません。代わりに、ファイルはブラウザーを使用してファイル システムに保存されます。 このポリシーは、edge://flags/ ページのユーザーの ClickOnce 設定をオーバーライドします。
+
+ このポリシーを構成しなかった場合、Microsoft Edge 87 より前の Microsoft Edge バージョンを使用しているユーザーは、デフォルトでは ClickOnce プロトコルを使用してファイルを開くことはできません。ただし、edge://flags/ ページで ClickOnce プロトコルを使用できるようにするオプションがあります。87 以降の Microsoft Edge バージョンを使用しているユーザーは、デフォルトで ClickOnce プロトコルを使用してファイルを開くことができますが、edge://flags/ ページで ClickOnce プロトコルを無効にするオプションがあります。
+
+ClickOnce を無効にすると、ClickOnce アプリケーション (.application ファイル) が正常に起動されなくなる可能性があります。
+
+ ClickOnce の詳細については、[https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) および [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880) を参照してください。
+
+  #### サポートされている機能:
+  - 必須になる場合があります: はい
+  - 推奨される場合があります: いいえ
+  - 動的ポリシーの更新: はい
+
+  #### データ型:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: ClickOnceEnabled
+  - GP の名前: ユーザーが ClickOnce プロトコルを使用してファイルを開くことを許可する
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (おすすめ): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (おすすめ): N/A
+  - 値の名前: ClickOnceEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000000
+```
+
+
+  
+
+  [トップに戻る](#microsoft-edge---ポリシー)
+
   ### CollectionsServicesAndExportsBlockList
   #### コレクション内の指定されたサービス リストとエクスポート対象へのアクセスをブロック
   
@@ -14814,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [トップに戻る](#microsoft-edge---ポリシー)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Microsoft Office のショートカットをお気に入りバーに表示する
-  
+  #### Microsoft Office のショートカットをお気に入りバーに表示する (非推奨)
+  >非推奨: このポリシーは推奨されていません。現在サポートされていますが、将来のリリースでは使用されなくなります。
   
   #### サポートされているバージョン:
   - Windows 以降の macOS と 77
 
   #### 説明
-  Office.com へのショートカットをお気に入りバーに含めるかどうかを指定します。ユーザーが Microsoft Edge にサインインしている場合、ユーザーはショートカットによって Microsoft Office のアプリやドキュメントにアクセスすることができます。
+  運用要件の変更により、このポリシーは期待どおりに機能しませんでした。したがって、これは非推奨であり、使用すべきではありません。
 
-このポリシーを有効にした場合または構成しなかった場合、ユーザーは、お気に入りバーのコンテキスト メニューで表示/非表示を切り替えることによって、ショートカットを表示するかどうかを選択できます。
-
-この設定を無効にした場合、ショートカットは表示されません。
+Office.com へのショートカットをお気に入りバーに含めるかどうかを指定します。Microsoft Edge にサインインしているユーザーの場合、ショートカットにより、ユーザーは Microsoft Office アプリおよびドキュメントに移動します。
+  このポリシーを有効にするか、構成しない場合、ユーザーは、お気に入りバーのコンテキスト メニューのトグルを変更して、ショートカットを表示するかどうかを選択できます。
+  このポリシーを無効にすると、ショートカットは表示されません。
 
   #### サポートされている機能:
   - 必須になる場合があります: はい
@@ -14838,7 +14889,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: ShowOfficeShortcutInFavoritesBar
-  - GP の名前: Microsoft Office のショートカットをお気に入りバーに表示する
+  - GP の名前: Microsoft Office のショートカットをお気に入りバーに表示する (非推奨)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (おすすめ): N/A
   - GP ADMX ファイル名: MSEdge.admx
