@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/23/2020
+ms.date: 09/14/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,7 +216,6 @@ and tips for Microsoft services|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Microsoft Edge closes|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Microsoft Edge closes|
-|[ClickOnceEnabled](#clickonceenabled)|Allow users to open files using the ClickOnce protocol|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
@@ -332,7 +331,7 @@ and tips for Microsoft services|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
@@ -1262,7 +1261,7 @@ Use the preceding information when configuring this policy.
   #### Description
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-If you don't configure this policy, the user can change this setting manually.
+If you don't set this policy, it uses BlockPlugins and users can change this setting.
 
 Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
@@ -8475,56 +8474,6 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ClickOnceEnabled
-  #### Allow users to open files using the ClickOnce protocol
-  
-  
-  #### Supported versions:
-  - On Windows since 78 or later
-
-  #### Description
-  Allow users to open files using the ClickOnce protocol. The ClickOnce protocol allows websites to request that the browser open files from a specific URL using the ClickOnce file handler on the user's computer or device.
-
-If you enable this policy, users can open files using the ClickOnce protocol. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
-
-If you disable this policy, users can't open files using the ClickOnce protocol. Instead, the file will be saved to the file system using the browser. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
-
-If you don't configure this policy, users with Microsoft Edge versions before Microsoft Edge 87 can't open files using the ClickOnce protocol by default. However, they have the option to enable the use of the ClickOnce protocol with the edge://flags/ page. Users with Microsoft Edge versions 87 and later can open files using the ClickOnce protocol by default but have the option to disable the ClickOnce protocol with edge://flags/ page.
-
-Disabling ClickOnce may prevent ClickOnce applications (.application files) from launching properly.
-
-For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
-
-  #### Supported features:
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-  - Boolean
-
-  #### Windows information and settings
-  ##### Group Policy (ADMX) info
-  - GP unique name: ClickOnceEnabled
-  - GP name: Allow users to open files using the ClickOnce protocol
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-  ##### Windows Registry Settings
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ClickOnceEnabled
-  - Value Type: REG_DWORD
-  ##### Example value:
-```
-0x00000000
-```
-
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
   ### CollectionsServicesAndExportsBlockList
   #### Block access to a specified list of services and export targets in Collections
   
@@ -14869,18 +14818,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Show Microsoft Office shortcut in favorites bar (deprecated)
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  #### Show Microsoft Office shortcut in favorites bar
+  
   
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
   #### Description
-  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
+  Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
 
-Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
-  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
-  If you disable this policy, the shortcut isn't shown.
+If this policy is enabled or not configure, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+
+If the policy is disabled, the shortcut won't be shown.
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -14893,7 +14842,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: ShowOfficeShortcutInFavoritesBar
-  - GP name: Show Microsoft Office shortcut in favorites bar (deprecated)
+  - GP name: Show Microsoft Office shortcut in favorites bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
