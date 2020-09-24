@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
 |[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시 (사용되지 않음)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|서명된 HTTP 교환(SXG) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
 |[SpellcheckEnabled](#spellcheckenabled)|맞춤법 검사 사용|
@@ -3955,11 +3955,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)을(를) 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins'입니다. 이 정책을 'BlockPlugins'로 설정하면 모든 웹 사이트에서 이 플러그인이 거부됩니다. 'ClickToPlay'는 Flash 플러그인이 실행되도록 허용하지만 사용자는 자리 표시자를 눌러 플러그인을 시작합니다.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-이 정책을 설정하지 않으면 BlockPlugins 정책을 사용하고 사용자가 이 설정을 변경할 수 있습니다.
+If you don't configure this policy, the user can change this setting manually.
 
-참고: 자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에 대해서만 가능합니다. 모든 사이트에 대해 자동 재생을 설정하려면 허용된 URL 목록에 http://* 및 https://*를 추가합니다.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 정책 옵션 매핑:
 
@@ -14865,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### 즐겨 찾기 모음에 Microsoft Office 바로 가기 표시
-  
+  #### 즐겨 찾기 모음에 Microsoft Office 바로 가기 표시 (사용되지 않음)
+  >사용되지 않음: 이 정책은 더 이상 사용되지 않습니다. 현재 지원되고 있으나 향후 릴리스에서는 사용되지 않을 예정입니다.
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  즐겨 찾기 모음에 Office.com에 대한 바로 가기를 포함할지 여부를 지정합니다. Microsoft Edge에 로그인한 사용자는 바로 가기를 통해 Microsoft Office 앱 및 문서로 이동합니다.
+  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
 
-이 정책을 사용하거나 설정하지 않은 경우 즐겨 찾기 모음 상황에 맞는 메뉴에서 토글을 변경하여 바로 가기를 표시할지 여부를 선택할 수 있습니다.
-
-정책을 사용하지 않으면 바로 가기가 표시되지 않습니다.
+Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
+  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+  If you disable this policy, the shortcut isn't shown.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -14889,7 +14889,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: ShowOfficeShortcutInFavoritesBar
-  - GP 이름: 즐겨 찾기 모음에 Microsoft Office 바로 가기 표시
+  - GP 이름: 즐겨 찾기 모음에 Microsoft Office 바로 가기 표시 (사용되지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
