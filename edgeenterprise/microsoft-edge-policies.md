@@ -1262,8 +1262,9 @@ Use the preceding information when configuring this policy.
   #### Description
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
+If you don't configure this policy, the user can change this setting manually.
 
-If you don't set this policy, it uses BlockPlugins and users can change this setting.
+                                                                                     
 
 Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
@@ -3254,6 +3255,7 @@ If you enable this policy and set it to:
 - "Address bar" ('redirect'), the new tab page search box uses the address bar to search on new tabs.
 
 Policy options mapping:
+  
 
 * bing (bing) = Search box (Recommended)
 
@@ -4407,6 +4409,12 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 
 
   
+  
+   
+ 
+ 
+   
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4842,7 +4850,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 
   #### Mac information and settings
-
   - Preference Key Name: PrintingPaperSizeDefault
   - Example value:
 ``` xml
@@ -5693,6 +5700,12 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 If you don't configure this policy, all background image types on the new tab page are enabled.
 
+    
+
+     
+
+   
+
 Policy options mapping:
 
 * DisableImageOfTheDay (1) = Disable daily background image type
@@ -5741,6 +5754,7 @@ Use the preceding information when configuring this policy.
 
   ### NewTabPageCompanyLogo
   #### Set new tab page company logo (obsolete)
+                                                                                                                 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
@@ -6625,6 +6639,8 @@ If you enable this policy, pages can send synchronous XHR requests during page d
 
 If you disable this policy or don't configure this policy, pages aren't allowed to send synchronous XHR requests during page dismissal.
 
+  
+
   #### Supported features:
   - Can be mandatory: Yes
   - Can be recommended: No
@@ -7202,6 +7218,20 @@ This policy is intended to give enterprises flexibility to disable the audio san
   #### Description
   If you enable this policy, all supported datatypes and settings from the specified browser will be silently and automatically imported at first run. During the First Run Experience, the import section will also be skipped.
 
+ 
+
+   
+
+  
+
+   
+
+  
+
+    
+
+    
+
 The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
 
 If this policy is set to 'FromDefaultBrowser', then the datatypes corresponding to the default browser on the managed device will be imported.
@@ -7232,6 +7262,7 @@ Note: For more details on what is imported from Google Chrome, please see [https
 
 If this policy is set to the value of 'FromSafari', user data is no longer imported into Microsoft Edge. This is due to the way Full Disk Access works on Mac.
 On macOS Mojave and above, it's no longer possible to have automated and unattended import of Safari data into Microsoft Edge.
+ 
 
 Starting with Microsoft Edge version 83, if this policy is set to the value of 'FromMozillaFirefox', the following datatypes will be imported from Mozilla Firefox:
 1. Favorites or bookmarks
@@ -7482,6 +7513,8 @@ Files with types that should be automatically opened will still be subject to th
 File types that a user has already specified to automatically be opened will continue to do so when downloaded. The user will continue to be able to specify other file types to be automatically opened.
 
 If you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.
+
+              
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -8167,6 +8200,10 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   #### Description
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
+ 
+  
+
+  
 
 It won't work in Microsoft Edge version 87, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
@@ -8540,6 +8577,8 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 If you enable this policy, services and export targets that match the given list are blocked.
 
 If you don't configure this policy, no restrictions on the acceptable services and export targets are enforced.
+
+     
 
 Policy options mapping:
 
@@ -9010,6 +9049,7 @@ If you disable this policy, DNS interception checks aren't performed.
   - On Windows 7 and macOS since 77 or later
 
   #### Description
+   
 
   If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
 
@@ -9880,6 +9920,8 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   ##### Example value:
 ```
 
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+             
 ```
 
 
@@ -10128,6 +10170,9 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Enable Domain Actions Download from Microsoft (obsolete)
+  
+  
+  
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
@@ -10951,6 +10996,10 @@ This enterprise policy is disabled by default.
   ### ForceNetworkInProcess
   #### Force networking code to run in the browser process (obsolete)
   
+  
+  
+  
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
   #### Supported versions:
   - On Windows since 78, until 83
@@ -10962,6 +11011,10 @@ This policy forces networking code to run in the browser process.
 
 This policy is disabled by default. If enabled, users are open to security issues when the networking process is sandboxed.
 
+
+ 
+
+  
   #### Supported features:
   - Can be mandatory: Yes
   - Can be recommended: No
@@ -12485,23 +12538,24 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
-
-Policy options mapping:
-
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Allow Internet Explorer mode testing
+  
+  
+  #### Supported versions:
+  - On Windows since 86 or later
 
   #### Description
   This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
 
-       This setting works in conjunction with:
-       [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-       and
-       [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+  This setting works in conjunction with:   [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
+  and   [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
 
-       If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+  If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
 
-       If you disable this policy, users can't see the UI option in the menu directly.
-
-       If you don't configure this policy, you can set up the ie-mode-test flag manually.
+  If you disable this policy, users can't see the UI option in the menu directly. 
+  
+  If you don't configure this policy, you can set up the ie-mode-test flag manually.
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -13003,6 +13057,8 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
   ### MetricsReportingEnabled
   #### Enable usage and crash-related data reporting (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+   
+  
   
   #### Supported versions:
   - On Windows and macOS since 77 or later
@@ -13019,9 +13075,11 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
+           
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
+  
   #### Supported features:
   - Can be mandatory: Yes
   - Can be recommended: No
@@ -13263,6 +13321,53 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   
 
+
+ 
+   
+ 
+
+   
+  
+
+   
+
+   
+
+  
+ 
+  
+ 
+
+  
+   
+
+   
+  
+   
+   
+  
+   
+ 
+   
+   
+   
+  
+ 
+ 
+   
+ 
+   
+
+
+  
+  
+   
+ 
+ 
+   
+  
+
+ 
   [Back to top](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
@@ -14017,6 +14122,13 @@ If you don't configure this policy, the default roaming profile path is used.
 ```
 
 
+  
+  
+   
+ 
+ 
+   
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -14062,6 +14174,12 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 ```
 
 
+  
+  
+   
+ 
+ 
+   
   
 
   [Back to top](#microsoft-edge---policies)
@@ -14579,6 +14697,8 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ### SendSiteInfoToImproveServices
   #### Send site information to improve Microsoft services (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+   
+  
   
   #### Supported versions:
   - On Windows and macOS since 77 or later
@@ -14588,6 +14708,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
 
+   
 Enable this policy to send info about websites visited in Microsoft Edge to Microsoft. Disable this policy to not send info about websites visited in Microsoft Edge to Microsoft. In both cases, users can't change or override the setting.
 
 On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
@@ -14595,6 +14716,7 @@ On Windows 10, if you don't configure this policy, Microsoft Edge will default t
 On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
+             
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -14881,6 +15003,8 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
   If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
   If you disable this policy, the shortcut isn't shown.
+
+                                                       
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -15188,6 +15312,8 @@ If you set the policy to false, auto upgrades will be disabled for audio and vid
 
 This policy does not affect other types of mixed content other than audio, video, and images.
 
+
+  
   #### Supported features:
   - Can be mandatory: Yes
   - Can be recommended: No
@@ -15282,6 +15408,8 @@ If this policy is false or unset, the warnings will appear on such unsupported c
   #### Description
   Disables data synchronization in Microsoft Edge. This policy also prevents the sync consent prompt from appearing.
 
+
+ 
 If you don't set this policy or apply it as recommended, users will be able to turn sync on or off. If you apply this policy as mandatory, users will not be able to turn sync on.
 
   #### Supported features:
@@ -15376,6 +15504,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   ### TLS13HardeningForLocalAnchorsEnabled
   #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
   
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
   - On Windows and macOS since 81, until 85
@@ -15388,6 +15517,10 @@ This policy controls a security feature in TLS 1.3 that protects connections aga
 If you enable this policy or don't set it, Microsoft Edge will enable these security protections for all connections.
 
 If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
+
+                                                            
+
+             
 
 This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -15651,6 +15784,8 @@ If you don't set this policy, the browser will only attempt to save memory when 
 If you disable this policy or don't configure it, users can set their own level of tracking prevention.
 
 Policy options mapping:
+   
+ 
 
 * TrackingPreventionOff (0) = Off (no tracking prevention)
 
@@ -16331,6 +16466,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebComponentsV0Enabled
   #### Re-enable Web Components v0 API until M84 (obsolete)
   
+  
+  
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 80, until 84
@@ -16381,11 +16519,15 @@ If you set this policy to False or don't set this policy, the Web Components v0 
   ### WebDriverOverridesIncompatiblePolicies
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
   
+  
+  
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 77, until 84
 
   #### Description
+  
   
 This policy doesn't work because WebDriver is now compatible with all existing policies.
 
