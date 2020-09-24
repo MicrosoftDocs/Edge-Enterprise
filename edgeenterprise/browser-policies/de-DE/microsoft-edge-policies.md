@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
 |[SerialAskForUrls](#serialaskforurls)|Die serielle API auf bestimmten Websites zulassen|
 |[SerialBlockedForUrls](#serialblockedforurls)|Die serielle API auf bestimmten Websites blockieren|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung des signierten HTTP-Austauschs (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Websiteisolation für jede Website aktivieren|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
@@ -2422,11 +2422,11 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   - Bei Windows und macOS seit 77 oder höher
 
   #### Beschreibung
-  Zuerst werden [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) überprüft, dann diese Richtlinie. Es stehen die Optionen "ClickToPlay" und "BlockPlugins" zur Verfügung. Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird der Zugriff auf dieses Plug-In auf allen Websites verweigert. Mit "ClickToPlay" kann das Flash-Plug-in ausgeführt werden, Benutzer müssen aber auf den Platzhalter klicken, um es zu starten.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Wenn Sie diese Richtlinie nicht festlegen, verwendet Sie BlockPlugins, und Benutzer können diese Einstellung ändern.
+If you don't configure this policy, the user can change this setting manually.
 
-Hinweis: Die automatische Wiedergabe steht nur für Domänen zur Verfügung, die explizit in der Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) aufgelistet sind. Um die automatische Wiedergabe für alle Websites zu aktivieren, fügen Sie “http://*” und “https://*” zur Liste der zulässigen URLs hinzu.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Zuordnung der Richtlinienoptionen:
 
@@ -14865,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen
-  
+  #### Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)
+  >VERALTET: Diese Richtlinie ist veraltet. Sie wird gegenwärtig noch unterstützt, aber in einem zukünftigen Release ausgemustert.
   
   #### Unterstützte Versionen:
   - Bei Windows und macOS seit 77 oder höher
 
   #### Beschreibung
-  Gibt an, ob in der Favoritenleiste eine Verknüpfung mit Office.com eingefügt werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, werden von der Verknüpfung zu ihren Microsoft Office-Apps und -Dokumenten weitergeleitet.
+  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
 
-Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, können Benutzer im Kontextmenü der Favoritenleiste wählen, ob die Verknüpfung angezeigt werden soll.
-
-Wenn die Richtlinie deaktiviert ist, wird die Verknüpfung nicht angezeigt.
+Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
+  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+  If you disable this policy, the shortcut isn't shown.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -14889,7 +14889,7 @@ Wenn die Richtlinie deaktiviert ist, wird die Verknüpfung nicht angezeigt.
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: ShowOfficeShortcutInFavoritesBar
-  - Gruppenrichtlinienname: Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen
+  - Gruppenrichtlinienname: Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
