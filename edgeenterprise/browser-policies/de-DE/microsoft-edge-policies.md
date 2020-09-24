@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/23/2020
+ms.date: 09/14/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,7 +216,6 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Erzwingung der Zertifikattransparenz für bestimmte URLs deaktivieren|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Browserdaten löschen, wenn Microsoft Edge geschlossen wird|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Löschen von zwischengespeicherten Bildern und Dateien nach dem Schließen von Microsoft Edge|
-|[ClickOnceEnabled](#clickonceenabled)|Benutzern das Öffnen von Dateien unter Verwendung des ClickOnce-Protokolls ermöglichen|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Zugriff auf eine angegebene Liste von Diensten blockieren und Ziele in Sammlungen exportieren|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Aktivieren von Sicherheitswarnungen für Befehlszeilenflags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Komponentenupdates in Microsoft Edge aktivieren|
@@ -332,7 +331,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Zugriff auf Sensoren auf bestimmten Websites blockieren|
 |[SerialAskForUrls](#serialaskforurls)|Die serielle API auf bestimmten Websites zulassen|
 |[SerialBlockedForUrls](#serialblockedforurls)|Die serielle API auf bestimmten Websites blockieren|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung des signierten HTTP-Austauschs (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Websiteisolation für jede Website aktivieren|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
@@ -2422,11 +2421,11 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   - Bei Windows und macOS seit 77 oder höher
 
   #### Beschreibung
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  Zuerst werden [PluginsAllowedForUrls](#pluginsallowedforurls) und [PluginsBlockedForUrls](#pluginsblockedforurls) überprüft, dann diese Richtlinie. Es stehen die Optionen "ClickToPlay" und "BlockPlugins" zur Verfügung. Wenn Sie diese Richtlinie auf "BlockPlugins" festlegen, wird der Zugriff auf dieses Plug-In auf allen Websites verweigert. Mit "ClickToPlay" kann das Flash-Plug-in ausgeführt werden, Benutzer müssen aber auf den Platzhalter klicken, um es zu starten.
 
-If you don't configure this policy, the user can change this setting manually.
+Wenn Sie diese Richtlinie nicht festlegen, verwendet Sie BlockPlugins, und Benutzer können diese Einstellung ändern.
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+Hinweis: Die automatische Wiedergabe steht nur für Domänen zur Verfügung, die explizit in der Richtlinie [PluginsAllowedForUrls](#pluginsallowedforurls) aufgelistet sind. Um die automatische Wiedergabe für alle Websites zu aktivieren, fügen Sie “http://*” und “https://*” zur Liste der zulässigen URLs hinzu.
 
 Zuordnung der Richtlinienoptionen:
 
@@ -8469,56 +8468,6 @@ Falls Sie diese Richtlinie deaktivieren, aktivieren Sie die Richtlinie [ClearBro
 ``` xml
 <true/>
 ```
-  
-
-  [Zurück nach oben](#microsoft-edge-–-richtlinien)
-
-  ### ClickOnceEnabled
-  #### Benutzern das Öffnen von Dateien unter Verwendung des ClickOnce-Protokolls ermöglichen
-  
-  
-  #### Unterstützte Versionen:
-  - Unter Windows seit Version 78 oder höher
-
-  #### Beschreibung
-  Ermöglicht Benutzern das Öffnen von Dateien unter Verwendung des ClickOnce-Protokolls. Mit dem ClickOnce-Protokoll können Websites anfordern, dass der Browser Dateien von einer bestimmten URL öffnet und dabei den ClickOnce-Dateihandler auf dem Computer oder Gerät des Benutzers verwendet.
-
-Wenn Sie diese Richtlinie aktivieren, können Benutzer Dateien unter Verwendung des ClickOnce-Protokolls öffnen. Diese Richtlinie überschreibt die ClickOnce-Einstellung des Benutzers auf der Seite edge://flags/“.
-
-Wenn Sie diese Richtlinie deaktivieren, können Benutzer keine Dateien unter Verwendung des ClickOnce-Protokolls öffnen. Die Datei wird stattdessen über den Browser im Dateisystem gespeichert. Diese Richtlinie überschreibt die ClickOnce-Einstellung des Benutzers auf der Seite edge://flags/“.
-
-Wenn Sie diese Richtlinie nicht konfigurieren, können Benutzer mit der Version Microsoft Edge vor Microsoft Edge 87 standardmäßig keine Dateien unter Verwendung des ClickOnce-Protokolls öffnen. Diese Benutzer haben jedoch die Möglichkeit, die Verwendung des ClickOnce-Protokolls auf der Seite edge://flags/“ zu aktivieren. Benutzer mit Microsoft Edge Versionen 87 und später können unter Verwendung des ClickOnce-Protokolls standardmäßig Dateien öffnen, haben jedoc nicht die Option, das ClickOnce-Protokoll auf der Seite edge://flags/ zu deaktivieren.
-
-Ist ClickOnce deaktiviert, können ClickOnce-Anwendungen (APPLICATION-Dateien) möglicherweise nicht ordnungsgemäß gestartet werden.
-
-Weitere Informationen zu ClickOnce finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
-
-  #### Unterstützte Features:
-  - Kann zwingend sein: Ja
-  - Kann empfohlen werden: Nein
-  - Dynamische Richtlinienaktualisierung: Ja
-
-  #### Datentyp:
-  - Boolesch
-
-  #### Windows-Informationen und-Einstellungen
-  ##### Informationen zur Gruppenrichtlinie (ADMX)
-  - Eindeutiger Name der Gruppenrichtlinie: ClickOnceEnabled
-  - Gruppenrichtlinienname: Benutzern das Öffnen von Dateien unter Verwendung des ClickOnce-Protokolls ermöglichen
-  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
-  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
-  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
-  ##### Windows-Registrierungseinstellungen
-  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge
-  - Pfad (Empfohlen): Nicht zutreffend
-  - Wertname: ClickOnceEnabled
-  - Werttyp: REG_DWORD
-  ##### Beispielwert:
-```
-0x00000000
-```
-
-
   
 
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
@@ -14865,18 +14814,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)
-  >VERALTET: Diese Richtlinie ist veraltet. Sie wird gegenwärtig noch unterstützt, aber in einem zukünftigen Release ausgemustert.
+  #### Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen
+  
   
   #### Unterstützte Versionen:
   - Bei Windows und macOS seit 77 oder höher
 
   #### Beschreibung
-  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
+  Gibt an, ob in der Favoritenleiste eine Verknüpfung mit Office.com eingefügt werden soll. Benutzer, die bei Microsoft Edge angemeldet sind, werden von der Verknüpfung zu ihren Microsoft Office-Apps und -Dokumenten weitergeleitet.
 
-Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
-  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
-  If you disable this policy, the shortcut isn't shown.
+Wenn diese Richtlinie aktiviert oder nicht konfiguriert ist, können Benutzer im Kontextmenü der Favoritenleiste wählen, ob die Verknüpfung angezeigt werden soll.
+
+Wenn die Richtlinie deaktiviert ist, wird die Verknüpfung nicht angezeigt.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -14889,7 +14838,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: ShowOfficeShortcutInFavoritesBar
-  - Gruppenrichtlinienname: Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)
+  - Gruppenrichtlinienname: Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
