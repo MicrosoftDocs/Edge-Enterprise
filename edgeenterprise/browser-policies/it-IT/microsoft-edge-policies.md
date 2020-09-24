@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/14/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,6 +216,7 @@ e suggerimenti per i servizi Microsoft|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disabilita l'applicazione della trasparenza dei certificati per URL specifici|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Cancella i dati di navigazione quando Microsoft Edge viene chiuso|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Cancella immagini e file memorizzati nella cache quando Microsoft Edge viene chiuso|
+|[ClickOnceEnabled](#clickonceenabled)|Consenti agli utenti di aprire file tramite il protocollo ClickOnce|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Blocca l'accesso a un elenco di servizi specifici ed esporta destinazioni in Raccolte|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Abilita gli avvisi di sicurezza per i flag della riga di comando|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Abilita gli aggiornamenti dei componenti in Microsoft Edge|
@@ -331,7 +332,7 @@ e suggerimenti per i servizi Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Blocca l'accesso ai sensori su siti specifici|
 |[SerialAskForUrls](#serialaskforurls)|Consenti l'API Serial su siti specifici|
 |[SerialBlockedForUrls](#serialblockedforurls)|Blocca l'API Serial su siti specifici|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Abilita supporto Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Abilita l'isolamento per ogni sito|
 |[SpellcheckEnabled](#spellcheckenabled)|Abilita controllo ortografia|
@@ -3079,11 +3080,11 @@ Utilizzare le informazioni precedenti durante la configurazione di questo criter
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) vengono controllati prima, quindi viene creato questo criterio. Le opzioni sono "ClickToPlay" e "BlockPlugins". Se imposti questo criterio su "BlockPlugins", questo plug-in viene negato a tutti i siti web. "ClickToPlay" consente l'esecuzione del plug-in Flash, ma gli utenti fanno clic sul segnaposto per avviarlo.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Se non imposti questo criterio, utilizza BlockPlugins e gli utenti possono modificare questa impostazione.
+If you don't configure this policy, the user can change this setting manually.
 
-Nota: la riproduzione automatica vale solo per i domini esplicitamente elencati nel criterio [PluginsAllowedForUrls](#pluginsallowedforurls). Per attivare la riproduzione automatica per tutti i siti, aggiungi http://* and https://* all'elenco di URL consentiti.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Mappatura opzioni criteri:
 
@@ -8469,6 +8470,56 @@ Se disabiliti questi criteri, non abilitare i criteri [ClearBrowsingDataOnExit](
 ``` xml
 <true/>
 ```
+  
+
+  [Torna all'inizio](#microsoft-edge---criteri)
+
+  ### ClickOnceEnabled
+  #### Consenti agli utenti di aprire file tramite il protocollo ClickOnce
+  
+  
+  #### Versioni supportate:
+  - Su Windows dal 78 o successiva
+
+  #### Descrizione
+  Consenti agli utenti di aprire i file utilizzando il protocollo ClickOnce. Il protocollo ClickOnce permette ai siti Web di richiedere che il browser apra i file da un URL specifico utilizzando il gestore di file ClickOnce nel computer o nel dispositivo dell'utente.
+
+Se abiliti questi criteri, gli utenti possono aprire i file utilizzando il protocollo ClickOnce. Questi criteri sostituiscono l'impostazione ClickOnce dell'utente nella pagina edge://flags/.
+
+Se disabiliti questi criteri, gli utenti non possono aprire i file con il protocollo ClickOnce. Il file verrà invece salvato nel file system utilizzando il browser. Questi criteri sostituiscono l'impostazione ClickOnce dell'utente nella pagina edge://flags/.
+
+Se non configuri questi criteri, gli utenti con versioni di Microsoft Edge precedenti a Microsoft Edge 87 non possono aprire i file utilizzando il protocollo ClickOnce per impostazione predefinita. Tuttavia, hanno l'opzione per abilitare l'uso del protocollo ClickOnce con la pagina edge://flags/. Gli utenti con Microsoft Edge versione 87 e successive possono aprire i file utilizzando il protocollo ClickOnce per impostazione predefinita, ma hanno la possibilità di disabilitare il protocollo ClickOnce con la pagina edge://flags/.
+
+La disabilitazione di ClickOnce può impedire l'avvio corretto delle applicazioni ClickOnce (file .application).
+
+Per ulteriori informazioni su ClickOnce, vedi [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) e [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+
+  #### Funzionalità supportate:
+  - Può essere obbligatorio: Sì
+  - Può essere consigliato: No
+  - Aggiornamento criteri dinamici: Sì
+
+  #### Tipo di dati:
+  - Booleano
+
+  #### Informazioni e impostazioni di Windows
+  ##### Info su Criteri di gruppo (ADMX)
+  - Nome univoco GP: ClickOnceEnabled
+  - Nome GP: Consenti agli utenti di aprire file tramite il protocollo ClickOnce
+  - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
+  - Percorso GP (Consigliati): N/D
+  - Nome file ADMX GP: MSEdge.admx
+  ##### Impostazioni Registro di sistema di Windows
+  - Percorso (Obbligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Percorso (Consigliati): N/D
+  - Nome valore: ClickOnceEnabled
+  - Tipo di valore: REG_DWORD
+  ##### Valore di esempio:
+```
+0x00000000
+```
+
+
   
 
   [Torna all'inizio](#microsoft-edge---criteri)
@@ -14816,18 +14867,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Torna all'inizio](#microsoft-edge---criteri)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Mostra collegamento Microsoft Office sulla barra Preferiti
-  
+  #### Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)
+  >DEPRECAtO: questi criteri sono deprecati. Sono attualmente supportati ma diventeranno obsoleti in una versione futura.
   
   #### Versioni supportate:
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  Specifica se includere un collegamento a Office.com nella barra Preferiti. Per gli utenti che hanno effettuato l'accesso a Microsoft Edge il collegamento indirizza gli utenti verso le app e i documenti di Microsoft Office.
+  Questi criteri non funzionano come previsto a causa delle modifiche nei requisiti operativi. Pertanto è deprecato e non deve essere utilizzato.
 
-Se questi criteri sono abilitati o non configurati, gli utenti possono scegliere se visualizzare il collegamento modificando l'interruttore nel menu di scelta rapida della barra Preferiti.
-
-Se i criteri sono disabilitati, il collegamento non viene visualizzato.
+Specifica se includere un collegamento a Office.com nella barra Preferiti. Per gli utenti che hanno effettuato l'accessoMicrosoft Edge  il collegamento porta gli utenti alle loro app e ai loro documenti Microsoft Office.
+Se abiliti o non configuri questi criteri, gli utenti possono scegliere se visualizzare il collegamento cambiando l'interruttore nel menu di scelta rapida della barra Preferiti.
+Se si disabilita questo criterio, il collegamento non verrà visualizzato.
 
   #### Funzionalità supportate:
   - Può essere obbligatorio: Sì
@@ -14840,7 +14891,7 @@ Se i criteri sono disabilitati, il collegamento non viene visualizzato.
   #### Informazioni e impostazioni di Windows
   ##### Info su Criteri di gruppo (ADMX)
   - Nome univoco GP: ShowOfficeShortcutInFavoritesBar
-  - Nome GP: Mostra collegamento Microsoft Office sulla barra Preferiti
+  - Nome GP: Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)
   - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
   - Percorso GP (Consigliati): N/D
   - Nome file ADMX GP: MSEdge.admx
