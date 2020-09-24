@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|阻止访问特定网站上的传感器|
 |[SerialAskForUrls](#serialaskforurls)|在特定网站上允许串行 API|
 |[SerialBlockedForUrls](#serialblockedforurls)|在特定网站上阻止串行 API|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|启用签名 HTTP Exchange (SXG) 支持|
 |[SitePerProcess](#siteperprocess)|为每个站点启用站点隔离|
 |[SpellcheckEnabled](#spellcheckenabled)|启用拼写检查|
@@ -2181,11 +2181,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 由于 Windows 或更高版本，macOS 和 77
 
   #### 描述
-  首先检查 [PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls)，然后检查此策略。选项为“ClickToPlay”和“BlockPlugins”。如果将此策略设置为“BlockPlugins”，则所有网站都将拒绝此插件。“ClickToPlay”允许 Flash 插件运行，但用户可单击占位符启动它。
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-如果未设置此策略，则它将使用 BlockPlugins，并且用户可以更改此设置。
+If you don't configure this policy, the user can change this setting manually.
 
-注意: 自动播放仅适用于 [PluginsAllowedForUrls](#pluginsallowedforurls) 策略中明确列出的域。若要为所有网站打开自动播放功能，请将 http://* 和 https://* 添加到允许的 URL 列表中。
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 策略选项映射：
 
@@ -14865,18 +14865,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [返回顶部](#microsoft-edge---策略)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### 在收藏夹栏中显示 Microsoft Office 快捷方式
-  
+  #### 在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)
+  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 77
 
   #### 描述
-  指定是否在收藏夹栏中包含 Office.com 的快捷方式。对于登录到 Microsoft Edge 的用户，该快捷方式会向用户显示其 Microsoft Office 应用和文档。
+  此策略由于操作要求发生变化而未能按预期工作。因此，它已被弃用，不应使用。
 
-如果启用或未配置此策略，则用户可以在收藏夹栏上下文菜单中更改切换开关，以选择是否查看快捷方式。
-
-如果禁用该策略，将不会显示该快捷方式。
+指定是否在收藏夹栏中包括 Office.com 的快捷方式。对于登录 Microsoft Edge 的用户，该快捷方式会将用户转到其 Microsoft Office 应用和文档中。
+  如果启用或未配置此策略，用户可以通过在收藏夹栏上下文中更改切换来选择是否显示快捷方式。
+  如果禁用此策略，则不会显示快捷方式。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -14889,7 +14889,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: ShowOfficeShortcutInFavoritesBar
-  - GP 名称: 在收藏夹栏中显示 Microsoft Office 快捷方式
+  - GP 名称: 在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
