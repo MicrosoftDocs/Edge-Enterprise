@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/14/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,6 +216,7 @@ y consejos para los servicios Microsoft|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Deshabilitar el cumplimiento de transparencia de certificados para direcciones URL específicas|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Borrar los datos de exploración al cerrar Microsoft Edge|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Borrar archivos e imágenes en caché al cerrar Microsoft Edge|
+|[ClickOnceEnabled](#clickonceenabled)|Permitir a los usuarios abrir archivos con el protocolo ClickOnce|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Bloquear el acceso a una lista específica de servicios y destinos de exportación en colecciones|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Habilitar advertencias de seguridad para marcadores de la línea de comandos|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Habilitar actualizaciones de componentes en Microsoft Edge|
@@ -331,7 +332,7 @@ y consejos para los servicios Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear el acceso a los sensores en sitios específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir la API serie en sitios específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear la API serie en sitios específicos|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilitar la compatibilidad con Exchange firmado de HTTP (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilitar el aislamiento de sitios para cada sitio|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilitar corrector ortográfico|
@@ -2208,11 +2209,11 @@ Usa la información anterior al configurar esta directiva.
   - En Windows y macOS desde 77 o posterior
 
   #### Descripción
-  [PluginsAllowedForUrls](#pluginsallowedforurls) y [PluginsBlockedForUrls](#pluginsblockedforurls) se comprueban en primer lugar y, a continuación, esta directiva. Las opciones son "ClickToPlay" y "BlockPlugins". Si establece esta directiva en "BlockPlugins", este complemento se deniega para todos los sitios web. "ClickToPlay" permite ejecutar el complemento Flash, pero los usuarios hacen clic en el marcador de posición para iniciarlo.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-     Si no define esta directiva, usará BlockPlugins y los usuarios podrán cambiar esta configuración.
+If you don't configure this policy, the user can change this setting manually.
 
-Nota: La reproducción automática solo se encuentra para los dominios que aparecen explícitamente en la directiva de [PluginsAllowedForUrls](#pluginsallowedforurls). Para activar la reproducción automática en todos los sitios, añada http://* y https://* a la lista de direcciones URL permitidas.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Asignación de opciones de directiva:
 
@@ -8468,6 +8469,56 @@ Si deshabilita esta directiva, no habilite la directiva [ClearBrowsingDataOnExit
 ``` xml
 <true/>
 ```
+  
+
+  [Volver al principio](#microsoft-edge:-directivas)
+
+  ### ClickOnceEnabled
+  #### Permitir a los usuarios abrir archivos con el protocolo ClickOnce
+  
+  
+  #### Versiones admitidas:
+  - En Windows desde 78 o posterior
+
+  #### Descripción
+  Permitir a los usuarios abrir archivos con el protocolo ClickOnce. El protocolo ClickOnce permite a los sitios web solicitar que el explorador abra archivos de una dirección URL específica mediante el controlador de archivos de ClickOnce del equipo o dispositivo del usuario.
+
+Si se habilita esta directiva, los usuarios pueden abrir archivos con el protocolo ClickOnce. Esta directiva invalida la configuración de ClickOnce del usuario en la página edge://flags/.
+
+Si se deshabilita esta directiva, los usuarios no podrán abrir archivos con el protocolo ClickOnce. En su lugar, el archivo se guardará en el sistema de archivos usando el explorador. Esta directiva invalida la configuración de ClickOnce del usuario en la página edge://flags/.
+
+Si no se configura esta directiva, los usuarios con versiones de Microsoft Edge anteriores a Microsoft Edge 87 no podrán abrir archivos con el protocolo ClickOnce de manera predeterminada. No obstante, tienen la opción de habilitar el uso del protocolo ClickOnce usando la página edge://flags/. Los usuarios con las versiones 87 y posteriores de Microsoft Edge pueden abrir archivos con el protocolo ClickOnce de forma predeterminada, pero tienen la opción de deshabilitar el protocolo ClickOnce en la página edge://flags/.
+
+     La deshabilitación de ClickOnce puede impedir que las aplicaciones ClickOnce (.application files) se inicien correctamente.
+
+Para obtener más información sobre ClickOnce, consulte [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+
+  #### Características admitidas:
+  - Puede ser obligatorio: Sí
+  - Se puede recomendar: No
+  - Actualización de directiva dinámica: Sí
+
+  #### Tipo de datos:
+  - Booleano
+
+  #### Información y configuración de Windows
+  ##### Información de la directiva de grupos (ADMX)
+  - Nombre único de la directiva de grupos: ClickOnceEnabled
+  - Nombre de la directiva de grupos: Permitir a los usuarios abrir archivos con el protocolo ClickOnce
+  - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (Recomendada): N/D
+  - Nombre del archivo ADMX de GP: MSEdge.admx
+  ##### Configuración del registro de Windows
+  - Ruta de acceso (Obligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Ruta de acceso (Recomendada): N/D
+  - Nombre del valor: ClickOnceEnabled
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000000
+```
+
+
   
 
   [Volver al principio](#microsoft-edge:-directivas)
@@ -14815,18 +14866,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Volver al principio](#microsoft-edge:-directivas)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Mostrar el acceso directo de Microsoft Office en la barra de favoritos
-  
+  #### Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)
+  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero será obsoleta en una versión futura.
   
   #### Versiones admitidas:
   - En Windows y macOS desde 77 o posterior
 
   #### Descripción
-  Especifica si se incluye un acceso directo a Office.com en la barra de favoritos. Para los usuarios que han iniciado sesión en Microsoft Edge el acceso directo lleva a los usuarios a sus documentos y aplicaciones de Microsoft Office.
+  Esta directiva no funcionó según lo esperado debido a cambios en los requisitos operativos. Por lo tanto, está en desuso y no debe usarse.
 
-Si esta directiva está habilitada o no está configurada, los usuarios podrán elegir si quieren ver el acceso directo cambiando el botón de alternancia en los favoritos de la barra del menú contextual.
-
-Si la directiva está deshabilitada, no se mostrará el acceso directo.
+Especifica si se incluye un acceso directo a Office.com en la barra de favoritos. Para los usuarios que han iniciado sesión en Microsoft Edge, el acceso directo lleva a los usuarios a sus documentos y aplicaciones de Microsoft Office.
+  Si habilitas o no configuras esta directiva, los usuarios pueden elegir si quieren ver el acceso directo cambiando el botón de alternancia en el menú contextual de la barra de favoritos.
+  Si deshabilitas esta directiva, no se muestra el acceso directo.
 
   #### Características admitidas:
   - Puede ser obligatorio: Sí
@@ -14839,7 +14890,7 @@ Si la directiva está deshabilitada, no se mostrará el acceso directo.
   #### Información y configuración de Windows
   ##### Información de la directiva de grupos (ADMX)
   - Nombre único de la directiva de grupos: ShowOfficeShortcutInFavoritesBar
-  - Nombre de la directiva de grupos: Mostrar el acceso directo de Microsoft Office en la barra de favoritos
+  - Nombre de la directiva de grupos: Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)
   - Ruta de acceso de GP (Obligatorio): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (Recomendada): N/D
   - Nombre del archivo ADMX de GP: MSEdge.admx
