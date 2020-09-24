@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -72,7 +72,7 @@ You can invoke Microsoft Edge kiosk mode features can be invoked with the follow
 
 ## Set up kiosk mode with assigned access
 
-Microsoft Edge kiosk mode with assigned access is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), version 87.0.644 or higher.
+Microsoft Edge kiosk mode with assigned access is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), version 87.0.644.4  or higher.
 
 **How do I get the Windows Insiders preview?**
 
@@ -83,7 +83,7 @@ To install a Windows 10 Insider Preview Build on a PC, follow the instructions i
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), 87.0.644 or higher.
+2. Install the latest version of [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), 87.0.644.4 or higher.
 
    > [!IMPORTANT]
    > Because a device level installation is required, only a non-Canary channel is supported.
