@@ -1262,7 +1262,8 @@ Use the preceding information when configuring this policy.
   #### Description
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-If you don't configure this policy, the user can change this setting manually.
+
+If you don't set this policy, it uses BlockPlugins and users can change this setting.
 
 Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
@@ -4841,6 +4842,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 
   #### Mac information and settings
+
   - Preference Key Name: PrintingPaperSizeDefault
   - Example value:
 ``` xml
@@ -9008,6 +9010,7 @@ If you disable this policy, DNS interception checks aren't performed.
   - On Windows 7 and macOS since 77 or later
 
   #### Description
+
   If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
 
 If you set this policy to False, Microsoft Edge is stopped from ever checking if it's the default and turns user controls off for this option.
@@ -9876,7 +9879,7 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   - Value Type: REG_SZ
   ##### Example value:
 ```
-"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+
 ```
 
 
@@ -12442,6 +12445,7 @@ If you set this policy to 'AllInPageNavigations', all navigations from pages loa
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Policy options mapping:
+  
 
 * Default (0) = Default
 
@@ -12481,12 +12485,9 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationTestingAllowed
-  #### Allow Internet Explorer mode testing
-  
-  
-  #### Supported versions:
-  - On Windows since 86 or later
+
+Policy options mapping:
+
 
   #### Description
   This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
@@ -14016,7 +14017,6 @@ If you don't configure this policy, the default roaming profile path is used.
 ```
 
 
-  
 
   [Back to top](#microsoft-edge---policies)
 

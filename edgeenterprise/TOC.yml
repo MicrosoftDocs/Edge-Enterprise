@@ -1,4 +1,4 @@
-# last revised 08/21/2020
+# last revised 09/21/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -64,8 +64,8 @@
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
-   - name: Video - Deploy Microsoft Edge
-     href: microsoft-edge-video-deploy.md
+#   - name: Video - Deploy Microsoft Edge
+#     href: microsoft-edge-video-deploy.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
      href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
@@ -93,8 +93,8 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-   - name: Video - Microsoft Edge and Microsoft Search
-     href: microsoft-edge-video-search.md
+#   - name: Video - Microsoft Edge and Microsoft Search
+#     href: microsoft-edge-video-search.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
    - name: Identity support and configuration
@@ -103,6 +103,8 @@
      href: microsoft-edge-enterprise-state-roaming.md
    - name: Microsoft Edge kiosk mode
      href: microsoft-edge-kiosk-mode.md
+   - name: Configure Microsoft Edge kiosk mode
+     href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
      href: microsoft-edge-enterprise-sync.md
    - name: On-premises sync for Active Directory users
@@ -126,8 +128,10 @@
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
-   - name: Video - Security, compatibility, and manageability
-     href: microsoft-edge-video-security-compatibility-manageability.md     
+#   - name: Video - Security, compatibility, and manageability
+#     href: microsoft-edge-video-security-compatibility-manageability.md 
+   - name: Security for your business
+     href: ms-edge-security-for-business.md    
    - name: Security overview
      href: security-overview.md
    - name: Allow list for Microsoft Edge endpoints
@@ -173,6 +177,18 @@
         href: edge-learnmore-regex.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
+      - name: Using Microsoft Edge rollback for enterprises
+        href: edge-learnmore-rollback.md
+- name: Microsoft Edge Videos
+  items:
+   - name: Microsoft Edge video collection
+     href: microsoft-edge-videos.md
+   - name: Video - Deploy Microsoft Edge
+     href: microsoft-edge-video-deploy.md
+   - name: Video - Microsoft Edge and Microsoft Search
+     href: microsoft-edge-video-search.md
+   - name: Video - Security, compatibility, and manageability
+     href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
 
