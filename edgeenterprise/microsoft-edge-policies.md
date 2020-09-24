@@ -16656,7 +16656,6 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 
   [Back to top](#microsoft-edge---policies)
 
-
 ## See also
 - [Configuring Microsoft Edge](configure-microsoft-edge.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
