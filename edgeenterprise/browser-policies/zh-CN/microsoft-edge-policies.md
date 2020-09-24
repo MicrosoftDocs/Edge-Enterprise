@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/23/2020
+ms.date: 09/14/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,7 +216,6 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|对特定 URL 禁用强制证书透明度|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Microsoft Edge 关闭时清除浏览数据|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Microsoft Edge 关闭时清除缓存的图像和文件|
-|[ClickOnceEnabled](#clickonceenabled)|允许用户使用 ClickOnce 协议打开文件|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|阻止访问集锦中指定的服务列表和导出目标|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|为命令行标志启用安全警告|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|在 Microsoft Edge 中启用组件更新|
@@ -332,7 +331,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|阻止访问特定网站上的传感器|
 |[SerialAskForUrls](#serialaskforurls)|在特定网站上允许串行 API|
 |[SerialBlockedForUrls](#serialblockedforurls)|在特定网站上阻止串行 API|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在收藏夹栏中显示 Microsoft Office 快捷方式|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|启用签名 HTTP Exchange (SXG) 支持|
 |[SitePerProcess](#siteperprocess)|为每个站点启用站点隔离|
 |[SpellcheckEnabled](#spellcheckenabled)|启用拼写检查|
@@ -2181,11 +2180,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 由于 Windows 或更高版本，macOS 和 77
 
   #### 描述
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  首先检查 [PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls)，然后检查此策略。选项为“ClickToPlay”和“BlockPlugins”。如果将此策略设置为“BlockPlugins”，则所有网站都将拒绝此插件。“ClickToPlay”允许 Flash 插件运行，但用户可单击占位符启动它。
 
-If you don't configure this policy, the user can change this setting manually.
+如果未设置此策略，则它将使用 BlockPlugins，并且用户可以更改此设置。
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+注意: 自动播放仅适用于 [PluginsAllowedForUrls](#pluginsallowedforurls) 策略中明确列出的域。若要为所有网站打开自动播放功能，请将 http://* 和 https://* 添加到允许的 URL 列表中。
 
 策略选项映射：
 
@@ -8469,56 +8468,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ``` xml
 <true/>
 ```
-  
-
-  [返回顶部](#microsoft-edge---策略)
-
-  ### ClickOnceEnabled
-  #### 允许用户使用 ClickOnce 协议打开文件
-  
-  
-  #### 支持的版本:
-  - 在 Windows 自 78 或之后
-
-  #### 描述
-  允许用户使用 ClickOnce 协议打开文件。通过 ClickOnce 协议，网站可以请求浏览器使用用户的计算机或设备上的 ClickOnce 文件处理程序打开特定 URL 中的文件。
-
-如果启用此策略，则用户可以使用 ClickOnce 协议打开文件。此策略将替代 edge://flags/ 页面中用户的 ClickOnce 设置。
-
-如果禁用此策略，则用户无法使用 ClickOnce 协议打开文件。文件将通过浏览器保存到文件系统。此策略将替代 edge://flags/ 页面中用户的 ClickOnce 设置。
-
-如果未配置此策略，则默认情况下，Microsoft Edge 版本在 Microsoft Edge 87 之前的用户无法使用 ClickOnce 协议打开文件。但是，他们可以选择允许将 ClickOnce 协议与 edge://flags/ 页面搭配使用。默认情况下，具有 Microsoft Edge 版本 87 和更高版本的用户可以使用 ClickOnce 协议打开文件，但可以选择使用 edge://flags/ 页面禁用 ClickOnce 协议。
-
-禁用 ClickOnce 可能会阻止 ClickOnce 应用程序(.application 文件)正常启动。
-
-有关 ClickOnce 的详细信息，请参阅 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 和 [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)。
-
-  #### 支持的功能:
-  - 可以为必填字段: 是
-  - 可以推荐: 否
-  - 动态策略刷新: 是
-
-  #### 数据类型:
-  - 布尔
-
-  #### Windows 信息和设置
-  ##### 组策略(ADMX)信息
-  - GP 唯一名称: ClickOnceEnabled
-  - GP 名称: 允许用户使用 ClickOnce 协议打开文件
-  - GP 路径 (强制): 管理模板/Microsoft Edge/
-  - GP 路径 (推荐): 不适用
-  - GP ADMX 文件名: MSEdge.admx
-  ##### Windows 注册表设置
-  - 路径 (强制): SOFTWARE\Policies\Microsoft\Edge
-  - 路径 (推荐): 不适用
-  - 值名称: ClickOnceEnabled
-  - 值类型: REG_DWORD
-  ##### 示例值:
-```
-0x00000000
-```
-
-
   
 
   [返回顶部](#microsoft-edge---策略)
@@ -14865,18 +14814,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [返回顶部](#microsoft-edge---策略)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### 在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)
-  >已弃用: 此策略已弃用。目前仍受支持，但将在未来版本中弃用。
+  #### 在收藏夹栏中显示 Microsoft Office 快捷方式
+  
   
   #### 支持的版本:
   - 由于 Windows 或更高版本，macOS 和 77
 
   #### 描述
-  此策略由于操作要求发生变化而未能按预期工作。因此，它已被弃用，不应使用。
+  指定是否在收藏夹栏中包含 Office.com 的快捷方式。对于登录到 Microsoft Edge 的用户，该快捷方式会向用户显示其 Microsoft Office 应用和文档。
 
-指定是否在收藏夹栏中包括 Office.com 的快捷方式。对于登录 Microsoft Edge 的用户，该快捷方式会将用户转到其 Microsoft Office 应用和文档中。
-  如果启用或未配置此策略，用户可以通过在收藏夹栏上下文中更改切换来选择是否显示快捷方式。
-  如果禁用此策略，则不会显示快捷方式。
+如果启用或未配置此策略，则用户可以在收藏夹栏上下文菜单中更改切换开关，以选择是否查看快捷方式。
+
+如果禁用该策略，将不会显示该快捷方式。
 
   #### 支持的功能:
   - 可以为必填字段: 是
@@ -14889,7 +14838,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows 信息和设置
   ##### 组策略(ADMX)信息
   - GP 唯一名称: ShowOfficeShortcutInFavoritesBar
-  - GP 名称: 在收藏夹栏中显示 Microsoft Office 快捷方式 (已弃用)
+  - GP 名称: 在收藏夹栏中显示 Microsoft Office 快捷方式
   - GP 路径 (强制): 管理模板/Microsoft Edge/
   - GP 路径 (推荐): 不适用
   - GP ADMX 文件名: MSEdge.admx
