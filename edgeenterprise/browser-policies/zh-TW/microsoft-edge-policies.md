@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/14/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,6 +216,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|停用針對特定 URL 的憑證透明度強化|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|當 Microsoft Edge 關閉時清除瀏覽資料|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|在 Microsoft Edge 關閉時清除快取圖片與檔案|
+|[ClickOnceEnabled](#clickonceenabled)|允許使用者透過 ClickOnce 協定打開檔案|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|封鎖對特定服務清單的存取，並在集合中匯出目標|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|啟用命令列旗標的安全性警告|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|啟用 Microsoft Edge 中的元件更新|
@@ -331,7 +332,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|封鎖特定網站上的感應器存取|
 |[SerialAskForUrls](#serialaskforurls)|允許特定網站上的序列 API|
 |[SerialBlockedForUrls](#serialblockedforurls)|封鎖特定網站上的序列 API|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在 [我的最愛] 列中顯示 Microsoft Office 捷徑|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在 [我的最愛] 列中顯示 Microsoft Office 捷徑 (已取代)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|啟用簽署 HTTP Exchange (SXG) 支援|
 |[SitePerProcess](#siteperprocess)|在所有網站中啟用網站隔離|
 |[SpellcheckEnabled](#spellcheckenabled)|啟用拼字檢查|
@@ -2179,11 +2180,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  會先檢查 [PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls)，然後再檢查此原則。選項為 'ClickToPlay' 和 'BlockPlugins'。如果您將此原則設定為 'BlockPlugins'，則會拒絕所有網站的此外掛程式。'ClickToPlay' 可讓 Flash 外掛程式執行，但使用者需按一下預留位置以啟動它。
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-如果您未設定這個原則，則會使用 BlockPlugins，而且使用者可以變更這個設定。
+If you don't configure this policy, the user can change this setting manually.
 
-注意：只會在 [PluginsAllowedForUrls](#pluginsallowedforurls) 原則中明確列出的網域進行自動播放。若要為所有網站開啟自動播放功能，請將 http:// 和 https://** 新增至允許的 URL 清單。
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 原則選項對應:
 
@@ -8467,6 +8468,56 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ``` xml
 <true/>
 ```
+  
+
+  [回到頂端](#microsoft-edge---原則)
+
+  ### ClickOnceEnabled
+  #### 允許使用者透過 ClickOnce 協定打開檔案
+  
+  
+  #### 支援的版本:
+  - 在 Windows 上，78 版或更新版本
+
+  #### 描述
+  允許使用者使用 ClickOnce 通訊協定開啟檔案。ClickOnce 通訊協定可讓網站要求瀏覽器在使用者的電腦或裝置上使用 ClickOnce 檔案處理常式從特定 URL 開啟檔案。
+
+如果啟用此原則，使用者就能使用 ClickOnce 通訊協定開啟檔案。這個原則會覆寫使用者在 edge://flags/ 頁面中的 ClickOnce 設定。
+
+如果停用此原則，使用者將無法使用 ClickOnce 開啟檔案。但是，檔案會儲存至使用瀏覽器的檔案系統。這個原則會覆寫使用者在 edge://flags/ 頁面中的 ClickOnce 設定。
+
+如果未設定此原則，使用 Microsoft Edge 87 之前的 Microsoft Edge 版本的使用者預設就無法使用 ClickOnce 通訊協定開啟檔案。不過，使用者可以選擇啟用 ClickOnce 通訊協定與 edge://flags/ 頁面的搭配使用。使用 Microsoft Edge 版本 87 及更新版本的使用者依預設可以使用 ClickOnce 通訊協定開啟檔案，但能選擇使用 edge://flags/  頁面來停用 ClickOnce 通訊協定。
+
+停用 ClickOnce 可能會使 ClickOnce 應用程式 (.application 檔案) 無法正確啟動。
+
+如需有關 ClickOnce 的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 與 [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)。
+
+  #### 支援功能:
+  - 可以是強制: 是
+  - 可以建議: 否
+  - 動態原則重新整理: 是
+
+  #### 資料類型:
+  - 布林值
+
+  #### Windows 資訊和設定
+  ##### 群組原則 (ADMX) 資訊
+  - GP 唯一名稱: ClickOnceEnabled
+  - GP 名稱: 允許使用者透過 ClickOnce 協定打開檔案
+  - GP 路徑 (強制): 系統管理範本/Microsoft Edge/
+  - GP 路徑 (推薦項目): N/A
+  - GP ADMX 檔案名稱: MSEdge.admx
+  ##### Windows 登錄設定
+  - 路徑 (強制): SOFTWARE\Policies\Microsoft\Edge
+  - 路徑 (推薦項目): N/A
+  - 值名稱: ClickOnceEnabled
+  - 數值類型: REG_DWORD
+  ##### 範例值:
+```
+0x00000000
+```
+
+
   
 
   [回到頂端](#microsoft-edge---原則)
@@ -14813,18 +14864,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [回到頂端](#microsoft-edge---原則)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### 在 [我的最愛] 列中顯示 Microsoft Office 捷徑
-  
+  #### 在 [我的最愛] 列中顯示 Microsoft Office 捷徑 (已取代)
+  >已取代: 已取代此原則。目前依然支援此原則，但在未來的版本中將淘汰。
   
   #### 支援的版本:
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  指定是否在 [我的最愛] 列中包含 Office.com 的捷徑。使用者登入 Microsoft Edge 捷徑會將使用者帶到他們的 Microsoft Office 應用程式與文件。
+  由於作業需求的變化，此原則無法如預期運作。因此該原則已經遭到取代，而不得使用。
 
-如果啟用或未設定這個原則，使用者可以選擇是否要藉由變更操作功能表列將 [我的最愛] 中的切換，請參閱快顯。
-
-如果已停用這個原則，將不會顯示捷徑。
+指定是否在 [我的最愛] 列中包含 Office.com 的捷徑。對於登入 Microsoft Edge 的使用者而言，此捷徑會將使用者帶往其 Microsoft Office 應用程式和文件。
+  如果您啟用或不設定此原則，使用者可以選擇是否要在 [我的最愛] 列的快顯功能表中變更切換以查看捷徑。
+  如果停用此原則，就不會顯示捷徑。
 
   #### 支援功能:
   - 可以是強制: 是
@@ -14837,7 +14888,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Windows 資訊和設定
   ##### 群組原則 (ADMX) 資訊
   - GP 唯一名稱: ShowOfficeShortcutInFavoritesBar
-  - GP 名稱: 在 [我的最愛] 列中顯示 Microsoft Office 捷徑
+  - GP 名稱: 在 [我的最愛] 列中顯示 Microsoft Office 捷徑 (已取代)
   - GP 路徑 (強制): 系統管理範本/Microsoft Edge/
   - GP 路徑 (推薦項目): N/A
   - GP ADMX 檔案名稱: MSEdge.admx
