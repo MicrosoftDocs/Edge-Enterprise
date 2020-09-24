@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/23/2020
+ms.date: 09/14/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -216,7 +216,6 @@ et des conseils pour les services Microsoft|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Désactiver l'application de transparence de certificat pour des URL spécifiques|
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Effacer les données de navigation à la fermeture de Microsoft Edge|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Effacer les images et les fichiers mis en cache lorsque Microsoft Edge se ferme|
-|[ClickOnceEnabled](#clickonceenabled)|Autoriser les utilisateurs à ouvrir des fichiers à l’aide du protocole ClickOnce|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Bloquer l’accès à une liste spécifiée de services et de cibles d’exportation dans Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Activer les avertissements de sécurité pour les indicateurs de ligne de commande|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Activer les mises à jour de composant dans Microsoft Edge|
@@ -332,7 +331,7 @@ et des conseils pour les services Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquer l’accès aux capteurs sur des sites spécifiques|
 |[SerialAskForUrls](#serialaskforurls)|Autoriser l’API série sur des sites spécifiques|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquer l’API série sur des sites spécifiques|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher les raccourcis Microsoft Office dans la barre des favoris (déconseillé)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Afficher les raccourcis Microsoft Office dans la barre des favoris|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Activer la prise en charge de SXG (échange HTTP signé)|
 |[SitePerProcess](#siteperprocess)|Activer l’isolation de site pour chaque site|
 |[SpellcheckEnabled](#spellcheckenabled)|Activer la vérification orthographique|
@@ -4384,11 +4383,11 @@ Utilisez les informations ci-dessus lors de la configuration de cette stratégie
   - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
 
   #### Description
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) et [PluginsBlockedForUrls](#pluginsblockedforurls) sont examinées en premier, puis cette stratégie. Les options sont « ClickToPlay » et « BlockPlugins ». Si vous configurez cette stratégie sur « BlockPlugins », ce plug-in est refusé pour tous les sites web. « ClickToPlay » permet au plug-in Flash de s'exécuter, mais les utilisateurs cliquent sur l’espace réservé pour le démarrer.
 
-If you don't configure this policy, the user can change this setting manually.
+Si vous ne définissez pas cette stratégie, elle utilise BlockPlugins et les utilisateurs peuvent modifier ce paramètre.
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+Remarque : la lecture automatique est réservée aux domaines répertoriés explicitement dans la stratégie [PluginsAllowedForUrls](#pluginsallowedforurls). Pour activer la lecture automatique pour tous les sites, ajoutez http://* et https://* à la liste d’URL autorisée.
 
 Mappage des options de stratégie :
 
@@ -8468,56 +8467,6 @@ Si vous désactivez cette stratégie, n’activez pas la stratégie [ClearBrowsi
 ``` xml
 <true/>
 ```
-  
-
-  [Revenir au début](#microsoft-edge---stratégies)
-
-  ### ClickOnceEnabled
-  #### Autoriser les utilisateurs à ouvrir des fichiers à l’aide du protocole ClickOnce
-  
-  
-  #### Versions prises en charge :
-  - Sur Windows depuis 78 ou ultérieur
-
-  #### Description
-  Autoriser les utilisateurs à ouvrir des fichiers à l’aide du protocole ClickOnce. Le protocole ClickOnce permet aux sites web de demander que le navigateur ouvre les fichiers d’une URL spécifique à l’aide du gestionnaire de fichiers ClickOnce sur l’ordinateur ou l’appareil de l’utilisateur.
-
-Si vous activez cette stratégie, les utilisateurs peuvent ouvrir des fichiers à l’aide du protocole ClickOnce. Cette stratégie remplace le paramètre ClickOnce de l’utilisateur sur la page edge://flags/.
-
-Si vous désactivez cette stratégie, les utilisateurs ne peuvent pas ouvrir de fichiers à l’aide du protocole ClickOnce. Au lieu de cela, le fichier est enregistré dans le système de fichiers utilisant le navigateur. Cette stratégie remplace le paramètre ClickOnce de l’utilisateur sur la page edge://flags/.
-
-Si vous ne configurez pas cette stratégie, les utilisateurs disposant de versions Microsoft Edge antérieures à Microsoft Edge 87 ne peuvent pas ouvrir de fichiers à l’aide du protocole ClickOnce par défaut. Les utilisateurs ont toutefois la possibilité d’activer l’utilisation du protocole ClickOnce avec la page edge://flags/. Les utilisateurs disposant des versions Microsoft Edge 87 et ultérieures peuvent ouvrir des fichiers à l’aide du protocole ClickOnce par défaut et ont la possibilité de désactiver le protocole ClickOnce avec la page edge://flags/.
-
- La désactivation de ClickOnce peut empêcher le lancement correct d’applications ClickOnce (fichiers .application).
-
-Si vous souhaitez obtenir plus d’informations sur ClickOnce, voir [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
-
-  #### Fonctionnalités prises en charge :
-  - Peut être obligatoire: Oui
-  - Peut être recommandé(e): Non
-  - Actualisation de la stratégie dynamique: Oui
-
-  #### Type de données:
-  - Booléen
-
-  #### Informations et paramètres Windows
-  ##### Informations sur la stratégie de groupe (ADMX)
-  - Nom unique de stratégie de groupe: ClickOnceEnabled
-  - Nom de la stratégie de groupe: Autoriser les utilisateurs à ouvrir des fichiers à l’aide du protocole ClickOnce
-  - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
-  - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
-  - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
-  ##### Paramètres du Registre Windows
-  - Chemin (Obligatoire): SOFTWARE\Policies\Microsoft\Edge
-  - Chemin (Recommandé): N/A
-  - Nom de la valeur: ClickOnceEnabled
-  - Type de la valeur: REG_DWORD
-  ##### Exemple de valeur :
-```
-0x00000000
-```
-
-
   
 
   [Revenir au début](#microsoft-edge---stratégies)
@@ -14866,18 +14815,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Revenir au début](#microsoft-edge---stratégies)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Afficher les raccourcis Microsoft Office dans la barre des favoris (déconseillé)
-  >DÉCONSEILLÉ : cette stratégie est déconseillée. Elle est actuellement prise en charge, mais deviendra obsolète dans une prochaine version.
+  #### Afficher les raccourcis Microsoft Office dans la barre des favoris
+  
   
   #### Versions prises en charge :
   - Sur Windows et macOS dans la mesure où 77 ou version ultérieure
 
   #### Description
-  Cette stratégie n’a pas fonctionné comme prévu, car des modifications ont été apportées aux exigences opérationnelles. Par conséquent, il est déconseillé et ne doit pas être utilisé.
+  Spécifie s’il faut inclure un raccourci vers Office.com dans la barre des favoris. Pour les utilisateurs connectés à Microsoft Edge, le raccourci dirige les utilisateurs vers leurs applications et documents Microsoft Office.
 
-Spécifie s’il faut inclure un raccourci vers Office.com dans la barre des favoris. Pour les utilisateurs connectés à Microsoft Edge le raccourci dirige les utilisateurs vers leurs applications et documents Microsoft Office.
-  Si vous activez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent décider s’ils souhaitent voir le raccourci en modifiant le bouton bascule dans le menu contextuel de la barre des favoris.
-  Si vous désactivez cette stratégie, le raccourci ne s’affiche pas.
+	Si cette stratégie est activée ou si vous ne la configurez pas, les utilisateurs peuvent choisir d'afficher le raccourci en modifiant le bouton bascule dans le menu contextuel de la barre des favoris.
+
+	Si vous désactivez cette stratégie, le raccourci n'est pas affiché.
 
   #### Fonctionnalités prises en charge :
   - Peut être obligatoire: Oui
@@ -14890,7 +14839,7 @@ Spécifie s’il faut inclure un raccourci vers Office.com dans la barre des fav
   #### Informations et paramètres Windows
   ##### Informations sur la stratégie de groupe (ADMX)
   - Nom unique de stratégie de groupe: ShowOfficeShortcutInFavoritesBar
-  - Nom de la stratégie de groupe: Afficher les raccourcis Microsoft Office dans la barre des favoris (déconseillé)
+  - Nom de la stratégie de groupe: Afficher les raccourcis Microsoft Office dans la barre des favoris
   - Chemin d'accès à la stratégie de groupe (Obligatoire): Modèles d’administration/Microsoft Edge/
   - Chemin d'accès à la stratégie de groupe (Recommandé): N/A
   - Nom du fichier ADMX de stratégie de groupe: MSEdge.admx
