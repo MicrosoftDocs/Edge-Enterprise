@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ and tips for Microsoft services|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
@@ -1262,7 +1262,7 @@ Use the preceding information when configuring this policy.
   #### Description
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-If you don't set this policy, it uses BlockPlugins and users can change this setting.
+If you don't configure this policy, the user can change this setting manually.
 
 Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
@@ -14869,18 +14869,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Show Microsoft Office shortcut in favorites bar
-  
+  #### Show Microsoft Office shortcut in favorites bar (deprecated)
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
   #### Description
-  Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
+  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
 
-If this policy is enabled or not configure, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
-
-If the policy is disabled, the shortcut won't be shown.
+Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
+  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+  If you disable this policy, the shortcut isn't shown.
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -14893,7 +14893,7 @@ If the policy is disabled, the shortcut won't be shown.
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: ShowOfficeShortcutInFavoritesBar
-  - GP name: Show Microsoft Office shortcut in favorites bar
+  - GP name: Show Microsoft Office shortcut in favorites bar (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
