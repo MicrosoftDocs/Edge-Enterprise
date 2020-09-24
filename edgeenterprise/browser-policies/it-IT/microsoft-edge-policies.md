@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/11/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -332,7 +332,7 @@ e suggerimenti per i servizi Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Blocca l'accesso ai sensori su siti specifici|
 |[SerialAskForUrls](#serialaskforurls)|Consenti l'API Serial su siti specifici|
 |[SerialBlockedForUrls](#serialblockedforurls)|Blocca l'API Serial su siti specifici|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Abilita supporto Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Abilita l'isolamento per ogni sito|
 |[SpellcheckEnabled](#spellcheckenabled)|Abilita controllo ortografia|
@@ -3080,11 +3080,11 @@ Utilizzare le informazioni precedenti durante la configurazione di questo criter
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  [PluginsAllowedForUrls](#pluginsallowedforurls) e [PluginsBlockedForUrls](#pluginsblockedforurls) vengono controllati prima, quindi viene creato questo criterio. Le opzioni sono "ClickToPlay" e "BlockPlugins". Se imposti questo criterio su "BlockPlugins", questo plug-in viene negato a tutti i siti web. "ClickToPlay" consente l'esecuzione del plug-in Flash, ma gli utenti fanno clic sul segnaposto per avviarlo.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
-Se non imposti questo criterio, utilizza BlockPlugins e gli utenti possono modificare questa impostazione.
+If you don't configure this policy, the user can change this setting manually.
 
-Nota: la riproduzione automatica vale solo per i domini esplicitamente elencati nel criterio [PluginsAllowedForUrls](#pluginsallowedforurls). Per attivare la riproduzione automatica per tutti i siti, aggiungi http://* and https://* all'elenco di URL consentiti.
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
 
 Mappatura opzioni criteri:
 
@@ -14867,18 +14867,18 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Torna all'inizio](#microsoft-edge---criteri)
 
   ### ShowOfficeShortcutInFavoritesBar
-  #### Mostra collegamento Microsoft Office sulla barra Preferiti
-  
+  #### Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)
+  >DEPRECAtO: questi criteri sono deprecati. Sono attualmente supportati ma diventeranno obsoleti in una versione futura.
   
   #### Versioni supportate:
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  Specifica se includere un collegamento a Office.com nella barra Preferiti. Per gli utenti che hanno effettuato l'accesso a Microsoft Edge il collegamento indirizza gli utenti verso le app e i documenti di Microsoft Office.
+  Questi criteri non funzionano come previsto a causa delle modifiche nei requisiti operativi. Pertanto è deprecato e non deve essere utilizzato.
 
-Se questi criteri sono abilitati o non configurati, gli utenti possono scegliere se visualizzare il collegamento modificando l'interruttore nel menu di scelta rapida della barra Preferiti.
-
-Se i criteri sono disabilitati, il collegamento non viene visualizzato.
+Specifica se includere un collegamento a Office.com nella barra Preferiti. Per gli utenti che hanno effettuato l'accessoMicrosoft Edge  il collegamento porta gli utenti alle loro app e ai loro documenti Microsoft Office.
+Se abiliti o non configuri questi criteri, gli utenti possono scegliere se visualizzare il collegamento cambiando l'interruttore nel menu di scelta rapida della barra Preferiti.
+Se si disabilita questo criterio, il collegamento non verrà visualizzato.
 
   #### Funzionalità supportate:
   - Può essere obbligatorio: Sì
@@ -14891,7 +14891,7 @@ Se i criteri sono disabilitati, il collegamento non viene visualizzato.
   #### Informazioni e impostazioni di Windows
   ##### Info su Criteri di gruppo (ADMX)
   - Nome univoco GP: ShowOfficeShortcutInFavoritesBar
-  - Nome GP: Mostra collegamento Microsoft Office sulla barra Preferiti
+  - Nome GP: Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)
   - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
   - Percorso GP (Consigliati): N/D
   - Nome file ADMX GP: MSEdge.admx
