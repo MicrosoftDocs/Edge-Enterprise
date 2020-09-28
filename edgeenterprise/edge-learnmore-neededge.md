@@ -14,6 +14,7 @@ description: "Need Microsoft Edge for modern sites"
 
 # Understand
 
+The NeedEdge policy enables customers to continue their task by automatically redirecting incompatible sites to Edge. This experience is driven by a list maintained by Microsoft of all sites showing an incompatibility message in IE. 
 
 ## Overview
 
