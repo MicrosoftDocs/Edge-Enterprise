@@ -30,7 +30,7 @@ Use the following steps to provision favorites and folders for your users.
 
 1. Go to the Microsoft Edge address bar and type this URL: *edge://flags/#edge-favorites-admin-export*.
 2. Under **Favorites configuration export for administrators**, pick **Enabled** from the dropdown list and then click **Restart**.
-3. Navigate to the Favorites management page at *edge://favorites* so you can start adding the favorites and folders that you want to provision. 
+3. Go to the Favorites management page at *edge://favorites* so you can start adding the favorites and folders that you want to provision. 
 4. On the **Favorites bar**, click **Add folder**. The folder structure of favorites that are set in the profile you're using will be reflected in the folder you provision for your users. The next screenshot shows "Managed favorites", the folder we'll use to provision favorites.
 
    ![Add a folder](media/edge-learnmore-provision-favorites/provision-favorites-add-folder.png)
