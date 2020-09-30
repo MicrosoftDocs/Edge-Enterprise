@@ -74,7 +74,7 @@ The following group policies impact Microsoft Edge sync:
 
 #### Is the synced data encrypted? 
 
-The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256, with the exception of the browser history and open tabs datatypes. To prevent these data types from syncing, you can apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) policy.
+The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256.
 
 #### Where is Microsoft Edge sync data stored?
 
