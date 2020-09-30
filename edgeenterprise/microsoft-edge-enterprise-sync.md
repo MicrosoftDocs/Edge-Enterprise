@@ -28,7 +28,6 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Addresses and more (form-fill)
 - Collections
 - Settings
-- Open tabs
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
