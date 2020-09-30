@@ -29,7 +29,6 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Collections
 - Settings
 
-
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
 > [!NOTE]
@@ -74,7 +73,7 @@ The following group policies impact Microsoft Edge sync:
 
 #### Is the synced data encrypted? 
 
-The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256.
+The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256. 
 
 #### Where is Microsoft Edge sync data stored?
 
