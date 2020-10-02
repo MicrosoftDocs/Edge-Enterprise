@@ -132,12 +132,12 @@
 #     href: microsoft-edge-video-security-compatibility-manageability.md 
    - name: Security for your business
      href: ms-edge-security-for-business.md    
-   - name: Conditional Access
-     href: ms-edge-security-conditional-access.md
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
+   - name: Support for Azure AD Conditional Access
+     href: ms-edge-security-conditional-access.md
    - name: Support for Application Guard
      href: microsoft-edge-security-windows-defender-application-guard.md
    - name: Support for Microsoft Defender SmartScreen
