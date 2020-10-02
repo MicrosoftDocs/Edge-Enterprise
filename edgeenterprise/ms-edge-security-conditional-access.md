@@ -14,16 +14,14 @@ description: "Microsoft Edge and Conditional Access"
 
 # Microsoft Edge and Conditional Access
   
-IT admins in the enterprise are constantly facing a myriad of existing and emerging security challenges while protecting the corporate network and devices from malicious attacks and preventing unauthorized access and leaks of corporate data. Microsoft Edge provides several natively built, unique capabilities that help address these challenges.
+This article describes how Microsoft Edge supports Conditional Access, and how to access resources protected by Conditional Access.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Conditional Access with Microsoft Edge
-
 A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. As a result of this, just focusing on who can access a resource is not sufficient. You also need to factor in how a resource is accessed. Azure Active Directory (Azure AD) Conditional Access helps you master the balance between security and productivity.
 
-### Accessing Conditional Access protected resources in Microsoft Edge
+## Accessing Conditional Access protected resources in Microsoft Edge
 
 Microsoft Edge natively supports Azure AD Conditional Access. There's no need to install a separate extension. When you're signed into a Microsoft Edge profile with enterprise Azure AD credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using Conditional Access.
 
