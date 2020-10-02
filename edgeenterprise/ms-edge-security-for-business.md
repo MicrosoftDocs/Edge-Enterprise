@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,7 +41,7 @@ For Chrome, an extension is available to leverage Windows 10 hardware isolation�
 
 Aside from protecting against external threats, IT admins also must protect against internal risk. Protecting sensitive corporate data—robustly and at scale—is a top priority for IT administrators, particularly as workforces have decentralized. Microsoft Edge is the only browser with native support for Azure AD Conditional Access, Windows Information Protection, and the new Microsoft Endpoint Data Loss Prevention (DLP) without additional software required.
 
-**Microsoft Edge is the only browser to natively support Conditional Access**. [Microsoft Edge's support for conditional access](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access) makes it easy for organizations to utilize identity signals as part of their access control decisions. [Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. To get Conditional Access support on Chrome, an additional plug-in is required.
+**Microsoft Edge is the only browser to natively support Conditional Access**. [Microsoft Edge's support for conditional access](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access-with-microsoft-edge) makes it easy for organizations to utilize identity signals as part of their access control decisions. [Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. To get Conditional Access support on Chrome, an additional plug-in is required.
 
 > [!NOTE]
 > Microsoft 365 E3 or higher subscription required for Azure AD Conditional Access.
@@ -51,7 +51,7 @@ Aside from protecting against external threats, IT admins also must protect agai
 > [!NOTE]
 > Windows Information Protection (WIP) configuration requires licensing Microsoft Intune or Microsoft Endpoint Configuration Manager, or using a 3rd party mobile device management (MDM) solution, which may have additional licensing requirements.
 
-**Microsoft Endpoint DLP will be natively supported only on Microsoft Edge upon its general availability in October**. Microsoft Endpoint Data Loss Prevention (DLP) integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without addition reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
+**Microsoft Endpoint DLP will be natively supported only on Microsoft Edge upon its general availability in October**. Microsoft Endpoint Data Loss Prevention (DLP) integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
 
 > [!NOTE]
 > Microsoft 365 E5 or Microsoft 365 E5 Compliance subscription required for Microsoft Endpoint Data Loss Prevention.
