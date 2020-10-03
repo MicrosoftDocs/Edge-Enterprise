@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -33,8 +33,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[기본 검색 공급자](#기본-검색-공급자)|[기본 메시지](#기본-메시지)|
 |[시작, 홈 페이지 및 새 탭 페이지](#시작-홈-페이지-및-새-탭-페이지)|[암호 관리자 및 보호](#암호-관리자-및-보호)|
 |[인쇄 중](#인쇄-중)|[콘텐츠 설정](#콘텐츠-설정)|
-|[프록시 서버](#프록시-서버)|[확장](#확장)|
-|[Additional](#additional)|
+|[키오스크 모드 설정](#키오스크-모드-설정)|[프록시 서버](#프록시-서버)|
+|[확장](#확장)|[Additional](#additional)|
+
 
 ### [*Application Guard 설정*](#application-guard-설정-policies)
 |정책 이름|설명|
@@ -48,7 +49,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 ### [*HTTP 인증*](#http-인증-policies)
 |정책 이름|설명|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|원본 간 HTTP 기본 인증 메시지 표시 허용|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge가 사용자 자격 증명을 위임할 수 있는 서버 목록을 지정합니다.|
 |[AuthSchemes](#authschemes)|지원되는 인증 방식|
 |[AuthServerAllowlist](#authserverallowlist)|허용된 인증 서버의 목록 구성|
@@ -157,6 +158,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대 해 [Microsof
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|특정 USB 장치에 연결하기 위해 특정 사이트에 대한 액세스 권한 부여|
 |[WebUsbAskForUrls](#webusbaskforurls)|특정 사이트에서 WebUSB 허용|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|특정 사이트에서 WebUSB 차단|
+### [*키오스크 모드 설정*](#키오스크-모드-설정-policies)
+|정책 이름|설명|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge가 닫힐 때 Kiosk 세션의 일부로 다운로드한 파일을 삭제합니다.|
 ### [*프록시 서버*](#프록시-서버-policies)
 |정책 이름|설명|
 |-|-|
@@ -547,16 +552,16 @@ Google 캐스트를 사용하지 않으려면 이 정책을 사용하지 않도�
   [맨 위로 이동](#microsoft-edge---정책)
 
   ### AllowCrossOriginAuthPrompt
-  #### 원본 간 HTTP 기본 인증 메시지 표시 허용
+  #### Allow cross-origin HTTP Authentication prompts
   
   
   #### 지원되는 버전:
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  페이지의 타사 하위 콘텐츠가 HTTP 기본 인증 대화 상자를 열 수 있는지 여부를 제어합니다.
+  페이지의 타사 이미지에서 인증 프롬프트를 표시할 수 있는지 여부를 제어합니다.
 
-일반적으로 피싱 방어는 사용하지 않도록 설정되어 있습니다. 이 정책을 구성하지 않는 경우 사용하지 않도록 설정되고 타사 하위 콘텐츠는 HTTP 기본 인증 대화 상자를 열 수 없습니다.
+일반적으로 피싱 방어는 피싱 모드로 사용할 수 없습니다. 이 정책을 구성하지 않으면 사용하지 않도록 설정되어 있거나 타사 이미지에서 인증 프롬프트를 표시할 수 없습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -569,7 +574,7 @@ Google 캐스트를 사용하지 않으려면 이 정책을 사용하지 않도�
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: AllowCrossOriginAuthPrompt
-  - GP 이름: 원본 간 HTTP 기본 인증 메시지 표시 허용
+  - GP 이름: Allow cross-origin HTTP Authentication prompts
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/HTTP 인증
   - GP 경로 (맞춤): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -3249,11 +3254,21 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  사이트에서 요청할 경우 Microsoft Edge가 자동으로 클라이언트 인증서를 선택해야 하는 URL 패턴에 따라 사이트 목록을 지정합니다.
+  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
 
-값은 문자열로 묶은 JSON 사전의 배열이어야 합니다. 각 사전의 형식은 { "pattern": "$URL_PATTERN", "filter" : $FILTER } 이어야 합니다. 여기서 $URL_PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저가 자동으로 선택할 수 있는 클라이언트 인증서를 제한합니다. 필터와는 별도로 서버의 인증서 요청과 일치하는 인증서만 선택됩니다. 예를 들어 $FILTER형식이 { "ISSUER": { "CN": "$ISSUER_CN" } }이면 CommonName $ISSUER_CN이 있는 인증서에서 발급한 클라이언트 인증서만 선택됩니다. $FILTER에 "ISSUER" 및 "SUBJECT" 섹션이 포함되어 있으면 클라이언트 인증서가 두 조건을 모두 충족해야 선택됩니다. $FILTER가 조직("O")을 지정하면 인증서에 지정된 값과 일치하는 조직이 하나 이상 있어야 합니다. $FILTER가 조직 단위("OU")를 지정하면 인증서에 지정된 값과 일치하는 조직 단위가 하나 이상 있어야 합니다. $FILTER가 빈 사전 {}이면 클라이언트 인증서 선택이 추가로 제한되지 않습니다.
+Examples for the usage of the $FILTER section:
 
-이 정책을 구성하지 않으면 모든 사이트에 대해 자동 선택이 수행되지 않습니다.
+* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+
+* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+
+* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+
+* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+
+* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+
+If you leave the policy unset, there's no autoselection for any site.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -3955,11 +3970,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)을 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins'입니다. 이 정책을 'BlockPlugins'로 설정하면 모든 웹 사이트에서 이 플러그인이 거부됩니다. 'ClickToPlay'는 Flash 플러그인이 실행되도록 허용하지만 사용자는 자리 표시자를 클릭하여 플러그인을 시작합니다.
 
-If you don't configure this policy, the user can change this setting manually.
+    이 정책을 구성하지 않으면 사용자는 이 설정을 수동으로 변경할 수 있습니다.
 
-Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+참고: 자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에 대해서만 가능합니다. 모든 사이트에 대해 자동 재생을 설정하려면 허용된 URL 목록에 http://* 및 https://*를 추가합니다.
 
 정책 옵션 매핑:
 
@@ -4729,9 +4744,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 80 이상
 
   #### 설명
-  모든 쿠키를 기존 SameSite 동작으로 되돌릴 수 있습니다. 레거시 동작으로 되돌리면 SameSite 속성을 지정하지 않은 쿠키가 "SameSite=None"인 것처럼 처리되고 "SameSite=None" 쿠키가 "Secure" 특성을 운반할 필요가 없습니다.
+  Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
-이 정책을 설정하지 않으면 SameSite 특성을 지정하지 않은 쿠키의 기본 동작이 SameSite-by-default 기능에 대한 다른 구성 소스에 종속됩니다. 이 기능은 현장 평가판 또는 edge://flags에서 same-site-by-default-cookies 플래그를 사용하도록 설정하여 설정할 수 있습니다.
+If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 정책 옵션 매핑:
 
@@ -4785,15 +4800,15 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 80 이상
 
   #### 설명
-  지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 되돌아갑니다.
+  Cookies set for domains match specified patterns will revert to legacy SameSite behavior.
 
-레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않는 쿠키가 "SameSite=None"처럼 처리되고 "Secure" 특성을 실행하는 "SameSite=None" 쿠키에 대한 요구 사항이 제거됩니다.
+Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
-이 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 지정한 패턴이 적용되지 않는 도메인의 쿠키에도 사용됩니다.
+If you don't set this policy, the global default value will be used. The global default will also be used for cookies on domains not covered by the patterns you specify.
 
-전역 기본값은 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) 정책을 사용하여 구성할 수 있습니다. [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)이(가) 설정되지 않은 경우 전역 기본값은 다른 구성 원본으로 돌아갑니다.
+The global default value can be configured using the [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
 
-이 정책에 나열되는 패턴은 URL이 아닌 도메인으로 간주되므로 스키마나 포트를 지정하지 않아야 합니다.
+Note that patterns you list in this policy are treated as domains, not URLs, so you should not specify a scheme or port.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -5462,6 +5477,56 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
+  
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ## 키오스크 모드 설정 policies
+
+  [맨 위로 이동](#microsoft-edge---정책)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Microsoft Edge가 닫힐 때 Kiosk 세션의 일부로 다운로드한 파일을 삭제합니다.
+  
+  
+  #### 지원되는 버전:
+  - Windows 87 이상부터
+
+  #### 설명
+  참고: 이 정책은 Edge가 "--edge-kiosk-type" 명령줄 매개 변수를 사용하여 실행되는 경우에만 지원됩니다.
+
+이 정책을 실행하면 Microsoft Edge가 닫힐 때마다 키오스크 세션의 일부로 다운로드된 파일이 삭제됩니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge가 닫힐 때 키오스크 세션의 일부로 다운로드된 파일이 삭제되지 않습니다.
+
+키오스크 모드 구성에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)을 참조하시기 바랍니다.
+
+  #### 지원되는 기능:
+  - 필수일 수 있음: 예
+  - 권장될 수 있음: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 다시 시작 필요
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: KioskDeleteDownloadsOnExit
+  - GP 이름: Microsoft Edge가 닫힐 때 Kiosk 세션의 일부로 다운로드한 파일을 삭제합니다.
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/키오스크 모드 설정
+  - GP 경로 (맞춤): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge
+  - 경로 (맞춤): 해당 없음
+  - 값 이름: KioskDeleteDownloadsOnExit
+  - 값 형식: REG_DWORD
+  ##### 예제 값:
+```
+0x00000001
+```
+
+
   
 
   [맨 위로 이동](#microsoft-edge---정책)
@@ -10898,13 +10963,13 @@ Microsoft Edge 84를 기준으로 이 정책을 구성하지 않는면 외부 �
   - Windows 및 macOS 이후 81 이상
 
   #### 설명
-  이 정책은 현재 기본 참조 페이지 정책과 호환되지 않는 경우 웹 컨텐츠를 업데이트할 수 있는 시간을 기업에 제공하기 위한 단기적인 목적의 메커니즘일 뿐이므로 더 이상 사용되지 않습니다. 이 정책은 Microsoft Edge버전 86부터 작동하지 않습니다.
+  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the current default referrer policy. It won't work in Microsoft Edge version 88.
 
- Microsoft Edge의 기본 참조 페이지 정책은 현재 값(다운그레이드 시 참조 페이지 없음)에서 점진적 롤아웃을 통해 보다 안전한 정책(교차 원본의 경우 엄격한 출처)으로 강화되고 있습니다.
+Microsoft Edge's default referrer policy is being strengthened from its current value of no-referrer-when-downgrade to the more secure strict-origin-when-cross-origin through a gradual rollout.
 
-롤아웃 전에는 이 엔터프라이즈 정책이 적용되지 않습니다. 롤아웃 후 이 엔터프라이즈 정책이 사용하도록 설정되면 Microsoft Edge의 기본 참조 페이지 정책이 이전 값(다운그레이드 시 참조 페이지 없음)으로 설정됩니다.
+Before the rollout, this enterprise policy will have no effect. After the rollout, when this enterprise policy is enabled, Microsoft Edge's default referrer policy will be set to its old value of no-referrer-when-downgrade.
 
-이 엔터프라이즈 정책은 기본적으로 사용하지 않도록 설정됩니다.
+This enterprise policy is disabled by default.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -10996,10 +11061,10 @@ Microsoft Edge 84를 기준으로 이 정책을 구성하지 않는면 외부 �
   #### 설명
   Microsoft Edge에서 데이터 동기화를 강제합니다. 또한 이 정책은 사용자가 동기화를 끄는 것을 방지합니다.
 
-이 정책을 구성하지 않으면 사용자가 동기화를 켜거나 끌 수 있습니다. 이 정책을 사용하면 사용자가 동기화를 사용 중지할 수 없습니다.
+이 정책을 구성하지 않으면 사용자가 동기화를 켜거나 끌 수 있습니다. 이 정책을 사용하면 사용자가 동기화를 끌 수 없습니다.
 
 이 정책이 의도대로 작동하려면
-[BrowserSignin](#browsersignin) 정책을 구성하지 않거나 사용하도록 설정해야합니다. [ForceSync](#forcesync)을(를) 사용 안함으로 설정하면 [BrowserSignin](#browsersignin)이 적용되지 않습니다.
+[BrowserSignin](#browsersignin)정책을 구성하지 않거나 사용하도록 설정해야 합니다. [BrowserSignin](#browsersignin)을(를) 사용 안함으로 설정하면 [ForceSync](#forcesync)이 적용되지 않습니다.
 
 [SyncDisabled](#syncdisabled)을 구성하지 않거나 False로 설정해야 합니다. True로 설정하면 [ForceSync](#forcesync)이(가) 적용되지 않습니다.
 
@@ -11367,29 +11432,31 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   #### 설명
   이 정책을 사용하면 Microsoft Edge를 처음 실행할 때 첫 실행 경험 및 시작 화면이 사용자에게 표시되지 않습니다.
 
-첫 실행 경험에서 표시되는 구성 옵션의 경우 브라우저는 기본적으로 다음과 같이 설정됩니다.
+     첫 실행 경험에서 표시되는 구성 옵션의 경우 브라우저는 기본적으로 다음과 같이 설정됩니다.
 
--새 탭 페이지에서 피드 유형은 MSN 뉴스로 설정되고 레이아웃은 이미지형으로 설정됩니다.
+     -새 탭 페이지에서 피드 유형은 MSN 뉴스로 설정되고 레이아웃은 영감을 주는 형으로 설정됩니다.
 
--Windows 계정이 Azure AD 또는 MSA 유형인 경우에도 사용자는 여전히 Microsoft Edge에 자동으로 로그인됩니다.
+     -Windows 계정이 Azure AD 또는 MSA 유형인 경우에도 사용자는 여전히 Microsoft Edge에 자동으로 로그인됩니다.
 
--동기화는 기본적으로 사용하도록 설정되지 않으며 사용자가 동기화 설정에서 동기화를 활성화할 수 있습니다.
+     -동기화는 기본적으로 사용하도록 설정되지 않으며 사용자가 브라우저를 시작할 때 동기화를 선택할지 메시지가 표시됩니다. [ForceSync](#forcesync) 혹은 [SyncDisabled](#syncdisabled) 정책을 사용하여 동기화와 동기화 동의 메시지를 구성합니다.
 
 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 첫 실행 경험 및 시작 화면이 표시됩니다.
 
-참고: 첫 실행 경험에서 사용자에게 표시되는 특정 구성 옵션은 다른 특정 정책을 사용하여 관리할 수도 있습니다. 이러한 정책과 함께 HideFirstRunExperience 정책을 사용하여 관리되는 장치에서 특정 브라우저 환경을 구성할 수 있습니다. 다른 정책 중 일부는 다음과 같습니다.
+ 참고: 첫 실행 경험에서 사용자에게 표시되는 특정 구성 옵션은 다른 특정 정책을 사용하여 관리될 수도 있습니다. 이러한 정책과 함께  정책을 사용하여 관리되는 장치에서 특정 브라우저 환경을 구성할 수 있습니다. 다른 정책 중 일부는 다음과 같습니다.HideFirstRunExperience 정책을 이들 정책과 합쳐서 관리형 장치에 특정 브라우저 환경을 구성할 수 있습니다. 다른 정책들 중 일부는 다음과 같습니다.
 
 -[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+       -[NewTabPageLocation](#newtabpagelocation)
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+     -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+  -[BrowserSignin](#browsersignin)
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+   -[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -12537,10 +12604,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### 설명
   자신의 프로세스에서 단독으로 실행되도록 원본을 지정합니다.
- 또한 이 정책은 하위 도메인에서 명명 한 원본을 분리합니다. 예를 들어 https://contoso.com/를 지정하면 https://foo.contoso.com/이 https://contoso.com/ 사이트의 일부로 격리됩니다.
- 정책이 활성화된 경우 쉼표로 구분된 목록의 각 명명된 출처는 자체 프로세스에서 실행됩니다.
- 이 정책을 사용하지 않으면 'IsolateOrigins' 및 'SitePerProcess' 기능이 모두 비활성화됩니다. 사용자는 명령줄 플래그를 통해 'IsolateOrigins' 정책을 수동으로 활성화할 수 있습니다.
-정책을 구성하지 않은 경우 사용자가 이 설정을 변경할 수 있습니다.
+
+또한 이 정책은 하위 도메인에서 명명한 원본을 분리합니다. 예를 들어 https://contoso.com/를 지정하면 https://foo.contoso.com/이 https://contoso.com/ 사이트의 일부로 격리됩니다.
+
+    정책이 활성화된 경우 쉼표로 구분된 목록의 각 명명된 출처는 자체 프로세스에서 실행됩니다.
+
+   이 정책을 사용하지 않으면 'IsolateOrigins' 및 'SitePerProcess' 기능이 모두 비활성화됩니다. 사용자는 명령줄 플래그를 통해 'IsolateOrigins' 정책을 수동으로 활성화할 수 있습니다.
+
+   이 정책을 구성하지 않은 경우 사용자가 이 설정을 변경할 수 있습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -14170,9 +14241,9 @@ Adobe Flash를 실행하도록 허용할 웹 사이트를 제어하려면 [Defau
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  지원되는 최소 버전의 SSL을 설정합니다. 이 정책을 구성하지 않으면 Microsoft Edge에서 기본 최소 버전인 TLS 1.0.
+  Sets the minimum supported version of TLS. If you don't configure this policy, Microsoft Edge uses a default minimum version, TLS 1.0.
 
-을 사용합니다.      이 정책을 실행하면 최소 버전을 'TLSv1', 'TLSv1.1' 또는 'TLSv1.2' 중 하나로 설정할 수 있습니다. 설정된 경우 Microsoft Edge은(는) 지정된 버전보다 낮은 버전의 SSL/TLS를 사용하지 않습니다. 인식할 수 없는 값은 무시됩니다.
+If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Any unrecognized value is ignored.
 
 정책 옵션 매핑:
 
@@ -14872,11 +14943,11 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows 및 macOS 이후 77 이상
 
   #### 설명
-  This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
+  이 정책은 운영 요구 사항의 변경 때문에 예상대로 작동하지 않았습니다. 따라서 이 항목이 지원되지 않으므로 사용해서는 안 됩니다.
 
-Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
-  If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
-  If you disable this policy, the shortcut isn't shown.
+는 즐겨찾기 모음에 Office.com 바로 가기를 포함할지 여부를 지정합니다. Microsoft Edge에 로그인한 사용자의 경우 바로 가기를 사용하면 Microsoft Office 앱과 문서로 이동합니다.
+이 정책을 활성화하거나 구성하지 않은 경우, 사용자가 즐겨찾기 모음 상황에 맞는 메뉴에서 토글을 변경하여 바로 가기를 표시할지 여부를 선택할 수 있습니다.
+이 정책을 사용하지 않도록 설정하면 바로 가기가 표시되지 않습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -14973,8 +15044,10 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   #### 설명
   'SitePerProcess' 정책을 사용하면 사용자가 모든 사이트를 격리하는 기본 동작을 해제하지 못하도록 할 수 있습니다. [IsolateOrigins](#isolateorigins) 정책을 사용하여 보다 세분화된 추가 출처를 격리할 수도 있습니다.
+
 이 정책을 사용하면 각 사이트가 자체 프로세스에서 실행되는 기본 동작을 사용자가 해제할 수 없습니다.
-이 정책을 구성하지 않으면 사용자가 사이트 격리를 해제할 수 있습니다. 예를 들어, edge://flags에서 "사이트 격리 사용 안 함" 항목을 사용하여 해제합니다. 정책을 사용하지 않거나 구성하지 않아도 사이트 격리가 해제되지 않습니다.
+
+이 정책을 사용하지 않거나 구성하지 않으면 사용자가 사이트 격리를 해제할 수 있습니다. (예를 들어, edge://flags에서 "사이트 격리 사용 안 함" 항목을 사용하여 해제합니다.) 정책을 사용하지 않거나 구성하지 않아도 사이트 격리가 해제되지 않습니다.
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
@@ -16249,16 +16322,9 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   - Windows 및 macOS 이후 80 이상
 
   #### 설명
-  사용자 상호 작용 없이 자동으로 설치되고 사용자가 제거하거나 사용할 수 없도록 설정한 웹 사이트 목록을 지정합니다.
+  사용자 상호 작용없이 설치할 수 있고 사용자가 제거하거나 끌 수 없는 웹 앱 목록을 지정하려면 이 정책을 구성합니다.
 
-정책의 각 목록 항목은 다음 멤버가 있는 개체입니다
-  - "url"은 필수입니다. "url"은 설치할 웹앱의 URL이어야 합니다.
-
-선택적 멤버의 값은 다음과 같습니다.
-  - "launch_container"는 설치 후 웹앱을 어떻게 열 것인지를 나타내는 "윈도우"또는 "탭"이어야 합니다.
-  - "create_desktop_shortcut"는 Windows에서 데스크탑 바로 가기를 만들어야 하는 경우 참이어야 합니다.
-
-"default_launch_container"가 생략되면 앱이 기본적으로 탭에서 열립니다. "default_launch_container"의 값에 관계없이 사용자는 앱이 열리는 컨테이너를 변경할 수 있습니다. "create_desktop_shortcuts"가 생략되면 바탕 화면 바로 가기가 만들어지지 않습니다.
+정책의 각 목록 항목은 필수 구성원이 있는 개체입니다.url (설치할 웹 앱의 URL) 및 2명의 선택적 구성원: default_launch_container (웹 앱이 새 탭으로 열리는 창 모드가 기본값으로 창 모드 지정) 그리고 create_desktop_shortcut(Linux과 Windows 바탕 화면 바로 가기를 만들려고 하는 경우 True).
 
   #### 지원되는 기능:
   - 필수일 수 있음: 예
