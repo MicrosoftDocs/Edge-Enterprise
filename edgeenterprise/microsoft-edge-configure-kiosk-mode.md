@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 10/01/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
