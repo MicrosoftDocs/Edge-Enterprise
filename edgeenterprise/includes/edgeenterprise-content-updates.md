@@ -9,7 +9,7 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/29/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes for Beta minor version 86.0.622.28. | modified |
-| 9/30/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 9/30/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business)<br>Minor wording correction and fix link. | modified |
 | 9/30/2020 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync)<br>Correct scope of synced data and FAQ - "Is the synced data encrypted?"  | modified |
 | 10/1/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes for Stable minor version 85.0.564.68. | modified |
 | 10/2/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes for Beta minor version 86.0.622.31. | modified |
