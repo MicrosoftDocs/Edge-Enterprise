@@ -1,4 +1,4 @@
-# last revised 09/21/2020
+# last revised 10/05/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -93,16 +93,12 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-#   - name: Video - Microsoft Edge and Microsoft Search
-#     href: microsoft-edge-video-search.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
    - name: Identity support and configuration
      href: microsoft-edge-security-identity.md
    - name: Microsoft Edge and Enterprise State Roaming
      href: microsoft-edge-enterprise-state-roaming.md
-   - name: Microsoft Edge kiosk mode
-     href: microsoft-edge-kiosk-mode.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
@@ -132,12 +128,12 @@
 #     href: microsoft-edge-video-security-compatibility-manageability.md 
    - name: Security for your business
      href: ms-edge-security-for-business.md    
-   - name: Security overview
-     href: security-overview.md
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
+   - name: Support for Azure AD Conditional Access
+     href: ms-edge-security-conditional-access.md
    - name: Support for Application Guard
      href: microsoft-edge-security-windows-defender-application-guard.md
    - name: Support for Microsoft Defender SmartScreen
@@ -173,6 +169,8 @@
         href: edge-learnmore-mixed-content-downloads.md
       - name: Progressive rollouts for Stable channel updates
         href: microsoft-edge-update-progressive-rollout.md
+      - name: Provision favorites for Microsoft Edge
+        href: edge-learnmore-provision-favorites.md
       - name: Regular Expression 2 (re2.h) syntax
         href: edge-learnmore-regex.md
       - name: User data directory variables
