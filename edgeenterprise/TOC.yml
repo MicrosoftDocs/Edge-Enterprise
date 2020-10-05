@@ -1,4 +1,4 @@
-# last revised 10/02/2020
+# last revised 10/05/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -93,16 +93,12 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-#   - name: Video - Microsoft Edge and Microsoft Search
-#     href: microsoft-edge-video-search.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
    - name: Identity support and configuration
      href: microsoft-edge-security-identity.md
    - name: Microsoft Edge and Enterprise State Roaming
      href: microsoft-edge-enterprise-state-roaming.md
-   - name: Microsoft Edge kiosk mode
-     href: microsoft-edge-kiosk-mode.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
