@@ -3,7 +3,7 @@ title: "On-premises sync for Active Directory (AD) users"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/21/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ Syncing user data in Microsoft Edge normally requires either a Microsoft Account
 
 ## How it works
 
-Microsoft Edge allows profiles to be associated with Active Directory (AD) accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APP_DATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer.
+Microsoft Edge allows profiles to be associated with Active Directory (AD) accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APPDATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer.
 
 ## Use on-premises sync
 
@@ -41,7 +41,7 @@ On-premises sync only works with the profile associated with an Active Directory
 
 ### Change the location of the user data (optional)
 
-By default, the user data is stored in a filed named **profile.pb** in *%APP_DATA%/Microsoft/Edge*. To change the location of this file, configure the [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) policy.
+By default, the user data is stored in a filed named **profile.pb** in *%APPDATA%/Microsoft/Edge*. To change the location of this file, configure the [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) policy.
 
 ## Changes in the user experience when on-premises sync is enabled
 
