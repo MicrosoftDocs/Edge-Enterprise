@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise Sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,8 +28,6 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Addresses and more (form-fill)
 - Collections
 - Settings
-- Browsing history
-- Open tabs
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
@@ -75,7 +73,7 @@ The following group policies impact Microsoft Edge sync:
 
 #### Is the synced data encrypted? 
 
-The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256, with the exception of the browser history and open tabs datatypes. To prevent these data types from syncing, you can apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) policy.
+The data is encrypted in transport using TLS 1.2 or greater. Most data types are additionally encrypted at rest in Microsoft's service using AES256. 
 
 #### Where is Microsoft Edge sync data stored?
 
