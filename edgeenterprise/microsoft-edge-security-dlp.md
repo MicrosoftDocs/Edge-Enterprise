@@ -12,9 +12,9 @@ ms.collection: M365-modern-desktop
 description: "Data Loss Prevention (DLP) in Microsoft Edge"
 ---
 
-# Microsoft Endpoint Data Loss Prevention (DLP) in Microsoft Edge
+# Data Loss Prevention (DLP) in Microsoft Edge
 
-This article describes Microsoft Endpoint Data Loss Prevention (DLP) - what it is, and why it's important.
+This article describes Data Loss Prevention (DLP) - what it is, and why it's important.
 
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
