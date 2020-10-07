@@ -24,7 +24,11 @@ Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint
 
 ## Microsoft Endpoint DLP
 
-Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, see [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, To learn more about endpoint DLP, view our video ...
+
+[![Microsoft Edge - Data loss prevention](https://res.cloudinary.com/marcomontalbano/image/upload/v1602111637/video_to_markdown/images/youtube--dLD04U9eTqg-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=dLD04U9eTqg "Microsoft Edge - Data loss prevention")
+
+... and then read [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
 
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
@@ -33,16 +37,10 @@ Microsoft Edge enforces admin configured policies for sensitive files and record
 
 Some of the user activities that you can audit and manage on devices running Windows 10 include the following activities:
 
+- File Upload: Protect sensitive file upload to unauthorized cloud locations. The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.
 - Clipboard Protection: Protect sensitive data from being copied out of the file.
 - Print Protection: Protect sensitive file from being printed.
 - Save to USB/Network: Protect sensitive file from being saved to removable USB storage or unauthorized network locations.
-- File Upload: Protect sensitive file upload to unauthorized cloud locations. The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.
-
-   ![Pick PDF document to drop.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-1.png)
-
-   ![Copy PDF file to local storage.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-2.png)
-
-   ![Error message when file copy blocked.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-3.png)
 
 For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
 
