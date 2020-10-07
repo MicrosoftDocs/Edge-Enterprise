@@ -38,11 +38,11 @@ Some of the user activities that you can audit and manage on devices running Win
 - Save to USB/Network: Protect sensitive file from being saved to removable USB storage or unauthorized network locations.
 - File Upload: Protect sensitive file upload to unauthorized cloud locations. The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.
 
-![Pick PDF document to drop.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-1.png)
+   ![Pick PDF document to drop.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-1.png)
 
-![Copy PDF file to local storage.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-2.png)
+   ![Copy PDF file to local storage.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-2.png)
 
-![Error message when file copy blocked.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-3.png)
+   ![Error message when file copy blocked.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-3.png)
 
 For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/en-us/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
 
