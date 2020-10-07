@@ -55,5 +55,6 @@ Check out [Support for Windows Information Protection](https://docs.microsoft.co
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge DLP and WIP video](https://www.youtube.com/watch?v=dLD04U9eTqg)
 - [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
 - [Protect your enterprise data using Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
