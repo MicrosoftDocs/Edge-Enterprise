@@ -3,7 +3,7 @@ title: "Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/06/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,16 +14,7 @@ description: "Data Loss Prevention (DLP) in Microsoft Edge"
 
 # Data Loss Prevention (DLP) in Microsoft Edge
 
-This article describes Data Loss Prevention (DLP) - what it is, and why it's important.
-
-> [!NOTE]
-> This applies to Microsoft Edge version 85 or later.
-
-## Overview
-
 Data loss prevention (DLP) is a system of technologies that identify and safeguard sensitive enterprise data from unauthorized disclosure. To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its unauthorized disclosure. Sensitive information includes financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records, among many other things.
-
-### The impact of remote work
 
 Remote work has increased the emphasis on using DLP. With the growing use of personal and work activities on devices, enterprises are seeing an increased risk of unauthorized sharing of corporate data outside the workplace.
 
@@ -35,36 +26,33 @@ Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint
 
 Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, see [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
 
-### Microsoft Edge support for Endpoint DLP
+> [!NOTE]
+> This applies to Microsoft Edge version 85 or later.
 
 Microsoft Edge enforces admin configured policies for sensitive files and records audit events for non-compliant activities.
 
 Some of the user activities that you can audit and manage on devices running Windows 10 include the following activities:
 
-- File Upload: Protect sensitive file upload to unauthorized cloud locations.
 - Clipboard Protection: Protect sensitive data from being copied out of the file.
 - Print Protection: Protect sensitive file from being printed.
 - Save to USB/Network: Protect sensitive file from being saved to removable USB storage or unauthorized network locations.
+- File Upload: Protect sensitive file upload to unauthorized cloud locations. The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.
 
-> [!NOTE]
-> For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/en-us/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
+![Pick PDF document to drop.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-1.png)
+
+![Copy PDF file to local storage.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-2.png)
+
+![Error message when file copy blocked.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-3.png)
+
+For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/en-us/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
 
 ## Windows Information Protection
 
-Check out [Support for Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), which describes how Microsoft Edge supports Windows Information Protection (WIP). This article includes [System Requirements](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements) such as:
+Check out [Support for Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), which describes how Microsoft Edge supports Windows Information Protection (WIP). You can learn moe about system requirements, benefits, and supported features in the following sections:
 
-- Windows version
-- Windows SKUs
-- management solution required to run WIP in the enterprise. 
-
-Support for Windows Information also lists the numerous benefits of WIP, among them:
-
-- separation between personal and corporate data
-- data protection for existing line-of-business apps
-- audit reports for tracking issues
-- integration with existing management systems
-
-Additional benefits are described in  [Windows Information Protection Benefits](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits).  
+- [System Requirements](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [Windows Information Protection Benefits](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
+- [WIP features supported in Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
 ## See also
 
