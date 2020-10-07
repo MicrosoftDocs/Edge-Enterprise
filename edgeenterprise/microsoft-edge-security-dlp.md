@@ -44,7 +44,7 @@ Some of the user activities that you can audit and manage on devices running Win
 
    ![Error message when file copy blocked.](./media/microsoft-edge-security-dlp/dlp-drop-salesdata-3.png)
 
-For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/en-us/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
+For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on).
 
 ## Windows Information Protection
 
