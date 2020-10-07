@@ -20,7 +20,7 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
 <!-- begin major 86 -->
-## Version 86.0.xxx.xx: October 8
+## Version 86.0.622.xx: October 8
 
 ### Feature updates
 
