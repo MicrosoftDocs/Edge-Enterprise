@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/01/2020
+ms.date: 10/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -180,6 +180,9 @@ Twenty-three new policies were added. Download the updated Administrative Templa
 - [WebRtcLocalhostIpHandling](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtclocalhostiphandling)
 
 <!-- end 86 -->
+## Version 85.0.564.70: October 6
+
+Fixed various bugs and performance issues.
 
 ## Version 85.0.564.68: October 1
 
