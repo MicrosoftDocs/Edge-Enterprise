@@ -3,7 +3,7 @@ title: "Need Microsoft Edge for compatibility with modern sites"
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 09/28/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Need Microsoft Edge for compatibility with modern web sites"
 
 # Need Microsoft Edge for compatibility with modern web sites
 
-The **RedirectIncompatibleSitesFromInternetExplorerToEdgeUXDisabled** policy enables customers using Internet Explorer to continue browsing by automatically redirecting incompatible sites to Microsoft Edge.
+The **HideInternetExplorerRedirectUXForIncompatibleSitesToMicrosoftEdgeEnabled** policy enables customers using Internet Explorer to continue browsing after they go to an incompatible site by automatically redirecting to Microsoft Edge.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
@@ -27,7 +27,7 @@ The redirection experience is driven by a list maintained by Microsoft of all si
 
 ## Microsoft Edge in action
 
-When a user goes to site that is incompatible with Internet Explorer several things can happen.
+When a user goes to site that is incompatible with Internet Explorer several things happen.
 
 First, they are notified about the website incompatibility and the fact that they're now using Microsoft Edge.
 
