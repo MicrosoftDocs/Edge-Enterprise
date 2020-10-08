@@ -183,6 +183,8 @@
   items:
    - name: Microsoft Edge video collection
      href: microsoft-edge-videos.md
+   - name: Video - Browser isolation using Application Guard
+     href: microsoft-edge-video-security-application-guard.md
    - name: Video - Deploy Microsoft Edge
      href: microsoft-edge-video-deploy.md
    - name: Video - Microsoft Edge and Data loss prevention (DLP)
