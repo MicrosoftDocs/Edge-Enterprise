@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -250,7 +250,7 @@ and tips for Microsoft services|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)|
@@ -340,6 +340,7 @@ and tips for Microsoft services|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
 |[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
@@ -10125,14 +10126,16 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Re-enable deprecated web platform features for a limited time
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
-  - On Windows and macOS since 77 or later
+  - On Windows and macOS since 77, until 86
 
   #### Description
-  Specify a list of deprecated web platform features to temporarily re-enable.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Specify a list of deprecated web platform features to temporarily re-enable.
 
 This policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.
 
@@ -10159,7 +10162,7 @@ Use the preceding information when configuring this policy.
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -15081,6 +15084,60 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 
   #### Mac information and settings
   - Preference Key Name: SitePerProcess
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 87 or later
+
+  #### Description
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here:
+SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388)
+Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SpeechRecognitionEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+
+  #### Mac information and settings
+  - Preference Key Name: SpeechRecognitionEnabled
   - Example value:
 ``` xml
 <true/>
