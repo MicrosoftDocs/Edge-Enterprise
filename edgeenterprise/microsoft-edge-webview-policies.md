@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/18/2020
+ms.date: 10/08/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -14,10 +14,10 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 ---
 
 # Microsoft Edge WebView2 - Policies
+
 The latest version of Microsoft Edge WebView2 includes the following policies. You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
-
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
