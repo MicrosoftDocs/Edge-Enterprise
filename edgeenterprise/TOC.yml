@@ -130,6 +130,8 @@
      href: ms-edge-security-for-business.md    
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
+   - name: Data Loss Prevention (DLP)
+     href: microsoft-edge-security-dlp.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access
