@@ -24,11 +24,7 @@ Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint
 
 ## Microsoft Endpoint DLP
 
-Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, To learn more about endpoint DLP, view our video ...
-
-[![Microsoft Edge - Data loss prevention](https://res.cloudinary.com/marcomontalbano/image/upload/v1602111637/video_to_markdown/images/youtube--dLD04U9eTqg-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=dLD04U9eTqg "Microsoft Edge - Data loss prevention")
-
-... and then read [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, read [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
 
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
@@ -55,6 +51,6 @@ Check out [Support for Windows Information Protection](https://docs.microsoft.co
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge DLP and WIP video](https://www.youtube.com/watch?v=dLD04U9eTqg)
+- [Video: Microsoft Edge DLP and WIP](https://www.youtube.com/watch?v=dLD04U9eTqg)
 - [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
 - [Protect your enterprise data using Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
