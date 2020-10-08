@@ -1,4 +1,4 @@
-# last revised 10/05/2020
+# last revised 10/07/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -183,6 +183,8 @@
      href: microsoft-edge-videos.md
    - name: Video - Deploy Microsoft Edge
      href: microsoft-edge-video-deploy.md
+   - name: Video - Microsoft Edge and Data loss prevention (DLP)
+     href: microsoft-edge-security-dlp.md
    - name: Video - Microsoft Edge and Microsoft Search
      href: microsoft-edge-video-search.md
    - name: Video - Security, compatibility, and manageability
