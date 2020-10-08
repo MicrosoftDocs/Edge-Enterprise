@@ -184,7 +184,7 @@
    - name: Video - Deploy Microsoft Edge
      href: microsoft-edge-video-deploy.md
    - name: Video - Microsoft Edge and Data loss prevention (DLP)
-     href: microsoft-edge-security-dlp.md
+     href: microsoft-edge-video-security-dlp.md
    - name: Video - Microsoft Edge and Microsoft Search
      href: microsoft-edge-video-search.md
    - name: Video - Security, compatibility, and manageability
