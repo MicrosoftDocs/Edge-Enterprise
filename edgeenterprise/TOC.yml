@@ -1,4 +1,4 @@
-# last revised 10/05/2020
+# last revised 10/08/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -130,6 +130,8 @@
      href: ms-edge-security-for-business.md    
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
+   - name: Data Loss Prevention (DLP)
+     href: microsoft-edge-security-dlp.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access
@@ -181,8 +183,12 @@
   items:
    - name: Microsoft Edge video collection
      href: microsoft-edge-videos.md
+   - name: Video - Browser isolation using Application Guard
+     href: microsoft-edge-video-security-application-guard.md
    - name: Video - Deploy Microsoft Edge
      href: microsoft-edge-video-deploy.md
+   - name: Video - Data loss prevention (DLP)
+     href: microsoft-edge-video-security-dlp.md
    - name: Video - Microsoft Edge and Microsoft Search
      href: microsoft-edge-video-search.md
    - name: Video - Security, compatibility, and manageability
