@@ -3,7 +3,7 @@ title: "Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/07/2020
+ms.date: 10/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -51,6 +51,6 @@ Check out [Support for Windows Information Protection](https://docs.microsoft.co
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Video: Microsoft Edge DLP and WIP](https://www.youtube.com/watch?v=dLD04U9eTqg)
+- [Video: Data loss prevention - Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
 - [Overview of data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
 - [Protect your enterprise data using Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
