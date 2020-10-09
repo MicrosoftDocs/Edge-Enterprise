@@ -155,7 +155,7 @@
      href: microsoft-edge-policies.md
    - name: Update policy reference
      href: microsoft-edge-update-policies.md
-   - name: Microsoft Edge WebView2 - Policies
+   - name: WebView2 policy reference
      href: microsoft-edge-webview-policies.md
    - name: Learn more reference
      items:
