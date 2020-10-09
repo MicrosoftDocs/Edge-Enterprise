@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -381,8 +381,8 @@ and tips for Microsoft services|
 
   ### ApplicationGuardContainerProxy
   #### Application Guard Container Proxy
-  
-  
+
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -433,14 +433,14 @@ For more information about identifying Application Guard traffic via dual proxy,
   ##### Example value:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
-  "ProxyMode": "direct", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyMode": "direct",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -450,8 +450,8 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   ### EnableMediaRouter
   #### Enable Google Cast
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -494,14 +494,14 @@ By default, Google Cast is enabled.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowCastIconInToolbar
   #### Show the cast icon in the toolbar
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -544,7 +544,7 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -554,8 +554,8 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 
   ### AutoSelectCertificateForUrls
   #### Automatically select client certificates for these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -611,14 +611,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
   <string>{"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesAllowedForUrls
   #### Allow cookies on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -676,14 +676,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesBlockedForUrls
   #### Block cookies on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -739,14 +739,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesSessionOnlyForUrls
   #### Limit cookies from specific websites to the current session
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -806,14 +806,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultCookiesSetting
   #### Configure cookies
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -866,14 +866,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemReadGuardSetting
   #### Control use of the File System API for reading
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -922,14 +922,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemWriteGuardSetting
   #### Control use of the File System API for writing
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -978,14 +978,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultGeolocationSetting
   #### Default geolocation setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1036,14 +1036,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultImagesSetting
   #### Default images setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1092,14 +1092,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultInsecureContentSetting
   #### Control use of insecure content exceptions
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1150,14 +1150,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultJavaScriptSetting
   #### Default JavaScript setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1206,14 +1206,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultNotificationsSetting
   #### Default notification setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1264,14 +1264,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPluginsSetting
   #### Default Adobe Flash setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1322,14 +1322,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPopupsSetting
   #### Default pop-up window setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1378,14 +1378,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebBluetoothGuardSetting
   #### Control use of the Web Bluetooth API
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1434,14 +1434,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebUsbGuardSetting
   #### Control use of the WebUSB API
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1492,14 +1492,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadAskForUrls
   #### Allow read access via the File System API on these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1549,14 +1549,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadBlockedForUrls
   #### Block read access via the File System API on these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1606,14 +1606,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteAskForUrls
   #### Allow write access to files and directories on these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1663,14 +1663,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteBlockedForUrls
   #### Block write access to files and directories on these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1720,14 +1720,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesAllowedForUrls
   #### Allow images on these sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1773,14 +1773,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesBlockedForUrls
   #### Block images on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1826,14 +1826,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentAllowedForUrls
   #### Allow insecure content on specified sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1879,14 +1879,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentBlockedForUrls
   #### Block insecure content on specified sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1932,14 +1932,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptAllowedForUrls
   #### Allow JavaScript on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1985,14 +1985,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptBlockedForUrls
   #### Block JavaScript on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2038,14 +2038,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabled
   #### Enable default legacy SameSite cookie behavior setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -2094,14 +2094,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabledForDomainList
   #### Revert to legacy SameSite behavior for cookies on specified sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -2153,14 +2153,14 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   <string>[*.]example.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsAllowedForUrls
   #### Allow notifications on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2206,14 +2206,14 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsBlockedForUrls
   #### Block notifications on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2259,14 +2259,14 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsAllowedForUrls
   #### Allow the Adobe Flash plug-in on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2314,14 +2314,14 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
   <string>http://contoso.edu:8080</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsBlockedForUrls
   #### Block the Adobe Flash plug-in on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2369,14 +2369,14 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
   <string>http://contoso.edu:8080</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsAllowedForUrls
   #### Allow pop-up windows on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2422,14 +2422,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsBlockedForUrls
   #### Block pop-up windows on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2475,14 +2475,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RegisteredProtocolHandlers
   #### Register protocol handlers
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2520,8 +2520,8 @@ Users can't remove a protocol handler registered by this policy. However, they c
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
-    "default": true, 
-    "protocol": "mailto", 
+    "default": true,
+    "protocol": "mailto",
     "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"
   }
 ]
@@ -2544,15 +2544,15 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
   #### Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
-  
-  
+
+
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -2590,14 +2590,14 @@ and tips for Microsoft services
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAllowDevicesForUrls
   #### Grant access to specific sites to connect to specific USB devices
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2636,12 +2636,12 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
     "devices": [
       {
-        "product_id": 5678, 
+        "product_id": 5678,
         "vendor_id": 1234
       }
-    ], 
+    ],
     "urls": [
-      "https://contoso.com", 
+      "https://contoso.com",
       "https://fabrikam.com"
     ]
   }
@@ -2673,14 +2673,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAskForUrls
   #### Allow WebUSB on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2728,14 +2728,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbBlockedForUrls
   #### Block WebUSB on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2783,7 +2783,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -2793,8 +2793,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### DefaultSearchProviderEnabled
   #### Enable the default search provider
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2847,14 +2847,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderEncodings
   #### Default search provider encodings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2908,14 +2908,14 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
   <string>ISO-8859-1</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURL
   #### Specifies the search-by-image feature for the default search provider
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2967,14 +2967,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>https://search.contoso.com/searchbyimage/upload</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURLPostParams
   #### Parameters for an image URL that uses POST
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3023,14 +3023,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>content={imageThumbnail},url={imageURL},sbisrc={SearchSource}</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderKeyword
   #### Default search provider keyword
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3075,14 +3075,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>mis</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderName
   #### Default search provider name
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3129,14 +3129,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>My Intranet Search</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSearchURL
   #### Default search provider search URL
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3185,14 +3185,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>https://search.contoso.com/search?q={searchTerms}</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSuggestURL
   #### Default search provider URL for suggestions
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3243,14 +3243,14 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ``` xml
 <string>https://search.contoso.com/suggest?q={searchTerms}</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSearchBox
   #### Configure the new tab page search box experience
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -3308,7 +3308,7 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>bing</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -3318,8 +3318,8 @@ Use the preceding information when configuring this policy.
 
   ### ExtensionAllowedTypes
   #### Configure allowed extension types
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3369,14 +3369,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
   <string>hosted_app</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallAllowlist
   #### Allow specific extensions to be installed
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3420,14 +3420,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
   <string>extension_id2</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallBlocklist
   #### Control which extensions cannot be installed
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3475,14 +3475,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
   <string>extension_id2</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallForcelist
   #### Control which extensions are installed silently
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3546,14 +3546,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
   <string>abcdefghijklmnopabcdefghijklmnop</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallSources
   #### Configure extension and user script install sources
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3601,14 +3601,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   <string>https://corp.contoso.com/*</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionSettings
   #### Configure extension management settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3645,62 +3645,62 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
     "allowed_types": [
       "hosted_app"
-    ], 
-    "blocked_install_message": "Custom error message.", 
+    ],
+    "blocked_install_message": "Custom error message.",
     "blocked_permissions": [
-      "downloads", 
+      "downloads",
       "bookmarks"
-    ], 
+    ],
     "install_sources": [
       "https://company-intranet/apps"
-    ], 
-    "installation_mode": "blocked", 
+    ],
+    "installation_mode": "blocked",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ]
-  }, 
+  },
   "abcdefghijklmnopabcdefghijklmnop": {
     "blocked_permissions": [
       "history"
-    ], 
-    "installation_mode": "allowed", 
+    ],
+    "installation_mode": "allowed",
     "minimum_version_required": "1.0.1"
-  }, 
+  },
   "bcdefghijklmnopabcdefghijklmnopa": {
     "allowed_permissions": [
       "downloads"
-    ], 
-    "installation_mode": "force_installed", 
+    ],
+    "installation_mode": "force_installed",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
-    ], 
+    ],
     "update_url": "https://contoso.com/update_url"
-  }, 
+  },
   "cdefghijklmnopabcdefghijklmnopab": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "fghijklmnopabcdefghijklmnopabcde": {
-    "blocked_install_message": "Custom removal message.", 
+    "blocked_install_message": "Custom removal message.",
     "installation_mode": "removed"
-  }, 
+  },
   "update_url:https://www.contoso.com/update.xml": {
     "allowed_permissions": [
       "downloads"
-    ], 
+    ],
     "blocked_permissions": [
       "wallpaper"
-    ], 
+    ],
     "installation_mode": "allowed"
   }
 }
@@ -3807,7 +3807,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   </dict>
 </dict>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -3817,8 +3817,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   ### AllowCrossOriginAuthPrompt
   #### Allow cross-origin HTTP Authentication prompts
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3859,14 +3859,14 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthNegotiateDelegateAllowlist
   #### Specifies a list of servers that Microsoft Edge can delegate user credentials to
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3909,14 +3909,14 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
 ``` xml
 <string>contoso.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthSchemes
   #### Supported authentication schemes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3959,14 +3959,14 @@ If you don't configure this policy, all four schemes are used.
 ``` xml
 <string>basic,digest,ntlm,negotiate</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthServerAllowlist
   #### Configure list of allowed authentication servers
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4009,14 +4009,14 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
 ``` xml
 <string>*contoso.com,contoso.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DisableAuthNegotiateCnameLookup
   #### Disable CNAME lookup when negotiating Kerberos authentication
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4059,14 +4059,14 @@ If you disable this policy or don't configure it, the canonical name of the serv
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableAuthNegotiatePort
   #### Include non-standard port in Kerberos SPN
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4109,14 +4109,14 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NtlmV2Enabled
   #### Control whether NTLMv2 authentication is enabled
-  
-  
+
+
   #### Supported versions:
   - On macOS since 77 or later
 
@@ -4135,7 +4135,7 @@ If you don't configure this policy, NTLMv2 is enabled by default.
   #### Data Type:
   - Boolean
 
-  
+
 
   #### Mac information and settings
   - Preference Key Name: NtlmV2Enabled
@@ -4143,7 +4143,7 @@ If you don't configure this policy, NTLMv2 is enabled by default.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4153,8 +4153,8 @@ If you don't configure this policy, NTLMv2 is enabled by default.
 
   ### KioskDeleteDownloadsOnExit
   #### Delete files downloaded as part of Kiosk session when Microsoft Edge closes
-  
-  
+
+
   #### Supported versions:
   - On Windows since 87 or later
 
@@ -4193,7 +4193,7 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4203,8 +4203,8 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
 
   ### NativeMessagingAllowlist
   #### Control which native messaging hosts users can use
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4250,14 +4250,14 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
   <string>com.native.messaging.host.name2</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingBlocklist
   #### Configure native messaging block list
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4305,14 +4305,14 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   <string>com.native.messaging.host.name2</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingUserLevelHosts
   #### Allow user-level native messaging hosts (installed without admin permissions)
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4355,7 +4355,7 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4365,8 +4365,8 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
 
   ### PasswordManagerEnabled
   #### Enable saving passwords to the password manager
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4411,14 +4411,14 @@ If you enable or disable this policy, users can't change or override it in Micro
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordMonitorAllowed
   #### Allow users to be alerted if their passwords are found to be unsafe
-  
-  
+
+
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -4471,14 +4471,14 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionChangePasswordURL
   #### Configure the change password URL
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4525,14 +4525,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <string>https://contoso.com/change_password.html</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionLoginURLs
   #### Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4582,14 +4582,14 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   <string>https://login.contoso.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionWarningTrigger
   #### Configure password protection warning trigger
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4646,7 +4646,7 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4656,8 +4656,8 @@ Use the preceding information when configuring this policy.
 
   ### DefaultPrinterSelection
   #### Default printer selection rules
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4704,14 +4704,14 @@ Omitting a field means all values match; for example, if you don't specify conne
 ``` xml
 <string>{ "idPattern": ".*public", "namePattern": ".*Color" }</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintHeaderFooter
   #### Print headers and footers
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4756,14 +4756,14 @@ If you enable this policy, users always print headers and footers.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintPreviewUseSystemDefaultPrinter
   #### Set the system default printer as the default printer
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4806,14 +4806,14 @@ If you enable this policy, Print Preview uses the OS system default printer as t
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingEnabled
   #### Enable printing
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4856,14 +4856,14 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingPaperSizeDefault
   #### Default printing page size
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -4898,9 +4898,9 @@ If the page size is unavailable on the printer chosen by the user this policy is
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   "custom_size": {
-    "height": 297000, 
+    "height": 297000,
     "width": 210000
-  }, 
+  },
   "name": "custom"
 }
 ```
@@ -4923,14 +4923,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   <string>custom</string>
 </dict>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### UseSystemPrintDialog
   #### Print using system print dialog
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4973,7 +4973,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4983,8 +4983,8 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   ### ProxyBypassList
   #### Configure proxy bypass rules
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5031,14 +5031,14 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 ``` xml
 <string>https://www.contoso.com, https://www.fabrikam.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyMode
   #### Configure proxy server settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5107,14 +5107,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>direct</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyPacUrl
   #### Set the proxy .pac file URL
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5161,14 +5161,14 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
 ``` xml
 <string>https://internal.contoso.com/example.pac</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyServer
   #### Configure address or URL of proxy server
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5215,14 +5215,14 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
 ``` xml
 <string>123.123.123.123:8080</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxySettings
   #### Proxy settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5281,9 +5281,9 @@ If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' and 'Prox
   ##### Example value:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
-  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
+  "ProxyMode": "direct",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
@@ -5305,7 +5305,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>123.123.123.123:8080</string>
 </dict>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -5315,8 +5315,8 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   ### PreventSmartScreenPromptOverride
   #### Prevent bypassing Microsoft Defender SmartScreen prompts for sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5361,14 +5361,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PreventSmartScreenPromptOverrideForFiles
   #### Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
   - On macOS since 79 or later
@@ -5414,14 +5414,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenAllowListDomains
   #### Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5473,14 +5473,14 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   <string>myuniversity.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenEnabled
   #### Configure Microsoft Defender SmartScreen
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5527,14 +5527,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenForTrustedDownloadsEnabled
   #### Force Microsoft Defender SmartScreen checks on downloads from trusted sources
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -5573,14 +5573,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenPuaEnabled
   #### Configure Microsoft Defender SmartScreen to block potentially unwanted apps
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -5627,7 +5627,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -5637,8 +5637,8 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   ### HomepageIsNewTabPage
   #### Set the new tab page as the home page
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5685,14 +5685,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### HomepageLocation
   #### Configure the home page URL
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5741,14 +5741,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <string>https://www.contoso.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageAllowedBackgroundTypes
   #### Configure the background types allowed for the new tab page layout
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -5799,13 +5799,13 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageCompanyLogo
   #### Set new tab page company logo (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
   - On Windows and macOS since 79, until 85
@@ -5851,11 +5851,11 @@ For help with determining the SHA-256 hash, see https://docs.microsoft.com/power
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   "default_logo": {
-    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
     "url": "https://www.contoso.com/logo.png"
-  }, 
+  },
   "light_logo": {
-    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737",
     "url": "https://www.contoso.com/light_logo.png"
   }
 }
@@ -5884,14 +5884,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   </dict>
 </dict>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageHideDefaultTopSites
   #### Hide the default top sites from the new tab page
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5934,14 +5934,14 @@ If you set this policy to false or don't configure it, the default top site tile
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageLocation
   #### Configure the new tab page URL
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5992,14 +5992,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <string>https://www.fabrikam.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageManagedQuickLinks
   #### Set new tab page quick links
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -6040,12 +6040,12 @@ If the policy is set as recommended, pinned tiles will remain in the list but th
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   {
-    "pinned": true, 
-    "title": "Contoso Portal", 
+    "pinned": true,
+    "title": "Contoso Portal",
     "url": "https://contoso.com"
-  }, 
+  },
   {
-    "title": "Fabrikam", 
+    "title": "Fabrikam",
     "url": "https://fabrikam.com"
   }
 ]
@@ -6074,14 +6074,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPagePrerenderEnabled
   #### Enable preload of the new tab page for faster rendering
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -6120,14 +6120,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSetFeedType
   #### Configure the Microsoft Edge new tab page experience
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -6188,14 +6188,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>0</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartup
   #### Action to take on startup
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6254,14 +6254,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>4</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartupURLs
   #### Sites to open when the browser starts
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6309,14 +6309,14 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   <string>https://www.fabrikam.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowHomeButton
   #### Show Home button on toolbar
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6359,7 +6359,7 @@ If you don't configure the policy, users can choose whether to show the home but
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
@@ -6369,8 +6369,8 @@ If you don't configure the policy, users can choose whether to show the home but
 
   ### AddressBarMicrosoftSearchInBingProviderEnabled
   #### Enable Microsoft Search in Bing suggestions in the address bar
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -6411,14 +6411,14 @@ If you have enabled the set of policies which forces a default search provider (
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AdsSettingForIntrusiveAdsSites
   #### Ads setting for sites with intrusive ads
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6465,14 +6465,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowDeletingBrowserHistory
   #### Enable deleting browser and download history
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6519,14 +6519,14 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowFileSelectionDialogs
   #### Allow file selection dialogs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6569,14 +6569,14 @@ If you disable this policy, whenever the user performs an action that triggers a
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowPopupsDuringPageUnload
   #### Allows a page to show popups during its unloading
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6621,14 +6621,14 @@ This policy will be removed in the future.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSurfGame
   #### Allow surf game
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -6669,14 +6669,14 @@ If you enable or don't configure this policy, users can play the surf game.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSyncXHRInPageDismissal
   #### Allow pages to send synchronous XHR requests during page dismissal (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -6721,14 +6721,14 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTokenBindingForUrls
   #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
-  
-  
+
+
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -6772,14 +6772,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTrackingForUrls
   #### Configure tracking prevention exceptions for specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6827,14 +6827,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AlternateErrorPagesEnabled
   #### Suggest similar pages when a webpage can't be found
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -6880,14 +6880,14 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AlwaysOpenPdfExternally
   #### Always open PDF files externally
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6930,14 +6930,14 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AmbientAuthenticationInPrivateModesEnabled
   #### Enable Ambient Authentication for InPrivate and Guest profiles
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -7002,14 +7002,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>0</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AppCacheForceEnabled
   #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 84 or later
 
@@ -7050,14 +7050,14 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ApplicationLocaleValue
   #### Set application locale
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -7094,14 +7094,14 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowed
   #### Allow or block audio capture
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7146,14 +7146,14 @@ This policy affects all types of audio inputs, not only the built-in microphone.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowedUrls
   #### Sites that can access audio capture devices without requesting permission
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7197,14 +7197,14 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   <string>https://[*.]contoso.edu/</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioSandboxEnabled
   #### Allow the audio sandbox to run
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -7252,14 +7252,14 @@ This policy is intended to give enterprises flexibility to disable the audio san
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoImportAtFirstRun
   #### Automatically import another browser's data and settings at first run
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7353,14 +7353,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoLaunchProtocolsFromOrigins
   #### Define a list of protocols that can launch an external application from listed origins without prompting the user
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7406,22 +7406,22 @@ However, origin matching patterns for this policy cannot contain "/path" or "@qu
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
     "allowed_origins": [
-      "example.com", 
+      "example.com",
       "http://www.example.com:8080"
-    ], 
+    ],
     "protocol": "spotify"
-  }, 
+  },
   {
     "allowed_origins": [
-      "https://example.com", 
+      "https://example.com",
       "https://.mail.example.com"
-    ], 
+    ],
     "protocol": "teams"
-  }, 
+  },
   {
     "allowed_origins": [
       "*"
-    ], 
+    ],
     "protocol": "outlook"
   }
 ]
@@ -7462,14 +7462,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenAllowedForURLs
   #### URLs where AutoOpenFileTypes can apply
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7525,14 +7525,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
   <string>.exact.hostname.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenFileTypes
   #### List of file types that should be automatically opened on download
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7586,14 +7586,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   <string>txt</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillAddressEnabled
   #### Enable AutoFill for addresses
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7638,14 +7638,14 @@ Note that if you disable this policy you also stop all activity for all web form
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillCreditCardEnabled
   #### Enable AutoFill for credit cards
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7688,14 +7688,14 @@ If you enable this policy or don't configure it, users can control AutoFill for 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoplayAllowed
   #### Allow media autoplay for websites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -7743,14 +7743,14 @@ A tab will need to be closed and re-opened for this policy to take effect.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundModeEnabled
   #### Continue running background apps after Microsoft Edge closes
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -7789,14 +7789,14 @@ If you don't configure this policy, background mode is initially turned off, and
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundTemplateListUpdatesEnabled
   #### Enables background updates to the list of available templates for Collections and other features that use templates
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -7839,14 +7839,14 @@ If you disable this setting the list of available templates will be downloaded o
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BingAdsSuppression
   #### Block all ads on Bing search results
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -7899,14 +7899,14 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BlockThirdPartyCookies
   #### Block third party cookies
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7951,14 +7951,14 @@ If you don't configure this policy, third-party cookies are enabled but users ca
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserAddProfileEnabled
   #### Enable profile creation from the Identity flyout menu or the Settings page
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8000,14 +8000,14 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserGuestModeEnabled
   #### Enable guest mode
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8050,14 +8050,14 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserNetworkTimeQueriesEnabled
   #### Allow queries to a Browser Network Time service
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8100,14 +8100,14 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserSignin
   #### Browser sign-in settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8164,14 +8164,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltInDnsClientEnabled
   #### Use built-in DNS client
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8218,14 +8218,14 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltinCertificateVerifierEnabled
   #### Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On macOS since 83 or later
 
@@ -8243,7 +8243,7 @@ It won't work in Microsoft Edge version 87, when support for the legacy certific
   #### Data Type:
   - Boolean
 
-  
+
 
   #### Mac information and settings
   - Preference Key Name: BuiltinCertificateVerifierEnabled
@@ -8251,14 +8251,14 @@ It won't work in Microsoft Edge version 87, when support for the legacy certific
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForCas
   #### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8313,14 +8313,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   <string>sha256//////////////////////w==</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForLegacyCas
   #### Disable Certificate Transparency enforcement for a list of legacy certificate authorities
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8372,14 +8372,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   <string>sha256//////////////////////w==</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForUrls
   #### Disable Certificate Transparency enforcement for specific URLs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8429,14 +8429,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   <string>.contoso.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClearBrowsingDataOnExit
   #### Clear browsing data when Microsoft Edge closes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -8483,14 +8483,14 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClearCachedImagesAndFilesOnExit
   #### Clear cached images and files when Microsoft Edge closes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -8537,14 +8537,14 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClickOnceEnabled
   #### Allow users to open files using the ClickOnce protocol
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -8587,14 +8587,14 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CollectionsServicesAndExportsBlockList
   #### Block access to a specified list of services and export targets in Collections
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -8646,14 +8646,14 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   <string>pinterest_suggestions</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CommandLineFlagSecurityWarningsEnabled
   #### Enable security warnings for command-line flags
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -8698,14 +8698,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ComponentUpdatesEnabled
   #### Enable component updates in Microsoft Edge
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8748,14 +8748,14 @@ However, some components are exempt from this policy. This includes any componen
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureDoNotTrack
   #### Configure Do Not Track
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8800,14 +8800,14 @@ If you don't configure this policy, users can choose whether to send these reque
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureOnPremisesAccountAutoSignIn
   #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
-  
-  
+
+
   #### Supported versions:
   - On Windows since 81 or later
 
@@ -8854,14 +8854,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureOnlineTextToSpeech
   #### Configure Online Text To Speech
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8908,14 +8908,14 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureShare
   #### Configure the Share experience
-  
-  
+
+
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -8958,14 +8958,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### CustomHelpLink
   #### Specify custom help link
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -9010,14 +9010,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <string>https://go.microsoft.com/fwlink/?linkid=2080734</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DNSInterceptionChecksEnabled
   #### DNS interception checks enabled
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -9062,14 +9062,14 @@ If you disable this policy, DNS interception checks aren't performed.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultBrowserSettingEnabled
   #### Set Microsoft Edge as default browser
-  
-  
+
+
   #### Supported versions:
   - On Windows 7 and macOS since 77 or later
 
@@ -9114,14 +9114,14 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderContextMenuAccessAllowed
   #### Allow default search provider context menu search access
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -9166,14 +9166,14 @@ The policy value is only appled when the [DefaultSearchProviderEnabled](#default
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSensorsSetting
   #### Default sensors setting
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -9226,14 +9226,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSerialGuardSetting
   #### Control use of the Serial API
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -9286,14 +9286,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DelayNavigationsForInitialSiteListDownload
   #### Require that the Enterprise Mode Site List is available before tab navigation
-  
-  
+
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -9345,14 +9345,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DeleteDataOnMigration
   #### Delete old browser data on migration
-  
-  
+
+
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -9389,14 +9389,14 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DeveloperToolsAvailability
   #### Control where developer tools can be used
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9451,14 +9451,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiagnosticData
   #### Send required and optional diagnostic data about browser usage
-  
-  
+
+
   #### Supported versions:
   - On Windows 7 and macOS since 86 or later
 
@@ -9525,14 +9525,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DirectInvokeEnabled
   #### Allow users to open files using the DirectInvoke protocol
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -9573,14 +9573,14 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### Disable3DAPIs
   #### Disable support for 3D graphics APIs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9623,14 +9623,14 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DisableScreenshots
   #### Disable taking screenshots
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9675,14 +9675,14 @@ Please note this policy controls screenshots taken from within the browser itsel
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheDir
   #### Set disk cache directory
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9727,14 +9727,14 @@ If you don't configure this policy, the default cache directory is used, and use
 ``` xml
 <string>${user_home}/Edge_cache</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheSize
   #### Set disk cache size, in bytes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9779,14 +9779,14 @@ If you don't configure this policy, the default size is used, but users can over
 ``` xml
 <integer>104857600</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsMode
   #### Control the mode of DNS-over-HTTPS
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -9843,14 +9843,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>off</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsTemplates
   #### Specify URI template of desired DNS-over-HTTPS resolver
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -9897,14 +9897,14 @@ Incorrectly formatted templates will be ignored.
 ``` xml
 <string>https://dns.example.net/dns-query{?dns}</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadDirectory
   #### Set download directory
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9953,14 +9953,14 @@ If the folder specified by the path doesn't exist, the download will trigger a p
       Linux-based OSes (including Mac): /home/${user_name}/Downloads
       Windows: C:\Users\${user_name}\Downloads</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadRestrictions
   #### Allow download restrictions
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10023,14 +10023,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EdgeCollectionsEnabled
   #### Enable the Collections feature
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -10073,14 +10073,14 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EditFavoritesEnabled
   #### Allows users to edit favorites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10121,13 +10121,13 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
   #### Re-enable deprecated web platform features for a limited time (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
   - On Windows and macOS since 77, until 86
@@ -10186,13 +10186,13 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
   <string>ExampleDeprecatedFeature_EffectiveUntil20080902</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDomainActionsDownload
   #### Enable Domain Actions Download from Microsoft (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 77, until 84
@@ -10244,14 +10244,14 @@ If you don't configure this policy, the list of Domain Actions will continue to 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableOnlineRevocationChecks
   #### Enable online OCSP/CRL checks
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10294,14 +10294,14 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableSha1ForLocalAnchors
   #### Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -10346,14 +10346,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseHardwarePlatformAPIEnabled
   #### Allow managed extensions to use the Enterprise Hardware Platform API
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -10394,14 +10394,14 @@ This policy also applies to component extensions.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseModeSiteListManagerAllowed
   #### Allow access to the Enterprise Mode Site List Manager tool
-  
-  
+
+
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -10438,14 +10438,14 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   #### Disable download file type extension-based warnings for specified file types on domains
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -10510,14 +10510,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExperimentationAndConfigurationServiceControl
   #### Control communication with the Experimentation and Configuration Service
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10582,14 +10582,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExternalProtocolDialogShowAlwaysOpenCheckbox
   #### Show an "Always open" checkbox in external protocol dialog
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -10638,14 +10638,14 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FamilySafetySettingsEnabled
   #### Allow users to configure Family safety
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -10688,14 +10688,14 @@ If you disable this policy, the Family safety page will not be shown.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FavoritesBarEnabled
   #### Enable favorites bar
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10740,14 +10740,14 @@ If this policy is not configured, then the user can decide to use the favorites 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceBingSafeSearch
   #### Enforce Bing SafeSearch
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10804,14 +10804,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>0</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceCertificatePromptsOnMultipleMatches
   #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -10854,14 +10854,14 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceEphemeralProfiles
   #### Enable use of ephemeral profiles
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10906,14 +10906,14 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceGoogleSafeSearch
   #### Enforce Google SafeSearch
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10956,14 +10956,14 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceLegacyDefaultReferrerPolicy
   #### Use a default referrer policy of no-referrer-when-downgrade (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11008,13 +11008,13 @@ This enterprise policy is disabled by default.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceNetworkInProcess
   #### Force networking code to run in the browser process (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
   #### Supported versions:
   - On Windows since 78, until 83
@@ -11052,14 +11052,14 @@ This policy is disabled by default. If enabled, users are open to security issue
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceSync
   #### Force synchronization of browser data and do not show the sync consent prompt
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -11108,14 +11108,14 @@ For this policy to work as intended,
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceYouTubeRestrict
   #### Force minimum YouTube Restricted Mode
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11170,14 +11170,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>0</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### FullscreenAllowed
   #### Allow full screen mode
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -11216,14 +11216,14 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### GloballyScopeHTTPAuthCacheEnabled
   #### Enable globally scoped HTTP auth cache
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11270,14 +11270,14 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### GoToIntranetSiteForSingleWordEntryInAddressBar
   #### Force direct intranet site navigation instead of searching on single word entries in the Address Bar
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -11326,14 +11326,14 @@ Popular, single-word search terms will require manual selection of search sugges
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### HSTSPolicyBypassList
   #### Configure the list of names that will bypass the HSTS policy check
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -11375,14 +11375,14 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   <string>meet</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### HardwareAccelerationModeEnabled
   #### Use hardware acceleration when available
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11423,14 +11423,14 @@ If you disable this policy, hardware acceleration is disabled.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### HideFirstRunExperience
   #### Hide the First-run experience and splash screen
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -11495,14 +11495,14 @@ Note: The specific configuration options shown to the user in the First Run Expe
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportAutofillFormData
   #### Allow importing of autofill form data
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11551,14 +11551,14 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportBrowserSettings
   #### Allow importing of browser settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -11607,14 +11607,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportCookies
   #### Allow importing of Cookies
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11661,14 +11661,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportExtensions
   #### Allow importing of extensions
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11717,14 +11717,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportFavorites
   #### Allow importing of favorites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11773,14 +11773,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHistory
   #### Allow importing of browsing history
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11829,14 +11829,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHomepage
   #### Allow importing of home page settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11885,14 +11885,14 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportOpenTabs
   #### Allow importing of open tabs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -11941,14 +11941,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportPaymentInfo
   #### Allow importing of payment info
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11997,14 +11997,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSavedPasswords
   #### Allow importing of saved passwords
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12053,14 +12053,14 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSearchEngine
   #### Allow importing of search engine settings
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12109,14 +12109,14 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportShortcuts
   #### Allow importing of shortcuts
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -12163,14 +12163,14 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InPrivateModeAvailability
   #### Configure InPrivate mode availability
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12225,14 +12225,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureFormsWarningsEnabled
   #### Enable warnings for insecure forms
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -12273,14 +12273,14 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### IntensiveWakeUpThrottlingEnabled
   #### Control the IntensiveWakeUpThrottling feature
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -12328,14 +12328,14 @@ Note that the policy is applied per renderer process, with the most recent value
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationEnhancedHangDetection
   #### Configure enhanced hang detection for Internet Explorer mode
-  
-  
+
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -12389,14 +12389,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationLevel
   #### Configure Internet Explorer integration
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -12439,14 +12439,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteList
   #### Configure the Enterprise Mode Site List
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -12479,14 +12479,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteRedirect
   #### Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
-  
-  
+
+
   #### Supported versions:
   - On Windows since 81 or later
 
@@ -12546,14 +12546,14 @@ Use the preceding information when configuring this policy.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationTestingAllowed
   #### Allow Internet Explorer mode testing
-  
-  
+
+
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -12597,14 +12597,14 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### IsolateOrigins
   #### Enable site isolation for specific origins
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12651,14 +12651,14 @@ If you don't configure the policy, the user can change this setting.
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### LocalProvidersEnabled
   #### Allow suggestions from local providers
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -12707,14 +12707,14 @@ This policy requires a browser restart to finish applying.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedFavorites
   #### Configure favorites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12752,26 +12752,26 @@ Managed favorites are not synced to the user account and can't be modified by ex
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
     "toplevel_name": "My managed favorites folder"
-  }, 
+  },
   {
-    "name": "Microsoft", 
+    "name": "Microsoft",
     "url": "microsoft.com"
-  }, 
+  },
   {
-    "name": "Bing", 
+    "name": "Bing",
     "url": "bing.com"
-  }, 
+  },
   {
     "children": [
       {
-        "name": "Microsoft Edge Insiders", 
+        "name": "Microsoft Edge Insiders",
         "url": "www.microsoftedgeinsider.com"
-      }, 
+      },
       {
-        "name": "Microsoft Edge", 
+        "name": "Microsoft Edge",
         "url": "www.microsoft.com/windows/microsoft-edge"
       }
-    ], 
+    ],
     "name": "Microsoft Edge links"
   }
 ]
@@ -12821,14 +12821,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedSearchEngines
   #### Manage Search Engines
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12869,33 +12869,33 @@ If the [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policy 
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
     "allow_search_engine_discovery": true
-  }, 
+  },
   {
-    "is_default": true, 
-    "keyword": "example1.com", 
-    "name": "Example1", 
-    "search_url": "https://www.example1.com/search?q={searchTerms}", 
+    "is_default": true,
+    "keyword": "example1.com",
+    "name": "Example1",
+    "search_url": "https://www.example1.com/search?q={searchTerms}",
     "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", 
-    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example2.com", 
-    "name": "Example2", 
-    "search_url": "https://www.example2.com/search?q={searchTerms}", 
+    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}",
+    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload",
+    "keyword": "example2.com",
+    "name": "Example2",
+    "search_url": "https://www.example2.com/search?q={searchTerms}",
     "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "encoding": "UTF-8", 
-    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example3.com", 
-    "name": "Example3", 
-    "search_url": "https://www.example3.com/search?q={searchTerms}", 
+    "encoding": "UTF-8",
+    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload",
+    "keyword": "example3.com",
+    "name": "Example3",
+    "search_url": "https://www.example3.com/search?q={searchTerms}",
     "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "keyword": "example4.com", 
-    "name": "Example4", 
+    "keyword": "example4.com",
+    "name": "Example4",
     "search_url": "https://www.example4.com/search?q={searchTerms}"
   }
 ]
@@ -12962,14 +12962,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### MaxConnectionsPerProxy
   #### Maximum number of concurrent connections to the proxy server
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13016,14 +13016,14 @@ If you don't configure this policy, the default value (32) is used.
 ``` xml
 <integer>32</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### MediaRouterCastAllowAllIPs
   #### Allow Google Cast to connect to Cast devices on all IP addresses
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13068,14 +13068,14 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### MetricsReportingEnabled
   #### Enable usage and crash-related data reporting (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13126,14 +13126,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeWindowOcclusionEnabled
   #### Enable Native Window Occlusion
-  
-  
+
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -13172,14 +13172,14 @@ If this policy is left not set, window hiding detection will be enabled.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NavigationDelayForInitialSiteListDownloadTimeout
   #### Set a timeout for delay of tab navigation for the Enterprise Mode Site List
-  
-  
+
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -13225,14 +13225,14 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NetworkPredictionOptions
   #### Enable network prediction
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13285,14 +13285,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### NonRemovableProfileEnabled
   #### Configure whether a user always has a default profile automatically signed in with their work or school account
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -13333,14 +13333,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
   #### Control where security restrictions on insecure origins apply
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13390,14 +13390,14 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   <string>*.contoso.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PaymentMethodQueryEnabled
   #### Allow websites to query for available payment methods
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -13440,14 +13440,14 @@ If you enable this policy or don't set this policy, websites can check if the us
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PersonalizationReportingEnabled
   #### Allow personalization of ads, search and news by sending browsing history to Microsoft
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -13490,14 +13490,14 @@ If you disable this policy, users can't change or override the setting. If this 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PinningWizardAllowed
   #### Allow Pin to taskbar wizard
-  
-  
+
+
   #### Supported versions:
   - On Windows since 80 or later
 
@@ -13536,14 +13536,14 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProactiveAuthEnabled
   #### Enable Proactive Authentication
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13588,14 +13588,14 @@ If you don't configure this policy, Proactive Authentication is turned on.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PromotionalTabsEnabled
   #### Enable full-tab promotional content
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13638,14 +13638,14 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### PromptForDownloadLocation
   #### Ask where to save downloaded files
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13688,14 +13688,14 @@ If you don't configure this policy, the user will be able to change this setting
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### QuicAllowed
   #### Allow QUIC protocol
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13740,14 +13740,14 @@ QUIC is a transport layer network protocol that can improve performance of web a
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RelaunchNotification
   #### Notify a user that a browser restart is recommended or required for pending updates
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13802,14 +13802,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>1</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RelaunchNotificationPeriod
   #### Set the time period for update notifications
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13852,14 +13852,14 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 ``` xml
 <integer>604800000</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RendererCodeIntegrityEnabled
   #### Enable renderer code integrity
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -13894,14 +13894,14 @@ Disabling this policy has a detrimental effect on Microsoft Edge's security and 
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RequireOnlineRevocationChecksForLocalAnchors
   #### Specify if online OCSP/CRL checks are required for local trust anchors
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -13938,14 +13938,14 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ResolveNavigationErrorsUseWebService
   #### Enable resolution of navigation errors using a web service
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13993,14 +13993,14 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestrictSigninToPattern
   #### Restrict which accounts can be used as Microsoft Edge primary accounts
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14043,14 +14043,14 @@ If you don't configure this policy or leave it blank, users can set any account 
 ``` xml
 <string>.*@contoso.com</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileLocation
   #### Set the roaming profile directory
-  
-  
+
+
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -14089,14 +14089,14 @@ If you don't configure this policy, the default roaming profile path is used.
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileSupportEnabled
   #### Enable using roaming copies for Microsoft Edge profile data
-  
-  
+
+
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -14135,14 +14135,14 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### RunAllFlashInAllowMode
   #### Extend Adobe Flash content setting to all content
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14185,14 +14185,14 @@ If you disable this policy or don't configure it, Adobe Flash content from other
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SSLErrorOverrideAllowed
   #### Allow users to proceed from the HTTPS warning page
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14235,14 +14235,14 @@ If you disable this policy, users are blocked from clicking through any warning 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SSLVersionMin
   #### Minimum TLS version enabled
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14293,14 +14293,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>tls1</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SaveCookiesOnExit
   #### Save cookies when Microsoft Edge closes
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14355,14 +14355,14 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SavingBrowserHistoryDisabled
   #### Disable saving browser history
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14405,14 +14405,14 @@ If you disable this policy or don't configure it, browsing history is saved.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ScreenCaptureAllowed
   #### Allow or deny screen capture
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -14452,14 +14452,14 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ScrollToTextFragmentEnabled
   #### Enable scrolling to text specified in URL fragments
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -14502,14 +14502,14 @@ If you disable this policy, web page scrolling to specific text fragments via a 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SearchSuggestEnabled
   #### Enable search suggestions
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14554,14 +14554,14 @@ If this policy is left not set, search suggestions are enabled but the user can 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SecurityKeyPermitAttestation
   #### Websites or domains that don't need permission to use direct Security Key attestation
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14605,14 +14605,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   <string>https://contoso.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SendIntranetToInternetExplorer
   #### Send all intranet sites to Internet Explorer
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -14645,14 +14645,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SendSiteInfoToImproveServices
   #### Send site information to improve Microsoft services (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14701,14 +14701,14 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsAllowedForUrls
   #### Allow access to sensors on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14760,14 +14760,14 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsBlockedForUrls
   #### Block access to sensors on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14819,14 +14819,14 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SerialAskForUrls
   #### Allow the Serial API on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14878,14 +14878,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SerialBlockedForUrls
   #### Block the Serial API on specific sites
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14937,14 +14937,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
   #### Show Microsoft Office shortcut in favorites bar (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14987,14 +14987,14 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SignedHTTPExchangeEnabled
   #### Enable Signed HTTP Exchange (SXG) support
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -15037,14 +15037,14 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SitePerProcess
   #### Enable site isolation for every site
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15088,14 +15088,14 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpeechRecognitionEnabled
   #### Configure Speech Recognition
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 87 or later
 
@@ -15142,14 +15142,14 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckEnabled
   #### Enable spellcheck
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15190,14 +15190,14 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguage
   #### Enable specific spellcheck languages
-  
-  
+
+
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -15242,14 +15242,14 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguageBlocklist
   #### Force disable spellcheck languages
-  
-  
+
+
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -15294,14 +15294,14 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### StricterMixedContentTreatmentEnabled
   #### Enable stricter treatment for mixed content (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -15348,14 +15348,14 @@ This policy does not affect other types of mixed content other than audio, video
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SuppressUnsupportedOSWarning
   #### Suppress the unsupported OS warning
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15396,14 +15396,14 @@ If this policy is false or unset, the warnings will appear on such unsupported c
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SyncDisabled
   #### Disable synchronization of data using Microsoft sync services
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15444,14 +15444,14 @@ If you don't set this policy or apply it as recommended, users will be able to t
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### SyncTypesListDisabled
   #### Configure the list of types that are excluded from synchronization
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -15497,13 +15497,13 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   <string>favorites</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TLS13HardeningForLocalAnchorsEnabled
   #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
   - On Windows and macOS since 81, until 85
@@ -15551,14 +15551,14 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TLSCipherSuiteDenyList
   #### Specify the TLS cipher suites to disable
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -15614,14 +15614,14 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   <string>0xcca9</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TabFreezingEnabled
   #### Allow freezing of background tabs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -15666,14 +15666,14 @@ If you disable this policy, no tabs will be frozen.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TaskManagerEndProcessEnabled
   #### Enable ending processes in the Browser task manager
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15712,14 +15712,14 @@ If you disable this policy, no tabs will be frozen.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TotalMemoryLimitMb
   #### Set limit on megabytes of memory a single Microsoft Edge instance can use
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -15762,14 +15762,14 @@ If you don't set this policy, the browser will only attempt to save memory when 
 ``` xml
 <integer>2048</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TrackingPrevention
   #### Block tracking of users' web-browsing activity
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -15822,14 +15822,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### TranslateEnabled
   #### Enable Translate
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15874,14 +15874,14 @@ If you don't configure the policy, users can choose whether to use the translati
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### URLAllowlist
   #### Define a list of allowed URLs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15943,14 +15943,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
   <string>.exact.hostname.com</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### URLBlocklist
   #### Block access to a list of URLs
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16016,14 +16016,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>*</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserAgentClientHintsEnabled
   #### Enable the User-Agent Client Hints feature (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -16068,14 +16068,14 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataDir
   #### Set the user data directory
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16122,14 +16122,14 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataSnapshotRetentionLimit
   #### Limits the number of user data snapshots retained for use in case of emergency rollback
-  
-  
+
+
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -16166,14 +16166,14 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserFeedbackAllowed
   #### Allow user feedback
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16216,14 +16216,14 @@ If you disable this policy, users can't invoke Edge Feedback.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowed
   #### Allow or block video capture
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16268,14 +16268,14 @@ This policy affects all types of video inputs, not only the built-in camera.
 ``` xml
 <false/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowedUrls
   #### Sites that can access video capture devices without requesting permission
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16319,14 +16319,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   <string>https://[*.]contoso.edu/</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WPADQuickCheckEnabled
   #### Set WPAD optimization
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16371,14 +16371,14 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebAppInstallForceList
   #### Configure list of force-installed Web Apps
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -16411,12 +16411,12 @@ Each list item of the policy is an object with a mandatory member: url (the URL 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
-    "create_desktop_shortcut": true, 
-    "default_launch_container": "window", 
+    "create_desktop_shortcut": true,
+    "default_launch_container": "window",
     "url": "https://www.contoso.com/maps"
-  }, 
+  },
   {
-    "default_launch_container": "tab", 
+    "default_launch_container": "tab",
     "url": "https://app.contoso.edu"
   }
 ]
@@ -16445,13 +16445,13 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   </dict>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebComponentsV0Enabled
   #### Re-enable Web Components v0 API until M84 (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 80, until 84
@@ -16495,13 +16495,13 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
-  
+
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 77, until 84
@@ -16551,14 +16551,14 @@ to override incompatible policies.
 ``` xml
 <true/>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalIpsAllowedUrls
   #### Manage exposure of local IP addressess by WebRTC
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -16610,14 +16610,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
   <string>*contoso.com*</string>
 </array>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalhostIpHandling
   #### Restrict exposure of local IP address by WebRTC
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16674,14 +16674,14 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>default</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcUdpPortRange
   #### Restrict the range of local UDP ports used by WebRTC
-  
-  
+
+
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16724,14 +16724,14 @@ If you don't configure this policy, or if you set it to an empty string or inval
 ``` xml
 <string>10000-11999</string>
 ```
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
   ### WinHttpProxyResolverEnabled
   #### Use Windows proxy resolver (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-  
+
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -16772,7 +16772,7 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge---policies)
 
