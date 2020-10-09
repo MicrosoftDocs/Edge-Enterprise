@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -44,8 +44,8 @@ These tables list all of the group policies available in this release of Microso
 
   ### browserExecutableFolder
   #### Configure the location of the browser executable folder
-  
-  
+
+
   #### Supported versions:
   - On Windows since 87 or later
 
@@ -81,14 +81,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge-webview2---policies)
 
   ### releaseChannelPreference
   #### Set the release channel search order preference
-  
-  
+
+
   #### Supported versions:
   - On Windows since 87 or later
 
@@ -126,7 +126,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, V
 ```
 
 
-  
+
 
   [Back to top](#microsoft-edge-webview2---policies)
 
