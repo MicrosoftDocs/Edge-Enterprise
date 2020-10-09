@@ -22,6 +22,8 @@ These release notes provide information about new features and non-security upda
 <!-- begin major 86 -->
 ## Version 86.0.622.38: October 9
 
+Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)
+
 ### Feature updates
 
 * **Roll back to previous Microsoft Edge version.** The rollback feature lets administrators revert to a known good version of Microsoft Edge if there's an issue in the latest version of Microsoft Edge. **Note:** Stable version 86.0.622.38 is the first version you can roll back to, which means that Stable version 87 is the first version ready to rollback from. [Learn more](edge-learnmore-rollback.md).
