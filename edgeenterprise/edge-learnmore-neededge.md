@@ -3,7 +3,7 @@ title: "Need Microsoft Edge for compatibility with modern sites"
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/07/2020
+ms.date: 10/12/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,22 +14,23 @@ description: "Need Microsoft Edge for compatibility with modern web sites"
 
 # Need Microsoft Edge for compatibility with modern web sites
 
-The **HideInternetExplorerRedirectUXForIncompatibleSitesToMicrosoftEdgeEnabled** policy enables customers using Internet Explorer to continue browsing after they go to an incompatible site by automatically redirecting to Microsoft Edge.
+The **HideInternetExplorerRedirectUXForIncompatibleSitesToMicrosoftEdgeEnabled** policy enables Internet Explorer users to continue browsing after they go to an incompatible site. Users that land on an incompatible site are automatically redirected to Microsoft Edge.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
 ## Overview
 
-Many modern websites have designs that are incompatible with Internet Explorer. Whenever a user visits one of these sites they can be automatically redirected to Microsoft Edge so they can continue their browsing tasks without interruption.
+Many modern websites have designs that are incompatible with Internet Explorer. Whenever an Internet Explorer user visits an incompatible site they get a message that tells them the site is incompatible with their browser.
 
-The redirection experience is driven by a list maintained by Microsoft of all sites that show an incompatibility message for Internet Explorer.
+> [!NOTE]
+> Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer.
 
 ## Microsoft Edge in action
 
 When a user goes to site that is incompatible with Internet Explorer several things happen.
 
-First, they are notified about the website incompatibility and the fact that they're now using Microsoft Edge.
+First, they're notified about the website incompatibility and the fact that they're now using Microsoft Edge.
 
 ![Browsing notification and prompt to import data and preferences.](media/edge-learnmore-neededge/neededge-dialog1.png)
 
