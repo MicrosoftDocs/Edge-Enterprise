@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -250,7 +250,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[DownloadRestrictions](#downloadrestrictions)|Разрешить ограничения загрузки|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Включить функцию "Коллекции"|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Позволяет пользователям редактировать "Избранное"|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Повторно включить устаревшие функции веб-платформы на ограниченное время|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Повторно включить устаревшие функции веб-платформы на ограниченное время (устарела)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Включить загрузку действий домена с серверов корпорации Майкрософт (устарела)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Включить проверки OCSP/CRL в сети|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Разрешить сертификаты, подписанные с помощью алгоритма SHA-1, если они выданы локальными якорями доверия (не рекомендуется)|
@@ -340,6 +340,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели "Избранное" (не рекомендуется)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписи HTTP exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию для каждого сайта|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Настроить распознавание речи|
 |[SpellcheckEnabled](#spellcheckenabled)|Включить проверку орфографии|
 |[SpellcheckLanguage](#spellchecklanguage)|Включить конкретные языки проверки орфографии|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Принудительное отключение языков проверки орфографии|
@@ -1904,21 +1905,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - На Windows и macOS с 77 или более поздней версии
 
   #### Описание
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  Настройка политики позволяет вам создать список шаблонов URL-адресов, указывающих сайты, для которых Microsoft Edge может автоматически выбирать сертификат клиента. Значение представляет собой массив в виде преобразованных в строку словарей JSON, каждый в формате { "pattern": "$URL_PATTERN", "filter" : $FILTER }, где $URL_PATTERN является шаблоном параметра содержимого. $FILTER ограничивает сертификаты клиента, из которых браузер может выбирать автоматически. Независимо от фильтра выбираются только сертификаты, соответствующие запросу сертификата сервера.
 
-Examples for the usage of the $FILTER section:
+Примеры использования раздела $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Если параметру $FILTER присвоено значение { "ISSUER": { "CN": "$ISSUER_CN" } }, выбираются только сертификаты клиентов, выданные сертификатом с CommonName $ISSUER_CN.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Если $FILTER содержит разделы "ISSUER" и "SUBJECT", выбираются только сертификаты клиентов, удовлетворяющие обоим условиям.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Если $FILTER содержит раздел "SUBJECT" со значением "O", выбираемый сертификат должен иметь хотя бы одну организацию, соответствующую указанному значению.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Если $FILTER содержит раздел "SUBJECT" со значением "OU", выбираемый сертификат должен иметь хотя бы одно подразделение организации, соответствующее указанному значению.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Если параметру $FILTER присвоено значение {}, выбор сертификатов клиента не ограничивается дополнительным образом. Обратите внимание, что фильтры, предоставляемые веб-сервером, по-прежнему применяются.
 
-If you leave the policy unset, there's no autoselection for any site.
+Если не настроить эту политику, автоматический выбор будет отсутствовать на всех сайтах.
 
   #### Поддерживаемые функции:
   - Может быть обязательной: Да
@@ -10123,20 +10124,22 @@ API SpeechSynthesis: [https://go.microsoft.com/fwlink/?linkid=2110038](https://g
   [В начало](#microsoft-edge:-политики)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Повторно включить устаревшие функции веб-платформы на ограниченное время
+  #### Повторно включить устаревшие функции веб-платформы на ограниченное время (устарела)
   
-  
+  >УСТАРЕВШАЯ: эта политика устарела. Она не действует в версиях Microsoft Edge, следующих за версией 86.
   #### Поддерживаемые версии:
-  - На Windows и macOS с 77 или более поздней версии
+  - На Windows и macOS с 77 до 86
 
   #### Описание
-  Укажите список устаревших функций веб-платформы, которые необходимо временно повторно включить.
+  Эта политика устарела, поскольку теперь для управления отдельными устаревающими функциями веб-платформы используются специальные политики веб-платформ.
 
-Этот параметр политики позволяет повторно включить устаревшие функции веб-платформы на ограниченное время. Функции определяются тегом строки.
+Укажите список устаревших функций веб-платформы, которые необходимо временно повторно включить.
 
-Если не настроить этот параметр политики, если список будет пустым или если функция не соответствует одному из поддерживаемых тегов строки, все устаревшие функции веб-платформы будут отключены.
+Этот параметр политики позволяет пользователю повторно включить устаревшие функции веб-платформы на ограниченное время. Функции определяются тегом строки.
 
-Этот параметр политики поддерживается на вышеуказанных платформах, но функция, которую он включает, может быть недоступна на всех этих платформах. Не все устаревшие функции веб-платформы можно включить повторно. Только явно указанные ниже функции можно включить повторно и только на ограниченный период времени, который зависит от функции. Вы можете увидеть, как меняется назначение функции веб-платформы, на странице https://bit.ly/blinkintents.
+Если не настроить этот параметр политики, если список будет пустым или если функция не соответствует одному из поддерживаемых тегов строки, все устаревшие функции веб-платформы останутся отключенными.
+
+Этот параметр политики поддерживается на вышеуказанных платформах, но функция, которую он включает, может быть доступна не на всех этих платформах. Не все устаревшие функции веб-платформы можно включить повторно. Только явно указанные ниже функции можно включить повторно и только на ограниченный период времени, который зависит от конкретной функции. Ознакомиться с назначением изменений функций веб-платформы на странице https://bit.ly/blinkintents.
 
 Общий формат тега строки: [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
 
@@ -10157,7 +10160,7 @@ API SpeechSynthesis: [https://go.microsoft.com/fwlink/?linkid=2110038](https://g
   #### Настройки и сведения Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя групповой политики: EnableDeprecatedWebPlatformFeatures
-  - Имя групповой политики: Повторно включить устаревшие функции веб-платформы на ограниченное время
+  - Имя групповой политики: Повторно включить устаревшие функции веб-платформы на ограниченное время (устарела)
   - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
   - Путь групповой политики (Рекомендовано): Н/Д
   - Имя файла групповой политики ADMX: MSEdge.admx
@@ -15077,6 +15080,60 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Сведения и настройки Mac
   - Имя предпочтительного ключа: SitePerProcess
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge:-политики)
+
+  ### SpeechRecognitionEnabled
+  #### Настроить распознавание речи
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS с 87 или более поздней версии
+
+  #### Описание
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here:
+SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388)
+Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Поддерживаемые функции:
+  - Может быть обязательной: Да
+  - Может быть рекомендованной: Нет
+  - Динамическое обновление политики: Да
+
+  #### Тип данных:
+  - Логическое
+
+  #### Настройки и сведения Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SpeechRecognitionEnabled
+  - Имя групповой политики: Настроить распознавание речи
+  - Путь групповой политики (Обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь групповой политики (Рекомендовано): Н/Д
+  - Имя файла групповой политики ADMX: MSEdge.admx
+  ##### Настройки реестра Windows
+  - Путь (Обязательно): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (Рекомендовано): Н/Д
+  - Имя значения: SpeechRecognitionEnabled
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000001
+```
+
+
+  #### Сведения и настройки Mac
+  - Имя предпочтительного ключа: SpeechRecognitionEnabled
   - Пример значения:
 ``` xml
 <true/>

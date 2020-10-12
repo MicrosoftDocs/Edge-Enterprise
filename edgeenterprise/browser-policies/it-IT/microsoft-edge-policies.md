@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -250,7 +250,7 @@ e suggerimenti per i servizi Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Consenti le restrizioni di download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Abilita la funzionalità Raccolte|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Consente agli utenti di modificare i Preferiti|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Abilita download azioni di dominio da Microsoft (obsoleto)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Abilita i controlli CRL/OCSP online|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Consenti certificati firmati con SHA-1 quando vengono emessi da Trust Anchor locali (deprecato)|
@@ -340,6 +340,7 @@ e suggerimenti per i servizi Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Abilita supporto Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Abilita l'isolamento per ogni sito|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Abilita controllo ortografia|
 |[SpellcheckLanguage](#spellchecklanguage)|Attiva lingua specifica per controllo ortografia|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forza disattivazione lingue per controllo ortografico|
@@ -2379,21 +2380,21 @@ Questo criterio è disponibile solo per le istanze di Windows che fanno parte di
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  L'impostazione del criterio ti consente di creare un elenco di modelli di URL che specificano siti per i quali Microsoft Edge può selezionare automaticamente un certificato client. Il valore è una matrice di dizionari JSON a stringhe, ognuna con il formato { "pattern": "$URL_PATTERN", "filter" : $FILTER }, dove $URL_PATTERN è un modello di impostazione del contenuto. $FILTER limita i certificati client selezionabili automaticamente dal browser. Indipendentemente dal filtro, vengono selezionati solo quei certificati che corrispondono alla richiesta di certificato del server.
 
-Examples for the usage of the $FILTER section:
+Esempi per l'utilizzo della sezione $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Se $FILTER è impostato su { "ISSUER": { "CN": "$ISSUER_CN" } }, verranno selezionati solo i certificati client emessi da un certificato con CommonName $ISSUER_CN.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Se $FILTER contiene entrambe le sezioni "ISSUER" e "SUBJECT", vengono selezionati solo i certificati client che soddisfano entrambe le condizioni.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Se $FILTER contiene una sezione "SUBJECT" con il valore "O", un certificato deve avere almeno un'organizzazione che corrisponde al valore specificato affinché lo si possa selezionare.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Se $FILTER contiene una sezione "SUBJECT" con un valore "OU", un certificato deve avere almeno un'unità organizzativa corrispondente al valore specificato affinché lo si possa selezionare.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Se $FILTER è impostato su {}, la selezione dei certificati client non viene ulteriormente limitata. Nota comunque che i filtri forniti dal server Web continuano ad applicarsi.
 
-If you leave the policy unset, there's no autoselection for any site.
+Lasciando il criterio non impostato, non vi sarà alcuna selezione automatica per nessun sito.
 
   #### Funzionalità supportate:
   - Può essere obbligatorio: Sì
@@ -10124,22 +10125,24 @@ Disabilita questi criteri per impedire agli utenti di aggiungere, rimuovere o mo
   [Torna all'inizio](#microsoft-edge---criteri)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato
+  #### Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)
   
-  
+  >OBSOLETO: questo criterio è obsoleto e non funziona nelle versioni di Microsoft Edge successive alla versione 86.
   #### Versioni supportate:
-  - Su Windows e macOS dal 77 o in seguito
+  - Su Windows e macOS dal 77, fino al 86
 
   #### Descrizione
-  Specifica un elenco delle funzionalità deprecate della piattaforma Web da riabilitare temporaneamente.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-Questi criteri consentono di abilitare di nuovo le funzionalità deprecate della piattaforma Web per un periodo di tempo limitato. Le funzionalità sono identificate da un tag di stringa.
+Specify a list of deprecated web platform features to temporarily re-enable.
 
-Se non configuri questi criteri, se l'elenco è vuoto oppure se una funzionalità non corrisponde a uno dei tag stringa supportati, tutte le funzionalità deprecate della piattaforma Web rimangono disabilitate.
+This policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.
 
-Sebbene i criteri stessi siano supportati sulle piattaforme illustrate sopra, la funzionalità che si sta abilitando potrebbe non essere disponibile su tutte le piattaforme. Non tutte le funzionalità deprecate della piattaforma Web possono essere nuovamente abilitate. Solo quelle elencate in modo esplicito di seguito possono essere abilitate nuovamente e solo per un periodo di tempo limitato, che differisce a seconda della funzionalità. Puoi rivedere lo scopo dietro le modifiche della funzionalità della piattaforma Web su https://bit.ly/blinkintents.
+If you don't configure this policy, if the list is empty, or if a feature doesn't match one of the supported string tags, all deprecated web platform features remain disabled.
 
-Il formato generico del tag stringa è [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+While the policy itself is supported on the above platforms, the feature it's enabling might not be available on all of those platforms. Not all deprecated Web Platform features can be re-enabled. Only those explicitly listed below can be re-enabled, and only for a limited period of time, which differs per feature. You can review the intent behind the Web Platform feature changes at https://bit.ly/blinkintents.
+
+The general format of the string tag is [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
 
 Mappatura opzioni criteri:
 
@@ -10158,7 +10161,7 @@ Utilizzare le informazioni precedenti durante la configurazione di questo criter
   #### Informazioni e impostazioni di Windows
   ##### Info su Criteri di gruppo (ADMX)
   - Nome univoco GP: EnableDeprecatedWebPlatformFeatures
-  - Nome GP: Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato
+  - Nome GP: Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)
   - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
   - Percorso GP (Consigliati): N/D
   - Nome file ADMX GP: MSEdge.admx
@@ -15079,6 +15082,60 @@ Se disabiliti o non configuri questi criteri, un utente può rifiutare esplicita
 
   #### Informazioni e impostazioni per Mac
   - Nome chiave preferenza: SitePerProcess
+  - Valore di esempio:
+``` xml
+<true/>
+```
+  
+
+  [Torna all'inizio](#microsoft-edge---criteri)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versioni supportate:
+  - Su Windows e macOS dal 87 o in seguito
+
+  #### Descrizione
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here:
+SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388)
+Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Funzionalità supportate:
+  - Può essere obbligatorio: Sì
+  - Può essere consigliato: No
+  - Aggiornamento criteri dinamici: Sì
+
+  #### Tipo di dati:
+  - Booleano
+
+  #### Informazioni e impostazioni di Windows
+  ##### Info su Criteri di gruppo (ADMX)
+  - Nome univoco GP: SpeechRecognitionEnabled
+  - Nome GP: Configure Speech Recognition
+  - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
+  - Percorso GP (Consigliati): N/D
+  - Nome file ADMX GP: MSEdge.admx
+  ##### Impostazioni Registro di sistema di Windows
+  - Percorso (Obbligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Percorso (Consigliati): N/D
+  - Nome valore: SpeechRecognitionEnabled
+  - Tipo di valore: REG_DWORD
+  ##### Valore di esempio:
+```
+0x00000001
+```
+
+
+  #### Informazioni e impostazioni per Mac
+  - Nome chiave preferenza: SpeechRecognitionEnabled
   - Valore di esempio:
 ``` xml
 <true/>
