@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -250,7 +250,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[DownloadRestrictions](#downloadrestrictions)|ダウンロードの制限を許可する|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|コレクション機能を有効にする|
 |[EditFavoritesEnabled](#editfavoritesenabled)|ユーザーによるお気に入りの編集を許可する|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|制限された期間、非推奨の Web プラットフォーム機能を再度有効にする|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|マイクロソフトからのドメイン アクションのダウンロードを有効にする (現在不使用)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|オンライン OCSP/CRL チェックを有効にする|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|ローカルトラストアンカーによって発行された場合に、SHA-1 を使用して署名された証明書を許可する (非推奨)|
@@ -340,6 +340,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office のショートカットをお気に入りバーに表示する (非推奨)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでサイト分離を有効にする|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
 |[SpellcheckLanguage](#spellchecklanguage)|特定のスペルチェック言語を有効にする|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|スペルチェック言語を強制的に無効にする|
@@ -1267,21 +1268,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - Windows 以降の macOS と 77
 
   #### 説明
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  ポリシーを設定すると、Microsoft Edge がクライアント証明書を自動的に選択できるサイトを指定する URL パターンの一覧を作成できます。値は stringified JSON 辞書の配列で、それぞれの中にフォーム { "pattern": "$URL_PATTERN", "filter" : $FILTER }、$URL_PATTERN はコンテンツ設定のパターンです。$FILTER ブラウザーが自動的に選択するクライアント証明書を制限します。フィルターに依存しない場合は、サーバーの証明書要求と一致する証明書のみが選択されます。
 
-Examples for the usage of the $FILTER section:
+  $FILTERセクションの使用例:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+ * $FILTER が { "ISSUER": { "CN": "$ISSUER_CN" } } に設定されている場合は、CommonName $ISSUER_CN を持つ証明書によって発行されたクライアント証明書のみが選択されます。
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+ * $FILTER に "ISSUER" と "SUBJECT" の両方のセクションが含まれている場合は、両方の条件を満たすクライアント証明書のみが選択されます。.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+ * "O" 値を含む "SUBJECT" セクションが $FILTER に含まれている場合、証明書には、指定された値に一致する組織が少なくとも1つ必要です。
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+ *"OU" 値を含む "SUBJECT" セクションが $FILTER に含まれている場合、証明書には、指定された値と一致する組織単位が少なくとも1つ必要です。
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+ * $FILTER を {} に設定した場合、クライアント証明書の選択は追加では制限されません。Web サーバーによって提供されたフィルターがまだ適用されていることに注意してください。
 
-If you leave the policy unset, there's no autoselection for any site.
+ポリシー設定を解除すると、どのサイトにも自動選択されません。
 
   #### サポートされている機能:
   - 必須になる場合があります: はい
@@ -10123,22 +10124,24 @@ Microsoft Defender SmartScreen の詳細については、[https://go.microsoft.
   [トップに戻る](#microsoft-edge---ポリシー)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする
+  #### 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)
   
-  
+  >古い形式: このポリシーは古い形式であり、Microsoft Edge 86 以降では使用することができません。
   #### サポートされているバージョン:
-  - Windows 以降の macOS と 77
+  - Windows 以降、macOS と 77 を 86
 
   #### 説明
-  一時的にもう一度有効にすることができる、非推奨の Web プラットフォーム機能のリストを指定します。
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-このポリシーを使用すると、限定された期間内であれば非推奨の Web プラットフォーム機能をもう一度有効にできます。機能は文字列タグで識別されます。
+Specify a list of deprecated web platform features to temporarily re-enable.
 
-このポリシーを構成しないと、リストが空の場合、またはサポートされる文字列タグのいずれにも機能が一致しない場合は、すべての非推奨の Web プラットフォーム機能は無効のままとなります。
+This policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.
 
-ポリシー自体は上記のプラットフォームでサポートされますが、このポリシーで有効になる機能は、一部のプラットフォームでは利用できない場合があります。一部の非推奨の Web プラットフォーム機能は、もう一度有効にすることはできません。もう一度有効にできるのは、下記のリストに明示的に指定されている機能のみで、有効にできる期間は限定されています。この期間は機能によって異なります。Web プラットフォーム機能の変更の背景にある目的については、https://bit.ly/blinkintents で確認できます。
+If you don't configure this policy, if the list is empty, or if a feature doesn't match one of the supported string tags, all deprecated web platform features remain disabled.
 
-文字列タグの一般的な形式は [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd] です。
+While the policy itself is supported on the above platforms, the feature it's enabling might not be available on all of those platforms. Not all deprecated Web Platform features can be re-enabled. Only those explicitly listed below can be re-enabled, and only for a limited period of time, which differs per feature. You can review the intent behind the Web Platform feature changes at https://bit.ly/blinkintents.
+
+The general format of the string tag is [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
 
 ポリシー オプションのマッピング:
 
@@ -10157,7 +10160,7 @@ Microsoft Defender SmartScreen の詳細については、[https://go.microsoft.
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: EnableDeprecatedWebPlatformFeatures
-  - GP の名前: 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする
+  - GP の名前: 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (おすすめ): N/A
   - GP ADMX ファイル名: MSEdge.admx
@@ -15077,6 +15080,60 @@ Office.com へのショートカットをお気に入りバーに含めるかど
 
   #### Mac の情報と設定
   - 優先されるキーの名前: SitePerProcess
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [トップに戻る](#microsoft-edge---ポリシー)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### サポートされているバージョン:
+  - Windows 以降の macOS と 87
+
+  #### 説明
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here:
+SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388)
+Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### サポートされている機能:
+  - 必須になる場合があります: はい
+  - 推奨される場合があります: いいえ
+  - 動的ポリシーの更新: はい
+
+  #### データ型:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SpeechRecognitionEnabled
+  - GP の名前: Configure Speech Recognition
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (おすすめ): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (おすすめ): N/A
+  - 値の名前: SpeechRecognitionEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
+  #### Mac の情報と設定
+  - 優先されるキーの名前: SpeechRecognitionEnabled
   - サンプル値:
 ``` xml
 <true/>
