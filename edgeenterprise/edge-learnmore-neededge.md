@@ -30,11 +30,13 @@ Many modern websites have designs that are incompatible with Internet Explorer. 
 
 When a user goes to site that is incompatible with Internet Explorer several things happen.
 
-First, they're notified about the website incompatibility and the fact that they're now using Microsoft Edge.
+First, they're shown the one-time dialog in the next screenshot. This dialog explains why they're getting redirected and prompts for consent to copy their browsing data and preferences from Internet Explorer to Microsoft Edge. The following browsing data will be imported: Favorites, Passwords, Search engines, open tabs, History, settings, cookies, and the Home Page.  
 
 ![Browsing notification and prompt to import data and preferences.](media/edge-learnmore-neededge/neededge-dialog1.png)
 
-A website incompatibility banner, shown in the next screenshot, appears below the address bar for every redirection.
+Even if they don't give their consent by checking "Always bring over my browsing data and preferences from Internet Explorer", they can click **Continue browsing** to continue their session.
+
+Finally, a website incompatibility banner, shown in the next screenshot, appears below the address bar for every redirection.
 
 ![Notification about modern sites and prompt to set Microsoft Edge as default browser or explore Microsoft Edge.](media/edge-learnmore-neededge/neededge-banner.png)
 
