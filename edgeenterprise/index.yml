@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/02/2020 #Required; mm/dd/yyyy format.
+  ms.date: 10/15/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -87,6 +87,8 @@ landingContent:
             url: microsoft-edge-policies.md
           - text: Update policy reference
             url: microsoft-edge-update-policies.md
+          - text: WebView2 policy reference
+            url: microsoft-edge-webview-policies.md
           - text: Policy mapping overview
             url: microsoft-edge-policy-map-overview.md
           - text: Microsoft Security Baselines Blog
