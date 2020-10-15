@@ -53,6 +53,9 @@ When a site is redirected from Internet Explorer to Microsoft�
 
 ## Policies to configure redirection to Microsoft Edge
 
+> [!NOTE]
+> These policies will be available as ADMX file updates by October 26, 2020 and will be available in Intune by November 9, 2020.
+
 Three group policies must be configured to enable automatic redirection to Microsoft Edge. These policies are:
 
 - RedirectSitesFromInternetExplorerPreventBHOInstall
@@ -94,11 +97,14 @@ This policy configures the user experience for incompatible site redirection to 
 
 ## Disable redirection to Microsoft Edge
 
-Use the following steps to disable redirection for your users.
+If you want to disable redirection BEFORE updating to Microsoft Edge Stable version 87, use the following step:
+
+1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Enabled**. This setting will stop redirecting as soon as the policy takes effect.
+
+If you want to disable redirection AFTER updating to Microsoft Edge Stable version 87, use the following steps:
 
 1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Disabled**. This setting will stop redirecting as soon as the policy takes effect.
-2. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**. This setting will take effect after the next Microsoft Edge Stable channel update is installed.
-3. Set the **HideInternetExplorerRedirectUXForIncompatibleSitesEnabled** policy to **Enabled**.
+2. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**. This will uninstall the BHO after the next Microsoft Edge update.
 
 ## See also
 
