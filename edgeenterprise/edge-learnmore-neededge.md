@@ -15,8 +15,8 @@ description: "Redirection from Internet Explorer to Microsoft Edge for compatibi
 # Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites
 
 > [!NOTE]
-> This article applies to:<br>
->   - Microsoft Edge Stable version 87 or later
+> This article applies to:
+> - Microsoft Edge Stable version 87 or later
 > - Windows Enterprise, an Windows Server (EDU and non-Client SKUs)
 >- devices that are domain-joined or MDM enrolled
 
