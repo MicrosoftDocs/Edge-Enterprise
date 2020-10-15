@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 10/09/2020
+ms.date: 10/15/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -123,7 +123,8 @@ and tips for Microsoft services|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 |Policy Name|Caption|
 |-|-|
-|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of Kiosk session when Microsoft Edge closes|
+|[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure address bar editing for kiosk mode public browsing experience|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of kiosk session when Microsoft Edge closes|
 ### [*Native Messaging*](#native-messaging-policies)
 |Policy Name|Caption|
 |-|-|
@@ -138,6 +139,7 @@ and tips for Microsoft services|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
+|[PasswordRevealEnabled](#passwordrevealenabled)|Enable Password reveal button|
 ### [*Printing*](#printing-policies)
 |Policy Name|Caption|
 |-|-|
@@ -175,7 +177,7 @@ and tips for Microsoft services|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (deprecated)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
@@ -365,6 +367,7 @@ and tips for Microsoft services|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
+|[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
@@ -381,8 +384,8 @@ and tips for Microsoft services|
 
   ### ApplicationGuardContainerProxy
   #### Application Guard Container Proxy
-
-
+  
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -433,14 +436,18 @@ For more information about identifying Application Guard traffic via dual proxy,
   ##### Example value:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
-  "ProxyMode": "direct",
-  "ProxyPacUrl": "https://internal.site/example.pac",
+  "ProxyMode": "direct", 
+  "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  ```
+  
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -450,8 +457,8 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   ### EnableMediaRouter
   #### Enable Google Cast
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -487,21 +494,20 @@ By default, Google Cast is enabled.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableMediaRouter
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowCastIconInToolbar
   #### Show the cast icon in the toolbar
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -537,14 +543,13 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ShowCastIconInToolbar
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -554,8 +559,8 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 
   ### AutoSelectCertificateForUrls
   #### Automatically select client certificates for these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -602,7 +607,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutoSelectCertificateForUrls
   - Example value:
@@ -611,14 +615,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
   <string>{"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesAllowedForUrls
   #### Allow cookies on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -666,7 +670,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CookiesAllowedForUrls
   - Example value:
@@ -676,14 +679,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesBlockedForUrls
   #### Block cookies on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -729,7 +732,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CookiesBlockedForUrls
   - Example value:
@@ -739,14 +741,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesSessionOnlyForUrls
   #### Limit cookies from specific websites to the current session
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -796,7 +798,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CookiesSessionOnlyForUrls
   - Example value:
@@ -806,14 +807,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultCookiesSetting
   #### Configure cookies
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -859,21 +860,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultCookiesSetting
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemReadGuardSetting
   #### Control use of the File System API for reading
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -915,21 +915,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultFileSystemReadGuardSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemWriteGuardSetting
   #### Control use of the File System API for writing
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -971,21 +970,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultFileSystemWriteGuardSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultGeolocationSetting
   #### Default geolocation setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1029,21 +1027,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultGeolocationSetting
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultImagesSetting
   #### Default images setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1085,21 +1082,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultImagesSetting
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultInsecureContentSetting
   #### Control use of insecure content exceptions
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1143,21 +1139,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultInsecureContentSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultJavaScriptSetting
   #### Default JavaScript setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1199,21 +1194,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultJavaScriptSetting
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultNotificationsSetting
   #### Default notification setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1257,21 +1251,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultNotificationsSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPluginsSetting
   #### Default Adobe Flash setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1315,21 +1308,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultPluginsSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPopupsSetting
   #### Default pop-up window setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1371,21 +1363,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultPopupsSetting
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebBluetoothGuardSetting
   #### Control use of the Web Bluetooth API
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1427,21 +1418,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultWebBluetoothGuardSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebUsbGuardSetting
   #### Control use of the WebUSB API
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1485,21 +1475,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultWebUsbGuardSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadAskForUrls
   #### Allow read access via the File System API on these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1539,7 +1528,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FileSystemReadAskForUrls
   - Example value:
@@ -1549,14 +1537,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadBlockedForUrls
   #### Block read access via the File System API on these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1596,7 +1584,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FileSystemReadBlockedForUrls
   - Example value:
@@ -1606,14 +1593,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteAskForUrls
   #### Allow write access to files and directories on these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1653,7 +1640,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FileSystemWriteAskForUrls
   - Example value:
@@ -1663,14 +1649,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteBlockedForUrls
   #### Block write access to files and directories on these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -1710,7 +1696,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FileSystemWriteBlockedForUrls
   - Example value:
@@ -1720,14 +1705,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesAllowedForUrls
   #### Allow images on these sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1763,7 +1748,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImagesAllowedForUrls
   - Example value:
@@ -1773,14 +1757,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesBlockedForUrls
   #### Block images on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1816,7 +1800,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImagesBlockedForUrls
   - Example value:
@@ -1826,14 +1809,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentAllowedForUrls
   #### Allow insecure content on specified sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1869,7 +1852,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: InsecureContentAllowedForUrls
   - Example value:
@@ -1879,14 +1861,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentBlockedForUrls
   #### Block insecure content on specified sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -1922,7 +1904,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: InsecureContentBlockedForUrls
   - Example value:
@@ -1932,14 +1913,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptAllowedForUrls
   #### Allow JavaScript on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -1975,7 +1956,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: JavaScriptAllowedForUrls
   - Example value:
@@ -1985,14 +1965,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptBlockedForUrls
   #### Block JavaScript on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2028,7 +2008,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: JavaScriptBlockedForUrls
   - Example value:
@@ -2038,14 +2017,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabled
   #### Enable default legacy SameSite cookie behavior setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -2087,21 +2066,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabledForDomainList
   #### Revert to legacy SameSite behavior for cookies on specified sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -2143,7 +2121,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Example value:
@@ -2153,14 +2130,14 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   <string>[*.]example.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsAllowedForUrls
   #### Allow notifications on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2196,7 +2173,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NotificationsAllowedForUrls
   - Example value:
@@ -2206,14 +2182,14 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsBlockedForUrls
   #### Block notifications on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2249,7 +2225,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NotificationsBlockedForUrls
   - Example value:
@@ -2259,14 +2234,14 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsAllowedForUrls
   #### Allow the Adobe Flash plug-in on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2304,7 +2279,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PluginsAllowedForUrls
   - Example value:
@@ -2314,14 +2288,14 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
   <string>http://contoso.edu:8080</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsBlockedForUrls
   #### Block the Adobe Flash plug-in on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2359,7 +2333,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PluginsBlockedForUrls
   - Example value:
@@ -2369,14 +2342,14 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
   <string>http://contoso.edu:8080</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsAllowedForUrls
   #### Allow pop-up windows on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2412,7 +2385,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PopupsAllowedForUrls
   - Example value:
@@ -2422,14 +2394,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsBlockedForUrls
   #### Block pop-up windows on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2465,7 +2437,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PopupsBlockedForUrls
   - Example value:
@@ -2475,14 +2446,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RegisteredProtocolHandlers
   #### Register protocol handlers
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2520,13 +2491,17 @@ Users can't remove a protocol handler registered by this policy. However, they c
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
-    "default": true,
-    "protocol": "mailto",
+    "default": true, 
+    "protocol": "mailto", 
     "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [{"default": true, "protocol": "mailto", "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: RegisteredProtocolHandlers
@@ -2544,15 +2519,15 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
   #### Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
-
-
+  
+  
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -2589,15 +2564,14 @@ and tips for Microsoft services
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAllowDevicesForUrls
   #### Grant access to specific sites to connect to specific USB devices
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2636,18 +2610,22 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
     "devices": [
       {
-        "product_id": 5678,
+        "product_id": 5678, 
         "vendor_id": 1234
       }
-    ],
+    ], 
     "urls": [
-      "https://contoso.com",
+      "https://contoso.com", 
       "https://fabrikam.com"
     ]
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://contoso.com", "https://fabrikam.com"]}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: WebUsbAllowDevicesForUrls
@@ -2673,14 +2651,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAskForUrls
   #### Allow WebUSB on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2718,7 +2696,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebUsbAskForUrls
   - Example value:
@@ -2728,14 +2705,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbBlockedForUrls
   #### Block WebUSB on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2773,7 +2750,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebUsbBlockedForUrls
   - Example value:
@@ -2783,7 +2759,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -2793,8 +2769,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### DefaultSearchProviderEnabled
   #### Enable the default search provider
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2840,21 +2816,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderEncodings
   #### Default search provider encodings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2896,7 +2871,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderEncodings
   - Example value:
@@ -2908,14 +2882,14 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
   <string>ISO-8859-1</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURL
   #### Specifies the search-by-image feature for the default search provider
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -2960,21 +2934,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderImageURL
   - Example value:
 ``` xml
 <string>https://search.contoso.com/searchbyimage/upload</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURLPostParams
   #### Parameters for an image URL that uses POST
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3016,21 +2989,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderImageURLPostParams
   - Example value:
 ``` xml
 <string>content={imageThumbnail},url={imageURL},sbisrc={SearchSource}</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderKeyword
   #### Default search provider keyword
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3068,21 +3040,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "mis"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderKeyword
   - Example value:
 ``` xml
 <string>mis</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderName
   #### Default search provider name
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3122,21 +3093,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "My Intranet Search"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderName
   - Example value:
 ``` xml
 <string>My Intranet Search</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSearchURL
   #### Default search provider search URL
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3178,21 +3148,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "https://search.contoso.com/search?q={searchTerms}"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderSearchURL
   - Example value:
 ``` xml
 <string>https://search.contoso.com/search?q={searchTerms}</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSuggestURL
   #### Default search provider URL for suggestions
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3236,21 +3205,20 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderSuggestURL
   - Example value:
 ``` xml
 <string>https://search.contoso.com/suggest?q={searchTerms}</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSearchBox
   #### Configure the new tab page search box experience
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -3301,14 +3269,13 @@ Use the preceding information when configuring this policy.
 "bing"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPageSearchBox
   - Example value:
 ``` xml
 <string>bing</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -3318,8 +3285,8 @@ Use the preceding information when configuring this policy.
 
   ### ExtensionAllowedTypes
   #### Configure allowed extension types
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3360,7 +3327,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExtensionAllowedTypes
   - Example value:
@@ -3369,14 +3335,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
   <string>hosted_app</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallAllowlist
   #### Allow specific extensions to be installed
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3410,7 +3376,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExtensionInstallAllowlist
   - Example value:
@@ -3420,14 +3385,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
   <string>extension_id2</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallBlocklist
   #### Control which extensions cannot be installed
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3465,7 +3430,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExtensionInstallBlocklist
   - Example value:
@@ -3475,14 +3439,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
   <string>extension_id2</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallForcelist
   #### Control which extensions are installed silently
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3536,7 +3500,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExtensionInstallForcelist
   - Example value:
@@ -3546,14 +3509,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
   <string>abcdefghijklmnopabcdefghijklmnop</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallSources
   #### Configure extension and user script install sources
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3592,7 +3555,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExtensionInstallSources
   - Example value:
@@ -3601,14 +3563,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   <string>https://corp.contoso.com/*</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionSettings
   #### Configure extension management settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3645,67 +3607,71 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
     "allowed_types": [
       "hosted_app"
-    ],
-    "blocked_install_message": "Custom error message.",
+    ], 
+    "blocked_install_message": "Custom error message.", 
     "blocked_permissions": [
-      "downloads",
+      "downloads", 
       "bookmarks"
-    ],
+    ], 
     "install_sources": [
       "https://company-intranet/apps"
-    ],
-    "installation_mode": "blocked",
+    ], 
+    "installation_mode": "blocked", 
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ],
+    ], 
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ]
-  },
+  }, 
   "abcdefghijklmnopabcdefghijklmnop": {
     "blocked_permissions": [
       "history"
-    ],
-    "installation_mode": "allowed",
+    ], 
+    "installation_mode": "allowed", 
     "minimum_version_required": "1.0.1"
-  },
+  }, 
   "bcdefghijklmnopabcdefghijklmnopa": {
     "allowed_permissions": [
       "downloads"
-    ],
-    "installation_mode": "force_installed",
+    ], 
+    "installation_mode": "force_installed", 
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ],
+    ], 
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
-    ],
+    ], 
     "update_url": "https://contoso.com/update_url"
-  },
+  }, 
   "cdefghijklmnopabcdefghijklmnopab": {
-    "blocked_install_message": "Custom error message.",
+    "blocked_install_message": "Custom error message.", 
     "installation_mode": "blocked"
-  },
+  }, 
   "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {
-    "blocked_install_message": "Custom error message.",
+    "blocked_install_message": "Custom error message.", 
     "installation_mode": "blocked"
-  },
+  }, 
   "fghijklmnopabcdefghijklmnopabcde": {
-    "blocked_install_message": "Custom removal message.",
+    "blocked_install_message": "Custom removal message.", 
     "installation_mode": "removed"
-  },
+  }, 
   "update_url:https://www.contoso.com/update.xml": {
     "allowed_permissions": [
       "downloads"
-    ],
+    ], 
     "blocked_permissions": [
       "wallpaper"
-    ],
+    ], 
     "installation_mode": "allowed"
   }
 }
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: ExtensionSettings
@@ -3807,7 +3773,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   </dict>
 </dict>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -3817,8 +3783,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   ### AllowCrossOriginAuthPrompt
   #### Allow cross-origin HTTP Authentication prompts
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3852,21 +3818,20 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowCrossOriginAuthPrompt
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthNegotiateDelegateAllowlist
   #### Specifies a list of servers that Microsoft Edge can delegate user credentials to
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3902,21 +3867,20 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
 "contoso.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AuthNegotiateDelegateAllowlist
   - Example value:
 ``` xml
 <string>contoso.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthSchemes
   #### Supported authentication schemes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -3952,21 +3916,20 @@ If you don't configure this policy, all four schemes are used.
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AuthSchemes
   - Example value:
 ``` xml
 <string>basic,digest,ntlm,negotiate</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AuthServerAllowlist
   #### Configure list of allowed authentication servers
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4002,21 +3965,20 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
 "*contoso.com,contoso.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AuthServerAllowlist
   - Example value:
 ``` xml
 <string>*contoso.com,contoso.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DisableAuthNegotiateCnameLookup
   #### Disable CNAME lookup when negotiating Kerberos authentication
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4052,21 +4014,20 @@ If you disable this policy or don't configure it, the canonical name of the serv
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DisableAuthNegotiateCnameLookup
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableAuthNegotiatePort
   #### Include non-standard port in Kerberos SPN
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4102,21 +4063,20 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableAuthNegotiatePort
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NtlmV2Enabled
   #### Control whether NTLMv2 authentication is enabled
-
-
+  
+  
   #### Supported versions:
   - On macOS since 77 or later
 
@@ -4135,7 +4095,7 @@ If you don't configure this policy, NTLMv2 is enabled by default.
   #### Data Type:
   - Boolean
 
-
+  
 
   #### Mac information and settings
   - Preference Key Name: NtlmV2Enabled
@@ -4143,7 +4103,7 @@ If you don't configure this policy, NTLMv2 is enabled by default.
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4151,21 +4111,72 @@ If you don't configure this policy, NTLMv2 is enabled by default.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### KioskAddressBarEditingEnabled
+  #### Configure address bar editing for kiosk mode public browsing experience
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 87 or later
+
+  #### Description
+  This policy only applies to Microsoft Edge kiosk mode while using the public browsing experience.
+
+If you enable this policy, it prevents users from changing the URL in the address bar.
+
+If you disable this policy or don't configure it, users can change the URL in the address bar.
+
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: KioskAddressBarEditingEnabled
+  - GP name: Configure address bar editing for kiosk mode public browsing experience
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Kiosk Mode settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: KioskAddressBarEditingEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  - Preference Key Name: KioskAddressBarEditingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### KioskDeleteDownloadsOnExit
-  #### Delete files downloaded as part of Kiosk session when Microsoft Edge closes
-
-
+  #### Delete files downloaded as part of kiosk session when Microsoft Edge closes
+  
+  
   #### Supported versions:
   - On Windows since 87 or later
 
   #### Description
-  Note: This policy is only supported when Edge is launched with the "--edge-kiosk-type" command-line parameter.
+  This policy only applies to Microsoft Edge kiosk mode.
 
-If you enable this policy, files downloaded as part of the Kiosk session are deleted each time Microsoft Edge closes.
+If you enable this policy, files downloaded as part of the kiosk session are deleted each time Microsoft Edge closes.
 
-If you disable this policy or don't configure it, files downloaded as part of the Kiosk session are not deleted when Microsoft Edge closes.
+If you disable this policy or don't configure it, files downloaded as part of the kiosk session are not deleted when Microsoft Edge closes.
 
-For detailed information on configuring Kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### Supported features:
   - Can be mandatory: Yes
@@ -4178,7 +4189,7 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: KioskDeleteDownloadsOnExit
-  - GP name: Delete files downloaded as part of Kiosk session when Microsoft Edge closes
+  - GP name: Delete files downloaded as part of kiosk session when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Kiosk Mode settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -4192,8 +4203,7 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4203,8 +4213,8 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
 
   ### NativeMessagingAllowlist
   #### Control which native messaging hosts users can use
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4240,7 +4250,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NativeMessagingAllowlist
   - Example value:
@@ -4250,14 +4259,14 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
   <string>com.native.messaging.host.name2</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingBlocklist
   #### Configure native messaging block list
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4295,7 +4304,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NativeMessagingBlocklist
   - Example value:
@@ -4305,14 +4313,14 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   <string>com.native.messaging.host.name2</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingUserLevelHosts
   #### Allow user-level native messaging hosts (installed without admin permissions)
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4348,14 +4356,13 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NativeMessagingUserLevelHosts
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4365,8 +4372,8 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
 
   ### PasswordManagerEnabled
   #### Enable saving passwords to the password manager
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4404,21 +4411,20 @@ If you enable or disable this policy, users can't change or override it in Micro
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PasswordManagerEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordMonitorAllowed
   #### Allow users to be alerted if their passwords are found to be unsafe
-
-
+  
+  
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -4470,15 +4476,14 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionChangePasswordURL
   #### Configure the change password URL
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4518,21 +4523,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 "https://contoso.com/change_password.html"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PasswordProtectionChangePasswordURL
   - Example value:
 ``` xml
 <string>https://contoso.com/change_password.html</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionLoginURLs
   #### Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4572,7 +4576,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PasswordProtectionLoginURLs
   - Example value:
@@ -4582,14 +4585,14 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   <string>https://login.contoso.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionWarningTrigger
   #### Configure password protection warning trigger
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4639,14 +4642,66 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PasswordProtectionWarningTrigger
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
+  
 
+  [Back to top](#microsoft-edge---policies)
+
+  ### PasswordRevealEnabled
+  #### Enable Password reveal button
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 87 or later
+
+  #### Description
+  Lets you configure the default display of the browser password reveal button for password input fields on websites.
+
+If you enable or don't configure this policy, the browser user setting defaults to displaying the password reveal button.
+
+If you disable this policy, the browser user setting won't display the password reveal button.
+
+For accessibility, users can change the browser setting from the default policy.
+
+This policy only affects the browser password reveal button, it doesn't affect websites' custom reveal buttons.
+
+  #### Supported features:
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: PasswordRevealEnabled
+  - GP name: Enable Password reveal button
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PasswordRevealEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  - Preference Key Name: PasswordRevealEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4656,8 +4711,8 @@ Use the preceding information when configuring this policy.
 
   ### DefaultPrinterSelection
   #### Default printer selection rules
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4697,21 +4752,20 @@ Omitting a field means all values match; for example, if you don't specify conne
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultPrinterSelection
   - Example value:
 ``` xml
 <string>{ "idPattern": ".*public", "namePattern": ".*Color" }</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintHeaderFooter
   #### Print headers and footers
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4749,21 +4803,20 @@ If you enable this policy, users always print headers and footers.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PrintHeaderFooter
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintPreviewUseSystemDefaultPrinter
   #### Set the system default printer as the default printer
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4799,21 +4852,20 @@ If you enable this policy, Print Preview uses the OS system default printer as t
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PrintPreviewUseSystemDefaultPrinter
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingEnabled
   #### Enable printing
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4849,21 +4901,20 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PrintingEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingPaperSizeDefault
   #### Default printing page size
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -4898,13 +4949,17 @@ If the page size is unavailable on the printer chosen by the user this policy is
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   "custom_size": {
-    "height": 297000,
+    "height": 297000, 
     "width": 210000
-  },
+  }, 
   "name": "custom"
 }
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {"custom_size": {"height": 297000, "width": 210000}, "name": "custom"}
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: PrintingPaperSizeDefault
@@ -4923,14 +4978,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   <string>custom</string>
 </dict>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### UseSystemPrintDialog
   #### Print using system print dialog
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -4966,14 +5021,13 @@ If you don't configure or disable this policy, print commands trigger the Micros
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: UseSystemPrintDialog
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4983,8 +5037,8 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   ### ProxyBypassList
   #### Configure proxy bypass rules
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5024,21 +5078,20 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ProxyBypassList
   - Example value:
 ``` xml
 <string>https://www.contoso.com, https://www.fabrikam.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyMode
   #### Configure proxy server settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5100,21 +5153,20 @@ Use the preceding information when configuring this policy.
 "direct"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ProxyMode
   - Example value:
 ``` xml
 <string>direct</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyPacUrl
   #### Set the proxy .pac file URL
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5154,21 +5206,20 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ProxyPacUrl
   - Example value:
 ``` xml
 <string>https://internal.contoso.com/example.pac</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyServer
   #### Configure address or URL of proxy server
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5208,21 +5259,20 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
 "123.123.123.123:8080"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ProxyServer
   - Example value:
 ``` xml
 <string>123.123.123.123:8080</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProxySettings
   #### Proxy settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5281,13 +5331,17 @@ If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' and 'Prox
   ##### Example value:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
-  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
-  "ProxyMode": "direct",
-  "ProxyPacUrl": "https://internal.site/example.pac",
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
+  "ProxyMode": "direct", 
+  "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: ProxySettings
@@ -5305,7 +5359,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>123.123.123.123:8080</string>
 </dict>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -5315,8 +5369,8 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   ### PreventSmartScreenPromptOverride
   #### Prevent bypassing Microsoft Defender SmartScreen prompts for sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5354,21 +5408,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PreventSmartScreenPromptOverride
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PreventSmartScreenPromptOverrideForFiles
   #### Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
   - On macOS since 79 or later
@@ -5407,21 +5460,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PreventSmartScreenPromptOverrideForFiles
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenAllowListDomains
   #### Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5463,7 +5515,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SmartScreenAllowListDomains
   - Example value:
@@ -5473,14 +5524,14 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   <string>myuniversity.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenEnabled
   #### Configure Microsoft Defender SmartScreen
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5520,21 +5571,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SmartScreenEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenForTrustedDownloadsEnabled
   #### Force Microsoft Defender SmartScreen checks on downloads from trusted sources
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -5572,15 +5622,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenPuaEnabled
   #### Configure Microsoft Defender SmartScreen to block potentially unwanted apps
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -5620,14 +5669,13 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SmartScreenPuaEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -5637,8 +5685,8 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   ### HomepageIsNewTabPage
   #### Set the new tab page as the home page
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5678,21 +5726,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: HomepageIsNewTabPage
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### HomepageLocation
   #### Configure the home page URL
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5734,21 +5781,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 "https://www.contoso.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: HomepageLocation
   - Example value:
 ``` xml
 <string>https://www.contoso.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageAllowedBackgroundTypes
   #### Configure the background types allowed for the new tab page layout
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -5792,20 +5838,19 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPageAllowedBackgroundTypes
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageCompanyLogo
   #### Set new tab page company logo (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
   - On Windows and macOS since 79, until 85
@@ -5851,16 +5896,20 @@ For help with determining the SHA-256 hash, see https://docs.microsoft.com/power
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   "default_logo": {
-    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
     "url": "https://www.contoso.com/logo.png"
-  },
+  }, 
   "light_logo": {
-    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737",
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
     "url": "https://www.contoso.com/light_logo.png"
   }
 }
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {"default_logo": {"hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", "url": "https://www.contoso.com/logo.png"}, "light_logo": {"hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", "url": "https://www.contoso.com/light_logo.png"}}
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: NewTabPageCompanyLogo
@@ -5884,14 +5933,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   </dict>
 </dict>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageHideDefaultTopSites
   #### Hide the default top sites from the new tab page
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5927,21 +5976,20 @@ If you set this policy to false or don't configure it, the default top site tile
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPageHideDefaultTopSites
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageLocation
   #### Configure the new tab page URL
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -5985,21 +6033,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 "https://www.fabrikam.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPageLocation
   - Example value:
 ``` xml
 <string>https://www.fabrikam.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageManagedQuickLinks
   #### Set new tab page quick links
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -6040,17 +6087,21 @@ If the policy is set as recommended, pinned tiles will remain in the list but th
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   {
-    "pinned": true,
-    "title": "Contoso Portal",
+    "pinned": true, 
+    "title": "Contoso Portal", 
     "url": "https://contoso.com"
-  },
+  }, 
   {
-    "title": "Fabrikam",
+    "title": "Fabrikam", 
     "url": "https://fabrikam.com"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [{"pinned": true, "title": "Contoso Portal", "url": "https://contoso.com"}, {"title": "Fabrikam", "url": "https://fabrikam.com"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: NewTabPageManagedQuickLinks
@@ -6074,14 +6125,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPagePrerenderEnabled
   #### Enable preload of the new tab page for faster rendering
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -6113,26 +6164,27 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPagePrerenderEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSetFeedType
-  #### Configure the Microsoft Edge new tab page experience
-
-
+  #### Configure the Microsoft Edge new tab page experience (deprecated)
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
   #### Description
-  Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+  We are deprecating this policy because the new version of the enterprise new tab page no longer requires choosing between different content types. Instead, the content that is presented to the user can be controlled via the Microsoft 365 admin center. To get to the Microsoft 365 admin center, sign in at https://admin.microsoft.com with your admin account. The policy will be made obsolete after Microsoft Edge version 90.
+
+Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
 
 When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
 
@@ -6167,7 +6219,7 @@ Use the preceding information when configuring this policy.
   #### Windows information and settings
   ##### Group Policy (ADMX) info
   - GP unique name: NewTabPageSetFeedType
-  - GP name: Configure the Microsoft Edge new tab page experience
+  - GP name: Configure the Microsoft Edge new tab page experience (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
@@ -6181,21 +6233,20 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NewTabPageSetFeedType
   - Example value:
 ``` xml
 <integer>0</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartup
   #### Action to take on startup
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6247,21 +6298,20 @@ Use the preceding information when configuring this policy.
 0x00000004
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RestoreOnStartup
   - Example value:
 ``` xml
 <integer>4</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartupURLs
   #### Sites to open when the browser starts
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6299,7 +6349,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RestoreOnStartupURLs
   - Example value:
@@ -6309,14 +6358,14 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   <string>https://www.fabrikam.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowHomeButton
   #### Show Home button on toolbar
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6352,14 +6401,13 @@ If you don't configure the policy, users can choose whether to show the home but
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ShowHomeButton
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -6369,8 +6417,8 @@ If you don't configure the policy, users can choose whether to show the home but
 
   ### AddressBarMicrosoftSearchInBingProviderEnabled
   #### Enable Microsoft Search in Bing suggestions in the address bar
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -6404,21 +6452,20 @@ If you have enabled the set of policies which forces a default search provider (
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AddressBarMicrosoftSearchInBingProviderEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AdsSettingForIntrusiveAdsSites
   #### Ads setting for sites with intrusive ads
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6458,21 +6505,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AdsSettingForIntrusiveAdsSites
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowDeletingBrowserHistory
   #### Enable deleting browser and download history
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6512,21 +6558,20 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowDeletingBrowserHistory
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowFileSelectionDialogs
   #### Allow file selection dialogs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6562,21 +6607,20 @@ If you disable this policy, whenever the user performs an action that triggers a
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowFileSelectionDialogs
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowPopupsDuringPageUnload
   #### Allows a page to show popups during its unloading
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6614,21 +6658,20 @@ This policy will be removed in the future.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowPopupsDuringPageUnload
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSurfGame
   #### Allow surf game
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -6662,21 +6705,20 @@ If you enable or don't configure this policy, users can play the surf game.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowSurfGame
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSyncXHRInPageDismissal
   #### Allow pages to send synchronous XHR requests during page dismissal (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -6714,21 +6756,20 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowSyncXHRInPageDismissal
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTokenBindingForUrls
   #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
-
-
+  
+  
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -6771,15 +6812,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTrackingForUrls
   #### Configure tracking prevention exceptions for specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -6817,7 +6857,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AllowTrackingForUrls
   - Example value:
@@ -6827,14 +6866,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AlternateErrorPagesEnabled
   #### Suggest similar pages when a webpage can't be found
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -6873,21 +6912,20 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AlternateErrorPagesEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AlwaysOpenPdfExternally
   #### Always open PDF files externally
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -6923,21 +6961,20 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AlwaysOpenPdfExternally
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AmbientAuthenticationInPrivateModesEnabled
   #### Enable Ambient Authentication for InPrivate and Guest profiles
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -6995,21 +7032,20 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AmbientAuthenticationInPrivateModesEnabled
   - Example value:
 ``` xml
 <integer>0</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AppCacheForceEnabled
   #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 84 or later
 
@@ -7043,21 +7079,20 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AppCacheForceEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ApplicationLocaleValue
   #### Set application locale
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -7093,15 +7128,14 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
 "en"
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowed
   #### Allow or block audio capture
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7139,21 +7173,20 @@ This policy affects all types of audio inputs, not only the built-in microphone.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AudioCaptureAllowed
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowedUrls
   #### Sites that can access audio capture devices without requesting permission
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7187,7 +7220,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AudioCaptureAllowedUrls
   - Example value:
@@ -7197,14 +7229,14 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   <string>https://[*.]contoso.edu/</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AudioSandboxEnabled
   #### Allow the audio sandbox to run
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -7245,21 +7277,20 @@ This policy is intended to give enterprises flexibility to disable the audio san
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AudioSandboxEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoImportAtFirstRun
   #### Automatically import another browser's data and settings at first run
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7346,21 +7377,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutoImportAtFirstRun
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoLaunchProtocolsFromOrigins
   #### Define a list of protocols that can launch an external application from listed origins without prompting the user
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7406,27 +7436,31 @@ However, origin matching patterns for this policy cannot contain "/path" or "@qu
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
     "allowed_origins": [
-      "example.com",
+      "example.com", 
       "http://www.example.com:8080"
-    ],
+    ], 
     "protocol": "spotify"
-  },
+  }, 
   {
     "allowed_origins": [
-      "https://example.com",
+      "https://example.com", 
       "https://.mail.example.com"
-    ],
+    ], 
     "protocol": "teams"
-  },
+  }, 
   {
     "allowed_origins": [
       "*"
-    ],
+    ], 
     "protocol": "outlook"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: AutoLaunchProtocolsFromOrigins
@@ -7462,14 +7496,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenAllowedForURLs
   #### URLs where AutoOpenFileTypes can apply
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7512,7 +7546,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutoOpenAllowedForURLs
   - Example value:
@@ -7525,14 +7558,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
   <string>.exact.hostname.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenFileTypes
   #### List of file types that should be automatically opened on download
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -7576,7 +7609,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutoOpenFileTypes
   - Example value:
@@ -7586,14 +7618,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   <string>txt</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillAddressEnabled
   #### Enable AutoFill for addresses
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7631,21 +7663,20 @@ Note that if you disable this policy you also stop all activity for all web form
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutofillAddressEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillCreditCardEnabled
   #### Enable AutoFill for credit cards
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7681,21 +7712,20 @@ If you enable this policy or don't configure it, users can control AutoFill for 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutofillCreditCardEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoplayAllowed
   #### Allow media autoplay for websites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -7736,21 +7766,20 @@ A tab will need to be closed and re-opened for this policy to take effect.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: AutoplayAllowed
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundModeEnabled
   #### Continue running background apps after Microsoft Edge closes
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -7788,15 +7817,14 @@ If you don't configure this policy, background mode is initially turned off, and
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundTemplateListUpdatesEnabled
   #### Enables background updates to the list of available templates for Collections and other features that use templates
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -7832,21 +7860,20 @@ If you disable this setting the list of available templates will be downloaded o
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BackgroundTemplateListUpdatesEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BingAdsSuppression
   #### Block all ads on Bing search results
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -7892,21 +7919,20 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BingAdsSuppression
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BlockThirdPartyCookies
   #### Block third party cookies
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7944,21 +7970,20 @@ If you don't configure this policy, third-party cookies are enabled but users ca
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BlockThirdPartyCookies
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserAddProfileEnabled
   #### Enable profile creation from the Identity flyout menu or the Settings page
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -7993,21 +8018,20 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BrowserAddProfileEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserGuestModeEnabled
   #### Enable guest mode
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8043,21 +8067,20 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BrowserGuestModeEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserNetworkTimeQueriesEnabled
   #### Allow queries to a Browser Network Time service
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8093,21 +8116,20 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BrowserNetworkTimeQueriesEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserSignin
   #### Browser sign-in settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8157,21 +8179,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BrowserSignin
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltInDnsClientEnabled
   #### Use built-in DNS client
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8211,21 +8232,20 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: BuiltInDnsClientEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltinCertificateVerifierEnabled
   #### Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On macOS since 83 or later
 
@@ -8243,7 +8263,7 @@ It won't work in Microsoft Edge version 87, when support for the legacy certific
   #### Data Type:
   - Boolean
 
-
+  
 
   #### Mac information and settings
   - Preference Key Name: BuiltinCertificateVerifierEnabled
@@ -8251,14 +8271,14 @@ It won't work in Microsoft Edge version 87, when support for the legacy certific
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForCas
   #### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8303,7 +8323,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForCas
   - Example value:
@@ -8313,14 +8332,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   <string>sha256//////////////////////w==</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForLegacyCas
   #### Disable Certificate Transparency enforcement for a list of legacy certificate authorities
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8362,7 +8381,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Example value:
@@ -8372,14 +8390,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   <string>sha256//////////////////////w==</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForUrls
   #### Disable Certificate Transparency enforcement for specific URLs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8419,7 +8437,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForUrls
   - Example value:
@@ -8429,14 +8446,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   <string>.contoso.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClearBrowsingDataOnExit
   #### Clear browsing data when Microsoft Edge closes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -8476,21 +8493,20 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ClearBrowsingDataOnExit
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClearCachedImagesAndFilesOnExit
   #### Clear cached images and files when Microsoft Edge closes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -8530,21 +8546,20 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ClearCachedImagesAndFilesOnExit
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ClickOnceEnabled
   #### Allow users to open files using the ClickOnce protocol
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -8586,15 +8601,14 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CollectionsServicesAndExportsBlockList
   #### Block access to a specified list of services and export targets in Collections
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -8637,7 +8651,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CollectionsServicesAndExportsBlockList
   - Example value:
@@ -8646,14 +8659,14 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   <string>pinterest_suggestions</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CommandLineFlagSecurityWarningsEnabled
   #### Enable security warnings for command-line flags
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -8691,21 +8704,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CommandLineFlagSecurityWarningsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ComponentUpdatesEnabled
   #### Enable component updates in Microsoft Edge
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8741,21 +8753,20 @@ However, some components are exempt from this policy. This includes any componen
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ComponentUpdatesEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureDoNotTrack
   #### Configure Do Not Track
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8793,21 +8804,20 @@ If you don't configure this policy, users can choose whether to send these reque
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ConfigureDoNotTrack
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureOnPremisesAccountAutoSignIn
   #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
-
-
+  
+  
   #### Supported versions:
   - On Windows since 81 or later
 
@@ -8853,15 +8863,14 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureOnlineTextToSpeech
   #### Configure Online Text To Speech
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -8901,21 +8910,20 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ConfigureOnlineTextToSpeech
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureShare
   #### Configure the Share experience
-
-
+  
+  
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -8957,15 +8965,14 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### CustomHelpLink
   #### Specify custom help link
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -9003,21 +9010,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: CustomHelpLink
   - Example value:
 ``` xml
 <string>https://go.microsoft.com/fwlink/?linkid=2080734</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DNSInterceptionChecksEnabled
   #### DNS interception checks enabled
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -9055,21 +9061,20 @@ If you disable this policy, DNS interception checks aren't performed.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DNSInterceptionChecksEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultBrowserSettingEnabled
   #### Set Microsoft Edge as default browser
-
-
+  
+  
   #### Supported versions:
   - On Windows 7 and macOS since 77 or later
 
@@ -9107,21 +9112,20 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultBrowserSettingEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderContextMenuAccessAllowed
   #### Allow default search provider context menu search access
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -9159,21 +9163,20 @@ The policy value is only appled when the [DefaultSearchProviderEnabled](#default
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSearchProviderContextMenuAccessAllowed
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSensorsSetting
   #### Default sensors setting
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -9219,21 +9222,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSensorsSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSerialGuardSetting
   #### Control use of the Serial API
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -9279,21 +9281,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DefaultSerialGuardSetting
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DelayNavigationsForInitialSiteListDownload
   #### Require that the Enterprise Mode Site List is available before tab navigation
-
-
+  
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -9344,15 +9345,14 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DeleteDataOnMigration
   #### Delete old browser data on migration
-
-
+  
+  
   #### Supported versions:
   - On Windows since 83 or later
 
@@ -9388,15 +9388,14 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DeveloperToolsAvailability
   #### Control where developer tools can be used
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9444,21 +9443,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DeveloperToolsAvailability
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiagnosticData
   #### Send required and optional diagnostic data about browser usage
-
-
+  
+  
   #### Supported versions:
   - On Windows 7 and macOS since 86 or later
 
@@ -9518,21 +9516,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DiagnosticData
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DirectInvokeEnabled
   #### Allow users to open files using the DirectInvoke protocol
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -9572,15 +9569,14 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### Disable3DAPIs
   #### Disable support for 3D graphics APIs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9616,21 +9612,20 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: Disable3DAPIs
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DisableScreenshots
   #### Disable taking screenshots
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9668,21 +9663,20 @@ Please note this policy controls screenshots taken from within the browser itsel
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DisableScreenshots
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheDir
   #### Set disk cache directory
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9720,21 +9714,20 @@ If you don't configure this policy, the default cache directory is used, and use
 "${user_home}/Edge_cache"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DiskCacheDir
   - Example value:
 ``` xml
 <string>${user_home}/Edge_cache</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheSize
   #### Set disk cache size, in bytes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9772,21 +9765,20 @@ If you don't configure this policy, the default size is used, but users can over
 0x06400000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DiskCacheSize
   - Example value:
 ``` xml
 <integer>104857600</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsMode
   #### Control the mode of DNS-over-HTTPS
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -9836,21 +9828,20 @@ Use the preceding information when configuring this policy.
 "off"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DnsOverHttpsMode
   - Example value:
 ``` xml
 <string>off</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsTemplates
   #### Specify URI template of desired DNS-over-HTTPS resolver
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -9890,21 +9881,20 @@ Incorrectly formatted templates will be ignored.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DnsOverHttpsTemplates
   - Example value:
 ``` xml
 <string>https://dns.example.net/dns-query{?dns}</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadDirectory
   #### Set download directory
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -9944,7 +9934,6 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DownloadDirectory
   - Example value:
@@ -9953,14 +9942,14 @@ If the folder specified by the path doesn't exist, the download will trigger a p
       Linux-based OSes (including Mac): /home/${user_name}/Downloads
       Windows: C:\Users\${user_name}\Downloads</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadRestrictions
   #### Allow download restrictions
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10016,21 +10005,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: DownloadRestrictions
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EdgeCollectionsEnabled
   #### Enable the Collections feature
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -10066,21 +10054,20 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EdgeCollectionsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EditFavoritesEnabled
   #### Allows users to edit favorites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10114,20 +10101,19 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EditFavoritesEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
   #### Re-enable deprecated web platform features for a limited time (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
   - On Windows and macOS since 77, until 86
@@ -10177,7 +10163,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableDeprecatedWebPlatformFeatures
   - Example value:
@@ -10186,13 +10171,13 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
   <string>ExampleDeprecatedFeature_EffectiveUntil20080902</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDomainActionsDownload
   #### Enable Domain Actions Download from Microsoft (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 77, until 84
@@ -10237,21 +10222,20 @@ If you don't configure this policy, the list of Domain Actions will continue to 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableDomainActionsDownload
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableOnlineRevocationChecks
   #### Enable online OCSP/CRL checks
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10287,21 +10271,20 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableOnlineRevocationChecks
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableSha1ForLocalAnchors
   #### Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -10339,21 +10322,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnableSha1ForLocalAnchors
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseHardwarePlatformAPIEnabled
   #### Allow managed extensions to use the Enterprise Hardware Platform API
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -10387,21 +10369,20 @@ This policy also applies to component extensions.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: EnterpriseHardwarePlatformAPIEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseModeSiteListManagerAllowed
   #### Allow access to the Enterprise Mode Site List Manager tool
-
-
+  
+  
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -10437,15 +10418,14 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   #### Disable download file type extension-based warnings for specified file types on domains
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -10500,7 +10480,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
@@ -10510,14 +10489,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExperimentationAndConfigurationServiceControl
   #### Control communication with the Experimentation and Configuration Service
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10575,21 +10554,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExperimentationAndConfigurationServiceControl
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ExternalProtocolDialogShowAlwaysOpenCheckbox
   #### Show an "Always open" checkbox in external protocol dialog
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -10631,21 +10609,20 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FamilySafetySettingsEnabled
   #### Allow users to configure Family safety
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -10681,21 +10658,20 @@ If you disable this policy, the Family safety page will not be shown.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FamilySafetySettingsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FavoritesBarEnabled
   #### Enable favorites bar
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10733,21 +10709,20 @@ If this policy is not configured, then the user can decide to use the favorites 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: FavoritesBarEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceBingSafeSearch
   #### Enforce Bing SafeSearch
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10797,21 +10772,20 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceBingSafeSearch
   - Example value:
 ``` xml
 <integer>0</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceCertificatePromptsOnMultipleMatches
   #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -10847,21 +10821,20 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceCertificatePromptsOnMultipleMatches
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceEphemeralProfiles
   #### Enable use of ephemeral profiles
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10899,21 +10872,20 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceEphemeralProfiles
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceGoogleSafeSearch
   #### Enforce Google SafeSearch
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -10949,21 +10921,20 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceGoogleSafeSearch
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceLegacyDefaultReferrerPolicy
   #### Use a default referrer policy of no-referrer-when-downgrade (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11001,20 +10972,19 @@ This enterprise policy is disabled by default.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceLegacyDefaultReferrerPolicy
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceNetworkInProcess
   #### Force networking code to run in the browser process (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
   #### Supported versions:
   - On Windows since 78, until 83
@@ -11051,15 +11021,14 @@ This policy is disabled by default. If enabled, users are open to security issue
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceSync
   #### Force synchronization of browser data and do not show the sync consent prompt
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -11101,21 +11070,20 @@ For this policy to work as intended,
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceSync
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceYouTubeRestrict
   #### Force minimum YouTube Restricted Mode
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11163,21 +11131,20 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ForceYouTubeRestrict
   - Example value:
 ``` xml
 <integer>0</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### FullscreenAllowed
   #### Allow full screen mode
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -11215,15 +11182,14 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### GloballyScopeHTTPAuthCacheEnabled
   #### Enable globally scoped HTTP auth cache
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11263,21 +11229,20 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: GloballyScopeHTTPAuthCacheEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### GoToIntranetSiteForSingleWordEntryInAddressBar
   #### Force direct intranet site navigation instead of searching on single word entries in the Address Bar
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -11319,21 +11284,20 @@ Popular, single-word search terms will require manual selection of search sugges
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### HSTSPolicyBypassList
   #### Configure the list of names that will bypass the HSTS policy check
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -11366,7 +11330,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: HSTSPolicyBypassList
   - Example value:
@@ -11375,14 +11338,14 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   <string>meet</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### HardwareAccelerationModeEnabled
   #### Use hardware acceleration when available
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11416,21 +11379,20 @@ If you disable this policy, hardware acceleration is disabled.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: HardwareAccelerationModeEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### HideFirstRunExperience
   #### Hide the First-run experience and splash screen
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -11488,21 +11450,20 @@ Note: The specific configuration options shown to the user in the First Run Expe
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: HideFirstRunExperience
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportAutofillFormData
   #### Allow importing of autofill form data
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11544,21 +11505,20 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportAutofillFormData
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportBrowserSettings
   #### Allow importing of browser settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -11600,21 +11560,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportBrowserSettings
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportCookies
   #### Allow importing of Cookies
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11654,21 +11613,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportCookies
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportExtensions
   #### Allow importing of extensions
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -11710,21 +11668,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportExtensions
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportFavorites
   #### Allow importing of favorites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11766,21 +11723,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportFavorites
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHistory
   #### Allow importing of browsing history
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11822,21 +11778,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportHistory
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHomepage
   #### Allow importing of home page settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11878,21 +11833,20 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportHomepage
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportOpenTabs
   #### Allow importing of open tabs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -11934,21 +11888,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportOpenTabs
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportPaymentInfo
   #### Allow importing of payment info
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -11990,21 +11943,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportPaymentInfo
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSavedPasswords
   #### Allow importing of saved passwords
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12046,21 +11998,20 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportSavedPasswords
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSearchEngine
   #### Allow importing of search engine settings
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12102,21 +12053,20 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportSearchEngine
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImportShortcuts
   #### Allow importing of shortcuts
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -12156,21 +12106,20 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ImportShortcuts
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InPrivateModeAvailability
   #### Configure InPrivate mode availability
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12218,21 +12167,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: InPrivateModeAvailability
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureFormsWarningsEnabled
   #### Enable warnings for insecure forms
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -12266,21 +12214,20 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: InsecureFormsWarningsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### IntensiveWakeUpThrottlingEnabled
   #### Control the IntensiveWakeUpThrottling feature
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -12321,21 +12268,20 @@ Note that the policy is applied per renderer process, with the most recent value
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: IntensiveWakeUpThrottlingEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationEnhancedHangDetection
   #### Configure enhanced hang detection for Internet Explorer mode
-
-
+  
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -12388,15 +12334,14 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationLevel
   #### Configure Internet Explorer integration
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -12438,15 +12383,14 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteList
   #### Configure the Enterprise Mode Site List
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -12478,15 +12422,14 @@ Use the preceding information when configuring this policy.
 "https://internal.contoso.com/sitelist.xml"
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteRedirect
   #### Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
-
-
+  
+  
   #### Supported versions:
   - On Windows since 81 or later
 
@@ -12545,15 +12488,14 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationTestingAllowed
   #### Allow Internet Explorer mode testing
-
-
+  
+  
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -12596,15 +12538,14 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### IsolateOrigins
   #### Enable site isolation for specific origins
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12644,21 +12585,20 @@ If you don't configure the policy, the user can change this setting.
 "https://contoso.com/,https://fabrikam.com/"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: IsolateOrigins
   - Example value:
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### LocalProvidersEnabled
   #### Allow suggestions from local providers
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -12700,21 +12640,20 @@ This policy requires a browser restart to finish applying.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: LocalProvidersEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedFavorites
   #### Configure favorites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12752,31 +12691,35 @@ Managed favorites are not synced to the user account and can't be modified by ex
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
     "toplevel_name": "My managed favorites folder"
-  },
+  }, 
   {
-    "name": "Microsoft",
+    "name": "Microsoft", 
     "url": "microsoft.com"
-  },
+  }, 
   {
-    "name": "Bing",
+    "name": "Bing", 
     "url": "bing.com"
-  },
+  }, 
   {
     "children": [
       {
-        "name": "Microsoft Edge Insiders",
+        "name": "Microsoft Edge Insiders", 
         "url": "www.microsoftedgeinsider.com"
-      },
+      }, 
       {
-        "name": "Microsoft Edge",
+        "name": "Microsoft Edge", 
         "url": "www.microsoft.com/windows/microsoft-edge"
       }
-    ],
+    ], 
     "name": "Microsoft Edge links"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [{"toplevel_name": "My managed favorites folder"}, {"name": "Microsoft", "url": "microsoft.com"}, {"name": "Bing", "url": "bing.com"}, {"children": [{"name": "Microsoft Edge Insiders", "url": "www.microsoftedgeinsider.com"}, {"name": "Microsoft Edge", "url": "www.microsoft.com/windows/microsoft-edge"}], "name": "Microsoft Edge links"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: ManagedFavorites
@@ -12821,14 +12764,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedSearchEngines
   #### Manage Search Engines
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -12869,38 +12812,42 @@ If the [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policy 
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
     "allow_search_engine_discovery": true
-  },
+  }, 
   {
-    "is_default": true,
-    "keyword": "example1.com",
-    "name": "Example1",
-    "search_url": "https://www.example1.com/search?q={searchTerms}",
+    "is_default": true, 
+    "keyword": "example1.com", 
+    "name": "Example1", 
+    "search_url": "https://www.example1.com/search?q={searchTerms}", 
     "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"
-  },
+  }, 
   {
-    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}",
-    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload",
-    "keyword": "example2.com",
-    "name": "Example2",
-    "search_url": "https://www.example2.com/search?q={searchTerms}",
+    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", 
+    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", 
+    "keyword": "example2.com", 
+    "name": "Example2", 
+    "search_url": "https://www.example2.com/search?q={searchTerms}", 
     "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"
-  },
+  }, 
   {
-    "encoding": "UTF-8",
-    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload",
-    "keyword": "example3.com",
-    "name": "Example3",
-    "search_url": "https://www.example3.com/search?q={searchTerms}",
+    "encoding": "UTF-8", 
+    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", 
+    "keyword": "example3.com", 
+    "name": "Example3", 
+    "search_url": "https://www.example3.com/search?q={searchTerms}", 
     "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"
-  },
+  }, 
   {
-    "keyword": "example4.com",
-    "name": "Example4",
+    "keyword": "example4.com", 
+    "name": "Example4", 
     "search_url": "https://www.example4.com/search?q={searchTerms}"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [{"allow_search_engine_discovery": true}, {"is_default": true, "keyword": "example1.com", "name": "Example1", "search_url": "https://www.example1.com/search?q={searchTerms}", "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"}, {"image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", "keyword": "example2.com", "name": "Example2", "search_url": "https://www.example2.com/search?q={searchTerms}", "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"}, {"encoding": "UTF-8", "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", "keyword": "example3.com", "name": "Example3", "search_url": "https://www.example3.com/search?q={searchTerms}", "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"}, {"keyword": "example4.com", "name": "Example4", "search_url": "https://www.example4.com/search?q={searchTerms}"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: ManagedSearchEngines
@@ -12962,14 +12909,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   </dict>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### MaxConnectionsPerProxy
   #### Maximum number of concurrent connections to the proxy server
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13009,21 +12956,20 @@ If you don't configure this policy, the default value (32) is used.
 0x00000020
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: MaxConnectionsPerProxy
   - Example value:
 ``` xml
 <integer>32</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### MediaRouterCastAllowAllIPs
   #### Allow Google Cast to connect to Cast devices on all IP addresses
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13061,21 +13007,20 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: MediaRouterCastAllowAllIPs
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### MetricsReportingEnabled
   #### Enable usage and crash-related data reporting (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13119,21 +13064,20 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: MetricsReportingEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NativeWindowOcclusionEnabled
   #### Enable Native Window Occlusion
-
-
+  
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -13171,15 +13115,14 @@ If this policy is left not set, window hiding detection will be enabled.
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NavigationDelayForInitialSiteListDownloadTimeout
   #### Set a timeout for delay of tab navigation for the Enterprise Mode Site List
-
-
+  
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -13224,15 +13167,14 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
 0x0000000a
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NetworkPredictionOptions
   #### Enable network prediction
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13278,21 +13220,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: NetworkPredictionOptions
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### NonRemovableProfileEnabled
   #### Configure whether a user always has a default profile automatically signed in with their work or school account
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -13332,15 +13273,14 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
   #### Control where security restrictions on insecure origins apply
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13380,7 +13320,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: OverrideSecurityRestrictionsOnInsecureOrigin
   - Example value:
@@ -13390,14 +13329,14 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   <string>*.contoso.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PaymentMethodQueryEnabled
   #### Allow websites to query for available payment methods
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -13433,21 +13372,20 @@ If you enable this policy or don't set this policy, websites can check if the us
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PaymentMethodQueryEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PersonalizationReportingEnabled
   #### Allow personalization of ads, search and news by sending browsing history to Microsoft
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -13483,21 +13421,20 @@ If you disable this policy, users can't change or override the setting. If this 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PersonalizationReportingEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PinningWizardAllowed
   #### Allow Pin to taskbar wizard
-
-
+  
+  
   #### Supported versions:
   - On Windows since 80 or later
 
@@ -13535,15 +13472,14 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ProactiveAuthEnabled
   #### Enable Proactive Authentication
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13581,21 +13517,20 @@ If you don't configure this policy, Proactive Authentication is turned on.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ProactiveAuthEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PromotionalTabsEnabled
   #### Enable full-tab promotional content
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13631,21 +13566,20 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PromotionalTabsEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### PromptForDownloadLocation
   #### Ask where to save downloaded files
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13681,21 +13615,20 @@ If you don't configure this policy, the user will be able to change this setting
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: PromptForDownloadLocation
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### QuicAllowed
   #### Allow QUIC protocol
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13733,21 +13666,20 @@ QUIC is a transport layer network protocol that can improve performance of web a
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: QuicAllowed
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RelaunchNotification
   #### Notify a user that a browser restart is recommended or required for pending updates
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13795,21 +13727,20 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RelaunchNotification
   - Example value:
 ``` xml
 <integer>1</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RelaunchNotificationPeriod
   #### Set the time period for update notifications
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13845,21 +13776,20 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 0x240c8400
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RelaunchNotificationPeriod
   - Example value:
 ``` xml
 <integer>604800000</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RendererCodeIntegrityEnabled
   #### Enable renderer code integrity
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -13893,15 +13823,14 @@ Disabling this policy has a detrimental effect on Microsoft Edge's security and 
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RequireOnlineRevocationChecksForLocalAnchors
   #### Specify if online OCSP/CRL checks are required for local trust anchors
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -13937,15 +13866,14 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
 0x00000000
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ResolveNavigationErrorsUseWebService
   #### Enable resolution of navigation errors using a web service
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -13986,21 +13914,20 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ResolveNavigationErrorsUseWebService
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RestrictSigninToPattern
   #### Restrict which accounts can be used as Microsoft Edge primary accounts
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14036,21 +13963,20 @@ If you don't configure this policy or leave it blank, users can set any account 
 ".*@contoso.com"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RestrictSigninToPattern
   - Example value:
 ``` xml
 <string>.*@contoso.com</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileLocation
   #### Set the roaming profile directory
-
-
+  
+  
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -14088,15 +14014,14 @@ If you don't configure this policy, the default roaming profile path is used.
 "${roaming_app_data}\\edge-profile"
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileSupportEnabled
   #### Enable using roaming copies for Microsoft Edge profile data
-
-
+  
+  
   #### Supported versions:
   - On Windows since 85 or later
 
@@ -14134,15 +14059,14 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### RunAllFlashInAllowMode
   #### Extend Adobe Flash content setting to all content
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14178,21 +14102,20 @@ If you disable this policy or don't configure it, Adobe Flash content from other
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: RunAllFlashInAllowMode
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SSLErrorOverrideAllowed
   #### Allow users to proceed from the HTTPS warning page
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14228,21 +14151,20 @@ If you disable this policy, users are blocked from clicking through any warning 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SSLErrorOverrideAllowed
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SSLVersionMin
   #### Minimum TLS version enabled
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14286,21 +14208,20 @@ Use the preceding information when configuring this policy.
 "tls1"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SSLVersionMin
   - Example value:
 ``` xml
 <string>tls1</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SaveCookiesOnExit
   #### Save cookies when Microsoft Edge closes
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14345,7 +14266,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SaveCookiesOnExit
   - Example value:
@@ -14355,14 +14275,14 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SavingBrowserHistoryDisabled
   #### Disable saving browser history
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14398,21 +14318,20 @@ If you disable this policy or don't configure it, browsing history is saved.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SavingBrowserHistoryDisabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ScreenCaptureAllowed
   #### Allow or deny screen capture
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -14445,21 +14364,20 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ScreenCaptureAllowed
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ScrollToTextFragmentEnabled
   #### Enable scrolling to text specified in URL fragments
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -14495,21 +14413,20 @@ If you disable this policy, web page scrolling to specific text fragments via a 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ScrollToTextFragmentEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SearchSuggestEnabled
   #### Enable search suggestions
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14547,21 +14464,20 @@ If this policy is left not set, search suggestions are enabled but the user can 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SearchSuggestEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SecurityKeyPermitAttestation
   #### Websites or domains that don't need permission to use direct Security Key attestation
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14596,7 +14512,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SecurityKeyPermitAttestation
   - Example value:
@@ -14605,14 +14520,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   <string>https://contoso.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SendIntranetToInternetExplorer
   #### Send all intranet sites to Internet Explorer
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -14644,15 +14559,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SendSiteInfoToImproveServices
   #### Send site information to improve Microsoft services (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14694,21 +14608,20 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SendSiteInfoToImproveServices
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsAllowedForUrls
   #### Allow access to sensors on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14750,7 +14663,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SensorsAllowedForUrls
   - Example value:
@@ -14760,14 +14672,14 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsBlockedForUrls
   #### Block access to sensors on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14809,7 +14721,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SensorsBlockedForUrls
   - Example value:
@@ -14819,14 +14730,14 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SerialAskForUrls
   #### Allow the Serial API on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14868,7 +14779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SerialAskForUrls
   - Example value:
@@ -14878,14 +14788,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SerialBlockedForUrls
   #### Block the Serial API on specific sites
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -14927,7 +14837,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SerialBlockedForUrls
   - Example value:
@@ -14937,14 +14846,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>[*.]contoso.edu</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
   #### Show Microsoft Office shortcut in favorites bar (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -14980,21 +14889,20 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: ShowOfficeShortcutInFavoritesBar
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SignedHTTPExchangeEnabled
   #### Enable Signed HTTP Exchange (SXG) support
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -15030,21 +14938,20 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SignedHTTPExchangeEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SitePerProcess
   #### Enable site isolation for every site
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15081,21 +14988,20 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SitePerProcess
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpeechRecognitionEnabled
   #### Configure Speech Recognition
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 87 or later
 
@@ -15135,21 +15041,20 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SpeechRecognitionEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckEnabled
   #### Enable spellcheck
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15183,21 +15088,20 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SpellcheckEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguage
   #### Enable specific spellcheck languages
-
-
+  
+  
   #### Supported versions:
   - On Windows since 77 or later
 
@@ -15241,15 +15145,14 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguageBlocklist
   #### Force disable spellcheck languages
-
-
+  
+  
   #### Supported versions:
   - On Windows since 78 or later
 
@@ -15293,15 +15196,14 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### StricterMixedContentTreatmentEnabled
   #### Enable stricter treatment for mixed content (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 81 or later
 
@@ -15341,21 +15243,20 @@ This policy does not affect other types of mixed content other than audio, video
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: StricterMixedContentTreatmentEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SuppressUnsupportedOSWarning
   #### Suppress the unsupported OS warning
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15389,21 +15290,20 @@ If this policy is false or unset, the warnings will appear on such unsupported c
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SuppressUnsupportedOSWarning
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SyncDisabled
   #### Disable synchronization of data using Microsoft sync services
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15437,21 +15337,20 @@ If you don't set this policy or apply it as recommended, users will be able to t
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SyncDisabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### SyncTypesListDisabled
   #### Configure the list of types that are excluded from synchronization
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 83 or later
 
@@ -15488,7 +15387,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: SyncTypesListDisabled
   - Example value:
@@ -15497,13 +15395,13 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   <string>favorites</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TLS13HardeningForLocalAnchorsEnabled
   #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
   - On Windows and macOS since 81, until 85
@@ -15544,21 +15442,20 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TLS13HardeningForLocalAnchorsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TLSCipherSuiteDenyList
   #### Specify the TLS cipher suites to disable
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 85 or later
 
@@ -15603,7 +15500,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TLSCipherSuiteDenyList
   - Example value:
@@ -15614,14 +15510,14 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   <string>0xcca9</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TabFreezingEnabled
   #### Allow freezing of background tabs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 79 or later
 
@@ -15659,21 +15555,20 @@ If you disable this policy, no tabs will be frozen.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TabFreezingEnabled
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TaskManagerEndProcessEnabled
   #### Enable ending processes in the Browser task manager
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15705,21 +15600,20 @@ If you disable this policy, no tabs will be frozen.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TaskManagerEndProcessEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TotalMemoryLimitMb
   #### Set limit on megabytes of memory a single Microsoft Edge instance can use
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -15755,21 +15649,20 @@ If you don't set this policy, the browser will only attempt to save memory when 
 0x00000800
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TotalMemoryLimitMb
   - Example value:
 ``` xml
 <integer>2048</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TrackingPrevention
   #### Block tracking of users' web-browsing activity
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 78 or later
 
@@ -15815,21 +15708,20 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TrackingPrevention
   - Example value:
 ``` xml
 <integer>2</integer>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### TranslateEnabled
   #### Enable Translate
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -15867,26 +15759,25 @@ If you don't configure the policy, users can choose whether to use the translati
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: TranslateEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### URLAllowlist
   #### Define a list of allowed URLs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
   #### Description
-  Allow access to the listed URLs, as exceptions to the URL block list.
+  Setting the policy provides access to the listed URLs, as exceptions to [URLBlocklist](#urlblocklist).
 
 Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -15930,7 +15821,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: URLAllowlist
   - Example value:
@@ -15943,14 +15833,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
   <string>.exact.hostname.com</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### URLBlocklist
   #### Block access to a list of URLs
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16000,7 +15890,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: URLBlocklist
   - Example value:
@@ -16016,14 +15905,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>*</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserAgentClientHintsEnabled
   #### Enable the User-Agent Client Hints feature (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows and macOS since 86 or later
 
@@ -16061,21 +15950,20 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: UserAgentClientHintsEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataDir
   #### Set the user data directory
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16115,21 +16003,20 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: UserDataDir
   - Example value:
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataSnapshotRetentionLimit
   #### Limits the number of user data snapshots retained for use in case of emergency rollback
-
-
+  
+  
   #### Supported versions:
   - On Windows since 86 or later
 
@@ -16165,15 +16052,14 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
 0x00000003
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### UserFeedbackAllowed
   #### Allow user feedback
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16209,21 +16095,20 @@ If you disable this policy, users can't invoke Edge Feedback.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: UserFeedbackAllowed
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowed
   #### Allow or block video capture
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16261,21 +16146,20 @@ This policy affects all types of video inputs, not only the built-in camera.
 0x00000000
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: VideoCaptureAllowed
   - Example value:
 ``` xml
 <false/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowedUrls
   #### Sites that can access video capture devices without requesting permission
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16309,7 +16193,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: VideoCaptureAllowedUrls
   - Example value:
@@ -16319,14 +16202,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   <string>https://[*.]contoso.edu/</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WPADQuickCheckEnabled
   #### Set WPAD optimization
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16364,21 +16247,20 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WPADQuickCheckEnabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebAppInstallForceList
   #### Configure list of force-installed Web Apps
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -16411,17 +16293,21 @@ Each list item of the policy is an object with a mandatory member: url (the URL 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
-    "create_desktop_shortcut": true,
-    "default_launch_container": "window",
+    "create_desktop_shortcut": true, 
+    "default_launch_container": "window", 
     "url": "https://www.contoso.com/maps"
-  },
+  }, 
   {
-    "default_launch_container": "tab",
+    "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
   }
 ]
 ```
-
+  ##### Compact example value:
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  ```
+  
 
   #### Mac information and settings
   - Preference Key Name: WebAppInstallForceList
@@ -16445,13 +16331,60 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   </dict>
 </array>
 ```
+  
 
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebCaptureEnabled
+  #### Enable web capture feature in Microsoft Edge
+  
+  
+  #### Supported versions:
+  - On Windows and macOS since 87 or later
+
+  #### Description
+  Enables the web capture feature in Microsoft Edge that allows users to capture web content and annotate the capture using inking tools.
+If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
+If you disable this policy, users can't access the web capture feature in Microsoft Edge.
+
+  #### Supported features:
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+  - Boolean
+
+  #### Windows information and settings
+  ##### Group Policy (ADMX) info
+  - GP unique name: WebCaptureEnabled
+  - GP name: Enable web capture feature in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+  ##### Windows Registry Settings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebCaptureEnabled
+  - Value Type: REG_DWORD
+  ##### Example value:
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  - Preference Key Name: WebCaptureEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebComponentsV0Enabled
   #### Re-enable Web Components v0 API until M84 (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 80, until 84
@@ -16488,20 +16421,19 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebComponentsV0Enabled
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
-
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
   - On Windows and macOS since 77, until 84
@@ -16544,21 +16476,20 @@ to override incompatible policies.
 0x00000001
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebDriverOverridesIncompatiblePolicies
   - Example value:
 ``` xml
 <true/>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalIpsAllowedUrls
   #### Manage exposure of local IP addressess by WebRTC
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 80 or later
 
@@ -16600,7 +16531,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebRtcLocalIpsAllowedUrls
   - Example value:
@@ -16610,14 +16540,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
   <string>*contoso.com*</string>
 </array>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalhostIpHandling
   #### Restrict exposure of local IP address by WebRTC
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16667,21 +16597,20 @@ Use the preceding information when configuring this policy.
 "default"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebRtcLocalhostIpHandling
   - Example value:
 ``` xml
 <string>default</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcUdpPortRange
   #### Restrict the range of local UDP ports used by WebRTC
-
-
+  
+  
   #### Supported versions:
   - On Windows and macOS since 77 or later
 
@@ -16717,21 +16646,20 @@ If you don't configure this policy, or if you set it to an empty string or inval
 "10000-11999"
 ```
 
-
   #### Mac information and settings
   - Preference Key Name: WebRtcUdpPortRange
   - Example value:
 ``` xml
 <string>10000-11999</string>
 ```
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### WinHttpProxyResolverEnabled
   #### Use Windows proxy resolver (deprecated)
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
-
+  
   #### Supported versions:
   - On Windows since 84 or later
 
@@ -16771,8 +16699,7 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 0x00000001
 ```
 
-
-
+  
 
   [Back to top](#microsoft-edge---policies)
 
