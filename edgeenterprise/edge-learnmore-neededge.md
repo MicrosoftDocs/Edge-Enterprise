@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/14/2020
+ms.date: 10/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,10 +15,7 @@ description: "Redirection from Internet Explorer to Microsoft Edge for compatibi
 # Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites
 
 > [!NOTE]
-> This article applies to:
-> - Microsoft Edge Stable version 87 or later
-> - Windows Enterprise, an Windows Server (EDU and non-Client SKUs)
->- devices that are domain-joined or MDM enrolled
+> This article applies to Microsoft Edge Stable version 87 or later.
 
 ## Overview
 
@@ -77,6 +74,13 @@ In addition to needing the BHO, there is a dependency on the **RedirectSitesFrom
 
 - If you don't configure this policy or set it to "Sitelist", Internet Explorer will redirect incompatible sites to Microsoft Edge. This is the default behavior.
 - If you disable this policy, incompatible sites aren't redirected to Microsoft Edge.
+
+> [!NOTE]
+> If you're on a personal device that isn't  managed by your organization, you'll see another setting named "Allow sites to be loaded in Internet Explorer mode" under **Internet Explorer compatibility**.
+>
+>If you're on a domain joined or Mobile Device Management (MDM) enrolled device, you won't see this option.
+>
+> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing).
 
 ### Policy: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
