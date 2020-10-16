@@ -23,7 +23,6 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
-
 ## Version 86.0.622.36 : October 7
 
 Fixed various bugs and performance issues.
