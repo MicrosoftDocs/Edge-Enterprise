@@ -24,17 +24,7 @@
 | 10/5/2020 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
 | 10/6/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 10/7/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/de-de/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/en-us/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/es-es/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/fr-fr/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/it-it/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ja-jp/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ko-kr/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/pt-br/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ru-ru/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-cn/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-tw/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/microsoft-edge-policies) | modified |
 | 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 10/8/2020 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
 | 10/9/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
@@ -55,17 +45,7 @@
 | 10/2/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
 | 10/2/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
 | 10/2/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/de-de/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/en-us/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/es-es/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/fr-fr/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/it-it/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ja-jp/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ko-kr/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/pt-br/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ru-ru/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-cn/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-tw/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/microsoft-edge-policies) | modified |
 | 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 
 
