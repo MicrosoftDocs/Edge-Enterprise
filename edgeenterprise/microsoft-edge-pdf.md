@@ -109,7 +109,7 @@ Users can navigate through and read PDF files using screen readers on Windows an
 
 ## Security and reliability
 
-Security is among the most important tenets for any organization. PDF reader security is an integral part of the Microsoft Edge security design. Two of the most important security features From a PDF reader perspective, two important security features are process isolation and Microsoft Defender Application Guard (Application Guard).
+Security is among the most important tenets for any organization. PDF reader security is an integral part of the Microsoft Edge security design. From a PDF reader perspective, two important security features are process isolation and Microsoft Defender Application Guard (Application Guard).
 
 - Process isolation. PDFs opened from different web sites are completely process isolated. The browser doesn't have to communicate with any websites, or PDF files opened from another source. PDF browsing is secure from any attacks that plan to use compromised PDFs as an attack surface.
 
