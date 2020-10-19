@@ -1,4 +1,4 @@
-# last revised 10/08/2020
+# last revised 10/15/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -175,6 +175,8 @@
         href: microsoft-edge-update-progressive-rollout.md
       - name: Provision favorites for Microsoft Edge
         href: edge-learnmore-provision-favorites.md
+      - name: Redirection from Internet Explorer to Microsoft Edge
+        href: edge-learnmore-neededge.md
       - name: Regular Expression 2 (re2.h) syntax
         href: edge-learnmore-regex.md
       - name: User data directory variables
