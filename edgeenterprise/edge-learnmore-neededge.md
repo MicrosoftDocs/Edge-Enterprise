@@ -46,7 +46,7 @@ The website incompatibility banner:
 - offers to make Microsoft Edge as the default browser
 - gives the user the option to explore Microsoft Edge
 
-When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that started loading the site is closed if it had no prior content. Otherwise, the active tab view goes to a  Microsoft support page that explains why the site was redirected to Microsoft Edge.
+When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that started loading the site is closed if it had no prior content. Otherwise, the active tab view goes to a  Microsoft [support](https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=en-US&rs=en-US&ad=US) page that explains why the site was redirected to Microsoft Edge.
 
 > [!NOTE]
 > After a redirection users can go back to using Internet Explorer for sites that are not on the Internet Explorer incompatibility list.  
