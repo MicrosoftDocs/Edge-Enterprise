@@ -6,6 +6,7 @@ manager: srugh
 ms.date: 10/20/2020
 audience: ITPro
 ms.topic: conceptual
+ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge release notes for Beta Channel"
@@ -24,7 +25,7 @@ These release notes provide information about new features and non-security upda
 ### Feature updates
 
 - **ClickOnce deployment enabled by default**. ClickOnce is enabled by default in Microsoft Edge 87, which reduces the barriers for enterprises to deploy software and better align with Microsoft Edge Legacy browser behavior. Starting in Microsoft Edge 87, the ClickOnceEnabled policy's "Not configured" state will reflect the new default ClickOnce state of Enabled (as compared to the previous default state of Disabled).
-- **Enhance the Microsoft Edge extensions product detail page on the Microsoft Edge Add-ons website**. The goal is to make the product detail page more engaging with all the relevant information that is necessary for the users to make an informed decision about extensions. The revised page will not have screenshots and videos if submitted by the developers and many other visual improvements.
+<!--- **Enhance the Microsoft Edge extensions product detail page on the Microsoft Edge Add-ons website**. The goal is to make the product detail page more engaging with all the relevant information that is necessary for the users to make an informed decision about extensions. The revised page will not have screenshots and videos if submitted by the developers and many other visual improvements.-->
 - **Keyboard support for highlighter on PDF files**. Users can use their keyboard keys to highlight any text on a PDF.
 - **Kiosk mode user data features enabled**. Starting with Microsoft Edge version 87 kiosk mode features that will help enterprises around the privacy of user data will be enabled. These features will enable experiences such as clear the user data on exit, delete downloaded files and to reset the configured start experience after a specified amount of idle time.
 - **Manually reset Microsoft Edge sync data in the cloud**. We are introducing a way to reset Microsoft Edge sync data from within the product. This ensures that user data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
