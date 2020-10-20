@@ -20,7 +20,7 @@ These release notes provide information about new features and non-security upda
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
 <!-- begin major 87 -->
-## Version 87.0.000.00: October 20
+## Version 87.0.664.12 : October 20
 
 ### Feature updates
 
@@ -29,17 +29,17 @@ These release notes provide information about new features and non-security upda
 - **Keyboard support for highlighter on PDF files**. Users can use their keyboard keys to highlight any text on a PDF.
 - **Kiosk mode user data features enabled**. Starting with Microsoft Edge version 87 kiosk mode features that will help enterprises around the privacy of user data will be enabled. These features will enable experiences such as clear the user data on exit, delete downloaded files and to reset the configured start experience after a specified amount of idle time.
 - **Manually reset Microsoft Edge sync data in the cloud**. We are introducing a way to reset Microsoft Edge sync data from within the product. This ensures that user data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
-- **The enterprise new tab page (NTP) integrates productivity with customizable, work-relevant feed content**. The new enterprise NTP blends the Office 365 productivity page we offer to users signed in with their work or school account with personalized, work-relevant company and industry feeds that are organized in a single page. Users will be able to recognize the familiar Office 365 content and Microsoft Search for Business powered by Bing. In addition, they can easily flip to a customizable "My Feed" with content and modules that are relevant to the user, their company, or their industry, as well as a selection of other feeds that the organization has made available. [Learn more](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide).
+- **The enterprise new tab page (NTP) integrates productivity with customizable, work-relevant feed content**. The enterprise NTP blends the Office 365 productivity page we offer to users signed in with their work or school account with personalized, work-relevant company and industry feeds that are organized in a single page. Users will be able to recognize the familiar Office 365 content and Microsoft Search for Business powered by Bing. In addition, they can easily flip to a customizable "My Feed" with content and modules that are relevant to the user, their company, or their industry, as well as a selection of other feeds that the organization has made available. [Learn more](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide).
 - **Printing:**
 
-  - Choose which side to flip on when printing on both sides. You can now choose to flip on the long side or the short side of a sheet when printing on both sides.
-  - Choose print rasterization mode for the enterprise. Control how Microsoft Edge prints to a non-PostScript printer on Windows. Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are Full and Fast.
+  - Choose which side to flip on when printing on both sides. Users can choose to flip on the long side or the short side of a sheet when printing on both sides.
+  - Choose print rasterization mode for the enterprise. Control how Microsoft Edge prints to a non-PostScript printer on Windows. Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are "Full" and "Fast".
 
 - **Security:**
 
-  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on downlevel Windows. A user signed in on Microsoft Edge on  downlevel Microsoft Windows (versions 7, 8,  and 8.1) will get automatically signed into  websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, and bing.com).
-  - Microsoft MSA browsers to Web SSO downlevel Windows. A signed in Microsoft Edge user on downlevel Windows will now get automatically signed into websites that are configured to allow single sign on with Microsoft accounts (e.g., bing.com, office.com, msn.com, and outlook.com).
-  - Support TLS Token Binding for policy-configured sites. TLS Token binding helps prevent token theft attacks to ensure that cookies can't be reused from a device other than the device upon which they were initially set. The use of TLS token binding requires setting the AllowTokenBindingForUrls policy and requires that the sites listed support this feature.
+  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on downlevel Windows. A user signed in on Microsoft Edge on downlevel Microsoft Windows (versions 7, 8,  and 8.1) will get automatically signed in to websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, and bing.com).
+  - Automatic sign for Microsoft accounts with Web single sign-on (SSO). A signed in Microsoft Edge user on downlevel Windows will now get automatically signed into websites that are configured to allow SSO with Microsoft accounts (e.g., bing.com, office.com, msn.com, and outlook.com).
+  - Support TLS Token Binding for policy-configured sites. TLS Token binding helps prevent token theft attacks to ensure that cookies can't be reused from a device other than the device upon which they were initially set. The use of TLS token binding requires setting the [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy and requires that the sites listed support this feature.
 
 ### Policy updates
 
