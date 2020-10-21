@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise Sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -40,7 +40,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 
 - Azure AD Premium (P1 and P2)
 - M365 Business Premium
-- Office 365 E3 and above
+- Office 365 E1 and above
 - Azure Information Protection (AIP) (P1& P2)
 - All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, M365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
 
