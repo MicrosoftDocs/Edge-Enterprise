@@ -119,7 +119,7 @@ Fixed various bugs and performance issues.
 * **Security:**
 
   * Secure DNS (DNS-over-HTTPS) Support.  Beginning with Microsoft Edge version 86, settings to control Secure DNS on un-managed devices is available. These settings aren't accessible to users on managed devices, but IT admins can enable or disable Secure DNS using the [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) group policy.
-  * Microsoft Edge alerts you if your passwords are found in an online leak. Microsoft Edge checks your passwords against a repository of known-breached credentials and alerts you if a match is found.
+
 
 * **Add a custom image to the New Tab Page (NTP) using a group policy.** Beginning with Microsoft Edge version 86 the NTP has an option to replace the default image with a custom user-supplied image. The ability to manage the properties of this image is also supported by the group policy.
 
