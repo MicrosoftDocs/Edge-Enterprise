@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/02/2020
+ms.date: 10/22/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -14,6 +14,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 ---
 
 # Microsoft Edge - Policies
+
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
 
 For information about an additional set of policies used to control how and when Microsoft Edge is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
@@ -24,6 +25,7 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > This article applies to Microsoft Edge version 77 or later.
 
 ## Available policies
+
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
 |||
@@ -38,15 +40,18 @@ These tables list all of the browser-related group policies available in this re
 
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard Container Proxy|
 ### [*Cast*](#cast-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[EnableMediaRouter](#enablemediarouter)|Enable Google Cast|
 |[ShowCastIconInToolbar](#showcasticonintoolbar)|Show the cast icon in the toolbar|
 ### [*Content settings*](#content-settings-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[AutoSelectCertificateForUrls](#autoselectcertificateforurls)|Automatically select client certificates for these sites|
@@ -90,6 +95,7 @@ and tips for Microsoft services|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
 ### [*Default search provider*](#default-search-provider-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[DefaultSearchProviderEnabled](#defaultsearchproviderenabled)|Enable the default search provider|
@@ -102,6 +108,7 @@ and tips for Microsoft services|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
 ### [*Extensions*](#extensions-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
@@ -111,6 +118,7 @@ and tips for Microsoft services|
 |[ExtensionInstallSources](#extensioninstallsources)|Configure extension and user script install sources|
 |[ExtensionSettings](#extensionsettings)|Configure extension management settings|
 ### [*HTTP authentication*](#http-authentication-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
@@ -121,16 +129,20 @@ and tips for Microsoft services|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Include non-standard port in Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Control whether NTLMv2 authentication is enabled|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
+
 |Policy Name|Caption|
 |-|-|
-|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of Kiosk session when Microsoft Edge closes|
+|[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure address bar editing for kiosk mode public browsing experience|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of kiosk session when Microsoft Edge closes|
 ### [*Native Messaging*](#native-messaging-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
@@ -138,7 +150,9 @@ and tips for Microsoft services|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
+|[PasswordRevealEnabled](#passwordrevealenabled)|Enable Password reveal button|
 ### [*Printing*](#printing-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Default printer selection rules|
@@ -148,6 +162,7 @@ and tips for Microsoft services|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
 ### [*Proxy server*](#proxy-server-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[ProxyBypassList](#proxybypasslist)|Configure proxy bypass rules|
@@ -156,6 +171,7 @@ and tips for Microsoft services|
 |[ProxyServer](#proxyserver)|Configure address or URL of proxy server|
 |[ProxySettings](#proxysettings)|Proxy settings|
 ### [*SmartScreen settings*](#smartscreen-settings-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
@@ -165,6 +181,7 @@ and tips for Microsoft services|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Force Microsoft Defender SmartScreen checks on downloads from trusted sources|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configure Microsoft Defender SmartScreen to block potentially unwanted apps|
 ### [*Startup&comma; home page and new tab page*](#startup-home-page-and-new-tab-page-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
@@ -175,11 +192,12 @@ and tips for Microsoft services|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (deprecated)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
 ### [*Additional*](#additional-policies)
+
 |Policy Name|Caption|
 |-|-|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
@@ -226,6 +244,7 @@ and tips for Microsoft services|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
+|[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
@@ -249,6 +268,7 @@ and tips for Microsoft services|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
+|[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
@@ -275,6 +295,7 @@ and tips for Microsoft services|
 |[HSTSPolicyBypassList](#hstspolicybypasslist)|Configure the list of names that will bypass the HSTS policy check|
 |[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Use hardware acceleration when available|
 |[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
+|[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Hide the one-time redirection dialog and the banner on Microsoft Edge|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
 |[ImportCookies](#importcookies)|Allow importing of Cookies|
@@ -314,6 +335,8 @@ and tips for Microsoft services|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
+|[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
+|[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Notify a user that a browser restart is recommended or required for pending updates|
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Set the time period for update notifications|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
@@ -365,8 +388,9 @@ and tips for Microsoft services|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
+|[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (deprecated)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
@@ -380,13 +404,17 @@ and tips for Microsoft services|
   [Back to top](#microsoft-edge---policies)
 
   ### ApplicationGuardContainerProxy
+
   #### Application Guard Container Proxy
+
   
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   Configures the proxy settings for Microsoft Edge Application Guard.
 If you enable this policy, Microsoft Edge Application Guard ignores other sources of proxy configurations.
 
@@ -411,26 +439,34 @@ If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' field is 
 For more information about identifying Application Guard traffic via dual proxy, visit [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ApplicationGuardContainerProxy
   - GP name: Application Guard Container Proxy
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Application Guard settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ApplicationGuardContainerProxy
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   "ProxyMode": "direct", 
@@ -439,6 +475,12 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 }
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  ```
+  
 
   
 
@@ -449,13 +491,17 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   [Back to top](#microsoft-edge---policies)
 
   ### EnableMediaRouter
+
   #### Enable Google Cast
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enable this policy to enable Google Cast. Users will be able to launch it from the app menu, page context menus, media controls on Cast-enabled websites, and (if shown) the Cast toolbar icon.
 
 Disable this policy to disable Google Cast.
@@ -463,32 +509,41 @@ Disable this policy to disable Google Cast.
 By default, Google Cast is enabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableMediaRouter
   - GP name: Enable Google Cast
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Cast
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnableMediaRouter
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableMediaRouter
   - Example value:
 ``` xml
@@ -499,13 +554,17 @@ By default, Google Cast is enabled.
   [Back to top](#microsoft-edge---policies)
 
   ### ShowCastIconInToolbar
+
   #### Show the cast icon in the toolbar
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set this policy to true to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
 
 If you don't configure this policy or if you disable it, users can pin or remove the icon by using its contextual menu.
@@ -513,32 +572,41 @@ If you don't configure this policy or if you disable it, users can pin or remove
 If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, then this policy is ignored, and the toolbar icon isn't shown.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ShowCastIconInToolbar
   - GP name: Show the cast icon in the toolbar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Cast
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ShowCastIconInToolbar
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ShowCastIconInToolbar
   - Example value:
 ``` xml
@@ -553,13 +621,17 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoSelectCertificateForUrls
+
   #### Automatically select client certificates for these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
 
 Examples for the usage of the $FILTER section:
@@ -577,26 +649,34 @@ Examples for the usage of the $FILTER section:
 If you leave the policy unset, there's no autoselection for any site.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoSelectCertificateForUrls
   - GP name: Automatically select client certificates for these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
@@ -604,6 +684,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoSelectCertificateForUrls
   - Example value:
 ``` xml
@@ -616,13 +697,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesAllowedForUrls
+
   #### Allow cookies on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that are allowed to set cookies.
 
 If you don't configure this policy, the global default value from the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -640,26 +725,34 @@ Note there cannot be conflicting URL patterns set between these three policies:
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CookiesAllowedForUrls
   - GP name: Allow cookies on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
@@ -668,6 +761,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CookiesAllowedForUrls
   - Example value:
 ``` xml
@@ -681,13 +775,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesBlockedForUrls
+
   #### Block cookies on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can't set cookies.
 
 If you don't configure this policy, the global default value from the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -703,26 +801,34 @@ Note there cannot be conflicting URL patterns set between these three policies:
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CookiesBlockedForUrls
   - GP name: Block cookies on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
@@ -731,6 +837,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CookiesBlockedForUrls
   - Example value:
 ``` xml
@@ -744,13 +851,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### CookiesSessionOnlyForUrls
+
   #### Limit cookies from specific websites to the current session
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Cookies created by websites that match a URL pattern you define are deleted when the session ends (when the window closes).
 
 Cookies created by websites that don't match the pattern are controlled by the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or by the user's personal configuration. This is also the default behavior if you don't configure this policy.
@@ -770,26 +881,34 @@ Note there cannot be conflicting URL patterns set between these three policies:
 If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from previous sessions, this policy is ignored, and cookies are stored permanently for those sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CookiesSessionOnlyForUrls
   - GP name: Limit cookies from specific websites to the current session
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
@@ -798,6 +917,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CookiesSessionOnlyForUrls
   - Example value:
 ``` xml
@@ -811,13 +931,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultCookiesSetting
+
   #### Configure cookies
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Control whether websites can create cookies on the user's device. This policy is all or nothing - you can let all websites create cookies, or no websites create cookies. You can't use this policy to enable cookies from specific websites.
 
 Set the policy to 'SessionOnly' to clear cookies when the session closes. If Microsoft Edge is running in background mode, the session might not close when the last window is closed, meaning the cookies won't be cleared when the window closes. See [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about configuring what happens when Microsoft Edge runs in background mode.
@@ -835,32 +959,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultCookiesSetting
   - GP name: Configure cookies
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultCookiesSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultCookiesSetting
   - Example value:
 ``` xml
@@ -871,13 +1004,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemReadGuardSetting
+
   #### Control use of the File System API for reading
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   If you set this policy to 3, websites can ask for read access to the host operating system's filesystem using the File System API. If you set this policy to 2, access is denied.
 
 If you don't set this policy, websites can ask for access. Users can change this setting.
@@ -891,32 +1028,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultFileSystemReadGuardSetting
   - GP name: Control use of the File System API for reading
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultFileSystemReadGuardSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultFileSystemReadGuardSetting
   - Example value:
 ``` xml
@@ -927,13 +1073,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultFileSystemWriteGuardSetting
+
   #### Control use of the File System API for writing
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   If you set this policy to 3, websites can ask for write access to the host operating system's filesystem using the File System API. If you set this policy to 2, access is denied.
 
 If you don't set this policy, websites can ask for access. Users can change this setting.
@@ -947,32 +1097,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultFileSystemWriteGuardSetting
   - GP name: Control use of the File System API for writing
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultFileSystemWriteGuardSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultFileSystemWriteGuardSetting
   - Example value:
 ``` xml
@@ -983,13 +1142,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultGeolocationSetting
+
   #### Default geolocation setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can track users' physical locations. You can allow tracking by default ('AllowGeolocation'), deny it by default ('BlockGeolocation'), or ask the user each time a website requests their location ('AskGeolocation').
 
 If you don't configure this policy, 'AskGeolocation' is used and the user can change it.
@@ -1005,32 +1168,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultGeolocationSetting
   - GP name: Default geolocation setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultGeolocationSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultGeolocationSetting
   - Example value:
 ``` xml
@@ -1041,13 +1213,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultImagesSetting
+
   #### Default images setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can display images. You can allow images on all sites ('AllowImages') or block them on all sites ('BlockImages').
 
 If you don't configure this policy, images are allowed by default, and the user can change this setting.
@@ -1061,32 +1237,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultImagesSetting
   - GP name: Default images setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultImagesSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultImagesSetting
   - Example value:
 ``` xml
@@ -1097,13 +1282,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultInsecureContentSetting
+
   #### Control use of insecure content exceptions
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Allows you to set whether users can add exceptions to allow mixed content for specific sites.
 
 This policy can be overridden for specific URL patterns using the [InsecureContentAllowedForUrls](#insecurecontentallowedforurls) and [InsecureContentBlockedForUrls](#insecurecontentblockedforurls) policies.
@@ -1119,32 +1308,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultInsecureContentSetting
   - GP name: Control use of insecure content exceptions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultInsecureContentSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultInsecureContentSetting
   - Example value:
 ``` xml
@@ -1155,13 +1353,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultJavaScriptSetting
+
   #### Default JavaScript setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can run JavaScript. You can allow it for all sites ('AllowJavaScript') or block it for all sites ('BlockJavaScript').
 
 If you don't configure this policy, all sites can run JavaScript by default, and the user can change this setting.
@@ -1175,32 +1377,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultJavaScriptSetting
   - GP name: Default JavaScript setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultJavaScriptSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultJavaScriptSetting
   - Example value:
 ``` xml
@@ -1211,13 +1422,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultNotificationsSetting
+
   #### Default notification setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can display desktop notifications. You can allow them by default ('AllowNotifications'), deny them by default ('BlockNotifications'), or have the user be asked each time a website wants to show a notification ('AskNotifications').
 
 If you don't configure this policy, notifications are allowed by default, and the user can change this setting.
@@ -1233,32 +1448,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultNotificationsSetting
   - GP name: Default notification setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultNotificationsSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultNotificationsSetting
   - Example value:
 ``` xml
@@ -1269,13 +1493,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPluginsSetting
+
   #### Default Adobe Flash setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   [PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
 
 If you don't configure this policy, the user can change this setting manually.
@@ -1291,32 +1519,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultPluginsSetting
   - GP name: Default Adobe Flash setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultPluginsSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultPluginsSetting
   - Example value:
 ``` xml
@@ -1327,13 +1564,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPopupsSetting
+
   #### Default pop-up window setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can show pop-up windows. You can allow them on all websites ('AllowPopups') or block them on all sites ('BlockPopups').
 
 If you don't configure this policy, pop-up windows are blocked by default, and users can change this setting.
@@ -1347,32 +1588,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultPopupsSetting
   - GP name: Default pop-up window setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultPopupsSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultPopupsSetting
   - Example value:
 ``` xml
@@ -1383,13 +1633,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebBluetoothGuardSetting
+
   #### Control use of the Web Bluetooth API
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Control whether websites can access nearby Bluetooth devices. You can completely block access or require the site to ask the user each time it wants to access a Bluetooth device.
 
 If you don't configure this policy, the default value ('AskWebBluetooth', meaning users are asked each time) is used and users can change it.
@@ -1403,32 +1657,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultWebBluetoothGuardSetting
   - GP name: Control use of the Web Bluetooth API
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultWebBluetoothGuardSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultWebBluetoothGuardSetting
   - Example value:
 ``` xml
@@ -1439,13 +1702,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultWebUsbGuardSetting
+
   #### Control use of the WebUSB API
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether websites can access connected USB devices. You can completely block access or ask the user each time a website wants to get access to connected USB devices.
 
 You can override this policy for specific URL patterns by using the [WebUsbAskForUrls](#webusbaskforurls) and [WebUsbBlockedForUrls](#webusbblockedforurls) policies.
@@ -1461,32 +1728,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultWebUsbGuardSetting
   - GP name: Control use of the WebUSB API
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultWebUsbGuardSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultWebUsbGuardSetting
   - Example value:
 ``` xml
@@ -1497,13 +1773,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadAskForUrls
+
   #### Allow read access via the File System API on these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Setting the policy lets you list the URL patterns that specify which sites can ask users to grant them read access to files or directories in the host operating system's file system via the File System API.
 
 Leaving the policy unset means [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
@@ -1513,26 +1793,34 @@ URL patterns can't conflict with [FileSystemReadBlockedForUrls](#filesystemreadb
 For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FileSystemReadAskForUrls
   - GP name: Allow read access via the File System API on these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
@@ -1541,6 +1829,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FileSystemReadAskForUrls
   - Example value:
 ``` xml
@@ -1554,13 +1843,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemReadBlockedForUrls
+
   #### Block read access via the File System API on these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   If you set this policy, you can list the URL patterns that specify which sites can't ask users to grant them read access to files or directories in the host operating system's file system via the File System API.
 
 If you don't set this policy, [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
@@ -1570,26 +1863,34 @@ URL patterns can't conflict with [FileSystemReadAskForUrls](#filesystemreadaskfo
 For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FileSystemReadBlockedForUrls
   - GP name: Block read access via the File System API on these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.edu"
@@ -1598,6 +1899,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FileSystemReadBlockedForUrls
   - Example value:
 ``` xml
@@ -1611,13 +1913,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteAskForUrls
+
   #### Allow write access to files and directories on these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   If you set this policy, you can list the URL patterns that specify which sites can ask users to grant them write access to files or directories in the host operating system's file system.
 
 If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
@@ -1627,26 +1933,34 @@ URL patterns can't conflict with [FileSystemWriteBlockedForUrls](#filesystemwrit
 For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FileSystemWriteAskForUrls
   - GP name: Allow write access to files and directories on these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
@@ -1655,6 +1969,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FileSystemWriteAskForUrls
   - Example value:
 ``` xml
@@ -1668,13 +1983,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### FileSystemWriteBlockedForUrls
+
   #### Block write access to files and directories on these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   If you set this policy, you can list the URL patterns that specify which sites can't ask users to grant them write access to files or directories in the host operating system's file system.
 
 If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
@@ -1684,26 +2003,34 @@ URL patterns can't conflict with [FileSystemWriteAskForUrls](#filesystemwriteask
 For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FileSystemWriteBlockedForUrls
   - GP name: Block write access to files and directories on these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.edu"
@@ -1712,6 +2039,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FileSystemWriteBlockedForUrls
   - Example value:
 ``` xml
@@ -1725,38 +2053,50 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesAllowedForUrls
+
   #### Allow images on these sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can display images.
 
 If you don't configure this policy, the global default value is used for all sites either from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImagesAllowedForUrls
   - GP name: Allow images on these sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
@@ -1765,6 +2105,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImagesAllowedForUrls
   - Example value:
 ``` xml
@@ -1778,38 +2119,50 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### ImagesBlockedForUrls
+
   #### Block images on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that aren't allowed to display images.
 
 If you don't configure this policy, the global default value from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImagesBlockedForUrls
   - GP name: Block images on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
@@ -1818,6 +2171,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImagesBlockedForUrls
   - Example value:
 ``` xml
@@ -1831,38 +2185,50 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentAllowedForUrls
+
   #### Allow insecure content on specified sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Create a list of URL patterns to specify sites that can display insecure mixed content (that is, HTTP content on HTTPS sites).
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InsecureContentAllowedForUrls
   - GP name: Allow insecure content on specified sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
@@ -1871,6 +2237,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 
   #### Mac information and settings
+  
   - Preference Key Name: InsecureContentAllowedForUrls
   - Example value:
 ``` xml
@@ -1884,38 +2251,50 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureContentBlockedForUrls
+
   #### Block insecure content on specified sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Create a list of URL patterns to specify sites that aren't allowed to display blockable (i.e. active) mixed content (that is, HTTP content on HTTPS sites) and for which optionally blockable mixed content upgrades will be disabled.
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InsecureContentBlockedForUrls
   - GP name: Block insecure content on specified sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
@@ -1924,6 +2303,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 
   #### Mac information and settings
+  
   - Preference Key Name: InsecureContentBlockedForUrls
   - Example value:
 ``` xml
@@ -1937,38 +2317,50 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptAllowedForUrls
+
   #### Allow JavaScript on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that are allowed to run JavaScript.
 
 If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: JavaScriptAllowedForUrls
   - GP name: Allow JavaScript on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
@@ -1977,6 +2369,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: JavaScriptAllowedForUrls
   - Example value:
 ``` xml
@@ -1990,38 +2383,50 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### JavaScriptBlockedForUrls
+
   #### Block JavaScript on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that aren't allowed to run JavaScript.
 
 If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: JavaScriptBlockedForUrls
   - GP name: Block JavaScript on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2030,6 +2435,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: JavaScriptBlockedForUrls
   - Example value:
 ``` xml
@@ -2043,13 +2449,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabled
+
   #### Enable default legacy SameSite cookie behavior setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
 If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
@@ -2063,32 +2473,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: LegacySameSiteCookieBehaviorEnabled
   - GP name: Enable default legacy SameSite cookie behavior setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: LegacySameSiteCookieBehaviorEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
   - Example value:
 ``` xml
@@ -2099,13 +2518,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### LegacySameSiteCookieBehaviorEnabledForDomainList
+
   #### Revert to legacy SameSite behavior for cookies on specified sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Cookies set for domains match specified patterns will revert to legacy SameSite behavior.
 
 Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
@@ -2117,26 +2540,34 @@ The global default value can be configured using the [LegacySameSiteCookieBehavi
 Note that patterns you list in this policy are treated as domains, not URLs, so you should not specify a scheme or port.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: LegacySameSiteCookieBehaviorEnabledForDomainList
   - GP name: Revert to legacy SameSite behavior for cookies on specified sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
@@ -2145,6 +2576,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 
   #### Mac information and settings
+  
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Example value:
 ``` xml
@@ -2158,38 +2590,50 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsAllowedForUrls
+
   #### Allow notifications on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to create a list of url patterns to specify sites that are allowed to display notifications.
 
 If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NotificationsAllowedForUrls
   - GP name: Allow notifications on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -2198,6 +2642,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NotificationsAllowedForUrls
   - Example value:
 ``` xml
@@ -2211,38 +2656,50 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
   [Back to top](#microsoft-edge---policies)
 
   ### NotificationsBlockedForUrls
+
   #### Block notifications on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to create a list of url patterns to specify sites that are not allowed to display notifications.
 
 If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NotificationsBlockedForUrls
   - GP name: Block notifications on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2251,6 +2708,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NotificationsBlockedForUrls
   - Example value:
 ``` xml
@@ -2264,13 +2722,17 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsAllowedForUrls
+
   #### Allow the Adobe Flash plug-in on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can run the Adobe Flash plug-in.
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -2278,26 +2740,34 @@ If you don't configure this policy, the global default value from the [DefaultPl
 For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PluginsAllowedForUrls
   - GP name: Allow the Adobe Flash plug-in on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
@@ -2306,6 +2776,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PluginsAllowedForUrls
   - Example value:
 ``` xml
@@ -2319,13 +2790,17 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsBlockedForUrls
+
   #### Block the Adobe Flash plug-in on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that are blocked from running Adobe Flash.
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -2333,26 +2808,34 @@ If you don't configure this policy, the global default value from the [DefaultPl
 For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PluginsBlockedForUrls
   - GP name: Block the Adobe Flash plug-in on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
@@ -2361,6 +2844,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PluginsBlockedForUrls
   - Example value:
 ``` xml
@@ -2374,38 +2858,50 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsAllowedForUrls
+
   #### Allow pop-up windows on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can open pop-up windows.
 
 If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PopupsAllowedForUrls
   - GP name: Allow pop-up windows on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -2414,6 +2910,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PopupsAllowedForUrls
   - Example value:
 ``` xml
@@ -2427,38 +2924,50 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### PopupsBlockedForUrls
+
   #### Block pop-up windows on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows.
 
 If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PopupsBlockedForUrls
   - GP name: Block pop-up windows on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2467,6 +2976,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PopupsBlockedForUrls
   - Example value:
 ``` xml
@@ -2480,13 +2990,17 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### RegisteredProtocolHandlers
+
   #### Register protocol handlers
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set this policy (recommended only) to register a list of protocol handlers. This list is merged with ones registered by the user and both are available to use.
 
 To register a protocol handler:
@@ -2497,26 +3011,34 @@ To register a protocol handler:
 Users can't remove a protocol handler registered by this policy. However, they can install a new default protocol handler to override the existing protocol handlers.
 
   #### Supported features:
+
   - Can be mandatory: No
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RegisteredProtocolHandlers
   - GP name: Register protocol handlers
   - GP path (Mandatory): N/A
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Content settings
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): N/A
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: RegisteredProtocolHandlers
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
@@ -2527,8 +3049,15 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [{"default": true, "protocol": "mailto", "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: RegisteredProtocolHandlers
   - Example value:
 ``` xml
@@ -2549,14 +3078,18 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   [Back to top](#microsoft-edge---policies)
 
   ### SpotlightExperiencesAndRecommendationsEnabled
+
   #### Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
+
   
   
   #### Supported versions:
+
   - On Windows since 86 or later
 
   #### Description
+
   Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services.
 
 If you enable or don't configure this setting, spotlight experiences and recommendations are turned on.
@@ -2564,27 +3097,35 @@ If you enable or don't configure this setting, spotlight experiences and recomme
 If you disable this setting, spotlight experiences and recommendations are turned off.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SpotlightExperiencesAndRecommendationsEnabled
   - GP name: Choose whether users can receive customized background images and text, suggestions, notifications,
 and tips for Microsoft services
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SpotlightExperiencesAndRecommendationsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -2595,13 +3136,17 @@ and tips for Microsoft services
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAllowDevicesForUrls
+
   #### Grant access to specific sites to connect to specific USB devices
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to set a list of urls that specify which sites will automatically be granted permission to access a USB device with the given vendor and product IDs. Each item in the list must contain both devices and urls in order for the policy to be valid. Each item in devices can contain a vendor ID and product ID field. Any ID that is omitted is treated as a wildcard with one exception, and that exception is that a product ID cannot be specified without a vendor ID also being specified. Otherwise, the policy will not be valid and will be ignored.
 
 The USB permission model uses the URL of the requesting site ("requesting URL") and the URL of the top-level frame site ("embedding URL") to grant permission to the requesting URL to access the USB device. The requesting URL may be different than the embedding URL when the requesting site is loaded in an iframe. Therefore, the "urls" field can contain up to two URL strings delimited by a comma to specify the requesting and embedding URL respectively. If only one URL is specified, then access to the corresponding USB devices will be granted when the requesting site's URL matches this URL regardless of embedding status. The URLs in "urls" must be valid URLs, otherwise the policy will be ignored.
@@ -2611,26 +3156,34 @@ If this policy is left not set, the global default value will be used for all si
 URL patterns in this policy should not clash with the ones configured via [WebUsbBlockedForUrls](#webusbblockedforurls). If there is a clash, this policy will take precedence over [WebUsbBlockedForUrls](#webusbblockedforurls) and [WebUsbAskForUrls](#webusbaskforurls).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebUsbAllowDevicesForUrls
   - GP name: Grant access to specific sites to connect to specific USB devices
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebUsbAllowDevicesForUrls
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
@@ -2648,8 +3201,15 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://contoso.com", "https://fabrikam.com"]}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: WebUsbAllowDevicesForUrls
   - Example value:
 ``` xml
@@ -2678,13 +3238,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbAskForUrls
+
   #### Allow WebUSB on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can ask the user for access to a USB device.
 
 If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -2692,26 +3256,34 @@ If you don't configure this policy, the global default value from the [DefaultWe
 The URL patterns defined in this policy can't conflict with those configured in the [WebUsbBlockedForUrls](#webusbblockedforurls) policy - you can't both allow and block a URL. For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebUsbAskForUrls
   - GP name: Allow WebUSB on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
@@ -2720,6 +3292,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebUsbAskForUrls
   - Example value:
 ``` xml
@@ -2733,13 +3306,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### WebUsbBlockedForUrls
+
   #### Block WebUSB on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can't ask the user to grant them access to a USB device.
 
 If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -2747,26 +3324,34 @@ If you don't configure this policy, the global default value from the [DefaultWe
 URL patterns in this policy can't conflict with those configured in the [WebUsbAskForUrls](#webusbaskforurls) policy. You can't both allow and block a URL.  For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebUsbBlockedForUrls
   - GP name: Block WebUSB on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
@@ -2775,6 +3360,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebUsbBlockedForUrls
   - Example value:
 ``` xml
@@ -2792,13 +3378,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderEnabled
+
   #### Enable the default search provider
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables the ability to use a default search provider.
 
 If you enable this policy, a user can search for a term by typing in the address bar (as long as what they type isn't a URL).
@@ -2816,32 +3406,41 @@ This policy is available only on Windows instances that are joined to a Microsof
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderEnabled
   - GP name: Enable the default search provider
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderEnabled
   - Example value:
 ``` xml
@@ -2852,13 +3451,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderEncodings
+
   #### Default search provider encodings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify the character encodings supported by the search provider. Encodings are code page names like UTF-8, GB2312, and ISO-8859-1. They are tried in the order provided.
 
 This policy is optional. If not configured, the default, UTF-8, is used.
@@ -2868,26 +3471,34 @@ This policy is applied only if you enable the [DefaultSearchProviderEnabled](#de
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderEncodings
   - GP name: Default search provider encodings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\DefaultSearchProviderEncodings
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
@@ -2898,6 +3509,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderEncodings
   - Example value:
 ``` xml
@@ -2913,13 +3525,17 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURL
+
   #### Specifies the search-by-image feature for the default search provider
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the URL to the search engine used for image search. Search requests are sent using the GET method.
 
 This policy is optional. If you don't configure it, image search isn't available.
@@ -2936,32 +3552,41 @@ This policy is applied only if you enable the [DefaultSearchProviderEnabled](#de
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderImageURL
   - GP name: Specifies the search-by-image feature for the default search provider
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderImageURL
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderImageURL
   - Example value:
 ``` xml
@@ -2972,13 +3597,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderImageURLPostParams
+
   #### Parameters for an image URL that uses POST
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable this policy, it specifies the parameters used when an image search that uses POST is performed. The policy consists of comma-separated name/value pairs. If a value is a template parameter, like {imageThumbnail} in the preceding example, it's replaced with real image thumbnail data. This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
 Specify Bing's Image Search URL Post Params as:
@@ -2992,32 +3621,41 @@ If you don't set this policy, image search requests are sent using the GET metho
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderImageURLPostParams
   - GP name: Parameters for an image URL that uses POST
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderImageURLPostParams
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderImageURLPostParams
   - Example value:
 ``` xml
@@ -3028,13 +3666,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderKeyword
+
   #### Default search provider keyword
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the keyword, which is the shortcut used in the Address Bar to trigger the search for this provider.
 
 This policy is optional. If you don't configure it, no keyword activates the search provider.
@@ -3044,32 +3686,41 @@ This policy is applied only if you enable the [DefaultSearchProviderEnabled](#de
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderKeyword
   - GP name: Default search provider keyword
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderKeyword
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "mis"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderKeyword
   - Example value:
 ``` xml
@@ -3080,13 +3731,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderName
+
   #### Default search provider name
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the name of the default search provider.
 
 If you enable this policy, you set the name of the default search provider.
@@ -3098,32 +3753,41 @@ If you don't enable this policy or if you leave it empty, the host name specifie
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderName
   - GP name: Default search provider name
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderName
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "My Intranet Search"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderName
   - Example value:
 ``` xml
@@ -3134,13 +3798,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSearchURL
+
   #### Default search provider search URL
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the URL of the search engine used for a default search. The URL contains the string '{searchTerms}', which is replaced at query time by the terms the user is searching for.
 
 Specify Bing's search URL as:
@@ -3154,32 +3822,41 @@ This policy is required when you enable the [DefaultSearchProviderEnabled](#defa
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderSearchURL
   - GP name: Default search provider search URL
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderSearchURL
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderSearchURL
   - Example value:
 ``` xml
@@ -3190,13 +3867,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderSuggestURL
+
   #### Default search provider URL for suggestions
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the URL for the search engine used to provide search suggestions. The URL contains the string '{searchTerms}', which is replaced at query time by the text the user has entered so far.
 
 This policy is optional. If you don't configure it, users won't see search suggestions; they will see suggestions from their browsing history and favorites.
@@ -3212,32 +3893,41 @@ This policy is applied only if you enable the [DefaultSearchProviderEnabled](#de
 Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderSuggestURL
   - GP name: Default search provider URL for suggestions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DefaultSearchProviderSuggestURL
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderSuggestURL
   - Example value:
 ``` xml
@@ -3248,13 +3938,17 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSearchBox
+
   #### Configure the new tab page search box experience
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   You can configure the new tab page search box to use "Search box (Recommended)" or "Address bar" to search on new tabs. This policy only works if you set the search engine to a value other than Bing by setting the following two policies: [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl).
 
  If you disable or don't configure this policy and:
@@ -3277,32 +3971,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageSearchBox
   - GP name: Configure the new tab page search box experience
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Default search provider
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Default search provider
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NewTabPageSearchBox
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "bing"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageSearchBox
   - Example value:
 ``` xml
@@ -3317,13 +4020,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionAllowedTypes
+
   #### Configure allowed extension types
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Controls which extension types can be installed and limits runtime access.
 
 This setting defines the allowed types of extensions and which hosts they can interact with. The value is a list of strings, each of which should be one of the following: "extension", "theme", "user_script", and "hosted_app". See the Microsoft Edge extensions documentation for more information on these types.
@@ -3335,26 +4042,34 @@ If you enable this policy, only extensions that match a type in the list are ins
 If you don't configure this policy, no restrictions on the acceptable extension types are enforced.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionAllowedTypes
   - GP name: Configure allowed extension types
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
@@ -3362,6 +4077,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionAllowedTypes
   - Example value:
 ``` xml
@@ -3374,36 +4090,48 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallAllowlist
+
   #### Allow specific extensions to be installed
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   By default, all extensions are allowed. However, if you block all extensions by setting the 'ExtensionInstallBlockList' policy to "*," users can only install extensions defined in this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionInstallAllowlist
   - GP name: Allow specific extensions to be installed
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
@@ -3412,6 +4140,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionInstallAllowlist
   - Example value:
 ``` xml
@@ -3425,13 +4154,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallBlocklist
+
   #### Control which extensions cannot be installed
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   List specific extensions that users can NOT install in Microsoft Edge. When you deploy this policy, any extensions on this list that were previously installed will be disabled, and the user won't be able to enable them. If you remove an item from the list of blocked extensions, that extension is automatically re-enabled anywhere it was previously installed.
 
 Use "*" to block all extensions that aren't explicitly listed in the allow list.
@@ -3439,26 +4172,34 @@ Use "*" to block all extensions that aren't explicitly listed in the allow list.
 If you don't configure this policy, users can install any extension in Microsoft Edge.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionInstallBlocklist
   - GP name: Control which extensions cannot be installed
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
@@ -3467,6 +4208,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionInstallBlocklist
   - Example value:
 ``` xml
@@ -3480,13 +4222,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallForcelist
+
   #### Control which extensions are installed silently
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies extensions that are installed silently, without user interaction, and that the users can't uninstall or disable ("force-installed"). All permissions requested by the extensions are granted implicitly, without user interaction, including any additional permissions requested by future versions of the extension. Furthermore, permissions are granted for the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. (These two APIs are only available to extensions that are force-installed.)
 
 This policy takes precedence over a potentially conflicting [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. When you take an extension off of the force-installed list it's automatically uninstalled by Microsoft Edge.
@@ -3510,26 +4256,34 @@ If you don't configure this policy, no extensions are installed automatically, a
 Note that this policy doesn't apply to InPrivate mode.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionInstallForcelist
   - GP name: Control which extensions are installed silently
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
@@ -3538,6 +4292,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionInstallForcelist
   - Example value:
 ``` xml
@@ -3551,13 +4306,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionInstallSources
+
   #### Configure extension and user script install sources
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define URLs that can install extensions and themes.
 
 By default, users have to download a *.crx file for each extension or script they want to install, and then drag it onto the Microsoft Edge settings page. This policy lets specific URLs use install the extension or script for the user.
@@ -3567,26 +4326,34 @@ Each item in this list is an extension-style match pattern (see [https://go.micr
 The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precedence over this policy. Any extensions that's on the block list won't be installed, even if it comes from a site on this list.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionInstallSources
   - GP name: Configure extension and user script install sources
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
@@ -3594,6 +4361,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionInstallSources
   - Example value:
 ``` xml
@@ -3606,13 +4374,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   [Back to top](#microsoft-edge---policies)
 
   ### ExtensionSettings
+
   #### Configure extension management settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures extension management settings for Microsoft Edge.
 
 This policy controls multiple settings, including settings controlled by any existing extension-related policies. This policy overrides any legacy policies if both are set.
@@ -3620,26 +4392,34 @@ This policy controls multiple settings, including settings controlled by any exi
 This policy maps an extension ID or an update URL to its configuration. With an extension ID, the configuration is applied only to the specified extension. Set a default configuration for the special ID "*", to apply to all extensions that aren't specifically listed in this policy. With an update URL, the configuration is applied to all extensions with the exact update URL stated in manifest of this extension, as described at [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExtensionSettings
   - GP name: Configure extension management settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ExtensionSettings
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
@@ -3706,8 +4486,15 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 }
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: ExtensionSettings
   - Example value:
 ``` xml
@@ -3816,44 +4603,57 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Back to top](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
+
   #### Allow cross-origin HTTP Authentication prompts
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Controls whether third-party images on a page can show an authentication prompt.
 
 Typically, this is disabled as a phishing defense. If you don't configure this policy, it's disabled and third-party images can't show an authentication prompt.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowCrossOriginAuthPrompt
   - GP name: Allow cross-origin HTTP Authentication prompts
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowCrossOriginAuthPrompt
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowCrossOriginAuthPrompt
   - Example value:
 ``` xml
@@ -3864,13 +4664,17 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
   [Back to top](#microsoft-edge---policies)
 
   ### AuthNegotiateDelegateAllowlist
+
   #### Specifies a list of servers that Microsoft Edge can delegate user credentials to
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configure the list of servers that Microsoft Edge can delegate to.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
@@ -3878,32 +4682,41 @@ Separate multiple server names with commas. Wildcards (*) are allowed.
 If you don't configure this policy Microsoft Edge won't delegate user credentials even if a server is detected as Intranet.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AuthNegotiateDelegateAllowlist
   - GP name: Specifies a list of servers that Microsoft Edge can delegate user credentials to
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AuthNegotiateDelegateAllowlist
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "contoso.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AuthNegotiateDelegateAllowlist
   - Example value:
 ``` xml
@@ -3914,13 +4727,17 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
   [Back to top](#microsoft-edge---policies)
 
   ### AuthSchemes
+
   #### Supported authentication schemes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies which HTTP authentication schemes are supported.
 
 You can configure the policy by using these values: 'basic', 'digest', 'ntlm', and 'negotiate'. Separate multiple values with commas.
@@ -3928,32 +4745,41 @@ You can configure the policy by using these values: 'basic', 'digest', 'ntlm', a
 If you don't configure this policy, all four schemes are used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AuthSchemes
   - GP name: Supported authentication schemes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AuthSchemes
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "basic,digest,ntlm,negotiate"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AuthSchemes
   - Example value:
 ``` xml
@@ -3964,13 +4790,17 @@ If you don't configure this policy, all four schemes are used.
   [Back to top](#microsoft-edge---policies)
 
   ### AuthServerAllowlist
+
   #### Configure list of allowed authentication servers
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies which servers to enable for integrated authentication. Integrated authentication is only enabled when Microsoft Edge receives an authentication challenge from a proxy or from a server in this list.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
@@ -3978,32 +4808,41 @@ Separate multiple server names with commas. Wildcards (*) are allowed.
 If you don't configure this policy, Microsoft Edge tries to detect if a server is on the intranet - only then will it respond to IWA requests. If the server is on the internet, IWA requests from it are ignored by Microsoft Edge.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AuthServerAllowlist
   - GP name: Configure list of allowed authentication servers
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AuthServerAllowlist
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "*contoso.com,contoso.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AuthServerAllowlist
   - Example value:
 ``` xml
@@ -4014,13 +4853,17 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
   [Back to top](#microsoft-edge---policies)
 
   ### DisableAuthNegotiateCnameLookup
+
   #### Disable CNAME lookup when negotiating Kerberos authentication
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Determines whether the generated Kerberos SPN is based on the canonical DNS name (CNAME) or on the original name entered.
 
 If you enable this policy, CNAME lookup is skipped and the server name (as entered) is used.
@@ -4028,32 +4871,41 @@ If you enable this policy, CNAME lookup is skipped and the server name (as enter
 If you disable this policy or don't configure it, the canonical name of the server is used.  This is determined through CNAME lookup.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DisableAuthNegotiateCnameLookup
   - GP name: Disable CNAME lookup when negotiating Kerberos authentication
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DisableAuthNegotiateCnameLookup
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DisableAuthNegotiateCnameLookup
   - Example value:
 ``` xml
@@ -4064,13 +4916,17 @@ If you disable this policy or don't configure it, the canonical name of the serv
   [Back to top](#microsoft-edge---policies)
 
   ### EnableAuthNegotiatePort
+
   #### Include non-standard port in Kerberos SPN
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies whether the generated Kerberos SPN should include a non-standard port.
 
 If you enable this policy, and a user includes a non-standard port (a port other than 80 or 443) in a URL, that port is included in the generated Kerberos SPN.
@@ -4078,32 +4934,41 @@ If you enable this policy, and a user includes a non-standard port (a port other
 If you don't configure or disable this policy, the generated Kerberos SPN won't include a port in any case.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableAuthNegotiatePort
   - GP name: Include non-standard port in Kerberos SPN
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnableAuthNegotiatePort
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableAuthNegotiatePort
   - Example value:
 ``` xml
@@ -4114,13 +4979,17 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
   [Back to top](#microsoft-edge---policies)
 
   ### NtlmV2Enabled
+
   #### Control whether NTLMv2 authentication is enabled
+
   
   
   #### Supported versions:
+
   - On macOS since 77 or later
 
   #### Description
+
   Controls whether NTLMv2 is enabled.
 
 All recent versions of Samba and Windows servers support NTLMv2. You should only disable NTLMv2 to address issues with backwards compatibility as it reduces the security of authentication.
@@ -4128,16 +4997,19 @@ All recent versions of Samba and Windows servers support NTLMv2. You should only
 If you don't configure this policy, NTLMv2 is enabled by default.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   
 
   #### Mac information and settings
+  
   - Preference Key Name: NtlmV2Enabled
   - Example value:
 ``` xml
@@ -4151,43 +5023,120 @@ If you don't configure this policy, NTLMv2 is enabled by default.
 
   [Back to top](#microsoft-edge---policies)
 
-  ### KioskDeleteDownloadsOnExit
-  #### Delete files downloaded as part of Kiosk session when Microsoft Edge closes
+  ### KioskAddressBarEditingEnabled
+
+  #### Configure address bar editing for kiosk mode public browsing experience
+
   
   
   #### Supported versions:
-  - On Windows since 87 or later
+
+  - On Windows and macOS since 87 or later
 
   #### Description
-  Note: This policy is only supported when Edge is launched with the "--edge-kiosk-type" command-line parameter.
 
-If you enable this policy, files downloaded as part of the Kiosk session are deleted each time Microsoft Edge closes.
+  This policy only applies to Microsoft Edge kiosk mode while using the public browsing experience.
 
-If you disable this policy or don't configure it, files downloaded as part of the Kiosk session are not deleted when Microsoft Edge closes.
+If you enable this policy, it prevents users from changing the URL in the address bar.
 
-For detailed information on configuring Kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+If you disable this policy or don't configure it, users can change the URL in the address bar.
+
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
-  - GP unique name: KioskDeleteDownloadsOnExit
-  - GP name: Delete files downloaded as part of Kiosk session when Microsoft Edge closes
+
+  - GP unique name: KioskAddressBarEditingEnabled
+  - GP name: Configure address bar editing for kiosk mode public browsing experience
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Kiosk Mode settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: KioskAddressBarEditingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: KioskAddressBarEditingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+
+  #### Delete files downloaded as part of kiosk session when Microsoft Edge closes
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 87 or later
+
+  #### Description
+                                                                                              
+
+  This policy only applies to Microsoft Edge kiosk mode.
+
+If you enable this policy, files downloaded as part of the kiosk session are deleted each time Microsoft Edge closes.
+
+If you disable this policy or don't configure it, files downloaded as part of the kiosk session are not deleted when Microsoft Edge closes.
+
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: KioskDeleteDownloadsOnExit
+  - GP name: Delete files downloaded as part of kiosk session when Microsoft Edge closes
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Kiosk Mode settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: KioskDeleteDownloadsOnExit
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -4202,38 +5151,50 @@ For detailed information on configuring Kiosk Mode, see [https://go.microsoft.co
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingAllowlist
+
   #### Control which native messaging hosts users can use
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   List specific native messaging hosts that users can use in Microsoft Edge.
 
 By default, all native messaging hosts are allowed. If you set the [NativeMessagingBlocklist](#nativemessagingblocklist) policy to *, all native messaging hosts are blocked, and only native messaging hosts listed in here are loaded.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NativeMessagingAllowlist
   - GP name: Control which native messaging hosts users can use
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
@@ -4242,6 +5203,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NativeMessagingAllowlist
   - Example value:
 ``` xml
@@ -4255,13 +5217,17 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingBlocklist
+
   #### Configure native messaging block list
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies which native messaging hosts that shouldn't be used.
 
 Use '*' to block all native messaging hosts unless they are explicitly listed in the allow list.
@@ -4269,26 +5235,34 @@ Use '*' to block all native messaging hosts unless they are explicitly listed in
 If you don't configure this policy, Microsoft Edge will load all installed native messaging hosts.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NativeMessagingBlocklist
   - GP name: Configure native messaging block list
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
@@ -4297,6 +5271,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NativeMessagingBlocklist
   - Example value:
 ``` xml
@@ -4310,13 +5285,17 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   [Back to top](#microsoft-edge---policies)
 
   ### NativeMessagingUserLevelHosts
+
   #### Allow user-level native messaging hosts (installed without admin permissions)
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables user-level installation of native messaging hosts.
 
 If you disable this policy, Microsoft Edge will only use native messaging hosts installed on the system level.
@@ -4324,32 +5303,41 @@ If you disable this policy, Microsoft Edge will only use native messaging hosts 
 By default, if you don't configure this policy, Microsoft Edge will allow usage of user-level native messaging hosts.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NativeMessagingUserLevelHosts
   - GP name: Allow user-level native messaging hosts (installed without admin permissions)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Native Messaging
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NativeMessagingUserLevelHosts
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NativeMessagingUserLevelHosts
   - Example value:
 ``` xml
@@ -4364,13 +5352,17 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordManagerEnabled
+
   #### Enable saving passwords to the password manager
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enable Microsoft Edge to save user passwords.
 
 If you enable this policy, users can save their passwords in Microsoft Edge. The next time they visit the site, Microsoft Edge will enter the password automatically.
@@ -4380,32 +5372,41 @@ If you disable this policy, users can't save new passwords, but they can still u
 If you enable or disable this policy, users can't change or override it in Microsoft Edge. If you don't configure it, users can save passwords, as well as turn this feature off.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PasswordManagerEnabled
   - GP name: Enable saving passwords to the password manager
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: PasswordManagerEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PasswordManagerEnabled
   - Example value:
 ``` xml
@@ -4416,13 +5417,17 @@ If you enable or disable this policy, users can't change or override it in Micro
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordMonitorAllowed
+
   #### Allow users to be alerted if their passwords are found to be unsafe
+
   
   
   #### Supported versions:
+
   - On Windows since 85 or later
 
   #### Description
+
   Allow Microsoft Edge to monitor user passwords.
 
 If you enable this policy and a user consents to enabling the policy, the user will get alerted if any of their passwords stored in Microsoft Edge are found to be unsafe. Microsoft Edge will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
@@ -4446,26 +5451,34 @@ Recommended enabled: If the policy is set to Recommended enabled, the UI in Sett
 Mandatory and Recommended disabled: Both these states will work the normal way, with the usual captions being shown to users.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PasswordMonitorAllowed
   - GP name: Allow users to be alerted if their passwords are found to be unsafe
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: PasswordMonitorAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -4476,13 +5489,17 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionChangePasswordURL
+
   #### Configure the change password URL
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the change password URL (HTTP and HTTPS schemes only).
 
 Password protection service will send users to this URL to change their password after seeing a warning in the browser.
@@ -4494,32 +5511,41 @@ If you disable this policy or don't configure it, then password protection servi
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PasswordProtectionChangePasswordURL
   - GP name: Configure the change password URL
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PasswordProtectionChangePasswordURL
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://contoso.com/change_password.html"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PasswordProtectionChangePasswordURL
   - Example value:
 ``` xml
@@ -4530,13 +5556,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionLoginURLs
+
   #### Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configure the list of enterprise login URLs (HTTP and HTTPS schemes only) where Microsoft Edge should capture the salted hashes of passwords and use it for password reuse detection.
 
 If you enable this policy, the password protection service captures fingerprints of passwords on the defined URLs.
@@ -4546,26 +5576,34 @@ If you disable this policy or don't configure it, no password fingerprints are c
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PasswordProtectionLoginURLs
   - GP name: Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
@@ -4574,6 +5612,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PasswordProtectionLoginURLs
   - Example value:
 ``` xml
@@ -4587,13 +5626,17 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   [Back to top](#microsoft-edge---policies)
 
   ### PasswordProtectionWarningTrigger
+
   #### Configure password protection warning trigger
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to control when to trigger password protection warning. Password protection alerts users when they reuse their protected password on potentially suspicious sites.
 
 You can use the [PasswordProtectionLoginURLs](#passwordprotectionloginurls) and [PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl) policies to configure which passwords to protect.
@@ -4615,36 +5658,111 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PasswordProtectionWarningTrigger
   - GP name: Configure password protection warning trigger
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PasswordProtectionWarningTrigger
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PasswordProtectionWarningTrigger
   - Example value:
 ``` xml
 <integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PasswordRevealEnabled
+
+  #### Enable Password reveal button
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 87 or later
+
+  #### Description
+
+  Lets you configure the default display of the browser password reveal button for password input fields on websites.
+
+If you enable or don't configure this policy, the browser user setting defaults to displaying the password reveal button.
+
+If you disable this policy, the browser user setting won't display the password reveal button.
+
+For accessibility, users can change the browser setting from the default policy.
+
+This policy only affects the browser password reveal button, it doesn't affect websites' custom reveal buttons.
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PasswordRevealEnabled
+  - GP name: Enable Password reveal button
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PasswordRevealEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PasswordRevealEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -4655,13 +5773,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPrinterSelection
+
   #### Default printer selection rules
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Overrides Microsoft Edge default printer selection rules. This policy determines the rules for selecting the default printer in Microsoft Edge, which happens the first time a user tries to print a page.
 
 When this policy is set, Microsoft Edge tries to find a printer that matches all of the specified attributes and uses it as default printer. If there are multiple printers that meet the criteria, the first printer that matches is used.
@@ -4673,32 +5795,41 @@ The value is parsed as a JSON object, conforming to the following schema: { "typ
 Omitting a field means all values match; for example, if you don't specify connectivity Print Preview starts discovering all kinds of local printers. Regular expression patterns must follow the JavaScript RegExp syntax and matches are case sensitive.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultPrinterSelection
   - GP name: Default printer selection rules
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultPrinterSelection
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultPrinterSelection
   - Example value:
 ``` xml
@@ -4709,13 +5840,17 @@ Omitting a field means all values match; for example, if you don't specify conne
   [Back to top](#microsoft-edge---policies)
 
   ### PrintHeaderFooter
+
   #### Print headers and footers
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Force 'headers and footers' to be on or off in the printing dialog.
 
 If you don't configure this policy, users can decide whether to print headers and footers.
@@ -4725,32 +5860,41 @@ If you disable this policy, users can't print headers and footers.
 If you enable this policy, users always print headers and footers.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PrintHeaderFooter
   - GP name: Print headers and footers
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: PrintHeaderFooter
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PrintHeaderFooter
   - Example value:
 ``` xml
@@ -4761,13 +5905,17 @@ If you enable this policy, users always print headers and footers.
   [Back to top](#microsoft-edge---policies)
 
   ### PrintPreviewUseSystemDefaultPrinter
+
   #### Set the system default printer as the default printer
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Tells Microsoft Edge to use the system default printer as the default choice in Print Preview instead of the most recently used printer.
 
 If you disable this policy or don't configure it, Print Preview uses the most recently used printer as the default destination choice.
@@ -4775,32 +5923,41 @@ If you disable this policy or don't configure it, Print Preview uses the most re
 If you enable this policy, Print Preview uses the OS system default printer as the default destination choice.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PrintPreviewUseSystemDefaultPrinter
   - GP name: Set the system default printer as the default printer
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: PrintPreviewUseSystemDefaultPrinter
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PrintPreviewUseSystemDefaultPrinter
   - Example value:
 ``` xml
@@ -4811,13 +5968,17 @@ If you enable this policy, Print Preview uses the OS system default printer as t
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingEnabled
+
   #### Enable printing
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables printing in Microsoft Edge and prevents users from changing this setting.
 
 If you enable this policy or don't configure it, users can print.
@@ -4825,32 +5986,41 @@ If you enable this policy or don't configure it, users can print.
 If you disable this policy, users can't print from Microsoft Edge. Printing is disabled in the wrench menu, extensions, JavaScript applications, and so on. Users can still print from plug-ins that bypass Microsoft Edge while printing. For example, certain Adobe Flash applications have the print option in their context menu, which isn't covered by this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PrintingEnabled
   - GP name: Enable printing
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PrintingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PrintingEnabled
   - Example value:
 ``` xml
@@ -4861,13 +6031,17 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
   [Back to top](#microsoft-edge---policies)
 
   ### PrintingPaperSizeDefault
+
   #### Default printing page size
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Overrides default printing page size.
 
 name should contain one of the listed formats or 'custom' if required paper size is not in the list. If 'custom' value is provided custom_size property should be specified. It describes the desired height and width in micrometers. Otherwise custom_size property shouldn't be specified. Policy that violates these rules is ignored.
@@ -4875,26 +6049,34 @@ name should contain one of the listed formats or 'custom' if required paper size
 If the page size is unavailable on the printer chosen by the user this policy is ignored.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PrintingPaperSizeDefault
   - GP name: Default printing page size
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PrintingPaperSizeDefault
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   "custom_size": {
@@ -4905,8 +6087,15 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 }
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {"custom_size": {"height": 297000, "width": 210000}, "name": "custom"}
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: PrintingPaperSizeDefault
   - Example value:
 ``` xml
@@ -4928,13 +6117,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   [Back to top](#microsoft-edge---policies)
 
   ### UseSystemPrintDialog
+
   #### Print using system print dialog
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Shows the system print dialog instead of print preview.
 
 If you enable this policy, Microsoft Edge opens the system print dialog instead of the built-in print preview when a user prints a page.
@@ -4942,32 +6135,41 @@ If you enable this policy, Microsoft Edge opens the system print dialog instead 
 If you don't configure or disable this policy, print commands trigger the Microsoft Edge print preview screen.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: UseSystemPrintDialog
   - GP name: Print using system print dialog
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: UseSystemPrintDialog
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: UseSystemPrintDialog
   - Example value:
 ``` xml
@@ -4982,13 +6184,17 @@ If you don't configure or disable this policy, print commands trigger the Micros
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyBypassList
+
   #### Configure proxy bypass rules
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Defines a list of hosts for which Microsoft Edge bypasses any proxy.
 
 This policy is applied only if you have selected 'Use fixed proxy servers' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
@@ -5000,32 +6206,41 @@ If you don't configure this policy, no list of hosts is created for which Micros
 For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProxyBypassList
   - GP name: Configure proxy bypass rules
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProxyBypassList
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ProxyBypassList
   - Example value:
 ``` xml
@@ -5036,13 +6251,17 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyMode
+
   #### Configure proxy server settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify the proxy server settings used by Microsoft Edge. If you enable this policy, users can't change the proxy settings.
 
 If you choose to never use a proxy server and to always connect directly, all other options are ignored.
@@ -5076,32 +6295,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProxyMode
   - GP name: Configure proxy server settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProxyMode
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "direct"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ProxyMode
   - Example value:
 ``` xml
@@ -5112,13 +6340,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyPacUrl
+
   #### Set the proxy .pac file URL
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the URL for a proxy auto-config (PAC) file.
 
 This policy is applied only if you selected 'Use a .pac proxy script' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
@@ -5130,32 +6362,41 @@ If you disable or don't configure this policy, no PAC file is specified. Leave t
 For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProxyPacUrl
   - GP name: Set the proxy .pac file URL
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProxyPacUrl
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://internal.contoso.com/example.pac"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ProxyPacUrl
   - Example value:
 ``` xml
@@ -5166,13 +6407,17 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
   [Back to top](#microsoft-edge---policies)
 
   ### ProxyServer
+
   #### Configure address or URL of proxy server
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the URL of the proxy server.
 
 This policy is applied only if you have selected 'Use fixed proxy servers' in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
@@ -5184,32 +6429,41 @@ If you disable or don't configure this policy, users can choose their own proxy 
 For more options and detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProxyServer
   - GP name: Configure address or URL of proxy server
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProxyServer
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "123.123.123.123:8080"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ProxyServer
   - Example value:
 ``` xml
@@ -5220,13 +6474,17 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
   [Back to top](#microsoft-edge---policies)
 
   ### ProxySettings
+
   #### Proxy settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the proxy settings for Microsoft Edge.
 
 If you enable this policy, Microsoft Edge ignores all proxy-related options specified from the command line.
@@ -5259,26 +6517,34 @@ If you choose the 'fixed_server' value as 'ProxyMode', the 'ProxyServer' and 'Pr
 If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' and 'ProxyBypassList' fields are used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProxySettings
   - GP name: Proxy settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Proxy server
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProxySettings
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
@@ -5288,8 +6554,15 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 }
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: ProxySettings
   - Example value:
 ``` xml
@@ -5314,13 +6587,17 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   [Back to top](#microsoft-edge---policies)
 
   ### PreventSmartScreenPromptOverride
+
   #### Prevent bypassing Microsoft Defender SmartScreen prompts for sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   This policy setting lets you decide whether users can override the Microsoft Defender SmartScreen warnings about potentially malicious websites.
 
 If you enable this setting, users can't ignore Microsoft Defender SmartScreen warnings and they are blocked from continuing to the site.
@@ -5330,32 +6607,41 @@ If you disable or don't configure this setting, users can ignore Microsoft Defen
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PreventSmartScreenPromptOverride
   - GP name: Prevent bypassing Microsoft Defender SmartScreen prompts for sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PreventSmartScreenPromptOverride
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PreventSmartScreenPromptOverride
   - Example value:
 ``` xml
@@ -5366,14 +6652,18 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### PreventSmartScreenPromptOverrideForFiles
+
   #### Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
   - On macOS since 79 or later
 
   #### Description
+
   This policy lets you determine whether users can override Microsoft Defender SmartScreen warnings about unverified downloads.
 
 If you enable this policy, users in your organization can't ignore Microsoft Defender SmartScreen warnings, and they're prevented from completing the unverified downloads.
@@ -5383,32 +6673,41 @@ If you disable or don't configure this policy, users can ignore Microsoft Defend
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PreventSmartScreenPromptOverrideForFiles
   - GP name: Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PreventSmartScreenPromptOverrideForFiles
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PreventSmartScreenPromptOverrideForFiles
   - Example value:
 ``` xml
@@ -5419,13 +6718,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenAllowListDomains
+
   #### Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configure the list of Microsoft Defender SmartScreen trusted domains. This means:
 Microsoft Defender SmartScreen won't check for potentially malicious resources like phishing software and other malware if the source URLs match these domains.
 The Microsoft Defender SmartScreen download protection service won't check downloads hosted on these domains.
@@ -5437,26 +6740,34 @@ This policy is available only on Windows instances that are joined to a Microsof
 Also note that this policy does not apply if your organization has enabled Microsoft Defender Advanced Threat Protection. You must configure your allow and block lists in Microsoft Defender Security Center instead.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SmartScreenAllowListDomains
   - GP name: Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
@@ -5465,6 +6776,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SmartScreenAllowListDomains
   - Example value:
 ``` xml
@@ -5478,13 +6790,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenEnabled
+
   #### Configure Microsoft Defender SmartScreen
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   This policy setting lets you configure whether to turn on Microsoft Defender SmartScreen. Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
 
 If you enable this setting, Microsoft Defender SmartScreen is turned on.
@@ -5496,32 +6812,41 @@ If you don't configure this setting, users can choose whether to use Microsoft D
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SmartScreenEnabled
   - GP name: Configure Microsoft Defender SmartScreen
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: SmartScreenEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SmartScreenEnabled
   - Example value:
 ``` xml
@@ -5532,13 +6857,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenForTrustedDownloadsEnabled
+
   #### Force Microsoft Defender SmartScreen checks on downloads from trusted sources
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   This policy setting lets you configure whether Microsoft Defender SmartScreen checks download reputation from a trusted source.
 
 If you enable or don't configure this setting, Microsoft Defender SmartScreen checks the download's reputation regardless of source.
@@ -5548,26 +6877,34 @@ If you disable this setting, Microsoft Defender SmartScreen doesn't check the do
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SmartScreenForTrustedDownloadsEnabled
   - GP name: Force Microsoft Defender SmartScreen checks on downloads from trusted sources
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: SmartScreenForTrustedDownloadsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -5578,13 +6915,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### SmartScreenPuaEnabled
+
   #### Configure Microsoft Defender SmartScreen to block potentially unwanted apps
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   This policy setting lets you configure whether to turn on blocking for potentially unwanted apps with Microsoft Defender SmartScreen. Potentially unwanted app blocking with Microsoft Defender SmartScreen provides warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking with Microsoft Defender SmartScreen is turned off by default.
 
 If you enable this setting, potentially unwanted app blocking with Microsoft Defender SmartScreen is turned on.
@@ -5596,32 +6937,41 @@ If you don't configure this setting, users can choose whether to use potentially
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SmartScreenPuaEnabled
   - GP name: Configure Microsoft Defender SmartScreen to block potentially unwanted apps
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: SmartScreenPuaEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SmartScreenPuaEnabled
   - Example value:
 ``` xml
@@ -5636,13 +6986,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### HomepageIsNewTabPage
+
   #### Set the new tab page as the home page
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the default home page in Microsoft Edge. You can set the home page to a URL you specify or to the new tab page.
 
 If you enable this policy, the new tab page is always used for the home page, and the home page URL location is ignored.
@@ -5654,32 +7008,41 @@ If not configured users can choose whether the new tab page is their home page.
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: HomepageIsNewTabPage
   - GP name: Set the new tab page as the home page
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: HomepageIsNewTabPage
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: HomepageIsNewTabPage
   - Example value:
 ``` xml
@@ -5690,13 +7053,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### HomepageLocation
+
   #### Configure the home page URL
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the default home page URL in Microsoft Edge.
 
 The home page is the page opened by the Home button. The pages that open on startup are controlled by the [RestoreOnStartup](#restoreonstartup) policies.
@@ -5710,32 +7077,41 @@ If you disable or don't configure this policy, users can choose their own home p
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: HomepageLocation
   - GP name: Configure the home page URL
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: HomepageLocation
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://www.contoso.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: HomepageLocation
   - Example value:
 ``` xml
@@ -5746,13 +7122,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageAllowedBackgroundTypes
+
   #### Configure the background types allowed for the new tab page layout
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   You can configure which types of background image that are allowed on the new tab page layout in Microsoft Edge.
 
 If you don't configure this policy, all background image types on the new tab page are enabled.
@@ -5768,32 +7148,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageAllowedBackgroundTypes
   - GP name: Configure the background types allowed for the new tab page layout
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NewTabPageAllowedBackgroundTypes
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageAllowedBackgroundTypes
   - Example value:
 ``` xml
@@ -5804,13 +7193,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageCompanyLogo
+
   #### Set new tab page company logo (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
+
   - On Windows and macOS since 79, until 85
 
   #### Description
+
   This policy didn't work as expected due to changes in operational requirements. Therefore it's obsolete and should not be used.
 
 Specifies the company logo to use on the new tab page in Microsoft Edge.
@@ -5828,26 +7221,34 @@ If you disable or don't configure this policy, Microsoft Edge will show no compa
 For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageCompanyLogo
   - GP name: Set new tab page company logo (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NewTabPageCompanyLogo
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   "default_logo": {
@@ -5861,8 +7262,15 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 }
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {"default_logo": {"hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", "url": "https://www.contoso.com/logo.png"}, "light_logo": {"hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", "url": "https://www.contoso.com/light_logo.png"}}
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageCompanyLogo
   - Example value:
 ``` xml
@@ -5889,13 +7297,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageHideDefaultTopSites
+
   #### Hide the default top sites from the new tab page
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Hides the default top sites from the new tab page in Microsoft Edge.
 
 If you set this policy to true, the default top site tiles are hidden.
@@ -5903,32 +7315,41 @@ If you set this policy to true, the default top site tiles are hidden.
 If you set this policy to false or don't configure it, the default top site tiles remain visible.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageHideDefaultTopSites
   - GP name: Hide the default top sites from the new tab page
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NewTabPageHideDefaultTopSites
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageHideDefaultTopSites
   - Example value:
 ``` xml
@@ -5939,13 +7360,17 @@ If you set this policy to false or don't configure it, the default top site tile
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageLocation
+
   #### Configure the new tab page URL
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the default URL for the new tab page.
 
 This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page.
@@ -5961,32 +7386,41 @@ If an invalid URL is provided, new tabs will open about://blank.
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageLocation
   - GP name: Configure the new tab page URL
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NewTabPageLocation
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://www.fabrikam.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageLocation
   - Example value:
 ``` xml
@@ -5997,13 +7431,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageManagedQuickLinks
+
   #### Set new tab page quick links
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   By default, Microsoft Edge displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
 
 [ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
@@ -6017,26 +7455,34 @@ If the policy is set as mandatory, the 'pinned' field will be ignored and all ti
 If the policy is set as recommended, pinned tiles will remain in the list but the user has the ability to edit and delete them. Quick link tiles that aren't pinned behave like default top sites and are pushed off the list if other websites are visited more frequently. When applying non-pinned links via this policy to an existing browser profile, the links may not appear at all, depending on how they rank compared to the user's browsing history.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageManagedQuickLinks
   - GP name: Set new tab page quick links
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NewTabPageManagedQuickLinks
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   {
@@ -6051,8 +7497,15 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [{"pinned": true, "title": "Contoso Portal", "url": "https://contoso.com"}, {"title": "Fabrikam", "url": "https://fabrikam.com"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageManagedQuickLinks
   - Example value:
 ``` xml
@@ -6079,42 +7532,55 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPagePrerenderEnabled
+
   #### Enable preload of the new tab page for faster rendering
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   If you configure this policy, preloading the New tab page is enabled, and users can't change this setting. If you don't configure this policy, preloading is enabled and a user can change this setting.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPagePrerenderEnabled
   - GP name: Enable preload of the new tab page for faster rendering
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NewTabPagePrerenderEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPagePrerenderEnabled
   - Example value:
 ``` xml
@@ -6125,14 +7591,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   [Back to top](#microsoft-edge---policies)
 
   ### NewTabPageSetFeedType
-  #### Configure the Microsoft Edge new tab page experience
-  
+
+  #### Configure the Microsoft Edge new tab page experience (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
-  Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+
+  We are deprecating this policy because the new version of the enterprise new tab page no longer requires choosing between different content types. Instead, the content that is presented to the user can be controlled via the Microsoft 365 admin center. To get to the Microsoft 365 admin center, sign in at https://admin.microsoft.com with your admin account. The policy will be made obsolete after Microsoft Edge version 90.
+
+Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
 
 When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
 
@@ -6157,32 +7629,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NewTabPageSetFeedType
-  - GP name: Configure the Microsoft Edge new tab page experience
+  - GP name: Configure the Microsoft Edge new tab page experience (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NewTabPageSetFeedType
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NewTabPageSetFeedType
   - Example value:
 ``` xml
@@ -6193,13 +7674,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartup
+
   #### Action to take on startup
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify how Microsoft Edge behaves when it starts.
 
 If you want a new tab to always open on startup, choose 'RestoreOnStartupIsNewTabPage'.
@@ -6223,32 +7708,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RestoreOnStartup
   - GP name: Action to take on startup
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: RestoreOnStartup
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000004
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RestoreOnStartup
   - Example value:
 ``` xml
@@ -6259,13 +7753,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### RestoreOnStartupURLs
+
   #### Sites to open when the browser starts
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify a list of websites to open automatically when the browser starts. If you don't configure this policy, no site is opened on startup.
 
 This policy only works if you also set the [RestoreOnStartup](#restoreonstartup) policy to 'Open a list of URLs' (4).
@@ -6273,26 +7771,34 @@ This policy only works if you also set the [RestoreOnStartup](#restoreonstartup)
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RestoreOnStartupURLs
   - GP name: Sites to open when the browser starts
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\RestoreOnStartupURLs
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
@@ -6301,6 +7807,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RestoreOnStartupURLs
   - Example value:
 ``` xml
@@ -6314,13 +7821,17 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   [Back to top](#microsoft-edge---policies)
 
   ### ShowHomeButton
+
   #### Show Home button on toolbar
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Shows the Home button on Microsoft Edge's toolbar.
 
 Enable this policy to always show the Home button. Disable it to never show the button.
@@ -6328,32 +7839,41 @@ Enable this policy to always show the Home button. Disable it to never show the 
 If you don't configure the policy, users can choose whether to show the home button.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ShowHomeButton
   - GP name: Show Home button on toolbar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ShowHomeButton
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ShowHomeButton
   - Example value:
 ``` xml
@@ -6368,44 +7888,57 @@ If you don't configure the policy, users can choose whether to show the home but
   [Back to top](#microsoft-edge---policies)
 
   ### AddressBarMicrosoftSearchInBingProviderEnabled
+
   #### Enable Microsoft Search in Bing suggestions in the address bar
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Azure AD account for that organization.
 If you disable this policy, users can't see internal results in the Microsoft Edge address bar suggestion list.
 If you have enabled the set of policies which forces a default search provider ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)), and the search provider specified is not Bing, then this policy is not applicable and there will be no Microsoft Search in Bing suggestions in the address bar's suggestion list.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AddressBarMicrosoftSearchInBingProviderEnabled
   - GP name: Enable Microsoft Search in Bing suggestions in the address bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AddressBarMicrosoftSearchInBingProviderEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AddressBarMicrosoftSearchInBingProviderEnabled
   - Example value:
 ``` xml
@@ -6416,13 +7949,17 @@ If you have enabled the set of policies which forces a default search provider (
   [Back to top](#microsoft-edge---policies)
 
   ### AdsSettingForIntrusiveAdsSites
+
   #### Ads setting for sites with intrusive ads
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Controls whether ads are blocked on sites with intrusive ads.
 
 Policy options mapping:
@@ -6434,32 +7971,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AdsSettingForIntrusiveAdsSites
   - GP name: Ads setting for sites with intrusive ads
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AdsSettingForIntrusiveAdsSites
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AdsSettingForIntrusiveAdsSites
   - Example value:
 ``` xml
@@ -6470,13 +8016,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### AllowDeletingBrowserHistory
+
   #### Enable deleting browser and download history
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables deleting browser history and download history and prevents users from changing this setting.
 
 Note that even with this policy is disabled, the browsing and download history aren't guaranteed to be retained: users can edit or delete the history database files directly, and the browser itself may remove (based on expiration period) or archive any or all history items at any time.
@@ -6488,32 +8038,41 @@ If you disable this policy, users can't delete browsing and download history.
 If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how this policy is configured.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowDeletingBrowserHistory
   - GP name: Enable deleting browser and download history
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowDeletingBrowserHistory
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowDeletingBrowserHistory
   - Example value:
 ``` xml
@@ -6524,13 +8083,17 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
   [Back to top](#microsoft-edge---policies)
 
   ### AllowFileSelectionDialogs
+
   #### Allow file selection dialogs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allow access to local files by letting Microsoft Edge display file selection dialogs.
 
 If you enable or don't configure this policy, users can open file selection dialogs as normal.
@@ -6538,32 +8101,41 @@ If you enable or don't configure this policy, users can open file selection dial
 If you disable this policy, whenever the user performs an action that triggers a file selection dialog (like importing favorites, uploading files, or saving links), a message is displayed instead, and the user is assumed to have clicked Cancel on the file selection dialog.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowFileSelectionDialogs
   - GP name: Allow file selection dialogs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowFileSelectionDialogs
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowFileSelectionDialogs
   - Example value:
 ``` xml
@@ -6574,13 +8146,17 @@ If you disable this policy, whenever the user performs an action that triggers a
   [Back to top](#microsoft-edge---policies)
 
   ### AllowPopupsDuringPageUnload
+
   #### Allows a page to show popups during its unloading
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   This policy allows an admin to specify that a page can show popups during its unloading.
 
 When the policy is set to enabled, pages are allowed to show popups while they're being unloaded.
@@ -6590,32 +8166,41 @@ When the policy is set to disabled or unset, pages aren't allowed to show popups
 This policy will be removed in the future.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowPopupsDuringPageUnload
   - GP name: Allows a page to show popups during its unloading
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowPopupsDuringPageUnload
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowPopupsDuringPageUnload
   - Example value:
 ``` xml
@@ -6626,44 +8211,57 @@ This policy will be removed in the future.
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSurfGame
+
   #### Allow surf game
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   If you disable this policy, users won't be able to play the surf game when the device is offline or if the user navigates to edge://surf.
 
 If you enable or don't configure this policy, users can play the surf game.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowSurfGame
   - GP name: Allow surf game
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowSurfGame
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowSurfGame
   - Example value:
 ``` xml
@@ -6674,13 +8272,17 @@ If you enable or don't configure this policy, users can play the surf game.
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSyncXHRInPageDismissal
+
   #### Allow pages to send synchronous XHR requests during page dismissal (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It won't work in Microsoft Edge version 88.
 
 This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
@@ -6690,32 +8292,41 @@ If you enable this policy, pages can send synchronous XHR requests during page d
 If you disable this policy or don't configure this policy, pages aren't allowed to send synchronous XHR requests during page dismissal.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowSyncXHRInPageDismissal
   - GP name: Allow pages to send synchronous XHR requests during page dismissal (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AllowSyncXHRInPageDismissal
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowSyncXHRInPageDismissal
   - Example value:
 ``` xml
@@ -6726,13 +8337,17 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTokenBindingForUrls
+
   #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+
   
   
   #### Supported versions:
+
   - On Windows since 83 or later
 
   #### Description
+
   Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
 For the domains on this list, the browser will send the Token Binding ClientHello in the TLS handshake (See https://tools.ietf.org/html/rfc8472).
 If the server responds with a valid ServerHello response, the browser will create and send Token Binding messages on subsequent https requests. See https://tools.ietf.org/html/rfc8471 for more info.
@@ -6744,26 +8359,34 @@ This policy is only available on Windows 10 devices with Virtual Secure Mode cap
 Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowTokenBindingForUrls
   - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
@@ -6777,13 +8400,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
   [Back to top](#microsoft-edge---policies)
 
   ### AllowTrackingForUrls
+
   #### Configure tracking prevention exceptions for specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Configure the list of URL patterns that are excluded from tracking prevention.
 
 If you configure this policy, the list of configured URL patterns is excluded from tracking prevention.
@@ -6791,26 +8418,34 @@ If you configure this policy, the list of configured URL patterns is excluded fr
 If you don't configure this policy, the global default value from the "Block tracking of users' web-browsing activity" policy (if set) or the user's personal configuration is used for all sites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AllowTrackingForUrls
   - GP name: Configure tracking prevention exceptions for specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
@@ -6819,6 +8454,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AllowTrackingForUrls
   - Example value:
 ``` xml
@@ -6832,13 +8468,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### AlternateErrorPagesEnabled
+
   #### Suggest similar pages when a webpage can't be found
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Allow Microsoft Edge to issue a connection to a web service to generate URL and search suggestions for connectivity issues such as DNS errors.
 
 If you enable this policy, a web service is used to generate url and search suggestions for network errors.
@@ -6849,32 +8489,41 @@ If you don't configure this policy, Microsoft Edge respects the user preference 
 Specifically, there's a **Suggest similar pages when a webpage can't be found** toggle, which the user can switch on or off. Note that if you have enable this policy (AlternateErrorPagesEnabled), the Suggest similar pages when a webpage can't be found setting is turned on, but the user can't change the setting by using the toggle. If you disable this policy, the Suggest similar pages when a webpage can't be found setting is turned off, and the user can't change the setting by using the toggle.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AlternateErrorPagesEnabled
   - GP name: Suggest similar pages when a webpage can't be found
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: AlternateErrorPagesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AlternateErrorPagesEnabled
   - Example value:
 ``` xml
@@ -6885,13 +8534,17 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
   [Back to top](#microsoft-edge---policies)
 
   ### AlwaysOpenPdfExternally
+
   #### Always open PDF files externally
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables the internal PDF viewer in Microsoft Edge.
 
 If you enable this policy Microsoft Edge treats PDF files as downloads and lets users open them with the default application.
@@ -6899,32 +8552,41 @@ If you enable this policy Microsoft Edge treats PDF files as downloads and lets 
 If you don't configure this policy or disable it, Microsoft Edge will open PDF files (unless the user disables it).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AlwaysOpenPdfExternally
   - GP name: Always open PDF files externally
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AlwaysOpenPdfExternally
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AlwaysOpenPdfExternally
   - Example value:
 ``` xml
@@ -6935,13 +8597,17 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
   [Back to top](#microsoft-edge---policies)
 
   ### AmbientAuthenticationInPrivateModesEnabled
+
   #### Enable Ambient Authentication for InPrivate and Guest profiles
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Microsoft Edge.
 
 Ambient Authentication is http authentication with default credentials when explicit credentials aren't provided via NTLM/Kerberos/Negotiate challenge/response schemes.
@@ -6971,32 +8637,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AmbientAuthenticationInPrivateModesEnabled
   - GP name: Enable Ambient Authentication for InPrivate and Guest profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AmbientAuthenticationInPrivateModesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AmbientAuthenticationInPrivateModesEnabled
   - Example value:
 ``` xml
@@ -7007,44 +8682,57 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### AppCacheForceEnabled
+
   #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 84 or later
 
   #### Description
+
   If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
 
 If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AppCacheForceEnabled
   - GP name: Allows the AppCache feature to be re-enabled, even if it's turned off by default
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AppCacheForceEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AppCacheForceEnabled
   - Example value:
 ``` xml
@@ -7055,13 +8743,17 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
   [Back to top](#microsoft-edge---policies)
 
   ### ApplicationLocaleValue
+
   #### Set application locale
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   Configures the application locale in Microsoft Edge and prevents users from changing the locale.
 
 If you enable this policy, Microsoft Edge uses the specified locale. If the configured locale isn't supported, 'en-US' is used instead.
@@ -7069,26 +8761,34 @@ If you enable this policy, Microsoft Edge uses the specified locale. If the conf
 If you disable or don't configure this setting, Microsoft Edge uses either the user-specified preferred locale (if configured) or the fallback locale 'en-US'.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ApplicationLocaleValue
   - GP name: Set application locale
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ApplicationLocaleValue
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "en"
 ```
@@ -7099,13 +8799,17 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowed
+
   #### Allow or block audio capture
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to set whether a user is prompted to grant a website access to their audio capture device. This policy applies to all URLs except for those configured in the [AudioCaptureAllowedUrls](#audiocaptureallowedurls) list.
 
 If you enable this policy or don't configure it (the default setting), the user is prompted for audio capture access except from the URLs in the [AudioCaptureAllowedUrls](#audiocaptureallowedurls) list. These listed URLs are granted access without prompting.
@@ -7115,32 +8819,41 @@ If you disable this policy, the user is not prompted, and audio capture is acces
 This policy affects all types of audio inputs, not only the built-in microphone.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AudioCaptureAllowed
   - GP name: Allow or block audio capture
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AudioCaptureAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AudioCaptureAllowed
   - Example value:
 ``` xml
@@ -7151,36 +8864,48 @@ This policy affects all types of audio inputs, not only the built-in microphone.
   [Back to top](#microsoft-edge---policies)
 
   ### AudioCaptureAllowedUrls
+
   #### Sites that can access audio capture devices without requesting permission
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify websites, based on URL patterns, that can use audio capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to audio capture devices.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AudioCaptureAllowedUrls
   - GP name: Sites that can access audio capture devices without requesting permission
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
@@ -7189,6 +8914,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AudioCaptureAllowedUrls
   - Example value:
 ``` xml
@@ -7202,13 +8928,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   [Back to top](#microsoft-edge---policies)
 
   ### AudioSandboxEnabled
+
   #### Allow the audio sandbox to run
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   This policy controls the audio process sandbox.
 
 If you enable this policy, the audio process will run sandboxed.
@@ -7221,32 +8951,41 @@ If you don't configure this policy, the default configuration for the audio sand
 This policy is intended to give enterprises flexibility to disable the audio sandbox if they use security software setups that interfere with the sandbox.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AudioSandboxEnabled
   - GP name: Allow the audio sandbox to run
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AudioSandboxEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AudioSandboxEnabled
   - Example value:
 ``` xml
@@ -7257,13 +8996,17 @@ This policy is intended to give enterprises flexibility to disable the audio san
   [Back to top](#microsoft-edge---policies)
 
   ### AutoImportAtFirstRun
+
   #### Automatically import another browser's data and settings at first run
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable this policy, all supported datatypes and settings from the specified browser will be silently and automatically imported at first run. During the First Run Experience, the import section will also be skipped.
 
 The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
@@ -7322,32 +9065,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoImportAtFirstRun
   - GP name: Automatically import another browser's data and settings at first run
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AutoImportAtFirstRun
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoImportAtFirstRun
   - Example value:
 ``` xml
@@ -7358,13 +9110,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### AutoLaunchProtocolsFromOrigins
+
   #### Define a list of protocols that can launch an external application from listed origins without prompting the user
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   Allows you to set a list of protocols, and for each protocol an associated list of allowed origin patterns, that can launch an external application without prompting the user. The trailing separator should not be included when listing the protocol. For example, list "skype" instead of "skype:" or "skype://".
 
 If you configure this policy, a protocol will only be permitted to launch an external application without prompting by policy if:
@@ -7382,26 +9138,34 @@ The origin matching patterns use a similar format to those for the [URLBlocklist
 However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoLaunchProtocolsFromOrigins
   - GP name: Define a list of protocols that can launch an external application from listed origins without prompting the user
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AutoLaunchProtocolsFromOrigins
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
@@ -7427,8 +9191,15 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoLaunchProtocolsFromOrigins
   - Example value:
 ``` xml
@@ -7467,13 +9238,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenAllowedForURLs
+
   #### URLs where AutoOpenFileTypes can apply
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   A list of URLs to which [AutoOpenFileTypes](#autoopenfiletypes) will apply to. This policy has no impact on automatically open values set by users via the download shelf ... > "Always open files of this type" menu entry.
 
 If you set URLs in this policy, files will only automatically open by policy if the URL is part of this set and the file type is listed in [AutoOpenFileTypes](#autoopenfiletypes). If either condition is false, the download won't automatically open by policy.
@@ -7483,26 +9258,34 @@ If you don't set this policy, all downloads where the file type is in [AutoOpenF
 A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoOpenAllowedForURLs
   - GP name: URLs where AutoOpenFileTypes can apply
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
@@ -7514,6 +9297,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoOpenAllowedForURLs
   - Example value:
 ``` xml
@@ -7530,13 +9314,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
   [Back to top](#microsoft-edge---policies)
 
   ### AutoOpenFileTypes
+
   #### List of file types that should be automatically opened on download
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   This policy sets a list of file types that should be automatically opened on download. Note: The leading separator should not be included when listing the file type, so list "txt" instead of ".txt".
 
 By default, these file types will be automatically opened on all URLs. You can use the [AutoOpenAllowedForURLs](#autoopenallowedforurls) policy to restrict the URLs for which these file types will be automatically opened on.
@@ -7550,26 +9338,34 @@ If you don't set this policy, only file types that a user has already specified 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoOpenFileTypes
   - GP name: List of file types that should be automatically opened on download
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
@@ -7578,6 +9374,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoOpenFileTypes
   - Example value:
 ``` xml
@@ -7591,13 +9388,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillAddressEnabled
+
   #### Enable AutoFill for addresses
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables the AutoFill feature and allows users to auto-complete address information in web forms using previously stored information.
 
 If you disable this policy, AutoFill never suggests or fills in address information, nor does it save additional address information that the user might submit while browsing the web.
@@ -7607,32 +9408,41 @@ If you enable this policy or don't configure it, users can control AutoFill for 
 Note that if you disable this policy you also stop all activity for all web forms, except payment and password forms. No further entries are saved, and Microsoft Edge won't suggest or AutoFill any previous entries.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutofillAddressEnabled
   - GP name: Enable AutoFill for addresses
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: AutofillAddressEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutofillAddressEnabled
   - Example value:
 ``` xml
@@ -7643,13 +9453,17 @@ Note that if you disable this policy you also stop all activity for all web form
   [Back to top](#microsoft-edge---policies)
 
   ### AutofillCreditCardEnabled
+
   #### Enable AutoFill for credit cards
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables Microsoft Edge's AutoFill feature and lets users auto complete credit card information in web forms using previously stored information.
 
 If you disable this policy, AutoFill never suggests or fills credit card information, nor will it save additional credit card information that users might submit while browsing the web.
@@ -7657,32 +9471,41 @@ If you disable this policy, AutoFill never suggests or fills credit card informa
 If you enable this policy or don't configure it, users can control AutoFill for credit cards.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutofillCreditCardEnabled
   - GP name: Enable AutoFill for credit cards
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: AutofillCreditCardEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutofillCreditCardEnabled
   - Example value:
 ``` xml
@@ -7693,13 +9516,17 @@ If you enable this policy or don't configure it, users can control AutoFill for 
   [Back to top](#microsoft-edge---policies)
 
   ### AutoplayAllowed
+
   #### Allow media autoplay for websites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   This policy sets the media autoplay policy for websites.
 
 The default setting, "Not configured" respects the current media autoplay settings and lets users configure their autoplay settings.
@@ -7712,32 +9539,41 @@ A tab will need to be closed and re-opened for this policy to take effect.
 
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: AutoplayAllowed
   - GP name: Allow media autoplay for websites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: AutoplayAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: AutoplayAllowed
   - Example value:
 ``` xml
@@ -7748,13 +9584,17 @@ A tab will need to be closed and re-opened for this policy to take effect.
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundModeEnabled
+
   #### Continue running background apps after Microsoft Edge closes
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   Allows Microsoft Edge processes to start at OS sign-in and keep running after the last browser window is closed. In this scenario, background apps and the current browsing session remain active, including any session cookies. An open background process displays an icon in the system tray and can always be closed from there.
 
 If you enable this policy, background mode is turned on.
@@ -7764,26 +9604,34 @@ If you disable this policy, background mode is turned off.
 If you don't configure this policy, background mode is initially turned off, and the user can configure its behavior in edge://settings/system.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BackgroundModeEnabled
   - GP name: Continue running background apps after Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: BackgroundModeEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -7794,13 +9642,17 @@ If you don't configure this policy, background mode is initially turned off, and
   [Back to top](#microsoft-edge---policies)
 
   ### BackgroundTemplateListUpdatesEnabled
+
   #### Enables background updates to the list of available templates for Collections and other features that use templates
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
 
 If you enable this setting or the setting is unconfigured, the list of available templates will be downloaded in the background from a Microsoft service every 24 hours.
@@ -7808,32 +9660,41 @@ If you enable this setting or the setting is unconfigured, the list of available
 If you disable this setting the list of available templates will be downloaded on demand. This type of download might result in small performance penalties for Collections and other features.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BackgroundTemplateListUpdatesEnabled
   - GP name: Enables background updates to the list of available templates for Collections and other features that use templates
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BackgroundTemplateListUpdatesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BackgroundTemplateListUpdatesEnabled
   - Example value:
 ``` xml
@@ -7844,13 +9705,17 @@ If you disable this setting the list of available templates will be downloaded o
   [Back to top](#microsoft-edge---policies)
 
   ### BingAdsSuppression
+
   #### Block all ads on Bing search results
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   Enables an ad-free search experience on Bing.com
 
 If you enable this policy, then a user can search on bing.com and have an ad-free search experience. At the same time, the SafeSearch setting will be set to 'Strict' and can't be changed by the user.
@@ -7868,32 +9733,41 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 * You were experiencing an ad-free search experience on Microsoft Edge Legacy and want to upgrade to the new version of Microsoft Edge.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BingAdsSuppression
   - GP name: Block all ads on Bing search results
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BingAdsSuppression
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BingAdsSuppression
   - Example value:
 ``` xml
@@ -7904,13 +9778,17 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
   [Back to top](#microsoft-edge---policies)
 
   ### BlockThirdPartyCookies
+
   #### Block third party cookies
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Block web page elements that aren't from the domain that's in the address bar from setting cookies.
 
 If you enable this policy, web page elements that are not from the domain that is in the address bar can't set cookies
@@ -7920,32 +9798,41 @@ If you disable this policy, web page elements from domains other than in the add
 If you don't configure this policy, third-party cookies are enabled but users can change this setting.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BlockThirdPartyCookies
   - GP name: Block third party cookies
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: BlockThirdPartyCookies
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BlockThirdPartyCookies
   - Example value:
 ``` xml
@@ -7956,45 +9843,58 @@ If you don't configure this policy, third-party cookies are enabled but users ca
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserAddProfileEnabled
+
   #### Enable profile creation from the Identity flyout menu or the Settings page
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to create new profiles, using the **Add profile** option.
 If you enable this policy or don't configure it, Microsoft Edge allows users to use **Add profile** on the Identity flyout menu or the Settings page to create new profiles.
 
 If you disable this policy, users cannot add new profiles from the Identity flyout menu or the Settings page.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BrowserAddProfileEnabled
   - GP name: Enable profile creation from the Identity flyout menu or the Settings page
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BrowserAddProfileEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BrowserAddProfileEnabled
   - Example value:
 ``` xml
@@ -8005,13 +9905,17 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserGuestModeEnabled
+
   #### Enable guest mode
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enable the option to allow the use of guest profiles in Microsoft Edge. In a guest profile, the browser doesn't import browsing data from existing profiles, and it deletes browsing data when all guest profiles are closed.
 
 If you enable this policy or don't configure it, Microsoft Edge lets users browse in guest profiles.
@@ -8019,32 +9923,41 @@ If you enable this policy or don't configure it, Microsoft Edge lets users brows
 If you disable this policy, Microsoft Edge doesn't let users browse in guest profiles.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BrowserGuestModeEnabled
   - GP name: Enable guest mode
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BrowserGuestModeEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BrowserGuestModeEnabled
   - Example value:
 ``` xml
@@ -8055,13 +9968,17 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserNetworkTimeQueriesEnabled
+
   #### Allow queries to a Browser Network Time service
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Prevents Microsoft Edge from occasionally sending queries to a browser network time service to retrieve an accurate timestamp.
 
 If you disable this policy, Microsoft Edge will stop sending queries to a browser network time service.
@@ -8069,32 +9986,41 @@ If you disable this policy, Microsoft Edge will stop sending queries to a browse
 If you enable this policy or don't configure it, Microsoft Edge will occasionally send queries to a browser network time service.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BrowserNetworkTimeQueriesEnabled
   - GP name: Allow queries to a Browser Network Time service
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BrowserNetworkTimeQueriesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BrowserNetworkTimeQueriesEnabled
   - Example value:
 ``` xml
@@ -8105,13 +10031,17 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
   [Back to top](#microsoft-edge---policies)
 
   ### BrowserSignin
+
   #### Browser sign-in settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify whether a user can sign into Microsoft Edge with their account and use account-related services like sync and single sign on. To control the availability of sync, use the [SyncDisabled](#syncdisabled) policy instead.
 
 If you set this policy to 'Disable', make sure that you also set the [NonRemovableProfileEnabled](#nonremovableprofileenabled) policy to disabled because [NonRemovableProfileEnabled](#nonremovableprofileenabled) disables the creation of an automatically signed in browser profile. If both policies are set, Microsoft Edge will use the 'Disable browser sign-in' policy and behave as if [NonRemovableProfileEnabled](#nonremovableprofileenabled) is set to disabled.
@@ -8133,32 +10063,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BrowserSignin
   - GP name: Browser sign-in settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BrowserSignin
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BrowserSignin
   - Example value:
 ``` xml
@@ -8169,13 +10108,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltInDnsClientEnabled
+
   #### Use built-in DNS client
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Controls whether to use the built-in DNS client.
 
 This does not affect which DNS servers are used; just the software stack which is used to communicate with them. For example if the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It is however possible that the built-in DNS client will address servers in different ways by using more modern DNS-related protocols such as DNS-over-TLS.
@@ -8187,32 +10130,41 @@ If you disable this policy, the client is never used.
 If you don't configure this policy, the built-in DNS client is enabled by default on MacOS, and users can change whether to use the built-in DNS client by editing edge://flags or by specifying a command-line flag.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: BuiltInDnsClientEnabled
   - GP name: Use built-in DNS client
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: BuiltInDnsClientEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: BuiltInDnsClientEnabled
   - Example value:
 ``` xml
@@ -8223,29 +10175,36 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
   [Back to top](#microsoft-edge---policies)
 
   ### BuiltinCertificateVerifierEnabled
+
   #### Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On macOS since 83 or later
 
   #### Description
+
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
 It won't work in Microsoft Edge version 87, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   
 
   #### Mac information and settings
+  
   - Preference Key Name: BuiltinCertificateVerifierEnabled
   - Example value:
 ``` xml
@@ -8256,13 +10215,17 @@ It won't work in Microsoft Edge version 87, when support for the legacy certific
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForCas
+
   #### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables enforcement of Certificate Transparency requirements for a list of subjectPublicKeyInfo hashes.
 
 This policy lets you disable Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted because they were not properly publicly disclosed to still be used for Enterprise hosts.
@@ -8277,26 +10240,34 @@ A subjectPublicKeyInfo hash is specified by concatenating the hash algorithm nam
 If you disable this policy or don't configure it, any certificate that's required to be disclosed via Certificate Transparency will be treated as untrusted if it's not disclosed according to the Certificate Transparency policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CertificateTransparencyEnforcementDisabledForCas
   - GP name: Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
@@ -8305,6 +10276,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForCas
   - Example value:
 ``` xml
@@ -8318,13 +10290,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForLegacyCas
+
   #### Disable Certificate Transparency enforcement for a list of legacy certificate authorities
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables enforcing Certificate Transparency requirements for a list of legacy certificate authorities (Cas).
 
 This policy lets you disable Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted because they were not properly publicly disclosed, continue to be used for enterprise hosts.
@@ -8336,26 +10312,34 @@ You specify a subjectPublicKeyInfo hash by concatenating the hash algorithm name
 If you don't configure this policy, any certificate that's required to be disclosed via Certificate Transparency will be treated as untrusted if it isn't disclosed according to the Certificate Transparency policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CertificateTransparencyEnforcementDisabledForLegacyCas
   - GP name: Disable Certificate Transparency enforcement for a list of legacy certificate authorities
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
@@ -8364,6 +10348,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Example value:
 ``` xml
@@ -8377,13 +10362,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   [Back to top](#microsoft-edge---policies)
 
   ### CertificateTransparencyEnforcementDisabledForUrls
+
   #### Disable Certificate Transparency enforcement for specific URLs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables enforcing Certificate Transparency requirements for the listed URLs.
 
 This policy lets you not disclose certificates for the hostnames in the specified URLs via Certificate Transparency. This lets you use certificates that would otherwise be untrusted, because they weren't properly publicly disclosed, but it makes it harder to detect mis-issued certificates for those hosts.
@@ -8393,26 +10382,34 @@ Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095
 If you don't configure this policy, any certificate that should be disclosed via Certificate Transparency is treated as untrusted if it's not disclosed.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CertificateTransparencyEnforcementDisabledForUrls
   - GP name: Disable Certificate Transparency enforcement for specific URLs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
@@ -8421,6 +10418,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForUrls
   - Example value:
 ``` xml
@@ -8434,13 +10432,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   [Back to top](#microsoft-edge---policies)
 
   ### ClearBrowsingDataOnExit
+
   #### Clear browsing data when Microsoft Edge closes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Microsoft Edge doesn't clear the browsing data by default when it closes. Browsing data includes information entered in forms, passwords, and even the websites visited.
 
 If you enable this policy, all browsing data is deleted each time Microsoft Edge closes. Note that if you enable this policy, it takes precedence over how you configured [DefaultCookiesSetting](#defaultcookiessetting)
@@ -8452,32 +10454,41 @@ If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#al
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ClearBrowsingDataOnExit
   - GP name: Clear browsing data when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ClearBrowsingDataOnExit
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ClearBrowsingDataOnExit
   - Example value:
 ``` xml
@@ -8488,13 +10499,17 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
   [Back to top](#microsoft-edge---policies)
 
   ### ClearCachedImagesAndFilesOnExit
+
   #### Clear cached images and files when Microsoft Edge closes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   Microsoft Edge doesn't clear cached images and files by default when it closes.
 
 If you enable this policy, cached images and files will be deleted each time Microsoft Edge closes.
@@ -8506,32 +10521,41 @@ If you don't configure this policy, users can choose whether cached images and f
 If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you configure both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how you configured [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ClearCachedImagesAndFilesOnExit
   - GP name: Clear cached images and files when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ClearCachedImagesAndFilesOnExit
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ClearCachedImagesAndFilesOnExit
   - Example value:
 ``` xml
@@ -8542,13 +10566,17 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
   [Back to top](#microsoft-edge---policies)
 
   ### ClickOnceEnabled
+
   #### Allow users to open files using the ClickOnce protocol
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   Allow users to open files using the ClickOnce protocol. The ClickOnce protocol allows websites to request that the browser open files from a specific URL using the ClickOnce file handler on the user's computer or device.
 
 If you enable this policy, users can open files using the ClickOnce protocol. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
@@ -8562,26 +10590,34 @@ Disabling ClickOnce may prevent ClickOnce applications (.application files) from
 For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ClickOnceEnabled
   - GP name: Allow users to open files using the ClickOnce protocol
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ClickOnceEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -8592,13 +10628,17 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
   [Back to top](#microsoft-edge---policies)
 
   ### CollectionsServicesAndExportsBlockList
+
   #### Block access to a specified list of services and export targets in Collections
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   List specific services and export targets that users can't access in the Collections feature in Microsoft Edge. This includes displaying additional data from Bing and exporting collections to Microsoft products or external partners.
 
 If you enable this policy, services and export targets that match the given list are blocked.
@@ -8612,26 +10652,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CollectionsServicesAndExportsBlockList
   - GP name: Block access to a specified list of services and export targets in Collections
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
@@ -8639,6 +10687,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CollectionsServicesAndExportsBlockList
   - Example value:
 ``` xml
@@ -8651,13 +10700,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   [Back to top](#microsoft-edge---policies)
 
   ### CommandLineFlagSecurityWarningsEnabled
+
   #### Enable security warnings for command-line flags
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   If disabled, this policy prevents security warnings from appearing when Microsoft Edge is launched with potentially dangerous command-line flags.
 
 If enabled or unset, security warnings are displayed when these command-line flags are used to launch Microsoft Edge.
@@ -8667,32 +10720,41 @@ For example, the --disable-gpu-sandbox flag generates this warning:  You're usin
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CommandLineFlagSecurityWarningsEnabled
   - GP name: Enable security warnings for command-line flags
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: CommandLineFlagSecurityWarningsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CommandLineFlagSecurityWarningsEnabled
   - Example value:
 ``` xml
@@ -8703,13 +10765,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### ComponentUpdatesEnabled
+
   #### Enable component updates in Microsoft Edge
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable or don't configure this policy, component updates are enabled in Microsoft Edge.
 
 If you disable this policy or set it to false, component updates are disabled for all components in Microsoft Edge.
@@ -8717,32 +10783,41 @@ If you disable this policy or set it to false, component updates are disabled fo
 However, some components are exempt from this policy. This includes any component that doesn't contain executable code, that doesn't significantly alter the behavior of the browser, or that's critical for security. That is, updates that are deemed "critical for security" are still applied even if you disable this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ComponentUpdatesEnabled
   - GP name: Enable component updates in Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ComponentUpdatesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ComponentUpdatesEnabled
   - Example value:
 ``` xml
@@ -8753,13 +10828,17 @@ However, some components are exempt from this policy. This includes any componen
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureDoNotTrack
+
   #### Configure Do Not Track
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify whether to send Do Not Track requests to websites that ask for tracking info. Do Not Track requests let the websites you visit know that you don't want your browsing activity to be tracked. By default, Microsoft Edge doesn't send Do Not Track requests, but users can turn on this feature to send them.
 
 If you enable this policy, Do Not Track requests are always sent to websites asking for tracking info.
@@ -8769,32 +10848,41 @@ If you disable this policy, requests are never sent.
 If you don't configure this policy, users can choose whether to send these requests.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ConfigureDoNotTrack
   - GP name: Configure Do Not Track
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ConfigureDoNotTrack
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ConfigureDoNotTrack
   - Example value:
 ``` xml
@@ -8804,14 +10892,93 @@ If you don't configure this policy, users can choose whether to send these reque
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ConfigureOnPremisesAccountAutoSignIn
-  #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
+  ### ConfigureFriendlyURLFormat
+
+  #### Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users
+
   
   
   #### Supported versions:
+
+  - On Windows since 87 or later
+
+  #### Description
+
+  If FriendlyURLs are enabled, Microsoft Edge will compute additional representations of the URL and place them on the clipboard.
+
+This policy configures what format will be pasted when the user pastes in external applications, or inside Microsoft Edge without the 'Paste as' context menu item.
+
+If configured, this policy makes a choice on behalf of the user. The options in edge://settings/shareCopyPaste will be grayed out, and the options in the 'Paste As' context menu will not be available.
+
+* Not configured = The user will be able to choose their preferred paste format. By default, this is set to the friendly URL format. The 'Paste As' menu will be available in Microsoft Edge.
+
+* 1 = No additional formats will be stored on the clipboard. There will be no 'Paste as' context menu item in Microsoft Edge and the only format available to paste will be the plain text URL format. Effectively, the friendly URL feature will be disabled.
+
+* 3 = The user will get a friendly URL whenever they paste into surfaces that accept rich text. The plain URL will still be available for non-rich surfaces. There will be no 'Paste As' menu in Microsoft Edge.
+
+* 4 = (Not currently used)
+
+The richer formats may not be well-supported in some paste destinations and/or websites. As such, if this policy is to be configured, then the plain URL option is recommended.
+
+Policy options mapping:
+
+* PlainText (1) = The plain URL without any extra information, such as the page's title. This is the recommended option when this policy is configured. For more information, see the description.
+
+* TitledHyperlink (3) = Titled Hyperlink: A hyperlink that points to the copied URL, but whose visible text is the title of the destination page. This is the Friendly URL format.
+
+* WebPreview (4) = Coming soon. If set, behaves the same as 'Plain URL'.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ConfigureFriendlyURLFormat
+  - GP name: Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ConfigureFriendlyURLFormat
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000003
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ConfigureOnPremisesAccountAutoSignIn
+
+  #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
+
+  
+  
+  #### Supported versions:
+
   - On Windows since 81 or later
 
   #### Description
+
   Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
 
 If you have configured the [BrowserSignin](#browsersignin) policy to disabled, this policy will not take any effect.
@@ -8829,26 +10996,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ConfigureOnPremisesAccountAutoSignIn
   - GP name: Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ConfigureOnPremisesAccountAutoSignIn
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -8859,13 +11034,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureOnlineTextToSpeech
+
   #### Configure Online Text To Speech
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether the browser can leverage Online Text to Speech voice fonts, part of Azure Cognitive Services. These voice fonts are higher quality than the pre-installed system voice fonts.
 
 If you enable or don't configure this policy, web-based applications that use the SpeechSynthesis API can use Online Text to Speech voice fonts.
@@ -8877,32 +11056,41 @@ SpeechSynthesis API: [https://go.microsoft.com/fwlink/?linkid=2110038](https://g
 Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go.microsoft.com/fwlink/?linkid=2110141)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ConfigureOnlineTextToSpeech
   - GP name: Configure Online Text To Speech
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ConfigureOnlineTextToSpeech
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ConfigureOnlineTextToSpeech
   - Example value:
 ``` xml
@@ -8913,13 +11101,17 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
   [Back to top](#microsoft-edge---policies)
 
   ### ConfigureShare
+
   #### Configure the Share experience
+
   
   
   #### Supported versions:
+
   - On Windows since 83 or later
 
   #### Description
+
   If you set this policy to 'ShareAllowed' (the default), users will be able to access the Windows 10 Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.
 
 If you set this policy to 'ShareDisallowed', users won't be able to access the Windows 10 Share experience. If the Share button is on the toolbar, it will also be hidden.
@@ -8933,26 +11125,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ConfigureShare
   - GP name: Configure the Share experience
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ConfigureShare
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -8963,13 +11163,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### CustomHelpLink
+
   #### Specify custom help link
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   Specify a link for the Help menu or the F1 key.
 
 If you enable this policy, an admin can specify a link for the Help menu or the F1 key.
@@ -8979,32 +11183,41 @@ If you disable or don't configure this policy, the default link for the Help men
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: CustomHelpLink
   - GP name: Specify custom help link
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: CustomHelpLink
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: CustomHelpLink
   - Example value:
 ``` xml
@@ -9015,13 +11228,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### DNSInterceptionChecksEnabled
+
   #### DNS interception checks enabled
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   This policy configures a local switch that can be used to disable DNS interception checks. These checks attempt to discover whether the browser is behind a proxy that redirects unknown host names.
 
 This detection might not be necessary in an enterprise environment where the network configuration is known. It can be disabled to avoid additional DNS and HTTP traffic on start-up and each DNS configuration change.
@@ -9031,32 +11248,41 @@ If you enable or don't set this policy, the DNS interception checks are performe
 If you disable this policy, DNS interception checks aren't performed.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DNSInterceptionChecksEnabled
   - GP name: DNS interception checks enabled
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DNSInterceptionChecksEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DNSInterceptionChecksEnabled
   - Example value:
 ``` xml
@@ -9067,13 +11293,17 @@ If you disable this policy, DNS interception checks aren't performed.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultBrowserSettingEnabled
+
   #### Set Microsoft Edge as default browser
+
   
   
   #### Supported versions:
+
   - On Windows 7 and macOS since 77 or later
 
   #### Description
+
   If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
 
 If you set this policy to False, Microsoft Edge is stopped from ever checking if it's the default and turns user controls off for this option.
@@ -9083,32 +11313,41 @@ If you don't set this policy, Microsoft Edge lets users control whether it's the
 Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Microsoft Edge the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) for more information.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultBrowserSettingEnabled
   - GP name: Set Microsoft Edge as default browser
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultBrowserSettingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultBrowserSettingEnabled
   - Example value:
 ``` xml
@@ -9119,13 +11358,17 @@ Note for Windows administrators: This policy only works for PCs running Windows 
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSearchProviderContextMenuAccessAllowed
+
   #### Allow default search provider context menu search access
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   Enables the use of a default search provider on the context menu.
 
 If you set this policy to disabled the search context menu item that relies on your default search provider and sidebar search will not be available.
@@ -9135,32 +11378,41 @@ If this policy is set to enabled or not set, the context menu item for your defa
 The policy value is only appled when the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy is enabled, and is not applicable otherwise.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSearchProviderContextMenuAccessAllowed
   - GP name: Allow default search provider context menu search access
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultSearchProviderContextMenuAccessAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSearchProviderContextMenuAccessAllowed
   - Example value:
 ``` xml
@@ -9171,13 +11423,17 @@ The policy value is only appled when the [DefaultSearchProviderEnabled](#default
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSensorsSetting
+
   #### Default sensors setting
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
 
 Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
@@ -9195,32 +11451,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSensorsSetting
   - GP name: Default sensors setting
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultSensorsSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSensorsSetting
   - Example value:
 ``` xml
@@ -9231,13 +11496,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultSerialGuardSetting
+
   #### Control use of the Serial API
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Set whether websites can access serial ports. You can completely block access or ask the user each time a website wants to get access to a serial port.
 
 Setting the policy to 3 lets websites ask for access to serial ports. Setting the policy to 2 denies access to serial ports.
@@ -9255,32 +11524,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DefaultSerialGuardSetting
   - GP name: Control use of the Serial API
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DefaultSerialGuardSetting
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DefaultSerialGuardSetting
   - Example value:
 ``` xml
@@ -9291,13 +11569,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DelayNavigationsForInitialSiteListDownload
+
   #### Require that the Enterprise Mode Site List is available before tab navigation
+
   
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   Lets you specify whether Microsoft Edge tabs wait to navigate until the browser has downloaded the initial Enterprise Mode Site List. This setting is intended for the scenario where the browser home page should load in Internet Explorer mode, and it is important that is does so on browser first run after IE mode is enabled. If this scenario does not exist, we recommend not enabling this setting because it can negatively impact the performance of loading the home page. The setting only applies when Microsoft Edge does not have a cached Enterprise Mode Site List, such as on browser first run after IE mode is enabled.
 
 This setting works in conjunction with:
@@ -9320,26 +11602,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DelayNavigationsForInitialSiteListDownload
   - GP name: Require that the Enterprise Mode Site List is available before tab navigation
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DelayNavigationsForInitialSiteListDownload
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -9350,13 +11640,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DeleteDataOnMigration
+
   #### Delete old browser data on migration
+
   
   
   #### Supported versions:
+
   - On Windows since 83 or later
 
   #### Description
+
   This policy determines whether user browsing data from Microsoft Edge Legacy will be deleted after migrating to the Microsoft Edge version 81 or later.
 
 If you set this policy to "Enabled", all browsing data from Microsoft Edge Legacy after migrating to the Microsoft Edge version 81 or later will be deleted. This policy must be set before migrating to the Microsoft Edge version 81 or later to have any effect on existing browsing data.
@@ -9364,26 +11658,34 @@ If you set this policy to "Enabled", all browsing data from Microsoft Edge Legac
 If you set this policy to "Disabled", or the policy is not configured, user browsing data isn't deleted after migrating to the Microsoft Edge version 83 or later.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DeleteDataOnMigration
   - GP name: Delete old browser data on migration
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DeleteDataOnMigration
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -9394,13 +11696,17 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
   [Back to top](#microsoft-edge---policies)
 
   ### DeveloperToolsAvailability
+
   #### Control where developer tools can be used
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Control where developer tools can be used.
 
 If you set this policy to 'DeveloperToolsDisallowedForForceInstalledExtensions' (the default), users can access the developer tools and the JavaScript console in general, but not in the context of extensions installed by enterprise policy.
@@ -9420,32 +11726,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DeveloperToolsAvailability
   - GP name: Control where developer tools can be used
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DeveloperToolsAvailability
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DeveloperToolsAvailability
   - Example value:
 ``` xml
@@ -9456,13 +11771,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DiagnosticData
+
   #### Send required and optional diagnostic data about browser usage
+
   
   
   #### Supported versions:
+
   - On Windows 7 and macOS since 86 or later
 
   #### Description
+
   This policy controls sending required and optional diagnostic data about browser usage to Microsoft.
 
 Required diagnostic data is collected keep Microsoft Edge secure, up to date and performing as expected.
@@ -9494,32 +11813,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DiagnosticData
   - GP name: Send required and optional diagnostic data about browser usage
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DiagnosticData
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DiagnosticData
   - Example value:
 ``` xml
@@ -9530,13 +11858,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DirectInvokeEnabled
+
   #### Allow users to open files using the DirectInvoke protocol
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   Allow users to open files using the DirectInvoke protocol. The DirectInvoke protocol allows websites to request that the browser open files from a specific URL using a specific file handler on the user's computer or device.
 
 If you enable or don't configure this policy, users can open files using the DirectInvoke protocol.
@@ -9548,26 +11880,34 @@ Note: Disabling DirectInvoke may prevent certain Microsoft SharePoint Online fea
 For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DirectInvokeEnabled
   - GP name: Allow users to open files using the DirectInvoke protocol
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DirectInvokeEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -9578,13 +11918,17 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
   [Back to top](#microsoft-edge---policies)
 
   ### Disable3DAPIs
+
   #### Disable support for 3D graphics APIs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Prevent web pages from accessing the graphics processing unit (GPU). Specifically, web pages can't access the WebGL API and plug-ins can't use the Pepper 3D API.
 
 If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Microsoft Edge might, by default, still require command line arguments to be passed in order to use these APIs.
@@ -9592,32 +11936,41 @@ If you don't configure or disable this policy, it potentially allows web pages t
 If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to true.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: Disable3DAPIs
   - GP name: Disable support for 3D graphics APIs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: Disable3DAPIs
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: Disable3DAPIs
   - Example value:
 ``` xml
@@ -9628,13 +11981,17 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
   [Back to top](#microsoft-edge---policies)
 
   ### DisableScreenshots
+
   #### Disable taking screenshots
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Controls if users can take screenshots of the browser page.
 
 If enabled, user can't take screenshots by using keyboard shortcuts or extension APIs.
@@ -9644,32 +12001,41 @@ If disabled or don't configure this policy, users can take screenshots.
 Please note this policy controls screenshots taken from within the browser itself. Even if you enable this policy, users might still be able to take screenshots using some method outside of the browser (like using an operating system feature or another application).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DisableScreenshots
   - GP name: Disable taking screenshots
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DisableScreenshots
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DisableScreenshots
   - Example value:
 ``` xml
@@ -9680,13 +12046,17 @@ Please note this policy controls screenshots taken from within the browser itsel
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheDir
+
   #### Set disk cache directory
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the directory to use to store cached files.
 
 If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified the '--disk-cache-dir' flag. To avoid data loss or other unexpected errors, don't configure this policy to a volume's root directory or to a directory used for other purposes, because Microsoft Edge manages its contents.
@@ -9696,32 +12066,41 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 If you don't configure this policy, the default cache directory is used, and users can override that default with the '--disk-cache-dir' command line flag.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DiskCacheDir
   - GP name: Set disk cache directory
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DiskCacheDir
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "${user_home}/Edge_cache"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DiskCacheDir
   - Example value:
 ``` xml
@@ -9732,13 +12111,17 @@ If you don't configure this policy, the default cache directory is used, and use
   [Back to top](#microsoft-edge---policies)
 
   ### DiskCacheSize
+
   #### Set disk cache size, in bytes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the size of the cache, in bytes, used to store files on the disk.
 
 If you enable this policy, Microsoft Edge uses the provided cache size regardless of whether the user has specified the '--disk-cache-size' flag. The value specified in this policy isn't a hard boundary but rather a suggestion to the caching system; any value below a few megabytes is too small and will be rounded up to a reasonable minimum.
@@ -9748,32 +12131,41 @@ If you set the value of this policy to 0, the default cache size is used, and us
 If you don't configure this policy, the default size is used, but users can override it with the '--disk-cache-size' flag.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DiskCacheSize
   - GP name: Set disk cache size, in bytes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DiskCacheSize
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x06400000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DiskCacheSize
   - Example value:
 ``` xml
@@ -9784,13 +12176,17 @@ If you don't configure this policy, the default size is used, but users can over
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsMode
+
   #### Control the mode of DNS-over-HTTPS
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   Control the mode of the DNS-over-HTTPS resolver. Note that this policy will only set the default mode for each query. The mode can be overridden for special types of queries such as requests to resolve a DNS-over-HTTPS server hostname.
 
 The "off" mode will disable DNS-over-HTTPS.
@@ -9812,32 +12208,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DnsOverHttpsMode
   - GP name: Control the mode of DNS-over-HTTPS
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DnsOverHttpsMode
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "off"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DnsOverHttpsMode
   - Example value:
 ``` xml
@@ -9848,13 +12253,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### DnsOverHttpsTemplates
+
   #### Specify URI template of desired DNS-over-HTTPS resolver
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   The URI template of the desired DNS-over-HTTPS resolver. To specify multiple DNS-over-HTTPS resolvers, separate the corresponding URI templates with spaces.
 
 If you set [DnsOverHttpsMode](#dnsoverhttpsmode) to "secure" then this policy must be set and cannot be empty.
@@ -9866,32 +12275,41 @@ If the URI template contains a dns variable, requests to the resolver will use G
 Incorrectly formatted templates will be ignored.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DnsOverHttpsTemplates
   - GP name: Specify URI template of desired DNS-over-HTTPS resolver
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: DnsOverHttpsTemplates
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://dns.example.net/dns-query{?dns}"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DnsOverHttpsTemplates
   - Example value:
 ``` xml
@@ -9902,13 +12320,17 @@ Incorrectly formatted templates will be ignored.
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadDirectory
+
   #### Set download directory
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the directory to use when downloading files.
 
 If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified one or chosen to be prompted for download location every time. See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
@@ -9920,32 +12342,41 @@ If you set an invalid path, Microsoft Edge will default to the user's default do
 If the folder specified by the path doesn't exist, the download will trigger a prompt that asks the user where they want to save their download.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DownloadDirectory
   - GP name: Set download directory
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DownloadDirectory
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DownloadDirectory
   - Example value:
 ``` xml
@@ -9958,13 +12389,17 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   [Back to top](#microsoft-edge---policies)
 
   ### DownloadRestrictions
+
   #### Allow download restrictions
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures the type of downloads that Microsoft Edge completely blocks, without letting users override the security decision.
 
 Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings.
@@ -9992,32 +12427,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: DownloadRestrictions
   - GP name: Allow download restrictions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: DownloadRestrictions
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: DownloadRestrictions
   - Example value:
 ``` xml
@@ -10028,13 +12472,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### EdgeCollectionsEnabled
+
   #### Enable the Collections feature
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Lets you allow users to access the Collections feature, where they can collect, organize, share, and export content more efficiently and with Office integration.
 
 If you enable or don't configure this policy, users can access and use the Collections feature in Microsoft Edge.
@@ -10042,32 +12490,41 @@ If you enable or don't configure this policy, users can access and use the Colle
 If you disable this policy, users can't access and use Collections in Microsoft Edge.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EdgeCollectionsEnabled
   - GP name: Enable the Collections feature
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EdgeCollectionsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EdgeCollectionsEnabled
   - Example value:
 ``` xml
@@ -10077,45 +12534,120 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 
   [Back to top](#microsoft-edge---policies)
 
-  ### EditFavoritesEnabled
-  #### Allows users to edit favorites
+  ### EdgeShoppingAssistantEnabled
+
+  #### Shopping in Microsoft Edge Enabled
+
   
   
   #### Supported versions:
+
+  - On Windows and macOS since 87 or later
+
+  #### Description
+
+  This policy lets users compare the prices of a product they are looking at, get coupons from the website they're on, or auto-apply coupons during checkout.
+
+If you enable or don't configure this policy, shopping features such as price comparison and coupons will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
+
+If you disable this policy shopping features such as price comparison and coupons will not be automatically found for retail domains.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeShoppingAssistantEnabled
+  - GP name: Shopping in Microsoft Edge Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeShoppingAssistantEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeShoppingAssistantEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EditFavoritesEnabled
+
+  #### Allows users to edit favorites
+
+  
+  
+  #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enable this policy to let users add, remove, and modify favorites. This is the default behavior if you don't configure the policy.
 
 Disable this policy to stop users from adding, removing, or modifying favorites. They can still use existing favorites.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EditFavoritesEnabled
   - GP name: Allows users to edit favorites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EditFavoritesEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EditFavoritesEnabled
   - Example value:
 ``` xml
@@ -10126,13 +12658,18 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
+
   #### Re-enable deprecated web platform features for a limited time (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
+            
+
   - On Windows and macOS since 77, until 86
 
   #### Description
+
   This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
 Specify a list of deprecated web platform features to temporarily re-enable.
@@ -10152,26 +12689,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableDeprecatedWebPlatformFeatures
   - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
@@ -10179,6 +12724,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableDeprecatedWebPlatformFeatures
   - Example value:
 ``` xml
@@ -10191,13 +12737,17 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDomainActionsDownload
+
   #### Enable Domain Actions Download from Microsoft (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
+
   - On Windows and macOS since 77, until 84
 
   #### Description
+
   This policy doesn't work because conflicting states should be avoided. This policy was used to enable/disable download of the domain actions list, but it didn't always achieve the desired state. The Experimentation and Configuration Service, which handles the download, has its own policy to configure what is downloaded from the service. Use the [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) policy instead.
 
 In Microsoft Edge, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
@@ -10213,32 +12763,41 @@ If you disable this policy, the list of Domain Actions will no longer be downloa
 If you don't configure this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableDomainActionsDownload
   - GP name: Enable Domain Actions Download from Microsoft (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnableDomainActionsDownload
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableDomainActionsDownload
   - Example value:
 ``` xml
@@ -10249,13 +12808,17 @@ If you don't configure this policy, the list of Domain Actions will continue to 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableOnlineRevocationChecks
+
   #### Enable online OCSP/CRL checks
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Online revocation checks don't provide a significant security benefit and are disabled by default.
 
 If you enable this policy, Microsoft Edge will perform soft-fail, online OCSP/CRL checks. "Soft fail" means that if the revocation server can't be reached, the certificate will be considered valid.
@@ -10263,32 +12826,41 @@ If you enable this policy, Microsoft Edge will perform soft-fail, online OCSP/CR
 If you disable the policy or don't configure it, Microsoft Edge won't perform online revocation checks.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableOnlineRevocationChecks
   - GP name: Enable online OCSP/CRL checks
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnableOnlineRevocationChecks
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableOnlineRevocationChecks
   - Example value:
 ``` xml
@@ -10299,13 +12871,17 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
   [Back to top](#microsoft-edge---policies)
 
   ### EnableSha1ForLocalAnchors
+
   #### Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   When this setting is enabled, Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.
 
 Note that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Microsoft Edge 92 releasing in mid 2021.
@@ -10315,32 +12891,41 @@ If you don't set this policy or set it to false, or the SHA-1 certificate chains
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnableSha1ForLocalAnchors
   - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnableSha1ForLocalAnchors
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnableSha1ForLocalAnchors
   - Example value:
 ``` xml
@@ -10351,44 +12936,57 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseHardwarePlatformAPIEnabled
+
   #### Allow managed extensions to use the Enterprise Hardware Platform API
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   When this policy is set to enabled, extensions installed by enterprise policy are allowed to use the Enterprise Hardware Platform API.
 When this policy is set to disabled or isn't set, no extensions are allowed to use the Enterprise Hardware Platform API.
 This policy also applies to component extensions.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnterpriseHardwarePlatformAPIEnabled
   - GP name: Allow managed extensions to use the Enterprise Hardware Platform API
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnterpriseHardwarePlatformAPIEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: EnterpriseHardwarePlatformAPIEnabled
   - Example value:
 ``` xml
@@ -10399,13 +12997,17 @@ This policy also applies to component extensions.
   [Back to top](#microsoft-edge---policies)
 
   ### EnterpriseModeSiteListManagerAllowed
+
   #### Allow access to the Enterprise Mode Site List Manager tool
+
   
   
   #### Supported versions:
+
   - On Windows since 86 or later
 
   #### Description
+
   Allows you to set whether Enterprise Mode Site List Manager is available to users.
 
 If you enable this policy, users can see the Enterprise Mode Site List Manager nav button on edge://compat page, navigate to the tool and use it.
@@ -10413,26 +13015,34 @@ If you enable this policy, users can see the Enterprise Mode Site List Manager n
 If you disable or don't configure this policy, users won't see the Enterprise Mode Site List Manager nav button and won't be able to use it.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: EnterpriseModeSiteListManagerAllowed
   - GP name: Allow access to the Enterprise Mode Site List Manager tool
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: EnterpriseModeSiteListManagerAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -10443,13 +13053,17 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
   [Back to top](#microsoft-edge---policies)
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+
   #### Disable download file type extension-based warnings for specified file types on domains
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
 
 Files with file type extensions specified for domains identified by this policy will still be subject to non-file type extension-based security warnings such as mixed-content download warnings and Microsoft Defender SmartScreen warnings.
@@ -10474,26 +13088,34 @@ The following example value would prevent file type extension-based download war
 Note that while the preceding example shows the suppression of file type extension-based download warnings for "swf" files for all domains, applying suppression of such warnings for all domains for any dangerous file type extension is not recommended due to security concerns. It is shown in the example merely to demonstrate the ability to do so.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - GP name: Disable download file type extension-based warnings for specified file types on domains
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
@@ -10502,6 +13124,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
@@ -10515,13 +13138,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   [Back to top](#microsoft-edge---policies)
 
   ### ExperimentationAndConfigurationServiceControl
+
   #### Control communication with the Experimentation and Configuration Service
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   In Microsoft Edge, the Experimentation and Configuration Service is used to deploy Experimentation and Configuration payload.
 
 Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
@@ -10551,32 +13178,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExperimentationAndConfigurationServiceControl
   - GP name: Control communication with the Experimentation and Configuration Service
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ExperimentationAndConfigurationServiceControl
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExperimentationAndConfigurationServiceControl
   - Example value:
 ``` xml
@@ -10587,13 +13223,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### ExternalProtocolDialogShowAlwaysOpenCheckbox
+
   #### Show an "Always open" checkbox in external protocol dialog
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   This policy controls whether the "Always allow this site to open links of this type" checkbox is shown on external protocol launch confirmation prompts. This policy only applies to https:// links.
 
 If you enable this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
@@ -10607,32 +13247,41 @@ On Microsoft Edge 83, if you don't configure this policy, the checkbox visibilit
 As of Microsoft Edge 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - GP name: Show an "Always open" checkbox in external protocol dialog
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Example value:
 ``` xml
@@ -10643,13 +13292,17 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
   [Back to top](#microsoft-edge---policies)
 
   ### FamilySafetySettingsEnabled
+
   #### Allow users to configure Family safety
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   This policy disables and completely hides the Family safety page in Settings. Navigation to edge://settings/familysafety will also be blocked. The Family safety page describes what features are available for family groups and how to join a family group. Learn more about family safety here: ([https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)).
 
 If you enable this policy or don't configure it, the Family safety page will be shown.
@@ -10657,32 +13310,41 @@ If you enable this policy or don't configure it, the Family safety page will be 
 If you disable this policy, the Family safety page will not be shown.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FamilySafetySettingsEnabled
   - GP name: Allow users to configure Family safety
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: FamilySafetySettingsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FamilySafetySettingsEnabled
   - Example value:
 ``` xml
@@ -10693,13 +13355,17 @@ If you disable this policy, the Family safety page will not be shown.
   [Back to top](#microsoft-edge---policies)
 
   ### FavoritesBarEnabled
+
   #### Enable favorites bar
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables or disables the favorites bar.
 
 If you enable this policy, users will see the favorites bar.
@@ -10709,32 +13375,41 @@ If you disable this policy, users won't see the favorites bar.
 If this policy is not configured, then the user can decide to use the favorites bar or not.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FavoritesBarEnabled
   - GP name: Enable favorites bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: FavoritesBarEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: FavoritesBarEnabled
   - Example value:
 ``` xml
@@ -10745,13 +13420,17 @@ If this policy is not configured, then the user can decide to use the favorites 
   [Back to top](#microsoft-edge---policies)
 
   ### ForceBingSafeSearch
+
   #### Enforce Bing SafeSearch
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Ensure that queries in Bing web search are done with SafeSearch set to the value specified. Users can't change this setting.
 
 If you configure this policy to 'BingSafeSearchNoRestrictionsMode', SafeSearch in Bing search falls back to the bing.com value.
@@ -10773,32 +13452,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceBingSafeSearch
   - GP name: Enforce Bing SafeSearch
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceBingSafeSearch
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceBingSafeSearch
   - Example value:
 ``` xml
@@ -10809,13 +13497,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### ForceCertificatePromptsOnMultipleMatches
+
   #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
 
 If you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls) if and only if there is more than one certificate.
@@ -10823,32 +13515,41 @@ If you set this policy to True, Microsoft Edge will prompt a user to select a ce
 If you set this policy to False or don't configure it, Microsoft Edge will automatically select a certificate even if there are multiple matches for a certificate. The user will not be prompted to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceCertificatePromptsOnMultipleMatches
   - GP name: Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceCertificatePromptsOnMultipleMatches
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceCertificatePromptsOnMultipleMatches
   - Example value:
 ``` xml
@@ -10859,13 +13560,17 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
   [Back to top](#microsoft-edge---policies)
 
   ### ForceEphemeralProfiles
+
   #### Enable use of ephemeral profiles
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Controls whether user profiles are switched to ephemeral mode. An ephemeral profile is created when a session begins, is deleted when the session ends, and is associated with the user's original profile.
 
 If you enable this policy, profiles run in ephemeral mode. This lets users work from their own devices without saving browsing data to those devices. If you enable this policy as an OS policy (by using GPO on Windows, for example), it applies to every profile on the system.
@@ -10875,32 +13580,41 @@ If you disable this policy or don't configure it, users get their regular profil
 In ephemeral mode, profile data is saved on disk only for the length of the user session. Features like browser history, extensions and their data, web data like cookies, and web databases aren't saved after the browser is closed. This doesn't prevent a user from manually downloading any data to disk, or from saving pages or printing them. If the user has enabled sync, all data is preserved in their sync accounts just like with regular profiles. Users can also use InPrivate browsing in ephemeral mode unless you explicitly disable this.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceEphemeralProfiles
   - GP name: Enable use of ephemeral profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceEphemeralProfiles
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceEphemeralProfiles
   - Example value:
 ``` xml
@@ -10911,13 +13625,17 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
   [Back to top](#microsoft-edge---policies)
 
   ### ForceGoogleSafeSearch
+
   #### Enforce Google SafeSearch
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Forces queries in Google Web Search to be performed with SafeSearch set to active, and prevents users from changing this setting.
 
 If you enable this policy, SafeSearch in Google Search is always active.
@@ -10925,32 +13643,41 @@ If you enable this policy, SafeSearch in Google Search is always active.
 If you disable this policy or don't configure it, SafeSearch in Google Search isn't enforced.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceGoogleSafeSearch
   - GP name: Enforce Google SafeSearch
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceGoogleSafeSearch
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceGoogleSafeSearch
   - Example value:
 ``` xml
@@ -10961,13 +13688,17 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
   [Back to top](#microsoft-edge---policies)
 
   ### ForceLegacyDefaultReferrerPolicy
+
   #### Use a default referrer policy of no-referrer-when-downgrade (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the current default referrer policy. It won't work in Microsoft Edge version 88.
 
 Microsoft Edge's default referrer policy is being strengthened from its current value of no-referrer-when-downgrade to the more secure strict-origin-when-cross-origin through a gradual rollout.
@@ -10977,32 +13708,41 @@ Before the rollout, this enterprise policy will have no effect. After the rollou
 This enterprise policy is disabled by default.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceLegacyDefaultReferrerPolicy
   - GP name: Use a default referrer policy of no-referrer-when-downgrade (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceLegacyDefaultReferrerPolicy
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceLegacyDefaultReferrerPolicy
   - Example value:
 ``` xml
@@ -11013,13 +13753,17 @@ This enterprise policy is disabled by default.
   [Back to top](#microsoft-edge---policies)
 
   ### ForceNetworkInProcess
+
   #### Force networking code to run in the browser process (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
   #### Supported versions:
+
   - On Windows since 78, until 83
 
   #### Description
+
   This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to migrate to 3rd party software that doesn't depend on hooking networking APIs. Proxy servers are recommended over LSPs and Win32 API patching.
 
 This policy forces networking code to run in the browser process.
@@ -11027,26 +13771,34 @@ This policy forces networking code to run in the browser process.
 This policy is disabled by default. If enabled, users are open to security issues when the networking process is sandboxed.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceNetworkInProcess
   - GP name: Force networking code to run in the browser process (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceNetworkInProcess
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -11057,13 +13809,17 @@ This policy is disabled by default. If enabled, users are open to security issue
   [Back to top](#microsoft-edge---policies)
 
   ### ForceSync
+
   #### Force synchronization of browser data and do not show the sync consent prompt
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.
 
 If you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.
@@ -11077,32 +13833,41 @@ For this policy to work as intended,
 1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceSync
   - GP name: Force synchronization of browser data and do not show the sync consent prompt
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceSync
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceSync
   - Example value:
 ``` xml
@@ -11113,13 +13878,17 @@ For this policy to work as intended,
   [Back to top](#microsoft-edge---policies)
 
   ### ForceYouTubeRestrict
+
   #### Force minimum YouTube Restricted Mode
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enforces a minimum Restricted Mode on YouTube and prevents users from picking a less restricted mode.
 
 Set to 'Strict' to enforce Strict Restricted Mode on YouTube.
@@ -11139,32 +13908,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ForceYouTubeRestrict
   - GP name: Force minimum YouTube Restricted Mode
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ForceYouTubeRestrict
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ForceYouTubeRestrict
   - Example value:
 ``` xml
@@ -11175,13 +13953,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### FullscreenAllowed
+
   #### Allow full screen mode
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   Set the availability of full screen mode - all Microsoft Edge UI is hidden and only web content is visible.
 
 If you enable this policy or don't configure it, the user, apps, and extensions with appropriate permissions can enter full screen mode.
@@ -11191,26 +13973,34 @@ If you disable this policy, users, apps, and extensions can't enter full screen 
 Opening Microsoft Edge in kiosk mode using the command line is unavailable when full screen mode is disabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: FullscreenAllowed
   - GP name: Allow full screen mode
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: FullscreenAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -11221,13 +14011,17 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
   [Back to top](#microsoft-edge---policies)
 
   ### GloballyScopeHTTPAuthCacheEnabled
+
   #### Enable globally scoped HTTP auth cache
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   This policy configures a single global per profile cache with HTTP server authentication credentials.
 
 If you disable or don't set this policy, the browser will use the default behavior of cross-site auth, which as of version 80, will be to scope HTTP server authentication credentials by top-level site. So, if two sites use resources from the same authenticating domain, credentials will need to be provided independently in the context of both sites. Cached proxy credentials will be reused across sites.
@@ -11239,32 +14033,41 @@ Enabling this policy leaves sites open to some types of cross-site attacks, and 
 This policy is intended to give enterprises depending on the legacy behavior a chance to update their login procedures and will be removed in the future.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: GloballyScopeHTTPAuthCacheEnabled
   - GP name: Enable globally scoped HTTP auth cache
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: GloballyScopeHTTPAuthCacheEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: GloballyScopeHTTPAuthCacheEnabled
   - Example value:
 ``` xml
@@ -11275,13 +14078,17 @@ This policy is intended to give enterprises depending on the legacy behavior a c
   [Back to top](#microsoft-edge---policies)
 
   ### GoToIntranetSiteForSingleWordEntryInAddressBar
+
   #### Force direct intranet site navigation instead of searching on single word entries in the Address Bar
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   If you enable this policy, the top auto-suggest result in the address bar suggestion list will navigate to intranet sites if the text entered in the address bar is a single word without punctuation.
 
 Default navigation when typing a single word without punctuation will conduct a navigation to an intranet site matching the entered text.
@@ -11295,32 +14102,41 @@ Navigation to sites in response to single word queries that would typically reso
 Popular, single-word search terms will require manual selection of search suggestions to properly conduct a search.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: GoToIntranetSiteForSingleWordEntryInAddressBar
   - GP name: Force direct intranet site navigation instead of searching on single word entries in the Address Bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Example value:
 ``` xml
@@ -11331,36 +14147,48 @@ Popular, single-word search terms will require manual selection of search sugges
   [Back to top](#microsoft-edge---policies)
 
   ### HSTSPolicyBypassList
+
   #### Configure the list of names that will bypass the HSTS policy check
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   Hostnames specified in this list will be exempt from the HSTS policy check that could potentially upgrade requests from "http://" to "https://". Only single-label hostnames are allowed in this policy. Hostnames must be canonicalized. Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific hostnames specified; it doesn't apply to subdomains of the names in the list.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: HSTSPolicyBypassList
   - GP name: Configure the list of names that will bypass the HSTS policy check
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
@@ -11368,6 +14196,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: HSTSPolicyBypassList
   - Example value:
 ``` xml
@@ -11380,44 +14209,57 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   [Back to top](#microsoft-edge---policies)
 
   ### HardwareAccelerationModeEnabled
+
   #### Use hardware acceleration when available
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify to use hardware acceleration, if it's available. If you enable this policy or don't configure it, hardware acceleration is enabled unless a GPU feature is explicitly blocked.
 
 If you disable this policy, hardware acceleration is disabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: HardwareAccelerationModeEnabled
   - GP name: Use hardware acceleration when available
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: HardwareAccelerationModeEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: HardwareAccelerationModeEnabled
   - Example value:
 ``` xml
@@ -11428,13 +14270,17 @@ If you disable this policy, hardware acceleration is disabled.
   [Back to top](#microsoft-edge---policies)
 
   ### HideFirstRunExperience
+
   #### Hide the First-run experience and splash screen
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   If you enable this policy, the First-run experience and the splash screen will not be shown to users when they run Microsoft Edge for the first time.
 
 For the configuration options shown in the First Run Experience, the browser will default to the following:
@@ -11464,32 +14310,41 @@ Note: The specific configuration options shown to the user in the First Run Expe
 -[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: HideFirstRunExperience
   - GP name: Hide the First-run experience and splash screen
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: HideFirstRunExperience
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: HideFirstRunExperience
   - Example value:
 ``` xml
@@ -11499,14 +14354,75 @@ Note: The specific configuration options shown to the user in the First Run Expe
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ImportAutofillFormData
-  #### Allow importing of autofill form data
+  ### HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+
+  #### Hide the one-time redirection dialog and the banner on Microsoft Edge
+
   
   
   #### Supported versions:
+
+  - On Windows since 87 or later
+
+  #### Description
+
+  This policy gives an option to disable one-time redirection dialog and the banner. When this policy is enabled, users will not see both the one-time dialog and the banner.
+Users will continue to be redirected to Microsoft Edge when they encounter an incompatible website on Internet Explorer, but their browsing data will not be imported.
+
+- If you enable this policy the one-time redirection dialog and banner will never be shown to users. Users' browsing data will not be imported when a redirection happens.
+
+- If you disable or don't set this policy, the redirection dialog will be shown on the first redirection and the persistent redirection banner will be shown to users on sessions that begin with a redirection. Users' browsing data will be imported every time user encounters such redirection (ONLY IF user consents to it on the one-time dialog).
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+  - GP name: Hide the one-time redirection dialog and the banner on Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImportAutofillFormData
+
+  #### Allow importing of autofill form data
+
+  
+  
+  #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import autofill form data from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import autofill data is automatically selected.
@@ -11520,32 +14436,41 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 **Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS) and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportAutofillFormData
   - GP name: Allow importing of autofill form data
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportAutofillFormData
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportAutofillFormData
   - Example value:
 ``` xml
@@ -11556,13 +14481,17 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
   [Back to top](#microsoft-edge---policies)
 
   ### ImportBrowserSettings
+
   #### Allow importing of browser settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Allows users to import browser settings from another browser into Microsoft Edge.
 
 If you enable this policy, the **Browser settings** check box is automatically selected in the **Import browser data** dialog box.
@@ -11576,32 +14505,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportBrowserSettings
   - GP name: Allow importing of browser settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportBrowserSettings
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportBrowserSettings
   - Example value:
 ``` xml
@@ -11612,13 +14550,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportCookies
+
   #### Allow importing of Cookies
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Allows users to import Cookies from another browser into Microsoft Edge.
 
 If you disable this policy, Cookies aren't imported on first run.
@@ -11630,32 +14572,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportCookies
   - GP name: Allow importing of Cookies
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportCookies
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportCookies
   - Example value:
 ``` xml
@@ -11666,13 +14617,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportExtensions
+
   #### Allow importing of extensions
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Allows users to import extensions from another browser into Microsoft Edge.
 
 If you enable this policy, the **Extensions** check box is automatically selected in the **Import browser data** dialog box.
@@ -11686,32 +14641,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportExtensions
   - GP name: Allow importing of extensions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportExtensions
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportExtensions
   - Example value:
 ``` xml
@@ -11722,13 +14686,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportFavorites
+
   #### Allow importing of favorites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import favorites from another browser into Microsoft Edge.
 
 If you enable this policy, the **Favorites** check box is automatically selected in the **Import browser data** dialog box.
@@ -11742,32 +14710,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (on macOS) browsers.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportFavorites
   - GP name: Allow importing of favorites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportFavorites
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportFavorites
   - Example value:
 ``` xml
@@ -11778,13 +14755,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHistory
+
   #### Allow importing of browsing history
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import their browsing history from another browser into Microsoft Edge.
 
 If you enable this policy, the **Browsing history** check box is automatically selected in the **Import browser data** dialog box.
@@ -11798,32 +14779,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (macOS) browsers.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportHistory
   - GP name: Allow importing of browsing history
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportHistory
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportHistory
   - Example value:
 ``` xml
@@ -11834,13 +14824,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportHomepage
+
   #### Allow importing of home page settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import their home page setting from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import the home page setting is automatically selected.
@@ -11854,32 +14848,41 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportHomepage
   - GP name: Allow importing of home page settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ImportHomepage
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportHomepage
   - Example value:
 ``` xml
@@ -11890,13 +14893,17 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   [Back to top](#microsoft-edge---policies)
 
   ### ImportOpenTabs
+
   #### Allow importing of open tabs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   Allows users to import open and pinned tabs from another browser into Microsoft Edge.
 
 If you enable this policy, the **Open tabs** check box is automatically selected in the **Import browser data** dialog box.
@@ -11910,32 +14917,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportOpenTabs
   - GP name: Allow importing of open tabs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportOpenTabs
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportOpenTabs
   - Example value:
 ``` xml
@@ -11946,13 +14962,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportPaymentInfo
+
   #### Allow importing of payment info
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import payment info from another browser into Microsoft Edge.
 
 If you enable this policy, the **payment info** check box is automatically selected in the **Import browser data** dialog box.
@@ -11966,32 +14986,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note:** This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportPaymentInfo
   - GP name: Allow importing of payment info
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportPaymentInfo
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportPaymentInfo
   - Example value:
 ``` xml
@@ -12002,13 +15031,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSavedPasswords
+
   #### Allow importing of saved passwords
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import saved passwords from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import saved passwords is automatically selected.
@@ -12022,32 +15055,41 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportSavedPasswords
   - GP name: Allow importing of saved passwords
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportSavedPasswords
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportSavedPasswords
   - Example value:
 ``` xml
@@ -12058,13 +15100,17 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   [Back to top](#microsoft-edge---policies)
 
   ### ImportSearchEngine
+
   #### Allow importing of search engine settings
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows users to import search engine settings from another browser into Microsoft Edge.
 
 If you enable, this policy, the option to import search engine settings is automatically selected.
@@ -12078,32 +15124,41 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportSearchEngine
   - GP name: Allow importing of search engine settings
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportSearchEngine
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportSearchEngine
   - Example value:
 ``` xml
@@ -12114,13 +15169,17 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   [Back to top](#microsoft-edge---policies)
 
   ### ImportShortcuts
+
   #### Allow importing of shortcuts
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   Allows users to import Shortcuts from another browser into Microsoft Edge.
 
 If you disable this policy, Shortcuts aren't imported on first run.
@@ -12132,32 +15191,41 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 **Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ImportShortcuts
   - GP name: Allow importing of shortcuts
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ImportShortcuts
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ImportShortcuts
   - Example value:
 ``` xml
@@ -12168,13 +15236,17 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   [Back to top](#microsoft-edge---policies)
 
   ### InPrivateModeAvailability
+
   #### Configure InPrivate mode availability
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies whether the user can open pages in InPrivate mode in Microsoft Edge.
 
 If you don't configure this policy or set it to 'Enabled', users can open pages in InPrivate mode.
@@ -12194,32 +15266,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InPrivateModeAvailability
   - GP name: Configure InPrivate mode availability
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InPrivateModeAvailability
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: InPrivateModeAvailability
   - Example value:
 ``` xml
@@ -12230,44 +15311,57 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### InsecureFormsWarningsEnabled
+
   #### Enable warnings for insecure forms
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.
 If you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.
 If you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InsecureFormsWarningsEnabled
   - GP name: Enable warnings for insecure forms
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InsecureFormsWarningsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: InsecureFormsWarningsEnabled
   - Example value:
 ``` xml
@@ -12278,13 +15372,17 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   [Back to top](#microsoft-edge---policies)
 
   ### IntensiveWakeUpThrottlingEnabled
+
   #### Control the IntensiveWakeUpThrottling feature
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   When enabled the IntensiveWakeUpThrottling feature causes Javascript timers in background tabs to be aggressively throttled and coalesced, running no more than once per minute after a page has been backgrounded for 5 minutes or more.
 
 This is a web standards compliant feature, but it may break functionality on some websites by causing certain actions to be delayed by up to a minute. However, it results in significant CPU and battery savings when enabled. See https://bit.ly/30b1XR4 for more details.
@@ -12297,32 +15395,41 @@ Note that the policy is applied per renderer process, with the most recent value
 
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: IntensiveWakeUpThrottlingEnabled
   - GP name: Control the IntensiveWakeUpThrottling feature
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: IntensiveWakeUpThrottlingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: IntensiveWakeUpThrottlingEnabled
   - Example value:
 ``` xml
@@ -12333,13 +15440,17 @@ Note that the policy is applied per renderer process, with the most recent value
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationEnhancedHangDetection
+
   #### Configure enhanced hang detection for Internet Explorer mode
+
   
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   Enhanced hang detection is a more granular approach to detecting hung webpages in Internet Explorer mode than what standalone Internet Explorer uses. When a hung webpage is detected, the browser will apply a mitigation to prevent the rest of the browser from hanging.
 
 This setting allows you to configure the use of enhanced hang detection in case you run into incompatible issues with any of your websites. We recommend disabling this policy only if you see notifications such as "(website) is not responding" in Internet Explorer mode but not in standalone Internet Explorer.
@@ -12364,26 +15475,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InternetExplorerIntegrationEnhancedHangDetection
   - GP name: Configure enhanced hang detection for Internet Explorer mode
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationEnhancedHangDetection
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -12394,13 +15513,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationLevel
+
   #### Configure Internet Explorer integration
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
 Policy options mapping:
@@ -12414,26 +15537,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InternetExplorerIntegrationLevel
   - GP name: Configure Internet Explorer integration
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationLevel
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -12444,36 +15575,48 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteList
+
   #### Configure the Enterprise Mode Site List
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InternetExplorerIntegrationSiteList
   - GP name: Configure the Enterprise Mode Site List
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationSiteList
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
@@ -12484,13 +15627,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationSiteRedirect
+
   #### Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
+
   
   
   #### Supported versions:
+
   - On Windows since 81 or later
 
   #### Description
+
   An "in-page" navigation is started from a link, a script, or a form on the current page. It can also be a server-side redirect of a previous "in-page" navigation attempt. Conversely, a user can start a navigation that isn't "in-page" that's independent of the current page in several ways by using the browser controls. For example, using the address bar, the back button, or a favorite link.
 
 This setting lets you specify whether navigations from pages loaded in Internet Explorer mode to unconfigured sites (that are not configured in the Enterprise Mode Site List) switch back to Microsoft Edge or remain in Internet Explorer mode.
@@ -12521,26 +15668,34 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InternetExplorerIntegrationSiteRedirect
   - GP name: Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationSiteRedirect
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -12551,13 +15706,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### InternetExplorerIntegrationTestingAllowed
+
   #### Allow Internet Explorer mode testing
+
   
   
   #### Supported versions:
+
   - On Windows since 86 or later
 
   #### Description
+
   This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
 
 This setting works in conjunction with:
@@ -12572,26 +15731,34 @@ If you disable this policy, users can't see the UI option in the menu directly.
 If you don't configure this policy, you can set up the ie-mode-test flag manually.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: InternetExplorerIntegrationTestingAllowed
   - GP name: Allow Internet Explorer mode testing
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationTestingAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -12602,13 +15769,17 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
   [Back to top](#microsoft-edge---policies)
 
   ### IsolateOrigins
+
   #### Enable site isolation for specific origins
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify origins to run in isolation, in their own process.
 
 This policy also isolates origins named by subdomains - for example, specifying https://contoso.com/ will cause https://foo.contoso.com/ to be isolated as part of the https://contoso.com/ site.
@@ -12620,32 +15791,41 @@ If you disable this policy, then both the 'IsolateOrigins' and 'SitePerProcess' 
 If you don't configure the policy, the user can change this setting.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: IsolateOrigins
   - GP name: Enable site isolation for specific origins
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: IsolateOrigins
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: IsolateOrigins
   - Example value:
 ``` xml
@@ -12656,13 +15836,17 @@ If you don't configure the policy, the user can change this setting.
   [Back to top](#microsoft-edge---policies)
 
   ### LocalProvidersEnabled
+
   #### Allow suggestions from local providers
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   Allow suggestions from suggestion providers on the device (local providers), for example, Favorites and Browsing History, in Microsoft Edge's Address Bar and Auto-Suggest List.
 
 If you enable this policy, suggestions from local providers are used.
@@ -12676,32 +15860,41 @@ Note that some features may not be available if a policy to disable this feature
 This policy requires a browser restart to finish applying.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: LocalProvidersEnabled
   - GP name: Allow suggestions from local providers
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: LocalProvidersEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: LocalProvidersEnabled
   - Example value:
 ``` xml
@@ -12712,13 +15905,17 @@ This policy requires a browser restart to finish applying.
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedFavorites
+
   #### Configure favorites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Configures a list of managed favorites.
 
 The policy creates a list of favorites. Each favorite contains the keys "name" and "url," which hold the favorite's name and its target. You can configure a subfolder by defining a favorites without an "url" key but with an additional "children" key that contains a list of favorites as defined above (some of which may be folders again). Microsoft Edge amends incomplete URLs as if they were submitted via the Address Bar, for example "microsoft.com" becomes "https://microsoft.com/".
@@ -12728,26 +15925,34 @@ These favorites are placed in a folder that can't be modified by the user (but t
 Managed favorites are not synced to the user account and can't be modified by extensions.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ManagedFavorites
   - GP name: Configure favorites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ManagedFavorites
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
@@ -12777,8 +15982,15 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [{"toplevel_name": "My managed favorites folder"}, {"name": "Microsoft", "url": "microsoft.com"}, {"name": "Bing", "url": "bing.com"}, {"children": [{"name": "Microsoft Edge Insiders", "url": "www.microsoftedgeinsider.com"}, {"name": "Microsoft Edge", "url": "www.microsoft.com/windows/microsoft-edge"}], "name": "Microsoft Edge links"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: ManagedFavorites
   - Example value:
 ``` xml
@@ -12826,13 +16038,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   [Back to top](#microsoft-edge---policies)
 
   ### ManagedSearchEngines
+
   #### Manage Search Engines
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Lets you configure a list of up to 10 search engines, one of which must be marked as the default search engine.
 You do not need to specify the encoding. Starting in Microsoft Edge 80, the suggest_url and image_search_url parameters are optional. The optional parameter, image_search_post_params (consists of comma-separated name/value pairs), is available starting in Microsoft Edge 80.
 
@@ -12845,26 +16061,34 @@ If you disable or don't configure this policy, users can modify the search engin
 If the [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policy is set, this policy (ManagedSearchEngines) is ignored. The user must restart their browser to finish applying this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ManagedSearchEngines
   - GP name: Manage Search Engines
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ManagedSearchEngines
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
@@ -12901,8 +16125,15 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [{"allow_search_engine_discovery": true}, {"is_default": true, "keyword": "example1.com", "name": "Example1", "search_url": "https://www.example1.com/search?q={searchTerms}", "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"}, {"image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", "keyword": "example2.com", "name": "Example2", "search_url": "https://www.example2.com/search?q={searchTerms}", "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"}, {"encoding": "UTF-8", "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", "keyword": "example3.com", "name": "Example3", "search_url": "https://www.example3.com/search?q={searchTerms}", "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"}, {"keyword": "example4.com", "name": "Example4", "search_url": "https://www.example4.com/search?q={searchTerms}"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: ManagedSearchEngines
   - Example value:
 ``` xml
@@ -12967,13 +16198,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   [Back to top](#microsoft-edge---policies)
 
   ### MaxConnectionsPerProxy
+
   #### Maximum number of concurrent connections to the proxy server
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies the maximum number of simultaneous connections to the proxy server.
 
 Some proxy servers can't handle a high number of concurrent connections per client - you can solve this by setting this policy to a lower value.
@@ -12985,32 +16220,41 @@ Some web apps are known to consume many connections with hanging GETs - lowering
 If you don't configure this policy, the default value (32) is used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: MaxConnectionsPerProxy
   - GP name: Maximum number of concurrent connections to the proxy server
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: MaxConnectionsPerProxy
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000020
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: MaxConnectionsPerProxy
   - Example value:
 ``` xml
@@ -13021,13 +16265,17 @@ If you don't configure this policy, the default value (32) is used.
   [Back to top](#microsoft-edge---policies)
 
   ### MediaRouterCastAllowAllIPs
+
   #### Allow Google Cast to connect to Cast devices on all IP addresses
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enable this policy to let Google Cast connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses.
 
 Disable this policy to restrict Google Cast to Cast devices on RFC1918/RFC4193 private addresses.
@@ -13037,32 +16285,41 @@ If you don't configure this policy, Google Cast connects to Cast devices on RFC1
 If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this policy has no effect.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: MediaRouterCastAllowAllIPs
   - GP name: Allow Google Cast to connect to Cast devices on all IP addresses
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: MediaRouterCastAllowAllIPs
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: MediaRouterCastAllowAllIPs
   - Example value:
 ``` xml
@@ -13073,13 +16330,17 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
   [Back to top](#microsoft-edge---policies)
 
   ### MetricsReportingEnabled
+
   #### Enable usage and crash-related data reporting (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   This policy is deprecated. It is currently supported but will become obsolete in Microsoft Edge 89. This policy is replaced by the new policy:  [DiagnosticData](#diagnosticdata)for Windows 7, Windows 8, and macOS. This policy is replaced by Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 This policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
@@ -13095,32 +16356,41 @@ To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveserv
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: MetricsReportingEnabled
   - GP name: Enable usage and crash-related data reporting (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: MetricsReportingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: MetricsReportingEnabled
   - Example value:
 ``` xml
@@ -13131,13 +16401,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### NativeWindowOcclusionEnabled
+
   #### Enable Native Window Occlusion
+
   
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   Enables native window occlusion in Microsoft Edge.
 
 If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
@@ -13147,26 +16421,34 @@ If you disable this setting Microsoft Edge will not detect when a window is cove
 If this policy is left not set, window hiding detection will be enabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NativeWindowOcclusionEnabled
   - GP name: Enable Native Window Occlusion
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NativeWindowOcclusionEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -13177,13 +16459,17 @@ If this policy is left not set, window hiding detection will be enabled.
   [Back to top](#microsoft-edge---policies)
 
   ### NavigationDelayForInitialSiteListDownloadTimeout
+
   #### Set a timeout for delay of tab navigation for the Enterprise Mode Site List
+
   
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   Allows you to set a timeout, in seconds, for Microsoft Edge tabs waiting to navigate until the browser has downloaded the initial Enterprise Mode Site List.
 
 This setting works in conjunction with:
@@ -13200,26 +16486,34 @@ If you set the timeout in this policy to a value greater than the default of 2 s
 If you don't configure this policy, the default timeout of 2 seconds is used. This default is subject to change in the future.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NavigationDelayForInitialSiteListDownloadTimeout
   - GP name: Set a timeout for delay of tab navigation for the Enterprise Mode Site List
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NavigationDelayForInitialSiteListDownloadTimeout
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x0000000a
 ```
@@ -13230,13 +16524,17 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
   [Back to top](#microsoft-edge---policies)
 
   ### NetworkPredictionOptions
+
   #### Enable network prediction
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables network prediction and prevents users from changing this setting.
 
 This controls DNS prefetching, TCP and SSL preconnection, and prerendering of web pages.
@@ -13254,32 +16552,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NetworkPredictionOptions
   - GP name: Enable network prediction
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: NetworkPredictionOptions
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: NetworkPredictionOptions
   - Example value:
 ``` xml
@@ -13290,13 +16597,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### NonRemovableProfileEnabled
+
   #### Configure whether a user always has a default profile automatically signed in with their work or school account
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   This policy determines if a user can remove the Microsoft Edge profile automatically signed in with a user's work or school account.
 
 If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed.
@@ -13308,26 +16619,34 @@ If you want to configure browser sign in, use the [BrowserSignin](#browsersignin
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: NonRemovableProfileEnabled
   - GP name: Configure whether a user always has a default profile automatically signed in with their work or school account
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: NonRemovableProfileEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -13338,13 +16657,17 @@ This policy is available only on Windows instances that are joined to a Microsof
   [Back to top](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
+
   #### Control where security restrictions on insecure origins apply
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies a list of origins (URLs) or hostname patterns (like "*.contoso.com") for which security restrictions on insecure origins don't apply.
 
 This policy lets you specify allowed origins for legacy applications that can't deploy TLS or set up a staging server for internal web development so that developers can test out features requiring secure contexts without having to deploy TLS on the staging server. This policy also prevents the origin from being labeled "Not Secure" in the omnibox.
@@ -13354,26 +16677,34 @@ Setting a list of URLs in this policy has the same effect as setting the command
 For more information on secure contexts, see https://www.w3.org/TR/secure-contexts/.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: OverrideSecurityRestrictionsOnInsecureOrigin
   - GP name: Control where security restrictions on insecure origins apply
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
@@ -13382,6 +16713,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 
   #### Mac information and settings
+  
   - Preference Key Name: OverrideSecurityRestrictionsOnInsecureOrigin
   - Example value:
 ``` xml
@@ -13395,13 +16727,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   [Back to top](#microsoft-edge---policies)
 
   ### PaymentMethodQueryEnabled
+
   #### Allow websites to query for available payment methods
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Allows you to set whether websites can check if the user has payment methods saved.
 
 If you disable this policy, websites that use PaymentRequest.canMakePayment or PaymentRequest.hasEnrolledInstrument API will be informed that no payment methods are available.
@@ -13409,32 +16745,41 @@ If you disable this policy, websites that use PaymentRequest.canMakePayment or P
 If you enable this policy or don't set this policy, websites can check if the user has payment methods saved.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PaymentMethodQueryEnabled
   - GP name: Allow websites to query for available payment methods
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PaymentMethodQueryEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PaymentMethodQueryEnabled
   - Example value:
 ``` xml
@@ -13445,13 +16790,17 @@ If you enable this policy or don't set this policy, websites can check if the us
   [Back to top](#microsoft-edge---policies)
 
   ### PersonalizationReportingEnabled
+
   #### Allow personalization of ads, search and news by sending browsing history to Microsoft
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history to be used for personalizing advertising, search, news and other Microsoft services.
 
 This setting is only available for users with a Microsoft account. This setting is not available for child accounts or enterprise accounts.
@@ -13459,32 +16808,41 @@ This setting is only available for users with a Microsoft account. This setting 
 If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Microsoft Edge will default to the user's preference.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PersonalizationReportingEnabled
   - GP name: Allow personalization of ads, search and news by sending browsing history to Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PersonalizationReportingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PersonalizationReportingEnabled
   - Example value:
 ``` xml
@@ -13495,13 +16853,17 @@ If you disable this policy, users can't change or override the setting. If this 
   [Back to top](#microsoft-edge---policies)
 
   ### PinningWizardAllowed
+
   #### Allow Pin to taskbar wizard
+
   
   
   #### Supported versions:
+
   - On Windows since 80 or later
 
   #### Description
+
   Microsoft Edge uses the Pin to taskbar wizard to help users pin suggested sites to the taskbar. The Pin to taskbar wizard feature is enabled by default and accessible to the user through the Settings and more menu.
 
 If you enable this policy or don't configure it, users can call the Pin to taskbar wizard from the Settings and More menu. The wizard can also be called via a protocol launch.
@@ -13511,26 +16873,34 @@ If you disable this policy, the Pin to taskbar wizard is disabled in the menu an
 User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PinningWizardAllowed
   - GP name: Allow Pin to taskbar wizard
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PinningWizardAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -13541,13 +16911,17 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
   [Back to top](#microsoft-edge---policies)
 
   ### ProactiveAuthEnabled
+
   #### Enable Proactive Authentication
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Lets you configure whether to turn on Proactive Authentication.
 
 If you enable this policy, Microsoft Edge tries to proactively authenticate the signed-in user with Microsoft services. At regular intervals, Microsoft Edge checks with an online service for an updated manifest that contains the configuration that governs how to do this.
@@ -13557,32 +16931,41 @@ If you disable this policy, Microsoft Edge doesn't try to proactively authentica
 If you don't configure this policy, Proactive Authentication is turned on.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ProactiveAuthEnabled
   - GP name: Enable Proactive Authentication
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ProactiveAuthEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ProactiveAuthEnabled
   - Example value:
 ``` xml
@@ -13593,13 +16976,17 @@ If you don't configure this policy, Proactive Authentication is turned on.
   [Back to top](#microsoft-edge---policies)
 
   ### PromotionalTabsEnabled
+
   #### Enable full-tab promotional content
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features.
 
 If you enable this policy (set it true) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
@@ -13607,32 +16994,41 @@ If you enable this policy (set it true) or don't configure it, Microsoft Edge ca
 If you disable (set to false) this policy, Microsoft Edge can't show full-tab content to users.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PromotionalTabsEnabled
   - GP name: Enable full-tab promotional content
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PromotionalTabsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PromotionalTabsEnabled
   - Example value:
 ``` xml
@@ -13643,13 +17039,17 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
   [Back to top](#microsoft-edge---policies)
 
   ### PromptForDownloadLocation
+
   #### Ask where to save downloaded files
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set whether to ask where to save a file before downloading it.
 
 If you enable this policy, the user is asked where to save each file before downloading; if you don't configure it, files are saved automatically to the default location, without asking the user.
@@ -13657,32 +17057,41 @@ If you enable this policy, the user is asked where to save each file before down
 If you don't configure this policy, the user will be able to change this setting.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: PromptForDownloadLocation
   - GP name: Ask where to save downloaded files
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: PromptForDownloadLocation
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: PromptForDownloadLocation
   - Example value:
 ``` xml
@@ -13693,13 +17102,17 @@ If you don't configure this policy, the user will be able to change this setting
   [Back to top](#microsoft-edge---policies)
 
   ### QuicAllowed
+
   #### Allow QUIC protocol
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows use of the QUIC protocol in Microsoft Edge.
 
 If you enable this policy or don't configure it, the QUIC protocol is allowed.
@@ -13709,32 +17122,41 @@ If you disable this policy, the QUIC protocol is blocked.
 QUIC is a transport layer network protocol that can improve performance of web applications that currently use TCP.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: QuicAllowed
   - GP name: Allow QUIC protocol
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: QuicAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: QuicAllowed
   - Example value:
 ``` xml
@@ -13744,14 +17166,148 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   [Back to top](#microsoft-edge---policies)
 
-  ### RelaunchNotification
-  #### Notify a user that a browser restart is recommended or required for pending updates
+  ### RedirectSitesFromInternetExplorerPreventBHOInstall
+
+  #### Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge
+
   
   
   #### Supported versions:
+
+  - On Windows since 87 or later
+
+  #### Description
+
+  This setting lets you specify whether to block the install of the Browser Helper Object (BHO) that enables redirecting incompatible sites from Internet Explorer to Microsoft Edge for sites that require a modern browser.
+
+If you enable this policy, the BHO will not be installed. If it is already installed it will be uninstalled on the next Microsoft Edge update.
+
+If this policy is not configured or is disabled, the BHO will be installed.
+
+The BHO is required for incompatible site redirection to occur, however whether redirection occurs or not is also controlled by [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RedirectSitesFromInternetExplorerPreventBHOInstall
+  - GP name: Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RedirectSitesFromInternetExplorerPreventBHOInstall
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RedirectSitesFromInternetExplorerRedirectMode
+
+  #### Redirect incompatible sites from Internet Explorer to Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 87 or later
+
+  #### Description
+
+  This setting lets you specify whether Internet Explorer will redirect navigations to sites that require a modern browser to Microsoft Edge.
+
+If you don't configure this policy or set it to 'Sitelist', beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
+
+Microsoft provides a list of public sites that require such redirection, such as https://mail.yahoo.com.
+
+When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that began loading that site is closed if it had no prior content. Otherwise, it is navigated to a Microsoft help page explaining why the site was redirected to Microsoft Edge.
+
+When Microsoft Edge is launched to load a site from IE, an information bar is shown to the user explaining that the site works best in a modern browser.
+
+If you set this policy to 'Disable', Internet Explorer will not redirect any traffic to Microsoft Edge.
+
+For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+
+Policy options mapping:
+
+* Disable (0) = Disable
+
+* Sitelist (1) = Redirect sites based on the incompatible sites sitelist
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RedirectSitesFromInternetExplorerRedirectMode
+  - GP name: Redirect incompatible sites from Internet Explorer to Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: RedirectSitesFromInternetExplorerRedirectMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RelaunchNotification
+
+  #### Notify a user that a browser restart is recommended or required for pending updates
+
+  
+  
+  #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Notify users that they need to restart Microsoft Edge to apply a pending update.
 
 If you don't configure this policy, Microsoft Edge adds a recycle icon at the far right of the top menu bar to prompt users to restart the browser to apply the update.
@@ -13771,32 +17327,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RelaunchNotification
   - GP name: Notify a user that a browser restart is recommended or required for pending updates
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RelaunchNotification
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RelaunchNotification
   - Example value:
 ``` xml
@@ -13807,13 +17372,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### RelaunchNotificationPeriod
+
   #### Set the time period for update notifications
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to set the time period, in milliseconds, over which users are notified that Microsoft Edge must be relaunched to apply a pending update.
 
 Over this time period, the user will be repeatedly informed of the need for an update. In Microsoft Edge the app menu changes to indicate that a relaunch is needed once one third of the notification period passes. This notification changes color once two thirds of the notification period passes, and again once the full notification period has passed. The additional notifications enabled by the [RelaunchNotification](#relaunchnotification) policy follow this same schedule.
@@ -13821,32 +17390,41 @@ Over this time period, the user will be repeatedly informed of the need for an u
 If not set, the default period of 604800000 milliseconds (one week) is used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RelaunchNotificationPeriod
   - GP name: Set the time period for update notifications
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RelaunchNotificationPeriod
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x240c8400
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RelaunchNotificationPeriod
   - Example value:
 ``` xml
@@ -13857,38 +17435,50 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
   [Back to top](#microsoft-edge---policies)
 
   ### RendererCodeIntegrityEnabled
+
   #### Enable renderer code integrity
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   If this policy is enabled or left unset, then Renderer Code Integrity is enabled. This policy should only be disabled if compatibility issues are encountered with third party software that must run inside Microsoft Edge's renderer processes.
 
 Disabling this policy has a detrimental effect on Microsoft Edge's security and stability because unknown and potentially hostile code will be allowed to load inside Microsoft Edge's renderer processes.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RendererCodeIntegrityEnabled
   - GP name: Enable renderer code integrity
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RendererCodeIntegrityEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -13899,13 +17489,17 @@ Disabling this policy has a detrimental effect on Microsoft Edge's security and 
   [Back to top](#microsoft-edge---policies)
 
   ### RequireOnlineRevocationChecksForLocalAnchors
+
   #### Specify if online OCSP/CRL checks are required for local trust anchors
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   Control whether online revocation checks (OCSP/CRL checks) are required. If Microsoft Edge can't get revocation status information, these certificates are treated as revoked ("hard-fail").
 
 If you enable this policy, Microsoft Edge always performs revocation checking for server certificates that successfully validate and are signed by locally-installed CA certificates.
@@ -13913,26 +17507,34 @@ If you enable this policy, Microsoft Edge always performs revocation checking fo
 If you don't configure or disable this policy, then Microsoft Edge uses the existing online revocation checking settings.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RequireOnlineRevocationChecksForLocalAnchors
   - GP name: Specify if online OCSP/CRL checks are required for local trust anchors
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RequireOnlineRevocationChecksForLocalAnchors
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
@@ -13943,13 +17545,17 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
   [Back to top](#microsoft-edge---policies)
 
   ### ResolveNavigationErrorsUseWebService
+
   #### Enable resolution of navigation errors using a web service
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allow Microsoft Edge to issue a dataless connection to a web service to probe networks for connectivity in cases like hotel and airport Wi-Fi.
 
 If you enable this policy, a web service is used for network connectivity tests.
@@ -13962,32 +17568,41 @@ If you don't configure this policy, Microsoft Edge respects the user preference 
 Specifically, there's a **Use a web service to help resolve navigation errors** toggle, which the user can switch on or off. Be aware that if you have enabled this policy (ResolveNavigationErrorsUseWebService), the **Use a web service to help resolve navigation errors** setting is turned on, but the user can't change the setting by using the toggle. If you have disabled this policy, the **Use a web service to help resolve navigation errors** setting is turned off, and the user can't change the setting by using the toggle.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ResolveNavigationErrorsUseWebService
   - GP name: Enable resolution of navigation errors using a web service
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ResolveNavigationErrorsUseWebService
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ResolveNavigationErrorsUseWebService
   - Example value:
 ``` xml
@@ -13998,13 +17613,17 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
   [Back to top](#microsoft-edge---policies)
 
   ### RestrictSigninToPattern
+
   #### Restrict which accounts can be used as Microsoft Edge primary accounts
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Determines which accounts can be set as browser primary accounts in Microsoft Edge (the account that is chosen during the Sync opt-in flow).
 
 If a user tries to configure a browser primary account with a username that doesn't match this pattern, they are blocked and will get the appropriate error message. You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
@@ -14012,32 +17631,41 @@ If a user tries to configure a browser primary account with a username that does
 If you don't configure this policy or leave it blank, users can set any account as a browser primary account in Microsoft Edge.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RestrictSigninToPattern
   - GP name: Restrict which accounts can be used as Microsoft Edge primary accounts
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RestrictSigninToPattern
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 ".*@contoso.com"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RestrictSigninToPattern
   - Example value:
 ``` xml
@@ -14048,13 +17676,17 @@ If you don't configure this policy or leave it blank, users can set any account 
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileLocation
+
   #### Set the roaming profile directory
+
   
   
   #### Supported versions:
+
   - On Windows since 85 or later
 
   #### Description
+
   Configures the directory to use to store the roaming copy of profiles.
 
 If you enable this policy, Microsoft Edge uses the provided directory to store a roaming copy of the profiles, as long as you've also enabled the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy. If you disable the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy or don't configure it, the value stored in this policy isn't used.
@@ -14064,26 +17696,34 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 If you don't configure this policy, the default roaming profile path is used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RoamingProfileLocation
   - GP name: Set the roaming profile directory
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RoamingProfileLocation
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "${roaming_app_data}\\edge-profile"
 ```
@@ -14094,13 +17734,17 @@ If you don't configure this policy, the default roaming profile path is used.
   [Back to top](#microsoft-edge---policies)
 
   ### RoamingProfileSupportEnabled
+
   #### Enable using roaming copies for Microsoft Edge profile data
+
   
   
   #### Supported versions:
+
   - On Windows since 85 or later
 
   #### Description
+
   Enable this policy to use roaming profiles on Windows. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator through the [RoamingProfileLocation](#roamingprofilelocation) policy).
 
 If you disable this policy or don't configure it, only the regular local profiles are used.
@@ -14110,26 +17754,34 @@ The [SyncDisabled](#syncdisabled) policy disables all data synchronization, over
 See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles for more information on using roaming user profiles.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RoamingProfileSupportEnabled
   - GP name: Enable using roaming copies for Microsoft Edge profile data
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RoamingProfileSupportEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -14140,13 +17792,17 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
   [Back to top](#microsoft-edge---policies)
 
   ### RunAllFlashInAllowMode
+
   #### Extend Adobe Flash content setting to all content
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable this policy, all Adobe Flash content embedded in websites that are set to allow Adobe Flash in the content settings -- either by the user or by enterprise policy -- will run. This includes content from other origins and/or small content.
 
 To control which websites are allowed to run Adobe Flash, see the specifications in the [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls), and [PluginsBlockedForUrls](#pluginsblockedforurls) policies.
@@ -14154,32 +17810,41 @@ To control which websites are allowed to run Adobe Flash, see the specifications
 If you disable this policy or don't configure it, Adobe Flash content from other origins (from sites that aren't specified in the three policies mentioned immediately above) or small content might be blocked.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: RunAllFlashInAllowMode
   - GP name: Extend Adobe Flash content setting to all content
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: RunAllFlashInAllowMode
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: RunAllFlashInAllowMode
   - Example value:
 ``` xml
@@ -14190,13 +17855,17 @@ If you disable this policy or don't configure it, Adobe Flash content from other
   [Back to top](#microsoft-edge---policies)
 
   ### SSLErrorOverrideAllowed
+
   #### Allow users to proceed from the HTTPS warning page
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Microsoft Edge shows a warning page when users visit sites that have SSL errors.
 
 If you enable or don't configure (default) this policy, users can click through these warning pages.
@@ -14204,32 +17873,41 @@ If you enable or don't configure (default) this policy, users can click through 
 If you disable this policy, users are blocked from clicking through any warning page.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SSLErrorOverrideAllowed
   - GP name: Allow users to proceed from the HTTPS warning page
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SSLErrorOverrideAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SSLErrorOverrideAllowed
   - Example value:
 ``` xml
@@ -14240,13 +17918,17 @@ If you disable this policy, users are blocked from clicking through any warning 
   [Back to top](#microsoft-edge---policies)
 
   ### SSLVersionMin
+
   #### Minimum TLS version enabled
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Sets the minimum supported version of TLS. If you don't configure this policy, Microsoft Edge uses a default minimum version, TLS 1.0.
 
 If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Any unrecognized value is ignored.
@@ -14262,32 +17944,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SSLVersionMin
   - GP name: Minimum TLS version enabled
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SSLVersionMin
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "tls1"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SSLVersionMin
   - Example value:
 ``` xml
@@ -14298,13 +17989,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### SaveCookiesOnExit
+
   #### Save cookies when Microsoft Edge closes
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   When this policy is enabled, the specified set of cookies is exempt from deletion when the browser closes. This policy is only effective when:
 - The 'Cookies and other site data' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
 - The policy [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) is enabled or
@@ -14319,26 +18014,34 @@ If you enable this policy, the list of cookies won't be cleared when the browser
 If you disable or don't configure this policy, the user's personal configuration is used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SaveCookiesOnExit
   - GP name: Save cookies when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
@@ -14347,6 +18050,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SaveCookiesOnExit
   - Example value:
 ``` xml
@@ -14360,13 +18064,17 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### SavingBrowserHistoryDisabled
+
   #### Disable saving browser history
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables saving browser history and prevents users from changing this setting.
 
 If you enable this policy, browsing history isn't saved. This also disables tab syncing.
@@ -14374,32 +18082,41 @@ If you enable this policy, browsing history isn't saved. This also disables tab 
 If you disable this policy or don't configure it, browsing history is saved.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SavingBrowserHistoryDisabled
   - GP name: Disable saving browser history
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SavingBrowserHistoryDisabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SavingBrowserHistoryDisabled
   - Example value:
 ``` xml
@@ -14410,43 +18127,56 @@ If you disable this policy or don't configure it, browsing history is saved.
   [Back to top](#microsoft-edge---policies)
 
   ### ScreenCaptureAllowed
+
   #### Allow or deny screen capture
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
 If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ScreenCaptureAllowed
   - GP name: Allow or deny screen capture
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ScreenCaptureAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ScreenCaptureAllowed
   - Example value:
 ``` xml
@@ -14457,13 +18187,17 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
   [Back to top](#microsoft-edge---policies)
 
   ### ScrollToTextFragmentEnabled
+
   #### Enable scrolling to text specified in URL fragments
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   This feature lets hyperlink and address bar URL navigations target specific text on a web page, which will be scrolled to after the web page finishes loading.
 
 If you enable or don't configure this policy, web page scrolling to specific text fragments via a URL will be enabled.
@@ -14471,32 +18205,41 @@ If you enable or don't configure this policy, web page scrolling to specific tex
 If you disable this policy, web page scrolling to specific text fragments via a URL will be disabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ScrollToTextFragmentEnabled
   - GP name: Enable scrolling to text specified in URL fragments
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ScrollToTextFragmentEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ScrollToTextFragmentEnabled
   - Example value:
 ``` xml
@@ -14507,13 +18250,17 @@ If you disable this policy, web page scrolling to specific text fragments via a 
   [Back to top](#microsoft-edge---policies)
 
   ### SearchSuggestEnabled
+
   #### Enable search suggestions
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables web search suggestions in Microsoft Edge's Address Bar and Auto-Suggest List and prevents users from changing this policy.
 
 If you enable this policy, web search suggestions are used.
@@ -14523,32 +18270,41 @@ If you disable this policy, web search suggestions are never used, however local
 If this policy is left not set, search suggestions are enabled but the user can change that.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SearchSuggestEnabled
   - GP name: Enable search suggestions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: SearchSuggestEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SearchSuggestEnabled
   - Example value:
 ``` xml
@@ -14559,38 +18315,50 @@ If this policy is left not set, search suggestions are enabled but the user can 
   [Back to top](#microsoft-edge---policies)
 
   ### SecurityKeyPermitAttestation
+
   #### Websites or domains that don't need permission to use direct Security Key attestation
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specifies websites and domains that don't need explicit user permission when attestation certificates from security keys are requested. Additionally, a signal is sent to the security key indicating that it can use individual attestation. Without this, users are prompted each time a site requests attestation of security keys.
 
 Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (like contoso.com) only match as webauthn RP IDs. To cover both U2F and webauthn APIs for a given site, you need to list both the appID URL and domain.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SecurityKeyPermitAttestation
   - GP name: Websites or domains that don't need permission to use direct Security Key attestation
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
@@ -14598,6 +18366,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SecurityKeyPermitAttestation
   - Example value:
 ``` xml
@@ -14610,36 +18379,48 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   [Back to top](#microsoft-edge---policies)
 
   ### SendIntranetToInternetExplorer
+
   #### Send all intranet sites to Internet Explorer
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SendIntranetToInternetExplorer
   - GP name: Send all intranet sites to Internet Explorer
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SendIntranetToInternetExplorer
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -14650,13 +18431,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   [Back to top](#microsoft-edge---policies)
 
   ### SendSiteInfoToImproveServices
+
   #### Send site information to improve Microsoft services (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   This policy is deprecated. It is currently supported but will become obsolete in Microsoft Edge 89. This policy is replaced by the new policy:  [DiagnosticData](#diagnosticdata)for Windows 7, Windows 8, and macOS. This policy is replaced by Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
@@ -14670,32 +18455,41 @@ On Windows 7, windows 8, and macOS this policy controls sending info about websi
 To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SendSiteInfoToImproveServices
   - GP name: Send site information to improve Microsoft services (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SendSiteInfoToImproveServices
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SendSiteInfoToImproveServices
   - Example value:
 ``` xml
@@ -14706,13 +18500,17 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsAllowedForUrls
+
   #### Allow access to sensors on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.
 
 If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14724,26 +18522,34 @@ The URL patterns defined in this policy can't conflict with those configured in 
 For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SensorsAllowedForUrls
   - GP name: Allow access to sensors on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
@@ -14752,6 +18558,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SensorsAllowedForUrls
   - Example value:
 ``` xml
@@ -14765,13 +18572,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### SensorsBlockedForUrls
+
   #### Block access to sensors on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.
 
 If you don't configure this policy, the global default value from the [DefaultSensorsSetting](#defaultsensorssetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14783,26 +18594,34 @@ The URL patterns defined in this policy can't conflict with those configured in 
 For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SensorsBlockedForUrls
   - GP name: Block access to sensors on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
@@ -14811,6 +18630,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SensorsBlockedForUrls
   - Example value:
 ``` xml
@@ -14824,13 +18644,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### SerialAskForUrls
+
   #### Allow the Serial API on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can ask the user for access to a serial port.
 
 If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14842,26 +18666,34 @@ The URL patterns defined in this policy can't conflict with those configured in 
 For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SerialAskForUrls
   - GP name: Allow the Serial API on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
@@ -14870,6 +18702,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SerialAskForUrls
   - Example value:
 ``` xml
@@ -14883,13 +18716,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### SerialBlockedForUrls
+
   #### Block the Serial API on specific sites
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that can't ask the user to grant them access to a serial port.
 
 If you don't configure this policy, the global default value from the [DefaultSerialGuardSetting](#defaultserialguardsetting) policy (if set) or the user's personal configuration is used for all sites.
@@ -14901,26 +18738,34 @@ The URL patterns in this policy can't conflict with those configured in the [Ser
 For detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SerialBlockedForUrls
   - GP name: Block the Serial API on specific sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
@@ -14929,6 +18774,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SerialBlockedForUrls
   - Example value:
 ``` xml
@@ -14942,13 +18788,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   [Back to top](#microsoft-edge---policies)
 
   ### ShowOfficeShortcutInFavoritesBar
+
   #### Show Microsoft Office shortcut in favorites bar (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
 
 Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
@@ -14956,32 +18806,41 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   If you disable this policy, the shortcut isn't shown.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: ShowOfficeShortcutInFavoritesBar
   - GP name: Show Microsoft Office shortcut in favorites bar (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ShowOfficeShortcutInFavoritesBar
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: ShowOfficeShortcutInFavoritesBar
   - Example value:
 ``` xml
@@ -14992,13 +18851,17 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   [Back to top](#microsoft-edge---policies)
 
   ### SignedHTTPExchangeEnabled
+
   #### Enable Signed HTTP Exchange (SXG) support
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Enable support for Signed HTTP Exchange (SXG).
 
 If this policy isn't set or enabled, Microsoft Edge will accept web contents served as Signed HTTP Exchanges.
@@ -15006,32 +18869,41 @@ If this policy isn't set or enabled, Microsoft Edge will accept web contents ser
 If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SignedHTTPExchangeEnabled
   - GP name: Enable Signed HTTP Exchange (SXG) support
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SignedHTTPExchangeEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SignedHTTPExchangeEnabled
   - Example value:
 ``` xml
@@ -15042,13 +18914,17 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
   [Back to top](#microsoft-edge---policies)
 
   ### SitePerProcess
+
   #### Enable site isolation for every site
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   The 'SitePerProcess' policy can be used to prevent users from opting out of the default behavior of isolating all sites. Note that you can also use the [IsolateOrigins](#isolateorigins) policy to isolate additional, finer-grained origins.
 
 If you enable this policy, users can't opt out of the default behavior where each site runs in its own process.
@@ -15057,32 +18933,41 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SitePerProcess
   - GP name: Enable site isolation for every site
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SitePerProcess
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SitePerProcess
   - Example value:
 ``` xml
@@ -15093,13 +18978,17 @@ If you disable or don't configure this policy, a user can opt out of site isolat
   [Back to top](#microsoft-edge---policies)
 
   ### SpeechRecognitionEnabled
+
   #### Configure Speech Recognition
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 87 or later
 
   #### Description
+
   Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
 
 If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
@@ -15111,32 +19000,40 @@ SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https:/
 Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SpeechRecognitionEnabled
   - GP name: Configure Speech Recognition
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SpeechRecognitionEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
-
   #### Mac information and settings
+  
   - Preference Key Name: SpeechRecognitionEnabled
   - Example value:
 ``` xml
@@ -15147,44 +19044,57 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckEnabled
+
   #### Enable spellcheck
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable or don't configure this policy, the user can use spellcheck.
 
 If you disable this policy, the user can't use spellcheck and the [SpellcheckLanguage](#spellchecklanguage) and [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) policies are also disabled.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SpellcheckEnabled
   - GP name: Enable spellcheck
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SpellcheckEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SpellcheckEnabled
   - Example value:
 ``` xml
@@ -15195,13 +19105,17 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguage
+
   #### Enable specific spellcheck languages
+
   
   
   #### Supported versions:
+
   - On Windows since 77 or later
 
   #### Description
+
   Enables different languages for spellcheck. Any language that you specify that isn't recognized is ignored.
 
 If you enable this policy, spellcheck is enabled for the languages specified, as well as any languages the user has enabled.
@@ -15215,26 +19129,34 @@ If a language is included in both the 'SpellcheckLanguage' and the [SpellcheckLa
 The supported languages are: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SpellcheckLanguage
   - GP name: Enable specific spellcheck languages
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
@@ -15247,13 +19169,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
   [Back to top](#microsoft-edge---policies)
 
   ### SpellcheckLanguageBlocklist
+
   #### Force disable spellcheck languages
+
   
   
   #### Supported versions:
+
   - On Windows since 78 or later
 
   #### Description
+
   Force-disables spellcheck languages. Unrecognized languages in that list will be ignored.
 
 If you enable this policy, spellcheck will be disabled for the languages specified. The user can still enable or disable spellcheck for languages not in the list.
@@ -15267,26 +19193,34 @@ If a language is included in both the [SpellcheckLanguage](#spellchecklanguage) 
 The currently supported languages are: af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SpellcheckLanguageBlocklist
   - GP name: Force disable spellcheck languages
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
@@ -15299,13 +19233,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   [Back to top](#microsoft-edge---policies)
 
   ### StricterMixedContentTreatmentEnabled
+
   #### Enable stricter treatment for mixed content (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 81 or later
 
   #### Description
+
   This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with stricter mixed content treatment. It won't work in Microsoft Edge version 85.
 
 This policy controls the treatment for mixed content (HTTP content in HTTPS sites) in the browser.
@@ -15317,32 +19255,41 @@ If you set the policy to false, auto upgrades will be disabled for audio and vid
 This policy does not affect other types of mixed content other than audio, video, and images.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: StricterMixedContentTreatmentEnabled
   - GP name: Enable stricter treatment for mixed content (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: StricterMixedContentTreatmentEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: StricterMixedContentTreatmentEnabled
   - Example value:
 ``` xml
@@ -15353,44 +19300,57 @@ This policy does not affect other types of mixed content other than audio, video
   [Back to top](#microsoft-edge---policies)
 
   ### SuppressUnsupportedOSWarning
+
   #### Suppress the unsupported OS warning
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Suppresses the warning that appears when Microsoft Edge is running on a computer or operating system that is no longer supported.
 
 If this policy is false or unset, the warnings will appear on such unsupported computers or operating systems.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SuppressUnsupportedOSWarning
   - GP name: Suppress the unsupported OS warning
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: SuppressUnsupportedOSWarning
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SuppressUnsupportedOSWarning
   - Example value:
 ``` xml
@@ -15401,44 +19361,57 @@ If this policy is false or unset, the warnings will appear on such unsupported c
   [Back to top](#microsoft-edge---policies)
 
   ### SyncDisabled
+
   #### Disable synchronization of data using Microsoft sync services
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Disables data synchronization in Microsoft Edge. This policy also prevents the sync consent prompt from appearing.
 
 If you don't set this policy or apply it as recommended, users will be able to turn sync on or off. If you apply this policy as mandatory, users will not be able to turn sync on.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SyncDisabled
   - GP name: Disable synchronization of data using Microsoft sync services
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: SyncDisabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SyncDisabled
   - Example value:
 ``` xml
@@ -15449,13 +19422,17 @@ If you don't set this policy or apply it as recommended, users will be able to t
   [Back to top](#microsoft-edge---policies)
 
   ### SyncTypesListDisabled
+
   #### Configure the list of types that are excluded from synchronization
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 83 or later
 
   #### Description
+
   If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Microsoft Edge synchronization service.
 
 You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". Note that these data type names are case sensitive.
@@ -15463,26 +19440,34 @@ You can provide one of the following data types for this policy: "favorites", "s
 Users will not be able to override the disabled data types.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: SyncTypesListDisabled
   - GP name: Configure the list of types that are excluded from synchronization
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
@@ -15490,6 +19475,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: SyncTypesListDisabled
   - Example value:
 ``` xml
@@ -15502,13 +19488,17 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   [Back to top](#microsoft-edge---policies)
 
   ### TLS13HardeningForLocalAnchorsEnabled
+
   #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
   #### Supported versions:
+
   - On Windows and macOS since 81, until 85
 
   #### Description
+
   This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to upgrade affected proxies.
 
 This policy controls a security feature in TLS 1.3 that protects connections against downgrade attacks. It is backwards-compatible and will not affect connections to compliant TLS 1.2 servers or proxies. However, older versions of some TLS-intercepting proxies have an implementation flaw which causes them to be incompatible.
@@ -15520,32 +19510,41 @@ If you disable this policy, Microsoft Edge will disable these security protectio
 This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TLS13HardeningForLocalAnchorsEnabled
   - GP name: Enable a TLS 1.3 security feature for local trust anchors (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: TLS13HardeningForLocalAnchorsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TLS13HardeningForLocalAnchorsEnabled
   - Example value:
 ``` xml
@@ -15556,13 +19555,17 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
   [Back to top](#microsoft-edge---policies)
 
   ### TLSCipherSuiteDenyList
+
   #### Specify the TLS cipher suites to disable
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 85 or later
 
   #### Description
+
   Configure the list of cipher suites that are disabled for TLS connections.
 
 If you configure this policy, the list of configured cipher suites will not be used when establishing TLS connections.
@@ -15576,26 +19579,34 @@ The TLS 1.3 cipher suite TLS_AES_128_GCM_SHA256 (0x1301) is required for TLS 1.3
 This policy does not affect QUIC-based connections. QUIC can be turned off via the [QuicAllowed](#quicallowed) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TLSCipherSuiteDenyList
   - GP name: Specify the TLS cipher suites to disable
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
@@ -15605,6 +19616,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TLSCipherSuiteDenyList
   - Example value:
 ``` xml
@@ -15619,13 +19631,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   [Back to top](#microsoft-edge---policies)
 
   ### TabFreezingEnabled
+
   #### Allow freezing of background tabs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 79 or later
 
   #### Description
+
   Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
 
 Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
@@ -15635,32 +19651,41 @@ If you enable or don't configure this policy, tabs that have been in the backgro
 If you disable this policy, no tabs will be frozen.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TabFreezingEnabled
   - GP name: Allow freezing of background tabs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: TabFreezingEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TabFreezingEnabled
   - Example value:
 ``` xml
@@ -15671,42 +19696,55 @@ If you disable this policy, no tabs will be frozen.
   [Back to top](#microsoft-edge---policies)
 
   ### TaskManagerEndProcessEnabled
+
   #### Enable ending processes in the Browser task manager
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   If you enable or don't configure this policy, users can end processes in the Browser task manager. If you disable it, users can't end processes, and the End process button is disabled in the Browser task manager.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TaskManagerEndProcessEnabled
   - GP name: Enable ending processes in the Browser task manager
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: TaskManagerEndProcessEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TaskManagerEndProcessEnabled
   - Example value:
 ``` xml
@@ -15717,13 +19755,17 @@ If you disable this policy, no tabs will be frozen.
   [Back to top](#microsoft-edge---policies)
 
   ### TotalMemoryLimitMb
+
   #### Set limit on megabytes of memory a single Microsoft Edge instance can use
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Configures the amount of memory that a single Microsoft Edge instance can use before tabs start getting discarded to save memory. The memory used by the tab will be freed and the tab will have to be reloaded when switched to.
 
 If you enable this policy, the browser will start to discard tabs to save memory once the limitation is exceeded. However, there is no guarantee that the browser is always running under the limit. Any value under 1024 will be rounded up to 1024.
@@ -15731,32 +19773,41 @@ If you enable this policy, the browser will start to discard tabs to save memory
 If you don't set this policy, the browser will only attempt to save memory when it has detected that the amount of physical memory on its machine is low.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TotalMemoryLimitMb
   - GP name: Set limit on megabytes of memory a single Microsoft Edge instance can use
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: TotalMemoryLimitMb
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000800
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TotalMemoryLimitMb
   - Example value:
 ``` xml
@@ -15767,13 +19818,17 @@ If you don't set this policy, the browser will only attempt to save memory when 
   [Back to top](#microsoft-edge---policies)
 
   ### TrackingPrevention
+
   #### Block tracking of users' web-browsing activity
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 78 or later
 
   #### Description
+
   Lets you decide whether to block websites from tracking users' web-browsing activity.
 
 If you disable this policy or don't configure it, users can set their own level of tracking prevention.
@@ -15791,32 +19846,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TrackingPrevention
   - GP name: Block tracking of users' web-browsing activity
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: TrackingPrevention
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000002
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TrackingPrevention
   - Example value:
 ``` xml
@@ -15827,13 +19891,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### TranslateEnabled
+
   #### Enable Translate
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Enables the integrated Microsoft translation service on Microsoft Edge.
 
 If you enable this policy, Microsoft Edge offers translation functionality to the user by showing an integrated translate flyout when appropriate, and a translate option on the right-click context menu.
@@ -15843,32 +19911,41 @@ Disable this policy to disable all built-in translate features.
 If you don't configure the policy, users can choose whether to use the translation functionality or not.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: TranslateEnabled
   - GP name: Enable Translate
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: TranslateEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: TranslateEnabled
   - Example value:
 ``` xml
@@ -15879,14 +19956,19 @@ If you don't configure the policy, users can choose whether to use the translati
   [Back to top](#microsoft-edge---policies)
 
   ### URLAllowlist
+
   #### Define a list of allowed URLs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
-  Allow access to the listed URLs, as exceptions to the URL block list.
+                    
+
+  Setting the policy provides access to the listed URLs, as exceptions to [URLBlocklist](#urlblocklist).
 
 Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -15901,26 +19983,34 @@ This policy also allows the browser to automatically invoke external application
 If you don't configure this policy, there are no exceptions to the block list in the [URLBlocklist](#urlblocklist) policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: URLAllowlist
   - GP name: Define a list of allowed URLs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\URLAllowlist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
@@ -15932,6 +20022,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: URLAllowlist
   - Example value:
 ``` xml
@@ -15948,13 +20039,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
   [Back to top](#microsoft-edge---policies)
 
   ### URLBlocklist
+
   #### Block access to a list of URLs
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Define a list of sites, based on URL patterns, that are blocked (your users can't load them).
 
 Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
@@ -15968,26 +20063,34 @@ This policy doesn't prevent the page from updating dynamically through JavaScrip
 If you don't configure this policy, no URLs are blocked.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: URLBlocklist
   - GP name: Block access to a list of URLs
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\URLBlocklist
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
@@ -16002,6 +20105,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: URLBlocklist
   - Example value:
 ``` xml
@@ -16021,13 +20125,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   [Back to top](#microsoft-edge---policies)
 
   ### UserAgentClientHintsEnabled
+
   #### Enable the User-Agent Client Hints feature (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows and macOS since 86 or later
 
   #### Description
+
   This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the User-Agent Client Hints feature. It won't work in Microsoft Edge version 89.
 
 When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
@@ -16037,32 +20145,41 @@ This is an additive feature, but the new headers may break some websites that re
 If you enable or don't configure this policy, the User-Agent Client Hints feature is enabled. If you disable this policy, this feature is unavailable.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: UserAgentClientHintsEnabled
   - GP name: Enable the User-Agent Client Hints feature (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: UserAgentClientHintsEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: UserAgentClientHintsEnabled
   - Example value:
 ``` xml
@@ -16073,13 +20190,17 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataDir
+
   #### Set the user data directory
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Set the directory to use for storing user data.
 
 If you enable this policy, Microsoft Edge uses the specified directory regardless of whether the user has set the '--user-data-dir' command-line flag.
@@ -16091,32 +20212,41 @@ To avoid data loss or other errors, don't configure this policy to a volume's ro
 See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: UserDataDir
   - GP name: Set the user data directory
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: UserDataDir
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "${users}/${user_name}/Edge"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: UserDataDir
   - Example value:
 ``` xml
@@ -16127,13 +20257,17 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
   [Back to top](#microsoft-edge---policies)
 
   ### UserDataSnapshotRetentionLimit
+
   #### Limits the number of user data snapshots retained for use in case of emergency rollback
+
   
   
   #### Supported versions:
+
   - On Windows since 86 or later
 
   #### Description
+
   Following each major version update, Microsoft Edge will create a snapshot of parts of the user's browsing data to use in case of a later emergency that requires a temporary version rollback. If a temporary rollback is performed to a version for which a user has a corresponding snapshot, the data in the snapshot is restored. This lets users keep settings such as bookmarks and autofill data.
 
 If you don't set this policy, the default value of 3 snapshots is used.
@@ -16141,26 +20275,34 @@ If you don't set this policy, the default value of 3 snapshots is used.
 If you set this policy, old snapshots are deleted as needed to respect the limit you set. If you set this policy to 0, no snapshots are taken.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Integer
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: UserDataSnapshotRetentionLimit
   - GP name: Limits the number of user data snapshots retained for use in case of emergency rollback
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: UserDataSnapshotRetentionLimit
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000003
 ```
@@ -16171,13 +20313,17 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
   [Back to top](#microsoft-edge---policies)
 
   ### UserFeedbackAllowed
+
   #### Allow user feedback
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Microsoft Edge uses the Edge Feedback feature (enabled by default) to allow users to send feedback, suggestions or customer surveys and to report any issues with the browser. Also, by default, users can't disable (turn off) the Edge Feedback feature.
 
 If you enable this policy or don't configure it, users can invoke Edge Feedback.
@@ -16185,32 +20331,41 @@ If you enable this policy or don't configure it, users can invoke Edge Feedback.
 If you disable this policy, users can't invoke Edge Feedback.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: UserFeedbackAllowed
   - GP name: Allow user feedback
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: UserFeedbackAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: UserFeedbackAllowed
   - Example value:
 ``` xml
@@ -16221,13 +20376,17 @@ If you disable this policy, users can't invoke Edge Feedback.
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowed
+
   #### Allow or block video capture
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Control whether sites can capture video.
 
 If enabled or not configured (default), the user will be asked about video capture access for all sites except those with URLs configured in the [VideoCaptureAllowedUrls](#videocaptureallowedurls) policy list, which will be granted access without prompting.
@@ -16237,32 +20396,41 @@ If you disable this policy, the user isn't prompted, and video capture is only a
 This policy affects all types of video inputs, not only the built-in camera.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: VideoCaptureAllowed
   - GP name: Allow or block video capture
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: VideoCaptureAllowed
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000000
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: VideoCaptureAllowed
   - Example value:
 ``` xml
@@ -16273,36 +20441,48 @@ This policy affects all types of video inputs, not only the built-in camera.
   [Back to top](#microsoft-edge---policies)
 
   ### VideoCaptureAllowedUrls
+
   #### Sites that can access video capture devices without requesting permission
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Specify websites, based on URL patterns, that can use video capture devices without asking the user for permission. Patterns in this list are matched against the security origin of the requesting URL. If they match, the site is automatically granted access to video capture devices.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: VideoCaptureAllowedUrls
   - GP name: Sites that can access video capture devices without requesting permission
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
@@ -16311,6 +20491,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 
   #### Mac information and settings
+  
   - Preference Key Name: VideoCaptureAllowedUrls
   - Example value:
 ``` xml
@@ -16324,13 +20505,17 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   [Back to top](#microsoft-edge---policies)
 
   ### WPADQuickCheckEnabled
+
   #### Set WPAD optimization
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to turn off WPAD (Web Proxy Auto-Discovery) optimization in Microsoft Edge.
 
 If you disable this policy, WPAD optimization is disabled, which makes the browser wait longer for DNS-based WPAD servers.
@@ -16340,32 +20525,41 @@ If you enable or don't configure the policy, WPAD optimization is enabled.
 Independent of whether or how this policy is enabled, the WPAD optimization setting cannot be changed by users.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WPADQuickCheckEnabled
   - GP name: Set WPAD optimization
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WPADQuickCheckEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WPADQuickCheckEnabled
   - Example value:
 ``` xml
@@ -16376,38 +20570,50 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   [Back to top](#microsoft-edge---policies)
 
   ### WebAppInstallForceList
+
   #### Configure list of force-installed Web Apps
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Configure this policy to specify a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off.
 
 Each list item of the policy is an object with a mandatory member: url (the URL of the web app to install) and 2 optional members: default_launch_container (specifies the window mode that the web app opens with-a new tab is the default) and create_desktop_shortcut (True if you want to create Linux and Windows desktop shortcuts).
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
+
   - Dictionary
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebAppInstallForceList
   - GP name: Configure list of force-installed Web Apps
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebAppInstallForceList
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
@@ -16422,8 +20628,15 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ]
 ```
 
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  ```
+  
 
   #### Mac information and settings
+  
   - Preference Key Name: WebAppInstallForceList
   - Example value:
 ``` xml
@@ -16449,14 +20662,78 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [Back to top](#microsoft-edge---policies)
 
+  ### WebCaptureEnabled
+
+  #### Enable web capture feature in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 87 or later
+
+  #### Description
+
+  Enables the web capture feature in Microsoft Edge that allows users to capture web content and annotate the capture using inking tools.
+If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
+If you disable this policy, users can't access the web capture feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebCaptureEnabled
+  - GP name: Enable web capture feature in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebCaptureEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebCaptureEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WebComponentsV0Enabled
+
   #### Re-enable Web Components v0 API until M84 (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
   #### Supported versions:
+
   - On Windows and macOS since 80, until 84
 
   #### Description
+
   This policy doesn't work because this policy allowed these features to be selectively re-enabled until Microsoft Edge version 85. The Web Components v0 APIs (Shadow DOM v0, Custom Elements v0, and HTML Imports) were deprecated in 2018, and have been disabled by default starting in Microsoft Edge version 80.
 
 If you set this policy is set to True, the Web Components v0 features will be enabled for all sites.
@@ -16464,32 +20741,41 @@ If you set this policy is set to True, the Web Components v0 features will be en
 If you set this policy to False or don't set this policy, the Web Components v0 features will be disabled by default, starting in Microsoft Edge version 80.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebComponentsV0Enabled
   - GP name: Re-enable Web Components v0 API until M84 (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebComponentsV0Enabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebComponentsV0Enabled
   - Example value:
 ``` xml
@@ -16500,13 +20786,18 @@ If you set this policy to False or don't set this policy, the Web Components v0 
   [Back to top](#microsoft-edge---policies)
 
   ### WebDriverOverridesIncompatiblePolicies
-  #### Allow WebDriver to Override Incompatible Policies (obsolete)
+
+  #### Allow WebDriver to Override Incompatible Policies (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+                     
   #### Supported versions:
+
   - On Windows and macOS since 77, until 84
 
   #### Description
+
   This policy doesn't work because WebDriver is now compatible with all existing policies.
 
 This policy allows users of the WebDriver feature to override
@@ -16520,32 +20811,41 @@ If the policy is disabled or not configured, WebDriver will not be allowed
 to override incompatible policies.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebDriverOverridesIncompatiblePolicies
-  - GP name: Allow WebDriver to Override Incompatible Policies (obsolete)
+  - GP name: Allow WebDriver to Override Incompatible Policies (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebDriverOverridesIncompatiblePolicies
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebDriverOverridesIncompatiblePolicies
   - Example value:
 ``` xml
@@ -16556,13 +20856,17 @@ to override incompatible policies.
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalIpsAllowedUrls
+
   #### Manage exposure of local IP addressess by WebRTC
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
+
   Specifies a list of origins (URLs) or hostname patterns (like "*contoso.com*") for which local IP address should be exposed by WebRTC.
 
 If you enable this policy and set a list of origins (URLs) or hostname patterns, when edge://flags/#enable-webrtc-hide-local-ips-with-mdns is Enabled, WebRTC will expose the local IP address for cases that match patterns in the list.
@@ -16574,26 +20878,34 @@ If you enable, disable, or don't configure this policy, and edge://flags/#enable
 Please note that this policy weakens the protection of local IP addresses that might be needed by administrators.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - List of strings
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebRtcLocalIpsAllowedUrls
   - GP name: Manage exposure of local IP addressess by WebRTC
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
+
   ##### Example value:
+
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
@@ -16602,6 +20914,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebRtcLocalIpsAllowedUrls
   - Example value:
 ``` xml
@@ -16615,13 +20928,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcLocalhostIpHandling
+
   #### Restrict exposure of local IP address by WebRTC
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Allows you to set whether or not WebRTC exposes the user's local IP address.
 
 If you set this policy to "AllowAllInterfaces" or "AllowPublicAndPrivateInterfaces", WebRTC exposes the local IP address.
@@ -16643,32 +20960,41 @@ Policy options mapping:
 Use the preceding information when configuring this policy.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebRtcLocalhostIpHandling
   - GP name: Restrict exposure of local IP address by WebRTC
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebRtcLocalhostIpHandling
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "default"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebRtcLocalhostIpHandling
   - Example value:
 ``` xml
@@ -16679,13 +21005,17 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ### WebRtcUdpPortRange
+
   #### Restrict the range of local UDP ports used by WebRTC
+
   
   
   #### Supported versions:
+
   - On Windows and macOS since 77 or later
 
   #### Description
+
   Restricts the UDP port range used by WebRTC to a specified port interval (endpoints included).
 
 By configuring this policy, you specify the range of local UDP ports that WebRTC can use.
@@ -16693,32 +21023,41 @@ By configuring this policy, you specify the range of local UDP ports that WebRTC
 If you don't configure this policy, or if you set it to an empty string or invalid port range, WebRTC can use any available local UDP port.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - String
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WebRtcUdpPortRange
   - GP name: Restrict the range of local UDP ports used by WebRTC
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WebRtcUdpPortRange
   - Value Type: REG_SZ
+
   ##### Example value:
+
 ```
 "10000-11999"
 ```
 
 
   #### Mac information and settings
+  
   - Preference Key Name: WebRtcUdpPortRange
   - Example value:
 ``` xml
@@ -16729,13 +21068,17 @@ If you don't configure this policy, or if you set it to an empty string or inval
   [Back to top](#microsoft-edge---policies)
 
   ### WinHttpProxyResolverEnabled
+
   #### Use Windows proxy resolver (deprecated)
+
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
+
   - On Windows since 84 or later
 
   #### Description
+
   This policy is deprecated because it will be superseded by a similar feature in a future release, see https://crbug.com/1032820.
 
 Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Microsoft Edge. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
@@ -16747,26 +21090,34 @@ If you enable this policy, the Windows proxy resolver will be used.
 If you disable or don't configure this policy, the Microsoft Edge proxy resolver will be used.
 
   #### Supported features:
+
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
+
   - Boolean
 
   #### Windows information and settings
+
   ##### Group Policy (ADMX) info
+
   - GP unique name: WinHttpProxyResolverEnabled
   - GP name: Use Windows proxy resolver (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
+
   ##### Windows Registry Settings
+
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WinHttpProxyResolverEnabled
   - Value Type: REG_DWORD
+
   ##### Example value:
+
 ```
 0x00000001
 ```
@@ -16778,6 +21129,7 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 
 
 ## See also
+
 - [Configuring Microsoft Edge](configure-microsoft-edge.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)
