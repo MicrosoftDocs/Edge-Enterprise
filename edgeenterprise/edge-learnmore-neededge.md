@@ -99,7 +99,7 @@ This policy configures the user experience for incompatible site redirection to 
 
 If you want to disable redirection BEFORE updating to Microsoft Edge Stable version 87, use the following step:
 
-1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Enabled**. This setting will stop redirecting as soon as the policy takes effect.
+1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Disabled**. This setting will stop redirecting as soon as the policy takes effect.
 
 If you want to disable redirection AFTER updating to Microsoft Edge Stable version 87, use the following steps:
 
