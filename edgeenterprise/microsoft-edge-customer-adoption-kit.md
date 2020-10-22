@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/22/2020
+ms.date: 10/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,9 +24,12 @@ The customer adoption kit contains the following material:
 
 - IT Deployment Guide
 - How to Get Started User Guide
-- Announcement Email
-- Tips & Tricks Email
+- Introductory Email
+- Banners
 - Digital Signage
+- One-Pagers
+- Demo and gifs
+- Web Resource links
 
 [Download customer adoption kit](https://www.microsoft.com/download/details.aspx?id=102119)
 
@@ -58,6 +61,18 @@ Use the following digital signage to inform users about the new Microsoft Edge:
 - Security
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="New tab page":::
+
+### Banners
+
+Use these banners on your internal sites to advertise the new Microsoft Edge to your employees.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Banner ads example.":::
+
+### One-pagers
+
+Send or post these one-pagers to help your employees learn about Microsoft Edge and set up the browser for use at work.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="One-pager for learning about Microsoft Edge.":::
 
 ## Other learning resources
 
