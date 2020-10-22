@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/22/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -541,6 +541,7 @@ By default, Google Cast is enabled.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: EnableMediaRouter
@@ -602,6 +603,7 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -680,6 +682,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AutoSelectCertificateForUrls
@@ -756,6 +759,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: CookiesAllowedForUrls
@@ -830,6 +834,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -910,6 +915,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: CookiesSessionOnlyForUrls
@@ -985,6 +991,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultCookiesSetting
@@ -1053,6 +1060,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultFileSystemReadGuardSetting
@@ -1120,6 +1128,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -1191,6 +1200,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultGeolocationSetting
@@ -1258,6 +1268,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -1329,6 +1340,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultInsecureContentSetting
@@ -1396,6 +1408,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -1467,6 +1480,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultNotificationsSetting
@@ -1537,6 +1551,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultPluginsSetting
@@ -1605,6 +1620,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultPopupsSetting
@@ -1672,6 +1688,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -1743,6 +1760,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultWebUsbGuardSetting
@@ -1808,6 +1826,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -1878,6 +1897,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: FileSystemReadBlockedForUrls
@@ -1946,6 +1966,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -2016,6 +2037,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: FileSystemWriteBlockedForUrls
@@ -2080,6 +2102,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -2146,6 +2169,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImagesBlockedForUrls
@@ -2210,6 +2234,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -2276,6 +2301,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: InsecureContentBlockedForUrls
@@ -2341,6 +2367,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: JavaScriptAllowedForUrls
@@ -2405,6 +2432,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -2477,6 +2505,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
@@ -2545,6 +2574,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2610,6 +2640,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NotificationsAllowedForUrls
@@ -2674,6 +2705,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -2742,6 +2774,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PluginsAllowedForUrls
@@ -2809,6 +2842,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PluginsBlockedForUrls
@@ -2874,6 +2908,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PopupsAllowedForUrls
@@ -2938,6 +2973,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -3093,6 +3129,7 @@ and tips for Microsoft services
 ```
 0x00000001
 ```
+
 
   
 
@@ -3253,6 +3290,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: WebUsbAskForUrls
@@ -3319,6 +3357,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -3399,6 +3438,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultSearchProviderEnabled
@@ -3466,6 +3506,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
+
 
   #### Mac information and settings
   
@@ -3543,6 +3584,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultSearchProviderImageURL
@@ -3611,6 +3653,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultSearchProviderImageURLPostParams
@@ -3674,6 +3717,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 "mis"
 ```
+
 
   #### Mac information and settings
   
@@ -3740,6 +3784,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 "My Intranet Search"
 ```
+
 
   #### Mac information and settings
   
@@ -3808,6 +3853,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
+
 
   #### Mac information and settings
   
@@ -3878,6 +3924,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
+
 
   #### Mac information and settings
   
@@ -3956,6 +4003,7 @@ Use the preceding information when configuring this policy.
 "bing"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NewTabPageSearchBox
@@ -4027,6 +4075,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ExtensionAllowedTypes
@@ -4088,6 +4137,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
+
 
   #### Mac information and settings
   
@@ -4155,6 +4205,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
+
 
   #### Mac information and settings
   
@@ -4239,6 +4290,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ExtensionInstallForcelist
@@ -4306,6 +4358,7 @@ The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precede
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
+
 
   #### Mac information and settings
   
@@ -4598,6 +4651,7 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AllowCrossOriginAuthPrompt
@@ -4659,6 +4713,7 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
 ```
 "contoso.com"
 ```
+
 
   #### Mac information and settings
   
@@ -4722,6 +4777,7 @@ If you don't configure this policy, all four schemes are used.
 "basic,digest,ntlm,negotiate"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AuthSchemes
@@ -4783,6 +4839,7 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
 ```
 "*contoso.com,contoso.com"
 ```
+
 
   #### Mac information and settings
   
@@ -4846,6 +4903,7 @@ If you disable this policy or don't configure it, the canonical name of the serv
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DisableAuthNegotiateCnameLookup
@@ -4907,6 +4965,7 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -5039,6 +5098,7 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
   - On Windows since 87 or later
 
   #### Description
+                                                                                              
 
   This policy only applies to Microsoft Edge kiosk mode.
 
@@ -5080,6 +5140,7 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 ```
 0x00000001
 ```
+
 
   
 
@@ -5139,6 +5200,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
+
 
   #### Mac information and settings
   
@@ -5207,6 +5269,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NativeMessagingBlocklist
@@ -5271,6 +5334,7 @@ By default, if you don't configure this policy, Microsoft Edge will allow usage 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -5339,6 +5403,7 @@ If you enable or disable this policy, users can't change or override it in Micro
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -5418,6 +5483,7 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -5476,6 +5542,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 "https://contoso.com/change_password.html"
 ```
+
 
   #### Mac information and settings
   
@@ -5542,6 +5609,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
+
 
   #### Mac information and settings
   
@@ -5621,6 +5689,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -5758,6 +5827,7 @@ Omitting a field means all values match; for example, if you don't specify conne
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultPrinterSelection
@@ -5822,6 +5892,7 @@ If you enable this policy, users always print headers and footers.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PrintHeaderFooter
@@ -5884,6 +5955,7 @@ If you enable this policy, Print Preview uses the OS system default printer as t
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PrintPreviewUseSystemDefaultPrinter
@@ -5945,6 +6017,7 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -6094,6 +6167,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: UseSystemPrintDialog
@@ -6163,6 +6237,7 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 ```
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
+
 
   #### Mac information and settings
   
@@ -6252,6 +6327,7 @@ Use the preceding information when configuring this policy.
 "direct"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ProxyMode
@@ -6318,6 +6394,7 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
 "https://internal.contoso.com/example.pac"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ProxyPacUrl
@@ -6383,6 +6460,7 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
 ```
 "123.123.123.123:8080"
 ```
+
 
   #### Mac information and settings
   
@@ -6561,6 +6639,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PreventSmartScreenPromptOverride
@@ -6625,6 +6704,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -6693,6 +6773,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -6763,6 +6844,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SmartScreenEnabled
@@ -6827,6 +6909,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -6885,6 +6968,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -6956,6 +7040,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: HomepageIsNewTabPage
@@ -7023,6 +7108,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 "https://www.contoso.com"
 ```
+
 
   #### Mac information and settings
   
@@ -7093,6 +7179,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -7260,6 +7347,7 @@ If you set this policy to false or don't configure it, the default top site tile
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NewTabPageHideDefaultTopSites
@@ -7329,6 +7417,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 "https://www.fabrikam.com"
 ```
+
 
   #### Mac information and settings
   
@@ -7489,6 +7578,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NewTabPagePrerenderEnabled
@@ -7571,6 +7661,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: NewTabPageSetFeedType
@@ -7649,6 +7740,7 @@ Use the preceding information when configuring this policy.
 0x00000004
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: RestoreOnStartup
@@ -7712,6 +7804,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
+
 
   #### Mac information and settings
   
@@ -7778,6 +7871,7 @@ If you don't configure the policy, users can choose whether to show the home but
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ShowHomeButton
@@ -7841,6 +7935,7 @@ If you have enabled the set of policies which forces a default search provider (
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -7908,6 +8003,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AdsSettingForIntrusiveAdsSites
@@ -7974,6 +8070,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AllowDeletingBrowserHistory
@@ -8035,6 +8132,7 @@ If you disable this policy, whenever the user performs an action that triggers a
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -8100,6 +8198,7 @@ This policy will be removed in the future.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AllowPopupsDuringPageUnload
@@ -8159,6 +8258,7 @@ If you enable or don't configure this policy, users can play the surf game.
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -8223,6 +8323,7 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -8293,6 +8394,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -8349,6 +8451,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -8418,6 +8521,7 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AlternateErrorPagesEnabled
@@ -8479,6 +8583,7 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -8564,6 +8669,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AmbientAuthenticationInPrivateModesEnabled
@@ -8623,6 +8729,7 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -8686,6 +8793,7 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
 "en"
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -8742,6 +8850,7 @@ This policy affects all types of audio inputs, not only the built-in microphone.
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -8802,6 +8911,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
+
 
   #### Mac information and settings
   
@@ -8872,6 +8982,7 @@ This policy is intended to give enterprises flexibility to disable the audio san
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -8985,6 +9096,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -9183,6 +9295,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AutoOpenAllowedForURLs
@@ -9259,6 +9372,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AutoOpenFileTypes
@@ -9326,6 +9440,7 @@ Note that if you disable this policy you also stop all activity for all web form
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AutofillAddressEnabled
@@ -9387,6 +9502,7 @@ If you enable this policy or don't configure it, users can control AutoFill for 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -9455,6 +9571,7 @@ A tab will need to be closed and re-opened for this policy to take effect.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: AutoplayAllowed
@@ -9519,6 +9636,7 @@ If you don't configure this policy, background mode is initially turned off, and
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -9573,6 +9691,7 @@ If you disable this setting the list of available templates will be downloaded o
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -9646,6 +9765,7 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: BingAdsSuppression
@@ -9710,6 +9830,7 @@ If you don't configure this policy, third-party cookies are enabled but users ca
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: BlockThirdPartyCookies
@@ -9770,6 +9891,7 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -9833,6 +9955,7 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: BrowserGuestModeEnabled
@@ -9894,6 +10017,7 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -9971,6 +10095,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: BrowserSignin
@@ -10036,6 +10161,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -10148,6 +10274,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForCas
@@ -10219,6 +10346,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10287,6 +10415,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
+
 
   #### Mac information and settings
   
@@ -10357,6 +10486,7 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ClearBrowsingDataOnExit
@@ -10422,6 +10552,7 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -10491,6 +10622,7 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -10552,6 +10684,7 @@ Use the preceding information when configuring this policy.
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
+
 
   #### Mac information and settings
   
@@ -10619,6 +10752,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: CommandLineFlagSecurityWarningsEnabled
@@ -10680,6 +10814,7 @@ However, some components are exempt from this policy. This includes any componen
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -10744,6 +10879,7 @@ If you don't configure this policy, users can choose whether to send these reque
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -10892,6 +11028,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -10950,6 +11087,7 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -11019,6 +11157,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11075,6 +11214,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
+
 
   #### Mac information and settings
   
@@ -11140,6 +11280,7 @@ If you disable this policy, DNS interception checks aren't performed.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DNSInterceptionChecksEnabled
@@ -11204,6 +11345,7 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultBrowserSettingEnabled
@@ -11267,6 +11409,7 @@ The policy value is only appled when the [DefaultSearchProviderEnabled](#default
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -11340,6 +11483,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DefaultSensorsSetting
@@ -11411,6 +11555,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -11489,6 +11634,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11543,6 +11689,7 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
 ```
 0x00000000
 ```
+
 
   
 
@@ -11610,6 +11757,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -11697,6 +11845,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DiagnosticData
@@ -11763,6 +11912,7 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11817,6 +11967,7 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -11882,6 +12033,7 @@ Please note this policy controls screenshots taken from within the browser itsel
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DisableScreenshots
@@ -11946,6 +12098,7 @@ If you don't configure this policy, the default cache directory is used, and use
 "${user_home}/Edge_cache"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DiskCacheDir
@@ -12009,6 +12162,7 @@ If you don't configure this policy, the default size is used, but users can over
 ```
 0x06400000
 ```
+
 
   #### Mac information and settings
   
@@ -12086,6 +12240,7 @@ Use the preceding information when configuring this policy.
 "off"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DnsOverHttpsMode
@@ -12152,6 +12307,7 @@ Incorrectly formatted templates will be ignored.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DnsOverHttpsTemplates
@@ -12217,6 +12373,7 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
+
 
   #### Mac information and settings
   
@@ -12302,6 +12459,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: DownloadRestrictions
@@ -12363,6 +12521,7 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -12486,6 +12645,7 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: EditFavoritesEnabled
@@ -12504,6 +12664,7 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
+            
 
   - On Windows and macOS since 77, until 86
 
@@ -12560,6 +12721,7 @@ Use the preceding information when configuring this policy.
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
+
 
   #### Mac information and settings
   
@@ -12633,6 +12795,7 @@ If you don't configure this policy, the list of Domain Actions will continue to 
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: EnableDomainActionsDownload
@@ -12694,6 +12857,7 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -12759,6 +12923,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: EnableSha1ForLocalAnchors
@@ -12818,6 +12983,7 @@ This policy also applies to component extensions.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -12880,6 +13046,7 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 ```
 0x00000000
 ```
+
 
   
 
@@ -12954,6 +13121,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
+
 
   #### Mac information and settings
   
@@ -13042,6 +13210,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ExperimentationAndConfigurationServiceControl
@@ -13110,6 +13279,7 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13171,6 +13341,7 @@ If you disable this policy, the Family safety page will not be shown.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -13235,6 +13406,7 @@ If this policy is not configured, then the user can decide to use the favorites 
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -13312,6 +13484,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ForceBingSafeSearch
@@ -13373,6 +13546,7 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -13438,6 +13612,7 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ForceEphemeralProfiles
@@ -13499,6 +13674,7 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -13564,6 +13740,7 @@ This enterprise policy is disabled by default.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ForceLegacyDefaultReferrerPolicy
@@ -13626,6 +13803,7 @@ This policy is disabled by default. If enabled, users are open to security issue
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -13686,6 +13864,7 @@ For this policy to work as intended,
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -13761,6 +13940,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ForceYouTubeRestrict
@@ -13825,6 +14005,7 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -13883,6 +14064,7 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -13952,6 +14134,7 @@ Popular, single-word search terms will require manual selection of search sugges
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14010,6 +14193,7 @@ Popular, single-word search terms will require manual selection of search sugges
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
+
 
   #### Mac information and settings
   
@@ -14072,6 +14256,7 @@ If you disable this policy, hardware acceleration is disabled.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14156,6 +14341,7 @@ Note: The specific configuration options shown to the user in the First Run Expe
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14282,6 +14468,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportAutofillFormData
@@ -14350,6 +14537,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportBrowserSettings
@@ -14415,6 +14603,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14484,6 +14673,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportExtensions
@@ -14551,6 +14741,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14620,6 +14811,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportHistory
@@ -14687,6 +14879,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14756,6 +14949,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportOpenTabs
@@ -14823,6 +15017,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -14892,6 +15087,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportSavedPasswords
@@ -14960,6 +15156,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ImportSearchEngine
@@ -15025,6 +15222,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -15100,6 +15298,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: InPrivateModeAvailability
@@ -15159,6 +15358,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -15226,6 +15426,7 @@ Note that the policy is applied per renderer process, with the most recent value
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -15306,6 +15507,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15367,6 +15569,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15417,6 +15620,7 @@ Use the preceding information when configuring this policy.
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
+
 
   
 
@@ -15496,6 +15700,7 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15558,6 +15763,7 @@ If you don't configure this policy, you can set up the ie-mode-test flag manuall
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15616,6 +15822,7 @@ If you don't configure the policy, the user can change this setting.
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
+
 
   #### Mac information and settings
   
@@ -15684,6 +15891,7 @@ This policy requires a browser restart to finish applying.
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -16044,6 +16252,7 @@ If you don't configure this policy, the default value (32) is used.
 0x00000020
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: MaxConnectionsPerProxy
@@ -16107,6 +16316,7 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -16178,6 +16388,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: MetricsReportingEnabled
@@ -16241,6 +16452,7 @@ If this policy is left not set, window hiding detection will be enabled.
 ```
 0x00000001
 ```
+
 
   
 
@@ -16306,6 +16518,7 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
 0x0000000a
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -16370,6 +16583,7 @@ Use the preceding information when configuring this policy.
 ```
 0x00000002
 ```
+
 
   #### Mac information and settings
   
@@ -16437,6 +16651,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -16495,6 +16710,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
+
 
   #### Mac information and settings
   
@@ -16561,6 +16777,7 @@ If you enable this policy or don't set this policy, websites can check if the us
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PaymentMethodQueryEnabled
@@ -16622,6 +16839,7 @@ If you disable this policy, users can't change or override the setting. If this 
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -16687,6 +16905,7 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -16743,6 +16962,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -16806,6 +17026,7 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: PromotionalTabsEnabled
@@ -16867,6 +17088,7 @@ If you don't configure this policy, the user will be able to change this setting
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -16931,6 +17153,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -17136,6 +17359,7 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: RelaunchNotification
@@ -17198,6 +17422,7 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 0x240c8400
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: RelaunchNotificationPeriod
@@ -17258,6 +17483,7 @@ Disabling this policy has a detrimental effect on Microsoft Edge's security and 
 0x00000000
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17312,6 +17538,7 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
 ```
 0x00000000
 ```
+
 
   
 
@@ -17372,6 +17599,7 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -17434,6 +17662,7 @@ If you don't configure this policy or leave it blank, users can set any account 
 ```
 ".*@contoso.com"
 ```
+
 
   #### Mac information and settings
   
@@ -17499,6 +17728,7 @@ If you don't configure this policy, the default roaming profile path is used.
 "${roaming_app_data}\\edge-profile"
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17556,6 +17786,7 @@ See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-
 0x00000001
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17610,6 +17841,7 @@ If you disable this policy or don't configure it, Adobe Flash content from other
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -17672,6 +17904,7 @@ If you disable this policy, users are blocked from clicking through any warning 
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -17742,6 +17975,7 @@ Use the preceding information when configuring this policy.
 ```
 "tls1"
 ```
+
 
   #### Mac information and settings
   
@@ -17814,6 +18048,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SaveCookiesOnExit
@@ -17879,6 +18114,7 @@ If you disable this policy or don't configure it, browsing history is saved.
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SavingBrowserHistoryDisabled
@@ -17937,6 +18173,7 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -17999,6 +18236,7 @@ If you disable this policy, web page scrolling to specific text fragments via a 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -18064,6 +18302,7 @@ If this policy is left not set, search suggestions are enabled but the user can 
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SearchSuggestEnabled
@@ -18125,6 +18364,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SecurityKeyPermitAttestation
@@ -18184,6 +18424,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
+
 
   
 
@@ -18245,6 +18486,7 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
 ```
 0x00000000
 ```
+
 
   #### Mac information and settings
   
@@ -18313,6 +18555,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -18385,6 +18628,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SensorsBlockedForUrls
@@ -18455,6 +18699,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
+
 
   #### Mac information and settings
   
@@ -18527,6 +18772,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SerialBlockedForUrls
@@ -18592,6 +18838,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: ShowOfficeShortcutInFavoritesBar
@@ -18653,6 +18900,7 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -18716,6 +18964,7 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -18843,6 +19092,7 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SpellcheckEnabled
@@ -18913,6 +19163,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -18976,6 +19227,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -19034,6 +19286,7 @@ This policy does not affect other types of mixed content other than audio, video
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -19095,6 +19348,7 @@ If this policy is false or unset, the warnings will appear on such unsupported c
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: SuppressUnsupportedOSWarning
@@ -19154,6 +19408,7 @@ If you don't set this policy or apply it as recommended, users will be able to t
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -19217,6 +19472,7 @@ Users will not be able to override the disabled data types.
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
+
 
   #### Mac information and settings
   
@@ -19285,6 +19541,7 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -19357,6 +19614,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: TLSCipherSuiteDenyList
@@ -19425,6 +19683,7 @@ If you disable this policy, no tabs will be frozen.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: TabFreezingEnabled
@@ -19482,6 +19741,7 @@ If you disable this policy, no tabs will be frozen.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -19544,6 +19804,7 @@ If you don't set this policy, the browser will only attempt to save memory when 
 ```
 0x00000800
 ```
+
 
   #### Mac information and settings
   
@@ -19617,6 +19878,7 @@ Use the preceding information when configuring this policy.
 0x00000002
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: TrackingPrevention
@@ -19681,6 +19943,7 @@ If you don't configure the policy, users can choose whether to use the translati
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: TranslateEnabled
@@ -19703,6 +19966,7 @@ If you don't configure the policy, users can choose whether to use the translati
   - On Windows and macOS since 77 or later
 
   #### Description
+                    
 
   Setting the policy provides access to the listed URLs, as exceptions to [URLBlocklist](#urlblocklist).
 
@@ -19755,6 +20019,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
+
 
   #### Mac information and settings
   
@@ -19838,6 +20103,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: URLBlocklist
@@ -19911,6 +20177,7 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: UserAgentClientHintsEnabled
@@ -19977,6 +20244,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 "${users}/${user_name}/Edge"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: UserDataDir
@@ -20039,6 +20307,7 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
 0x00000003
 ```
 
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -20093,6 +20362,7 @@ If you disable this policy, users can't invoke Edge Feedback.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -20158,6 +20428,7 @@ This policy affects all types of video inputs, not only the built-in camera.
 0x00000000
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: VideoCaptureAllowed
@@ -20217,6 +20488,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
+
 
   #### Mac information and settings
   
@@ -20284,6 +20556,7 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -20500,6 +20773,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 0x00000001
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: WebComponentsV0Enabled
@@ -20517,6 +20791,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+                     
   #### Supported versions:
 
   - On Windows and macOS since 77, until 84
@@ -20567,6 +20842,7 @@ to override incompatible policies.
 ```
 0x00000001
 ```
+
 
   #### Mac information and settings
   
@@ -20635,6 +20911,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
+
 
   #### Mac information and settings
   
@@ -20715,6 +20992,7 @@ Use the preceding information when configuring this policy.
 "default"
 ```
 
+
   #### Mac information and settings
   
   - Preference Key Name: WebRtcLocalhostIpHandling
@@ -20776,6 +21054,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 ```
 "10000-11999"
 ```
+
 
   #### Mac information and settings
   
@@ -20842,6 +21121,7 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
 ```
 0x00000001
 ```
+
 
   
 
