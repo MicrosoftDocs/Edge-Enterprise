@@ -25,6 +25,13 @@ The next version of Microsoft Edge features more frequent and more flexible upda
 
 As part of this policy, the supported releases of Microsoft Edge will include the latest available release from the Beta and Stable channels.
 
+## Assisted support availability for Microsoft Edge
+Security updates and servicing updates are available on the most recent Stable channel release and latest Beta channel release only. Using older releases of Microsoft Edge likely means you are missing the latest quality and security updates and is not recommended. If use of the older releases is necessary for your organization then Assisted Support is available for the most recent three Stable channel releases and the latest Beta channel release.  The effective assisted support duration for a Stable channel release is approximately 18 weeks. The effective support duration for a Beta channel release is ~6 weeks, prior Beta channel releases are not supported.
+
+Microsoft strongly recommends staying current with the most recent Stable channel or Beta channel release.
+
+
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
