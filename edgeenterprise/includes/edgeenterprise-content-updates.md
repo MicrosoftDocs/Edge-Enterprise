@@ -1,52 +1,6 @@
-<!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
 
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/12/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Bug and performance fixes in minor release version 86.0.622.36. | modified |
-| 10/12/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Remove PW monitor from release notes for major version 86.0.622.38, currently unsupported in Stable channel. | modified |
-| 10/12/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>Add link to Ignite video. | modified |
-| 10/13/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Bug and performance fixes in minor release version 86.0.622.43. | modified |
-| 10/15/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index)<br>Annotate new and updated content for previous week. | modified |
-| 10/16/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Minor wording changes in release notes for major verion 86.0.622.38. | modified |
-| 10/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Bug and performance fixes in minor release version 86.0.622.43. | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/5/2020 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
-| 10/5/2020 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
-| 10/6/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/7/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 10/8/2020 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
-| 10/9/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/9/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 10/9/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-
-
-## Week of September 28, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/29/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 9/30/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 9/30/2020 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
-| 10/1/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/2/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/2/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
-| 10/2/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
-| 10/2/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/microsoft-edge-policies) | modified |
-| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 
 
 ## Week of September 21, 2020
@@ -62,24 +16,86 @@
 | 9/25/2020 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
 
 
-## Week of September 07, 2020
+## Week of September 28, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/9/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 9/9/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 9/9/2020 | [Microsoft Edge enterprise privacy settings](/DeployEdge/microsoft-edge-enterprise-privacy-settings) | modified |
-| 9/9/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 9/9/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 9/10/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 9/10/2020 | [ClickOnce and DirectInvoke in Microsoft Edge](/DeployEdge/edge-learn-more-co-di) | modified |
+| 9/29/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 9/30/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 9/30/2020 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 10/1/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/2/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 10/2/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
+| 10/2/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
+| 10/2/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/de-de/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/en-us/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/es-es/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/fr-fr/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/it-it/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ja-jp/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ko-kr/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/pt-br/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ru-ru/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-cn/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-tw/microsoft-edge-policies) | modified |
+| 10/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 
 
-## Week of August 31, 2020
+## Week of October 05, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 9/2/2020 | [Microsoft Edge rollback for enterprises](/DeployEdge/edge-learnmore-rollback) | modified |
+| 10/5/2020 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
+| 10/5/2020 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
+| 10/6/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/7/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/de-de/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/en-us/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/es-es/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/fr-fr/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/it-it/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ja-jp/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ko-kr/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/pt-br/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/ru-ru/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-cn/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/browser-policies/zh-tw/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 10/8/2020 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 10/9/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/9/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 10/9/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/12/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 10/12/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/12/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
+| 10/13/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/15/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
+| 10/16/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
+
+## Week of October 19, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/20/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/20/2020 | [Access the old version of Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-access-old-edge) | modified |
+| 10/21/2020 | [Allow list for Microsoft Edge endpoints](/DeployEdge/microsoft-edge-security-endpoints) | modified |
+| 10/21/2020 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 10/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 10/21/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 10/22/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/22/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 10/22/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 10/22/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
