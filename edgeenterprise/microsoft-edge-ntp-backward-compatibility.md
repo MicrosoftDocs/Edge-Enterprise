@@ -57,6 +57,7 @@ The Enterprise new tab page will offer industry relevant information in **My Fee
 
 With the changes to the New tab page, the Page layout no longer has to control two specific content types (Office 365 and Microsoft News), so the content toggle isn't available. The next screenshot shows 
 
+:::image type="content" source="media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-page-layout.png" alt-text="Page layout view for New tab page.":::
 
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype)
