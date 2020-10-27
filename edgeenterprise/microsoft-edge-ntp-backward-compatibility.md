@@ -1,5 +1,5 @@
 ---
-title: "Backwards compatibility for the Enterprise new tab page"
+title: "Backwards compatibility for the Enterprise New tab page"
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
@@ -9,21 +9,55 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Backwards compatibility for the Enterprise new tab page"
+description: "Backwards compatibility for the Enterprise New tab page"
 ---
 
 # Backwards compatibility for the Enterprise new tab page
 
-This article describes the change to the new tab page that applies to the Microsoft Edge Stable, Beta and Dev channels and how users can maintain backwards compatibility.
+This article describes the change to the New tab page and how  users can be backwards compatible with Microsoft Edge version 87 and earlier.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
-## New tab page switch to a single endpoint
+## Information feeds from single endpoint
 
-The new version of the Enterprise new tab page combines compliant Microsoft 365 content with industry relevant and compliant information feeds that are served via the MSN.com endpoint.
+The new version of the Enterprise New tab page combines compliant Microsoft 365 content with industry relevant and compliant information feeds that are served via the MSN.com endpoint.
 
-## My Feed experience
+> [!NOTE]
+> Office 365 content was originally served using the [Office.com](https://www.office.com) domain.
+
+If access to the MSN.com domain is restricted for your organization, we strongly recommend giving users access to this [url](https://ntp.msn.com).
+
+If you need more time to enable access to the MSN domain, we recommend using the [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype), that lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+
+### Keep using Office.com
+
+ You can configure the **NewTabPageSetFeedType** policy to keep using the deprecated Office.com domain.
+
+> [!IMPORTANT]
+> The **NewTabPageSetFeedType** policy and the Office.com domain that serves Office 365 content will quit working when Microsoft Edge version 90 is released.
+
+The following policy settings will force the Enterprise New tab page to render Office document content from the Office.com domain.
+
+- Set the policy as **Mandatory**.
+- Set the value of the policy mapping to **Office (1) = Office 365 feed experience**.
+
+If the switch to the Office.com isn't possible, reach out and send us feedback. Another option is to configure the [NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) so it points to an endpoint URL point to a URL that's allowed by your organization.
+
+> [!NOTE]
+> The **NewTabPageLocation** policy has precedence if the **NewTabPageSetFeedType** policy is also configured.
+
+## My Feed experience replaces MSN News content
+
+The Enterprise new tab page will offer industry relevant information in **My Feed**, and Office 365 content in one single view for users signed in with their Azure Active Directory (Azure AD) account. After you select the Microsoft News option in the settings flyout, your new tab page view will be replaced with **My Feed** content. When you sign in to Azure AD and open a new tab page in the browser it will look like the example in the next screenshot.
+
+:::image type="content" source="media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png" alt-text="New tab page showing content from My Feed.":::
+
+## Page layout
+
+With the changes to the New tab page, the Page layout no longer has to control two specific content types (Office 365 and Microsoft News), so the content toggle isn't available. The next screenshot shows 
+
+
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype)
 
