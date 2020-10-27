@@ -42,7 +42,7 @@ The following policy settings will force the Enterprise New tab page to render O
 - Set the policy as **Mandatory**.
 - Set the value of the policy mapping to **Office (1) = Office 365 feed experience**.
 
-If the switch to the Office.com isn't possible, reach out and send us feedback. Another option is to configure the [NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) so it points to an endpoint URL point to a URL that's allowed by your organization.
+If the switch to the Office.com isn't possible, reach out and send us feedback. Another option is to configure the [NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) so it points to an endpoint URL that's allowed by your organization.
 
 > [!NOTE]
 > The **NewTabPageLocation** policy has precedence if the **NewTabPageSetFeedType** policy is also configured.
