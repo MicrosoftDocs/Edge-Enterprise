@@ -3,7 +3,7 @@ title: "Microsoft Edge Lifecycle"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
