@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -35,8 +35,8 @@ These tables list all of the group policies available in this release of Microso
 
 |Policy Name|Caption|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Configure the location of the browser executable folder|
-|[releaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Configure the location of the browser executable folder|
+|[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference|
 
 
 
@@ -45,7 +45,7 @@ These tables list all of the group policies available in this release of Microso
 
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Configure the location of the browser executable folder
 
@@ -75,7 +75,7 @@ To set the value for the folder path, provide a Value name and Value pair. Set v
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: browserExecutableFolder
+  - GP unique name: BrowserExecutableFolder
   - GP name: Configure the location of the browser executable folder
   - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
   - GP path (Recommended): N/A
@@ -83,7 +83,7 @@ To set the value for the folder path, provide a Value name and Value pair. Set v
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Path (Recommended): N/A
   - Value Name: list of REG_SZ
   - Value Type: list of REG_SZ
@@ -91,7 +91,7 @@ To set the value for the folder path, provide a Value name and Value pair. Set v
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -99,7 +99,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Set the release channel search order preference
 
@@ -131,7 +131,7 @@ To set the value for the release channel preference, provide a Value name and Va
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: releaseChannelPreference
+  - GP unique name: ReleaseChannelPreference
   - GP name: Set the release channel search order preference
   - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
   - GP path (Recommended): N/A
@@ -139,7 +139,7 @@ To set the value for the release channel preference, provide a Value name and Va
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Path (Recommended): N/A
   - Value Name: list of REG_SZ
   - Value Type: list of REG_SZ
@@ -147,7 +147,7 @@ To set the value for the release channel preference, provide a Value name and Va
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 
