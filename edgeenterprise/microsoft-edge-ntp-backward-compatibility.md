@@ -3,7 +3,7 @@ title: "Backwards compatibility for the Enterprise New tab page"
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 10/22/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
