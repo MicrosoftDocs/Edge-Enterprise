@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,8 +19,12 @@ These release notes provide information about new features and non-security upda
 > [!IMPORTANT]
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
+## Version 87.0.664.18: October 26
+
+Fixed various bugs and performance issues.
+
 <!-- begin major 87 -->
-## Version 87.0.664.12 : October 20
+## Version 87.0.664.12: October 20
 
 ### Feature updates
 
@@ -64,19 +68,17 @@ Ten new policies were added. Download the updated Administrative Templates from 
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - Re-enable deprecated web platform features for a limited time.
 
-
-
 <!-- end major 87 -->
 
-## Version 86.0.622.43 : October 16
+## Version 86.0.622.43: October 16
 
 Fixed various bugs and performance issues.
 
-## Version 86.0.622.36 : October 7
+## Version 86.0.622.36: October 7
 
 Fixed various bugs and performance issues.
 
-## Version 86.0.622.31 : October 1
+## Version 86.0.622.31: October 1
 
 Fixed various bugs and performance issues.
 
