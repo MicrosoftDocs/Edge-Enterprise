@@ -12,9 +12,9 @@ ms.collection: M365-modern-desktop
 description: "Backwards compatibility for the Enterprise New tab page"
 ---
 
-# Backwards compatibility for the Enterprise new tab page
+# Backwards compatibility for the Enterprise New tab page
 
-This article describes the change to the New tab page and how  users can be backwards compatible with Microsoft Edge version 87 and earlier.
+This article describes the change to the New tab page and how users can be backwards compatible with Microsoft Edge version 87 and earlier.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
