@@ -53,6 +53,8 @@ The Enterprise New tab page will offer industry relevant information in **My Fee
 
 ![New tab page showing content from My Feed.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png)
 
+> [!NOTE]
+> Users who aren't signed in with Azure AD will continue to see the MSN News feed when they open a new tab.
 
 ## Page layout
 
