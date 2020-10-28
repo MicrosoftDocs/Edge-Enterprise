@@ -53,7 +53,6 @@ The Enterprise New tab page will offer industry relevant information in **My Fee
 
 ![New tab page showing content from My Feed.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png)
 
-:::image type="content" source="media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png" alt-text="New tab page showing content from My Feed.":::
 
 ## Page layout
 
