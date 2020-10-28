@@ -49,7 +49,9 @@ If the switch to the Office.com isn't possible, reach out and send us feedback. 
 
 ## My Feed experience replaces MSN News content
 
-The Enterprise new tab page will offer industry relevant information in **My Feed**, and Office 365 content in one single view for users signed in with their Azure Active Directory (Azure AD) account. After you select the Microsoft News option in the settings flyout, your new tab page view will be replaced with **My Feed** content. When you sign in to Azure AD and open a new tab page in the browser it will look like the example in the next screenshot.
+The Enterprise New tab page will offer industry relevant information in **My Feed** and Office 365 content in one single view for users signed in with their Azure Active Directory (Azure AD) account. For users signed in with their Azure Active Directory (Azure AD) who selected the Microsoft News option in the settings flyout,  their new tab page view will be replaced with **My Feed** content. When they open a new tab page in the browser it will look like the example in the next screenshot.
+
+![New tab page showing content from My Feed.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png)
 
 :::image type="content" source="media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png" alt-text="New tab page showing content from My Feed.":::
 
