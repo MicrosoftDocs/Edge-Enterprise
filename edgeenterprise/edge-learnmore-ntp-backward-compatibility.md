@@ -47,7 +47,7 @@ If the switch to the Office.com isn't possible, reach out and send us feedback. 
 > [!NOTE]
 > The **NewTabPageLocation** policy has precedence if the **NewTabPageSetFeedType** policy is also configured.
 
-## Single view for My Feed
+## Enterprise users will now get Microsoft news content via My Feed
 
 The Enterprise New tab page will offer industry relevant information in **My Feed** and Office 365 content in a single view for users signed in with their Azure Active Directory (Azure AD) account. For users signed in with their Azure Active Directory (Azure AD) who selected the Microsoft News option in the settings flyout, their new tab page view will be replaced with **My Feed** content. When they open a new tab page in the browser it will look like the example in the next screenshot.
 
