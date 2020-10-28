@@ -159,6 +159,8 @@
      href: microsoft-edge-webview-policies.md
    - name: Learn more reference
      items:
+      - name: Backwards compatibility for the New tab page
+        href: edge-learnmore-ntp-backward-compatibility.md
       - name: ClickOnce and DirectInvoke
         href: edge-learn-more-co-di.md
       - name: Command-line options to configure proxy settings
