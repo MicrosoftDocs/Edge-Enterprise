@@ -58,7 +58,7 @@ The Enterprise New tab page will offer industry relevant information in **My Fee
 
 With the changes to the New tab page, the Page layout no longer has to control two specific content types (Office 365 and Microsoft News), so the content toggle isn't available. The next screenshot shows the flyout for the Page layout.
 
-:::image type="content" source="media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-page-layout.png" alt-text="Page layout view for New tab page.":::
+![Page layout view for New tab page.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-page-layout.png)
 
 If you want to keep accessing Microsoft News content that isn't tied to your organization, you must use a different browser profile. Go to  *edge://settings/profiles* and sign out of your Azure AD profile. This action will bring up the  standard view for the Enterprise new tab page. 
 
