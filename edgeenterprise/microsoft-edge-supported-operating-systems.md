@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/11/2020
+ms.date: 10/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,6 +35,7 @@ The next version of Microsoft Edge is supported on the following operating syste
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Windows 10 Enterprise multi-session
+- Windows 10 IoT
 
 ### Windows Server
 
