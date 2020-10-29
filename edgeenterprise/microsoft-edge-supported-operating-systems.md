@@ -35,7 +35,10 @@ The next version of Microsoft Edge is supported on the following operating syste
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Windows 10 Enterprise multi-session
-- Windows 10 IoT
+- Windows 10 IoT Enterprise SAC ****
+- Windows 10 IoT Enterprise 2019 LTSC ****
+
+**** The Microsoft Edge OPK is available on MOO for IoT OEMs to preinstall and distribute as part of their Windows 10 IoT Enterprise based solution.  
 
 ### Windows Server
 
