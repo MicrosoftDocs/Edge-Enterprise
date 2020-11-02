@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/02/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -18,6 +18,19 @@ This article describes the recommended practices for deploying Microsoft Edge in
 
 >[!NOTE]
 >This article applies to Microsoft Edge version 77 or later.
+
+The following sections provide specific guidance for planning your Microsoft Edge deployment.
+
+- [Evaluate browser environment and requirements](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Make sure Windows 10 devices are ready](#make-sure-your-Windows-10-devices-are-ready)
+- [Pick deployment methodology](#determine-your-deployment-methodology)
+- [Do site discovery](#do-site-discovery)
+- [Pick channel strategy](#determine-your-channel-strategy)
+- [Identify and configure policies](#define-and-configure-policies)
+- [Test App compatibility](#do-app-compatibility-testing)
+- [Microsoft Edge pilot](#deploy-microsoft-edge-to-a-pilot-group)
+- [Evaluate pilot](#validate-your-deployment)
+- [Deploy Microsoft Edge across the enterprise](#broad-deployment-of-microsoft-edge)
 
 ## Evaluate your existing browser environment and browser needs
 
