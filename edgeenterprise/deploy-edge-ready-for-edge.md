@@ -35,4 +35,4 @@ The following table lists provider support statements for Microsoft Edge.
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Plan your deployment of Microsoft Edge](deploy-edge-plan-deploymentment.md)
+- [Plan your deployment of Microsoft Edge](deploy-edge-plan-deployment.md)
