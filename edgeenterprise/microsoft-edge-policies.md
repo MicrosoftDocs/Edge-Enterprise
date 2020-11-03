@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/28/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -399,6 +399,8 @@ and tips for Microsoft services|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
 
 
@@ -4057,7 +4059,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Description
 
-  By default, all extensions are allowed. However, if you block all extensions by setting the 'ExtensionInstallBlockList' policy to "*," users can only install extensions defined in this policy.
+  By default, all extensions are allowed. However, if you block all extensions by setting the 'ExtensionInstallBlockList' policy to "*", users can only install extensions defined in this policy.
 
   #### Supported features:
 
@@ -4272,9 +4274,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   Define URLs that can install extensions and themes.
 
-By default, users have to download a *.crx file for each extension or script they want to install, and then drag it onto the Microsoft Edge settings page. This policy lets specific URLs use install the extension or script for the user.
+Define URLs that can install extensions and themes directly without having to drag and drop the packages to the edge://extensions page.
 
-Each item in this list is an extension-style match pattern (see [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (in other words, the referrer) must be allowed by these patterns.
+Each item in this list is an extension-style match pattern (see [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (in other words, the referrer) must be allowed by these patterns. Do not host the files at a location that requires authentication.
 
 The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precedence over this policy. Any extensions that's on the block list won't be installed, even if it comes from a site on this list.
 
@@ -5730,7 +5732,7 @@ If you disable this policy, startup boost is turned off.
 
 If you don't configure this policy, startup boost may initially be off or on. The user can configure its behavior in edge://settings/system.
 
-Learn more about startup boost: https://aka.ms/edgestartupboostfaq
+Learn more about startup boost: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
   #### Supported features:
 
@@ -8009,7 +8011,7 @@ Note that even with this policy is disabled, the browsing and download history a
 
 If you enable this policy or don't configure it, users can delete the browsing and download history.
 
-If you disable this policy, users can't delete browsing and download history.
+If you disable this policy, users can't delete browsing and download history, and history sync will be disabled.
 
 If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how this policy is configured.
 
@@ -10841,6 +10843,7 @@ If you don't configure this policy, users can choose whether to send these reque
   #### Supported versions:
 
   - On Windows since 87 or later
+  - On macOS since 88 or later
 
   #### Description
 
@@ -10903,6 +10906,13 @@ Use the preceding information when configuring this policy.
 0x00000003
 ```
 
+  #### Mac information and settings
+  
+  - Preference Key Name: ConfigureFriendlyURLFormat
+  - Example value:
+``` xml
+<integer>3</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15588,18 +15598,20 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is a replacement for the ie-mode-test flag policy. It lets users open an IE mode tab from the UI menu option.
+  This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
+
+Users can do so from within the "More tools" menu by selecting 'Open sites in Internet Explorer mode'.
+
+Additionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
 and
 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
 
-If you enable this policy, users can open IE mode tab from the UI option and navigate current site to an IE mode site.
+If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list.
 
-If you disable this policy, users can't see the UI option in the menu directly.
-
-If you don't configure this policy, you can set up the ie-mode-test flag manually.
+If you disable or don't configure this policy, users can't see the options 'Open in Internet Explorer mode' and 'Open in Edge mode' under "More tools" menu. However, users can configure these options with the --ie-mode-test flag.
 
   #### Supported features:
 
@@ -17093,8 +17105,6 @@ For more information about this policy see [https://go.microsoft.com/fwlink/?lin
   This setting lets you specify whether Internet Explorer will redirect navigations to sites that require a modern browser to Microsoft Edge.
 
 If you don't configure this policy or set it to 'Sitelist', beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
-
-Microsoft provides a list of public sites that require such redirection, such as https://mail.yahoo.com.
 
 When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that began loading that site is closed if it had no prior content. Otherwise, it is navigated to a Microsoft help page explaining why the site was redirected to Microsoft Edge.
 
@@ -20860,6 +20870,135 @@ If you don't configure this policy, or if you set it to an empty string or inval
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Enable the Web widget
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 88 or later
+
+  #### Description
+
+  Enables the Web widget. When enabled, users can use the widget to search the web from their desktop or from an application. The widget provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The widget also includes feed tiles that users can click to see more information on msn.com in a new Microsoft Edge browser tab or window. The feed tiles may include ads. The widget can be launched from the Microsoft Edge settings or from the "More tools" menu in Microsoft Edge.
+
+If you enable or don't configure this policy:
+  The Web widget will be automatically enabled for all profiles.
+  In the Microsoft Edge settings, users will see option to launch the widget.
+  In the Microsoft Edge settings, users will see the menu item to run the widget at Windows startup (auto-start).
+    The option to enable the widget at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+    If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the widget at startup will be toggled off.
+  Users will see the menu item to launch the widget from the Microsoft Edge "More tools" menu. Users can launch the widget from "More tools".
+  The widget can be turned off by the "Quit" option in the System tray or by closing the widget from the taskbar. The widget will be restarted on system reboot if auto-start is enabled.
+
+If you disable this policy:
+  The Web widget will be disabled for all profiles.
+  The option to launch the widget from Microsoft Edge Settings will be disabled.
+  The option to launch start the widget at Windows startup (auto-start) will be disabled.
+  The option to launch the widget from Microsoft Edge "More tools" menu will be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebWidgetAllowed
+  - GP name: Enable the Web widget
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebWidgetAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Allow the Web widget at Windows startup
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 88 or later
+
+  #### Description
+
+  Allows the Web widget to start running at Windows startup.
+
+If you enable:
+  The Web widget will start running at Windows startup by default.
+  If the widget is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the widget on Windows startup.
+
+If you disable this policy:
+  The Web widget will not start at Windows startup for all profiles.
+  The option to start the widget at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+
+If you don't configure the policy:
+  The Web widget will not start at Windows startup for all profiles.
+  The option to start the widget at Windows startup will be toggled off in Microsoft Edge settings.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebWidgetIsEnabledOnStartup
+  - GP name: Allow the Web widget at Windows startup
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebWidgetIsEnabledOnStartup
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
