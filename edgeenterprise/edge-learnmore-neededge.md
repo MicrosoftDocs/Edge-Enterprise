@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -99,7 +99,7 @@ This policy configures the user experience for incompatible site redirection to 
 
 If you want to disable redirection BEFORE updating to Microsoft Edge Stable version 87, use the following step:
 
-1. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**. 
+1. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**.
 
 If you want to disable redirection AFTER updating to Microsoft Edge Stable version 87, use the following steps:
 
