@@ -1,9 +1,9 @@
 ---
-title: "Read for Microsoft Edge"
+title: "Ready for Microsoft Edge"
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/02/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,7 +22,7 @@ To help you plan your deployment of Microsoft Edge, we've compiled a list of web
 
 ### Microsoft testing and certification
 
-Microsoft doesn't test or certify these applications in Microsoft Edge. The list was compiled based on publicly available resources. Always refer to the current provider’s support statement. Some applications may require the use of IE Mode as indicated by the support statement.
+Microsoft doesn't test or certify these applications in Microsoft Edge. The list was compiled based on publicly available resources. Always refer to the provider’s current support statement. Some applications may require the use of IE Mode as indicated by the support statement.
 
 The following table lists provider support statements for Microsoft Edge.
 
