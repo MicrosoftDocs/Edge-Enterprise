@@ -22,7 +22,7 @@ This article describes the recommended practices for deploying Microsoft Edge in
 The following sections provide specific guidance for planning your Microsoft Edge deployment.
 
 - [Evaluate browser environment and requirements](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Make sure Windows 10 devices are ready](#make-sure-your-Windows-10-devices-are-ready)
+- [Make sure Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
 - [Pick deployment methodology](#determine-your-deployment-methodology)
 - [Do site discovery](#do-site-discovery)
 - [Pick channel strategy](#determine-your-channel-strategy)
