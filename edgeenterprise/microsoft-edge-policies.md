@@ -24,6 +24,23 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New, updated, and deprecated policies
+
+The following table lists the new, updated, and deprecated policies for this update.
+
+| Name | Status |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | New |
+| [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) | Updated |
+| [CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblockList) | Updated |
+| [ConfigureFriendlyURLFormat](#configurefriendlyurlformat) | Updated |
+| [InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed) | Updated |
+| [SSLVersionMin](#sslversionmin) | Updated |
+| [ProxyBypassList](#proxybypasslist) | Deprecated |
+| [ProxyMode](#proxymode) | Deprecated |
+| [ProxyPacUrl](#proxypacurl) | Deprecated |
+| [ProxyServer](#proxyserver) | Deprecated |
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
