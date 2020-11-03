@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -69,14 +69,14 @@ Redirection from Internet Explorer to Microsoft Edge requires an Internet Explor
 - If you enable this policy, the BHO required for redirection will not be installed and your users will continue to see incompatibility messages for certain websites on Internet Explorer. If the BHO is already installed, it will be uninstalled the next time the Microsoft Edge Stable channel is updated.
 - If you disable or don't configure this policy, the BHO will be installed. This is the default behavior.
 
-In addition to needing the BHO, there is a dependency on the **RedirectSitesFromInternetExplorerRedirectMode**, which needs to be set to "Sitelist" or "Not Configured".
+In addition to needing the BHO, there is a dependency on the **RedirectSitesFromInternetExplorerRedirectMode**, which needs to be set to "Redirect sites based on the incompatible sites sitelist" or "Not Configured".
 
 ### Policy: RedirectSitesFromInternetExplorerRedirectMode
 
  This policy corresponds to the Microsoft Edge **Default browser** setting "Let Internet Explorer open sites in Microsoft Edge". You can access this setting by going to the *edge://settings/defaultbrowser* URL.  
 
 - If you don't configure this policy or set it to "Sitelist", Internet Explorer will redirect incompatible sites to Microsoft Edge. This is the default behavior.
-- If you disable this policy, incompatible sites aren't redirected to Microsoft Edge.
+- To disable this policy, select **Enabled** AND then in the dropdown under Options: Redirect incompatible sites from Internet Explorer to Microsoft Edge, select **Disable**. In this state, incompatible sites aren't redirected to Microsoft Edge.
 
 > [!NOTE]
 > If you're on a personal device that isn't  managed by your organization, you'll see another setting named "Allow sites to be loaded in Internet Explorer mode" under **Internet Explorer compatibility**.
@@ -99,11 +99,11 @@ This policy configures the user experience for incompatible site redirection to 
 
 If you want to disable redirection BEFORE updating to Microsoft Edge Stable version 87, use the following step:
 
-1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Enabled**. This setting will stop redirecting as soon as the policy takes effect.
+1. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**.
 
 If you want to disable redirection AFTER updating to Microsoft Edge Stable version 87, use the following steps:
 
-1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Disabled**. This setting will stop redirecting as soon as the policy takes effect.
+1. Set the **RedirectSitesFromInternetExplorerRedirectMode** policy to **Enabled** AND then in the dropdown under Options: Redirect incompatible sites from Internet Explorer to Microsoft Edge, select **Disable**. This setting will stop redirecting as soon as the policy takes effect.
 2. Set the **RedirectSitesFromInternetExplorerPreventBHOInstall** policy to **Enabled**. This will uninstall the BHO after the next Microsoft Edge update.
 
 ## See also
