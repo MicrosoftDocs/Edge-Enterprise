@@ -21,7 +21,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 86.0.622.62: November 4
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)
+Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020). This update contains [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), that has been reported by the Chromium team as being an active exploit.
 
 ## Version 86.0.622.61: November 2
 
