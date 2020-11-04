@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -18,6 +18,19 @@ This article describes the recommended practices for deploying Microsoft Edge in
 
 >[!NOTE]
 >This article applies to Microsoft Edge version 77 or later.
+
+The following sections provide specific guidance for planning your Microsoft Edge deployment.
+
+- [Evaluate browser environment and requirements](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Make sure Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
+- [Pick deployment methodology](#determine-your-deployment-methodology)
+- [Do site discovery](#do-site-discovery)
+- [Pick channel strategy](#determine-your-channel-strategy)
+- [Identify and configure policies](#define-and-configure-policies)
+- [Test App compatibility](#do-app-compatibility-testing)
+- [Microsoft Edge pilot](#deploy-microsoft-edge-to-a-pilot-group)
+- [Evaluate pilot](#validate-your-deployment)
+- [Deploy Microsoft Edge across the enterprise](#broad-deployment-of-microsoft-edge)
 
 ## Evaluate your existing browser environment and browser needs
 
@@ -152,9 +165,11 @@ Application compatibility for Microsoft Edge is extremely high - so high that Mi
 2. If it works on Internet Explorer, it will work on Microsoft Edge in Internet Explorer mode.
 3. If it works on Google Chrome, it will work on Microsoft Edge.
 
-If you have an application where we don't meet this promise, then we stand behind the promise to fix it with [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
+If you have an application where we don't meet our compatibility promise, then we stand behind the promise to fix it with [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-Despite this promise, we know that many organizations must validate some applications for their compliance or risk management reasons. Even though we expect this to be very straightforward, it's important to be organized and rigorous in app testing.
+### Internal line of business app testing
+
+Despite our compatibility promise, we know that many organizations must validate some applications for their compliance or risk management reasons. Even though we expect this to be very straightforward, it's important to be organized and rigorous in app testing.
 
 There are 2 ways to do app compatibility testing:
 
@@ -162,6 +177,10 @@ There are 2 ways to do app compatibility testing:
 2. Pilot testing. Applications are validated by a limited number of users in their daily work environment using their own devices.
 
 Choose the method that is most appropriate for each app,  to manage risk without over-investing in compatibility testing.
+
+### Third party app support
+
+In addition to their own line of business apps, many organizations use apps provided by external sources. The [Ready for Microsoft Edge](deploy-edge-ready-for-edge.md) article contains a list of web applications that may be in use within your organization. This list provides links to provider support statements for their products when used with Microsoft Edge.
 
 ## Deploy Microsoft Edge to a pilot group
 
