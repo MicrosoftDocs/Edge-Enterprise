@@ -3,7 +3,7 @@ title: "Ready for Microsoft Edge"
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ The article provides information for the IT Administrator who's planning a Micro
 
 To help you plan your deployment of Microsoft Edge, we've compiled a list of web applications that may be in use within your organization. This list lets you determine if the web application is ready for Microsoft Edge, as documented by the web application provider’s public support statement.
 
-### Microsoft testing and certification
+### Application list
 
 Microsoft doesn't test or certify these applications in Microsoft Edge. The list was compiled based on publicly available resources. Always refer to the provider’s current support statement. Some applications may require the use of IE Mode as indicated by the support statement.
 
