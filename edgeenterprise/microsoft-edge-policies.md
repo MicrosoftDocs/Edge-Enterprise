@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,18 +24,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New, updated, and deprecated policies
+## New and deprecated policies
 
-The following table lists the new, updated, and deprecated policies for this update.
+The following table lists new and deprecated policies for this update.
 
 | Name | Status |
 |-|-|
 | [WebWidgetAllowed](#webwidgetallowed) | New |
-| [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) | Updated |
-| [CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblockList) | Updated |
-| [ConfigureFriendlyURLFormat](#configurefriendlyurlformat) | Updated |
-| [InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed) | Updated |
-| [SSLVersionMin](#sslversionmin) | Updated |
 | [ProxyBypassList](#proxybypasslist) | Deprecated |
 | [ProxyMode](#proxymode) | Deprecated |
 | [ProxyPacUrl](#proxypacurl) | Deprecated |
