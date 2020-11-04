@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 11/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -180,7 +180,7 @@ Choose the method that is most appropriate for each app,  to manage risk without
 
 ### Third party app support
 
-In addition to their own line of business apps, many organizations use apps provided by external sources. The **Ready for Microsoft Edge** article contains a list of web applications that may be in use within your organization. This list provides links to provider support statements for their products when used with Microsoft Edge.
+In addition to their own line of business apps, many organizations use apps provided by external sources. The [Ready for Microsoft Edge](deploy-edge-ready-for-edge.md) article contains a list of web applications that may be in use within your organization. This list provides links to provider support statements for their products when used with Microsoft Edge.
 
 ## Deploy Microsoft Edge to a pilot group
 
