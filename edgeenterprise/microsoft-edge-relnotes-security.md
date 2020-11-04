@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## November 4, 2020
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 86.0.622.62)**, which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), that has been reported by the Chromium team as being an active exploit. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 86.0.622.63)**, which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), that has been reported by the Chromium team as being an active exploit. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## October 22, 2020
 
