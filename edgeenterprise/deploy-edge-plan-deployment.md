@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 11/02/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -167,7 +167,7 @@ Application compatibility for Microsoft Edge is extremely high - so high that Mi
 
 If you have an application where we don't meet our compatibility promise, then we stand behind the promise to fix it with [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-### In-house app testing
+### Internal line of business app testing
 
 Despite our compatibility promise, we know that many organizations must validate some applications for their compliance or risk management reasons. Even though we expect this to be very straightforward, it's important to be organized and rigorous in app testing.
 
@@ -177,6 +177,10 @@ There are 2 ways to do app compatibility testing:
 2. Pilot testing. Applications are validated by a limited number of users in their daily work environment using their own devices.
 
 Choose the method that is most appropriate for each app,  to manage risk without over-investing in compatibility testing.
+
+### Third party app support
+
+In addition to their own line of business apps, many organizations use apps provided by external sources. The **Ready for Microsoft Edge** article contains a list of web applications that may be in use within your organization. This list provides links to provider support statements for their products when used with Microsoft Edge.
 
 ## Deploy Microsoft Edge to a pilot group
 
