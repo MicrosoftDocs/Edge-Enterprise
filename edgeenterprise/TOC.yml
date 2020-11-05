@@ -123,6 +123,11 @@
         href: edge-ie-mode-site-discovery.md
       - name: IE mode FAQ
         href: edge-ie-mode-faq.md
+      - name: Additional guidance
+        items:
+         - name: Cookie sharing from Microsoft Edge to Internet Explorer
+           href: edge-ie-mode-add-guidance-cookieshare.md
+
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
