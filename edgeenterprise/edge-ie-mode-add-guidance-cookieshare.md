@@ -34,10 +34,37 @@ This article explains explains how to configure session cookie sharing from a Mi
 
 ## Overview
 
+A common configuration in large organizations is to have an application that works on a modern browser link to another application, which might be configured to open in Internet Explorer mode with Single Sign On (SSO) enabled as part of the workflow.
+
+By default, the Microsoft Edge and Internet Explorer processes don't share session cookies, and this can be inconvenient in some cases. For example, when a user has to re-authenticate in Internet Explorer mode or when signing out of an Microsoft Edge session doesn’t sign out of the Internet Explorer mode session. In these scenarios, you can configure specific cookies set by SSO to be sent from Microsoft Edge to Internet Explorer so the authentication experience becomes more seamless by eliminating the need to re-authenticate.
+
+> [!NOTE]
+> Session cookies can only be shared from Microsoft Edge to Internet Explorer. Sharing session cookies in reverse (from Internet Explorer to Microsoft Edge) isn't possible.
+
 ## How cookie sharing works
+
+The Enterprise Mode site list XML has been extended to allow additional elements to specify cookies that need to be shared from a Microsoft Edge session with Internet Explorer.  
+
+The first time an Internet Explorer mode tab is created in a Microsoft Edge session, all matching cookies are shared to the Internet Explorer session. Subsequently, any time a cookie that matches a rule is added, deleted, or modified it is sent as an update to the Internet Explorer session. The set of shared cookies is also re-evaluated when the site list is updated.
 
 ### Updated schema elements
 
+The following table describes the \<shared-cookie\> element added to support the cookie sharing feature.
+
+| Element| Description |
+|-|-|
+| \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>OR<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |**(Required)** A \<shared-cookie\> element requires, at minimum, a *domain* (for domain cookies) or a *host* (for host-only cookies) attribute and a *name* attribute.<br>These must be exact matches to the cookie's domain and name respectively. **Note** that subdomains do not match.<br><br>The *domain* attribute is used for domain cookies (and a leading dot is allowed but optional).<br>The *host* attribute is used for host-only cookies (and a leading dot is an error). Specifying neither or both will result in an error.<br>* A cookie is a domain cookie if a domain was specified in the cookie string (via HTTP Set-Cookie response header or document.cookie JS API). A domain cookie applies to the specified domain and all subdomains. If a domain was not specified in the cookie string, the cookie is a host-only cookie and only applies to the specific host that it was set for. Note that some classes of URLs such as single-word hostnames (e.g. http://intranetsite) and IP addresses (e.g. http://10.0.0.1) can only set host-only cookies.    |
+| \<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2" **path**="/a/b/c"\>\</shared-cookie\>  | **(Optional)** A *path* attribute may be specified. If no path attribute is specified (or if the path attribute is empty), any cookies matching domain/host and name match the policy, regardless of path (wildcard rule).<br><br>If a path is specified, it must be an exact match.<br>If a cookie matches a rule with a path, that takes precedence over a rule without a path. |
+
+#### Sharing example
+
+```xml
+<site-list version="1">
+<shared-cookie domain=".contoso.com" name="cookie1"></shared-cookie> 
+<shared-cookie host="subdomain.contoso.com" name="cookie2" path="/a/b/c">
+</shared-cookie>
+</site-list>
+```
 
 ## See also
 
