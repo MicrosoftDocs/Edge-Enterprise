@@ -21,6 +21,17 @@ This article explains explains how to configure session cookie sharing from a Mi
 
 ## Prerequisites
 
+- Windows updates
+
+  - Windows 10 version 2004, Windows server version 2004 - KB4571744 or higher
+  - Windows 10 version 1909, Windows server version 1909 – KB4566116 or higher
+  - Windows 10 version 1903, Windows server version 1903 – KB4566116 or higher
+  - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB4571748 or higher
+  - Windows 10 version 1803 – KB4577032 or higher
+
+- Microsoft Edge version 87 or later
+- [IE mode](https://aka.ms/iemodeonedge) configured with Enterprise Mode Site List
+
 ## Overview
 
 ## How cookie sharing works
