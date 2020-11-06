@@ -1,5 +1,5 @@
 ---
-title: "Add Internet Explorer mode to the "Open with" context menu"
+title: "Add Internet Explorer mode to the Open with context menu"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Add Internet Explorer mode to the "Open with" context menu"
+description: "Add Internet Explorer mode to the Open with context menu"
 ---
 
 # Add Internet Explorer mode to the "Open with" context menu
