@@ -3,7 +3,7 @@ title: "Ready for Microsoft Edge"
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,6 +19,17 @@ The article provides information for the IT Administrator who's planning a Micro
 ## Web application compatibility and support
 
 To help you plan your deployment of Microsoft Edge, we've compiled a list of web applications that may be in use within your organization. This list lets you determine if the web application is ready for Microsoft Edge, as documented by the web application provider’s public support statement.
+
+### Add to the application list
+
+The list is regularly updated as support statements are identified from customer engagement feedback.
+
+If you are a web app provider and would like your support statement included for customer reference, please mail the following information to [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Product name
+- Version Supported (if applicable)
+- Provider Name
+- Public Support Statement URL
 
 ### Application list
 
