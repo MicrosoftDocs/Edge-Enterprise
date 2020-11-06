@@ -45,16 +45,15 @@ HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeXML\shell\open\command
 @="\"C:\Users\<username>\AppData\Local\Microsoft\Edge SxS\Application\msedge.exe\" -ie-mode-file-url -- \"%1\""
 ```
 
-3. \<explain why we are doing this at a high level\> 
-Finally, associate the .mht file extension with a new ProgID. Add your ProgID as a value name, with the value type of REG_SZ.
+3. Finally, associate the .mht file extension with a new ProgID. Add your ProgID as a value name, with the value type of REG_SZ.
 
 ```markdown
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mht\OpenWithProgids 
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mht\OpenWithProgids
 "MSEdgeIEModeXML"=hex(0):
 ```
 
 
-After you set the keys described in the previous example, your users will see an additional option on the **Open with** menu to open an .mht file using Microsoft Edge \<channel\> with IE mode. 
+After you set the keys described in the previous example, your users will see an additional option on the **Open with** menu to open an .mht file using Microsoft Edge \<channel\> with IE mode.
 
 ## See also
 
