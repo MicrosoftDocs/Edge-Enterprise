@@ -3,7 +3,7 @@ title: "Ready for Microsoft Edge"
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/05/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
