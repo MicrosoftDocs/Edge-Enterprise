@@ -21,13 +21,13 @@ This article explains how to add Microsoft Edge with Internet Explorer mode as a
 
 ## “Open with” file type association example
 
-The registry example used in the following instructions shows an entry that associates Microsoft Edge with IE mode with the mht file type. Use the following steps as a guide for setting a file association.
+The registry example used in the following instructions shows an entry that associates Microsoft Edge with IE mode with the .mht file type. Use the following steps as a guide for setting a file association.
 
-1. Define a new ProgID  with the Microsoft Edge channel to use to open with IE mode, including the application name and Icon and the full path to msedge.exe.
+1. Define a new ProgID with the Microsoft Edge channel to use to open with IE mode, including the application name and Icon and the full path to msedge.exe.
 
 ```markdown
 HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeXML\Application
-"ApplicationCompany"="Microsoft Corporation" 
+"ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge Canary with IE Mode"
 "ApplicationIcon"="C:\Users\<username>\AppData\Local\Microsoft\Edge SxS\Application\\msedge.exe,4"
 "AppUserModelId"=""
@@ -46,7 +46,7 @@ HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeXML\shell\open\command
 ```
 
 3. \<explain why we are doing this at a high level\> 
-Finally, associate the .xml file extension with a new ProgID. Add your ProgID as a value name, with the value type of REG_SZ.
+Finally, associate the .mht file extension with a new ProgID. Add your ProgID as a value name, with the value type of REG_SZ.
 
 ```markdown
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mht\OpenWithProgids 
@@ -54,7 +54,7 @@ HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.m
 ```
 
 
-After you set the keys described in the previous example, your users will see an additional option on the **Open with** menu to open an mht file using Microsoft Edge \<channel\> with IE mode. 
+After you set the keys described in the previous example, your users will see an additional option on the **Open with** menu to open an .mht file using Microsoft Edge \<channel\> with IE mode. 
 
 ## See also
 
