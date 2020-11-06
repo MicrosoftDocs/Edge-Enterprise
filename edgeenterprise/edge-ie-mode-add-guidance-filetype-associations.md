@@ -3,7 +3,7 @@ title: "Add Internet Explorer mode to the Open with context menu"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/05/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
