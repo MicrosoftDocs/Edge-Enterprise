@@ -26,7 +26,7 @@ The following instructions show an entry that associates Microsoft Edge with IE 
 > [!NOTE]
 > You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
-1. Define a new ProgID with the Microsoft Edge channel to use to open with IE mode, including the application name and Icon and the full path to msedge.exe.
+1. Define a new ProgID with the Microsoft Edge channel to use to open with IE mode. The ProgID includes the application name and Icon and the full path to msedge.exe.
 
 ```markdown
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
