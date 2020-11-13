@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 10/02/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,7 +22,7 @@ Let's get into the details, starting with **external threats** and then looking 
 
 ### Highest-rated protection against phishing and malware
 
-Built into Microsoft Edge, SmartScreen blocks more phishing and malware attempts than Google Chrome's Safe Browsing, according to an [independent study from NSS Labs](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/). SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
+Built into Microsoft Edge, SmartScreen blocks more [phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) and [malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) attempts than Google Chrome's Safe Browsing, according to an independent study from NSS Labs. SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
 
 [Microsoft Edge with SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) blocked 95.5% of phishing attempts and 98.5% of malware attempts [during the NSS Labs test](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) compared to Chrome's Safe Browsing's rates of 86.9% and 86.0%, respectively.
 
@@ -51,7 +51,7 @@ Aside from protecting against external threats, IT admins also must protect agai
 > [!NOTE]
 > Windows Information Protection (WIP) configuration requires licensing Microsoft Intune or Microsoft Endpoint Configuration Manager, or using a 3rd party mobile device management (MDM) solution, which may have additional licensing requirements.
 
-**Microsoft Endpoint DLP will be natively supported only on Microsoft Edge upon its general availability in October**. Microsoft Endpoint Data Loss Prevention (DLP) integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
+**Microsoft Endpoint DLP is only supported natively in Microsoft Edge**. Microsoft Endpoint Data Loss Prevention (DLP) integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
 
 > [!NOTE]
 > Microsoft 365 E5 or Microsoft 365 E5 Compliance subscription required for Microsoft Endpoint Data Loss Prevention.
