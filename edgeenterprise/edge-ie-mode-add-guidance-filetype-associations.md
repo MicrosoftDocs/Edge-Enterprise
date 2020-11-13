@@ -26,26 +26,26 @@ The following instructions show an entry that associates Microsoft Edge with IE 
 > [!NOTE]
 > You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
-1. Define a new ProgID with the Microsoft Edge channel to use to open with IE mode. The ProgID includes the application name and Icon and the full path to msedge.exe.
+1. Define a new ProgID with the Microsoft Edge channel to use to open with Internet Explorer mode. The ProgID includes the application name and Icon and the full path to msedge.exe.
 
 ```markdown
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
-"ApplicationName"="Microsoft Edge Canary with IE Mode"
-"ApplicationIcon"="C:\Users\<username>\AppData\Local\Microsoft\Edge SxS\Application\\msedge.exe,4"
+"ApplicationName"="Microsoft Edge with IE Mode"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
 "AppUserModelId"=""
 ```
 
 ```markdown
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]
-@="C:\\Users\<username>\AppData\Local\Microsoft\Edge SxS\Application\\msedge.exe,4"
+@="C:\\<edge_installation_dir>\\msedge.exe,4"
 ```
 
 2. Configure shell updates to pass the command line needed to open with IE mode.
 
 ```markdown
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell\open\command]
-@="\"C:\\Users\<username>\AppData\Local\Microsoft\Edge SxS\Application\\msedge.exe\" -ie-mode-file-url -- \"%1\""
+@="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 ```
 
 3. Finally, associate the .mht file extension with a new ProgID. Add your ProgID as a value name, with the value type of REG_SZ.
@@ -62,6 +62,8 @@ After you set the keys described in the previous example, your users will see an
 You can save the following code snippet as a .reg file and import it into the registry.
 
 ```markdown
+Windows Registry Editor Version 5.00
+
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mht\OpenWithProgids]
 "MSEdgeIEModeMHT"=hex(0):
 
@@ -70,18 +72,18 @@ You can save the following code snippet as a .reg file and import it into the re
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\edge_installation_dir\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
 "AppUserModelId"=""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]
-@="C:\\edge_installation_dir\\msedge.exe,4"
+@="C:\\<edge_installation_dir>\\msedge.exe,4"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeXML\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell\open\command]
-@="\"C:\\edge_installation_dir\\msedge.exe\" -ie-mode-file-url -- \"%1\""
+@="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
 
