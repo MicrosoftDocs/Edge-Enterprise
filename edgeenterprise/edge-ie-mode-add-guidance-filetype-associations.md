@@ -80,7 +80,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell]
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeXML\shell\open]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\shell\open\command]
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
