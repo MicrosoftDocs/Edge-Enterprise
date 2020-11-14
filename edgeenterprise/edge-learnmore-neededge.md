@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ The need to  manually switch to a different browser changes starting with Micros
 When a user goes to a site that is incompatible with Internet Explorer, they will be automatically redirected to Microsoft Edge. This article describes the user experience for redirection and the group policies that are used to configure or disable automatic redirection.
 
 > [!NOTE]
-> Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer.
+> Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
 ## Redirection experience
 
@@ -108,5 +108,6 @@ If you want to disable redirection AFTER updating to Microsoft Edge Stable versi
 
 ## See also
 
+- [Request updates to the incompatible sites list](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge Policies](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
