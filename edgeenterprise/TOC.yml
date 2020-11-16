@@ -1,4 +1,4 @@
-# last revised 11/06/2020
+# last revised 11/16/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -125,7 +125,7 @@
         href: edge-ie-mode-faq.md
       - name: Additional guidance
         items:
-         - name: Add IE mode to "Open with" context menu
+         - name: Associate file extensions with Internet Explorer mode
            href: edge-ie-mode-add-guidance-filetype-associations.md
          - name: Cookie sharing from Microsoft Edge to Internet Explorer
            href: edge-ie-mode-add-guidance-cookieshare.md
