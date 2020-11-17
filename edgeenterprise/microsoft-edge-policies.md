@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,18 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New and deprecated policies
-
-The following table lists new and deprecated policies for this update.
-
-| Name | Status |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | New |
-| [ProxyBypassList](#proxybypasslist) | Deprecated |
-| [ProxyMode](#proxymode) | Deprecated |
-| [ProxyPacUrl](#proxypacurl) | Deprecated |
-| [ProxyServer](#proxyserver) | Deprecated |
 
 ## Available policies
 
@@ -4002,15 +3990,23 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Controls which extension types can be installed and limits runtime access.
+  Setting the policy controls which apps and extensions may be installed in Microsoft Edge, which hosts they can interact with, and limits runtime access.
 
-This setting defines the allowed types of extensions and which hosts they can interact with. The value is a list of strings, each of which should be one of the following: "extension", "theme", "user_script", and "hosted_app". See the Microsoft Edge extensions documentation for more information on these types.
+If you don't set this policy, there aren't any restrictions on acceptable extension and app types.
 
-Note that this policy also affects extensions to be force-installed by using [ExtensionInstallForcelist](#extensioninstallforcelist) policy.
+Extensions and apps which have a type that's not on the list won't be installed. Each value should be one of these strings:
 
-If you enable this policy, only extensions that match a type in the list are installed.
+* "extension"
 
-If you don't configure this policy, no restrictions on the acceptable extension types are enforced.
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+See the Microsoft Edge extensions documentation for more information about these types.
+
+Note: This policy also affects extensions and apps to be force-installed using [ExtensionInstallForcelist](#extensioninstallforcelist).
 
   #### Supported features:
 
@@ -4201,27 +4197,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Description
 
-  Specifies extensions that are installed silently, without user interaction, and that the users can't uninstall or disable ("force-installed"). All permissions requested by the extensions are granted implicitly, without user interaction, including any additional permissions requested by future versions of the extension. Furthermore, permissions are granted for the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. (These two APIs are only available to extensions that are force-installed.)
+  Set this policy to specify a list of apps and extensions that install silently, without user interaction. Users can't uninstall or turn off this setting. Permissions are granted implicitly, including the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. Note: These 2 APIs aren't available to apps and extensions that aren't force-installed.
 
-This policy takes precedence over a potentially conflicting [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. When you take an extension off of the force-installed list it's automatically uninstalled by Microsoft Edge.
+If you don't set this policy, no apps or extensions are autoinstalled and users can uninstall any app in Microsoft Edge.
 
-Forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website for instances that aren't one of the following: Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management, and macOS instances that are managed via MDM or joined to a domain via MCX.
+This policy supercedes [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. If a previously force-installed app or extension is removed from this list, Microsoft Edge automatically uninstalls it.
 
-Note that users can modify the source code of any extension by using Developer Tools, potentially rendering the extension dysfunctional. If this is a concern, set the [DeveloperToolsAvailability](#developertoolsavailability) policy.
+On Microsoft Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain, and running Windows 10 Pro.
 
-Use the following format to add an extension to the list:
+On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, or joined to a domain via MCX.
 
-[extensionID];[updateURL]
+The source code of any extension can be altered by users with developer tools, potentially rendering the extension unfunctional. If this is a concern, configure the DeveloperToolsDisabled policy.
 
-- extensionID - the 32-letter string found on edge://extensions when in developer mode.
+Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
-- updateURL (optional) is the address of the Update Manifest XML document for the app or extension, as described at [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043). If you want to install an extension from the Chrome Web Store, provide the Chrome Web Store update URL, https://clients2.google.com/service/update2/crx. Note that the update URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL indicated in the extension's manifest. If you don't set the updateURL, the extension is assumed to be hosted in Microsoft Store and the following update URL is used (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-
-For example, gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx installs the Microsoft Online app from the Microsoft Store "update" URL. For more information about hosting extensions, see: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
-
-If you don't configure this policy, no extensions are installed automatically, and users can uninstall any extension in Microsoft Edge.
-
-Note that this policy doesn't apply to InPrivate mode.
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Supported features:
 
