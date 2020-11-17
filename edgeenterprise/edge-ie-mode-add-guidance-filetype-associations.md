@@ -1,5 +1,5 @@
 ---
-title: "Add Internet Explorer mode to the Open with context menu"
+title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
