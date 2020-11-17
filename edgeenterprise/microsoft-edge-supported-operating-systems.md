@@ -24,7 +24,7 @@ This article describes the supported operating systems that apply to Microsoft E
 > [!NOTE]
 > Product functionality and feature availability may vary on older operating systems. To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below. This guidance includes the latest cumulative update, as applicable.
 
-Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems:
+Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
 ### Windows Client
 
@@ -42,7 +42,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### Windows Server
 
-- Windows Server 2008 R2**
+- Windows Server 2008 R2 **
 - Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
