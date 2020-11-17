@@ -101,9 +101,9 @@ The following articles provide the information you need to install, configure, a
 
 ## Frequently Asked Questions
 
-### Does Application Guard work in IE Mode?
+### Does Application Guard work in IE mode?
 
-IE Mode supports Application Guard functionality, but we don't anticipate much use of this feature in IE Mode. IE Mode is recommended to be deployed for a list of trusted internal sites, and Application Guard is for untrusted sites only. Make sure all the IE mode sites or IP addresses are also added to the Network Isolation policy to be considered as trusted resource by Application Guard.
+IE mode supports Application Guard functionality, but we don't anticipate much use of this feature in IE Mode. IE mode is recommended to be deployed for a list of trusted internal sites, and Application Guard is for untrusted sites only. Make sure all the IE mode sites or IP addresses are also added to the Network Isolation policy to be considered as trusted resource by Application Guard.
 
 ### Do I need to install the Application Guard Chrome extension?
 
