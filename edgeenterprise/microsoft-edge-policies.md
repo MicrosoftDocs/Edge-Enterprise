@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -36,8 +36,9 @@ These tables list all of the browser-related group policies available in this re
 |[Kiosk Mode settings](#kiosk-mode-settings)|[Native Messaging](#native-messaging)|
 |[Password manager and protection](#password-manager-and-protection)|[Performance](#performance)|
 |[Printing](#printing)|[Proxy server](#proxy-server)|
-|[SmartScreen settings](#smartscreen-settings)|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|
-|[Additional](#additional)|
+|[Sleeping Tabs settings](#sleeping-tabs-settings)|[SmartScreen settings](#smartscreen-settings)|
+|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|[Additional](#additional)|
+
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -111,6 +112,7 @@ and tips for Microsoft services|
 
 |Policy Name|Caption|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|Blocks external extensions from being installed|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Allow specific extensions to be installed|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
@@ -175,6 +177,13 @@ and tips for Microsoft services|
 |[ProxyPacUrl](#proxypacurl)|Set the proxy .pac file URL (deprecated)|
 |[ProxyServer](#proxyserver)|Configure address or URL of proxy server (deprecated)|
 |[ProxySettings](#proxysettings)|Proxy settings|
+### [*Sleeping Tabs settings*](#sleeping-tabs-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Block Sleeping Tabs on specific sites|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configure Sleeping Tabs|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Set the background tab inactivity timeout for Sleeping Tabs|
 ### [*SmartScreen settings*](#smartscreen-settings-policies)
 
 |Policy Name|Caption|
@@ -336,7 +345,7 @@ and tips for Microsoft services|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, search and news by sending browsing history to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (deprecated)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
@@ -365,6 +374,7 @@ and tips for Microsoft services|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
@@ -3978,6 +3988,71 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### Blocks external extensions from being installed
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 88 or later
+
+  #### Description
+
+  Control the installation of external extensions.
+
+If you enable this setting, external extensions are blocked from being installed.
+
+If you disable this setting or leave it unset, external extensions are allowed to be installed.
+
+External extensions and their installation are documented at https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BlockExternalExtensions
+  - GP name: Blocks external extensions from being installed
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BlockExternalExtensions
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: BlockExternalExtensions
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### Configure allowed extension types
@@ -6580,6 +6655,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Sleeping Tabs settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### Block Sleeping Tabs on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 88 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by Sleeping Tabs.
+
+If the policy [SleepingTabsEnabled](#sleepingtabsenabled) is disabled, this list is not used and no sites will be put to sleep automatically.
+
+If you don't configure this policy, all sites will be eligible to be put to sleep unless the user's personal configuration blocks them.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SleepingTabsBlockedForUrls
+  - GP name: Block Sleeping Tabs on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SleepingTabsBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### Configure Sleeping Tabs
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 88 or later
+
+  #### Description
+
+  This policy setting lets you configure whether to turn on Sleeping Tabs. Sleeping Tabs reduces CPU, battery, and memory usage by putting idle background tabs to sleep. Microsoft Edge uses heuristics to avoid putting tabs to sleep that do useful work in the background, such as display notifications, play sound, and stream video. By default, Sleeping Tabs is turned on.
+
+Individual sites may be blocked from being put to sleep by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
+
+If you enable this setting, Sleeping Tabs is turned on.
+
+If you disable this setting, Sleeping Tabs is turned off.
+
+If you don't configure this setting, users can choose whether to use Sleeping Tabs.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SleepingTabsEnabled
+  - GP name: Configure Sleeping Tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SleepingTabsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SleepingTabsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### Set the background tab inactivity timeout for Sleeping Tabs
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 88 or later
+
+  #### Description
+
+  This policy setting lets you configure the timeout, in seconds, after which inactive background tabs will be automatically put to sleep if Sleeping Tabs is enabled. By default, this timeout is 7,200 seconds (2 hours).
+
+Tabs are only put to sleep automatically when the policy [SleepingTabsEnabled](#sleepingtabsenabled) is enabled or is not configured and the user has enabled the Sleeping Tabs setting.
+
+If you don't configure this policy, users can choose the timeout value.
+
+Policy options mapping:
+
+* 5Minutes (300) = 5 minutes of inactivity
+
+* 15Minutes (900) = 15 minutes of inactivity
+
+* 30Minutes (1800) = 30 minutes of inactivity
+
+* 1Hour (3600) = 1 hour of inactivity
+
+* 2Hours (7200) = 2 hours of inactivity
+
+* 3Hours (10800) = 3 hours of inactivity
+
+* 6Hours (21600) = 6 hours of inactivity
+
+* 12Hours (43200) = 12 hours of inactivity
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SleepingTabsTimeout
+  - GP name: Set the background tab inactivity timeout for Sleeping Tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SleepingTabsTimeout
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000384
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SleepingTabsTimeout
+  - Example value:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## SmartScreen settings policies
 
   [Back to top](#microsoft-edge---policies)
@@ -7361,6 +7655,8 @@ If you set this policy to false or don't configure it, the default top site tile
 
   Configures the default URL for the new tab page.
 
+The recommended version of this policy does not currently work and functions exactly like the mandatory version.
+
 This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page.
 
 This policy doesn't determine which page opens on startup; that's controlled by the [RestoreOnStartup](#restoreonstartup) policy. It also doesn't affect the home page if that's set to open to the new tab page.
@@ -7889,7 +8185,7 @@ If you have enabled the set of policies which forces a default search provider (
 
   - Can be mandatory: Yes
   - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
 
   #### Data Type:
 
@@ -16783,9 +17079,9 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   ### ProactiveAuthEnabled
 
-  #### Enable Proactive Authentication
+  #### Enable Proactive Authentication (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -16793,11 +17089,13 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   #### Description
 
-  Lets you configure whether to turn on Proactive Authentication.
+  This policy is deprecated because it does not work independently of browser sign in. It won't work in Microsoft Edge version 91. If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
 
-If you enable this policy, Microsoft Edge tries to proactively authenticate the signed-in user with Microsoft services. At regular intervals, Microsoft Edge checks with an online service for an updated manifest that contains the configuration that governs how to do this.
+Lets you configure whether to turn on Proactive Authentication in Microsoft Edge.
 
-If you disable this policy, Microsoft Edge doesn't try to proactively authenticate the signed-in user with Microsoft services. Microsoft Edge no longer checks with an online service for an updated manifest that contains the configuration for doing this.
+If you enable this policy, Microsoft Edge tries to seamlessly authenticate to websites and services using the account which is signed-in to the browser.
+
+If you disable this policy, Microsoft Edge does not try to authenticate with websites or services using single sign-on (SSO). Authenticated experiences like the Enterprise New Tab Page will not work (e.g. recent and recommended Office documents will not be available).
 
 If you don't configure this policy, Proactive Authentication is turned on.
 
@@ -16816,7 +17114,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ProactiveAuthEnabled
-  - GP name: Enable Proactive Authentication
+  - GP name: Enable Proactive Authentication (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -18624,6 +18922,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Show Microsoft Rewards experiences
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 88 or later
+
+  #### Description
+
+  Show Microsoft Rewards experience and notifications.
+If you enable this policy:
+   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
+   - The setting to enable Give mode will be enabled and respect the user's setting.
+
+If you disable this policy:
+   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will not see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - The setting to enable Microsoft Rewards in Microsoft Edge settings will be disabled and toggled off.
+
+If you don't configure this policy:
+   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
+   - The setting to enable Give mode will be enabled and respect the user's setting.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowMicrosoftRewards
+  - GP name: Show Microsoft Rewards experiences
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: ShowMicrosoftRewards
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowMicrosoftRewards
+  - Example value:
+``` xml
+<false/>
 ```
   
 
