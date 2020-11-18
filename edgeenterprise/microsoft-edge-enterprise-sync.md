@@ -75,9 +75,9 @@ The following group policies impact Microsoft Edge sync:
 
 ### SECURITY and SERVER/DATA COMPLIANCE
 
-#### Is the synced data encrypted? 
+#### Is the synced data encrypted?
 
-The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via Azure Information Protection. (TBD link) 
+The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/).
 
 #### Why don’t open tab and history data have additional client-side encryption?  
 
