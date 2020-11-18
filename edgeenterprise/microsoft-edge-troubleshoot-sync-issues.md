@@ -14,7 +14,10 @@ description: "Troubleshoot Microsoft Edge sync issues"
 
 # Troubleshoot Microsoft Edge sync issues
 
-This article provides troubleshooting steps for the most commonly encountered sync issues, along with the recommended tools for gathering the logs needed for troubleshooting.
+This article provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
+
+> [!NOTE]
+> Applies to Microsoft Edge version 77 and above unless otherwise noted.
 
 ## Overview
 
