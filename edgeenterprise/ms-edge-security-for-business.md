@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/17/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
