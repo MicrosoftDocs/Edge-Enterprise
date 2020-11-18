@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/11/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -51,10 +51,12 @@ Aside from protecting against external threats, IT admins also must protect agai
 > [!NOTE]
 > Windows Information Protection (WIP) configuration requires licensing Microsoft Intune or Microsoft Endpoint Configuration Manager, or using a 3rd party mobile device management (MDM) solution, which may have additional licensing requirements.
 
-**Microsoft Endpoint DLP is only supported natively in Microsoft Edge**. Microsoft Endpoint Data Loss Prevention (DLP) integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
+**Microsoft Endpoint data loss prevention (Endpoint DLP) is only supported natively in Microsoft Edge**. Endpoint DLP integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
+
+To learn more about Endpoint DLP prerequisites and how to set this up, go to [Get started with Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide).
 
 > [!NOTE]
-> Microsoft 365 E5 or Microsoft 365 E5 Compliance subscription required for Microsoft Endpoint Data Loss Prevention.
+> Microsoft 365 E5 or Microsoft 365 E5 Compliance subscription required for Microsoft Endpoint data loss prevention.
 
 ## See also
 
