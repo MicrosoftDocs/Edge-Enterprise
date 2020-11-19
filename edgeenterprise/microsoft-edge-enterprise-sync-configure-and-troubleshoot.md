@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot Microsoft Edge sync issues"
+title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Troubleshoot Microsoft Edge sync issues"
+description: "Configure and troubleshoot Microsoft Edge sync"
 ---
 
-# Troubleshoot Microsoft Edge sync issues
+# Configure and troubleshoot Microsoft Edge sync
 
 This article provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
 
