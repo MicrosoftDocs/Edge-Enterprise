@@ -3,7 +3,7 @@ title: "Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,12 +22,17 @@ This blending of user activities has spread to devices as well, where data is mo
 
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
-## Microsoft Endpoint DLP
+## Microsoft Endpoint data loss prevention (Endpoint DLP)
 
-Microsoft Endpoint DLP is the next generation of DLP using modern concepts such as data-centric protection. It's  built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device. To learn more about endpoint DLP, read [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+Microsoft Endpoint DLP is the next generation of data loss prevention using modern concepts such as data-centric protection. It's built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device.
 
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
+
+To learn more about Endpoint DLP:
+
+- [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [Get started with Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
 Microsoft Edge enforces admin configured policies for sensitive files and records audit events for non-compliant activities.
 
