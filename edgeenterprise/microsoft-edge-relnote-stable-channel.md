@@ -24,7 +24,7 @@ These release notes provide information about new features and non-security upda
 
 ### Feature updates
 
-- **Automatically redirect incompatible sites from Internet Explorer to Microsoft Edge**. When an Internet Explorer user visits a public site that's incompatible with Internet Explorer, they get a message that tells them the site is incompatible with their browser, and they need to manually switch to a different browser. With the Microsoft Edge 87 Stable update, public websites that show an incompatibility message on Internet Explorer will be automatically redirected to Microsoft Edge. For more information, see [Learn more](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
+- **Automatic redirection for incompatible sites from Internet Explorer to Microsoft Edge**. Starting with the Microsoft Edge 87 Stable update, public websites that show an incompatibility message on Internet Explorer will be automatically redirected to Microsoft Edge. To learn more and to configure this experience, see [Redirecting incompatible sites](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
 
 - **Kiosk mode privacy features enabled**. Starting with Microsoft Edge version 87, kiosk mode features that will help enterprises around the privacy of user data will be enabled. These features will enable experiences such as clear the user data on exit, delete downloaded files and to reset the configured start experience after a specified amount of idle time. Learn more about how to [Configure Microsoft Edge kiosk mode](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)
 
