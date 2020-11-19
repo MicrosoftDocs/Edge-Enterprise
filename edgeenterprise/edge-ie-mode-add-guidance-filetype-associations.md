@@ -1,18 +1,18 @@
 ---
-title: "Add Internet Explorer mode to the Open with context menu"
+title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Add Internet Explorer mode to the Open with context menu"
+description: "Associate file extensions with Internet Explorer mode"
 ---
 
-# Add Internet Explorer mode to the "Open with" context menu
+# Associate file extensions with Internet Explorer mode
 
 This article explains how to associate Microsoft Edge with Internet Explorer mode with file extensions for desktop applications.
 
