@@ -23,7 +23,7 @@ This article provides troubleshooting steps for the most commonly encountered sy
 
 ## Troubleshoot sync issues
 
-This section provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
+This section provides troubleshooting steps for the most common sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
 
 ## Frequently Asked Questions
 
