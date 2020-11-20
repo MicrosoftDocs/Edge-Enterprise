@@ -87,72 +87,58 @@ The next screenshot shows an example of an identity error found in *edge://sync-
 
 ### Common sync issues
 
-#### Issue: Can't access subscription
+#### Issue: Can't access M365 or Azure Information Protection subscription
 
-Do you have a previous M365 or Azure Information Protection subscription which expired and then replaced with a new subscription?
-If so, then the tenant ID has changed and the service data needs to be reset. Please see the instructions for resetting data in the "Cryptographer error encountered" section below.
+Do you have a previous M365 or Azure Information Protection (AIP) subscription that expired and then replaced with a new subscription? If so, then the tenant ID has changed and the service data needs to be reset. See the instructions for resetting data in the **Cryptographer error encountered** issue.
 
 #### Issue: “Sync is not available for this account.”
 
-If this error is encountered for an Azure Active Directory account, or if DISABLED_BY_ADMIN appears in *edge://sync-internals*, please follow the following steps in order until the problem is resolved. Because the source of this error is almost always requires a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin and not by end users.
+If this error is encountered for an Azure Active Directory account, or if DISABLED_BY_ADMIN appears in *edge://sync-internals*, follow the steps in the next procedure sequentially until the problem is fixed.
 
-1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) . If the tenant does not have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+> [!NOTE]
+> Because the source of this error is usually requires a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin and not by end users.
 
-2. If a supported subscription is available, verify that the tenant has Azure Information Protection available. The instructions for inspecting the AIP status and, if necessary, activating AIP are [here](https://docs.microsoft.com/en-us/azure/information-protection/activate-office365) .
+1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://docs.microsoft.com/azure/information-protection/activate-office365). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. The instructions for checking the AIP status and, if necessary, activating AIP are [here](https://docs.microsoft.com/azure/information-protection/activate-office365).
+3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn ESR off if this step fixes the issue.
 
-3. If step 2 indicates that AIP is active but sync still does not work, turn Enterprise State Roaming on. The instructions for activating ESR are here . Note that ESR does not need to remain on. It can be switched back off if this step has successfully resolved the issue.
+4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps)  PowerShell applet to see if scoping is enabled. The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
-4. Confirm that Azure Information Protection is not scoped via an onboarding policy. The [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/en-us/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps)  PowerShell applet will show if scoping is enabled.
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-unscoped-cfg.png" alt-text="Unscoped configuration":::
 
-This is what an unscoped configuration looks like:
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg.png" alt-text="Scoped configuration":::
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
- 
-    UseRmsUserLicense SecurityGroupObjectId                Scope
-    ----------------- ---------------------                -----
-                False 
-And this is what a configuration scoped to a specific security group looks like:
+   If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. In the example below, onboarding has scoped AIP to the indicated security group and the scoping should be removed with the [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet.
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
- 
-    UseRmsUserLicense SecurityGroupObjectId                Scope
-    ----------------- ---------------------                -----
-                False f1488a05-8196-40a6-9483-524948b90282   All
-If scoping is enabled, the impacted user should either be added to the security group for the scope, or the scope should be removed. In the example below, onboarding has scoped AIP to the indicated security group and the scoping should be removed with the [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/en-us/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)  PowerShell applet.
+5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell applet shows the status of the service.
 
-5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AadrmConfiguration](https://docs.microsoft.com/en-us/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell applet will display the status. In the example below, IPCv3Service is enabled.
-    PS C:\Work\scripts\PowerShell> Get-AadrmConfiguration | select 
-    IPCv3ServiceFunctionalState
- 
-    IPCv3ServiceFunctionalState
-    ---------------------------
-                        Enabled
-6. If failures are still observed, collect logs via OCV and report to Edge team.
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Check to see if IPCv3Service is enabled.":::
+
+6. If the issue isn't fixed, collect logs via OCV and them to Microsoft Edge team.
 
 #### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying…”
 
 1. Try to sign out and then sign in.
-
 2. Go to *edge://sync-internals*. If under the "**Type info**" section the following error is present, then  skip to the following issue, **Cryptographer error encountered**.
-`"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered"`
+
+   `"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered"`
 
 3. Try pinging the server endpoint. The server endpoint for a client is available in *edge://sync-internals*. The next screenshot shows endpoint information under **Environment Info**.
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-endpoint-info.png" alt-text="Endpoint information":::
-
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-endpoint-info.png" alt-text="Endpoint information":::
 
 4. If the server endpoint is empty, or if server cannot be pinged and a firewall is present in the environment, confirm that the necessary service endpoints are available to the client computer.
 
-- Edge sync service endpoints:
-  - https://enterprise.activity.windows.com 
-  - https://edge.activity.windows.com 
-- Azure Information Protection endpoints:
-  - https://api.aadrm.com  (for most tenants)
-  - https://api.aadrm.de  (for tenants in Germany)
-  - https://api.aadrm.cn  (for tenants in China)
-- [Windows Notification Service endpoints](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) 
+   - Edge sync service endpoints:
+     - [https://enterprise.activity.windows.com](https://enterprise.activity.windows.com)
+     - [https://edge.activity.windows.com](https://edge.activity.windows.com)
+    - Azure Information Protection endpoints:
+      - [https://api.aadrm.com](https://api.aadrm.com) (for most tenants)
+      - [https://api.aadrm.de](https://api.aadrm.de) (for tenants in Germany)
+      - [https://api.aadrm.cn](https://api.aadrm.cn) (for tenants in China)
+   - [Windows Notification Service endpoints](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
-5. If failures are still observed, collect logs via OCV and report to Edge team.
+5. If the issue still isn't fixed, collect logs via OCV and send them to the Microsoft Edge team.
 
 ### Issue: Cryptographer error encountered
 
@@ -169,8 +155,6 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
 #### Issue: “Sync has been turned off by your administrator.”
 
 Make sure that the [SyncDisabled policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled)  is not set.
-
-
 
 ## Frequently Asked Questions
 
