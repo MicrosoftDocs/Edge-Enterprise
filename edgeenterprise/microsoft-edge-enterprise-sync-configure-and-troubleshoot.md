@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 11/24/2020
+ms.date: 11/25/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -79,7 +79,7 @@ This section provides troubleshooting steps for the most encountered sync issues
 
 A popular use case for maintaining user identity in the browser is to support sync. For this reason, identity issues are frequently confused with sync issues. Understand the difference between identity and sync issue before you start troubleshooting sync.
 
-Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account. If you encounter an identity issues as an account not properly signing in or the wrong account appearing as the user’s default account, refer to the [Identity troubleshooting guide](https://dev.azure.com/microsoft/Edge/_wiki/wikis/Edge.wiki/48883/Identity-TSG).
+Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
 The next screenshot shows an example of an identity error found in *edge://sync-internals*.
 
@@ -103,9 +103,23 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn ESR off if this step fixes the issue.
 4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps)  PowerShell applet to see if scoping is enabled. The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
-   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-unscoped-cfg.png" alt-text="Unscoped configuration":::
+   ```powershell
+    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+ 
+    UseRmsUserLicense SecurityGroupObjectId                Scope
+    ----------------- ---------------------                -----
+                False 
+   ```
 
-   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg.png" alt-text="Scoped configuration":::
+   ```powershell
+
+    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+ 
+    UseRmsUserLicense SecurityGroupObjectId                Scope
+    ----------------- ---------------------                -----
+                False f1488a05-8196-40a6-9483-524948b90282   All
+   ```
+
 
    If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. In the example below, onboarding has scoped AIP to the indicated security group and the scoping should be removed with the [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet.
 
@@ -113,7 +127,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Check to see if IPCv3Service is enabled.":::
 
-6. If the issue isn't fixed, collect logs via OCV and them to Microsoft Edge team.
+6. If the issue isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
 #### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying…”
 
@@ -129,7 +143,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 4. If the server endpoint is empty, or if server cannot be pinged and a firewall is present in the environment, confirm that the necessary service endpoints are available to the client computer.
 
    - Edge sync service endpoints:
-     - [https://enterprise.activity.windows.com](https://enterprise.activity.windows.com)
+     - [https://edge-enterprise.activity.windows.com](https://edge-enterprise.activity.windows.com)
      - [https://edge.activity.windows.com](https://edge.activity.windows.com)
     - Azure Information Protection endpoints:
       - [https://api.aadrm.com](https://api.aadrm.com) (for most tenants)
@@ -137,7 +151,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
       - [https://api.aadrm.cn](https://api.aadrm.cn) (for tenants in China)
    - [Windows Notification Service endpoints](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
-5. If the issue still isn't fixed, collect logs via OCV and send them to the Microsoft Edge team.
+5. If the issue still isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
 ### Issue: Cryptographer error encountered
 
@@ -147,7 +161,7 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
 
 1. Restart Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. Data reset is needed to resume sync.
-   - "No permissions" in "Last MIP Result": It is possibly caused by alias change or tenant subscription changes. Data reset is needed to resume sync.
+   - "No permissions" in "Last MIP Result": It is possibly caused by an Azure AD change or tenant subscription changes. Data reset is needed to resume sync.
    - Other errors may mean server configuration issues.
 2. If data reset is needed, please contact Edge Support.
 
