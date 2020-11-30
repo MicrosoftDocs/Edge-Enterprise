@@ -76,7 +76,7 @@ Use the following steps to enable rollback with Microsoft Edge update and Group 
    - Automatic silent updates only
 
      > [!NOTE]
-     > To force a group policy update, type `dsregcmd /status` at the Windows administrator Command Prompt (Run as administrator).
+     > To force a group policy update, type `gpupdate /force` at the Windows administrator Command Prompt (Run as administrator).
 
 5. Click **OK** to save the policy settings. Rollback will happen the next time Microsoft Edge Update checks for an update. If you want the update to happen sooner, you can change the Microsoft Edge Update polling interval or enable rollback using an MSI.
 
