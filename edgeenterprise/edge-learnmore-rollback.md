@@ -25,7 +25,7 @@ Rollback lets you replace your Microsoft Edge browser version with an earlier ve
 
 ## Before you begin
 
-It's important to understand how the rollback feature is installed in a Microsoft Edge environment. You can deploy rollback using two different methods: manually with an MSI or by using Microsoft Edge update and Group Policy. We also  encourage using a selection of Group Policies for a smoother deployment.
+It's important to understand how the rollback feature is installed in a Microsoft Edge environment. You can deploy rollback using two different methods: manually with an MSI or by using Microsoft Edge update and Group Policy. We also wencourage using a selection of Group Policies for a smoother deployment.
 
 ### Recommendations
 
@@ -108,7 +108,7 @@ We recommend forcing a restart on users after rollback is enabled.
 
 A snapshot is a version stamped copy of the user data folder. During a version upgrade, a snapshot of the previous version is made and stored in the snapshot folder. After rollback occurs, a version matched snapshot will be copied into the new user data folder and deleted from the snapshot folder. If no version matched snapshot is available upon downgrade, rollback will rely on Sync to populate user data into the new Microsoft Edge version.
 
-The [UserDataSnapshotRetentionLimit] group policy allows you to set a limit for the number of snapshots that can be retained at any given time. By default, three snapshots are kept. You can configure this policy to keep from 0-5 snapshots.
+The [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) group policy allows you to set a limit for the number of snapshots that can be retained at any given time. By default, three snapshots are kept. You can configure this policy to keep from 0-5 snapshots.
 
 ## Frequently asked questions
 
