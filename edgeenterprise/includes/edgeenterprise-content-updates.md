@@ -1,13 +1,10 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 ## Week of November 23, 2020
 
-
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 11/24/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 11/24/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes for Stable minor version 87.0.664.47. | modified |
 
 
 ## Week of November 16, 2020
