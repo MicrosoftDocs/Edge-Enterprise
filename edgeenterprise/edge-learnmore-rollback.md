@@ -3,7 +3,7 @@ title: "Microsoft Edge rollback for enterprises"
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -76,7 +76,7 @@ Use the following steps to enable rollback with Microsoft Edge update and Group 
    - Automatic silent updates only
 
      > [!NOTE]
-     > To force a group policy update, type `dsregcmd /status` at the Windows administrator Command Prompt (Run as administrator).
+     > To force a group policy update, type `gpupdate /force` at the Windows administrator Command Prompt (Run as administrator).
 
 5. Click **OK** to save the policy settings. Rollback will happen the next time Microsoft Edge Update checks for an update. If you want the update to happen sooner, you can change the Microsoft Edge Update polling interval or enable rollback using an MSI.
 
@@ -154,7 +154,6 @@ Microsoft Edge Update hasn't run a check for updates yet. By default, auto-updat
 ### As an IT admin, I followed all the steps for rollback correctly. Only a portion of my user group was rolled back. Why haven't the other users been rolled back yet?
 
 The group policy setting hasn't synced to all the clients yet. When admins set a group policy, clients don't receive these settings instantaneously. You can [Force a Remote Group Policy Refresh](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
-
 
 ## See also
 
