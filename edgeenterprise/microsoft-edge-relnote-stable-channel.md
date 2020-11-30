@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 87.0.664.52: November 30
+
+Fixed various bugs and performance issues.
 
 ## Version 87.0.664.47: November 23
 
