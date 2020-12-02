@@ -19,6 +19,12 @@ These release notes provide information about new features and non-security upda
 > [!IMPORTANT]
 > Please see this [update on Microsoft Edge channel releases](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
 
+## Version 87.0.664.00: December 3
+
+Fixed various bugs and performance issues. The following new feature is supported in this release.
+
+- **Alerts are generated if a user's password is found in an online leak**. User passwords will be checked against a repository of known-breached credentials and sends the user an alert if a match is found. (This feature will be available in Microsoft Edge Stable 88.)
+
 ## Version 87.0.664.52: November 30
 
 Fixed various bugs and performance issues.
