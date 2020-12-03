@@ -1,19 +1,49 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Week of November 09, 2020
+## Week of November 23, 2020
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 11/9/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes for minor version 87.0.664.30. | modified |
-| 11/11/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business)<br>Update information about Microsoft Endpoint DLP. | modified |
-| 11/11/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Security update for minor version 86.0.622.68. | modified |
-| 11/11/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable minor version 86.0.622.68. | modified |
-| 11/12/2020 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies)<br>Refresh metadata. | modified |
-| 11/13/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Security update for minor version 86.0.622.69. Call out to CVE-2020-16013 and CVE-2020-16017, exploits in the wild. | modified |
-| 11/13/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable minor version 86.0.622.69. Call out to CVE-2020-16013 and CVE-2020-16017, exploits in the wild.  | modified |
-| 11/13/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Policy updates. | modified |
-| 11/13/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Refresh format and metadata. | modified |
-| 11/13/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule)<br>Revise dates for Beta 89 and 89. Add builds 90 and 91 for Beta and Stable.  | modified |
+| 11/24/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes for Stable minor version 87.0.664.47. | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/16/2020 | [Add Internet Explorer mode to the Open with context menu](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
+| 11/16/2020 | [Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites](/DeployEdge/edge-learnmore-neededge) | modified |
+| 11/16/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
+| 11/16/2020 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
+| 11/17/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/18/2020 | [Data Loss Prevention in Microsoft Edge](/DeployEdge/microsoft-edge-security-dlp) | modified |
+| 11/18/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 11/18/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/19/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 11/19/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 11/19/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 11/19/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 11/19/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 11/20/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/9/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/9/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 11/11/2020 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 11/11/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 11/11/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 11/12/2020 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 11/13/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 11/13/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 11/13/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 11/13/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 11/13/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
 
 
 ## Week of November 02, 2020
@@ -47,34 +77,3 @@
 | 10/27/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 10/29/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 10/30/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/20/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/20/2020 | [Access the old version of Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-access-old-edge) | modified |
-| 10/21/2020 | [Allow list for Microsoft Edge endpoints](/DeployEdge/microsoft-edge-security-endpoints) | modified |
-| 10/21/2020 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
-| 10/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/21/2020 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 10/22/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/22/2020 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 10/22/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 10/22/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/12/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/12/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/12/2020 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
-| 10/13/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/15/2020 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
-| 10/16/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
