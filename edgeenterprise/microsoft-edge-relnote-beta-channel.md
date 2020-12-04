@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,7 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues. The following new feature is supported in this release.
 
-- **Alerts are generated if a user's password is found in an online leak**. User passwords will be checked against a repository of known-breached credentials and sends the user an alert if a match is found. (This feature will be available in Microsoft Edge Stable 88.)
+- **Alerts are generated if a user's password is found in an online leak**. User passwords are checked against a repository of known-breached credentials and sends the user an alert if a match is found. To ensure security and privacy, user passwords are hashed and encrypted when they're checked against the database of leaked credentials.
 
 ## Version 87.0.664.52: November 30
 
