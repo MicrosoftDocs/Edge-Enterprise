@@ -24,6 +24,30 @@ These release notes provide information about new features and non-security upda
 
 ### Feature updates
 
+- **Deprecations:**
+
+  - Deprecate support for FTP protocol. Support for the legacy FTP protocol has been removed from Microsoft Edge. Attempting to navigate to an FTP link will result in the browser directing the Operating System to open an external application to handle the FTP link. Alternatively, IT administrators can configure Microsoft Edge to use IE Mode for sites that rely on the FTP protocol.
+  - Adobe Flash support will be removed. Starting with Microsoft Edge Beta version 88, Adobe Flash capability and support will be removed. Learn more: [Update on Adobe Flash Player End of Support - Microsoft Edge Blog (windows.com)](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
+
+- **Authentication:**
+
+  - Single Sign On (SSO) now available for Microsoft Account (MSA) on MacOS and down-level Windows. A user signed in on Microsoft Edge on either MacOS or down-level Microsoft Windows (7, 8, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).
+  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on down-level Windows. A user signed in on Microsoft Edge on down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, bing.com).
+  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on MacOS. A user signed in on Microsoft Edge on MacOS will now get automatically signed into websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, bing.com).
+  - Automatically switch users on MacOS to their work profile for sites that authenticate with their work account. Starting with Microsoft Edge version 88, we provide the ability to switch sites that authenticate with your work profile on MacOS.
+
+- **Security and Privacy:**
+
+  - Alerts if your passwords are found in an online leak. Starting with Microsoft Edge v. 88, the browser checks your passwords against a repository of know-breached credentials and alerts you if a match is found.
+  - Automatically upgrade mixed content. Secure pages delivered over HTTPS may contain references images that are served over non-secure HTTP. To improve privacy and security in Microsoft Edge 88, those images will be retrieved over HTTPS instead. If the image is not available over HTTPS, it will not be loaded.
+  - View site permissions by site and by recent activity. Starting with Microsoft Edge 88, users will be able to manage site permissions more easily. They will be able to view permissions by web site rather than just permission type.  Additionally, we’ve added a recent activity section that will show a user all the recent changes to their site permissions.
+  - Increased controls for browser cookies. Starting with Microsoft Edge 88, users can delete third party cookies without affecting first party cookies. Users will also be able to filter their cookies by first or third party and sort by name, number of cookies, and the amount of data stored and last modified.
+
+- **Performance:**
+
+  - Improve browser performance with sleeping tabs. Sleeping tabs improves browser performance by reducing system resources (e.g., RAM, CPU) that are used by background, inactive browser tabs. Users can prevent tab sites from going to sleep and configure the length of time before an inactive tab goes to sleep. This feature can also be managed with group policies.
+  - Improve Microsoft Edge startup speed with startup boost. To improve Microsoft Edge startup speed, we’ve developed a feature named startup boost. Startup boost launches a set of Microsoft Edge processes in the background which makes Microsoft Edge available quickly when launched.
+
 - **Productivity:**
 
   - Tabs from other devices. Support for syncing browsing history and open tabs is a top-requested feature in Microsoft Edge. This feature is still under development and will be made available to everyone in the future, but users who are already part of the rollout will see a new pivot in History called Tabs from other devices. Here you’ll find all the tabs you have open in Microsoft Edge on other devices, including Windows, macOS, Linux, iOS, and Android. Note: Both devices need to have history and tab sync enabled for them to show up.
