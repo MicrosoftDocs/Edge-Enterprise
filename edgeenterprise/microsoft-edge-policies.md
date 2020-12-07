@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/06/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,23 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New and deprecated policies
-
-The following table lists the new and deprecated policies for this update.
-
-| Name | Caption |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Open local files in Internet Explorer mode file extension allow list|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a link in Internet Explorer mode|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
-|[VerticalTabsAllowed](#verticaltabsallowed)|Configures availability of a vertical layout for tabs on the side of the browser|
-| DEPRECATED [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC|
-
-
 
 ## Available policies
 
@@ -2751,7 +2734,7 @@ Define a list of sites, based on URL patterns, that can run the Adobe Flash plug
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
 
@@ -2820,7 +2803,7 @@ Define a list of sites, based on URL patterns, that are blocked from running Ado
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '*' and '[*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
 
