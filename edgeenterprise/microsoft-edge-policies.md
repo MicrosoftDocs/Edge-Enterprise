@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/06/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -166,6 +166,8 @@ and tips for Microsoft services|
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
 |[PrintingEnabled](#printingenabled)|Enable printing|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
@@ -4156,7 +4158,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Description
 
-  By default, all extensions are allowed. However, if you block all extensions by setting the 'ExtensionInstallBlockList' policy to "*", users can only install extensions defined in this policy.
+  Setting this policy specifies which extensions are not subject to the blocklist.
+
+A blocklist value of * means all extensions are blocked and users can only install extensions listed in the allow list.
+
+By default, all extensions are allowed. However, if you prohibited extensions by policy, you can use the list of allowed extensions to change that policy.
 
   #### Supported features:
 
@@ -4219,11 +4225,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Description
 
-  List specific extensions that users can NOT install in Microsoft Edge. When you deploy this policy, any extensions on this list that were previously installed will be disabled, and the user won't be able to enable them. If you remove an item from the list of blocked extensions, that extension is automatically re-enabled anywhere it was previously installed.
+  Lets you specify which extensions the users CANNOT install. Extensions already installed will be disabled if blocked, without a way for the user to enable them. After a disabled extension is removed from the blocklist it will automatically get re-enabled.
 
-Use "*" to block all extensions that aren't explicitly listed in the allow list.
+A blocklist value of '*' means all extensions are blocked unless they are explicitly listed in the allowlist.
 
-If you don't configure this policy, users can install any extension in Microsoft Edge.
+If this policy isn't set, the user can install any extension in Microsoft Edge.
 
   #### Supported features:
 
@@ -4430,11 +4436,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Description
 
-  Configures extension management settings for Microsoft Edge.
+  Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
-This policy controls multiple settings, including settings controlled by any existing extension-related policies. This policy overrides any legacy policies if both are set.
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
-This policy maps an extension ID or an update URL to its configuration. With an extension ID, the configuration is applied only to the specified extension. Set a default configuration for the special ID "*", to apply to all extensions that aren't specifically listed in this policy. With an update URL, the configuration is applied to all extensions with the exact update URL stated in manifest of this extension, as described at [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
+Note: For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
+
 
   #### Supported features:
 
@@ -5199,9 +5206,9 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 
   #### Description
 
-  List specific native messaging hosts that users can use in Microsoft Edge.
+  Setting the policy specifies which native messaging hosts aren't subject to the deny list. A deny list value of * means all native messaging hosts are denied unless they're explicitly allowed.
 
-By default, all native messaging hosts are allowed. If you set the [NativeMessagingBlocklist](#nativemessagingblocklist) policy to *, all native messaging hosts are blocked, and only native messaging hosts listed in here are loaded.
+All native messaging hosts are allowed by default. However, if a native messaging host is denied by policy, the admin can use the allow list to change that policy.
 
   #### Supported features:
 
@@ -5264,11 +5271,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### Description
 
-  Specifies which native messaging hosts that shouldn't be used.
+  Setting this policy specifies which native messaging hosts shouldn't be loaded. A deny list value of * means all native messaging hosts are denied unless they're explicitly allowed.
 
-Use '*' to block all native messaging hosts unless they are explicitly listed in the allow list.
-
-If you don't configure this policy, Microsoft Edge will load all installed native messaging hosts.
+If you leave this policy unset , Microsoft Edge loads all installed native messaging hosts.
 
   #### Supported features:
 
@@ -5331,11 +5336,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Description
 
-  Enables user-level installation of native messaging hosts.
+  If you set this policy to Enabled or leave it unset, Microsoft Edge can use native messaging hosts installed at the user level.
 
-If you disable this policy, Microsoft Edge will only use native messaging hosts installed on the system level.
-
-By default, if you don't configure this policy, Microsoft Edge will allow usage of user-level native messaging hosts.
+If you set this policy to Disabled, Microsoft Edge can only use these hosts if they're installed at the system level.
 
   #### Supported features:
 
@@ -6135,6 +6138,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### Restrict background graphics printing mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Restricts background graphics printing mode. If this policy isn't set there's no restriction on printing background graphics.
+
+Policy options mapping:
+
+* any (any) = Allow printing with and without background graphics
+
+* enabled (enabled) = Allow printing only with background graphics
+
+* disabled (disabled) = Allow printing only without background graphics
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintingAllowedBackgroundGraphicsModes
+  - GP name: Restrict background graphics printing mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintingAllowedBackgroundGraphicsModes
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"enabled"
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintingAllowedBackgroundGraphicsModes
+  - Example value:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### Default background graphics printing mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Overrides default background graphics printing mode.
+
+Policy options mapping:
+
+* enabled (enabled) = Enable background graphics printing mode by default
+
+* disabled (disabled) = Disable background graphics printing mode by default
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintingBackgroundGraphicsDefault
+  - GP name: Default background graphics printing mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintingBackgroundGraphicsDefault
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"enabled"
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintingBackgroundGraphicsDefault
+  - Example value:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8275,7 +8412,7 @@ If you don't configure the policy, users can choose whether to show the home but
 
   Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Azure AD account for that organization.
 If you disable this policy, users can't see internal results in the Microsoft Edge address bar suggestion list.
-If you have enabled the set of policies which forces a default search provider ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)), and the search provider specified is not Bing, then this policy is not applicable and there will be no Microsoft Search in Bing suggestions in the address bar's suggestion list.
+Starting with Microsoft Edge version 89, Microsoft Search in Bing suggestions will be available even if Bing isn't the user's default search provider.
 
   #### Supported features:
 
@@ -17962,9 +18099,8 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 
   #### Description
 
-  If this policy is enabled or left unset, then Renderer Code Integrity is enabled. This policy should only be disabled if compatibility issues are encountered with third party software that must run inside Microsoft Edge's renderer processes.
-
-Disabling this policy has a detrimental effect on Microsoft Edge's security and stability because unknown and potentially hostile code will be allowed to load inside Microsoft Edge's renderer processes.
+  Setting the policy to Enabled or leaving it unset turns Renderer Code Integrity on.
+Setting the policy to Disabled has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's renderer processes. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's renderer processes.
 
   #### Supported features:
 
