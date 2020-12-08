@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/07/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -74,7 +74,7 @@ Seamless Single Sign-On automatically signs users in when they're on corporate d
 
 ### Windows Integrated Authentication (WIA)
 
-Microsoft Edge also support Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allow-list for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
+Microsoft Edge also supports Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allow-list for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
 
 To support WIA-based SSO on Microsoft Edge (version 77 and later), you might also have to do some server-side configuration. You will probably have to configure the Active Directory Federation Services (AD FS) property **WiaSupportedUserAgents** to add support for the new Microsoft Edge user agent string. For instructions on how to do this, see [View WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) settings and [Change WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings) settings. An example of the Microsoft Edge user agent string on Windows 10 is shown below, and you can learn more about the [Microsoft Edge UA string here](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string). 
 
