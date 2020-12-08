@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2020
+ms.date: 12/07/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -74,13 +74,13 @@ Seamless Single Sign-On automatically signs users in when they're on corporate d
 
 ### Windows Integrated Authentication (WIA)
 
-Microsoft Edge also support Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allow-list for WIA. To configure which servers are enabled for integrated authentication, see the [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) policy.
+Microsoft Edge also support Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allow-list for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
 
 To support WIA-based SSO on Microsoft Edge (version 77 and later), you might also have to do some server-side configuration. You will probably have to configure the Active Directory Federation Services (AD FS) property **WiaSupportedUserAgents** to add support for the new Microsoft Edge user agent string. For instructions on how to do this, see [View WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) settings and [Change WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings) settings. An example of the Microsoft Edge user agent string on Windows 10 is shown below, and you can learn more about the [Microsoft Edge UA string here](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string). 
 
 The following example of a UA string is for the latest Dev Channel build when this article was published:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
-On MacOS, you can also use [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) and [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) policies to enable Kerberos SSO with Microsoft Edge.
+For services that require delegating Negotiate credentials, Microsoft Edge supports Constrained Delegation using the [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) policy.
 
 ## Additional authentication concepts
 
