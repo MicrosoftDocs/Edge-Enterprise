@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise Sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 12/03/2020
+ms.date: 12/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Microsoft Edge Enterprise Sync"
 This article explains how to use Microsoft Edge to sync your favorites, passwords, and other browser data across all your signed-in devices.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
+> This article applies to Microsoft Edge version 77 or later unless otherwise noted.
 
 ## Overview
 
@@ -29,8 +29,8 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Collections
 - Settings
 - Extension
-- Open tabs
-- History
+- Open tabs (available in Microsoft Edge version 89)
+- History (available in Microsoft Edge version 89)
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
