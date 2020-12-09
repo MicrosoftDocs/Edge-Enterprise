@@ -28,10 +28,8 @@ These release notes provide information about new features and non-security upda
 
 - **Authentication:**
 
-  - Single Sign On (SSO) now available for Microsoft Account (MSA) on MacOS and down-level Windows. A user signed in on Microsoft Edge on either MacOS or down-level Microsoft Windows (7, 8, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).
-  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on down-level Windows. A user signed in on Microsoft Edge on down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, bing.com).
-  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts on macOS. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work or School accounts (e.g., sharepoint.com, office.com, bing.com).
-  - Automatically switch users on macOS to their work profile for sites that authenticate with their work account. Starting with Microsoft Edge version 88, we provide the ability to switch sites that authenticate with a user's work profile on macOS.
+  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS and down-level Windows. A user signed in on Microsoft Edge on either macOS or down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
+  - Automatically switch users on macOS to their work profile for sites that authenticate with their work account. Starting with Microsoft Edge version 88, we provide the ability to switch sites that authenticate with a user’s work profile on macOS. <br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
 
 - **Security and Privacy:**
 
@@ -42,20 +40,14 @@ These release notes provide information about new features and non-security upda
 
 - **Performance:**
 
-  - Improve browser performance with sleeping tabs. Sleeping tabs improves browser performance by reducing system resources (e.g., RAM and CPU) that are used by background, inactive browser tabs. Users can prevent tab sites from going to sleep and configure the length of time before an inactive tab goes to sleep. This feature can be managed with group policies.
-  - Improve Microsoft Edge startup speed with startup boost. To improve Microsoft Edge startup speed, we’ve developed a feature named startup boost. Startup boost launches a set of Microsoft Edge processes in the background which makes Microsoft Edge available quickly when launched.
+  - Improve browser performance with sleeping tabs. Sleeping tabs improves browser performance by putting inactive tabs to sleep to free up system resources like memory and CPU so active tabs or other applications can use them. Users can prevent sites from going to sleep and configure the length of time before an inactive tab goes to sleep. To keep users in their flow, there are also heuristics to prevent certain sites from going to sleep, such as intranet sites. This feature can be managed with group policies.
+  - Improve Microsoft Edge startup speed with startup boost. To improve Microsoft Edge startup speed, we’ve developed a feature named startup boost. Startup boost makes Microsoft Edge launch faster by enabling Microsoft Edge to run in the background.
 
 - **Productivity:**
 
-  - Tabs from other devices. Support for syncing browsing history and open tabs is a top-requested feature in Microsoft Edge. This feature is still under development and will be made available to everyone in the future, but users who are already part of the rollout will see a new pivot in History named "Tabs from other devices". Here a user can find all the tabs they have open in Microsoft Edge on other devices, including Windows, macOS, Linux, iOS, and Android. Note: Other devices must to have history and tab sync enabled for them to show up.
-  - Vertical tabs improve multitasking and productivity. As the number of horizontal tabs grows, site titles start to get cut off and tab controls are lost as each tab shrinks. This interrupts user workflow as they spend more time finding, switching, and managing their tabs and less time on the task at hand. Vertical tabs let users move their tabs to the side, where vertically aligned icons and longer site titles make it easier to quickly scan, identify and switch to the tab they want to open. Vertical tabs also make it easier to organize several tabs, by providing more space to quickly multi-select, close and reorder tabs. When users want to focus and see more of the web while using vertical tabs, they can collapse the pane and hover to expand it whenever they want to interact with a specific tab.
+  - Improve productivity and multi-tasking with vertical tabs. As the number of horizontal tabs grows, site titles start to get cut off and tab controls are lost as each tab shrinks. This interrupts user workflow as they spend more time finding, switching, and managing their tabs and less time on the task at hand. Vertical tabs let users move their tabs to the side, where vertically aligned icons and longer site titles make it easier to quickly scan, identify and switch to the tab they want to open.
   - Auto filling the date of birth field. Microsoft Edge already helps save time and effort while filling out forms and creating accounts online by auto filling user data such as addresses, names, phone numbers, etc. Microsoft Edge now supports the date of birth field which users can save and auto fill. A user can view, edit and delete this information anytime in their profile settings.
   - Improvements to Recently closed in History. Recently closed now keeps the last 25 tabs and windows from any past browsing session rather than just the previous session. Users can select Recently closed in the new History experience to see all the tabs that were open.
-
-- **Print:**
-
-  - Choose print rasterization mode for your enterprise. This policy controls how Microsoft Edge prints to a non-PostScript printer on Windows. Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are Full and Fast.
-  - Configure page orientation while printing. Changing page orientation to portrait or landscape is now supported for printing PDF documents. Users can configure page orientation with the print dialog.
 
 - **PDF:**
 
