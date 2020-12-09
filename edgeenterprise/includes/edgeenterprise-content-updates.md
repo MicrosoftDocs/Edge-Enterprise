@@ -1,10 +1,31 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Week of November 23, 2020
+## Week of November 30, 2020
+
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 11/24/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes for Stable minor version 87.0.664.47. | modified |
+| 11/30/2020 | [Microsoft Edge rollback for enterprises](/DeployEdge/edge-learnmore-rollback)<br>Fix command in rollback to force group policy update. | modified |
+| 11/30/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes for minor version 87.0.664.52.  | modified |
+| 11/30/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Fixes for minor version 87.0.664.52.| modified |
+| 12/1/2020 | [Configure Microsoft Edge on macOS with Jamf](/DeployEdge/configure-microsoft-edge-on-mac-jamf)<br>Remove support for master preferences. | modified |
+| 12/1/2020 | [Configure Microsoft Edge for macOS using a .plist](/DeployEdge/configure-microsoft-edge-on-mac)<br>Remove support for master preferences. | modified |
+| 12/1/2020 | [Configure Microsoft Edge for Windows](/DeployEdge/configure-microsoft-edge)<br>Remove support for master preferences. | modified |
+| 12/1/2020 | [Automate Microsoft Edge for macOS deployment with Jamf](/DeployEdge/deploy-edge-mac-jamf)<br>Refresh metadata. | modified |
+| 12/1/2020 | [Allow list for Microsoft Edge endpoints](/DeployEdge/microsoft-edge-security-endpoints)<br>Fix endpoint for enterprise sync service. | modified |
+| 12/2/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Annotate with list of new and deprecated policies. | modified |
+| 12/2/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Refresh metadata. | modified |
+| 12/3/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes for minor version 87.0.664.55, highlighting password monitoring and alerting feature. | modified |
+| 12/3/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Fixes for minor version 87.0.664.55, highlighting availability of price comparison for Microsoft Shopping.| modified |
+| 12/4/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Revise release note for Beta minor version 87.0.664.55 for clarity.  | modified |
+
+
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/24/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 
 
 ## Week of November 16, 2020
@@ -62,18 +83,3 @@
 | 11/4/2020 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 11/4/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
 | 11/6/2020 | [Ready for Microsoft Edge](/DeployEdge/deploy-edge-ready-for-edge) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/26/2020 | [Microsoft Edge Lifecycle](/DeployEdge/microsoft-edge-support-lifecycle) | modified |
-| 10/26/2020 | [Microsoft Edge customer adoption materials](/DeployEdge/microsoft-edge-customer-adoption-kit) | modified |
-| 10/26/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/27/2020 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 10/27/2020 | [Microsoft Edge Lifecycle](/DeployEdge/microsoft-edge-support-lifecycle) | modified |
-| 10/27/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/29/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/30/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
