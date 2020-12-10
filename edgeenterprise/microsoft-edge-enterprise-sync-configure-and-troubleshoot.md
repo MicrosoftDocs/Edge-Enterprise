@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 12/03/2020
+ms.date: 12/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Configure and troubleshoot Microsoft Edge sync"
 This article provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
 
 > [!NOTE]
-> Applies to Microsoft Edge version 77 and above unless otherwise noted.
+> Applies to Microsoft Edge version 77 or later unless otherwise noted.
 
 ## Overview
 
@@ -29,8 +29,8 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Collections
 - Settings
 - Extension
-- Open tabs
-- History
+- Open tabs (available in Microsoft Edge version 88)
+- History (available in Microsoft Edge version 88)
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
