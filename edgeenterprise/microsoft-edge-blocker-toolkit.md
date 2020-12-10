@@ -3,7 +3,7 @@ title: "Blocker Toolkit to disable automatic delivery of Microsoft Edge"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/30/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,14 @@ description: "Blocker Toolkit to disable automatic delivery of Microsoft Edge"
 
 # Blocker Toolkit to disable automatic delivery of Microsoft Edge (Chromium-based)
 
-This article describes the Blocker Toolkit for disabling automatic delivery and installation of Microsoft Edge. This article was updated on **01/09/2020** with more information about devices that might require you to use the Blocker Toolkit, on **2/28/2020** to remove "MDM managed" from the criteria of devices to be excluded from this automatic update, and on **6/30/2020** to reflect that all Windows Update connected devices are in scope to receive this update (effective no sooner than 7/30/2020).
+This article describes the Blocker Toolkit for disabling automatic delivery and installation of Microsoft Edge.
+
+The following updates have been made to this article:
+
+- **01/09/2020** with more information about devices that might require you to use the Blocker Toolkit
+- **2/28/2020** to remove "MDM managed" from the criteria of devices to be excluded from this automatic update
+- **6/30/2020** to reflect that all Windows Update connected devices are in scope to receive this update (effective no sooner than 7/30/2020)
+- **12/10/2020** to explain pre 20H2 situations in which the Blocker Toolkit settings will be ignored
 
 > [!NOTE]
 > This applies to Microsoft Edge Stable channel.
@@ -23,16 +30,15 @@ This article describes the Blocker Toolkit for disabling automatic delivery and 
 
 To help our customers become more secure and up-to-date, Microsoft will distribute Microsoft Edge (Chromium-based) to all Windows Update-connected devices running Windows 10 version 1803 and newer. This process will start after January 15, 2020 and more information will be available on that date.
 
-The Blocker Toolkit is intended for organizations that would like to block automatic delivery of Microsoft Edge (Chromium-based) to Windows Updated-connected devices running Windows 10 version 1803 and newer.
-Devices that are Windows Server Update Services (WSUS) or Windows Update for Business (WUfB) managed will be excluded from this automatic update.
+The Blocker Toolkit is intended for organizations that would like to block automatic delivery of Microsoft Edge (Chromium-based) to Windows Updated-connected devices running Windows 10 version 1803 and newer. Devices that are Windows Server Update Services (WSUS) or Windows Update for Business (WUfB) managed will be excluded from this automatic Windows Update, but may receive the new Microsoft Edge (Chromium-based) through their organization.
 
 **It's important to note that:**
 
 - The Blocker Toolkit will not prevent users from manually installing Microsoft Edge (Chromium-based) from Internet download, or from external media.
 - Organizations with updates managed through Windows Update for Business (WUfB) will not automatically receive this update and do not need to deploy the blocker toolkit.
-- Organizations with environments managed with an update management solution such as Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM) do not have to deploy the Blocker Toolkit. They can use those products to fully manage deployment of updates released through Windows Update and Microsoft Update, including Microsoft Edge (Chromium-based), within their environment.
+- Organizations with environments managed with an update management solution such as Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM) do not have to deploy the Blocker Toolkit. They can use those products to fully manage deployment of updates released through Windows Update and Microsoft Update, including the [Update in WSUS for the new Microsoft Edge](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge), within their environment.
 - This update is a stand-alone update (not part of the monthly cumulative update) to give Enterprise customers flexibility and maximum control over deploying this update.
-- The new Microsoft Edge (Chromium-based) will be included as part of the Windows 10, version 20H2 feature update in the second half of 2020. The Blocker toolkit does not impact 20H2 behaviors or deployment. See more information about Windows 10, version 20H2 [here](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/).
+- The new Microsoft Edge (Chromium-based) is included as part of the Windows 10, version 20H2 feature update in the second half of 2020. The Blocker toolkit does not impact 20H2 behaviors or deployment. See more information about Windows 10, version 20H2 [here](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/).
 
 You can download the Blocker Toolkit executable file from [https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe](https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe).
 
