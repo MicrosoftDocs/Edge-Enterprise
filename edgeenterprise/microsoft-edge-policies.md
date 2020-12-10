@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/03/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,15 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies for this update.
+
+| Name | Caption |
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restrict background graphics printing mode|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Default background graphics printing mode|
 
 ## Available policies
 
