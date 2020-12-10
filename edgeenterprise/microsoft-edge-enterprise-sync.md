@@ -29,8 +29,8 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Collections
 - Settings
 - Extension
-- Open tabs (available in Microsoft Edge version 89)
-- History (available in Microsoft Edge version 89)
+- Open tabs (available in Microsoft Edge version 88)
+- History (available in Microsoft Edge version 88)
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
