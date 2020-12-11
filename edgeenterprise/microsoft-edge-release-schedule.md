@@ -36,7 +36,7 @@ The following table lists the planned release dates for the Beta and Stable chan
 | 85 | Released<br>Version | 07-28-2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-85056418-july-28)  | 08-27-2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
 | 86 | Released<br>Version | 09-09-2020<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 10-09-2020<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
 | **87** | Released<br>Version | 10-20-2020<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | **11-19-2020**<br>**[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19)** |
-| **88** | Released<br>Version | **12-10-2020**<br>[88.0.705.18] | Week of 01-21-2021 |
+| **88** | Released<br>Version | **12-09-2020**<br>**[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)** | Week of 01-21-2021 |
 | 89 | Target release | Week of 02-02-2021 | Week of 03-04-2021 |
 | 90 | Target release | Week of 03-16-2021 | Week of 4-15-2021 |
 | 91 | Target release | Week of 04-27-2021 | Week of 05-27-2021 |
