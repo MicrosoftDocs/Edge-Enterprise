@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/26/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,7 +31,7 @@ The customer adoption kit contains the following material:
 - Demo and gifs
 - Web Resource links
 
-[Download customer adoption kit](https://www.microsoft.com/download/details.aspx?id=102119)
+The adoption kit is available in English, French, German, and Japanese. Select your required language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119)
 
 ### IT Deployment Guide
 
