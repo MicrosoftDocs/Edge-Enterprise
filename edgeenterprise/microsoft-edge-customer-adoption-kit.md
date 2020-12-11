@@ -31,7 +31,7 @@ The customer adoption kit contains the following material:
 - Demo and gifs
 - Web Resource links
 
-The adoption kit is available in English, French, German, and Japanese. Select your required language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119)
+The adoption kit is available in English, French, German, and Japanese. Select your required language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
 
 ### IT Deployment Guide
 
