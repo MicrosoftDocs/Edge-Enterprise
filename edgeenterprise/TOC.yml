@@ -210,5 +210,4 @@
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
-  href: faqs-edge-in-the-enterprise.md
-
+  href: faqs-edge-in-the-enterprise.yml
