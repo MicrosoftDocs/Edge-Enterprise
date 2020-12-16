@@ -58,7 +58,7 @@ sections:
           
           Manual updates can be done through a configuration management tool, such as [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
-additionalContent: | 
-  ## See also
+additionalContent: |
+  ## See also
   - [Microsoft Edge documentation landing page](https://docs.microsoft.com/DeployEdge/)
   - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
