@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 10/05/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,19 +32,21 @@ Both experiences are running a Microsoft Edge InPrivate session, which protects 
 
 An initial set of kiosk mode features are now available to test with Microsoft Edge Canary Channel, version 87. You can download Microsoft Edge Canary from the [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) page.
 
-### Kiosk mode features
+### Kiosk mode supported features
 
-The following features are available:
+The following table lists the features supported by kiosk mode.
 
-- InPrivate navigation protects user data by deleting browser data and downloads when the session ends.
-- A policy to configure Delete downloads on exit.
-- The option to reset a user session after a certain period of inactivity.
-- An initial set of lockdown functionality. The following functions are available:
-
-  - Mouse context menu
-  - F12 Developer Tools
-  - F11 Exit full screen (while in full screen mode)
-  - Blocking of the initial set of *Edge://* pages
+|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|
+|-|-|-|-|
+|InPrivate Navigation|Y|Y|87|
+|Reset on inactivity|Y|Y|87|
+|Read only address bar (policy) |N|Y |87|
+|Delete downloads on exit (policy)  | Y|Y |87 |
+|Initial set of lockdown functionalities (F11, F12, and etc.)  |Y |Y | 87|
+| Multi tab support | N| Y| 87|
+|End session button | N| Y| 88|
+|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br> - edge://settings<br>- Other shortcuts | <br>Y<br>N<br>Y<br>N |<br>Y<br>Y<br>Y<br>Y |89 |
+|The "…" settings menu will display only the required options  |N |Y |89 |
 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
@@ -67,6 +69,24 @@ You can invoke Microsoft Edge kiosk mode features can be invoked with the follow
   - Allowed values
     - 0 - turns off the timer
     - 1-1440 minutes for reset on idle timer
+
+## Support policies for kiosk mode
+
+Use any of the Microsoft Edge policies listed in the following table to enhance the kiosk experience for the Microsoft Edge kiosk mode type you configure. To learn more about these policies, see [Microsoft Edge – Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
+
+|Group policy|Digital\Interactive signage|Public browsing single-app|
+|--|--|--|
+|[Printing](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
+|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
+|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
+|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
+|[UrlAllowList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
+|[UrlBlockList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
+|[SmartScreen settings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
 
 ## Microsoft Edge with assigned access
 
@@ -148,6 +168,12 @@ Although kiosk mode doesn't currently support the following functionality, work 
 - Extensions
 - Internet Explorer mode
 - Windows Defender Application Guard (WDAG)
+
+We recommend that you turn off:
+
+- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
+- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
+- [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 
 ## Roadmap
 
