@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: "Frequently asked questions about Edge in the enterprise"
+  title: "Frequently asked questions (FAQ) about Edge in the enterprise"
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
@@ -10,9 +10,9 @@ metadata:
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: "Frequently asked questions about deploying Microsoft Edge in the enterprise"
+  description: "Frequently asked questions (FAQ) about deploying Microsoft Edge in the enterprise"
     
-title: Frequently asked questions about Microsoft Edge in the enterprise
+title: Frequently asked questions (FAQ) about Microsoft Edge in the enterprise
 summary: |
   > [!NOTE]
   > This article applies to Microsoft Edge version 77 or later.
@@ -22,7 +22,8 @@ sections:
   - name: Ignored
     questions:
       - question: How do I know which version of Microsoft Edge I have?
-        answer: In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **Settings**. Select **About Microsoft Edge** to see your version of Microsoft Edge.
+        answer: |
+          In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **Settings**. Select **About Microsoft Edge** to see your version of Microsoft Edge.
 
       - question: Will Internet Explorer 11 continue to receive updates?
         answer: |
