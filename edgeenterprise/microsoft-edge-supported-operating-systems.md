@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,8 +38,6 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
-
-
 ### Windows Server
 
 - Windows Server 2008 R2 **
@@ -50,7 +48,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** We will continue to support Microsoft Edge on Windows 7 and Windows Server 2008 R2 until July 15, 2021. These operating systems are out of support and Microsoft recommends you move to a supported operating system such as Windows 10. While Microsoft Edge helps keep you more secure on the web, your PC may still be vulnerable to security risks. In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Without the Windows 7 Extended Security updates Internet Explorer functionality will be vulnerable to security risks. Additionally, IE mode functionality may cease to work without the continued servicing through the extended security updates.  
+> ** We will continue to support Microsoft Edge on Windows 7 until January 15, 2022 and Windows Server 2008 R2 until July 15, 2021. These operating systems are out of support and Microsoft recommends you move to a supported operating system such as Windows 10. While Microsoft Edge helps keep you more secure on the web, your PC may still be vulnerable to security risks. In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Without the Windows 7 Extended Security updates Internet Explorer functionality will be vulnerable to security risks. Additionally, IE mode functionality may cease to work without the continued servicing through the extended security updates.  
 >
 > *** In the same fashion as above, for Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure. Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.
 >
@@ -71,6 +69,10 @@ Microsoft Edge for Android can be installed on tablets and phones that meet the 
 ### Chromebooks
 
 Microsoft Edge does not support Chromebooks.
+
+## Recent changes
+
+- **12/17/2020** - Microsoft Edge support on Windows 7 extended to January 15, 2022.
 
 ## See also
 
