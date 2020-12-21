@@ -1,7 +1,7 @@
 ---
 title: "IE mode FAQ"
 ms.author: shisub
-author: v-danwes
+author: dan-wesley
 manager: srugh
 ms.date: 12/21/2020
 audience: ITPro
