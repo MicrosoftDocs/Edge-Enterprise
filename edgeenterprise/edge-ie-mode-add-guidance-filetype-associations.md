@@ -3,7 +3,7 @@ title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/16/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
