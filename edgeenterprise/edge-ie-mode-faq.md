@@ -3,7 +3,7 @@ title: "IE mode FAQ"
 ms.author: cjacks
 author: cjacks
 manager: saudm
-ms.date: 05/27/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
