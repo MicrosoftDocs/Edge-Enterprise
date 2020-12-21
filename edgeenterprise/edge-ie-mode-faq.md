@@ -1,8 +1,8 @@
 ---
 title: "IE mode FAQ"
-ms.author: cjacks
-author: cjacks
-manager: saudm
+ms.author: shisub
+author: v-danwes
+manager: srugh
 ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
