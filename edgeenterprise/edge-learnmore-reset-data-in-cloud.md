@@ -3,7 +3,7 @@ title: "Reset Microsoft Edge data"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 12/18/2020
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,8 +37,8 @@ If Microsoft Edge reports that it can't synchronize your data and suggests reset
 
 Use the following steps to do a reset.
 
-1. First, make sure that you’re signed out of Microsoft Edge on all your devices, including your mobile devices. To sign out of Microsoft Edge, select **Settings and more > Settings > Sign out**. When signing out, do not select the option to clear favorites, settings, and etc. from your local device.
-2. After you sign out of all your devices, open Microsoft Edge on your desktop. **Select Settings and more > Sync > Reset sync**. In the resulting dialog box, choose to resume sync after resetting data, and then select **Reset**.
+1. First, make sure that you’re signed out of Microsoft Edge on all your devices, including your mobile devices, except the device you are performing the reset on. To sign out of Microsoft Edge, select **Settings and more > Settings > Sign out**. When signing out, do not select the option to clear favorites, settings, and etc. from your local device.
+2. After you sign out of all your other devices, open Microsoft Edge on your desktop. **Select Settings and more > Sync > Reset sync**. In the resulting dialog box, choose to resume sync after resetting data, and then select **Reset**.
 
 ## Perform a reset to remove your data from Microsoft’s cloud
 
