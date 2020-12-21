@@ -1,19 +1,16 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 ## Week of December 14, 2020
 
-
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/15/2020 | Frequently asked questions about Edge in the enterprise | removed |
-| 12/16/2020 | [Blocker Toolkit to disable automatic delivery of Microsoft Edge](/DeployEdge/microsoft-edge-blocker-toolkit) | modified |
-| 12/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 12/16/2020 | Microsoft Edge kiosk mode | removed |
-| 12/17/2020 | [Frequently asked questions (FAQ) about Edge in the enterprise](/DeployEdge/faqs-edge-in-the-enterprise) | modified |
-| 12/17/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/17/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
+| 12/15/2020 | Frequently asked questions about Edge in the enterprise<br>Out of date artifact deleted. | removed |
+| 12/16/2020 | [Blocker Toolkit to disable automatic delivery of Microsoft Edge](/DeployEdge/microsoft-edge-blocker-toolkit)<br>Update about pre 20H2 situations where toolkit is ignored.  | modified |
+| 12/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Update to features (Day at a glance) in major version 88.0.705.18. | modified |
+| 12/16/2020 | Microsoft Edge kiosk mode<br>Artifact deleted. | removed |
+| 12/17/2020 | [Frequently asked questions (FAQ) about Edge in the enterprise](/DeployEdge/faqs-edge-in-the-enterprise)<br>Refreshed and republished. | modified |
+| 12/17/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes for minor version 87.0.664.66. | modified |
+| 12/17/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems)<br>Add note about extended support for Windows 7 and Windows Server 2008 R2. | modified |
 
 
 ## Week of November 30, 2020
