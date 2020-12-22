@@ -45,7 +45,7 @@ The following table lists the features supported by kiosk mode.
 |Initial set of lockdown functionalities (F11, F12, and etc.)  |Y |Y | 87|
 | Multi tab support | N| Y| 87|
 |End session button | N| Y| 88|
-|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br> - edge://settings<br>- Other shortcuts | <br>Y<br>N<br>Y<br>Y |<br>Y<br>Y<br>Y<br>Y |<br>89 |
+|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br> - edge://settings<br>- Other shortcuts | <br>Y<br>N<br>Y<br>Y |<br>Y<br>Y<br>Y<br>Y |<br><br>89 |
 |The "…" settings menu will display only the required options  |N |Y |89 |
 
 > [!NOTE]
