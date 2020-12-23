@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 12/22/2020
+ms.date: 12/23/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -162,13 +162,6 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
 With the release of this preview version of kiosk mode we're continuing work on improving the product and adding new features.
 
-Although kiosk mode doesn't currently support the following functionality, work is underway on the following features:
-
-- Collections
-- Extensions
-- Internet Explorer mode
-- Windows Defender Application Guard (WDAG)
-
 We recommend that you turn off:
 
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
@@ -176,23 +169,6 @@ We recommend that you turn off:
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 
 ## Roadmap
-<!--
-### Later this year (2020)
-
-We'll add the following features:
-
-- End session button
-- Read only address bar  
-  - Configurable with group policy
-  - When enabled, users will be prevented from editing the address bar and navigating to another page.
-
-- More lockdown functions:
-
-  - Additional accelerators will be blocked (for example, CTRL+N)
-  - The "…" settings menu will enable only required options (for example, Print, Help,  Feedback, and Read aloud)
-  - Additional *edge://* pages lockdown (for example, *edge://settings*)
-  - Configure print options UI
-  - Limiting file explorer to the download folder only. -->
 
 ### In early 2021
 
