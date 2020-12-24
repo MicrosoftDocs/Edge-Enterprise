@@ -30,7 +30,7 @@ Both experiences are running a Microsoft Edge InPrivate session, which protects 
 
 ## Set up Microsoft Edge kiosk mode
 
-An initial set of kiosk mode features is now available to test with Microsoft Edge Canary Channel, version 87. You can download Microsoft Edge Canary from the [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) page.
+An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Soft Edge (Official Stable Channel)](https://www.microsoft.com/en-us/edge).
 
 ### Kiosk mode supported features
 
@@ -45,8 +45,8 @@ The following table lists the features supported by kiosk mode.
 |Initial set of lockdown functionalities (F11, F12, and etc.)  |Y |Y | 87|
 | Multi tab support | N| Y| 87|
 |End session button | N| Y| 88|
-|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br> - edge://settings<br>- Other shortcuts | <br>Y<br>N<br>Y<br>Y |<br>Y<br>Y<br>Y<br>Y |<br><br>89 |
-|The "…" settings menu will display only the required options  |N |Y |89 |
+|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br>- Other shortcuts | <br>Y<br>N<br>Y |<br>Y<br>Y<br>Y |<br><br>89 |
+|The "Settings and more" menu will display only the required options  |N |Y |89 |
 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
@@ -74,6 +74,9 @@ You can invoke Microsoft Edge kiosk mode features can be invoked with the follow
 
 Use any of the Microsoft Edge policies listed in the following table to enhance the kiosk experience for the Microsoft Edge kiosk mode type you configure. To learn more about these policies, see [Microsoft Edge – Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
 
+> [!NOTE]
+> Policy configuration isn't limited to the policies listed in the following table, however additional policies should be tested to ensure that kiosk mode functionality isn't negatively affected.
+
 |Group policy|Digital\Interactive signage|Public browsing single-app|
 |--|--|--|
 |[Printing](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
@@ -81,8 +84,8 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 |[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
 |[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
 |[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[UrlAllowList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[UrlBlockList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
+|[URLAllowList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
+|[URLBlockList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
 |[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
@@ -167,6 +170,7 @@ We recommend that you turn off:
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
+- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
 
 ## Roadmap
 
