@@ -1,16 +1,13 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 ## Week of December 21, 2020
 
-
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/21/2020 | [Cookie sharing from Microsoft Edge to Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | modified |
-| 12/21/2020 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
-| 12/21/2020 | [IE mode FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-| 12/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 12/21/2020 | [Cookie sharing from Microsoft Edge to Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare)<br>Refresh, minor edits. | modified |
+| 12/21/2020 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations)<br>Refresh, minor edits. | modified |
+| 12/21/2020 | [IE mode FAQ](/DeployEdge/edge-ie-mode-faq)<br>Add question about saving links as webpages. | modified |
+| 12/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Update with fixes for minor version 88.0.705.29. | modified |
 
 
 ## Week of December 14, 2020
