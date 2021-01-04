@@ -3,7 +3,7 @@ title: "PDF reader in Microsoft Edge"
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 08/05/2020
+ms.date: 01/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,12 +29,16 @@ The following table shows which channels and versions of Microsoft Edge support 
 |---------|------------------------|
 | View and print local, online, and embedded PDF files | 79.0.309.71                |
 | Basic form filling<br>(JavaScript forms aren't supported) | 79.0.309.71           |
+|Table of Contents| 86.0.622.38 |
+| Page Layouts|Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
 | Inking  | 80.0.361.48            |
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| Read Aloud | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Text Notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Read Aloud | 84.0.522.63  |
 | View MIP protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
 |  View IRM protected files  | 83.0.478.37            |
+| View and Validate Digital Signatures (Preview) |  |
 
 ### Constraints
 
@@ -54,9 +58,13 @@ Inking on PDF files comes in handy to take quick notes for easy reference, sign,
 
 ### Highlight
 
-PDF reader in Microsoft Edge comes with support for adding and editing highlights. To create a highlight, the user simply needs to select the text, right-click on it, select highlights in the menu and choose the desired color. The next screenshot shows the highlight options that are available.
+PDF reader in Microsoft Edge comes with support for adding and editing highlights. To create a highlight, the user simply needs to select the text, right-click on it, select highlights in the menu and choose the desired color. Highlights can also be created using a pen, or keyboard. The next screenshot shows the highlight options that are available.
 
 ![Use the highlight option in PDF reader](media/microsoft-edge-pdf/pdf-reader-highlight.png)
+
+### Text Notes
+
+Read Aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users. It also helps auditory learners focus on the content, which makes learning much easier. The next screenshot shows a Read Aloud example. The highlighting shows the text that is currently being read.
 
 ### Read Aloud
 
@@ -81,6 +89,10 @@ If the profile that the user is logged into Microsoft Edge with has at least vie
 
 <!-- SCREENSHOT -->
 ![Prompt to save SharePoint pdf page protected by MIP](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
+
+### Certificate Based Digital Signatures (Preview)
+
+Microsoft Information Protection (MIP) enables users to collaborate with others securely, while adhering to their organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
 
 ## Accessibility
 
@@ -118,7 +130,7 @@ This protection also applies to any online PDF files that are viewed. Further, a
 
 ### Reliability
 
-Because Microsoft Edge is Chromium-based, users can expect the same level of reliability that they're used to seeing in Google Chrome.
+Because Microsoft Edge is Chromium-based, users can expect the same level of reliability that they're used to seeing in other Chromium-based browsers.
 
 ## Deploy and update PDF reader
 
