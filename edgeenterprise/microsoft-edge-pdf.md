@@ -53,7 +53,6 @@ Note the following constraints for the current PDF reader:
 
 Inking on PDF files comes in handy to take quick notes for easy reference, sign, or fill out PDF forms. This capability is now available in Microsoft Edge. In addition to inking PDF files as needed, you can use color and stroke width to bring attention to different parts of the PDF file. The next screenshot shows how a user can add inking to a pdf page.
 
-<!-- SCREENSHOT -->
 ![Add inking to pdf page](media/microsoft-edge-pdf/pdf-reader-inking.png)
 
 ### Highlight
@@ -81,7 +80,6 @@ Read Aloud for PDF adds the convenience of listening to PDF content while carryi
 
 These files can be opened directly in the browser, without the need to download any other software, or install any add-in. This integrates the security provided by MIP directly into the browser, providing a seamless workflow.
 
-<!-- SCREENSHOT -->
 ![Protected pdf document.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
 In addition to MIP protected files, PDF files in [Information Rights Management (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide&preserve-view=true) protected SharePoint libraries can also be opened natively in the browser.
@@ -90,7 +88,6 @@ With Microsoft Edge, users can view MIP protected files saved locally, or in the
 
 If the profile that the user is logged into Microsoft Edge with has at least view permissions to the file, the file will open in Microsoft Edge.
 
-<!-- SCREENSHOT -->
 ![Prompt to save SharePoint pdf page protected by MIP](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
 
 ### Certificate Based Digital Signatures (Preview)
@@ -105,22 +102,13 @@ The PDF reader comes with support for Keyboard accessibility, High contrast mode
 
 Users can use navigate to different parts of the document that a user can interact with, such as form fields and highlights, using the keyboard.
 
-<!-- SCREENSHOT -->
-
 ### High contrast mode
 
 PDF reader will use the settings defined at the operating system level to render PDF content in high contrast mode.
 
-<!-- SCREENSHOT -->
-<!--![High contrast mode for pdf file](media/microsoft-edge-pdf/pdf-reader-high-contrast.png)-->
-
 ### Screen reader support
 
-Users can navigate through and read PDF files using screen readers on Windows and Mac computers. <!--The next screenshot shows the toolbar that users can use for audio settings when they're using the Read Aloud option in PDF reader. -->
-
-<!-- SCREENSHOT -->
-<!--
-![Screen reader toolbar](media/microsoft-edge-pdf/pdf-reader-read-aloud.png) -->
+Users can navigate through and read PDF files using screen readers on Windows and Mac computers.
 
 ## Security and reliability
 
