@@ -70,7 +70,7 @@ Read Aloud for PDF adds the convenience of listening to PDF content while carryi
 
 Read Aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users. It also helps auditory learners focus on the content, which makes learning much easier. The next screenshot shows a Read Aloud example. The highlighting shows the text that is currently being read.
 
-![Use the highlight option in PDF reader](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
+![Use the highlight option for Read Aloud in PDF reader](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
 
 ### Protected PDFs
 
