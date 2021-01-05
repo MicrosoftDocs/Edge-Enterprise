@@ -31,11 +31,11 @@ The following table shows which channels and versions of Microsoft Edge support 
 | Basic form filling<br>(JavaScript forms aren't supported) | 79.0.309.71           |
 |Table of Contents| 86.0.622.38 |
 | Page view |Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
-| Caret mode browsing | |
+| Caret mode browsing |87.0.664.66 |
 | Inking  | 80.0.361.48            |
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| Text Notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Text notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
 | Read Aloud | 84.0.522.63  |
 | View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
@@ -84,7 +84,7 @@ PDF reader in Microsoft Edge comes with support for adding and editing highlight
 
 ![Use the highlight option in PDF reader](media/microsoft-edge-pdf/pdf-reader-highlight.png)
 
-### Text Notes
+### Text notes
 
 While reading a PDF file, text notes can be added to text in the file to jot down thoughts for easy reference later.
 
