@@ -3,7 +3,7 @@ title: "PDF reader in Microsoft Edge"
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 01/04/2021
+ms.date: 01/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn about PDF reader in Microsoft Edge."
 
 # PDF reader in Microsoft Edge
 
-PDF files make up a substantial part of our day-to-day lives. They come in the form of contracts and agreements, newsletters, forms, research articles, resumes, and so on. These files highlight the need for a reliable, secure, and powerful PDF reader that can be adopted by Enterprises.
+PDF files make up a large part of our day-to-day lives. They come in the form of contracts and agreements, newsletters, forms, research articles, resumes, and so on. These files highlight the need for a reliable, secure, and powerful PDF reader that can be adopted by Enterprises.
 
 Microsoft Edge comes with a built-in PDF reader that lets you open your local pdf files, online pdf files, or pdf files embedded in web pages. You can annotate these files with ink and highlighting. This PDF reader gives users a single application to meet web page and PDF document needs. The Microsoft Edge PDF reader is a secure and reliable application that works across the Windows and macOS desktop platforms.
 
@@ -30,15 +30,16 @@ The following table shows which channels and versions of Microsoft Edge support 
 | View and print local, online, and embedded PDF files | 79.0.309.71                |
 | Basic form filling<br>(JavaScript forms aren't supported) | 79.0.309.71           |
 |Table of Contents| 86.0.622.38 |
-| Page Layouts|Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Page view |Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Caret mode browsing | |
 | Inking  | 80.0.361.48            |
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
 | Text Notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
 | Read Aloud | 84.0.522.63  |
-| View MIP protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
-|  View IRM protected files  | 83.0.478.37            |
-| View and Validate Digital Signatures (Preview) |  |
+| View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
+|  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
+
 
 ### Constraints
 
@@ -48,6 +49,28 @@ Note the following constraints for the current PDF reader:
 -  Documentation related to Accessibility scenarios that currently aren't supported can be found on the [Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/) blog.
 
 ## Features
+
+The PDF reader, built into Microsoft Edge, comes with the basic reading and navigation features, as Zoom, Rotate, Fit to page/width, jump to page, and search, among others. They can be accessed through a pin-able toolbar at the top of PDF content. This section gives an overview of some important functions. The next screenshot shows the Reader toolbar.
+
+![PDF Reader toolbar](media/microsoft-edge-pdf/pdf-reader-toolbar.png)
+
+### Table of Contents
+
+Table of Contents enables users to easily navigate through PDF documents. It can be accessed by clicking on the Table of Contents icon to open the navigation pane, which contains a list of sections within the PDF. Users can click any of the labels in the pane to navigate to that section of the document. The pane stays open for as long as needed, and can be closed when the user wants to go back to reading the document. The next screenshot shows the navigation pane for an open document.
+
+![PDF Reader navigation with Table of Contents](media/microsoft-edge-pdf/pdf-reader-toc.png)
+
+### Page view
+
+Microsoft Edge supports different views for PDF documents in our Dev and Canary channels. Users can change the layout of a document from a single page view to two pages that are displayed side by side. To change how the PDF document is being viewed, users can click the Page View button in the PDF toolbar and then choose either view they want to use. The two page view is shown in the next screenshot.
+
+![PDF Reader using Two page view of document.](media/microsoft-edge-pdf/pdf-reader-page-view.png)
+
+### Caret mode browsing
+
+Caret browsing is available for PDF files opened in Microsoft Edge, which means that users can interact with PDF files using the keyboard. If a user presses the F7 key anywhere in the browser, they're asked if caret browsing should be turned on. If enabled, caret browsing is available for any content opened in the browser, be it PDF files or web pages. When a user presses F7 again, caret browsing is turned off. When caret browsing is active and the focus is on the content, users will see a blinking cursor in the PDF file. The caret can also be used to navigate through the file, or to select text by pressing Shift while moving the cursor. This ability lets users easily create elements as highlights, or interact with elements as links, form fields with the keyboard. The next screenshot shows the popup menu for turning on Caret mode browsing.
+
+![PDF Reader menu for Caret mode browsing.](media/microsoft-edge-pdf/pdf-reader-caret-mode.png)
 
 ### Inking
 
@@ -63,7 +86,15 @@ PDF reader in Microsoft Edge comes with support for adding and editing highlight
 
 ### Text Notes
 
-Read Aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users. It also helps auditory learners focus on the content, which makes learning much easier. The next screenshot shows a Read Aloud example. The highlighting shows the text that is currently being read.
+While reading a PDF file, text notes can be added to text in the file to jot down thoughts for easy reference later.
+
+Users can add a note by selecting the piece of text they wish to add a note for and invoking the right-click context menu. Selecting the **Add Comment** option in the menu will open a text box where users can add their comments. They can type the comment and then click the check mark to save the comment.
+
+After a note is added, the selected text will be highlighted, and a comment icon will appear to indicate the comment. Users can hover over that icon to preview the comment or click on it to open and edit the note.
+
+The next screenshot shows a note getting added to highlighted text.
+
+![PDF Reader add text note to document.](media/microsoft-edge-pdf/pdf-reader-text-note.png)
 
 ### Read Aloud
 
@@ -100,7 +131,7 @@ The PDF reader comes with support for Keyboard accessibility, High contrast mode
 
 ### Keyboard Accessibility
 
-Users can use navigate to different parts of the document that a user can interact with, such as form fields and highlights, using the keyboard.
+Users can use navigate to different parts of the document that a user can interact with, such as form fields and highlights, using the keyboard. Users can also use Caret mode to navigate and interact with the PDF files using the keyboard.
 
 ### High contrast mode
 
