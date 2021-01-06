@@ -29,9 +29,9 @@ The following table shows which channels and versions of Microsoft Edge support 
 |---------|------------------------|
 | View and print local, online, and embedded PDF files | 79.0.309.71                |
 | Basic form filling<br>(JavaScript forms aren't supported) | 79.0.309.71           |
-|Table of Contents| 86.0.622.38 |
+|Table of contents| 86.0.622.38 |
 | Page view |Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
-| Caret mode browsing |87.0.664.66 |
+| Caret mode browsing |87.0.664.41 |
 | Inking  | 80.0.361.48            |
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
@@ -53,9 +53,9 @@ The PDF reader, built into Microsoft Edge, comes with the basic reading and navi
 
 ![PDF Reader toolbar](media/microsoft-edge-pdf/pdf-reader-toolbar.png)
 
-### Table of Contents
+### Table of contents
 
-Table of Contents enables users to easily navigate through PDF documents. It can be accessed by clicking on the Table of Contents icon to open the navigation pane, which contains a list of sections within the PDF. Users can click any of the labels in the pane to navigate to that section of the document. The pane stays open for as long as needed, and can be closed when the user wants to go back to reading the document. The next screenshot shows the navigation pane for an open document.
+Table of contents lets users easily navigate through PDF documents that have a table of contents. When a user clicks the Table of contents icon, a navigation pane that  shows a list of the labelled sections and subsections in the PDF document is shown. The user can then click any of the labels in the pane to navigate to that section of the document. The pane stays open for as long as needed and can be closed when the user wants to go back to reading the document. The next screenshot shows the navigation pane for an open document.
 
 ![PDF Reader navigation with Table of Contents](media/microsoft-edge-pdf/pdf-reader-toc.png)
 
