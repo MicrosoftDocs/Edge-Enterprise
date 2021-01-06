@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/06/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -36,7 +36,7 @@ These tables list all of the browser-related group policies available in this re
 |[Kiosk Mode settings](#kiosk-mode-settings)|[Native Messaging](#native-messaging)|
 |[Password manager and protection](#password-manager-and-protection)|[Performance](#performance)|
 |[Printing](#printing)|[Proxy server](#proxy-server)|
-|[Sleeping Tabs settings](#sleeping-tabs-settings)|[SmartScreen settings](#smartscreen-settings)|
+|[Sleeping tabs settings](#sleeping-tabs-settings)|[SmartScreen settings](#smartscreen-settings)|
 |[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|[Additional](#additional)|
 
 
@@ -181,13 +181,13 @@ and tips for Microsoft services|
 |[ProxyPacUrl](#proxypacurl)|Set the proxy .pac file URL (deprecated)|
 |[ProxyServer](#proxyserver)|Configure address or URL of proxy server (deprecated)|
 |[ProxySettings](#proxysettings)|Proxy settings|
-### [*Sleeping Tabs settings*](#sleeping-tabs-settings-policies)
+### [*Sleeping tabs settings*](#sleeping-tabs-settings-policies)
 
 |Policy Name|Caption|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Block Sleeping Tabs on specific sites|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Configure Sleeping Tabs|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Set the background tab inactivity timeout for Sleeping Tabs|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Block sleeping tabs on specific sites|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configure sleeping tabs|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Set the background tab inactivity timeout for sleeping tabs|
 ### [*SmartScreen settings*](#smartscreen-settings-policies)
 
 |Policy Name|Caption|
@@ -748,6 +748,8 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
   #### Supported features:
@@ -825,6 +827,8 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -901,6 +905,8 @@ Note there cannot be conflicting URL patterns set between these three policies:
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
 If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from previous sessions, this policy is ignored, and cookies are stored permanently for those sites.
 
@@ -4442,6 +4448,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
 This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
+To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
+
+{"update_url:https://clients2.google.com/service/update2/crx":{"installation_mode":"blocked"}}
+
+Note that you can still use [ExtensionInstallForcelist](#extensioninstallforcelist) and [ExtensionInstallAllowlist](#extensioninstallallowlist) to allow / force install specific extensions even if the store is blocked using the JSON in the previous example.
+
 Note: For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
 
@@ -6950,13 +6962,13 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Back to top](#microsoft-edge---policies)
 
-  ## Sleeping Tabs settings policies
+  ## Sleeping tabs settings policies
 
   [Back to top](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Block Sleeping Tabs on specific sites
+  #### Block sleeping tabs on specific sites
 
   
   
@@ -6966,7 +6978,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by Sleeping Tabs.
+  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by sleeping tabs.
 
 If the policy [SleepingTabsEnabled](#sleepingtabsenabled) is disabled, this list is not used and no sites will be put to sleep automatically.
 
@@ -6987,9 +6999,9 @@ If you don't configure this policy, all sites will be eligible to be put to slee
   ##### Group Policy (ADMX) info
 
   - GP unique name: SleepingTabsBlockedForUrls
-  - GP name: Block Sleeping Tabs on specific sites
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP name: Block sleeping tabs on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping tabs settings
   - GP ADMX file name: MSEdge.admx
 
   ##### Windows Registry Settings
@@ -7023,7 +7035,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Configure Sleeping Tabs
+  #### Configure sleeping tabs
 
   
   
@@ -7033,15 +7045,15 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Description
 
-  This policy setting lets you configure whether to turn on Sleeping Tabs. Sleeping Tabs reduces CPU, battery, and memory usage by putting idle background tabs to sleep. Microsoft Edge uses heuristics to avoid putting tabs to sleep that do useful work in the background, such as display notifications, play sound, and stream video. By default, Sleeping Tabs is turned on.
+  This policy setting lets you configure whether to turn on sleeping tabs. Sleeping tabs reduces CPU, battery, and memory usage by putting idle background tabs to sleep. Microsoft Edge uses heuristics to avoid putting tabs to sleep that do useful work in the background, such as display notifications, play sound, and stream video. By default, sleeping tabs is turned on.
 
 Individual sites may be blocked from being put to sleep by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
-If you enable this setting, Sleeping Tabs is turned on.
+If you enable this setting, sleeping tabs is turned on.
 
-If you disable this setting, Sleeping Tabs is turned off.
+If you disable this setting, sleeping tabs is turned off.
 
-If you don't configure this setting, users can choose whether to use Sleeping Tabs.
+If you don't configure this setting, users can choose whether to use sleeping tabs.
 
   #### Supported features:
 
@@ -7058,9 +7070,9 @@ If you don't configure this setting, users can choose whether to use Sleeping Ta
   ##### Group Policy (ADMX) info
 
   - GP unique name: SleepingTabsEnabled
-  - GP name: Configure Sleeping Tabs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP name: Configure sleeping tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping tabs settings
   - GP ADMX file name: MSEdge.admx
 
   ##### Windows Registry Settings
@@ -7089,7 +7101,7 @@ If you don't configure this setting, users can choose whether to use Sleeping Ta
 
   ### SleepingTabsTimeout
 
-  #### Set the background tab inactivity timeout for Sleeping Tabs
+  #### Set the background tab inactivity timeout for sleeping tabs
 
   
   
@@ -7099,9 +7111,9 @@ If you don't configure this setting, users can choose whether to use Sleeping Ta
 
   #### Description
 
-  This policy setting lets you configure the timeout, in seconds, after which inactive background tabs will be automatically put to sleep if Sleeping Tabs is enabled. By default, this timeout is 7,200 seconds (2 hours).
+  This policy setting lets you configure the timeout, in seconds, after which inactive background tabs will be automatically put to sleep if sleeping tabs is enabled. By default, this timeout is 7,200 seconds (2 hours).
 
-Tabs are only put to sleep automatically when the policy [SleepingTabsEnabled](#sleepingtabsenabled) is enabled or is not configured and the user has enabled the Sleeping Tabs setting.
+Tabs are only put to sleep automatically when the policy [SleepingTabsEnabled](#sleepingtabsenabled) is enabled or is not configured and the user has enabled the sleeping tabs setting.
 
 If you don't configure this policy, users can choose the timeout value.
 
@@ -7140,9 +7152,9 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SleepingTabsTimeout
-  - GP name: Set the background tab inactivity timeout for Sleeping Tabs
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping Tabs settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping Tabs settings
+  - GP name: Set the background tab inactivity timeout for sleeping tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping tabs settings
   - GP ADMX file name: MSEdge.admx
 
   ##### Windows Registry Settings
@@ -11524,11 +11536,15 @@ Use the preceding information when configuring this policy.
 
   Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
 
+On every launch, Microsoft Edge will try to sign-in using this policy, as long as the first profile being launched isn't signed-in or an auto sign-in hasn't happened before.
+
 If you have configured the [BrowserSignin](#browsersignin) policy to disabled, this policy will not take any effect.
 
 If you enable this policy and set it to 'SignInAndMakeDomainAccountNonRemovable', Microsoft Edge will automatically sign in users that are on domain joined machines using their Active Directory accounts.
 
 If you set this policy to 'Disabled' or don't set it, Microsoft Edge will not automatically sign in users that are on domain joined machines with Active Directory accounts.
+
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with sync disabled and machine is now hybrid joined i.e it has an Azure AD account, it will auto-upgrade the on-premises profile to Azure AD profile to get full Azure AD sync facilities.
 
 Policy options mapping:
 
@@ -17336,13 +17352,15 @@ Use the preceding information when configuring this policy.
 
   This policy determines if a user can remove the Microsoft Edge profile automatically signed in with a user's work or school account.
 
-If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed.
+If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed. The profile will be non-removable only if profile is signed-in with either on-premises account or Azure AD account that matches OS sign-in account.
 
 If you disable or don't configure this policy, the profile automatically signed in with a user's work or school account on Windows can be signed out or removed by the user.
 
 If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
+
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with sync disabled and machine is hybrid joined, it will auto-upgrade the on-premises profile to Azure AD profile and make it non-removable instead of creating a new non-removable Azure AD profile.
 
   #### Supported features:
 
