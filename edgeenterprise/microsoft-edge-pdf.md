@@ -39,6 +39,7 @@ The following table shows which channels and versions of Microsoft Edge support 
 | Read aloud | 84.0.522.63  |
 | View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
+| Digital signatures | Being worked on |
 
 ### Constraints
 
