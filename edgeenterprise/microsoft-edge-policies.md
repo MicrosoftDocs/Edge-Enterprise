@@ -24,6 +24,7 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+
 ## New policies
 
 The following table lists the new policies for this update.
