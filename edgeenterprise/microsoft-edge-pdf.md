@@ -3,7 +3,7 @@ title: "PDF reader in Microsoft Edge"
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 01/05/2021
+ms.date: 01/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -36,10 +36,9 @@ The following table shows which channels and versions of Microsoft Edge support 
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
 | Text notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
-| Read Aloud | 84.0.522.63  |
+| Read aloud | 84.0.522.63  |
 | View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
-
 
 ### Constraints
 
@@ -96,9 +95,9 @@ The next screenshot shows a note getting added to highlighted text.
 
 ![PDF Reader add text note to document.](media/microsoft-edge-pdf/pdf-reader-text-note.png)
 
-### Read Aloud
+### Read aloud
 
-Read Aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users. It also helps auditory learners focus on the content, which makes learning much easier. The next screenshot shows a Read Aloud example. The highlighting shows the text that is currently being read.
+Read aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users. It also helps auditory learners focus on the content, which makes learning much easier. The next screenshot shows a Read aloud example. The highlighting shows the text that is currently being read.
 
 ![Use the highlight option for Read Aloud in PDF reader](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
 
