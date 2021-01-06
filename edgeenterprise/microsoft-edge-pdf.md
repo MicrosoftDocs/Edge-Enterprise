@@ -49,7 +49,7 @@ Note the following constraints for the current PDF reader:
 
 ## Features
 
-The PDF reader, built into Microsoft Edge, comes with the basic reading and navigation features, as Zoom, Rotate, Fit to page/width, jump to page, and search, among others. They can be accessed through a pin-able toolbar at the top of PDF content. This section gives an overview of some important functions. The next screenshot shows the Reader toolbar.
+The PDF reader, built into Microsoft Edge, comes with the basic reading and navigation features, as Zoom, Rotate, Fit to page/width, jump to page, and search, among others. They can be accessed through a pin-able toolbar at the top of PDF content. This section gives an overview of some important functions. The next screenshot shows the PDF reader toolbar.
 
 ![PDF Reader toolbar](media/microsoft-edge-pdf/pdf-reader-toolbar.png)
 
