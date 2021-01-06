@@ -24,6 +24,17 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following table lists the new policies for this update.
+
+| Name | Caption |
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Allow Basic authentication for HTTP|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting \_blank|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
