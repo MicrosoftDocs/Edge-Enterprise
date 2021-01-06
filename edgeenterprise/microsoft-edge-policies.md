@@ -433,8 +433,6 @@ and tips for Microsoft services|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
 
 
@@ -22099,136 +22097,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Enable the Web widget
-
-  
-  
-  #### Supported versions:
-
-  - On Windows since 88 or later
-
-  #### Description
-
-  Enables the Web widget. When enabled, users can use the widget to search the web from their desktop or from an application. The widget provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The widget also includes feed tiles that users can click to see more information on msn.com in a new Microsoft Edge browser tab or window. The feed tiles may include ads. The widget can be launched from the Microsoft Edge settings or from the "More tools" menu in Microsoft Edge.
-
-If you enable or don't configure this policy:
-  The Web widget will be automatically enabled for all profiles.
-  In the Microsoft Edge settings, users will see option to launch the widget.
-  In the Microsoft Edge settings, users will see the menu item to run the widget at Windows startup (auto-start).
-    The option to enable the widget at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
-    If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the widget at startup will be toggled off.
-  Users will see the menu item to launch the widget from the Microsoft Edge "More tools" menu. Users can launch the widget from "More tools".
-  The widget can be turned off by the "Quit" option in the System tray or by closing the widget from the taskbar. The widget will be restarted on system reboot if auto-start is enabled.
-
-If you disable this policy:
-  The Web widget will be disabled for all profiles.
-  The option to launch the widget from Microsoft Edge Settings will be disabled.
-  The option to launch start the widget at Windows startup (auto-start) will be disabled.
-  The option to launch the widget from Microsoft Edge "More tools" menu will be disabled.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: WebWidgetAllowed
-  - GP name: Enable the Web widget
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebWidgetAllowed
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Allow the Web widget at Windows startup
-
-  
-  
-  #### Supported versions:
-
-  - On Windows since 88 or later
-
-  #### Description
-
-  Allows the Web widget to start running at Windows startup.
-
-If you enable:
-  The Web widget will start running at Windows startup by default.
-  If the widget is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the widget on Windows startup.
-
-If you disable this policy:
-  The Web widget will not start at Windows startup for all profiles.
-  The option to start the widget at Windows startup will be disabled and toggled off in Microsoft Edge settings.
-
-If you don't configure the policy:
-  The Web widget will not start at Windows startup for all profiles.
-  The option to start the widget at Windows startup will be toggled off in Microsoft Edge settings.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: WebWidgetIsEnabledOnStartup
-  - GP name: Allow the Web widget at Windows startup
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: WebWidgetIsEnabledOnStartup
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [Back to top](#microsoft-edge---policies)
 
