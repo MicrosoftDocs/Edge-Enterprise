@@ -33,8 +33,8 @@ The following table lists the new policies for this update.
 |-|-|
 |[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Allow Basic authentication for HTTP|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting \_blank|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Allow the Web widget|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Enable the Web widget at Windows startup|
 
 
 ## Available policies
@@ -434,8 +434,8 @@ and tips for Microsoft services|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Allow the Web widget|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Enable the Web widget at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
 
 
@@ -22106,7 +22106,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   ### WebWidgetAllowed
 
-  #### Enable the Web widget
+  #### Allow the Web widget
 
   
   
@@ -22172,7 +22172,7 @@ If you disable this policy:
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Allow the Web widget at Windows startup
+  #### Enable the Web widget at Windows startup
 
   
   
