@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 12/23/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,11 +42,13 @@ The following table lists the features supported by kiosk mode.
 |Reset on inactivity|Y|Y|87|
 |[Read only address bar](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (policy) |N|Y |87|
 |[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |87 |
-|Initial set of lockdown functionalities (F11, F12, and etc.)  |Y |Y | 87|
+|F# keys blocked:<br>- F11 – enter\exit full-screen<br>- F12 – launch Developer Tools |<br>Y<br>Y| <br>Y<br>Y|<br>87|
 | Multi tab support | N| Y| 87|
 |End session button | N| Y| 88|
-|Shortcuts (Accelerators blocked):<br>- CTRL+N<br> - CTRL+T<br>- Other shortcuts | <br>Y<br>N<br>Y |<br>Y<br>Y<br>Y |<br><br>89 |
-|The "Settings and more" menu will display only the required options  |N |Y |89 |
+|Additional shortcuts blocked:<br>- CTRL+N<br> - CTRL+T | <br>Y<br>N|<br>Y<br>Y|<br>89 |
+|Microsoft Edge URLs blocked|Y|Y|88|
+|Microsoft Edge URLs allowed:<br>- edge://downloads<br>- edge://print |<br>N<br>N |<br>Y<br>Y|
+|Settings and more (...) will display only the required options  |N |Y |89 |
 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
@@ -84,8 +86,8 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 |[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
 |[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
 |[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[URLAllowList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[URLBlockList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
+|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
+|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
 |[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
