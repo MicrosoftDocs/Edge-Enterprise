@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/17/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 87.0.664.75: January 7
+
+Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
 
 ## Version 87.0.664.66: December 17
 
