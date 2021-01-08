@@ -45,7 +45,7 @@ The following table lists the features supported by kiosk mode.
 |F11 blocked (enter/exit full-screen)<br>F12 blocked (launch Developer Tools)|Y<br>Y| Y<br>Y|87<br>87|
 | Multi tab support | N| Y| 87|
 |End session button | N| Y| 88|
-|All Internal Microsoft Edge URLs are blocked, except for:<br>- *edge://downloads*<br>- *edge://print* |N<br>N|Y<br>Y|88|
+|All Internal Microsoft Edge URLs are blocked, except for:<br>- *edge://downloads*<br>- *edge://print* |N|Y|88|
 |CTRL+N blocked (open a new window)<br>CTRL+T blocked (open new tab)|Y<br>N|Y<br>Y|89<br>89|
 |Settings and more (...) will display only the required options  |N |Y |89 |
 
