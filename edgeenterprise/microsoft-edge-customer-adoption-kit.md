@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,9 +14,9 @@ description: "Microsoft Edge customer adoption materials"
 
 # Customer adoption materials for Microsoft Edge
 
-To support the deployment and adoption of the new Microsoft Edge, please see the collected materials and resources below. A collected zip file is provided for you to download.
+To support the deployment and adoption of the new Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
 
-Please check back for additional materials as they are available.
+Check back for more materials as they're made available.
 
 ## Customer adoption kit
 
@@ -31,7 +31,7 @@ The customer adoption kit contains the following material:
 - Demo and gifs
 - Web Resource links
 
-The adoption kit is available in English, French, German, and Japanese. Select your required language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
+The adoption kit is available in English, French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
 
 ### IT Deployment Guide
 
@@ -47,7 +47,7 @@ Use this guide to educate users on the new Microsoft Edge. The guide includes ov
 
 ### Email templates
 
-Use these email templates to announce that the new Microsoft Edge is available for users and to provide tips and tricks on how to get the most out of the browser.
+Use these email templates to announce that the new Microsoft Edge is available for users. These templates include tips and tricks to get the most out of the browser.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Email template for tips and tricks":::
 
