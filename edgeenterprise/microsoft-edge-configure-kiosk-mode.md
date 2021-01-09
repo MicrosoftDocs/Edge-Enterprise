@@ -41,12 +41,14 @@ The following table lists the features supported by kiosk mode.
 |InPrivate Navigation|Y|Y|87|
 |Reset on inactivity|Y|Y|87|
 |[Read only address bar](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (policy) |N|Y |87|
-|[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |87 |
-|F11 blocked (enter/exit full-screen)<br>F12 blocked (launch Developer Tools)|Y<br>Y| Y<br>Y|87<br>87|
+|[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |87|
+|F11 blocked (enter/exit full-screen) | Y | Y | 87 |
+|F12 blocked (launch Developer Tools) | Y | Y | 87 |
 | Multi tab support | N| Y| 87|
 |End session button | N| Y| 88|
-|All Internal Microsoft Edge URLs are blocked, except for:<br>- *edge://downloads*<br>- *edge://print* |N|Y|88|
-|CTRL+N blocked (open a new window)<br>CTRL+T blocked (open new tab)|Y<br>N|Y<br>Y|89<br>89|
+|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|88|
+| CTRL+N blocked (open a new window) | Y | Y | 89 |
+| CTRL+T blocked (open new tab) | N | Y | 89 |
 |Settings and more (...) will display only the required options  |N |Y |89 |
 
 > [!NOTE]
