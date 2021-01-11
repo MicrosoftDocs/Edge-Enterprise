@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 12/09/2020
+ms.date: 01/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -163,7 +163,7 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. Data reset is needed to resume sync.
    - "No permissions" in "Last MIP Result": It is possibly caused by an Azure AD change or tenant subscription changes. Data reset is needed to resume sync.
    - Other errors may mean server configuration issues.
-2. If data reset is needed, please contact Edge Support.
+2. If data reset is needed, see [Reset Microsoft Edge data in the cloud](https://docs.microsoft.com/deployedge/edge-learnmore-reset-data-in-cloud).
 
 #### Issue: “Sync has been turned off by your administrator.”
 
