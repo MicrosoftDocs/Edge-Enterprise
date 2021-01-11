@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/08/2021
+ms.date: 01/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge customer adoption materials"
 
 # Customer adoption materials for Microsoft Edge
 
-To support the deployment and adoption of the new Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
+To support the deployment and adoption of Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
 
 Check back for more materials as they're made available.
 
@@ -41,19 +41,19 @@ Use this guide to begin planning deployment and learn how to get started deployi
 
 ### How to Get Started User Guide
 
-Use this guide to educate users on the new Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
+Use this guide to educate users about Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Get Started User Guide How to ...":::
 
 ### Email templates
 
-Use these email templates to announce that the new Microsoft Edge is available for users. These templates include tips and tricks to get the most out of the browser.
+Use these email templates to announce that Microsoft Edge is available for users. These templates include tips and tricks to get the most out of the browser.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Email template for tips and tricks":::
 
 ### Digital Signage
 
-Use the following digital signage to inform users about the new Microsoft Edge:
+Use the following digital signage to inform users about Microsoft Edge:
 
 - Enterprise new tab page
 - Multiple Profiles and Cross Platform
@@ -64,7 +64,7 @@ Use the following digital signage to inform users about the new Microsoft Edge:
 
 ### Banners
 
-Use these banners on your internal sites to advertise the new Microsoft Edge to your employees.
+Use these banners on your internal sites to advertise Microsoft Edge to your employees.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Banner ads example.":::
 
