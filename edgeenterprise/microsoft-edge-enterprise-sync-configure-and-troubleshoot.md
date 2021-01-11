@@ -155,15 +155,15 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 ### Issue: Cryptographer error encountered
 
-This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The next screenshot shows an example of a cryptographer error.
+This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The next screenshot shows an example of the details for a cryptography error.
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error.png" alt-text="Cryptographer error.":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Cryptographer error.":::
 
 1. Restart Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. Data reset is needed to resume sync.
    - "No permissions" in "Last MIP Result": It is possibly caused by an Azure AD change or tenant subscription changes. Data reset is needed to resume sync.
    - Other errors may mean server configuration issues.
-2. If data reset is needed, see [Reset Microsoft Edge data in the cloud](https://docs.microsoft.com/deployedge/edge-learnmore-reset-data-in-cloud).
+2. If data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
 
 #### Issue: “Sync has been turned off by your administrator.”
 
