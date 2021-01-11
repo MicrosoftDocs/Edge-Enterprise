@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/11/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -29,16 +29,14 @@
      href: deploy-edge-plan-deployment.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
-   - name: Release information
-     items:
-      - name: Release schedule
-        href: microsoft-edge-release-schedule.md
-      - name: Beta Channel Release Notes
-        href: microsoft-edge-relnote-beta-channel.md
-      - name: Stable Channel Release Notes
-        href: microsoft-edge-relnote-stable-channel.md
-      - name: Security updates
-        href: microsoft-edge-relnotes-security.md
+   - name: Stable Channel Release Notes
+     href: microsoft-edge-relnote-stable-channel.md
+   - name: Beta Channel Release Notes
+     href: microsoft-edge-relnote-beta-channel.md
+   - name: Release schedule
+     href: microsoft-edge-release-schedule.md
+   - name: Security updates
+     href: microsoft-edge-relnotes-security.md     
    - name: Microsoft Edge policy mapping
      items:
       - name: Policy mapping overview
