@@ -1,4 +1,4 @@
-# last revised 11/16/2020
+# last revised 12/21/2020
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -85,7 +85,8 @@
    - name: Configure for Windows
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
-     href: configure-edge-with-intune.md
+     href: https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+#     href: configure-edge-with-intune.md
    - name: Configure for Windows with Mobile Device Management
      href: configure-edge-with-mdm.md
    - name: Configure for macOS using a .plist
@@ -190,6 +191,8 @@
         href: edge-learnmore-neededge.md
       - name: Regular Expression 2 (re2.h) syntax
         href: edge-learnmore-regex.md
+      - name: Reset Microsoft Edge data
+        href: edge-learnmore-reset-data-in-cloud.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises
@@ -209,5 +212,4 @@
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
-  href: faqs-edge-in-the-enterprise.md
-
+  href: faqs-edge-in-the-enterprise.yml
