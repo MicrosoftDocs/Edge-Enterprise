@@ -31,8 +31,12 @@
      href: deploy-edge-ready-for-edge.md
    - name: Stable Channel Release Notes
      href: microsoft-edge-relnote-stable-channel.md
+   - name: Stable Channel archived release notes
+     href: microsoft-edge-relnote-archive-stable-channel.md
    - name: Beta Channel Release Notes
      href: microsoft-edge-relnote-beta-channel.md
+   - name: Beta Channel archived release notes
+     href: microsoft-edge-relnote-archive-beta-channel.md
    - name: Release schedule
      href: microsoft-edge-release-schedule.md
    - name: Security updates
