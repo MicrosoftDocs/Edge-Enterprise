@@ -82,7 +82,7 @@ A popular use case for maintaining user identity in the browser is to support sy
 
 Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
-The next screenshot shows an example of an identity error found in *edge://sync-internals*.
+The next screenshot shows an example of an identity error found in *edge://sync-internals* under **Credentials**:
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Identity error":::
 
