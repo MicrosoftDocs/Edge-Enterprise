@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 01/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,10 @@ description: "Microsoft Edge release notes for Beta Channel"
 # Release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel.
+
+## Version 88.0.705.41: January 11
+
+Fixed various bugs and performance issues.
 
 ## Version 88.0.705.29: December 21
 
