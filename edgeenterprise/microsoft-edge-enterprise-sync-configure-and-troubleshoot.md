@@ -14,7 +14,8 @@ description: "Configure and troubleshoot Microsoft Edge sync"
 
 # Configure and troubleshoot Microsoft Edge sync
 
-This article provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
+This article explains how to configure and use Microsoft Edge to sync your favorites, passwords, and other browser data across all your signed-in devices. This article also
+provides troubleshooting steps for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting.
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
@@ -56,7 +57,7 @@ You can use the following group policies to configure and manage Microsoft Edge 
 - [AllowDeletingBrowserHistory](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowdeletingbrowserhistory): When this policy is set to disabled, history sync will also be disabled.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Configure the list of types that are excluded from synchronization.
 - [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): Allow Active Directory (AD) profiles to use on-premises storage. For more information, see [On-premises sync for Active Directory (AD) users](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
-- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): Turn sync on by default and do not require user consent to sync.  
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): Turn on sync by default and do not require user consent to sync.  
 
 ## Configure Microsoft Edge sync
 
@@ -67,9 +68,9 @@ To restrict sync to certain set of users, you can enable the [AIP onboarding con
 > [!CAUTION]
 > Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. In addition, any onboarding control policy used to restrict Edge sync will also restrict other applications from protecting content using AIP.
 
-## Microsoft Edge and Enterprise State Roaming
+## Microsoft Edge and Enterprise State Roaming (ESR)
 
-The new Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, the new Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, the Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## Troubleshoot sync issues
 
@@ -100,7 +101,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://docs.microsoft.com/azure/information-protection/activate-office365). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
 2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. The instructions for checking the AIP status and, if necessary, activating AIP are [here](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn ESR off if this step fixes the issue.
+3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn off ESR if this step fixes the issue.
 4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps)  PowerShell applet to see if scoping is enabled. The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
    ```powershell
@@ -142,7 +143,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 4. If the server endpoint is empty, or if server cannot be pinged and a firewall is present in the environment, confirm that the necessary service endpoints are available to the client computer.
 
-   - Edge sync service endpoints:
+   - Microsoft Edge sync service endpoints:
      - [https://edge-enterprise.activity.windows.com](https://edge-enterprise.activity.windows.com)
      - [https://edge.activity.windows.com](https://edge.activity.windows.com)
     - Azure Information Protection endpoints:
@@ -159,7 +160,7 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Cryptographer error.":::
 
-1. Restart Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
+1. Restart Microsoft Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. Data reset is needed to resume sync.
    - "No permissions" in "Last MIP Result": It is possibly caused by an Azure AD change or tenant subscription changes. Data reset is needed to resume sync.
    - Other errors may mean server configuration issues.
@@ -177,9 +178,9 @@ Make sure that the [SyncDisabled policy](https://docs.microsoft.com/deployedge/m
 
 The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern) policy.
 
-#### Why don’t open tab and history data have additional client-side encryption?
+#### Why don’t open tab and history data have more client-side encryption?
 
-To reduce resource utilization on end user devices, history data is generated server-side based on open tab roaming data. This process would not be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) or [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) policies.
+To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process would not be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) or [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) policies.
 
 #### Can tenant admins bring their own key?
 
@@ -217,7 +218,7 @@ There are no plans to support this syncing. If you still need IE in your environ
 
 #### Will Microsoft Edge sync with Microsoft Edge Legacy?
 
-No, it won't. We believe connecting these two ecosystems will lead to compromises in the reliability of sync in the Microsoft Edge. We will ensure that existing data is migrated to the Microsoft Edge. Users will also be able to import data from browser of their choice. This also means that new Microsoft Edge browser won't have a way to sync with IE.
+No, it won't. We believe connecting these two ecosystems will lead to compromises in the reliability of sync in the Microsoft Edge. We will ensure that existing data is migrated to the Microsoft Edge. Users will also be able to import data from browser of their choice, which also means that Microsoft Edge won't have a way to sync with IE.
 
 ### MANAGING SYNC
 
