@@ -3,7 +3,7 @@ title: "Microsoft Edge security, compatibility, and manageability"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 07/28/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,9 @@ description: "Microsoft Edge security, compatibility, and manageability"
 
 # Video: Microsoft Edge security, compatibility, and manageability
 
-This video shows how Microsoft Edge takes security, compatibility, and manageability to the next level.
+This video shows how Microsoft Edge takes security, compatibility, and manageability to the next level. Click the next screenshot to watch the video by Jeremy Chapman, Director of Microsoft 365.
+
+[![Microsoft Edge security, compatibility, and manageability](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
 ## About the video
 
@@ -23,12 +25,6 @@ Take a hands-on tour to experience the security, compatibility, and manageabilit
 - Security. Microsoft Edge helps protect your network and devices from malicious attacks and prevents unauthorized access and leaks of corporate data.
 - Compatibility. Microsoft Edge is compatible with both the modern and legacy web.
 - Manageability. Consider your update management or servicing options for Microsoft Edge.
-
-Click the next screenshot to watch the video by Jeremy Chapman, Director of Microsoft 365.
-<!--
-[![Video: Security, compatibility, and manageability](http://img.youtube.com/vi/uMmh_gNaM4I/0.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)")-->
-
-[![Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)](https://res.cloudinary.com/marcomontalbano/image/upload/v1595890410/video_to_markdown/images/youtube--uMmh_gNaM4I-c05b58ac6eb4c4700831b2b3070cd403.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Video: Security, compatibility, and manageability")
 
 ## See also
 
