@@ -22,8 +22,7 @@ Click the next screenshot to watch the video by Colleen Williams, Senior Program
 
 ## About the video
 
-
-
+It's been an exciting year for Microsoft Edge! We've continued our mission for Microsoft Edge to be the best browser for business. Come learn about new security and productivity features and our continued integration with M365. We've been listening and learning from you and we'll share how all of that feedback fits into Microsoft Edge.
 
 ## See also
 
