@@ -14,7 +14,7 @@ description: "Microsoft Edge: State of the browser 2020"
 
 # Video: Microsoft Edge: State of the browser 2020
 
-The video in this article gives an overview of the key features of Microsoft Edge.
+This video gives an overview of the key features of Microsoft Edge.
 
 Click the next screenshot to watch the video by Colleen Williams, Senior Program Manager.
 
