@@ -20,7 +20,7 @@ This video shows how Microsoft Edge enables and supports identity for enterprise
 
 ## About the video
 
-Configure an authenticated and personalized experience for your users with Microsoft Edge. This talk will dive into configuring sign in, single sign on, and multiple profiles to help you get the best out of Microsoft Edge.
+This video describes how to configure an authenticated and personalized experience for your users. Topics include configuring sign-in, single sign-on, and multiple profiles.
 
 ## See also
 
