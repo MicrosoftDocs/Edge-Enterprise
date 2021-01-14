@@ -1,4 +1,4 @@
-# last revised 01/13/2021
+# last revised 01/14/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -211,6 +211,14 @@
      href: microsoft-edge-video-deploy.md
    - name: Video - Data loss prevention (DLP)
      href: microsoft-edge-video-security-dlp.md
+   - name: Video - Identity in Microsoft Edge
+     href: microsoft-edge-video-identity.md
+   - name: Video - Microsoft Edge version rollback
+     href: microsoft-edge-video-version-rollback.md
+   - name: Video - PDF reader in Microsoft Edge
+     href: microsoft-edge-video-pdf-reader.md
+   - name: Video - Secure browsing on Microsoft Edge
+     href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
