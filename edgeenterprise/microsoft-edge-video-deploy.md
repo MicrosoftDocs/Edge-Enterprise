@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge to hundreds or thousands of devices"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 04/23/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,17 +14,13 @@ description: "Deploy Microsoft Edge to hundreds or thousands of devices"
 
 # Video: Deploy Microsoft Edge to hundreds or thousands of devices
 
-The video described in this article shows the steps to deploy Microsoft Edge to all your managed devices.
+This video shows the steps to deploy Microsoft Edge to all your managed devices. Click the next screenshot to watch the video by Jeremy Chapman, Director Microsoft 365.
+
+[![Deploy Microsoft Edge to hundreds or thousands of devices](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
 ## About the video
 
 See a hands-on tour of how to deploy Microsoft Edge to your devices. Learn about Microsoft Edge package options for automated installation, how to deploy Microsoft Edge to Windows PCs using Microsoft Endpoint Configuration Manager, and steps to ensure all managed devices, including your phones and Macs, are provisioned with Microsoft Edge.
-
-Click the next screenshot to watch the video by Jeremy Chapman, Director Microsoft 365.
-
-<!-- [![Deploy Microsoft Edge video](http://img.youtube.com/vi/o90UsN6g6NE/0.jpg)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")-->
-
-[![Steps to deploy Microsoft Edge](https://res.cloudinary.com/marcomontalbano/image/upload/v1587672892/video_to_markdown/images/youtube--o90UsN6g6NE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices.")
 
 ## See also
 
