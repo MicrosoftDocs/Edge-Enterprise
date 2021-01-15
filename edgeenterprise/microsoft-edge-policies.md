@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/08/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies for this update.
+
+| Name | Caption |
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Define an ordered list of preferred languages that websites should display in if the site supports the language|
+
 
 ## Available policies
 
