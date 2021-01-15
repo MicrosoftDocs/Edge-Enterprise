@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -82,9 +82,9 @@ A popular use case for maintaining user identity in the browser is to support sy
 
 Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
-The next screenshot shows an example of an identity error found in *edge://sync-internals* under **Credentials**:
+The next screenshot shows an example of an identity error. The error is "Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea", which is found in *edge://sync-internals* under **Credentials**:
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Identity error":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
 ### Common sync issues
 
@@ -156,7 +156,9 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 ### Issue: Cryptographer error encountered
 
-This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The next screenshot shows an example of the details for a cryptography error.
+This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The next screenshot shows an example of the following cryptography error:
+
+"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered".
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Cryptographer error.":::
 
