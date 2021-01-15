@@ -19,7 +19,17 @@ This article describes Password Monitor in Microsoft Edge and gives admins the s
 > [!NOTE]
 > This article applies to Microsoft Edge version 88 or later.
 
-## Introduction
+## Introduction, benefits, and availability
+
+### Benefits
+
+### Availability
+
+## Prerequisites and criteria for enabling Password Monitor
+
+## Enabling Password Monitor for users
+
+## Configure group policy for Password Monitor
 
 ## FAQ
 
