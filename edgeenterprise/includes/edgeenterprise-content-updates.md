@@ -9,15 +9,21 @@
 |------|------------|--------|
 | 1/11/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
 | 1/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 1/13/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 1/13/2021 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | added |
+| 1/13/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | added |
 | 1/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 | 1/13/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/13/2021 | [Microsoft Edge: State of the browser 2020](/DeployEdge/microsoft-edge-video-state-of-browser) | added |
 | 1/13/2021 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
 | 1/13/2021 | [Deploy Microsoft Edge to hundreds or thousands of devices](/DeployEdge/microsoft-edge-video-deploy) | modified |
 | 1/13/2021 | [Microsoft Edge and Microsoft Search](/DeployEdge/microsoft-edge-video-search) | modified |
 | 1/13/2021 | [Microsoft Edge browser isolation using Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard) | modified |
 | 1/13/2021 | [Microsoft Edge security, compatibility, and manageability](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | modified |
 | 1/13/2021 | [Microsoft Edge and Data loss prevention](/DeployEdge/microsoft-edge-video-security-dlp) | modified |
+| 1/14/2021 | [Microsoft Edge and Identity](/DeployEdge/microsoft-edge-video-identity) | added |
+| 1/14/2021 | [Microsoft Edge enterprise grade PDF reader](/DeployEdge/microsoft-edge-video-pdf-reader) | added |
+| 1/14/2021 | [Secure browsing on Microsoft Edge](/DeployEdge/microsoft-edge-video-security-smartscreen) | added |
+| 1/14/2021 | [Microsoft Edge version rollback](/DeployEdge/microsoft-edge-video-version-rollback) | added |
 | 1/14/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
 | 1/15/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 1/15/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
