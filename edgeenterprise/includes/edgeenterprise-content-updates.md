@@ -46,21 +46,8 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 12/21/2020 | [Reset Microsoft Edge data](/DeployEdge/edge-learnmore-reset-data-in-cloud) | added |
 | 12/21/2020 | [Cookie sharing from Microsoft Edge to Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | modified |
 | 12/21/2020 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
 | 12/21/2020 | [IE mode FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
 | 12/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of December 14, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/15/2020 | Frequently asked questions about Edge in the enterprise | removed |
-| 12/16/2020 | [Blocker Toolkit to disable automatic delivery of Microsoft Edge](/DeployEdge/microsoft-edge-blocker-toolkit) | modified |
-| 12/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 12/16/2020 | Microsoft Edge kiosk mode | removed |
-| 12/17/2020 | [Frequently asked questions (FAQ) about Edge in the enterprise](/DeployEdge/faqs-edge-in-the-enterprise) | modified |
-| 12/17/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/17/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
