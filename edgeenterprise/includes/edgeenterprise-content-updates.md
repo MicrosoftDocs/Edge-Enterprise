@@ -1,14 +1,38 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+
+
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/11/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 1/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/13/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 1/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/13/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/13/2021 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
+| 1/13/2021 | [Deploy Microsoft Edge to hundreds or thousands of devices](/DeployEdge/microsoft-edge-video-deploy) | modified |
+| 1/13/2021 | [Microsoft Edge and Microsoft Search](/DeployEdge/microsoft-edge-video-search) | modified |
+| 1/13/2021 | [Microsoft Edge browser isolation using Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard) | modified |
+| 1/13/2021 | [Microsoft Edge security, compatibility, and manageability](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | modified |
+| 1/13/2021 | [Microsoft Edge and Data loss prevention](/DeployEdge/microsoft-edge-video-security-dlp) | modified |
+| 1/14/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 1/15/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/15/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 1/15/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
 
 ## Week of January 04, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/7/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Updated with 4 new policies. | modified |
-| 1/7/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Refresh, no changes. | modified |
-| 1/8/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security release for Stable minor version 87.0.664.75. | modified |
-| 1/8/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Stable minor version 87.0.664.75 update for security release. | modified |
+| 1/7/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/7/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 1/8/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/8/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 
 
 ## Week of December 21, 2020
