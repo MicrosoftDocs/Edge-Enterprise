@@ -24,16 +24,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
-
-The following table lists the new policies for this update.
-
-| Name | Caption |
-|--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Define an ordered list of preferred languages that websites should display in if the site supports the language|
-
-
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -43,12 +33,12 @@ These tables list all of the browser-related group policies available in this re
 |[Application Guard settings](#application-guard-settings)|[Cast](#cast)|
 |[Content settings](#content-settings)|[Default search provider](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP authentication](#http-authentication)|
-|[Kiosk Mode settings](#kiosk-mode-settings)|[Native Messaging](#native-messaging)|
-|[Password manager and protection](#password-manager-and-protection)|[Performance](#performance)|
-|[Printing](#printing)|[Proxy server](#proxy-server)|
-|[Sleeping tabs settings](#sleeping-tabs-settings)|[SmartScreen settings](#smartscreen-settings)|
-|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|[Additional](#additional)|
-
+|[Kiosk Mode settings](#kiosk-mode-settings)|[Manageability](#manageability)|
+|[Native Messaging](#native-messaging)|[Password manager and protection](#password-manager-and-protection)|
+|[Performance](#performance)|[Printing](#printing)|
+|[Proxy server](#proxy-server)|[Sleeping tabs settings](#sleeping-tabs-settings)|
+|[SmartScreen settings](#smartscreen-settings)|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|
+|[Additional](#additional)|
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -147,6 +137,11 @@ and tips for Microsoft services|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure address bar editing for kiosk mode public browsing experience|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of kiosk session when Microsoft Edge closes|
+### [*Manageability*](#manageability-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
 ### [*Native Messaging*](#native-messaging-policies)
 
 |Policy Name|Caption|
@@ -396,6 +391,7 @@ and tips for Microsoft services|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5276,6 +5272,72 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Manageability policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Mobile App Management Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to retrieve policies from the Intune application management services and apply them to users' profiles.
+
+If you enable this policy or don't configure it, Mobile App Management (MAM) Policies can be applied.
+
+If you disable this policy, Microsoft Edge will not communicate with Intune to request MAM Policies.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MAMEnabled
+  - GP name: Mobile App Management Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MAMEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MAMEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Native Messaging policies
 
   [Back to top](#microsoft-edge---policies)
@@ -9137,6 +9199,8 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
   Disables the internal PDF viewer in Microsoft Edge.
 
 If you enable this policy Microsoft Edge treats PDF files as downloads and lets users open them with the default application.
+
+If Microsoft Edge is the default PDF reader, PDF files aren't downloaded and will continue to open in Microsoft Edge.
 
 If you don't configure this policy or disable it, Microsoft Edge will open PDF files (unless the user disables it).
 
@@ -19806,6 +19870,68 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Allow recommendations and promotional notifications from Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  This policy setting lets you decide whether employees should receive recommendations and in-product assistance notifications from Microsoft Edge.
+
+If you enable or don't configure this setting, employees receive recommendations / notifications from Microsoft Edge.
+
+If you disable this setting, employees will not receive any recommendations / notifications from Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowRecommendationsEnabled
+  - GP name: Allow recommendations and promotional notifications from Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowRecommendationsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowRecommendationsEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
