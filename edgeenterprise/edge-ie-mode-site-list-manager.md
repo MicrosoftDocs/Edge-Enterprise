@@ -49,7 +49,7 @@ Use the following steps to add individual sites to your site list.
    - **IE11**. Opens the site in the IE11 application.
    - **IE mode**. Opens the site in Internet Explorer mode on Microsoft Edge if enabled and in the IE11 app otherwise. See [Internet Explorer mode on Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode).
    - **MSEdge**. Opens the site in Microsoft Edge.
-   - **Configurable**. Allows the site to participate in IE mode engine determination. See [Configurable sites in IE mode](https://docs.microsoft.com/en-us/deployedge/edge-learnmore-configurable-sites-ie-mode)
+   - **Configurable**. Allows the site to participate in IE mode engine determination. See [Configurable sites in IE mode](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
    - **None**. Opens in whatever browser the user chooses.  
 
 4. Under **Compat Mode**, choose one of the following options:
