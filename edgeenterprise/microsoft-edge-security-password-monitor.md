@@ -27,13 +27,9 @@ Password Monitor helps Microsoft Edge users protect their online accounts by inf
 
 Given the frequency and scope of these online attacks having this kind of protection has become necessary for everyone. Microsoft Edge has the built-in ability to securely check a user's saved passwords against passwords that are known to be compromised and alerts them if a match is found.  
 
-<!-- screenshot -->
-  
 ### Availability
 
 Password Monitor has been in early preview channels (Canary/ Dev) and will be promoted to Stable Channel version 88 starting 1/21. The rollout will be gradual and it could take a few weeks before you will see the following message and control in your **Settings** > **Profile** > **Password** page.
-
-<!-- screenshot -->
 
 ## Configure group policy for Password Monitor
 
@@ -46,12 +42,9 @@ After the policy is enabled, users still need to provide consent to turn on the 
 After the password monitor policy is enabled, there are different ways this feature is made available to users.
 
 - Auto-enablement. Users that are signed-in using their work account (Active Directory or Azure Active Directory) and syncing their passwords will be auto-enabled for this feature. They will  see the notification in the next screenshot informing them that the feature's turned on.
-<!-- screenshot -->-  Getting explicit consent. Users that don’t have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
+-  Getting explicit consent. Users that don’t have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
    - When a user is saving a new password.
    - When a user has signed-in to the browser using a saved password.
-<!-- screenshot -->
-
-<!-- screenshot -->
 - Direct activation. Users can go to **Settings** > **Passwords** anytime and turn the feature On or Off.
 
 ## User scenarios with Password Monitor auto-enabled
