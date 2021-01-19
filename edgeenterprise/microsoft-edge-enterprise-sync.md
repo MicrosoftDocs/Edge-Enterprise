@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/15/2021
+ms.date: 01/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -156,10 +156,8 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 ### Issue: Cryptographer error encountered
 
-This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The next screenshot shows an example of the following cryptography error:
+This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. An example of a cryptography error is:
 <br>"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered".
-
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="Cryptographer error.":::
 
 1. Restart Microsoft Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. Data reset is needed to resume sync.
