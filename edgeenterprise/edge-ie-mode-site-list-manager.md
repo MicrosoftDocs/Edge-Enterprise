@@ -14,22 +14,23 @@ description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
 
 # Enterprise Site List Manager in Microsoft Edge
 
-This article explains how to enable and use the Enterprise Site List Manager in Microsoft Edge to create and manage your Enterprise Mode Site List.
+This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer mode.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 89 or later.
 
 ## Overview
 
-The Enterprise Site List Manager is an in-browser version of the [standalone tool](https://www.microsoft.com/download/details.aspx?id=49974) that lets you create, edit, and export your organization’s site list XML.
+The Enterprise Site List Manager is an in-browser version of the [standalone Enterprise Mode Site List Manager tool](https://www.microsoft.com/download/details.aspx?id=49974) that lets you create, edit, and export your organization’s site list.
 
-All future improvements to the site list manager for Internet Explorer mode will be available through the tool in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
+Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
 
 ## Enabling access to Enterprise Site List Manager
 
 You can configure access to the tool by using the [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) group policy.
 
-If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. If Disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
+If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. 
+If Disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
 
 ## Using the Enterprise Site List Manager
 
@@ -64,7 +65,9 @@ Use the following steps to add individual sites to your site list.
    Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update and will continue to load in Enterprise Mode, as usual. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
 
 5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see [here](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
+
 6. Type any comments about the website into the **Comment** box. Administrators can only see comments while they’re in this tool and these comments are retained in the site list xml.
+
 7. Click **Add** to add the site to your site list.
 
 ### Export site list to XML
