@@ -3,7 +3,7 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/19/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,8 +29,7 @@ Future improvements to the tool for Internet Explorer mode will be available thr
 
 You can configure access to the tool by using the [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) group policy.
 
-If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. 
-If Disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
+If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. If Disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
 
 ## Using the Enterprise Site List Manager
 
