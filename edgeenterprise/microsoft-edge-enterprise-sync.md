@@ -3,7 +3,7 @@ title: "Configure and troubleshoot Microsoft Edge sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/19/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -70,7 +70,7 @@ To restrict sync to certain set of users, you can enable the [AIP onboarding con
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
-Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, the Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longaer a part of Azure AD Enterprise State Roaming. However, the Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## Troubleshoot sync issues
 
@@ -82,7 +82,7 @@ A popular use case for maintaining user identity in the browser is to support sy
 
 Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
-The next screenshot shows an example of an identity error. The error is "Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea", which is found in *edge://sync-internals* under **Credentials**:
+The next screenshot shows an example of an identity error. The error is "**Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea**", which is found in *edge://sync-internals* under **Credentials**:
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
@@ -205,7 +205,7 @@ Not today. For customers in the GCC High cloud, Microsoft Edge sync is disabled.
 
 #### Why isn’t Microsoft Edge sync supported in all M365 subscriptions?
 
-Enterprise sync depends on[Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which is not available in all M365 subscriptions.
+Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which is not available in all M365 subscriptions.
 
 #### Is Microsoft Edge sync based on Enterprise State Roaming?
 
