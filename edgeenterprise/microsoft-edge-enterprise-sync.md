@@ -156,7 +156,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 ### Issue: Cryptographer error encountered
 
-This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. An example of a cryptography error is:
+This error is visible under **Type info** in *edge://sync-internals* and may mean that the user's service side data needs to be reset. The following example shows a cryptography error message:
 <br>"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered".
 
 1. Restart Microsoft Edge and navigate to *edge://sync-internals* and check the “**AAD Account Key Status**” section
