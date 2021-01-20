@@ -9,7 +9,7 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 1/11/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published in previous week. | modified |
-| 1/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Updated by archiving older release notes. | modified |
 | 1/13/2021 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel)<br>Article listing archived release notes for Beta channel. | added |
 | 1/13/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel)<br>Article listing archived release notes for Stable channel. | added |
 | 1/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Updated by archiving older release notes. | modified |
