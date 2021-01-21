@@ -3,7 +3,7 @@ title: "PDF reader in Microsoft Edge"
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 01/06/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -39,7 +39,7 @@ The following table shows which channels and versions of Microsoft Edge support 
 | Read aloud | 84.0.522.63  |
 | View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
-| Digital signatures | Being worked on |
+| View and validate Digital Signatures | Available in Canary and Dev channels. Being actively worked on. |
 
 ### Constraints
 
@@ -56,7 +56,7 @@ The PDF reader, built into Microsoft Edge, comes with the basic reading and navi
 
 ### Table of contents
 
-Table of contents lets users easily navigate through PDF documents that have a table of contents. When a user clicks the Table of contents icon, a navigation pane that  shows a list of the labelled sections and subsections in the PDF document is shown. The user can then click any of the labels in the pane to navigate to that section of the document. The pane stays open for as long as needed and can be closed when the user wants to go back to reading the document. The next screenshot shows the navigation pane for an open document.
+Table of contents lets users easily navigate through PDF documents that have a table of contents. When a user clicks the Table of contents icon, a navigation pane that  shows a list of the labeled sections and subsections in the PDF document is shown. The user can then click any of the labels in the pane to navigate to that section of the document. The pane stays open for as long as needed and can be closed when the user wants to go back to reading the document. The next screenshot shows the navigation pane for an open document.
 
 ![PDF Reader navigation with Table of Contents](media/microsoft-edge-pdf/pdf-reader-toc.png)
 
@@ -109,7 +109,7 @@ Read aloud for PDF adds the convenience of listening to PDF content while carryi
 > [!IMPORTANT]
 > A license is required for MIP. For more information, see this [Microsoft 365 licensing guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
-These files can be opened directly in the browser, without the need to download any other software, or install any add-in. This integrates the security provided by MIP directly into the browser, providing a seamless workflow.
+These files can be opened directly in the browser, without the need to download any other software, or install any add-in. This capability integrates the security provided by MIP directly into the browser, providing a seamless workflow.
 
 ![Protected pdf document.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
@@ -121,9 +121,11 @@ If the profile that the user is logged into Microsoft Edge with has at least vie
 
 ![Prompt to save SharePoint pdf page protected by MIP](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
 
-### Certificate Based Digital Signatures (Preview)
+### View and validate certificate-based digital signatures
 
-Microsoft Information Protection (MIP) enables users to collaborate with others securely, while adhering to their organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
+In this digital world, it becomes important to establish the authenticity and ownership of the content in the document. Certificate-based digital signatures are commonly used in PDF documents to ensure that the content in the document is the same as what the author intended it to be, and has not been changed. With Microsoft Edge, you can view and validate certificate digital signatures in PDFs.
+
+We’re actively working on improving the support to address more scenarios, and are looking forward for feedback about the same.
 
 ## Accessibility
 
