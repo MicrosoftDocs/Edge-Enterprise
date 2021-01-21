@@ -173,3 +173,4 @@ We're actively looking at feedback from you about the features you find importan
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap)
+- [Video: Microsoft Edge enterprise grade PDF reader](microsoft-edge-video-pdf-reader.md)
