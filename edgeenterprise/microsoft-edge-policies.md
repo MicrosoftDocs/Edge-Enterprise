@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,17 +24,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-
 ## New policies
 
 The following table lists the new policies for this update.
 
 | Name | Caption |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Allow Basic authentication for HTTP|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting \_blank|
-|[WebWidgetAllowed](#webwidgetallowed)|Allow the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Enable the Web widget at Windows startup|
+|--|--|
+|[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
+
+
 
 
 ## Available policies
@@ -46,12 +45,12 @@ These tables list all of the browser-related group policies available in this re
 |[Application Guard settings](#application-guard-settings)|[Cast](#cast)|
 |[Content settings](#content-settings)|[Default search provider](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP authentication](#http-authentication)|
-|[Kiosk Mode settings](#kiosk-mode-settings)|[Native Messaging](#native-messaging)|
-|[Password manager and protection](#password-manager-and-protection)|[Performance](#performance)|
-|[Printing](#printing)|[Proxy server](#proxy-server)|
-|[Sleeping tabs settings](#sleeping-tabs-settings)|[SmartScreen settings](#smartscreen-settings)|
-|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|[Additional](#additional)|
-
+|[Kiosk Mode settings](#kiosk-mode-settings)|[Manageability](#manageability)|
+|[Native Messaging](#native-messaging)|[Password manager and protection](#password-manager-and-protection)|
+|[Performance](#performance)|[Printing](#printing)|
+|[Proxy server](#proxy-server)|[Sleeping tabs settings](#sleeping-tabs-settings)|
+|[SmartScreen settings](#smartscreen-settings)|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|
+|[Additional](#additional)|
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -150,6 +149,11 @@ and tips for Microsoft services|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure address bar editing for kiosk mode public browsing experience|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of kiosk session when Microsoft Edge closes|
+### [*Manageability*](#manageability-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
 ### [*Native Messaging*](#native-messaging-policies)
 
 |Policy Name|Caption|
@@ -263,6 +267,7 @@ and tips for Microsoft services|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
 |[BrowserSignin](#browsersignin)|Browser sign-in settings|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
@@ -285,6 +290,7 @@ and tips for Microsoft services|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Define an ordered list of preferred languages that websites should display in if the site supports the language|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
 |[DeleteDataOnMigration](#deletedataonmigration)|Delete old browser data on migration|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Control where developer tools can be used|
@@ -397,6 +403,7 @@ and tips for Microsoft services|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -434,8 +441,8 @@ and tips for Microsoft services|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Allow the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Enable the Web widget at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
 
 
@@ -5277,6 +5284,72 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Manageability policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Mobile App Management Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to retrieve policies from the Intune application management services and apply them to users' profiles.
+
+If you enable this policy or don't configure it, Mobile App Management (MAM) Policies can be applied.
+
+If you disable this policy, Microsoft Edge will not communicate with Intune to request MAM Policies.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MAMEnabled
+  - GP name: Mobile App Management Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MAMEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MAMEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Native Messaging policies
 
   [Back to top](#microsoft-edge---policies)
@@ -6310,7 +6383,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Overrides default background graphics printing mode.
+  Overrides the last used setting for printing background graphics.
+If you enable this setting, background graphics printing is enabled.
+If you disable this setting, background graphics printing is disabled.
 
 Policy options mapping:
 
@@ -9137,6 +9212,8 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 
 If you enable this policy Microsoft Edge treats PDF files as downloads and lets users open them with the default application.
 
+If Microsoft Edge is the default PDF reader, PDF files aren't downloaded and will continue to open in Microsoft Edge.
+
 If you don't configure this policy or disable it, Microsoft Edge will open PDF files (unless the user disables it).
 
   #### Supported features:
@@ -10674,6 +10751,108 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### Browsing Data Lifetime Settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Configures browsing data lifetime settings for Microsoft Edge.
+This policy controls the lifetime of selected browsing data. This policy has no effect if Sync is enabled.
+The available data types are the 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' and 'hosted_app_data'.
+Microsoft Edge will regularly remove data of selected types that is older than 'time_to_live_in_hours'. Because data deletion only happens at certain intervals, some data might be kept slightly longer but never more than twice its expected 'time_to_live_in_hours'.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BrowsingDataLifetime
+  - GP name: Browsing Data Lifetime Settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BrowsingDataLifetime
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: BrowsingDataLifetime
+  - Example value:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### Use built-in DNS client
@@ -10688,13 +10867,13 @@ Use the preceding information when configuring this policy.
 
   Controls whether to use the built-in DNS client.
 
-This does not affect which DNS servers are used; just the software stack which is used to communicate with them. For example if the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It is however possible that the built-in DNS client will address servers in different ways by using more modern DNS-related protocols such as DNS-over-TLS.
+This policy controls which software stack is used to communicate with the DNS server: the operating system DNS client, or Microsoft Edge's built-in DNS client. This policy does not affect which DNS servers are used: if, for example, the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It also does not control if DNS-over-HTTPS is used; Microsoft Edge always uses the built-in resolver for DNS-over-HTTPS requests. Please see the [DnsOverHttpsMode](#dnsoverhttpsmode) policy for information on controlling DNS-over-HTTPS.
 
 If you enable this policy, the built-in DNS client is used, if it's available.
 
-If you disable this policy, the client is never used.
+If you disable this policy, the built-in DNS client is only used when DNS-over-HTTPS is in use.
 
-If you don't configure this policy, the built-in DNS client is enabled by default on MacOS, and users can change whether to use the built-in DNS client by editing edge://flags or by specifying a command-line flag.
+If you don't configure this policy, the built-in DNS client is enabled by default.
 
   #### Supported features:
 
@@ -12131,6 +12310,70 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### Define an ordered list of preferred languages that websites should display in if the site supports the language
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  Configures the language variants that Microsoft Edge sends to websites as part of the Accept-Language request HTTP header and prevents users from adding, removing, or changing the order of preferred languages in Microsoft Edge settings. Users who want to change the languages Microsoft Edge displays in or offers to translate pages to will be limited to the languages configured in this policy.
+
+If you enable this policy, websites will appear in the first language in the list that they support unless other site-specific logic is used to determine the display language. The language variants defined in this policy override the languages configured as part of the [SpellcheckLanguage](#spellchecklanguage) policy.
+
+If you don't configure or disable this policy, Microsoft Edge sends websites the user-specified preferred languages as part of the Accept-Language request HTTP header.
+
+For detailed information on valid language variants, see [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefinePreferredLanguages
+  - GP name: Define an ordered list of preferred languages that websites should display in if the site supports the language
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefinePreferredLanguages
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"en-US,fr,es"
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DefinePreferredLanguages
+  - Example value:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### Require that the Enterprise Mode Site List is available before tab navigation
@@ -13095,11 +13338,11 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 
   #### Description
 
-  This policy lets users compare the prices of a product they are looking at, get coupons from the website they're on, or auto-apply coupons during checkout.
+  This policy lets users compare the prices of a product they are looking at, get coupons or rebates from the website they're on, or auto-apply coupons during checkout.
 
-If you enable or don't configure this policy, shopping features such as price comparison and coupons will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
+If you enable or don't configure this policy, shopping features such as price comparison, coupons and rebates will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
 
-If you disable this policy shopping features such as price comparison and coupons will not be automatically found for retail domains.
+If you disable this policy shopping features such as price comparison, coupons and rebates will not be automatically found for retail domains.
 
   #### Supported features:
 
@@ -18489,9 +18732,9 @@ If you don't configure this policy, the default roaming profile path is used.
 
 If you disable this policy or don't configure it, only the regular local profiles are used.
 
-The [SyncDisabled](#syncdisabled) policy disables all data synchronization, overriding policy.
+The [SyncDisabled](#syncdisabled) only disables cloud synchronization and has no impact on this policy.
 
-See https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles for more information on using roaming user profiles.
+See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) for more information on using roaming user profiles.
 
   #### Supported features:
 
@@ -19644,6 +19887,68 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShowRecommendationsEnabled
+
+  #### Allow recommendations and promotional notifications from Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  This policy setting lets you decide whether employees should receive recommendations and in-product assistance notifications from Microsoft Edge.
+
+If you enable or don't configure this setting, employees receive recommendations / notifications from Microsoft Edge.
+
+If you disable this setting, employees will not receive any recommendations / notifications from Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowRecommendationsEnabled
+  - GP name: Allow recommendations and promotional notifications from Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowRecommendationsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowRecommendationsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SignedHTTPExchangeEnabled
 
   #### Enable Signed HTTP Exchange (SXG) support
@@ -20160,6 +20465,8 @@ If this policy is false or unset, the warnings will appear on such unsupported c
   #### Description
 
   Disables data synchronization in Microsoft Edge. This policy also prevents the sync consent prompt from appearing.
+
+This policy disables cloud synchronization only and has no impact on the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy.
 
 If you don't set this policy or apply it as recommended, users will be able to turn sync on or off. If you apply this policy as mandatory, users will not be able to turn sync on.
 
@@ -22106,7 +22413,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   ### WebWidgetAllowed
 
-  #### Allow the Web widget
+  #### Enable the Web widget
 
   
   
@@ -22172,7 +22479,7 @@ If you disable this policy:
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Enable the Web widget at Windows startup
+  #### Allow the Web widget at Windows startup
 
   
   
