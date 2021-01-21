@@ -3,7 +3,7 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/20/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,6 +30,8 @@ Given the frequency and scope of these online attacks having this kind of protec
 ### Availability
 
 Password Monitor has been in early preview channels (Canary/ Dev) and will be promoted to Stable Channel version 88 starting 1/21. The rollout will be gradual and it could take a few weeks before you will see the following message and control in your **Settings** > **Profile** > **Password** page.
+
+:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option to enable Password Monitor":::
 
 ## Configure group policy for Password Monitor
 
