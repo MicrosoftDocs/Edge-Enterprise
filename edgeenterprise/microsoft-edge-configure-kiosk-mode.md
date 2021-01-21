@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,7 +30,7 @@ Both experiences are running a Microsoft Edge InPrivate session, which protects 
 
 ## Set up Microsoft Edge kiosk mode
 
-An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Soft Edge (Official Stable Channel)](https://www.microsoft.com/edge).
+An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Edge (Official Stable Channel)](https://www.microsoft.com/edge).
 
 ### Kiosk mode supported features
 
