@@ -340,6 +340,7 @@ Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microso
 ## Version 85.0.564.44: August 31
 
 Fixed various bugs and performance issues.
+
 <!-- 85.0.564.41: August 27 -->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
