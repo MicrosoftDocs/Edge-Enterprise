@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,14 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Addendum
+
+### Version [88.0.705.50](#version-88070550-released-on-january-21) released on January 21
+
+The following feature was added to the release:
+
+- Single sign-on (SSO) for all Windows accounts using the default Microsoft Edge profile. Starting with Microsoft Edge version 89, we will provide SSO for all Windows accounts in the default Microsoft Edge profile for users that have one profile. If a user creates separate profiles, we will isolate SSO to the profile's signed-in account.
 
 ## Version 88.0.705.50: January 21
 
