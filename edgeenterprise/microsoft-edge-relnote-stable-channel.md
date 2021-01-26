@@ -24,14 +24,6 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
-## Addendum
-
-### Version [88.0.705.50](#version-88070550-released-on-january-21) released on January 21
-
-The following feature was added to the release:
-
-- Single sign-on (SSO) for all Windows accounts using the default Microsoft Edge profile. Starting with Microsoft Edge version 89, we will provide SSO for all Windows accounts in the default Microsoft Edge profile for users that have one profile. If a user creates separate profiles, we will isolate SSO to the profile's signed-in account.
-
 ## Version 88.0.705.50: January 21
 
 Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
@@ -47,6 +39,11 @@ Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microso
 - **Authentication:**
 
   - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on down-level Windows. A user signed in on Microsoft Edge on down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
+  
+  - Single sign-on (SSO) for all Windows accounts using the Microsoft Edge profile. Starting with Microsoft Edge version 89, we will support SSO for all Windows accounts in the Microsoft Edge profile for users that have one profile. If a user creates separate profiles, we will isolate SSO to the profile's signed-in account. This feature can be enabled for any profile that isn’t signed-in with a work/school account and allows the use of any signed-in work/school profile in the unsigned-in/personal profile. This feature is configured in **Settings** > **Profiles**.
+  
+    > [!NOTE]
+    > "Single sign-on (SSO) for all Windows accounts using the Microsoft Edge profile" is an update to the January 21 release notes.
 
 - **Kiosk mode option to end session**. The "End session" button is now available in a kiosk mode public browsing experience. This feature ensures that browser data and settings are deleted when Microsoft Edge is closed. Learn more about kiosk mode features and roadmap, [Configure Microsoft Edge kiosk mode](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
