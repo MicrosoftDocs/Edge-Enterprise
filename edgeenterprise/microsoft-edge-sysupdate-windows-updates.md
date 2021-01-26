@@ -3,7 +3,7 @@ title: "Windows updates for Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 01/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,9 @@ description: "Windows updates for Microsoft Edge."
 # Windows updates to support the next version of Microsoft Edge
 
 This article describes how Windows will be updated to support the next version of Microsoft Edge.
+
+> [!IMPORTANT]
+> Refer to the [**blog post**]() about Microsoft Edge Legacy end of service.
 
 > [!NOTE]
 > This article applies to the Microsoft Edge Stable channel.
