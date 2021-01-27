@@ -59,11 +59,11 @@ Microsoft Defender SmartScreen determines whether a downloaded app or app instal
 - Files with a known safe reputation will download without any notification.  
 - Files with a known malicious reputation show a warning to let the user know that the file is unsafe and has been reported as malicious. The next screenshot is an example of a warning for a malicious file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - Files that are unknown show a warning to let the user know that the download doesn't have a known footprint and advise caution. The next screenshot is an example of a warning for an unknown file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with unknown reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 Not all unknown programs are malicious, and the unknown warning is intended to provide context and guidance for users who need it, especially if the warning is unexpected.
 
