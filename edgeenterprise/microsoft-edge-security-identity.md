@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge identity support and configuration"
 
 # Microsoft Edge identity support and configuration
 
-This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD), and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Azure Active Directory (Azure AD) accounts belonging to the global cloud or the GCC sovereign cloud. We are working on adding support for other sovereign clouds. 
+This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD), and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Azure Active Directory (Azure AD) accounts belonging to the global cloud or the GCC sovereign cloud. We are working on adding support for other sovereign clouds.
 
 > [!NOTE]
 > This applies  to Microsoft Edge version 77 or later.
@@ -46,7 +46,7 @@ By default, the user will not get automatically signed in. If you want to automa
 
 ### Manual sign-in
 
-If the user doesn't get automatically signed into Microsoft Edge, they can manually sign into Microsoft Edge during the first run experience, browser settings, or by opening the identity flyout. 
+If the user doesn't get automatically signed into Microsoft Edge, they can manually sign into Microsoft Edge during the first run experience, browser settings, or by opening the identity flyout.
 
 ### Managing browser sign-in
 
@@ -99,7 +99,7 @@ If a user saves passwords in Microsoft Edge, they can enable a feature that auto
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge documentation landing page](https://docs.microsoft.com/DeployEdge/)
+- [Video: Microsoft Edge and Identity](microsoft-edge-video-identity.md)
 - [Identity and access management](https://www.microsoft.com/security/technology/identity-access-management)
 - [Identity platform](https://developer.microsoft.com/identity)
 - [Four steps to a strong identity foundation with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)
