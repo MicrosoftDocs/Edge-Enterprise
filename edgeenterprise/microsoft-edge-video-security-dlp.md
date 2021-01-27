@@ -3,7 +3,7 @@ title: "Microsoft Edge and Data loss prevention"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,4 +25,5 @@ Data Loss Prevention (DLP) has never been more important than now with remote wo
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Data Loss Prevention (DLP) in Microsoft Edge](microsoft-edge-security-dlp.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

@@ -3,7 +3,7 @@ title: "Microsoft Edge security, compatibility, and manageability"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,4 +29,5 @@ Take a hands-on tour to experience the security, compatibility, and manageabilit
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge security for your business](ms-edge-security-for-business.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

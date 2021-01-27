@@ -3,7 +3,7 @@ title: "Microsoft Edge browser isolation using Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/12/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,4 +25,5 @@ With Microsoft Edge, help reduce your enterprise's exposure to web-based attacks
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge support for Microsoft Defender Application Guard](microsoft-edge-security-windows-defender-application-guard.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

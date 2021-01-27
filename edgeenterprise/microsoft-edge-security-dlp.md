@@ -3,7 +3,7 @@ title: "Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/18/2020
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,8 +29,9 @@ Microsoft Endpoint DLP is the next generation of data loss prevention using mode
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
 
-To learn more about Endpoint DLP:
+To learn more about Endpoint DLP, use the following resources:
 
+- [Video: Microsoft Edge and Data loss prevention (DLP)](microsoft-edge-video-security-dlp.md)
 - [Learn about Microsoft 365 Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
 - [Get started with Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
 
@@ -38,7 +39,7 @@ Microsoft Edge enforces admin configured policies for sensitive files and record
 
 Some of the user activities that you can audit and manage on devices running Windows 10 include the following activities:
 
-- File Upload: Protect sensitive file upload to unauthorized cloud locations. The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.
+- File Upload: Protect sensitive file upload to unauthorized cloud locations. <!-- The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.-->
 - Clipboard Protection: Protect sensitive data from being copied out of the file.
 - Print Protection: Protect sensitive file from being printed.
 - Save to USB/Network: Protect sensitive file from being saved to removable USB storage or unauthorized network locations.

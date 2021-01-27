@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/18/2020
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge security for your business"
 
 # Microsoft Edge security for your business
 
-Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows 10**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows 10—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits.
+Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows 10**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows 10—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits. For more information, watch [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md).
 
 Let's get into the details, starting with **external threats** and then looking at **internal risks and information protection**.
 
@@ -61,3 +61,4 @@ To learn more about Endpoint DLP prerequisites and how to set this up, go to [Ge
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md)
