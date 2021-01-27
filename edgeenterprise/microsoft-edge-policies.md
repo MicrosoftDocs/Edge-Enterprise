@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,18 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies for this update.
-
-| Name | Caption |
-|--|--|
-|[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
-
-
-
 
 ## Available policies
 
@@ -406,6 +394,7 @@ and tips for Microsoft services|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
+|[SmartActionsBlockList](#smartactionsblocklist)|Block smart actions  for a list of services|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
 |[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
@@ -2896,7 +2885,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that can open pop-up windows.
+  Define a list of sites, based on URL patterns, that can open pop-up windows. * is not an accepted value for this policy.
 
 If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
 
@@ -2961,7 +2950,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows.
+  Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows. * is not an accepted value for this policy.
 
 If you don't configure this policy, the global default value from the [DefaultPopupsSetting](#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
 
@@ -6979,7 +6968,7 @@ For ProxyMode, if you choose the value:
   * direct, a proxy is never used and all other fields are ignored.
   * system, the systems's proxy is used and all other fields are ignored.
   * auto_detect, all other fields are ignored.
-  * fixed_server, the ProxyServer and ProxyBypassList fields are used.
+  * fixed_servers, the ProxyServer and ProxyBypassList fields are used.
   * pac_script, the ProxyPacUrl and ProxyBypassList fields are used.
 
 For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
@@ -7016,7 +7005,7 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7025,7 +7014,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7039,7 +7028,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -20074,6 +20063,83 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 
   [Back to top](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### Block smart actions  for a list of services
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 89 or later
+
+  #### Description
+
+  List specific services, such as PDFs, that don't show smart actions. (Smart actions are actions like "define" which are available in full and mini context menus in Microsoft Edge.)
+
+If you enable the policy: :
+   - The smart action in the mini and full context menu will be disabled for all profiles for services that match the given list.
+   - Users will not see the smart action in the mini and full context menu on text selection for services that match the given list.
+   - In Microsoft Edge settings, the smart action in the mini and full context menu will be disabled for services that match the given list.
+
+If you disable or don't configure this policy:
+   - The smart action in the mini and full context menu will be enabled for all profiles.
+   - Users will see the smart action in the mini and full context menu on text selection.
+   - In Microsoft Edge settings, the smart action in the mini and full context menu will be enabled.
+
+Policy options mapping:
+
+* smart_actions_pdf (smart_actions_pdf) = Smart actions in PDF
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SmartActionsBlockList
+  - GP name: Block smart actions  for a list of services
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SmartActionsBlockList
+  - Example value:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21839,24 +21905,7 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 
   Configure this policy to specify a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off.
 
-Each list item of the policy is an object with a mandatory member:
-url (the URL of the web app to install)
-
-and 3 optional members:
-- default_launch_container
-(specifies the window mode that the web app opens with-a new tab is the
-default.)
-
-- create_desktop_shortcut
-(True if you want to create Linux and
-Windows desktop shortcuts.)
-
-- override_app_name
-(Starting with Microsoft Edge 89,
-allows you to override the app name if it is not a
-Progressive Web App (PWA), or the app name that is temporarily
-installed if it is a PWA but authentication is required before the
-installation can be completed.)
+Each list item of the policy is an object with a mandatory member: url (the URL of the web app to install) and 2 optional members: default_launch_container (specifies the window mode that the web app opens with-a new tab is the default) and create_desktop_shortcut (True if you want to create Linux and Windows desktop shortcuts).
 
   #### Supported features:
 
@@ -21897,11 +21946,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21909,7 +21953,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21933,14 +21977,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
