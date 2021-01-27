@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/21/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -132,6 +132,8 @@
            href: edge-ie-mode-add-guidance-filetype-associations.md
          - name: Cookie sharing from Microsoft Edge to Internet Explorer
            href: edge-ie-mode-add-guidance-cookieshare.md
+         - name: Enterprise Site List Manager in Microsoft Edge
+           href: edge-ie-mode-site-list-manager.md
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
@@ -144,6 +146,8 @@
      href: microsoft-edge-security-endpoints.md
    - name: Data Loss Prevention (DLP)
      href: microsoft-edge-security-dlp.md
+   - name: Password Monitor auto-enabled for users
+     href: microsoft-edge-security-password-monitor.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access

@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 10/05/2020
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Configure Microsoft Edge kiosk mode"
 
 # Configure Microsoft Edge kiosk mode
 
-This article describes how to configure Microsoft Edge kiosk mode options that you can pilot. There's also a roadmap of features we are targeting.
+This article describes how to configure Microsoft Edge kiosk mode options that you can pilot. There's also a roadmap of features we're targeting.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
@@ -23,35 +23,40 @@ This article describes how to configure Microsoft Edge kiosk mode options that y
 
 Microsoft Edge kiosk mode offers two lockdown experiences of the browser so organizations can create, manage, and provide the best experience for their customers. The following lockdown experiences are available:  
 
-- The Digital/Interactive signage experience displays a specific site in full-screen mode.
-- The public-browsing experience runs a limited multi-tab version of Microsoft Edge.
+- **Digital/Interactive Signage** experience - Displays a specific site in full-screen mode.
+- **Public-Browsing** experience - Runs a limited multi-tab version of Microsoft Edge.
 
 Both experiences are running a Microsoft Edge InPrivate session, which protects user data.
 
 ## Set up Microsoft Edge kiosk mode
 
-An initial set of kiosk mode features are now available to test with Microsoft Edge Canary Channel, version 87. You can download Microsoft Edge Canary from the [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download) page.
+An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Edge (Official Stable Channel)](https://www.microsoft.com/edge).
 
-### Kiosk mode features
+### Kiosk mode supported features
 
-The following features are available:
+The following table lists the features supported by kiosk mode.
 
-- InPrivate navigation protects user data by deleting browser data and downloads when the session ends.
-- A policy to configure Delete downloads on exit.
-- The option to reset a user session after a certain period of inactivity.
-- An initial set of lockdown functionality. The following functions are available:
-
-  - Mouse context menu
-  - F12 Developer Tools
-  - F11 Exit full screen (while in full screen mode)
-  - Blocking of the initial set of *Edge://* pages
+|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|
+|-|-|-|-|
+|InPrivate Navigation|Y|Y|87|
+|Reset on inactivity|Y|Y|87|
+|[Read only address bar](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (policy) |N|Y |87|
+|[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |87|
+|F11 blocked (enter/exit full-screen) | Y | Y | 87 |
+|F12 blocked (launch Developer Tools) | Y | Y | 87 |
+| Multi tab support | N| Y| 87|
+|End session button | N| Y| 88|
+|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|88|
+| CTRL+N blocked (open a new window) | Y | Y | 89 |
+| CTRL+T blocked (open new tab) | N | Y | 89 |
+|Settings and more (...) will display only the required options  |N |Y |89 |
 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
 
 ## Use kiosk mode features
 
-You can invoke Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command line options:
+Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command line options:
 
 - Kiosk mode Digital/Interactive signage: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - Kiosk mode public browsing: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
@@ -68,11 +73,32 @@ You can invoke Microsoft Edge kiosk mode features can be invoked with the follow
     - 0 - turns off the timer
     - 1-1440 minutes for reset on idle timer
 
+## Support policies for kiosk mode
+
+Use any of the Microsoft Edge policies listed in the following table to enhance the kiosk experience for the Microsoft Edge kiosk mode type you configure. To learn more about these policies, see [Microsoft Edge – Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
+
+> [!NOTE]
+> Policy configuration isn't limited to the policies listed in the following table, however additional policies should be tested to ensure that kiosk mode functionality isn't negatively affected.
+
+|Group policy|Digital\Interactive signage|Public browsing single-app|
+|--|--|--|
+|[Printing](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
+|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
+|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
+|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
+|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
+|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
+|[SmartScreen settings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
+
 ## Microsoft Edge with assigned access
 
 ### Single app kiosk
 
-Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences, Digital/Interactive signage and Public-browsing.  
+Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing.  
 
 Kiosk mode with assigned access is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 or higher.
 
@@ -82,16 +108,16 @@ To install a Windows 10 Insider Preview Build on a PC, follow the instructions i
 
 ### Multi-app kiosk
 
-Microsoft Edge can be run with [multi-app assigned access](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access follow the instructions on how to [Set up a multi-app kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **MSEdge**).
+Microsoft Edge can be run with [multi-app assigned access](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **MSEdge**).
 
-Configure Microsoft Edge kiosk mode When using Microsoft Edge with multi-app assigned access you can use the [Microsoft Edge browser policies](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) to configure the browsing experience to meet your unique requirements.
+When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the[Microsoft Edge browser policies](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) to configure the browsing experience to meet your unique requirements.
 
 ### Configure using Windows Settings
 
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), 87.0.644.4 or higher.
+2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
    > [!IMPORTANT]
    > Because a device level installation is required, only a non-Canary channel is supported.
@@ -136,45 +162,30 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Kiosk mode - finish set up":::
 
-13. Sign off from the kiosk device and sign in with the local kiosk account to validate the configuration.
+13. Sign out from the kiosk device and sign in with the local kiosk account to validate the configuration.
 
 ## Functional limitations
 
 With the release of this preview version of kiosk mode we're continuing work on improving the product and adding new features.
 
-Although kiosk mode doesn't currently support the following functionality, work is underway on the following features:
+We recommend that you turn off:
 
-- Collections
-- Extensions
-- Internet Explorer mode
-- Windows Defender Application Guard (WDAG)
+- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
+- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
+- [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
+- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
 
 ## Roadmap
-
-### Later this year (2020)
-
-We'll add the following features:
-
-- End session button
-- Read only address bar  
-  - Configurable with group policy
-  - When enabled, users will be prevented from editing the address bar and navigating to another page.
-
-- More lockdown functions:
-
-  - Additional accelerators will be blocked (for example, CTRL+N)
-  - The "…" settings menu will enable only required options (for example, Print, Help,  Feedback, and Read aloud)
-  - Additional *edge://* pages lockdown (for example, *edge://settings*)
-  - Configure print options UI
-  - Limiting file explorer to the download folder only.
 
 ### In early 2021
 
 We'll add the following support and features:
 
-- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows.
+- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows 10 1909 and higher.
 - Additional features for parity with Microsoft Edge Legacy.
 - Integration with Intune to configure devices using kiosk mode profile UX.
+- Additional keyboard shortcuts will be blocked.
+- Restrict the launch of other applications from the browser.
 
 ## See also
 
