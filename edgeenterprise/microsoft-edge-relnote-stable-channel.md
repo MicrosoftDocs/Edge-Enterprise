@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -44,7 +44,7 @@ Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microso
 
   - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on down-level Windows. A user signed in on Microsoft Edge on down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
   
-  - Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts in non-Azure AD Microsoft Edge profiles. This feature can be enabled for any profile that isn’t signed-in with a work/school account and is not guest or in-private and allows the use of any signed-in work/school account on operating system that profile. This feature can be configured in **Settings** > **Profiles** > **Profile Preferences** > **Allow single sign-on for work or school sites using this profile**.
+  - Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts in non-Azure AD Microsoft Edge profiles. This feature can be enabled for any profile that isn’t signed-in with a work/school account and is not guest or in-private and allows the use of any signed-in work/school account on operating system with that profile. This feature can be configured in **Settings** > **Profiles** > **Profile Preferences** > **Allow single sign-on for work or school sites using this profile**.
   
     > [!NOTE]
     > "Single sign-on (SSO) for all Windows accounts using the Microsoft Edge profile" is an update to the January 21 release notes.
