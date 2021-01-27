@@ -3,7 +3,7 @@ title: "Microsoft Edge rollback for enterprises"
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "How to roll back Microsoft Edge to a previous version"
 
 # How to roll back Microsoft Edge to a previous version
 
-This article describes how to roll back to a previous version of Microsoft Edge using the rollback feature.
+This article describes how to roll back to a previous version of Microsoft Edge using the rollback feature. To learn more about this feature, watch [Video: Microsoft Edge version rollback](microsoft-edge-video-version-rollback.md).
 
 >[!NOTE]
 >This article applies to Microsoft Edge version 86 or later.
@@ -158,3 +158,4 @@ The group policy setting hasn't synced to all the clients yet. When admins set a
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Video: Microsoft Edge version rollback](microsoft-edge-video-version-rollback.md)
