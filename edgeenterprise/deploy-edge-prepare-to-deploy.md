@@ -1,9 +1,9 @@
 ---
 title: "Prepare to deploy Microsoft Edge"
 ms.author: ryhecht
-author: ryhecht
+author: RyanHechtMSFT
 manager: tinad
-ms.date: 01/26/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
