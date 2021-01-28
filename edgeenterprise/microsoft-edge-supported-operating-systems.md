@@ -68,7 +68,7 @@ Microsoft Edge for Android can be installed on tablets and phones that meet the 
 
 ### Apple Silicon Macs
 
-Microsoft Edge native app support in Stable, Dev, and Canary channels for Apple Silicon Macs (M1 Macs, ARM64 Macs).
+Microsoft Edge native app support in Stable version 88 for Apple Silicon Macs.
 
 ### Chromebooks
 
