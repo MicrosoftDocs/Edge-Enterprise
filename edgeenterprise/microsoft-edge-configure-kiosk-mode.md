@@ -86,16 +86,44 @@ msedge.exe --kiosk www.fabrikam.com --edge-kiosk-type=public-browsing
 
 ### Additional command line options
 
-- `--no-first-run` : Disable the first Microsoft Edge run experience.
-- `--kiosk-idle-timeout-minutes` : Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. The following values are supported:
+- Disable the first Microsoft Edge run experience.
 
-  - Default values
-    - Full screen - turned off
-    - Public browsing - 5 minutes
-  - Allowed values
-    - 0 - turns off the timer
-    - 1-1440 minutes for reset on idle timer
+  ```
+  --no-first-run
+  ```
 
+ - Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. Replace "value" in the next example with the number of minutes.
+
+   ```
+   --kiosk-idle-timeout-minutes=value
+   ``` 
+   The following "values" are supported:
+
+     - Default values
+       - Full screen - turned off
+       - Public browsing - 5 minutes
+    - Allowed values
+      - 0 - turns off the timer
+      - 1-1440 minutes for reset on idle timer
+
+### Command line examples
+
+You can copy, edit, and use the following command line examples to configure your kiosk.
+
+**no-first-run**
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --no-first-run
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
+```
+
+**timeout**
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --kiosk-idle-timeout-minutes=1
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
+
+```
 ## Support policies for kiosk mode
 
 Use any of the Microsoft Edge policies listed in the following table to enhance the kiosk experience for the Microsoft Edge kiosk mode type you configure. To learn more about these policies, see [Microsoft Edge – Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
