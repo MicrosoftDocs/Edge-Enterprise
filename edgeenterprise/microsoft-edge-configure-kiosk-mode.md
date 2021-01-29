@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/28/2021
+ms.date: 01/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -66,10 +66,23 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 
 ## Use kiosk mode features
 
-Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command line options:
+Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command line options for Digital/Interactive signage and Public browsing.
 
-- Kiosk mode Digital/Interactive signage: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
-- Kiosk mode public browsing: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
+### Kiosk mode Digital/Interactive signage
+ 
+``
+msedge.exe --kiosk www.fabrikam.com --edge-kiosk-type=fullscreen
+``
+
+:::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-digital-interactive.png" alt-text="Kiosk site with digital or interactive signage":::
+
+### Kiosk mode Public browsing
+
+``
+msedge.exe --kiosk www.fabrikam.com --edge-kiosk-type=public-browsing
+``
+
+:::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-public-browsing.png" alt-text="Kiosk site for public browsing":::
 
 ### Additional command line options
 
