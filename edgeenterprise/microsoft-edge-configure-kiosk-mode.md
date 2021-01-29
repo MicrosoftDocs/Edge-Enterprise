@@ -70,17 +70,17 @@ Microsoft Edge kiosk mode features can be invoked with the following Windows 10 
 
 ### Kiosk mode Digital/Interactive signage
  
-``
+```
 msedge.exe --kiosk www.fabrikam.com --edge-kiosk-type=fullscreen
-``
+```
 
 :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-digital-interactive.png" alt-text="Kiosk site with digital or interactive signage":::
 
 ### Kiosk mode Public browsing
 
-``
+```
 msedge.exe --kiosk www.fabrikam.com --edge-kiosk-type=public-browsing
-``
+```
 
 :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-public-browsing.png" alt-text="Kiosk site for public browsing":::
 
