@@ -1,22 +1,39 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+
+
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/25/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 1/26/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/26/2021 | [Password Monitor auto-enabled for users](/DeployEdge/microsoft-edge-security-password-monitor) | modified |
+| 1/27/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/27/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 1/27/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/28/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
 
 ## Week of January 18, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/22/2021 | [PDF reader in Microsoft Edge](/DeployEdge/microsoft-edge-pdf)<br>Update with additions to supported features. | modified |
-| 1/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Updated feature list for major version 88.0.705.50. | modified |
-| 1/21/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel),<br>Fixes for minor version 88.0.705.49.| modified |
-| 1/21/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update for major version 88.0.705.50, calling out new features, and new or deprecated group policies.| modified |
-| 1/21/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable version 88.0.705.50.  | modified |
-| 1/21/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update and call out new policies.| modified |
-| 1/21/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Automatic refresh, no changes. | modified |
-| 1/22/2021 | [Password Monitor auto-enabled for users](/DeployEdge/microsoft-edge-security-password-monitor)<br>New article describing the Password Monitor and how it's automatically enabled for users. | added |
-| 1/21/2021 | [Enterprise Site List Manager in Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager)<br>New article describing the Site List Manager built in to Microsoft Edge. | added |
-| 1/19/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published in previous week. | modified |
-| 1/22/2021 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Update feature support and roadmap. | modified |
-| 1/22/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync)<br>Update article to clarify troubleshooting. | modified |
+| 1/22/2021 | [PDF reader in Microsoft Edge](/DeployEdge/microsoft-edge-pdf) | modified |
+| 1/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/21/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/21/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/21/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/21/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/21/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 1/22/2021 | [Password Monitor auto-enabled for users](/DeployEdge/microsoft-edge-security-password-monitor) | added |
+| 1/21/2021 | [Enterprise Site List Manager in Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager) | added |
+| 1/19/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 1/22/2021 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
+| 1/22/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
 
 
 ## Week of December 21, 2020
