@@ -1,20 +1,18 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
-
 
 ## Week of January 25, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/25/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 1/26/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 1/26/2021 | [Password Monitor auto-enabled for users](/DeployEdge/microsoft-edge-security-password-monitor) | modified |
-| 1/27/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 1/27/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 1/27/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 1/28/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 1/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/25/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published week of January 25. | modified |
+| 1/26/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update with addendum for major version 88.0.705.50. Call out availability of SSO.| modified |
+| 1/26/2021 | [Password Monitor auto-enabled for users](/DeployEdge/microsoft-edge-security-password-monitor)<br>Correct availability and link to Microsoft Research on safeguarding passwords. | modified |
+| 1/27/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update, new policy added.| modified |
+| 1/27/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Refresh, no changes. | modified |
+| 1/27/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update for minor version 88.0.705.53 fixes. | modified |
+| 1/28/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update for minor version 88.0.705.56 fixes. | modified |
+| 1/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Update for minor version 88.0.705.56 fixes. | modified |
 
 
 ## Week of January 18, 2021
