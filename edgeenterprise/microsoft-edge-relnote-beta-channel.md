@@ -29,11 +29,6 @@ These release notes provide information about new features and non-security upda
 
   - Improvements to text selection experience within PDF documents. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
 
-- **Printing:**
-
-  -	New print rasterization mode for non-PostScript printers. Starting with Microsoft Edge version 89 a new policy exists that controls how Microsoft Edge prints to non-PostScript printers on Windows. Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are Full and Fast.
-  - Additional page scaling options for printing. With Microsoft Edge version 89 users will be able to customize scaling while printing webpages and PDF documents with additional options. The "Fit to Page" option ensures that the webpage or document is fit into the space available in the selected "Paper size" for printing. The "Actual size" option ensures that there are no changes in the size of the contents being printed regardless of the selected "Paper size".
-
 - The "Disable developer mode extensions" warning can be permanently dismissed. Starting with Microsoft Edge version 89, you can turn off the warning "Disable developer mode extensions" by selecting the 'Don't show this again' option.
 
 - Manage your extensions from the address bar. The new extensions menu on the address bar will let you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
