@@ -3,7 +3,7 @@ title: "IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 2/2/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
