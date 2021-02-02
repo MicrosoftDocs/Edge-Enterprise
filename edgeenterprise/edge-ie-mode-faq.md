@@ -58,6 +58,10 @@ You may see this error if there was an unexpected error in Internet Explorer. Re
 
 You may see this error if you're remote debugging and navigate to a web page configured to run in IE mode. You can continue, but the page will be rendered using Microsoft Edge.
 
+### Error message: "Error: Could not retrieve EMIE site list."
+
+You may see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting Edge 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedFOrURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
+
 ## Frequently Asked Questions
 
 ### Will IE mode replace Internet Explorer 11?
