@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,6 +28,8 @@ The following table lists the planned release dates for the Beta and Stable chan
 > Release dates are approximate and might vary based on build status.
 
 ### Microsoft Edge releases
+
+The following table only tracks and provides information for major releases in both channels.
 
 | Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week |
 |---------|-----|------|--------|
