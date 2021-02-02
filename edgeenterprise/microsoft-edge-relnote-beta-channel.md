@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/29/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,44 @@ description: "Microsoft Edge release notes for Beta Channel"
 # Release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. Archived versions of these release notes are available [here](microsoft-edge-relnote-archive-beta-channel.md).
+
+<!-- begin major 89 -->
+## Version 89.0.000.00: February 00
+
+### Feature updates
+
+- Kiosk mode enables additional lockdown capabilities. Starting with Microsoft Edge version 89, we have added additional lockdown capabilities within kiosk mode to enable customers to get the job done in a productive and more secure experience.
+
+- Reset your Microsoft Edge sync data in the cloud manually. We are introducing a way to reset your Microsoft Edge sync data from within the product. This ensures that your data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
+
+- **PDF:**
+
+  - Improvements to text selection experience within PDF documents. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
+
+- **Printing:**
+
+  -	New print rasterization mode for non-PostScript printers. Starting with Microsoft Edge version 89 a new policy exists that controls how Microsoft Edge prints to non-PostScript printers on Windows. Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are Full and Fast.
+  - Additional page scaling options for printing. With Microsoft Edge version 89 users will be able to customize scaling while printing webpages and PDF documents with additional options. The "Fit to Page" option ensures that the webpage or document is fit into the space available in the selected "Paper size" for printing. The "Actual size" option ensures that there are no changes in the size of the contents being printed regardless of the selected "Paper size".
+
+- The "Disable developer mode extensions" warning can be permanently dismissed. Starting with Microsoft Edge version 89, you can turn off the warning "Disable developer mode extensions" by selecting the 'Don't show this again' option.
+
+- Manage your extensions from the address bar. The new extensions menu on the address bar will let you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
+
+- Support for natural language search on the address bar, history search page, and the history hub. Starting with Microsoft Edge version 89, finding an article/website will be easier with the natural language search on the address bar, history page, and history hub. Users can search for previously viewed page content/description/timing (such as "cake recipe from last week") in addition to titles/URL keyword matches.
+
+- **Productivity:**
+
+  - Date of birth field now supported in autofill. Today Microsoft Edge helps you save time and effort while filling out forms and creating accounts online by auto filling your data like addresses, names, phone numbers, etc. Starting with Microsoft Edge version 89, we are adding support for another field that you can have saved and auto-filled - date of birth. You can view, edit and delete this information anytime in your profile settings.
+  - Extend autofill suggestions to include content from the  clipboard. Clipboard content is parsed when you select a profile/address field (For example, phone, email, zip code, city, state, etc.) to show as autofill suggestions.
+
+- Support blocking auto-playing video. Starting with Microsoft Edge version 89, users will have the option to block media from automatically playing.
+
+### Policy updates
+
+#### New policies
+#### Deprecated policies
+#### Obsoleted policies
+<!-- end major 89 -->
 
 ## Version 88.0.705.56: January 29
 
