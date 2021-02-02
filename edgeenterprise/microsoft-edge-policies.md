@@ -8057,7 +8057,7 @@ If you don't configure this policy, the default new tab page is used.
 
 If you configure this policy *and* the [NewTabPageSetFeedType](#newtabpagesetfeedtype) policy, this policy has precedence.
 
-If an invalid URL is provided, new tabs will open about://blank.
+If an invalid URL is provided, new tabs will open about:blank.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
