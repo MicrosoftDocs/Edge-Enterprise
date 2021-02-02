@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/28/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -68,7 +68,7 @@ Microsoft Edge for Android can be installed on tablets and phones that meet the 
 
 ### Apple Silicon Macs
 
-Microsoft Edge support as of Stable version 88 for Apple Silicon Macs.
+Microsoft Edge native support as of Stable version 88 for Apple Silicon Macs.
 
 ### Chromebooks
 
