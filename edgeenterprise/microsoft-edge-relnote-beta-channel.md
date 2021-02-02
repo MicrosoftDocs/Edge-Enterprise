@@ -25,9 +25,7 @@ These release notes provide information about new features and non-security upda
 
 - Reset your Microsoft Edge sync data in the cloud manually. We are introducing a way to reset your Microsoft Edge sync data from within the product. This ensures that your data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
 
-- **PDF:**
-
-  - Improvements to text selection experience within PDF documents. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
+- Improvements to text selection experience within PDF documents. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
 
 - The "Disable developer mode extensions" warning can be permanently dismissed. Starting with Microsoft Edge version 89, you can turn off the warning "Disable developer mode extensions" by selecting the 'Don't show this again' option.
 
