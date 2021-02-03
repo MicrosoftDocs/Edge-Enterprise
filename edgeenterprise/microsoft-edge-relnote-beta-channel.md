@@ -31,7 +31,7 @@ These release notes provide information about new features and non-security upda
 
 - The "Disable developer mode extensions" warning can be permanently dismissed. Starting with Microsoft Edge version 89, you can turn off the warning "Disable developer mode extensions" by selecting the 'Don't show this again' option.
 
-- Manage your extensions from the address bar. The new extensions menu on the address bar will let you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
+- Manage your extensions from the toolbar. The new extensions menu on the toolbar will let you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
 
 - Support for natural language search on the address bar, history search page, and the history hub. Starting with Microsoft Edge version 89, finding an article/website will be easier with the natural language search on the address bar, history page, and history hub. Users can search for previously viewed page content/description/timing (such as "cake recipe from last week") in addition to titles/URL keyword matches.
 
