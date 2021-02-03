@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge with Windows 10 updates"
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 01/27/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge

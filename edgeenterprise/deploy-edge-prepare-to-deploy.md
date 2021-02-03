@@ -3,7 +3,7 @@ title: "Microsoft Edge in your environment"
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 02/03/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,7 @@ description: "Microsoft Edge in your environment"
 
 This article describes how to prepare to deploy Microsoft Edge when Microsoft Edge Legacy reaches its end of service.
 
-As per the Microsoft Edge Product Team’s [blog post](), support for the Microsoft Edge Legacy desktop application will end on March 9, 2021. The Update Tuesday (or "B") release in April will remove Microsoft Edge Legacy from devices running Windows 10 RS4 through 20H1 and replace it with Microsoft Edge.
+As per the Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS), support for the Microsoft Edge Legacy desktop application will end on March 9, 2021. The Update Tuesday (or "B") release in April will remove Microsoft Edge Legacy from devices running Windows 10 RS4 through 20H1 and replace it with Microsoft Edge.
 
 ## How to Prepare
 
