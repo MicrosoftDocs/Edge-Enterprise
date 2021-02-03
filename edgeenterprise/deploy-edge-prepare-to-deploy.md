@@ -1,18 +1,18 @@
 ---
-title: "Prepare to deploy Microsoft Edge"
+title: "Microsoft Edge in your environment"
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Prepare to deploy Microsoft Edge"
+description: "Microsoft Edge in your environment"
 ---
 
-# Prepare to deploy Microsoft Edge
+# Microsoft Edge in your environment
 
 This article describes how to prepare to deploy Microsoft Edge when Microsoft Edge Legacy reaches its end of service.
 

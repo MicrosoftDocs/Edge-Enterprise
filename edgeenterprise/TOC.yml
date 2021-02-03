@@ -1,4 +1,4 @@
-# last revised 01/26/2021
+# last revised 02/03/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -27,7 +27,7 @@
      href: microsoft-edge-roadmap.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
-   - name: Prepare to deploy Microsoft Edge
+   - name: Microsoft Edge in your environment
      href: deploy-edge-prepare-to-deploy.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
