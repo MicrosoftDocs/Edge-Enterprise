@@ -3,7 +3,7 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 89 or later.
+> This article applies to Microsoft Edge version 89 or later. 
 
 ## Overview
 
@@ -30,11 +30,11 @@ Future improvements to the tool for Internet Explorer mode will be available thr
 You can configure access to the tool by using the [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) group policy.
 
 If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. 
-If Disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
+If disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
 
 ## Using the Enterprise Site List Manager
 
-The Enterprise Site List Manager tool uses the v.2 version of the schema. If you import a v.1 version schema into the Enterprise Site List Manager (schema v.2), the XML is saved into the v.2 version of the schema.
+The Enterprise Site List Manager tool uses the v.2 version of the schema. If you import a v.1 version schema into the Enterprise Site List Manager (schema v.2), the XML is saved into the v.2 version of the schema. See [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ### Add single sites to your site list  
 
@@ -123,5 +123,5 @@ To search, type part of the URL into the **Filter sites by URL** search box on
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Additional Enterprise Site Discovery information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
