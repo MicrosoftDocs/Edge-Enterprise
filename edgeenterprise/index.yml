@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/01/2020 #Required; mm/dd/yyyy format.
+  ms.date: 02/02/2021 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -96,7 +96,7 @@ landingContent:
           - text: Microsoft Security Baselines Blog
             url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
   # Card 6 (col 3, 2nd row)
-  - title: Engage with enterprise community or get help
+  - title: Engage with community or get help
     linkLists:
        - linkListType: get-started
          links:
@@ -106,3 +106,7 @@ landingContent:
              url: "https://microsoftedgesupport.microsoft.com/hc/"
 #           - text: Troubleshoot Microsoft Edge
 #             url: microsoft-edge-troubleshooting.md
+       - linkListType: learn
+         links:
+           - text: Security Researchers community
+             url: "https://microsoftedge.github.io/edgevr/"
