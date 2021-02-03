@@ -3,7 +3,7 @@ title: "Access the old version of Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn how to access the legacy version of Microsoft Edge."
 
 # Access Microsoft Edge Legacy after installing the new version of Microsoft Edge
 
-Microsoft Edge Legacy will stop receiving security updates on March 9, 2021. You can access Microsoft Edge Legacy until April XX. For more information, see [link to blog post]().
+Microsoft Edge Legacy will stop receiving security updates on March 9, 2021. You can access Microsoft Edge Legacy until April XX. For more information, see Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS).
 
 > [!NOTE]
 > This article applies to the Microsoft Edge [Stable channel](microsoft-edge-channels.md).
