@@ -111,7 +111,7 @@ If you update to Windows 10, version 20H2, the new version of Microsoft Edge wil
 
 ## How to get help
 
-Kiosk mode might be an important part of your everyday business, so we want to help make this transition as smooth as possible. If your business needs help with the transition, Microsoft Edge support from Microsoft is available. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they'll work with the new version of Microsoft Edge.
+A kiosk might be an important part of your everyday business, so we want to help make this transition as smooth as possible. If your business needs help with the transition, Microsoft Edge support from Microsoft is available. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they'll work with the new version of Microsoft Edge.
 
 ## See also
 
