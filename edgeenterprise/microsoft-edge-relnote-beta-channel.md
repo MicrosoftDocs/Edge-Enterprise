@@ -23,6 +23,8 @@ These release notes provide information about new features and non-security upda
 
 - Kiosk mode enables additional lockdown capabilities. Starting with Microsoft Edge version 89, we have added additional lockdown capabilities within kiosk mode to enable customers to get the job done in a productive and more secure experience. [Learn more](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
+- The Enterprise Mode Site List Manager tool will be available right within the browser through the edge://compat page. You can use this tool to create, edit and export your site list XML for Internet Explorer mode on Microsoft Edge. You can enable access to the tool as needed through group policy. [Learn More](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+
 - Reset your Microsoft Edge sync data in the cloud manually. We are introducing a way to reset your Microsoft Edge sync data from within the product. This ensures that your data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
 
 - **PDF:**
