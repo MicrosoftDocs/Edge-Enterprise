@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Edge kiosk transition plan"
+title: "Plan your Microsoft Edge kiosk mode transition"
 ms.author: aguta
 author: aguta
 manager: srugh
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Create a transition plan for Microsoft Edge kiosk"
+description: "Plan your Microsoft Edge kiosk mode transition"
 ---
 
-# Create a transition plan for a Microsoft Edge kiosk
+# Plan your Microsoft Edge kiosk mode transition
 
 This article provides guidance on how to transition your kiosk from Microsoft Edge Legacy to Microsoft Edge.  
 
@@ -20,7 +20,7 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 > This article applies to Microsoft Edge Stable, Beta and Dev Channels, version 87 or later.
 
 > [!IMPORTANT]
-> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be removed and replaced with the new release of Microsoft Edge as part of the Windows Update Tuesday (or “B”) release on April 13, 2021. Because of this, you will need to set up a new kiosk in Microsoft Edge.
+> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with the new release of Microsoft Edge](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021. **To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
 
 ## Kiosk setup options
 
@@ -58,7 +58,7 @@ Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
 2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
    > [!IMPORTANT]
-   > Because a device level installation is required, only a non-Canary channel is supported.
+   > Because a device level installation is required, the Canary channel isn't supported.
 
 3. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select  **Set up a kiosk (assigned access)**, shown in the next screenshot to open the dialog for creating the kiosk.
 
@@ -102,16 +102,15 @@ Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
 
 13. Sign out from the kiosk device and sign in with the local kiosk account to validate the configuration.
 
-
 **Step 3: Develop a transition plan.** Based on your testing and organizational needs, we recommend developing a transition plan and moving to the new version of Microsoft Edge before to support ends for Microsoft Edge Legacy on March 9, 2021.  
 
 ## Scenarios that require you to recreate an existing kiosk
 
-If you update to Windows 10, version 20H2, the new version of Microsoft Edge will be installed and Microsoft Edge Legacy will be hidden and not usable. If so, you will need to set up a new kiosk as we've described.
+If you update to Windows 10, version 20H2, the new Microsoft Edge will be installed, and Microsoft Edge Legacy will be hidden. In this instance, you will need to set up kiosk mode again in the new version of Microsoft Edge.
 
 ## How to get help
 
-A kiosk might be an important part of your everyday business, so we want to help make this transition as smooth as possible. If your business needs help with the transition, Microsoft Edge support from Microsoft is available. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they'll work with the new version of Microsoft Edge.
+Kiosk mode may be an important part of your everyday business, so we want to help make this transition as smooth as possible and help you avoid disruptions. If your business needs help transitioning to the new Microsoft Edge, [support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) is available from Microsoft. [FastTrack support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) is also available at no additional charge to customers with 150 or more paid seats of Windows 10 Enterprise. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they'll should also work with on the new Microsoft Edge. If not, you can contact App Assure for remediation support here or by email (ACHELP@microsoft.com) if you experience any challenges submitting your request.
 
 ## See also
 
