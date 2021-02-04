@@ -31,20 +31,30 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
 **Step 1: Evaluate your needs against released (and upcoming) kiosk mode functionality.** The following table lists the features supported by kiosk mode in Microsoft Edge on Chromium and Microsoft Edge Legacy. Use this table as a guide to transitioning to Microsoft Edge by comparing how these features are supported in both releases of Microsoft Edge.
 
-|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|
-|-|-|-|-|
-|InPrivate Navigation|Y|Y|87|
-|Reset on inactivity|Y|Y|87|
-|[Read only address bar](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (policy) |N|Y |87|
-|[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |87|
-|F11 blocked (enter/exit full-screen) | Y | Y | 87 |
-|F12 blocked (launch Developer Tools) | Y | Y | 87 |
-| Multi tab support | N| Y| 87|
-|End session button | N| Y| 88|
-|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|88|
-| CTRL+N blocked (open a new window) | Y | Y | 89 |
-| CTRL+T blocked (open new tab) | N | Y | 89 |
-|Settings and more (...) will display only the required options  |N |Y |89 |
+|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|Available with Microsoft Edge Legacy|
+|-|-|-|-|-|
+|InPrivate Navigation|Y|Y|89|Y|
+|Reset on inactivity|Y|Y|89|Y|
+|[Read only address bar](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (policy) |N|Y |89|N|
+|[Delete downloads on exit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (policy)  | Y|Y |89|N|
+|F11 blocked (enter/exit full-screen) | Y | Y | 89 |Y|
+|F12 blocked (launch Developer Tools) | Y | Y | 89 |Y|
+| Multi tab support | N| Y| 89|Y|
+|[Allow URL support](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (policy)|Y|Y|89|N|
+|[Block URL support](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (policy)|Y|Y|89|N|
+|[Show home button](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (policy)|N|Y|89|Y|
+|[Manage favorites](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (policy)|N|Y|89|Y|
+|[Enable printer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (policy)|Y|Y|89|Y|
+|[Configure the new tab page URL](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (policy)|N|Y||Y|
+|End session button | N| Y| 89|Y|
+|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
+| CTRL+N blocked (open a new window) | Y | Y | 89 |Y|
+| CTRL+T blocked (open new tab) |Y | Y | 89 |Y|
+|Settings and more (...) will display only the required options  |Y |Y |89 |Y|
+|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
+|UI print settings lockdown|Y|Y|90/91|Y|
+|[Set the new tab page as the home page](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+|Internet Explorer integration (Internet Explorer mode)|N|N|TBD|Y (multi-app only)|
 
 > [!NOTE]
 > For information about the Microsoft Edge release schedule, see [Microsoft Edge release schedule](microsoft-edge-release-schedule.md).
