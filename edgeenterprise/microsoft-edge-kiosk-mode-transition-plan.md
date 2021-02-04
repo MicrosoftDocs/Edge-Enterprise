@@ -24,7 +24,7 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 
 ## Kiosk setup options
 
-You have two options for setting up a kiosk.
+You have two options for setting up kiosk mode.
 
 - Option 1 (Recommended): Download and install the new version of Microsoft Edge and set up kiosk mode before to applying the Windows 10 Update Tuesday (or “B”) release to your devices on or after April 13, 2021.
 - Option 2: After you apply the Windows 10 Update Tuesday (or “B”) release on or after April 13, 2021, Microsoft Edge Legacy, and its kiosk, will no longer be available. You will need to set up a kiosk in Microsoft Edge to run kiosk scenarios. With this option, you will experience a disruption in your kiosk environment—which is why we strongly recommend Option 1.  
