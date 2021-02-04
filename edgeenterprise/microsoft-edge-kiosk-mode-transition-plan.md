@@ -1,18 +1,18 @@
 ---
-title: "Plan your Microsoft Edge kiosk mode transition"
+title: "Plan your kiosk mode transition"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/03/2021
+ms.date: 02/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Plan your Microsoft Edge kiosk mode transition"
+description: "Plan your kiosk mode transition"
 ---
 
-# Plan your Microsoft Edge kiosk mode transition
+# Plan your kiosk mode transition
 
 This article provides guidance on how to transition your kiosk from Microsoft Edge Legacy to Microsoft Edge.  
 
@@ -20,20 +20,16 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 > This article applies to Microsoft Edge Stable, Beta and Dev Channels, version 87 or later.
 
 > [!IMPORTANT]
-> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with the new release of Microsoft Edge](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021. **To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
+> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with the new release of Microsoft Edge](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021.<br>
+**To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
 
-## Kiosk setup options
-
-You have two options for setting up kiosk mode.
-
-- Option 1 (Recommended): Download and install the new version of Microsoft Edge and set up kiosk mode before to applying the Windows 10 Update Tuesday (or “B”) release to your devices on or after April 13, 2021.
-- Option 2: After you apply the Windows 10 Update Tuesday (or “B”) release on or after April 13, 2021, Microsoft Edge Legacy, and its kiosk, will no longer be available. You will need to set up a kiosk in Microsoft Edge to run kiosk scenarios. With this option, you will experience a disruption in your kiosk environment—which is why we strongly recommend Option 1.  
+If you do not set up kiosk mode in Microsoft Edge on Chromium prior to applying April’s Windows 10 Update Tuesday release, kiosk mode will no longer work.
 
 ## Kiosk setup steps
 
-Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
+Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
-**Step 1: Evaluate your needs against released (and upcoming) kiosk mode functionality.** The following table lists the features supported by kiosk mode in Microsoft Edge and Microsoft Edge Legacy. Use this table as a guide to transitioning to Microsoft Edge by comparing how these features are supported in both releases of Microsoft Edge.
+**Step 1: Evaluate your needs against released (and upcoming) kiosk mode functionality.** The following table lists the features supported by kiosk mode in Microsoft Edge on Chromium and Microsoft Edge Legacy. Use this table as a guide to transitioning to Microsoft Edge by comparing how these features are supported in both releases of Microsoft Edge.
 
 |Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|
 |-|-|-|-|
@@ -49,13 +45,14 @@ Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
 | CTRL+N blocked (open a new window) | Y | Y | 89 |
 | CTRL+T blocked (open new tab) | N | Y | 89 |
 |Settings and more (...) will display only the required options  |N |Y |89 |
+
 > [!NOTE]
 > For information about the Microsoft Edge release schedule, see [Microsoft Edge release schedule](microsoft-edge-release-schedule.md).
 
 **Step2: Test the new kiosk in Microsoft Edge.** We recommend that you test setting up kiosk mode in Microsoft Edge. A quick and easy way to test kiosk mode is to configure an assigned access single app using Windows Settings as described next.
 
 1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
    > [!IMPORTANT]
    > Because a device level installation is required, the Canary channel isn't supported.
@@ -73,9 +70,6 @@ Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Kiosk mode - create account":::
 
 6. On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.
-
-   > [!NOTE]
-   > This only applies to Microsoft Edge Dev, Beta, and Stable channels.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
 
@@ -102,15 +96,15 @@ Use the following steps as a guide  to set up a kiosk in Microsoft Edge.
 
 13. Sign out from the kiosk device and sign in with the local kiosk account to validate the configuration.
 
-**Step 3: Develop a transition plan.** Based on your testing and organizational needs, we recommend developing a transition plan and moving to the new version of Microsoft Edge before to support ends for Microsoft Edge Legacy on March 9, 2021.  
+**Step 3: Develop a transition plan.** Based on your testing and organizational needs, we recommend developing a transition plan and moving to Microsoft Edge on Chromium before support ends for Microsoft Edge Legacy on March 9, 2021.
 
 ## Scenarios that require you to recreate an existing kiosk
 
-If you update to Windows 10, version 20H2, the new Microsoft Edge will be installed, and Microsoft Edge Legacy will be hidden. In this instance, you will need to set up kiosk mode again in the new version of Microsoft Edge.
+If you update to Windows 10, version 20H2, Microsoft Edge on Chromium will be installed, and Microsoft Edge Legacy will be hidden. In this instance, you will need to set up kiosk mode again in Microsoft Edge on Chromium.
 
 ## How to get help
 
-Kiosk mode may be an important part of your everyday business, so we want to help make this transition as smooth as possible and help you avoid disruptions. If your business needs help transitioning to the new Microsoft Edge, [support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) is available from Microsoft. [FastTrack support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) is also available at no additional charge to customers with 150 or more paid seats of Windows 10 Enterprise. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they'll should also work with on the new Microsoft Edge. If not, you can contact App Assure for remediation support here or by email (ACHELP@microsoft.com) if you experience any challenges submitting your request.
+Kiosk mode may be an important part of your everyday business, so we want to help make this transition as smooth as possible and help you avoid disruptions. If your business needs help transitioning to Microsoft Edge on Chromium, [support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) is available from Microsoft. [FastTrack support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) is also available at no additional charge to customers with 150 or more paid seats of Windows 10 Enterprise. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they should also work on Microsoft Edge on Chromium. If not, you can contact App Assure for remediation support here or by email if you experience any challenges submitting your request (ACHELP@microsoft.com).  
 
 ## See also
 
