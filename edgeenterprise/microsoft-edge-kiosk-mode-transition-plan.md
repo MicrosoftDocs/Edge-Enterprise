@@ -20,7 +20,7 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 > This article applies to Microsoft Edge Stable, Beta and Dev Channels, version 87 or later.
 
 > [!IMPORTANT]
-> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with the new release of Microsoft Edge](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021.<br>
+> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with Microsoft Edge on Chromium](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021.<br>
 **To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
 
 If you do not set up kiosk mode in Microsoft Edge on Chromium prior to applying April’s Windows 10 Update Tuesday release, kiosk mode will no longer work.
