@@ -3,7 +3,7 @@ title: "Windows updates for Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,12 +16,15 @@ description: "Windows updates for Microsoft Edge."
 
 This article describes how Windows will be updated to support the next version of Microsoft Edge.
 
+> [!IMPORTANT]
+> Refer to the Microsoft Edge product team [blog post](https://aka.ms/EdgeLegacyEOS) about Microsoft Edge Legacy end of service.
+
 > [!NOTE]
 > This article applies to the Microsoft Edge Stable channel.
 
 ## Microsoft Edge and the Windows release cycle
 
-The next version of Microsoft Edge features more frequent and more flexible updating capabilities. Because browser releases aren't bound to the Windows major releases, changes will be made to the operating system to ensure that the next version of Microsoft Edge fits seamlessly into Windows. As a result, feature updates will be released on a 6-week cycle (approximately.) Security and compatibility updates will be shipped as needed.
+The next version of Microsoft Edge features more frequent and more flexible updating capabilities. Because browser releases aren't bound to the Windows major releases, changes will be made to the operating system to ensure that the next version of Microsoft Edge fits seamlessly into Windows. As a result, feature updates will be released on a 6-week cycle (approximately). Security and compatibility updates will be shipped as needed.
 
 ## Updates and the user experience
 
