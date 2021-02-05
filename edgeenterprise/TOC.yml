@@ -68,6 +68,8 @@
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
+   - name: Deploy Microsoft Edge with Windows 10 updates
+     href: deploy-edge-with-windows-10-updates.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
      href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
