@@ -1,4 +1,4 @@
-# last revised 02/04/2021
+# last revised 02/05/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -27,6 +27,8 @@
      href: microsoft-edge-roadmap.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
+   - name: Microsoft Edge in your environment
+     href: deploy-edge-prepare-to-deploy.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
    - name: Stable Channel Release Notes
@@ -49,8 +51,6 @@
         href: microsoft-edge-policy-map-legacy-to-newedge.md
       - name: Google Chrome to Microsoft Edge policy mapping
         href: microsoft-edge-policy-map-chrome-to-newedge.md
-#      - name: Internet Explorer to Microsoft Edge policy mapping
-#        href: microsoft-edge-policy-map-ie-to-newedge.md
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -59,8 +59,8 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-      - name: Blocker Toolkit for Microsoft Edge updates
-        href: microsoft-edge-blocker-toolkit.md
+#      - name: Blocker Toolkit for Microsoft Edge updates
+#        href: microsoft-edge-blocker-toolkit.md
       - name: How to access the old version of Microsoft Edge
         href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
@@ -68,8 +68,6 @@
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
-#   - name: Video - Deploy Microsoft Edge
-#     href: microsoft-edge-video-deploy.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
      href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
@@ -140,8 +138,6 @@
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
-#   - name: Video - Security, compatibility, and manageability
-#     href: microsoft-edge-video-security-compatibility-manageability.md 
    - name: Security for your business
      href: ms-edge-security-for-business.md    
    - name: Allow list for Microsoft Edge endpoints
