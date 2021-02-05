@@ -105,7 +105,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
 **Step 3: Develop a transition plan.** Based on your testing and organizational needs, we recommend developing a transition plan and moving to Microsoft Edge on Chromium before support ends for Microsoft Edge Legacy on March 9, 2021.
 
-## Scenarios that require you to recreate an existing kiosk
+## Additional scenarios that require you to recreate an existing kiosk mode
 
 If you update to Windows 10, version 20H2, Microsoft Edge on Chromium will be installed, and Microsoft Edge Legacy will be hidden. In this instance, you will need to set up kiosk mode again in Microsoft Edge on Chromium.
 
