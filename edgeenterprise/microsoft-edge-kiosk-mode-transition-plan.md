@@ -20,8 +20,7 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 > This article applies to Microsoft Edge Stable, Beta and Dev Channels, version 87 or later.
 
 > [!IMPORTANT]
-> When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with Microsoft Edge on Chromium](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021.<br>
-**To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
+> When support ends for Microsoft Edge Legacy on March 9, 2021, it will be removed and replaced with Microsoft Edge on Chromium as part of the Windows Update in April. For details, go to [this blog post](aka.ms/EdgeLegacyEOS). To continue to use your browser-based kiosk scenarios, you need to install Microsoft Edge on Chromium and set up kiosk mode prior to April’s Windows Update release to your device.
 
 ## Kiosk setup steps
 
@@ -80,7 +79,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
 
-7. Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:
+7. Select one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
