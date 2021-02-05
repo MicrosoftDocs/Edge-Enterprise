@@ -142,7 +142,7 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 
 Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing.  
 
-Kiosk mode with assigned access is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download), version 87.0.644.4 or higher.
+Microsoft Edge kiosk mode with assigned access single app is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
 **How do I get the Windows Insiders preview?**
 
@@ -159,11 +159,7 @@ When using Microsoft Edge with multi-app assigned access, you can configure Micr
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
-
-   > [!IMPORTANT]
-   > Because a device level installation is required, only a non-Canary channel is supported.
-
+2. To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 3. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select  **Set up a kiosk (assigned access)**, shown in the next screenshot to open the dialog for creating the kiosk.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Set up kiosk with assigned access":::
@@ -233,8 +229,8 @@ We'll add the following support and features:
 - General availability of Microsoft Edge kiosk mode with assigned access single app on Windows 10 1909 and higher.
 - Additional features for parity with Microsoft Edge Legacy.
 - Integration with Intune to configure devices using kiosk mode profile UX.
-- Additional keyboard shortcuts will be blocked.
 - Restrict the launch of other applications from the browser.
+- UI print settings lockdown.
 
 ## See also
 
