@@ -3,7 +3,7 @@ title: "Microsoft Edge and Identity"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/26/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge

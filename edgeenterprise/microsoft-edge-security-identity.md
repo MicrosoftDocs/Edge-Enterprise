@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,7 @@ This article describes how Microsoft Edge uses identity to support features such
 
 Microsoft Edge supports signing into a browser profile with an Azure AD, MSA, or a domain account. The type of account used for sign-in determines which authenticated features are available for the user in Microsoft Edge. The following table summarizes the feature support for each type of account.
 
-|    | Azure AD Premium | Azure AD Free | On-premises AD DS | MSA     |
+| Feature   | Azure AD Premium | Azure AD Free | On-premises AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
 | Sync | Yes | No | No | Yes |
 | SSO with Primary Refresh Token | Yes | Yes | No | Yes |

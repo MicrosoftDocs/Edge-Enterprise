@@ -3,7 +3,7 @@ title: "Microsoft Edge and Data loss prevention"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/26/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
