@@ -3,7 +3,7 @@ title: "Access the old version of Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn how to access the legacy version of Microsoft Edge."
 
 # Access Microsoft Edge Legacy after installing the new version of Microsoft Edge
 
-Learn how to access Microsoft Edge Legacy after installing the new version of Microsoft Edge.
+Microsoft Edge Legacy will stop receiving security updates on March 9, 2021. You can access Microsoft Edge Legacy until April 13. For more information, see Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS).
 
 > [!NOTE]
 > This article applies to the Microsoft Edge [Stable channel](microsoft-edge-channels.md).
@@ -40,10 +40,6 @@ The procedures in this article apply to systems that have been updated with the 
 Before using the detailed instructions in this article, consider the following two steps to let your users run Microsoft Edge Legacy and the Microsoft Edge [Beta channel](microsoft-edge-channels.md) side-by-side.
 
 1. Prevent the automatic install of the Stable Channel of Microsoft Edge by [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).
-
-   > [!TIP]
-   > Use the [Blocker Toolkit](microsoft-edge-blocker-toolkit.md) to disable automatic delivery of Microsoft Edge.
-
 2. Install the [Beta channel](https://www.microsoft.com/edge/business/download) of the new version of Microsoft Edge.
 
    > [!NOTE]
