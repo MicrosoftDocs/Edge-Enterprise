@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,7 +33,10 @@ Designed for Windows 10 and Microsoft Edge, Application Guard uses a hardware is
 
 The enterprise administrator defines what are trusted sites, cloud resources, and internal networks. Everything that's not in the trusted sites list is considered untrusted. These sites are isolated from the corporate network and data on the user's device.
 
-For more information, see [What is Application Guard and how does it work?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work).
+For more information:
+
+- watch our video [Microsoft Edge browser isolation using Application Guard](microsoft-edge-video-security-application-guard.md)
+- read [What is Application Guard and how does it work?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
 
 The next screenshot shows an example of Application Guard's message showing that the user is browsing in a safe space.
 

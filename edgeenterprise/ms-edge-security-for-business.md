@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge security for your business"
 
 # Microsoft Edge security for your business
 
-Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows 10**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows 10—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits.
+Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows 10**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows 10—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits. For more information, watch [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md).
 
 Let's get into the details, starting with **external threats** and then looking at **internal risks and information protection**.
 
@@ -53,7 +53,7 @@ Aside from protecting against external threats, IT admins also must protect agai
 
 **Microsoft Endpoint data loss prevention (Endpoint DLP) is only supported natively in Microsoft Edge**. Endpoint DLP integrates with Microsoft Security Center and extends information protection to Microsoft Edge to help alert users to non-compliant activity and prevent data loss as users work online. It discovers and labels sensitive data inside the enterprise that matches admin-defined criteria, such as files containing credit card numbers or governmental IDs (for example, social security numbers), financial information, etc. Microsoft Information Protection policies can be deployed to Microsoft Endpoint DLP without additional reconfiguration, including sensitive content identifiers and policies that IT admins have already customized. This is seamless deployment of information protection for IT admins.
 
-To learn more about Endpoint DLP prerequisites and how to set this up, go to [Get started with Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide).
+To learn more about Endpoint DLP prerequisites and how to set this up, go to [Get started with Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true).
 
 > [!NOTE]
 > Microsoft 365 E5 or Microsoft 365 E5 Compliance subscription required for Microsoft Endpoint data loss prevention.
@@ -61,3 +61,4 @@ To learn more about Endpoint DLP prerequisites and how to set this up, go to [Ge
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md)
