@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/17/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -66,6 +66,10 @@ Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 11.0 or later. Microso
 
 Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android KitKat 4.4 or later with an ARM-based processor.
 
+### Apple Silicon Macs
+
+Microsoft Edge native support as of Stable version 88 for Apple Silicon Macs.
+
 ### Chromebooks
 
 Microsoft Edge does not support Chromebooks.
@@ -73,6 +77,7 @@ Microsoft Edge does not support Chromebooks.
 ## Recent changes
 
 - **12/17/2020** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended to January 15, 2022.
+- **01/28/2021** - Microsoft Edge support for Apple Silicon Macs.
 
 ## See also
 
