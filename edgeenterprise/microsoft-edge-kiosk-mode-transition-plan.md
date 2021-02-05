@@ -3,7 +3,7 @@ title: "Plan your kiosk mode transition"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/04/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
