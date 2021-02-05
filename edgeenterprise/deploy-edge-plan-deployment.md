@@ -1,9 +1,9 @@
 ---
 title: "Plan your deployment of Microsoft Edge"
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -50,7 +50,6 @@ Start by defining your current state:
 After you understand the current state, you can determine the desired goals for your browser deployment, taking into account the following:
 
 - Do you want to [set Microsoft Edge as your default browser](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Do you want to hide the legacy version of Microsoft Edge, or do you want to [leave it available for users](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)?
 - How will you [configure Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
 - What features are critical to configure as part of your initial deployment?
 - What is the process for addressing any identified compatibility or configuration issues?
@@ -206,4 +205,3 @@ After a finishing the pilot and updating your deployment plan with lessons learn
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Video - Deploy Microsoft Edge](microsoft-edge-video-deploy.md)
-
