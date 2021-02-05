@@ -26,6 +26,8 @@ These release notes provide information about new features and non-security upda
 
 ## Version 88.0.705.62: February 4
 
+Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
+
 Fixed various bugs and performance issues.
 
 ## Version 88.0.705.56: January 28
