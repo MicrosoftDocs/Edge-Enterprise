@@ -24,6 +24,10 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
+## Version 88.0.705.63: February 5
+
+Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021).
+
 ## Version 88.0.705.62: February 4
 
 Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
