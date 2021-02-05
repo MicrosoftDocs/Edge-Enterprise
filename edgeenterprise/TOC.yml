@@ -104,6 +104,8 @@
      href: microsoft-edge-security-identity.md
    - name: Microsoft Edge and Enterprise State Roaming
      href: microsoft-edge-enterprise-state-roaming.md
+   - name: Plan your kiosk mode transition
+     href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
