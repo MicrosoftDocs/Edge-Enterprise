@@ -3,7 +3,7 @@ title: "IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "FAQ and Troubleshooting for Microsoft Edge with IE mode"
 
 # IE mode FAQ
 
-This article provides troubleshooting tips and an FAQ for Microsoft Edge (version 77 or later).
+This article provides troubleshooting tips and an FAQ for Microsoft Edge version 77 or later.
 
 > [!NOTE]
 > This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
@@ -57,6 +57,10 @@ You may see this error if there was an unexpected error in Internet Explorer. Re
 ### Error message: "Turn off remote debugging to open this site in IE mode otherwise it might not work as expected."
 
 You may see this error if you're remote debugging and navigate to a web page configured to run in IE mode. You can continue, but the page will be rendered using Microsoft Edge.
+
+### Error message: "Error: Could not retrieve EMIE site list."
+
+You may see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
 ## Frequently Asked Questions
 
