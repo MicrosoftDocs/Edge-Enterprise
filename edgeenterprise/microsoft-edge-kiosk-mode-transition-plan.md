@@ -23,8 +23,6 @@ This article provides guidance on how to transition your kiosk from Microsoft Ed
 > When support ends for Microsoft Edge Legacy on March 9, 2021, this out of support desktop application will be [removed and replaced with Microsoft Edge on Chromium](https://aka.ms/EdgeLegacyEOS) as part of the Windows Update Tuesday (or “B”) release on April 13, 2021.<br>
 **To avoid a disruption in service and continue using your browser-based kiosk scenarios, you will need to install Microsoft Edge and set up kiosk mode prior to applying April’s Windows 10 Update Tuesday release to your devices.**
 
-If you do not set up kiosk mode in Microsoft Edge on Chromium prior to applying April’s Windows 10 Update Tuesday release, kiosk mode will no longer work.
-
 ## Kiosk setup steps
 
 Use the following steps as a guide to set up a kiosk in Microsoft Edge.
@@ -54,7 +52,6 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 |Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
 |UI print settings lockdown|Y|Y|90/91|Y|
 |[Set the new tab page as the home page](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (policy)|-|-|TBD|Y|
-|Internet Explorer integration (Internet Explorer mode)|N|N|TBD|Y (multi-app only)|
 
 > [!NOTE]
 > For information about the Microsoft Edge release schedule, see [Microsoft Edge release schedule](microsoft-edge-release-schedule.md).
@@ -114,7 +111,11 @@ If you update to Windows 10, version 20H2, Microsoft Edge on Chromium will be in
 
 ## How to get help
 
-Kiosk mode may be an important part of your everyday business, so we want to help make this transition as smooth as possible and help you avoid disruptions. If your business needs help transitioning to Microsoft Edge on Chromium, [support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) is available from Microsoft. [FastTrack support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) is also available at no additional charge to customers with 150 or more paid seats of Windows 10 Enterprise. Additionally, if you experience site or app compatibility issues, get no-cost help using [App Assure](https://fasttrack.microsoft.com/portal). The App Assure compatibility promise is: if your web apps or sites work on Internet Explorer 11, supported versions of Google Chrome, or any version of Microsoft Edge, they should also work on Microsoft Edge on Chromium. If not, you can contact App Assure for remediation support here or by email if you experience any challenges submitting your request (ACHELP@microsoft.com).  
+Kiosk mode may be an important part of your everyday business, so we want to help make this transition as smooth as possible and help you avoid disruptions. If your business needs help transitioning to Microsoft Edge on Chromium:
+
+- [Support](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) is available from Microsoft. 
+- [FastTrack support](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) is also available at no additional charge to customers with 150 or more paid seats of Windows 10 Enterprise.
+- [App Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) is available if you experience site or app compatibility issues.
 
 ## See also
 
