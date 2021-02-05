@@ -27,6 +27,8 @@
      href: microsoft-edge-roadmap.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
+   - name: Microsoft Edge in your environment
+     href: deploy-edge-prepare-to-deploy.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
    - name: Stable Channel Release Notes
