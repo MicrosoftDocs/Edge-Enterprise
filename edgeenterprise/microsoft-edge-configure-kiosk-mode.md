@@ -59,7 +59,6 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
 |UI print settings lockdown|Y|Y|90/91|Y|
 |[Set the new tab page as the home page](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (policy)|-|-|TBD|Y|
-|Internet Explorer integration (Internet Explorer mode)|N|N|TBD|Y (multi-app only)|
 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
@@ -92,7 +91,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. Replace "value" in the next example with the number of minutes.
+- **--kiosk-idle-timeout-minutes=**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. Replace "value" in the next example with the number of minutes.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +159,7 @@ When using Microsoft Edge with multi-app assigned access, you can configure Micr
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
 1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](https://docs.microsoft.com/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Dev channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
    > [!IMPORTANT]
    > Because a device level installation is required, only a non-Canary channel is supported.
@@ -239,7 +238,7 @@ We'll add the following support and features:
 
 ## See also
 
-- [Configure kiosks and digital signs on Windows desktop editions](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Deploy Microsoft Edge Legacy kiosk mode](https://aka.ms/edgekioskmode)
-- [Plan your deployment of Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Plan your deployment of Microsoft Edge](deploy-edge-plan-deployment.md)
+- [Configure kiosks and digital signs on Windows desktop editions](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Plan your kiosk mode transition](microsoft-edge-kiosk-mode-transition-plan.md)
