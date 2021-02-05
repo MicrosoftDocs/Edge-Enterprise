@@ -3,7 +3,7 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -21,7 +21,7 @@ This article describes how Password Monitor in Microsoft Edge will be turned on 
 
 ## Introduction, benefits, and availability
 
-Password Monitor helps Microsoft Edge users protect their online accounts by informing them if any of their passwords have been found in an online leak. Online leaks or data breaches happen when bad actors steal data from third-party apps or websites.
+Password Monitor helps Microsoft Edge users protect their online accounts by informing them if any of their passwords have been found in an online leak. Online leaks or data breaches happen when bad actors steal data from third-party apps or websites. To learn more, see the [Password Monitor: Safeguarding passwords in Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)  paper on the Microsoft Research Blog.
 
 ### Benefits
 
@@ -29,7 +29,7 @@ Given the frequency and scope of these online attacks having this kind of protec
 
 ### Availability
 
-Password Monitor has been in early preview channels (Canary/ Dev) and will be promoted to Stable Channel version 88 starting 1/21. The rollout will be gradual and it could take a few weeks before you will see the following message and control in your **Settings** > **Profile** > **Password** page.
+Password Monitor is available in Stable Channel version 88 starting 1/21. The rollout will be gradual and it could take a few weeks before you will see the following message and control in your **Settings** > **Profile** > **Password** page.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Option to enable Password Monitor":::
 
