@@ -28,6 +28,11 @@ Fixed various bugs and performance issues.
 
 - The Enterprise Mode Site List Manager tool will be available in the browser through the *edge://compat* page. You can use this tool to create, edit and export your site list XML for Internet Explorer mode on Microsoft Edge. You can enable access to this tool as needed through group policy. [Learn More](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
 
+- Improve browser performance with sleeping tabs. Sleeping tabs improves browser performance by putting inactive tabs to sleep to free up system resources like memory and CPU so active tabs or other applications can use them. Users can prevent sites from going to sleep and configure the length of time before an inactive tab goes to sleep. To keep users in their flow, there are also [heuristics](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) to prevent certain sites from going to sleep, such as intranet sites. This feature is limited to a randomly selected group of users who have enabled experimentation. This feature can be managed with group policies.
+
+  > [!NOTE]
+  > "Improve browser performance with sleeping tabs" is an update to the February 3 release notes for major version 89.0.774.18.
+
 - Reset your Microsoft Edge sync data in the cloud manually. We are introducing a way to reset your Microsoft Edge sync data from within the product. This ensures that your data is cleared from Microsoft services, as well as resolving certain product issues that previously required a support ticket.
 
 - Improvements to text selection experience within PDF documents. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
