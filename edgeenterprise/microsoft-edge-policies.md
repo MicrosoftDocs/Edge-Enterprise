@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -28,10 +28,11 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 The following table lists the new policies for this update.
 
-| Name| Caption |
+| Name | Caption |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Windows Hello For HTTP Auth Enabled|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard Favorites Sync Enabled|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
+
 
 
 ## Available policies
@@ -55,6 +56,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard Container Proxy|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard Favorites Sync Enabled|
 ### [*Cast*](#cast-policies)
 
 |Policy Name|Caption|
@@ -376,6 +378,7 @@ and tips for Microsoft services|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RelaunchNotification](#relaunchnotification)|Notify a user that a browser restart is recommended or required for pending updates|
@@ -403,7 +406,7 @@ and tips for Microsoft services|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Edge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SmartActionsBlockList](#smartactionsblocklist)|Block smart actions for a list of services|
@@ -531,6 +534,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Application Guard Favorites Sync Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 90 or later
+
+  #### Description
+
+  This policy allows Microsoft Edge computers/devices that have application guard enabled to sync favorites from the host to the container so the favorites match.
+
+If [ManagedFavorites](#managedfavorites) are configured, those favorites will also be synced to the container.
+
+If you enable this policy, editing favorites in the container is disabled. So, the add favorites and add favorites folder buttons will be blurred out in the UI of the container browser.
+
+If you disable or don't configure this policy, favorites on the host will not be shared to the container.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ApplicationGuardFavoritesSyncEnabled
+  - GP name: Application Guard Favorites Sync Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Application Guard settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ApplicationGuardFavoritesSyncEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
 
   
 
@@ -5231,9 +5291,9 @@ If you disable this policy, a basic username and password prompt will be used to
 
   This policy only applies to Microsoft Edge kiosk mode while using the public browsing experience.
 
-If you enable this policy, it prevents users from changing the URL in the address bar.
+If you enable or don't configure this policy, users can change the URL in the address bar.
 
-If you disable this policy or don't configure it, users can change the URL in the address bar.
+If you disable this policy, it prevents users from changing the URL in the address bar.
 
 For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
@@ -8114,7 +8174,7 @@ If you don't configure this policy, the default new tab page is used.
 
 If you configure this policy *and* the [NewTabPageSetFeedType](#newtabpagesetfeedtype) policy, this policy has precedence.
 
-If an invalid URL is provided, new tabs will open about://blank.
+If a blank tab is preferred, "about:blank" is the correct URL to use, not "about://blank".
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -10432,7 +10492,7 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 
 * You have an EDU tenant, but the policy doesn't work.
 
-* You had your IP whitelisted for having an ad free search experience.
+* You had your IP allowlisted for having an ad free search experience.
 
 * You were experiencing an ad-free search experience on Microsoft Edge Legacy and want to upgrade to the new version of Microsoft Edge.
 
@@ -18310,6 +18370,68 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   [Back to top](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Manage QuickView Office files capability in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 90 or later
+
+  #### Description
+
+  Allows you to set whether users can view Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
+
+If you enable or don't configure this policy, these files can be viewed in Microsoft Edge using Office Viewer instead of downloading the files.
+
+If you disable this policy, these files will be downloaded to be viewed.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: QuickViewOfficeFilesEnabled
+  - GP name: Manage QuickView Office files capability in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: QuickViewOfficeFilesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: QuickViewOfficeFilesEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge
@@ -20040,7 +20162,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   ### ShowRecommendationsEnabled
 
-  #### Allow recommendations and promotional notifications from Edge
+  #### Allow recommendations and promotional notifications from Microsoft Edge
 
   
   
@@ -20071,7 +20193,7 @@ If you disable this setting, employees will not receive any recommendations / no
   ##### Group Policy (ADMX) info
 
   - GP unique name: ShowRecommendationsEnabled
-  - GP name: Allow recommendations and promotional notifications from Edge
+  - GP name: Allow recommendations and promotional notifications from Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -20239,7 +20361,7 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 
   List specific services, such as PDFs, that don't show smart actions. (Smart actions are actions like "define" which are available in full and mini context menus in Microsoft Edge.)
 
-If you enable the policy: :
+If you enable the policy:
    - The smart action in the mini and full context menu will be disabled for all profiles for services that match the given list.
    - Users will not see the smart action in the mini and full context menu on text selection for services that match the given list.
    - In Microsoft Edge settings, the smart action in the mini and full context menu will be disabled for services that match the given list.
