@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 02/05/2021
+ms.date: 02/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ Let's get into the details, starting with **external threats** and then looking 
 
 Built into Microsoft Edge, SmartScreen blocks more [phishing](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) and [malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) attempts than Google Chrome's Safe Browsing, according to an independent study from NSS Labs. SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
 
-[Microsoft Edge with SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) blocked 95.5% of phishing attempts and 98.5% of malware attempts [during the NSS Labs test](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) compared to Chrome's Safe Browsing's rates of 86.9% and 86.0%, respectively.
+[Microsoft Edge with SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) blocked 95.5% of phishing attempts during the [NSS Labs’ Phishing Protection](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) test and 98.5% of malware attempts during the [NSS Labs’ Malware Protection](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) test compared to Chrome's Safe Browsing's rates of 86.9% and 86.0%, respectively.
 
 ### The only browser on Windows 10 that natively supports hardware isolation
 
