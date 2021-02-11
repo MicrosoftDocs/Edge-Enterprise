@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/09/2021
+ms.date: 02/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 88.0.705.68: February 11
+
+Fixed various bugs and performance issues.
 
 ## Version 88.0.705.63: February 5
 
