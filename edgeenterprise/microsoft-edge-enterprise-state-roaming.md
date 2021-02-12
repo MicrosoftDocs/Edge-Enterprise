@@ -58,7 +58,7 @@ We will provide control and visibility over who syncs settings in your organizat
 
 ### Management
 
-Admins will be able to control which members in your organization can enable sync. See [Configuration options for Microsoft Edge sync](microsoft-edge-enterprise-sync.md#configuration-options-for-microsoft-edge-sync) and [Sync group policies](microsoft-edge-enterprise-sync.md#sync-group-policies). Additionally, users can turn sync on/off for each of their devices as well as toggle each data attribute individually for sync.
+Admins will be able to control which members in your organization can enable sync. See [Configure Microsoft Edge sync](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync) and [Sync group policies](microsoft-edge-enterprise-sync.md#sync-group-policies). Additionally, users can turn sync on/off for each of their devices as well as toggle each data attribute individually for sync.
 
 ### Key management
 
