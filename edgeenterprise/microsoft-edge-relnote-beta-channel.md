@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,10 @@ description: "Microsoft Edge release notes for Beta Channel"
 # Release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. Archived versions of these release notes are available [here](microsoft-edge-relnote-archive-beta-channel.md).
+
+## Version 89.0.774.27: February 12
+
+Fixed various bugs and performance issues.
 
 ## Version 89.0.774.23: February 8
 
@@ -28,7 +32,7 @@ Fixed various bugs and performance issues.
 
 - **The Enterprise Mode Site List Manager tool will be available in the browser through the *edge://compat* page**. You can use this tool to create, edit and export your site list XML for Internet Explorer mode on Microsoft Edge. You can enable access to this tool as needed through group policy. [Learn More](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
 
-- **Improve browser performance with sleeping tabs**. Sleeping tabs improves browser performance by putting inactive tabs to sleep to free up system resources like memory and CPU so active tabs or other applications can use them. Users can prevent sites from going to sleep and configure the length of time before an inactive tab goes to sleep. To keep users in their flow, there are also [heuristics](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) to prevent certain sites from going to sleep, such as intranet sites. This feature is limited to a randomly selected group of users who have enabled experimentation. This feature can be managed with group policies.
+- **Improve browser performance with sleeping tabs**. Sleeping tabs improves browser performance by putting inactive tabs to sleep to free up system resources like memory and CPU so active tabs or other applications can use them. Users can prevent sites from going to sleep and configure the length of time before an inactive tab goes to sleep. To keep users in their flow, there are also [heuristics](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) to prevent certain sites from going to sleep, such as intranet sites. This feature can be managed with group policies.
 
   > [!NOTE]
   > "Improve browser performance with sleeping tabs" is an update to the February 3 release notes for major version 89.0.774.18.
