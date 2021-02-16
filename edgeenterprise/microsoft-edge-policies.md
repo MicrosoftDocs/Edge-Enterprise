@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,17 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies for this update.
-
-| Name | Caption |
-|--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard Favorites Sync Enabled|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
-
-
 
 ## Available policies
 
@@ -366,7 +355,7 @@ and tips for Microsoft services|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
@@ -391,6 +380,7 @@ and tips for Microsoft services|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
@@ -448,6 +438,7 @@ and tips for Microsoft services|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
 
 
@@ -15101,7 +15092,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Description
 
-  Specify to use hardware acceleration, if it's available. If you enable this policy or don't configure it, hardware acceleration is enabled unless a GPU feature is explicitly blocked.
+  Specifies whether to use hardware acceleration if it's available. If you enable this policy or don't configure it, hardware acceleration is enabled unless a GPU feature is explicitly blocked.
 
 If you disable this policy, hardware acceleration is disabled.
 
@@ -17614,9 +17605,9 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   ### NativeWindowOcclusionEnabled
 
-  #### Enable Native Window Occlusion
+  #### Enable Native Window Occlusion (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -17624,13 +17615,15 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  Enables native window occlusion in Microsoft Edge.
+  This policy is deprecated, use the '[WindowOcclusionEnabled](#windowocclusionenabled)' policy instead. It won't work in Microsoft Edge version 92.
+
+Enables native window occlusion in Microsoft Edge.
 
 If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
 
 If you disable this setting Microsoft Edge will not detect when a window is covered by other windows.
 
-If this policy is left not set, window hiding detection will be enabled.
+If this policy is left not set, occlusion detection will be enabled.
 
   #### Supported features:
 
@@ -17647,7 +17640,7 @@ If this policy is left not set, window hiding detection will be enabled.
   ##### Group Policy (ADMX) info
 
   - GP unique name: NativeWindowOcclusionEnabled
-  - GP name: Enable Native Window Occlusion
+  - GP name: Enable Native Window Occlusion (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19167,6 +19160,77 @@ If you disable this policy, users are blocked from clicking through any warning 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### Allow users to proceed from the HTTPS warning page for specific origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 90 or later
+
+  #### Description
+
+  Microsoft Edge shows a warning page when users visit sites that have SSL errors.
+
+If you enable or don't configure the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy, this policy does nothing.
+
+If you disable the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy, configuring this policy lets you configure a list of origin patterns for sites where users can continue to click through SSL error pages. Users can't click through SSL error pages on origins that are not on this list.
+
+If you don't configure this policy, the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy applies for all sites.
+
+For detailed information about valid origin patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy. This policy only matches based on origin, so any path or query in the URL pattern is ignored.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SSLErrorOverrideAllowedForOrigins
+  - GP name: Allow users to proceed from the HTTPS warning page for specific origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SSLErrorOverrideAllowedForOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -22199,10 +22263,10 @@ default.)
 
 - create_desktop_shortcut
 (True if you want to create Linux and
-Windows desktop shortcuts.)
+Microsoft Windows desktop shortcuts.)
 
-- override_app_name
-(Starting with Microsoft Edge 89,
+- fallback_app_name
+(Starting with Microsoft Edge 90,
 allows you to override the app name if it is not a
 Progressive Web App (PWA), or the app name that is temporarily
 installed if it is a PWA but authentication is required before the
@@ -22250,7 +22314,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22259,7 +22323,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22287,7 +22351,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22937,6 +23001,63 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: WinHttpProxyResolverEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WindowOcclusionEnabled
+
+  #### Enable Window Occlusion
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 89 or later
+
+  #### Description
+
+  Enables window occlusion in Microsoft Edge.
+
+If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
+
+If you disable this setting Microsoft Edge will not detect when a window is covered by other windows.
+
+If this policy is left not set, window hiding detection will be enabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WindowOcclusionEnabled
+  - GP name: Enable Window Occlusion
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WindowOcclusionEnabled
   - Value Type: REG_DWORD
 
   ##### Example value:
