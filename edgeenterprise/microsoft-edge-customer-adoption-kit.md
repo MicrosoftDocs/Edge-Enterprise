@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/11/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,14 +24,14 @@ The customer adoption kit contains the following material:
 
 - IT Deployment Guide
 - How to Get Started User Guide
-- Introductory Email
+- Adoption Email Templates
 - Banners
 - Digital Signage
 - One-Pagers
-- Demo and gifs
-- Web Resource links
+- Demo Video and GIFs
+- Web Resource Links
 
-The adoption kit is available in English, French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
+The adoption kit is available in English and several other languages, including French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
 
 ### IT Deployment Guide
 
@@ -45,11 +45,15 @@ Use this guide to educate users about Microsoft Edge. The guide includes overvie
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Get Started User Guide How to ...":::
 
-### Email templates
+### Adoption Email Templates
 
-Use these email templates to announce that Microsoft Edge is available for users. These templates include tips and tricks to get the most out of the browser.
+Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshots show examples of these templates.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Email template for tips and tricks":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-1.png" alt-text="Email template to announce Microsoft Edge":::
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-2.png" alt-text="Email template introducing user to Microsoft Edge":::
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-3.png" alt-text="Email template calling out Microsoft Edge productivity":::
 
 ### Digital Signage
 
