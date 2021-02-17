@@ -3,7 +3,7 @@ title: "Microsoft Edge version rollback"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,4 +25,5 @@ Version rollback lets you replace your Microsoft Edge browser version with an ea
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [How to roll back Microsoft Edge to a previous version](edge-learnmore-rollback.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

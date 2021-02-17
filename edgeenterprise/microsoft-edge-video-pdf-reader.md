@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise grade PDF reader"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,4 +25,5 @@ This video highlights the features in  Microsoft Edge's built-in PDF reader. See
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [PDF reader in Microsoft Edge](microsoft-edge-pdf.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

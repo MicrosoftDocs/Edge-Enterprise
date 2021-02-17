@@ -3,7 +3,7 @@ title: "Microsoft Edge support for Microsoft Defender SmartScreen"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ This article describes the benefits of using Microsoft Defender SmartScreen, exp
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-Microsoft Defender SmartScreen is a service that Microsoft Edge uses to keep you safe while you browse the web. Microsoft Defender SmartScreen provides an early warning system against websites that might engage in phishing attacks or attempt to distribute malware through a focused attack.
+Microsoft Defender SmartScreen is a service that Microsoft Edge uses to keep you safe while you browse the web. Microsoft Defender SmartScreen provides an early warning system against websites that might engage in phishing attacks or attempt to distribute malware through a focused attack. For more information, watch [Video: Secure browsing on Microsoft Edge](microsoft-edge-video-security-smartscreen.md).
 
 > [!NOTE]
 > Before Windows 10, version 1703, this feature was called the SmartScreen filter when used within the browser and Microsoft SmartScreen when used outside of the browser.
@@ -59,11 +59,11 @@ Microsoft Defender SmartScreen determines whether a downloaded app or app instal
 - Files with a known safe reputation will download without any notification.  
 - Files with a known malicious reputation show a warning to let the user know that the file is unsafe and has been reported as malicious. The next screenshot is an example of a warning for a malicious file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - Files that are unknown show a warning to let the user know that the download doesn't have a known footprint and advise caution. The next screenshot is an example of a warning for an unknown file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with unknown reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 Not all unknown programs are malicious, and the unknown warning is intended to provide context and guidance for users who need it, especially if the warning is unexpected.
 
@@ -116,6 +116,7 @@ As you browse the web, Microsoft Defender SmartScreen categorizes websites and d
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Video: Secure browsing on Microsoft Edge](microsoft-edge-video-security-smartscreen.md)
 - [Microsoft Defender SmartScreen Overview](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
 - [Threat protection](https://docs.microsoft.com/windows/security/threat-protection/index)
 - [Protect against potentially unwanted applications](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)
