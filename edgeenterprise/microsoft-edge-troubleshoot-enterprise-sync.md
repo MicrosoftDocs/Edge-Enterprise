@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
+description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
 ---
 
 # Diagnose and fix Microsoft Edge sync issues
