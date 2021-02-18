@@ -47,13 +47,9 @@ Use this guide to educate users about Microsoft Edge. The guide includes overvie
 
 ### Adoption Email Templates
 
-Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshots show examples of these templates.
+Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshot shows an example of these templates.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-1.png" alt-text="Email template to announce Microsoft Edge":::
-
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-2.png" alt-text="Email template introducing user to Microsoft Edge":::
-
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template-3.png" alt-text="Email template calling out Microsoft Edge productivity":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-3-email-template.png" alt-text="Adoption email templates":::
 
 ### Digital Signage
 
