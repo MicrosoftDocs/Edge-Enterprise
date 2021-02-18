@@ -14,7 +14,7 @@ description: "Admin and user configuration options for Microsoft Edge sync"
 
 # Configure Microsoft Edge enterprise sync
 
-This article explains how to configure and use Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
+This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
