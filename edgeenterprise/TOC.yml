@@ -1,4 +1,4 @@
-# last revised 02/17/2021
+# last revised 02/22/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -114,6 +114,8 @@
         href: microsoft-edge-enterprise-sync.md
       - name: Diagnose and fix Microsoft Edge sync issues
         href: microsoft-edge-troubleshoot-enterprise-sync.md
+      - name: Sync FAQ
+        href: microsoft-edge-enterprise-sync-faq.md
    - name: On-premises sync for Active Directory users
      href: microsoft-edge-on-premises-sync.md
    - name: PDF reader in Microsoft Edge
