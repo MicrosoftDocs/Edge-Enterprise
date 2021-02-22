@@ -14,7 +14,9 @@ description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot
 
 # Diagnose and fix Microsoft Edge sync issues
 
-This article provides troubleshooting guidance for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting a sync issue. If a user is experiencing an issue syncing browser data across their devices they can try resetting sync. [Learn more](edge-learnmore-reset-data-in-cloud.md)
+This article provides troubleshooting guidance for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting a sync issue. 
+
+If a user is experiencing an issue syncing browser data across their devices they can try resetting sync. [Learn more](edge-learnmore-reset-data-in-cloud.md).
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
