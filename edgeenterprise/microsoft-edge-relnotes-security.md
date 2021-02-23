@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,26 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## February 17, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.74)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+## February 5, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.63)**, which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+## February 4, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.62)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+## January 21, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.50)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+<!--- https://msrc.microsoft.com/update-guide/ -->
+## January 7, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 87.0.664.75)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## December 7, 2020
 

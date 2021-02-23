@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 02/05/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -27,18 +27,22 @@
      href: microsoft-edge-roadmap.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
+   - name: Microsoft Edge in your environment
+     href: deploy-edge-prepare-to-deploy.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
-   - name: Release information
-     items:
-      - name: Release schedule
-        href: microsoft-edge-release-schedule.md
-      - name: Beta Channel Release Notes
-        href: microsoft-edge-relnote-beta-channel.md
-      - name: Stable Channel Release Notes
-        href: microsoft-edge-relnote-stable-channel.md
-      - name: Security updates
-        href: microsoft-edge-relnotes-security.md
+   - name: Stable Channel Release Notes
+     href: microsoft-edge-relnote-stable-channel.md
+   - name: Stable Channel archived release notes
+     href: microsoft-edge-relnote-archive-stable-channel.md
+   - name: Beta Channel Release Notes
+     href: microsoft-edge-relnote-beta-channel.md
+   - name: Beta Channel archived release notes
+     href: microsoft-edge-relnote-archive-beta-channel.md
+   - name: Release schedule
+     href: microsoft-edge-release-schedule.md
+   - name: Security updates
+     href: microsoft-edge-relnotes-security.md     
    - name: Microsoft Edge policy mapping
      items:
       - name: Policy mapping overview
@@ -47,8 +51,6 @@
         href: microsoft-edge-policy-map-legacy-to-newedge.md
       - name: Google Chrome to Microsoft Edge policy mapping
         href: microsoft-edge-policy-map-chrome-to-newedge.md
-#      - name: Internet Explorer to Microsoft Edge policy mapping
-#        href: microsoft-edge-policy-map-ie-to-newedge.md
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -57,8 +59,8 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-      - name: Blocker Toolkit for Microsoft Edge updates
-        href: microsoft-edge-blocker-toolkit.md
+#      - name: Blocker Toolkit for Microsoft Edge updates
+#        href: microsoft-edge-blocker-toolkit.md
       - name: How to access the old version of Microsoft Edge
         href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
@@ -66,8 +68,8 @@
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
-#   - name: Video - Deploy Microsoft Edge
-#     href: microsoft-edge-video-deploy.md
+   - name: Deploy Microsoft Edge with Windows 10 updates
+     href: deploy-edge-with-windows-10-updates.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
      href: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
@@ -102,6 +104,8 @@
      href: microsoft-edge-security-identity.md
    - name: Microsoft Edge and Enterprise State Roaming
      href: microsoft-edge-enterprise-state-roaming.md
+   - name: Plan your kiosk mode transition
+     href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md 
    - name: Microsoft Edge Sync
@@ -130,18 +134,20 @@
            href: edge-ie-mode-add-guidance-filetype-associations.md
          - name: Cookie sharing from Microsoft Edge to Internet Explorer
            href: edge-ie-mode-add-guidance-cookieshare.md
+         - name: Enterprise Site List Manager in Microsoft Edge
+           href: edge-ie-mode-site-list-manager.md
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
-#   - name: Video - Security, compatibility, and manageability
-#     href: microsoft-edge-video-security-compatibility-manageability.md 
    - name: Security for your business
      href: ms-edge-security-for-business.md    
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
    - name: Data Loss Prevention (DLP)
      href: microsoft-edge-security-dlp.md
+   - name: Password Monitor auto-enabled for users
+     href: microsoft-edge-security-password-monitor.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access
@@ -201,14 +207,22 @@
   items:
    - name: Microsoft Edge video collection
      href: microsoft-edge-videos.md
+   - name: Video - Microsoft Edge - State of the browser 2020
+     href: microsoft-edge-video-state-of-browser.md
    - name: Video - Browser isolation using Application Guard
      href: microsoft-edge-video-security-application-guard.md
    - name: Video - Deploy Microsoft Edge
      href: microsoft-edge-video-deploy.md
    - name: Video - Data loss prevention (DLP)
      href: microsoft-edge-video-security-dlp.md
-   - name: Video - Microsoft Edge and Microsoft Search
-     href: microsoft-edge-video-search.md
+   - name: Video - Identity in Microsoft Edge
+     href: microsoft-edge-video-identity.md
+   - name: Video - Microsoft Edge version rollback
+     href: microsoft-edge-video-version-rollback.md
+   - name: Video - PDF reader in Microsoft Edge
+     href: microsoft-edge-video-pdf-reader.md
+   - name: Video - Secure browsing on Microsoft Edge
+     href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
 - name: Frequently asked questions
