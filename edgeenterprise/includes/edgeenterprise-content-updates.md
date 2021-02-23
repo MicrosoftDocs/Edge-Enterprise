@@ -1,5 +1,6 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
+
+
 
 
 ## Week of February 15, 2021
@@ -7,11 +8,11 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 2/15/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 2/17/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 2/17/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 2/17/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 2/17/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/15/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published week of February 8. | modified |
+| 2/17/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update browser policy reference documentation, calling out new and deprecated policies. | modified |
+| 2/17/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Automatic refresh, no changes to content. | modified |
+| 2/17/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable minor version 88.0.705.74. | modified |
+| 2/17/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Updated to reflect security update for Stable minor version 88.0.705.74. | modified |
 
 
 ## Week of February 08, 2021
