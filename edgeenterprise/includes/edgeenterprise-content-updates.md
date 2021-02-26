@@ -1,23 +1,38 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
 
-## Week of February 08, 2021
+
+## Week of February 15, 2021
+
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 2/8/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Update 89.0.774.18 note, add Sleeping tabs feature.  | modified |
-| 2/8/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published week of February 1. | modified |
-| 2/8/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes in minor version 88.0.705.63. | modified |
-| 2/9/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes in minor version 89.0.774.23. | modified |
-| 2/9/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule)<br>Fix broken link to release note. | modified |
-| 2/9/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update minor version 88.0.705.63 to call out security exploit in wild. | modified |
-| 2/9/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update and call out 2 new policies. | modified |
-| 2/9/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies)<br>Refresh, no change. | modified |
-| 2/10/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business)<br>Add links to NSS Labs reports on phishing and malware tests.| modified |
-| 2/10/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule)<br>Trim table, delete 3 oldest rows, add 2 new for future releases. | modified |
-| 2/11/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixes in minor version 88.0.705.68. | modified |
-| 2/12/2021 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync)<br>Clarify: how sync works, profile associated with AD, and SyncDisabled policy. | modified |
-| 2/12/2021 | [Microsoft Edge and Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming)<br>Refresh with minor wording changes to fix typos. | modified |
-| 2/12/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fixes in minor version 89.0.774.27. | modified |
+| 2/15/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 2/17/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 2/17/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 2/17/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 2/17/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
+## Week of February 08, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/8/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/8/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 2/8/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/9/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/9/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 2/9/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/9/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 2/9/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 2/10/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 2/10/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 2/11/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/12/2021 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
+| 2/12/2021 | [Microsoft Edge and Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming) | modified |
+| 2/12/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 
 
 ## Week of February 01, 2021
@@ -95,61 +110,3 @@
 | 1/19/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
 | 1/22/2021 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
 | 1/22/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
-
-
-## Week of December 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/21/2020 | [Cookie sharing from Microsoft Edge to Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | modified |
-| 12/21/2020 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
-| 12/21/2020 | [IE mode FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-| 12/21/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of January 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/7/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 1/7/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 1/8/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 1/8/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of January 11, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/11/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 1/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 1/13/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 1/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 1/13/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 1/13/2021 | [Microsoft Edge Enterprise documentation](/DeployEdge/index) | modified |
-| 1/13/2021 | [Deploy Microsoft Edge to hundreds or thousands of devices](/DeployEdge/microsoft-edge-video-deploy) | modified |
-| 1/13/2021 | [Microsoft Edge and Microsoft Search](/DeployEdge/microsoft-edge-video-search) | modified |
-| 1/13/2021 | [Microsoft Edge browser isolation using Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard) | modified |
-| 1/13/2021 | [Microsoft Edge security, compatibility, and manageability](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | modified |
-| 1/13/2021 | [Microsoft Edge and Data loss prevention](/DeployEdge/microsoft-edge-video-security-dlp) | modified |
-| 1/14/2021 | [Configure and troubleshoot Microsoft Edge sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
-| 1/15/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 1/15/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 1/15/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of December 14, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/15/2020 | Frequently asked questions about Edge in the enterprise | removed |
-| 12/16/2020 | [Blocker Toolkit to disable automatic delivery of Microsoft Edge](/DeployEdge/microsoft-edge-blocker-toolkit) | modified |
-| 12/16/2020 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 12/16/2020 | Microsoft Edge kiosk mode | removed |
-| 12/17/2020 | [Frequently asked questions (FAQ) about Edge in the enterprise](/DeployEdge/faqs-edge-in-the-enterprise) | modified |
-| 12/17/2020 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/17/2020 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
