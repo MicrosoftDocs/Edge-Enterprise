@@ -1,18 +1,18 @@
 ---
-title: "Configure Sites on the Enterprise Mode Site List"
+title: "Enterprise site configuration strategy"
 ms.author: cjacks
 author: cjacks
 manager: saudm
-ms.date: 05/28/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Configure Enterprise Site List"
+description: "A step by step guide to configuring enterprise sites."
 ---
 
-# Configure Sites on the Enterprise Mode Site List
+# Enterprise site configuration strategy
 
 This article describes changes to the Enterprise Mode Site List that support configuring IE mode for Microsoft Edge version 77 and later.
 

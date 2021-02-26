@@ -1,4 +1,4 @@
-# last revised 02/05/2021
+# last revised 02/26/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -116,26 +116,26 @@
      href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
-   - name: Use Microsoft Edge in IE mode
+   - name: Use Microsoft Edge in Internet Explorer mode
      items:
-      - name: About IE mode
+      - name: What is Internet Explorer (IE) mode?
         href: edge-ie-mode.md
-      - name: Configure Sites on the Enterprise Mode Site List
+      - name: Configure IE mode policies
+        href: edge-ie-mode-policies.md        
+      - name: Enterprise site configuration strategy
         href: edge-ie-mode-sitelist.md
-      - name: Configure IE mode Policies
-        href: edge-ie-mode-policies.md
-      - name: Enterprise Site Discovery Step-by-Step Guide
-        href: edge-ie-mode-site-discovery.md
-      - name: IE mode FAQ
-        href: edge-ie-mode-faq.md
-      - name: Additional guidance
+      - name: Enterprise Site Discovery
         items:
-         - name: Associate file extensions with Internet Explorer mode
-           href: edge-ie-mode-add-guidance-filetype-associations.md
-         - name: Cookie sharing from Microsoft Edge to Internet Explorer
-           href: edge-ie-mode-add-guidance-cookieshare.md
+         - name: Enterprise Site Discovery Step-by-Step Guide
+           href: edge-ie-mode-site-discovery.md
          - name: Enterprise Site List Manager in Microsoft Edge
            href: edge-ie-mode-site-list-manager.md
+      - name: Cookie sharing from Microsoft Edge to Internet Explorer
+        href: edge-ie-mode-add-guidance-cookieshare.md
+      - name: Associate file extensions with Internet Explorer mode
+        href: edge-ie-mode-add-guidance-filetype-associations.md       
+      - name: IE mode FAQ
+        href: edge-ie-mode-faq.md
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
