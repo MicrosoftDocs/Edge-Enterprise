@@ -134,7 +134,7 @@
         href: edge-ie-mode-add-guidance-cookieshare.md
       - name: Associate file extensions with Internet Explorer mode
         href: edge-ie-mode-add-guidance-filetype-associations.md       
-      - name: IE mode FAQ
+      - name: IE mode troubleshooting and FAQ
         href: edge-ie-mode-faq.md
 
 # SECURITY AND PRIVACY

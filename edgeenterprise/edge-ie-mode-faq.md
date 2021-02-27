@@ -1,23 +1,23 @@
 ---
-title: "IE mode FAQ"
+title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "FAQ and Troubleshooting for Microsoft Edge with IE mode"
+description: "Troubleshooting and FAQ for Microsoft Edge Internet Explorer mode"
 ---
 
-# IE mode FAQ
+# IE mode troubleshooting and FAQ
 
 This article provides troubleshooting tips and an FAQ for Microsoft Edge version 77 or later.
 
 > [!NOTE]
-> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
+> This article applies to Microsoft Edge version 77 or later.
 
 ## Troubleshoot IE mode
 
