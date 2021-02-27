@@ -3,7 +3,7 @@ title: "Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -50,7 +50,7 @@ For more detailed information about user activities you can audit and manage, se
 
 Check out [Support for Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), which describes how Microsoft Edge supports Windows Information Protection (WIP). You can learn moe about system requirements, benefits, and supported features in the following sections:
 
-- [System Requirements](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [System Requirements](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
 - [Windows Information Protection Benefits](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [WIP features supported in Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
