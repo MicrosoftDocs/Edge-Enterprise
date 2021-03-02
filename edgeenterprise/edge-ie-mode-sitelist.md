@@ -3,7 +3,7 @@ title: "Enterprise site configuration strategy"
 ms.author: cjacks
 author: cjacks
 manager: saudm
-ms.date: 02/26/2021
+ms.date: 03/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,8 +19,8 @@ This article describes changes to the Enterprise Mode Site List that support con
 For more information on the schema for the Enterprise Mode Site List XML file, see [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
-
+> This article applies to Microsoft Edge version 77 or later.
+<!--
 ## Updated schema elements
 
 The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
@@ -50,7 +50,15 @@ The following table shows the possible values of the \<open-in\> element:
 |**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
 
 >[!NOTE]
-> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   
+> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
+
+## Configuration strategy
+
+Step 1 – Get the site list – if you don’t have one use Site Discovery Step-by-Step
+Step 2 – Neutral sites + sticky mode
+        Use more examples and explain sticky mode better
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing
+
 
 ## Configure neutral sites
 
