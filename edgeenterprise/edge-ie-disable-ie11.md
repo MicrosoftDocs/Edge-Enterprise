@@ -71,7 +71,7 @@ To disable Internet Explorer 11 using group policy, follow these steps:
 
    - **Never** if you don’t want to notify users that IE11 is disabled.
    - **Always** if you want to notify users every time they're redirected from IE11.
-   - **Once per user if you want to notify users only the first time, they are redirected.
+   - **Once per user** if you want to notify users only the first time they are redirected.
 
 7. Click **OK** or **Apply** to save this policy setting.
 
