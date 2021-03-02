@@ -1,8 +1,8 @@
 ---
 title: "Enterprise site configuration strategy"
-ms.author: cjacks
-author: cjacks
-manager: saudm
+ms.author: shisub
+author: shisub
+manager: srugh
 ms.date: 03/02/2021
 audience: ITPro
 ms.topic: conceptual
