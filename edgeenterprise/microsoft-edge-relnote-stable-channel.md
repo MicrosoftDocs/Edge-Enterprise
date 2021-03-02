@@ -29,6 +29,12 @@ These release notes provide information about new features and non-security upda
 
 ### Feature updates
 
+- **Taskbar and Start menu shortcut updates and fixes:**
+
+  - Right-clicking the Microsoft Edge shortcut in the Start menu will now show the option to unpin Microsoft Edge from the taskbar when it’s pinned.
+  - Start layouts that include a taskbar configuration to pin Microsoft Edge to the taskbar will no longer result in a second Microsoft Edge shortcut being pinned to the taskbar.
+  - Organizations using Windows Roaming Profiles should no longer see a blank white icon in place of the Edge icon on the taskbar when their users log into Windows 10.
+
 - **Kiosk mode enables additional lockdown capabilities**. Starting with Microsoft Edge version 89, we have added additional lockdown capabilities within kiosk mode to enable customers to get the job done in a productive and more secure experience. [Learn more](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
 - **The Enterprise Mode Site List Manager tool will be available in the browser through the *edge://compat* page**. You can use this tool to create, edit and export your site list XML for Internet Explorer mode on Microsoft Edge. You can enable access to this tool as needed through group policy. [Learn More](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
