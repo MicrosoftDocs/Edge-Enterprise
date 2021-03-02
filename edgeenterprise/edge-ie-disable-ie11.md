@@ -54,13 +54,26 @@ When you enable the **Send all sites not included in the site list to Microsoft 
 
 As part of setting the policy for this experience, you can optionally show a redirect message for each user who tries to launch IE11. This message can be set to display "Always" or "Once per user". By default, the redirect message shown in the next screenshot is never shown.
 
+:::image type="content" source="media/edge-ie-disable-ie11/ie11-redirect-msg.png" alt-text="Warning message when trying to launch IE after configuring a redirect to Microsoft Edge.":::
 
 If your Enterprise Mode Site List contains applications that are configured to open in the IE11 app and you disable IE11 with this policy, they will open in IE mode on Microsoft Edge.
 
-## Disable Internet Explorer 11 as a standalone browser using Group Policy
+## Disable Internet Explorer 11 as a standalone browser
 
+To disable Internet Explorer 11 using group policy, follow these steps:
 
+1. Download and install the latest [Microsoft Edge Policy Template](https://www.microsoft.com/en-us/business/download).
+2. Open the Group Policy Editor.
+3. Go to ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
+4. Double-click **Disable Internet Explorer 11 as a standalone browser**.
+5. Select **Enabled**.
+6. Under **Options**, set the dropdown value to on of the following:
 
+   - **Never** if you don’t want to notify users that IE11 is disabled.
+   - **Always** if you want to notify users every time they are redirected from IE11.
+   - **Once per user** if you want to notify users only the first time they are redirected.
+
+7. Click **OK** or **Apply** to save this policy setting.
 
 ## See also
 
