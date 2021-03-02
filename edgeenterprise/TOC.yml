@@ -124,6 +124,8 @@
         href: edge-ie-mode-policies.md        
       - name: Enterprise site configuration strategy
         href: edge-ie-mode-sitelist.md
+      - name: Disable Internet Explorer 11 (IE 11)
+        href: edge-ie-disable-ie11.md
       - name: Enterprise Site Discovery
         items:
          - name: Enterprise Site Discovery Step-by-Step Guide
