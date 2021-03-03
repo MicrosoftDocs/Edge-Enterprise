@@ -40,10 +40,10 @@ The following Windows updates and Microsoft Edge software are required:
 
 For organizations that require Internet Explorer 11 (IE11) for legacy compatibility, Internet Explorer mode (IE mode) on Microsoft Edge provides a seamless, single browser experience. Users can access legacy applications from within Microsoft Edge without having to switch back to IE11.
 
-After you configure IE mode, you can disable IE11 as a standalone browser without affecting IE mode functionality across your organization.
+After you configure IE mode, you can disable IE11 as a standalone browser **without affecting IE mode functionality** across your organization using group policy.
 
 > [!NOTE]
-> If you need the standalone IE11 app for specific sites, and want to redirect all other browser traffic to Microsoft Edge, you can configure the [Send all sites not included in the site list to Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) policy to [redirect sites from IE to Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge).
+> If you need the standalone IE11 app for specific sites, and want to redirect all other browser traffic to Microsoft Edge, you can configure the [Send all sites not included in the site list to Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) policy to redirect sites from IE to Microsoft Edge.
 
 ## User experience after redirecting traffic to Microsoft Edge
 
@@ -58,7 +58,6 @@ As part of setting the policy for this experience, you can optionally show a red
 :::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg.png" alt-text="Alert when trying to open IE after when a redirect to Microsoft Edge is active.":::
 
 If your Enterprise Mode Site List contains applications that are configured to open in the IE11 app and you disable IE11 with this policy, they will open in IE mode on Microsoft Edge.
-
 > [!NOTE]
 > There is a known issue with this user flow that is being actively investigated.
 
