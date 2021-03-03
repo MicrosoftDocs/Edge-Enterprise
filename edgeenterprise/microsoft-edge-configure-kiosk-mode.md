@@ -60,10 +60,8 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |UI print settings lockdown|Y|Y|90/91|Y|
 |[Set the new tab page as the home page](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (policy)|-|-|TBD|Y|
 
-\* Applicable in assigned access
-
 > [!NOTE]
-> These features are only enabled in an assigned access single app scenario.
+> Features followed by "*" are only enabled in an assigned access single app scenario.
 
 ## Use kiosk mode features
 
