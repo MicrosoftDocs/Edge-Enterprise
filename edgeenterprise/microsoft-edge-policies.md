@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/25/2021
+ms.date: 03/02/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,14 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies for this update.
-
-| Name | Caption |
-|--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
 
 ## Available policies
 
@@ -21822,7 +21814,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the User-Agent Client Hints feature. It won't work in Microsoft Edge version 89.
+  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the User-Agent Client Hints feature. It won't work in Microsoft Edge version 93.
 
 When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
 
