@@ -16,9 +16,6 @@ description: "Learn how to disable Internet Explorer 11 and use Internet Explore
 
 This article describes how to disable Internet Explorer 11 as a standalone browser in your environment.
 
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
-
 ## Prerequisites
 
 The following Windows updates and Microsoft Edge software are required:
