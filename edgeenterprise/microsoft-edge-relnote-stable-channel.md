@@ -41,10 +41,7 @@ Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microso
 
 - **Improvements to text selection experience within PDF documents**. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
 
-- **Productivity:**
-
-  - Date of birth field now supported in autofill. Today Microsoft Edge helps you save time and effort while filling out forms and creating accounts online by auto filling your data like addresses, names, phone numbers, etc. Starting with Microsoft Edge version 89, we are adding support for another field that you can have saved and auto-filled - date of birth. You can view, edit and delete this information anytime in your profile settings.
-  - Extend autofill suggestions to include content from the  clipboard. Clipboard content is parsed when you select a profile/address field (For example, phone, email, zip code, city, state, etc.) to show as autofill suggestions.
+- **Date of birth field now supported in autofill**. Today Microsoft Edge helps you save time and effort while filling out forms and creating accounts online by auto filling your data like addresses, names, phone numbers, etc. Starting with Microsoft Edge version 89, we are adding support for another field that you can have saved and auto-filled - date of birth. You can view, edit and delete this information anytime in your profile settings.
 
 ### Policy updates
 
@@ -59,12 +56,6 @@ Seven new policies were added. Download the updated Administrative Templates fro
 - [PrintingAllowedBackgroundGraphicsModes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingallowedbackgroundgraphicsmodes) - Restrict background graphics printing mode
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault) - Default background graphics printing mode
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist) - Block smart actions  for a list of services
-
-#### Deprecated policies
-
-The following policies are deprecated.
-
-- [SSLVersionMin](https://docs.microsoft.com/deployedge/microsoft-edge-policies#sslversionmin) - Minimum TLS version enabled
 
 #### Obsoleted policies
 
