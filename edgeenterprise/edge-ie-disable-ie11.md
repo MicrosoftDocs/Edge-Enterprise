@@ -56,7 +56,7 @@ As part of setting the policy for this experience, you can optionally show a red
 
 If your Enterprise Mode Site List contains applications that are configured to open in the IE11 app and you disable IE11 with this policy, they will open in IE mode on Microsoft Edge.
 > [!NOTE]
-> There is a known issue with this user flow that is being actively investigated.
+> There is a known issue with the user flow when a site is configured to open in IE11 and the disable IE11 policy is set. The issue being actively investigated.
 
 ## Disable Internet Explorer 11 as a standalone browser
 
