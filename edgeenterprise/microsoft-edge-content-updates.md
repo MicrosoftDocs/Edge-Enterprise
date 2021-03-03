@@ -3,7 +3,7 @@ title: "Microsoft Edge content updates"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 02/22/2021
+ms.date: 03/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge

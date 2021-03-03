@@ -1,7 +1,8 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
+## Week of February 22, 2021
 
-
+Publishing system down for entire week. Nothing published.
 
 ## Week of February 15, 2021
 
