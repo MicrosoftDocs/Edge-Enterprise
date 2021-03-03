@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -53,13 +53,15 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |[Configure the new tab page URL](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (policy)|N|Y||Y|
 |End session button | N| Y| 89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
-| CTRL+N blocked (open a new window) | Y | Y | 89 |Y|
+| CTRL+N blocked (open a new window) * | Y | Y | 89 |Y|
 | CTRL+T blocked (open new tab) |Y | Y | 89 |Y|
 |Settings and more (...) will display only the required options  |Y |Y |89 |Y|
 |Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
 |UI print settings lockdown|Y|Y|90/91|Y|
 |[Set the new tab page as the home page](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (policy)|-|-|TBD|Y|
 
+\* Applicable in assigned access
+ 
 > [!NOTE]
 > As kiosk mode evolves, more features will be available.
 
