@@ -45,10 +45,9 @@ After you configure IE mode, you can disable IE11 as a standalone browser withou
 
 ## User experience after redirecting traffic to Microsoft Edge
 
-When you enable the **Send all sites not included in the site list to Microsoft Edge** policy, all IE11 activity is redirected to Microsoft Edge and users have the following experience:
+When you enable the **Disable Internet Explorer 11 as a standalone browser** policy, all IE11 activity is redirected to Microsoft Edge and users have the following experience:
 
-- Users will not see the IE11 icon.
-- When users try to launch IE11 through an application pin (such as taskbar), they will be asked each time if they want the pin removed before launching Microsoft Edge.
+- The IE11 icon on the Start Menu will be removed, but the one on the taskbar will remain.
 - When users try to launch shortcuts or file associations that use IE11, they will be redirected to open the same file/URL in Microsoft Edge.
 - When users try to launch IE11 by directly invoking the iexplore.exe binary, Microsoft Edge will launch instead.
 
