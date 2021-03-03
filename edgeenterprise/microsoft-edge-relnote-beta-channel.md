@@ -16,6 +16,9 @@ description: "Microsoft Edge release notes for Beta Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. Archived versions of these release notes are available [here](microsoft-edge-relnote-archive-beta-channel.md).
 
+> [!NOTE]
+> We've updated the Microsoft Edge Beta [Version 89.0.774.18: February 3](#version-89077418-february-3) feature list to reflect the list of features that landed.
+
 ## Version 89.0.774.45: March 3
 
 Fixed various bugs and performance issues.
@@ -53,18 +56,7 @@ Fixed various bugs and performance issues.
 
 - **Improvements to text selection experience within PDF documents**. Users will begin to get a smoother and more consistent text selection experience across PDF documents opened in Microsoft Edge starting with version 89.
 
-- **The "Disable developer mode extensions" warning can be permanently dismissed**. Starting with Microsoft Edge version 89, you can turn off the warning "Disable developer mode extensions" by selecting the 'Don't show this again' option.
-
-- **Manage your extensions from the toolbar**. The new extensions menu on the toolbar will let you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
-
-- **Support for natural language search on the address bar, history search page, and the history hub**. Starting with Microsoft Edge version 89, finding an article/website will be easier with the natural language search on the address bar, history page, and history hub. Users can search for previously viewed page content/description/timing (such as "cake recipe from last week") in addition to titles/URL keyword matches.
-
-- **Productivity:**
-
-  - Date of birth field now supported in autofill. Today Microsoft Edge helps you save time and effort while filling out forms and creating accounts online by auto filling your data like addresses, names, phone numbers, etc. Starting with Microsoft Edge version 89, we are adding support for another field that you can have saved and auto-filled - date of birth. You can view, edit and delete this information anytime in your profile settings.
-  - Extend autofill suggestions to include content from the  clipboard. Clipboard content is parsed when you select a profile/address field (For example, phone, email, zip code, city, state, etc.) to show as autofill suggestions.
-
-- **Support blocking auto-playing video**. Starting with Microsoft Edge version 89, users will have the option to block media from automatically playing.
+- **Date of birth field now supported in autofill**. Today Microsoft Edge helps you save time and effort while filling out forms and creating accounts online by auto filling your data like addresses, names, phone numbers, etc. Starting with Microsoft Edge version 89, we are adding support for another field that you can have saved and auto-filled - date of birth. You can view, edit and delete this information anytime in your profile settings.
 
 ### Policy updates
 
