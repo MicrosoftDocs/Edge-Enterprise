@@ -33,7 +33,7 @@ Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microso
 
 - **Taskbar and Start menu shortcut updates and fixes:**
   - Right-clicking the Microsoft Edge shortcut in the Start menu will now properly show the option to unpin Microsoft Edge from the taskbar when it’s pinned.
-  - Start layouts that include a taskbar configuration to pin Microsoft Edge to the taskbar will no longer result in a second Microsoft Edge shortcut getting pinned to the taskbar.
+  - Start layouts that include a [taskbar configuration](https://docs.microsoft.com/windows/configuration/configure-windows-10-taskbar) to pin Microsoft Edge to the taskbar will no longer result in a second Microsoft Edge shortcut getting pinned to the taskbar.
   - Organizations using Windows Roaming Profiles will no longer see a blank white icon in place of the Microsoft Edge icon on the taskbar when their users log on to Windows.
 
 ### Feature updates
