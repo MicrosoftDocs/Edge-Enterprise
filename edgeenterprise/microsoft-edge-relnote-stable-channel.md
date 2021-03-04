@@ -81,7 +81,7 @@ Fixed various bugs and performance issues.
 
 ## Version 88.0.705.74: February 17
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
 
 ## Version 88.0.705.68: February 11
 
@@ -96,7 +96,7 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/Dep
 
 ## Version 88.0.705.62: February 4
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
 
 Fixed various bugs and performance issues.
 
@@ -110,7 +110,7 @@ Fixed various bugs and performance issues.
 
 ## Version 88.0.705.50: January 21
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
 
 <!--- begin major 88  --->
 ### Feature updates
@@ -209,7 +209,7 @@ Eighteen new policies were added. Download the updated Administrative Templates 
 <!--- end major 88  --->
 ## Version 87.0.664.75: January 7
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
 
 ## Version 87.0.664.66: December 17
 
@@ -221,7 +221,7 @@ Fixed various bugs and performance issues.
 
 ## Version 87.0.664.57: December 7
 
-Fixed various bugs and performance issues. Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
+Fixed various bugs and performance issues. Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
 
 ## Version 87.0.664.55: December 3
 
@@ -240,7 +240,7 @@ Fixed various bugs and performance issues.
 <!-- begin major 87 --->
 ## Version 87.0.664.41: November 19
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
 
 ### Feature updates
 
@@ -301,7 +301,7 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/Dep
 
 ## Version 86.0.622.68: November 11
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)
 
 ## Version 86.0.622.63: November 4
 
@@ -324,7 +324,7 @@ Fixed various bugs and performance issues.
 
 ## Version 86.0.622.51: October 22
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)
 
 ## Version 86.0.622.48: October 20
 
@@ -337,7 +337,7 @@ Fixed various bugs and performance issues.
 <!-- begin major 86 -->
 ## Version 86.0.622.38: October 9
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)
 
 ### Feature updates
 
@@ -423,11 +423,11 @@ Fixed various bugs and performance issues.
 
 ## Version 85.0.564.63: September 23
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)
+Stable channel Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)
 
 ## Version 85.0.564.51: September 9
 
-Security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)
+Stable channel security updates are listed [here](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)
 
 ## Version 85.0.564.44: August 31
 
