@@ -54,11 +54,16 @@ The following table shows the possible values of the \<open-in\> element:
 
 ## Configuration strategy
 
+The following steps are part of a site configuration strategy for IE mode:
+1. Get the site list
+2. Configure neutral sites
+3. Use cookie sharing as required
 
-Step 1 – Get the site list – if you don’t have one use Site Discovery Step-by-Step
+<!--
+Step 1.  – if you don’t have one use Site Discovery Step-by-Step
 Step 2 – Neutral sites + sticky mode
         Use more examples and explain sticky mode better
-Step 3 – If that doesn’t cover your needs, then use Cookie sharing
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 
 ## Configure neutral sites
 
