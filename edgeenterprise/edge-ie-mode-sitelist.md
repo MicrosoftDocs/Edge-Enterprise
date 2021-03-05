@@ -3,18 +3,18 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "A step by step guide to configuring enterprise sites."
+description: "A step by step guide to configuring the Enterprise Mode Site list for Internet Explorer mode."
 ---
 
 # Enterprise site configuration strategy
 
-This article describes changes to the Enterprise Mode Site List that support configuring IE mode for Microsoft Edge version 77 and later.
+This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.
 
 For more information on the schema for the Enterprise Mode Site List XML file, see [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
@@ -54,11 +54,11 @@ The following table shows the possible values of the \<open-in\> element:
 
 ## Configuration strategy
 
+
 Step 1 – Get the site list – if you don’t have one use Site Discovery Step-by-Step
 Step 2 – Neutral sites + sticky mode
         Use more examples and explain sticky mode better
 Step 3 – If that doesn’t cover your needs, then use Cookie sharing
-
 
 ## Configure neutral sites
 
