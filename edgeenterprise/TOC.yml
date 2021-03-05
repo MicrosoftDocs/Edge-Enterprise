@@ -128,16 +128,12 @@
         href: edge-ie-mode-policies.md
       - name: Disable Internet Explorer 11
         href: edge-ie-disable-ie11.md
-      - name: Enterprise Site Discovery Step-by-Step Guide
-        href: edge-ie-mode-site-discovery.md
-      - name: IE mode FAQ
-        href: edge-ie-mode-faq.md
-      - name: Additional guidance
+      - name: Site Discovery
         items:
          - name: Enterprise Site Discovery Step-by-Step Guide
            href: edge-ie-mode-site-discovery.md
          - name: Enterprise Site List Manager in Microsoft Edge
-           href: edge-ie-mode-site-list-manager.md
+           href: edge-ie-mode-site-list-manager.md         
       - name: Keep in-page navigation in IE mode
         href: edge-learnmore-inpage-nav.md    
       - name: Cookie sharing from Microsoft Edge to Internet Explorer
