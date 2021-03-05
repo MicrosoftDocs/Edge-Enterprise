@@ -1,4 +1,4 @@
-# last revised 02/22/2021
+# last revised 03/02/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -130,6 +130,8 @@
         href: edge-ie-mode-sitelist.md
       - name: Configure IE mode Policies
         href: edge-ie-mode-policies.md
+      - name: Disable Internet Explorer 11
+        href: edge-ie-disable-ie11.md
       - name: Enterprise Site Discovery Step-by-Step Guide
         href: edge-ie-mode-site-discovery.md
       - name: IE mode FAQ
