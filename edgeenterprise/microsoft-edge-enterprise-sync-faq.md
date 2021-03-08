@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 02/22/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge

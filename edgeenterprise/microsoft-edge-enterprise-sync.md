@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 02/18/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -74,5 +74,6 @@ Microsoft Edge is a cross-platform application with an expanded scope for syncin
 ## See also
 
 - [Microsoft Edge Enterprise Sync](microsoft-edge-enterprise-sync.md)
+- [Diagnose and fix Microsoft Edge sync issues](microsoft-edge-troubleshoot-enterprise-sync.md)
 - [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

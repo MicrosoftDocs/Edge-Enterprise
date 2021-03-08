@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 02/17/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot
 
 # Diagnose and fix Microsoft Edge sync issues
 
-This article provides troubleshooting guidance for the most commonly encountered sync issues. It also includes the recommended tools for gathering the logs needed for troubleshooting a sync issue.
+This article provides troubleshooting guidance for the most commonly encountered sync issues in an Azure Active Directory (Azure AD) environment. It also includes the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
 If a user is experiencing an issue syncing browser data across their devices they can try [resetting sync](edge-learnmore-reset-data-in-cloud.md). If this doesn't work, admins or support staff can use the following guidance to fix a sync issue.
 
