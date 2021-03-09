@@ -1,10 +1,10 @@
-# last revised 03/02/2021
+# last revised 03/08/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
   href: https://docs.microsoft.com/microsoft-edge/
-- name: Microsoft Edge content updates
-  href: microsoft-edge-content-updates.md
+#- name: Microsoft Edge content updates
+#  href: microsoft-edge-content-updates.md
 # GET STARTED
 - name: Get started with Microsoft Edge
   items:
@@ -107,9 +107,15 @@
    - name: Plan your kiosk mode transition
      href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
-     href: microsoft-edge-configure-kiosk-mode.md 
-   - name: Microsoft Edge Sync
-     href: microsoft-edge-enterprise-sync.md
+     href: microsoft-edge-configure-kiosk-mode.md
+   - name: Microsoft Edge enterprise sync
+     items: 
+      - name: Configure Microsoft Edge sync
+        href: microsoft-edge-enterprise-sync.md
+      - name: Diagnose and fix Microsoft Edge sync issues
+        href: microsoft-edge-troubleshoot-enterprise-sync.md
+      - name: Sync FAQ
+        href: microsoft-edge-enterprise-sync-faq.md
    - name: On-premises sync for Active Directory users
      href: microsoft-edge-on-premises-sync.md
    - name: PDF reader in Microsoft Edge
