@@ -3,7 +3,7 @@ title: "Disable Internet Explorer 11"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -62,7 +62,7 @@ If your Enterprise Mode Site List contains applications that are configured to o
 
 To disable Internet Explorer 11 using group policy, follow these steps:
 
-1. Download and install the latest [Microsoft Edge Policy Template](https://www.microsoft.com/edge/business/download).
+1. Ensure you have the pre-requisite operating system updates. This step will update the ADMX files on your machine directly (specifically inetres.adml and inetres.admx). Please note that if you want to update your Central Store, you will need to copy over the .adml and .admx files from a machine that has the pre-requisite updates. For more information, see [Create and manage Central Store](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Open the Group Policy Editor.
 3. Go to ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
 4. Double-click **Disable Internet Explorer 11 as a standalone browser**.
