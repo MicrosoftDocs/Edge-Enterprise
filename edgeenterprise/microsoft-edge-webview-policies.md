@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/05/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -19,6 +19,7 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
@@ -26,9 +27,8 @@ For information about an additional set of policies used to control how and when
 
 These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
 
-|||
-|-|-|
-|[Loader Override Settings](#loader-override-settings)|
+- [Loader Override Settings](#loader-override-settings)
+
 
 ### [*Loader Override Settings*](#loader-override-settings-policies)
 
