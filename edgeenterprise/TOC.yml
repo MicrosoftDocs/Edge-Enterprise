@@ -3,8 +3,8 @@
   href: index.yml
 - name: Microsoft Edge documentation
   href: https://docs.microsoft.com/microsoft-edge/
-- name: Microsoft Edge content updates
-  href: microsoft-edge-content-updates.md
+#- name: Microsoft Edge content updates
+#  href: microsoft-edge-content-updates.md
 # GET STARTED
 - name: Get started with Microsoft Edge
   items:
