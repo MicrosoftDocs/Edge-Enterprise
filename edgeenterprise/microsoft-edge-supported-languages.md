@@ -53,9 +53,9 @@ In addition to using a foreign language in the browser, you can use the [Transla
 > [!NOTE]
 > If the translator extension doesn't work after installation, restart Microsoft Edge. If the extension still doesn't work, provide feedback through the Feedback Hub.
 
-## Supported languages
+## Supported display languages
 
-The following table lists the languages that are supported by Microsoft Edge.
+The following table lists the display languages that are supported by Microsoft Edge.
 
 > [!NOTE]
 > Languages that aren't supported by Microsoft Edge on macOS are indicated by an asterisk (*) after the country/region.  
