@@ -49,6 +49,7 @@ Microsoft Endpoint DLP|	Yes*|Yes|No|No|	No|[Microsoft Endpoint DLP](https://docs
 |Shopping|Yes|Yes|Yes|Yes|Yes| |
 |Enterprise New Tab Page|Yes|Yes|Yes|Yes|Yes| |
 |Microsoft Search in Bing|Yes|Yes|Yes|Yes|Yes| |
+|Sync|Yes|Yes|Yes|Yes|Yes|  |
 
 ## See also
 
