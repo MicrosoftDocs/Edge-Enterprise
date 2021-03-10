@@ -46,6 +46,7 @@ Fixed various bugs and performance issues.
 ## Version 89.0.774.23: February 8
 
 Fixed various bugs and performance issues.
+
 <!-- begin major 89 -->
 ## Version 89.0.774.18: February 3
 
