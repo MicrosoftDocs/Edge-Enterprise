@@ -3,7 +3,7 @@ title: "Manage Microsoft Edge Extensions in the enterprise"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 01/04/2021
+ms.date: 03/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
