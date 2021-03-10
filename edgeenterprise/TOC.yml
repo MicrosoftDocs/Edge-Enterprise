@@ -112,9 +112,9 @@
      items:
       - name: Manage Microsoft Edge Extensions in the enterprise
         href: microsoft-edge-manage-extensions.md
-        name: Use group policies to manage Microsoft Edge Extensions
+      - name: Use group policies to manage Microsoft Edge Extensions
         href: microsoft-edge-manage-extensions-policies.md
-        name: Create a web store for Microsoft Edge Extensions
+      - name: Create a web store for Microsoft Edge Extensions
         href: microsoft-edge-manage-extensions-webstore.md
    - name: Microsoft Edge enterprise sync
      items: 
