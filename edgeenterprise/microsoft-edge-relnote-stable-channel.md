@@ -24,6 +24,10 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
+## Version 89.0.774.50: March 10
+
+Fixed various bugs and performance issues.
+
 ## Version 89.0.774.48: March 8
 
 Fixed various bugs and performance issues.
