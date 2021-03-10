@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/09/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -108,6 +108,14 @@
      href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md
+   - name: Manage Microsoft Edge Extensions
+     items:
+      - name: Manage Microsoft Edge Extensions in the enterprise
+        href: microsoft-edge-manage-extensions.md
+        name: Use group policies to manage Microsoft Edge Extensions
+        href: microsoft-edge-manage-extensions-policies.md
+        name: Create a web store for Microsoft Edge Extensions
+        href: microsoft-edge-manage-extensions-webstore.md
    - name: Microsoft Edge enterprise sync
      items: 
       - name: Configure Microsoft Edge sync
