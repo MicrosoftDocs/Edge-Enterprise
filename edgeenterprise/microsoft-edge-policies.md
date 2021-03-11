@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,29 +24,36 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
+## New and deprecated policies
 
-The following table lists the new policies for this update.
+The following table lists the new and deprecated policies for this update.
 
-| Name | Caption |
+|Name|Caption|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
 
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-|||
-|-|-|
-|[Application Guard settings](#application-guard-settings)|[Cast](#cast)|
-|[Content settings](#content-settings)|[Default search provider](#default-search-provider)|
-|[Extensions](#extensions)|[HTTP authentication](#http-authentication)|
-|[Kiosk Mode settings](#kiosk-mode-settings)|[Manageability](#manageability)|
-|[Native Messaging](#native-messaging)|[Password manager and protection](#password-manager-and-protection)|
-|[Performance](#performance)|[Printing](#printing)|
-|[Proxy server](#proxy-server)|[Sleeping tabs settings](#sleeping-tabs-settings)|
-|[SmartScreen settings](#smartscreen-settings)|[Startup, home page and new tab page](#startup-home-page-and-new-tab-page)|
-|[Additional](#additional)|
+- [Application Guard settings](#application-guard-settings)
+- [Cast](#cast)
+- [Content settings](#content-settings)
+- [Default search provider](#default-search-provider)
+- [Extensions](#extensions)
+- [HTTP authentication](#http-authentication)
+- [Kiosk Mode settings](#kiosk-mode-settings)
+- [Manageability](#manageability)
+- [Native Messaging](#native-messaging)
+- [Password manager and protection](#password-manager-and-protection)
+- [Performance](#performance)
+- [Printing](#printing)
+- [Proxy server](#proxy-server)
+- [Sleeping tabs settings](#sleeping-tabs-settings)
+- [SmartScreen settings](#smartscreen-settings)
+- [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
+- [Additional](#additional)
+
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -390,7 +397,7 @@ and tips for Microsoft services|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
@@ -1890,7 +1897,7 @@ Leaving the policy unset means [DefaultFileSystemReadGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -1959,7 +1966,7 @@ If you don't set this policy, [DefaultFileSystemReadGuardSetting](#defaultfilesy
 
 URL patterns can't conflict with [FileSystemReadAskForUrls](#filesystemreadaskforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2028,7 +2035,7 @@ If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2097,7 +2104,7 @@ If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2164,6 +2171,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 If you don't configure this policy, the global default value is used for all sites either from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration.
 
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -2228,6 +2237,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   Define a list of sites, based on URL patterns, that aren't allowed to display images.
 
 If you don't configure this policy, the global default value from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2294,6 +2305,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -2358,6 +2371,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   Create a list of URL patterns to specify sites that aren't allowed to display blockable (i.e. active) mixed content (that is, HTTP content on HTTPS sites) and for which optionally blockable mixed content upgrades will be disabled.
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -9129,7 +9144,7 @@ If you enable or don't configure this policy, users can play the surf game.
 
   #### Description
 
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It won't work in Microsoft Edge version 88.
+  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It won't work in Microsoft Edge version 93.
 
 This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
 
@@ -11052,7 +11067,7 @@ If you enable this policy, the built-in DNS client is used, if it's available.
 
 If you disable this policy, the built-in DNS client is only used when DNS-over-HTTPS is in use.
 
-If you don't configure this policy, the built-in DNS client is enabled by default.
+If you don't configure this policy, the built-in DNS client is enabled by default on macOS and Android (when neither Private DNS nor VPN are enabled).
 
   #### Supported features:
 
@@ -11112,7 +11127,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
-It won't work in Microsoft Edge version 87, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+It won't work in Microsoft Edge version 92, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
 
   #### Supported features:
@@ -19312,9 +19327,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### SSLVersionMin
 
-  #### Minimum TLS version enabled
+  #### Minimum TLS version enabled (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -19322,7 +19337,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### Description
 
-  Sets the minimum supported version of TLS. If you don't configure this policy, Microsoft Edge will show an error for TLS 1.0 and TLS 1.1, but the user will be able to bypass it.
+  Support for suppressing the TLS 1.0/1.1 warning will be removed from Microsoft Edge starting in version 91 (around May 2021) and this policy will stop working then.
+
+Sets the minimum supported version of TLS. If you don't configure this policy, Microsoft Edge will show an error for TLS 1.0 and TLS 1.1, but the user will be able to bypass it.
 
 If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Any unrecognized value is ignored.
 
@@ -19351,7 +19368,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SSLVersionMin
-  - GP name: Minimum TLS version enabled
+  - GP name: Minimum TLS version enabled (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx

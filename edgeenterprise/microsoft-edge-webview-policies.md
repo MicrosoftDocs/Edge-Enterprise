@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,9 +26,8 @@ For information about an additional set of policies used to control how and when
 
 These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
 
-|||
-|-|-|
-|[Loader Override Settings](#loader-override-settings)|
+- [Loader Override Settings](#loader-override-settings)
+
 
 ### [*Loader Override Settings*](#loader-override-settings-policies)
 
