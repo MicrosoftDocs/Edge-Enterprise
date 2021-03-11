@@ -24,9 +24,9 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Deprecated policies
+## New and deprecated policies
 
-The following table lists the deprecated policies for this update.
+The following table lists the new and deprecated policies for this update.
 
 |Name|Caption|
 |--|--|
