@@ -116,6 +116,8 @@
         href: microsoft-edge-manage-extensions-policies.md
       - name: Create a web store for Microsoft Edge Extensions
         href: microsoft-edge-manage-extensions-webstore.md
+      - name: Microsoft Edge Extensions FAQ
+        href: microsoft-edge-manage-extensions-faq.md
    - name: Microsoft Edge enterprise sync
      items: 
       - name: Configure Microsoft Edge sync
