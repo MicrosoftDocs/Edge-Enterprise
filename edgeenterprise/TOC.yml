@@ -1,4 +1,4 @@
-# last revised 03/09/2021
+# last revised 03/11/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -59,8 +59,6 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-#      - name: Blocker Toolkit for Microsoft Edge updates
-#        href: microsoft-edge-blocker-toolkit.md
       - name: How to access the old version of Microsoft Edge
         href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
@@ -108,15 +106,15 @@
      href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md
-   - name: Manage Microsoft Edge Extensions
+   - name: Manage Microsoft Edge extensions
      items:
-      - name: Manage Microsoft Edge Extensions in the enterprise
+      - name: Manage extensions in the enterprise
         href: microsoft-edge-manage-extensions.md
-      - name: Use group policies to manage Microsoft Edge Extensions
+      - name: Use group policies to manage extensions
         href: microsoft-edge-manage-extensions-policies.md
-      - name: Create a web store for Microsoft Edge Extensions
+      - name: Create a web store to host extensions
         href: microsoft-edge-manage-extensions-webstore.md
-      - name: Microsoft Edge Extensions FAQ
+      - name: Extensions FAQ
         href: microsoft-edge-manage-extensions-faq.md
    - name: Microsoft Edge enterprise sync
      items: 

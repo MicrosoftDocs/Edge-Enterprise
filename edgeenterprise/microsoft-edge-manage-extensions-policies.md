@@ -1,18 +1,18 @@
 ---
-title: "Use group policies to manage Microsoft Edge Extensions in the enterprise"
+title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/09/2021
+ms.date: 03/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Use group policies to manage Microsoft Edge Extensions in the enterprise"
+description: "Use group policies to manage Microsoft Edge extensions in the enterprise"
 ---
 
-# Use group policies to manage Microsoft Edge Extensions in the enterprise
+# Use group policies to manage Microsoft Edge extensions
 
 This article gives IT administrators best practice guidance for managing Microsoft Edge browser extensions in their organizations. It provides steps for managing extensions using Windows Group Policies. For the corresponding implementation for MAC/Linux refer to the Microsoft Edge Browser Policy Documentation | Microsoft Docs guide.  
 
