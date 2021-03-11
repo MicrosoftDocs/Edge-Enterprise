@@ -207,8 +207,6 @@
         href: edge-learnmore-regex.md
       - name: Reset Microsoft Edge data
         href: edge-learnmore-reset-data-in-cloud.md
-#      - name: User data directory variables
-#        href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises
         href: edge-learnmore-rollback.md
 - name: Microsoft Edge Videos
