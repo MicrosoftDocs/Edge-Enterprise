@@ -5,7 +5,7 @@ author: dan-wesley
 manager: srugh
 ms.date: 05/01/2020
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
