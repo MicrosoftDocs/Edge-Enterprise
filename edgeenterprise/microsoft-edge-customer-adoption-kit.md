@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/26/2020
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,9 +14,9 @@ description: "Microsoft Edge customer adoption materials"
 
 # Customer adoption materials for Microsoft Edge
 
-To support the deployment and adoption of the new Microsoft Edge, please see the collected materials and resources below. A collected zip file is provided for you to download.
+To support the deployment and adoption of Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
 
-Please check back for additional materials as they are available.
+Check back for more materials as they're made available.
 
 ## Customer adoption kit
 
@@ -24,14 +24,14 @@ The customer adoption kit contains the following material:
 
 - IT Deployment Guide
 - How to Get Started User Guide
-- Introductory Email
+- Adoption Email Templates
 - Banners
 - Digital Signage
 - One-Pagers
-- Demo and gifs
-- Web Resource links
+- Demo Video and GIFs
+- Web Resource Links
 
-[Download customer adoption kit](https://www.microsoft.com/download/details.aspx?id=102119)
+The adoption kit is available in English and several other languages, including French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
 
 ### IT Deployment Guide
 
@@ -41,19 +41,19 @@ Use this guide to begin planning deployment and learn how to get started deployi
 
 ### How to Get Started User Guide
 
-Use this guide to educate users on the new Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
+Use this guide to educate users about Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Get Started User Guide How to ...":::
 
-### Email templates
+### Adoption Email Templates
 
-Use these email templates to announce that the new Microsoft Edge is available for users and to provide tips and tricks on how to get the most out of the browser.
+Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshot shows an example of these templates.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Email template for tips and tricks":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-3-email-template.png" alt-text="Adoption email templates":::
 
 ### Digital Signage
 
-Use the following digital signage to inform users about the new Microsoft Edge:
+Use the following digital signage to inform users about Microsoft Edge:
 
 - Enterprise new tab page
 - Multiple Profiles and Cross Platform
@@ -64,7 +64,7 @@ Use the following digital signage to inform users about the new Microsoft Edge:
 
 ### Banners
 
-Use these banners on your internal sites to advertise the new Microsoft Edge to your employees.
+Use these banners on your internal sites to advertise Microsoft Edge to your employees.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Banner ads example.":::
 

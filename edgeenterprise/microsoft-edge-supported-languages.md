@@ -3,18 +3,18 @@ title: "Microsoft Edge language support"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2019
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge language support"
+description: "Microsoft Edge display language support for Windows and macOS."
 ---
 
 # Microsoft Edge language support
 
-This article shows how you can use Microsoft Edge settings to add a supported language to the browser. Microsoft Edge supports 96 languages on Windows and 91 languages on macOS.
+This article shows how you can use Microsoft Edge settings to add a supported language to the browser. Microsoft Edge supports 84 display languages on Windows and 81 display languages on macOS.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 78 or later.
@@ -53,9 +53,9 @@ In addition to using a foreign language in the browser, you can use the [Transla
 > [!NOTE]
 > If the translator extension doesn't work after installation, restart Microsoft Edge. If the extension still doesn't work, provide feedback through the Feedback Hub.
 
-## Supported languages
+## Supported display languages
 
-The following table lists the languages that are supported by Microsoft Edge.
+The following table lists the display languages that are supported by Microsoft Edge.
 
 > [!NOTE]
 > Languages that aren't supported by Microsoft Edge on macOS are indicated by an asterisk (*) after the country/region.  
@@ -66,23 +66,18 @@ The following table lists the languages that are supported by Microsoft Edge.
 |                 Albanian                           |                 Albania                 |     sq         |
 |            Amharic                                 |                Ethiopia                 |     am         |
 |               Arabic                               |              Saudi Arabia               |     ar         |
-|               Armenian                             |              Armenia                    |      hy        |
 |               Assamese                             |                  India                  |     as         |
 |          Azerbaijani                               |               Azerbaijan, Latin         |    az          |
-|                   Bangla                           |              Bangladesh*                |     bn         |
-|                                                    |                  India*                 |     bn-IN      |
+|                   Bangla                           |              India*                     |     bn-IN      |
 |                  Basque                            |                  Basque                 |     eu         |
-|                   Belarusian                       |                  Belarus                |     be         |
 |              Bosnian                               |       Bosnia and Herzegovina, Latin     |       bs       |
 |                Bulgarian                           |                Bulgaria                 |     bg         |
 |                 Catalan                            |                Catalan                  |     ca         |
-|                Cherokee                            |                   Cherokee              |      chr       |
 |            Chinese                                 |              China, Simplified          |     zh-CN      |
 |                                                    |             Taiwan, Traditional         |     zh-TW      |
 |                 Croatian                           |                 Croatia                 |     hr         |
 |                 Czech                              |             Czech Republic              |     cs         |
 |                  Danish                            |                 Denmark                 |     da         |
-|                   Dari                             |                  Afghanistan*           |     prs        |
 |                Dutch                               |               Netherlands               |     nl         |
 |              English                               |             United Kingdom              |     en-GB      |
 |                                                    |              United States              |     en         |
@@ -107,10 +102,8 @@ The following table lists the languages that are supported by Microsoft Edge.
 |                      Kannada                       |                  India                  |     kn         |
 |                Kazakh                              |               Kazakhstan                |     kk         |
 |                  Khmer                             |                Cambodia                 |     km         |
-|                   Kiswahili                        |                    Kenya                |     sw         |
 |                      Konkani                       |                  India                  |     kok        |
 |                   Korean                           |                  Korea                  |     ko         |
-|                    Kyrgyz                          |              Kyrgyzstan                 |     ky         |
 |                     Lao                            |               Laos P.D.R.               |     lo         |
 |                  Latvian                           |                 Latvia                  |     lv         |
 |               Lithuanian                           |                Lithuania                |     lt         |
@@ -121,7 +114,6 @@ The following table lists the languages that are supported by Microsoft Edge.
 |               Maltese                              |                  Malta                  |     mt         |
 |          Maori                                     |               New Zealand               |     mi         |
 |               Marathi                              |                  India                  |     mr         |
-|                Mongolian                           |           Mongolia, Cyrillic            |     mn         |
 |                Nepali                              |               Nepal                     |     ne         |
 |             Norwegian                              |                 Norway, Bokmål          |     nb         |
 |                                                    |                 Norway, Nynorsk         |     nn         |
@@ -138,8 +130,6 @@ The following table lists the languages that are supported by Microsoft Edge.
 |            Serbian                                 |    Bosnia and Herzegovina, Cyrillic*    |   sr-Cyrl-BA   |
 |                                                    |                 Serbia, Cyrillic        |   sr-Cyrl-RS   |
 |                                                    |                 Serbia, Latin           |   sr-Latn-RS   |
-|                   Sindhi                           |               Pakistan                  |      sd        |
-|                 Sinhala                            |           Sri Lanka                     |      si        |
 |                 Slovak                             |                Slovakia                 |        sk      |
 |                Slovenian                           |                Slovenia                 |        sl      |
 |              Spanish                               |                 Mexico                  |     es-MX      |
@@ -150,11 +140,9 @@ The following table lists the languages that are supported by Microsoft Edge.
 |                Telugu                              |                  India                  |     te         |
 |                  Thai                              |                Thailand                 |     th         |
 |                  Turkish                           |                 Turkey                  |     tr         |
-|                  Turkmen                           |         Turkmenistan                    |      tk        |
 |                Ukrainian                           |                 Ukraine                 |     uk         |
 |             Urdu                                   |       Islamic Republic of Pakistan      |     ur         |
 |              Uyghur                                |                   PRC                   |     ug         |
-|              Uzbek                                 |         Uzbekistan, Latin               |   uz-Latn      |
 |               Valencian                            |                  Spain*                 | ca-Es-VALENCIA |
 |            Vietnamese                              |                 Vietnam                 |     vi         |
 |            Welsh                                   |             United Kingdom              |     cy         |
