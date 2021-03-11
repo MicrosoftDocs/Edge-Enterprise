@@ -22,4 +22,7 @@ aa
 
 ## See also
 
+- [Manage Microsoft Edge extensions in the enterprise](microsoft-edge-manage-extensions.md)
+- [Create a web store to host Microsoft Edge extensions](microsoft-edge-manage-extensions-webstore.md)
+- [FAQ for Microsoft Edge Extensions](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
