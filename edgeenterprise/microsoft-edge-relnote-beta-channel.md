@@ -24,6 +24,40 @@ These release notes provide information about new features and non-security upda
 
 ### Feature updates
 
+- **Synced browser history support for history search**. Searching history is currently limited to local data. This feature enables a user to search their local and synced browser history. This provides basic search capabilities on the *edge://history* page.
+
+- **Access downloads from a flyout in the menu bar**. Downloads will appear in the top-right corner with all the active downloads in one place. This menu is easily dismissible so users can continue browsing uninterrupted, and they can monitor overall download progress right from the toolbar. [Learn more](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+- **Extensions:**
+
+  - **Manage extensions from the address bar**. The all-new extensions menu on the address bar will let users  hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for a user to find new extensions and manage existing ones.
+
+  - **The "Disable developer mode extensions" warning can be permanently dismissed**. Starting with Microsoft Edge version 90, users can turn off the warning "Disable developer mode extensions" by clicking the "Don't show this again" option.
+
+- **Security**:
+
+  - **Authentication is required before autofilling passwords to provide a secure and trustworthy user experience**. Passwords saved to the browser will no longer be autofilled, they need successful user authentication before filling. This adds another layer of privacy and help prevents un-authorized users from exploiting saved passwords.
+
+  - **Single Sign On (SSO) is now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS**. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, and outlook.com).
+
+  - **Support for TLS Token binding for policy-configured sites**. TLS Token binding helps prevent token theft attacks to help ensure that cookies can’t be reused from a device other than the device on which they were initially set. Use of TLS token binding requires setting the [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) policy and requires that the listed sites support this feature.
+
+  - **Implement Trusted Types on Microsoft Edge internal pages**. [Trusted Types](https://web.dev/trusted-types/) is now enabled by default on Microsoft Edge internal pages, such as *edge://settings*.
+
+- **Productivity:**
+
+  - **Autofill suggestions are extended to include address fields content from clipboard**. Clipboard content is parsed when you click on a profile/address field (for example, phone, email, zip code, city, state, etc.) to show as autofill suggestions. 
+
+  - **Users can search for autofill suggestions even if a form or field isn’t detected**. Today if you have your information saved on Microsoft Edge, autofill suggestions pop up automatically and help you save time while filling out forms. In cases where autofill misses a form, or if you want to fetch data in forms that don't typically have autofill (like temporary forms), you can search for your information use autofill.
+
+  - **Bulk-delete passwords**.  Starting with Microsoft Edge version 90, users will be able to delete multiple saved passwords in a single action from the Settings > Passwords page.
+
+- **Printing:**
+
+  - **New print rasterization mode for non-PostScript printers**. Starting with Microsoft Edge version 90, Admins can use a new policy to define print rasterization mode for their users. This policy  controls how Microsoft Edge prints to non-PostScript printers on Windows.  Sometimes print jobs on non-PostScript printers need to be rasterized to print correctly. The print options are Full and Fast.
+
+  - **Additional page scaling options for printing**. Users are now able to customize scaling while printing webpages and PDF documents using additional options.The "Fit to Page" option ensures that the webpage or document is fit into the space available in the selected "Paper size" for printing. The "Actual size" option ensures that there are no changes in the size of the contents being printed regardless of the selected "Paper size".
+
 ### Policy updates
 
 #### New policies
