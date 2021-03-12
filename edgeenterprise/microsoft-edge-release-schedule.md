@@ -20,6 +20,9 @@ This article describes the release cadence and anticipated release schedule for 
 
 Microsoft provides four options, called channels, to manage how often Microsoft Edge is updated with new features. The Microsoft Edge team plans to push public updates to the Beta and Stable channels every six weeks. For more information about our channels, their release cycle, and support levels, see the [Channel overview](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview).
 
+> [!NOTE]
+> Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week major release cycle cadence. However, we recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle**; this option will only be available for customers with managed environments.
+
 ## Release schedule
 
 The following table lists the planned release dates for the Beta and Stable channels.
