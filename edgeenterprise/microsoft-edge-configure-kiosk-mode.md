@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,6 +31,9 @@ Both experiences are running a Microsoft Edge InPrivate session, which protects 
 ## Set up Microsoft Edge kiosk mode
 
 An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Edge (Official Stable Channel)](https://www.microsoft.com/edge).
+
+> [!IMPORTANT]
+> You can invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [**Use kiosk mode features**](#use-kiosk-mode-features).
 
 ### Kiosk mode supported features
 
@@ -206,7 +209,7 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
 With the release of this preview version of kiosk mode we're continuing work on improving the product and adding new features.
 
-We recommend that you turn off:
+We currently don't support the following features and recommend that you turn off:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -219,6 +222,7 @@ We recommend that you turn off:
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## Roadmap
 
