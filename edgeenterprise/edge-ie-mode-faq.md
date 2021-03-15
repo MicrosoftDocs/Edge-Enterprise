@@ -19,6 +19,7 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 > [!NOTE]
 > This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
 
+
 ## Troubleshoot IE mode
 
 Use the information in this section to diagnose and fix IE mode problems.
