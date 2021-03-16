@@ -24,8 +24,6 @@ These release notes provide information about new features and non-security upda
 
 ### Feature updates
 
-- **Synced browser history support for history search**. Searching history is currently limited to local data. This feature enables a user to search their local and synced browser history. This provides basic search capabilities on the *edge://history* page.
-
 - **Access downloads from a flyout in the menu bar**. Downloads will appear in the top-right corner with all the active downloads in one place. This menu is easily dismissible so users can continue browsing uninterrupted, and they can monitor overall download progress right from the toolbar. [Learn more](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
 
 - **Single Sign On (SSO) is now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS**. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, and outlook.com).
