@@ -20,7 +20,7 @@ This article describes how to configure Microsoft Edge kiosk mode options that y
 > This article applies to Microsoft Edge version 87 or later.
 
 > [!IMPORTANT]
-> You can invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [Use kiosk mode features](#use-kiosk-mode-features).
+> Invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [Use kiosk mode features](#use-kiosk-mode-features).
 
 ## Overview
 
