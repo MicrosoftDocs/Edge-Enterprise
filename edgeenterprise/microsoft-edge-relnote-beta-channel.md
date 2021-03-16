@@ -78,6 +78,10 @@ Seven new policies were added. Download the updated Administrative Templates fro
 - [SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin)- Minimum TLS version enabled
 <!-- end major 90 -->
 
+## Version 89.0.774.54: March 13
+
+Fixed various bugs and performance issues.
+
 ## Version 89.0.774.50: March 10
 
 Fixed various bugs and performance issues.
