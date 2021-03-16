@@ -32,9 +32,6 @@ Both experiences are running a Microsoft Edge InPrivate session, which protects 
 
 An initial set of kiosk mode features is available to test with Microsoft Edge Stable Channel, version 87. You can download the latest version from [Microsoft Edge (Official Stable Channel)](https://www.microsoft.com/edge).
 
-> [!IMPORTANT]
-> You can invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [**Use kiosk mode features**](#use-kiosk-mode-features).
-
 ### Kiosk mode supported features
 
 The following table lists the features supported by kiosk mode in Microsoft Edge and Microsoft Edge Legacy. Use this table as a guide to transitioning to Microsoft Edge by comparing how these features are supported in both versions of Microsoft Edge.
