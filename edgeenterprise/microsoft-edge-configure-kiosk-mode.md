@@ -19,6 +19,9 @@ This article describes how to configure Microsoft Edge kiosk mode options that y
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
+> [!IMPORTANT]
+> You can invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [Use kiosk mode features](#use-kiosk-mode-features).
+
 ## Overview
 
 Microsoft Edge kiosk mode offers two lockdown experiences of the browser so organizations can create, manage, and provide the best experience for their customers. The following lockdown experiences are available:  
