@@ -91,7 +91,7 @@ The following examples show how to block extensions on a hostname and how to blo
 
 ### JSON example to block hostname
 
-The next example shows the JSON and compressed JSON to block any extension from accessing the www.microsoft.com hostname.
+The next example shows the JSON and compressed JSON to block any extension from accessing the `www.microsoft.com` hostname.
 
 ```json
 { 
