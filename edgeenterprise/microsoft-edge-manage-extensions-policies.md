@@ -32,7 +32,11 @@ You can control what extensions your users can install based on permissions usin
 Use the following steps as a guide for blocking an extension.
 
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions**  and then select **Configure extension management settings**.
-2. Enable the policy, then enter the permissions that you want allowed or blocked, by using a JSON string that gets compressed. The following example shows the JSON to block any extension that needs the use of permission "usb" and the compressed string.
+2. Enable the policy, then enter the permissions that you want allowed or blocked, by using a JSON string that gets compressed. The next screenshot shows how to block an extension that uses the permission "usb".
+
+    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-1.png" alt-text="Configure group policy to block an extension.":::
+
+The following example shows the JSON to block any extension that needs the use of permission "usb" and the compressed string.
 
    ```json
    { 
