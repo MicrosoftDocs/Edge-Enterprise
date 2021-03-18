@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/17/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -106,7 +106,7 @@ The next example shows the JSON and compressed JSON to block any extension from 
 ```
 
 > [!NOTE]
-> To block all extensions from accessing a webpage, use an asterisk for the extension ID, as shown in the previous example.  If you specify one extension ID instead of an asterisk, the policy will only apply to that extension. You can block more than one extension, but they need to be separate entries. .
+> To block all extensions from accessing a webpage, use an asterisk for the extension ID, as shown in the previous example.  If you specify one extension ID instead of an asterisk, the policy will only apply to that extension. You can block more than one extension, but they need to be separate entries.
 
 ### JSON example to block extensions on same domain
 
@@ -138,14 +138,65 @@ The next example shows the JSON and compressed JSON to block two extensions from
 
 Use the following steps as a guide to allow all extensions except those you want to block.
 
+1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Control which extensions cannot be installed**.
+2. Select **Enabled**.
+3. Click **Show**.
+4. Enter the app ID of the extensions that you want to block. Type **\*** into the policy to prevent any extensions from being installed. You can use this in conjunction with the "Allow specific extensions to be installed" policy to only allow certain extensions to be installed. The next screenshot shows an extension that will be blocked based on the app ID that's provided.
+
+   :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Use app ID to block an extension.":::
+
+   > [!TIP]
+   > If you can’t find the app ID of an extension, look at the extension in the Microsoft Edge Add-ons website. Find the specific extension and you will see the app ID at the end of the URL in the omnibox.
+
+> [!NOTE]
+> You can add an extension to the blocklist that’s already installed on a user’s computer. This will disable the extension and prevent the user from re-enabling it. It won't be uninstalled, just disabled.
+
+### Block or allow one extension
+
+To block a single extension, add the app ID of the extension you want blocked to the configure extension installation blocklist policy. All other extensions will be allowed to be installed.
+
+Use the following steps as a guide to allow a single extension.
+
+1. In the **Show Contents** window for **Control which extensions cannot be installed** policy, type **\***. This will block all extensions from being installed.  
+2. Add the app ID of the allowed extension to the **Allow specific extensions to be installed** policy. When adding multiple app ID’s use a separate row for each ID.  
 
 ## Force-install an extension
 
-Use the following steps as a guide to force-install an extension. 
+Use the following steps as a guide to force-install an extension.
+
+1. In the Group Policy Editor, go to **Administrative Templates> Microsoft Edge >  Extensions >** and then select **Control which extensions are installed silently**.
+2. Select **Enabled**.  
+3. Click **Show**.
+4. Enter the app ID or IDs of the extension or extensions you want to force-install.  
+
+The extension will be installed silently with no need for user interaction. The user also won’t be able to uninstall or disable the extension. This setting will overwrite over any blocklist policy that’s enabled.
+
+> [!NOTE]
+> For extensions hosted in the Chrome web store use a string such as: `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
 
 ## Block extensions from a specific store or update URL
 
-To block extensions from a particular store or URL, you only need to block the *update_url* for that store.  
+To block extensions from a particular store or URL, you only need to block the *update_url* for that store.
+
+Use the following steps as a guide to block extensions from an particular store or URL.
+
+1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Configure extension management settings**.  
+2. Enable the policy, then enter the permissions that you want allowed or blocked, compressing it to a single JSON string. The next example shows how to block from the Chrome Web Store using its update URL (`https://clients2.google.com/service/update2/crx`).
+
+```json
+{ 
+"update_url:https://clients2.google.com/service/update2/crx":{ 
+                                                             " installation_mode":"blocked" 
+                                                             } 
+} 
+```
+
+```json
+{"update_url:https://clients2.google.com/service/update2/crx":{"installation_mode":"blocked"}} 
+```
+
+> [!NOTE]
+> You can still use **ExtensionInstallForceList** and **ExtensionInstallAllowList** to allow/force install specific extensions even if the store is blocked using the JSON in the previous example.
 
 ## See also
 
