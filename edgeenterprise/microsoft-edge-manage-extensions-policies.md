@@ -40,13 +40,9 @@ The following example shows the JSON to block any extension that needs the use o
 
    ```json
    { 
-
         "*": { 
-
              "blocked_permissions": ["usb"] 
-
         } 
-
    } 
    ```
 
@@ -114,19 +110,12 @@ The next example shows the JSON and compressed JSON to block two extensions from
 
 ```json
 { 
-
     "aapbdbdomjkkjkaonfhkkikfgjllcleb": { 
-
         "runtime_blocked_hosts": ["*://*.importantwebsite"] 
-
     }, 
-
     "bfbmjmiodbnnpllbbbfblcplfjjepjdn": { 
-
         "runtime_blocked_hosts": ["*://*.importantwebsite"] 
-
     } 
-
 } 
 ```
 
