@@ -47,6 +47,15 @@ Some examples of these permissions are: access to a USB port, storage or viewing
 
 ## Get ready to manage extensions
 
+Most organizations should manage extensions by their permissions and what websites they have access to. This method is more secure, easier to manage, and is scalable for large organizations.  
+
+- Blocked/allowed permissions – Lets you control extensions by the permissions they need.
+- Runtime block hosts – Lets you to control what websites these extensions can access.
+- Force install extensions – Lets you install extensions silently.
+- Allowlist/blocklist (if required) – Decide what extensions are allowed to be installed.
+
+Using this approach saves time because you only need to set these once. And with the run-time hosts policy, your most important sites will be protected.
+
 ### Decide which extensions to allow
 
 ## See also
