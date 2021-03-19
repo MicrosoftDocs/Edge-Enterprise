@@ -18,14 +18,14 @@ Microsoft is committed to providing enterprises with the information and control
 
 ## Overview
 
-When Microsoft Edge is deployed on Windows 10, the default is to send diagnostic data based on the users' [Windows Diagnostic data setting](https://go.microsoft.com/fwlink/?linkid=2099569).
+When Microsoft Edge is deployed on Windows 10, the default is to send diagnostic data based on the users' [Windows Diagnostic data setting](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 When Microsoft Edge is deployed on non-Windows platforms, diagnostic data is collected according to the settings of the following group policies:
 
-- (DEPRECATED) [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - Enable usage and crash-related data reporting. This policy will be obsolete in Microsoft Edge version 89.
-- (DEPRECATED) [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Send site information to improve Microsoft services. This policy will be obsolete in Microsoft Edge version 89.
+- (DEPRECATED) [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - Enable usage and crash-related data reporting. This policy will be obsolete in Microsoft Edge version 89.
+- (DEPRECATED) [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Send site information to improve Microsoft services. This policy will be obsolete in Microsoft Edge version 89.
 
-The preceding deprecated policies are replaced by [Allow Telemetry](https://go.microsoft.com/fwlink/?linkid=2099569) on Windows 10, and [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) policy for all other platforms.  
+The preceding deprecated policies are replaced by [Allow Telemetry](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) on Windows 10, and [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy for all other platforms.  
 
 ## Configure policy settings
 
@@ -33,7 +33,7 @@ Before you begin, download and use the latest Microsoft Edge Policy Template (Fo
 
 ### Send required and optional diagnostic data about browser usage
 
-If the [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) policy is configured, it takes precedence over [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) and [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).
+If the [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy is configured, it takes precedence over [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) and [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices).
 
 #### Required and optional diagnostic data
 
@@ -42,7 +42,7 @@ Required diagnostic data is collected to keep Microsoft Edge secure, up to date 
 Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to help keep Microsoft Edge secure, up to date, and performing as expected and is used to improve Microsoft Edge and other Microsoft products and services for all users.
 
 > [!NOTE]
-> This policy isn't supported on Windows 10 devices. To control data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be to **Allow Telemetry** or to **Allow Diagnostic Data**, depending on the version of Windows. Learn more about [Windows 10 diagnostic data collection](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+> This policy isn't supported on Windows 10 devices. To control data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be to **Allow Telemetry** or to **Allow Diagnostic Data**, depending on the version of Windows. Learn more about [Windows 10 diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 Use one of the following settings to configure **DiagnosticData**:
 
@@ -66,13 +66,13 @@ When Microsoft Edge is running on Windows 10:
 
 - If this policy isn't configured, Microsoft Edge will default to the Windows diagnostic data setting.
 - If this policy is enabled, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to **Enhanced** or **Full**.
-  - If this policy is enabled, Microsoft Edge will only send usage data if [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) is also enabled.
-- If this policy is disabled, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. [Learn more about Windows Diagnostic data settings](https://go.microsoft.com/fwlink/?linkid=2099569).
+  - If this policy is enabled, Microsoft Edge will only send usage data if [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) is also enabled.
+- If this policy is disabled, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. [Learn more about Windows Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 When Microsoft Edge is running on Windows 7, 8, and macOS:
 
 - If this policy isn't configured, Microsoft Edge defaults to the user's preference.
--  If this policy is enabled, Microsoft Edge will only send usage data if [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) is also enabled.
+-  If this policy is enabled, Microsoft Edge will only send usage data if [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) is also enabled.
 
 ### (DEPRECATED) Send site information to improve Microsoft services
 
@@ -84,19 +84,19 @@ When Microsoft Edge is running on Windows 10:
 
 - If this policy isn't configured, Microsoft Edge will default to the Windows diagnostic data setting.
 - If this policy is enabled, Microsoft Edge will only send information about the websites that are visited if the Windows Diagnostic data setting is set to **Full**.
-  - If this policy is enabled, Microsoft Edge will only send usage data if [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) is also enabled. 
-- If this policy is disabled, Microsoft Edge will not send info about websites visited. To [learn more about Windows Diagnostic data settings](https://go.microsoft.com/fwlink/?linkid=2099569).
+  - If this policy is enabled, Microsoft Edge will only send usage data if [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) is also enabled. 
+- If this policy is disabled, Microsoft Edge will not send info about websites visited. To [learn more about Windows Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 When Microsoft Edge is running on Windows 7, 8, and macOS:
 
-- If this policy is enabled, Microsoft Edge will only send usage data if [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) is also enabled.
+- If this policy is enabled, Microsoft Edge will only send usage data if [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) is also enabled.
 - If this policy isn't configured, Microsoft Edge defaults to the user's preference.
 
 ## Implementation details
 
 For non-Windows 10 devices: 
-- If [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) policy is configured, it takes precedence over [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) and [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices). 
-- If [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) policy isn't configured, Microsoft Edge listens to [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) and [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices).  
+- If [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy is configured, it takes precedence over [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) and [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices). 
+- If [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy isn't configured, Microsoft Edge listens to [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) and [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices).  
 
 For Windows 10 to understand our implementation with the dependency on the Windows Diagnostic data setting, the following table identifies whether **Required** and **Optional** diagnostic data is sent to Microsoft.
 
@@ -123,4 +123,4 @@ You may want to consider the following group policies related to data privacy:
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge policies](microsoft-edge-policies.md)
-- [Microsoft Edge Privacy Whitepaper](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper)
+- [Microsoft Edge Privacy Whitepaper](/microsoft-edge/privacy-whitepaper)

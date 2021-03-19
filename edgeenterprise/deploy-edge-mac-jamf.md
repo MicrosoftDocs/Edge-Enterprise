@@ -92,4 +92,4 @@ Congratulations! You’ve just finished configuring Jamf to deploy Microsoft Edg
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Integrate Jamf with Microsoft Intune](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Integrate Jamf with Microsoft Intune](/intune/conditional-access-integrate-jamf)
