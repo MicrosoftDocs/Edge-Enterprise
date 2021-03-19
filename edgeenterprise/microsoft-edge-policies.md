@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,6 +24,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies for this update.
+
+|Name|Caption|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Fetch keepalive duration on shutdown|
+
 
 ## Available policies
 
@@ -226,6 +236,7 @@ and tips for Microsoft services|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (deprecated)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
@@ -317,6 +328,7 @@ and tips for Microsoft services|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety and Kids Mode|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Fetch keepalive duration on shutdown|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
@@ -8454,6 +8466,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewTabPageQuickLinksEnabled
+
+  #### Allow quick links on the new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 91 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, Microsoft Edge displays quick links on the new tab page, and the user can interact with the control, turning quick links on and off. Enabling this policy does not force quick links to be visible - the user can continue to turn quick links on and off.
+
+If you disable this policy, Microsoft Edge hides quick links on the new tab page and disables the quick links control in the NTP settings flyout.
+
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+
+Related policy: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageQuickLinksEnabled
+  - GP name: Allow quick links on the new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageQuickLinksEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewTabPageQuickLinksEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NewTabPageSetFeedType
 
   #### Configure the Microsoft Edge new tab page experience (deprecated)
@@ -14385,6 +14461,68 @@ If this policy is not configured, then the user can decide to use the favorites 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### FetchKeepaliveDurationOnShutdown
+
+  #### Fetch keepalive duration on shutdown
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 90 or later
+
+  #### Description
+
+  Controls the duration (in seconds) that keepalive requests are allowed to prevent the browser from completing its shutdown.
+
+If you configure this policy, the browser will block completing shutdown while it processes any outstanding keepalive requests (see https://fetch.spec.whatwg.org/#request-keepalive-flag) up to the maximum period of time specified by this policy.
+
+If you disable or don't configure this policy, the default value of 0 seconds is used and outstanding keepalive requests will be immediately cancelled during browser shutdown.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: FetchKeepaliveDurationOnShutdown
+  - GP name: Fetch keepalive duration on shutdown
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: FetchKeepaliveDurationOnShutdown
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: FetchKeepaliveDurationOnShutdown
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ForceBingSafeSearch
 
   #### Enforce Bing SafeSearch
@@ -15113,7 +15251,11 @@ Popular, single-word search terms will require manual selection of search sugges
 
   #### Description
 
-  Hostnames specified in this list will be exempt from the HSTS policy check that could potentially upgrade requests from "http://" to "https://". Only single-label hostnames are allowed in this policy. Hostnames must be canonicalized. Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific hostnames specified; it doesn't apply to subdomains of the names in the list.
+  Setting the policy specifies a list of hostnames that bypass preloaded HSTS upgrades from http to https.
+
+Only single-label hostnames are allowed in this policy, and this policy only applies to static HSTS-preloaded entries (for example, "app", "new", "search", "play"). This policy does not prevent HSTS upgrades for servers that have dynamically requested HSTS upgrades using a Strict-Transport-Security response header.
+
+Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific single-label hostnames specified, not to subdomains of those names.
 
   #### Supported features:
 
@@ -16840,9 +16982,9 @@ Users can do so from within the "More tools" menu by selecting 'Open sites in In
 Additionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.
 
 This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
+   
+																														 
 
 If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list.
 
