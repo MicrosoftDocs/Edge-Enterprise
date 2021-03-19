@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/18/2021
+ms.date: 03/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -36,7 +36,9 @@ Use the following steps as a guide for blocking an extension.
 
     :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-1.png" alt-text="Configure group policy to block an extension.":::
 
-The following example shows the JSON to block any extension that needs the use of permission "usb" and the compressed string.
+The following example shows the JSON to block any extension that needs the use of permission "usb" and its compressed string.
+
+### JSON example
 
    ```json
    { 
@@ -87,7 +89,7 @@ The following examples show how to block extensions on a hostname and how to blo
 
 ### JSON example to block hostname
 
-The next example shows the JSON and compressed JSON to block any extension from accessing the `www.microsoft.com` hostname.
+This example shows the JSON and compressed JSON string to block any extension from accessing the `www.microsoft.com` hostname.
 
 ```json
 { 
@@ -106,7 +108,7 @@ The next example shows the JSON and compressed JSON to block any extension from 
 
 ### JSON example to block extensions on same domain
 
-The next example shows the JSON and compressed JSON to block two extensions from running on the same domain.
+This example shows the JSON and compressed JSON string to block two extensions from running on the same domain.
 
 ```json
 { 
@@ -170,7 +172,11 @@ To block extensions from a particular store or URL, you only need to block the *
 Use the following steps as a guide to block extensions from an particular store or URL.
 
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Configure extension management settings**.  
-2. Enable the policy, then enter the permissions that you want allowed or blocked, compressing it to a single JSON string. The next example shows how to block from the Chrome Web Store using its update URL (`https://clients2.google.com/service/update2/crx`).
+2. Enable the policy, then enter the permissions that you want allowed or blocked, compressing it to a single JSON string.
+
+The next example shows the JSON and compressed JSON string to block from the Chrome Web Store using its update URL (`https://clients2.google.com/service/update2/crx`).
+
+### JSON example for blocking on update URL
 
 ```json
 { 
