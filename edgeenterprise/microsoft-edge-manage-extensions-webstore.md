@@ -1,20 +1,20 @@
 ---
-title: "Create a web store to host Microsoft Edge extensions"
+title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/11/2021
+ms.date: 03/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn how to create and use a web store to host Microsoft Edge extensions in the enterprise"
+description: "Learn how to package and self-host Microsoft Edge extensions in the enterprise."
 ---
 
-# Create a web store to host Microsoft Edge extensions
+# Self-host Microsoft Edge extensions
 
-This article gives IT administrators best practice guidance for managing Microsoft Edge browser extensions in their organizations. It provides steps for managing extensions using Windows Group Policies. For the corresponding implementation for MAC/Linux refer to the Microsoft Edge Browser Policy Documentation | Microsoft Docs guide.  
+This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
 
 ## Introduction
 
