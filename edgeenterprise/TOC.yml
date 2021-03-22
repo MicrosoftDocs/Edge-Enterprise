@@ -112,7 +112,7 @@
         href: microsoft-edge-manage-extensions.md
       - name: Use group policies to manage extensions
         href: microsoft-edge-manage-extensions-policies.md
-      - name: Create a web store to host extensions
+      - name: Self-host Microsoft Edge extensions
         href: microsoft-edge-manage-extensions-webstore.md
       - name: Extensions FAQ
         href: microsoft-edge-manage-extensions-faq.md
