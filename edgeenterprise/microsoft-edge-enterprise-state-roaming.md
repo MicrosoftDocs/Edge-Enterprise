@@ -21,7 +21,7 @@ This article explains how Microsoft Edge participation in the Enterprise State R
 
 ## Introduction
 
-With Windows 10, [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) users gained the ability to securely synchronize their user settings and application settings data to the cloud. [Enterprise State Roaming (ESR)](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview) provides users with a unified experience across their Windows devices and reduces the time needed for configuring a new device.
+With Windows 10, [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) users gained the ability to securely synchronize their user settings and application settings data to the cloud. [Enterprise State Roaming (ESR)](/azure/active-directory/devices/enterprise-state-roaming-overview) provides users with a unified experience across their Windows devices and reduces the time needed for configuring a new device.
 
 As part of Microsoft Edge adopting the Chromium platform, its sync solution is now disconnected from Windows sync framework. This affects the relationship of Microsoft Edge to the ESR offering.
 
@@ -65,7 +65,7 @@ Admins will be able to control which members in your organization can enable syn
 The synchronization feature leverages Azure Information Protection (AIP) to protect the synchronized data for only the user and the enterprise admins. AIP supports both Microsoft managed (default) and bring your own key for cloud-key management. The cloud-key management strategy your organization uses is transparent to Microsoft Edge and has no impact on the synchronization feature.
 
 > [!IMPORTANT]
-> [Hold your own key (HYOK)](https://docs.microsoft.com/azure/information-protection/configure-adrms-restrictions) and the Active Directory Rights Management Service aren't supported.
+> [Hold your own key (HYOK)](/azure/information-protection/configure-adrms-restrictions) and the Active Directory Rights Management Service aren't supported.
 
 ## Summary of sync attributes
 
@@ -79,7 +79,7 @@ The following data attributes will sync in the new version of Microsoft Edge at 
 - Settings (preferences)
 - Extensions
 
-The preceding list of attributes is different than the attributes that could be synced in Microsoft Edge Legacy. (For details about Microsoft Edge Legacy settings, see [Windows 10 roaming settings](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference).) Users can selectively enable/disable these attributes using Microsoft Edge settings. Given the difference in attributes between the two versions (for example, history), users might be asked to give sync consent again.
+The preceding list of attributes is different than the attributes that could be synced in Microsoft Edge Legacy. (For details about Microsoft Edge Legacy settings, see [Windows 10 roaming settings](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference).) Users can selectively enable/disable these attributes using Microsoft Edge settings. Given the difference in attributes between the two versions (for example, history), users might be asked to give sync consent again.
 
 > [!NOTE]
 > Unlike Microsoft Edge Legacy, the new Microsoft Edge doesn't use Windows credential Manager for passwords and as a result, won't sync passwords with Internet Explorer or other apps that use Windows Credential manager.

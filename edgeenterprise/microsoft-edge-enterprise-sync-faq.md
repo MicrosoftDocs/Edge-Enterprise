@@ -20,11 +20,11 @@ This article answers frequently asked questions about enterprise sync for Micros
 
 ### Is the synced data encrypted?
 
-The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern) policy.
+The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern) policy.
 
 ### Why don’t open tab and history data have more client-side encryption?
 
-To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process would not be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) or [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) policies.
+To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process would not be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) or [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) policies.
 
 ### Can tenant admins bring their own key?
 
@@ -58,7 +58,7 @@ No. ESR can be used to enable sync, but Microsoft Edge sync is not a part of ESR
 
 ### Will Microsoft Edge ever support syncing between Microsoft Edge and IE?
 
-There are no plans to support this syncing. If you still need IE in your environment to support legacy apps, consider our [new IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode).
+There are no plans to support this syncing. If you still need IE in your environment to support legacy apps, consider our [new IE mode](./edge-ie-mode.md).
 
 ### Will Microsoft Edge sync with Microsoft Edge Legacy?
 
@@ -68,7 +68,7 @@ No, it won't. We believe connecting these two ecosystems will lead to compromise
 
 ### Is it possible to stop my users from syncing with a personal tenant?
 
-Not directly, but you can determine which profiles can sign on to Microsoft Edge using the [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern) policy.
+Not directly, but you can determine which profiles can sign on to Microsoft Edge using the [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern) policy.
 
 ## See also
 

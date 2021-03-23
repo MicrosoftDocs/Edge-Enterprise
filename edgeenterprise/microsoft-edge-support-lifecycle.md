@@ -35,6 +35,6 @@ Microsoft strongly recommends staying current with the most recent Stable channe
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge documentation](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge documentation](./index.yml)
 - [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
-- [Microsoft Edge Supported Operating Systems](https://docs.microsoft.com/DeployEdge/microsoft-edge-supported-operating-systems)
+- [Microsoft Edge Supported Operating Systems](./microsoft-edge-supported-operating-systems.md)

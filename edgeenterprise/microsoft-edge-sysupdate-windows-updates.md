@@ -89,4 +89,4 @@ The following table gives the details for specific updates in each set of change
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge documentation](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge documentation](./index.yml)
