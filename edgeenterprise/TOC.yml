@@ -1,10 +1,10 @@
-# last revised 03/11/2021
+# last revised 03/22/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
   href: /microsoft-edge/
-#- name: Microsoft Edge content updates
-#  href: microsoft-edge-content-updates.md
+- name: Microsoft Edge content updates
+  href: microsoft-edge-content-updates.md
 # GET STARTED
 - name: Get started with Microsoft Edge
   items:
