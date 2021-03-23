@@ -16,9 +16,26 @@ description: "Learn how to package and self-host Microsoft Edge extensions in th
 
 This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
 
-## Introduction
+## Prerequisites
 
-aa
+To self-host your own extensions, you will need to provide your own web hosting services for the extensions and their manifest files.
+
+ The following steps assume that you’ve already created your extension, have some experience with XML files, have a working knowledge of configuring group policy, and know how to use the Windows registry.
+
+## Publish an extension
+
+Before you publish an extension it needs to be packed into a CRX file. Use the following steps as a guide to packing an extension as a CRX file.
+
+## Publish updates to an extension
+
+After you change and test the updated extension you can publish it. Use the following steps as a guide for publishing an update.
+
+## Distribute a privately hosted extension
+
+If you aren’t using the Admin console, you can use the policy called "Configure the list of force installed apps and extensions" to force-install an extension on your user's device. 
+
+
+
 
 ## See also
 
