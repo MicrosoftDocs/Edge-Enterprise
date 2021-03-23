@@ -26,7 +26,7 @@ The need to  manually switch to a different browser changes starting with Micros
 When a user goes to a site that is incompatible with Internet Explorer, they will be automatically redirected to Microsoft Edge. This article describes the user experience for redirection and the group policies that are used to configure or disable automatic redirection.
 
 > [!NOTE]
-> Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+> Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
 ## Redirection experience
 
@@ -83,7 +83,7 @@ In addition to needing the BHO, there is a dependency on the **RedirectSitesFrom
 >
 >If you're on a domain joined or Mobile Device Management (MDM) enrolled device, you won't see this option.
 >
-> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing).
+> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
 
 ### Policy: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
@@ -108,6 +108,6 @@ If you want to disable redirection AFTER updating to Microsoft Edge Stable versi
 
 ## See also
 
-- [Request updates to the incompatible sites list](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [Request updates to the incompatible sites list](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge Policies](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Microsoft Edge Policies](./microsoft-edge-policies.md)
