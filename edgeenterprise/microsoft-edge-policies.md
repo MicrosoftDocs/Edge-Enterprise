@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -21,7 +21,6 @@ For information about an additional set of policies used to control how and when
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
@@ -31,9 +30,7 @@ The following table lists the new policies for this update.
 
 |Name|Caption|
 |--|--|
-|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Fetch keepalive duration on shutdown|
-
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 
 ## Available policies
 
@@ -232,6 +229,7 @@ and tips for Microsoft services|
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
@@ -328,7 +326,7 @@ and tips for Microsoft services|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety and Kids Mode|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Fetch keepalive duration on shutdown|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
@@ -382,7 +380,7 @@ and tips for Microsoft services|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, search and news by sending browsing history to Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (deprecated)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
@@ -431,7 +429,7 @@ and tips for Microsoft services|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configure the list of types that are excluded from synchronization|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
-|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs|
+|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
@@ -8173,6 +8171,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewTabPageContentEnabled
+
+  #### Allow Microsoft News content on the new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 91 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, Microsoft Edge displays Microsoft News content on the new tab page. The user can choose different display options for the content, including but not limited to Content off, Content visible on scroll, Headings only, and Content visible. Enabling this policy doesn't force content to be visible - the user can continue to set their own preferred content position.
+
+If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off'.
+
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+
+Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageContentEnabled
+  - GP name: Allow Microsoft News content on the new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageContentEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewTabPageContentEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NewTabPageHideDefaultTopSites
 
   #### Hide the default top sites from the new tab page
@@ -8484,7 +8546,7 @@ If you disable this policy, Microsoft Edge hides quick links on the new tab page
 
 This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
 
-Related policy: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
 
   #### Supported features:
 
@@ -14461,7 +14523,7 @@ If this policy is not configured, then the user can decide to use the favorites 
 
   [Back to top](#microsoft-edge---policies)
 
-  ### FetchKeepaliveDurationOnShutdown
+  ### FetchKeepaliveDurationSecondsOnShutdown
 
   #### Fetch keepalive duration on shutdown
 
@@ -14493,7 +14555,7 @@ If you disable or don't configure this policy, the default value of 0 seconds is
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: FetchKeepaliveDurationOnShutdown
+  - GP unique name: FetchKeepaliveDurationSecondsOnShutdown
   - GP name: Fetch keepalive duration on shutdown
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
@@ -14503,7 +14565,7 @@ If you disable or don't configure this policy, the default value of 0 seconds is
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
-  - Value Name: FetchKeepaliveDurationOnShutdown
+  - Value Name: FetchKeepaliveDurationSecondsOnShutdown
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -14514,7 +14576,7 @@ If you disable or don't configure this policy, the default value of 0 seconds is
 
   #### Mac information and settings
   
-  - Preference Key Name: FetchKeepaliveDurationOnShutdown
+  - Preference Key Name: FetchKeepaliveDurationSecondsOnShutdown
   - Example value:
 ``` xml
 <integer>1</integer>
@@ -16983,8 +17045,6 @@ Additionally, users can test their applications in a modern browser without remo
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
-   
-																														 
 
 If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list.
 
@@ -18216,7 +18276,7 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   ### PersonalizationReportingEnabled
 
-  #### Allow personalization of ads, search and news by sending browsing history to Microsoft
+  #### Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft
 
   
   
@@ -18226,9 +18286,9 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   #### Description
 
-  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history to be used for personalizing advertising, search, news and other Microsoft services.
+  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history, favorites & collections, browser usage data and typing like in the address bar to be used for personalizing advertising, search, news, Microsoft Edge and other Microsoft services.
 
-This setting is only available for users with a Microsoft account. This setting is not available for child accounts or enterprise accounts.
+This setting is not available for child accounts or enterprise accounts.
 
 If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Microsoft Edge will default to the user's preference.
 
@@ -18247,7 +18307,7 @@ If you disable this policy, users can't change or override the setting. If this 
   ##### Group Policy (ADMX) info
 
   - GP unique name: PersonalizationReportingEnabled
-  - GP name: Allow personalization of ads, search and news by sending browsing history to Microsoft
+  - GP name: Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21362,17 +21422,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### TabFreezingEnabled
 
-  #### Allow freezing of background tabs
+  #### Allow freezing of background tabs (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
 
-  - On Windows and macOS since 79 or later
+  - On Windows and macOS since 79, until 86
 
   #### Description
 
-  Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
+  This policy doesn't work, use [SleepingTabsEnabled](#sleepingtabsenabled) instead.
+
+Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
 
 Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
 
@@ -21395,7 +21457,7 @@ If you disable this policy, no tabs will be frozen.
   ##### Group Policy (ADMX) info
 
   - GP unique name: TabFreezingEnabled
-  - GP name: Allow freezing of background tabs
+  - GP name: Allow freezing of background tabs (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
