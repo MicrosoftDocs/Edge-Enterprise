@@ -151,5 +151,5 @@ The following table lists the display languages that are supported by Microsoft 
 
 ## See also
 
-- [Microsoft Edge documentation](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge documentation](./index.yml)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

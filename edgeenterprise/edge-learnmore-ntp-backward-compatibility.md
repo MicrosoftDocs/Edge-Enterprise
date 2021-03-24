@@ -28,7 +28,7 @@ The new version of the Enterprise New tab page combines compliant Microsoft 365 
 
 If access to the MSN.com domain is restricted for your organization, we strongly recommend giving users access to this [url](https://ntp.msn.com).
 
-If you need more time to enable access to the MSN domain, we recommend using the [NewTabPageSetFeedType](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagesetfeedtype), that lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+If you need more time to enable access to the MSN domain, we recommend using the [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype), that lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
 
 ### Keep using Office.com
 
@@ -42,7 +42,7 @@ The following policy settings will force the Enterprise New tab page to render O
 - Set the policy as **Mandatory**.
 - Set the value of the policy mapping to **Office (1) = Office 365 feed experience**.
 
-If the switch to the Office.com isn't possible, reach out and send us feedback. Another option is to configure the [NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) so it points to an endpoint URL that's allowed by your organization.
+If the switch to the Office.com isn't possible, reach out and send us feedback. Another option is to configure the [NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) so it points to an endpoint URL that's allowed by your organization.
 
 > [!NOTE]
 > The **NewTabPageLocation** policy has precedence if the **NewTabPageSetFeedType** policy is also configured.
@@ -67,4 +67,4 @@ If you want to keep accessing Microsoft News content that isn't tied to your org
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Enterprise Mode for Internet Explorer 11](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Enterprise Mode for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
