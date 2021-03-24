@@ -41,7 +41,7 @@ This support is available across all platforms, including all supported versions
 
 ### How to deploy Conditional Access in Azure Active Directory
 
-[Deploy Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help deploy Conditional Access in Azure Active Directory.
+[Deploy Conditional Access](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help deploy Conditional Access in Azure Active Directory.
 
 ## See also
 

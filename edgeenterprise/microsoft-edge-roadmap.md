@@ -24,7 +24,7 @@ Microsoft Edge has been added to the [M365 Roadmap](https://www.microsoft.com/mi
 
 The web is constantly evolving to improve the user experience, security, and privacy. In some cases, changes are significant enough to impact the functionality of existing webpages.
 
-Visit the [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes) site to see the high-impact changes that the Microsoft Edge team is currently tracking. Check back often; the Microsoft Edge team updates this page as timelines solidify and new changes are announced.
+Visit the [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes) site to see the high-impact changes that the Microsoft Edge team is currently tracking. Check back often; the Microsoft Edge team updates this page as timelines solidify and new changes are announced.
 
 ## See also
 

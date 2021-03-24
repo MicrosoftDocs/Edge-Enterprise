@@ -29,7 +29,7 @@ This article explains the Configurable sites feature of the Enterprise Mode Site
   - Windows 8.1 – KB4556798 or higher
 
 - Microsoft Edge version 83 or later
-- [IE mode](https://aka.ms/iemodeonedge) configured with Enterprise Mode Site List
+- [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
 ## Overview
 
@@ -78,6 +78,6 @@ Enabling Configurable sites in Microsoft Edge automatically enables the followin
 
 ## See also
 
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [About IE mode](./edge-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
