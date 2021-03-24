@@ -24,7 +24,19 @@ To self-host your own extensions, you will need to provide your own web hosting 
 
 ## Publish an extension
 
-Before you publish an extension it needs to be packed into a CRX file. Use the following steps as a guide to packing an extension as a CRX file.
+Before you publish an extension it needs to be packed into a CRX (Chrome extension) file. Use the following steps as a guide to packing an extension as a CRX file.
+
+1. In the Microsoft Edge address bar, go to *edge://extensions* and turn on **Developer mode** if it’s not already enabled.
+2. Under **Installed extensions**, click **Pack Extension** to create the CRX file.
+3. Use the **Pack extension** dialog to find the directory that has the source for the extension. Select the directory and then click **Pack extension**.  This will create your CRX file, along with a PEM file. Save the PEM file because it’s needed for making version updates to the extension. The next screenshot shows the **Pack extension** dialog for locating the root directory of the extension.
+
+   :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-pack-dialog.png" alt-text="Pack extension dialog for finding an extension's source code.":::
+
+   > [!IMPORTANT]
+   > Store the PEM file in a safe location because it’s the key for the extension and it’s needed for future updates.
+
+4. Drag the CRX file into your extensions window and make sure that it loads.
+5. Test the extension and take note of the ID field (this is the CRX ID) and version number. You’ll need this information later. The next screenshot shows 
 
 ## Publish updates to an extension
 
