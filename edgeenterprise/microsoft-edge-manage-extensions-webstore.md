@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/22/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -36,7 +36,29 @@ Before you publish an extension it needs to be packed into a CRX (Chrome extensi
    > Store the PEM file in a safe location because it’s the key for the extension and it’s needed for future updates.
 
 4. Drag the CRX file into your extensions window and make sure that it loads.
-5. Test the extension and take note of the ID field (this is the CRX ID) and version number. You’ll need this information later. The next screenshot shows 
+5. Test the extension and take note of the ID field (this is the CRX ID) and version number. You’ll need this information later. The next screenshot shows a test extension with its CRX ID.
+
+   :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-test-extension.png" alt-text="Extension example showing CRX ID":::
+
+6. Upload the the CRX file to the host and note the URL of the location it will be downloaded from. This information is needed for the XML manifest file.
+7. To create a manifest XML file with the app/extension ID, download URL, and version, define the following fields:  
+
+   - **appid** - The extension ID from step 5
+   - **codebase** - The download location for the CRX file from step 6
+   - **version** - The version of the app/extension, which should match the version specified in the manifest of the extension.
+
+   The next code snippet shows an example of an XML manifest file.
+
+   ```xml
+   <?xml version='1.0' encoding='UTF-8'?> 
+   <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'> 
+     <app appid='ekilpdeokbpjmminmhfcgkncmmohmfeb'> 
+     <updatecheck codebase='https://app.somecompany.com/extensionfolder/helloworld.crx' version='1.0' /> 
+     </app> 
+   </gupdate> 
+   ```
+
+8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL will be needed when you install the extension using a group policy. (See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
 
 ## Publish updates to an extension
 
@@ -44,9 +66,7 @@ After you change and test the updated extension you can publish it. Use the foll
 
 ## Distribute a privately hosted extension
 
-If you aren’t using the Admin console, you can use the policy called "Configure the list of force installed apps and extensions" to force-install an extension on your user's device. 
-
-
+If you aren’t using the Admin console, you can use the policy called "Configure the list of force installed apps and extensions" to force-install an extension on your user's device.
 
 
 ## See also
