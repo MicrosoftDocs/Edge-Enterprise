@@ -16,7 +16,7 @@ description: "Provision favorites for Microsoft Edge"
 
 Based on customer feedback, we've made improvements to provisioning favorites. Starting with Microsoft Edge version 85, Admins no longer have to manually craft a file to provision favorites. Admins can add favorites and folders using the Microsoft Edge UI to generate a file that can be exported to a group policy.
 
-This article describes how to provision a set of favorites and folders for your organization. You can use the [Configure favorites](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) policy to provision favorites and folders.
+This article describes how to provision a set of favorites and folders for your organization. You can use the [Configure favorites](//DeployEdge/microsoft-edge-policies#configure-favorites) policy to provision favorites and folders.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 85 or later.
