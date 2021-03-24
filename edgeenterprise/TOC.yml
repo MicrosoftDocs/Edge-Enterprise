@@ -31,6 +31,8 @@
      href: deploy-edge-plan-deployment.md
    - name: Microsoft Edge in your environment
      href: deploy-edge-prepare-to-deploy.md
+   - name: Microsoft browser usage report
+     href: microsoft-edge-browser-usage-report.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
    - name: Stable Channel Release Notes
