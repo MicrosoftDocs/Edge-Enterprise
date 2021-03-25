@@ -47,7 +47,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Multiple Profiles|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|[On-premises sync for Active Directory (AD) users](https://docs.microsoft.com/deployedge/microsoft-edge-on-premises-sync) |
 |Seamless SSO|Yes (1709+)|Yes|Yes|Yes|[Seamless SSO](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#seamless-sso)|
-|SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|Yes (coming with version 90)|[SSO with PRT](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
+|SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|No|[SSO with PRT](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
 |Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|[WIA](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
 
 |Additional features|Win 10|Win 8.1|Win 7|macOS|URL|
