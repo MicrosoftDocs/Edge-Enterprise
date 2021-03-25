@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 89.0.774.63: March 25
+
+Fixed various bugs and performance issues.
 
 ## Version 89.0.774.57: March 18
 
@@ -102,7 +106,7 @@ Fixed various bugs and performance issues.
 
 ## Version 88.0.705.74: February 17
 
-Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#February-17-2021).
+Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#february-17-2021).
 
 ## Version 88.0.705.68: February 11
 
@@ -113,11 +117,11 @@ Fixed various bugs and performance issues.
 > [!IMPORTANT]
 > This update contains [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148) which has been reported by the Chromium team as having an exploit in the wild.
 
-Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#February-5-2021).
+Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#february-5-2021).
 
 ## Version 88.0.705.62: February 4
 
-Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#February-4-2021).
+Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#february-4-2021).
 
 Fixed various bugs and performance issues.
 
