@@ -24,7 +24,7 @@ This article explains how to associate Microsoft Edge with Internet Explorer mod
 The following instructions show an entry that associates Microsoft Edge with IE mode with the .mht file type. Use the following steps as a guide for setting a file association.
 
 > [!NOTE]
-> You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+> You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 1. Define a new ProgID with the Microsoft Edge channel to use to open with Internet Explorer mode. The ProgID includes the application name and Icon and the full path to msedge.exe.
 
@@ -88,14 +88,14 @@ Windows Registry Editor Version 5.00
 ```
 ## Configuring file types to open in Internet Explorer mode
 
-Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
+Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](./microsoft-edge-policies.md#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
 
-You can define file types this option should apply to, by specifying file extensions in this policy [Open local files in Internet Explorer mode file extension allow list](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist). 
+You can define file types this option should apply to, by specifying file extensions in this policy [Open local files in Internet Explorer mode file extension allow list](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 
 ## See also
 
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Configurable sites information](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Setting file type associations](https://docs.microsoft.com/windows/win32/shell/fa-file-types)
+- [About IE mode](./edge-ie-mode.md)
+- [Configurable sites information](./edge-learnmore-configurable-sites-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Setting file type associations](/windows/win32/shell/fa-file-types)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
