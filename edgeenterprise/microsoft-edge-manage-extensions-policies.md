@@ -197,5 +197,6 @@ The next example shows the JSON and compressed JSON string to block from the Chr
 
 - [Manage Microsoft Edge extensions in the enterprise](microsoft-edge-manage-extensions.md)
 - [Create a web store to host Microsoft Edge extensions](microsoft-edge-manage-extensions-webstore.md)
+- [Reference guide for the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
 - [FAQ for Microsoft Edge Extensions](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

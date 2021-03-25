@@ -109,5 +109,6 @@ With your baseline of allowed permissions enforced and sensitive corporate sites
 
 - [Use group policies to manage Microsoft Edge extensions](microsoft-edge-manage-extensions-policies.md)
 - [Create a web store to host Microsoft Edge extensions](microsoft-edge-manage-extensions-webstore.md)
+- [Reference guide for the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
 - [FAQ for Microsoft Edge Extensions](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

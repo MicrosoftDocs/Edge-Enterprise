@@ -73,5 +73,6 @@ If you aren’t using the Admin console, you can use the policy called "Configur
 
 - [Manage Microsoft Edge extensions in the enterprise](microsoft-edge-manage-extensions.md)
 - [Use group policies to manage Microsoft Edge extensions](microsoft-edge-manage-extensions-policies.md)
+- [Reference guide for the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
 - [FAQ for Microsoft Edge Extensions](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

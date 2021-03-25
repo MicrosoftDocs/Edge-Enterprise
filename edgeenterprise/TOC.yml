@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/25/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -116,6 +116,8 @@
         href: microsoft-edge-manage-extensions-policies.md
       - name: Self-host Microsoft Edge extensions
         href: microsoft-edge-manage-extensions-webstore.md
+      - name: Detailed guide to the ExtensionSettings policy
+        href: microsoft-edge-manage-extensions-ref-guide.md
       - name: Extensions FAQ
         href: microsoft-edge-manage-extensions-faq.md
    - name: Microsoft Edge enterprise sync

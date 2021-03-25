@@ -24,4 +24,5 @@ This article provides an FAQ for Microsoft Edge extensions.
 - [Manage Microsoft Edge extensions in the enterprise](microsoft-edge-manage-extensions.md)
 - [Use group policies to manage Microsoft Edge extensions](microsoft-edge-manage-extensions-policies.md)
 - [Create a web store to host Microsoft Edge extensions](microsoft-edge-manage-extensions-webstore.md)
+- [Reference guide for the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
