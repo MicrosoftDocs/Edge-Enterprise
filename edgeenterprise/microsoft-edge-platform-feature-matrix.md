@@ -62,7 +62,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Sleeping Tabs|Yes|Yes|Yes|Yes|[Feature overview](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel)<br>[Latest Blog Post](https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/)<br>[Group Policies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#sleeping-tabs-settings)|
 |Sync|Yes|Yes|Yes|Yes| [Enterprise Sync](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-sync) |
 |Version Rollback|Yes|Yes|Yes|No|[Version rollback](https://docs.microsoft.com/deployedge/edge-learnmore-rollback) |
-|Vertical Tabs|Yes|Yes|Yes|Yes|[Vertical tabs](https://techcommunity.microsoft.com/t5/articles/vertical-tabs-preview-now-available-in-the-canary-and-dev/m-p/1823751) |
+|Vertical Tabs|Yes|Yes|Yes|Yes| |
 
 ## See also
 
