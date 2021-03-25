@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/24/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ This article summarizes platform support for Microsoft Edge features.
 The following tables summarize feature support for the Windows and macOS platforms.
 
 > [!NOTE]
-> Android and iOS are currently not represented in the support tables but these platforms are being worked on and this information will be added when available.
+> Android and iOS are currently not represented in the support tables however we’re continuing to work on this information and will update accordingly.
 
 | Security features |Win 10|Win 8.1|Win 7|macOS|URL|
 |--------|-------|--------|-----|-------|---|
@@ -35,7 +35,6 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Password Monitor|Yes|Yes|Yes|Yes|[Password Monitor](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
 |Password Generator|Yes|Yes|Yes|Yes	|[Password Generator](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
 |Windows Information Protection (WIP)|Yes (1607+)|No|No|No|[WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)|
-
 
 
 |Identity features| Win 10 | Win 8.1 | Win 7 | macOS | URL |
@@ -61,7 +60,6 @@ The following tables summarize feature support for the Windows and macOS platfor
 |PDF Reader|Yes|Yes|Yes|Yes|[PDF Reader](https://docs.microsoft.com/deployedge/microsoft-edge-pdf) |
 |Shopping|Yes|Yes|Yes|Yes|[Shopping](https://techcommunity.microsoft.com/t5/articles/introducing-shopping-with-microsoft-edge/m-p/1870080) |
 |Sleeping Tabs|Yes|Yes|Yes|Yes|[Feature overview](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel)<br>[Latest Blog Post](https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/)<br>[Group Policies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#sleeping-tabs-settings)|
-|Startup Boost|Yes|Yes|Yes|No|[Startup Boost](https://techcommunity.microsoft.com/t5/articles/startup-boost-faq/td-p/1810423)|
 |Sync|Yes|Yes|Yes|Yes| [Enterprise Sync](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-sync) |
 |Version Rollback|Yes|Yes|Yes|No|[Version rollback](https://docs.microsoft.com/deployedge/edge-learnmore-rollback) |
 |Vertical Tabs|Yes|Yes|Yes|Yes|[Vertical tabs](https://techcommunity.microsoft.com/t5/articles/vertical-tabs-preview-now-available-in-the-canary-and-dev/m-p/1823751) |
