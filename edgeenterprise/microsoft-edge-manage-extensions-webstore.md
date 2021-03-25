@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/24/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -60,13 +60,32 @@ Before you publish an extension it needs to be packed into a CRX (Chrome extensi
 
 8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL will be needed when you install the extension using a group policy. (See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
 
+   > [!IMPORTANT]
+   > The hosting location for the extension doesn’t need authentication. It needs to be accessible by user devices wherever they might be used.
+
 ## Publish updates to an extension
 
 After you change and test the updated extension you can publish it. Use the following steps as a guide for publishing an update.
 
+1. Change the version number in your extension's manifest.JSON file to a higher number using the following syntax: `"version":"versionString"`. If the "version":"1.0", then you can update to "version":"1.1" or any number higher than "1.0".
+2. Update the "version" of `<updatecheck>` in the XML file to match the number that you put in the manifest file in the previous step. For example:<br>`<updatecheck codebase='https://app.somecompany.com/extensionfolder/helloworld.crx' version='1.1' />`
+3. Create a CRX file that includes the new changes. Go to *edge://extensions* and enable **Developer mode**.
+4. Click **Pack extension** and go to the directory for the extension source.
+
+> [!IMPORTANT]
+> Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change.
+
+5. Drag and drop the CRX file into the extensions window and verify that it loads.
+6. Test the updated extension.
+7. Replace the old CRX file and XML file with the new files for the updated extension.
+
+The extension's changes will be picked up during the next policy sync cycle. For more information about updating extensions, see: [Update URL](https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/auto-update#update-url) and [Update manifest](https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/auto-update#updated-manifest).
+
 ## Distribute a privately hosted extension
 
-If you aren’t using the Admin console, you can use the policy called "Configure the list of force installed apps and extensions" to force-install an extension on your user's device.
+You can share the link of the location where the XML file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Alternatively, you can use group policy to [Force-install an extension](microsoft-edge-manage-extensions-policies.md#force-install-an-extension) on your users’ devices.
+
+You can apply these policies to your selected users, devices, or both. Policy updates aren’t instantaneous and it will take time for the policy settings to take effect.
 
 
 ## See also
