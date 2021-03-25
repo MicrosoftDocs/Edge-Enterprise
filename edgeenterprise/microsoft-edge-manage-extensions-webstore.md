@@ -72,8 +72,8 @@ After you change and test the updated extension you can publish it. Use the foll
 3. Create a CRX file that includes the new changes. Go to *edge://extensions* and enable **Developer mode**.
 4. Click **Pack extension** and go to the directory for the extension source.
 
-> [!IMPORTANT]
-> Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change.
+   > [!IMPORTANT]
+   > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change.
 
 5. Drag and drop the CRX file into the extensions window and verify that it loads.
 6. Test the updated extension.
@@ -87,11 +87,10 @@ You can share the link of the location where the XML file is hosted, and as soon
 
 You can apply these policies to your selected users, devices, or both. Policy updates aren’t instantaneous and it will take time for the policy settings to take effect.
 
-
 ## See also
 
 - [Manage Microsoft Edge extensions in the enterprise](microsoft-edge-manage-extensions.md)
 - [Use group policies to manage Microsoft Edge extensions](microsoft-edge-manage-extensions-policies.md)
-- [Reference guide for the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
+- [Detailed guide to the ExtensionSettings policy](microsoft-edge-manage-extensions-ref-guide.md)
 - [FAQ for Microsoft Edge Extensions](microsoft-edge-manage-extensions-faq.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
