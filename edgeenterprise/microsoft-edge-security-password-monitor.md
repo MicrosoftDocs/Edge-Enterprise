@@ -35,7 +35,7 @@ Password Monitor is available in Stable Channel version 88 starting 1/21. The ro
 
 ## Configure group policy for Password Monitor
 
-This feature is controlled via the [PasswordMonitorAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmonitorallowed) group policy.
+This feature is controlled via the [PasswordMonitorAllowed](./microsoft-edge-policies.md#passwordmonitorallowed) group policy.
 
 After the policy is enabled, users still need to provide consent to turn on the feature. Consent is required because the feature contains user's sensitive and personal data (passwords). If the feature is disabled using group policy, users can't override this setting.  
 

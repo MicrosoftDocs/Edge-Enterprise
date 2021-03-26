@@ -16,7 +16,7 @@ description: "A step by step guide to configuring the Enterprise Mode Site list 
 
 This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.
 
-For more information on the schema for the Enterprise Mode Site List XML file, see [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+For more information on the schema for the Enterprise Mode Site List XML file, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
@@ -43,7 +43,7 @@ The following table shows the possible values of the \<open-in\> element:
 
 | **Value** | **Description** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](https://docs.microsoft.com/deployedge/edge-ie-mode-policies)|
+| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
 | **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
 | **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
 | **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
@@ -89,7 +89,7 @@ You can configure neutral sites by setting the *Open In* dropdown to 'None' in t
 To identify authentication servers, inspect the network traffic from an application using the IE11 Developer Tools. If you need more time to identify your authentication servers, you can configure a policy to keep all in-page navigations in IE mode to allow your users to continue their workflows uninterrupted. To minimize the use of IE mode when unnecessary, disable this setting once you've identified and added your authentication servers to the site list. For more information, see [Keep in-page navigation in IE mode](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
-   >Enterprise Mode schema v.1 isn't supported for IE mode integration. If you are currently using schema v.1 with Internet Explorer 11, you must upgrade to schema v.2. For more information, see [Enterprise Mode schema v.2 guidance](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >Enterprise Mode schema v.1 isn't supported for IE mode integration. If you are currently using schema v.1 with Internet Explorer 11, you must upgrade to schema v.2. For more information, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ## (Optional) Use cookie sharing if required
 
@@ -98,5 +98,5 @@ By default, the Microsoft Edge and Internet Explorer processes don't share sessi
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [About IE mode](./edge-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

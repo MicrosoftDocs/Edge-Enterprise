@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/26/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,7 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
 
 ## Troubleshoot IE mode
 
@@ -35,7 +36,7 @@ You can get Internet Explorer mode diagnostic information on the Microsoft Edge 
 
 ### Error message: "To open this page in Internet Explorer mode, reinstall Microsoft Edge with administrator privileges."
 
-You may see this error if you don't have all required Windows Updates. See the prerequisites listed in [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode) for the required versions of Windows and Microsoft Edge.
+You may see this error if you don't have all required Windows Updates. See the prerequisites listed in [About IE mode](./edge-ie-mode.md) for the required versions of Windows and Microsoft Edge.
 
 If you've already installed all required Windows Updates, you may see this error if:
 
@@ -60,7 +61,7 @@ You may see this error if you're remote debugging and navigate to a web page con
 
 ### Error message: "Error: Could not retrieve EMIE site list."
 
-You may see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
+You may see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
 ## Frequently Asked Questions
 
@@ -79,10 +80,10 @@ There is no explicit command line in Microsoft Edge to mirror the *nomerge* opti
 1. Use Profiles in Microsoft Edge - Each profile maps to a different IE session for IE mode pages, so it behaves identically to the *nomerge* option.
 2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that both launches Microsoft Edge and changes the path for the session.
 
-If neither of the above options works for your scenario, reach out through one of our feedback channels:  Microsoft support, [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise), or [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+If neither of the above options works for your scenario, reach out through one of our feedback channels:  Microsoft support or [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ### Can I save links as webpages in Internet Explorer mode?
- 
+
 Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy *"Allow Save Target As in Internet Explorer mode"* located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*.
 The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, re-opening the file will render the page in Microsoft Edge.
  
@@ -98,5 +99,5 @@ Note that this functionality requires the following minimum operating system upd
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [About IE mode](./edge-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

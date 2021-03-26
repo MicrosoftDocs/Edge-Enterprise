@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,13 +24,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New and deprecated policies
+## New policies
 
-The following table lists the new and deprecated policies for this update.
+The following table lists the new policies for this update.
 
 |Name|Caption|
 |--|--|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 
 ## Available policies
 
@@ -229,10 +229,12 @@ and tips for Microsoft services|
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (deprecated)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
@@ -324,6 +326,7 @@ and tips for Microsoft services|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety and Kids Mode|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
@@ -377,7 +380,7 @@ and tips for Microsoft services|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, search and news by sending browsing history to Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (deprecated)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
@@ -426,7 +429,7 @@ and tips for Microsoft services|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configure the list of types that are excluded from synchronization|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
-|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs|
+|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
@@ -496,7 +499,7 @@ If you choose the 'fixed_servers' value as 'ProxyMode', the 'ProxyServer' field 
 
 If you choose the 'pac_script' value as 'ProxyMode', the 'ProxyPacUrl' field is used.
 
-For more information about identifying Application Guard traffic via dual proxy, visit [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
+For more information about identifying Application Guard traffic via dual proxy, visit [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
 
   #### Supported features:
 
@@ -836,7 +839,7 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
@@ -915,7 +918,7 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -994,7 +997,7 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 - CookiesSessionOnlyForUrls
 
-For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
 If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from previous sessions, this policy is ignored, and cookies are stored permanently for those sites.
 
@@ -1897,7 +1900,7 @@ Leaving the policy unset means [DefaultFileSystemReadGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -1966,7 +1969,7 @@ If you don't set this policy, [DefaultFileSystemReadGuardSetting](#defaultfilesy
 
 URL patterns can't conflict with [FileSystemReadAskForUrls](#filesystemreadaskforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2035,7 +2038,7 @@ If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2104,7 +2107,7 @@ If you don't set this policy, [DefaultFileSystemWriteGuardSetting](#defaultfiles
 
 URL patterns can't conflict with [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Neither policy takes precedence if a URL matches with both.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2171,7 +2174,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 If you don't configure this policy, the global default value is used for all sites either from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2238,7 +2241,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 If you don't configure this policy, the global default value from the [DefaultImagesSetting](#defaultimagessetting) policy (if set) or the user's personal configuration is used for all sites.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2305,7 +2308,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2372,7 +2375,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
-For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2706,7 +2709,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Allows you to create a list of url patterns to specify sites that are allowed to display notifications.
 
-If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -2771,7 +2774,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Allows you to create a list of url patterns to specify sites that are not allowed to display notifications.
 
-If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+If you don't set this policy, the global default value will be used for all sites. This default value will be from the [DefaultNotificationsSetting](#defaultnotificationssetting) policy if it's set, or from the user's personal configuration. For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -2840,7 +2843,7 @@ Define a list of sites, based on URL patterns, that can run the Adobe Flash plug
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
 
@@ -2909,7 +2912,7 @@ Define a list of sites, based on URL patterns, that are blocked from running Ado
 
 If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
 
-For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
 
   #### Supported features:
 
@@ -3353,7 +3356,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
 
-The URL patterns defined in this policy can't conflict with those configured in the [WebUsbBlockedForUrls](#webusbblockedforurls) policy - you can't both allow and block a URL. For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)
+The URL patterns defined in this policy can't conflict with those configured in the [WebUsbBlockedForUrls](#webusbblockedforurls) policy - you can't both allow and block a URL. For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)
 
   #### Supported features:
 
@@ -3420,7 +3423,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 If you don't configure this policy, the global default value from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy (if set) or the user's personal configuration is used for all sites.
 
-URL patterns in this policy can't conflict with those configured in the [WebUsbAskForUrls](#webusbaskforurls) policy. You can't both allow and block a URL.  For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+URL patterns in this policy can't conflict with those configured in the [WebUsbAskForUrls](#webusbaskforurls) policy. You can't both allow and block a URL.  For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -4408,7 +4411,7 @@ On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons 
 
 The source code of any extension can be altered by users with developer tools, potentially rendering the extension unfunctional. If this is a concern, configure the DeveloperToolsDisabled policy.
 
-Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
+Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
 Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4477,7 +4480,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 Define URLs that can install extensions and themes directly without having to drag and drop the packages to the edge://extensions page.
 
-Each item in this list is an extension-style match pattern (see [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (in other words, the referrer) must be allowed by these patterns. Do not host the files at a location that requires authentication.
+Each item in this list is an extension-style match pattern (see [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (in other words, the referrer) must be allowed by these patterns. Do not host the files at a location that requires authentication.
 
 The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precedence over this policy. Any extensions that's on the block list won't be installed, even if it comes from a site on this list.
 
@@ -4542,7 +4545,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
-This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ).
 
 To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
 
@@ -5310,7 +5313,7 @@ If you enable or don't configure this policy, users can change the URL in the ad
 
 If you disable this policy, it prevents users from changing the URL in the address bar.
 
-For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### Supported features:
 
@@ -5374,7 +5377,7 @@ If you enable this policy, files downloaded as part of the kiosk session are del
 
 If you disable this policy or don't configure it, files downloaded as part of the kiosk session are not deleted when Microsoft Edge closes.
 
-For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+For detailed information on configuring kiosk Mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### Supported features:
 
@@ -6869,7 +6872,7 @@ If you enable this policy, you can create a list of hosts for which Microsoft Ed
 
 If you don't configure this policy, no list of hosts is created for which Microsoft Edge bypasses a proxy. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
 
-For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### Supported features:
 
@@ -6940,7 +6943,7 @@ If you choose to use:
   * fixed_servers = Fixed proxy servers. You can specify further options with [ProxyServer](#proxyserver) and [ProxyBypassList](#proxybypasslist).
   * pac_script =  A .pac proxy script. Use [ProxyPacUrl](#proxypacurl) to set the URL to a proxy .pac file.
 
-For detailed examples, go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+For detailed examples, go to [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
 If you don't configure this policy, users can choose their own proxy settings.
 
@@ -7024,7 +7027,7 @@ If you enable this policy, you can specify the URL for a PAC file, which defines
 
 If you disable or don't configure this policy, no PAC file is specified. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
 
-For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### Supported features:
 
@@ -7092,7 +7095,7 @@ If you enable this policy, the proxy server configured by this policy will be us
 
 If you disable or don't configure this policy, users can choose their own proxy settings while in this proxy mode. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
 
-For more options and detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+For more options and detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### Supported features:
 
@@ -7176,7 +7179,7 @@ For ProxyMode, if you choose the value:
   * fixed_servers, the ProxyServer and ProxyBypassList fields are used.
   * pac_script, the ProxyPacUrl and ProxyBypassList fields are used.
 
-For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### Supported features:
 
@@ -8168,6 +8171,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewTabPageContentEnabled
+
+  #### Allow Microsoft News content on the new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 91 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, Microsoft Edge displays Microsoft News content on the new tab page. The user can choose different display options for the content, including but not limited to Content off, Content visible on scroll, Headings only, and Content visible. Enabling this policy doesn't force content to be visible - the user can continue to set their own preferred content position.
+
+If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off'.
+
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+
+Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageContentEnabled
+  - GP name: Allow Microsoft News content on the new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageContentEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewTabPageContentEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NewTabPageHideDefaultTopSites
 
   #### Hide the default top sites from the new tab page
@@ -8453,6 +8520,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   #### Mac information and settings
   
   - Preference Key Name: NewTabPagePrerenderEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NewTabPageQuickLinksEnabled
+
+  #### Allow quick links on the new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 91 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, Microsoft Edge displays quick links on the new tab page, and the user can interact with the control, turning quick links on and off. Enabling this policy does not force quick links to be visible - the user can continue to turn quick links on and off.
+
+If you disable this policy, Microsoft Edge hides quick links on the new tab page and disables the quick links control in the NTP settings flyout.
+
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+
+Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageQuickLinksEnabled
+  - GP name: Allow quick links on the new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageQuickLinksEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewTabPageQuickLinksEnabled
   - Example value:
 ``` xml
 <true/>
@@ -9984,7 +10115,7 @@ If either condition is false, the external protocol launch prompt will not be om
 
 If you don't configure this policy, no protocols can launch without a prompt. Users can opt out of prompts on a per-protocol/per-site basis unless the [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) policy is set to Disabled. This policy has no impact on per-protocol/per-site prompt exemptions set by users.
 
-The origin matching patterns use a similar format to those for the [URLBlocklist](#urlblocklist) policy, which are documented at [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+The origin matching patterns use a similar format to those for the [URLBlocklist](#urlblocklist) policy, which are documented at [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
 
@@ -10106,7 +10237,7 @@ If you set URLs in this policy, files will only automatically open by policy if 
 
 If you don't set this policy, all downloads where the file type is in [AutoOpenFileTypes](#autoopenfiletypes) will automatically open.
 
-A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -10568,7 +10699,7 @@ If you don't configure this policy, then the default experience will have ads in
 
 This policy is only available for K-12 SKUs that are identified as EDU tenants by Microsoft.
 
-Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) to learn more about this policy or if the following scenarios apply to you:
+Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge) to learn more about this policy or if the following scenarios apply to you:
 
 * You have an EDU tenant, but the policy doesn't work.
 
@@ -11314,7 +11445,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 This policy lets you not disclose certificates for the hostnames in the specified URLs via Certificate Transparency. This lets you use certificates that would otherwise be untrusted, because they weren't properly publicly disclosed, but it makes it harder to detect mis-issued certificates for those hosts.
 
-Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Because certificates are valid for a given hostname, independent of the scheme, port, or path, only the hostname part of the URL is considered. Wildcard hosts are not supported.
+Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Because certificates are valid for a given hostname, independent of the scheme, port, or path, only the hostname part of the URL is considered. Wildcard hosts are not supported.
 
 If you don't configure this policy, any certificate that should be disclosed via Certificate Transparency is treated as untrusted if it's not disclosed.
 
@@ -11521,7 +11652,7 @@ If you don't configure this policy, users with Microsoft Edge versions before Mi
 
 Disabling ClickOnce may prevent ClickOnce applications (.application files) from launching properly.
 
-For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) and [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
 
   #### Supported features:
 
@@ -11920,7 +12051,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
+  Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) for more information) your environment.
 
 On every launch, Microsoft Edge will try to sign-in using this policy, as long as the first profile being launched isn't signed-in or an auto sign-in hasn't happened before.
 
@@ -12250,7 +12381,7 @@ If you set this policy to False, Microsoft Edge is stopped from ever checking if
 
 If you don't set this policy, Microsoft Edge lets users control whether it's the default and, if not, whether user notifications should appear.
 
-Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Microsoft Edge the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) for more information.
+Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Microsoft Edge the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md) for more information.
 
   #### Supported features:
 
@@ -12785,7 +12916,7 @@ Required diagnostic data is collected keep Microsoft Edge secure, up to date and
 
 Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.
 
-This policy is not supported on Windows 10 devices. To control this data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+This policy is not supported on Windows 10 devices. To control this data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Use one of the following settings to configure this policy:
 
@@ -12873,7 +13004,7 @@ If you disable this policy, users can't open files using the DirectInvoke protoc
 
 Note: Disabling DirectInvoke may prevent certain Microsoft SharePoint Online features from working as expected.
 
-For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) and [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
+For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) and [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
 
   #### Supported features:
 
@@ -14050,7 +14181,7 @@ If you disable this policy or don't configure it, file types that trigger extens
 
 If you enable this policy:
 
-* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 * The file type extension entered must be in lower-cased ASCII. The leading separator should not be included when listing the file type extension, so list "jnlp" should be used instead of ".jnlp".
 
 Example:
@@ -14387,6 +14518,68 @@ If this policy is not configured, then the user can decide to use the favorites 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FetchKeepaliveDurationSecondsOnShutdown
+
+  #### Fetch keepalive duration on shutdown
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 90 or later
+
+  #### Description
+
+  Controls the duration (in seconds) that keepalive requests are allowed to prevent the browser from completing its shutdown.
+
+If you configure this policy, the browser will block completing shutdown while it processes any outstanding keepalive requests (see https://fetch.spec.whatwg.org/#request-keepalive-flag) up to the maximum period of time specified by this policy.
+
+If you disable or don't configure this policy, the default value of 0 seconds is used and outstanding keepalive requests will be immediately cancelled during browser shutdown.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: FetchKeepaliveDurationSecondsOnShutdown
+  - GP name: Fetch keepalive duration on shutdown
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: FetchKeepaliveDurationSecondsOnShutdown
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: FetchKeepaliveDurationSecondsOnShutdown
+  - Example value:
+``` xml
+<integer>1</integer>
 ```
   
 
@@ -15120,7 +15313,11 @@ Popular, single-word search terms will require manual selection of search sugges
 
   #### Description
 
-  Hostnames specified in this list will be exempt from the HSTS policy check that could potentially upgrade requests from "http://" to "https://". Only single-label hostnames are allowed in this policy. Hostnames must be canonicalized. Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific hostnames specified; it doesn't apply to subdomains of the names in the list.
+  Setting the policy specifies a list of hostnames that bypass preloaded HSTS upgrades from http to https.
+
+Only single-label hostnames are allowed in this policy, and this policy only applies to static HSTS-preloaded entries (for example, "app", "new", "search", "play"). This policy does not prevent HSTS upgrades for servers that have dynamically requested HSTS upgrades using a Strict-Transport-Security response header.
+
+Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase. This policy only applies to the specific single-label hostnames specified, not to subdomains of those names.
 
   #### Supported features:
 
@@ -16408,7 +16605,7 @@ If you set this policy to 'Enabled' or don't configure it, websites running in I
 
 If you set this policy to 'Disabled', enhanced hang detection is disabled, and users will get the basic Internet Explorer hang detection behavior.
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Policy options mapping:
 
@@ -16467,7 +16664,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Policy options mapping:
 
@@ -16537,7 +16734,7 @@ If you set this policy to true, or don't configure it, the user is allowed to us
 
 If you set this policy to false, the user isn't allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### Supported features:
 
@@ -16597,7 +16794,7 @@ When a file:// URL is requested to launch in Internet Explorer mode, the file ex
 
 If you set this policy to the special value "*" or don't configure it, all file extensions are allowed.
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### Supported features:
 
@@ -16660,7 +16857,7 @@ If you set this policy to true, the 'Open link in new Internet Explorer mode tab
 
 If you set this policy to false or don't configure it, the context menu item will not be added.
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### Supported features:
 
@@ -16711,7 +16908,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   #### Description
 
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### Supported features:
 
@@ -16779,7 +16976,7 @@ If you set this policy to 'AutomaticNavigationsOnly', you get the default experi
 
 If you set this policy to 'AllInPageNavigations', all navigations from pages loaded in IE mode to unconfigured sites are kept in Internet Explorer mode (Least Recommended).
 
-To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
 
 Policy options mapping:
 
@@ -16847,9 +17044,7 @@ Users can do so from within the "More tools" menu by selecting 'Open sites in In
 Additionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.
 
 This setting works in conjunction with:
-[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
 If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list.
 
@@ -17634,13 +17829,13 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 
   #### Description
 
-  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
 
 This policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
 
 Enable this policy to send reporting of usage and crash-related data to Microsoft. Disable this policy to not send the data to Microsoft. In both cases, users can't change or override the setting.
 
-On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If you enable this policy, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If you enable this policy, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
@@ -18081,7 +18276,7 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   ### PersonalizationReportingEnabled
 
-  #### Allow personalization of ads, search and news by sending browsing history to Microsoft
+  #### Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft
 
   
   
@@ -18091,9 +18286,9 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   #### Description
 
-  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history to be used for personalizing advertising, search, news and other Microsoft services.
+  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history, favorites & collections, browser usage data and typing like in the address bar to be used for personalizing advertising, search, news, Microsoft Edge and other Microsoft services.
 
-This setting is only available for users with a Microsoft account. This setting is not available for child accounts or enterprise accounts.
+This setting is not available for child accounts or enterprise accounts.
 
 If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Microsoft Edge will default to the user's preference.
 
@@ -18112,7 +18307,7 @@ If you disable this policy, users can't change or override the setting. If this 
   ##### Group Policy (ADMX) info
 
   - GP unique name: PersonalizationReportingEnabled
-  - GP name: Allow personalization of ads, search and news by sending browsing history to Microsoft
+  - GP name: Allow personalization of Microsoft services by sending browsing and browser-related data to Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -18534,7 +18729,7 @@ If this policy is not configured or is disabled, the BHO will be installed.
 
 The BHO is required for incompatible site redirection to occur, however whether redirection occurs or not is also controlled by [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
   #### Supported features:
 
@@ -18595,7 +18790,7 @@ When Microsoft Edge is launched to load a site from IE, an information bar is sh
 
 If you set this policy to 'Disable', Internet Explorer will not redirect any traffic to Microsoft Edge.
 
-For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
 Policy options mapping:
 
@@ -19089,7 +19284,7 @@ If you disable this policy or don't configure it, only the regular local profile
 
 The [SyncDisabled](#syncdisabled) only disables cloud synchronization and has no impact on this policy.
 
-See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) for more information on using roaming user profiles.
+See [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md) for more information on using roaming user profiles.
 
   #### Supported features:
 
@@ -19274,7 +19469,7 @@ If you disable the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy, c
 
 If you don't configure this policy, the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy applies for all sites.
 
-For detailed information about valid origin patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy. This policy only matches based on origin, so any path or query in the URL pattern is ignored.
+For detailed information about valid origin patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * is not an accepted value for this policy. This policy only matches based on origin, so any path or query in the URL pattern is ignored.
 
   #### Supported features:
 
@@ -19793,7 +19988,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### Description
 
-  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  For guidance about configuring the optimal experience for Internet Explorer mode see [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### Supported features:
 
@@ -19844,13 +20039,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### Description
 
-  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
 
 This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
 
 Enable this policy to send info about websites visited in Microsoft Edge to Microsoft. Disable this policy to not send info about websites visited in Microsoft Edge to Microsoft. In both cases, users can't change or override the setting.
 
-On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
@@ -19920,7 +20115,7 @@ For URL patterns that don't match this policy, the following order of precedence
 
 The URL patterns defined in this policy can't conflict with those configured in the [SensorsBlockedForUrls](#sensorsblockedforurls) policy. You can't allow and block a URL.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -19991,7 +20186,7 @@ For URL patterns that don't match this policy, the following order of precedence
 
 The URL patterns defined in this policy can't conflict with those configured in the [SensorsAllowedForUrls](#sensorsallowedforurls) policy. You can't allow and block a URL.
 
-For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+For detailed information about valid URL patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -20062,7 +20257,7 @@ For URL patterns that don't match this policy, the following order of precedence
 
 The URL patterns defined in this policy can't conflict with those configured in the [SerialBlockedForUrls](#serialblockedforurls) policy. You can't allow and block a URL.
 
-For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+For detailed information about valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -20133,7 +20328,7 @@ For URL patterns that don't match this policy, the following order of precedence
 
 The URL patterns in this policy can't conflict with those configured in the [SerialAskForUrls](#serialaskforurls) policy. You can't allow and block a URL.
 
-For detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+For detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -21227,17 +21422,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### TabFreezingEnabled
 
-  #### Allow freezing of background tabs
+  #### Allow freezing of background tabs (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Supported versions:
 
-  - On Windows and macOS since 79 or later
+  - On Windows and macOS since 79, until 86
 
   #### Description
 
-  Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
+  This policy doesn't work, use [SleepingTabsEnabled](#sleepingtabsenabled) instead.
+
+Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
 
 Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
 
@@ -21260,7 +21457,7 @@ If you disable this policy, no tabs will be frozen.
   ##### Group Policy (ADMX) info
 
   - GP unique name: TabFreezingEnabled
-  - GP name: Allow freezing of background tabs
+  - GP name: Allow freezing of background tabs (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21621,7 +21818,7 @@ If you don't configure the policy, users can choose whether to use the translati
 
   Setting the policy provides access to the listed URLs, as exceptions to [URLBlocklist](#urlblocklist).
 
-Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 You can use this policy to open exceptions to restrictive block lists. For example, you can include '\*' in the block list to block all requests, and then use this policy to allow access to a limited list of URLs. You can use this policy to open exceptions to certain schemes, subdomains of other domains, ports, or specific paths.
 
@@ -21702,7 +21899,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Define a list of sites, based on URL patterns, that are blocked (your users can't load them).
 
-Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Format the URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 You can define exceptions in the [URLAllowlist](#urlallowlist) policy. These policies are limited to 1000 entries; subsequent entries are ignored.
 
