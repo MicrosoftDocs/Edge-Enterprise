@@ -3,7 +3,7 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 03/05/2021
+ms.date: 03/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -68,7 +68,7 @@ Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 ## Prepare your site list
 
 If you already have an Enterprise Mode site list for IE11 or Microsoft Edge Legacy, you can re-use it to configure IE mode.
-If you do not have a site list, you can use the (Enterprise Site Dicovery tool)[https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery] to populate your site list.
+If you do not have a site list, you can use the [Enterprise Site Dicovery tool](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery) to populate your site list.
 
 ## Configure neutral sites
 
@@ -93,7 +93,7 @@ To identify authentication servers, inspect the network traffic from an applicat
 
 ## (Optional) Use cookie sharing if required
 
-By default, the Microsoft Edge and Internet Explorer processes don't share session cookies, and this can be inconvenient in some cases while using IE mode. For example, when a user has to re-authenticate in IE mode when previously they are accustomed to doing so or when signing out of an Microsoft Edge session doesn’t sign out of the Internet Explorer mode session for critical transactions. In these scenarios, you can configure specific cookies set by SSO to be sent from Microsoft Edge to Internet Explorer so the authentication experience becomes more seamless by eliminating the need to re-authenticate. For more information, see (Cookie sharing from Microsoft Edge to Internet Explorer)[https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare].
+By default, the Microsoft Edge and Internet Explorer processes don't share session cookies, and this can be inconvenient in some cases while using IE mode. For example, when a user has to re-authenticate in IE mode when previously they are accustomed to doing so or when signing out of an Microsoft Edge session doesn’t sign out of the Internet Explorer mode session for critical transactions. In these scenarios, you can configure specific cookies set by SSO to be sent from Microsoft Edge to Internet Explorer so the authentication experience becomes more seamless by eliminating the need to re-authenticate. For more information, see [Cookie sharing from Microsoft Edge to Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## See also
 
