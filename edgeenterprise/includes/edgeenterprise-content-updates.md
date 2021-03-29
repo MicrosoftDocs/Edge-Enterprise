@@ -1,13 +1,15 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
 
 
 ## Week of March 22, 2021
 
+> [!NOTE]
+> Unless noted, the updates for this week were the result of a bulk refresh to align hyperlinks with publishing requirements.
+
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/22/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
+| 3/22/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Refresh list of content updates with annotations. | modified |
 | 3/23/2021 | [Configure Microsoft Edge policy settings for Windows using Microsoft Intune](/DeployEdge/configure-edge-with-intune) | modified |
 | 3/23/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
 | 3/23/2021 | [Configure Microsoft Edge for macOS using a .plist](/DeployEdge/configure-microsoft-edge-on-mac) | modified |
@@ -69,10 +71,10 @@
 | 3/23/2021 | [Diagnose and fix Microsoft Edge sync issues](/DeployEdge/microsoft-edge-troubleshoot-enterprise-sync) | modified |
 | 3/23/2021 | [Microsoft Edge and Conditional Access](/DeployEdge/ms-edge-security-conditional-access) | modified |
 | 3/23/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 3/24/2021 | [Microsoft browser usage report](/DeployEdge/microsoft-edge-browser-usage-report) | added |
-| 3/24/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 3/25/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 3/25/2021 | [Platform support for Microsoft Edge features](/DeployEdge/microsoft-edge-platform-feature-matrix) | added |
+| 3/24/2021 | [Microsoft browser usage report](/DeployEdge/microsoft-edge-browser-usage-report)<br>A new article that provides information about the browser usage report: what it is, and how to get it. | added |
+| 3/24/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Refreshed policy article and called out new policy. | modified |
+| 3/25/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixed bugs and performance issues in minor version 89.0.774.63. | modified |
+| 3/25/2021 | [Platform support for Microsoft Edge features](/DeployEdge/microsoft-edge-platform-feature-matrix)<br>A new document that summarizes platform support for Microsoft Edges features. | added |
 
 
 ## Week of March 15, 2021
