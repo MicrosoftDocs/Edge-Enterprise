@@ -151,7 +151,7 @@ You can use the [ExtensionInstallBlocklist](https://docs.microsoft.com/DeployEdg
 
 ## Force-install an extension
 
-Use the [ExtensionInstallForcelist](https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) policy to control which extensions are blocked or allowed. Use the following steps as a guide to force-install an extension.
+Use the [ExtensionInstallForcelist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) policy to control which extensions are blocked or allowed. Use the following steps as a guide to force-install an extension.
 
 1. In the Group Policy Editor, go to **Administrative Templates> Microsoft Edge >  Extensions >** and then select **Control which extensions are installed silently**.
 2. Select **Enabled**.  
