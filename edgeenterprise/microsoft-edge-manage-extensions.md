@@ -3,7 +3,7 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/19/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,7 +86,8 @@ Use the following steps as a guide to decide which extensions to allow in your o
 
      - Install the extension from the [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/) website or the [Chrome Web Store](https://chrome.google.com/webstore).
      - Test the extension and understand how it works in your organization.
-     - Review the permissions that the extension requires by navigating to *edge://extensions*. For example, the Microsoft Editor extension requests the permissions "Read your browsing history". Weigh the usefulness of this extension against the level of permissions it requests. After you approve an extension for your organization, manage it using the following tools.  
+     - Review the permissions that the extension requires by navigating to *edge://extensions*. For example, the Microsoft Office extension shown in the next screenshot requests the permissions "Read your browsing history" and "Display notifications". Weigh the usefulness of this extension against the level of permissions it requests. After you approve an extension for your organization, manage it using the following tools.
+   :::image type="content" source="media/microsoft-edge-manage-extensions/manage-extesions-office-extension.png" alt-text="Microsoft Office extension with permissions.":::
 
    - You can also validate the extensions requested by users in your organization before approving them in the organization. Some of the permissions that extensions use can be vague. For business-critical apps, you can reach out to the app developer or vendor directly to get more information about the extension or look at the source code. They should be able to detail the changes that the extension can make on devices and websites.
    - Review the Declare Permissions list, which lists all permissions an extension can use. From this list, you can decide which permissions you want to allow in your organization.
@@ -99,7 +100,7 @@ Use the following steps as a guide to decide which extensions to allow in your o
 
 5. Present your list to your stakeholders and the IT team to get buy in.
 6. Test out the new policy in your lab or with a small pilot in your organization.
-7. Roll out these new sets of policies to employees in phases.
+7. Roll out these new sets of policies to employees in phases. For more information, see [Use group policies to manage Microsoft Edge extensions](microsoft-edge-manage-extensions-policies.md).
 8. Review feedback from your users.
 9. Repeat and fine-tune the process monthly, quarterly, or yearly.
 

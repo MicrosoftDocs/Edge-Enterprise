@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/19/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -21,7 +21,13 @@ This article describes the options and steps for managing extensions by using gr
 
 ## Before you begin
 
-The extensions options assume that you already have Microsoft Edge managed for your users. For more information,  see the [Configure Microsoft Edge policy settings on Windows](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+The extensions options assume that you already have Microsoft Edge managed for your users. For more information about setting up administrative templates for Microsoft Edge policies, see:
+
+- [Configure Microsoft Edge policy settings on Windows](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)
+- [Configure for Windows with Intune](https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Configure for Windows with Mobile Device Management](https://docs.microsoft.com/deployedge/configure-edge-with-mdm)
+- [Configure for macOS using a .plist](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)
+- [Configure for macOS with Jamf](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac-jamf)
 
 The configuration steps in this article are for Windows, for the corresponding implementation in MAC/Linux, see the [Microsoft Edge browser policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies) reference.
 
@@ -108,7 +114,7 @@ This example shows the JSON and compressed JSON string to block any extension fr
 
 ### JSON example to block extensions on same domain
 
-This example shows the JSON and compressed JSON string to block two extensions from running on the same domain.
+This example shows the JSON and compressed JSON string to block specific extensions from running on the same domain, "importantwebsite".
 
 ```json
 { 
@@ -127,12 +133,13 @@ This example shows the JSON and compressed JSON string to block two extensions f
 
 ## Allow or block extensions in group policy
 
-Use the following steps as a guide to allow all extensions except those you want to block.
+You can use the [ExtensionInstallBlocklist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallblocklist) and [ExtensionInstallAllowlist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallallowlist) policies to control which extensions are blocked or allowed. Use the following steps as a guide to allow all extensions except those you want to block.
 
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Control which extensions cannot be installed**.
 2. Select **Enabled**.
 3. Click **Show**.
-4. Enter the app ID of the extensions that you want to block. Type **\*** into the policy to prevent any extensions from being installed. You can use this in conjunction with the "Allow specific extensions to be installed" policy to only allow certain extensions to be installed. The next screenshot shows an extension that will be blocked based on the app ID that's provided.
+4. Enter the app ID of the extensions that you want to block. When adding multiple app ID’s use a separate row for each ID.
+5. To block all extensions, type **\*** into the policy to prevent any extensions from being installed. You can use this in conjunction with the "Allow specific extensions to be installed" policy to only allow certain extensions to be installed. The next screenshot shows an extension that will be blocked based on the app ID that's provided.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Use app ID to block an extension.":::
 
@@ -142,18 +149,9 @@ Use the following steps as a guide to allow all extensions except those you want
 > [!NOTE]
 > You can add an extension to the blocklist that’s already installed on a user’s computer. This will disable the extension and prevent the user from re-enabling it. It won't be uninstalled, just disabled.
 
-### Block or allow one extension
-
-To block a single extension, add the app ID of the extension you want blocked to the configure extension installation blocklist policy. All other extensions will be allowed to be installed.
-
-Use the following steps as a guide to allow a single extension.
-
-1. In the **Show Contents** window for **Control which extensions cannot be installed** policy, type **\***. This will block all extensions from being installed.  
-2. Add the app ID of the allowed extension to the **Allow specific extensions to be installed** policy. When adding multiple app ID’s use a separate row for each ID.  
-
 ## Force-install an extension
 
-Use the following steps as a guide to force-install an extension.
+Use the [ExtensionInstallForcelist](https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) policy to control which extensions are blocked or allowed. Use the following steps as a guide to force-install an extension.
 
 1. In the Group Policy Editor, go to **Administrative Templates> Microsoft Edge >  Extensions >** and then select **Control which extensions are installed silently**.
 2. Select **Enabled**.  
@@ -167,7 +165,7 @@ The extension will be installed silently with no need for user interaction. The 
 
 ## Block extensions from a specific store or update URL
 
-To block extensions from a particular store or URL, you only need to block the *update_url* for that store.
+To block extensions from a particular store or URL, you only need to block the *update_url* for that store using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy. 
 
 Use the following steps as a guide to block extensions from an particular store or URL.
 

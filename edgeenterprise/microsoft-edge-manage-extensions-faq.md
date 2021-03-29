@@ -1,23 +1,31 @@
 ---
-title: "Microsoft Edge Extensions FAQ"
+title: "Microsoft Edge extensions FAQ"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/11/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "FAQ for Microsoft Edge Extensions"
+description: "FAQ for Microsoft Edge extensions"
 ---
 
-# FAQ for Microsoft Edge Extensions
+# FAQ for Microsoft Edge extensions
 
 This article provides an FAQ for Microsoft Edge extensions.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## What is the update URL for the Microsoft Edge Add-ons store?
+
+The update URL for extensions hosted on Microsoft Edge Add-ons is: [https://edge.microsoft.com/extensionwebstorebase/v1/crx](https://edge.microsoft.com/extensionwebstorebase/v1/crx).
+
+## What is the update URL for Chrome Web Store extensions?
+
+The update URL for extensions hosted on Chrome Webstore is: [https://clients2.google.com/service/update2/crx](https://clients2.google.com/service/update2/crx)
 
 ## See also
 

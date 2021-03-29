@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/25/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -58,6 +58,8 @@ Before you publish an extension it needs to be packed into a CRX (Chrome extensi
    </gupdate> 
    ```
 
+   For more information, see [Auto-update extensions in Microsoft Edge - Microsoft Edge Development]().
+
 8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL will be needed when you install the extension using a group policy. (See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
 
    > [!IMPORTANT]
@@ -73,7 +75,7 @@ After you change and test the updated extension you can publish it. Use the foll
 4. Click **Pack extension** and go to the directory for the extension source.
 
    > [!IMPORTANT]
-   > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change.
+   > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change and the update will be treated as a new extension.
 
 5. Drag and drop the CRX file into the extensions window and verify that it loads.
 6. Test the updated extension.
