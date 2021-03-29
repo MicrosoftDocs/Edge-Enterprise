@@ -25,6 +25,8 @@
   items:
    - name: Microsoft Edge Enterprise Roadmap
      href: microsoft-edge-roadmap.md
+   - name: Platform support for Microsoft Edge features
+     href: microsoft-edge-platform-feature-matrix.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
    - name: Microsoft Edge in your environment
