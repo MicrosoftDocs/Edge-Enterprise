@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: cjacks
 author: cjacks
 manager: saudm
-ms.date: 03/25/2020
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,9 @@ Configuring IE mode requires three steps:
 1. [Configure Internet Explorer integration](#configure-internet-explorer-integration)
 2. [Redirect sites from Microsoft Edge to IE mode](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Optional) [Redirect sites from IE to Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. If you are ready to disable the IE11 app, follow the steps in [Disable Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
+    2. Otherwise,  follow the rest of the steps in [Redirect sites from IE to Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > Policies to enable IE mode can be configured through Intune. For more information, see [Add Microsoft Edge to Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) and [Configure Microsoft Edge policies with Microsoft Intune](./configure-edge-with-intune.md).
