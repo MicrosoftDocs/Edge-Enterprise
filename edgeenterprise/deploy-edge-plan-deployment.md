@@ -1,9 +1,9 @@
 ---
 title: "Plan your deployment of Microsoft Edge"
 ms.author: collw
-author: appcompatguy
+author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
