@@ -1,8 +1,8 @@
 ---
 title: "Configure IE mode Policies"
-ms.author: cjacks
-author: cjacks
-manager: saudm
+ms.author: collw
+author: dan-wesley
+manager: srugh
 ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
