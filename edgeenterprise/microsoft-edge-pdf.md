@@ -104,16 +104,16 @@ Read aloud for PDF adds the convenience of listening to PDF content while carryi
 
 ### Protected PDFs
 
-[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&preserve-view=true) enables users to collaborate with others securely, while adhering to your organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
+[Microsoft Information Protection (MIP)](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) enables users to collaborate with others securely, while adhering to your organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
 
 > [!IMPORTANT]
-> A license is required for MIP. For more information, see this [Microsoft 365 licensing guidance](https://docs.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+> A license is required for MIP. For more information, see this [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 These files can be opened directly in the browser, without the need to download any other software, or install any add-in. This capability integrates the security provided by MIP directly into the browser, providing a seamless workflow.
 
 ![Protected pdf document.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 
-In addition to MIP protected files, PDF files in [Information Rights Management (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide&preserve-view=true) protected SharePoint libraries can also be opened natively in the browser.
+In addition to MIP protected files, PDF files in [Information Rights Management (IRM)](/microsoft-365/compliance/set-up-irm-in-sp-admin-center?preserve-view=true&view=o365-worldwide) protected SharePoint libraries can also be opened natively in the browser.
 
 With Microsoft Edge, users can view MIP protected files saved locally, or in the cloud. If saved locally, the file can be opened directly in the browser. If the file is opened from a cloud service as SharePoint, the user may need to use the "Open in browser" option.
 
@@ -150,7 +150,7 @@ Security is among the most important tenets for any organization. PDF reader sec
 - Process isolation. PDFs opened from different web sites are completely process isolated. The browser doesn't have to communicate with any websites, or PDF files opened from another source. PDF browsing is secure from any attacks that plan to use compromised PDFs as an attack surface.
 
 - Application Guard. With Application Guard, admins can set a list of sites that are trusted by their organization. If users open any other sites, they are opened in a separate Application Guard window that runs in its own container. The container helps protect the corporate network and any data on user's computer from being compromised.<br><br>
-This protection also applies to any online PDF files that are viewed. Further, any PDF files that are downloaded from an Application Guard window are stored, and when needed, re-opened in the container. This helps keeps your environment secure not just when the file is downloaded, but through its whole lifecycle. For more information, see [Application Guard](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).
+This protection also applies to any online PDF files that are viewed. Further, any PDF files that are downloaded from an Application Guard window are stored, and when needed, re-opened in the container. This helps keeps your environment secure not just when the file is downloaded, but through its whole lifecycle. For more information, see [Application Guard](./microsoft-edge-security-windows-defender-application-guard.md).
 
 ### Reliability
 
@@ -158,10 +158,10 @@ Because Microsoft Edge is Chromium-based, users can expect the same level of rel
 
 ## Deploy and update PDF reader
 
-The PDF reader gets deployed and updated with the rest of the Microsoft Edge browser. To learn more about deploying Microsoft Edge, watch the [Deploy Microsoft Edge to hundreds or thousands of devices](microsoft-edge-video-deploy.md) video. You can also find more deployment information on the [Microsoft Edge documentation](https://docs.microsoft.com/DeployEdge/) landing page.
+The PDF reader gets deployed and updated with the rest of the Microsoft Edge browser. To learn more about deploying Microsoft Edge, watch the [Deploy Microsoft Edge to hundreds or thousands of devices](microsoft-edge-video-deploy.md) video. You can also find more deployment information on the [Microsoft Edge documentation](./index.yml) landing page.
 
 > [!TIP]
-> You can make Microsoft Edge the default PDF reader for your organization. To do this, [follow these steps](https://docs.microsoft.com/deployedge/edge-default-browser).
+> You can make Microsoft Edge the default PDF reader for your organization. To do this, [follow these steps](./edge-default-browser.md).
 
 ## Roadmap and feedback
 

@@ -30,7 +30,7 @@ This article explains explains how to configure session cookie sharing from a Mi
   - Windows 10 version 1803 – KB4577032 or higher
 
 - Microsoft Edge version 87 or later
-- [IE mode](https://aka.ms/iemodeonedge) configured with Enterprise Mode Site List
+- [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
 ## Overview
 
@@ -68,7 +68,7 @@ The following table describes the \<shared-cookie\> element added to support the
 
 ## See also
 
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Configurable sites information](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [About IE mode](./edge-ie-mode.md)
+- [Configurable sites information](./edge-learnmore-configurable-sites-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
