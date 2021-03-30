@@ -58,7 +58,7 @@ Before you publish an extension it needs to be packed into a CRX (Chrome extensi
    </gupdate> 
    ```
 
-   For more information, see [Auto-update extensions in Microsoft Edge - Microsoft Edge Development]().
+   For more information, see [Auto-update extensions in Microsoft Edge - Microsoft Edge Development](https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/auto-update).
 
 8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL will be needed when you install the extension using a group policy. (See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
 
