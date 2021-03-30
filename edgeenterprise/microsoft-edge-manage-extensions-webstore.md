@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/29/2021
+ms.date: 03/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -87,7 +87,7 @@ The extension's changes will be picked up during the next policy sync cycle. For
 
 You can share the link of the location where the XML file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Alternatively, you can use group policy to [Force-install an extension](microsoft-edge-manage-extensions-policies.md#force-install-an-extension) on your users’ devices.
 
-You can apply these policies to your selected users, devices, or both. Policy updates aren’t instantaneous and it will take time for the policy settings to take effect.
+You can apply these policies to your selected users, devices, or both. Policy updates aren’t instantaneous, and it will take time for the policy settings to take effect.
 
 ## See also
 

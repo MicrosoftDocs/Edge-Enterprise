@@ -3,7 +3,7 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/29/2021
+ms.date: 03/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -52,12 +52,12 @@ The traditional model for managing extensions uses the allowlist and blocklist a
 
 ## Understand extension permissions
 
-Extensions can require rights to make changes on a devices or a web page to run properly. These rights are called permissions. Developers must list what rights and access their extensions need. There are two main categories for permissions, and many extensions need both of the following permissions:
+Extensions can require rights to make changes on a device or a web page to run properly. These rights are called permissions. Developers must list what rights and access their extensions need. There are two main categories for permissions, and many extensions need both of the following permissions:
 
 - Host permissions require the extension to list webpages it may view or modify.
 - Device permissions are the rights needed by an extension on the device where it’s running.
 
-Some examples of these permissions are: access to a USB port, storage or viewing screen. Communicating with native programs.  
+Some examples of these permissions are: access to a USB port, storage or viewing screen, and communicating with native programs.  
 
 ## Get ready to manage extensions
 
