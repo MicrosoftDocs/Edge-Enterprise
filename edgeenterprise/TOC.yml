@@ -1,4 +1,4 @@
-# last revised 03/29/2021
+# last revised 03/31/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -129,9 +129,7 @@
    - name: Use Microsoft Edge in Internet Explorer mode
      items:
       - name: What is Internet Explorer (IE) mode?
-        href: edge-ie-mode.md
-      - name: Configure IE mode policies
-        href: edge-ie-mode-policies.md        
+        href: edge-ie-mode.md   
       - name: Enterprise site configuration strategy
         href: edge-ie-mode-sitelist.md
       - name: Configure IE mode Policies
