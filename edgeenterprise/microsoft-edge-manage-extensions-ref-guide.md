@@ -38,8 +38,8 @@ The ExtensionSettings policy can overwrite other policies that you've set elsewh
 
 This policy can control settings such as Update URL, where the extension will be downloaded from for initial install, and Blocked permissions, or which permissions aren't allowed to run.
 
-|Field|Description|
-|--|---|
+| Field | Description |
+|--|--|
 | allowed_types  | Can only be used to configure the default configuration, *. Specifies what types of app or extension users are allowed to install on Microsoft Edge. The value is a list of strings, each of which should be one of the following: "extension", "theme", "user_script",and "hosted_app"   |
 | blocked_install_message | If you block users from installing certain extensions, you can specify a custom message to display in the browser if users try to install them.<br>Append text to the generic error message that is displayed on the Microsoft Edge Add-ons website. For example, you can tell users how to contact their IT department or why a particular extension is unavailable. The message can be up to 1,000 characters long.   |
 |blocked_permissions  | Prevents users from installing and running extensions that request certain API permissions that your organization doesn’t allow. For example, you can block extensions that access cookies. If an extension requires a permission that you blocked, the user can’t install it. If users previously installed the extension, it will no longer load. If an extension contains a blocked permission as an optional requirement, it installs as usual. Then, while the extension is running, blocked permissions are automatically declined.<br>For a list of available permissions, see [declare permissions](https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/declare-permissions).   |
