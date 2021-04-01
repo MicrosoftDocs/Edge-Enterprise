@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,6 +16,8 @@ description: "Microsoft Edge release notes for Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel.
 
+
+
 - All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 - Archived release notes for Microsoft Edge Stable Channel are located [here](microsoft-edge-relnote-archive-stable-channel.md).
 
@@ -23,6 +25,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+
+## Version 89.0.774.68: April 1
+
+Stable channel security updates are listed [here](./microsoft-edge-relnotes-security.md#april-1-2021).
 
 ## Version 89.0.774.63: March 25
 
