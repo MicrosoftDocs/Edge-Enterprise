@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/31/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -25,6 +25,8 @@
   items:
    - name: Microsoft Edge Enterprise Roadmap
      href: microsoft-edge-roadmap.md
+   - name: Platform support for Microsoft Edge features
+     href: microsoft-edge-platform-feature-matrix.md
    - name: Plan your deployment of Microsoft Edge
      href: deploy-edge-plan-deployment.md
    - name: Microsoft Edge in your environment
@@ -124,28 +126,32 @@
      href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
-   - name: Use Microsoft Edge in IE mode
+   - name: Use Microsoft Edge in Internet Explorer mode
      items:
-      - name: About IE mode
-        href: edge-ie-mode.md
-      - name: Configure Sites on the Enterprise Mode Site List
+      - name: What is Internet Explorer (IE) mode?
+        href: edge-ie-mode.md   
+      - name: Enterprise site configuration strategy
         href: edge-ie-mode-sitelist.md
       - name: Configure IE mode Policies
         href: edge-ie-mode-policies.md
       - name: Disable Internet Explorer 11
         href: edge-ie-disable-ie11.md
-      - name: Enterprise Site Discovery Step-by-Step Guide
-        href: edge-ie-mode-site-discovery.md
-      - name: IE mode FAQ
-        href: edge-ie-mode-faq.md
-      - name: Additional guidance
+      - name: Site Discovery and list management
         items:
-         - name: Associate file extensions with Internet Explorer mode
-           href: edge-ie-mode-add-guidance-filetype-associations.md
-         - name: Cookie sharing from Microsoft Edge to Internet Explorer
-           href: edge-ie-mode-add-guidance-cookieshare.md
+         - name: Enterprise Site Discovery Step-by-Step Guide
+           href: edge-ie-mode-site-discovery.md
          - name: Enterprise Site List Manager in Microsoft Edge
-           href: edge-ie-mode-site-list-manager.md
+           href: edge-ie-mode-site-list-manager.md         
+      - name: Keep in-page navigation in IE mode
+        href: edge-learnmore-inpage-nav.md    
+      - name: Cookie sharing from Microsoft Edge to Internet Explorer
+        href: edge-ie-mode-add-guidance-cookieshare.md
+      - name: Configurable sites in IE mode
+        href: edge-learnmore-configurable-sites-ie-mode.md
+      - name: Associate file extensions with Internet Explorer mode
+        href: edge-ie-mode-add-guidance-filetype-associations.md       
+      - name: IE mode troubleshooting and FAQ
+        href: edge-ie-mode-faq.md
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
@@ -191,12 +197,12 @@
         href: edge-learn-more-co-di.md
       - name: Command-line options to configure proxy settings
         href: edge-learnmore-cmdline-options-proxy-settings.md
-      - name: Configurable sites in IE mode
-        href: edge-learnmore-configurable-sites-ie-mode.md
+#      - name: Configurable sites in IE mode
+#        href: edge-learnmore-configurable-sites-ie-mode.md
       - name: Filter format for URL list-based policies
         href: edge-learnmmore-url-list-filter format.md
-      - name: Keep in-page navigation in IE mode
-        href: edge-learnmore-inpage-nav.md
+#      - name: Keep in-page navigation in IE mode
+#        href: edge-learnmore-inpage-nav.md
       - name: Mixed content downloads
         href: edge-learnmore-mixed-content-downloads.md
       - name: Progressive rollouts for Stable channel updates
