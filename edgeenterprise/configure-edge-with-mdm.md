@@ -3,9 +3,9 @@ title: "Configure Microsoft Edge using Mobile Device Management"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 04/05/2021
+ms.date: 04/06/2021
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
@@ -214,7 +214,7 @@ OMA-URI examples with their URI path, type, and an example value.
 
 ### Integer data type examples
 
-*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -223,7 +223,7 @@ OMA-URI examples with their URI path, type, and an example value.
 | type    | String                                                                               |
 | Value   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#defaultimagessetting):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -232,7 +232,7 @@ OMA-URI examples with their URI path, type, and an example value.
 | type    | String                                                                               |
 | Value   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#diskcachesize):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -250,9 +250,9 @@ OMA-URI examples with their URI path, type, and an example value.
 | Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
 | Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
+| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
 -->
-*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -261,7 +261,7 @@ OMA-URI examples with their URI path, type, and an example value.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>For multiple list items: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#extensioninstallforcelist):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -272,7 +272,7 @@ OMA-URI examples with their URI path, type, and an example value.
 
 #### Dictionary and String data type example
 
-*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
