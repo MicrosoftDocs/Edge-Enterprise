@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge using Mobile Device Management"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 10/25/2019
+ms.date: 04/05/2021
 audience: ITPro
 ms.topic: technical
 ms.prod: microsoft-edge
@@ -194,7 +194,7 @@ OMA-URI examples with their URI path, type, and an example value.
 
 #### Boolean data type examples
 
-*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -203,7 +203,7 @@ OMA-URI examples with their URI path, type, and an example value.
 | type    | String                                                                               |
 | Value   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#defaultsearchproviderenabled):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
