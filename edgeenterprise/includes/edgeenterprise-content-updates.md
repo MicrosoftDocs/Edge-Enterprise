@@ -1,5 +1,6 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
-
+
+
 
 
 ## Week of March 29, 2021
@@ -7,17 +8,17 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/29/2021 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | modified |
-| 3/29/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 3/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 3/30/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-| 3/30/2021 | [Configure IE mode Policies](/DeployEdge/edge-ie-mode-policies) | modified |
-| 3/30/2021 | [Enterprise site configuration strategy](/DeployEdge/edge-ie-mode-sitelist) | modified |
-| 3/30/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode) | modified |
-| 4/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 4/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 4/1/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 4/2/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 3/29/2021 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment)<br>Refresh metadata. | modified |
+| 3/29/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published week of March 22. | modified |
+| 3/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fix bugs and performance issues in Beta version 90.0.818.22. | modified |
+| 3/30/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [Configure IE mode Policies](/DeployEdge/edge-ie-mode-policies)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [Enterprise site configuration strategy](/DeployEdge/edge-ie-mode-sitelist)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode)<br>Refresh as part of table of contents reorganization. | modified |
+| 4/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable version 89.0.774.68. | modified |
+| 4/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update to Stable version 89.0.774.68 for security update.  | modified |
+| 4/1/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update policy document and call out new policies. | modified |
+| 4/2/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fix bugs and performance issues for Beta version 90.0.818.27. | modified |
 
 
 ## Week of March 22, 2021
