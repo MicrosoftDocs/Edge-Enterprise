@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/29/2021
+ms.date: 04/07/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,18 +18,6 @@ This article describes the options and steps for managing extensions by using gr
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## Before you begin
-
-The extensions options assume that you already have Microsoft Edge managed for your users. For more information about setting up administrative templates for Microsoft Edge policies, see:
-
-- [Configure Microsoft Edge policy settings on Windows](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)
-- [Configure for Windows with Intune](https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
-- [Configure for Windows with Mobile Device Management](https://docs.microsoft.com/deployedge/configure-edge-with-mdm)
-- [Configure for macOS using a .plist](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)
-- [Configure for macOS with Jamf](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac-jamf)
-
-The configuration steps in this article are for Windows, for the corresponding implementation in MAC/Linux, see the [Microsoft Edge browser policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies) reference.
 
 ## Block extensions based on their permissions
 
