@@ -1,15 +1,32 @@
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
 
-## Week of March 22, 2021
 
-> [!NOTE]
-> Unless noted, the updates for this week were the result of a bulk refresh to align hyperlinks with publishing requirements.
+
+## Week of March 29, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/22/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Refresh list of content updates with annotations. | modified |
+| 3/29/2021 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment)<br>Refresh metadata. | modified |
+| 3/29/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates)<br>Annotate content published week of March 22. | modified |
+| 3/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fix bugs and performance issues in Beta version 90.0.818.22. | modified |
+| 3/30/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [Configure IE mode Policies](/DeployEdge/edge-ie-mode-policies)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [Enterprise site configuration strategy](/DeployEdge/edge-ie-mode-sitelist)<br>Refresh as part of table of contents reorganization. | modified |
+| 3/30/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode)<br>Refresh as part of table of contents reorganization. | modified |
+| 4/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security)<br>Security update for Stable version 89.0.774.68. | modified |
+| 4/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Update to Stable version 89.0.774.68 for security update.  | modified |
+| 4/1/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Update policy document and call out new policies. | modified |
+| 4/2/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Fix bugs and performance issues for Beta version 90.0.818.27. | modified |
+
+
+## Week of March 22, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/22/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
 | 3/23/2021 | [Configure Microsoft Edge policy settings for Windows using Microsoft Intune](/DeployEdge/configure-edge-with-intune) | modified |
 | 3/23/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
 | 3/23/2021 | [Configure Microsoft Edge for macOS using a .plist](/DeployEdge/configure-microsoft-edge-on-mac) | modified |
@@ -71,10 +88,10 @@
 | 3/23/2021 | [Diagnose and fix Microsoft Edge sync issues](/DeployEdge/microsoft-edge-troubleshoot-enterprise-sync) | modified |
 | 3/23/2021 | [Microsoft Edge and Conditional Access](/DeployEdge/ms-edge-security-conditional-access) | modified |
 | 3/23/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 3/24/2021 | [Microsoft browser usage report](/DeployEdge/microsoft-edge-browser-usage-report)<br>A new article that provides information about the browser usage report: what it is, and how to get it. | added |
-| 3/24/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies)<br>Refreshed policy article and called out new policy. | modified |
-| 3/25/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Fixed bugs and performance issues in minor version 89.0.774.63. | modified |
-| 3/25/2021 | [Platform support for Microsoft Edge features](/DeployEdge/microsoft-edge-platform-feature-matrix)<br>A new document that summarizes platform support for Microsoft Edges features. | added |
+| 3/24/2021 | [Microsoft browser usage report](/DeployEdge/microsoft-edge-browser-usage-report) | added |
+| 3/24/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 3/25/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 3/25/2021 | [Platform support for Microsoft Edge features](/DeployEdge/microsoft-edge-platform-feature-matrix) | added |
 
 
 ## Week of March 15, 2021
