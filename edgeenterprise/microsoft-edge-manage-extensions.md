@@ -61,16 +61,25 @@ Some examples of these permissions are: access to a USB port, storage or viewing
 
 ## Get ready to manage extensions
 
+Before you begin
+The extensions options assume that you already have Microsoft Edge managed for your users. For more information about setting up administrative templates for Microsoft Edge policies, see:
+•	Configure Microsoft Edge policy settings on Windows
+•	Configure for Windows with Intune
+•	Configure for Windows with Mobile Device Management
+•	Configure for macOS using a .plist
+•	Configure for macOS with Jamf
+The configuration steps in this article are for Windows, for the corresponding implementation in MAC/Linux, see the Microsoft Edge browser policy reference.
+
+## Decide which extensions to allow
+
 Most organizations should manage extensions by their permissions and what websites they have access to. This method is more secure, easier to manage, and is scalable for large organizations.  
 
 - Blocked/allowed permissions – Lets you control extensions by the permissions they need.
 - Runtime block hosts – Lets you to control what websites these extensions can access.
-- Force install extensions – Lets you install extensions silently.
-- Allowlist/blocklist (if required) – Decide what extensions are allowed to be installed.
 
-Using this approach saves time because you only need to set these once. And with the run-time hosts policy, your most important sites will be protected.
-
-### Decide which extensions to allow
+Using this approach saves time because you only need to set these once. And with the run-time hosts policy, your most important sites will be protected.There are other options as well such as:
+•	Force install extensions – Lets you install extensions silently.
+•	Allowlist/blocklist (if required) – Decide what extensions are allowed to be installed.
 
 Use the following steps as a guide to decide which extensions to allow in your organization.
 
