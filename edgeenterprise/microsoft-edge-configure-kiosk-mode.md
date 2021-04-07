@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/07/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -59,9 +59,9 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 | CTRL+N blocked (open a new window) * | Y | Y | 89 |Y|
 | CTRL+T blocked (open new tab) |Y | N | 89 |Y|
 |Settings and more (...) will display only the required options  |Y |Y |89 |Y|
-|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
-|UI print settings lockdown|Y|Y|90/91|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+|Restrict the launch of other applications from the browser|Y|Y|90|Y|
+|UI print settings lockdown|Y|Y|90|Y|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
 > Features followed by "*" are only enabled in an assigned access single app scenario.
@@ -223,18 +223,6 @@ We currently don't support the following features and recommend that you turn of
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
-
-## Roadmap
-
-### In early 2021
-
-We'll add the following support and features:
-
-- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows 10 1909 and higher.
-- Additional features for parity with Microsoft Edge Legacy.
-- Integration with Intune to configure devices using kiosk mode profile UX.
-- Restrict the launch of other applications from the browser.
-- UI print settings lockdown.
 
 ## See also
 
