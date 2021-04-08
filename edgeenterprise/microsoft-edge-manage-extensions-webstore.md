@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 04/07/2021
+ms.date: 04/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,9 +86,9 @@ The extension's changes will be picked up during the next policy sync cycle. For
 ## Distribute a privately hosted extension
 
 You can share the link of the location where the XML file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page.  
-Alternatly, you can use group policy [ExtensionInstallForceList] to Force-install an extension on your users’ devices on your users’ devices.
+Alternatively, you can use group policy [ExtensionInstallForceList](https://review.docs.microsoft.com/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) to Force-install an extension on your users’ devices.
 
-You can apply these policies to your selected users, devices, or both. Policy updates aren’t instantaneous, and it will take time for the policy settings to take effect.
+You can apply these policies to your selected users, devices, or both. Remember though that policy updates are not instantaneous, and it will take time for the policy settings to take effect.
 
 ## See also
 
