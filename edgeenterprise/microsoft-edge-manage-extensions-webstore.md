@@ -1,7 +1,7 @@
 ---
 title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
-author: dan-wesley
+author: Andrea-Barr
 manager: balajek
 ms.date: 04/08/2021
 audience: ITPro
