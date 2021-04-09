@@ -53,7 +53,7 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
 |[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
 |[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y||Y|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
 |End session button * | N| Y|89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
 | CTRL+N blocked (open a new window) * | Y | Y |89|Y|
