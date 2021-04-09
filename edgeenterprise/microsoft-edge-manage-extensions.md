@@ -1,7 +1,7 @@
 ---
 title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
-author: Andrea-Barr
+author: AndreaLBarr
 manager: balajek
 ms.date: 04/08/2021
 audience: ITPro
