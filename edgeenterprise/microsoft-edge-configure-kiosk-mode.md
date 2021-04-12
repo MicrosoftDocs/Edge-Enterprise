@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,23 +45,23 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |Reset on inactivity|Y|Y|89|Y|
 |[Read only address bar](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (policy) |N|Y |89|N|
 |[Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (policy)  | Y|Y |89|N|
-|F11 blocked (enter/exit full-screen) | Y | Y | 89 |Y|
-|F12 blocked (launch Developer Tools) | Y | Y | 89 |Y|
-| Multi tab support | N| Y| 89|Y|
+|F11 blocked (enter/exit full-screen) | Y | Y |89|Y|
+|F12 blocked (launch Developer Tools) | Y | Y |89|Y|
+| Multi tab support | N| Y|89|Y|
 |[Allow URL support](./microsoft-edge-policies.md#urlallowlist) (policy)|Y|Y|89|N|
 |[Block URL support](./microsoft-edge-policies.md#urlblocklist) (policy)|Y|Y|89|N|
 |[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
 |[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
 |[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y||Y|
-|End session button * | N| Y| 89|Y|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
+|End session button * | N| Y|89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
-| CTRL+N blocked (open a new window) * | Y | Y | 89 |Y|
-| CTRL+T blocked (open new tab) |Y | N | 89 |Y|
-|Settings and more (...) will display only the required options  |Y |Y |89 |Y|
-|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
-|UI print settings lockdown|Y|Y|90/91|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+| CTRL+N blocked (open a new window) * | Y | Y |89|Y|
+| CTRL+T blocked (open new tab) |Y | N |89|Y|
+|Settings and more (...) will display only the required options  |Y |Y |89|Y|
+|Restrict the launch of other applications from the browser|Y|Y|90|Y|
+|UI print settings lockdown|Y|Y|90|Y|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
 > Features followed by "*" are only enabled in an assigned access single app scenario.
@@ -223,18 +223,6 @@ We currently don't support the following features and recommend that you turn of
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
-
-## Roadmap
-
-### In early 2021
-
-We'll add the following support and features:
-
-- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows 10 1909 and higher.
-- Additional features for parity with Microsoft Edge Legacy.
-- Integration with Intune to configure devices using kiosk mode profile UX.
-- Restrict the launch of other applications from the browser.
-- UI print settings lockdown.
 
 ## See also
 

@@ -63,8 +63,6 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-#      - name: Blocker Toolkit for Microsoft Edge updates
-#        href: microsoft-edge-blocker-toolkit.md
       - name: How to access the old version of Microsoft Edge
         href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
@@ -112,6 +110,18 @@
      href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md
+   - name: Manage Microsoft Edge extensions
+     items:
+      - name: Manage extensions in the enterprise
+        href: microsoft-edge-manage-extensions.md
+      - name: Use group policies to manage extensions
+        href: microsoft-edge-manage-extensions-policies.md
+      - name: Self-host Microsoft Edge extensions
+        href: microsoft-edge-manage-extensions-webstore.md
+      - name: Detailed guide to the ExtensionSettings policy
+        href: microsoft-edge-manage-extensions-ref-guide.md
+      - name: Extensions FAQ
+        href: microsoft-edge-manage-extensions-faq.md
    - name: Microsoft Edge enterprise sync
      items: 
       - name: Configure Microsoft Edge sync

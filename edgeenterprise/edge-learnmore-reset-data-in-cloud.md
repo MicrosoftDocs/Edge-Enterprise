@@ -3,7 +3,7 @@ title: "Reset Microsoft Edge data"
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 12/21/2020
+ms.date: 04/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,9 @@ This article describes the steps for resetting your Microsoft Edge data in the c
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 88 or later unless otherwise noted.
+
+> [!NOTE]
+> If your tenant is in a GCC Mod environment, your tenant admin will need to file a support request with Microsoft to reset your data.
 
 ## Overview
 
