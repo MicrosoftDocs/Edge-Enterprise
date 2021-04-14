@@ -30,7 +30,11 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 
-## Version 89.0.774.74: April 12
+## Version 89.0.774.76: April 12
+
+Fixed various bugs and performance issues.
+
+## Version 89.0.774.75: April 8
 
 Fixed various bugs and performance issues.
 
