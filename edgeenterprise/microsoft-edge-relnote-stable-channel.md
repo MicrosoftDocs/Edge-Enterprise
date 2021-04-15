@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
-## Version 90.0.x.x: April 15 ##
+## Version 90.0.818.39: April 15 ##
 
 Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-15-2021).
 
@@ -73,12 +73,6 @@ Eight new policies were added. Download the updated Administrative Templates fro
 -	[NativeWindowOcclusionEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#nativewindowocclusionenabled) - Enable Native Window Occlusion
 -	[SSLVersionMin](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#sslversionmin)- Minimum TLS version enabled
 
-
-
-
-
-## Version 89.0.774.74: April 12
-=======
 ## Version 89.0.774.77: April 14
 
 Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-14-2021).
@@ -86,6 +80,7 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/dep
 ## Version 89.0.774.76: April 12
 
 Fixed various bugs and performance issues.
+
 
 ## Version 89.0.774.75: April 8
 master
