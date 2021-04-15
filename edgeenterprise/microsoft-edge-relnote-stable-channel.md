@@ -83,7 +83,6 @@ Fixed various bugs and performance issues.
 
 
 ## Version 89.0.774.75: April 8
-master
 
 Fixed various bugs and performance issues.
 
