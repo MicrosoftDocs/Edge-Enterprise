@@ -3,11 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-v-andreabarr-Edge-Enterprise-pr-edits
 ms.date: 04/15/2021
-=======
-ms.date: 04/14/2021
-master
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
