@@ -59,19 +59,19 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/dep
 ## New policies
 
 Eight new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
--	[ApplicationGuardFavoritesSyncEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#applicationguardfavoritessyncenabled) - Application Guard Favorites Sync Enabled
+-	[ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) - Application Guard Favorites Sync Enabled
 -	[FetchKeepaliveDurationSecondsOnShutdown](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown)- Fetch keepalive duration on shutdown
--	[ManagedConfigurationPerOrigin](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#managedconfigurationperorigin) - Sets managed configuration values for websites to specific origins
--	[PrintRasterizationMode](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#printrasterizationmode) - Print Rasterization Mode
--	[QuickViewOfficeFilesEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#quickviewofficefilesenabled) - Manage QuickView Office files capability in Microsoft Edge
--	[SSLErrorOverrideAllowedForOrigins](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#sslerroroverrideallowedfororigins) - Allow users to proceed from the HTTPS warning page for specific origins
--	[WindowOcclusionEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#windowocclusionenabled) - Enable Window Occlusion
--	[WindowsHelloForHTTPAuthEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#windowshelloforhttpauthenabled) - Windows Hello For HTTP Auth Enabled
+-	[ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) - Sets managed configuration values for websites to specific origins
+-	[PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode) - Print Rasterization Mode
+-	[QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) - Manage QuickView Office files capability in Microsoft Edge
+-	[SSLErrorOverrideAllowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) - Allow users to proceed from the HTTPS warning page for specific origins
+-	[WindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled) - Enable Window Occlusion
+-	[WindowsHelloForHTTPAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) - Windows Hello For HTTP Auth Enabled
 
 ## Deprecated policies
 
--	[NativeWindowOcclusionEnabled](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#nativewindowocclusionenabled) - Enable Native Window Occlusion
--	[SSLVersionMin](https://review.docs.microsoft.com/deployedge/microsoft-edge-policies?branch=pr-en-us-665#sslversionmin)- Minimum TLS version enabled
+-	[NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - Enable Native Window Occlusion
+-	[SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin)- Minimum TLS version enabled
 
 ## Version 89.0.774.77: April 14
 
