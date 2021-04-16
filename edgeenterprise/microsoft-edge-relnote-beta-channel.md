@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/14/2021
+ms.date: 04/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > We've updated the Microsoft Edge Beta [Version 89.0.774.18: February 3](#version-89077418-february-3) release note to reflect the features that landed.
+
+## Version 90.0.818.41: April 16
+
+Fixed various bugs and performance issues.
 
 ## Version 90.0.818.38: April 14
 
