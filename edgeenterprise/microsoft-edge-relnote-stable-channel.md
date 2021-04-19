@@ -16,8 +16,6 @@ description: "Microsoft Edge release notes for Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel.
 
-
-
 - All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 - Archived release notes for Microsoft Edge Stable Channel are located [here](microsoft-edge-relnote-archive-stable-channel.md).
 
@@ -26,7 +24,12 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
-## Version 90.0.818.41: April 16
+## Version 90.0.818.42: April 19 ##
+
+Fixed various bugs and performance issues.
+
+## Version 90.0.818.41: April 16 ##
+
 Stable channel security updates are listed [here](https://docs.microsoft.com//deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
 ## Version 90.0.818.39: April 15 ##
