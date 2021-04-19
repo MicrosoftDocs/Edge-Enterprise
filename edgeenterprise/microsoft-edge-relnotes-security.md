@@ -16,6 +16,10 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
+## April 16, 2021
+
+Microsoft has released the latest Microsoft Edge Stable Channel (Version 90.0.818.41), which incorporates the latest Security Updates of the Chromium project. There are no CVE’s published with this update at this moment.
+
 ## April 15, 2021
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 90.0.818.39)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
