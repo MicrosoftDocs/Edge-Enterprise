@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 90.0.818.xx: April 122 ##
 
-Stable channel security updates are listed [here](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#april-22-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-22-2021).
 
 ## Version 90.0.818.41: April 16 ##
 
