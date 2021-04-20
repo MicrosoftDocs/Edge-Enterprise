@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/19/2021
+ms.date: 04/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,6 +27,7 @@ These release notes provide information about new features and non-security upda
 ## Version 90.0.818.42: April 19 ##
 
 Fixed various bugs and performance issues.
+Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-19-2021).
 
 ## Version 90.0.818.41: April 16 ##
 
