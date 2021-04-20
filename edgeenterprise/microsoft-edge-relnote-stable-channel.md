@@ -24,10 +24,9 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 
-## Version 90.0.818.42: April 19 ##
+## Version 90.0.818.xx: April 122 ##
 
-Fixed various bugs and performance issues.
-Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-19-2021).
+Stable channel security updates are listed [here](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#april-22-2021).
 
 ## Version 90.0.818.41: April 16 ##
 
