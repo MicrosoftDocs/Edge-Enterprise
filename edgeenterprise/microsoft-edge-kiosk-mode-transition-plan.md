@@ -89,7 +89,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
 
 8. Select **Next**.
