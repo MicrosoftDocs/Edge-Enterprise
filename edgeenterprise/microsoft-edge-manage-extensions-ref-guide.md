@@ -14,7 +14,7 @@ description: "A detailed reference guide for configuring Microsoft Edge extensio
 
 # Detailed guide to the ExtensionSettings policy
 
-Windows offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string or in the Windows Registry using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy.
+Microsoft Edge offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string in the Windows Group Policy Editor or in the Windows Registry using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
@@ -23,9 +23,6 @@ Windows offers multiple ways to manage extensions. A common way is to set multip
 
 You decide if you want to set all extension management settings here or set these controls through other policies.
   
-> [!NOTE]
-> The Runtime allowed/blocked hosts setting can only be set within the extension settings policy.  
-
 The ExtensionSettings policy can overwrite other policies that you've set elsewhere in group policy, including the following policies:
 
 - [ExtensionAllowedTypes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensionallowedtypes)
@@ -50,37 +47,6 @@ This policy can control settings such as Update URL, where the extension will be
 | runtime_allowed_hosts | Allows extensions to interact with specified websites, even if they’re also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
 | runtime_blocked_hosts | Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
 
-## Configure using the Windows Registry
-
-The ExtensionSettings policy should be written to the registry under this key:
-
-`HKLM\Software\Policies\Microsoft\Edge\`
-
-> [!NOTE]
-> It’s possible to use HKCU instead of HKLM. The equivalent path can be configured with Group Policy Object (GPO).  
-
-For Microsoft Edge, all settings will start under this key:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
-
-The next key that you will create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location for settings that apply to Google Hangouts:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
-
-For settings that apply to the Default Scope, use this location:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\*`
-
-Different settings will require different formats, depending on whether they are a string or an array of strings. Array values require [＂value＂]. String values can be entered as is. The following list shows which settings are arrays or strings:
-
-- Installation_mode = String
-- update_url = String
-- blocked_permissions = Array of strings
-- allowed_permissions = Array of Strings
-- minimum_version_required = String
-- runtime_blocked_hosts = Array of strings
-- runtime_allowed_hosts = Array of Strings
-- blocked_install_message = String
 
 ## Configure using a JSON string in Windows Group Policy Editor
 
@@ -122,25 +88,24 @@ The next JSON example blocks any extension from running on `.example.com` and bl
 {"*":{"runtime_blocked_hosts":["*://*.example.com"],"blocked_permissions":["usb"]}} 
 ```
 
-### JSON examples for extension settings
+### A few more JSON examples for extension settings
 
-- "allowed" (default). User can install all extensions.
+#### Using installation_mode property to allow and block extensions
+
+- User can install all extensions - this is the default setting 
 
   `{ "*": {"installation_mode": "allowed" }}`
-- "blocked". User can’t install any extensions.  
+- User can’t install any extensions.  
 
   `{ "*": {"installation_mode": "blocked" }}`
 
-- "Blocked_install_message". Specify a custom message to display when installation is blocked.
+- Specify a custom message to display when installation is blocked.
 
    `{"*": {"blocked_install_message": ["Call IT(408 - 555 - 1234) for an exception"]}}`
 
-- "force_installed". The extension is automatically installed without user interaction. A user can’t disable or remove the extension.
-- "normal_installed". The extension is automatically installed without user interaction, but they can disable the extension.  
+#### Using installation_mode property to force install extensions
 
-#### Normal and force installed extensions
-
-If an extension is "normal" or "force" installed, the **update_url** field must also be defined. This field points to the location where the extension can be installed from. Use the following locations for the **update_url** field:
+When using installation_mode as "force_installed", the extension is automatically installed without user interaction. A user can’t disable or remove the extension. If an extension is "normal" or "force" installed, the **update_url** field must also be defined. This field points to the location where the extension can be installed from. Use the following locations for the **update_url** field:
 
 - If the extension you’re downloading is hosted on the Microsoft Edge Add-ons store, use [https://edge.microsoft.com/extensionwebstorebase/v1/crx](https://edge.microsoft.com/extensionwebstorebase/v1/crx).
 - If the extension you’re downloading is hosted on the Chrome Web Store, use [https://clients2.google.com/service/update2/crx](https://clients2.google.com/service/update2/crx).
@@ -148,8 +113,43 @@ If an extension is "normal" or "force" installed, the **update_url** field must 
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
   
+In the above example Instead of "force_installed", if you use "normal_installed", then the extension is automatically installed without user interaction, but they can disable the extension.  
+
    > [!TIP]
-   > Formatting a JSON string correctly can be tricky. Use a JSON checker before implementing the policy.
+   > Formatting a JSON string correctly can be tricky. Use a JSON checker before implementing the policy. Or try the early version of [Extension Settings Generator Tool](https://microsoft.github.io/edge-extension-settings-generator/minimal)
+
+## Configure using the Windows Registry
+
+The ExtensionSettings policy should be written to the registry under this key:
+
+`HKLM\Software\Policies\Microsoft\Edge\`
+
+> [!NOTE]
+> It’s possible to use HKCU instead of HKLM. The equivalent path can be configured with Group Policy Object (GPO).  
+
+For Microsoft Edge, all settings will start under this key:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
+
+The next key that you will create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location for settings that apply to Google Hangouts:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
+
+For settings that apply to the Default Scope, use this location:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\*`
+
+Different settings will require different formats, depending on whether they are a string or an array of strings. Array values require [＂value＂]. String values can be entered as is. The following list shows which settings are arrays or strings:
+
+- Installation_mode = String
+- update_url = String
+- blocked_permissions = Array of strings
+- allowed_permissions = Array of Strings
+- minimum_version_required = String
+- runtime_blocked_hosts = Array of strings
+- runtime_allowed_hosts = Array of Strings
+- blocked_install_message = String
+
 
 ## See also
 
