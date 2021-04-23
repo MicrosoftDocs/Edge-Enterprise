@@ -39,7 +39,7 @@ You can configure Internet Explorer to open directly within Microsoft Edge (IE m
 
 1. Download and use the latest [Microsoft Edge Policy Template](https://www.microsoft.com/en-us/edge/business/download).
 2. Open Group Policy Editor.
-3. Click **Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
+3. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
 4. Double-click **Configure Internet Explorer integration**.
 5. Select **Enabled**.
 6. Under **Options**, set the dropdown value to 
