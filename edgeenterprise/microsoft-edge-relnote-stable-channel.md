@@ -37,6 +37,7 @@ Fixed various bugs and performance issues.
 > [!Important]
 This update contains [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 >
+
 Stable channel security updates are listed [here](https://docs.microsoft.com//deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
 ## Version 90.0.818.39: April 15 ##
