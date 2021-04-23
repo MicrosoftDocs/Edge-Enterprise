@@ -34,6 +34,9 @@ Fixed various bugs and performance issues.
 
 ## Version 90.0.818.41: April 16 ##
 
+> [!Important]
+This update contains [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+>
 Stable channel security updates are listed [here](https://docs.microsoft.com//deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
 ## Version 90.0.818.39: April 15 ##
@@ -85,6 +88,9 @@ Eight new policies were added. Download the updated Administrative Templates fro
 
 ## Version 89.0.774.77: April 14
 
+> [!Important]
+This update contains  [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) and [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220) which has been reported by the Chromium team as having an exploit in the wild.  For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+>
 Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#april-14-2021).
 
 ## Version 89.0.774.76: April 12
