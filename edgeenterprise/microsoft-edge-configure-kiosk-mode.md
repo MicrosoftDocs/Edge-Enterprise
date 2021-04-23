@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 04/20/2021 
+ms.date: 04/23/2021 
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -190,7 +190,7 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Kiosk mode display - full screen digital sign":::
 
 8. Select **Next**.
 9. Type the URL to load when the kiosk launches.
