@@ -25,6 +25,9 @@ This article describes the options and steps for managing extensions by using gr
 
 You can control what extensions your users can install based on permissions using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy. If an installed extension needs a permission that’s blocked, it just won't run. The extension isn't removed, just disabled.
 
+> [!NOTE]
+> The blocked permissions setting can only be set within the extension settings policy.  
+
 Use the following steps as a guide for blocking an extension.
 
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions**  and then select **Configure extension management settings**.
@@ -54,6 +57,9 @@ The following example shows the JSON to block any extension that needs the use o
 ## Prevent extensions from altering web pages
 
 This setting prevents extensions from reading and changing  data from sensitive websites and domains. Blocking unwanted actions is done by blocking actions such as script injection into your websites, reading the cookies, or making web-request modifications. This setting doesn’t prevent your users from installing or removing extensions, it only prevents extensions from altering the specified websites. 
+  
+> [!NOTE]
+> The Runtime allowed/blocked hosts setting can only be set within the extension settings policy.  
 
 You can configure the following settings in the ExtensionSettings policy to prevent (or allow) alterations of websites or domains:
 
