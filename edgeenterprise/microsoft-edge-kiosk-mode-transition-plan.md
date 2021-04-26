@@ -83,7 +83,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
 6. On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Kiosk mode - choose an app":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode display - full screen digital sign":::
 
 7. Select one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
