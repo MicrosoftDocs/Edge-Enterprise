@@ -48,8 +48,8 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 | CTRL+N blocked (open a new window) | Y | Y | 89 |Y|
 | CTRL+T blocked (open new tab) |Y | Y | 89 |Y|
 |Settings and more (...) will display only the required options  |Y |Y |89 |Y|
-|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
-|UI print settings lockdown|Y|Y|90/91|Y|
+|Restrict the launch of other applications from the browser|Y|Y|90|Y|
+|UI print settings lockdown|Y|Y|90|Y|
 |[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
