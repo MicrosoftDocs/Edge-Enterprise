@@ -42,7 +42,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 |[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
 |[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
 |[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y||Y|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
 |End session button | N| Y| 89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
 | CTRL+N blocked (open a new window) | Y | Y | 89 |Y|
@@ -50,7 +50,7 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 |Settings and more (...) will display only the required options  |Y |Y |89 |Y|
 |Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
 |UI print settings lockdown|Y|Y|90/91|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
 > For information about the Microsoft Edge release schedule, see [Microsoft Edge release schedule](microsoft-edge-release-schedule.md).
