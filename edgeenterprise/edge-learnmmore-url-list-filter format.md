@@ -32,7 +32,7 @@ The fields in the filter format are:
 | Field | Description |
 | --- | --- |
 | **scheme** (*optional*) | It can be http://, https://, ftp://, edge://, etc. |
-| **host** (*required*) | It must be a valid host name or IP address and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (".") before **host**. |
+| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (".") before **host**. A single IP Address Literal hostname may be specified, but wildcarding is not supported for an IP Address Literal hostname. |
 | **port** (*optional*) | Valid values range from 1 to 65535. |
 | **path** (*optional*) | You can use any string in the path. |
 | **query** (*optional*) | The **query** is either key-value or key-only tokens separated by an ampersand ("&"). Separate key-value tokens with an equal sign ("="). To indicate a prefix match, you can use an asterisk ("\*") at the end of the **query**. |
