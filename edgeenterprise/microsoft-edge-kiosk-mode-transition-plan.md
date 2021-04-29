@@ -3,7 +3,7 @@ title: "Plan your kiosk mode transition"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,23 +42,29 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 |[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
 |[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
 |[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y||Y|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
 |End session button | N| Y| 89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
 | CTRL+N blocked (open a new window) | Y | Y | 89 |Y|
 | CTRL+T blocked (open new tab) |Y | Y | 89 |Y|
 |Settings and more (...) will display only the required options  |Y |Y |89 |Y|
-|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
-|UI print settings lockdown|Y|Y|90/91|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+|Restrict the launch of other applications from the browser|Y|Y|90|Y|
+|UI print settings lockdown|Y|Y|90|Y|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
 > For information about the Microsoft Edge release schedule, see [Microsoft Edge release schedule](microsoft-edge-release-schedule.md).
 
 **Step2: Test the new kiosk in Microsoft Edge.** We recommend that you test setting up kiosk mode in Microsoft Edge. A quick and easy way to test kiosk mode is to configure an assigned access single app using Windows Settings as described next.
 
-1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](/windows-insider/get-started).
-2. Install the latest version of [Microsoft Edge Stable channel](https://www.microsoft.com/edge), version 87 or higher.  To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+1. The minimum system updates for the operating systems listed in the next table.
+
+|Operating System|Version|Updates|
+|--|--|--|
+|Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. To test the latest features, you can download the latest [Microsoft Edge Stable channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
 
    > [!IMPORTANT]
    > Because a device level installation is required, the Canary channel isn't supported.
@@ -77,13 +83,13 @@ Use the following steps as a guide to set up a kiosk in Microsoft Edge.
 
 6. On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Choose a Kiosk - full screen digital sign":::
 
 7. Select one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
 
 8. Select **Next**.
