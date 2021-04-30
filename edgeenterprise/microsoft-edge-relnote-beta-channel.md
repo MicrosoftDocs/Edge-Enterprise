@@ -39,14 +39,6 @@ These release notes provide information about new features and non-security upda
 
 Six new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
 
-- [ApplicationGuardFavoritesSyncEnabled](./microsoft-edge-policies.md#applicationguardfavoritessyncenabled) - Application Guard Favorites Sync Enabled
-- [ManagedConfigurationPerOrigin](./microsoft-edge-policies.md#managedconfigurationperorigin) - Sets managed configuration values for websites to specific origins
-- [PrintRasterizationMode](./microsoft-edge-policies.md#printrasterizationmode) - Print Rasterization Mode
-- [QuickViewOfficeFilesEnabled](./microsoft-edge-policies.md#quickviewofficefilesenabled) - Manage QuickView Office files capability in Microsoft Edge
-- [SSLErrorOverrideAllowedForOrigins](./microsoft-edge-policies.md#sslerroroverrideallowedfororigins) - Allow users to proceed from the HTTPS warning page for specific origins
-- [WindowOcclusionEnabled](./microsoft-edge-policies.md#windowocclusionenabled) - Enable Window Occlusion
-- [WindowsHelloForHTTPAuthEnabled](./microsoft-edge-policies.md#windowshelloforhttpauthenabled) - Windows Hello For HTTP Auth Enabled
-
 - [ApplicationGuardTrafficIdentificationEnabled](./microsoft-edge-policies.md#applicationguardtrafficidentificationenabled) - Application Guard Traffic Identification
 - [ExplicitlyAllowedNetworkPorts](./microsoft-edge-policies.md#explicitlyallowednetworkports) - Explicitly allowed network ports
 - [ImportStartupPageSettings](./microsoft-edge-policies.md#importstartuppagesettings) - Allow importing of startup page settings
