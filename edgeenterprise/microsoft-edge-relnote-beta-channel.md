@@ -39,12 +39,12 @@ These release notes provide information about new features and non-security upda
 
 Six new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
 
-- [ApplicationGuardTrafficIdentificationEnabled](./microsoft-edge-policies.md#applicationguardtrafficidentificationenabled) - Application Guard Traffic Identification
-- [ExplicitlyAllowedNetworkPorts](./microsoft-edge-policies.md#explicitlyallowednetworkports) - Explicitly allowed network ports
-- [ImportStartupPageSettings](./microsoft-edge-policies.md#importstartuppagesettings) - Allow importing of startup page settings
-- [MathSolverEnabled](./microsoft-edge-policies.md#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
-- [NewTabPageContentEnabled](./microsoft-edge-policies.md#newtabpagecontentenabled) - Allow Microsoft News content on the new tab page
-- [NewTabPageQuickLinksEnabled](./microsoft-edge-policies.md#newtabpagequicklinksenabled) - Allow quick links on the new tab page
+- [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled)|Application) - Application Guard Traffic Identification
+- [ExplicitlyAllowedNetworkPorts](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports)|Explicitly) - Explicitly allowed network ports
+- [ImportStartupPageSettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#importstartuppagesettings)|Allow) - Allow importing of startup page settings
+- [MathSolverEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mathsolverenabled)|Let) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+- [NewTabPageContentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled)|Allow) - Allow Microsoft News content on the new tab page
+- [NewTabPageQuickLinksEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled)|Allow) - Allow quick links on the new tab page
 
 #### Obsoleted Policy
 
