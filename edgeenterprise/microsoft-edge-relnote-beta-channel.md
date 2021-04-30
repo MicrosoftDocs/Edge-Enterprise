@@ -19,15 +19,15 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > We've updated the Microsoft Edge Beta [Version 89.0.774.18: February 3](#version-89077418-february-3) release note to reflect the features that landed.
 
-## Version 91.0.818.x: April 30
+## Version 91.0.864.11: April 30
 
 ### Feature updates
 
 - **Identify network traffic originating from Microsoft Defender Application Guard containers at the proxy level**. Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to identify them and apply specific policies.
 
-- **Support option to allow synchronizing Favorites from the host to the Edge Application Guard container**. Starting in Edge version 91, users have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
+- **Support option to allow synchronizing Favorites from the host to the Edge Application Guard container**. Starting with Microsoft Edge version 91, users have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
 
-- **'Current Page' option for printing PDF documents**. With Microsoft Edge version 91, we have added support for printing just the current page in view for PDF documents. You can do this by selecting the 'Current Page' option under the 'Pages' section in print dialog.
+- **'Current Page' option for printing PDF documents**. Starting with Microsoft Edge version 91, we have added support for printing just the current page in view for PDF documents. You can do this by selecting the 'Current Page' option under the 'Pages' section in print dialog.
 
 - **Support for Speech Recognition APIs**. Starting with Microsoft Edge version 91, API support for speech recognition commands on Google.com and similar sites will be added. This feature is limited to a randomly selected group of users who have enabled experimentation. These users are giving feedback to the feature team.
 
