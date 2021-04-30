@@ -42,9 +42,9 @@ Microsoft Edge Legacy inherited the Zones architecture from its Internet Explore
 
 Unlike its predecessors, the new Microsoft Edge makes very limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](https://docs.microsoft.com/DeployEdge/edge-learnmmore-url-list-filter%20format). 
 
-When end-users open edge://settings/content/siteDetails?site=https://example.com, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings Page directly, instead making choices while browsing using various widgets and toggles in the **Page Info** dropdown (which appears when you click the lock icon in the address bar) or via various prompts or buttons at the right-edge of the address bar. 
+When end-users open <code>edge://settings/content/siteDetails?site=https://example.com</code>, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings Page directly, instead making choices while browsing using various widgets and toggles in the **Page Info** dropdown (which appears when you click the lock icon in the address bar) or via various prompts or buttons at the right-edge of the address bar. 
 
-Enterprises can use Group Policy to provision site lists for individual policies that control the browser’s behavior. To find these policies, simply open the [Microsoft Edge Group Policy documentation](https://docs.microsoft.com/deployedge/microsoft-edge-policies) and search for ForUrls to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed within the [Group Policy for Content Settings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#content-settings) section. 
+Enterprises can use Group Policy to provision site lists for individual policies that control the browser’s behavior. To find these policies, simply open the [Microsoft Edge Group Policy documentation](https://docs.microsoft.com/deployedge/microsoft-edge-policies) and search for **ForUrls** to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed within the [Group Policy for Content Settings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#content-settings) section. 
 
 There are also a number of policies (whose names contain **Default**) that control the default behavior for a given setting. 
 
@@ -62,17 +62,17 @@ No. You must individually list each desired hostname, e.g. (https://payroll, htt
 
 If you were forward-thinking enough to structure your intranet such that your hostnames are of the form: 
 
-https://payroll.contoso-intranet.com 
+- <div style="display: inline">https://payroll.contoso-intranet.com</div>
 
-https://timecard.contoso-intranet.com 
+- <div style="display: inline">https://timecard.contoso-intranet.com</div>
 
-https://sharepoint.contoso-intranet.com 
+- <div style="display: inline">https://sharepoint.contoso-intranet.com</div>
 
 Congratulations, you’ve implemented a best practice. You can configure each desired policy with a ***.contoso-intranet.com** entry and your entire Intranet will be opted in. 
 
 ## Use of Security Zones in the Microsoft Edge 
 
-While Microsoft Edge mostly relies upon individual policies of the URL Filter format, it continues to use Windows’ Security Zones by default in a small number of places in order to simplify deployment within Enterprises that have historically relied upon Zones configuration. The following behaviors are controlled by Zone policy: 
+While Microsoft Edge mostly relies upon individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a small number of places in order to simplify deployment within Enterprises that have historically relied upon Zones configuration. The following behaviors are controlled by Zone policy: 
 
 1. When deciding whether to release Windows Integrated Authentication (Kerberos/NTLM) credentials automatically 
 
