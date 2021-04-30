@@ -28,12 +28,12 @@ When a user goes to a site that is incompatible with Internet Explorer, they wil
 > [!NOTE]
 > Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
-## Pre-requisites
-1.	Microsoft Edge Stable version 87 or later
-2.	Windows versions
-    1. Windows 10 version 1709 or later
-    2. 	Windows 8.1
-    3. 	Windows 7
+## Prerequisites
+- Microsoft Edge Stable version 87 or later
+- Windows versions
+    - Windows 10 version 1709 or later
+    - Windows 8.1
+    - Windows 7
 
 
 
