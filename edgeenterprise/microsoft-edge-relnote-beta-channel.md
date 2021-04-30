@@ -52,7 +52,7 @@ Six new policies were added. Download the updated Administrative Templates from 
 - [ImportStartupPageSettings](./microsoft-edge-policies.md#importstartuppagesettings) - Allow importing of startup page settings
 - [MathSolverEnabled](./microsoft-edge-policies.md#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
 - [NewTabPageContentEnabled](./microsoft-edge-policies.md#newtabpagecontentenabled) - Allow Microsoft News content on the new tab page
-- [NewTabPageQuickLinksEnabled](./microsoft-edge-policies.md#newtabpagequicklinksenabled) - Allow quick links on the new tab page
+- [NewTabPageQuickLinksEnabled](./microsoft-edge-policies.md#newtabpagequicklinksenabled) - Allow quick links on the new tab page 
 
 #### Obsoleted Policy
 
