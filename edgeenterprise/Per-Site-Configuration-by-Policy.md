@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Per-Site Configuration by Policy "
 ---
 
-## Per-Site Configuration by Policy
+# Per-Site Configuration by Policy
 
 ## Introduction: Browsers as Decision Makers
 
