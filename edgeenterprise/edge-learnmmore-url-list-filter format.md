@@ -77,13 +77,13 @@ If a filter has a dot (".") prefixing the **host** then only exact **host** matc
 - "contoso.com" (no dot) will match "contoso.com", "www.contoso.com", and "sub.www.contoso.com"
 - ".www.contoso.com" (with a dot prefix) will only match "www.contoso.com"
 
-You can use either a standard or customer **schema**. Supported standard schemas include:
+You can use either a standard or custom **schema**. Supported standard schemas include:
 
 - _about_, _blob_, _content_, _edge_, _cid_, _data_, _file_, _filesystem_, _ftp_, _gopher_, _http_, _https_, _javascript_, _mailto_, _ws_, and _wss_.
 
 Any other **schema** is treated as a custom **schema**, but only the _schema:*_ and _schema://*_ patterns are allowed. For example:
 
-- "custom:*" or "custom://*" will match "custom:app"
+- "custom:\*" or "custom://\*" will match "custom:app"
 - "custom:app" or "custom://app" are invalid
 
 **schema** and **host** aren't case-sensitive. For example:
