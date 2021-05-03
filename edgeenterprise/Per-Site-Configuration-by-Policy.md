@@ -3,7 +3,7 @@ title: "Per-Site Configuration by Policy "
 ms.author: brianalt
 author: AndreaLBarr
 manager: laurawi
-ms.date: 06/03/2021
+ms.date: 05/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
