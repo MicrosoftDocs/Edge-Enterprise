@@ -21,7 +21,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 91.0.864.15: May 3
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues. 
 
 ## Version 90.0.818.46: April 22
 
