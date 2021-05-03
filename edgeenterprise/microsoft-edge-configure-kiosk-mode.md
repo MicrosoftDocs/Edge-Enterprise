@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 04/12/2021
+ms.date: 04/26/2021 
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -143,13 +143,9 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 
 ### Single app kiosk
 
-Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing.  
+Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing. 
 
-Microsoft Edge kiosk mode with assigned access single app is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
-
-**How do I get the Windows Insiders preview?**
-
-To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](/windows-insider/get-started).
+Microsoft Edge kiosk mode with assigned access single app is currently available for testing with the latest Windows 10 Insider Preview Build, version 20215 or higher, and with the Microsoft Edge Beta Channel, version 89 or higher. 
 
 ### Multi-app kiosk
 
@@ -161,8 +157,15 @@ When using Microsoft Edge with multi-app assigned access, you can configure Micr
 
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
-1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](/windows-insider/get-started).
-2. To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+1. The minimum system updates for the operating systems listed in the next table.
+
+|Operating System|Version|Updates|
+|--|--|--|
+|Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. To test the latest features, you can download the latest [Microsoft Edge Stable channel](https://www.microsoft.com/edge/business/download), version 89 or higher.
+
 3. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select  **Set up a kiosk (assigned access)**, shown in the next screenshot to open the dialog for creating the kiosk.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Set up kiosk with assigned access":::
@@ -180,14 +183,14 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
    > [!NOTE]
    > This only applies to Microsoft Edge Dev, Beta, and Stable channels.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Kiosk mode display - full screen digital sign"::: 
 
 7. Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="How will the kiosk be used - full screen digital sign"::: 
 
 8. Select **Next**.
 9. Type the URL to load when the kiosk launches.
