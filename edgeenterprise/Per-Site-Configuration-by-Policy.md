@@ -1,9 +1,9 @@
 ---
 title: "Per-Site Configuration by Policy "
-ms.author: brianalt
+ms.author: v-andreabarr
 author: AndreaLBarr
 manager: laurawi
-ms.date: 06/30/2020
+ms.date: 05/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -11,7 +11,7 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Per-Site Configuration by Policy "
 ---
-# Per-Site Configuration by Policy
+# PerSite Configuration by Policy
 
 ## Introduction: Browsers as Decision Makers
 
@@ -55,7 +55,7 @@ Many of the settings are very obscure (WebSerial, WebMIDI) and there’s very of
 
 No, the format does not support specifying an IP-range for allow and block lists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (e.g. <http://127.0.0.1/>). If a hostname is used (<http://localhost>), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
 
-## Q: Can URL Filters match just dotless host names?
+## Q: Can URL Filters match just dot less host names?
 
 No. You must individually list each desired hostname, e.g. (<https://payroll>, <https://stock>, <https://who>, etc).
 
