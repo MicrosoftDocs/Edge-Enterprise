@@ -1,6 +1,6 @@
 ---
 title: "Per-Site Configuration by Policy "
-ms.author: AndreaLBarr
+ms.author: v-andreabarr
 author: AndreaLBarr
 manager: laurawi
 ms.date: 05/03/2021
