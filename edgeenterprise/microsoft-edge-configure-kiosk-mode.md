@@ -143,15 +143,19 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 
 ### Single app kiosk
 
-Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing. 
+Microsoft Edge version 90 kiosk mode offers an extensive list of features. See the section of Kiosk mode supported features.
+With the following Windows updates you can configure Microsoft Edge via assigned access single app.
 
-Microsoft Edge kiosk mode with assigned access single app is currently available for testing with the latest Windows 10 Insider Preview Build, version 20215 or higher, and with the Microsoft Edge Beta Channel, version 89 or higher. 
+|Operating System|Version|Updates|
+|--|--|--|
+|Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+You can manage Microsoft Edge kiosk mode assigned access single app via [Windows Settings](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) and Intune.
 
 ### Multi-app kiosk
 
 Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **MSEdge**).
-
-When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the[Microsoft Edge browser policies](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) to configure the browsing experience to meet your unique requirements.
 
 ### Configure using Windows Settings
 
