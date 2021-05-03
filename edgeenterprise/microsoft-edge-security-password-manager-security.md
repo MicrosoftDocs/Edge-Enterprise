@@ -30,83 +30,77 @@ The way to decrypt another user's passwords is if that user were logged on and t
 
 The profile’s encryption key is protected using Chromium's OSCrypt and uses the following platform-specific OS storage locations:
 
-- On Windows, the storage area is DPAPI 
+- On Windows, the storage area is DPAPI
 
-- On Mac, the storage area is the Keychain 
+- On Mac, the storage area is the Keychain
 
-- On Linux, the storage area is Gnome Keyring or KWallet 
+- On Linux, the storage area is Gnome Keyring or KWallet
 
-All ofAll these storage areas encrypt the AES256 key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture. 
+All these storage areas encrypt the AES256 key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture.
 
-However, physically local attacks and malware are outside the threat modelmodel, and, under these conditions, encrypted data would be vulnerable. If your computer's infected with malware, an attacker can get decrypted access to the browser's storage areas. The attacker's code, running as your user account, can do anything you can do. 
+However, physically local attacks and malware are outside the threat model and, under these conditions, encrypted data would be vulnerable. If your computer's infected with malware, an attacker can get decrypted access to the browser's storage areas. The attacker's code, running as your user account, can do anything you can do.
 
-Why encrypt data locally? Why not store the encryption key elsewhere, or make it harder to obtain? 
+## Why encrypt data locally? Why not store the encryption key elsewhere, or make it harder to obtain?
 
-Internet browsers (including Microsoft Edge) aren’t equipped with defenses to protect against threats where the entire device is compromised due to malware running as the user on the computer. However, programs like Microsoft Defender SmartScreen and OS-level protections like Windows Defender are designed to ensure that the device isn't compromised to start with. 
+Internet browsers (including Microsoft Edge) aren’t equipped with defenses to protect against threats where the entire device is compromised due to malware running as the user on the computer. However, programs like Microsoft Defender SmartScreen and OS-level protections like Windows Defender are designed to ensure that the device isn't compromised to start with.
 
-Despite its inability to protect against full-trust malware, Local Data Encryption is useful in certain scenarios. For example, if an attacker finds a way to steal files from the disk without the ability to execute code, orcode or has stolen a laptop that isn’t protected with Full Disk Encryption, Local Data Encryption will make it harder for the thief to get the stored data. 
+Despite its inability to protect against full-trust malware, Local Data Encryption is useful in certain scenarios. For example, if an attacker finds a way to steal files from the disk without the ability to execute code or has stolen a laptop that isn’t protected with Full Disk Encryption, Local Data Encryption will make it harder for the thief to get the stored data.
 
-Do you recommend storing passwords in Microsoft Edge? 
+## Do you recommend storing passwords in Microsoft Edge?
 
-Users who can rely on the Microsoft Edge's in-built password manager can (and do) use stronger and unique passwords more because they don’t need to remember them all and type them as often. And because the password manager will only autofill passwords on the sites to which they belong, users are less likely to fall for a phishing attack. 
+Users who can rely on the Microsoft Edge's in-built password manager can (and do) use stronger and unique passwords more because they don’t need to remember them all and type them as often. And because the password manager will only autofill passwords on the sites to which they belong, users are less likely to fall for a phishing attack.
 
-Note 
+> [!Note]
+>Industry reports show that 80% of online incidents are related to phishing, and more than 37% of untrained users fail phishing tests.
 
-Industry reports show that 80% of online incidents are related to phishing, and more than 37% of untrained users fail phishing tests. 
+Microsoft Edge’s password manager is convenient and easily distributed, which contributes to improved security. When combined with sync, you can get all your passwords on all your devices and it's easy to use a different password for every website. You can use long and complex passwords that you don't have to remember for every site and skip the hassle of typing a complex string every single time. Password manager's convenience means there's less risk of falling for a phishing attack.
 
- 
+However, using a password manager that's keyed to the user’s operating system login session also means that an attacker in that session can immediately retrieve all the user’s saved passwords. Without a password manager to steal from, an adversary would need to track keystrokes or monitor submitted passwords.
 
-Microsoft Edge’s password manager is convenient and easily distributed, which contributes to improved security. When combined with sync, you can get all your passwords on all your devices and it's easy to use a different password for every website. You can use long and complex passwords that you don't have to remember for every site and skip the hassle of typing a complex string every single time. Password manager's convenience means there's less risk of falling for a phishing attack. 
+The decision of whether to use a password manager comes down to assessing the many benefits we’ve described against the possibility of the entire device getting compromised. For most threat models, using the Microsoft Edge password manager is the recommended option.
 
-However, using a password manager that's keyed to the user’s operating system login session also means that an attacker in that session can immediately retrieve all the user’s saved passwords. Without a password manager to steal from, an adversary would need to track keystrokes or monitor submitted passwords. 
+> [!Note]
+>If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as MS Authenticator) or WebAuthN.
 
-The decision of whether to use a password manager comes down to assessing the many benefits we’ve described against the possibility of the entire device getting compromised. For most threat models, using the Microsoft Edge password manager is the recommended option. 
+## Should a password manager be enabled by an organization?
 
- Note 
+The simple and easy answer is: Yes, use the browser’s password manager.
 
-If an enterprise is concerned about the thefttheft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as MS Authenticator) or WebAuthN. 
+A more complete response means having in-depth knowledge of your threat model because security options and choices vary depending on different threat models. Some relevant questions to consider when thinking about whether you should enable the password manager for your organization are:
 
- 
+- What kind of attackers are you worried about?
 
-Should a password manager be enabled by an organization? 
+- What kind of websites do your users log on to?
 
-The simple and easy answer is: Yes, use the browser’s password manager. 
+- Do your users select strong, unique passwords?
 
-A more complete response means having in-depth knowledge of your threat model because security options and choices vary depending on different threat models. Some relevant questions to consider when thinking about whether you should enable the password manager for your organization are: 
+- Are your users’ accounts protected with 2FA?
 
-What kind of attackers are you worried about? 
+- What kind of attacks are most likely?
 
-What kind of websites do your users log on to? 
+- How do you protect your enterprise devices from malware?
 
-Do your users select strong, unique passwords? 
+- What’s your users’ personal tolerance for inconvenience?
 
-Are your users’ accounts protected with 2FA? 
+- Consider the impact of data sync.
 
-What kind of attacks are most likely? 
+It’s important to factor in the security of user data as it gets synced to various user devices and the amount of control the organization has on autofill data syncing.
 
-How do you protect your enterprise devices from malware? 
+Data syncing and Microsoft Edge:
 
-What’s your users’ personal tolerance for inconvenience? 
+- Data syncing can be enabled or disabled as desired across the organization.
 
-Consider the impact of data sync 
+- Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Information Protection.
 
-It’s important to factor in the security of user data as it gets sync’edsynced to various user devices and the amount of control the organization has on autofill data syncing. 
+## Why do Microsoft security baselines recommend disabling the password manager?
 
-Data syncing and Microsoft Edge: 
+The Microsoft security team has currently rated the impact of a worm that compromises a network of Enterprise (PCS (resulting in loss of all credentials in all devices’ password managers) as more severe than the (more likely but lower impact) risk of targeted phishing attacks that compromise a single user-entered credential.
 
-Data syncing can be enabled or disabled as desired across the organization. 
+This assessment is under discussion and subject to change with the addition of new security-enhancing features in Microsoft Edge.
 
-Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addressesaddresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Information Protection. 
+## Can malicious extensions gain access to passwords?
 
-Why do Microsoft security baselines recommend disabling the password manager? 
-
-The Microsoft security team has currently rated the impact of a worm that compromises a network of Enterprise PCS  (PCS (resulting in loss of all credentials in all devices’ password managers) as more severe than the (more likely but lower impact) risk of targeted phishing attacks that compromise a single user-entered credential. 
-
-This assessment is under discussion and subject to change with the addition of new security-enhancing features in Microsoft Edge. 
-
-Can malicious extensions gain access to passwords? 
-
-An extension with permission to interact with a page is inherently able to access anything from that page, including an auto filled password. Similarly, a malicious extension can modify the contents of form fields and network requests/responses to misuse the authority of the current user login context. 
+An extension with permission to interact with a page is inherently able to access anything from that page, including an auto filled password. Similarly, a malicious extension can modify the contents of form fields and network requests/responses to misuse the authority of the current user login context.
 
 However, Microsoft Edge provides an extensive set of policies that enable fine control over installed extensions. Using the policies in the following table is necessary to protect corporate data. 
 
