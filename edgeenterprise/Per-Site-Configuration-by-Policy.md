@@ -29,7 +29,7 @@ To simplify configuration for the user or their administrator, the legacy platfo
 
 When making a decision, the browser would first map the website to a Zone, then consult the setting for that URLAction for that Zone to decide what to do. Reasonable defaults like “Automatically satisfy authentication challenges from my Intranet” meant that most users never needed to change any settings away from their defaults.
 
-Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via “Site to Zone Assignment List” policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, additional heuristics could [assign sites to the Local Intranet Zone](https://docs.microsoft.com/archive/blogs/ieinternals/the-intranet-zone). In particular, dot less host names (e.g.://payroll) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
+Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via “Site to Zone Assignment List” policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, additional heuristics could [assign sites to the Local Intranet Zone](https://docs.microsoft.com/archive/blogs/ieinternals/the-intranet-zone). In particular, dotless host names (e.g. `http://payroll`) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
 
 Microsoft Edge Legacy inherited the Zones architecture from its Internet Explorer predecessor with a few simplifying changes:
 
@@ -55,17 +55,17 @@ Many of the settings are very obscure (WebSerial, WebMIDI) and there’s very of
 
 No, the format does not support specifying an IP-range for allow and block lists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (e.g. <http://127.0.0.1/>). If a hostname is used (<http://localhost>), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
 
-## Q: Can URL Filters match just dot less host names?
+## Q: Can URL Filters match just dotless host names?
 
-No. You must individually list each desired hostname, e.g. (<https://payroll>, <https://stock>, <https://who>, etc).
+No. You must individually list each desired hostname, e.g. (`https://payroll`, `https://stock`, `https://who`, etc).
 
 If you were forward-thinking enough to structure your intranet such that your host names are of the form:
 
-- <div style="display: inline">https://payroll.contoso-intranet.com</div>
+- <div style="display: inline">`https://payroll.contoso-intranet.com`</div>
 
-- <div style="display: inline">https://timecard.contoso-intranet.com</div>
+- <div style="display: inline">`https://timecard.contoso-intranet.com`</div>
 
-- <div style="display: inline">https://sharepoint.contoso-intranet.com</div>
+- <div style="display: inline">`https://sharepoint.contoso-intranet.com`</div>
 
 Congratulations, you’ve implemented a best practice. You can configure each desired policy with a ***.contoso-intranet.com** entry and your entire Intranet will be opted in.
 
