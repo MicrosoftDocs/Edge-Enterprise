@@ -102,102 +102,54 @@ This assessment is under discussion and subject to change with the addition of n
 
 An extension with permission to interact with a page is inherently able to access anything from that page, including an auto filled password. Similarly, a malicious extension can modify the contents of form fields and network requests/responses to misuse the authority of the current user login context.
 
-However, Microsoft Edge provides an extensive set of policies that enable fine control over installed extensions. Using the policies in the following table is necessary to protect corporate data. 
+However, Microsoft Edge provides an extensive set of policies that enable fine control over installed extensions. Using the policies in the following table is necessary to protect corporate data.
 
-Policy 
+| Policy | Caption |
+|-|-|
+|[BlockExternalExtensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockexternalextensions)|Blocks external extensions from being installed|
+|[ExtensionAllowedTypes](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionallowedtypes)|Configure allowed extension types|
+|[ExtensionInstallAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallallowlist)|Allow specific extensions to be installed|
+|[ExtensionInstallBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallblocklist)|Control which extensions cannot be installed|
+|[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallforcelist)|Control which extensions are installed silently|
+|[ExtensionInstallSources](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallsources)|Configure extension and user script install sources|
+| [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) |Configure extension management settings |
 
-Caption 
+## How does the Microsoft Edge password manager compare with a third-party product?
 
-BlockExternalExtensions 
+The following table shows how Microsoft Edge password manager compares to third-party password managers.
 
-Blocks external extensions from being installed 
+| Third-party password manager | Microsoft Edge password manager|
+|-|-|
+| Server sync. Some products store passwords in the cloud to sync all your devices. This feature is helpful, but there's a risk if the cloud service gets compromised and your data is exposed. **Remarks:** The risk is mitigated by having passwords encrypted in the cloud and storing the encryption key on your device(s) so attackers can't get to the key and your passwords.| There's a cloud exposure risk because passwords are synced across Windows devices that have Microsoft Edge installed. **Remarks:** This risk is mitigated by the data security steps covered in this article.|
+| Trust. It's necessary to trust that the third party isn't doing anything malicious, such as sending your passwords to another party. **Remarks:** This risk can be mitigated by reviewing the source code (in the case of open-source products), or by believing that the vendor cares about their reputation and revenue. | **Remarks:** Microsoft is a known and trusted vendor with decades of history in providing enterprise-grade security and productivity, with resources designed to protect your passwords worldwide. |
+| Supply chain security. It's hard to verify that the vendor has secure supply chain/build/release processes for the source code. |**Remarks:** Microsoft has robust internal processes to ensure minimal risk to source code. |
+| Compromised client or account. If a client device or user account is compromised, an attacker can get the passwords. **Remarks:** This risk is mitigated for some password managers that require the user to enter a Master Password that's not stored locally to decrypt the passwords. A Master Password is only partial mitigation because an attacker could read keystrokes and get the master password as it's typed or read passwords from process memory when filling in a form field. | **Remarks:** Microsoft offers OS-level protections like Windows Defender, designed to ensure that the device isn't compromised to start with. However, if a client device is compromised, an attacker may be able to decrypt the passwords. |
 
-ExtensionAllowedTypes 
 
-Configure allowed extension types 
+> [!Note]
+> Third-party products might provide protection against additional threat models, but this is at the expense of complexity or ease-of-use. The Microsoft Edge password manager is designed to provide convenient and easy-to-use password management that can be fully controlled by IT Admins using Group Policy and doesn’t require trusting a third party.
 
-ExtensionInstallAllowlist 
+## Why doesn't Microsoft offer a Master Password to protect the data?
 
-Allow specific extensions to be installed 
+When browser passwords are encrypted on disk, the encryption key is available to any process on your device, which includes any locally running malware. Even if passwords are encrypted in a "vault" by a master key, they’ll be decrypted when loaded in the browser’s memory space and can be harvested after you unlock the vault.
 
-ExtensionInstallBlocklist 
+A Master Password feature (that authenticates the user before auto-filling their data) provides a trade-off in convenience for broader threat mitigation. Specifically, it helps to reduce the window of data exposure against latent malware or physically local attackers. However, a Master Password is not a panacea, and local attackers and dedicated malware have various strategies for circumventing the protection of a Master Password.
 
-Control which extensions cannot be installed 
+> [!Note]
+> Microsoft recognizes the value in authenticating users before autofill and this functionality will be added to Microsoft Edge in a future release.
 
-ExtensionInstallForcelist 
+## Can using a password manager impact my privacy?
 
-Control which extensions are installed silently 
+No, not if steps are taken to protect access to your saved passwords.
 
-ExtensionInstallSources 
+There’s a known exploit that some advertisers use, which uses stored passwords to uniquely identify and track users. For more information, see [Ad targeters are pulling data from your browser’s password manager](https://www.theverge.com/2017/12/30/16829804/browser-password-manager-adthink-princeton-research). Browsers have taken steps to mitigate this [privacy issue](https://bugs.chromium.org/p/chromium/issues/detail?id=798492). The PasswordValueGatekeeper class can be used to limit access to the password field data, even when the browser is configured to autofill when it loads.
 
-Configure extension and user script install sources 
+This user information harvesting threat can be easily mitigated by enabling the optional  edge://flags/#fill-on-account-select feature. This feature only allows passwords to be added to a form field after the user explicitly chooses a credential, which ensures that users stay aware of who is receiving their passwords.
 
-ExtensionSettings 
+## See also
 
-Configure extension management settings 
+[Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download)
 
-How does the Microsoft Edge password manager compare with a third-party product? 
-
-The following table shows how Microsoft Edge password manager compares to third-party password managers. 
-
-Third-party password manager 
-
-Microsoft Edge password manager 
-
-Server sync. Some products store passwords in the cloud to sync tosync all your devices. This feature is helpful, but there's a risk if the cloud service gets compromised and your data is exposed. 
-Remarks: The risk is mitigated by having passwords encrypted in the cloud, andcloud and storing the encryption key on your device(s) so attackers can't get to the key and your passwords. 
-
-There's a cloud exposure risk because passwords are synced across Windows devices that have Microsoft Edge installed. 
-Remarks: This risk is mitigated by the data security steps covered in this article. 
-
-Trust. It's necessary to trust that the third party isn't doing anything malicious, such as sending your passwords to another party. 
-Remarks: This risk can be mitigated by reviewing the source code (in the case of open-source products), or by believing that the vendor cares about their reputation and revenue. 
-
-Remarks:  Microsoft: Microsoft is a known and trusted vendor with decades of history in providing enterprise-grade security and productivity, with resources designed to protect your passwords worldwideworldwide. 
-
-Supply chain security. It's hard to verify that the vendor has secure supply chain/build/release processes for the source code. 
-
-Remarks: Microsoft has robust internal processes to ensure minimal risk to source code. 
-
-Compromised client or account. If a client device or user account is compromised, an attacker can get the passwords. 
-Remarks: This risk is mitigated for some password managers that require the user to enter a Master Password that's not stored locally to decrypt the passwords. A Master Password is only partial mitigation, becausemitigation because an attacker could read keystrokes and get the master password as it's typed or read passwords from process memory when filling in a form field. 
-
-Remarks:  Microsoft: Microsoft offers OS-level protections like Windows Defender, designed to ensure that the device isn't compromised to start with. However, if a client device is compromised, an attacker may be able to decrypt the passwords. 
-
-  
-
-Note 
-
-Third-party products might provide protection against additional threat models, but this is at the expense of complexity or ease-of-use. The Microsoft Edge password manager is designed to provide convenient and easy-to-use password management that can be fully controlled by IT Admins using Group Policy and doesn’t require trusting a third party. 
-
- 
-
-Why doesn't Microsoft offer a Master Password to protect the data? 
-
-When browser passwords are encrypted on disk, the encryption key is available to any process on your device, which includes any locally running malware. Even if passwords are encrypted in a "vault" by a master key, they’ll be decrypted when loaded in the browser’s memory space and can be harvested after you unlock the vault. 
-
-A Master Password feature (that authenticates the user before auto-filling their data) provides a trade-off in convenience for broader threat mitigation. Specifically, it helps to reduce the window of data exposure against latent malware or physically local attackers. However, a Master Password is not a panacea, and local attackers and dedicated malware have various strategies for circumventing the protection of a Master Password. 
-
-Note 
-
-Microsoft recognizes the value in authenticating users before autofill and this functionality will be added to Microsoft Edge in a future release.   
-
- 
-
-  
-
-Can using a password manager impact my privacy? 
-
-No, not if steps are taken to protect access to your saved passwords. 
-
-There’s a known exploit that some advertisers use, which uses stored passwords to uniquely identify and track users. For more information, see Ad targeters are pulling data from your browser’s password manager. Browsers have taken steps to mitigate this privacy issue. The PasswordValueGatekeeper class can be used to limit access to the password field data, even when the browser is configured to autofill when it loads. 
-
-This user information harvesting threat can be easily mitigated by enabling the optional  edge://flags/#fill-on-account-select feature. This feature only allows passwords to be added to a form field after the user explicitly chooses a credential, which ensures that users stay aware of who is receiving their passwords. 
-
-See also 
-
-Microsoft Edge Enterprise landing page 
-
-How Microsoft Edge is more secure than Chrome for business on Windows 10 
+[How Microsoft Edge is more secure than Chrome for business on Windows 10](https://docs.microsoft.com/DeployEdge/ms-edge-security-for-business)
 
  
