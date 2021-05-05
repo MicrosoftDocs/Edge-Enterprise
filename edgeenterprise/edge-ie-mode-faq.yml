@@ -82,7 +82,7 @@ sections:
           Yes, if this works in standalone Internet Explorer 11 it will work in IE mode. However, rather than use the Open with Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [sync your SharePoint files](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) or [move or copy files in SharePoint](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
           
       - question: |
-          Does IE mode on Microsoft Edge support the *nomerge* option that was supported in Internet Explorer 11?
+          Does IE mode on Microsoft Edge support the <em>nomerge</em> option that was supported in Internet Explorer 11?
         answer: |
           There is no explicit command line in Microsoft Edge to mirror the *nomerge* option, but there are a couple of alternatives that we recommend to provide this functionality.
           
