@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/21/2020 #Required; mm/dd/yyyy format.
+  ms.date: 02/02/2021 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -31,8 +31,12 @@ landingContent:
             url: "https://aka.ms/EdgeEnterprise"
           - text: Use enterprise features
             url: edge-ie-mode.md
-          - text: Video - Microsoft Edge and Microsoft Search
-            url: microsoft-edge-video-search.md
+      - linkListType: video
+        links:
+          - text: Microsoft Edge Videos
+            url: microsoft-edge-videos.md
+          - text: Microsoft Edge YouTube channel
+            url: "https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA"
   # Card (col 2, 1st row)
   - title: Deploy and update Microsoft Edge
     linkLists:
@@ -43,9 +47,9 @@ landingContent:
           - text: Video - Deploy Microsoft Edge
             url: microsoft-edge-video-deploy.md
           - text: Deploy to Windows
-            url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+            url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
           - text: Deploy to macOS
-            url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+            url: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
  # Card 3 (col 3, 1st row)
   - title: Configure Microsoft Edge
     linkLists:
@@ -66,7 +70,7 @@ landingContent:
           - text: Video - Security, compatibility, and manageability
             url: microsoft-edge-video-security-compatibility-manageability.md
           - text: Security
-            url: security-overview.md
+            url: ms-edge-security-for-business.md
           - text: Privacy
             url: microsoft-edge-enterprise-privacy-settings.md
  # Card 4 (col 1, 2nd row)
@@ -85,12 +89,14 @@ landingContent:
             url: microsoft-edge-policies.md
           - text: Update policy reference
             url: microsoft-edge-update-policies.md
+          - text: WebView2 policy reference
+            url: microsoft-edge-webview-policies.md
           - text: Policy mapping overview
             url: microsoft-edge-policy-map-overview.md
           - text: Microsoft Security Baselines Blog
             url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
   # Card 6 (col 3, 2nd row)
-  - title: Engage with enterprise community or get help
+  - title: Engage with community or get help
     linkLists:
        - linkListType: get-started
          links:
@@ -100,3 +106,7 @@ landingContent:
              url: "https://microsoftedgesupport.microsoft.com/hc/"
 #           - text: Troubleshoot Microsoft Edge
 #             url: microsoft-edge-troubleshooting.md
+       - linkListType: learn
+         links:
+           - text: Security Researchers community
+             url: "https://microsoftedge.github.io/edgevr/"

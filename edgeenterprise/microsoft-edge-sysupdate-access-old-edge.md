@@ -3,7 +3,7 @@ title: "Access the old version of Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn how to access the legacy version of Microsoft Edge."
 
 # Access Microsoft Edge Legacy after installing the new version of Microsoft Edge
 
-Learn how to access Microsoft Edge Legacy after installing the new version of Microsoft Edge.
+Microsoft Edge Legacy will stop receiving security updates on March 9, 2021. You can access Microsoft Edge Legacy until April 13. For more information, see Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS).
 
 > [!NOTE]
 > This article applies to the Microsoft Edge [Stable channel](microsoft-edge-channels.md).
@@ -30,6 +30,8 @@ While most organizations will want to replace Microsoft Edge Legacy with the new
 > The Microsoft Edge Legacy desktop app will reach end of support on March 9, 2021 in favor of the new Microsoft Edge. This means that Microsoft Edge Legacy will not receive security updates after that date. This change is applicable to all experiences that run in the Microsoft Edge Legacy desktop app. [Learn more](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Before you begin
+> [!NOTE]
+> Starting with Windows 10 version 20H2 Microsoft Edge Legacy is no longer included. Starting with this version of Windows 10 the side-by-side experience is not supported.
 
 The procedures in this article apply to systems that have been updated with the latest security updates. When the new version of Microsoft Edge is installed, the old version (Microsoft Edge Legacy) will be hidden. By default, all attempts to launch the old version will redirect the user to the newly installed version of Microsoft Edge. This article describes how you can keep using Microsoft Edge Legacy after you install Microsoft Edge.
 
@@ -38,10 +40,6 @@ The procedures in this article apply to systems that have been updated with the 
 Before using the detailed instructions in this article, consider the following two steps to let your users run Microsoft Edge Legacy and the Microsoft Edge [Beta channel](microsoft-edge-channels.md) side-by-side.
 
 1. Prevent the automatic install of the Stable Channel of Microsoft Edge by [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).
-
-   > [!TIP]
-   > Use the [Blocker Toolkit](microsoft-edge-blocker-toolkit.md) to disable automatic delivery of Microsoft Edge.
-
 2. Install the [Beta channel](https://www.microsoft.com/edge/business/download) of the new version of Microsoft Edge.
 
    > [!NOTE]
@@ -53,7 +51,7 @@ This side-by-side solution is less complex and requires less management than the
 
 Installing the Stable Channel of the next version of Microsoft Edge at the system-level will cause the current version (Microsoft Edge Legacy) to be hidden. If you want to let your users see both versions of Microsoft Edge side by side in Windows, you can enable this experience by setting the **Allow Microsoft Edge Side by Side browser experience** group policy to **Enabled**.
 
-This group policy is documented [here](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)
+This group policy is documented [here](./microsoft-edge-update-policies.md#allowsxs)
 
 ### To set up the side-by-side browser experience policy:
 

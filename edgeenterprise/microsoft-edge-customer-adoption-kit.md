@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,9 +14,9 @@ description: "Microsoft Edge customer adoption materials"
 
 # Customer adoption materials for Microsoft Edge
 
-To support the deployment and adoption of the new Microsoft Edge, look at the following collected materials and resources below.
+To support the deployment and adoption of Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
 
-Check back for additional materials as they become available.
+Check back for more materials as they're made available.
 
 ## Customer adoption kit
 
@@ -24,31 +24,55 @@ The customer adoption kit contains the following material:
 
 - IT Deployment Guide
 - How to Get Started User Guide
+- Adoption Email Templates
+- Banners
 - Digital Signage
+- One-Pagers
+- Demo Video and GIFs
+- Web Resource Links
 
-## IT Deployment Guide
+The adoption kit is available in English and several other languages, including French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
+
+### IT Deployment Guide
 
 Use this guide to begin planning deployment and learn how to get started deploying Microsoft Edge in your environment.
 
-[Get the IT Deployment Guide](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics video series":::
 
-## How to Get Started User Guide
+### How to Get Started User Guide
 
-Use this guide to educate users on the new Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
+Use this guide to educate users about Microsoft Edge. The guide includes overviews of the UI, menus, and features. We've also included tips to help users get started.
 
-[Get the How to Get Started User Guide](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Get Started User Guide How to ...":::
 
-## Digital Signage
+### Adoption Email Templates
 
-Use the following digital signage to inform users about the new Microsoft Edge.
+Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshot shows an example of these templates.
 
-[Microsoft Edge – Enterprise new tab page](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-3-email-template.png" alt-text="Adoption email templates":::
 
-[Microsoft Edge – Multiple Profiles and Cross Platform](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### Digital Signage
 
-[Microsoft Edge – Microsoft Search in Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+Use the following digital signage to inform users about Microsoft Edge:
 
-[Microsoft Edge - Security](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- Enterprise new tab page
+- Multiple Profiles and Cross Platform
+- Microsoft Search in Bing
+- Security
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="New tab page":::
+
+### Banners
+
+Use these banners on your internal sites to advertise Microsoft Edge to your employees.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Banner ads example.":::
+
+### One-pagers
+
+Send or post these one-pagers to help your employees learn about Microsoft Edge and set up the browser for use at work.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="One-pager for learning about Microsoft Edge.":::
 
 ## Other learning resources
 

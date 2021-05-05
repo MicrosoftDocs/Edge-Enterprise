@@ -1,9 +1,9 @@
 ---
 title: "Plan your deployment of Microsoft Edge"
-ms.author: cjacks
-author: appcompatguy
-manager: saudm
-ms.date: 04/23/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
@@ -18,6 +18,19 @@ This article describes the recommended practices for deploying Microsoft Edge in
 
 >[!NOTE]
 >This article applies to Microsoft Edge version 77 or later.
+
+The following sections provide specific guidance for planning your Microsoft Edge deployment.
+
+- [Evaluate browser environment and requirements](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Make sure Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
+- [Pick deployment methodology](#determine-your-deployment-methodology)
+- [Do site discovery](#do-site-discovery)
+- [Pick channel strategy](#determine-your-channel-strategy)
+- [Identify and configure policies](#define-and-configure-policies)
+- [Test App compatibility](#do-app-compatibility-testing)
+- [Microsoft Edge pilot](#deploy-microsoft-edge-to-a-pilot-group)
+- [Evaluate pilot](#validate-your-deployment)
+- [Deploy Microsoft Edge across the enterprise](#broad-deployment-of-microsoft-edge)
 
 ## Evaluate your existing browser environment and browser needs
 
@@ -36,24 +49,23 @@ Start by defining your current state:
 
 After you understand the current state, you can determine the desired goals for your browser deployment, taking into account the following:
 
-- Do you want to [set Microsoft Edge as your default browser](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Do you want to hide the legacy version of Microsoft Edge, or do you want to [leave it available for users](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)?
-- How will you [configure Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
+- Do you want to [set Microsoft Edge as your default browser](./edge-default-browser.md)?
+- How will you [configure Microsoft Edge](./configure-microsoft-edge.md)?
 - What features are critical to configure as part of your initial deployment?
 - What is the process for addressing any identified compatibility or configuration issues?
 
 You should also understand the **pre-requisites** for features you're interested in, such as:
 
-- [Windows Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
-- [Internet Explorer mode](https://docs.microsoft.com/DeployEdge/edge-ie-mode)
-- [Authentication and sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-identity)
+- [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
+- [Internet Explorer mode](./edge-ie-mode.md)
+- [Authentication and sync](./microsoft-edge-security-identity.md)
 
 With these answers in mind, you're ready to planning your Microsoft Edge deployment.
 <!--bookmark -->
 
 ## Make sure your Windows 10 devices are ready
 
-The Edge Stable channel requires the Latest Cumulative Update (LCU) from October 2019 (or later). If you attempt to deploy to a Windows 10 device that has an older LCU, then the installation will fail. For more details about the minimum LCU that must be applied before deploying Edge, see [Windows updates to support the next version of Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
+The Edge Stable channel requires the Latest Cumulative Update (LCU) from October 2019 (or later). If you attempt to deploy to a Windows 10 device that has an older LCU, then the installation will fail. For more details about the minimum LCU that must be applied before deploying Edge, see [Windows updates to support the next version of Microsoft Edge](./microsoft-edge-sysupdate-windows-updates.md).
 
 ## Determine your deployment methodology
 
@@ -84,7 +96,7 @@ Identify any SSO (or other neutral) sites that you use and add these to your Ent
 If you're currently only using Internet Explorer, you might not know which sites have upgraded to modern web standards and which still require Internet Explorer. You want to find these sites and add them to the Enterprise Site List. This lets you use Internet Explorer mode only on the sites that need it.
 
 > [!TIP]
-> Use the [Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN) tools to discover the sites that might need Internet Explorer mode. You can collect collect data on computers running Windows Internet Explorer 8 through Internet Explorer 11 on Windows 10, Windows 8.1, or Windows 7.
+> Use the [Enterprise Site Discovery](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery) tools to discover the sites that might need Internet Explorer mode. You can collect collect data on computers running Windows Internet Explorer 8 through Internet Explorer 11 on Windows 10, Windows 8.1, or Windows 7.
 
 ### Analyze site discovery data
 
@@ -100,7 +112,7 @@ After you've collected site data, we recommend the following 4-step process to a
 
 ## Determine your channel strategy
 
-Microsoft Edge is released in [multiple channels](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels).
+Microsoft Edge is released in [multiple channels](./microsoft-edge-channels.md).
 
 > [!NOTE]
 > You can install more than one channel on a device
@@ -122,21 +134,21 @@ Because it's possible to install multiple channels on a device, you can mitigate
 
 After you've created your Enterprise Site List, we recommend identifying and configuring the policies that you intend to deploy with Microsoft Edge. This ensures that these policies are applied when you perform your testing.
 
-First, consider the first-run experience you want your users to have. If you want to automatically import settings from the current browser, configure the policy for [AutoImportAtFirstRun](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autoimportatfirstrun).
+First, consider the first-run experience you want your users to have. If you want to automatically import settings from the current browser, configure the policy for [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun).
 
-For security policies, we recommend starting with the Microsoft Edge Security Baseline. The Security Baseline can be applied using the [recommended security configuration baseline settings](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) or by using [Microsoft Intune](https://docs.microsoft.com/intune/protect/security-baseline-settings-edge).
+For security policies, we recommend starting with the Microsoft Edge Security Baseline. The Security Baseline can be applied using the [recommended security configuration baseline settings](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) or by using [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
 
-For other policies, we recommend reviewing the policy configurations for [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) and [Microsoft Edge Updates](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies).
+For other policies, we recommend reviewing the policy configurations for [Microsoft Edge](./microsoft-edge-policies.md) and [Microsoft Edge Updates](./microsoft-edge-update-policies.md).
 
 ### Define your update strategy and policies
 
 You also want to determine how you want to do updates after you deploy Microsoft Edge:
 
 - **Allow Microsoft Edge to update itself** (default). If you choose to allow automatic updates of Microsoft Edge, then Microsoft Edge will automatically update itself at the pace determined by the channel(s) you deployed.
-- **Update Microsoft Edge at your own pace**. If you prefer to have explicit control over when updates are deployed, you can disable automatic updates and deploy it yourself (see the [Update Policy reference](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).) After you disable automatic updates you can deploy updates for each channel using one of the following tools:
+- **Update Microsoft Edge at your own pace**. If you prefer to have explicit control over when updates are deployed, you can disable automatic updates and deploy it yourself (see the [Update Policy reference](./microsoft-edge-update-policies.md).) After you disable automatic updates you can deploy updates for each channel using one of the following tools:
 
-- [Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
-- [Configuration Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager)
+- [Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Configuration Manager](./deploy-edge-with-configuration-manager.md)
 - the deployment tool of your choice.
 
 Regardless of your update strategy, we recommend leveraging a ringed deployment strategy. With automatic updates, this means having a representative sample of users running the Beta Channel, to identify issues with what will become the Stable Channel. With manual updates, this might also include additional validation of a pilot group after a new Stable Channel build is released. This is followed by broad deployment.
@@ -152,9 +164,11 @@ Application compatibility for Microsoft Edge is extremely high - so high that Mi
 2. If it works on Internet Explorer, it will work on Microsoft Edge in Internet Explorer mode.
 3. If it works on Google Chrome, it will work on Microsoft Edge.
 
-If you have an application where we don't meet this promise, then we stand behind the promise to fix it with [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
+If you have an application where we don't meet our compatibility promise, then we stand behind the promise to fix it with [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-Despite this promise, we know that many organizations must validate some applications for their compliance or risk management reasons. Even though we expect this to be very straightforward, it's important to be organized and rigorous in app testing.
+### Internal line of business app testing
+
+Despite our compatibility promise, we know that many organizations must validate some applications for their compliance or risk management reasons. Even though we expect this to be very straightforward, it's important to be organized and rigorous in app testing.
 
 There are 2 ways to do app compatibility testing:
 
@@ -163,12 +177,16 @@ There are 2 ways to do app compatibility testing:
 
 Choose the method that is most appropriate for each app,  to manage risk without over-investing in compatibility testing.
 
+### Third party app support
+
+In addition to their own line of business apps, many organizations use apps provided by external sources. The [Ready for Microsoft Edge](deploy-edge-ready-for-edge.md) article contains a list of web applications that may be in use within your organization. This list provides links to provider support statements for their products when used with Microsoft Edge.
+
 ## Deploy Microsoft Edge to a pilot group
 
 After you've defined your policies and have finished your initial app compatibility testing, you're ready to deploy to your pilot group. Deploy to your pilot group using one of the following tools:
 
-- [Microsoft Intune for Windows](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json), or [Microsoft Intune for macOS](https://docs.microsoft.com/intune/apps/apps-edge-macos?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
-- [Configuration Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager).
+- [Microsoft Intune for Windows](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json), or [Microsoft Intune for macOS](/intune/apps/apps-edge-macos?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Configuration Manager](./deploy-edge-with-configuration-manager.md).
 - Another management tool, download and deploy the [MSI file for Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
 ## Validate your deployment
@@ -187,4 +205,3 @@ After a finishing the pilot and updating your deployment plan with lessons learn
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Video - Deploy Microsoft Edge](microsoft-edge-video-deploy.md)
-

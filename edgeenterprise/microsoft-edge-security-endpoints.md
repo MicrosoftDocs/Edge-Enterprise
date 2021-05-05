@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/09/2020
+ms.date: 11/25/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,7 +31,7 @@ The service that Microsoft Edge uses to check for new updates.
 
 ### Experimentation and Configuration service
 
-- `https://config.ecs.skype.com`
+- `https://config.edge.skype.com`
 
 ### Download locations for Microsoft Edge
 
@@ -77,7 +77,7 @@ Locations Microsoft Edge Extensions can be downloaded from during an initial ins
 
 ### Optionally for Download Delivery Optimization
 
-For information about delivery optimization, see [Delivery Optimization for Windows 10 updates](https://aka.ms/waas-do).
+For information about delivery optimization, see [Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
 
 - Client to Service communication: `*.do.dsp.mp.microsoft.com` (HTTP Port 80, HTTPS Port 443)
 - Client to Client communication: TCP port 7680 should be open for inbound traffic
@@ -88,7 +88,7 @@ These endpoints manage the reading and writing of synced data, rights management
 
 - Edge sync service endpoints:
 
-  - `https://enterprise.edge.activity.windows.com`
+  - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
 
 - Azure Information Protection endpoints:
@@ -97,7 +97,7 @@ These endpoints manage the reading and writing of synced data, rights management
   - `https://api.aadrm.de` (for tenants in Germany)
   - `https://api.aadrm.cn` (for tenants in China)
 
-- [Windows Notification Service endpoints](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+- [Windows Notification Service endpoints](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
 ## Other browser support services
 
@@ -109,5 +109,5 @@ Provide metadata for browser features such as tracking protection, certificate r
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge documentation landing page](https://docs.microsoft.com/DeployEdge/)
-- [Manage connection endpoints for Windows 10 Enterprise, version 1903](https://docs.microsoft.com/windows/privacy/manage-windows-1903-endpoints)
+- [Microsoft Edge documentation landing page](./index.yml)
+- [Manage connection endpoints for Windows 10 Enterprise, version 1903](/windows/privacy/manage-windows-1903-endpoints)

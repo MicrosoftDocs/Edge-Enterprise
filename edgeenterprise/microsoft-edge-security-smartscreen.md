@@ -3,7 +3,7 @@ title: "Microsoft Edge support for Microsoft Defender SmartScreen"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,14 +19,14 @@ This article describes the benefits of using Microsoft Defender SmartScreen, exp
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-Microsoft Defender SmartScreen is a service that Microsoft Edge uses to keep you safe while you browse the web. Microsoft Defender SmartScreen provides an early warning system against websites that might engage in phishing attacks or attempt to distribute malware through a focused attack.
+Microsoft Defender SmartScreen is a service that Microsoft Edge uses to keep you safe while you browse the web. Microsoft Defender SmartScreen provides an early warning system against websites that might engage in phishing attacks or attempt to distribute malware through a focused attack. For more information, watch [Video: Secure browsing on Microsoft Edge](microsoft-edge-video-security-smartscreen.md).
 
 > [!NOTE]
 > Before Windows 10, version 1703, this feature was called the SmartScreen filter when used within the browser and Microsoft SmartScreen when used outside of the browser.
 
 ## The benefits of Microsoft Defender SmartScreen
 
-Microsoft Defender SmartScreen provides several benefits, which are summarized in the following list. These benefits are described in detail in the [Microsoft Defender SmartScreen documentation](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview#benefits-of-windows-defender-smartscreen). The benefits are:
+Microsoft Defender SmartScreen provides several benefits, which are summarized in the following list. These benefits are described in detail in the [Microsoft Defender SmartScreen documentation](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview#benefits-of-windows-defender-smartscreen). The benefits are:
 
 - Anti-phishing and anti-malware support
 - Reputation-based URL and app protection
@@ -50,7 +50,7 @@ If Microsoft Defender SmartScreen determines that a page is malicious, it will s
 
 ![Microsoft Defender SmartScreen block page for a link to external site](media/microsoft-edge-security-smartscreen/microsoft-edge-smartscreen-warning.png)
 
-Users are given the option of reporting a site as safe or unsafe within the warning message. For more information, see [how to report a site](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device#how-users-can-report-websites-as-safe-or-unsafe).
+Users are given the option of reporting a site as safe or unsafe within the warning message. For more information, see [how to report a site](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device#how-users-can-report-websites-as-safe-or-unsafe).
 
 ### File analysis
 
@@ -59,11 +59,11 @@ Microsoft Defender SmartScreen determines whether a downloaded app or app instal
 - Files with a known safe reputation will download without any notification.  
 - Files with a known malicious reputation show a warning to let the user know that the file is unsafe and has been reported as malicious. The next screenshot is an example of a warning for a malicious file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - Files that are unknown show a warning to let the user know that the download doesn't have a known footprint and advise caution. The next screenshot is an example of a warning for an unknown file.
 
-  ![Microsoft Defender SmartScreen block page file with malicious reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![Microsoft Defender SmartScreen block notification for file with unknown reputation](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 Not all unknown programs are malicious, and the unknown warning is intended to provide context and guidance for users who need it, especially if the warning is unexpected.
 
@@ -72,7 +72,7 @@ Not all unknown programs are malicious, and the unknown warning is intended to p
 However, users can still download and run the application by clicking **... | Keep | Show More | Keep anyway**.
 
 > [!TIP]
-> **FYI for Enterprise Customers.** By default, Microsoft Defender SmartScreen lets users bypass warnings. Because this user interaction is potentially risky, we recommend that you review these [recommended group policy settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-available-settings#recommended-group-policy-and-mdm-settings-for-your-organization).
+> **FYI for Enterprise Customers.** By default, Microsoft Defender SmartScreen lets users bypass warnings. Because this user interaction is potentially risky, we recommend that you review these [recommended group policy settings](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-available-settings#recommended-group-policy-and-mdm-settings-for-your-organization).
 
 You see how Microsoft Defender SmartScreen responds to different scenarios using our [demo site](https://demo.smartscreen.msft.net/).
 
@@ -82,7 +82,7 @@ Microsoft Defender SmartScreen protects users while they browse the Internet by 
 
 The Microsoft Defender SmartScreen service stores data about reputation checks. As new sites are identified, the service adds to a dynamic database of known malicious URLs and files. This data is stored on secure Microsoft servers and is only used for Microsoft security services. This data will never be used to identify or target users in any way. Clearing browsing cache clears all locally stored Microsoft Defender SmartScreen URL data. Clearing download history will remove any locally stored SmartScreen data about file downloads.
 
-For more information about Microsoft Defender SmartScreen and privacy on Microsoft Edge, read the [Microsoft Edge Privacy Whitepaper](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#smartscreen).
+For more information about Microsoft Defender SmartScreen and privacy on Microsoft Edge, read the [Microsoft Edge Privacy Whitepaper](/microsoft-edge/privacy-whitepaper#smartscreen).
 
 ## Microsoft Defender SmartScreen setup for admins
 
@@ -91,21 +91,21 @@ Admins can configure Microsoft Defender SmartScreen using Group Policy, Microsof
 ### Microsoft Defender SmartScreen set up using Group Policy
 
 For a complete list of SmartScreen policies, see
-[Microsoft Defender SmartScreen settings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartscreen-settings)
+[Microsoft Defender SmartScreen settings](./microsoft-edge-policies.md#smartscreen-settings)
 
 ### Microsoft Defender SmartScreen set up using MDM
 
 For more information, see:
 
-- [Windows Intune settings for Microsoft Defender SmartScreen](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
-- [MDM policy settings](https://docs.microsoft.com/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
+- [Windows Intune settings for Microsoft Defender SmartScreen](/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
+- [MDM policy settings](/mem/intune/protect/endpoint-protection-windows-10#windows-defender-smartscreen-settings)
 
 ## Microsoft Defender SmartScreen setup for users
 
 Microsoft Defender SmartScreen is turned on by default for Microsoft Edge. To turn off Microsoft Defender SmartScreen, go to *edge://settings/privacy > Services > Microsoft Defender SmartScreen*. This setting is the same for all profiles associated with the installation of Microsoft Edge on a device. This setting is not synced across devices. The setting applies to InPrivate browsing and Guest mode. If a device is managed with group policies set by an organization, this configuration will be reflected in *edge://settings/privacy*.
 
 > [!NOTE]
-> Users can set up Microsoft Defender SmartScreen for an individual device unless Group Policy or MDM is configured to prevent it. For more information, see [set up and use Microsoft Defender SmartScreen on individual devices](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device).
+> Users can set up Microsoft Defender SmartScreen for an individual device unless Group Policy or MDM is configured to prevent it. For more information, see [set up and use Microsoft Defender SmartScreen on individual devices](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-set-individual-device).
 
 ## Frequently asked questions
 
@@ -116,6 +116,7 @@ As you browse the web, Microsoft Defender SmartScreen categorizes websites and d
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Defender SmartScreen Overview](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
-- [Threat protection](https://docs.microsoft.com/windows/security/threat-protection/index)
-- [Protect against potentially unwanted applications](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)
+- [Video: Secure browsing on Microsoft Edge](microsoft-edge-video-security-smartscreen.md)
+- [Microsoft Defender SmartScreen Overview](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
+- [Threat protection](/windows/security/threat-protection/index)
+- [Protect against potentially unwanted applications](./microsoft-edge-potentially-unwanted-apps.md)

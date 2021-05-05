@@ -3,7 +3,7 @@ title: "Microsoft Edge security, compatibility, and manageability"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 07/28/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,9 @@ description: "Microsoft Edge security, compatibility, and manageability"
 
 # Video: Microsoft Edge security, compatibility, and manageability
 
-This video shows how Microsoft Edge takes security, compatibility, and manageability to the next level.
+This video shows how Microsoft Edge takes security, compatibility, and manageability to the next level. Click the next screenshot to watch the video by Jeremy Chapman, Director of Microsoft 365.
+
+[![Microsoft Edge security, compatibility, and manageability](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
 ## About the video
 
@@ -24,13 +26,8 @@ Take a hands-on tour to experience the security, compatibility, and manageabilit
 - Compatibility. Microsoft Edge is compatible with both the modern and legacy web.
 - Manageability. Consider your update management or servicing options for Microsoft Edge.
 
-Click the next screenshot to watch the video by Jeremy Chapman, Director of Microsoft 365.
-<!--
-[![Video: Security, compatibility, and manageability](http://img.youtube.com/vi/uMmh_gNaM4I/0.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)")-->
-
-[![Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)](https://res.cloudinary.com/marcomontalbano/image/upload/v1595890410/video_to_markdown/images/youtube--uMmh_gNaM4I-c05b58ac6eb4c4700831b2b3070cd403.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Video: Security, compatibility, and manageability")
-
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge security for your business](ms-edge-security-for-business.md)
 - [Microsoft Edge YouTube playlist](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
