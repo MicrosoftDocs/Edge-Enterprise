@@ -176,6 +176,8 @@
      href: microsoft-edge-security-dlp.md
    - name: Password Monitor auto-enabled for users
      href: microsoft-edge-security-password-monitor.md
+   - name: Microsoft Edge password manager security
+     href: microsoft-edge-security-password-manager-security.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access
