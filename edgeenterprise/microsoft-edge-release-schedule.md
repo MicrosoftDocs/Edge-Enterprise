@@ -46,7 +46,7 @@ The following table only tracks and provides information for major releases in b
 | 94 | Target release | Week of 01-Sep-2021 | Week of 23-Sep-2021 |
 | 95 | Target release | Week of 28-Sep-2021 | Week of 21-Oct-2021 |
 | 96 | Target release | Week of 26-Oct-2021 | Week of 18-Nov-2021 |
-| 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 |
+| 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 | 
 
 ## Release Process
 
