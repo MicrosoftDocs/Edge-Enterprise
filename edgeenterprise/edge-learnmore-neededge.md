@@ -28,6 +28,15 @@ When a user goes to a site that is incompatible with Internet Explorer, they wil
 > [!NOTE]
 > Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
+## Prerequisites
+- Microsoft Edge Stable version 87 or later
+- Windows versions
+    - Windows 10 version 1709 or later
+    - Windows 8.1
+    - Windows 7
+
+
+
 ## Redirection experience
 
 On redirection to Microsoft Edge, users are shown the one-time dialog in the next screenshot. This dialog explains why they're getting redirected and prompts for consent to copy their browsing data and preferences from Internet Explorer to Microsoft Edge. The following browsing data will be imported: Favorites, Passwords, Search engines, open tabs, History, settings, cookies, and the Home Page.
