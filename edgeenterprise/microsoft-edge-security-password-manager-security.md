@@ -3,7 +3,7 @@ title: "Microsoft Edge password manager security "
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 02/05/2021
+ms.date: 05/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -60,7 +60,7 @@ However, using a password manager that's keyed to the user’s operating system 
 The decision of whether to use a password manager comes down to assessing the many benefits we’ve described against the possibility of the entire device getting compromised. For most threat models, using the Microsoft Edge password manager is the recommended option.
 
 > [!Note]
->If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as MS Authenticator) or WebAuthN.
+>If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as [MS Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-download-install)) or [WebAuthN](https://webauthn.guide/).
 
 ## Should a password manager be enabled by an organization?
 
@@ -94,7 +94,7 @@ Data syncing and Microsoft Edge:
 
 ## Why do Microsoft security baselines recommend disabling the password manager?
 
-The Microsoft security team has currently rated the impact of a worm that compromises a network of Enterprise (PCS (resulting in loss of all credentials in all devices’ password managers) as more severe than the (more likely but lower impact) risk of targeted phishing attacks that compromise a single user-entered credential.
+The Microsoft security team has currently rated the impact of a worm that compromises a network of Enterprise PCS (resulting in loss of all credentials in all devices’ password managers) as more severe than the (more likely but lower impact) risk of targeted phishing attacks that compromise a single user-entered credential.
 
 This assessment is under discussion and subject to change with the addition of new security-enhancing features in Microsoft Edge.
 
@@ -120,11 +120,10 @@ The following table shows how Microsoft Edge password manager compares to third-
 
 | Third-party password manager | Microsoft Edge password manager|
 |-|-|
-| Server sync. Some products store passwords in the cloud to sync all your devices. This feature is helpful, but there's a risk if the cloud service gets compromised and your data is exposed. **Remarks:** The risk is mitigated by having passwords encrypted in the cloud and storing the encryption key on your device(s) so attackers can't get to the key and your passwords.| There's a cloud exposure risk because passwords are synced across Windows devices that have Microsoft Edge installed. **Remarks:** This risk is mitigated by the data security steps covered in this article.|
-| Trust. It's necessary to trust that the third party isn't doing anything malicious, such as sending your passwords to another party. **Remarks:** This risk can be mitigated by reviewing the source code (in the case of open-source products), or by believing that the vendor cares about their reputation and revenue. | **Remarks:** Microsoft is a known and trusted vendor with decades of history in providing enterprise-grade security and productivity, with resources designed to protect your passwords worldwide. |
-| Supply chain security. It's hard to verify that the vendor has secure supply chain/build/release processes for the source code. |**Remarks:** Microsoft has robust internal processes to ensure minimal risk to source code. |
-| Compromised client or account. If a client device or user account is compromised, an attacker can get the passwords. **Remarks:** This risk is mitigated for some password managers that require the user to enter a Master Password that's not stored locally to decrypt the passwords. A Master Password is only partial mitigation because an attacker could read keystrokes and get the master password as it's typed or read passwords from process memory when filling in a form field. | **Remarks:** Microsoft offers OS-level protections like Windows Defender, designed to ensure that the device isn't compromised to start with. However, if a client device is compromised, an attacker may be able to decrypt the passwords. |
-
+| *Server sync*. Some products store passwords in the cloud to sync all your devices. This feature is helpful, but there's a risk if the cloud service gets compromised and your data is exposed. **Remarks:** The risk is mitigated by having passwords encrypted in the cloud and storing the encryption key on your device(s) so attackers can't get to the key and your passwords.| There's a cloud exposure risk because passwords are synced across Windows devices that have Microsoft Edge installed. **Remarks:** This risk is mitigated by the data security steps covered in this article.|
+| *Trust*. It's necessary to trust that the third party isn't doing anything malicious, such as sending your passwords to another party. **Remarks:** This risk can be mitigated by reviewing the source code (in the case of open-source products), or by believing that the vendor cares about their reputation and revenue. | **Remarks:** Microsoft is a known and trusted vendor with decades of history in providing enterprise-grade security and productivity, with resources designed to protect your passwords worldwide. |
+| *Supply chain security*. It's hard to verify that the vendor has secure supply chain/build/release processes for the source code. |**Remarks:** Microsoft has robust internal processes to ensure minimal risk to source code. |
+| *Compromised client or account*. If a client device or user account is compromised, an attacker can get the passwords. **Remarks:** This risk is mitigated for some password managers that require the user to enter a Master Password that's not stored locally to decrypt the passwords. A Master Password is only partial mitigation because an attacker could read keystrokes and get the master password as it's typed or read passwords from process memory when filling in a form field. | **Remarks:** Microsoft offers OS-level protections like Windows Defender, designed to ensure that the device isn't compromised to start with. However, if a client device is compromised, an attacker may be able to decrypt the passwords. |
 
 > [!Note]
 > Third-party products might provide protection against additional threat models, but this is at the expense of complexity or ease-of-use. The Microsoft Edge password manager is designed to provide convenient and easy-to-use password management that can be fully controlled by IT Admins using Group Policy and doesn’t require trusting a third party.
