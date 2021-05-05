@@ -1,4 +1,4 @@
-# last revised 03/31/2021
+# last revised 05/03/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -63,8 +63,6 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-#      - name: Blocker Toolkit for Microsoft Edge updates
-#        href: microsoft-edge-blocker-toolkit.md
       - name: How to access the old version of Microsoft Edge
         href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
@@ -92,6 +90,8 @@
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+   - name: Per Site Configuration by Policy
+     href: Per-Site-Configuration-by-Policy.md
 #     href: configure-edge-with-intune.md
    - name: Configure for Windows with Mobile Device Management
      href: configure-edge-with-mdm.md
@@ -112,6 +112,18 @@
      href: microsoft-edge-kiosk-mode-transition-plan.md
    - name: Configure Microsoft Edge kiosk mode
      href: microsoft-edge-configure-kiosk-mode.md
+   - name: Manage Microsoft Edge extensions
+     items:
+      - name: Manage extensions in the enterprise
+        href: microsoft-edge-manage-extensions.md
+      - name: Use group policies to manage extensions
+        href: microsoft-edge-manage-extensions-policies.md
+      - name: Self-host Microsoft Edge extensions
+        href: microsoft-edge-manage-extensions-webstore.md
+      - name: Detailed guide to the ExtensionSettings policy
+        href: microsoft-edge-manage-extensions-ref-guide.md
+      - name: Extensions FAQ
+        href: microsoft-edge-manage-extensions-faq.md
    - name: Microsoft Edge enterprise sync
      items: 
       - name: Configure Microsoft Edge sync
@@ -164,6 +176,8 @@
      href: microsoft-edge-security-dlp.md
    - name: Password Monitor auto-enabled for users
      href: microsoft-edge-security-password-monitor.md
+   - name: Microsoft Edge password manager security
+     href: microsoft-edge-security-password-manager-security.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access
@@ -215,6 +229,8 @@
         href: edge-learnmore-regex.md
       - name: Reset Microsoft Edge data
         href: edge-learnmore-reset-data-in-cloud.md
+      - name: User data directory variables
+        href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises
         href: edge-learnmore-rollback.md
 - name: Microsoft Edge Videos

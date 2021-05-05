@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/16/2021
+ms.date: 04/26/2021 
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,23 +45,23 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 |Reset on inactivity|Y|Y|89|Y|
 |[Read only address bar](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (policy) |N|Y |89|N|
 |[Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (policy)  | Y|Y |89|N|
-|F11 blocked (enter/exit full-screen) | Y | Y | 89 |Y|
-|F12 blocked (launch Developer Tools) | Y | Y | 89 |Y|
-| Multi tab support | N| Y| 89|Y|
+|F11 blocked (enter/exit full-screen) | Y | Y |89|Y|
+|F12 blocked (launch Developer Tools) | Y | Y |89|Y|
+| Multi tab support | N| Y|89|Y|
 |[Allow URL support](./microsoft-edge-policies.md#urlallowlist) (policy)|Y|Y|89|N|
 |[Block URL support](./microsoft-edge-policies.md#urlblocklist) (policy)|Y|Y|89|N|
 |[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
 |[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
 |[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y||Y|
-|End session button * | N| Y| 89|Y|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
+|End session button * | N| Y|89|Y|
 |All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
-| CTRL+N blocked (open a new window) * | Y | Y | 89 |Y|
-| CTRL+T blocked (open new tab) |Y | N | 89 |Y|
-|Settings and more (...) will display only the required options  |Y |Y |89 |Y|
-|Restrict the launch of other applications from the browser|Y|Y|90/91|Y|
-|UI print settings lockdown|Y|Y|90/91|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|-|-|TBD|Y|
+| CTRL+N blocked (open a new window) * | Y | Y |89|Y|
+| CTRL+T blocked (open new tab) |Y | N |89|Y|
+|Settings and more (...) will display only the required options  |Y |Y |89|Y|
+|Restrict the launch of other applications from the browser|Y|Y|90|Y|
+|UI print settings lockdown|Y|Y|90|Y|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
 
 > [!NOTE]
 > Features followed by "*" are only enabled in an assigned access single app scenario.
@@ -143,26 +143,33 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 
 ### Single app kiosk
 
-Microsoft Edge currently supports a subset of the same Microsoft Edge Legacy kiosk mode types for single-app assigned access with the following lockdown experiences: Digital/Interactive signage, and Public-browsing.  
+Microsoft Edge version 90 kiosk mode offers an extensive list of features. See the section of Kiosk mode supported features.
+With the following Windows updates you can configure Microsoft Edge via assigned access single app.
 
-Microsoft Edge kiosk mode with assigned access single app is currently available for testing with the latest [Windows 10 Insider Preview Build](https://insider.windows.com/), version 20215 or higher, and with the [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+|Operating System|Version|Updates|
+|--|--|--|
+|Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-**How do I get the Windows Insiders preview?**
-
-To install a Windows 10 Insider Preview Build on a PC, follow the instructions in [Getting started with Windows 10 Insider Preview Builds](/windows-insider/get-started).
+You can manage Microsoft Edge kiosk mode assigned access single app via [Windows Settings](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) and Intune.
 
 ### Multi-app kiosk
 
 Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **MSEdge**).
 
-When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the[Microsoft Edge browser policies](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) to configure the browsing experience to meet your unique requirements.
-
 ### Configure using Windows Settings
 
 Windows Settings is the simplest way to set up one or two single-app kiosk devices. Use the following steps to set up a single-app kiosk computer.
 
-1. Install the latest Windows 10 Insider Preview, version 20215 or higher. Follow the instructions in [Getting started with Windows 10 Insider Preview Builds](/windows-insider/get-started).
-2. To test the latest features, you can download the latest [Microsoft Edge Beta channel](https://www.microsoftedgeinsider.com/download), version 89 or higher.
+1. The minimum system updates for the operating systems listed in the next table.
+
+|Operating System|Version|Updates|
+|--|--|--|
+|Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. To test the latest features, you can download the latest [Microsoft Edge Stable channel](https://www.microsoft.com/edge/business/download), version 89 or higher.
+
 3. On the kiosk computer, open Windows Settings, and type "kiosk" in the search field. Select  **Set up a kiosk (assigned access)**, shown in the next screenshot to open the dialog for creating the kiosk.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Set up kiosk with assigned access":::
@@ -180,14 +187,14 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
    > [!NOTE]
    > This only applies to Microsoft Edge Dev, Beta, and Stable channels.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Kiosk mode - choose an app":::
+     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Kiosk mode display - full screen digital sign"::: 
 
 7. Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:
 
    - Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.
    - Public browser - Runs a limited multi-tab version of Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Kiosk mode display - full screen digital sign":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="How will the kiosk be used - full screen digital sign"::: 
 
 8. Select **Next**.
 9. Type the URL to load when the kiosk launches.
@@ -223,18 +230,6 @@ We currently don't support the following features and recommend that you turn of
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
-
-## Roadmap
-
-### In early 2021
-
-We'll add the following support and features:
-
-- General availability of Microsoft Edge kiosk mode with assigned access single app on Windows 10 1909 and higher.
-- Additional features for parity with Microsoft Edge Legacy.
-- Integration with Intune to configure devices using kiosk mode profile UX.
-- Restrict the launch of other applications from the browser.
-- UI print settings lockdown.
 
 ## See also
 
