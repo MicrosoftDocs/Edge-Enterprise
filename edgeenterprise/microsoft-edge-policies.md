@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/03/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,18 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies for this update.
-
-|Name|Caption|
-|--|--|
-|[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
-|[HeadlessModeEnabled](#headlessmodeenabled)|Control use of the Headless Mode|
-|[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
-|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge|
-|[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 
 ## Available policies
 
@@ -111,7 +99,8 @@ These tables list all of the browser-related group policies available in this re
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
+and tips for Microsoft services|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
@@ -3245,7 +3234,8 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### SpotlightExperiencesAndRecommendationsEnabled
 
-  #### Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services
+  #### Choose whether users can receive customized background images and text, suggestions, notifications,
+and tips for Microsoft services
 
   
   
