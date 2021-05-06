@@ -96,6 +96,12 @@ Note that this functionality requires the following minimum operating system upd
 - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
 
+### Can I open a site in IE mode without an Enterprise Mode Site list?
+
+Yes, for testing purposes IE mode can toggle for a particular browser instance.
+
+Run Microsoft Edge with the `--ie-mode-test` command line flag eg. `msedge.exe --ie-mode-test`, then select ... -> More Tools -> "Open sites in Internet Explorer mode".
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
