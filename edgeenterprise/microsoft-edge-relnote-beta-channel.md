@@ -19,6 +19,10 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > We've updated the Microsoft Edge Beta [Version 89.0.774.18: February 3](#version-89077418-february-3) release note to reflect the features that landed.
 
+## Version 91.0.864.19: May 7
+
+Fixed various bugs and performance issues.
+
 ## Version 91.0.864.15: May 3
 
 Fixed various bugs and performance issues.
