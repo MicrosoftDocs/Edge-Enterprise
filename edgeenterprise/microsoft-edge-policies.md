@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/06/2021
+ms.date: 05/11/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -99,8 +99,7 @@ These tables list all of the browser-related group policies available in this re
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
@@ -2491,7 +2490,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   Define a list of sites, based on URL patterns, that are allowed to run JavaScript.
 
-If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
+If you don't configure this policy, [DefaultJavaScriptSetting](#defaultjavascriptsetting) applies for all sites, if it's set. If not, the user's personal setting applies.
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -2556,7 +2557,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
   Define a list of sites, based on URL patterns, that aren't allowed to run JavaScript.
 
-If you don't configure this policy, the global default value from the [DefaultJavaScriptSetting](#defaultjavascriptsetting) policy (if set) or the user's personal configuration is used for all sites.
+If you don't configure this policy, [DefaultJavaScriptSetting](#defaultjavascriptsetting) applies for all sites, if it's set. If not, the user's personal setting applies.
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
   #### Supported features:
 
@@ -3234,8 +3237,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### SpotlightExperiencesAndRecommendationsEnabled
 
-  #### Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  #### Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services
 
   
   
@@ -3266,8 +3268,7 @@ If you disable this setting, spotlight experiences and recommendations are turne
   ##### Group Policy (ADMX) info
 
   - GP unique name: SpotlightExperiencesAndRecommendationsEnabled
-  - GP name: Choose whether users can receive customized background images and text, suggestions, notifications,
-and tips for Microsoft services
+  - GP name: Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -9082,7 +9083,7 @@ Note that even with this policy is disabled, the browsing and download history a
 
 If you enable this policy or don't configure it, users can delete the browsing and download history.
 
-If you disable this policy, users can't delete browsing and download history, and history sync will be disabled.
+If you disable this policy, users can't delete browsing and download history. Disabling this policy will disable history sync and open tab sync.
 
 If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how this policy is configured.
 
@@ -13741,6 +13742,8 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 If you enable or don't configure this policy, shopping features such as price comparison, coupons and rebates will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
 
 If you disable this policy shopping features such as price comparison, coupons and rebates will not be automatically found for retail domains.
+
+Starting in version 90.0.818.56, the behavior of the messaging letting users know that there is a coupon, rebate, price comparison or price history available on shopping domains is also done through a horizontal banner below the address bar. Previously this messaging was done on the address bar.
 
   #### Supported features:
 
