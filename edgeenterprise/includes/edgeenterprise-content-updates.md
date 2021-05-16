@@ -2,6 +2,19 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 5/11/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 5/13/2021 | Microsoft Edge Legacy to Microsoft Edge policy mapping | removed |
+| 5/13/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 5/13/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 5/14/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
+
 ## Week of May 03, 2021
 
 
@@ -86,14 +99,3 @@
 | 4/16/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 4/16/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
 | 4/16/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/5/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 4/6/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
-| 4/6/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 4/6/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
