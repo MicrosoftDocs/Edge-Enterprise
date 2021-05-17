@@ -23,7 +23,8 @@ This article describes the supported operating systems that apply to Microsoft E
 
 > [!NOTE]
 > Product functionality and feature availability may vary on older operating systems. To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below. This guidance includes the latest cumulative update, as applicable.
->Preview builds are available for Linux. For any issues related to Microsoft Edge on Linux either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. Enterprise support for Microsoft Edge on Linux is coming at a later time.
+>
+>Preview builds are available for Linux. For any issues related to Microsoft Edge on Linux, either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. Enterprise support for Microsoft Edge on Linux is coming at a later time.
 
 Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
