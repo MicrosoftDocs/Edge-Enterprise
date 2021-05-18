@@ -14,7 +14,8 @@ description: "A step-by-step guide to configuring the Enterprise Mode Site list 
 
 # Enterprise site configuration strategy
 
->[!Note] The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ]()). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here]().
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ]()). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here]().
 
 This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.
 

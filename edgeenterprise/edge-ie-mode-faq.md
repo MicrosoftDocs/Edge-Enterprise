@@ -14,7 +14,8 @@ description: "Troubleshooting and FAQ for Microsoft Edge Internet Explorer mode"
 
 # IE mode troubleshooting and FAQ
 
->[!Note] The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ]()). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here]().
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ]()). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here]().
 
 This article provides troubleshooting tips and an FAQ for Microsoft Edge version 77 or later.
 
