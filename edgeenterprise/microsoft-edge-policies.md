@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/11/2021
+ms.date: 05/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11145,7 +11145,7 @@ Use the preceding information when configuring this policy.
   Configures browsing data lifetime settings for Microsoft Edge.
 This policy controls the lifetime of selected browsing data. This policy has no effect if Sync is enabled.
 The available data types are the 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' and 'hosted_app_data'.
-Microsoft Edge will regularly remove data of selected types that is older than 'time_to_live_in_hours'. Because data deletion only happens at certain intervals, some data might be kept slightly longer but never more than twice its expected 'time_to_live_in_hours'.
+Microsoft Edge will regularly remove data of selected types that is older than 'time_to_live_in_hours'. The deletion of expired data will happen 15 seconds after the browser starts then every hour while the browser is running.
 
 
   #### Supported features:
@@ -17979,7 +17979,7 @@ If you enable or don't configure the policy, then a user can take a snip of the 
 
 If you disable the policy, then the Math Solver tool will be disabled and users will not be able to use it.
 
-Note: The Math Solver Component can also be configured using [ComponentUpdatesEnabled](#componentupdatesenabled) policy.
+Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to disabled will also disable the Math Solver component.
 
   #### Supported features:
 
