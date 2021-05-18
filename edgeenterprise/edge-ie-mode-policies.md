@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/23/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,8 @@ description: "Configure IE mode policies"
 ---
 
 # Configure IE mode policies
+
+>[!Note] The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ]()). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here]().
 
 This article explains how to configure IE mode policies.
 
