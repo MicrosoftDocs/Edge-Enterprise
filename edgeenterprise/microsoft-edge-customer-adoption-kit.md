@@ -21,17 +21,28 @@ Check back for more materials as they're made available.
 ## Customer adoption kit
 
 The customer adoption kit contains the following material:
-
-- IT Deployment Guide
-- How to Get Started User Guide
-- Adoption Email Templates
-- Banners
-- Digital Signage
-- One-Pagers
-- Demo Video and GIFs
-- Web Resource Links
+- Internet Explorer Retirement Kit **(Only Available in English)** 
+    - Adoption emails
+    - Flyers
+    - Infographic
+    - Site Collection Form
+- General Adoption Kit
+    - IT Deployment Guide
+    - How to Get Started User Guide
+    - Adoption Email Templates
+    - Banners
+    - Digital Signage
+    - One-Pagers
+    - Demo Video and GIFs
+    - Web Resource Links
 
 The adoption kit is available in English and several other languages, including French, German, and Japanese. Select your preferred language at the [Microsoft Edge Customer Adoption Kit download center](https://www.microsoft.com/download/details.aspx?id=102119).
+
+### Internet Explorer (IE) Retirement Resources
+
+Find valuable resources and expert guidance to help your organization safely and quickly move from IE to Microsoft Edge.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Internet Explorer Retirement":::
 
 ### IT Deployment Guide
 
