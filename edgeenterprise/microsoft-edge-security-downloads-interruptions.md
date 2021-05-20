@@ -35,7 +35,11 @@ The download will also proceed automatically if the user explicitly initiated it
 
 If a download for a potentially dangerous type starts without the required gesture, Microsoft Edge states that the download “was blocked”. Commands named `Keep` and `Delete` are available from the … menu on the download item to allow the user to continue or cancel the download.
 
+:::image type="content" source="media/microsoft-edge-security-Download-interruptions/Dowload-was-blocked.png" alt-text="Download Was Blocked":::
+
 On the `edge://downloads`, page, the user will see the same options:
+
+:::image type="content" source="media/microsoft-edge-security-Download-interruptions/msg-keep-delete-option.png" alt-text="MSG Keep Delete Option":::
 
 ## Enterprise Controls
 
