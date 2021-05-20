@@ -23,7 +23,7 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
-
+>
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
 
 ## Version 90.0.818.62: May 13
