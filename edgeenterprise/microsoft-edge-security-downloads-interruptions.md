@@ -27,7 +27,7 @@ The third setting **ALLOW_ON_USER_GESTURE** is more subtle. Such files are poten
 1. There is a [user gesture](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that initiated the download (e.g., the user clicked a link to the download).
 2. There is a recorded prior visit to the referring origin (the page linking to the download) prior to the most recent midnight (i.e., yesterday or earlier). This implies that the user has a history of visiting the site.
 
-The download will also proceed automatically if the user explicitly initiated it by using the **Save link** as context menu command, entered the download’s URL directly into the browser’s address bar, or if Microsoft Defender SmartScreen indicated that the file is safe.
+The download will also proceed automatically if the user explicitly initiated it by using the **Save link as** context menu command, entered the download’s URL directly into the browser’s address bar, or if Microsoft Defender SmartScreen indicated that the file is safe.
 
 **Update:** Starting in version 91, Microsoft Edge will interrupt downloads that lack the required gesture.
 
@@ -35,7 +35,11 @@ The download will also proceed automatically if the user explicitly initiated it
 
 If a download for a potentially dangerous type starts without the required gesture, Microsoft Edge states that the download “was blocked”. Commands named `Keep` and `Delete` are available from the … menu on the download item to allow the user to continue or cancel the download.
 
+:::image type="content" source="media/microsoft-edge-security-Download-interruptions/Dowload-was-blocked.png" alt-text="Download Was Blocked":::
+
 On the `edge://downloads`, page, the user will see the same options:
+
+:::image type="content" source="media/microsoft-edge-security-Download-interruptions/msg-keep-delete-option.png" alt-text="MSG Keep Delete Option":::
 
 ## Enterprise Controls
 
