@@ -19,7 +19,11 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 91.0.864.27 : May 14
+## Version 91.0.864.33: May 21
+
+Fixed various bugs and performance issues.
+
+## Version 91.0.864.27: May 14
 
 Fixed various bugs and performance issues.
 
