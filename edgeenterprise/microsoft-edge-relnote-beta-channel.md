@@ -23,6 +23,7 @@ These release notes provide information about new features and non-security upda
 > Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are unknown to SmartScreen. Users may override and continue to download by right clicking and choosing “Keep” on the download item. Enterprise administrators may opt out of this behavior one of these two policies: 
 > - [SmartScreenAllowListDomains](microsoft-edge-policies#smartscreenallowlistdomains.md) - Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings
 > - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
+> 
 > For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
 
 ## Version 91.0.864.33: May 21
