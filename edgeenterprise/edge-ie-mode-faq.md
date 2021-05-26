@@ -70,7 +70,7 @@ You may see this error on the *edge://compat/enterprise* page indicating that th
 
 ### Will IE mode replace Internet Explorer 11?
 
-We're committed to keeping Internet Explorer a supported, reliable, and safe browser. Internet Explorer is still a component of Windows and follows the support lifecycle of the OS on which it's installed. For details, see [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/). While Microsoft continues to support and update Internet Explorer, the latest features and platform updates will only be available in Microsoft Edge.
+Yes, the Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/).The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 ### Can I use "Open with Explorer" or "View in File Explorer" in SharePoint with IE mode?
 
