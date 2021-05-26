@@ -17,9 +17,19 @@ description: "Microsoft Edge release notes for Beta Channel"
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. Archived versions of these release notes are available [here](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> We've updated the Microsoft Edge Beta [Version 89.0.774.18: February 3](#version-89077418-february-3) release note to reflect the features that landed.
+> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 91.0.864.27 : May 14
+> [!IMPORTANT]
+> Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check. Users may override and continue to download by right clicking and choosing “Keep” on the download item. Enterprise administrators may opt out of this behavior by configuring the following policy: 
+> - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
+> 
+> For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
+
+## Version 91.0.864.33: May 21
+
+Fixed various bugs and performance issues.
+
+## Version 91.0.864.27: May 14
 
 Fixed various bugs and performance issues.
 
