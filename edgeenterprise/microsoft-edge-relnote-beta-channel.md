@@ -25,6 +25,10 @@ These release notes provide information about new features and non-security upda
 > 
 > For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
 
+## Version 91.0.864.36: May 26
+
+Fixed various bugs and performance issues.
+
 ## Version 91.0.864.33: May 21
 
 Fixed various bugs and performance issues.
