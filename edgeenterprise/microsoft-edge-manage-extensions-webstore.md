@@ -85,7 +85,7 @@ The extension's changes will be picked up during the next policy sync cycle. For
 
 ## Distribute a privately hosted extension
 
-You can share the link of the location where the XML file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy. 
+You can share the link of the location where the CRX file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy. 
  
 Alternatively, you can use group policy [ExtensionInstallForceList](https://review.docs.microsoft.com/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) to Force-install an extension on your users’ devices. 
 
