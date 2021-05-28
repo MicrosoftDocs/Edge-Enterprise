@@ -63,8 +63,6 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-      - name: How to access the old version of Microsoft Edge
-        href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
         href: microsoft-edge-sysupdate-windows-updates.md
 # DEPLOY
