@@ -2,6 +2,43 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 5/11/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 5/13/2021 | Microsoft Edge Legacy to Microsoft Edge policy mapping | removed |
+| 5/13/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 5/13/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 5/14/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
+
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/3/2021 | [Per-Site Configuration by Policy ](/DeployEdge/per-site-configuration-by-policy) | modified |
+| 5/3/2021 | [Filter format for Microsoft Edge URL policies](/DeployEdge/edge-learnmmore-url-list-filter%20format) | modified |
+| 5/3/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 5/3/2021 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
+| 5/3/2021 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 5/3/2021 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
+| 5/3/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 5/4/2021 | [Per-Site Configuration by Policy ](/DeployEdge/per-site-configuration-by-policy) | modified |
+| 5/4/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 5/5/2021 | [Ready for Microsoft Edge](/DeployEdge/deploy-edge-ready-for-edge) | modified |
+| 5/5/2021 | [Microsoft Edge password manager security ](/DeployEdge/microsoft-edge-security-password-manager-security) | added |
+| 5/6/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 5/6/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 5/6/2021 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
+| 5/6/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 5/7/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 5/8/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
+
 ## Week of April 26, 2021
 
 
@@ -62,32 +99,3 @@
 | 4/16/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 4/16/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
 | 4/16/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/5/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 4/6/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
-| 4/6/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 4/6/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-
-
-## Week of March 29, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/29/2021 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | modified |
-| 3/29/2021 | [Microsoft Edge content updates](/DeployEdge/microsoft-edge-content-updates) | modified |
-| 3/29/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 3/30/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-| 3/30/2021 | [Configure IE mode Policies](/DeployEdge/edge-ie-mode-policies) | modified |
-| 3/30/2021 | [Enterprise site configuration strategy](/DeployEdge/edge-ie-mode-sitelist) | modified |
-| 3/30/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode) | modified |
-| 4/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 4/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 4/1/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 4/2/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |

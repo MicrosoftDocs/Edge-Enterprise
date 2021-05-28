@@ -23,6 +23,58 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
+>
+> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 91.0.864.37: May 27
+
+Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#may-13-2021).
+
+### Feature updates
+
+- **Identify network traffic originating from Microsoft Defender Application Guard containers at the proxy level**. Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to identify them and apply specific policies.
+
+- **Support option to allow synchronizing Favorites from the host to the Edge Application Guard container**. Starting with Microsoft Edge version 91, users have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
+
+- **Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check**. Users may override and continue to download by right clicking and choosing “Keep” on the download item. Enterprise administrators may opt out of this behavior by configuring the following policy:
+  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
+
+    For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
+
+- **Support for Speech Recognition APIs**. Starting with Microsoft Edge version 91, API support for speech recognition commands on Google.com and similar sites will be added. This feature is limited to a randomly selected group of users who have enabled experimentation. These users are giving feedback to the feature team.
+
+- **Personalize your browser with new theme colors**. Make Microsoft Edge your own with one of the fourteen new theme colors on the Settings -> Appearance page. You can also install custom themes from the Microsoft Edge Add-on site. [Learn more](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+
+### Policy updates
+
+#### New policies
+
+Six new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
+
+- [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) - Application Guard Traffic Identification
+- [ExplicitlyAllowedNetworkPorts](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) - Explicitly allowed network ports
+- [ImportStartupPageSettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#importstartuppagesettings) - Allow importing of startup page settings
+- [MathSolverEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+- [NewTabPageContentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - Allow Microsoft News content on the new tab page
+- [NewTabPageQuickLinksEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - Allow quick links on the new tab page
+
+#### Obsoleted Policy
+
+- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) - Enable Proactive Authentication
+<!-- end major 91 -->
+
+
+## Version 90.0.818.66: May 20
+
+Fixed various bugs and performance issues.
+
+## Version 90.0.818.62: May 13
+
+Stable channel security updates are listed [here](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#may-13-2021).
+
+## Version 90.0.818.56: May 6
+
+Fixed various bugs and performance issues.
 
 ## Version 90.0.818.51: April 29
 
@@ -56,7 +108,12 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/dep
 
 -	 **Single Sign On (SSO) is now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS.** A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (for example, bing.com, office.com, msn.com, and outlook.com).
 
-- **Kiosk mode.** Starting with Microsoft Edge version 90, we have locked down the UI print settings to only allow the configured printers and “Print to PDF” options. We have also done improvements within the assigned access single app kiosk mode to restrict the launch of other applications from the browser. For more information about the kiosk mode features please go [here](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features). 
+- **Kiosk mode.** Starting with Microsoft Edge version 90, we have locked down the UI print settings to only allow the configured printers and “Print to PDF” options. We have also done improvements within the assigned access single app kiosk mode to restrict the launch of other applications from the browser. For more information about the kiosk mode features please go [here](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features).
+
+- **Interrupt Downloads** Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check. Users may override and continue to download by right clicking and choosing “Keep” on the download item.
+Enterprise administrators may opt out of this behavior one of these two policies:
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
+For more information, see [Microsoft Edge Security downloads interruptions](https://docs.microsoft.com/deployedge/microsoft-edge-security-downloads-interruptions)
 
 - **Printing**:
 
@@ -82,6 +139,12 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/dep
 
 Eight new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
 -	[ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) - Application Guard Favorites Sync Enabled
+- [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Application Guard Traffic Identification
+- [ExplicitlyAllowedNetworkPorts](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Explicitly allowed network ports
+- [ImportStartupPageSettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#importstartuppagesettings) Allow importing of startup page settings
+- [MathSolverEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mathsolverenabled) Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+- [NewTabPageContentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Allow Microsoft News content on the new tab page
+- [NewTabPageQuickLinksEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) Allow quick links on the new tab page
 -	[FetchKeepaliveDurationSecondsOnShutdown](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown)- Fetch keepalive duration on shutdown
 -	[ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) - Sets managed configuration values for websites to specific origins
 -	[PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode) - Print Rasterization Mode
@@ -92,6 +155,7 @@ Eight new policies were added. Download the updated Administrative Templates fro
 
 ## Deprecated policies
 
+- [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled) Enable Proactive Authentication
 -	[NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - Enable Native Window Occlusion
 -	[SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin)- Minimum TLS version enabled
 
