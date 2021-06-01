@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/18/2021
+ms.date: 05/31/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -235,6 +235,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -258,6 +259,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoOpenFileTypes](#autoopenfiletypes)|List of file types that should be automatically opened on download|
 |[AutofillAddressEnabled](#autofilladdressenabled)|Enable AutoFill for addresses|
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for credit cards|
+|[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates|
@@ -310,7 +312,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
@@ -356,10 +358,12 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
 |[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Open local files in Internet Explorer mode file extension allow list|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a link in Internet Explorer mode|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a file:// link in Internet Explorer mode|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Specify the number of days that a site remains on the local IE mode site list|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
@@ -1035,8 +1039,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Cookies created by websites that don't match the pattern are controlled by the [DefaultCookiesSetting](#defaultcookiessetting) policy (if set) or by the user's personal configuration. This is also the default behavior if you don't configure this policy.
 
-If Microsoft Edge is running in background mode, the session might not close when the last window is closed, meaning the cookies won't be cleared when the window closes. See the [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about configuring what happens when Microsoft Edge runs in background mode.
-
 You can also use the [CookiesAllowedForUrls](#cookiesallowedforurls) and [CookiesBlockedForUrls](#cookiesblockedforurls) policies to control which websites can create cookies.
 
 Note there cannot be conflicting URL patterns set between these three policies:
@@ -1114,7 +1116,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   Control whether websites can create cookies on the user's device. This policy is all or nothing - you can let all websites create cookies, or no websites create cookies. You can't use this policy to enable cookies from specific websites.
 
-Set the policy to 'SessionOnly' to clear cookies when the session closes. If Microsoft Edge is running in background mode, the session might not close when the last window is closed, meaning the cookies won't be cleared when the window closes. See [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about configuring what happens when Microsoft Edge runs in background mode.
+Set the policy to 'SessionOnly' to clear cookies when the session closes.
 
 If you don't configure this policy, the default 'AllowCookies' is used, and users can change this setting in Microsoft Edge Settings. (If you don't want users to be able to change this setting, set the policy.)
 
@@ -8939,6 +8941,68 @@ If you don't configure the policy, users can choose whether to show the home but
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AADWebSiteSSOUsingThisProfileEnabled
+
+  #### Single sign-on for work or school sites using this profile enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 92 or later
+
+  #### Description
+
+  'Allow single sign-on for work or school sites using this profile' option allows non-AAD profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-AAD profiles only.
+
+If you disable this policy, non-AAD profiles will not be able to use SSO using other credentials present on the machine. This will also ensure that 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' is turned off.
+
+If you enable this policy or don't configure it, non-AAD profiles will be able to use SSO using other credentials present on the machine and 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' will continue working.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AADWebSiteSSOUsingThisProfileEnabled
+  - GP name: Single sign-on for work or school sites using this profile enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: AADWebSiteSSOUsingThisProfileEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AADWebSiteSSOUsingThisProfileEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AddressBarMicrosoftSearchInBingProviderEnabled
 
   #### Enable Microsoft Search in Bing suggestions in the address bar
@@ -10542,6 +10606,80 @@ If you enable this policy or don't configure it, users can control AutoFill for 
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutomaticHttpsDefault
+
+  #### Configure Automatic HTTPS
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 92 or later
+
+  #### Description
+
+  This policy lets you manage settings for [AutomaticHttpsDefault](#automatichttpsdefault), which switches connections from HTTP to HTTPS.
+
+This feature helps protect against man-in-the-middle attacks by enforcing more secure connections, but users might experience more connection errors.
+
+Note: The 'UpgradeCapableDomains' configuration requires a component list, and will not upgrade these connections if [ComponentUpdatesEnabled](#componentupdatesenabled) is set to 'Disabled'.
+
+If you don't configure this policy, [AutomaticHttpsDefault](#automatichttpsdefault) will be enabled, and will only upgrade connections on domains likely to support HTTPS.
+
+Policy options mapping:
+
+* DisableAutomaticHttps (0) = Automatic HTTPS functionality is disabled.
+
+* UpgradeCapableDomains (1) = Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.
+
+* AlwaysUpgrade (2) = All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutomaticHttpsDefault
+  - GP name: Configure Automatic HTTPS
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: AutomaticHttpsDefault
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutomaticHttpsDefault
+  - Example value:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -13737,11 +13875,11 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 
   #### Description
 
-  This policy lets users compare the prices of a product they are looking at, get coupons or rebates from the website they're on, or auto-apply coupons during checkout.
+  This policy lets users compare the prices of a product they are looking at, get coupons or rebates from the website they're on, auto-apply coupons and help checkout faster using autofill data.
 
-If you enable or don't configure this policy, shopping features such as price comparison, coupons and rebates will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
+If you enable or don't configure this policy, shopping features such as price comparison, coupons, rebates and express checkout will be automatically applied for retail domains. Coupons for the current retailer and prices from other retailers will be fetched from a server.
 
-If you disable this policy shopping features such as price comparison, coupons and rebates will not be automatically found for retail domains.
+If you disable this policy shopping features such as price comparison, coupons, rebates and express checkout will not be automatically found for retail domains.
 
 Starting in version 90.0.818.56, the behavior of the messaging letting users know that there is a coupon, rebate, price comparison or price history available on shopping domains is also done through a horizontal banner below the address bar. Previously this messaging was done on the address bar.
 
@@ -14060,13 +14198,13 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 
   ### EnableSha1ForLocalAnchors
 
-  #### Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
+  #### Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 91.
   #### Supported versions:
 
-  - On Windows and macOS since 85 or later
+  - On Windows and macOS since 85, until 91
 
   #### Description
 
@@ -14093,7 +14231,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnableSha1ForLocalAnchors
-  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)
+  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -17114,7 +17252,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   ### InternetExplorerIntegrationLocalFileShowContextMenu
 
-  #### Show context menu to open a link in Internet Explorer mode
+  #### Show context menu to open a file:// link in Internet Explorer mode
 
   
   
@@ -17133,6 +17271,8 @@ If you set this policy to true, the 'Open link in new Internet Explorer mode tab
 
 If you set this policy to false or don't configure it, the context menu item will not be added.
 
+If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to true, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
+
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### Supported features:
@@ -17150,7 +17290,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   ##### Group Policy (ADMX) info
 
   - GP unique name: InternetExplorerIntegrationLocalFileShowContextMenu
-  - GP name: Show context menu to open a link in Internet Explorer mode
+  - GP name: Show context menu to open a file:// link in Internet Explorer mode
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -17160,6 +17300,132 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalSiteListExpirationDays
+
+  #### Specify the number of days that a site remains on the local IE mode site list
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 92 or later
+
+  #### Description
+
+  If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy is enabled or not configured, users will be able to tell Microsoft Edge to load specific pages in Internet Explorer mode for a limited number of days.
+
+You can use this setting to determine how many days that configuration is remembered in the browser. After this period has elapsed, the individual page will no longer automatically load in IE mode.
+
+If you disable the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy, this policy has no effect.
+
+If you disable or don't configure this policy, the default value of 30 days is used.
+
+If you enable this policy, you must enter the number of days for which the sites are retained on the user's local site list in Microsoft Edge. The value can be from 0 to 90 days.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationLocalSiteListExpirationDays
+  - GP name: Specify the number of days that a site remains on the local IE mode site list
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationLocalSiteListExpirationDays
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x0000001e
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationReloadInIEModeAllowed
+
+  #### Allow unconfigured sites to be reloaded in Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 92 or later
+
+  #### Description
+
+  This policy allows users to reload unconfigured sites (that are not configured in the Enterprise Mode Site List) in Internet Explorer mode when browsing in Microsoft Edge and a site requires Internet Explorer for compatibility.
+
+After a site has been reloaded in Internet Explorer mode, "in-page" navigations will stay in Internet Explorer mode (for example, a link, script, or form on the page, or a server-side redirect from another "in-page" navigation). Users can choose to exit from Internet Explorer mode, or Microsoft Edge will automatically exit from Internet Explorer mode when a navigation that isn't "in-page" occurs (for example, using the address bar, the back button, or a favorite link).
+
+Users can also optionally tell Microsoft Edge to use Internet Explorer mode for the site in the future. This choice will be remembered for a length of time managed by the [InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays) policy.
+
+If the [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) policy is set to 'IEMode', then sites explicitly configured by the [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy's site list to use Microsoft Edge can't be reloaded in Internet Explorer mode, and sites configured by the site list or by the [SendIntranetToInternetExplorer](#sendintranettointernetexplorer) policy to use Internet Explorer mode can't exit from Internet Explorer mode.
+
+If you enable this policy, users are allowed to reload unconfigured sites in Internet Explorer mode.
+
+If you disable this policy, users aren't allowed to reload unconfigured sites in Internet Explorer mode.
+
+Note that if you enable this policy, it takes precedence over how you configured the [InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed) policy, and that policy will be disabled.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationReloadInIEModeAllowed
+  - GP name: Allow unconfigured sites to be reloaded in Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: InternetExplorerIntegrationReloadInIEModeAllowed
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -17252,6 +17518,8 @@ If you set this policy to 'AutomaticNavigationsOnly', you get the default experi
 
 If you set this policy to 'AllInPageNavigations', all navigations from pages loaded in IE mode to unconfigured sites are kept in Internet Explorer mode (Least Recommended).
 
+If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then all in-page navigations from unconfigured sites that users have chosen to reload in Internet Explorer mode will be kept in Internet Explorer mode, regardless of how this policy is configured.
+
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Policy options mapping:
@@ -17303,9 +17571,9 @@ Use the preceding information when configuring this policy.
 
   ### InternetExplorerIntegrationTestingAllowed
 
-  #### Allow Internet Explorer mode testing
+  #### Allow Internet Explorer mode testing (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -17313,7 +17581,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
+  This policy is deprecated, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. It won't work in Microsoft Edge version 95.
+
+This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
 
 Users can do so from within the "More tools" menu by selecting 'Open sites in Internet Explorer mode'.
 
@@ -17322,7 +17592,7 @@ Additionally, users can test their applications in a modern browser without remo
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
-If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list.
+If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list. Note that if the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy is enabled, it takes precedence and these options will not be visible under "More tools".
 
 If you disable or don't configure this policy, users can't see the options 'Open in Internet Explorer mode' and 'Open in Edge mode' under "More tools" menu. However, users can configure these options with the --ie-mode-test flag.
 
@@ -17341,7 +17611,7 @@ If you disable or don't configure this policy, users can't see the options 'Open
   ##### Group Policy (ADMX) info
 
   - GP unique name: InternetExplorerIntegrationTestingAllowed
-  - GP name: Allow Internet Explorer mode testing
+  - GP name: Allow Internet Explorer mode testing (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21324,8 +21594,6 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy is disabled, this policy w
 
 If a language is included in both the 'SpellcheckLanguage' and the [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) policy, the spellcheck language is enabled.
 
-The supported languages are: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
-
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -21386,8 +21654,6 @@ If you do not set this policy, or disable it, there will be no change to the use
 If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, this policy will have no effect.
 
 If a language is included in both the [SpellcheckLanguage](#spellchecklanguage) and the 'SpellcheckLanguageBlocklist' policy, the spellcheck language is enabled.
-
-The currently supported languages are: af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
   #### Supported features:
 
