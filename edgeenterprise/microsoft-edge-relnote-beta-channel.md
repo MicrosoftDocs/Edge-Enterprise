@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 05/03/2021
+ms.date: 06/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,10 @@ These release notes provide information about new features and non-security upda
 > - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
 > 
 > For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
+
+## Version 91.0.864.41: June 3, 2021
+
+Fixed various bugs and performance issues.
 
 ## Version 91.0.864.37: May 27
 
