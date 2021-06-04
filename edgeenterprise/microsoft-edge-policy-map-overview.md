@@ -14,9 +14,8 @@ description: "Microsoft Edge policy mapping overview"
 
 # Microsoft Edge policy mapping overview
 
-To help with your initial deployment use the following policy mappings to migrate your Microsoft Edge Legacy (version 45 and earlier) or Google Chrome (version 80) policy configuration to Microsoft Edge (version 80).
+To help with your initial deployment use the following policy mappings to migrate your Google Chrome (version 80) policy configuration to Microsoft Edge (version 80).
 
-- [Microsoft Edge Legacy to Microsoft Edge policy mapping](microsoft-edge-policy-map-legacy-to-newedge.md)
 - [Google Chrome to Microsoft Edge policy mapping](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
