@@ -1,8 +1,8 @@
 ---
 title: "Edge for Virtualization desktop infrastructure"
-ms.author: shisub
+ms.author: andrew.lake
 author: AndreaLBarr
-manager: srugh
+manager: collw
 ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
@@ -11,6 +11,8 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge for Virtualized Desktop Infrastructure."
 ---
+
+# Microsoft Edge for Virtualized Desktop Infrastructure
 
 This article describes the requirements and limitations for using Microsoft Edge in a virtualized environment.
 
