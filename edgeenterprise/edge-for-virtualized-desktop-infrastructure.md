@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Microsoft Edge for Virtualized Desktop Infrastructure."
 ---
 
-# Microsoft Edge for Virtualized Desktop Infrastructure
+## Microsoft Edge for Virtualized Desktop Infrastructure
 
 This article describes the requirements and limitations for using Microsoft Edge in a virtualized environment.
 
