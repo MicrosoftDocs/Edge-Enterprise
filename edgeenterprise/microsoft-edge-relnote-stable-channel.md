@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 91.0.864.41: June 3, 2021
 
-Fixed various bugs and performance issues.
+Stable channel security updates are listed [here]().
 
 ## Version 91.0.864.37: May 27
 
