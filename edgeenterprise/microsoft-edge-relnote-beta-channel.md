@@ -61,7 +61,7 @@ Fixed various bugs and performance issues.
 
 - **Interrupt Downloads** Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check. Users may override and continue to download by right clicking and choosing “Keep” on the download item.
 Enterprise administrators may opt out of this behavior one of these two policies:
-- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
+    - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
 For more information, see [Microsoft Edge Security downloads interruptions](https://docs.microsoft.com/deployedge/microsoft-edge-security-downloads-interruptions)
 
 ### Policy updates
