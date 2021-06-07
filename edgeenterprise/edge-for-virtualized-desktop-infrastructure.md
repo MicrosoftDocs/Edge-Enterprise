@@ -26,7 +26,7 @@ Most features of Edge are supported on VDI environments without any special conf
 
 ## Platforms certified for Edge
 
-- Windows Virtual Desktop
+- Azure Virtual Desktop
 - Citrix Virtual Apps and Desktops (formerly known as XenApp and XenDesktop)
 
 While other VDI solutions have not yet been verified by the Edge team, it is expected that the most common workflows in Edge should be supported. Guidance provided below may or may not be applicable to your chosen solution.
@@ -128,4 +128,4 @@ See [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/cit
 This is a known issue in Edge and other applications that use WAM (i.e. Office) due to Windows components necessary for such scenarios not being initialized when running in the “seamless” mode. To work around this issue:
 
 - Use Edge via a Remote Desktop to the Citrix Host instead of as a seamless remote application.
-- Use Windows Virtual Desktop remote apps instead, which has mitigation's for this issue.
+- Use Azure Virtual Desktop remote apps instead, which has mitigation's for this issue.
