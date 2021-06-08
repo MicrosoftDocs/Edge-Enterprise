@@ -1,6 +1,6 @@
 ---
 title: "Edge for Virtualization desktop infrastructure"
-ms.author: andrew.lake
+ms.author: anlake
 author: AndreaLBarr
 manager: collw
 ms.date: 06/08/2021
@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Microsoft Edge for Virtualized Desktop Infrastructure."
 ---
 
-## Microsoft Edge for Virtualized Desktop Infrastructure
+# Microsoft Edge for Virtualized Desktop Infrastructure
 
 This article describes the requirements and limitations for using Microsoft Edge in a virtualized environment.
 
@@ -66,7 +66,7 @@ For non-persisted machines it is best practice to disable automatic updates and 
 
 See the following policies for disabling automatic updates:
 
-- [Update policy override default](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#updatedefault)
+- [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault)
 
 - [Update policy override](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#update)
 
