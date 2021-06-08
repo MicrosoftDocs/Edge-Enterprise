@@ -66,7 +66,7 @@ For non-persisted machines it is best practice to disable automatic updates and 
 
 See the following policies for disabling automatic updates:
 
-- [Update policy override default](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#updatedefault)
+- [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault)
 
 - [Update policy override](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#update)
 
