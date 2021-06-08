@@ -1,6 +1,6 @@
 ---
 title: "Edge for Virtualization desktop infrastructure"
-ms.author: andrew.lake
+ms.author: anlake
 author: AndreaLBarr
 manager: collw
 ms.date: 06/08/2021
