@@ -3,7 +3,7 @@ title: "Edge for Virtualization desktop infrastructure"
 ms.author: andrew.lake
 author: AndreaLBarr
 manager: collw
-ms.date: 05/19/2021
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
