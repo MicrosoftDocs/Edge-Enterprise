@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,9 +14,9 @@ description: "Use group policies to manage Microsoft Edge extensions in the ente
 
 # Use group policies to manage Microsoft Edge extensions
 
-This article describes the options and steps for managing extensions by using group policies. These options  assume that you already have Microsoft Edge managed for your users. If you have not already set up Microsoft Edge to be managed for your users please follow the below link to do so now. 
+This article describes the options and steps for managing extensions by using group policies. These options  assume that you already have Microsoft Edge managed for your users. If you have not already set up Microsoft Edge to be managed for your users please follow the below link to do so now.
 
-- [Manage Microsoft Edge extensions in the enterprise](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Freview.docs.microsoft.com%2Fen-us%2FDeployEdge%2Fmicrosoft-edge-manage-extensions%3Fbranch%3Dpr-en-us-565&data=04%7C01%7Cv-andreabarr%40microsoft.com%7C6e4d287e8b014524d8d808d8fa6bc8a4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534688176646040%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=drRb3DhNVZJO0uKX9MfE5%2BjGAflHyCSUoGOPqRr5U7Q%3D&reserved=0)
+- [Manage Microsoft Edge extensions in the enterprise](https://docs.microsoft.com/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.

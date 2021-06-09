@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/03/2021
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 >
-> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
+> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
 ## Version 91.0.864.41: June 3
 
@@ -41,7 +41,7 @@ Stable channel security updates are listed [here](https://docs.microsoft.com/dep
 - **Support option to allow synchronizing Favorites from the host to the Edge Application Guard container**. Starting with Microsoft Edge version 91, users have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
 
 - **Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check**. Users may override and continue to download by right clicking and choosing “Keep” on the download item. Enterprise administrators may opt out of this behavior by configuring the following policy:
-  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
+  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) - Disable download file type extension-based warnings for specified file types on domains
 
     For more information, see [Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
 

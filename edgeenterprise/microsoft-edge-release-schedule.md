@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 05/03/2021
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,7 +45,7 @@ The following table only tracks and provides information for major releases in b
 | 94 | Target release | Week of 01-Sep-2021 | Week of 23-Sep-2021 |
 | 95 | Target release | Week of 28-Sep-2021 | Week of 21-Oct-2021 |
 | 96 | Target release | Week of 26-Oct-2021 | Week of 18-Nov-2021 |
-| 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 | 
+| 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 |
 
 ## Release Process
 
@@ -55,10 +55,10 @@ The trigger for Beta and Stable major releases is an equivalent Chromium release
 
 The date reference (Released/Release week) for the Stable channel references the beginning of the progressive roll out.
 
-We use a progressive rollout model which means that new release availability for any given device could be staggered over upcoming days. For more information, see [Progressive rollouts for Microsoft Edge Stable Channel](microsoft-edge-update-progressive-rollout.md).
+We use a progressive rollout model which means that new release availability for any given device could be staggered over upcoming days. For more information, see [Progressive rollouts for Microsoft Edge Stable Channel](https://docs.microsoft.com/deployedge/microsoft-edge-update-progressive-rollout).
 
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge channels](microsoft-edge-channels.md)
+- [Microsoft Edge channels](https://docs.microsoft.com/deployedge/microsoft-edge-channels)
 - [Channel downloads](https://www.microsoft.com/edge/business/download)

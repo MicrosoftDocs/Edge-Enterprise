@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Interrupting Downloads of Potentially Dangerous Files"
 ---
 
-## Interrupting Downloads of Potentially Dangerous Files
+# Interrupting Downloads of Potentially Dangerous Files
 
 Microsoft Edge’s File Type Policies component allows files to be classified by their level of “dangerousness”, such that harmless files (e.g. `.txt` files) can be downloaded freely, whilst potentially-dangerous files (e.g. `.dll` files) are subjected to a higher degree of vetting and a more security-conscious user-experience.
 
