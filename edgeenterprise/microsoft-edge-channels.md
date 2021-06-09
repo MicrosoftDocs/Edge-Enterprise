@@ -16,7 +16,7 @@ description: "Microsoft Edge channel overview"
 
 One of the benefits of the next version of Microsoft Edge is that Microsoft can provide new features on a regular basis. However, as the admin who deploys Microsoft Edge to the users in your organization, you might want to have more control over how often your users get these new features. Microsoft provides you four options, called channels, to control how often Microsoft Edge is updated with new features. Here's an overview of the four options.
 
-For more information on support for each channel check out: [Microsoft Edge Lifecycle](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-support-lifecycle)
+For more information on support for each channel read: [Microsoft Edge Lifecycle](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-support-lifecycle)
   
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
