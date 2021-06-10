@@ -10225,13 +10225,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
       "https://example.com", 
       "https://.mail.example.com"
     ], 
-    "protocol": "teams"
+    "protocol": "msteams"
   }, 
   {
     "allowed_origins": [
       "*"
     ], 
-    "protocol": "outlook"
+    "protocol": "msoutlook"
   }
 ]
 ```
@@ -10239,7 +10239,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
   ```
   
 
