@@ -16,9 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## DATE: June 11, 2021
+## June 11, 2021
 
-Microsoft has released the latest Microsoft Edge Stable Channel (91.0.864.48), which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide/).
+Microsoft has released the latest Microsoft Edge Stable Channel (version 91.0.864.48), which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide/).
 
 ## June 03, 2021
 
