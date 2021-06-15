@@ -3,7 +3,7 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
 ---
 
 # Enterprise Site List Manager in Microsoft Edge
+
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer mode.
 

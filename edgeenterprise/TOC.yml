@@ -1,4 +1,4 @@
-# last revised 04/21/2021
+# last revised 05/03/2021
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -51,8 +51,6 @@
      items:
       - name: Policy mapping overview
         href: microsoft-edge-policy-map-overview.md
-      - name: Microsoft Edge Legacy to Microsoft Edge policy mapping
-        href: microsoft-edge-policy-map-legacy-to-newedge.md
       - name: Google Chrome to Microsoft Edge policy mapping
         href: microsoft-edge-policy-map-chrome-to-newedge.md
    - name: Supported Operating Systems
@@ -63,8 +61,6 @@
      href: microsoft-edge-supported-languages.md
    - name: System updates for Microsoft Edge
      items:
-      - name: How to access the old version of Microsoft Edge
-        href: microsoft-edge-sysupdate-access-old-edge.md
       - name: Windows updates to support Microsoft Edge
         href: microsoft-edge-sysupdate-windows-updates.md
 # DEPLOY
@@ -90,6 +86,8 @@
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+   - name: Per Site Configuration by Policy
+     href: Per-Site-Configuration-by-Policy.md
 #     href: configure-edge-with-intune.md
    - name: Configure for Windows with Mobile Device Management
      href: configure-edge-with-mdm.md
@@ -100,6 +98,8 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
+   - name: Edge for Virtualization desktop infrastructure 
+     href: edge-for-virtualized-desktop-infrastructure.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
    - name: Identity support and configuration
@@ -161,19 +161,23 @@
       - name: Associate file extensions with Internet Explorer mode
         href: edge-ie-mode-add-guidance-filetype-associations.md       
       - name: IE mode troubleshooting and FAQ
-        href: edge-ie-mode-faq.md
+        href: edge-ie-mode-faq.yml
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
   items:
    - name: Security for your business
      href: ms-edge-security-for-business.md    
+   - name: Interrupting Downloads of Potentially Dangerous Files
+     href: microsoft-edge-security-downloads-interruptions.md
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
    - name: Data Loss Prevention (DLP)
      href: microsoft-edge-security-dlp.md
    - name: Password Monitor auto-enabled for users
      href: microsoft-edge-security-password-monitor.md
+   - name: Microsoft Edge password manager security
+     href: microsoft-edge-security-password-manager-security.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
    - name: Support for Azure AD Conditional Access

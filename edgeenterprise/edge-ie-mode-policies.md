@@ -1,9 +1,9 @@
 ---
 title: "Configure IE mode Policies"
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Configure IE mode policies"
 ---
 
 # Configure IE mode policies
+
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to configure IE mode policies.
 
@@ -39,7 +42,7 @@ You can configure Internet Explorer to open directly within Microsoft Edge (IE m
 
 1. Download and use the latest [Microsoft Edge Policy Template](https://www.microsoft.com/en-us/edge/business/download).
 2. Open Group Policy Editor.
-3. Click **Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
+3. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
 4. Double-click **Configure Internet Explorer integration**.
 5. Select **Enabled**.
 6. Under **Options**, set the dropdown value to 
@@ -79,7 +82,7 @@ IE mode can use the existing policy configuring the Enterprise Site List for Int
 1. Create or reuse a Site List XML
     1. All sites that have the element _\<open-in\>IE11\</open-in\>_ will now open in IE mode.
 2. Open Group Policy Editor.
-3. Click **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer**.
+3. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer**.
 4. Double-click **Use the Enterprise Mode IE website list**.
 5. Select **Enabled**.
 6. Under **Options**, type the location of website list. You can use one of the following locations:
@@ -95,7 +98,7 @@ You can also configure IE mode with a separate policy for Microsoft Edge. This a
 1. Create or reuse a Site List XML
     1. All sites that have the element _\<open-in\>IE11\</open-in\>_ will now open in IE mode.
 2. Open Group Policy Editor.
-3. Click **Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
+3. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
 4. Double-click **Configure the Enterprise Mode Site List**.
 5. Select **Enabled**.
 6. Under **Options**, type the location of website list. You can use one of the following locations:
@@ -113,7 +116,7 @@ IE mode can be configured as for all sites in the Local Intranet zone. You can r
 > The Local Intranet zone contains explicitly added sites, but also assigns sites to this zone using heuristics. This can include dotless host names (e.g. **https**:**//payroll**) and sites that the proxy configuration script configures to bypass the proxy. If an external party controls DNS or proxy, they could potentially force websites into IE mode.
 
 1. Open Local Group Policy Editor.
-2. Click **Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
+2. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
 3. Double-click **Send all intranet sites to Internet Explorer**.
 4. Select **Enabled**, and then click **OK** or **Apply** to save the policy settings.
 
@@ -122,7 +125,7 @@ IE mode can be configured as for all sites in the Local Intranet zone. You can r
 You can prevent your users from using Internet Explorer for sites that don't need it. Internet Explorer can automatically redirect sites to Microsoft Edge if they aren't on your site list.
 
 1. Open Group Policy Editor.
-2. Click **Computer Configuration** > **Administrative Tools** > **Windows Components** > **Internet Explorer**.
+2. Click **User Configuration/Computer Configuration** > **Administrative Tools** > **Windows Components** > **Internet Explorer**.
 3. Double-click **Send all sites not included in the Enterprise Mode Site List to Microsoft Edge.**
 4. Select **Enabled**
 5. Click **OK** or **Apply** to save these settings.

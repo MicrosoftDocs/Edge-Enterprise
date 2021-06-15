@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,6 +45,24 @@ The next screenshot shows an example of Application Guard's message showing that
 ## What's new
 
 Application Guard support in the new Microsoft Edge  browser has functional parity with Microsoft Edge Legacy and includes several improvements.
+
+### Favorites synchronizing from the host to the container
+
+Some of our customers have been asking for favorites sync between the host browser and the container in Application Guard. Starting from Microsoft Edge 91, users now have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
+
+This support can be controlled via policy. You can update the Edge policy [ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) to enable or disable favorites sync.
+
+> [!Note]
+> For security reasons, favorites sync is only possible from the host to the container and not the other way around. To ensure a unified list of favorites across the host and the container, we have disabled favorites management inside the container.
+
+### Identify network traffic originating from the container
+
+Several customers are using WDAG in a specific configuration where they want to identify network traffic coming from the container. Some of the scenarios for this are:
+
+- To restrict access to only a handful of untrusted sites
+- To allow internet access from the container only
+
+Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to use proxy to filter out traffic and apply specific policies. You can use the header to identify which traffic is through the container or the host using [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### Extension support inside the container
 
@@ -104,9 +122,9 @@ The following articles provide the information you need to install, configure, a
 
 ## Frequently Asked Questions
 
-### Does Application Guard work in IE Mode?
+### Does Application Guard work in IE mode?
 
-IE Mode supports Application Guard functionality, but we don't anticipate much use of this feature in IE Mode. IE Mode is recommended to be deployed for a list of trusted internal sites, and Application Guard is for untrusted sites only. Make sure all the IE mode sites or IP addresses are also added to the Network Isolation policy to be considered as trusted resource by Application Guard.
+IE mode supports Application Guard functionality, but we don't anticipate much use of this feature in IE Mode. IE mode is recommended to be deployed for a list of trusted internal sites, and Application Guard is for untrusted sites only. Make sure all the IE mode sites or IP addresses are also added to the Network Isolation policy to be considered as trusted resource by Application Guard.
 
 ### Do I need to install the Application Guard Chrome extension?
 

@@ -19,6 +19,9 @@ description: "Redirection from Internet Explorer to Microsoft Edge for compatibi
 
 ## Overview
 
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
 Many modern websites have designs that are incompatible with Internet Explorer. Whenever an Internet Explorer user visits an incompatible public site, they get a message that tells them the site is incompatible with their browser, and they need to manually switch to a different browser.
 
 The need to  manually switch to a different browser changes starting with Microsoft Edge Stable version 87.
@@ -27,6 +30,15 @@ When a user goes to a site that is incompatible with Internet Explorer, they wil
 
 > [!NOTE]
 > Microsoft maintains a list of all sites that are known to be incompatible with Internet Explorer. For more information, see [Request updates to the incompatible sites list](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+
+## Prerequisites
+- Microsoft Edge Stable version 87 or later
+- Windows versions
+    - Windows 10 version 1709 or later
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## Redirection experience
 
