@@ -21,7 +21,7 @@ Check back for more materials as they're made available.
 ## Customer adoption kit
 
 The customer adoption kit contains the following material:
-- Internet Explorer Retirement Kit **(Only Available in English)** 
+- Internet Explorer Retirement Kit **(Available in English, German, Spanish, French, Japanese, Korean, Chinese (Traditional))**
     - Adoption emails
     - Flyers
     - Infographic
