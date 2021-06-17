@@ -26,6 +26,15 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version VERSION#: DATE
+
+> [!Important]
+> This update contains [CVE-2021-30554](insert HyperLink to CVE) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
+Stable channel security updates are listed [here](Security Release Notes).
+
+[Additional updates].
+
 ## Version 91.0.864.48: June 11
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-11-2021).
