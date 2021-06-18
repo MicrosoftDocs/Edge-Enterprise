@@ -95,7 +95,7 @@ In addition to needing the BHO, there is a dependency on the **RedirectSitesFrom
 >
 >If you're on a domain joined or Mobile Device Management (MDM) enrolled device, you won't see this option.
 >
-> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
+> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](./microsoft-edge-policies.md#intranetredirectbehavior).
 
 ### Policy: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
