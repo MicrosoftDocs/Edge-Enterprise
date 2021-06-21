@@ -68,7 +68,7 @@ See the following policies for disabling automatic updates:
 
 - [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault)
 
-- [Update policy override](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#update)
+- [Update policy override](/deployedge/microsoft-edge-update-policies#update)
 
 ### Profile management
 
@@ -82,7 +82,7 @@ If your Azure AD plan supports it, Enterprise sync is the fastest and easiest me
 
 See the following for more information on requirements and configuration.  
 
-- [Configure Microsoft Edge enterprise sync | Microsoft Docs](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-sync)
+- [Configure Microsoft Edge enterprise sync | Microsoft Docs](/deployedge/microsoft-edge-enterprise-sync)
 
 ### On-premise Sync for Active Directory Users
 
@@ -90,7 +90,7 @@ With on-premises sync, Microsoft Edge saves an Active Directory user's favorites
 
 See the following for more information on requirements and configuration.  
 
-- [On-premises sync for Active Directory (AD) users | Microsoft Docs](https://docs.microsoft.com/deployedge/microsoft-edge-on-premises-sync)
+- [On-premises sync for Active Directory (AD) users | Microsoft Docs](/deployedge/microsoft-edge-on-premises-sync)
 
 ### User Profile Redirection  
 
@@ -98,7 +98,7 @@ There are several solutions for migrating and redirecting the entire user folder
 
 Some popular solutions include:
 
-- [FSLogix Overview - FSLogix | Microsoft Docs](https://docs.microsoft.com/fslogix/overview)
+- [FSLogix Overview - FSLogix | Microsoft Docs](/fslogix/overview)
 - [How to Configure Citrix Profile Management](https://support.citrix.com/article/CTX222893)
 
 It is also may be recommended that when using this method unnecessary folders be excluded from the backed-up user folder to reduce initial loading times when users are logging on to a machine and the profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
