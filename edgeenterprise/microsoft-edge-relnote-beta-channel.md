@@ -17,7 +17,7 @@ description: "Microsoft Edge release notes for Beta Channel"
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. Archived versions of these release notes are available [here](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+> Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](./microsoft-edge/web-platform/site-impacting-changes).
 
 ## Version 92.0.902.9: June 8
 
@@ -65,8 +65,8 @@ Fixed various bugs and performance issues.
 
 - **Interrupt Downloads** Starting with Microsoft Edge version 91 the browser will automatically interrupt downloads of types which could harm your computer if those downloads are started without a user interaction and are not supported by SmartScreen Application Reputation check. Users may override and continue to download by right clicking and choosing “Keep” on the download item.
 Enterprise administrators may opt out of this behavior one of these two policies:
-    - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
-For more information, see [Microsoft Edge Security downloads interruptions](https://docs.microsoft.com/deployedge/microsoft-edge-security-downloads-interruptions)
+    - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](./deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
+For more information, see [Microsoft Edge Security downloads interruptions](./deployedge/microsoft-edge-security-downloads-interruptions)
 
 ### Policy updates
 
@@ -74,12 +74,12 @@ For more information, see [Microsoft Edge Security downloads interruptions](http
 
 Six new policies were added. Download the updated Administrative Templates from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). The following new policies were added:
 
-- [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) - Application Guard Traffic Identification
-- [ExplicitlyAllowedNetworkPorts](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) - Explicitly allowed network ports
-- [ImportStartupPageSettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#importstartuppagesettings) - Allow importing of startup page settings
-- [MathSolverEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
-- [NewTabPageContentEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - Allow Microsoft News content on the new tab page
-- [NewTabPageQuickLinksEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - Allow quick links on the new tab page
+- [ApplicationGuardTrafficIdentificationEnabled](./DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) - Application Guard Traffic Identification
+- [ExplicitlyAllowedNetworkPorts](./DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) - Explicitly allowed network ports
+- [ImportStartupPageSettings](./DeployEdge/microsoft-edge-policies#importstartuppagesettings) - Allow importing of startup page settings
+- [MathSolverEnabled](./DeployEdge/microsoft-edge-policies#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+- [NewTabPageContentEnabled](./DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) - Allow Microsoft News content on the new tab page
+- [NewTabPageQuickLinksEnabled](./DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) - Allow quick links on the new tab page
 
 #### Obsoleted Policy
 
@@ -124,7 +124,7 @@ Fixed various bugs and performance issues.
 
 - **Single Sign On (SSO) is now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS**. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (for example, bing.com, office.com, msn.com, and outlook.com).
 
-- **Kiosk mode.** Starting with Microsoft Edge version 90, we have locked down the UI print settings to only allow the configured printers and “Print to PDF” options. We have also done improvements within the assigned access single app kiosk mode to restrict the launch of other applications from the browser. For more information about the kiosk mode features please go [here](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features). 
+- **Kiosk mode.** Starting with Microsoft Edge version 90, we have locked down the UI print settings to only allow the configured printers and “Print to PDF” options. We have also done improvements within the assigned access single app kiosk mode to restrict the launch of other applications from the browser. For more information about the kiosk mode features please go [here](./deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features).
 
 - **Printing:**
 
