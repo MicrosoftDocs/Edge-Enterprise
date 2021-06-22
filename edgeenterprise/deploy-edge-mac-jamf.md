@@ -5,7 +5,7 @@ author: dan-wesley
 manager: laurawi
 ms.date: 11/30/2019
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop

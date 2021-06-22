@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge rollback for enterprises"
-ms.author: v-danwes
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 02/04/2021

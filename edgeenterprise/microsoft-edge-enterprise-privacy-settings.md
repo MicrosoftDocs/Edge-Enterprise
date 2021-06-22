@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge enterprise privacy settings"
-ms.author: likravit
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 09/09/2020
