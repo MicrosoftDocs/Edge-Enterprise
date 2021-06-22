@@ -86,7 +86,7 @@ For services that require delegating Negotiate credentials, Microsoft Edge suppo
 
 ### Proactive Authentication
 
-Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page. You can control it using the [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled) policy.
+Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page. You can control it using the [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled) policy.
 
 ### Windows Hello CredUI for NTLM Authentication
 
