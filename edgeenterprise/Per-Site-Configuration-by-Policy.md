@@ -1,6 +1,6 @@
 ---
 title: "Per-Site Configuration by Policy "
-ms.author: v-andreabarr
+ms.author: collw
 author: AndreaLBarr
 manager: laurawi
 ms.date: 05/03/2021
@@ -19,7 +19,7 @@ As a part of every page load, browsers make many decisions — should a particul
 
 In most cases, decisions are governed by two inputs: a user setting, and the URL of the page for which the decision is being made.
 
-In the legacy Internet Explorer web platform, each of these decisions was called an [URLAction](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178%28v%3dvs.85%29), and Enterprise Group Policy and user settings inside the Internet Control Panel controlled how the browser would handle each decision.  
+In the legacy Internet Explorer web platform, each of these decisions was called an [URLAction](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178%28v%3dvs.85%29), and Enterprise Group Policy and user settings inside the Internet Control Panel controlled how the browser would handle each decision.  
 
 In the Microsoft Edge, most per-site permissions are controlled by settings and policies expressed using a simple syntax with limited wild carding support. Windows Security Zones are still used only for a small number of configuration decisions.
 
@@ -29,7 +29,7 @@ To simplify configuration for the user or their administrator, the legacy platfo
 
 When making a decision, the browser would first map the website to a Zone, then consult the setting for that URLAction for that Zone to decide what to do. Reasonable defaults like “Automatically satisfy authentication challenges from my Intranet” meant that most users never needed to change any settings away from their defaults.
 
-Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via “Site to Zone Assignment List” policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, additional heuristics could [assign sites to the Local Intranet Zone](https://docs.microsoft.com/archive/blogs/ieinternals/the-intranet-zone). In particular, dotless host names (e.g. `http://payroll`) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
+Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via “Site to Zone Assignment List” policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, additional heuristics could [assign sites to the Local Intranet Zone](/archive/blogs/ieinternals/the-intranet-zone). In particular, dotless host names (e.g. `http://payroll`) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
 
 Microsoft Edge Legacy inherited the Zones architecture from its Internet Explorer predecessor with a few simplifying changes:
 
@@ -39,11 +39,11 @@ Microsoft Edge Legacy inherited the Zones architecture from its Internet Explore
 
 ## Per-Site Permissions in the Microsoft Edge
 
-Unlike its predecessors, the new Microsoft Edge makes very limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](https://docs.microsoft.com/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Unlike its predecessors, the new Microsoft Edge makes very limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 When end-users open <code>edge://settings/content/siteDetails?site=https://example.com</code>, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings Page directly, instead making choices while browsing using various widgets and toggles in the **Page Info** dropdown (which appears when you click the lock icon in the address bar) or via various prompts or buttons at the right-edge of the address bar.
 
-Enterprises can use Group Policy to provision site lists for individual policies that control the browser’s behavior. To find these policies, simply open the [Microsoft Edge Group Policy documentation](https://docs.microsoft.com/deployedge/microsoft-edge-policies) and search for **ForUrls** to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed within the [Group Policy for Content Settings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#content-settings) section.
+Enterprises can use Group Policy to provision site lists for individual policies that control the browser’s behavior. To find these policies, simply open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for **ForUrls** to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed within the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
 
 There are also a number of policies (whose names contain **Default**) that control the default behavior for a given setting.
 
@@ -81,7 +81,7 @@ While Microsoft Edge mostly relies upon individual policies using the URL Filter
 
 ## Credential Release
 
-By default, Microsoft Edge will evaluate URLACTION_CREDENTIALS_USE to decide whether Windows Integrated Authentication is used automatically, or the user should instead see a manual authentication prompt. Configuring an [AuthServerAllowlist site list policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
+By default, Microsoft Edge will evaluate URLACTION_CREDENTIALS_USE to decide whether Windows Integrated Authentication is used automatically, or the user should instead see a manual authentication prompt. Configuring an [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
 
 ## File Downloads
 
@@ -91,7 +91,7 @@ If the Windows Security Zone policy is configured to Disable the setting Lau
 
 ## IE mode
 
-IE mode can be configured to [open all Intranet sites in IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode#configure-all-intranet-sites). When in this configuration, Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a consequence they evaluate Zones settings for every policy decision just as Internet Explorer itself did.
+IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/edge-ie-mode#configure-all-intranet-sites). When in this configuration, Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a consequence they evaluate Zones settings for every policy decision just as Internet Explorer itself did.
 
 ## Summary
 
