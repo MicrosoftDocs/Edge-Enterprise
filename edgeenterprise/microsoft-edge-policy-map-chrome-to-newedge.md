@@ -14,12 +14,12 @@ description: "Google Chrome to Microsoft Edge policy mapping"
 
 # Google Chrome to Microsoft Edge policy mapping
 
-This article maps the Google Chrome policies to the relevant Microsoft Edge policies supported in version 80. For Microsoft Edge Legacy policies see the [Microsoft Edge Legacy to Microsoft Edge policy mapping](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master) article.
+This article maps the Google Chrome policies to the relevant Microsoft Edge policies supported in version 80. For Microsoft Edge Legacy policies see the [Microsoft Edge Legacy to Microsoft Edge policy mapping](./deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master) article.
 
 > [!NOTE]
 > The mapping provided below is meant to help with your initial deployment of Microsoft Edge version 80. For a definitive list of the latest policies see:
-> - [Browser policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
-> - [Update policy reference](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies)
+> - [Browser policy reference](./deployedge/microsoft-edge-policies)
+> - [Update policy reference](./deployedge/microsoft-edge-update-policies)
 
 ## Google Chrome to Microsoft Edge policy map
 

@@ -4190,7 +4190,7 @@ If you enable this setting, external extensions are blocked from being installed
 
 If you disable this setting or leave it unset, external extensions are allowed to be installed.
 
-External extensions and their installation are documented at https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+External extensions and their installation are documented at ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### Supported features:
@@ -4474,7 +4474,7 @@ The source code of any extension can be altered by users with developer tools, p
 
 Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
-Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Supported features:
 
@@ -8156,7 +8156,7 @@ If you enable this policy, Microsoft Edge downloads and shows the specified logo
 
 If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
 
-For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+For help with determining the SHA-256 hash, see ./powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Supported features:
 
