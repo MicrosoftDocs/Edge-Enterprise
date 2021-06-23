@@ -151,7 +151,7 @@ With the following Windows updates you can configure Microsoft Edge via assigned
 |Windows 10 | 2004 or later|[KB4601382 or later](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
 |Windows 10| 1909| [KB4601380 or later](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
-You can manage Microsoft Edge kiosk mode assigned access single app via [Windows Settings](./deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) and Intune.
+You can manage Microsoft Edge kiosk mode assigned access single app via [Windows Settings](/deployedge/microsoft-edge-configure-kiosk-mode#configure-using-windows-settings) and Intune.
 
 ### Multi-app kiosk
 
