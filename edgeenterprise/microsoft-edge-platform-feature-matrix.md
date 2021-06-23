@@ -44,7 +44,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Browser to Web Single Sign On (SSO)|Yes|Yes|Yes|Yes|[Browser-Web SSO](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
 |Guided Switch/"Automatic Profile Switching"|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |Multiple Profiles|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
-|On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|[On-premises sync for Active Directory (AD) users](./deployedge/microsoft-edge-on-premises-sync) |
+|On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|[On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync) |
 |Seamless SSO|Yes (1709+)|Yes|Yes|Yes|[Seamless SSO](/deployedge/microsoft-edge-security-identity#seamless-sso)|
 |SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|No|[SSO with PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
 |Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
