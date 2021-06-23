@@ -14,7 +14,7 @@ description: "A detailed reference guide for configuring Microsoft Edge extensio
 
 # Detailed guide to the ExtensionSettings policy
 
-Microsoft Edge offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string in the Windows Group Policy Editor or in the Windows Registry using the [ExtensionSettings](./deployedge/microsoft-edge-policies#extensionsettings) policy.
+Microsoft Edge offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string in the Windows Group Policy Editor or in the Windows Registry using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
