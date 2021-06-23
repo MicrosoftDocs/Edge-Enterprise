@@ -1,6 +1,6 @@
 ---
 title: "Reset Microsoft Edge data"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 04/08/2021
