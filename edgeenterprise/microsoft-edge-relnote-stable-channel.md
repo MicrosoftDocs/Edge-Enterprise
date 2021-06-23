@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/18/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,15 +35,18 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ## Version 91.0.864.48: June 11
 
+> [!Important]
+>This update contains [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-11-2021).
 
 ## Version 91.0.864.41: June 3
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-13-2021).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-3-2021).
 
 ## Version 91.0.864.37: May 27
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-13-2021).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-27-2021).
 
 ### Feature updates
 
