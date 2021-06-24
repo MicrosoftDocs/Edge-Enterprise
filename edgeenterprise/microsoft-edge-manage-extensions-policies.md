@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,16 +14,16 @@ description: "Use group policies to manage Microsoft Edge extensions in the ente
 
 # Use group policies to manage Microsoft Edge extensions
 
-This article describes the options and steps for managing extensions by using group policies. These options  assume that you already have Microsoft Edge managed for your users. If you have not already set up Microsoft Edge to be managed for your users please follow the below link to do so now. 
+This article describes the options and steps for managing extensions by using group policies. These options  assume that you already have Microsoft Edge managed for your users. If you have not already set up Microsoft Edge to be managed for your users please follow the below link to do so now.
 
-- [Manage Microsoft Edge extensions in the enterprise](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Freview.docs.microsoft.com%2Fen-us%2FDeployEdge%2Fmicrosoft-edge-manage-extensions%3Fbranch%3Dpr-en-us-565&data=04%7C01%7Cv-andreabarr%40microsoft.com%7C6e4d287e8b014524d8d808d8fa6bc8a4%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637534688176646040%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=drRb3DhNVZJO0uKX9MfE5%2BjGAflHyCSUoGOPqRr5U7Q%3D&reserved=0)
+- [Manage Microsoft Edge extensions in the enterprise](/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
 ## Block extensions based on their permissions
 
-You can control what extensions your users can install based on permissions using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy. If an installed extension needs a permission that’s blocked, it just won't run. The extension isn't removed, just disabled.
+You can control what extensions your users can install based on permissions using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy. If an installed extension needs a permission that’s blocked, it just won't run. The extension isn't removed, just disabled.
 
 > [!NOTE]
 > The blocked permissions setting can only be set within the extension settings policy.  
@@ -129,7 +129,7 @@ This example shows the JSON and compressed JSON string to block specific extensi
 
 ## Allow or block extensions in group policy
 
-You can use the [ExtensionInstallBlocklist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallblocklist) and [ExtensionInstallAllowlist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallallowlist) policies to control which extensions are blocked or allowed. Use the following steps as a guide to allow all extensions except those you want to block.
+You can use the [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge-policies#extensioninstallblocklist) and [ExtensionInstallAllowlist](/DeployEdge/microsoft-edge-policies#extensioninstallallowlist) policies to control which extensions are blocked or allowed. Use the following steps as a guide to allow all extensions except those you want to block.
 
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Control which extensions cannot be installed**.
 2. Select **Enabled**.
@@ -147,7 +147,7 @@ You can use the [ExtensionInstallBlocklist](https://docs.microsoft.com/DeployEdg
 
 ## Force-install an extension
 
-Use the [ExtensionInstallForcelist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) policy to control which extensions are blocked or allowed. Use the following steps as a guide to force-install an extension.
+Use the [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) policy to control which extensions are blocked or allowed. Use the following steps as a guide to force-install an extension.
 
 1. In the Group Policy Editor, go to **Administrative Templates> Microsoft Edge >  Extensions >** and then select **Control which extensions are installed silently**.
 2. Select **Enabled**.  
@@ -161,7 +161,7 @@ The extension will be installed silently with no need for user interaction. The 
 
 ## Block extensions from a specific store or update URL
 
-To block extensions from a particular store or URL, you only need to block the *update_url* for that store using the [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) policy. 
+To block extensions from a particular store or URL, you only need to block the *update_url* for that store using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy.
 
 Use the following steps as a guide to block extensions from an particular store or URL.
 
