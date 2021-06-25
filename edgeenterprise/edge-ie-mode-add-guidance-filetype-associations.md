@@ -89,6 +89,7 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+
 ## Configuring file types to open in Internet Explorer mode
 
 Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
