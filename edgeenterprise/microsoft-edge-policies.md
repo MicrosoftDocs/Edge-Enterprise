@@ -7046,7 +7046,7 @@ For origins not covered by the patterns specified here, the global default value
 
 Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
-For detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+For detailed information on valid URL patterns, please go [here](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
