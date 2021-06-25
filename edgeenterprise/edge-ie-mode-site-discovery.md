@@ -1,6 +1,6 @@
 ---
 title: "Enterprise Site Discovery Step by Step Guide"
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
 ms.date: 05/19/2021

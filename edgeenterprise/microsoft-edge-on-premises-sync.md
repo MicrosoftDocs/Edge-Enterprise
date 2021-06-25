@@ -1,6 +1,6 @@
 ---
 title: "On-premises sync for Active Directory (AD) users"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 02/12/2021

@@ -46,12 +46,12 @@ It also lists some syntax accepted by PCRE, PERL and VIM.
 | negated Unicode character class (one-letter name) | \PN |
 | negated Unicode character class | \P{Greek} |
 
-| | Composites |
+|&nbsp;| Composites |
 | --- | --- |
 | xy | x followed by y |
 | x\|y | x or y (prefer x) |
 
-| | Repetitions |
+|&nbsp;| Repetitions |
 | --- | --- |
 | x\* | zero or more x, prefer more |
 | x+ | one or more x, prefer more |
@@ -72,7 +72,7 @@ It also lists some syntax accepted by PCRE, PERL and VIM.
 
 Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject forms that create a minimum or maximum repetition count above 1000. Unlimited repetitions are not subject to this restriction.
 
-| | Possessive repetitions |
+|&nbsp;| Possessive repetitions |
 | --- | --- |
 | x\*+ | zero or more x, possessive (NOT SUPPORTED) |
 | x++ | one or more x, possessive (NOT SUPPORTED) |
@@ -81,7 +81,7 @@ Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject fo
 | x{n,}+ | n or more x, possessive (NOT SUPPORTED) |
 | x{n}+ | exactly n x, possessive (NOT SUPPORTED) |
 
-| | Grouping |
+|&nbsp;| Grouping |
 | --- | --- |
 | (re) | numbered capturing group (submatch) |
 | (?P&lt;name&gt;re) | named &amp; numbered capturing group (submatch) |
@@ -96,7 +96,7 @@ Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject fo
 | re@&gt; | possessive match of re (NOT SUPPORTED) VIM |
 | %(re) | non-capturing group (NOT SUPPORTED) VIM |
 
-| | Flags |
+|&nbsp;| Flags |
 | --- | --- |
 | i | case-insensitive (default false) |
 | m | multi-line mode: ^ and $ match begin/end line in addition to begin/end text (default false) |
@@ -105,7 +105,7 @@ Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject fo
 
 Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 
-|  | Empty strings |
+|&nbsp;| Empty strings |
 | --- | --- |
 | ^ | at beginning of text or line (m=true) |
 | $ | at end of text (like \z not \Z) or line (m=true) |
@@ -136,7 +136,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \%23c | in column 23 (NOT SUPPORTED) VIM |
 | \%23v | in virtual column 23 (NOT SUPPORTED) VIM |
 
-|  | Escape sequences |
+|&nbsp;| Escape sequences |
 | --- | --- |
 | \a | bell (≡ \007) |
 | \f | form feed (≡ \014) |
@@ -177,7 +177,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \%u1234 | Unicode character 0x1234 (NOT SUPPORTED) VIM |
 | \%U12345678 | Unicode character 0x12345678 (NOT SUPPORTED) VIM |
 
-|  | Character class elements |
+|&nbsp;| Character class elements |
 | --- | --- |
 | x | single character |
 | A-Z | character range (inclusive) |
@@ -186,7 +186,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \p{Foo} | Unicode character class Foo |
 | \pF | Unicode character class F (one-letter name) |
 
-|  | Named character classes as character class elements |
+|&nbsp;| Named character classes as character class elements |
 | --- | --- |
 | [\d] | digits (≡ \d) |
 | [^\d] | not digits (≡ \D) |
@@ -227,7 +227,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | [[:word:]] | word characters (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | hex digit (≡ [0-9A-Fa-f]) |
 
-| | Unicode character class names--general category |
+|&nbsp;| Unicode character class names--general category |
 | --- | --- |
 | C | other |
 | Cc | control |
@@ -428,7 +428,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | Yi |
 | Zanabazar\_Square |
 
-|  | Vim character classes |
+|&nbsp;| Vim character classes |
 | --- | --- |
 | \i | identifier character (NOT SUPPORTED) VIM |
 | \I | \i except digits (NOT SUPPORTED) VIM |
@@ -465,7 +465,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \V | verynomagic (NOT SUPPORTED) VIM |
 | \Z | ignore differences in Unicode combining characters (NOT SUPPORTED) VIM |
 
-|  | Magic |
+|&nbsp;| Magic |
 | --- | --- |
 | (?{code}) | arbitrary Perl code (NOT SUPPORTED) PERL |
 | (??{code}) | postponed arbitrary Perl code (NOT SUPPORTED) PERL |
