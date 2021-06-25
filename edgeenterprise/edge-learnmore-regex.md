@@ -465,7 +465,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \V | verynomagic (NOT SUPPORTED) VIM |
 | \Z | ignore differences in Unicode combining characters (NOT SUPPORTED) VIM |
 
-|&nbsp;| Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | arbitrary Perl code (NOT SUPPORTED) PERL |
 | (??{code}) | postponed arbitrary Perl code (NOT SUPPORTED) PERL |
