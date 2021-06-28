@@ -3,11 +3,11 @@ title: "PDF reader in Microsoft Edge"
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 03/01/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about PDF reader in Microsoft Edge."
 ---
