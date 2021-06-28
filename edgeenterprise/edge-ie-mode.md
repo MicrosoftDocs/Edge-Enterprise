@@ -3,11 +3,11 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 05/19/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how Internet Explorer mode in Microsoft Edge provides access to sites that need Internet Explorer 11 and access to modern sites."
 ---
