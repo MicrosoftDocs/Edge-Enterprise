@@ -3,11 +3,11 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Admin and user options for configuring Microsoft Edge to sync favorites, passwords, and other browser data."
 ---
