@@ -7,7 +7,7 @@ ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Admin and user options for configuring Microsoft Edge to sync favorites, passwords, and other browser data."
 ---
