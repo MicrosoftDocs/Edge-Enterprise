@@ -3,11 +3,11 @@ title: "Reset Microsoft Edge data"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 04/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "How to reset Microsoft Edge data in the cloud"
 ---
