@@ -3,11 +3,11 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites"
 ---

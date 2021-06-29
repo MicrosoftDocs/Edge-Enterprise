@@ -3,11 +3,11 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Password Monitor auto-enabled for users"
 ---

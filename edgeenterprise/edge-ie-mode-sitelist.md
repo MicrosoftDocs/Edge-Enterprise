@@ -3,11 +3,11 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "A step-by-step guide to configuring the Enterprise Mode Site list for Internet Explorer mode."
 ---

@@ -3,11 +3,11 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 03/31/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "A detailed reference guide for configuring Microsoft Edge extensions using the ExtensionSettings policy."
 ---

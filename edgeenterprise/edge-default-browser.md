@@ -3,11 +3,11 @@ title: "Set Microsoft Edge as the default browser on Windows and macOS"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 1/15/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to set Microsoft Edge as the default browser"
 ---

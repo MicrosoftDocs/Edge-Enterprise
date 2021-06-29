@@ -3,11 +3,11 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/23/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge customer adoption materials"
 ---

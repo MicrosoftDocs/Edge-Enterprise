@@ -4,11 +4,11 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: "Frequently asked questions (FAQ) about deploying Microsoft Edge in the enterprise"
     

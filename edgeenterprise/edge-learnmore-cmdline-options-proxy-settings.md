@@ -3,11 +3,11 @@ title: "Microsoft Edge proxy settings"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Use command-line options to configure proxy settings "
 ---
