@@ -4232,7 +4232,7 @@ If you enable this setting, external extensions are blocked from being installed
 
 If you disable this setting or leave it unset, external extensions are allowed to be installed.
 
-External extensions and their installation are documented at ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+External extensions and their installation are documented [here](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
 
   #### Supported features:
