@@ -3,11 +3,11 @@ title: "Microsoft Edge password manager security "
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 05/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge password manager security"
 ---
