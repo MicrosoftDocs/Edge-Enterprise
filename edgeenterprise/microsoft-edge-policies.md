@@ -3,11 +3,11 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/17/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
@@ -7046,7 +7046,7 @@ For origins not covered by the patterns specified here, the global default value
 
 Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
-For detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+For detailed information on valid URL patterns, please go [here](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 

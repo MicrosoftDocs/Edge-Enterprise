@@ -60,7 +60,8 @@ Eight new policies were added. Download the updated Administrative Templates fro
 
 #### Obsoleted Policy
 
-- |[EnableSha1ForLocalAnchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors
+- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Allow certificates signed using SHA-1 when issued by local trust anchors.
+
 
 ## Version 92.0.902.9: June 8
 
