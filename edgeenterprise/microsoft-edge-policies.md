@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/17/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,41 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies for this update.
-
-|Name|Caption|
-|--|--|
-|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
-|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS|
-|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow insecure websites to make requests to more-private network endpoints|
-|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from insecure contexts|
-|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Specify the number of days that a site remains on the local IE mode site list|
-|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
-|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
-|[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
-
-## Deprecated policies
-
-The following table lists the deprecated policies for this update.
-
-|Name|Caption|
-|--|--|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting (deprecated)|
-
-## Obsolete policies
-
-The following table lists the obsolete policies for this update.
-
-|Name|Caption|
-|--|--|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (obsolete)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
 
 ## Available policies
 
@@ -112,7 +77,7 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Control use of insecure content exceptions|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Default JavaScript setting|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Default notification setting|
-|[DefaultPluginsSetting](#defaultpluginssetting)|Default Adobe Flash setting (obsolete)|
+|[DefaultPluginsSetting](#defaultpluginssetting)|Default Adobe Flash setting (obsolete) (obsolete)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Default pop-up window setting|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
@@ -130,8 +95,8 @@ These tables list all of the browser-related group policies available in this re
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revert to legacy SameSite behavior for cookies on specified sites|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Allow notifications on specific sites|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Block notifications on specific sites|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|Allow the Adobe Flash plug-in on specific sites (obsolete)|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|Block the Adobe Flash plug-in on specific sites (obsolete)|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|Allow the Adobe Flash plug-in on specific sites (obsolete) (obsolete)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|Block the Adobe Flash plug-in on specific sites (obsolete) (obsolete)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
@@ -262,14 +227,14 @@ These tables list all of the browser-related group policies available in this re
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
-|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
+|[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete) (obsolete)|
 |[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
 |[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (obsolete)|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (obsolete) (obsolete)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
@@ -282,7 +247,7 @@ These tables list all of the browser-related group policies available in this re
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete)|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete) (obsolete)|
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (deprecated)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
@@ -352,10 +317,10 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
-|[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete) (obsolete)|
+|[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete) (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete) (obsolete)|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
@@ -369,7 +334,7 @@ These tables list all of the browser-related group policies available in this re
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete) (obsolete)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
@@ -397,6 +362,7 @@ These tables list all of the browser-related group policies available in this re
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
@@ -417,7 +383,7 @@ These tables list all of the browser-related group policies available in this re
 |[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete) (obsolete)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -426,7 +392,7 @@ These tables list all of the browser-related group policies available in this re
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete)|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete) (obsolete)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
@@ -441,7 +407,7 @@ These tables list all of the browser-related group policies available in this re
 |[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used as Microsoft Edge primary accounts|
 |[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete) (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
@@ -452,7 +418,7 @@ These tables list all of the browser-related group policies available in this re
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (obsolete)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (obsolete) (obsolete)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
@@ -468,13 +434,13 @@ These tables list all of the browser-related group policies available in this re
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
 |[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (obsolete)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (obsolete) (obsolete)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suppress the unsupported OS warning|
 |[SyncDisabled](#syncdisabled)|Disable synchronization of data using Microsoft sync services|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configure the list of types that are excluded from synchronization|
-|[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
+|[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete) (obsolete)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
-|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete)|
+|[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete) (obsolete)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
@@ -494,8 +460,8 @@ These tables list all of the browser-related group policies available in this re
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
 |[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
-|[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
+|[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete) (obsolete)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (deprecated) (obsolete) (obsolete)|
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (deprecated)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
@@ -1703,7 +1669,7 @@ Use the preceding information when configuring this policy.
 
   ### DefaultPluginsSetting
 
-  #### Default Adobe Flash setting (obsolete)
+  #### Default Adobe Flash setting (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
@@ -1744,7 +1710,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DefaultPluginsSetting
-  - GP name: Default Adobe Flash setting (obsolete)
+  - GP name: Default Adobe Flash setting (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -2932,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### Allow the Adobe Flash plug-in on specific sites (obsolete)
+  #### Allow the Adobe Flash plug-in on specific sites (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
@@ -2965,7 +2931,7 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   ##### Group Policy (ADMX) info
 
   - GP unique name: PluginsAllowedForUrls
-  - GP name: Allow the Adobe Flash plug-in on specific sites (obsolete)
+  - GP name: Allow the Adobe Flash plug-in on specific sites (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -3001,7 +2967,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### Block the Adobe Flash plug-in on specific sites (obsolete)
+  #### Block the Adobe Flash plug-in on specific sites (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
@@ -3034,7 +3000,7 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   ##### Group Policy (ADMX) info
 
   - GP unique name: PluginsBlockedForUrls
-  - GP name: Block the Adobe Flash plug-in on specific sites (obsolete)
+  - GP name: Block the Adobe Flash plug-in on specific sites (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -4232,7 +4198,7 @@ If you enable this setting, external extensions are blocked from being installed
 
 If you disable this setting or leave it unset, external extensions are allowed to be installed.
 
-External extensions and their installation are documented at ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+External extensions and their installation are documented at https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### Supported features:
@@ -4516,7 +4482,7 @@ The source code of any extension can be altered by users with developer tools, p
 
 Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
-Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Supported features:
 
@@ -4648,7 +4614,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
-This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to true, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
 
@@ -4722,6 +4688,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
       "downloads"
     ],
     "installation_mode": "force_installed",
+    "override_update_url": true,
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
     ],
@@ -4757,7 +4724,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -4815,6 +4782,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     </array>
     <key>installation_mode</key>
     <string>force_installed</string>
+    <key>override_update_url</key>
+    <true/>
     <key>runtime_allowed_hosts</key>
     <array>
       <string>*://good.contoso.com</string>
@@ -8320,7 +8289,7 @@ Use the preceding information when configuring this policy.
 
   ### NewTabPageCompanyLogo
 
-  #### Set new tab page company logo (obsolete)
+  #### Set new tab page company logo (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
@@ -8344,7 +8313,7 @@ If you enable this policy, Microsoft Edge downloads and shows the specified logo
 
 If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
 
-For help with determining the SHA-256 hash, see ./powershell/module/microsoft.powershell.utility/get-filehash.
+For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Supported features:
 
@@ -8361,7 +8330,7 @@ For help with determining the SHA-256 hash, see ./powershell/module/microsoft.po
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewTabPageCompanyLogo
-  - GP name: Set new tab page company logo (obsolete)
+  - GP name: Set new tab page company logo (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -8845,7 +8814,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 
   ### NewTabPageSetFeedType
 
-  #### Configure the Microsoft Edge new tab page experience (obsolete)
+  #### Configure the Microsoft Edge new tab page experience (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 92.
@@ -8896,7 +8865,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewTabPageSetFeedType
-  - GP name: Configure the Microsoft Edge new tab page experience (obsolete)
+  - GP name: Configure the Microsoft Edge new tab page experience (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
@@ -9454,7 +9423,7 @@ If you disable this policy, whenever the user performs an action that triggers a
 
   ### AllowPopupsDuringPageUnload
 
-  #### Allows a page to show popups during its unloading (obsolete)
+  #### Allows a page to show popups during its unloading (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
@@ -9487,7 +9456,7 @@ This policy was removed in Microsoft Edge 88 and is ignored if set.
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowPopupsDuringPageUnload
-  - GP name: Allows a page to show popups during its unloading (obsolete)
+  - GP name: Allows a page to show popups during its unloading (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -10474,14 +10443,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
     "allowed_origins": [
       "https://example.com",
       "https://.mail.example.com"
-    ], 
-    "protocol": "msteams"
-  }, 
+    ],
+    "protocol": "teams"
+  },
   {
     "allowed_origins": [
       "*"
-    ], 
-    "protocol": "msoutlook"
+    ],
+    "protocol": "outlook"
   }
 ]
 ```
@@ -10489,7 +10458,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
   ```
   
 
@@ -12652,12 +12621,13 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
   #### Supported versions:
 
   - On Windows since 83 or later
+  - On macOS since 93 or later
 
   #### Description
 
-  If you set this policy to 'ShareAllowed' (the default), users will be able to access the Windows 10 Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.
+  If you set this policy to 'ShareAllowed' (the default), users will be able to access the Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.
 
-If you set this policy to 'ShareDisallowed', users won't be able to access the Windows 10 Share experience. If the Share button is on the toolbar, it will also be hidden.
+If you set this policy to 'ShareDisallowed', users won't be able to access the Share experience. If the Share button is on the toolbar, it will also be hidden.
 
 Policy options mapping:
 
@@ -12700,6 +12670,13 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+  #### Mac information and settings
+  
+  - Preference Key Name: ConfigureShare
+  - Example value:
+``` xml
+<integer>1</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -14246,7 +14223,7 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
 
   ### EnableDeprecatedWebPlatformFeatures
 
-  #### Re-enable deprecated web platform features for a limited time (obsolete)
+  #### Re-enable deprecated web platform features for a limited time (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
@@ -14289,7 +14266,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -14323,7 +14300,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
 
-  #### Enable Domain Actions Download from Microsoft (obsolete)
+  #### Enable Domain Actions Download from Microsoft (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -14362,7 +14339,7 @@ If you don't configure this policy, the list of Domain Actions will continue to 
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnableDomainActionsDownload
-  - GP name: Enable Domain Actions Download from Microsoft (obsolete)
+  - GP name: Enable Domain Actions Download from Microsoft (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -14455,7 +14432,7 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 
   ### EnableSha1ForLocalAnchors
 
-  #### Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
+  #### Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 91.
@@ -14488,7 +14465,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnableSha1ForLocalAnchors
-  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
+  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -15401,7 +15378,7 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Use a default referrer policy of no-referrer-when-downgrade (obsolete)
+  #### Use a default referrer policy of no-referrer-when-downgrade (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
@@ -15434,7 +15411,7 @@ This enterprise policy is disabled by default.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ForceLegacyDefaultReferrerPolicy
-  - GP name: Use a default referrer policy of no-referrer-when-downgrade (obsolete)
+  - GP name: Use a default referrer policy of no-referrer-when-downgrade (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -17253,6 +17230,65 @@ Note that the policy is applied per renderer process, with the most recent value
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationCloudSiteList
+
+  #### Configure the Enterprise Mode Cloud Site List
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  The Microsoft Edge Site Lists setting in the M365 Admin Center allows you to host your site list(s) in a compliant cloud location and manage the contents of your site list(s) through the built-in experience. This setting allows you to specify which site list within the M365 Admin Center to deploy to your users. The user must be signed into Microsoft Edge with a valid work or school account. Otherwise, Microsoft Edge will not download the site list from the cloud location.
+
+This setting is applicable only when the [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) setting is configured.
+
+If you configure this policy, Microsoft Edge will use the specified site list. When enabled, you can enter the identifier of the site list that you created and published to the cloud in M365 Admin Center.
+
+This setting takes precedence over Microsoft Edge's [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy as well as Internet Explorer's site list setting (Use the Enterprise mode IE website list). If you disable or don't configure this policy, Microsoft Edge will use the [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy instead.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationCloudSiteList
+  - GP name: Configure the Enterprise Mode Cloud Site List
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationCloudSiteList
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"aba95e58-070f-4784-8dcd-e5fd46c2c6d6"
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationEnhancedHangDetection
 
   #### Configure enhanced hang detection for Internet Explorer mode
@@ -18743,7 +18779,7 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 
   ### MetricsReportingEnabled
 
-  #### Enable usage and crash-related data reporting (obsolete)
+  #### Enable usage and crash-related data reporting (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
@@ -18782,7 +18818,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   ##### Group Policy (ADMX) info
 
   - GP unique name: MetricsReportingEnabled
-  - GP name: Enable usage and crash-related data reporting (obsolete)
+  - GP name: Enable usage and crash-related data reporting (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19319,7 +19355,7 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   ### ProactiveAuthEnabled
 
-  #### Enable Proactive Authentication (obsolete)
+  #### Enable Proactive Authentication (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 90.
@@ -19354,7 +19390,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ProactiveAuthEnabled
-  - GP name: Enable Proactive Authentication (obsolete)
+  - GP name: Enable Proactive Authentication (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -20249,7 +20285,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/f
 
   ### RunAllFlashInAllowMode
 
-  #### Extend Adobe Flash content setting to all content (obsolete)
+  #### Extend Adobe Flash content setting to all content (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
@@ -20282,7 +20318,7 @@ If you disable this policy or don't configure it, Adobe Flash content from other
   ##### Group Policy (ADMX) info
 
   - GP unique name: RunAllFlashInAllowMode
-  - GP name: Extend Adobe Flash content setting to all content (obsolete)
+  - GP name: Extend Adobe Flash content setting to all content (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -20953,7 +20989,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Send site information to improve Microsoft services (obsolete)
+  #### Send site information to improve Microsoft services (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
@@ -20990,7 +21026,7 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
   ##### Group Policy (ADMX) info
 
   - GP unique name: SendSiteInfoToImproveServices
-  - GP name: Send site information to improve Microsoft services (obsolete)
+  - GP name: Send site information to improve Microsoft services (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21317,9 +21353,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context.  A SharedArrayBuffer is a binary data buffer that can be used to create views on shared memory.  SharedArrayBuffers have a memory access vulnerability in several popular CPUs.
 
-If you enable this policy, sites are allowed to use SharedArrayBuffers.
+If you enable this policy, sites are allowed to use SharedArrayBuffers with no restrictions.
 
-If you disable or don't configure this policy, sites are prevented from using SharedArrayBuffers.
+If you disable or don't configure this policy, sites are allowed to use SharedArrayBuffers only when cross-origin isolated.
 
 Microsoft Edge will require cross-origin isolation when using SharedArrayBuffers from Microsoft Edge 91 onward for Web Compatibility reasons.
 
@@ -22012,7 +22048,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### Enable stricter treatment for mixed content (obsolete)
+  #### Enable stricter treatment for mixed content (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -22047,7 +22083,7 @@ This policy does not affect other types of mixed content other than audio, video
   ##### Group Policy (ADMX) info
 
   - GP unique name: StricterMixedContentTreatmentEnabled
-  - GP name: Enable stricter treatment for mixed content (obsolete)
+  - GP name: Enable stricter treatment for mixed content (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22265,7 +22301,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   ### TLS13HardeningForLocalAnchorsEnabled
 
-  #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
+  #### Enable a TLS 1.3 security feature for local trust anchors (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
@@ -22300,7 +22336,7 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
   ##### Group Policy (ADMX) info
 
   - GP unique name: TLS13HardeningForLocalAnchorsEnabled
-  - GP name: Enable a TLS 1.3 security feature for local trust anchors (obsolete)
+  - GP name: Enable a TLS 1.3 security feature for local trust anchors (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22406,7 +22442,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### TabFreezingEnabled
 
-  #### Allow freezing of background tabs (obsolete)
+  #### Allow freezing of background tabs (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
@@ -22441,7 +22477,7 @@ If you disable this policy, no tabs will be frozen.
   ##### Group Policy (ADMX) info
 
   - GP unique name: TabFreezingEnabled
-  - GP name: Allow freezing of background tabs (obsolete)
+  - GP name: Allow freezing of background tabs (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -23756,7 +23792,7 @@ If you disable this policy, users can't access the web capture feature in Micros
 
   ### WebComponentsV0Enabled
 
-  #### Re-enable Web Components v0 API until M84 (obsolete)
+  #### Re-enable Web Components v0 API until M84 (obsolete) (obsolete)
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -23787,7 +23823,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebComponentsV0Enabled
-  - GP name: Re-enable Web Components v0 API until M84 (obsolete)
+  - GP name: Re-enable Web Components v0 API until M84 (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -23818,7 +23854,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 
   ### WebDriverOverridesIncompatiblePolicies
 
-  #### Allow WebDriver to Override Incompatible Policies (obsolete)
+  #### Allow WebDriver to Override Incompatible Policies (deprecated) (obsolete) (obsolete)
 
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
@@ -23855,7 +23891,7 @@ to override incompatible policies.
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebDriverOverridesIncompatiblePolicies
-  - GP name: Allow WebDriver to Override Incompatible Policies (obsolete)
+  - GP name: Allow WebDriver to Override Incompatible Policies (deprecated) (obsolete) (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
