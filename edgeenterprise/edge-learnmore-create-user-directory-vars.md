@@ -3,7 +3,7 @@ title: "Create Microsoft Edge user data directory variables"
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
