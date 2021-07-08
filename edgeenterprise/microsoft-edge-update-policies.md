@@ -3,11 +3,11 @@ title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/12/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom:
 description: "Documentation for all policies supported by the Microsoft Edge Updater"
@@ -23,7 +23,7 @@ For information about other policies available in Microsoft Edge, check out [Mic
 ## Available policies
 These tables lists all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-|||
+|&nbsp;|&nbsp;|
 |**-**|-|
 |**[Applications](#applications)**|[Preferences](#preferences)|
 |**[Proxy Server](#proxy-server)**|[Microsoft Edge WebView](#microsoft-edge-webview)|
