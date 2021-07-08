@@ -3,7 +3,7 @@ title: "Create Microsoft Edge user data directory variables"
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -57,7 +57,7 @@ Microsoft Edge supports the following path variables.
 | **${global_app_data}** | The system-wide Application Data folder. Example: *C:\AppData* |
 | **${program_files}** | The Program Files folder for the current process. This  folder  depends on whether it's a 32-bit or 64-bit process. Example resolution: *C:\Program Files (x86)* |
 | **${windows}** | The Windows folder. Example: *C:\Windows* |
-| **${client_name)** | The name of the client PC connected to an RDP or Citrix session. This variable is empty if it's used from a local session. If it's used in a path, prefix it with something that's guaranteed not to be empty. Example: *C:\edge_profiles\session_${client_name}* resolves to *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* and *C:\edge_profiles\session_&lt;SomePCname&gt;* for remote sessions. |
+| **${client_name}** | The name of the client PC connected to an RDP or Citrix session. This variable is empty if it's used from a local session. If it's used in a path, prefix it with something that's guaranteed not to be empty. Example: *C:\edge_profiles\session_${client_name}* resolves to *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* and *C:\edge_profiles\session_&lt;SomePCname&gt;* for remote sessions. |
 | **${session_name}** | The name of the active session. Use this name to distinguish multiple simultaneously connected remote sessions that are using a single user profile. Example: *WinSta0 for local desktop sessions* |
 
 #### macOS only
