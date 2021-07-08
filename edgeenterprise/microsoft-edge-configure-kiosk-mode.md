@@ -94,7 +94,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session. Replace "value" in the next example with the number of minutes.
+- **--kiosk-idle-timeout-minutes=**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session by closing the browser. Note: this flag will not restart Microsoft Edge after it is closed. A separate technology, such as Assigned Access or Shell Launch is required to automatically restart Edge after the idle timeout. Replace "value" in the next example with the number of minutes.
 
    ```
    --kiosk-idle-timeout-minutes=value
