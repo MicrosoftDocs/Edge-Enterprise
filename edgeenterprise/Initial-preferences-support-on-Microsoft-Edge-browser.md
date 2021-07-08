@@ -77,18 +77,18 @@ Apply the initial_preferences file to users' computers at the same time as Micro
 
         **Location for initial_preferences file for Windows (AMD64 and ARM64) is:** 
 
-        Stable: C:\Program Files (x86)\Microsoft\Edge\Application 
+        `Stable: C:\Program Files (x86)\Microsoft\Edge\Application 
         Beta: C:\Program Files (x86)\Microsoft\Edge Beta\Application 
         Canary: %LOCALAPPDATA%\Microsoft\Edge SxS\Application 
         Dev: C:\Program Files (x86)\Microsoft\Edge Dev\Application 
-        **Note**: The initial_preferences file needs to be added to the same folder as the msedge.exe file on users' Windows computers.  
+        **Note**: The initial_preferences file needs to be added to the same folder as the msedge.exe file on users' Windows computers.`
 
         **Location for initial_preferences file for macOS:**
 
-        Stable: "~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"   
+        `Stable: "~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"   
         Beta: “~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences" 
         Canary: “~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences" 
-        Dev: "~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences" 
+        Dev: "~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences"` 
 
 ## Tip: MSI / Pkg Deployment and initial_preferences interaction
 
