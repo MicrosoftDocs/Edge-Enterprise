@@ -75,20 +75,20 @@ Customize with your preferences in the downloaded initial_preferences file.  Val
 
 Apply the initial_preferences file to users' computers at the same time as Microsoft Edge Browser is deployed and any policies are applied. Place the initial_preferences file in the following location on the device.
 
-        **Location for initial_preferences file for Windows (AMD64 and ARM64) is:** 
+### Location for initial_preferences file for Windows (AMD64 and ARM64) is:
 
-        `Stable: C:\Program Files (x86)\Microsoft\Edge\Application 
-        Beta: C:\Program Files (x86)\Microsoft\Edge Beta\Application 
-        Canary: %LOCALAPPDATA%\Microsoft\Edge SxS\Application 
-        Dev: C:\Program Files (x86)\Microsoft\Edge Dev\Application 
-        **Note**: The initial_preferences file needs to be added to the same folder as the msedge.exe file on users' Windows computers.`
+Stable: C:\Program Files (x86)\Microsoft\Edge\Application 
+Beta: C:\Program Files (x86)\Microsoft\Edge Beta\Application 
+Canary: %LOCALAPPDATA%\Microsoft\Edge SxS\Application 
+Dev: C:\Program Files (x86)\Microsoft\Edge Dev\Application 
+**Note**: The initial_preferences file needs to be added to the same folder as the msedge.exe file on users' Windows computers.  
 
-        **Location for initial_preferences file for macOS:**
+### Location for initial_preferences file for macOS:
 
-        `Stable: "~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"   
-        Beta: “~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences" 
-        Canary: “~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences" 
-        Dev: "~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences"` 
+Stable: "~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"   
+Beta: “~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences" 
+Canary: “~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences" 
+Dev: "~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences" 
 
 ## Tip: MSI / Pkg Deployment and initial_preferences interaction
 
