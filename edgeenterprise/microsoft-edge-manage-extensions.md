@@ -3,11 +3,11 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Manage Microsoft Edge extensions in the enterprise"
 ---

@@ -3,11 +3,11 @@ title: "Backwards compatibility for the Enterprise New tab page"
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 10/28/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Backwards compatibility for the Enterprise New tab page"
 ---
