@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge customer adoption materials"
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge customer adoption materials"
 ---
@@ -21,7 +21,7 @@ Check back for more materials as they're made available.
 ## Customer adoption kit
 
 The customer adoption kit contains the following material:
-- Internet Explorer Retirement Kit **(Only Available in English)** 
+- Internet Explorer Retirement Kit **(Available in English, German, Spanish, French, Japanese, Korean, Chinese (Simplified))**
     - Adoption emails
     - Flyers
     - Infographic

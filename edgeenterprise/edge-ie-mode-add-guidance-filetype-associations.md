@@ -3,11 +3,11 @@ title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Associate file extensions with Internet Explorer mode"
 ---
@@ -89,9 +89,10 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+
 ## Configuring file types to open in Internet Explorer mode
 
-Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](./microsoft-edge-policies.md#show-context-menu-to-open-a-link-in-internet-explorer-mode).
+Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
 You can define file types this option should apply to, by specifying file extensions in this policy [Open local files in Internet Explorer mode file extension allow list](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 

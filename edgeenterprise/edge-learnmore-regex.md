@@ -3,11 +3,11 @@ title: "Regular Expression 2 syntax"
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/09/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Regular Expression 2 syntax"
 ---
@@ -465,7 +465,7 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | \V | verynomagic (NOT SUPPORTED) VIM |
 | \Z | ignore differences in Unicode combining characters (NOT SUPPORTED) VIM |
 
-|&nbsp;| Magic |
+| &nbsp; | Magic |
 | --- | --- |
 | (?{code}) | arbitrary Perl code (NOT SUPPORTED) PERL |
 | (??{code}) | postponed arbitrary Perl code (NOT SUPPORTED) PERL |
