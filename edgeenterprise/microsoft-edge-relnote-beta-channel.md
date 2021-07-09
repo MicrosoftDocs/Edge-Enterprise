@@ -19,6 +19,10 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 92.0.902.40: July 6
+
+Fixed various bugs and performance issues.
+
 ## Version 92.0.902.22: June 21
 
 ### Feature updates
@@ -64,7 +68,6 @@ Eight new policies were added. Download the updated Administrative Templates fro
 #### Obsoleted Policy
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Allow certificates signed using SHA-1 when issued by local trust anchors.
-
 
 ## Version 92.0.902.9: June 8
 
