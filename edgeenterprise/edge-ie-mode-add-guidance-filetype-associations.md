@@ -3,16 +3,19 @@ title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Associate file extensions with Internet Explorer mode"
 ---
 
 # Associate file extensions with Internet Explorer mode
+
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to associate Microsoft Edge with Internet Explorer mode with file extensions for desktop applications.
 
@@ -24,7 +27,7 @@ This article explains how to associate Microsoft Edge with Internet Explorer mod
 The following instructions show an entry that associates Microsoft Edge with IE mode with the .mht file type. Use the following steps as a guide for setting a file association.
 
 > [!NOTE]
-> You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+> You can set specific file extensions to open in Internet Explorer mode by default using the policy to **Set a default associations configuration file**. For more information, see [Policy CSP - ApplicationDefaults](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 1. Define a new ProgID with the Microsoft Edge channel to use to open with Internet Explorer mode. The ProgID includes the application name and Icon and the full path to msedge.exe.
 
@@ -86,16 +89,17 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+
 ## Configuring file types to open in Internet Explorer mode
 
-Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
+Starting Edge 88, you can configure specific file type links to open in Internet Explorer mode using the policy [Show context menu to open links in Internet Explorer mode](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
-You can define file types this option should apply to, by specifying file extensions in this policy [Open local files in Internet Explorer mode file extension allow list](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist). 
+You can define file types this option should apply to, by specifying file extensions in this policy [Open local files in Internet Explorer mode file extension allow list](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 
 ## See also
 
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Configurable sites information](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Setting file type associations](https://docs.microsoft.com/windows/win32/shell/fa-file-types)
+- [About IE mode](./edge-ie-mode.md)
+- [Configurable sites information](./edge-learnmore-configurable-sites-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Setting file type associations](/windows/win32/shell/fa-file-types)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

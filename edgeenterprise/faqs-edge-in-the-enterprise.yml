@@ -4,11 +4,11 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 11/04/2020
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: "Frequently asked questions (FAQ) about deploying Microsoft Edge in the enterprise"
     
@@ -25,17 +25,13 @@ sections:
         answer: |
           In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **Settings**. Select **About Microsoft Edge** to see your version of Microsoft Edge.
 
-      - question: Will Internet Explorer 11 continue to receive updates?
+      - question: What about Internet Explore 11?
         answer: |
-          We're committed to keeping Internet Explorer a supported, reliable, and safe browser. Internet Explorer is still a component of Windows and follows the support lifecycle of the operating system on which it's installed. For more information, see [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/). While we continue to support and update Internet Explorer, the latest features and platform updates will be available only in Microsoft Edge.
-          
-      - question: Can I run the current version of Microsoft Edge (Microsoft Edge Legacy) side by side when I'm trying the new version?
-        answer: |
-          Yes, you can. After January 15th, 2020 the new version of Microsoft Edge (Chromium-based) will be distributed to Home and Pro Edition devices running Windows 10 version 1803 or newer. Domain-joined devices are excluded from this update. For more information, see [Overview of Microsoft Edge updates](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). You can have a side-by-side installation of Microsoft Edge Legacy as you evaluate the next version of Microsoft Edge. For more information, see [How to access the old version of Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). Additionally, each of the new Microsoft Edge channels also supports side-by-side installations. For more information, see [Overview of Microsoft Edge channels](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
-          
+          The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see the [FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. Learn more [here](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+      
       - question: Does Microsoft Edge (Chromium-based) support ActiveX controls or BHOs like Silverlight or Java?
         answer: |
-          No. Microsoft Edge doesn't support ActiveX controls or Browser Help Objects (BHOs) like Silverlight or Java. However, if you're running web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer 11, you can configure them to run in IE mode on the new Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+          No. Microsoft Edge doesn't support ActiveX controls or Browser Help Objects (BHOs) like Silverlight or Java. However, if you're running web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer 11, you can configure them to run in IE mode on the new Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](./edge-ie-mode.md).
           
       - question: Will favorites be ported over from the current version of Microsoft Edge or will I have to re-add them?
         answer: |
@@ -43,7 +39,7 @@ sections:
           
       - question: What's the difference between the Stable, Beta, Dev, and Canary channels/builds?
         answer: |
-          The Stable channel of the next version of Microsoft Edge is the most stable channel we offer with enterprise-focused features ready for you to [pilot and evaluate](https://aka.ms/EdgeEnterprise) across your organization. The Beta channel allows you to validate the next Stable release with a representative set of users. The Stable and Beta channels are updated approximately every six weeks. The Dev and Canary channels continue to update weekly and daily, respectively. Offline installers (MSIs and PKG files) are available only for Stable, Beta, and Dev channels. For more information, see [Overview of Microsoft Edge channels](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+          The Stable channel of the next version of Microsoft Edge is the most stable channel we offer with enterprise-focused features ready for you to [pilot and evaluate](https://aka.ms/EdgeEnterprise) across your organization. The Beta channel allows you to validate the next Stable release with a representative set of users. The Stable and Beta channels are updated approximately every six weeks. The Dev and Canary channels continue to update weekly and daily, respectively. Offline installers (MSIs and PKG files) are available only for Stable, Beta, and Dev channels. For more information, see [Overview of Microsoft Edge channels](./microsoft-edge-channels.md).
           
       - question: What kind of extension support do I have with the new version of Microsoft Edge?
         answer: |
@@ -57,7 +53,7 @@ sections:
         answer: |
           Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) that can be used for the initial deployment of the new Microsoft Edge via WSUS. After initial deployment, automatic updates are configured by default. For more information, see [Update in WSUS for the new Microsoft Edge for Windows 10, version 1809, 1903, 1909, and 2004: October 29, 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
           
-          Manual updates can be done through a configuration management tool, such as [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+          Manual updates can be done through a configuration management tool, such as [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
       
       - question: Are master preferences supported?
         answer: |
@@ -66,5 +62,5 @@ sections:
 
 additionalContent: |
   ## See also
-  - [Microsoft Edge documentation landing page](https://docs.microsoft.com/DeployEdge/)
+  - [Microsoft Edge documentation landing page](./index.yml)
   - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

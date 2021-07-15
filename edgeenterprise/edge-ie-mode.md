@@ -1,23 +1,26 @@
 ---
-title: "About IE mode"
+title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn how to use Microsoft Edge with IE mode."
+description: "Learn how Internet Explorer mode in Microsoft Edge provides access to sites that need Internet Explorer 11 and access to modern sites."
 ---
 
-# About IE mode
+# What is Internet Explorer (IE) mode?
 
-This article provides an overview and prerequisites for using Microsoft Edge with IE mode.
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
+We created Internet Explorer (IE) mode in Microsoft Edge for organizations that still need Internet Explorer 11 for backward compatibility with existing websites but also need a modern browser. This feature makes it easier for organizations to use one browser, for legacy web/apps or for a modern web/app. This article provides an introduction to using Microsoft Edge with IE mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
+> This article applies to Microsoft Edge version 77 or later.
 
 ## What is IE mode?
 
@@ -42,7 +45,7 @@ Only those sites that you specifically configure (via policy) will use IE mode, 
 - ActiveX controls (such as Java or Silverlight)
 - Browser Helper Objects 
 - Internet Explorer settings and Group Policies that affect the security zone settings and Protected Mode
-- The F12 developer tools for IE, when launch with [IEChooser](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- The F12 developer tools for IE, when launch with [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
 - Microsoft Edge extensions (Extensions that interact with the IE page content directly are not supported.)
 
 ### IE mode doesn't support the following Internet Explorer functionality
@@ -82,10 +85,10 @@ The following prerequisites apply to using Microsoft Edge with IE mode.
   > [!IMPORTANT]
   > ** Windows 7 and Windows Server 2008 R2 will be supported by Microsoft Edge even after those operating systems go out of support. In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). We recommend that you upgrade to a supported operating system as soon as possible in order to remain secure. Support for Microsoft Edge with the Extended Security Updates should be considered a temporary bridge to getting to a supported OS state.
 
-2. The Microsoft Edge administrative template. For more information, see [Configure Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+2. The Microsoft Edge administrative template. For more information, see [Configure Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer 11 enabled in Windows Features.
 
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

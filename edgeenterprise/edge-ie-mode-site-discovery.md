@@ -1,18 +1,21 @@
 ---
 title: "Enterprise Site Discovery Step by Step Guide"
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/07/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Use Enterprise Site Discovery to Prepare for IE mode"
 ---
 
 # Enterprise Site Discovery Step-by-Step Guide
+
+>[!Note]
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article provides a step-by-step guide to using Enterprise Site Discovery with Microsoft Endpoint Configuration Manager.
 
@@ -45,7 +48,7 @@ Before you can connect to Windows Management Instrumentation (WMI) to retrieve s
 
 From the **Enterprise Site Discovery Setup and Configuration Package**, extract the contents to a folder in your definitive software library file share. Example: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Next, create a package in Microsoft Endpoint Configuration Manager, as described in the [documentation](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), selecting the following options:
+Next, create a package in Microsoft Endpoint Configuration Manager, as described in the [documentation](/configmgr/apps/deploy-use/packages-and-programs), selecting the following options:
 
 - On the **Package** page, select **Name** and specify the name **Enable Site Discovery**
 - On the **Package** page, select **This package contains source files**
@@ -63,11 +66,11 @@ Next, create a package in Microsoft Endpoint Configuration Manager, as described
 After creating the package, double-click on the package name **Enable Site Discovery** to view its properties. In the **After running** property, select **Configuration manager restarts computer**. WMI data collection will begin after the devices reboot.
 
 > [!NOTE]
-> You can configure the amount of time a user has to restart the device as described in the [client settings documentation](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings#computer-restart).
+> You can configure the amount of time a user has to restart the device as described in the [client settings documentation](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
 ## Configure Enterprise Site Discovery via Group Policy
 
-With Enterprise Site Discovery enabled, you can configure what data you'll collect. Consider local laws and regulatory requirements as described [here](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+With Enterprise Site Discovery enabled, you can configure what data you'll collect. Consider local laws and regulatory requirements as described [here](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
 1. Open Group Policy Editor
 2. Click **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer** 
@@ -125,7 +128,7 @@ The Enterprise Site Discovery package includes two sample reports. One report sh
 Use the following procedure to create a sample report that uses three data sources: the sites a user visits, information about their system, and the document modes used by the sites. This report helps you identify sites that may depend on legacy document modes.
 
 1. Copy the report **SCCM_Report-Site_Discovery.rdl** to your Configuration Manager server.
-2. Install [Microsoft Report Builder](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Double-click **SCCM_Report-Site_Discovery.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, click **No**.
 5. After the report opens, expand **Data Sources** and double-click **DataSource1**.
@@ -147,7 +150,7 @@ Use the following procedure to create a sample report that uses three data sourc
 Use the following procedure to create a sample report that uses one data source: the sites that are using ActiveX controls. Since Internet Explorer is the only browser that support ActiveX controls, these sites may require IE mode.
 
 1. Copy the report **SCCM Report Sample - ActiveX.rdl** to your Configuration Manager server.
-2. Install [Microsoft Report Builder](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Double-click **SCCM Report Sample - ActiveX.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, click **No**.
 5. After the report opens, expand **Data Sources** and double-click **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
@@ -185,7 +188,7 @@ Now that you've customized and uploaded the reports, you can view them in Config
 
 ## Disable Enterprise Site Discovery
 
-When you're finished collecting data, you should disable Enterprise Site Discovery. Create a second package to disable Enterprise Site Discovery in Microsoft Endpoint Configuration Manager, as described in the [documentation](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), selecting the following options:
+When you're finished collecting data, you should disable Enterprise Site Discovery. Create a second package to disable Enterprise Site Discovery in Microsoft Endpoint Configuration Manager, as described in the [documentation](/configmgr/apps/deploy-use/packages-and-programs), selecting the following options:
 
 - On the **Package** page, select **Name** and specify the name **Disable Site Discovery**
 - On the **Package** page, select **This package contains source files**
@@ -201,6 +204,6 @@ When you're finished collecting data, you should disable Enterprise Site Discove
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [About IE mode](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Additional Enterprise Site Discovery information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
+- [About IE mode](./edge-ie-mode.md)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Additional Enterprise Site Discovery information](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)

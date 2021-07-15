@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge rollback for enterprises"
-ms.author: v-danwes
+ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 02/04/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "How to roll back Microsoft Edge to a previous version"
 ---
@@ -43,7 +43,7 @@ Use the following steps to roll back manually with an MSI.
 1. Disable Microsoft Edge Updates.
 
    > [!NOTE]
-   > We recommend that you install the most current Administrative templates. For more information, see [Download and install the Microsoft Edge administrative template](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
+   > We recommend that you install the most current Administrative templates. For more information, see [Download and install the Microsoft Edge administrative template](./configure-microsoft-edge.md#1-download-and-install-the-microsoft-edge-administrative-template).
 
    - Open the local Group Policy Editor and go to *Computer Configuration>Administrative Templates>Microsoft Edge Update>Applications>Microsoft Edge>*.
    - Select **Update policy override** and then select **Enabled**.
@@ -60,7 +60,7 @@ Use the following steps to roll back manually with an MSI.
    - Type the following command, where: *C:\Users\username\Desktop\test* is the path to the MSI you downloaded, and FileName is the name of the .msi file:<br>
  `C:\Users\username\Desktop\test>msiexec /I FileName.msi /qn ALLOWDOWNGRADE=1`<br>
      > [!NOTE]
-     > For more information about msiexec, see [msiexec](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
+     > For more information about msiexec, see [msiexec](/windows-server/administration/windows-commands/msiexec).
    - Close and reopen Microsoft Edge to verify that the rollback worked. Under **Settings and more** (ALT + F), go to **Settings** and select **About Microsoft Edge**.
 
 ## Enable rollback with Microsoft Edge update and Group Policy
@@ -108,7 +108,7 @@ We recommend forcing a restart on users after rollback is enabled.
 
 A snapshot is a version stamped copy of the user data folder. During a version upgrade, a snapshot of the previous version is made and stored in the snapshot folder. After rollback occurs, a version matched snapshot will be copied into the new user data folder and deleted from the snapshot folder. If no version matched snapshot is available upon downgrade, rollback will rely on Sync to populate user data into the new Microsoft Edge version.
 
-The [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) group policy allows you to set a limit for the number of snapshots that can be retained at any given time. By default, three snapshots are kept. You can configure this policy to keep from 0-5 snapshots.
+The [UserDataSnapshotRetentionLimit](./microsoft-edge-policies.md#userdatasnapshotretentionlimit) group policy allows you to set a limit for the number of snapshots that can be retained at any given time. By default, three snapshots are kept. You can configure this policy to keep from 0-5 snapshots.
 
 ## Frequently asked questions
 
@@ -118,13 +118,13 @@ The [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/micro
 
 1. If the Install update group policy is disabled, rollback won't occur.
 
-   - To use rollback, make sure Install is set to **Enabled**. When this policy is disabled, it prevents Microsoft Edge channels from being installed. For more information, see [Install](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#install).
+   - To use rollback, make sure Install is set to **Enabled**. When this policy is disabled, it prevents Microsoft Edge channels from being installed. For more information, see [Install](./microsoft-edge-update-policies.md#install).
 
 2. If Enlightenment Updates aren't present, Microsoft Edge installations will be blocked unless *Allow Microsoft Edge Side by Side browser experience* is enabled.
 
    - For Windows versions 1903 and 1909: If your last update was before October 2019, you may have this issue.
    - For Windows versions 1709, 1803, and 1809: If your last update was before November 2019, you may have this issue.<br>
-For more information, see [Windows updates to support the next version of Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-windows-updates)
+For more information, see [Windows updates to support the next version of Microsoft Edge](./microsoft-edge-sysupdate-windows-updates.md)
 
 #### The following error message was shown after using the Command Prompt and rollback didn't occur. What's wrong?
 
@@ -149,11 +149,11 @@ Some common errors that prevent rollback are:
 
 ### I set all the group policies correctly, but rollback didn't execute. What happened?
 
-Microsoft Edge Update hasn't run a check for updates yet. By default, auto-update checks for updates every 10 hours. You can fix this issue by changing Microsoft Edge Update's polling interval with the Auto-update check period override group policy. For more information, see the [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) policy.
+Microsoft Edge Update hasn't run a check for updates yet. By default, auto-update checks for updates every 10 hours. You can fix this issue by changing Microsoft Edge Update's polling interval with the Auto-update check period override group policy. For more information, see the [AutoUpdateCheckPeriodMinutes](./microsoft-edge-update-policies.md#autoupdatecheckperiodminutes) policy.
 
 ### As an IT admin, I followed all the steps for rollback correctly. Only a portion of my user group was rolled back. Why haven't the other users been rolled back yet?
 
-The group policy setting hasn't synced to all the clients yet. When admins set a group policy, clients don't receive these settings instantaneously. You can [Force a Remote Group Policy Refresh](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
+The group policy setting hasn't synced to all the clients yet. When admins set a group policy, clients don't receive these settings instantaneously. You can [Force a Remote Group Policy Refresh](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
 ## See also
 

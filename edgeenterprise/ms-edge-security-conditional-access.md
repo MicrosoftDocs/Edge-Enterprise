@@ -3,11 +3,11 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: srugh
 author: srugh
 manager: seanlyn
-ms.date: 10/02/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge and Conditional Access"
 ---
@@ -41,7 +41,7 @@ This support is available across all platforms, including all supported versions
 
 ### How to deploy Conditional Access in Azure Active Directory
 
-[Deploy Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help deploy Conditional Access in Azure Active Directory.
+[Deploy Conditional Access](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help deploy Conditional Access in Azure Active Directory.
 
 ## See also
 

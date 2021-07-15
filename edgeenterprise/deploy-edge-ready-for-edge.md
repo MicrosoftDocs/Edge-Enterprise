@@ -3,11 +3,11 @@ title: "Ready for Microsoft Edge"
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/06/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Ready for Microsoft Edge"
 ---
@@ -39,6 +39,7 @@ The following table lists provider support statements for Microsoft Edge.
 
 | Provider |  Product | Support statement |
 |-|-|-|
+| Accurent  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
 | Acumatica  | Acumatica ERP  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
 | Adaptive (Workday)    | Workday Adaptive Planning   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |

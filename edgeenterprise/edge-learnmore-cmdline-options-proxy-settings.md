@@ -3,11 +3,11 @@ title: "Microsoft Edge proxy settings"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Use command-line options to configure proxy settings "
 ---
@@ -27,11 +27,11 @@ There are scenarios where users request an alternative to using the system's def
 
 These command-line options correspond to the following policies in the **Proxy server** group:
 
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist)
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode)
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl)
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver)
-- [ProxySettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxysettings)
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist)
+- [ProxyMode](./microsoft-edge-policies.md#proxymode)
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl)
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver)
+- [ProxySettings](./microsoft-edge-policies.md#proxysettings)
 
 ## Command-line options for proxy settings
 

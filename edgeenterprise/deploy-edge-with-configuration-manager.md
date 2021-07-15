@@ -3,11 +3,11 @@ title: "Deploy Microsoft Edge using System Center Configuration Manager"
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 06/29/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to deploy Microsoft Edge with System Center Configuration Manager (SCCM)."
 ---
@@ -21,7 +21,7 @@ This article shows you how to automate a Microsoft Edge deployment by using Syst
 
 ## Before you begin
 
-Review the information in [Introduction to application management in Configuration Manager](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management). This application management article will help you understand the terminology used in this article and is a guide to preparing your site to install applications.
+Review the information in [Introduction to application management in Configuration Manager](/sccm/apps/understand/introduction-to-application-management). This application management article will help you understand the terminology used in this article and is a guide to preparing your site to install applications.
 
 Download the Microsoft Edge Enterprise installation files (**MicrosoftEdgeDevEnterpriseX64.msi** and/or **MicrosoftEdgeDevEnterpriseX86.msi**) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise).
 
@@ -89,7 +89,7 @@ After you create an application, you can refine the application settings if you 
 
    ![Configure the application properties](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- In the **<application name\> Application Properties** dialog page, you'll see a tabbed view of the items that you can configure to change the behavior of the application. For more information about the settings you can configure, see [Create applications](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications).
+ In the **<application name\> Application Properties** dialog page, you'll see a tabbed view of the items that you can configure to change the behavior of the application. For more information about the settings you can configure, see [Create applications](/sccm/apps/deploy-use/create-applications).
 
 For this example, you'll change some properties of the application's deployment type. To change the deployment properties:
 
@@ -132,7 +132,7 @@ For this example, you'll change some properties of the application's deployment 
 To deploy the updated application to PCs, make sure that the application content is copied to a distribution point. PCs access the distribution point to install the application.  
 
 >[!TIP]
->To find out more about distribution points and content management in Configuration Manager, see [Deploy and manage content for System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
+>To find out more about distribution points and content management in Configuration Manager, see [Deploy and manage content for System Center Configuration Manager](/sccm/core/servers/deploy/configure/deploy-and-manage-content).  
 
 1. In the Configuration Manager console, click **Software Library**.  
 
@@ -221,7 +221,7 @@ Use the information in the following **Monitor the application** section to see 
     - **Unknown**: Configuration Manager was unable to report the status of the deployment. Check back again later.  
 
     >[!TIP]
-    >There are several ways you can monitor application deployments. For more information, see [Monitor applications from the System Center Configuration Manager console](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+    >There are several ways you can monitor application deployments. For more information, see [Monitor applications from the System Center Configuration Manager console](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
 ## End-user experience  
 
@@ -230,4 +230,4 @@ Users who have PCs that are managed by Configuration Manager and are running Win
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Create and deploy an application with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [Create and deploy an application with System Center Configuration Manager](/sccm/apps/get-started/create-and-deploy-an-application)

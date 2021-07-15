@@ -1,13 +1,13 @@
 ---
 title: "Diagnose and fix Microsoft Edge sync issues"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
 ---
@@ -44,10 +44,10 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 > [!NOTE]
 > Because the source of this error is usually requires a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin and not by end users.
 
-1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://docs.microsoft.com/azure/information-protection/activate-office365). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
-2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. The instructions for checking the AIP status and, if necessary, activating AIP are [here](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn off ESR if this step fixes the issue.
-4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet to see if scoping is enabled. The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
+1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](/azure/information-protection/activate-office365). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. The instructions for checking the AIP status and, if necessary, activating AIP are [here](/azure/information-protection/activate-office365).
+3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). The instructions for enabling ESR are [here](/azure/active-directory/devices/enterprise-state-roaming-enable). Note that ESR does not need to stay on. You can turn off ESR if this step fixes the issue.
+4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet to see if scoping is enabled. The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -66,9 +66,9 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. In the example below, onboarding has scoped AIP to the indicated security group and the scoping should be removed with the [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet.
+   If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. In the example below, onboarding has scoped AIP to the indicated security group and the scoping should be removed with the [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell applet.
 
-5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell applet shows the status of the service.
+5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps)  PowerShell applet shows the status of the service.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Check to see if IPCv3Service is enabled.":::
 
@@ -94,7 +94,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
       - [https://api.aadrm.com](https://api.aadrm.com) (for most tenants)
       - [https://api.aadrm.de](https://api.aadrm.de) (for tenants in Germany)
       - [https://api.aadrm.cn](https://api.aadrm.cn) (for tenants in China)
-   - [Windows Notification Service endpoints](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Windows Notification Service endpoints](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. If the issue still isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
@@ -111,7 +111,7 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
 
 ### Issue: “Sync has been turned off by your administrator.”
 
-Make sure that the [SyncDisabled policy](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled)  is not set.
+Make sure that the [SyncDisabled policy](./microsoft-edge-policies.md#syncdisabled)  is not set.
 
 ## See also
 

@@ -3,11 +3,11 @@ title: "Automate Microsoft Edge for macOS deployment with Jamf"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2019
+ms.date: 06/29/2021
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "How to automate Microsoft Edge for macOS deployment with Jamf."
 ---
@@ -92,4 +92,4 @@ Congratulations! You’ve just finished configuring Jamf to deploy Microsoft Edg
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Integrate Jamf with Microsoft Intune](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Integrate Jamf with Microsoft Intune](/intune/conditional-access-integrate-jamf)

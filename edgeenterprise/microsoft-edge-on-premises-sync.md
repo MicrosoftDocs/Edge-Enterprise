@@ -1,13 +1,13 @@
 ---
 title: "On-premises sync for Active Directory (AD) users"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 02/12/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "On-premises sync for Active Directory (AD) users"
 ---
@@ -33,15 +33,15 @@ To use on-premises sync, you have to enable it, associate a profile with an AD a
 
 ### Enable on-premises sync
 
-To enable on-premises sync in Microsoft Edge, configure the [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled) policy.
+To enable on-premises sync in Microsoft Edge, configure the [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled) policy.
 
 ### Ensure that a profile is associated with an Active Directory account
 
-On-premises sync only works with the profile associated with an Active Directory (AD) account. If no such profile exists, on-premises sync will not function. To ensure that users sign on with an AD account, configure the [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) policy. For on-premises sync, Microsoft Edge only relies on AD to establish an identity for the user data, and there's no direct relationship between how Microsoft Edge reads and writes on-premises data to how the admin has configured roaming for an AD user.
+On-premises sync only works with the profile associated with an Active Directory (AD) account. If no such profile exists, on-premises sync will not function. To ensure that users sign on with an AD account, configure the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. For on-premises sync, Microsoft Edge only relies on AD to establish an identity for the user data, and there's no direct relationship between how Microsoft Edge reads and writes on-premises data to how the admin has configured roaming for an AD user.
 
 ### Change the location of the user data (optional)
 
-By default, the user data is stored in a filed named **profile.pb** in *%APPDATA%/Microsoft/Edge*. To change the location of this file, configure the [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) policy.
+By default, the user data is stored in a filed named **profile.pb** in *%APPDATA%/Microsoft/Edge*. To change the location of this file, configure the [RoamingProfileLocation](./microsoft-edge-policies.md#roamingprofilelocation) policy.
 
 ## Changes in the user experience when on-premises sync is enabled
 
@@ -62,7 +62,7 @@ Because on-premises sync works by moving a user data file between computers, on-
 
 ### Using other sync policies with on-premises sync
 
-The [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) policy can be used to selectively disable either favorites or settings sync if desired. The [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) policy has no impact on on-premises sync.
+The [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) policy can be used to selectively disable either favorites or settings sync if desired. The [SyncDisabled](./microsoft-edge-policies.md#syncdisabled) policy has no impact on on-premises sync.
 
 ## See also
 

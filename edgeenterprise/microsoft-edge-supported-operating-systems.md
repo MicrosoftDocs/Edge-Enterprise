@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 02/02/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,7 @@ This article describes the supported operating systems that apply to Microsoft E
 
 > [!NOTE]
 > Product functionality and feature availability may vary on older operating systems. To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below. This guidance includes the latest cumulative update, as applicable.
+
 
 Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
@@ -69,6 +70,10 @@ Microsoft Edge for Android can be installed on tablets and phones that meet the 
 ### Apple Silicon Macs
 
 Microsoft Edge native support as of Stable version 88 for Apple Silicon Macs.
+
+### Linux
+
+Preview builds are available for Linux. For any issues related to Microsoft Edge on Linux, either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. Enterprise support for Microsoft Edge on Linux is coming at a later time.
 
 ### Chromebooks
 

@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge and mixed content downloads"
-ms.author: kele
+ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 06/29/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge and mixed content downloads"
 ---
@@ -53,7 +53,7 @@ If a user decides to keep the download, they are prompted to confirm their actio
 
 ## Supporting policies
 
-Enterprises that want to exclude mixed content blocking from specific websites can use the [InsecureContentAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) policy to do so.
+Enterprises that want to exclude mixed content blocking from specific websites can use the [InsecureContentAllowedForUrls](./microsoft-edge-policies.md#insecurecontentallowedforurls) policy to do so.
 
 ## Content license
 

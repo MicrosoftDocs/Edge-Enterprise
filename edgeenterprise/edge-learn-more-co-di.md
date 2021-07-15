@@ -1,13 +1,13 @@
 ---
 title: "ClickOnce and DirectInvoke in Microsoft Edge"
-ms.author: kele
+ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 09/10/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about ClickOnce and DirectInvoke in Microsoft Edge."
 ---
@@ -18,7 +18,7 @@ ClickOnce and DirectInvoke are features available in IE and Microsoft Edge (vers
 
 For more information about these features, see:
 
-- [ClickOnce](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
 - [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
@@ -82,7 +82,7 @@ The second popup only shows up if:
 
 ## ClickOnce and DirectInvoke policies
 
-There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users. These two policies are [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) and [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled). These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.
+There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users. These two policies are [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) and [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.
 
 ## ClickOnce and DirectInvoke behavior
 
@@ -130,6 +130,6 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 ## See also
 
-- [ClickOnce security and deployment](https://go.microsoft.com/fwlink/?linkid=2099880)
-- [DirectInvoke in Internet Explorer](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [ClickOnce security and deployment](/visualstudio/deployment/clickonce-security-and-deployment)
+- [DirectInvoke in Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)

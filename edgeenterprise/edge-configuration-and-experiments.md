@@ -3,11 +3,11 @@ title: "Microsoft Edge configurations and experimentation"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge configurations and experimentation"
 ---
@@ -38,7 +38,7 @@ Microsoft Edge builds have features and functionality that are still in developm
 
 In all the preceding scenarios, the service delivers the feature flag values to the browser client so they can be applied. Depending on the update, configurations are applied immediately or when the user restarts the browser.
 
-Microsoft Edge's interaction with this service is controlled by settings in the [ExperimentationAndConfigurationServiceControl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) policy. You can configure policy settings to:
+Microsoft Edge's interaction with this service is controlled by settings in the [ExperimentationAndConfigurationServiceControl](./microsoft-edge-policies.md#experimentationandconfigurationservicecontrol) policy. You can configure policy settings to:
 
 - Retrieve configurations only
 - Retrieve configurations and experiments
@@ -50,4 +50,4 @@ Microsoft Edge's interaction with this service is controlled by settings in the 
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://www.microsoftedgeinsider.com/enterprise)
-- [Microsoft Edge documentation landing page](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge documentation landing page](./index.yml)

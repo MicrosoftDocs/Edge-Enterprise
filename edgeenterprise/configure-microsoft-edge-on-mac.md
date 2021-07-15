@@ -3,11 +3,11 @@ title: "Configure Microsoft Edge for macOS using a .plist"
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Configure Microsoft Edge policy settings on macOS using a .plist"
 ---
@@ -58,7 +58,7 @@ After converting the file verify that your policy data is correct and contains t
 
 ## Deploy your plist
 
-For Microsoft Intune create a new device configuration profile targeting the macOS platform and select the *Preference file* profile type. Target **com.microsoft.Edge** as the preference domain name and upload your plist. For more information see [Add a property list file to macOS devices using Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
+For Microsoft Intune create a new device configuration profile targeting the macOS platform and select the *Preference file* profile type. Target **com.microsoft.Edge** as the preference domain name and upload your plist. For more information see [Add a property list file to macOS devices using Microsoft Intune](/intune/configuration/preference-file-settings-macos).
 
 For Jamf upload the .plist file as a *Custom Settings* payload.
 

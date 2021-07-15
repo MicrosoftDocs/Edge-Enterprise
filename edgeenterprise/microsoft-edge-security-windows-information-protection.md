@@ -3,11 +3,11 @@ title: "Microsoft Edge support for Windows Information Protection"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/24/2020
+ms.date: 06/29/2029
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge support for Windows Information Protection"
 ---
@@ -31,7 +31,7 @@ The follow requirements apply to devices using WIP in the enterprise:
 
 - Windows 10, version 1607 or later
 - Only Windows client SKUs
-- One of the management solutions described in [WIP prerequisites](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)
+- One of the management solutions described in [WIP prerequisites](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)
 
 ### Windows Information Protection benefits
 
@@ -45,7 +45,7 @@ WIP provides the following benefits:
 
 ## WIP policy and protection modes
 
-Using policies, you can configure the four protection modes described in the following table. For more information, see [WIP-protection modes](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes).
+Using policies, you can configure the four protection modes described in the following table. For more information, see [WIP-protection modes](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes).
 
 | Mode | Description |
 |------|-------------|
@@ -85,10 +85,10 @@ Using WIP with Microsoft Edge requires the presence of a work profile.
 
 On hybrid joined machines, Microsoft Edge is automatically signed in with the Azure Active Directory (Azure AD) account. To make sure that users don't remove this profile, which is needed for WIP, configure the following policy:
 
-- [NonRemovableProfileEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#nonremovableprofileenabled)
+- [NonRemovableProfileEnabled](./microsoft-edge-policies.md#nonremovableprofileenabled)
 
 > [!NOTE]
-> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 If hybrid joining isn't an option, you can use on-prem Active Directory accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Azure AD's features, such as cloud sync, Office NTP, and so on.)
 
@@ -96,11 +96,11 @@ If hybrid joining isn't an option, you can use on-prem Active Directory accounts
 
 For AD accounts, you must configure the following policy to have the Microsoft Edge auto create a special work profile.
 
-- [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin)
+- [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin)
 
 ### Windows policies for WIP
 
-You can configure WIP using Windows policies. For more information, see [Create and deploy WIP policies using Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)
+You can configure WIP using Windows policies. For more information, see [Create and deploy WIP policies using Microsoft Intune](/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)
 
 ## Frequently Asked Questions
 
@@ -119,4 +119,4 @@ If you're not using Microsoft Intune, download and apply the policy update in th
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) 
-- [Protect enterprise data using Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Protect enterprise data using Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

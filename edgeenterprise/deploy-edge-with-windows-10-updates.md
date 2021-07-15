@@ -3,11 +3,11 @@ title: "Deploy Microsoft Edge with Windows 10 updates"
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Deploy Microsoft Edge with Windows 10 updates"
 ---
@@ -26,7 +26,7 @@ Windows Server Update Services (WSUS) has updates for each version of Windows 10
 
 ## For Windows 10 releases prior to RS4 (and Windows 7, 8.1, and earlier)
 
-Windows updates to install Microsoft Edge aren't available for these versions. Consider other options for deploying Microsoft Edge to these devices such as [Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) or [Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+Windows updates to install Microsoft Edge aren't available for these versions. Consider other options for deploying Microsoft Edge to these devices such as [Configuration Manager](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) or [Intune](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
 
 ## See also
 

@@ -3,11 +3,11 @@ title: "Filter format for Microsoft Edge URL policies"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about the filter format used for Microsoft Edge URLBlocklist and URLAllowlist policies."
 ---
@@ -32,7 +32,7 @@ The fields in the filter format are:
 | Field | Description |
 | --- | --- |
 | **scheme** (*optional*) | It can be http://, https://, ftp://, edge://, etc. |
-| **host** (*required*) | It must be a valid host name or IP address and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (".") before **host**. |
+| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (".") before **host**. A single IP Address Literal hostname may be specified, but wildcarding is not supported for an IP Address Literal hostname. |
 | **port** (*optional*) | Valid values range from 1 to 65535. |
 | **path** (*optional*) | You can use any string in the path. |
 | **query** (*optional*) | The **query** is either key-value or key-only tokens separated by an ampersand ("&"). Separate key-value tokens with an equal sign ("="). To indicate a prefix match, you can use an asterisk ("\*") at the end of the **query**. |
@@ -77,13 +77,13 @@ If a filter has a dot (".") prefixing the **host** then only exact **host** matc
 - "contoso.com" (no dot) will match "contoso.com", "www.contoso.com", and "sub.www.contoso.com"
 - ".www.contoso.com" (with a dot prefix) will only match "www.contoso.com"
 
-You can use either a standard or customer **schema**. Supported standard schemas include:
+You can use either a standard or custom **schema**. Supported standard schemas include:
 
 - _about_, _blob_, _content_, _edge_, _cid_, _data_, _file_, _filesystem_, _ftp_, _gopher_, _http_, _https_, _javascript_, _mailto_, _ws_, and _wss_.
 
 Any other **schema** is treated as a custom **schema**, but only the _schema:*_ and _schema://*_ patterns are allowed. For example:
 
-- "custom:*" or "custom://*" will match "custom:app"
+- "custom:\*" or "custom://\*" will match "custom:app"
 - "custom:app" or "custom://app" are invalid
 
 **schema** and **host** aren't case-sensitive. For example:
