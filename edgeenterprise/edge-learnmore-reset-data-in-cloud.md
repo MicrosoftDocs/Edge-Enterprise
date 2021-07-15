@@ -3,7 +3,7 @@ title: "Reset Microsoft Edge data"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
