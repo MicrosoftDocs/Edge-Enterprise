@@ -38,6 +38,7 @@ Microsoft strongly recommends staying current with the most recent Stable channe
 
 Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week major release cycle cadence. We will continue to provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release will be approximately 12 weeks.
 
+
 We recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle**. Assisted Support will be available for the most recent two Extended Stable channel releases. The effective assisted support duration for an Extended Stable channel release will be approximately 16 weeks. Refer to the table below.
 
 |     Release option              |     Major version release supported    |     Major version release serviced    |     Support coverage across releases    |     Servicing coverage    |
