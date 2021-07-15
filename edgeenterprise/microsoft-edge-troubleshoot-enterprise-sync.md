@@ -1,13 +1,13 @@
 ---
 title: "Diagnose and fix Microsoft Edge sync issues"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
 ---

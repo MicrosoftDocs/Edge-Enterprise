@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge rollback for enterprises"
-ms.author: v-danwes
+ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 02/04/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "How to roll back Microsoft Edge to a previous version"
 ---

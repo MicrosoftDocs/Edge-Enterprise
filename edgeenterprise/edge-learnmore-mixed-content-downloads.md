@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge and mixed content downloads"
-ms.author: kele
+ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 06/29/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge and mixed content downloads"
 ---

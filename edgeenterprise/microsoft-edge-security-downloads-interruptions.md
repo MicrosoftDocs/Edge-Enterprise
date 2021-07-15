@@ -3,16 +3,16 @@ title: "Interrupting Downloads of Potentially Dangerous Files"
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 05/20/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Interrupting Downloads of Potentially Dangerous Files"
 ---
 
-## Interrupting Downloads of Potentially Dangerous Files
+# Interrupting Downloads of Potentially Dangerous Files
 
 Microsoft Edge’s File Type Policies component allows files to be classified by their level of “dangerousness”, such that harmless files (e.g. `.txt` files) can be downloaded freely, whilst potentially-dangerous files (e.g. `.dll` files) are subjected to a higher degree of vetting and a more security-conscious user-experience.
 
@@ -45,7 +45,7 @@ On the `edge://downloads`, page, the user will see the same options:
 
 While users are unlikely to encounter download interruptions for sites they use every day, they might encounter them for legitimate downloads on sites that they use rarely. To help streamline the user-experience for Enterprises, a Group Policy is available.
 
-Enterprises can use [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) to specify the filetypes that are allowed to download from specific sites without interruption. For instance, the following policy allows XML files to download from contoso.com and woodgrovebank.com without interruption, and MSG files to download from any site.
+Enterprises can use [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) to specify the filetypes that are allowed to download from specific sites without interruption. For instance, the following policy allows XML files to download from contoso.com and woodgrovebank.com without interruption, and MSG files to download from any site.
 
 `[{"file_extension":"xml","domains":["contoso.com", "woodgrovebank.com"]},
 {"file_extension":"msg", "domains": ["*"]}]`

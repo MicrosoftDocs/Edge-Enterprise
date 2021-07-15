@@ -3,11 +3,11 @@ title: "Microsoft Edge password manager security "
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 05/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge password manager security"
 ---
@@ -60,7 +60,7 @@ However, using a password manager that's keyed to the user’s operating system 
 The decision of whether to use a password manager comes down to assessing the many benefits we’ve described against the possibility of the entire device getting compromised. For most threat models, using the Microsoft Edge password manager is the recommended option.
 
 > [!Note]
->If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as [MS Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-download-install)) or [WebAuthN](https://webauthn.guide/).
+>If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as [MS Authenticator](/azure/active-directory/user-help/user-help-auth-app-download-install)) or [WebAuthN](https://webauthn.guide/).
 
 ## Should a password manager be enabled by an organization?
 
@@ -106,13 +106,13 @@ However, Microsoft Edge provides an extensive set of policies that enable fine c
 
 | Policy | Caption |
 |-|-|
-|[BlockExternalExtensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockexternalextensions)|Blocks external extensions from being installed|
-|[ExtensionAllowedTypes](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionallowedtypes)|Configure allowed extension types|
-|[ExtensionInstallAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallallowlist)|Allow specific extensions to be installed|
-|[ExtensionInstallBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallblocklist)|Control which extensions cannot be installed|
-|[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallforcelist)|Control which extensions are installed silently|
-|[ExtensionInstallSources](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensioninstallsources)|Configure extension and user script install sources|
-| [ExtensionSettings](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionsettings) |Configure extension management settings |
+|[BlockExternalExtensions](/deployedge/microsoft-edge-policies#blockexternalextensions)|Blocks external extensions from being installed|
+|[ExtensionAllowedTypes](/deployedge/microsoft-edge-policies#extensionallowedtypes)|Configure allowed extension types|
+|[ExtensionInstallAllowlist](/deployedge/microsoft-edge-policies#extensioninstallallowlist)|Allow specific extensions to be installed|
+|[ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#extensioninstallblocklist)|Control which extensions cannot be installed|
+|[ExtensionInstallForcelist](/deployedge/microsoft-edge-policies#extensioninstallforcelist)|Control which extensions are installed silently|
+|[ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources)|Configure extension and user script install sources|
+| [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) |Configure extension management settings |
 
 ## How does the Microsoft Edge password manager compare with a third-party product?
 
@@ -149,6 +149,4 @@ This user information harvesting threat can be easily mitigated by enabling the 
 
 [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download)
 
-[How Microsoft Edge is more secure than Chrome for business on Windows 10](https://docs.microsoft.com/DeployEdge/ms-edge-security-for-business)
-
- 
+[How Microsoft Edge is more secure than Chrome for business on Windows 10](/DeployEdge/ms-edge-security-for-business)

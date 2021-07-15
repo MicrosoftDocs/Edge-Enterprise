@@ -3,11 +3,11 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites"
 ---
@@ -95,7 +95,7 @@ In addition to needing the BHO, there is a dependency on the **RedirectSitesFrom
 >
 >If you're on a domain joined or Mobile Device Management (MDM) enrolled device, you won't see this option.
 >
-> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
+> Instead, if you want to let your users load sites in Internet Explorer mode, you can do so by configuring the policy [Allow Internet Explorer mode testing](./microsoft-edge-policies.md#intranetredirectbehavior).
 
 ### Policy: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

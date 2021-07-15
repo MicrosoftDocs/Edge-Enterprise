@@ -1,13 +1,13 @@
 ---
 title: "Enterprise Site Discovery Step by Step Guide"
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Use Enterprise Site Discovery to Prepare for IE mode"
 ---

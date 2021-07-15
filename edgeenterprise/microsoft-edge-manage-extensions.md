@@ -3,11 +3,11 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Manage Microsoft Edge extensions in the enterprise"
 ---
@@ -65,11 +65,11 @@ Some examples of these permissions are: access to a USB port, storage or viewing
 
 The extensions options assume that you already have Microsoft Edge managed for your users. For more information about setting up administrative templates for Microsoft Edge policies, see:
 
--	[Configure Microsoft Edge policy settings on Windows](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)
--	[Configure for Windows with Intune](https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
--	[Configure for Windows with Mobile Device Management](https://docs.microsoft.com/deployedge/configure-edge-with-mdm)
--	[Configure for macOS using a .plist](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)
--	[Configure for macOS with Jamf](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac-jamf)
+-	[Configure Microsoft Edge policy settings on Windows](/DeployEdge/configure-microsoft-edge)
+-	[Configure for Windows with Intune](/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+-	[Configure for Windows with Mobile Device Management](/deployedge/configure-edge-with-mdm)
+-	[Configure for macOS using a .plist](/deployedge/configure-microsoft-edge-on-mac)
+-	[Configure for macOS with Jamf](/deployedge/configure-microsoft-edge-on-mac-jamf)
 
 The configuration steps in this article are for Windows, for the corresponding implementation in MAC/Linux, see the Microsoft Edge browser policy reference.
 

@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Edge enterprise sync FAQ"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Frequently asked questions for Microsoft Edge enterprise sync."
 ---
@@ -54,7 +54,7 @@ Enterprise sync depends on [Azure Information Protection](https://azure.microsof
 
 ### Is Microsoft Edge sync based on Enterprise State Roaming?
 
-No. ESR can be used to enable sync, but Microsoft Edge sync is not a part of ESR. For more information, see [Microsoft Edge Sync](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync) and [Microsoft Edge and Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming).
+No. ESR can be used to enable sync, but Microsoft Edge sync is not a part of ESR. For more information, see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync) and [Microsoft Edge and Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
 
 ### Will Microsoft Edge ever support syncing between Microsoft Edge and IE?
 

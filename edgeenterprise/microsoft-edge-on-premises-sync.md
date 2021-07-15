@@ -1,13 +1,13 @@
 ---
 title: "On-premises sync for Active Directory (AD) users"
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 02/12/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "On-premises sync for Active Directory (AD) users"
 ---

@@ -3,11 +3,11 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 06/29/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Plan your deployment of Microsoft Edge"
 ---

@@ -3,11 +3,11 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge support for Microsoft Defender Application Guard"
 ---
@@ -50,7 +50,7 @@ Application Guard support in the new Microsoft Edge  browser has functional pari
 
 Some of our customers have been asking for favorites sync between the host browser and the container in Application Guard. Starting from Microsoft Edge 91, users now have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
 
-This support can be controlled via policy. You can update the Edge policy [ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) to enable or disable favorites sync.
+This support can be controlled via policy. You can update the Edge policy [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) to enable or disable favorites sync.
 
 > [!Note]
 > For security reasons, favorites sync is only possible from the host to the container and not the other way around. To ensure a unified list of favorites across the host and the container, we have disabled favorites management inside the container.
@@ -62,7 +62,7 @@ Several customers are using WDAG in a specific configuration where they want to 
 - To restrict access to only a handful of untrusted sites
 - To allow internet access from the container only
 
-Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to use proxy to filter out traffic and apply specific policies. You can use the header to identify which traffic is through the container or the host using [ApplicationGuardTrafficIdentificationEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
+Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to use proxy to filter out traffic and apply specific policies. You can use the header to identify which traffic is through the container or the host using [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### Extension support inside the container
 
