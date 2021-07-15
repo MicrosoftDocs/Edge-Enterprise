@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Edge Lifecycle"
 ms.author: srugh
-author: srugh
+author: AndreaLBarr
 manager: seanlynd
 ms.date: 07/15/2021
 audience: ITPro
