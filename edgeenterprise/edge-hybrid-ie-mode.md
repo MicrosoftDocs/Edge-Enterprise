@@ -1,5 +1,5 @@
 ---
-title: "Disable Internet Explorer 11"
+title: "Hybrid IE Mode"
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Learn how to disable Internet Explorer 11 and use Internet Explorer mode in Microsoft Edge."
+description: "Local site list for hybrid IE mode ."
 ---
 
 ## Local site list for IE mode
