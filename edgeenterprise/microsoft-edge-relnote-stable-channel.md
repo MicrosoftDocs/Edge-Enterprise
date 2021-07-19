@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 07/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,12 +26,12 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## 91.0.864.71: MM DD
+## 91.0.864.71: July 19
 
 > [!Important]
 >This update contains [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) [confirm HyperLink] which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-xx-2021).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-19-2021).
 
 ## Version 91.0.864.67: July 8
 
