@@ -1,5 +1,5 @@
 ---
-title: "Local site lists for IE mode"
+title: "Local site list for IE mode"
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
