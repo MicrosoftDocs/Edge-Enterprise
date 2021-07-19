@@ -34,11 +34,11 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
 ## Overview
 
-- IE mode is powered by the configuration of the Enterprise Mode Site List. While you are identifying and configuring sites on the site list to use IE mode, your users no longer need to wait or fall back to the standalone IE11 application.
+IE mode is powered by the configuration of the Enterprise Mode Site List. While you are identifying and configuring sites on the site list to use IE mode, your users no longer need to wait or fall back to the standalone IE11 application.
 
-- Starting with Microsoft Edge version 92, repeated access to *unconfigured* IE mode sites is easier. Users can reload sites in IE mode. They can add these sites to their local site list to automatically render in IE mode for a period of 30 days, while the organization’s site list gets updated. When [IE11 is disabled](/deployedge/edge-ie-disable-ie11) in your environment, your users are no longer solely dependent on the organization’s site list.
+Starting with Microsoft Edge version 92, repeated access to *unconfigured* IE mode sites is easier. Users can reload sites in IE mode. They can add these sites to their local site list to automatically render in IE mode for a period of 30 days, while the organization’s site list gets updated. When [IE11 is disabled](/deployedge/edge-ie-disable-ie11) in your environment, your users are no longer solely dependent on the organization’s site list.
 
-- You can configure this experience through group policies for your organization.
+You can configure this experience through group policies for your organization.
 
 Note: An *unconfigured* site is one that requires IE mode but is not configured to open in IE mode in the Enterprise Mode Site List.
 
@@ -107,7 +107,7 @@ This policy can be used to adjust the number of days that a site remains on the 
 
 This policy has no effect if you disabled the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
 
-Note:
+**Note:**
 
 The local site list does not currently sync across devices. This improvement is currently on our backlog and we’ll update when this becomes available.
 
