@@ -116,3 +116,4 @@ The local site list does not currently sync across devices. This improvement is 
 Disable Internet Explorer 11 - [Disable Internet Explorer 11 | Microsoft Docs](/deployedge/edge-ie-disable-ie11)
 
 Configure IE mode policies - [Configure IE mode Policies | Microsoft Docs](/deployedge/edge-ie-mode-policies)
+
