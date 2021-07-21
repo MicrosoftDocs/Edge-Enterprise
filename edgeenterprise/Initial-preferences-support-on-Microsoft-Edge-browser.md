@@ -43,7 +43,7 @@ Below is the list of preferences setting that are currently supported by Microso
 | homepage | Homepage_url |
 | homepage_is_newtabpage | true |
 | incognito | mode_availability |
-| Session | restore_on_startup<br>startup_urls 
+| Session | restore_on_startup<br>startup_urls |
 | Extensions | Extensions : settings |
 
 ## 1: Download an example initial_preferences file
