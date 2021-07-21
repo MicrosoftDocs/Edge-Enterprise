@@ -73,7 +73,7 @@ Apply the *initial_preferences* file to users' devices at the same time as Micro
 
 | Channel | Location |
 | - | - |
-| Stable: `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
+| Stable | `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
 | Beta | `“~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |
 | Canary | `“~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences"` |
 | Dev | `"~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences"` |
