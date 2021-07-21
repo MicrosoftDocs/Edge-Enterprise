@@ -3,7 +3,7 @@ title: "Reset Microsoft Edge data"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,8 +30,8 @@ There are situations in which you want to reset your Microsoft Edge data in the 
 
 Before performing a reset, we recommend that you back up your favorites. Use the following steps to back up your favorites.
 
-1. In Microsoft Edge, select **Settings and more > Favorites > More options > Export favorites**.
-2. Choose the file to where you want to save your favorites. You can type your own filename or use the name that Microsoft Edge provides by default,  "favorites_month_day_year.html" as a filename. For example, "favorites_12_17_20.html". If you need to restore your favorites later, you can do so from that file.
+1. In Microsoft Edge, select **Press Ctrl + Shift + O > Choose three dots > Click Export favourites**.
+2. Choose the file to where you want to save your favorites. You can type your own filename or use the name that Microsoft Edge provides by default,  "favorites_month_day_year.html" as a filename. For example, "favorites_07_05_21.html". If you need to restore your favorites later, you can do so from that file.
 3. Click **Save**.
 
 ## Perform a reset to fix a synchronization problem
@@ -40,15 +40,15 @@ If Microsoft Edge reports that it can't synchronize your data and suggests reset
 
 Use the following steps to do a reset.
 
-1. First, make sure that you’re signed out of Microsoft Edge on all your devices, including your mobile devices, except the device you are performing the reset on. To sign out of Microsoft Edge, select **Settings and more > Settings > Sign out**. When signing out, do not select the option to clear favorites, settings, and etc. from your local device.
-2. After you sign out of all your other devices, open Microsoft Edge on your desktop. **Select Settings and more > Sync > Reset sync**. In the resulting dialog box, choose to resume sync after resetting data, and then select **Reset**.
+1. First, make sure that you’re signed out of Microsoft Edge on all your devices, including your mobile devices, except the device you are performing the reset on. To sign out of Microsoft Edge, select **Settings > Profiles > Sign out**. When signing out, do not select the option to clear favorites, settings, and etc. from your local device.
+2. After you sign out of all your other devices, open Microsoft Edge on your desktop. Select **Settings > Profiles > Reset sync**. In the resulting dialog box, choose to resume sync after resetting data, and then select **Reset Now**.
 
 ## Perform a reset to remove your data from Microsoft’s cloud
 
 If you want to remove your data from Microsoft’s cloud, use the following steps to do a reset.
 
-1. Stop synchronization on devices except the device you are performing the reset on.  In Microsoft Edge, select **Settings and more > Settings > Sync > Turn off sync**.  
-2. After you stop synchronization, select **Settings and more > Sync > Reset sync**. In the resulting dialog box, **do not** choose to resume sync after resetting data. Select **Reset**.
+1. Stop synchronization on devices except the device you are performing the reset on.  In Microsoft Edge, select **Settings > Profiles > Turn off sync**.  
+2. After you stop synchronization, select **Settings > Profiles > Reset sync**. In the resulting dialog box, **do not** choose to resume sync on this device after resetting sync. Select **Reset**.
 
 ## What to expect during and after a data reset
 
