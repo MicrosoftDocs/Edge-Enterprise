@@ -77,7 +77,7 @@ After you change and test the updated extension you can publish it. Use the foll
    > [!IMPORTANT]
    > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change and the update will be treated as a new extension.
 
-5. Drag and drop the CRX file into the extensions window and verify that it loads.
+5. Drag and drop the CRX file into the extensions window and verify that it loads. The extension will be disabled after this operation. To enable it add the CRX ID of the extension to the ExtensionInstallAllowList policy. 
 6. Test the updated extension.
 7. Replace the old CRX file and XML file with the new files for the updated extension.
 
@@ -85,7 +85,7 @@ The extension's changes will be picked up during the next policy sync cycle. For
 
 ## Distribute a privately hosted extension
 
-You can share the link of the location where the CRX file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy.
+You can share the link of the location where the CRX file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy and add the URL of the location where the CRX file is hosted to the [ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources) policy.
 
 Alternatively, you can use group policy [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) to Force-install an extension on your users’ devices.
 
