@@ -130,6 +130,32 @@ IE mode supports Application Guard functionality, but we don't anticipate much u
 
 No, the Application Guard feature is natively supported in Microsoft Edge. In fact, the Application Guard Chrome extension isn't a supported configuration in Microsoft Edge.
 
+### Can employees download documents from the Application Guard Edge session onto host devices?
+
+In Windows 10 Enterprise edition, version 1803, users are able to download documents from the isolated Application Guard container to the host PC. This capability is managed by policy.
+
+In Windows 10 Enterprise edition, version 1709, or Windows 10 Professional edition, version 1803, it is not possible to download files from the isolated Application Guard container to the host computer. However, employees can use the Print as PDF or Print as XPS options and save those files to the host device.
+
+### Can employees copy and paste between the host device and the Application Guard Edge session?
+
+Depending on your organization's settings, employees can copy and paste images (.bmp) and text to and from the isolated container.
+
+### Why don't employees see their favorites in the Application Guard Edge session?
+
+Depending on your organization’s settings, it might be that Favorites Sync is turned off. To manage the policy, see: Microsoft Edge and Microsoft Defender Application Guard | Microsoft Docs.
+
+### Why aren’t employees able to see their extensions in the Application Guard Edge session?
+
+Make sure to enable the extensions policy on your Application Guard configuration.
+
+### My extension doesn’t seem to work in Edge Application Guard?
+
+If the extensions policy is enabled for MDAG in configuration, check if your extension requires Native Message Handling components, those extensions are not supported in the Application Guard container.
+
+### I’m trying to watch playback video with HDR, why is the HDR option missing?
+
+In order for HDR video playback to work in the container, vGPU Hardware Acceleration needs to be enabled in Application Guard.
+
 ### Are there any other platform related FAQs?
 
 Yes. [Frequently asked questions - Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 
