@@ -144,6 +144,8 @@
         href: edge-ie-mode-sitelist.md
       - name: Configure IE mode Policies
         href: edge-ie-mode-policies.md
+      - name: IE Mode Local Site List
+        href: edge-ie-mode-local-site-list.md
       - name: Disable Internet Explorer 11
         href: edge-ie-disable-ie11.md
       - name: Site Discovery and list management
