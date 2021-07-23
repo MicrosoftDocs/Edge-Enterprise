@@ -413,7 +413,7 @@ If you disable this policy, communication with the Experimentation and Configura
 
 If you don't configure this policy, on a managed device the behavior is same as policy 'disabled'.
 
-If you don't configure this policy, on an unmanaged device the behavior is same as policy 'enabled].
+If you don't configure this policy, on an unmanaged device the behavior is same as policy 'enabled'.
 
 #### Windows information and settings
 ##### Group Policy (ADMX) info
