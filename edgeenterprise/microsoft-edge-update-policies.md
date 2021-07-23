@@ -3,7 +3,7 @@ title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: AndreaLBarr
 manager: tahills
-ms.date: 07/22/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -398,6 +398,38 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 [Back to top](#microsoft-edge---update-policies)
 
+### UpdaterExperimentationAndConfigurationServiceControl
+#### Retrieve Configurations and experiments
+>Microsoft Edge Update 1.3.145.1 and later
+
+#### Description
+In Microsoft Edge Update, the Experimentation and Configuration Service is used to deploy experimentation payload.
+
+Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing feedback.
+
+If you enable this policy, experimentation payload is downloaded from the Experimentation and Configuration Service.
+
+If you disable this policy, communication with the Experimentation and Configuration Service is stopped completely.
+
+If you don't configure this policy, on a managed device the behavior is same as policy 'disabled'.
+
+If you don't configure this policy, on an unmanaged device the behavior is same as policy 'enabled].
+
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: UpdateExperimentationAndConfigureationServiceControl
+- GP name: Controle updater's communication with the Experimentation And Configuration Service
+- GP Path: Administrative Templates/Microsoftt Edge Update/Microsoft Edge Update
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: UpdaterExperimentationAndConfigurationServiceControl
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
 
 ## Preferences policies
 
@@ -454,39 +486,6 @@ If you enable this policy, update checks are suppressed each day starting at Hou
 duration   : 0x0000003c
 start hour : 0x00000001
 start min  : 0x00000002
-```
-[Back to top](#microsoft-edge---update-policies)
-
-## UpdaterExperimentationAndConfigurationServiceControl
-#### Retrieve Configurations and experiments
->Microsoft Edge Update 1.3.145.1 and later
-
-#### Description
-In Microsoft Edge Update, the Experimentation and Configuration Service is used to deploy experimentation payload.
-
-Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing feedback.
-
-If you enable this policy, experimentation payload is downloaded from the Experimentation and Configuration Service.
-
-If you disable this policy, communication with the Experimentation and Configuration Service is stopped completely.
-
-If you don't configure this policy, on a managed device the behavior is same as policy 'disabled'.
-
-If you don't configure this policy, on an unmanaged device the behavior is same as policy 'enabled].
-
-#### Windows information and settings
-##### Group Policy (ADMX) info
-- GP unique name: UpdateExperimentationAndConfigureationServiceControl
-- GP name: Controle updater's communication with the Experimentation And Configuration Service
-- GP Path: Administrative Templates/Microsoftt Edge Update/Microsoft Edge Update
-- GP ADMX file name: msedgeupdate.admx
-##### Windows Registry Settings
-- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Value Name: UpdaterExperimentationAndConfigurationServiceControl
-- Value Type: REG_DWORD
-##### Example value:
-```
-0x00000001
 ```
 [Back to top](#microsoft-edge---update-policies)
 
