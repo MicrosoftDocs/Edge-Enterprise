@@ -1,9 +1,9 @@
 ﻿---
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -39,7 +39,7 @@ These tables lists all of the update-related group policies available in this re
 |[CreateDesktopShortcut](#createdesktopshortcut)|Prevent Desktop Shortcut creation upon install (per channel)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Rollback to Target version (per channel)|
 |[TargetVersionPrefix](#targetversionprefix)|Target version override (per channel)|
-
+|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Retrieve Configurations and experiments|
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
 |-|-|
@@ -199,7 +199,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Value Name: 
+- Value Name:
   - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -244,7 +244,6 @@ For this group policy to take affect, it must be configured before the automatic
 0x00000001
 ```
 [Back to top](#microsoft-edge---update-policies)
-
 
 ### CreateDesktopShortcutDefault
 #### Prevent Desktop Shortcut creation upon install default
@@ -399,6 +398,38 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 [Back to top](#microsoft-edge---update-policies)
 
+### UpdaterExperimentationAndConfigurationServiceControl
+#### Retrieve Configurations and experiments
+>Microsoft Edge Update 1.3.145.1 and later
+
+#### Description
+In Microsoft Edge Update, the Experimentation and Configuration Service is used to deploy experimentation payload.
+
+Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing feedback.
+
+If you enable this policy, experimentation payload is downloaded from the Experimentation and Configuration Service.
+
+If you disable this policy, communication with the Experimentation and Configuration Service is stopped completely.
+
+If you don't configure this policy, on a managed device the behavior is same as policy 'disabled'.
+
+If you don't configure this policy, on an unmanaged device the behavior is same as policy 'enabled'.
+
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: UpdateExperimentationAndConfigureationServiceControl
+- GP name: Controle updater's communication with the Experimentation And Configuration Service
+- GP Path: Administrative Templates/Microsoftt Edge Update/Microsoft Edge Update
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: UpdaterExperimentationAndConfigurationServiceControl
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
 
 ## Preferences policies
 
@@ -457,7 +488,6 @@ start hour : 0x00000001
 start min  : 0x00000002
 ```
 [Back to top](#microsoft-edge---update-policies)
-
 
 ## Proxy Server policies
 
