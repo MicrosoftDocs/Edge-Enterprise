@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,9 +45,9 @@ You can configure Internet Explorer to open directly within Microsoft Edge (IE m
 3. Click **User Configuration/Computer Configuration** > **Administrative Templates** > **Microsoft Edge**.
 4. Double-click **Configure Internet Explorer integration**.
 5. Select **Enabled**.
-6. Under **Options**, set the dropdown value to 
+6. Under **Options**, set the dropdown value to
    -  **Internet Explorer mode** if you want sites to open in IE mode on Microsoft Edge
-   -  **Internet Explorer 11** if you want sites to open in a standalone Internet Explorer 11 window
+   -  **Internet Explorer 11** if you want sites to open in a standalone Internet Explorer 11 window (This option will not be supported after June 15, 2022 when the Internet Explorer 11 desktop application will be retired and go out of support.  After June 15, 2022 when IE11 will no longer be available, this option will behave the same as the **Internet Explorer mode** option.)  
    -  **None** if you want to stop users from configuring Internet Explorer mode via edge://flags or through the command line
 
    > [!NOTE]
