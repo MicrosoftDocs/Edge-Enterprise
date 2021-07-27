@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 07/13/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -32,6 +32,7 @@ These tables list all of the browser-related group policies available in this re
 - [Cast](#cast)
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
+- [Experimentation](#experimentation)
 - [Extensions](#extensions)
 - [HTTP authentication](#http-authentication)
 - [Identity and sign-in](#identity-and-sign-in)
@@ -122,6 +123,11 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|Default search provider search URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
+### [*Experimentation*](#experimentation-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|Configure users ability to override feature flags|
 ### [*Extensions*](#extensions-policies)
 
 |Policy Name|Caption|
@@ -151,6 +157,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
 |Policy Name|Caption|
@@ -197,6 +204,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
 |[PrintingEnabled](#printingenabled)|Enable printing|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
+|[PrintingWebpageLayout](#printingwebpagelayout)|Sets layout for printing|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Print using system print dialog|
 ### [*Private Network Request Settings*](#private-network-request-settings-policies)
 
@@ -278,6 +286,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for credit cards|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
+|[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
@@ -382,12 +391,14 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Specify the number of days that a site remains on the local IE mode site list|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
+|[MAUEnabled](#mauenabled)|Always use Microsoft AutoUpdate as the updater for Microsoft Edge|
 |[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Allow single sign-on for Microsoft sites using this profile|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
 |[ManagedFavorites](#managedfavorites)|Configure favorites|
@@ -460,6 +471,7 @@ These tables list all of the browser-related group policies available in this re
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
+|[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
@@ -4464,6 +4476,85 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Experimentation policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### FeatureFlagOverridesControl
+
+  #### Configure users ability to override feature flags
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 93 or later
+
+  #### Description
+
+  Configures users ability to override state of feature flags.
+If you set this policy to 'CommandLineOverridesEnabled', users can override state of feature flags using command line arguments but not edge://flags page.
+
+If you set this policy to 'OverridesEnabled', users can override state of feature flags using command line arguments or edge://flags page.
+
+If you set this policy to 'OverridesDisabled', users can't override state of feature flags using command line arguments or edge://flags page.
+
+If you don't configure this policy, the behavior is the same as the 'OverridesEnabled'.
+
+Policy options mapping:
+
+* CommandLineOverridesEnabled (2) = Allow users to override feature flags using command line arguments only
+
+* OverridesEnabled (1) = Allow users to override feature flags
+
+* OverridesDisabled (0) = Prevent users from overriding feature flags
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: FeatureFlagOverridesControl
+  - GP name: Configure users ability to override feature flags
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Experimentation
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: FeatureFlagOverridesControl
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: FeatureFlagOverridesControl
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Extensions policies
 
   [Back to top](#microsoft-edge---policies)
@@ -4762,7 +4853,7 @@ If you don't set this policy, no apps or extensions are autoinstalled and users 
 
 This policy supercedes [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. If a previously force-installed app or extension is removed from this list, Microsoft Edge automatically uninstalls it.
 
-On Microsoft Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain, and running Windows 10 Pro.
+For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, or joined to a domain via MCX.
 
@@ -5708,6 +5799,62 @@ If you disable this setting, implicit sign-in will be disabled.
 
 ```
 0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### OneAuthAuthenticationEnforced
+
+  #### OneAuth Authentication Flow Enforced for signin
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  This policy allows users to decide whether to use the OneAuth library for sign-in and token fetch in Microsoft Edge on Windows 10 RS3 and above.
+
+If you disable or don't configure this policy, signin process will use Windows Account Manager. Microsoft Edge would be able to use accounts you logged in to Windows, Microsoft Office, or other Microsoft applications for login, without the needing of password. Or you can provide valid account and password to sign in, which will be stored in Windows Account Manager for future usage. You will be able to investigate all accounts stored in Windows Account Manager through Windows Settings -> Accounts -> Email and accounts page.
+
+If you enable this policy, OneAuth authentication flow will be used for account signin. The OneAuth authentication flow has fewer dependencies and can work without Windows shell. The account you use would not be stored in the Email and accounts page.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OneAuthAuthenticationEnforced
+  - GP name: OneAuth Authentication Flow Enforced for signin
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OneAuthAuthenticationEnforced
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
 ```
 
   
@@ -7209,6 +7356,76 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintingWebpageLayout
+
+  #### Sets layout for printing
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 93 or later
+
+  #### Description
+
+  Configuring  this   policy  sets  the  layout  for  printing  webpages.
+
+If  you  disable  or  don't  configure  this  policy,  users  can  decide  whether  to  print  webpages  in  Portrait  or  Landscape  layout.
+
+If  you  enable  this  policy,  the  selected  option  is  set  as  the  layout  option.
+
+Policy options mapping:
+
+* portrait (0) = Sets layout option as portrait
+
+* landscape (1) = Sets layout option as landscape
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintingWebpageLayout
+  - GP name: Sets layout for printing
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PrintingWebpageLayout
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintingWebpageLayout
+  - Example value:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### UseSystemPrintDialog
 
   #### Print using system print dialog
@@ -7740,6 +7957,7 @@ This policy overrides the following individual policies:
 Setting the [ProxySettings](#proxysettings) policy accepts the following fields:
   * ProxyMode, which lets you specify the proxy server used by Microsoft Edge and prevents users from changing proxy settings
   * ProxyPacUrl, a URL to a proxy .pac file
+  * ProxyPacMandatory, which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script
   * ProxyServer, a URL for the proxy server
   * ProxyBypassList, a list of proxy hosts that Microsoft Edge bypasses
 
@@ -7748,7 +7966,7 @@ For ProxyMode, if you choose the value:
   * system, the systems's proxy is used and all other fields are ignored.
   * auto_detect, all other fields are ignored.
   * fixed_servers, the ProxyServer and ProxyBypassList fields are used.
-  * pac_script, the ProxyPacUrl and ProxyBypassList fields are used.
+  * pac_script, the ProxyPacUrl, ProxyPacMandatory and ProxyBypassList fields are used.
 
 For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -11262,6 +11480,75 @@ A tab will need to be closed and re-opened for this policy to take effect.
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutoplayAllowlist
+
+  #### Allow media autoplay on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 93 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, that are allowed to autoplay media.
+
+If you don't configure this policy, the global default value from the [AutoplayAllowed](#autoplayallowed) policy (if set) or the user's personal configuration is used for all sites.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+Note: * is not an accepted value for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutoplayAllowlist
+  - GP name: Allow media autoplay on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutoplayAllowlist
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -18221,6 +18508,63 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationSiteListRefreshInterval
+
+  #### Configure how frequently the Enterprise Mode Site List is refreshed
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes.
+
+This setting is applicable only when the [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) or [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) setting is configured.
+
+If you configure this policy, Microsoft Edge will attempt to retrieve an updated version of the configured Enterprise Mode Site List using the specified refresh interval.
+
+If you disable or don't configure this policy, Microsoft Edge will use a default refresh interval, currently 120 minutes.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationSiteListRefreshInterval
+  - GP name: Configure how frequently the Enterprise Mode Site List is refreshed
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationSiteListRefreshInterval
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x000000f0
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteRedirect
 
   #### Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages
@@ -18625,6 +18969,48 @@ This policy requires a browser restart to finish applying.
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MAUEnabled
+
+  #### Always use Microsoft AutoUpdate as the updater for Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On macOS since 93 or later
+
+  #### Description
+
+  This policy lets you configure the updater that Microsoft Edge uses.
+
+If you enable this policy, Microsoft Edge will only be updated by Microsoft AutoUpdate.
+
+If you disable or don't configure this policy, Microsoft Edge will be updated by Microsoft Edge Update.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MAUEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -23477,6 +23863,70 @@ If you don't configure the policy, users can choose whether to use the translati
   #### Mac information and settings
   
   - Preference Key Name: TranslateEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TravelAssistanceEnabled
+
+  #### Enable travel assistance
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 93 or later
+
+  #### Description
+
+  Configure this policy to allow/disallow travel assistance.
+
+The travel assistance feature gives helpful and relevant information to a user who performs Travel related task within the browser. This feature provides trusted and validated suggestions / information  to the users from across sources gathered by Microsoft.
+
+If you enable or don't configure this setting, travel assistance will be enabled for the users when they are performing travel related tasks.
+
+If you disable this setting, travel assistance will be disabled and  users will not be able to see any travel related recommendations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TravelAssistanceEnabled
+  - GP name: Enable travel assistance
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: TravelAssistanceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: TravelAssistanceEnabled
   - Example value:
 ``` xml
 <true/>
