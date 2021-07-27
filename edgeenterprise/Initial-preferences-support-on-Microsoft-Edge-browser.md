@@ -3,7 +3,7 @@ title: "Initial preferences support on Microsoft Edge browser"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/26/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -54,9 +54,9 @@ To get started, download the example *initial_preferences* file form this locati
 
 Customize the preferences settings in the downloaded *initial_preferences* file and validate the changes to make sure that there are no errors in the JSON code. If you find errors, check the syntax and structure of the *initial_preferences* file, make corrections, and validate it again. Few example tools to validate JSON, Online [JSON Tools](https://jsonformatter.org/) or [JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
 
-## 3: Deploy / Push preferences to users' computer
+## 3: Deploy preferences to users' computer
 
-Apply the *initial_preferences* file to users' devices at the same time as Microsoft Edge Browser is deployed and place the file in the following location on the device.
+Deploy the *initial_preferences* file to users' devices at the same time as Microsoft Edge Browser is deployed and place the file in the following location on the device.
 
 ### Windows (AMD64 and ARM64)
 
@@ -67,7 +67,7 @@ Apply the *initial_preferences* file to users' devices at the same time as Micro
 |Canary | `"%LOCALAPPDATA%\Microsoft\Edge SxS\Application"` |
 | Dev | `"C:\Program Files (x86)\Microsoft\Edge Dev\Application"` |
 
-**Note**: The *initial_preferences* file needs to be added to the same folder as the msedge.exe file on users' Windows computers.  
+**Note**: The *initial_preferences* file needs to be deployed to the same folder as the msedge.exe file on users' Windows computers.  
 
 ### macOS
 
@@ -80,7 +80,7 @@ Apply the *initial_preferences* file to users' devices at the same time as Micro
 
 ## Important notes: MSI / Pkg Deployment and *initial_preferences* interaction
 
-The initial_preferences file can be placed and deployed in the above-mentioned directory before Microsoft Edge is installed through MSI / PKG file; i.e. Microsoft Edge browser can be installed and deployed later. The initial_preferences file would persist where it was deployed earlier, and the file would be read by Microsoft Edge in its first run after installation. To apply Initial Preferences in cases that Microsoft Edge on Windows is preinstalled, IT admins shall configure and install the initial_preferences file, as instructed above, before users run the browser for the first time.
+The initial_preferences file can be placed and deployed in the above-mentioned directory before Microsoft Edge is installed through MSI / PKG file; i.e. Microsoft Edge browser can be installed and deployed later. The initial_preferences file would persist where it was deployed earlier, and the file would be read by Microsoft Edge in its first run after installation. To deploy Initial Preferences in cases that Microsoft Edge on Windows is preinstalled, IT admins shall configure and install the initial_preferences file, as instructed above, before users run the browser for the first time.
 
 - The file would be read by Microsoft Edge in its first run after installation -> also,the file will be read by Microsoft Edge during the first launch of the browser
 - IT admins shall configure and install the initial_preferences file, as instructed above, before users run the browser for the first time. ->IT admins must configure and deploy the initial_preferences file before users launch the browser for the first time.
