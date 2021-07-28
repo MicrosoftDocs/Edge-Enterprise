@@ -38,10 +38,10 @@ Below is the list of preferences setting that are currently supported by Microso
 | Browser / clear_data | browsing_history<br>browsing_history_basic"<br>cache<br>cache_basic<br>cookies<br>download_history<br>form_data<br>passwords |
 | History | browsing_history<br>cache<br>cookies<br>download_history<br>form_data<br>hosted_apps_data<br>passwords<br>site_settings |
 | Browser | first_run_tabs<br>dark_theme<br>show_toolbar_bookmarks_button<br>show_toolbar_collections_butto<br>show_toolbar_downloads_button<br>show_home_button<br>show_prompt_before_closing_tabs<br>show_toolbar_history_button |
-| default_search_provider | enabled<br>search_url |
+| default_search_provider | [default_search_provider] enabled |
 | Fullscreen | Allowed |
 | homepage | Homepage_url |
-| homepage_is_newtabpage | true |
+| homepage_is_newtabpage | homepage_is_newtabpage |
 | incognito | mode_availability |
 | Session | restore_on_startup<br>startup_urls |
 | Extensions | Extensions : settings |
@@ -80,10 +80,7 @@ Deploy the *initial_preferences* file to users' devices at the same time as Micr
 
 ## Important notes: MSI / Pkg Deployment and *initial_preferences* interaction
 
-The initial_preferences file can be placed and deployed in the above-mentioned directory before Microsoft Edge is installed through MSI / PKG file; i.e. Microsoft Edge browser can be installed and deployed later. The initial_preferences file would persist where it was deployed earlier, and the file would be read by Microsoft Edge in its first run after installation. To deploy Initial Preferences in cases that Microsoft Edge on Windows is preinstalled, IT admins shall configure and install the initial_preferences file, as instructed above, before users run the browser for the first time.
-
-- The file would be read by Microsoft Edge in its first run after installation -> also,the file will be read by Microsoft Edge during the first launch of the browser
-- IT admins shall configure and install the initial_preferences file, as instructed above, before users run the browser for the first time. ->IT admins must configure and deploy the initial_preferences file before users launch the browser for the first time.
+Initial preferences will only take effect when the initial_preferences file is deployed before the browser first run by the end users.  
 
 ## See also
 
