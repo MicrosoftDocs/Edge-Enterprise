@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 07/27/2021
+ms.date: 07/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -180,12 +180,14 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
 |[PasswordMonitorAllowed](#passwordmonitorallowed)|Allow users to be alerted if their passwords are found to be unsafe|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Enable Password reveal button|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|Configures a setting that asks users to enter their device password while using password autofill|
 ### [*Performance*](#performance-policies)
 
 |Policy Name|Caption|
@@ -6250,6 +6252,61 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PasswordGeneratorEnabled
+
+  #### Allow users to get a strong password suggestion whenever they are creating an account online
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  Configures the Password Generator Settings toggle that enables/disables the feature for users.
+
+If you enable or don't configure this policy, then Password Generator will offer users a strong and unique password suggestion (via a dropdown) on Signup and Change Password pages.
+
+If you disable this policy, users will no longer see strong password suggestions on Signup or Change Password pages.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PasswordGeneratorEnabled
+  - GP name: Allow users to get a strong password suggestion whenever they are creating an account online
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PasswordGeneratorEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PasswordManagerEnabled
 
   #### Enable saving passwords to the password manager
@@ -6658,6 +6715,71 @@ This policy only affects the browser password reveal button, it doesn't affect w
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrimaryPasswordSetting
+
+  #### Configures a setting that asks users to enter their device password while using password autofill
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  The feature helps users add an additional layer of privacy to their online accounts by requiring device authentication (as a way of confirming the user's identity) before the saved password is auto-filled into a web form. This ensures that non-authorized persons can't use saved passwords for autofill.
+
+This group policy configures the radio button selector that enables this feature for users. It also has a frequency control where users can specify how often they would like to be prompted for authentication.
+
+If you set this policy to 'Automatically, disable this policy, or don't configure this policy, autofill will not have any authentication flow.'
+
+If you set this policy to 'With device password', then users will need to enter their device password (or preferred mode of authentication under Windows Hello if on Windows - PIN, face recognition or fingerprint and equivalent options on mac) to prove their identity, and only then will their password get auto-filled. Also, The frequency for authentication prompt would be set to 'Always' by default, however users can change it to the other option as well which is 'Once every browsing session'.
+
+Policy options mapping:
+
+* Automatically (0) = Automatically
+
+* WithDevicePassword (1) = With device password
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrimaryPasswordSetting
+  - GP name: Configures a setting that asks users to enter their device password while using password autofill
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrimaryPasswordSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
