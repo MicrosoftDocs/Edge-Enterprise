@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/29/2021
+ms.date: 08/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,22 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 93.x.x.x: August 3
+
+### Feature updates
+
+- **Initial Preferences in Microsoft Edge.**  Deploying Microsoft Edge to your enterprise will become easier starting in version 93, with the addition of Initial Preferences.
+
+- **IE mode on Microsoft Edge will support "nomerge" behavior.**  Starting in Edge 93, IE mode on Microsoft Edge will support nomerge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, similar to the nomerge behavior in IE11. You will need to adjust your site list to configure sites that need to prevent session sharing as "nomerge". Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated “nomerge” sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. This follows previous behavior where users could launch IE with nomerge and could also launch Microsoft Edge without nomerge via other mechanisms.
+
+- **Tab Groups.**  The ability to categorize tabs into user-defined groups helps you more effectively find, switch and manage tabs across multiple workstreams. To enable this, we are turning on tab grouping beginning with Microsoft Edge version 93.
+
+- **Hide the title bar while using Vertical Tabs.**  Get the extra few pixels back by hiding the browser's title bar, while in Vertical Tabs. Starting with Microsoft Edge version 93, you can go to edge://settings/appearance and under the Customize Toolbar section select the option to hide the title bar while in Vertical Tab mode.
+
+- **Video Picture in Picture (PiP) from hover toolbar.**  Beginning in Edge version 93, it will become even easier to enter Picture in Picture (PiP) mode. When you hover over a supported video, a toolbar will appear that allows you to view that video in a PiP window.  Please note: this is currently available for Microsoft Edge users on macOS.  Please check back shortly as we continue our rollout to Windows users.
+
+- **Removal of 3DES in TLS.**  Starting with Edge v93, support for the TLS_RSA_WITH_3DES_EDE_CBC_SHA cipher suite will be removed. This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, navigate to the Chrome Platform Status entry. Additionally, in Edge v93, the TripleDESEnabled policy will be available to support scenarios that need to preserve compatibility with outdated servers. This compatibility policy will become obsolete and stop working in Edge v95. Ensure that you update affected servers before then.
 
 ## Version 92.0.902.62: July 29
 
