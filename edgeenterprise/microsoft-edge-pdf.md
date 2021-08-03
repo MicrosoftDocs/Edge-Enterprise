@@ -1,9 +1,9 @@
 ---
 title: "PDF reader in Microsoft Edge"
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 03/01/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,16 +30,17 @@ The following table shows which channels and versions of Microsoft Edge support 
 | View and print local, online, and embedded PDF files | 79.0.309.71                |
 | Basic form filling<br>(JavaScript forms aren't supported) | 79.0.309.71           |
 |Table of contents| 86.0.622.38 |
-| Page view |Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Page view | 88.0.705.50 |
 | Caret mode browsing |87.0.664.41 |
 | Inking  | 80.0.361.48            |
 | Ink customization | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| Text notes | Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels |
+| Text notes | 88.0.705.50 |
 | Read aloud | 84.0.522.63  |
-| View Microsoft Information Protection (MIP) protected files | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
+| View Microsoft Information Protection (MIP) protected files in the same business tenant | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
+| View Microsoft Information Protection (MIP) protected files across business tenants | 91.0.864.37  |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
-| View and validate Digital Signatures | Available in Canary and Dev channels. Being actively worked on. |
+
 
 ### Constraints
 
@@ -110,6 +111,7 @@ Read aloud for PDF adds the convenience of listening to PDF content while carryi
 > A license is required for MIP. For more information, see this [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 These files can be opened directly in the browser, without the need to download any other software, or install any add-in. This capability integrates the security provided by MIP directly into the browser, providing a seamless workflow.
+You can view MIP Protected files across business tenants. Viewing files using consumer identities currently is not supported.
 
 ![Protected pdf document.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

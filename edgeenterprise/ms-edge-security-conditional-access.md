@@ -3,11 +3,11 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: srugh
 author: srugh
 manager: seanlyn
-ms.date: 10/02/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge and Conditional Access"
 ---

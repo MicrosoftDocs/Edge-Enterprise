@@ -3,11 +3,11 @@ title: "Cookie sharing from Microsoft Edge to Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "How to share cookies from Microsoft Edge to Internet Explorer "
 ---
