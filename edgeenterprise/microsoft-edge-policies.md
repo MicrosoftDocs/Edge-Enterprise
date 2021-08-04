@@ -3,11 +3,11 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/01/2021
+ms.date: 08/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
@@ -56,6 +56,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard Container Proxy|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard Favorites Sync Enabled|
+|[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Ignore Application Guard site list configuration and browse Edge normally|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard Traffic Identification|
 ### [*Cast*](#cast-policies)
 
@@ -158,6 +159,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
+|[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
 |Policy Name|Caption|
@@ -413,6 +415,7 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
@@ -634,6 +637,62 @@ If you disable or don't configure this policy, favorites on the host will not be
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ApplicationGuardFavoritesSyncEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ApplicationGuardPassiveModeEnabled
+
+  #### Ignore Application Guard site list configuration and browse Edge normally
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 94 or later
+
+  #### Description
+
+  Set whether Edge should ignore the Application Guard site list configuration for trusted and untrusted sites.
+
+If you enable this policy, all navigations from Edge, including navigations to untrusted sites, will be accessed normally within Edge without redirecting to the Application Guard container. Note: this policy ONLY impacts Edge, so navigations from other browsers might get redirected to the Application Guard Container if you have the corresponding extensions enabled.
+
+If you disable or don't configure this policy, Edge does not ignore the Application Guard site list. If users try to navigate to an untrusted site in the host, the site will open in the container.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ApplicationGuardPassiveModeEnabled
+  - GP name: Ignore Application Guard site list configuration and browse Edge normally
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Application Guard settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ApplicationGuardPassiveModeEnabled
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -5076,6 +5135,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ],
+    "toolbar_state": "force_shown",
     "update_url": "https://contoso.com/update_url"
   },
   "cdefghijklmnopabcdefghijklmnopab": {
@@ -5105,7 +5165,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -5173,6 +5233,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>*://*.contoso.com</string>
     </array>
+    <key>toolbar_state</key>
+    <string>force_shown</string>
     <key>update_url</key>
     <string>https://contoso.com/update_url</string>
   </dict>
@@ -5825,6 +5887,7 @@ If you disable or don't configure this policy, signin process will use Windows A
 
 If you enable this policy, OneAuth authentication flow will be used for account signin. The OneAuth authentication flow has fewer dependencies and can work without Windows shell. The account you use would not be stored in the Email and accounts page.
 
+This policy will only take effect on Windows 10 RS3 and above. On Windows 10 below RS3, OneAuth is used for authentication in Microsoft Edge by default.
 
   #### Supported features:
 
@@ -5857,6 +5920,65 @@ If you enable this policy, OneAuth authentication flow will be used for account 
 
 ```
 0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WAMAuthBelowWin10RS3Enabled
+
+  #### WAM for authentication below Windows 10 RS3 enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  Configure this policy to decide whether WAM is used for authentication in Microsoft Edge on Windows 10 RS1 and RS2.
+
+If you enable this setting, WAM will be used in the authentication flow on Windows 10 RS1 and RS2.
+
+If you disable or don't configure this setting, OneAuth libraries will be used instead of WAM on Windows 10 RS1 and RS2.
+
+Note that if this policy is enabled, then previous sign-in sessions (which used OneAuth by default) cannot be used. Please sign out of those profiles.
+
+This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 and above, WAM is used for authentication in Microsoft Edge by default.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WAMAuthBelowWin10RS3Enabled
+  - GP name: WAM for authentication below Windows 10 RS3 enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WAMAuthBelowWin10RS3Enabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
@@ -6260,7 +6382,7 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   
   #### Supported versions:
 
-  - On Windows since 93 or later
+  - On Windows and macOS since 93 or later
 
   #### Description
 
@@ -6303,6 +6425,13 @@ If you disable this policy, users will no longer see strong password suggestions
 0x00000000
 ```
 
+  #### Mac information and settings
+  
+  - Preference Key Name: PasswordGeneratorEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -6380,6 +6509,7 @@ If you enable or disable this policy, users can't change or override it in Micro
   #### Supported versions:
 
   - On Windows since 85 or later
+  - On macOS since 93 or later
 
   #### Description
 
@@ -6438,6 +6568,13 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 0x00000001
 ```
 
+  #### Mac information and settings
+  
+  - Preference Key Name: PasswordMonitorAllowed
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -6727,7 +6864,7 @@ This policy only affects the browser password reveal button, it doesn't affect w
   
   #### Supported versions:
 
-  - On Windows since 93 or later
+  - On Windows and macOS since 93 or later
 
   #### Description
 
@@ -6780,6 +6917,13 @@ Use the preceding information when configuring this policy.
 0x00000000
 ```
 
+  #### Mac information and settings
+  
+  - Preference Key Name: PrimaryPasswordSetting
+  - Example value:
+``` xml
+<integer>0</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -7705,7 +7849,7 @@ For origins not covered by the patterns specified here, the global default value
 
 Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
-For detailed information on valid URL patterns, please go [here](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+For detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
 
   #### Supported features:
 
@@ -20106,6 +20250,61 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
 ```
 0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### OpenMicrosoftLinksInEdgeEnabled
+
+  #### Always open links from certain Microsoft apps in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 93 or later
+
+  #### Description
+
+  Enables Microsoft Edge to open links from Microsoft Outlook and Microsoft Teams Win32 applications, using the correct profile in Microsoft Edge.
+
+If you disable this policy, the default browser will be used to open links from these apps.
+
+If you enable or do not configure this policy, Microsoft Edge will always open links from these apps using the correct profile even when Microsoft Edge is not set as the default browser. This policy does not change the default browser.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OpenMicrosoftLinksInEdgeEnabled
+  - GP name: Always open links from certain Microsoft apps in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OpenMicrosoftLinksInEdgeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
 ```
 
   
