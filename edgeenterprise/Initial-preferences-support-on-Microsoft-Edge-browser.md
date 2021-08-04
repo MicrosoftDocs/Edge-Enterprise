@@ -42,7 +42,6 @@ Below is the list of preferences setting that are currently supported by Microso
 | Fullscreen | Allowed |
 | homepage | Homepage_url |
 | homepage_is_newtabpage | homepage_is_newtabpage |
-| incognito | mode_availability |
 | Session | restore_on_startup<br>startup_urls |
 | Extensions | Extensions : settings |
 
