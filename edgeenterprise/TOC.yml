@@ -86,6 +86,8 @@
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+   - name: Configure Microsoft Edge using Initial Preferences settings for the first run
+     href: Initial-preferences-support-on-Microsoft-Edge-browser.md
    - name: Per Site Configuration by Policy
      href: Per-Site-Configuration-by-Policy.md
 #     href: configure-edge-with-intune.md
