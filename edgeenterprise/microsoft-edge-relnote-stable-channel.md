@@ -32,7 +32,7 @@ Fixed various bugs & performance issues.
 
 ### Modified Policy
 
-AutoplayAllowed – Setting to “Disabled” now sets media autoplay to “Limit”
+- AutoplayAllowed – Setting to “Disabled” now sets media autoplay to “Limit”
 
 ## Version 92.0.902.55: July 22
 
