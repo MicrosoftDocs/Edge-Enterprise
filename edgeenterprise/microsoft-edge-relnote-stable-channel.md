@@ -30,6 +30,15 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-05-2021).
 
+## Version 92.0.902.62: July 29
+
+Fixed various bugs & performance issues.
+
+### Modified Policy
+
+- AutoplayAllowed – Setting to “Disabled” now sets media autoplay to “Limit”
+
+
 ## Version 92.0.902.55: July 22
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-22-2021).
