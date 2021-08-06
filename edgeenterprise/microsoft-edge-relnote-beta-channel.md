@@ -25,7 +25,7 @@ These release notes provide information about new features and non-security upda
 
 - **Initial Preferences in Microsoft Edge.**  Starting with Microsoft Edge version 93, deploying Microsoft Edge to your enterprise will become easier with the addition of Initial Preferences.
 
-- **IE mode on Microsoft Edge will support "nomerge" behavior.**  Starting with Microsoft Edge version 93, IE mode on Microsoft Edge will support _nomerge_. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, similar to the behavior in IE11. You will need to adjust your site list to configure sites that need to prevent session sharing. Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated “nomerge” sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. This is similar behavior to when users could launch IE with nomerge and could also launch Microsoft Edge without nomerge via other mechanisms. Learn more [here].(/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
+- **IE mode on Microsoft Edge will support "nomerge" behavior.**  Starting with Microsoft Edge version 93, IE mode on Microsoft Edge will support _nomerge_. For an end user, when a new browser window is launched from an IE mode application, it will be in a separate session, similar to the behavior in IE11. You will need to adjust your site list to configure sites that need to prevent session sharing. Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated “nomerge” sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. Learn more [here].(/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
 
 - **Tab Groups.**  The ability to categorize tabs into user-defined groups helps you more effectively find, switch, and manage tabs across multiple workstreams. To enable this, we are turning on tab grouping beginning with Microsoft Edge version 93.
 
@@ -101,19 +101,19 @@ Note that KB5003698 or later is required for Windows 10, version 1909; or KB5003
 - **MHTML files will default to opening in Internet Explorer mode**. Starting in Microsoft Edge version 92 Stable, MHTML file types will automatically open in Internet Explorer mode on Microsoft Edge instead of the Internet Explorer (IE11) application. This is most commonly observed while trying to view Outlook emails in a browser. This change will occur only if IE11 is the default handler for this file type. If you'd prefer to change this, you can do so prior to installing the Stable version 92 update using [this guidance](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 - **Payment instruments are now synced across devices**. Beginning with Microsoft Edge version 92, you have the option to synchronize your payment information across your signed in devices.
-Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+Please note: this is a Controlled Feature Rollout. If you don’t see this feature, check back shortly as we continue our rollout.
 
 - **"Disable developer mode extensions" warning can be permanently dismissed**. Beginning with Microsoft Edge version 92, you can turn off the warning "Disable developer mode extensions" by clicking on the 'Don't show this again' option.
-Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+Please note: this is a Controlled Feature Rollout. If you don’t see this feature, check back shortly as we continue our rollout.
 
 - **Manage your extensions right from the toolbar**. The all-new extensions menu on the toolbar will allow you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
-Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+Please note: this is a Controlled Feature Rollout. If you don’t see this feature, check back shortly as we continue our rollout.
 
 - **Automatic HTTPS**. Users will have the option to upgrade navigation from HTTP to HTTPS on domains likely to support this more secure protocol. This support can also be configured to attempt delivery over HTTPS for all domains.
 Please note: we are experimenting with this feature and this behavior won’t be seen if you have opted out of experiments.
 
 - **Improvements to font rendering**. Improvements have been made to the rendering of text to improve clarity and reduce blurriness.
-Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+Please note: this is a Controlled Feature Rollout. If you don’t see this feature, check back shortly as we continue our rollout.
 
 ### Policy updates
 
