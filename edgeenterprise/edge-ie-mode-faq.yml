@@ -137,14 +137,7 @@ sections:
           - Windows 10, version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
           - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
           
-          
-      - question: |
-          Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
-        answer: |
-          Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge.
-          To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. 
-          Then you can select **Settings and more** (the ellipses icon) **... > More Tools > Open sites in Edge mode**.
- 
+         
                     
 additionalContent: |
 
