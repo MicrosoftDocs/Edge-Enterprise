@@ -3,7 +3,7 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,16 +42,16 @@ Only those sites that you specifically configure (via policy) will use IE mode, 
 ### IE mode supports the following Internet Explorer functionality
 
 - All document modes and enterprise modes
-- ActiveX controls (such as Java or Silverlight)
+- ActiveX controls (such as Java or Silverlight). **Note**: Silverlight reaches [end of support](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) on October 12, 2021. 
 - Browser Helper Objects 
-- Internet Explorer settings and Group Policies that affect the security zone settings and Protected Mode
-- The F12 developer tools for IE, when launch with [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Internet Explorer settings and group policies that affect security zone settings and Protected Mode
+- F12 developer tools for IE, when launched with [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-)
 - Microsoft Edge extensions (Extensions that interact with the IE page content directly are not supported.)
 
 ### IE mode doesn't support the following Internet Explorer functionality
 
 - Internet Explorer toolbars
-- Internet Explorer settings and Group Policies that affect the navigation menu (for example - search engines, and home pages.)
+- Internet Explorer settings and group policies that control the navigation menu.
 - IE11 or Microsoft Edge F12 developer tools
 
 ## Prerequisites
