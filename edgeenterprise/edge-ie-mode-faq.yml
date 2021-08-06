@@ -118,8 +118,8 @@ sections:
              </site>
              ```
               
-          3. Use the command line `--enable-features=msAllowNoMergeIEMode`(**Note**: This command line currently exists for validation purposes and will not be necessary after the Microsoft Edge 93 *Stable* release).
-          4. Navigate to any site configured as nomerge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session (multiple iexplore.exe processes in Task Manager).
+          3. Use the command line `--enable-features=msAllowNoMergeIEMode`. (**Note**: This command line currently exists for validation purposes and will not be necessary after the Microsoft Edge 93 *Stable* release)
+          4. Navigate to any site configured as nomerge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session (notice multiple iexplore.exe processes in Task Manager).
 
           If you have any feedback, please reach out through one of our feedback channels: Microsoft support or [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
      
@@ -141,9 +141,10 @@ sections:
       - question: |
           Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
         answer: |
-          Yes, for testing purposes while you are modernizing your sites, you can test sites configured to open in IE mode through the Enetrprise Mode Site List on Microsoft Edge.
+          Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge.
           To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. 
           Then you can select **Settings and more** (the ellipses icon) **... > More Tools > Open sites in Edge mode**.
+ 
                     
 additionalContent: |
 
