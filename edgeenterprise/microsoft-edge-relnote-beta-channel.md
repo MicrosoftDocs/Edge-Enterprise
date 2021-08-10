@@ -72,6 +72,10 @@ These release notes provide information about new features and non-security upda
 
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Add mac platform support
 
+## Version 93.0.961.18: August 10
+
+Fixed various bugs and performance issues.
+
 ## Version 92.0.902.62: July 29
 
 Fixed various bugs and performance issues.
