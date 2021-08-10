@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/05/2021
+ms.date: 08/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -480,7 +480,7 @@ These tables list all of the browser-related group policies available in this re
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
-|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (deprecated)|
+|[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
 |[UserDataDir](#userdatadir)|Set the user data directory|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Allow user feedback|
@@ -7771,7 +7771,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   Controls whether insecure websites are allowed to make requests to more-private network endpoints.
 
-This policy relates to the CORS-RFC1918 specification. See https://wicg.github.io/cors-rfc1918 for more details.
+This policy relates to the Private Network Access specification. See https://wicg.github.io/private-network-access/ for more details.
 
 A network endpoint is more private than another if:
 1) Its IP address is localhost and the other is not.
@@ -13188,6 +13188,11 @@ This policy is available only on Windows instances that are joined to a Microsof
 If you disable this policy or set it to false, component updates are disabled for all components in Microsoft Edge.
 
 However, some components are exempt from this policy. This includes any component that doesn't contain executable code, that doesn't significantly alter the behavior of the browser, or that's critical for security. That is, updates that are deemed "critical for security" are still applied even if you disable this policy.
+
+Examples of such components include the certificate revocation lists and security lists like tracking prevention lists.
+
+Please note that disabling this policy can potentially prevent the Microsoft Edge developers from providing critical security fixes in a timely manner and is thus not recommended.
+
 
   #### Supported features:
 
@@ -24482,17 +24487,17 @@ Use the preceding information when configuring this policy.
 
   ### UserAgentClientHintsEnabled
 
-  #### Enable the User-Agent Client Hints feature (deprecated)
+  #### Enable the User-Agent Client Hints feature (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 93.
   #### Supported versions:
 
-  - On Windows and macOS since 86 or later
+  - On Windows and macOS since 86, until 93
 
   #### Description
 
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the User-Agent Client Hints feature. It won't work in Microsoft Edge version 94.
+  This policy is obsolete because it was intended for short-term adaptation purposes only. It doesn't work in Microsoft Edge after version 93.
 
 When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
 
@@ -24515,7 +24520,7 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
   ##### Group Policy (ADMX) info
 
   - GP unique name: UserAgentClientHintsEnabled
-  - GP name: Enable the User-Agent Client Hints feature (deprecated)
+  - GP name: Enable the User-Agent Client Hints feature (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
