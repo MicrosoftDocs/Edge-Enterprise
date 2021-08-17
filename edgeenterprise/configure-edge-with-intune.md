@@ -48,7 +48,8 @@ This procedure leverages Administrative templates (which you might be familiar w
 3. From **Devices** | **Overview**, select **Configuration Profiles** (under Policy heading).
 4. On the top command bar, select **Create profile**.
 5. In the drop-down list below **Platform**, select **Windows 10 and later**.
-6. In the drop-down list below **Profile**, select **Administrative Templates** and then click the **Create** button. The next screenshot shows the drop-down lists to select the platform and type of profile.
+6. In the drop-down list below **Profile Type**, select **Templates**.
+7. In Under **Template name**, select **Administrative Templates** and then click the **Create** button. The next screenshot shows the drop-down lists to select the platform and type of profile.
 
     ![Select platform and type of profile](./media/configure-edge-with-intune/create-profile-platform.png)
 
