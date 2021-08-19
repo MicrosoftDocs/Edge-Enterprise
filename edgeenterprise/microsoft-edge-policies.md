@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/09/2021
+ms.date: 08/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -28,6 +28,7 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
+- [Allow or deny screen capture](#allow-or-deny-screen-capture)
 - [Application Guard settings](#application-guard-settings)
 - [Cast](#cast)
 - [Content settings](#content-settings)
@@ -50,6 +51,11 @@ These tables list all of the browser-related group policies available in this re
 - [Additional](#additional)
 
 
+### [*Allow or deny screen capture*](#allow-or-deny-screen-capture-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
 |Policy Name|Caption|
@@ -159,6 +165,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
+|[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
@@ -442,7 +449,6 @@ These tables list all of the browser-related group policies available in this re
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
@@ -503,6 +509,69 @@ These tables list all of the browser-related group policies available in this re
 
 
 
+
+  ## Allow or deny screen capture policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ScreenCaptureAllowed
+
+  #### Allow or deny screen capture
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 83 or later
+
+  #### Description
+
+  If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
+If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ScreenCaptureAllowed
+  - GP name: Allow or deny screen capture
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Allow or deny screen capture
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ScreenCaptureAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ScreenCaptureAllowed
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
 
   ## Application Guard settings policies
 
@@ -2525,7 +2594,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Create a list of URL patterns to specify sites that can display insecure mixed content (that is, HTTP content on HTTPS sites).
+  Create a list of URL patterns to specify sites that can display or, as of version 94, download insecure mixed content (that is, HTTP content on HTTPS sites).
 
 If you don't configure this policy, blockable mixed content will be blocked and optionally blockable mixed content will be upgraded. However, users will be allowed to set exceptions to allow insecure mixed content for specific sites.
 
@@ -5925,6 +5994,63 @@ This policy will only take effect on Windows 10 RS3 and above. On Windows 10 bel
 
   [Back to top](#microsoft-edge---policies)
 
+  ### OnlyOnPremisesImplicitSigninEnabled
+
+  #### Only on-premises account enabled for implicit sign-in
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 94 or later
+
+  #### Description
+
+  Configure this policy to decide whether only on-premises accounts are enabled for implicit sign-in.
+
+If you enable this policy, only on-premises accounts will be enabled for implicit sign-in. Microsoft Edge won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
+
+If you disable or don't configure this policy, all accounts will be enabled for implicit sign-in.
+
+This policy will only take effect when policy [ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin) is enabled and set to 'SignInAndMakeDomainAccountNonRemovable'.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OnlyOnPremisesImplicitSigninEnabled
+  - GP name: Only on-premises account enabled for implicit sign-in
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OnlyOnPremisesImplicitSigninEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WAMAuthBelowWin10RS3Enabled
 
   #### WAM for authentication below Windows 10 RS3 enabled
@@ -8931,13 +9057,13 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   Configures the default home page in Microsoft Edge. You can set the home page to a URL you specify or to the new tab page.
 
-If you enable this policy, the new tab page is always used for the home page, and the home page URL location is ignored.
+If you enable this policy, the Home button is set to the new tab page as configured by the user or with the policy [NewTabPageLocation](#newtabpagelocation) and the URL set with the policy [HomepageLocation](#homepagelocation) is not taken into consideration.
 
-If you disable this policy, the user's home page can't be the new tab page, unless the URL is set to 'edge://newtab'.
+If you disable this policy, the Home button is the set URL as configured by the user or as configured in the policy [HomepageLocation](#homepagelocation).
 
-If not configured users can choose whether the new tab page is their home page.
+If you don't configure this policy, users can choose whether the set URL or the new tab page is their home page.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10 Pro or Enterprise instances enrolled for device management.
 
   #### Supported features:
 
@@ -8999,13 +9125,13 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 The home page is the page opened by the Home button. The pages that open on startup are controlled by the [RestoreOnStartup](#restoreonstartup) policies.
 
-You can either set a URL here or set the home page to open the new tab page. If you select to open the new tab page, then this policy doesn't take effect.
+You can either set a URL here or set the home page to open the new tab page 'edge://newtab'. By default, the Home button will open the new tab page (as configured by the user or with the policy [NewTabPageLocation](#newtabpagelocation)), and the user will be able to choose between the URL configured by this policy and the new tab page.
 
-If you enable this policy, users can't change their home page URL, but they can choose to use the new tab page as their home page.
+If you enable this policy, users can't change their home page URL, but they can choose the behavior for the Home button to open either the set URL or the new tab page. If you wish to enforce the usage of the set URL you must also configure [HomepageIsNewTabPage](#homepageisnewtabpage)=Disabled.
 
 If you disable or don't configure this policy, users can choose their own home page, as long as the [HomepageIsNewTabPage](#homepageisnewtabpage) policy isn't enabled.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro, or Enterprise instances enrolled for device management.
 
   #### Supported features:
 
@@ -13411,6 +13537,8 @@ From Microsoft Edge 89 onwards, if there is an existing on-premises profile with
 
 From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
 
+From Microsoft Edge 94 onwards, if policy [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) is enabled, and this policy is set to 'SignInAndMakeDomainAccountNonRemovable', it will take effect even on hybrid joined environment. Microsoft Edge will automatically sign in users using their Active Directory domain account even if there are MSA or AAD accounts.
+
 Policy options mapping:
 
 * Disabled (0) = Disabled
@@ -15640,7 +15768,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   #### Data Type:
 
-  - List of strings
+  - Dictionary
 
   #### Windows information and settings
 
@@ -15654,27 +15782,62 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
+  - Value Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Value Type: REG_SZ
 
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
-
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
 ```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
 
   #### Mac information and settings
   
   - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
+<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
-  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -22000,65 +22163,6 @@ If you disable this policy or don't configure it, browsing history is saved.
   - Example value:
 ``` xml
 <true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ScreenCaptureAllowed
-
-  #### Allow or deny screen capture
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 83 or later
-
-  #### Description
-
-  If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
-If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: ScreenCaptureAllowed
-  - GP name: Allow or deny screen capture
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ScreenCaptureAllowed
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000000
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: ScreenCaptureAllowed
-  - Example value:
-``` xml
-<false/>
 ```
   
 
