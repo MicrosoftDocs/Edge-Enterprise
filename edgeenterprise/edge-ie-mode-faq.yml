@@ -4,7 +4,7 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 06/29/2021
+  ms.date: 08/05/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
@@ -81,6 +81,15 @@ sections:
           Yes, the Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/).The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
           
       - question: |
+          How can I debug my legacy application while using IE mode on Microsoft Edge?
+        answer: |
+          You can use IEChooser to launch the Internet Explorer DevTools to debug the content of your IE mode tabs. To use IEChooser, perform the following steps.
+          1. Open IEChooser.
+              - Open the Run dialog box. For example, press the `Windows logo key` + `R`.
+              - Enter `%systemroot%\system32\f12\IEChooser.exe`, and then select **Ok**.
+          2. In IEChooser, select the entry for the IE mode tab.
+            
+      - question: |
           Can I use "Open with Explorer" or "View in File Explorer" in SharePoint with IE mode?
         answer: |
           Yes, if this works in standalone Internet Explorer 11 it will work in IE mode. However, rather than use the Open with Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [sync your SharePoint files](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) or [move or copy files in SharePoint](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
@@ -88,13 +97,32 @@ sections:
       - question: |
           Does IE mode on Microsoft Edge support the 'nomerge' option that was supported in Internet Explorer 11?
         answer: |
-          There is no explicit command line in Microsoft Edge to mirror the *nomerge* option, but there are a couple of alternatives that we recommend to provide this functionality.
-          
+          The recommended alternatives for the nomerge functionality in Microsoft Edge are to -
           1. Use Profiles in Microsoft Edge - Each profile maps to a different IE session for IE mode pages, so it behaves identically to the *nomerge* option.
           2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that both launches Microsoft Edge and changes the path for the session.
           
-          If neither of the above options works for your scenario, reach out through one of our feedback channels:  Microsoft support or [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+          If neither of those options work for your scenario, starting in **Microsoft Edge version 93**, IE mode on Microsoft Edge will support nomerge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the nomerge behavior in IE11. 
           
+          Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated *“nomerge”* sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. 
+          This follows previous behavior where users could launch IE with nomerge and could also launch Microsoft Edge without nomerge via other mechanisms. 
+          All sites opening in a new window (through window.open) will respect the merge nature of the parent process. Please note that session switching isn’t supported;  navigations within the same IE mode tab will use the same session.
+          
+          You can validate the behavior in the Microsoft Edge **Beta** channel (version 93 or later) by following these steps:
+          1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later. 
+          2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to “nomerge”. This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. 
+             (**Note**: The integrated site list manager tool available at edge://compat/sitelistmanager will include this option with the Microsoft Edge 93 *Stable* release)
+          
+             ```
+             <site url="contoso.com">
+             <open-in merge-type="no-merge">IE11</open-in>
+             </site>
+             ```
+              
+          3. Use the command line `--enable-features=msAllowNoMergeIEMode`. (**Note**: This command line currently exists for validation purposes and will not be necessary after the Microsoft Edge 93 *Stable* release)
+          4. Navigate to any site configured as nomerge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session (notice multiple iexplore.exe processes in Task Manager).
+
+          If you have any feedback, please reach out through one of our feedback channels: Microsoft support or [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+     
       - question: |
           Can I save links as webpages in Internet Explorer mode?
         answer: |
@@ -109,14 +137,8 @@ sections:
           - Windows 10, version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
           - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
           
-          
-      - question: |
-          Can I open a site in IE mode without an Enterprise Mode Site list?
-        answer: |
-          Yes, for testing purposes IE mode can toggle for a particular browser instance.
-          
-          Run Microsoft Edge with the `--ie-mode-test` command line flag eg. `msedge.exe --ie-mode-test`, then select ... -> More Tools -> "Open sites in Internet Explorer mode".
-          
+         
+                    
 additionalContent: |
 
   ## See also
