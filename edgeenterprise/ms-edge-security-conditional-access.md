@@ -46,4 +46,4 @@ This support is available across all platforms, including all supported versions
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Video: Security, compatibility, and manageability](/microsoft-edge-video-security-compatibility-manageability.md)
+- [Video: Security, compatibility, and manageability](/deployedge/microsoft-edge-video-security-compatibility-manageability)
