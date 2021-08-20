@@ -70,10 +70,8 @@ You can use the following group policies to configure specific sites to open in 
     > [!NOTE]
     > It is not mandatory to configure the Microsoft Edge policy. Many organizations use this as an override, allowing them to target the current Site List at all users with the IE policy, and more easily target an updated version to pilot uses with the Microsoft Edge policy.
 
-For more information about Enterprise Mode Site lists, see:
+For more information about Enterprise Mode Site Lists, see [Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
 
-- [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Add multiple sites to the Enterprise Mode site list using a file and the Enterprise Mode Site List Manager (schema v.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### Configure using the Use the Enterprise Mode IE website list policy
 
