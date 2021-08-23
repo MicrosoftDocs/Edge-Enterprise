@@ -30,6 +30,10 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-19-2021).
 
+## Version 92.0.902.73: August 12
+
+Fixed various bugs & performance issues.
+
 ## Version 92.0.902.67: August 5
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-05-2021).
