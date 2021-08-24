@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/18/2021
+ms.date: 08/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -501,6 +501,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (deprecated)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
+|[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
@@ -25612,6 +25613,64 @@ Use the preceding information when configuring this policy.
 ``` xml
 <string>default</string>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebRtcRespectOsRoutingTableEnabled
+
+  #### Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 94 or later
+
+  #### Description
+
+  Controls whether WebRTC will respect the Windows OS routing table rules when making peer to peer connections.
+
+If you disable this policy or don't configure it, WebRTC will not consider the routing table and may make peer to peer connections over any available network.
+
+If you enable this policy, WebRTC will prefer to make peer to peer connections using the indicated network interface for the remote address as indicated in the routing table.
+
+This policy is only available on Windows.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebRtcRespectOsRoutingTableEnabled
+  - GP name: Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebRtcRespectOsRoutingTableEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
