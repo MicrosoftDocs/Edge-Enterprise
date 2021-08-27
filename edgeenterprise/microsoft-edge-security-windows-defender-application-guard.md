@@ -46,6 +46,13 @@ The next screenshot shows an example of Application Guard's message showing that
 
 Application Guard support in the new Microsoft Edge  browser has functional parity with Microsoft Edge Legacy and includes several improvements.
 
+### Enable Application Guard in passive mode and browse Edge normally
+
+Starting from Microsoft Edge 94, users now have the option to configure passive mode, meaning that Application Guard ignores the site list configuration and users can browse Edge normally. This support can be controlled via policy. You can update the Edge policy [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) to enable or disable passive mode.
+
+> [!Note]
+> This policy ONLY impacts Edge, so navigations from other browsers might get redirected to the Application Guard Container if you have the corresponding extensions enabled.
+
 ### Favorites synchronizing from the host to the container
 
 Some of our customers have been asking for favorites sync between the host browser and the container in Application Guard. Starting from Microsoft Edge 91, users now have the option to configure Application Guard to synchronize their favorites from the host to the container. This ensures new favorites appear on the container as well.
