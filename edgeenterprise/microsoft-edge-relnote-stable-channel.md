@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/06/2021
+ms.date: 08/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,18 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 92.0.902.84: August 26
+
+Fixed various bugs & performance issues.
+
+## Version 92.0.902.78: August 19
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-19-2021).
+
+## Version 92.0.902.73: August 12
+
+Fixed various bugs & performance issues.
 
 ## Version 92.0.902.67: August 5
 
