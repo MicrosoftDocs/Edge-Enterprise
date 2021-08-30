@@ -99,7 +99,6 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 89.0.
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 89.0.774.68 )**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-
 ## March 13, 2021
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 89.0.774.54 )**, which incorporates the latest Security Updates of the Chromium project. This update contains [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
@@ -118,7 +117,11 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.
 
 ## February 4, 2021
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.62)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 88.0.705.62)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific update:
+
+- [CVE-2021-24113](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-24113)
 
 ## January 21, 2021
 
