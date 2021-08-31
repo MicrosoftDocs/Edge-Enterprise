@@ -57,7 +57,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Initial Preferences in Microsoft Edge.**  Starting with Microsoft Edge version 93, deploying Microsoft Edge to your enterprise will become easier with the addition of Initial Preferences.
+- **Initial Preferences in Microsoft Edge.**  Starting with Microsoft Edge version 93, deploying Microsoft Edge to your enterprise will become easier with the addition of [Initial Preferences](/deployedge/initial-preferences-support-on-microsoft-edge-browser).
 
 - **IE mode on Microsoft Edge will support "nomerge" behavior.**  Starting with Microsoft Edge version 93, IE mode on Microsoft Edge will support _nomerge_. For an end user, when a new browser window is launched from an IE mode application, it will be in a separate session, similar to the behavior in IE11. You will need to adjust your site list to configure sites that need to prevent session sharing. Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated “nomerge” sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. Learn more [here](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
 
