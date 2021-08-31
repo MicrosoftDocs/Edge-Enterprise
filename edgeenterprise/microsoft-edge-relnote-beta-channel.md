@@ -37,7 +37,7 @@ These release notes provide information about new features and non-security upda
 
 - **Free form text boxes added to PDF documents.**  We now support adding free form text boxes to PDF documents that you can use to fill in forms and add visible notes.
 
-- Update your passwords with ease.  The browser will now take you directly to the Change Password page for a given website saving you time and clicks by avoiding the need to navigate to the page manually. Once you’re on this page the browser will also autofill your existing password and suggest a strong, unique new password.  Please note: currently this feature is available on a limited number of sites.  
+- **Update your passwords with ease.**  The browser will now take you directly to the Change Password page for a given website saving you time and clicks by avoiding the need to navigate to the page manually. Once you’re on this page the browser will also autofill your existing password and suggest a strong, unique new password.  Please note: currently this feature is available on a limited number of sites.  
 
 - **New accessibility settings page.** We have brought accessibility-related settings together on a single page. You can find the new edge://settings/accessibility page under the main settings list. Here you can find settings to make the web page bigger, show a high visibility outline around the area of focus and other settings that can help improve your web browsing experience. We’ll continue to add new settings here in future versions of Microsoft Edge.
 
