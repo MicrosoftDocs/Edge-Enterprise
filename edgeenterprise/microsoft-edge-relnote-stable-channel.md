@@ -44,7 +44,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
   - Enable [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) policy and set the list of specific file types that ClickOnce and DirectInvoke should be disabled for
   - Enable the [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) policy and set the list of specific domains that ClickOnce and DirectInvoke will be disabled for.
 
-Note: [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) is a supporter policy for [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes). If [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) is not set and [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) is set, then file types listed will automatically open from all URLs.
+  Note: AutoOpenAllowedForURLs is a supporter policy for AutoOpenFileTypes. If AutoOpenAllowedForURLs is not set and AutoOpenFileTypes is set, then file types listed will automatically open from all URLs.
 
 - **Tab Groups.**  We are turning on tab grouping which provides the ability to categorize tabs into user-defined groups and helps you more effectively find, switch and manage tabs across multiple workstreams.  
 
