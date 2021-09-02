@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -21270,7 +21270,7 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 
 Users are notified of the need for a browser relaunch or device restart based on the [RelaunchNotification](#relaunchnotification) and [RelaunchNotificationPeriod](#relaunchnotificationperiod) policy settings. Browsers and devices are forcibly restarted at the end of the notification period when the [RelaunchNotification](#relaunchnotification) policy is set to 'Required'. This RelaunchWindow policy can be used to defer the end of the notification period so that it falls within a specific time window.
 
-If you don't configure this policy, the default target time window for Microsoft Edge is between 2 AM and 4 AM. The default target time window for Microsoft Edge is the whole day (i.e., the end of the notification period is never deferred).
+If you don't configure this policy, the default target time window is the whole day (i.e., the end of the notification period is never deferred).
 
 Note: Though the policy can accept multiple items in entries, all but the first item are ignored.
 Warning: Setting this policy may delay application of software updates.
