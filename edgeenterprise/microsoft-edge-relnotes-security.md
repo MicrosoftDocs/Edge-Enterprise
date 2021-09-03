@@ -22,11 +22,11 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 93.
 
 This update contains the following Microsoft Edge-specific update:
 
-- [CVE-2021-26436](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26436)
 - [CVE-2021-36930](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36930)
+- [CVE-2021-26436](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26436)
+- [CVE-2021-26439](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26439)
 - [CVE-2021-38641](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38641)
 - [CVE-2021-38642](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38642)
-- [CVE-2021-38670](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38670)
 
 ## August 19, 2021
 
