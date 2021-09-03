@@ -25,7 +25,7 @@ sections:
         answer: |
           In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **Settings**. Select **About Microsoft Edge** to see your version of Microsoft Edge.
 
-      - question: What about Internet Explore 11?
+      - question: What about Internet Explorer 11?
         answer: |
           The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see the [FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. Learn more [here](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
       
