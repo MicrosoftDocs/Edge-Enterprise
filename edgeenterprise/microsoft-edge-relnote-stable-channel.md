@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/07/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -53,6 +53,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - **Video Picture in Picture (PiP) from hover toolbar.**  When you hover over a supported video, a toolbar will appear that allows you to view that video in a PiP window.  Please note: this is currently available for Microsoft Edge users on macOS.  
 
 - **Removal of 3DES in TLS. Support for the TLS_RSA_WITH_3DES_EDE_CBC_SHA cipher suite will be removed.** This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, navigate to the [Chrome Platform Status entry](https://chromestatus.com/feature/6678134168485888). Additionally, in Microsoft Edge version 93, the [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) policy will be available to support scenarios that need to preserve compatibility with outdated servers. This compatibility policy will become obsolete and stop working in Microsoft Edge version 95. Ensure that you update affected servers before then.
+
+- **Microsoft Edge for iOS and Microsoft Edge for Android.**  We’ve redesigned the browser to be faster, safer, and easier to use. Please note: If you don’t see this feature, please check back shortly as we continue our rollout.
 
 ## Version 92.0.902.84: August 26
 
