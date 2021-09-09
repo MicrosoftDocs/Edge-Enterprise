@@ -93,6 +93,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Add mac platform support
 - [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Add mac platform support
 
+
 ## Version 92.0.902.84: August 26
 
 Fixed various bugs & performance issues.
