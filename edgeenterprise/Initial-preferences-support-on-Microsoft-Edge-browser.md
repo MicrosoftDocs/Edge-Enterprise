@@ -47,7 +47,7 @@ Below is the list of preferences setting that are currently supported by Microso
 
 ## 1: Download an example initial_preferences file
 
-To get started, download the example *initial_preferences* file form this location the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download) **and** follow the steps below.
+To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). Extract the files, and open the `initial_preferences` file within the `examples` folder.
 
 ## 2: Customize and validate the initial_preferences file
 
