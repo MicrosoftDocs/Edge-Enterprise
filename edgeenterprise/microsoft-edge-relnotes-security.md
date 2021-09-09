@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,14 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## September 9, 2021
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 93.0.961.44)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide)
+
+This update contains the following Microsoft Edge-specific update:
+
+- [CVE-2021-38669](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38669)
 
 ## September 2, 2021
 
