@@ -65,7 +65,7 @@ sections:
            Then you can select Settings and more (the ellipses icon ...) > More Tools > Open sites in Edge mode.
       - question:
 
-          Error message: "To open this page in IE mode, try restarting Microsoft Edge."
+          Receiving error message "To open this page in IE mode, try restarting Microsoft Edge."
         answer: |
           You may see this error if there was an unexpected error in Internet Explorer. Restarting Microsoft Edge usually fixes this error.
 
