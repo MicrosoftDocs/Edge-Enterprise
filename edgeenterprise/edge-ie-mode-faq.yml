@@ -4,7 +4,7 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 08/31/2021
+  ms.date: 09/31/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
@@ -57,9 +57,10 @@ sections:
           - Enable Internet Explorer 11 in Windows Features.
           
           To check if Microsoft Edge is installed at the systems level, type "edge://version" in the Microsoft Edge address bar. The Executable path will show a path starting with *C:\Program Files*, which indicates a system install. If the Executable path begins with *C:\Users\*, uninstall and then reinstall Microsoft Edge with administrator privileges.
-          
-      - question: |
-          Error message: "To open this page in IE mode, try restarting Microsoft Edge."
+      
+      - question:
+
+          Receiving error message "To open this page in IE mode, try restarting Microsoft Edge."
         answer: |
           You may see this error if there was an unexpected error in Internet Explorer. Restarting Microsoft Edge usually fixes this error.
 
@@ -88,7 +89,12 @@ sections:
               - Open the Run dialog box. For example, press the `Windows logo key` + `R`.
               - Enter `%systemroot%\system32\f12\IEChooser.exe`, and then select **Ok**.
           2. In IEChooser, select the entry for the IE mode tab.
-            
+      - question: 
+          Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
+        answer:
+           Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running.
+         
+           Then you can select Settings and more (the ellipses icon ...) > More Tools > Open sites in Edge mode.    
       - question: |
           Can I use "Open with Explorer" or "View in File Explorer" in SharePoint with IE mode?
         answer: |
