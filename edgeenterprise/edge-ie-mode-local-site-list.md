@@ -49,8 +49,9 @@ To enable the local site list experience, users can go to the URL *edge://settin
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Internet Explorer Compatibility":::
 
 >[!Note]  
-
->1. If you have enabled IE mode testing through the *InternetExplorerIntegrationTestingAllowed* policy, you will see this setting, but it will be greyed out unless you  explicitly Enable the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.  
+>
+>1. If you have enabled IE mode testing through the *InternetExplorerIntegrationTestingAllowed* policy, you will see this setting, but it will be greyed out unless you  explicitly Enable the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
+>
 >2. If **Allow sites to be reloaded in Internet Explorer mode** is set to **Default**, users might be able to reload sites in IE mode if they have existing Internet Explorer 11 usage.  
 
 When this setting is enabled, users can reload a site in IE mode by selecting **Settings and more (the ellipses icon ...) > Reload in Internet Explorer mode**. Users can also select **Reload tab in Internet Explorer mode** when they right-click on a tab or choose **Open link in new Internet Explorer mode tab** when they right click on a link.
