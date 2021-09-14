@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/29/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -103,7 +103,7 @@ These tables list all of the browser-related group policies available in this re
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Block JavaScript on specific sites|
 |[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
 |[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Block JavaScript from using JIT on these sites|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting (deprecated)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting (obsolete)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revert to legacy SameSite behavior for cookies on specified sites|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Allow notifications on specific sites|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Block notifications on specific sites|
@@ -304,6 +304,7 @@ These tables list all of the browser-related group policies available in this re
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
+|[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Enable browser legacy extension point blocking|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
 |[BrowserSignin](#browsersignin)|Browser sign-in settings|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
@@ -405,6 +406,8 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
+|[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
@@ -458,6 +461,7 @@ These tables list all of the browser-related group policies available in this re
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
@@ -493,6 +497,7 @@ These tables list all of the browser-related group policies available in this re
 |[VerticalTabsAllowed](#verticaltabsallowed)|Configures availability of a vertical layout for tabs on the side of the browser|
 |[VideoCaptureAllowed](#videocaptureallowed)|Allow or block video capture|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
+|[VisualSearchEnabled](#visualsearchenabled)|Visual search enabled|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
 |[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
@@ -2993,19 +2998,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   ### LegacySameSiteCookieBehaviorEnabled
 
-  #### Enable default legacy SameSite cookie behavior setting (deprecated)
+  #### Enable default legacy SameSite cookie behavior setting (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
   #### Supported versions:
 
-  - On Windows and macOS since 80 or later
+  - On Windows and macOS since 80, until 94
 
   #### Description
 
-  'This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they are found to be incompatible with the SameSite behavior change.
+  This policy doesn't work because it was only intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they were found to be incompatible with the SameSite behavior change.
 
-It won't work in Microsoft Edge version 95. If you still require legacy cookie behavior, please use [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) to configure behavior on a per-domain basis.
+If you still require legacy cookie behavior, please use [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) to configure behavior on a per-domain basis.
 
 Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
@@ -3034,7 +3039,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: LegacySameSiteCookieBehaviorEnabled
-  - GP name: Enable default legacy SameSite cookie behavior setting (deprecated)
+  - GP name: Enable default legacy SameSite cookie behavior setting (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -3081,7 +3086,7 @@ Reverting to legacy behavior causes cookies that don't specify a SameSite attrib
 
 If you don't set this policy, the global default value will be used. The global default will also be used for cookies on domains not covered by the patterns you specify.
 
-The global default value can be configured until Microsoft Edge version 95 using the deprecated [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
+The global default value can be configured using the [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
 
 Note that patterns you list in this policy are treated as domains, not URLs, so you should not specify a scheme or port.
 
@@ -6123,7 +6128,7 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
   
   #### Supported versions:
 
-  - On Windows and macOS since 87 or later
+  - On Windows since 87 or later
 
   #### Description
 
@@ -6168,13 +6173,6 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 0x00000001
 ```
 
-  #### Mac information and settings
-  
-  - Preference Key Name: KioskAddressBarEditingEnabled
-  - Example value:
-``` xml
-<true/>
-```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -12320,6 +12318,61 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### BrowserLegacyExtensionPointsBlockingEnabled
+
+  #### Enable browser legacy extension point blocking
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Sets the ProcessExtensionPointDisablePolicy on Microsoft Edge's browser process to block code injection from legacy third party applications.
+
+If you enable or don't configure this policy, the ProcessExtensionPointDisablePolicy is applied to block legacy extension points in the browser process.
+
+If you disable this policy, the ProcessExtensionPointDisablePolicy is not applied to block legacy extension points in the browser process. This has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's browser process. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's browser process.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BrowserLegacyExtensionPointsBlockingEnabled
+  - GP name: Enable browser legacy extension point blocking
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BrowserLegacyExtensionPointsBlockingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -19143,6 +19196,116 @@ If you disable or don't configure this policy, users can't see the options 'Open
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationWindowOpenHeightAdjustment
+
+  #### Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting lets you specify a custom adjustment to the height of popup windows generated via window.open from the Internet Explorer mode site.
+
+If you configure this policy, Microsoft Edge will add the adjustment value to the height, in pixels. The exact difference depends on the UI configuration of both IE and Edge, but a typical difference is 5.
+
+If you disable or don't configure this policy, Microsoft Edge will treat IE mode window.open the same as Edge mode window.open in window height calculations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - GP name: Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000005
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationWindowOpenWidthAdjustment
+
+  #### Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting lets you specify a custom adjustment to the width of popup windows generated via window.open from the Internet Explorer mode site.
+
+If you configure this policy, Microsoft Edge will add the adjustment value to the width, in pixels. The exact difference depends on the UI configuration of both IE and Edge, but a typical difference is 4.
+
+If you disable or don't configure this policy, Microsoft Edge will treat IE mode window.open the same as Edge mode window.open in window width calculations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - GP name: Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000004
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### IntranetRedirectBehavior
 
   #### Intranet Redirection Behavior
@@ -22761,6 +22924,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShadowStackCrashRollbackBehavior
+
+  #### Configure ShadowStack crash rollback behavior
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Specifies whether Microsoft Edge should enable the Hardware-enforced Stack Protection security feature following crash triggered by this feature.
+
+If you don't configure this policy, Microsoft Edge will manage the setting to safely rollout Hardware-enforced Stack Protection, eventually mandatorily enabling the feature for all users.
+
+Set this policy to 'Disable' to always disable Hardware-enforced Stack Protection following a crash triggered by this feature.
+
+Set this policy to 'DisableUntilUpdate' to disable Hardware-enforced Stack Protection following a crash triggered by this feature but enable it after Microsoft Edge has potentially resolved the issue.
+
+Set this policy to 'Enable' to always enable Hardware-enforced Stack Protection following a crash triggered by this feature.
+
+Policy options mapping:
+
+* Disable (0) = Disable Hardware-enforced Stack Protection
+
+* DisableUntilUpdate (1) = Disable Hardware-enforced Stack Protection until the next Microsoft Edge update
+
+* Enable (2) = Enable Hardware-enforced Stack Protection
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShadowStackCrashRollbackBehavior
+  - GP name: Configure ShadowStack crash rollback behavior
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShadowStackCrashRollbackBehavior
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SharedArrayBufferUnrestrictedAccessAllowed
 
   #### Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context
@@ -25029,6 +25261,61 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [Back to top](#microsoft-edge---policies)
 
+  ### VisualSearchEnabled
+
+  #### Visual search enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Visual search lets you quickly explore more related content about entities in an image.
+
+If you enable or don't configure this policy, visual search will be enabled via image hover, context menu, and search in sidebar.
+
+If you disable this policy, visual search will be disabled and you won't be able to get more info about images via hover, context menu, and search in sidebar.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: VisualSearchEnabled
+  - GP name: Visual search enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: VisualSearchEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WPADQuickCheckEnabled
 
   #### Set WPAD optimization
@@ -25110,21 +25397,36 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 Each list item of the policy is an object with a mandatory member:
 url (the URL of the web app to install)
 
-and 3 optional members:
+and 5 optional members:
 - default_launch_container
 (specifies the window mode that the web app opens with-a new tab is the
 default.)
 
 - create_desktop_shortcut
 (True if you want to create Linux and
-Microsoft Windows desktop shortcuts.)
+Microsoft Windows desktop shortcuts).
 
 - fallback_app_name
-(Starting with Microsoft Edge 90,
+(Starting with Microsoft Edge version 90,
 allows you to override the app name if it is not a
 Progressive Web App (PWA), or the app name that is temporarily
 installed if it is a PWA but authentication is required before the
-installation can be completed.)
+installation can be completed. If both
+custom_name and
+fallback_app_name are provided,
+the latter will be ignored.)
+
+- custom_name
+(Starting with Microsoft Edge
+version 96, allows you to permanently override the app name for all web
+apps and PWAs.)
+
+- custom_icon
+(Starting with Microsoft Edge
+version 96, allows you to override the app icon of installed apps. The
+icons have to be square, maximal 1 MB in size, and in one of the following
+formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
+hash of the icon file.)
 
   #### Supported features:
 
@@ -25169,7 +25471,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "window",
     "fallback_app_name": "Editor",
-    "url": "https://app.contoso.com/editor"
+    "url": "https://app.contoso.edu/editor"
+  },
+  {
+    "custom_name": "Spreadsheets",
+    "default_launch_container": "window",
+    "url": "https://app.contoso.edu/sheets"
+  },
+  {
+    "custom_icon": {
+      "hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38",
+      "url": "https://mydomain.example.com/sunny_icon.png"
+    },
+    "url": "https://weather.example.com"
   }
 ]
 ```
@@ -25177,7 +25491,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
   ```
   
 
@@ -25208,7 +25522,26 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
-    <string>https://app.contoso.com/editor</string>
+    <string>https://app.contoso.edu/editor</string>
+  </dict>
+  <dict>
+    <key>custom_name</key>
+    <string>Spreadsheets</string>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>url</key>
+    <string>https://app.contoso.edu/sheets</string>
+  </dict>
+  <dict>
+    <key>custom_icon</key>
+    <dict>
+      <key>hash</key>
+      <string>c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38</string>
+      <key>url</key>
+      <string>https://mydomain.example.com/sunny_icon.png</string>
+    </dict>
+    <key>url</key>
+    <string>https://weather.example.com</string>
   </dict>
 </array>
 ```
