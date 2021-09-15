@@ -13724,7 +13724,9 @@ Use the preceding information when configuring this policy.
 
   #### Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge
 
-  
+> [!NOTE]
+> Currently, the ConfigureViewInFileExplorer policy can only be applied to Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro, or Enterprise instances enrolled for device management.
+
   
   #### Supported versions:
 
