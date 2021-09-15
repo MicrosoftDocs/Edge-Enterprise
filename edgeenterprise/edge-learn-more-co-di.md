@@ -16,6 +16,8 @@ description: "Learn about ClickOnce and DirectInvoke in Microsoft Edge."
 
 ClickOnce and DirectInvoke are features available in IE and Microsoft Edge that support the use of a file handler to download files from a website. Although they serve different purposes, both features let websites specify that a file requested for download is passed to a file handler on the user's device. ClickOnce requests are handled by the native file handler in Windows. DirectInvoke requests are handled by a registered file handler specified by the website hosting the file.
 
+After setting up ClickOnce or DirectInvoke, the ClickOnce or DirectInvoke prompts can be bypassed by setting up additional enterprise policies. These policies can support either bypassing the ClickOnce or DirectInvoke prompts for specified file types for all domains or for specified file types from specified domains.
+
 For more information about these features, see:
 
 - [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
@@ -83,6 +85,10 @@ The second popup only shows up if:
 ## ClickOnce and DirectInvoke policies
 
 There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users. These two policies are [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) and [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.
+
+To specify file type(s) that the ClickOnce or DirectInvoke prompts should be bypassed for, use the policy labeled in the Group Policy Editor as “List of file types that should be automatically opened on download”. This will allow specified file types to be automatically opened after download.  
+
+To bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two additional policies labelled in the Group Policy Editor as “List of file types that should be automatically opened on download” and “URLs where AutoOpen-FileTypes can apply”. Please note that the policy “URLs where AutoOpen-FileTypes can apply” is a supporter policy for “List of file types that should be automatically opened on download”.  
 
 ## ClickOnce and DirectInvoke behavior
 
