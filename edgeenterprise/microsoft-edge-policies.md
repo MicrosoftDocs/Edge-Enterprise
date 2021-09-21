@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 09/13/2021
+ms.date: 09/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -99,6 +99,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Block images on specific sites|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Allow insecure content on specified sites|
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Block insecure content on specified sites|
+|[IntranetFileLinksEnabled](#intranetfilelinksenabled)|Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Allow JavaScript on specific sites|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Block JavaScript on specific sites|
 |[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
@@ -326,6 +327,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -342,6 +344,7 @@ These tables list all of the browser-related group policies available in this re
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
+|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
@@ -405,7 +408,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
 |[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
@@ -2718,6 +2721,65 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
   <string>[*.]example.edu</string>
 </array>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### IntranetFileLinksEnabled
+
+  #### Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting allows file URL links to intranet zone files from intranet zone HTTPS websites to open Windows File Explorer for that file or directory.
+
+If you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer for that file or directory.
+
+If you disable or don't configure this policy, file URL links will not open.
+
+Microsoft Edge uses the definition of intranet zone as configured for Internet Explorer. Note that https://localhost/ is specifically blocked as an exception of allowed intranet zone host, while loopback addresses (127.0.0.*, [::1]) are considered internet zone by default.
+
+Users may opt out of prompts on a per-protocol/per-site basis unless the [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) policy is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: IntranetFileLinksEnabled
+  - GP name: Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: IntranetFileLinksEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11360,6 +11422,8 @@ The origin matching patterns use a similar format to those for the [URLBlocklist
 
 However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -11479,6 +11543,8 @@ If you set URLs in this policy, files will only automatically open by policy if 
 If you don't set this policy, all downloads where the file type is in [AutoOpenFileTypes](#autoopenfiletypes) will automatically open.
 
 A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+This policy does not work as expected with file://* wildcards.
 
   #### Supported features:
 
@@ -12950,6 +13016,8 @@ Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095
 
 If you don't configure this policy, any certificate that should be disclosed via Certificate Transparency is treated as untrusted if it's not disclosed.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -13847,6 +13915,70 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ```
   
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CrossOriginWebAssemblyModuleSharingEnabled
+
+  #### Specifies whether WebAssembly modules can be sent cross-origin
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  Specifies whether WebAssembly modules can be sent to another window or worker cross-origin. Cross-origin WebAssembly module sharing will be deprecated as part of the efforts to deprecate document.domain, see https://github.com/mikewest/deprecating-document-domain. This policy allows re-enabling of cross-origin WebAssembly module sharing. This offers a longer transition period in the deprecation process.
+
+If you enable this policy, sites can send WebAssembly modules cross-origin
+without restrictions.
+
+If you disable or don't configure this policy, sites can only send
+WebAssembly modules to windows and workers in the same origin.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CrossOriginWebAssemblyModuleSharingEnabled
+  - GP name: Specifies whether WebAssembly modules can be sent cross-origin
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -14908,6 +15040,79 @@ If you don't configure this policy, the default size is used, but users can over
   - Example value:
 ``` xml
 <integer>104857600</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DisplayCapturePermissionsPolicyEnabled
+
+  #### Specifies whether the display-capture permissions-policy is checked or skipped
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  The display-capture permissions-policy gates access to getDisplayMedia(),
+as per this spec:
+https://www.w3.org/TR/screen-capture/#feature-policy-integration
+However, if this policy is Disabled, this requirement is not enforced,
+and getDisplayMedia() is allowed from contexts that would otherwise be
+forbidden. This Enterprise policy is temporary; it's intended to be
+removed after Microsoft Edge version 100.
+It is intended to unblock Enterprise users whose application is non-spec compliant,
+but needs time to be fixed.
+
+If you enable or don't configure this policy, sites can only call getDisplayMedia() from
+contexts which are allowlisted by the display-capture permissions-policy.
+
+If you disable this policy, sites can call getDisplayMedia() even from contexts
+which are not allowlisted by the display-capture permissions policy.
+Note that other restrictions may still apply.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DisplayCapturePermissionsPolicyEnabled
+  - GP name: Specifies whether the display-capture permissions-policy is checked or skipped
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DisplayCapturePermissionsPolicyEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DisplayCapturePermissionsPolicyEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -19134,17 +19339,17 @@ Use the preceding information when configuring this policy.
 
   ### InternetExplorerIntegrationTestingAllowed
 
-  #### Allow Internet Explorer mode testing (deprecated)
+  #### Allow Internet Explorer mode testing (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
   #### Supported versions:
 
-  - On Windows since 86 or later
+  - On Windows since 86, until 94
 
   #### Description
 
-  This policy is deprecated, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. It won't work in Microsoft Edge version 95.
+  This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. Alternatively, users can still use the --ie-mode-test flag.
 
 This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
 
@@ -19174,7 +19379,7 @@ If you disable or don't configure this policy, users can't see the options 'Open
   ##### Group Policy (ADMX) info
 
   - GP unique name: InternetExplorerIntegrationTestingAllowed
-  - GP name: Allow Internet Explorer mode testing (deprecated)
+  - GP name: Allow Internet Explorer mode testing (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -24628,6 +24833,8 @@ This policy also allows the browser to automatically invoke external application
 
 If you don't configure this policy, there are no exceptions to the block list in the [URLBlocklist](#urlblocklist) policy.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -24707,6 +24914,8 @@ This policy doesn't prevent the page from updating dynamically through JavaScrip
 
 If you don't configure this policy, no URLs are blocked.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -24742,9 +24951,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
 
 ```
 
@@ -24759,7 +24967,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>hosting.com/bad_path</string>
   <string>https://server:8080/path</string>
   <string>.exact.hostname.com</string>
-  <string>file://*</string>
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
