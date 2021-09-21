@@ -30,14 +30,14 @@ When a site loads in IE mode, the IE logo indicator displays on the left side of
 
   ![IE logo indicator](./media/ie-mode/ie-logo-indicator1.png)
 
-Only those sites that you specifically configure (via policy) will use IE mode, all other sites will be rendered as modern web sites. For a site to use IE mode, you need to:
+Only those sites that you specifically configure (via policy) will use IE mode, all other sites will be rendered as modern web sites. For a site to use IE mode, you need to either:
 
 - List the site in the Enterprise Mode Site List XML defined in one of these policies:
   - Microsoft Edge 78 or later, "Configure the Enterprise Mode Site List"
   - Internet Explorer, "Use the Enterprise Mode IE website list"
   > [!NOTE]
   > We only process one Enterprise Mode Site List. The Microsoft Edge site list policy takes precedence over the Internet Explorer site list policy.
-- All Intranet sites when the **Send all intranet sites to Internet Explorer** group policy is enabled (Microsoft Edge 77 or later.)
+- Configure the **Send all intranet sites to Internet Explorer** group policy and set it to **Enabled** (Microsoft Edge 77 or later.)
 
 ### IE mode supports the following Internet Explorer functionality
 
