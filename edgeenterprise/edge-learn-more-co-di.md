@@ -3,7 +3,7 @@ title: "ClickOnce and DirectInvoke in Microsoft Edge"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,9 +86,9 @@ The second popup only shows up if:
 
 There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users. These two policies are [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) and [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.
 
-To specify file type(s) that the ClickOnce or DirectInvoke prompts should be bypassed for, use the policy labeled in the Group Policy Editor as “List of file types that should be automatically opened on download”. This will allow specified file types to be automatically opened after download.  
+To specify file type(s) that the ClickOnce or DirectInvoke prompts should be bypassed for, use the policy labeled in the Group Policy Editor as “List of file types that should be automatically opened on download”. This will allow specified file types to be automatically opened after download for all domains.  
 
-To bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two additional policies labelled in the Group Policy Editor as “List of file types that should be automatically opened on download” and “URLs where AutoOpen-FileTypes can apply”. Please note that the policy “URLs where AutoOpen-FileTypes can apply” is a supporter policy for “List of file types that should be automatically opened on download”.  
+To bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two additional policies labelled in the Group Policy Editor as “List of file types that should be automatically opened on download” and “URLs where AutoOpen-FileTypes can apply”. Please note that the policy “URLs where AutoOpen- FileTypes can apply” is a supporter policy for “List of file types that should be automatically opened on download” and does nothing on its own.  
 
 ## ClickOnce and DirectInvoke behavior
 
