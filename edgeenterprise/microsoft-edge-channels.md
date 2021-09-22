@@ -26,6 +26,7 @@ For more information on support for each channel read: [Microsoft Edge Lifecycle
 |Channel|Primary purpose|How often updated with new features|Supported?|
 |:---:|---|:---:|:---:|
 |[Stable](#stable-channel)|Broad Deployment|~4 weeks|Yes|
+|[Extended Stable](#extended-stable-channel)|An enterprise release option for Stable aligned to a longer release cycle |~8 weeks|Yes|
 |[Beta](#beta-channel)|Representative validation in the organization|~4 weeks|Yes|
 |[Dev](#dev-channel)|Planning and developing|Weekly|No|
 |[Canary](#canary-channel)|Bleeding edge content|Daily|No|
