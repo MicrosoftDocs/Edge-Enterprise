@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,6 @@ This article describes the supported operating systems that apply to Microsoft E
 
 > [!NOTE]
 > Product functionality and feature availability may vary on older operating systems. To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below. This guidance includes the latest cumulative update, as applicable.
-
 
 Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
@@ -46,6 +45,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
+- Windows Server 2022 (LTSC)
 - Windows Server (SAC)
 
 > [!IMPORTANT]
