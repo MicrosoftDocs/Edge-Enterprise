@@ -28,6 +28,8 @@ These release notes provide information about new features and non-security upda
 
 ## Version 94.x.x.x: September 24
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+
 ### Feature updates
 
 - **Microsoft Edge has completed the move to a 4-week cadence for updates.**  We have adopted a new 4-week release cycle for major versions. Read more here: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
