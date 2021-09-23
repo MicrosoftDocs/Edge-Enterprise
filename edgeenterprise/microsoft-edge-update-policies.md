@@ -1,9 +1,9 @@
 ﻿---
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -39,6 +39,7 @@ These tables lists all of the update-related group policies available in this re
 |[CreateDesktopShortcut](#createdesktopshortcut)|Prevent Desktop Shortcut creation upon install (per channel)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Rollback to Target version (per channel)|
 |[TargetVersionPrefix](#targetversionprefix)|Target version override (per channel)|
+|[TargetChannelOverride](#targetchanneloverride)|Target channel override (Stable only)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Retrieve Configurations and experiments|
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
@@ -395,6 +396,42 @@ This policy is available only on Windows instances that are joined to a Microsof
 ##### Example value:
 ```
 83.0.499.12
+```
+[Back to top](#microsoft-edge---update-policies)
+
+### TargetChannelOverride
+>Microsoft Edge Update 1.3.147.1 and later
+
+#### Description
+Specifies which Channel Microsoft Edge should be updated to. 
+
+If you enable this poicy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
+
+  - Stable: Microsoft Edge will be updated to the latest stable version.
+  - Beta: Microsoft Edge will be updated to the latest beta version.
+  - Dev: Microsoft Edge will be updated to the latest dev version.
+  - Extended Stable: Microsoft Edge will be updated to the latest extended stable version, which follows a longer release cadence than stable. For more information, visit https://go.microsoft.com/fwlink/?linkid=2163508.
+
+If you do not configure this policy, Microsoft Edge will be updated to the latest version available for the Stable Channel.
+
+This policy is available only on Microsoft Edge Stable.
+
+This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: TargetChannelOverride
+- GP name: Target Channel override
+- GP path: 
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: 
+  - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Value Type: REG_SZ
+##### Example value:
+```
+extended
 ```
 [Back to top](#microsoft-edge---update-policies)
 
