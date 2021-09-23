@@ -3,8 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/21/2021
-ms.date: 09/22/2021
+ms.date: 09/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 94.x.x.x: September 23
+## Version 94.x.x.x: September 24
 
 ### Feature updates
 
@@ -44,6 +43,16 @@ These release notes provide information about new features and non-security upda
 - **Enable implicit sign-in for on-premises accounts.** By enabling the [OnlyOnPremisesImplicitSigninEnabled](/deployedge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) policy, only on-premises accounts will be enabled for implicit sign-in.  Microsoft Edge won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
 
 - **New accessibility settings page.**  We have brought accessibility-related settings together on a single page. You can find the new edge://settings/accessibility page under the main settings list. Here you can find settings to make the web page bigger, show a high visibility outline around the area of focus and other settings that can help improve your web browsing experience. We’ll continue to add new settings here in future versions of Microsoft Edge.
+
+***New Policies***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Ignore Application Guard site list configuration and browse Edge normally
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Only on-premises account enabled for implicit sign-in
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC
+
+***Obsoleted Policy***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Enable the User-Agent Client Hints feature
 
 ## Version 93.0.961.52: September 16
 
