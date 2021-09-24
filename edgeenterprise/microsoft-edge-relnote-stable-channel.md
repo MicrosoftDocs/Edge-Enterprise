@@ -29,7 +29,7 @@ These release notes provide information about new features and non-security upda
 ## Version 94.0.992.31: September 24
 
 > [!Important]
-> This update contains a fix for [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the Security Update Guide
+> This update contains a fix for [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
