@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 09/24/2021
+ms.date: 09/26/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -209,8 +209,10 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Default printer selection rules|
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
+|[PrintPostScriptMode](#printpostscriptmode)|Print PostScript Mode|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
+|[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
@@ -289,6 +291,7 @@ These tables list all of the browser-related group policies available in this re
 |[ApplicationLocaleValue](#applicationlocalevalue)|Set application locale|
 |[AudioCaptureAllowed](#audiocaptureallowed)|Allow or block audio capture|
 |[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|Sites that can access audio capture devices without requesting permission|
+|[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Allow the audio process to run with priority above normal on Windows|
 |[AudioSandboxEnabled](#audiosandboxenabled)|Allow the audio sandbox to run|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|Automatically import another browser's data and settings at first run|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Define a list of protocols that can launch an external application from listed origins without prompting the user|
@@ -7313,6 +7316,73 @@ If you enable this policy, users always print headers and footers.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintPostScriptMode
+
+  #### Print PostScript Mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Controls how Microsoft Edge prints on Microsoft Windows.
+
+Printing to a PostScript printer on Microsoft Windows different PostScript generation methods can affect printing performance.
+
+If you set this policy to Default, Microsoft Edge will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.
+
+If you set this policy to Type42, Microsoft Edge will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.
+
+If you don't configure this policy, Microsoft Edge will be in Default mode.
+
+Policy options mapping:
+
+* Default (0) = Default
+
+* Type42 (1) = Type42
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintPostScriptMode
+  - GP name: Print PostScript Mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintPostScriptMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrintPreviewUseSystemDefaultPrinter
 
   #### Set the system default printer as the default printer
@@ -7436,6 +7506,70 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintRasterizePdfDpi
+
+  #### Print Rasterize PDF DPI
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  Controls print image resolution when Microsoft Edge prints PDFs with rasterization.
+
+When printing a PDF using the Print to image option, it can be beneficial to specify a print resolution other than a device's printer setting or the PDF default.  A high resolution will significantly increase the processing and printing time while a low resolution can lead to poor imaging quality.
+
+If you set this policy, it allows a particular resolution to be specified for use when rasterizing PDFs for printing.
+
+If you set this policy to zero or don't configure it, the system default resolution will be used during rasterization of page images.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintRasterizePdfDpi
+  - GP name: Print Rasterize PDF DPI
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintRasterizePdfDpi
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x0000012c
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintRasterizePdfDpi
+  - Example value:
+``` xml
+<integer>300</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11210,6 +11344,63 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   <string>https://[*.]contoso.edu/</string>
 </array>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AudioProcessHighPriorityEnabled
+
+  #### Allow the audio process to run with priority above normal on Windows
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  This policy controls the priority of the audio process on Windows.
+If this policy is enabled, the audio process will run with above normal priority.
+If this policy is disabled, the audio process will run with normal priority.
+If this policy is not configured, the default configuration for the audio process will be used.
+This policy is intended as a temporary measure to give enterprises the ability to
+run audio with higher priority to address certain performance issues with audio capture.
+This policy will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AudioProcessHighPriorityEnabled
+  - GP name: Allow the audio process to run with priority above normal on Windows
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AudioProcessHighPriorityEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
