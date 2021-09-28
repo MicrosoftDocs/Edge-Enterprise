@@ -2,6 +2,23 @@
 
 
 
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/22/2021 | [ClickOnce and DirectInvoke in Microsoft Edge](/DeployEdge/edge-learn-more-co-di) | modified |
+| 9/22/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+| 9/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 9/22/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 9/23/2021 | [Microsoft Edge channel overview](/DeployEdge/microsoft-edge-channels) | modified |
+| 9/23/2021 | [Windows updates for Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates) | modified |
+| 9/23/2021 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 9/24/2021 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
+| 9/24/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 9/24/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+
+
 ## Week of September 13, 2021
 
 
