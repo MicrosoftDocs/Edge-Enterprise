@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/27/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -43,7 +43,7 @@ The following table only tracks and provides information for major releases in b
 | 92 | Released<br>Version | 08-Jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 22-July-2021<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
 | 93 | Released<br>Version | 03-Aug-2021<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 02-Sep-2021<BR>[93.0.961.38](/deployedge/microsoft-edge-relnote-stable-channel#version-93096138-September-02) |
 | 94 | Released<br>Version | 02-Sep-2021<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 24-Sep-2021<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
-| 95 | Target release | Week of 28-Sep-2021 | Week of 21-Oct-2021 |
+| 95 | Released<br>Version | 82-Sep-2021<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-beta-channel#version-95010209-September-28) | Week of 21-Oct-2021 |
 | 96 | Target release | Week of 26-Oct-2021 | Week of 18-Nov-2021 |
 | 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 |
 
