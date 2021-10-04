@@ -47,7 +47,35 @@ This policy can control settings such as Update URL, where the extension will be
 | **runtime_allowed_hosts**| Allows extensions to interact with specified websites, even if they’re also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
 | **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
 | **override_update_url**| Available from Edge 93<br>If this is set to `true`, Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this is not set or is set to `false`, Edge uses the URL specified in the extension's manifest for updates.|
+| **toolbar_state**| Available from Edge 94<br>This policy setting allows you to force show an installed extension to the toolbar. The default state is `default_shown` for all extensions. Following states are possible for this setting<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users will not be able to hide the specificed extension icon from the toolbar.<br>-`default_hidden`: In this state, extensions are hidden from the toolbar on installation. Users can show them on the toolbar, if needed.<br>-`default_shown`: This is the deafult setting of all the installed extensions on the browser.
 
+These are the keys which are allowed at the global scope (*): 
+
+- blocked_permissions
+- installation_mode - only 'blocked', 'allowed' or 'removed' are the valid values in this scope.
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+These are the keys which are allowed at an individual extension scope: 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (Available from Edge 94)
+- installation_mode - `"blocked"`, `"allowed"`, `"removed"`, `"force_installed"`, and `"normal_installed"` are the possible values.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+These are the keys which are allowed at an update URL scope: 
+
+- blocked_permissions
+- installation_mode  - only `"blocked"`, `"allowed"` or `"removed"` are the valid values in this scope.
 
 ## Configure using a JSON string in Windows Group Policy Editor
 
