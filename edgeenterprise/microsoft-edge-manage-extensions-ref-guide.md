@@ -52,7 +52,7 @@ This policy can control settings such as Update URL, where the extension will be
 These are the keys which are allowed at the global scope (*): 
 
 - blocked_permissions
-- installation_mode - only 'blocked', 'allowed' or 'removed' are the valid values in this scope.
+- installation_mode - only `"blocked"`, `"allowed"` or `"removed"` are the valid values in this scope.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
@@ -64,7 +64,6 @@ These are the keys which are allowed at an individual extension scope:
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- toolbar_state (Available from Edge 94)
 - installation_mode - `"blocked"`, `"allowed"`, `"removed"`, `"force_installed"`, and `"normal_installed"` are the possible values.
 - runtime_allowed_hosts
 - update_url
