@@ -2,6 +2,24 @@
 
 
 
+## Week of September 27, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/27/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 9/28/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode) | modified |
+| 9/28/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 9/28/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 9/29/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 9/29/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 9/29/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 9/30/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 9/30/2021 | [Microsoft Edge password manager security ](/DeployEdge/microsoft-edge-security-password-manager-security) | modified |
+| 10/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+
+
 ## Week of September 20, 2021
 
 
