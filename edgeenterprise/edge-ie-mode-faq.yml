@@ -113,7 +113,7 @@ sections:
           This follows previous behavior where users could launch IE with no-merge and could also launch Microsoft Edge without no-merge via other mechanisms. 
           All sites opening in a new window (through window.open) will respect the merge nature of the parent process. Please note that session switching isn’t supported;  navigations within the same IE mode tab will use the same session.
           
-          You can validate the behavior in the Microsoft Edge **Beta** channel (version 93 or later) by following these steps:
+          You can validate the behavior in Microsoft Edge version 93 or later by following these steps:
           1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later. 
           2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to “no-merge”. This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. 
              (**Note**: The integrated site list manager tool available at edge://compat/sitelistmanager includes aNo merge checkbox when you Add or Edit a site)
@@ -146,7 +146,7 @@ sections:
           Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
         answer: |
           Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running.
-          Then you can select Settings and more (the ellipses icon) ... > More Tools > Open sites in Edge mode.
+          Then you can select **Settings and more** (the ellipses icon) **... > More Tools > Open sites in Edge mode**.
             
 additionalContent: |
 
