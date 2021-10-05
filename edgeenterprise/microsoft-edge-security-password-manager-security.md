@@ -3,7 +3,7 @@ title: "Microsoft Edge password manager security "
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -135,7 +135,7 @@ When browser passwords are encrypted on disk, the encryption key is available to
 A Master Password feature (that authenticates the user before auto-filling their data) provides a trade-off in convenience for broader threat mitigation. Specifically, it helps to reduce the window of data exposure against latent malware or physically local attackers. However, a Master Password is not a panacea, and local attackers and dedicated malware have various strategies for circumventing the protection of a Master Password.
 
 > [!Note]
-> Microsoft recognizes the value in authenticating users before autofill and this functionality will be added to Microsoft Edge in a future release.
+> Microsoft Edge now offers the ability to enable authentication before autofill capability; this provides users an additional layer of privacy and prevents their stored passwords from being used by anyone but them. For more details, see [Additional privacy for your saved passwords](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e).  
 
 ## Can using a password manager impact my privacy?
 

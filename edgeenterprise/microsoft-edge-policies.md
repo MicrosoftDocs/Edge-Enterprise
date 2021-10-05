@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/30/2021
+ms.date: 09/26/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -99,11 +99,12 @@ These tables list all of the browser-related group policies available in this re
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Block images on specific sites|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Allow insecure content on specified sites|
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Block insecure content on specified sites|
+|[IntranetFileLinksEnabled](#intranetfilelinksenabled)|Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Allow JavaScript on specific sites|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Block JavaScript on specific sites|
 |[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
 |[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Block JavaScript from using JIT on these sites|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting (deprecated)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Enable default legacy SameSite cookie behavior setting (obsolete)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revert to legacy SameSite behavior for cookies on specified sites|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Allow notifications on specific sites|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Block notifications on specific sites|
@@ -208,8 +209,10 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Default printer selection rules|
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
+|[PrintPostScriptMode](#printpostscriptmode)|Print PostScript Mode|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
+|[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
@@ -288,6 +291,7 @@ These tables list all of the browser-related group policies available in this re
 |[ApplicationLocaleValue](#applicationlocalevalue)|Set application locale|
 |[AudioCaptureAllowed](#audiocaptureallowed)|Allow or block audio capture|
 |[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|Sites that can access audio capture devices without requesting permission|
+|[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Allow the audio process to run with priority above normal on Windows|
 |[AudioSandboxEnabled](#audiosandboxenabled)|Allow the audio sandbox to run|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|Automatically import another browser's data and settings at first run|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Define a list of protocols that can launch an external application from listed origins without prompting the user|
@@ -304,6 +308,7 @@ These tables list all of the browser-related group policies available in this re
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
+|[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Enable browser legacy extension point blocking|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
 |[BrowserSignin](#browsersignin)|Browser sign-in settings|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
@@ -325,6 +330,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -341,6 +347,7 @@ These tables list all of the browser-related group policies available in this re
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
+|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
@@ -404,7 +411,9 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
 |[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (deprecated)|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
+|[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
@@ -458,6 +467,7 @@ These tables list all of the browser-related group policies available in this re
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
@@ -493,6 +503,7 @@ These tables list all of the browser-related group policies available in this re
 |[VerticalTabsAllowed](#verticaltabsallowed)|Configures availability of a vertical layout for tabs on the side of the browser|
 |[VideoCaptureAllowed](#videocaptureallowed)|Allow or block video capture|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
+|[VisualSearchEnabled](#visualsearchenabled)|Visual search enabled|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
 |[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
@@ -2717,6 +2728,65 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### IntranetFileLinksEnabled
+
+  #### Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting allows file URL links to intranet zone files from intranet zone HTTPS websites to open Windows File Explorer for that file or directory.
+
+If you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer for that file or directory.
+
+If you disable or don't configure this policy, file URL links will not open.
+
+Microsoft Edge uses the definition of intranet zone as configured for Internet Explorer. Note that https://localhost/ is specifically blocked as an exception of allowed intranet zone host, while loopback addresses (127.0.0.*, [::1]) are considered internet zone by default.
+
+Users may opt out of prompts on a per-protocol/per-site basis unless the [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) policy is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: IntranetFileLinksEnabled
+  - GP name: Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: IntranetFileLinksEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### JavaScriptAllowedForUrls
 
   #### Allow JavaScript on specific sites
@@ -2993,19 +3063,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   ### LegacySameSiteCookieBehaviorEnabled
 
-  #### Enable default legacy SameSite cookie behavior setting (deprecated)
+  #### Enable default legacy SameSite cookie behavior setting (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
   #### Supported versions:
 
-  - On Windows and macOS since 80 or later
+  - On Windows and macOS since 80, until 94
 
   #### Description
 
-  'This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they are found to be incompatible with the SameSite behavior change.
+  This policy doesn't work because it was only intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they were found to be incompatible with the SameSite behavior change.
 
-It won't work in Microsoft Edge version 95. If you still require legacy cookie behavior, please use [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) to configure behavior on a per-domain basis.
+If you still require legacy cookie behavior, please use [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) to configure behavior on a per-domain basis.
 
 Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
@@ -3034,7 +3104,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: LegacySameSiteCookieBehaviorEnabled
-  - GP name: Enable default legacy SameSite cookie behavior setting (deprecated)
+  - GP name: Enable default legacy SameSite cookie behavior setting (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -3081,7 +3151,7 @@ Reverting to legacy behavior causes cookies that don't specify a SameSite attrib
 
 If you don't set this policy, the global default value will be used. The global default will also be used for cookies on domains not covered by the patterns you specify.
 
-The global default value can be configured until Microsoft Edge version 95 using the deprecated [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
+The global default value can be configured using the [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) policy. If [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) is unset, the global default value falls back to other configuration sources.
 
 Note that patterns you list in this policy are treated as domains, not URLs, so you should not specify a scheme or port.
 
@@ -6123,7 +6193,7 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
   
   #### Supported versions:
 
-  - On Windows and macOS since 87 or later
+  - On Windows since 87 or later
 
   #### Description
 
@@ -6168,13 +6238,6 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
 0x00000001
 ```
 
-  #### Mac information and settings
-  
-  - Preference Key Name: KioskAddressBarEditingEnabled
-  - Example value:
-``` xml
-<true/>
-```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -7253,6 +7316,73 @@ If you enable this policy, users always print headers and footers.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintPostScriptMode
+
+  #### Print PostScript Mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Controls how Microsoft Edge prints on Microsoft Windows.
+
+Printing to a PostScript printer on Microsoft Windows different PostScript generation methods can affect printing performance.
+
+If you set this policy to Default, Microsoft Edge will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.
+
+If you set this policy to Type42, Microsoft Edge will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.
+
+If you don't configure this policy, Microsoft Edge will be in Default mode.
+
+Policy options mapping:
+
+* Default (0) = Default
+
+* Type42 (1) = Type42
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintPostScriptMode
+  - GP name: Print PostScript Mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintPostScriptMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrintPreviewUseSystemDefaultPrinter
 
   #### Set the system default printer as the default printer
@@ -7376,6 +7506,70 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintRasterizePdfDpi
+
+  #### Print Rasterize PDF DPI
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  Controls print image resolution when Microsoft Edge prints PDFs with rasterization.
+
+When printing a PDF using the Print to image option, it can be beneficial to specify a print resolution other than a device's printer setting or the PDF default.  A high resolution will significantly increase the processing and printing time while a low resolution can lead to poor imaging quality.
+
+If you set this policy, it allows a particular resolution to be specified for use when rasterizing PDFs for printing.
+
+If you set this policy to zero or don't configure it, the system default resolution will be used during rasterization of page images.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintRasterizePdfDpi
+  - GP name: Print Rasterize PDF DPI
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintRasterizePdfDpi
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x0000012c
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintRasterizePdfDpi
+  - Example value:
+``` xml
+<integer>300</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -11154,6 +11348,63 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AudioProcessHighPriorityEnabled
+
+  #### Allow the audio process to run with priority above normal on Windows
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  This policy controls the priority of the audio process on Windows.
+If this policy is enabled, the audio process will run with above normal priority.
+If this policy is disabled, the audio process will run with normal priority.
+If this policy is not configured, the default configuration for the audio process will be used.
+This policy is intended as a temporary measure to give enterprises the ability to
+run audio with higher priority to address certain performance issues with audio capture.
+This policy will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AudioProcessHighPriorityEnabled
+  - GP name: Allow the audio process to run with priority above normal on Windows
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AudioProcessHighPriorityEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AudioSandboxEnabled
 
   #### Allow the audio sandbox to run
@@ -11362,6 +11613,8 @@ The origin matching patterns use a similar format to those for the [URLBlocklist
 
 However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -11481,6 +11734,8 @@ If you set URLs in this policy, files will only automatically open by policy if 
 If you don't set this policy, all downloads where the file type is in [AutoOpenFileTypes](#autoopenfiletypes) will automatically open.
 
 A URL pattern has to be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+This policy does not work as expected with file://* wildcards.
 
   #### Supported features:
 
@@ -12324,6 +12579,61 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 
   [Back to top](#microsoft-edge---policies)
 
+  ### BrowserLegacyExtensionPointsBlockingEnabled
+
+  #### Enable browser legacy extension point blocking
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Sets the ProcessExtensionPointDisablePolicy on Microsoft Edge's browser process to block code injection from legacy third party applications.
+
+If you enable or don't configure this policy, the ProcessExtensionPointDisablePolicy is applied to block legacy extension points in the browser process.
+
+If you disable this policy, the ProcessExtensionPointDisablePolicy is not applied to block legacy extension points in the browser process. This has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's browser process. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's browser process.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BrowserLegacyExtensionPointsBlockingEnabled
+  - GP name: Enable browser legacy extension point blocking
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BrowserLegacyExtensionPointsBlockingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### BrowserNetworkTimeQueriesEnabled
 
   #### Allow queries to a Browser Network Time service
@@ -12896,6 +13206,8 @@ This policy lets you not disclose certificates for the hostnames in the specifie
 Form your URL pattern according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Because certificates are valid for a given hostname, independent of the scheme, port, or path, only the hostname part of the URL is considered. Wildcard hosts are not supported.
 
 If you don't configure this policy, any certificate that should be disclosed via Certificate Transparency is treated as untrusted if it's not disclosed.
+
+This policy does not work as expected with file://* wildcards.
 
   #### Supported features:
 
@@ -13796,6 +14108,70 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ```
   
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CrossOriginWebAssemblyModuleSharingEnabled
+
+  #### Specifies whether WebAssembly modules can be sent cross-origin
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  Specifies whether WebAssembly modules can be sent to another window or worker cross-origin. Cross-origin WebAssembly module sharing will be deprecated as part of the efforts to deprecate document.domain, see https://github.com/mikewest/deprecating-document-domain. This policy allows re-enabling of cross-origin WebAssembly module sharing. This offers a longer transition period in the deprecation process.
+
+If you enable this policy, sites can send WebAssembly modules cross-origin
+without restrictions.
+
+If you disable or don't configure this policy, sites can only send
+WebAssembly modules to windows and workers in the same origin.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CrossOriginWebAssemblyModuleSharingEnabled
+  - GP name: Specifies whether WebAssembly modules can be sent cross-origin
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -14857,6 +15233,79 @@ If you don't configure this policy, the default size is used, but users can over
   - Example value:
 ``` xml
 <integer>104857600</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DisplayCapturePermissionsPolicyEnabled
+
+  #### Specifies whether the display-capture permissions-policy is checked or skipped
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  The display-capture permissions-policy gates access to getDisplayMedia(),
+as per this spec:
+https://www.w3.org/TR/screen-capture/#feature-policy-integration
+However, if this policy is Disabled, this requirement is not enforced,
+and getDisplayMedia() is allowed from contexts that would otherwise be
+forbidden. This Enterprise policy is temporary; it's intended to be
+removed after Microsoft Edge version 100.
+It is intended to unblock Enterprise users whose application is non-spec compliant,
+but needs time to be fixed.
+
+If you enable or don't configure this policy, sites can only call getDisplayMedia() from
+contexts which are allowlisted by the display-capture permissions-policy.
+
+If you disable this policy, sites can call getDisplayMedia() even from contexts
+which are not allowlisted by the display-capture permissions policy.
+Note that other restrictions may still apply.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DisplayCapturePermissionsPolicyEnabled
+  - GP name: Specifies whether the display-capture permissions-policy is checked or skipped
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DisplayCapturePermissionsPolicyEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DisplayCapturePermissionsPolicyEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -19083,17 +19532,17 @@ Use the preceding information when configuring this policy.
 
   ### InternetExplorerIntegrationTestingAllowed
 
-  #### Allow Internet Explorer mode testing (deprecated)
+  #### Allow Internet Explorer mode testing (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
   #### Supported versions:
 
-  - On Windows since 86 or later
+  - On Windows since 86, until 94
 
   #### Description
 
-  This policy is deprecated, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. It won't work in Microsoft Edge version 95.
+  This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. Alternatively, users can still use the --ie-mode-test flag.
 
 This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
 
@@ -19123,7 +19572,7 @@ If you disable or don't configure this policy, users can't see the options 'Open
   ##### Group Policy (ADMX) info
 
   - GP unique name: InternetExplorerIntegrationTestingAllowed
-  - GP name: Allow Internet Explorer mode testing (deprecated)
+  - GP name: Allow Internet Explorer mode testing (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19139,6 +19588,116 @@ If you disable or don't configure this policy, users can't see the options 'Open
 
 ```
 0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationWindowOpenHeightAdjustment
+
+  #### Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting lets you specify a custom adjustment to the height of popup windows generated via window.open from the Internet Explorer mode site.
+
+If you configure this policy, Microsoft Edge will add the adjustment value to the height, in pixels. The exact difference depends on the UI configuration of both IE and Edge, but a typical difference is 5.
+
+If you disable or don't configure this policy, Microsoft Edge will treat IE mode window.open the same as Edge mode window.open in window height calculations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - GP name: Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000005
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationWindowOpenWidthAdjustment
+
+  #### Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  This setting lets you specify a custom adjustment to the width of popup windows generated via window.open from the Internet Explorer mode site.
+
+If you configure this policy, Microsoft Edge will add the adjustment value to the width, in pixels. The exact difference depends on the UI configuration of both IE and Edge, but a typical difference is 4.
+
+If you disable or don't configure this policy, Microsoft Edge will treat IE mode window.open the same as Edge mode window.open in window width calculations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - GP name: Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000004
 ```
 
   
@@ -22763,6 +23322,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShadowStackCrashRollbackBehavior
+
+  #### Configure ShadowStack crash rollback behavior
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Specifies whether Microsoft Edge should enable the Hardware-enforced Stack Protection security feature following crash triggered by this feature.
+
+If you don't configure this policy, Microsoft Edge will manage the setting to safely rollout Hardware-enforced Stack Protection, eventually mandatorily enabling the feature for all users.
+
+Set this policy to 'Disable' to always disable Hardware-enforced Stack Protection following a crash triggered by this feature.
+
+Set this policy to 'DisableUntilUpdate' to disable Hardware-enforced Stack Protection following a crash triggered by this feature but enable it after Microsoft Edge has potentially resolved the issue.
+
+Set this policy to 'Enable' to always enable Hardware-enforced Stack Protection following a crash triggered by this feature.
+
+Policy options mapping:
+
+* Disable (0) = Disable Hardware-enforced Stack Protection
+
+* DisableUntilUpdate (1) = Disable Hardware-enforced Stack Protection until the next Microsoft Edge update
+
+* Enable (2) = Enable Hardware-enforced Stack Protection
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShadowStackCrashRollbackBehavior
+  - GP name: Configure ShadowStack crash rollback behavior
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShadowStackCrashRollbackBehavior
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SharedArrayBufferUnrestrictedAccessAllowed
 
   #### Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context
@@ -24398,6 +25026,8 @@ This policy also allows the browser to automatically invoke external application
 
 If you don't configure this policy, there are no exceptions to the block list in the [URLBlocklist](#urlblocklist) policy.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -24477,6 +25107,8 @@ This policy doesn't prevent the page from updating dynamically through JavaScrip
 
 If you don't configure this policy, no URLs are blocked.
 
+This policy does not work as expected with file://* wildcards.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -24512,9 +25144,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
 
 ```
 
@@ -24529,7 +25160,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>hosting.com/bad_path</string>
   <string>https://server:8080/path</string>
   <string>.exact.hostname.com</string>
-  <string>file://*</string>
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
@@ -25031,6 +25661,61 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [Back to top](#microsoft-edge---policies)
 
+  ### VisualSearchEnabled
+
+  #### Visual search enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 95 or later
+
+  #### Description
+
+  Visual search lets you quickly explore more related content about entities in an image.
+
+If you enable or don't configure this policy, visual search will be enabled via image hover, context menu, and search in sidebar.
+
+If you disable this policy, visual search will be disabled and you won't be able to get more info about images via hover, context menu, and search in sidebar.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: VisualSearchEnabled
+  - GP name: Visual search enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: VisualSearchEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WPADQuickCheckEnabled
 
   #### Set WPAD optimization
@@ -25112,21 +25797,36 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 Each list item of the policy is an object with a mandatory member:
 url (the URL of the web app to install)
 
-and 3 optional members:
+and 5 optional members:
 - default_launch_container
 (specifies the window mode that the web app opens with-a new tab is the
 default.)
 
 - create_desktop_shortcut
 (True if you want to create Linux and
-Microsoft Windows desktop shortcuts.)
+Microsoft Windows desktop shortcuts).
 
 - fallback_app_name
-(Starting with Microsoft Edge 90,
+(Starting with Microsoft Edge version 90,
 allows you to override the app name if it is not a
 Progressive Web App (PWA), or the app name that is temporarily
 installed if it is a PWA but authentication is required before the
-installation can be completed.)
+installation can be completed. If both
+custom_name and
+fallback_app_name are provided,
+the latter will be ignored.)
+
+- custom_name
+(Starting with Microsoft Edge
+version 96, allows you to permanently override the app name for all web
+apps and PWAs.)
+
+- custom_icon
+(Starting with Microsoft Edge
+version 96, allows you to override the app icon of installed apps. The
+icons have to be square, maximal 1 MB in size, and in one of the following
+formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
+hash of the icon file.)
 
   #### Supported features:
 
@@ -25171,7 +25871,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "window",
     "fallback_app_name": "Editor",
-    "url": "https://app.contoso.com/editor"
+    "url": "https://app.contoso.edu/editor"
+  },
+  {
+    "custom_name": "Spreadsheets",
+    "default_launch_container": "window",
+    "url": "https://app.contoso.edu/sheets"
+  },
+  {
+    "custom_icon": {
+      "hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38",
+      "url": "https://mydomain.example.com/sunny_icon.png"
+    },
+    "url": "https://weather.example.com"
   }
 ]
 ```
@@ -25179,7 +25891,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
   ```
   
 
@@ -25210,7 +25922,26 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
-    <string>https://app.contoso.com/editor</string>
+    <string>https://app.contoso.edu/editor</string>
+  </dict>
+  <dict>
+    <key>custom_name</key>
+    <string>Spreadsheets</string>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>url</key>
+    <string>https://app.contoso.edu/sheets</string>
+  </dict>
+  <dict>
+    <key>custom_icon</key>
+    <dict>
+      <key>hash</key>
+      <string>c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38</string>
+      <key>url</key>
+      <string>https://mydomain.example.com/sunny_icon.png</string>
+    </dict>
+    <key>url</key>
+    <string>https://weather.example.com</string>
   </dict>
 </array>
 ```
