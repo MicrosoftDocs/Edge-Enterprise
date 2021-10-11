@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/08/2021
+ms.date: 10/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,9 +26,9 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version VERSION #: October 7
+## Version 94.0.992.47: October 11
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-08-2021).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-11-2021).
 
 ## Version 94.0.992.38: October 1
 
