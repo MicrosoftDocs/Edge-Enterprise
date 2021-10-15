@@ -84,7 +84,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### Kiosk mode Download Files on Exit
 
-In order to setup Edge to remove downloaded files when a Kiosk instance is closed, the below 2 Group Policies have to be setup:
+To setup Edge to remove downloaded files when a Kiosk instance is closed, the below 2 Group Policies must be setup:
 - [Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Enabled
 - [Set download directory](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
