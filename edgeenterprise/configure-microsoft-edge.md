@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Configure Microsoft Edge policy settings on Windows devices"
+description: "Learn how to configure Microsoft Edge policy settings on Windows devices"
 ---
 
 # Configure Microsoft Edge policy settings on Windows
