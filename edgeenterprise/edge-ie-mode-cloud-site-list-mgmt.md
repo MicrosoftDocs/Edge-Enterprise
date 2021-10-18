@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Learn how to configure and use Cloud Site List Management for IE mode using the M365 Admin Center."
 ---
 
-# Cloud Site List Management for IE mode (Public Preview) 
+# Cloud Site List Management for IE mode (Public Preview)
 
 This article explains how to configure and use Cloud Site List Management for IE mode through the M365 Admin Center.
 
