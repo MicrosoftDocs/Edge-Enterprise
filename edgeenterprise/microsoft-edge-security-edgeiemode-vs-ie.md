@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode on Microsoft Edge is more secure than Intern
 ms.author: gennlu
 author: dan-wesley
 manager: kawong
-ms.date: 10/15/2021
+ms.date: 10/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -64,7 +64,7 @@ Improving real world browser security relies heavily on a broad ecosystem of ext
 SmartScreen, Microsoft’s phishing protection technology, blocks more phishing <sup>1</sup> and malware <sup>2</sup> attempts than Google Chrome’s Safe Browsing, according to an independent study by [CyberRatings.org](https://www.cyberratings.org/).
 
 > [!NOTE]
-> <sup>1</sup> Web Browsers vs. Phishing, Comparative Test Report (July 2021), CyberRatings.org
+> <sup>1</sup> Web Browsers vs. Phishing, Comparative Test Report (July 2021), CyberRatings.org<br>
 > <sup>2</sup>Web Browsers vs. Malware, Comparative Test Report (July 2021), CyberRatings.org
 
 Microsoft Edge provides full native support for SmartScreen, but IE is only partially supported because of its outdated architecture.
