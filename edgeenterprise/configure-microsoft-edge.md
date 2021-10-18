@@ -3,13 +3,13 @@ title: "Configure Microsoft Edge for Windows"
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 10/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Configure Microsoft Edge policy settings on Windows devices"
+description: "Learn how to configure Microsoft Edge policy settings on Windows devices"
 ---
 
 # Configure Microsoft Edge policy settings on Windows
@@ -30,7 +30,7 @@ Microsoft Edge supports both _mandatory_ and _recommended_ policies. Mandatory p
 >[!TIP]
 > You can use Microsoft Intune to configure Microsoft Edge policy settings. For more information, see [Configure Microsoft Edge using Microsoft Intune](configure-edge-with-intune.md).
 
-There are two administrative templates for Microsoft Edge, both of which can be applied either at the computer or Active Directory domain level:
+There are two administrative templates for Microsoft Edge, both can be applied with common group policy management tools such as Local Group Policy Editor for application on an individual computer or the Group Policy Management Console for Microsoft Windows domain networks. These templates are:
 
 - *msedge.admx* to [configure Microsoft Edge settings](microsoft-edge-policies.md)
 - *msedgeupdate.admx* to [manage Microsoft Edge updates](microsoft-edge-update-policies.md).
