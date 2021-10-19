@@ -3,7 +3,7 @@ title: Cloud Site List Management for IE mode (Public Preview)"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/18/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 
 # Cloud Site List Management for IE mode (Public Preview)
 
-This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the M365 Admin Center.
+This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 (M365) Admin Center.
 
 ## Overview
 
@@ -64,7 +64,7 @@ Use the following steps to change how your organization receives Microsoft 365 u
 > [!NOTE]
 > It can take up to 24 hours for the following configuration changes to take effect in Microsoft 365. If you opt out of a targeted release after enabling it, your users may lose access to features that haven't reached the scheduled release yet.
 
-1. Sign in to the Admin Center and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
+1. Sign in to the [Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
 2. To disable targeted release, select **Standard release**, then select **Save changes**.
 3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
 4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
@@ -75,17 +75,90 @@ For more information, see [Set up the Standard or Targeted release options - Mic
 
 ### Publish enterprise site list to the cloud
 
-#### CREATE A SITE LIST 
-#### IMPORT SITE LIST
-#### Publish site list
+Use the following steps as a guide to create site list, import a site list, and publish the site list. Before you can complete these steps you need to sign in the Microsoft 365 admin center. 
+
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
+2. On the left navigation pane, select **Settings > Org Settings**.
+3. You will see **Microsoft Edge site lists (Preview)** option.
+
+#### Steps to create a site list
+
+1. On the Org Settings page, select **Microsoft Edge site lists (Preview)**
+2. On the resulting page, select **Create a new list**.
+3. Enter a **Site list name** and a **Description**, and then select **Create**.
+4. After you get confirmation,select **Close panel**. 
+
+#### Steps to important a site list
+
+1. Select the site list you want to populate. (In this example the list is  **– Fabrikam – all users**.)
+2. On the resulting page, select **Import list**.
+3. On the right-hand panel, select **Browse**.
+4. Select the file you want to import and then select **Upload** on the bottom of the panel.
+5. You can skim through the URLs in the uploaded file. If you want to pick a different file, you can select **Upload a different file** at the top of the panel. If everything looks correct, select **Add** at the bottom of the panel.
+6. After your list is imported, select **Close panel**. 
+
+#### Steps to publish a site list
+
+1. To publish a site list, go back up a level to the Microsoft Edge site lists page. You can do this by selecting the breadcrumb right above the site list name.
+2. On the Microsoft Edge site lists page, select the site list you want to publish to the cloud, and then select **Publish site list**.
+3. On the right-hand panel, update the **Version number** and select **Publish**at the bottom of the panel.
+4. After confirmation, select **Close panel**. The **Published status** icon, **Last published** and **Last published by** are all updated.
 
 ## Associate the cloud-hosted site list with Microsoft Edge
 
-x
+Use the following steps to associate the cloud-hosted site list with Microsoft Edge.
+
+1. To configure devices to use the Fabrikam – all users list example, go to the site list contents page and copy the **Site list ID**.
+2. For the device group you pick, select **Enabled** and enter the**Site list ID** in the Configure the Enterprise Mode Cloud Site List policy.
+3. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). Note that you need to be signed into Microsoft Edge.
+
+## Manage site list content on the M365 Admin Center
+
+Use the following steps as a guide for managing site list content.
+
+### Add individual sites to the site list
+
+You can add individual sites to any site list. After adding sites to the list, you can use the predefined filters using the **Filter** button (next to the Search input area) to view updates to the list.
+
+1. Go to the site list where you want to add a site.
+2. Select **Add a site**.
+3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
+
+If a site is added to a previously published list, the **Status** column will show the upload pending icon until the site list is published again. Hovering over the icon to will show a tooltip with the reason the upload is pending. The following tooltips are used:
+
+- **Pending add** – the entry was added
+- **Pending edit** – the entry was edited
+- **Pending delete** – the entry was deleted
+
+### View the change history for site entries
+
+1. Select the site entry that you want to see the change history for and then select **View comments**.
+
+### Delete a site from the site list
+
+Use the following steps to delete a site entry.
+
+1. Pick the site list entry that you’d like to delete a site from. Select **Delete site**.
+2. Select **Delete** at the bottom of the pane.
+3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Pending delete** state.
 
 ## FAQ
 
-x
+### Why is my tenant required to have an Exchange Service subscription for this feature?
+
+This ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the M365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a 3 day delay for you to use the experience.
+
+### Can users who haven’t signed in to Microsoft Edge download the site list?
+
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+
+### What happens if users log out of Microsoft Edge?
+
+Access to the site list requires explicit browser sign-in for the first download. There may be scenarios where the user logs out after being logged in and at that point the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured.
+
+### Why is there a warning message when I export the site list?
+
+mmmmm
 
 ## See also
 
