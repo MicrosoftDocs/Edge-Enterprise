@@ -95,6 +95,4 @@ You can also use REGEDIT.exe on a target computer to view the registry settings 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Configure for Windows with Intune](configure-edge-with-intune.md)
 - [Configure for macOS](configure-microsoft-edge-on-mac.md)
-- [Browse Microsoft Edge Enterprise Policies](microsoft-edge-policies.md)
-
-
+- [Browse Microsoft Edge Enterprise Policies](./microsoft-edge-policies.md)
