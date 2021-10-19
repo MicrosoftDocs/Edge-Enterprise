@@ -42,7 +42,7 @@ IT admins can publish one or more site lists to an authenticated endpoint that M
 
 ### Configure Microsoft Edge to use your cloud hosted site list
 
-With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode.
+With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode.
 
 > [!IMPORTANT]
 > When this policy is configured, it overrides the original InternetExplorerIntegrationSiteList policy.
@@ -71,7 +71,7 @@ Use the following steps to change how your organization receives Microsoft 365 u
 5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
 6. When you finish adding users, select **Save changes**.
 
-For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](https://docs.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
+For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/docs.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
 
 ### Publish enterprise site list to the cloud
 
@@ -153,7 +153,7 @@ This subscription ensures that the right backend association happens with your t
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
-No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
 
 ### What is the default refresh interval after updates are made to site list contents?
 
