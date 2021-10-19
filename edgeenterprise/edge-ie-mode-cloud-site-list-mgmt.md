@@ -153,7 +153,10 @@ This subscription ensures that the right backend association happens with your t
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
-No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled). One of the following scenarios cause and update a cached site list:
+
+- 60 seconds after you restart the browser AND the user is signed in to Microsoft Edge. You can use this policy to set a shorter interval. If this interval needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy.
+- A refresh interval of two hours is met AND the user is signed in to the browser.
 
 ### What is the default refresh interval after updates are made to site list contents?
 
