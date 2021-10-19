@@ -14,11 +14,11 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 
 # Cloud Site List Management for IE mode (Public Preview)
 
-This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 (Microsoft 365) Admin Center.
+This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
 ## Overview
 
-Microsoft Edge with IE mode creates a seamless single browser experience for enterprise environments that have a mix of legacy and modern applications. You can control which applications need legacy compatibility such that your end users have the most secure browsing experience without compromising business critical workflows. As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. This is done using the **Microsoft Edge Site Lists** experience in the **M365 Admin Center**. This experience is now in public preview.
+Microsoft Edge with IE mode creates a seamless single browser experience for enterprise environments that have a mix of legacy and modern applications. You can control which applications need legacy compatibility such that your end users have the most secure browsing experience without compromising business critical workflows. As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. This experience is now in public preview.
 
 The preview experience  lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
@@ -29,7 +29,7 @@ The following prerequisites apply to this public preview.
 1. Customers must have an Azure AD tenant.
 2. The tenant subscription must include Exchange Services. For more information, see the [FAQ](#faq).
 3. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-4. Admins need to be a Global Administrator or an Microsoft Edge Administrator on the tenant to access the Microsoft Edge site lists experience.
+4. Admins need to be a Global Administrator or a Microsoft Edge Administrator on the tenant to access the Microsoft Edge site lists experience.
    - To opt in to the public preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
@@ -161,7 +161,7 @@ x
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. There may be scenarios where the user logs out after being logged in and at that point the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured.
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured.
 
 ### Why is there a warning message when I export the site list?
 
