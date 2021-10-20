@@ -63,13 +63,13 @@ Use the following steps to change how your organization receives Microsoft 365 u
 > It can take up to 24 hours for the following configuration changes to take effect in Microsoft 365. If you opt out of a targeted release after enabling it, your users may lose access to features that haven't reached the scheduled release yet.
 
 1. Sign in to the [M365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
-2. To disable targeted release, select **Standard release**, then select **Save changes**.
-3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
-4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
-5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
+2. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
+3. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
+4. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
+5. To disable targeted release, select **Standard release**, then select **Save changes**.
 6. When you finish adding users, select **Save changes**.
 
-For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/docs.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
+For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
 
 ## Publish enterprise site list to the cloud
 
