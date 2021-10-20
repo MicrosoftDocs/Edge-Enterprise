@@ -158,6 +158,8 @@ The extension will be installed silently with no need for user interaction. The 
 
 > [!NOTE]
 > For extensions hosted in the Chrome web store use a string such as: `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> For self-hosted extensions use the pattern extension_id;update_url where update_url points to the location of the update manifest XML file. For e.g.: 
+`mfjlfjaknfckffgjgmdfeheeealceoak;https://file_location.azurewebsites.net/picture_of_the_day.xml`.
 
 ## Block extensions from a specific store or update URL
 
