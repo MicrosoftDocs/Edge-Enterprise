@@ -149,7 +149,7 @@ There are scenarios where you want to export a site list. For example, if you're
 
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
 2. On the resulting page, you’ll see the site list entries and the **Export list** option.
-3. Select Export list to download the site list xML file.
+3. Select **Export list** to download the site list xML file.
 
 ## FAQ
 
