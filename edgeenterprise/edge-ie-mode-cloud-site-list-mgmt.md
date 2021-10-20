@@ -145,7 +145,7 @@ Use the following steps to delete a site entry.
 
 ### Export a site list
 
-There are scenarios where you want to export a site list. For example, to move a site list to the cloud or maintain a hybrid environment with site lists in the cloud and on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
+There are scenarios where you want to export a site list. For example, if you're unable to move your site list to the cloud right away or if you need to maintain a hybrid environment with site lists in the cloud as well as on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
 
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
 2. On the resulting page you’ll see the site list entries and the **Export list** option.
