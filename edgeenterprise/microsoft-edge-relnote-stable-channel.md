@@ -50,6 +50,24 @@ These release notes provide information about new features and non-security upda
 
 - **Auto-account creation.** We now provide additional support on Sign-Up pages by allowing you to create an online account with one click. You can do this by selecting the suggestion drop-down when you click on any form field in the Sign-Up form. Doing so will show not only information relevant to the Sign-Up form, but also a strong new password suggestion. Upon selection, all the relevant information gets populated in the respective fields and the suggested password will be automatically stored on submission to the website. Note: Currently this feature is only available on a limited number of sites.
 
+### Policy updates
+
+#### New Policies
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Enable browser legacy extension point blocking
+- [CrossOriginWebAssemblyModuleSharingEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Specifies whether WebAssembly modules can be sent cross-origin
+- [DisplayCapturePermissionsPolicyEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Specifies whether the display-capture permissions-policy is checked or skipped
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages
+- [IntranetFileLinksEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer
+- [NewSmartScreenLibraryEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Enable new SmartScreen library
+- [ShadowStackCrashRollbackBehavior](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Configure ShadowStack crash rollback behavior
+- [VisualSearchEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#visualsearchenabled) Visual search enabled
+
+#### Obsoleted Policies
+
+- [InternetExplorerIntegrationTestingAllowed](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Allow Internet Explorer mode testing
+- [LegacySameSiteCookieBehaviorEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Enable default legacy SameSite cookie behavior setting
 
 
 ## Version 94.0.992.50: October 14
