@@ -174,9 +174,10 @@ Access to the site list requires explicit browser sign in for the first download
 
 ## Support and Feedback
 
-While in public preview, the Cloud Site List Management experience is covered by your existing Premier Support contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+While in public preview, the Cloud Site List Management experience is covered by your existing [Microsoft Premier Support](https://www.microsoft.com/en-us/unifiedsupport/premier) contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## See also
 
 - [About IE mode](./edge-ie-mode.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+  
