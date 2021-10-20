@@ -18,7 +18,8 @@ This article explains how to configure and use Cloud Site List Management for In
 
 ## Overview
 
-Microsoft Edge with IE mode creates a seamless single browser experience for enterprise environments that have a mix of legacy and modern applications. You can control which applications need legacy compatibility such that your end users have the most secure browsing experience without compromising business critical workflows. As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. This experience is now in public preview.
+As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. 
+**This experience is now in public preview.**
 
 The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
@@ -38,18 +39,18 @@ There are three aspects to the preview experience.
 
 ### Publish enterprise site list to the cloud
 
-IT admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the Microsoft 365 Admin Center and then publish it to the cloud location.
+IT admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the Microsoft 365 Admin Center and then publish it to the cloud location. 
 
-### Configure Microsoft Edge to use your cloud hosted site list
+### Associate the cloud-hosted site list with Microsoft Edge
 
-With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode.
+With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
 
 > [!IMPORTANT]
 > When this policy is configured, it overrides the original InternetExplorerIntegrationSiteList policy.
 
 ### Manage site list contents on the Microsoft 365 Admin Center
 
-IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to set up the Admin Center for Microsoft 365.
+IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the M365 Admin Center.
 
 ## Opt in to public preview
 
@@ -109,11 +110,12 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 3. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
 
 > [!NOTE]
-> After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/eneterprise](edge://compat/eneterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
+> After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
 
-## Manage site list content on the Microsoft 365 Admin Center
+## Manage site list contents on the Microsoft 365 Admin Center
 
-Use the following steps as a guide for managing site list content.
+You can add individual site entries, delete site entries and view change history for comments.
+If you have hybrid sceanrios that require a your site list to be hosted on-premises, you can export your site list from the M365 Admin Center. Use the following steps as a guide for managing site list content. 
 
 ### Add individual sites to the site list
 
@@ -123,11 +125,8 @@ You can add individual sites to any site list. After adding sites to the list, y
 2. Select **Add a site**.
 3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
 
-If a site is added to a previously published list, the **Status** column will show the upload pending icon until the site list is published again. Hovering over the icon to will show a tooltip with the reason the upload is pending. The following tooltips are used:
-
-- **Pending add** – the entry was added
-- **Pending edit** – the entry was edited
-- **Pending delete** – the entry was deleted
+   > [!NOTE]
+   > The **Status** column for any entries added to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button _(next to the Search box)_ to select Addition pending to see all added entries that are pending publication.
 
 ### View the change history for site entries
 
@@ -142,7 +141,7 @@ Use the following steps to delete a site entry.
 3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
-   > Any updates to a **Published** site list will show in a pending state (Addition pending, Edit pending or Delete pending). If you navigate to the list of site lists by selecting Microsoft Edge site lists at the top of the screen, you'll see the **Published Status** column. This column shows **Changes pending publish** that indicates that latest updates to the site list need to be published in order for users to receive them.
+   > The **Status** column for any entries deleted from a Published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them.You can use the **Filter** button _(next to the Search box)_ to select Delete pending to see all deleted entries that are pending publication.
 
 ## FAQ
 
@@ -160,15 +159,12 @@ The site list is refreshed in Microsoft Edge every two hours. You can change thi
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. One of the following scenarios cause an update a cached site list:
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user is not signed in to Microsoft Edge):
 
-- 60 seconds after you restart the browser AND the user is signed in to Microsoft Edge. You can use this policy to set a shorter interval. If this interval needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy.
-- A refresh interval of two hours is met AND the user is signed in to the browser.
-
-
+- 60 seconds after you restart the browser. If the 60 second startup delay needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy to change the amount of delay.
+- Every two hours when Microsoft Edge is running.
 
 ## See also
 
 - [About IE mode](./edge-ie-mode.md)
-- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
