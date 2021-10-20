@@ -14,14 +14,14 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 
 # Cloud Site List Management for IE mode (Public Preview)
 
-This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
+This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center (M365 Admin Center).
 
 ## Overview
 
-As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. 
+As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **M365 Admin Center**. 
 **This experience is now in public preview.**
 
-The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
+The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the M365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ The following prerequisites apply to this public preview.
 1. Customers must have an Azure AD tenant.
 2. The tenant subscription must include Exchange Services. For more information, see the [FAQ](#faq).
 3. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-4. Admins need to be a Global Administrator or a Microsoft Edge Administrator on the tenant to access the Microsoft Edge site lists experience.
+4. Admins need to be an [Edge Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
    - To opt in to the public preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
@@ -39,29 +39,29 @@ There are three aspects to the preview experience.
 
 ### Publish enterprise site list to the cloud
 
-IT admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the Microsoft 365 Admin Center and then publish it to the cloud location. 
+Admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the M365 Admin Center and then publish it to the cloud location. 
 
 ### Associate the cloud-hosted site list with Microsoft Edge
 
 With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
 
 > [!IMPORTANT]
-> When this policy is configured, it overrides the original InternetExplorerIntegrationSiteList policy.
+> When this policy is configured, it overrides the original [InternetExplorerIntegrationSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist) policy.
 
-### Manage site list contents on the Microsoft 365 Admin Center
+### Manage site list contents on the M365 Admin Center
 
-IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
+Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the M365 Admin Center.
 
 ## Opt in to public preview
 
-While in public preview, you need to opt in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
+While in public preview, you need to opt in to view preview experiences in the M365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
 Use the following steps to change how your organization receives Microsoft 365 updates.
 
 > [!NOTE]
 > It can take up to 24 hours for the following configuration changes to take effect in Microsoft 365. If you opt out of a targeted release after enabling it, your users may lose access to features that haven't reached the scheduled release yet.
 
-1. Sign in to the [Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
+1. Sign in to the [M365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
 2. To disable targeted release, select **Standard release**, then select **Save changes**.
 3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
 4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
@@ -72,9 +72,9 @@ For more information, see [Set up the Standard or Targeted release options - Mic
 
 ## Publish enterprise site list to the cloud
 
-Use the following steps as a guide to create site list, import a site list, and publish the site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
+Use the following steps as a guide to create site list, import a site list, and publish the site list. Before you can complete these steps, sign in the M365 admin center.
 
-1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
+1. Sign in to the [M365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
 3. You'll see **Microsoft Edge site lists (Preview)** option.
 
@@ -112,10 +112,10 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 > [!NOTE]
 > After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
 
-## Manage site list contents on the Microsoft 365 Admin Center
+## Manage site list contents on the M365 Admin Center
 
 You can add individual site entries, delete site entries and view change history for comments.
-If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
+If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the M365 Admin Center. Use the following steps as a guide for managing site list content.
 
 ### Add individual sites to the site list
 
@@ -155,7 +155,7 @@ There are scenarios where you want to export a site list. For example, if you're
 
 ### Why is my tenant required to have an Exchange Service subscription for this feature?
 
-This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the Microsoft 365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three-day delay for you to use the experience.
+This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the M365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three-day delay for you to use the experience.
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
@@ -171,6 +171,10 @@ Access to the site list requires explicit browser sign in for the first download
 
 - 60 seconds after you restart the browser. If the 60 second startup delay needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy to change the amount of delay.
 - Every two hours when Microsoft Edge is running.
+
+## Support and Feedback
+
+While in public preview, the Cloud Site List Management experience is covered by your existing Premier Support contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## See also
 
