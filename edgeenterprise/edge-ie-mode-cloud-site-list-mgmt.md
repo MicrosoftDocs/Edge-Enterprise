@@ -1,7 +1,7 @@
 ---
 title: Cloud Site List Management for Internet Explorer (IE) mode (Public Preview)"
 ms.author: shisub
-author: dan-wesley
+author: danwesley
 manager: srugh
 ms.date: 10/19/2021
 audience: ITPro
@@ -142,6 +142,14 @@ Use the following steps to delete a site entry.
 
    > [!NOTE]
    > The **Status** column for any entries deleted from a Published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them.You can use the **Filter** button _(next to the Search box)_ to select Delete pending to see all deleted entries that are pending publication.
+
+### Export a site list
+
+There are scenarios where you want to export a site list. For example, to move a site list to the cloud or maintain a hybrid environment with site lists in the cloud and on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
+
+1. On the Microsoft Edge site lists page, select the site list that you want to export.
+2. On the resulting page you’ll see the site list entries and the **Export list** option.
+3. Select Export list to download the site list xML file.
 
 ## FAQ
 
