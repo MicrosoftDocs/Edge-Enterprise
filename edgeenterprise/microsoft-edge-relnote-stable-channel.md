@@ -30,7 +30,7 @@ These release notes provide information about new features and non-security upda
 
 <!-- Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-21-2021). -->
 
-### Feature update
+### Feature updates
 
 - **View in File Explorer support for SharePoint Online libraries in Microsoft Edge.**  Now you can enable the View in File Explorer capability on SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you need to enable the Microsoft Edge policy [Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge](/docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge](/docs.microsoft.com/en-us/SharePoint/sharepoint-view-in-edge).
 
