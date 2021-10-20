@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
-author: danwesley
+author: dan-wesley
 manager: srugh
 ms.date: 10/20/2021
 audience: ITPro
