@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode (Public Previe
 ms.author: shisub
 author: danwesley
 manager: srugh
-ms.date: 10/19/2021
+ms.date: 10/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,6 +19,7 @@ This article explains how to configure and use Cloud Site List Management for In
 ## Overview
 
 As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **M365 Admin Center**. 
+
 **This experience is now in public preview.**
 
 The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the M365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
@@ -30,8 +31,8 @@ The following prerequisites apply to this public preview.
 1. Customers must have an Azure AD tenant.
 2. The tenant subscription must include Exchange Services. For more information, see the [FAQ](#faq).
 3. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-4. Admins need to be an [Edge Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
-   - To opt in to the public preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
+4. Admins need to be an [Edge Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the **Microsoft Edge site lists** experience under **Org Settings** on M365 Admin Center.
+   - Global Administrator permission is required to opt the tenant in to Targeted release for public preview. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
 
@@ -76,7 +77,7 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. Sign in to the [M365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
-3. You'll see **Microsoft Edge site lists (Preview)** option.
+3. You'll see the **Microsoft Edge site lists (Preview)** option.
 
 ### Steps to create a site list
 
@@ -98,16 +99,18 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. To publish a site list, go back up a level to the Microsoft Edge site lists page. Select the breadcrumb above the site list name to go up a level.
 2. On the Microsoft Edge site lists page, select the site list you want to publish to the cloud, and then select **Publish site list**.
-3. On the right-hand panel, update the **Version number** and select **Publish the bottom of the panel.
-4. After confirmation, select **Close panel**. The **Published status** icon, **Last published**, and **Last published by** are all updated.
+3. On the right-hand panel, update the **Version number** and select **Publish** the bottom of the panel.
+4. After confirmation, select **Close panel**. 
+5. The **Published status** column, **Last published**, and **Last published by** are all updated.
 
 ## Associate the cloud-hosted site list with Microsoft Edge
 
 Use the following steps to associate the cloud-hosted site list with Microsoft Edge.
 
-1. To configure devices to use the Fabrikam – all users list example, go to the site list contents page and copy the **Site list ID**.
-2. For the device group you pick, select **Enabled** and enter the **Site list ID** in the Configure the Enterprise Mode Cloud Site List policy.
-3. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
+1. To configure devices to use a published site list, click on the site list you want to assign to devices.
+2. On the resulting page, copy the **Site list ID**.
+3. For the device group you pick, select **Enabled** and enter the **Site list ID** in the [Configure the Enterprise Mode Cloud Site List](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) policy.
+4. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
 
 > [!NOTE]
 > After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
