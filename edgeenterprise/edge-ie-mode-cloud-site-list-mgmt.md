@@ -153,18 +153,18 @@ This subscription ensures that the right backend association happens with your t
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
-No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in (Microsoft Edge Browser Policy Documentation | Microsoft Docs) to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled). One of the following scenarios cause and update a cached site list:
-
-- 60 seconds after you restart the browser AND the user is signed in to Microsoft Edge. You can use this policy to set a shorter interval. If this interval needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy.
-- A refresh interval of two hours is met AND the user is signed in to the browser.
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
 
 ### What is the default refresh interval after updates are made to site list contents?
 
-x
+The site list is refreshed in Microsoft Edge every two hours. You can change this interval the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy. The minimum refresh interval is 30 minutes.
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured.
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. One of the following scenarios cause an update a cached site list:
+
+- 60 seconds after you restart the browser AND the user is signed in to Microsoft Edge. You can use this policy to set a shorter interval. If this interval needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy.
+- A refresh interval of two hours is met AND the user is signed in to the browser.
 
 ### Why is there a warning message when I export the site list?
 
