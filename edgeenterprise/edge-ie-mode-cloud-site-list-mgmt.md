@@ -20,7 +20,7 @@ This article explains how to configure and use Cloud Site List Management for In
 
 Microsoft Edge with IE mode creates a seamless single browser experience for enterprise environments that have a mix of legacy and modern applications. You can control which applications need legacy compatibility such that your end users have the most secure browsing experience without compromising business critical workflows. As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. This experience is now in public preview.
 
-The preview experience  lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
+The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
 ## Prerequisites
 
@@ -51,11 +51,7 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 
 IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to set up the Admin Center for Microsoft 365.
 
-## Admin Center set up
-
-Before you complete the steps to set up the Admin Center, you must opt in to the public preview.
-
-### Opt in to public preview
+## Opt in to public preview
 
 While in public preview, you need to opt-in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
@@ -73,7 +69,7 @@ Use the following steps to change how your organization receives Microsoft 365 u
 
 For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/docs.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
 
-### Publish enterprise site list to the cloud
+## Publish enterprise site list to the cloud
 
 Use the following steps as a guide to create site list, import a site list, and publish the site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
 
@@ -81,23 +77,23 @@ Use the following steps as a guide to create site list, import a site list, and 
 2. On the left navigation pane, select **Settings > Org Settings**.
 3. You will see **Microsoft Edge site lists (Preview)** option.
 
-#### Steps to create a site list
+### Steps to create a site list
 
 1. On the Org Settings page, select **Microsoft Edge site lists (Preview)**
 2. On the resulting page, select **Create a new list**.
 3. Enter a **Site list name** and a **Description**, and then select **Create**.
 4. After you get confirmation,select **Close panel**. 
 
-#### Steps to important a site list
+### Steps to import a site list
 
-1. Select the site list you want to populate. (In this example the list is  **– Fabrikam – all users**.)
+1. Select the site list you want to populate.
 2. On the resulting page, select **Import list**.
 3. On the right-hand panel, select **Browse**.
 4. Select the file you want to import and then select **Upload** on the bottom of the panel.
 5. You can skim through the URLs in the uploaded file. If you want to pick a different file, you can select **Upload a different file** at the top of the panel. If everything looks correct, select **Add** at the bottom of the panel.
 6. After your list is imported, select **Close panel**. 
 
-#### Steps to publish a site list
+### Steps to publish a site list
 
 1. To publish a site list, go back up a level to the Microsoft Edge site lists page. Select the breadcrumb above the site list name to go up a level.
 2. On the Microsoft Edge site lists page, select the site list you want to publish to the cloud, and then select **Publish site list**.
@@ -109,8 +105,11 @@ Use the following steps as a guide to create site list, import a site list, and 
 Use the following steps to associate the cloud-hosted site list with Microsoft Edge.
 
 1. To configure devices to use the Fabrikam – all users list example, go to the site list contents page and copy the **Site list ID**.
-2. For the device group you pick, select **Enabled** and enter the**Site list ID** in the Configure the Enterprise Mode Cloud Site List policy.
+2. For the device group you pick, select **Enabled** and enter the **Site list ID** in the Configure the Enterprise Mode Cloud Site List policy.
 3. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
+
+> [!NOTE]
+> After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/eneterprise](edge://compat/eneterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
 
 ## Manage site list content on the Microsoft 365 Admin Center
 
@@ -166,9 +165,7 @@ Access to the site list requires explicit browser sign in for the first download
 - 60 seconds after you restart the browser AND the user is signed in to Microsoft Edge. You can use this policy to set a shorter interval. If this interval needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy.
 - A refresh interval of two hours is met AND the user is signed in to the browser.
 
-### Why is there a warning message when I export the site list?
 
-mmmmm
 
 ## See also
 
