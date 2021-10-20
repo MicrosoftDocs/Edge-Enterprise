@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/13/2021
+ms.date: 10/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -412,6 +412,7 @@ These tables list all of the browser-related group policies available in this re
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
@@ -19302,6 +19303,75 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
 ```
 "aba95e58-070f-4784-8dcd-e5fd46c2c6d6"
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationComplexNavDataTypes
+
+  #### Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers.
+
+If you enable this policy, you can specify which data types should be included in navigations between Microsoft Edge and Internet Explorer mode.
+
+If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data and additional headers in navigations that change modes.
+
+To learn more, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+Policy options mapping:
+
+* IncludeNone (0) = Do not send form data or headers
+
+* IncludeFormDataOnly (1) = Send form data only
+
+* IncludeHeadersOnly (2) = Send additional headers only
+
+* IncludeFormDataAndHeaders (3) = Send form data and additional headers
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationComplexNavDataTypes
+  - GP name: Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationComplexNavDataTypes
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000003
 ```
 
   
