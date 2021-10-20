@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for Windows"
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/18/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,8 +32,8 @@ Microsoft Edge supports both _mandatory_ and _recommended_ policies. Mandatory p
 
 There are two administrative templates for Microsoft Edge, both can be applied with common group policy management tools such as Local Group Policy Editor for application on an individual computer or the Group Policy Management Console for Microsoft Windows domain networks. These templates are:
 
-- *msedge.admx* to [configure Microsoft Edge settings](microsoft-edge-policies.md)
-- *msedgeupdate.admx* to [manage Microsoft Edge updates](microsoft-edge-update-policies.md).
+- *msedge.admx* to [configure Microsoft Edge settings](./microsoft-edge-policies.md)
+- *msedgeupdate.admx* to [manage Microsoft Edge updates](./microsoft-edge-update-policies.md)
 
 To get started, download and install the Microsoft Edge administrative template.
 
