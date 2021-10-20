@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
-author: danwesley
+author: dan-wesley
 manager: srugh
 ms.date: 10/20/2021
 audience: ITPro
