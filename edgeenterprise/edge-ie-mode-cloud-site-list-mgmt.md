@@ -50,11 +50,11 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 
 ### Manage site list contents on the Microsoft 365 Admin Center
 
-IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the M365 Admin Center.
+IT admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
 
 ## Opt in to public preview
 
-While in public preview, you need to opt-in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
+While in public preview, you need to opt in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
 Use the following steps to change how your organization receives Microsoft 365 updates.
 
@@ -76,7 +76,7 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
-3. You will see **Microsoft Edge site lists (Preview)** option.
+3. You'll see **Microsoft Edge site lists (Preview)** option.
 
 ### Steps to create a site list
 
@@ -115,7 +115,7 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 ## Manage site list contents on the Microsoft 365 Admin Center
 
 You can add individual site entries, delete site entries and view change history for comments.
-If you have hybrid sceanrios that require a your site list to be hosted on-premises, you can export your site list from the M365 Admin Center. Use the following steps as a guide for managing site list content. 
+If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
 ### Add individual sites to the site list
 
@@ -145,17 +145,17 @@ Use the following steps to delete a site entry.
 
 ### Export a site list
 
-There are scenarios where you want to export a site list. For example, if you're unable to move your site list to the cloud right away or if you need to maintain a hybrid environment with site lists in the cloud as well as on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
+There are scenarios where you want to export a site list. For example, if you're unable to move your site list to the cloud right away or if you need to maintain a hybrid environment with site lists in the cloud and on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
 
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
-2. On the resulting page you’ll see the site list entries and the **Export list** option.
+2. On the resulting page, you’ll see the site list entries and the **Export list** option.
 3. Select Export list to download the site list xML file.
 
 ## FAQ
 
 ### Why is my tenant required to have an Exchange Service subscription for this feature?
 
-This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the Microsoft 365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three day delay for you to use the experience.
+This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the Microsoft 365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three-day delay for you to use the experience.
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
