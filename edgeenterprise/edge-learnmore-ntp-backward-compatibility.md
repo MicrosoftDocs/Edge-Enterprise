@@ -3,7 +3,7 @@ title: "Backwards compatibility for the Enterprise New tab page"
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ The new version of the Enterprise New tab page combines compliant Microsoft 365 
 > [!NOTE]
 > Office 365 content was originally served using the [Office.com](https://www.office.com) domain.
 
-If access to the MSN.com domain is restricted for your organization, we strongly recommend giving users access to this [url](https://ntp.msn.com).
+If access to the MSN.com domain is restricted for your organization, we strongly recommend giving users access to this [https://ntp.msn.com](https://ntp.msn.com).
 
 If you need more time to enable access to the MSN domain, we recommend using the [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype), that lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
 
