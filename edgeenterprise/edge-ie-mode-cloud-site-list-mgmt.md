@@ -31,7 +31,7 @@ The following prerequisites apply to this public preview.
 1. Customers must have an Azure AD tenant.
 2. The tenant subscription must include Exchange Services. For more information, see the [FAQ](#faq).
 3. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-4. Admins need to be an [Edge Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/docs.microsoft.com/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the **Microsoft Edge site lists** experience under **Org Settings** on M365 Admin Center.
+4. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the **Microsoft Edge site lists** experience under **Org Settings** on M365 Admin Center.
    - Global Administrator permission is required to opt the tenant in to Targeted release for public preview. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
@@ -44,10 +44,10 @@ Admins can publish one or more site lists to an authenticated endpoint that Micr
 
 ### Associate the cloud-hosted site list with Microsoft Edge
 
-With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
+With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
 
 > [!IMPORTANT]
-> When this policy is configured, it overrides the original [InternetExplorerIntegrationSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist) policy.
+> When this policy is configured, it overrides the original [InternetExplorerIntegrationSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist) policy.
 
 ### Manage site list contents on the M365 Admin Center
 
@@ -162,17 +162,17 @@ This subscription ensures that the right backend association happens with your t
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
-No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/deployEdge/microsoft-edge-policies#implicitsigninenabled).
 
 ### What is the default refresh interval after updates are made to site list contents?
 
-The site list is refreshed in Microsoft Edge every two hours. You can change this interval the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy. The minimum refresh interval is 30 minutes.
+The site list is refreshed in Microsoft Edge every two hours. You can change this interval the [NavigationDelayForInitialSiteListDownloadTimeout](/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy. The minimum refresh interval is 30 minutes.
 
 ### What happens if users log out of Microsoft Edge?
 
 Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user is not signed in to Microsoft Edge):
 
-- 60 seconds after you restart the browser. If the 60 second startup delay needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/docs.microsoft.com/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy to change the amount of delay.
+- 60 seconds after you restart the browser. If the 60 second startup delay needs to be shorter, you can use the [NavigationDelayForInitialSiteListDownloadTimeout](/deployedge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) policy to change the amount of delay.
 - Every two hours when Microsoft Edge is running.
 
 ## Support and Feedback
