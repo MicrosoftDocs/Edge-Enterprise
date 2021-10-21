@@ -69,7 +69,7 @@ Use the following steps to change how your organization receives Microsoft 365 u
 5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
 6. When you finish adding users, select **Save changes**.
 
-For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/docs.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
+For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
 
 ## Publish enterprise site list to the cloud
 
@@ -77,7 +77,7 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
-3. You'll see **Microsoft Edge site lists (Preview)** option.
+3. You'll see the **Microsoft Edge site lists (Preview)** option.
 
 ### Steps to create a site list
 
@@ -99,16 +99,18 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. To publish a site list, go back up a level to the Microsoft Edge site lists page. Select the breadcrumb above the site list name to go up a level.
 2. On the Microsoft Edge site lists page, select the site list you want to publish to the cloud, and then select **Publish site list**.
-3. On the right-hand panel, update the **Version number** and select **Publish the bottom of the panel.
-4. After confirmation, select **Close panel**. The **Published status** icon, **Last published**, and **Last published by** are all updated.
+3. On the right-hand panel, update the **Version number** and select **Publish** the bottom of the panel.
+4. After confirmation, select **Close panel**. 
+5. The **Published status** column, **Last published**, and **Last published by** are all updated.
 
 ## Associate the cloud-hosted site list with Microsoft Edge
 
 Use the following steps to associate the cloud-hosted site list with Microsoft Edge.
 
-1. To configure devices to use the Fabrikam – all users list example, go to the site list contents page and copy the **Site list ID**.
-2. For the device group you pick, select **Enabled** and enter the **Site list ID** in the Configure the Enterprise Mode Cloud Site List policy.
-3. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
+1. To configure devices to use a published site list, click on the site list you want to assign to devices.
+2. On the resulting page, copy the **Site list ID**.
+3. For the device group you pick, select **Enabled** and enter the **Site list ID** in the [Configure the Enterprise Mode Cloud Site List](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) policy.
+4. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
 
 > [!NOTE]
 > After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
