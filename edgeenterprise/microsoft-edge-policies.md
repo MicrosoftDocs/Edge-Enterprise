@@ -24,6 +24,22 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following policies were added to this documentation update.
+
+|Policy Name|Caption|
+|-|-|
+[TyposquattingChecker settings](#typosquattingchecker-settings)|Provide warning messages to help protect your users from potential typosquatting sites.|
+|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Prevents files from being uploaded while in Application Guard|
+|[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library|
+|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|AutoLaunch Protocols Component Enabled|
+|[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
+|[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
