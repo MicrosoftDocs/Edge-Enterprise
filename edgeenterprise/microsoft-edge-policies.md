@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 09/26/2021
+ms.date: 10/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,22 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following policies were added to this documentation update.
+
+|Policy Name|Caption|
+|-|-|
+[TyposquattingChecker settings](#typosquattingchecker-settings)|Provide warning messages to help protect your users from potential typosquatting sites.|
+|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Prevents files from being uploaded while in Application Guard|
+|[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library|
+|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|AutoLaunch Protocols Component Enabled|
+|[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
+|[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 
 ## Available policies
 
@@ -48,6 +64,7 @@ These tables list all of the browser-related group policies available in this re
 - [Sleeping tabs settings](#sleeping-tabs-settings)
 - [SmartScreen settings](#smartscreen-settings)
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
+- [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
 
 
@@ -64,6 +81,7 @@ These tables list all of the browser-related group policies available in this re
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Application Guard Favorites Sync Enabled|
 |[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Ignore Application Guard site list configuration and browse Edge normally|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard Traffic Identification|
+|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Prevents files from being uploaded while in Application Guard|
 ### [*Cast*](#cast-policies)
 
 |Policy Name|Caption|
@@ -202,6 +220,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Printing*](#printing-policies)
 
@@ -246,6 +265,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings|
@@ -270,6 +290,11 @@ These tables list all of the browser-related group policies available in this re
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
+### [*TyposquattingChecker settings*](#typosquattingchecker-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[TyposquattingCheckerEnabled](#typosquattingcheckerenabled)|Configure Edge TyposquattingChecker|
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
@@ -294,6 +319,7 @@ These tables list all of the browser-related group policies available in this re
 |[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Allow the audio process to run with priority above normal on Windows|
 |[AudioSandboxEnabled](#audiosandboxenabled)|Allow the audio sandbox to run|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|Automatically import another browser's data and settings at first run|
+|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|AutoLaunch Protocols Component Enabled|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Define a list of protocols that can launch an external application from listed origins without prompting the user|
 |[AutoOpenAllowedForURLs](#autoopenallowedforurls)|URLs where AutoOpenFileTypes can apply|
 |[AutoOpenFileTypes](#autoopenfiletypes)|List of file types that should be automatically opened on download|
@@ -375,6 +401,7 @@ These tables list all of the browser-related group policies available in this re
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
 |[FullscreenAllowed](#fullscreenallowed)|Allow full screen mode|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Enable globally scoped HTTP auth cache|
@@ -401,6 +428,7 @@ These tables list all of the browser-related group policies available in this re
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
@@ -446,6 +474,7 @@ These tables list all of the browser-related group policies available in this re
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Set the time period for update notifications|
 |[RelaunchWindow](#relaunchwindow)|Set the time interval for relaunch|
 |[RemoteDebuggingAllowed](#remotedebuggingallowed)|Allow remote debugging|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
@@ -469,6 +498,7 @@ These tables list all of the browser-related group policies available in this re
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
+|[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
@@ -826,6 +856,62 @@ If you disable this policy, the extra header is not added to the traffic.
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: ApplicationGuardTrafficIdentificationEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ApplicationGuardUploadBlockingEnabled
+
+  #### Prevents files from being uploaded while in Application Guard
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  Sets whether files can be uploaded while in Application Guard.
+
+If you enable this policy, users will not be able to upload files in Application Guard.
+
+If you disable or don't configure this policy, users will be able to upload files while in Application Guard.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ApplicationGuardUploadBlockingEnabled
+  - GP name: Prevents files from being uploaded while in Application Guard
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Application Guard settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ApplicationGuardUploadBlockingEnabled
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -4777,7 +4863,7 @@ If you enable this setting, external extensions are blocked from being installed
 
 If you disable this setting or leave it unset, external extensions are allowed to be installed.
 
-External extensions and their installation are documented at https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+External extensions and their installation are documented at [Alternate extension distribution methods](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
 
   #### Supported features:
@@ -5061,7 +5147,7 @@ The source code of any extension can be altered by users with developer tools, p
 
 Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
-Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions at [Publish and update extensions in the Microsoft Edge Add-ons website](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Supported features:
 
@@ -7121,6 +7207,88 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EfficiencyMode
+
+  #### Configure when efficiency mode should become active
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  This policy setting lets you configure when efficiency mode will become active. By default, efficiency mode will be active when the device is unplugged and the battery is low. On devices with no battery, the default is for efficiency mode to never become active.
+
+Set this policy to 'AlwaysActive' and efficiency mode will always be active.
+
+Set this policy to 'NeverActive' and efficiency mode will never become active.
+
+Set this policy to 'ActiveWhenUnplugged' and efficiency mode will become active when the device is unplugged. If the device does not have a battery, efficiency mode will never become active.
+
+Set this policy to 'ActiveWhenUnpluggedBatteryLow' and efficiency mode will become active when the device is unplugged and the battery is low. If the device does not have a battery, efficiency mode will never become active.
+
+If you don't configure this policy, users can choose the efficiency mode option in edge://settings/system.
+
+Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+Policy options mapping:
+
+* AlwaysActive (0) = Efficiency mode is always active
+
+* NeverActive (1) = Efficiency mode is never active
+
+* ActiveWhenUnplugged (2) = Efficiency mode is active when the device is unplugged
+
+* ActiveWhenUnpluggedBatteryLow (3) = Efficiency mode is active when the device is unplugged and the battery is low
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EfficiencyMode
+  - GP name: Configure when efficiency mode should become active
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EfficiencyMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000003
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EfficiencyMode
+  - Example value:
+``` xml
+<integer>3</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### StartupBoostEnabled
 
   #### Enable startup boost
@@ -7324,7 +7492,7 @@ If you enable this policy, users always print headers and footers.
   
   #### Supported versions:
 
-  - On Windows since 95 or later
+  - On Windows since 96 or later
 
   #### Description
 
@@ -7518,7 +7686,7 @@ Use the preceding information when configuring this policy.
   
   #### Supported versions:
 
-  - On Windows and macOS since 95 or later
+  - On Windows and macOS since 96 or later
 
   #### Description
 
@@ -8169,7 +8337,7 @@ For origins not covered by the patterns specified here, the global default value
 
 Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
-For detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
+For detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### Supported features:
 
@@ -8845,6 +9013,72 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewSmartScreenLibraryEnabled
+
+  #### Enable new SmartScreen library
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 95 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to load new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
+
+If you enable this policy, Microsoft Edge will use SmartScreen implementation from new library (libSmartScreenN).
+
+If you disable or don't configure this policy, Microsoft Edge will continue using the SmartScreen implementation from old library (libSmartScreen).
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+This temporary policy was created to support the update of a new SmartScreen client. This policy will be deprecated and removed along with the legacy client.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewSmartScreenLibraryEnabled
+  - GP name: Enable new SmartScreen library
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: NewSmartScreenLibraryEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewSmartScreenLibraryEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PreventSmartScreenPromptOverride
 
   #### Prevent bypassing Microsoft Defender SmartScreen prompts for sites
@@ -9468,7 +9702,7 @@ If you enable this policy, Microsoft Edge downloads and shows the specified logo
 
 If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
 
-For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+For help with determining the SHA-256 hash, see [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### Supported features:
 
@@ -10248,6 +10482,74 @@ If you don't configure the policy, users can choose whether to show the home but
   #### Mac information and settings
   
   - Preference Key Name: ShowHomeButton
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## TyposquattingChecker settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TyposquattingCheckerEnabled
+
+  #### Configure Edge TyposquattingChecker
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  This policy setting lets you configure whether to turn on Edge TyposquattingChecker. Edge TyposquattingChecker provides warning messages to help protect your users from potential typosquatting sites. By default, Edge TyposquattingChecker is turned on.
+
+If you enable this policy, Edge TyposquattingChecker is turned on.
+
+If you disable this policy, Edge TyposquattingChecker is turned off.
+
+If you don't configure this policy, Edge TyposquattingChecker is turned on but users can choose whether to use Edge TyposquattingChecker.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TyposquattingCheckerEnabled
+  - GP name: Configure Edge TyposquattingChecker
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/TyposquattingChecker settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/TyposquattingChecker settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: TyposquattingCheckerEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: TyposquattingCheckerEnabled
   - Example value:
 ``` xml
 <true/>
@@ -11580,6 +11882,68 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutoLaunchProtocolsComponentEnabled
+
+  #### AutoLaunch Protocols Component Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  Specifies whether the AutoLaunch Protocols component should be enabled. This component allows Microsoft to provide a list similar to that of the [AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins) policy, allowing certain external protocols to launch without prompt or blocking certain protocols (on specified origins). By default, this component is enabled.
+
+If you enable or don't configure this policy, the AutoLaunch Protocols component is enabled.
+
+If you disable this policy, the AutoLaunch Protocols component is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutoLaunchProtocolsComponentEnabled
+  - GP name: AutoLaunch Protocols Component Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AutoLaunchProtocolsComponentEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutoLaunchProtocolsComponentEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -14036,9 +14400,7 @@ Use the preceding information when configuring this policy.
 
   #### Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge
 
-> [!NOTE]
-> Currently, the ConfigureViewInFileExplorer policy can only be applied to Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro, or Enterprise instances enrolled for device management.
-
+  
   
   #### Supported versions:
 
@@ -17123,7 +17485,7 @@ If you don't configure this policy, users will be able to turn sync on or off. I
 For this policy to work as intended,
 [BrowserSignin](#browsersignin) policy must not be configured, or must be set to enabled. If [BrowserSignin](#browsersignin) is set to disabled, then [ForceSync](#forcesync) will not take affect.
 
-[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect.
+[SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect. If you wish to ensure specific datatypes sync or do not sync, use the [ForceSyncTypes](#forcesynctypes) policy and [SyncTypesListDisabled](#synctypeslistdisabled) policy.
 
 0 = Do not automatically start sync and show the sync consent (default)
 1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
@@ -17167,6 +17529,71 @@ For this policy to work as intended,
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ForceSyncTypes
+
+  #### Configure the list of types that are included for synchronization
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
+
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". Note that these data type names are case sensitive.
+
+Users will not be able to override the enabled data types.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceSyncTypes
+  - GP name: Configure the list of types that are included for synchronization
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ForceSyncTypes
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ForceSyncTypes\1 = "favorites"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ForceSyncTypes
+  - Example value:
+``` xml
+<array>
+  <string>favorites</string>
+</array>
 ```
   
 
@@ -18892,6 +19319,75 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
 ```
 "aba95e58-070f-4784-8dcd-e5fd46c2c6d6"
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationComplexNavDataTypes
+
+  #### Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers.
+
+If you enable this policy, you can specify which data types should be included in navigations between Microsoft Edge and Internet Explorer mode.
+
+If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data and additional headers in navigations that change modes.
+
+To learn more, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+Policy options mapping:
+
+* IncludeNone (0) = Do not send form data or headers
+
+* IncludeFormDataOnly (1) = Send form data only
+
+* IncludeHeadersOnly (2) = Send additional headers only
+
+* IncludeFormDataAndHeaders (3) = Send form data and additional headers
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationComplexNavDataTypes
+  - GP name: Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationComplexNavDataTypes
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000003
 ```
 
   
@@ -21975,6 +22471,68 @@ If you disable this policy, users are not allowed to use remote debugging.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### RendererAppContainerEnabled
+
+  #### Enable renderer in app container
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  Launches Renderer processes into an App Container for
+additional security benefits.
+
+If you don't configure this policy, Microsoft Edge will launch the renderer process in an app
+container in a future update.
+
+If you enable this policy, Microsoft Edge will launch the renderer process in an app container.
+
+If you disable this policy, Microsoft Edge will not launch the renderer process in an app container.
+
+Only turn off the policy if there are compatibility issues with
+third-party software that must run inside Microsoft Edge's renderer processes.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RendererAppContainerEnabled
+  - GP name: Enable renderer in app container
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RendererAppContainerEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### RendererCodeIntegrityEnabled
 
   #### Enable renderer code integrity
@@ -23447,6 +24005,70 @@ Microsoft Edge will require cross-origin isolation when using SharedArrayBuffers
   #### Mac information and settings
   
   - Preference Key Name: SharedArrayBufferUnrestrictedAccessAllowed
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SharedLinksEnabled
+
+  #### Show links shared from Microsoft 365 apps in History
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  Allows Microsoft Edge to display links recently shared by or shared with the user from Microsoft 365 apps in History.
+
+If you enable or don't configure this policy, Microsoft Edge displays links recently shared by or shared with the user from Microsoft 365 apps in History.
+
+If you disable this policy, Microsoft Edge does not display links recently shared by or shared with the user from Microsoft 365 apps in History. The control in Microsoft Edge settings is disabled and set to off.
+
+This policy only applies for Microsoft Edge local user profiles and profiles signed in using Azure Active Directory.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SharedLinksEnabled
+  - GP name: Show links shared from Microsoft 365 apps in History
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SharedLinksEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SharedLinksEnabled
   - Example value:
 ``` xml
 <true/>
