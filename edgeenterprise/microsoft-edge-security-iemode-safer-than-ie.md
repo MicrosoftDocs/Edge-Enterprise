@@ -1,18 +1,18 @@
 ---
-title: "Internet Explorer (IE) mode on Microsoft Edge is more secure than Internet Explorer"
+title: "Modern security protection for vulnerable legacy apps"
 ms.author: gennlu
 author: dan-wesley
 manager: kawong
-ms.date: 10/20/2021
+ms.date: 10/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn how Internet Explorer mode on Microsoft Edge provides better security than Internet Explorer."
+description: "Learn how Microsoft Edge with IE mode provides modern security protection for vulnerable legacy apps."
 ---
 
-# IE mode on Microsoft Edge is more secure than Internet Explorer
+# Modern security protection for vulnerable legacy apps
 
 As the Internet evolved over the last 20 years, so have user needs and expectations for the browsers they use. Today, the Internet is foundational to many businesses, and having a modern browser designed to securely meet business needs is paramount. Microsoft Edge is a modern browser built to securely access the modern web. This article shows how Internet Explorer (IE) mode on Microsoft Edge is more secure than Internet Explorer.
 
