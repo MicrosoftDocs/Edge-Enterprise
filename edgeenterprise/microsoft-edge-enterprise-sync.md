@@ -1,9 +1,9 @@
 ---
 title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
-author: AndreaLBarr
+author: dan-wesley
 manager: silvanam
-ms.date: 09/07/2021
+ms.date: 10/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,7 +42,11 @@ Sync functionality is enabled via user consent and users can turn sync on or off
 Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for any of the following subscriptions:
 
 - Azure AD Premium (P1 or P2)
-- M365 Business Premium, Business Standard, or Business Basic
+- M365 Business Premium, Business Standard, or **Business Basic \***
+
+   > [!IMPORTANT]
+   > **\*** We found a problem with **Business Basic** for Sync and we’re working on a fix. In the interim, this isn’t working as intended.
+
 - Office 365 E1 and above
 - Azure Information Protection (AIP) (P1 or P2)
 - All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, M365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
