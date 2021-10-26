@@ -76,6 +76,6 @@ IE mode on Microsoft Edge is a unique solution that ensures users can access mis
 ## See also
 
 - [About IE mode](./edge-ie-mode.md)
-- [Additional Enterprise Mode information](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Security for your business](./ms-edge-security-for-business.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
