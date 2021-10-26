@@ -3,7 +3,7 @@ title: "Modern security protection for vulnerable legacy apps"
 ms.author: gennlu
 author: dan-wesley
 manager: kawong
-ms.date: 10/25/2021
+ms.date: 10/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
