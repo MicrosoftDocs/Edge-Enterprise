@@ -31,7 +31,7 @@ The following table lists the planned release dates for the Beta and Stable chan
 
 ### Microsoft Edge releases
 
-The following table only tracks and provides information for major releases in both channels.
+The following table tracks and provides information for major releases in both channels.
 
 | Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week |
 |---------|-----|------|--------|
