@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/25/2021
+ms.date: 10/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
