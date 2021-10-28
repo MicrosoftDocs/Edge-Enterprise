@@ -33,7 +33,7 @@ The following table lists the planned release dates for the Beta and Stable chan
 
 The following table tracks and provides information for major releases in both channels.
 
-| Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week | Extended Stable Channel<br>Release week |
+| Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week | Extended<br> Stable Channel<br>Release week |
 |---------|-----|------|--------|--------|
 | 88 | Released<br>Version | 09-Dec-2020<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-88070518-december-9) | 21-Jan-2021<br>[88.0.705.50](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-88070550-january-21)|  |
 | 89 | Released<br>Version | 03-Feb-2021<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-89077418-february-3) | 08-Mar-2021<br>[89.0.774.48](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-89077448-march-8) |  |
