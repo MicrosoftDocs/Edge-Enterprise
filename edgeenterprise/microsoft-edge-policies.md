@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/20/2021
+ms.date: 10/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -28,17 +28,9 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 The following policies were added to this documentation update.
 
-|Policy Name|Caption|
-|-|-|
-[TyposquattingChecker settings](#typosquattingchecker-settings)|Provide warning messages to help protect your users from potential typosquatting sites.|
-|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Prevents files from being uploaded while in Application Guard|
-|[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library|
-|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|AutoLaunch Protocols Component Enabled|
-|[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
-|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
-|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
-|[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
+| Policy Name |	Caption |
+|--|--|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
 
 ## Available policies
 
@@ -442,12 +434,13 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
 |[MAUEnabled](#mauenabled)|Always use Microsoft AutoUpdate as the updater for Microsoft Edge|
-|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Allow single sign-on for Microsoft sites using this profile|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Allow single sign-on for Microsoft personal sites using this profile|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
 |[ManagedFavorites](#managedfavorites)|Configure favorites|
 |[ManagedSearchEngines](#managedsearchengines)|Manage Search Engines|
@@ -544,8 +537,8 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Web widget|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Web widget at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
@@ -4863,7 +4856,7 @@ If you enable this setting, external extensions are blocked from being installed
 
 If you disable this setting or leave it unset, external extensions are allowed to be installed.
 
-External extensions and their installation are documented at [Alternate extension distribution methods](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
+External extensions and their installation are documented at https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### Supported features:
@@ -5147,7 +5140,7 @@ The source code of any extension can be altered by users with developer tools, p
 
 Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
-Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions at [Publish and update extensions in the Microsoft Edge Add-ons website](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Supported features:
 
@@ -8337,7 +8330,7 @@ For origins not covered by the patterns specified here, the global default value
 
 Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
-For detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+For detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.
 
   #### Supported features:
 
@@ -9702,7 +9695,7 @@ If you enable this policy, Microsoft Edge downloads and shows the specified logo
 
 If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
 
-For help with determining the SHA-256 hash, see [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
+For help with determining the SHA-256 hash, see https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### Supported features:
 
@@ -16582,7 +16575,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   #### Data Type:
 
-  - Dictionary
+  - List of strings
 
   #### Windows information and settings
 
@@ -16596,62 +16589,27 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Path (Recommended): N/A
-  - Value Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - Value Type: REG_SZ
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
 
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
-  {
-    "domains": [
-      "https://contoso.com",
-      "contoso2.com"
-    ],
-    "file_extension": "jnlp"
-  },
-  {
-    "domains": [
-      "*"
-    ],
-    "file_extension": "swf"
-  }
-]
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+
 ```
-
-  ##### Compact example value:
-
-  ```
-  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
-  ```
-  
 
   #### Mac information and settings
   
   - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
-<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>https://contoso.com</string>
-      <string>contoso2.com</string>
-    </array>
-    <key>file_extension</key>
-    <string>jnlp</string>
-  </dict>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>*</string>
-    </array>
-    <key>file_extension</key>
-    <string>swf</string>
-  </dict>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -20200,6 +20158,61 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerModeToolbarButtonEnabled
+
+  #### Show the Reload in Internet Explorer mode button in the toolbar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 96 or later
+
+  #### Description
+
+  Set this policy to show the Reload in Internet Explorer mode button in the toolbar. Users can hide the button in the toolbar through edge://settings/appearance.  The button will only be shown on the toolbar when the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy is enabled or if the user has chosen to enable "Allow sites to be reloaded in Internet Explorer mode".
+
+If you enable this policy, the Reload in Internet mode button is pinned to the toolbar.
+
+If you disable or don't configure this policy, the Reload in Internet Explorer mode button isn't shown in the toolbar by default. Users can toggle the Show Internet Explorer mode button in edge://settings/appearance.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerModeToolbarButtonEnabled
+  - GP name: Show the Reload in Internet Explorer mode button in the toolbar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: InternetExplorerModeToolbarButtonEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### IntranetRedirectBehavior
 
   #### Intranet Redirection Behavior
@@ -20509,7 +20522,7 @@ If you disable or don't configure this policy, Microsoft Edge will be updated by
 
   ### MSAWebSiteSSOUsingThisProfileAllowed
 
-  #### Allow single sign-on for Microsoft sites using this profile
+  #### Allow single sign-on for Microsoft personal sites using this profile
 
   
   
@@ -20519,7 +20532,7 @@ If you disable or don't configure this policy, Microsoft Edge will be updated by
 
   #### Description
 
-  'Allow single sign-on for Microsoft sites using this profile' option allows non-MSA profiles to be able to use single sign-on for Microsoft sites using MSA credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-MSA profiles only.
+  'Allow single sign-on for Microsoft personal sites using this profile' option allows non-MSA profiles to be able to use single sign-on for Microsoft sites using MSA credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-MSA profiles only.
 
 If you disable this policy, non-MSA profiles will not be able to use single sign-on for Microsoft sites using MSA credentials present on the machine.
 
@@ -20540,7 +20553,7 @@ If you enable this policy or don't configure it, users will be able to use the S
   ##### Group Policy (ADMX) info
 
   - GP unique name: MSAWebSiteSSOUsingThisProfileAllowed
-  - GP name: Allow single sign-on for Microsoft sites using this profile
+  - GP name: Allow single sign-on for Microsoft personal sites using this profile
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -23892,15 +23905,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Specifies whether Microsoft Edge should enable the Hardware-enforced Stack Protection security feature following crash triggered by this feature.
+  Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
 
-If you don't configure this policy, Microsoft Edge will manage the setting to safely rollout Hardware-enforced Stack Protection, eventually mandatorily enabling the feature for all users.
+Using this policy, you may control the behavior of the Hardware-enforced Stack Protection feature after a crash triggered by this feature is encountered.
 
-Set this policy to 'Disable' to always disable Hardware-enforced Stack Protection following a crash triggered by this feature.
+Set this policy to 'Disable' to disable the feature.
 
-Set this policy to 'DisableUntilUpdate' to disable Hardware-enforced Stack Protection following a crash triggered by this feature but enable it after Microsoft Edge has potentially resolved the issue.
+Set this policy to 'DisableUntilUpdate' to disable the feature until Microsoft Edge updates next time.
 
-Set this policy to 'Enable' to always enable Hardware-enforced Stack Protection following a crash triggered by this feature.
+Set this policy to 'Enable' to keep the feature enabled.
 
 Policy options mapping:
 
@@ -27094,7 +27107,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   ### WebWidgetAllowed
 
-  #### Enable the Web widget
+  #### Enable the Edge bar
 
   
   
@@ -27104,22 +27117,22 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Description
 
-  Enables the Web widget. When enabled, users can use the widget to search the web from their desktop or from an application. The widget provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The widget also includes feed tiles that users can click to see more information on msn.com in a new Microsoft Edge browser tab or window. The feed tiles may include ads. The widget can be launched from the Microsoft Edge settings or from the "More tools" menu in Microsoft Edge.
+  Enables the Edge bar. When enabled, users can use the Edge bar to search the web from their desktop or from an application. The Edge bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The Edge bar also includes feed tiles that users can click to see more information on msn.com in a new Microsoft Edge browser tab or window. The feed tiles may include ads. The Edge bar can be launched from the Microsoft Edge settings or from the "More tools" menu in Microsoft Edge.
 
 If you enable or don't configure this policy:
-  The Web widget will be automatically enabled for all profiles.
-  In the Microsoft Edge settings, users will see option to launch the widget.
-  In the Microsoft Edge settings, users will see the menu item to run the widget at Windows startup (auto-start).
-    The option to enable the widget at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
-    If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the widget at startup will be toggled off.
-  Users will see the menu item to launch the widget from the Microsoft Edge "More tools" menu. Users can launch the widget from "More tools".
-  The widget can be turned off by the "Quit" option in the System tray or by closing the widget from the taskbar. The widget will be restarted on system reboot if auto-start is enabled.
+  The Edge bar will be automatically enabled for all profiles.
+  In the Microsoft Edge settings, users will see option to launch the Edge bar.
+  In the Microsoft Edge settings, users will see the menu item to run the Edge bar at Windows startup (auto-start).
+    The option to enable the Edge bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+    If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the Edge bar at startup will be toggled off.
+  Users will see the menu item to launch the Edge bar from the Microsoft Edge "More tools" menu. Users can launch the Edge bar from "More tools".
+  The Edge bar can be turned off by the "Quit" option in the System tray or by closing the Edge bar from the taskbar. The Edge bar will be restarted on system reboot if auto-start is enabled.
 
 If you disable this policy:
-  The Web widget will be disabled for all profiles.
-  The option to launch the widget from Microsoft Edge Settings will be disabled.
-  The option to launch start the widget at Windows startup (auto-start) will be disabled.
-  The option to launch the widget from Microsoft Edge "More tools" menu will be disabled.
+  The Edge bar will be disabled for all profiles.
+  The option to launch the Edge bar from Microsoft Edge Settings will be disabled.
+  The option to launch start the Edge bar at Windows startup (auto-start) will be disabled.
+  The option to launch the Edge bar from Microsoft Edge "More tools" menu will be disabled.
 
   #### Supported features:
 
@@ -27136,7 +27149,7 @@ If you disable this policy:
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetAllowed
-  - GP name: Enable the Web widget
+  - GP name: Enable the Edge bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -27160,7 +27173,7 @@ If you disable this policy:
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Allow the Web widget at Windows startup
+  #### Allow the Edge bar at Windows startup
 
   
   
@@ -27170,19 +27183,19 @@ If you disable this policy:
 
   #### Description
 
-  Allows the Web widget to start running at Windows startup.
+  Allows the Edge bar to start running at Windows startup.
 
 If you enable:
-  The Web widget will start running at Windows startup by default.
-  If the widget is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the widget on Windows startup.
+  The Edge bar will start running at Windows startup by default.
+  If the Edge bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Edge bar on Windows startup.
 
 If you disable this policy:
-  The Web widget will not start at Windows startup for all profiles.
-  The option to start the widget at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+  The Edge bar will not start at Windows startup for all profiles.
+  The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
 If you don't configure the policy:
-  The Web widget will not start at Windows startup for all profiles.
-  The option to start the widget at Windows startup will be toggled off in Microsoft Edge settings.
+  The Edge bar will not start at Windows startup for all profiles.
+  The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
   #### Supported features:
 
@@ -27199,7 +27212,7 @@ If you don't configure the policy:
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetIsEnabledOnStartup
-  - GP name: Allow the Web widget at Windows startup
+  - GP name: Allow the Edge bar at Windows startup
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
