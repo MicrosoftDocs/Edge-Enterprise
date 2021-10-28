@@ -16,7 +16,7 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## October 28
+## October 28, 2021
 
 Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
 
