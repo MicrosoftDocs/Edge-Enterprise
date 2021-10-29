@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/27/2021
+ms.date: 10/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -59,6 +59,11 @@ These release notes provide information about new features and non-security upda
 - [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) - Configure Edge TyposquattingChecker.
 
 <!-- end major 96 --->
+
+## Version 95.0.1020.38: October 28
+
+Fixed various bugs and performance issues.
+
 ## Version 95.0.1020.20: October 11
 
 Fixed various bugs and performance issues.
