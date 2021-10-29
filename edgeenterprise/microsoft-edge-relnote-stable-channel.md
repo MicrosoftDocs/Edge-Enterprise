@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/28/2021
+ms.date: 10/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,6 +29,10 @@ These release notes provide information about new features and non-security upda
 ## Version 95.0.1020.38: October 28
 
 Fixed various bugs & performance issues.
+
+## Version 94.0.992.57: October 27
+
+Fixed various bugs and performance issues.
 
 ## Version 95.0.1020.30: October 21
 
@@ -74,9 +78,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Enable default legacy SameSite cookie behavior setting
 
 
+
 ## Version 94.0.992.50: October 14
 
-Fixed various bugs & performance issues.
+Fixed various bugs and performance issues.
 
 ## Version 94.0.992.47: October 11
 
