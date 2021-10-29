@@ -26,9 +26,16 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 95.0.1020.40: 'October 28
+
+> [!IMPORTANT]
+> This update contains a fix for CVE-2021-38000 and CVE-2021-38003 which have been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide)
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-21-2021).
+
 ## Version 95.0.1020.38: October 28
 
-Fixed various bugs & performance issues.
+Fixed various bugs and performance issues.
 
 ## Version 94.0.992.57: October 27
 
