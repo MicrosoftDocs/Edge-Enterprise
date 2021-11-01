@@ -95,11 +95,14 @@ The recommended alternatives for the no-merge functionality in Microsoft Edge ar
 1. Use Profiles in Microsoft Edge - Each profile maps to a different IE session for IE mode pages, so it behaves identically to the no-merge option.
 2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that both launches Microsoft Edge and changes the path for the session.
 
-If neither of those options work for your scenario, starting in Microsoft Edge version 93, IE mode on Microsoft Edge will support no-merge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the no-merge behavior in IE11.
+If neither of the previous options work for your scenario, starting in Microsoft Edge version 93, IE mode on Microsoft Edge will support no-merge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the no-merge behavior in IE11.
 
-Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated "*no-merge*" sites, that window is locked into a different "no-merge" IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. This follows previous behavior where users could launch IE with no-merge and could also launch Microsoft Edge without no-merge via other mechanisms. All sites opening in a new window (through window.open) will respect the merge nature of the parent process. Please note that session switching isn’t supported; navigations within the same IE mode tab will use the same session.
+For each Microsoft Edge window, the first time an IE mode tab is visited within that window, if it’s a designated "no-merge" site, that window is locked into a different "no-merge" IE session.  This window stays locked from all other Microsoft Edge windows until the last IE mode tab is closed in the locked window. This follows previous behavior where users could launch IE with no-merge and launch Microsoft Edge without no-merge using other mechanisms. All sites opening in a new window (through window.open) will respect the merge nature of the parent process.
 
-You can validate the behavior in Microsoft Edge version 93 or later by following these steps:
+> [!NOTE]
+> Session switching isn’t supported. Navigations within the same IE mode tab will use the same session.
+
+You can validate the no-merge behavior in Microsoft Edge version 93 or later by following these steps:
 
 1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later.
 2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to “no-merge”. This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. (**Note:** The integrated site list manager tool available at *edge://compat/sitelistmanager* includes a **No merge** checkbox when you Add or Edit a site.)
@@ -129,11 +132,11 @@ The ability to save links as web pages  requires the following minimum operating
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the --ie-mode-test command line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
-Starting with Microsoft Edge v.96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
+Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. For more information, see "Improved handoff between IE mode and the modern browser." in the [Version 96.0.1054.8: November 1](/deployedge/microsoft-edge-relnote-beta-channel#version-96010548-november-1) release note. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
 
 In addition to Microsoft Edge version 96, you need to have the following Windows updates installed for this experience:
 
