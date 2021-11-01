@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 10/29/2021
+ms.date: 11/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -21,7 +21,7 @@ These release notes provide information about new features and non-security upda
 
 <!--- begin major 96 -->
 
-## Version 96.0.0000.00: November 1
+## Version 96.0.1054.8: November 1
 
 ### Feature updates
 
