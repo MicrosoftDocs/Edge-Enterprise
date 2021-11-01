@@ -24,6 +24,9 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 
 ## Troubleshoot IE Mode
 
+Use the information in this section to diagnose and fix IE mode problems.
+
+
 ## Frequently Asked Questions
 
 ## See also
