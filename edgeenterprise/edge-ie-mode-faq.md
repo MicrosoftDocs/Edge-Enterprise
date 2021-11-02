@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/01/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,10 +30,10 @@ Use the information in this section to diagnose and fix IE mode problems.
 
 You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
 
-- **Registry key check.** (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can click Fix it to resolve the problem.
+- **Registry key check.** (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can select **Fix it** to resolve the problem.
 - **Internet Explorer mode.** Shows the API version that's used, based on the configuration and OS. If there's a problem, the user may be prompted to install a Windows Update.
 - **Internet Explorer mode setting.** Shows whether Internet Explorer mode is enabled, and how it's configured.
-- **Command line.** Shows the command line string and switches used to start Microsoft Edge.
+- **Command line.** Shows the command-line string and switches used to start Microsoft Edge.
 - **Group policy settings.** Shows whether IE mode is configured using group policies, and the policies that are applied.
 
 ### Error message: "To open this page in Internet Explorer mode, reinstall Microsoft Edge with administrator privileges."
