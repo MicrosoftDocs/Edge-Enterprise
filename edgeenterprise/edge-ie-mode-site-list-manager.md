@@ -47,7 +47,7 @@ Use the following steps to add individual sites to your site list.
 > You can only add specific URLs, not Internet or Intranet Zones.
 
 1. In the Enterprise Site List Manager, click **Add a site**.
-2. Type the URL for the website you’d like to add, for example: <domain>.com or <domain>.com/<path> in the URL box.
+2. Type the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
 3. Select one of the following options from the **Open in** list:
 
    - **IE11**. Opens the site in the IE11 application.
