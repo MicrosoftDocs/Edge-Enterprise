@@ -158,9 +158,9 @@ There are scenarios where you want to export a site list. For example, if you're
 
 ## FAQ
 
-### Why is my tenant required to have an Exchange Service subscription for this feature?
+### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
-This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the Microsoft 365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three-day delay for you to use the experience.
+Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that’s shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Azure Active Directory. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can’t create a new list, or if you need urgent assistance, contact Microsoft Support.
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
