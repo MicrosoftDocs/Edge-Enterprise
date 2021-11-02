@@ -3,7 +3,7 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,16 +17,16 @@ description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
 >[!Note]
 > The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer mode.
+This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 89 or later. 
+> This article applies to Microsoft Edge version 89 or later.
 
 ## Overview
 
-The Enterprise Site List Manager is an in-browser version of the [standalone Enterprise Mode Site List Manager tool](https://www.microsoft.com/download/details.aspx?id=49974) that lets you create, edit, and export your organization’s site list.
+The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization’s site list.
 
-Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
+Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager accessible at *edge://compat/SiteListManager* in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
 
 ## Enabling access to Enterprise Site List Manager
 
