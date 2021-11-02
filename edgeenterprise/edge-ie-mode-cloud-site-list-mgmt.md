@@ -18,9 +18,12 @@ This article explains how to configure and use Cloud Site List Management for In
 
 ## Overview
 
-As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**. To learn more, watch the [Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ)
+As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**.
 
-**This experience is now in public preview.**
+To learn more, watch the [Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ) video.
+
+> [!NOTE]
+> This experience is now in public preview.
 
 The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
