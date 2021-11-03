@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode (Public Previe
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/02/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
