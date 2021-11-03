@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/02/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -139,7 +139,7 @@ Yes, while you are modernizing your legacy sites, you can test IE mode sites on 
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
-Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. For more information, see "Improved handoff between IE mode and the modern browser." in the [Version 96.0.1054.8: November 1](/deployedge/microsoft-edge-relnote-beta-channel#version-96010548-november-1) release note. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
+Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
 
 In addition to Microsoft Edge version 96, you need to have the following Windows updates installed for this experience:
 
