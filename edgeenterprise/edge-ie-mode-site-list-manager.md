@@ -3,13 +3,13 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/02/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
+description: "Enable and use Enterprise Site List Manager in Microsoft Edge"
 ---
 
 # Enterprise Site List Manager in Microsoft Edge
@@ -24,9 +24,9 @@ This article explains how to enable access to and use the Enterprise Site List M
 
 ## Overview
 
-The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization’s site list.
+The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization’s site list. You can access the in-browser Enterprise Site List Manager at *edge://compat/SiteListManager*.
 
-Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager accessible at *edge://compat/SiteListManager* in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
+Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager (*edge://compat/SiteListManager*) in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
 
 ## Enabling access to Enterprise Site List Manager
 
