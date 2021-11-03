@@ -45,12 +45,12 @@
      href: microsoft-edge-release-schedule.md
    - name: Security updates
      href: microsoft-edge-relnotes-security.md     
-   - name: Microsoft Edge policy mapping
-     items:
-      - name: Policy mapping overview
-        href: microsoft-edge-policy-map-overview.md
-      - name: Google Chrome to Microsoft Edge policy mapping
-        href: microsoft-edge-policy-map-chrome-to-newedge.md
+#   - name: Microsoft Edge policy mapping
+#     items:
+#      - name: Policy mapping overview
+#        href: microsoft-edge-policy-map-overview.md
+#      - name: Google Chrome to Microsoft Edge policy mapping
+#        href: microsoft-edge-policy-map-chrome-to-newedge.md
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
