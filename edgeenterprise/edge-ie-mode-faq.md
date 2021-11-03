@@ -84,9 +84,8 @@ You can use IEChooser to launch the Internet Explorer DevTools to debug the cont
 
 Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running. Then you can select **Settings and more** (the ellipses icon ...) **> More Tools > Open sites in Edge mode**.
 
-### Can I use "View in File Explorer" in SharePoint Online with IE mode?
+### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
-Yes, if this option works in standalone Internet Explorer 11 it will work in IE mode. 
 Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you will need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
 However, rather than use the View in File Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) or [Move or copy files in SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
