@@ -91,8 +91,8 @@ landingContent:
             url: microsoft-edge-update-policies.md
           - text: WebView2 policy reference
             url: microsoft-edge-webview-policies.md
-          - text: Policy mapping overview
-            url: microsoft-edge-policy-map-overview.md
+#          - text: Policy mapping overview
+#            url: microsoft-edge-policy-map-overview.md
           - text: Microsoft Security Baselines Blog
             url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
   # Card 6 (col 3, 2nd row)
