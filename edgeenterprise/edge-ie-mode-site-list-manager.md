@@ -3,13 +3,13 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
+description: "Enable and use Enterprise Site List Manager in Microsoft Edge"
 ---
 
 # Enterprise Site List Manager in Microsoft Edge
@@ -17,16 +17,16 @@ description: "Enable and use Enterprise Site List Manager in Microsoft Edge "
 >[!Note]
 > The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer mode.
+This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 89 or later. 
+> This article applies to Microsoft Edge version 89 or later.
 
 ## Overview
 
-The Enterprise Site List Manager is an in-browser version of the [standalone Enterprise Mode Site List Manager tool](https://www.microsoft.com/download/details.aspx?id=49974) that lets you create, edit, and export your organization’s site list.
+The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization’s site list. You can access the in-browser Enterprise Site List Manager at *edge://compat/SiteListManager*.
 
-Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
+Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager (*edge://compat/SiteListManager*) in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
 
 ## Enabling access to Enterprise Site List Manager
 
@@ -47,7 +47,7 @@ Use the following steps to add individual sites to your site list.
 > You can only add specific URLs, not Internet or Intranet Zones.
 
 1. In the Enterprise Site List Manager, click **Add a site**.
-2. Type the URL for the website you’d like to add, for example: <domain>.com or <domain>.com/<path> in the URL box.
+2. Type the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
 3. Select one of the following options from the **Open in** list:
 
    - **IE11**. Opens the site in the IE11 application.
