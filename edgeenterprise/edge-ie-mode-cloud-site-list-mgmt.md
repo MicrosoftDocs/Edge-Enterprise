@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode (Public Previe
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,10 @@ This article explains how to configure and use Cloud Site List Management for In
 
 As you transition your workflows and applications from IE11 to IE mode, **Cloud Site List Management** lets you manage your site lists for IE mode in the cloud. You can work with site lists using the **Microsoft Edge Site Lists** experience in the **Microsoft 365 Admin Center**.
 
-**This experience is now in public preview.**
+To learn more, watch the [Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ) video.
+
+> [!NOTE]
+> This experience is now in public preview.
 
 The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
@@ -29,9 +32,8 @@ The preview experience lets you store your organization’s site list in a compl
 The following prerequisites apply to this public preview.
 
 1. Customers must have an Azure AD tenant.
-2. The tenant subscription must include Exchange Services. For more information, see the [FAQ](#faq).
-3. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-4. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
+2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
+3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
    - To opt in to the public preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
@@ -156,9 +158,9 @@ There are scenarios where you want to export a site list. For example, if you're
 
 ## FAQ
 
-### Why is my tenant required to have an Exchange Service subscription for this feature?
+### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
-This subscription ensures that the right backend association happens with your tenant immediately, which occurs when you first select Microsoft Edge site lists. When Exchange Services aren’t part of your subscription, the association request from the Microsoft 365 Admin Center will fail. An alert is sent to the provisioning system to address the problem.  This will result in a three-day delay for you to use the experience.
+Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that’s shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Azure Active Directory. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can’t create a new list, or if you need urgent assistance, contact Microsoft Support.
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
