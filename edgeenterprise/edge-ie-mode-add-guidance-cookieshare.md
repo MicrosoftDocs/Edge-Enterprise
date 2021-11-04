@@ -3,7 +3,7 @@ title: "Cookie sharing from Microsoft Edge to Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,6 +31,9 @@ This article explains explains how to configure session cookie sharing from a Mi
   - Windows 10 version 1903, Windows Server version 1903 – KB4566116 or higher
   - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB4571748 or higher
   - Windows 10 version 1803 – KB4577032 or higher
+  - Windows 10 Enterprise 2016 LTSC and Windows Server 2016 - KB4580346 or higher
+  - Windows 10 Enterprise 2015 LTSB - KB4580327 or higher
+  - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher
   - Windows 10 Enterprise 2016 LTSC and Windows Server 2016 - KB4580346 or higher
   - Windows 10 Enterprise 2015 LTSB - KB4580327 or higher
   - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher
