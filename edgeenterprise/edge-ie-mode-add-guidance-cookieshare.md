@@ -32,7 +32,7 @@ This article explains explains how to configure session cookie sharing from a Mi
   - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB4571748 or higher
   - Windows 10 version 1803 – KB4577032 or higher
   - Windows 10 Enterprise 2016 LTSC and Windows Server 2016 - KB4580346 or higher
-  - Windows 10 Enterprise 2015 LTSC - KB4580327 or higher
+  - Windows 10 Enterprise 2015 LTSB - KB4580327 or higher
   - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher
 
 - Microsoft Edge version 87 or later
