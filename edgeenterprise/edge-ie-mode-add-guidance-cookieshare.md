@@ -17,7 +17,7 @@ description: "Learn how to share cookies from Microsoft Edge to Internet Explore
 >[!Note]
 > The Internet Explorer (IE) 11 desktop application will be retired and go out of support on June 15, 2022. To see what’s in scope and out of scope when IE 11 is retired, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). The same IE 11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-This article explains how to configure session cookie sharing from a Microsoft Edge process to Internet Explorer process, while using Internet Explorer mode.
+This article explains how to configure session cookie sharing from a Microsoft Edge process to an Internet Explorer process, while using Internet Explorer mode.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
