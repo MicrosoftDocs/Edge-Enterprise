@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 11/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,11 +22,7 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Troubleshoot IE Mode
-
-Use the information in this section to diagnose and fix IE mode problems.
-
-### Internet Explorer mode  general diagnostic information
+## Get general diagnostic and configuration information
 
 You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
 
@@ -65,6 +61,77 @@ You might see this error if you're remote debugging and navigate to a web page c
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
+## Common issues
+
+Use this section as a guide to help you troubleshoot and fix the two most common issues when moving to Microsoft Edge with IE mode. These issues are:
+
+- incorrect Document mode configurations
+- incomplete neutral site configurations
+
+### Incorrect Document mode configurations
+
+This section describes the symptoms and gives steps to diagnose and fix this issue.
+
+#### Symptoms
+
+Users will experience the following symptoms:
+  
+- Sizing and positioning of page elements might be off or they might be missing 
+- Some functionality might be lost or not work as expected. For example, buttons that worked with Internet Explorer don’t do anything or return an error.
+
+#### How to troubleshoot and fix
+
+The general strategy is to duplicate the same settings that worked with Internet Explorer 11 for a specific site in our IE mode site list entry. Use the F12 Developer Toolbar's "Emulation" tab in IE 11, shown in the next screenshot to investigate the scenario you want to fix. To open the Developer toolbar, press the F12 key and then select **Open DevTools**.
+
+**<-- insert screenshot here**
+
+The Emulation tab shows two pieces of information to focus on: the Document mode (1), and the text below the dropdown list (2). This information can help explain why we are in the 11 (Default) mode for the page or site we’re looking at.
+
+There are different messages that can be displayed for the Document mode, and in our example they are:
+  
+- Via X-UA-compatible meta tag
+- Via X-UA-compatible HTTP header
+
+The two X-UA-Compatible options indicate that either the webpage or the web server where the site is hosted, is showing the document mode that should be used by the browser.  
+We want to honor the document mode in nearly all cases. To do that, we need to select one of the following modes in the IE mode site list entry for the site:
+
+- Default
+- IE8 Enterprise
+- IE7 Enterprise
+
+These options respect the webpage or web server directives. Remember that we need to select an option that includes the specified document mode. In the screenshot example, because the specified document mode is 11, we’d select "Default"  because neither IE8 Enterprise or IE7 Enterprise support IE 11 document mode.  
+
+If the Document mode indicates that one of the following compatibility views is needed for the site, the configuration setting is straightforward.
+
+- Via local compatibility view settings
+- Via the compatibility view list
+- Via intranet compatibility settings
+
+Because all the Compatibility View settings result in "IE7 Enterprise" behavior, this is the setting to choose in the "Compat Mode" section of the IE mode site list entry.
+
+For more information about the logic that Internet Explorer or IE mode uses to land in one doc mode over another, see the [Deprecated document modes and Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes) article.
+
+The general rule is to use the most current logic-based mode that allows a given site to work as expected. We’d start with the Default mode, move to IE8 Enterprise mode, and then to IE7 Enterprise mode if needed. This gives child pages the flexibility to use different Document modes as necessary via the built-in logic for their specific needs. As a result, all the website pages aren’t locked in to one specific Document mode.  
+
+The following table lists the available document modes for these settings.
+
+| Logic-based mode | Default | IE8 Enterprise | IE7 Enterprise |
+|--|--|--|--|
+| Available Document modes | IE11 Doc mode<br> IE10 Doc mode<br>IE9 Doc mode<br> IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode | IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode   | IE7 Doc mode<br>IE5 Quirks mode  |
+
+> [!NOTE]
+> In some cases, a particular site or page requires a specific document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren’t effective.
+
+### Incomplete neutral site configurations 
+
+This section describes the symptoms and gives steps to diagnose and fix this issue.
+
+#### Symptoms
+
+
+#### How to troubleshoot and fix
+
+<!-- FAQ -->
 ## Frequently Asked Questions
 
 ### Will IE mode replace Internet Explorer 11?
