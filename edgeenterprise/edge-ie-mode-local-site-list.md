@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Learn how to enable local site lists and easy access to IE mode"
 ---
 
-## Local site list for IE mode
+# Local site list for IE mode
 
 >[!Note]
 > The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
@@ -22,7 +22,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 > [!NOTE]
 > This article applies to Microsoft Edge version 92 or later.
 
-### Prerequisites
+## Prerequisites
 
 1. Windows updates
 
