@@ -22,46 +22,7 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Get general diagnostic and configuration information
-
-You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
-
-- **Registry key check.** (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can select **Fix it** to resolve the problem.
-- **Internet Explorer mode.** Shows the API version that's used, based on the configuration and OS. If there's a problem, the user may be prompted to install a Windows Update.
-- **Internet Explorer mode setting.** Shows whether Internet Explorer mode is enabled, and how it's configured.
-- **Command line.** Shows the command-line string and switches used to start Microsoft Edge.
-- **Group policy settings.** Shows whether IE mode is configured using group policies, and the policies that are applied.
-
-### Error message: "To open this page in Internet Explorer mode, reinstall Microsoft Edge with administrator privileges."
-
-You might see this error if you don't have all required Windows Updates. See the prerequisites listed in [About IE mode](./edge-ie-mode.md) for the required versions of Windows and Microsoft Edge.
-
-If you've already installed all required Windows Updates, you might see this error if:
-
-- You're using the Canary channel, which is installed at the user level by default.
-- You're using the Stable, Beta, or Dev channel, but when prompted for elevation when installing the elevation was canceled. When you cancel the elevation prompt, the installation will continue at the user level.
-- Internet Explorer 11 has been disabled in Windows Features.
-
-Possible solutions are:
-
-- Run the installer for any channel at the system level: `installer.exe --system-level`.
-- Enable Internet Explorer 11 in Windows Features.
-
-To check if Microsoft Edge is installed at the systems level, type "edge://version" in the Microsoft Edge address bar. The Executable path will show a path starting with *C:\Program Files*, which indicates a system install. If the Executable path begins with *C:\Users*, uninstall and then reinstall Microsoft Edge with administrator privileges.
-
-### Error message "To open this page in IE mode, try restarting Microsoft Edge."
-
-You might see this error if there was an unexpected error in Internet Explorer. Restarting Microsoft Edge usually fixes this error.
-
-### Error message: "Turn off remote debugging to open this site in IE mode otherwise it might not work as expected."
-
-You might see this error if you're remote debugging and navigate to a web page configured to run in IE mode. You can continue, but the page will be rendered using Microsoft Edge.
-
-### Error message: "Could not retrieve EMIE site list."
-
-You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
-
-## Common issues
+## Common IE mode issues
 
 Use this section as a guide to help you troubleshoot and fix the two most common issues when moving to Microsoft Edge with IE mode. These issues are:
 
@@ -163,6 +124,45 @@ In some rare instances, it may be necessary to configure specific shared cookies
 ## What if these steps don't fix the issue?
 
 This article is designed to help troubleshoot the most common IE mode configuration issues, but it might not cover every possible scenario. If you run into an issue that you can't fix and need help with, contact App Assure at [https://aka.ms/AppAssure](https://aka.ms/AppAssure) and we'll help you with your problem.
+
+## Get general diagnostic and configuration information
+
+You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
+
+- **Registry key check.** (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can select **Fix it** to resolve the problem.
+- **Internet Explorer mode.** Shows the API version that's used, based on the configuration and OS. If there's a problem, the user may be prompted to install a Windows Update.
+- **Internet Explorer mode setting.** Shows whether Internet Explorer mode is enabled, and how it's configured.
+- **Command line.** Shows the command-line string and switches used to start Microsoft Edge.
+- **Group policy settings.** Shows whether IE mode is configured using group policies, and the policies that are applied.
+
+### Error message: "To open this page in Internet Explorer mode, reinstall Microsoft Edge with administrator privileges."
+
+You might see this error if you don't have all required Windows Updates. See the prerequisites listed in [About IE mode](./edge-ie-mode.md) for the required versions of Windows and Microsoft Edge.
+
+If you've already installed all required Windows Updates, you might see this error if:
+
+- You're using the Canary channel, which is installed at the user level by default.
+- You're using the Stable, Beta, or Dev channel, but when prompted for elevation when installing the elevation was canceled. When you cancel the elevation prompt, the installation will continue at the user level.
+- Internet Explorer 11 has been disabled in Windows Features.
+
+Possible solutions are:
+
+- Run the installer for any channel at the system level: `installer.exe --system-level`.
+- Enable Internet Explorer 11 in Windows Features.
+
+To check if Microsoft Edge is installed at the systems level, type "edge://version" in the Microsoft Edge address bar. The Executable path will show a path starting with *C:\Program Files*, which indicates a system install. If the Executable path begins with *C:\Users*, uninstall and then reinstall Microsoft Edge with administrator privileges.
+
+### Error message "To open this page in IE mode, try restarting Microsoft Edge."
+
+You might see this error if there was an unexpected error in Internet Explorer. Restarting Microsoft Edge usually fixes this error.
+
+### Error message: "Turn off remote debugging to open this site in IE mode otherwise it might not work as expected."
+
+You might see this error if you're remote debugging and navigate to a web page configured to run in IE mode. You can continue, but the page will be rendered using Microsoft Edge.
+
+### Error message: "Could not retrieve EMIE site list."
+
+You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
 ## Frequently Asked Questions
 
