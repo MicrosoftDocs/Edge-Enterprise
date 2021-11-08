@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Troubleshooting and FAQ for Microsoft Edge Internet Explorer mode"
+description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer mode"
 ---
 
 # Internet Explorer (IE) mode troubleshooting and FAQ
@@ -26,8 +26,8 @@ This article provides troubleshooting tips and an FAQ for Microsoft Edge version
 
 Use this section as a guide to help you troubleshoot and fix the two most common issues when moving to Microsoft Edge with IE mode. These issues are:
 
-- incorrect Document mode configurations
-- incomplete neutral site configurations
+- Incorrect Document mode configurations
+- Incomplete neutral site configurations
 
 ### Incorrect Document mode configurations
 
@@ -60,7 +60,7 @@ We want to honor the document mode in nearly all cases. To do that, we need to s
 - IE8 Enterprise
 - IE7 Enterprise
 
-These options respect the webpage or web server directives. Remember that we need to select an option that includes the specified document mode. In the screenshot example, because the specified document mode is 11, we’d select "Default"  because neither IE8 Enterprise or IE7 Enterprise support IE 11 document mode.  
+These options respect the webpage or web server directives. Remember that we need to select an option that includes the specified document mode. In the screenshot example, because the specified document mode is 11, we’d select "Default"  because IE8 Enterprise and IE7 Enterprise don't support IE 11 document mode.  
 
 If the Document mode indicates that one of the following compatibility views is needed for the site, the configuration setting is straightforward.
 
@@ -68,11 +68,11 @@ If the Document mode indicates that one of the following compatibility views is 
 - Via the compatibility view list
 - Via intranet compatibility settings
 
-Because all the Compatibility View settings result in "IE7 Enterprise" behavior, this is the setting to choose in the "Compat Mode" section of the IE mode site list entry.
+Because all the Compatibility View settings result in "IE7 Enterprise" behavior, choose this setting in the "Compat Mode" section of the IE mode site list entry.
 
 For more information about the logic that Internet Explorer or IE mode uses to land in one doc mode over another, see the [Deprecated document modes and Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes) article.
 
-The general rule is to use the most current logic-based mode that allows a given site to work as expected. We’d start with the Default mode, move to IE8 Enterprise mode, and then to IE7 Enterprise mode if needed. This gives child pages the flexibility to use different Document modes as necessary via the built-in logic for their specific needs. As a result, all the website pages aren’t locked in to one specific Document mode.  
+The general rule is to use the most current logic-based mode that allows a given site to work as expected. We’d start with the Default mode, move to IE8 Enterprise mode, and then to IE7 Enterprise mode if needed. This selection gives child pages the flexibility to use different Document modes as necessary via the built-in logic for their specific needs. As a result, all the website pages aren’t locked in to one specific Document mode.  
 
 The following table lists the available document modes for these settings.
 
@@ -97,7 +97,7 @@ Before we start analyzing a  failing workflow in Microsoft Edge, look at the add
 
 :::image type="content" source="media/edge-ie-mode-faq/edge--ie-mode-logo.png" alt-text="IE logo on Microsoft Edge menu bar."
 
-If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this further points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
+If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
 Often, the redirect cycle happens so quickly that it’s difficult to identify the missing neutral sites. To help with this analysis, we use a tool that’s built into the Chromium engine: **net-export**.
 
@@ -162,7 +162,7 @@ You might see this error if you're remote debugging and navigate to a web page c
 
 ### Error message: "Could not retrieve EMIE site list."
 
-You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
+You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication also isn't allowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
 ## Frequently Asked Questions
 
@@ -181,7 +181,7 @@ You can use IEChooser to launch the Internet Explorer DevTools to debug the cont
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running. Then you can select **Settings and more** (the ellipses icon ...) **> More Tools > Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then you can select **Settings and more** (the ellipses icon ...) **> More Tools > Open sites in Edge mode**.
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
@@ -233,7 +233,7 @@ The ability to save links as web pages  requires the following minimum operating
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To accomplish this, you can run Microsoft Edge with the `--ie-mode-test` command line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To test these sites, can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
