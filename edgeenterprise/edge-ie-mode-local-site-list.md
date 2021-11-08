@@ -1,9 +1,9 @@
 ---
 title: "Local site list for IE mode"
 ms.author: shisub
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 09/13/2021
+ms.date: 11/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
