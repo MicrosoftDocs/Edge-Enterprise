@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/05/2021
+ms.date: 11/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -122,16 +122,48 @@ The following table lists the available document modes for these settings.
 > [!NOTE]
 > In some cases, a particular site or page requires a specific document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren’t effective.
 
-### Incomplete neutral site configurations 
+### Incomplete neutral site configurations
 
 This section describes the symptoms and gives steps to diagnose and fix this issue.
 
 #### Symptoms
-
-
+  
+A page relies on SSO for authentication, but users are prompted multiple times for credentials, experience a looping redirect behavior, failed authentication errors, or some combination of these symptoms.
+  
 #### How to troubleshoot and fix
+  
+Before we start analyzing a  failing workflow in Microsoft Edge, look at the address bar for the IE mode "e" logo, shown in the next screenshot.
 
-<!-- FAQ -->
+**<-- Insert image**
+
+If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this further points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
+
+Often, the redirect cycle happens so quickly that it’s difficult to identify the missing neutral sites. To help with this analysis, we use a tool that’s built into the Chromium engine: **net-export**.
+
+> [!TIP]
+> Network traces are inherently noisy. To minimize the noise, close all other browser instances and tabs that aren’t needed for the specific workflow that you’re investigating.
+
+The following steps describe how to troubleshoot a neutral site configuration.
+  
+1. Open a new tab in Microsoft Edge and go to *edge://net-export*.
+2. Select **Start Logging to Disk**, and then pick a location where you want to save the resulting .json log. This log can safely be deleted after you finish troubleshooting.
+3. Open another tab (keep the net-export tab open), and repeat the failing workflow.
+4. After you finish, return to the net-export tab and select **Stop Logging**.
+5. Select the "netlog viewer" hyperlink.
+6. On the resulting page, select **Choose File**, and then pick the .json file you created in step 2.
+7. After the log file is loaded, select **Events** from the left side menu.
+8. Scroll through the network log and identify the starting URL. (You can also use the search function to find your starting point.)
+9. From the starting point, scroll downward and look for URLs in the workflow that don’t have an entry in your IE mode site list. Pay special attention to URLs with indicators for SSO, AUTH, LOGIN, and so on.
+10. After you identify a candidate URL, add it to the IE mode site list as a neutral site by selecting **None** in the Open-in dropdown. Test the workflow again.
+
+In some cases, multiple neutral site entries are needed, depending on the specific site architecture in place. If the workflow still fails after adding a new neutral site, repeat the process to capture a new net-export log and perform another pass.
+
+In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you are aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+
+## What if these steps don't fix the issue?
+
+This article is designed to help troubleshoot the most common IE mode configuration issues, but it might not cover every possible scenario. If you run into an issue that you can't fix and need help with, contact App Assure at [https://aka.ms/AppAssure](https://aka.ms/AppAssure) and we'll help you with your problem.
+
 ## Frequently Asked Questions
 
 ### Will IE mode replace Internet Explorer 11?
