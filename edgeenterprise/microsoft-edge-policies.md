@@ -30,14 +30,19 @@ The following policies were added to this documentation update.
 
 | Policy Name |	Caption |
 |--|--|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Get Image Descriptions from Microsoft Enabled|
-|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
+|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Allow Tab capture by these origins|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-- [Allow or deny screen capture](#allow-or-deny-screen-capture)
 - [Application Guard settings](#application-guard-settings)
 - [Cast](#cast)
 - [Content settings](#content-settings)
@@ -51,6 +56,7 @@ These tables list all of the browser-related group policies available in this re
 - [Native Messaging](#native-messaging)
 - [Password manager and protection](#password-manager-and-protection)
 - [Performance](#performance)
+- [Permit or deny screen capture](#permit-or-deny-screen-capture)
 - [Printing](#printing)
 - [Private Network Request Settings](#private-network-request-settings)
 - [Proxy server](#proxy-server)
@@ -61,11 +67,6 @@ These tables list all of the browser-related group policies available in this re
 - [Additional](#additional)
 
 
-### [*Allow or deny screen capture*](#allow-or-deny-screen-capture-policies)
-
-|Policy Name|Caption|
-|-|-|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
 |Policy Name|Caption|
@@ -124,6 +125,8 @@ These tables list all of the browser-related group policies available in this re
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
+|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Allow notifications to set Microsoft Edge as default PDF reader|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
@@ -215,6 +218,14 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
+### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Allow Tab capture by these origins|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
 ### [*Printing*](#printing-policies)
 
 |Policy Name|Caption|
@@ -373,6 +384,7 @@ These tables list all of the browser-related group policies available in this re
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
@@ -483,6 +495,7 @@ These tables list all of the browser-related group policies available in this re
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
@@ -547,69 +560,6 @@ These tables list all of the browser-related group policies available in this re
 
 
 
-
-  ## Allow or deny screen capture policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ScreenCaptureAllowed
-
-  #### Allow or deny screen capture
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 83 or later
-
-  #### Description
-
-  If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
-If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: ScreenCaptureAllowed
-  - GP name: Allow or deny screen capture
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Allow or deny screen capture
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ScreenCaptureAllowed
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000000
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: ScreenCaptureAllowed
-  - Example value:
-``` xml
-<false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
 
   ## Application Guard settings policies
 
@@ -3765,6 +3715,196 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
     <string>mailto</string>
     <key>url</key>
     <string>https://mail.contoso.com/mail/?extsrc=mailto&url=%s</string>
+  </dict>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SerialAllowAllPortsForUrls
+
+  #### Automatically grant sites permission to connect all serial ports
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy allows you to list sites which are automatically granted permission to access all available serial ports.
+
+The URLs must be valid, or the policy is ignored. Only the origin (scheme, host, and port) of the URL is considered.
+
+This policy overrides [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) and the user's preferences.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SerialAllowAllPortsForUrls
+  - GP name: Automatically grant sites permission to connect all serial ports
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls\1 = "https://www.example.com"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SerialAllowAllPortsForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SerialAllowUsbDevicesForUrls
+
+  #### Automatically grant sites permission to connect to USB serial devices
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy lets you list sites that are automatically granted permission to access USB serial devices with vendor and product IDs that match the vendor_id and product_id fields.
+
+Optionally you can omit the product_id field. This enables site access to all the vendor's devices.  When you provide a product ID, then you give the site access to a specific device from the vendor but not all devices.
+
+The URLs must be valid, or the policy is ignored. Only the origin (scheme, host, and port) of the URL is considered.
+
+This policy overrides [DefaultSerialGuardSetting](#defaultserialguardsetting), [SerialAskForUrls](#serialaskforurls), [SerialBlockedForUrls](#serialblockedforurls) and the user's preferences.
+
+This policy only affects access to USB devices through the Web Serial API. To grant access to USB devices through the WebUSB API see the [WebUsbAllowDevicesForUrls](#webusballowdevicesforurls) policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SerialAllowUsbDevicesForUrls
+  - GP name: Automatically grant sites permission to connect to USB serial devices
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SerialAllowUsbDevicesForUrls
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://specific-device.example.com"
+    ]
+  },
+  {
+    "devices": [
+      {
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://all-vendor-devices.example.com"
+    ]
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://specific-device.example.com"]}, {"devices": [{"vendor_id": 1234}], "urls": ["https://all-vendor-devices.example.com"]}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SerialAllowUsbDevicesForUrls
+  - Example value:
+``` xml
+<key>SerialAllowUsbDevicesForUrls</key>
+<array>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>product_id</key>
+        <integer>5678</integer>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://specific-device.example.com</string>
+    </array>
+  </dict>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://all-vendor-devices.example.com</string>
+    </array>
   </dict>
 </array>
 ```
@@ -7346,6 +7486,292 @@ Learn more about startup boost: [https://go.microsoft.com/fwlink/?linkid=2147018
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Permit or deny screen capture policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SameOriginTabCaptureAllowedByOrigins
+
+  #### Allow Same Origin Tab capture by these origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy lets you set a list of URL patterns that can capture tabs with their same Origin.
+
+Leaving the policy unset means that sites will not be considered for an override at this scope of capture.
+
+If a site matches a URL pattern in this policy, the following policies will not be considered: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SameOriginTabCaptureAllowedByOrigins
+  - GP name: Allow Same Origin Tab capture by these origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Permit or deny screen capture
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SameOriginTabCaptureAllowedByOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ScreenCaptureAllowedByOrigins
+
+  #### Allow Desktop, Window, and Tab capture by these origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy lets you set a list of URL patterns that can use Desktop, Window, and Tab Capture.
+
+Leaving the policy unset means that sites will not be considered for an override at this scope of Capture.
+
+This policy is not considered if a site matches a URL pattern in any of the following policies: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+If a site matches a URL pattern in this policy, the [ScreenCaptureAllowed](#screencaptureallowed) will not be considered.
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ScreenCaptureAllowedByOrigins
+  - GP name: Allow Desktop, Window, and Tab capture by these origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Permit or deny screen capture
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ScreenCaptureAllowedByOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TabCaptureAllowedByOrigins
+
+  #### Allow Tab capture by these origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy lets you set a list of URL patterns that can use Tab Capture.
+
+Leaving the policy unset means that sites will not be considered for an override at this scope of capture.
+
+This policy is not considered if a site matches a URL pattern in the [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins) policy.
+
+If a site matches a URL pattern in this policy, the following policies will not be considered: [WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins), [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TabCaptureAllowedByOrigins
+  - GP name: Allow Tab capture by these origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Permit or deny screen capture
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: TabCaptureAllowedByOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WindowCaptureAllowedByOrigins
+
+  #### Allow Window and Tab capture by these origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  Setting the policy lets you set a list of URL patterns that can use Window and Tab Capture.
+
+Leaving the policy unset means that sites will not be considered for an override at this scope of Capture.
+
+This policy is not considered if a site matches a URL pattern in any of the following policies: [TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins), [SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+If a site matches a URL pattern in this policy, the following policies will not be considered: [ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins), [ScreenCaptureAllowed](#screencaptureallowed).
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).  This policy only matches based on origin, so any path in the URL pattern is ignored.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WindowCaptureAllowedByOrigins
+  - GP name: Allow Window and Tab capture by these origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Permit or deny screen capture
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WindowCaptureAllowedByOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Printing policies
 
   [Back to top](#microsoft-edge---policies)
@@ -10572,9 +10998,9 @@ If you don't configure this policy, Edge TyposquattingChecker is turned on but u
 
   'Allow single sign-on for work or school sites using this profile' option allows non-AAD profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-AAD profiles only.
 
-If you disable this policy, non-AAD profiles will not be able to use SSO using other credentials present on the machine. This will also ensure that 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' is turned off.
+If you enable or disable this policy, 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' will be turned off.
 
-If you enable this policy or don't configure it, non-AAD profiles will be able to use SSO using other credentials present on the machine and 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' will continue working.
+If you don't configure this policy, users can control whether to use SSO using other credentials present on the machine in edge://settings/profiles/multiProfileSettings.
 
   #### Supported features:
 
@@ -16081,6 +16507,70 @@ If you disable this policy, users can't access and use Collections in Microsoft 
   #### Mac information and settings
   
   - Preference Key Name: EdgeCollectionsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeDiscoverEnabled
+
+  #### Discover feature In Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  This policy lets you configure the Discover feature in Microsoft Edge.
+
+Working in the background when enabled, this feature sends URLs to Microsoft Bing to search for related recommendations.
+
+If you enable or don't configure this policy, you can use the Discover button on Microsoft Edge to start using this feature.
+
+If you disable this policy, you can't use the Discover feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeDiscoverEnabled
+  - GP name: Discover feature In Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeDiscoverEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeDiscoverEnabled
   - Example value:
 ``` xml
 <true/>
@@ -23432,6 +23922,70 @@ If you disable this policy or don't configure it, browsing history is saved.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ScreenCaptureAllowed
+
+  #### Allow or deny screen capture
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 83 or later
+
+  #### Description
+
+  If you enable this policy, or don't configure this policy, a web page can use screen-share APIs (for example, getDisplayMedia() or the Desktop Capture extension API) for a screen capture.
+If you disable this policy, calls to screen-share APIs will fail. For example, if you're using a web-based online meeting, video or screen sharing will not work.  However, this policy is not considered
+(and a site will be allowed to use screen-share APIs) if the site matches an origin pattern in any of the following policies:
+[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins),
+[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins),
+[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins),
+[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ScreenCaptureAllowed
+  - GP name: Allow or deny screen capture
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ScreenCaptureAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ScreenCaptureAllowed
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ScrollToTextFragmentEnabled
 
   #### Enable scrolling to text specified in URL fragments
@@ -26583,13 +27137,13 @@ the latter will be ignored.)
 
 - custom_name
 (Allows you to permanently override the app name for all web
-apps and PWAs.) Not currently supported in Microsoft Edge.
+apps and PWAs. Not currently supported in Microsoft Edge.)
 
 - custom_icon
-(Allows you to override the app icon of installed apps. The
-icons have to be square, maximal 1 MB in size, and in one of the following
-formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file.) Not currently supported in Microsoft Edge.
+(Allows you to override the app icon of installed apps. The icons have to
+be square, maximal 1 MB in size, and in one of the following formats:
+jpeg, png, gif, webp, ico. The hash value has to be the SHA256
+hash of the icon file. Not currently supported in Microsoft Edge.)
 
   #### Supported features:
 
