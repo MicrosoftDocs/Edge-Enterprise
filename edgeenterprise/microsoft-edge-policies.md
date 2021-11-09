@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/08/2021
+ms.date: 11/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,22 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following policies were added to this documentation update.
+
+| Policy Name |	Caption |
+|--|--|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
+|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
+|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Allow Tab capture by these origins|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 
 ## Available policies
 
