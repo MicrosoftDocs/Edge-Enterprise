@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2021
+ms.date: 11/08/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26553,7 +26553,6 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   
   
   #### Supported versions:
-
   - On Windows and macOS since 80 or later
 
   #### Description
@@ -26585,14 +26584,14 @@ the latter will be ignored.)
 - custom_name
 (Starting with Microsoft Edge
 version 96, allows you to permanently override the app name for all web
-apps and PWAs.)
+apps and PWAs.) **Note:** This property is currently not supported in Microsoft Edge.
 
 - custom_icon
 (Starting with Microsoft Edge
 version 96, allows you to override the app icon of installed apps. The
 icons have to be square, maximal 1 MB in size, and in one of the following
 formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file.)
+hash of the icon file.) **Note:** This property is currently not supported in Microsoft Edge.
 
   #### Supported features:
 
