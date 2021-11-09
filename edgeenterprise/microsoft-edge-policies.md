@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/08/2021
+ms.date: 11/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26582,16 +26582,14 @@ fallback_app_name are provided,
 the latter will be ignored.)
 
 - custom_name
-(Starting with Microsoft Edge
-version 96, allows you to permanently override the app name for all web
-apps and PWAs.) **Note:** This property is currently not supported in Microsoft Edge.
+(Allows you to permanently override the app name for all web
+apps and PWAs.) Not currently supported in Microsoft Edge.
 
 - custom_icon
-(Starting with Microsoft Edge
-version 96, allows you to override the app icon of installed apps. The
+(Allows you to override the app icon of installed apps. The
 icons have to be square, maximal 1 MB in size, and in one of the following
 formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file.) **Note:** This property is currently not supported in Microsoft Edge.
+hash of the icon file.) Not currently supported in Microsoft Edge.
 
   #### Supported features:
 
