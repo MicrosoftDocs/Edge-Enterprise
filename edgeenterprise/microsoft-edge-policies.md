@@ -26580,20 +26580,18 @@ installation can be completed. If both
 custom_name and
 fallback_app_name are provided,
 the latter will be ignored.)
-> [!IMPORTANT]
-> The `custom_name` and `custom_icon` attributes are currently not supported in Microsoft Edge.
 
 - custom_name
 (Starting with Microsoft Edge
 version 96, allows you to permanently override the app name for all web
-apps and PWAs.)
+apps and PWAs.)**Note:** This property is currently not supported in Microsoft Edge.
 
 - custom_icon
 (Starting with Microsoft Edge
 version 96, allows you to override the app icon of installed apps. The
 icons have to be square, maximal 1 MB in size, and in one of the following
 formats: jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file.)
+hash of the icon file.) **Note:** This property is currently not supported in Microsoft Edge.
 
   #### Supported features:
 
