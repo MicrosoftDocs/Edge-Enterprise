@@ -1,9 +1,9 @@
 ---
-title: "Local site list for IE mode"
+title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/08/2021
+ms.date: 11/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 description: "Learn how to enable local site lists and easy access to IE mode"
 ---
 
-# Local site list for IE mode
+# Local site list for Internet Explorer (IE) mode
 
 >[!Note]
 > The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-This article explains how to configure easy access to Internet Explorer mode (IE mode) and to allow the use of local site lists in your organization.
+This article explains how to configure easy access to Internet Explorer mode (IE mode) and allow the use of local site lists in your organization.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 92 or later.
@@ -26,9 +26,9 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
 1. Windows updates
 
-- Windows 10, version 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) or later  
+   - Windows 10, version 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) or later  
 
-- Windows 10, version 2004; Windows 10, version 20H2 and Windows 10, version 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) or later
+   - Windows 10, version 2004; Windows 10, version 20H2 and Windows 10, version 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) or later
 
 2. Microsoft Edge version 92 (92.0.925.0 or later)
 
@@ -54,7 +54,7 @@ To enable the local site list experience, users can go to the URL *edge://settin
 
 >[!Note]  
 >
->1. If you have enabled IE mode testing through the *InternetExplorerIntegrationTestingAllowed* policy, you will see this setting, but it will be greyed out unless you  explicitly Enable the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
+>1. If you have enabled IE mode testing through the *InternetExplorerIntegrationTestingAllowed* policy, you will see this setting, but it will be greyed out unless you  explicitly enable the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
 >
 >2. If **Allow sites to be reloaded in Internet Explorer mode** is set to **Default**, users might be able to reload sites in IE mode if they have existing Internet Explorer 11 usage.  
 
@@ -113,10 +113,9 @@ This policy can be used to adjust the number of days that a site remains on the 
 This policy has no effect if you disabled the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
 
 > [!NOTE]
-> The local site list currently doesn't sync across devices. This improvement is currently on our backlog and we’ll update when this becomes available.
+> The local site list currently doesn't sync across devices. This improvement is currently in our backlog and we’ll update this feature when it's available.
 
 ## See Also
 
-Disable Internet Explorer 11 - [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
-
-Configure IE mode policies - [Configure IE mode Policies](/deployedge/edge-ie-mode-policies)
+- Disable Internet Explorer 11 - [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
+- Configure IE mode policies - [Configure IE mode Policies](/deployedge/edge-ie-mode-policies)
