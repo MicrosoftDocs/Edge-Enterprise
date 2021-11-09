@@ -26584,7 +26584,7 @@ the latter will be ignored.)
 - custom_name
 (Starting with Microsoft Edge
 version 96, allows you to permanently override the app name for all web
-apps and PWAs.)**Note:** This property is currently not supported in Microsoft Edge.
+apps and PWAs.) **Note:** This property is currently not supported in Microsoft Edge.
 
 - custom_icon
 (Starting with Microsoft Edge
