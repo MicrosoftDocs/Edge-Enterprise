@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,7 +86,7 @@ For information about delivery optimization, see [Delivery Optimization for Wind
 
 These endpoints manage the reading and writing of synced data, rights management for secure data, and notifying the browser when new sync data is available.
 
-- Edge sync service endpoints:
+- Microsoft Edge sync service endpoints:
 
   - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
@@ -98,6 +98,12 @@ These endpoints manage the reading and writing of synced data, rights management
   - `https://api.aadrm.cn` (for tenants in China)
 
 - [Windows Notification Service endpoints](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+### Cloud Site List Management
+
+The service that Microsoft Edge uses to download the cloud-hosted site list for Internet Explorer (IE) mode. For more information, see [Cloud Site List Management](https://aka.ms/CloudSiteList)
+
+- `https://edge.microsoft.com/`
 
 ## Other browser support services
 

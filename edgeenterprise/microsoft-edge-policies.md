@@ -27107,7 +27107,6 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   
   
   #### Supported versions:
-
   - On Windows and macOS since 80 or later
 
   #### Description
