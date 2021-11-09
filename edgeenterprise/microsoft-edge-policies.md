@@ -26553,7 +26553,6 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   
   
   #### Supported versions:
-
   - On Windows and macOS since 80 or later
 
   #### Description
@@ -26581,6 +26580,8 @@ installation can be completed. If both
 custom_name and
 fallback_app_name are provided,
 the latter will be ignored.)
+> [!IMPORTANT]
+> The `custom_name` and `custom_icon` attributes are currently not supported in Microsoft Edge.
 
 - custom_name
 (Starting with Microsoft Edge
