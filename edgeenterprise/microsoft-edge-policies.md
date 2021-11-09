@@ -31,7 +31,6 @@ The following policies were added to this documentation update.
 | Policy Name |	Caption |
 |--|--|
 |[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
-|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
 |[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
 |[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
 |[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
