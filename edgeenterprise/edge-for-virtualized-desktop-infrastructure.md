@@ -1,68 +1,70 @@
 ---
-title: "Edge for Virtualization desktop infrastructure"
+title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
 ms.author: anlake
-author: AndreaLBarr
+author: dan-wesley
 manager: collw
-ms.date: 06/29/2021
+ms.date: 11/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge for Virtualized Desktop Infrastructure."
+description: "Microsoft Edge for Virtual desktop infrastructure (VDI)."
 ---
 
-# Microsoft Edge for Virtualized Desktop Infrastructure
+# Microsoft Edge for Virtual desktop infrastructure (VDI)
 
-This article describes the requirements and limitations for using Microsoft Edge in a virtualized environment.
+This article describes the requirements and limitations for using Microsoft Edge in a virtual environment.
 
 ## What is VDI?
 
-Virtual Desktop Infrastructure (VDI) is virtualization technology that hosts a desktop operating system and applications on a centralized server in a data center. This enables a fully personalized desktop experience for users with a fully secured and compliant centralized source.
+Virtual desktop infrastructure (VDI) is a desktop virtualization technology that hosts an operating system and applications on a centralized server in a data center. This technology enables a fully personalized desktop experience for users on a fully secured and compliant centralized source.
 
-Microsoft Edge can be used in such a virtualized environment in much the same ways as it can be used on the local device, all the while running from secure and controlled server environment. Depending on your chosen VDI solution it may also be possible to give your users seamless access to intranet Applications and Sites.
+Microsoft Edge can be used in a virtual environment in much the same way as it can be used on a local device. A virtual desktop takes advantage of a secure and controlled server environment. Depending on your chosen VDI solution, it might also be possible to give your users seamless access to intranet applications and sites.
 
-Most features of Edge are supported on VDI environments without any special configuration. However, to ensure an optimal experience it’s recommended to follow the guidance below.
+Most Microsoft Edge features are supported in VDI environments without any special configuration. However, to ensure an optimal experience we recommend that you review the following guidance.
 
-## Platforms certified for Edge
+## Platforms certified for Microsoft Edge
+
+The following platforms are certified for Microsoft Edge:
 
 - Azure Virtual Desktop
 - Citrix Virtual Apps and Desktops (formerly known as XenApp and XenDesktop)
 
-While other VDI solutions have not yet been verified by the Edge team, it is expected that the most common workflows in Edge should be supported. Guidance provided below may or may not be applicable to your chosen solution.
+Although other VDI solutions haven't been certified by the Microsoft Edge team yet, it's expected that the most common workflows in Microsoft Edge should be supported. The following guidance may or may not be applicable to your chosen solution.
 
-## Edge on VDI performance considerations
+## Performance considerations for Microsoft Edge on VDI
 
-When designing your VDI environment you should carefully consider the workflows and needs of your users to achieve optimal performance, as well as the limits of your server configuration.
+When designing your VDI environment you should carefully consider the workflows and needs of your users to achieve optimal performance, and understand the limits of your server configuration.
 
-Edge recommends the following minimal requirements for deploying Edge to VDI environments:
+The following minimum requirements are recommended for deploying Microsoft Edge on a VDI environment:
 
-- vCPU – 2-4 Cores per User
+- vCPU – 2-4 cores per User
 - RAM – 1 GB per User
 
-Please note that large complex web applications and extensions will require more memory and will have to be accounted for when configuring your environment.
+Large and complex web applications and extensions will need more memory and processing capability, which must be considered when configuring your virtual environment.
 
-## Edge on non-persisted VDI environments
+## Microsoft Edge on non-persisted VDI environments
 
 Many VDI solutions allow access to persisted environments, where users are assigned a virtual environment that persists between sessions, and non-persisted environments, where users are assigned to one of several available machines, possibly a different machine each session, user data may or may not sync between sessions.
 
-When using a non-persisted environment, one usually creates a “golden image” which is used for each device that includes the needed apps and configurations. Below are our recommendations for preparing Edge for such an image.
+When using a non-persisted environment, one usually creates a "golden image" that has the required apps and configurations that will be deployed on each device. Use the following recommendations as a guide for preparing a golden image.
 
-### Deploy Edge
+### Deploy Microsoft Edge
 
-If you are on Windows 10, version 1803 and above, you should have Microsoft Edge installed on your system. However, if you are on an older version of Windows or wish to deploy a different channel of Edge, the following steps are recommended.
+If you are on Windows 10, version 1803 and above, you should already have Microsoft Edge installed on your system. However, if you're using an older version of Windows or want to deploy a different Microsoft Edge channel,  follow these steps:
 
-1. Download the Edge MSI package matching your VDI VM operating system from:
+1. Download the Microsoft Edge MSI package that matches your VDI VM operating system from:
 
     - [Download Microsoft Edge for Business - Microsoft](https://www.microsoft.com/edge/business/download)
 
-2. Install the MSI to the VDI VM by running the following command:
+2. Run the following command to install the MSI to the VDI VM:
 
     - `msiexec /i <path_to_msi> /qn /norestart /l*v <install_logfile_name>`
 
 ### Disable automatic updates
 
-For non-persisted machines it is best practice to disable automatic updates and instead update Edge by updating the “golden image” to ensure that there are no version mismatches among the pool of machines.
+For non-persisted machines, it is best practice to disable automatic updates and instead update Edge by updating the “golden image” to ensure that there are no version mismatches among the pool of machines.
 
 See the following policies for disabling automatic updates:
 
@@ -72,7 +74,7 @@ See the following policies for disabling automatic updates:
 
 ### Profile management
 
-On non-persisted setups it is important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they have never used before and as such has none of their user data.
+On non-persisted setups, it is important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they have never used before and as such has none of their user data.
 
 Edge supports several methods for syncing user data such that it is available regardless of how they are accessing Edge.
 
