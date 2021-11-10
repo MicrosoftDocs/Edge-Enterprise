@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/08/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -44,7 +44,7 @@ Users will experience the following symptoms:
 
 The general strategy is to duplicate the same settings that worked with Internet Explorer 11 for a specific site in our IE mode site list entry. Use the F12 Developer Toolbar's "Emulation" tab in IE 11, shown in the next screenshot to investigate the scenario you want to fix. To open the Developer toolbar, press the F12 key and then select **Open DevTools**.
 
-:::image type="content" source="media/edge-ie-mode-faq/edge-ie-mode-emulation-tab.png" alt-text="Emulation tab on DevTools view":::
+![Emulation tab on DevTools view](./media/edge-ie-mode-faq/edge-ie-mode-emulation-tab.png)
 
 The Emulation tab shows two pieces of information to focus on: the Document mode (1), and the text below the dropdown list (2). This information can help explain why we are in the 11 (Default) mode for the page or site we’re looking at.
 
@@ -95,7 +95,9 @@ A page relies on SSO for authentication, but users are prompted multiple times f
   
 Before we start analyzing a  failing workflow in Microsoft Edge, look at the address bar for the IE mode "e" logo, shown in the next screenshot.
 
-:::image type="content" source="media/edge-ie-mode-faq/edge--ie-mode-logo.png" alt-text="IE logo on Microsoft Edge menu bar."
+![IE logo on Microsoft Edge menu bar.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
+
+<!--:::image type="content" source="./media/edge-ie-mode-faq/edge--ie-mode-logo.png" alt-text="IE logo on Microsoft Edge menu bar."--->
 
 If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
