@@ -45,8 +45,8 @@ When all the updates are applied AND the Stable channel of the next version of M
 
 Along with the previous changes, there are changes that will happen regardless of whether the Stable channel of the next version of Microsoft Edge is installed.
 
-- Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support. Users attempting to open these protocols will get a dialog that prompts them to choose a default app. Learn more about changes to books support at [Download an ePub app to keep reading e-books](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
-
+- Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support. Users attempting to open these protocols will get a dialog that prompts them to choose a default app. Learn more about changes to books support at [Download an ePub app to keep reading e-books](https://support.microsoft.com/microsoft-edge/download-an-epub-app-to-keep-reading-e-books-0114ba69-4cae-b6b0-4d47-99eb50f36449).
+  
 ## Timeline
 
 The changes needed to support the described experience will be delivered with three updates for different versions of Windows.
