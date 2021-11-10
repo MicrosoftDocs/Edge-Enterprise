@@ -1,9 +1,9 @@
 ---
 title: "Windows updates for Microsoft Edge"
 ms.author: jtkim
-author: RyanHechtMSFT
+author: dan-wesley
 manager: srugh
-ms.date: 09/23/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,11 +41,11 @@ When all the updates are applied AND the Stable channel of the next version of M
 - All attempts to launch the current version of Microsoft Edge will redirect to the next version of Microsoft Edge.
 
   > [!NOTE]
-  > User-level installs won’t trigger these behaviors.
+  > User-level installs won’t trigger the preceding behaviors.
 
 Along with the previous changes, there are changes that will happen regardless of whether the Stable channel of the next version of Microsoft Edge is installed.
 
-- Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support. Users attempting to open these protocols will get a dialog that prompts them to choose a default app. Learn more about changes to books support at [Download an ePub app to keep reading e-books](https://support.microsoft.com/microsoft-edge/download-an-epub-app-to-keep-reading-e-books-0114ba69-4cae-b6b0-4d47-99eb50f36449).
+- Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support. Users attempting to open these protocols will get a dialog that prompts them to choose a default app. Visit the Microsoft Store to see our recommendations for ebook readers.
   
 ## Timeline
 
@@ -64,27 +64,18 @@ The changes needed to support the described experience will be delivered with th
   > [!NOTE]
   > This is the update where Microsoft Edge will no longer support eBooks.
 
-### Windows versions 1709, 1803, and 1809
-
-- First set of changes in an optional August 2019 update, delivered with the September 2019 security update.
-- Second set of changes in an optional September 2019 update, delivered with the October 2019 security update.
-
-  > [!NOTE]
-  > This is the update where Microsoft Edge will de-register for the XML protocol.
-
-- Third set of changes in an optional October 2019 update, delivered with the November 2019 security update.
-
-  > [!NOTE]
-  > This is the update where Microsoft Edge will no longer support eBooks.
-
 The following table gives the details for specific updates in each set of changes.
 
 | Windows 10 | More Information | Required Download |
 |--|--|--|
-| Version 1709 | [KB4525241](https://support.microsoft.com/help/4525241/windows-10-update-kb4525241) | [Cumulative Update for Windows 10 Version 1709](https://www.catalog.update.microsoft.com/Search.aspx?q=4525241) |
-| Version 1803  | [KB4525237](https://support.microsoft.com/help/4525237/windows-10-update-kb4525237) | [Cumulative Update for Windows 10 Version 1803](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4525237) |
-| Version 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Cumulative Update for Windows 10 Version 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | Version 1903 and 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Cumulative Update for Windows 10 Version 1903 and 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
+
+## Older versions of Windows
+
+If you're on a device running a Windows version older than Windows 10 RS4, upgrade to a supported version of Windows 10 to get Microsoft Edge.
+
+The following article lists the currently supported versions of Windows 10 and Windows 11.
+[Supported versions of Windows client](https://docs.microsoft.com/en-us/windows/release-health/supported-versions-windows-client)
 
 ## See also
 
