@@ -81,7 +81,7 @@ The following table lists the available document modes for these settings.
 | Available Document modes | IE11 Doc mode<br> IE10 Doc mode<br>IE9 Doc mode<br> IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode | IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode   | IE7 Doc mode<br>IE5 Quirks mode  |
 
 > [!NOTE]
-> In some cases, a particular site or page requires a specif":::ic document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren’t effective.
+> In some cases, a particular site or page requires a specific document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren’t effective.
 
 ### Incomplete neutral site configurations
 
@@ -96,8 +96,6 @@ A page relies on SSO for authentication, but users are prompted multiple times f
 Before we start analyzing a  failing workflow in Microsoft Edge, look at the address bar for the IE mode "e" logo, shown in the next screenshot.
 
 ![IE logo on Microsoft Edge menu bar.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
-
-<!--:::image type="content" source="./media/edge-ie-mode-faq/edge--ie-mode-logo.png" alt-text="IE logo on Microsoft Edge menu bar."--->
 
 If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
