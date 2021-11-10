@@ -72,9 +72,7 @@ The following table gives the details for specific updates in each set of change
 
 ## Older versions of Windows
 
-If you're on a device running a Windows version older than Windows 10 RS4, upgrade to a supported version of Windows 10 to get Microsoft Edge.
-
-The following article lists the currently supported versions of Windows 10 and Windows 11.
+If you're on a device running a Windows version older than Windows 10 RS4, upgrade to a supported version of Windows 10 to get Microsoft Edge. The following article lists the currently supported versions of Windows 10 and Windows 11.
 
 - [Supported versions of Windows client](https://docs.microsoft.com//windows/release-health/supported-versions-windows-client)
 
