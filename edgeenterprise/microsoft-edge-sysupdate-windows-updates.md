@@ -51,7 +51,7 @@ Along with the previous changes, there are changes that will happen regardless o
 
 If you're on a device running a Windows version older than Windows 10 RS4, upgrade to a supported version of Windows 10 to get Microsoft Edge. The following article lists the currently supported versions of Windows 10 and Windows 11.
 
-- [Supported versions of Windows client](https://docs.microsoft.com//windows/release-health/supported-versions-windows-client)
+- [Supported versions of Windows client](/windows/release-health/supported-versions-windows-client)
 
 > [!NOTE]
 > For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge.
