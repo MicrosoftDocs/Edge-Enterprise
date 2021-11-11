@@ -3,7 +3,7 @@ title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/09/2021
+ms.date: 11/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,7 +33,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 2. Microsoft Edge version 92 (92.0.925.0 or later)
 
 > [!IMPORTANT]
-> This feature isn't supported on Windows Server 2016 at this time.
+> This local site list feature isn't supported on Windows Server 2016 at this time.
 
 ## Overview
 
@@ -46,7 +46,7 @@ You can configure this experience through group policies for your organization.
 > [!NOTE]
 > An *unconfigured* site is one that requires IE mode but isn't configured to open in IE mode in the Enterprise Mode Site List.
 
-## Local site list experience
+## Enable the local site list experience
 
 To enable the local site list experience, users can go to the URL *edge://settings/defaultBrowser* and set **Allow sites to be reloaded in Internet Explorer mode** to **Allow**.
 
