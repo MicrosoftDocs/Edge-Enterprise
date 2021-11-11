@@ -47,34 +47,14 @@ Along with the previous changes, there are changes that will happen regardless o
 
 - Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support. Users attempting to open these protocols will get a dialog that prompts them to choose a default app. Visit the Microsoft Store to see our recommendations for ebook readers.
   
-## Timeline
-
-The changes needed to support the described experience will be delivered with three updates for different versions of Windows.
-
-### Windows versions 1903 and 1909
-
-- First set of changes in optional July 2019 update, delivered with the August 2019 security update.
-- Second set of changes in the optional August 2019 update, delivered with the September 2019 security update.
-
-  > [!NOTE]
-  > This is the update where Microsoft Edge will de-register for the XML protocol.
-
-- Third set of changes in the optional September 2019 update, delivered with the October 2019 security update.
-
-  > [!NOTE]
-  > This is the update where Microsoft Edge will no longer support eBooks.
-
-The following table gives the details for specific updates in each set of changes.
-
-| Windows 10 | More Information | Required Download |
-|--|--|--|
-| Version 1903 and 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Cumulative Update for Windows 10 Version 1903 and 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
-
 ## Older versions of Windows
 
 If you're on a device running a Windows version older than Windows 10 RS4, upgrade to a supported version of Windows 10 to get Microsoft Edge. The following article lists the currently supported versions of Windows 10 and Windows 11.
 
 - [Supported versions of Windows client](https://docs.microsoft.com//windows/release-health/supported-versions-windows-client)
+
+> [!NOTE]
+> For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge.
 
 ## See also
 
