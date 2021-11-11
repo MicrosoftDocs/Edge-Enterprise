@@ -54,7 +54,7 @@ If you're on a device running a Windows version older than Windows 10 RS4, upgra
 - [Supported versions of Windows client](/windows/release-health/supported-versions-windows-client)
 
 > [!NOTE]
-> For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge.
+> For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge. For more information, see [Windows 10 update history](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
 
 ## See also
 
