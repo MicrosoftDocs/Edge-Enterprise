@@ -52,21 +52,21 @@ When using a non-persisted environment, one usually creates a "golden image" tha
 
 ### Deploy Microsoft Edge
 
-If you are on Windows 10, version 1803 and above, you should already have Microsoft Edge installed on your system. However, if you're using an older version of Windows or want to deploy a different Microsoft Edge channel,  follow these steps:
+If you are on Windows 10, version 1803 and above, you should already have Microsoft Edge installed on your system. However, if you're using an older version of Windows or want to deploy a different Microsoft Edge channel, follow these steps:
 
 1. Download the Microsoft Edge MSI package that matches your VDI VM operating system from:
 
     - [Download Microsoft Edge for Business - Microsoft](https://www.microsoft.com/edge/business/download)
 
-2. Run the following command to install the MSI to the VDI VM:
+2. Run the following command to install the MSI to the VDI virtual machine (VM):
 
     - `msiexec /i <path_to_msi> /qn /norestart /l*v <install_logfile_name>`
 
 ### Disable automatic updates
 
-For non-persisted machines, it is best practice to disable automatic updates and instead update Edge by updating the “golden image” to ensure that there are no version mismatches among the pool of machines.
+For non-persisted machines, the best practice to disable automatic updates and update Microsoft Edge by updating the golden image to ensure that there are no version mismatches among the pool of virtual machines.
 
-See the following policies for disabling automatic updates:
+For more information about disabling automatic updates, see the following policies:
 
 - [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault)
 
@@ -74,17 +74,13 @@ See the following policies for disabling automatic updates:
 
 ### Profile management
 
-On non-persisted setups, it is important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they have never used before and as such has none of their user data.
+On non-persisted setups, it's important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they've never used before. In this scenario, the VM doesn't have any of the user's data.
 
-Edge supports several methods for syncing user data such that it is available regardless of how they are accessing Edge.
+Microsoft Edge supports several methods for syncing user data so it's available regardless of how they are accessing Microsoft Edge. Two methods are Azure Active Directory (Azure AD) sync and on-premises sync for AD users.
 
 ### Azure AD Sync
 
-If your Azure AD plan supports it, Enterprise sync is the fastest and easiest method to ensure that Edge user data is synced to all user devices.  
-
-See the following for more information on requirements and configuration.  
-
-- [Configure Microsoft Edge enterprise sync | Microsoft Docs](/deployedge/microsoft-edge-enterprise-sync)
+If your Azure AD plan supports it, Enterprise sync is the fastest and easiest method to ensure that Microsoft Edge user data is synced to all user devices. For more information, see [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync)
 
 ### On-premise Sync for Active Directory Users
 
@@ -96,14 +92,14 @@ See the following for more information on requirements and configuration.
 
 ### User Profile Redirection  
 
-There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in such non-persisted environments. Check with your VDI provider to determine the recommended solution.
+There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in a non-persisted environments. Check with your VDI provider to determine the recommended solution.
 
-Some popular solutions include:
+Some popular solutions include the following:
 
 - [FSLogix Overview - FSLogix | Microsoft Docs](/fslogix/overview)
 - [How to Configure Citrix Profile Management](https://support.citrix.com/article/CTX222893)
 
-It is also may be recommended that when using this method unnecessary folders be excluded from the backed-up user folder to reduce initial loading times when users are logging on to a machine and the profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
+It some cases, unnecessary folders should be excluded from the backed-up user folder to reduce initial loading times when a user's logging on to a machine and the their profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
 
 - %LocalAppData%\Microsoft\Edge\User Data\Default\Cache
 - %LocalAppData%\Microsoft\Edge\User Data\Default\Code Cache
