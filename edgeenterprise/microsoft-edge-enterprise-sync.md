@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 10/26/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,9 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 
 # Configure Microsoft Edge enterprise sync
 
-This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.If you are not an admin, please visit this article for how to sign-in and sync Microsoft Edge across devices. [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
+
+If you're not an admin, use the following article as a guide to learn how to sign-in and sync Microsoft Edge across devices: [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
@@ -32,24 +34,27 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Open tabs (available in Microsoft Edge version 88)
 - History (available in Microsoft Edge version 88)
 
-Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. If a user is experiencing a sync issue they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
 
 > [!NOTE]
-> Additional device connectivity and configuration data (such as device name, make and model) is uploaded to support sync functionality.
+> Additional device connectivity and configuration data (such as device name, device make,  and device model) is uploaded to support sync functionality.
 
 ## Prerequisites
 
 Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for any of the following subscriptions:
 
 - Azure AD Premium (P1 or P2)
-- M365 Business Premium, Business Standard, or **Business Basic \***
+  
+  - For customers that only have Azure AD P1 or P2, it’s required to enable the Azure AD Enterprise State Roaming feature to use Microsoft Edge Enterprise Sync. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
+
+- Microsoft 365 Business Premium, Business Standard, or **Business Basic \***
 
    > [!IMPORTANT]
    > **\*** We found a problem with **Business Basic** for Sync and we’re working on a fix. In the interim, this isn’t working as intended.
 
 - Office 365 E1 and above
 - Azure Information Protection (AIP) (P1 or P2)
-- All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, M365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
+- All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, Microsoft 365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
 
 ## Sync group policies
 
