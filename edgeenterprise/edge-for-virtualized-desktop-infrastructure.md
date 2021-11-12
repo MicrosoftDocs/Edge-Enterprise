@@ -123,7 +123,7 @@ For more information, see [Mobile experience policy settings (citrix.com)](https
 
 This is a known issue in Microsoft Edge and other applications that use WAM (that is, Office) due to necessary Windows components not being initialized when running in the "seamless" mode. Try one of the following options to work around this issue:
 
-- Use Microsoft Edge via a Remote Desktop to the Citrix Host instead of as a seamless remote application.
+- Use Microsoft Edge via a Remote Desktop to the Citrix Host instead of a seamless remote application.
 - Use Azure Virtual Desktop remote apps instead, which has mitigations for this issue.
 
 ## See also
