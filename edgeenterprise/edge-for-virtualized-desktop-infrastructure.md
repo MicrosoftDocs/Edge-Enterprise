@@ -3,7 +3,7 @@ title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
 ms.author: anlake
 author: dan-wesley
 manager: collw
-ms.date: 11/09/2021
+ms.date: 11/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,17 +86,15 @@ If your Azure AD plan supports it, Enterprise sync is the fastest and easiest me
 
 With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can easily be moved between different computers.  
 
-See the following for more information on requirements and configuration.  
-
-- [On-premises sync for Active Directory (AD) users | Microsoft Docs](/deployedge/microsoft-edge-on-premises-sync)
+for more information about requirements and configuration, see [On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync)
 
 ### User Profile Redirection  
 
-There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in a non-persisted environments. Check with your VDI provider to determine the recommended solution.
+There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in a non-persisted environments. Check with your VDI provider to determine the recommended solution for your environment.
 
 Some popular solutions include the following:
 
-- [FSLogix Overview - FSLogix | Microsoft Docs](/fslogix/overview)
+- [FSLogix Overview - FSLogix](/fslogix/overview)
 - [How to Configure Citrix Profile Management](https://support.citrix.com/article/CTX222893)
 
 It some cases, unnecessary folders should be excluded from the backed-up user folder to reduce initial loading times when a user's logging on to a machine and the their profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
@@ -110,7 +108,7 @@ It some cases, unnecessary folders should be excluded from the backed-up user fo
 
 ### Microsoft Edge crashes in older versions of XenApp and XenDesktop
 
-This issue should be mitigated in newer versions however if you are encountering this issue in your environment, you can work around the issue by disabling Citrix API Hooks for Edge, see [How to Disable Citrix API Hooks on a Per-application Basis.](https://support.citrix.com/article/CTX107825)
+This issue should be mitigated in newer versions of these products. However, if you're encountering this issue in your environment, you can work around the issue by disabling Citrix API Hooks for Microsoft Edge, see [How to Disable Citrix API Hooks on a Per-application Basis.](https://support.citrix.com/article/CTX107825)
 
 ### Degraded performance when rendering pages with exceptionally large HTML tables
 
@@ -121,9 +119,14 @@ The following Citrix policies are known to slow rendering of html pages with ver
 
 See [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html) for more information. Disabling these policies should mitigate the issue.
 
-### Windows Account Manager authorization scenarios (i.e.  Azure sync) fail in Edge when run as a Citrix seamless application
+### Windows Account Manager authorization scenarios (that is, Azure sync) fail in Microsoft Edge when run as a Citrix seamless application
 
-This is a known issue in Edge and other applications that use WAM (i.e. Office) due to Windows components necessary for such scenarios not being initialized when running in the “seamless” mode. To work around this issue:
+This is a known issue in Microsoft Edge and other applications that use WAM (that is, Office) due to necessary Windows components not being initialized when running in the "seamless" mode. Try one of the following options to work around this issue:
 
-- Use Edge via a Remote Desktop to the Citrix Host instead of as a seamless remote application.
-- Use Azure Virtual Desktop remote apps instead, which has mitigation's for this issue.
+- Use Microsoft Edge via a Remote Desktop to the Citrix Host instead of as a seamless remote application.
+- Use Azure Virtual Desktop remote apps instead, which has mitigations for this issue.
+
+## See also
+
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [Azure Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/)
