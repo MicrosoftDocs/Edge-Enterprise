@@ -86,18 +86,18 @@ If your Azure AD plan supports it, Enterprise sync is the fastest and easiest me
 
 With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can easily be moved between different computers.  
 
-for more information about requirements and configuration, see [On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync)
+For more information about requirements and configuration, see [On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync)
 
 ### User Profile Redirection  
 
-There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in a non-persisted environments. Check with your VDI provider to determine the recommended solution for your environment.
+There are several solutions for migrating and redirecting the entire user folder to ensure that user context is maintained in a non-persisted environment. Check with your VDI provider to determine the recommended solution for your environment.
 
-Some popular solutions include the following:
+Some popular solutions include the following options:
 
 - [FSLogix Overview - FSLogix](/fslogix/overview)
 - [How to Configure Citrix Profile Management](https://support.citrix.com/article/CTX222893)
 
-It some cases, unnecessary folders should be excluded from the backed-up user folder to reduce initial loading times when a user's logging on to a machine and the their profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
+It some cases, unnecessary folders should be excluded from the backed-up user folder to reduce initial loading times when a user's logging on to a machine and their profile is being migrated. If so, we recommend the following folders be excluded from your backup to reduce size.
 
 - %LocalAppData%\Microsoft\Edge\User Data\Default\Cache
 - %LocalAppData%\Microsoft\Edge\User Data\Default\Code Cache
@@ -112,12 +112,12 @@ This issue should be mitigated in newer versions of these products. However, if 
 
 ### Degraded performance when rendering pages with exceptionally large HTML tables
 
-The following Citrix policies are known to slow rendering of html pages with very large (30,000+ row) tables.
+The following Citrix policies are known to slow rendering of html pages with large (30,000+ row) tables.
 
 - Automatic keyboard display
 - Remote the combo box
 
-See [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html) for more information. Disabling these policies should mitigate the issue.
+For more information, see [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html) for more information. Disabling these policies should mitigate the issue.
 
 ### Windows Account Manager authorization scenarios (that is, Azure sync) fail in Microsoft Edge when run as a Citrix seamless application
 
