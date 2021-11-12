@@ -18,9 +18,9 @@ This article describes the requirements and limitations for using Microsoft Edge
 
 ## What is VDI?
 
-Virtual desktop infrastructure (VDI) is a desktop virtualization technology that hosts an operating system and applications on a centralized server in a data center. This technology enables a fully personalized desktop experience for users on a fully secured and compliant centralized source.
+Virtual desktop infrastructure (VDI) is a desktop virtualization technology that hosts an operating system and applications on a centralized server in a data center. This technology enables a fully personalized desktop experience for users on a secure and compliant centralized source.
 
-Microsoft Edge can be used in a virtual environment in much the same way as it can be used on a local device. A virtual desktop takes advantage of a secure and controlled server environment. Depending on your chosen VDI solution, it might also be possible to give your users seamless access to intranet applications and sites.
+Microsoft Edge can be used in a virtual environment in much the same way as it's used on a local device. A virtual desktop takes advantage of a secure and controlled server environment. Depending on the VDI solution you choose, it might also be possible to give your users seamless access to intranet applications and sites.
 
 Most Microsoft Edge features are supported in VDI environments without any special configuration. However, to ensure an optimal experience we recommend that you review the following guidance.
 
