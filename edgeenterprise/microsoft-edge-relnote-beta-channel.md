@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,8 +30,6 @@ Fixed various bugs and performance issues.
 - **Launch Progressive Web App (PWA) directly via protocol links.** Let installed PWAs handle links that use a specific protocol for a more integrated experience.
 
 - **Learn how to solve math problems with Math Solver.** We’re excited to announce that you can use Math Solver in Microsoft Edge to get help with a wide range of mathematical concepts. These concepts range from elementary arithmetic and quadratic equations to trigonometry and calculus. Math Solver lets you take a picture of a handwritten or printed math problem and then provides an instant solution with step-by-step instructions to help you learn how to reach the solution without help. Math Solver also comes with a mathematical keyboard that you can use to easily type math problems. This keyboard eliminates the need to search around a traditional keyboard to find the math characters you need. After solving your problem, Math Solver provides options to continue learning with quizzes, worksheets, and video tutorials.
-
-- **Scrolling improvements for PDF documents.** We're improving scrolling performance to provide a smoother scroll experience in PDF documents. You won't see white bars appearing during scrolling.
 
 - **Freeform highlighting on PDFs.** The PDF viewing and markup experience is improved with the addition of freeform highlighters. You can highlight sections in PDFs that you don't have access to, and scanned documents.
 
