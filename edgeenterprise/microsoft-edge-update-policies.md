@@ -23,13 +23,15 @@ For information about other policies available in Microsoft Edge, check out [Mic
 > This article applies to Microsoft Edge version 77 or later.
 
 # Microsoft Edge - Update policies
+
 The latest version of Microsoft Edge includes the following policies that you can use to control how and when Microsoft Edge is updated.
 
 For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 ## Available policies
-These tables lists all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
+These tables list all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
 |||
 |-|-|
@@ -54,8 +56,8 @@ These tables lists all of the update-related group policies available in this re
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Auto-update check period override|
-|[UpdatesSuppressed](#updatessuppressed)|Time period in each day to suppress auto-update check|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Microsoft AutoUpdate check period override|
+|[UpdatesSuppressed](#updatessuppressed)|Time period in each day to suppress Microsoft AutoUpdate check|
 
 ### [Proxy Server](#proxy-server-policies)
 |Policy Name|Caption|
@@ -233,7 +235,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
-This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side.
+This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side by side.
 
 If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Disabled” setting.
 
@@ -381,7 +383,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 When this policy is enabled, and auto-update is enabled, Microsoft Edge will be updated to the version specified by this policy value.
 
-The policy value must be a specific Microsoft Edge version, e.g. 83.0.499.12.
+The policy value must be a specific Microsoft Edge version, for example, 83.0.499.12.
 
 If a device has newer version of Microsoft Edge than the value specified, Microsoft Edge will remain on the newer version and not downgrade to the specified version.
 
@@ -422,7 +424,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 Specifies which Channel Microsoft Edge should be updated to.
 
-If you enable this poicy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
+If you enable this policy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
 
   - Stable: Microsoft Edge will be updated to the latest stable version.
   - Beta: Microsoft Edge will be updated to the latest beta version.
@@ -492,7 +494,7 @@ The 'Update policy override default' and per-application 'Update policy override
 >Microsoft Edge Update 1.3.33.5 and later
 
 #### Description
-If you enable this policy, update checks are suppressed each day starting at Hour:Minute for a period of Duration (in minutes). Duration isn't affected by daylight saving time. For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.
+If you enable this policy, update checks are suppressed each day starting at Hour:Minute for Duration (in minutes). Duration isn't affected by daylight saving time. For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.
 
   If you disable or don't configure this policy, update checks aren't suppressed during any specific period.
 #### Windows information and settings
@@ -522,7 +524,7 @@ start min  : 0x00000002
 
 [Back to top](#microsoft-edge---update-policies)
 ### ProxyMode
-#### Choose how to specify a proxy server settings
+#### Choose how to specify a proxy server setting
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -540,7 +542,7 @@ Allows you to specify the proxy server settings that are used by Microsoft Edge 
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: ProxyMode
-- GP name: Choose how to specify a proxy server settings
+- GP name: Choose how to specify a proxy server setting
 - GP path: Administrative Templates/Microsoft Edge Update/Proxy Server
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
@@ -711,9 +713,4 @@ Lets you specify whether or not automatic updates are enabled for Microsoft Edge
 
 ## See also
   - [Configuring Microsoft Edge](./configure-microsoft-edge.md)
-  - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-
-
-## See also
-  - [Configuring Microsoft Edge](configure-microsoft-edge.md)
   - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
