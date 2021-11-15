@@ -98,7 +98,7 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-   - name: Edge for Virtualization desktop infrastructure 
+   - name: Microsoft Edge for Virtual desktop infrastructure 
      href: edge-for-virtualized-desktop-infrastructure.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
