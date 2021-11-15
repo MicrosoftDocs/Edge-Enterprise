@@ -1,20 +1,20 @@
 ---
-title: "Windows updates for Microsoft Edge"
+title: "Windows updates to support Microsoft Edge"
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 11/12/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Windows updates for Microsoft Edge."
+description: "Windows updates to support Microsoft Edge."
 ---
 
 # Windows updates to support the next version of Microsoft Edge
 
-This article describes how Windows will be updated to support the next version of Microsoft Edge.
+This article describes how Windows will be updated to support the next version of Microsoft Edge
 
 > [!IMPORTANT]
 > Refer to the Microsoft Edge product team [blog post](https://aka.ms/EdgeLegacyEOS) about Microsoft Edge Legacy end of service.
@@ -55,6 +55,9 @@ If you're on a device running a Windows version older than Windows 10 RS4, upgra
 
 > [!NOTE]
 > For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge. For more information, see [Windows 10 update history](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
+
+> [!IMPORTANT]
+> If you need updates not listed here, please run Windows Update or contact your administrator.
 
 ## See also
 
