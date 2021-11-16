@@ -194,7 +194,7 @@ If you select manual updates, make sure you periodically check for updates by us
 
 If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override default](#updatedefault)' policy.
 
-See [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) for more information.
+For more information, see [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
@@ -233,9 +233,9 @@ If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) w
 
 The “Disabled” setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Not Configured” setting.
 
-When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
+When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side by side after Microsoft Edge (Chromium-based) is installed.
 
-For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
+For this group policy to take effect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
 
 Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side browser experience are not supported.
 #### Windows information and settings
@@ -381,7 +381,7 @@ If a device has newer version of Microsoft Edge than the value specified, Micros
 
 If the specified version does not exist, or is improperly formatted, then Microsoft Edge will remain on its current version and not update to future versions automatically.
 
-See [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) for more information.
+For more information, see [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707).
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
@@ -524,7 +524,7 @@ Allows you to specify the proxy server settings that are used by Microsoft Edge 
 
   If you enable this policy, you can choose between the following proxy server options:
    - If you choose to never use a proxy server and always connect directly, all other options are ignored.
-   - If you choose to use system proxy settings or auto-detect the proxy server, all other options are ignored.
+   - If you choose to use system proxy settings or autodetect the proxy server, all other options are ignored.
    - If you choose fixed server proxy mode, you can specify further options in '[Address or URL of a proxy server](#proxyserver)' policy.
    - If you choose to use a .pac proxy script, you must specify the URL for the script in '[URL to proxy .pac file](#proxypacurl)' policy.
 
