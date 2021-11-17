@@ -207,7 +207,7 @@ OMA-URI examples with their URI path, type, and an example value.
 |---------|--------------------------------------------------------------------------------------|
 | Name    | Microsoft Edge: ShowHomeButton                                                       |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Startup/ShowHomeButton` |
-| type    | String                                                                               |
+| Type    | String                                                                               |
 | Value   | `<enabled/>`                                                                          |
 
 *[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#defaultsearchproviderenabled):*
@@ -216,7 +216,7 @@ OMA-URI examples with their URI path, type, and an example value.
 |---------|--------------------------------------------------------------------------------------|
 | Name    | Microsoft Edge: DefaultSearchProviderEnabled                                         |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~DefaultSearchProvider/DefaultSearchProviderEnabled`    |
-| type    | String                                                                               |
+| Type    | String                                                                               |
 | Value   | `<disable/>`                                                                          |
 
 ### Integer data type examples
@@ -227,7 +227,7 @@ OMA-URI examples with their URI path, type, and an example value.
 |---------|--------------------------------------------------------------------------------------|
 | Name    | Microsoft Edge: AutoImportAtFirstRun                                                 |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge/AutoImportAtFirstRun`   |
-| type    | String                                                                               |
+| Type    | String                                                                               |
 | Value   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
 *[DefaultImagesSetting](./microsoft-edge-policies.md#defaultimagessetting):*
@@ -236,7 +236,7 @@ OMA-URI examples with their URI path, type, and an example value.
 |---------|--------------------------------------------------------------------------------------|
 | Name    | Microsoft Edge: DefaultImagesSetting                                                 |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/DefaultImagesSetting`    |
-| type    | String                                                                               |
+| Type    | String                                                                               |
 | Value   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
 *[DiskCacheSize](./microsoft-edge-policies.md#diskcachesize):*
@@ -245,20 +245,11 @@ OMA-URI examples with their URI path, type, and an example value.
 |---------|--------------------------------------------------------------------------------------|
 | Name    | Microsoft Edge: DiskCacheSize                                                        |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge/DiskCacheSize`        |
-| type    | String                                                                               |
+| Type    | String                                                                               |
 | Value   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
 #### List of strings data type examples
-<!--
-*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
-| Field   | Value                                                                                |
-|---------|--------------------------------------------------------------------------------------|
-| Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
-| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
-| Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
--->
 *[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | Field   | Value                                                                                |
