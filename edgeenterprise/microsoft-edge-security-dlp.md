@@ -1,30 +1,34 @@
 ---
-title: "Data Loss Prevention in Microsoft Edge"
+title: "Understand Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Data Loss Prevention (DLP) in Microsoft Edge"
+description: "Understand Data Loss Prevention (DLP) in Microsoft Edge"
 ---
 
-# Data Loss Prevention (DLP) in Microsoft Edge
+# Understand Data Loss Prevention (DLP) in Microsoft Edge
 
-Data loss prevention (DLP) is a system of technologies that identify and safeguard sensitive enterprise data from unauthorized disclosure. To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its unauthorized disclosure. Sensitive information includes financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records, among many other things.
+This article describes how Microsoft Edge supports data loss prevention (DLP) through Endpoint DLP and Windows Information Protection (WIP).
+
+## DLP defined
+
+Data loss prevention (DLP) is a system of technologies that identify and safeguard sensitive enterprise data from unauthorized disclosure. To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its unauthorized disclosure. Sensitive information includes financial data or personal information. Some examples of personal information include credit card numbers, social security numbers, and health records.
 
 Remote work has increased the emphasis on using DLP. With the growing use of personal and work activities on devices, enterprises are seeing an increased risk of unauthorized sharing of corporate data outside the workplace.
 
-This blending of user activities has spread to devices as well, where data is moved between personal and corporate devices over a variety of public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
+This blending of user activities has spread to devices as well, where data is moved between personal and corporate devices over various public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
 
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
 ## Microsoft Endpoint data loss prevention (Endpoint DLP)
 
-Microsoft Endpoint DLP is the next generation of data loss prevention using modern concepts such as data-centric protection. It's built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device.
+Microsoft Endpoint DLP is the next generation of data loss prevention using modern concepts such as data-centric protection. It's built-in to Windows 10 and Microsoft Edge so it doesn't need more agents or plugins on the device.
 
 > [!NOTE]
 > This applies to Microsoft Edge version 85 or later.
