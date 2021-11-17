@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge using Mobile Device Management"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Configure Microsoft Edge using Mobile Device Management."
 
 # Configure Microsoft Edge using Mobile Device Management
 
-This article explains how to configure Microsoft Edge on Windows 10 using [Mobile Device Management (MDM)](/windows/client-management/mdm/) by means of [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). This article also describes:
+This article explains how to configure Microsoft Edge on Windows 10 using [Mobile Device Management (MDM)](/windows/client-management/mdm/) with [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). This article also describes:
 
 - How to [create Open Mobile Alliance Uniform Resource Identifier (OMA-URI) for Microsoft Edge policies](#create-an-oma-uri-for-microsoft-edge-policies).
 - How to [configure Microsoft Edge in Intune using ADMX ingestion and custom OMA-URI](#configure-microsoft-edge-in-intune-using-admx-ingestion).
@@ -46,9 +46,9 @@ Configuring Microsoft Edge with MDM is a two part process:
 
 ## Create an OMA-URI for Microsoft Edge policies
 
-The following sections describe how to create the OMA-URI path and look up and define the value in XML format for mandatory and recommended browser polices.
+The following sections describe how to create the OMA-URI path and look up and define the value in XML format for mandatory and recommended browser policies.
 
-Before you get started download the Microsoft Edge policy templates file (MicrosoftEdgePolicyTemplates.cab) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) and extract the contents.
+Before you get started, download the Microsoft Edge policy templates file (MicrosoftEdgePolicyTemplates.cab) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) and extract the contents.
 
 There are three steps for defining the OMA-URI:
 
@@ -86,7 +86,7 @@ If the policy is in a group, follow these steps:
 
 ### Specify the data type
 
-The OMA-URI data type is always “String”.
+The OMA-URI data type is always "String".
 
 ### Set the value for a browser policy
 
@@ -145,14 +145,21 @@ To find the textID and define the value set the locale, follow these steps:
 To set the locale to "es-US" with the "ApplicationLocaleValue" policy:<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### Create the OMA-URI for a recommended policies
+Dictionary data types are treated as large strings but normally need string escaping to get the value into the correct form.
+
+For example, to set the ManagedFavorites policy the value would be:
+
+```xml
+<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>
+```
+
+### Create the OMA-URI for recommended policies
 
 Defining the URI path for recommended policies depends on the policy you want to configure.
 
 #### To define the URI path for a recommended policy
 
 Use the URI path formula (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) and the following steps to define the URI path:
-
 1. Open **msedge.admx** with any xml editor.
 2. If the policy you want to configure isn't in a group, skip to step 4 and remove `~<ADMXCategory>` from the path.
 3. If the policy you want to configure is in a group:
@@ -178,7 +185,7 @@ Use the URI path formula (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~
 
 The following table shows examples of OMA-URI paths for recommended policies.
 
-|              Policy               |             OMA-URI                      |
+|      Policy    |   OMA-URI  |
 |-----------------------------------|------------------------------------------|
 | [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
 | [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
@@ -270,20 +277,29 @@ OMA-URI examples with their URI path, type, and an example value.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### Dictionary and String data type example
+#### Dictionary and String data type examples
 
 *[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
-| Field   | Value                                                                                |
-|---------|--------------------------------------------------------------------------------------|
+| Field   | Value      |
+|---------|------------|
 | Name    | Microsoft Edge: ProxyMode                                                            |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ProxyMode/ProxyMode`  |
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
+*[ManagedFavorites](./microsoft-edge-policies.md#ManagedFavorites):*
+
+| Field   | Value    |
+|---------|----------|
+| Name    | Microsoft Edge: ManagedFavorites                                                            |
+| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge/ManagedFavorites`  |
+| Type    | String                                                                               |
+| Value   | `<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>`                               |
+
 ## Configure Microsoft Edge in Intune using ADMX ingestion
 
-The recommended way to configure Microsoft Edge with Microsoft Intune is to use the Administrative Templates profile as described in [Configure Microsoft Edge policy settings with Microsoft Intune](./configure-edge-with-intune.md). If you want to evaluate a policy that is currently not available in the Microsoft Edge Administrative Templates in Intune you can configure Microsoft Edge using  [custom settings for Windows 10 devices in Intune](/intune/configuration/custom-settings-windows-10).
+The recommended way to configure Microsoft Edge with Microsoft Intune is to use the Administrative Templates profile. This profile is described in [Configure Microsoft Edge policy settings with Microsoft Intune](./configure-edge-with-intune.md). If you want to evaluate a policy that's currently not available in the Microsoft Edge Administrative Templates in Intune,  you can configure Microsoft Edge using [custom settings for Windows 10 devices in Intune](/intune/configuration/custom-settings-windows-10).
 
 This section describes how to:
 
@@ -398,7 +414,7 @@ For more trouble shooting tips, see [Set up Microsoft Intune](/intune/fundamenta
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-- [Configure Microsoft Edge policy settings with Microsoft Intune](configure-edge-with-intune.md)
+- [Configure Microsoft Edge policy settings with Microsoft Intune](./configure-edge-with-intune.md)
 - [Mobile device management](/windows/client-management/mdm/)
 - [Use custom settings for Windows 10 devices in Intune](/intune/configuration/custom-settings-windows-10)
 - [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
