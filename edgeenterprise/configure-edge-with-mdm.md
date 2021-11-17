@@ -288,7 +288,7 @@ OMA-URI examples with their URI path, type, and an example value.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-*[ManagedFavorites](./microsoft-edge-policies.md#ManagedFavorites):*
+*[ManagedFavorites](./microsoft-edge-policies.md#managedfavorites):*
 
 | Field   | Value    |
 |---------|----------|
