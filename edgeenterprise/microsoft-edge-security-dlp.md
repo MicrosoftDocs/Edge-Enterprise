@@ -3,7 +3,7 @@ title: "Understand Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/17/2021
+ms.date: 11/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Understand Data Loss Prevention (DLP) in Microsoft Edge"
 
 # Understand Data Loss Prevention (DLP) in Microsoft Edge
 
-This article describes how Microsoft Edge supports data loss prevention (DLP) through Endpoint DLP and Windows Information Protection (WIP).
+This article describes how Microsoft Edge supports data loss prevention (DLP) with Endpoint DLP and Windows Information Protection (WIP).
 
 ## DLP defined
 
@@ -22,7 +22,7 @@ Data loss prevention (DLP) is a system of technologies that identify and safegua
 
 Remote work has increased the emphasis on using DLP. With the growing use of personal and work activities on devices, enterprises are seeing an increased risk of unauthorized sharing of corporate data outside the workplace.
 
-This blending of user activities has spread to devices as well, where data is moved between personal and corporate devices over various public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
+This blending of user activities has also spread to devices, where data is moved between personal and corporate devices over various public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
 
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
@@ -39,7 +39,7 @@ To learn more about Endpoint DLP, use the following resources:
 - [Learn about Microsoft 365 Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
 - [Get started with Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
-Microsoft Edge enforces admin configured policies for sensitive files and records audit events for non-compliant activities.
+Microsoft Edge enforces admin-configured policies for sensitive files, and records audit events for non-compliant activities.
 
 Some of the user activities that you can audit and manage on devices running Windows 10 include the following activities:
 
