@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/09/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,18 +26,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following policies were added to this documentation update.
+The following policies were added and deprecated for this documentation update.
 
 | Policy Name |	Caption |
 |--|--|
-|[SerialAllowAllPortsForUrls](#serialallowallportsforurls)|Automatically grant sites permission to connect all serial ports|
-|[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
-|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
-|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
-|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Allow Tab capture by these origins|
-|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
-|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
-|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
+|[SmartScreenDnsRequestsEnabled](#smartscreendnsrequestsenabled)|Enable Microsoft Defender SmartScreen DNS requests|
+|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
+|[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled (DEPRECATED)|
 
 ## Available policies
 
@@ -273,6 +268,7 @@ These tables list all of the browser-related group policies available in this re
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings|
+|[SmartScreenDnsRequestsEnabled](#smartscreendnsrequestsenabled)|Enable Microsoft Defender SmartScreen DNS requests|
 |[SmartScreenEnabled](#smartscreenenabled)|Configure Microsoft Defender SmartScreen|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Force Microsoft Defender SmartScreen checks on downloads from trusted sources|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configure Microsoft Defender SmartScreen to block potentially unwanted apps|
@@ -346,6 +342,7 @@ These tables list all of the browser-related group policies available in this re
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS|
+|[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled (deprecated)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
@@ -449,6 +446,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
@@ -9133,7 +9131,7 @@ This policy overrides the following individual policies:
 Setting the [ProxySettings](#proxysettings) policy accepts the following fields:
   * ProxyMode, which lets you specify the proxy server used by Microsoft Edge and prevents users from changing proxy settings
   * ProxyPacUrl, a URL to a proxy .pac file
-  * ProxyPacMandatory, which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script
+  * ProxyPacMandatory, a boolean flag which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script
   * ProxyServer, a URL for the proxy server
   * ProxyBypassList, a list of proxy hosts that Microsoft Edge bypasses
 
@@ -9179,6 +9177,7 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
   "ProxyMode": "pac_script",
+  "ProxyPacMandatory": false,
   "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -9187,7 +9186,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacMandatory": false, "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -9202,6 +9201,8 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
   <string>pac_script</string>
+  <key>ProxyPacMandatory</key>
+  <false/>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -9696,6 +9697,70 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   <string>mydomain.com</string>
   <string>myuniversity.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SmartScreenDnsRequestsEnabled
+
+  #### Enable Microsoft Defender SmartScreen DNS requests
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  This policy lets you configure whether to enable DNS requests made by Microsoft Defender SmartScreen. Note: Disabling DNS requests will prevent Microsoft Defender SmartScreen from getting IP addresses, and potentially impact the IP-based protections provided.
+
+If you enable or don't configure this setting, Microsoft Defender SmartScreen will make DNS requests.
+
+If you disable this setting, Microsoft Defender SmartScreen will not make any DNS requests.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SmartScreenDnsRequestsEnabled
+  - GP name: Enable Microsoft Defender SmartScreen DNS requests
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SmartScreenDnsRequestsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SmartScreenDnsRequestsEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -13886,6 +13951,72 @@ This policy is a temporary measure and will be removed in future versions of Mic
   #### Mac information and settings
   
   - Preference Key Name: CECPQ2Enabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CORSNonWildcardRequestHeadersSupport
+
+  #### CORS non-wildcard request header support enabled (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  This policy lets you configure support of CORS non-wildcard request headers.
+
+Microsoft Edge version 97 introduces support for CORS non-wildcard request headers. When a script makes a cross-origin network request via fetch() and XMLHttpRequest with a script-added Authorization header, the header must be explicitly allowed by the Access-Control-Allow-Headers header in the CORS preflight response. "Explicitly" here means that the wild card symbol "*" doesn't cover the Authorization header. See [https://go.microsoft.com/fwlink/?linkid=2180022](https://go.microsoft.com/fwlink/?linkid=2180022) for more detail.
+
+If you enable or don't configure the policy, Microsoft Edge will support the CORS non-wildcard request headers and behave as previously described.
+
+If you disable this policy, Microsoft Edge will allow the wildcard symbol ("*") in the Access-Control-Allow-Headers header in the CORS preflight response to cover the Authorization header.
+
+This policy is a temporary workaround for the new CORS non-wildcard request header feature. It's intended to be removed after Microsoft Edge version 103.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CORSNonWildcardRequestHeadersSupport
+  - GP name: CORS non-wildcard request header support enabled (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CORSNonWildcardRequestHeadersSupport
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: CORSNonWildcardRequestHeadersSupport
   - Example value:
 ``` xml
 <true/>
@@ -20779,6 +20910,63 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerModeTabInEdgeModeAllowed
+
+  #### Allow sites configured for Internet Explorer mode to open in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 97 or later
+
+  #### Description
+
+  This policy lets sites configured to open in Internet Explorer mode to be opened by Microsoft Edge for testing on a modern browser without removing them from the site list.
+
+Users can configure this setting in the "More tools" menu by selecting 'Open sites in Microsoft Edge'.
+
+If you enable this policy, the option to 'Open sites in Microsoft Edge' will be visible under "More tools". Users use this option to test IE mode sites on a modern browser.
+
+If you disable or don't configure this policy, users can't see the option 'Open in Microsoft Edge' under the "More tools" menu. However, users can access this menu option with the --ie-mode-test flag.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerModeTabInEdgeModeAllowed
+  - GP name: Allow sites configured for Internet Explorer mode to open in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerModeTabInEdgeModeAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerModeToolbarButtonEnabled
 
   #### Show the Reload in Internet Explorer mode button in the toolbar
@@ -27107,6 +27295,7 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   
   
   #### Supported versions:
+
   - On Windows and macOS since 80 or later
 
   #### Description
