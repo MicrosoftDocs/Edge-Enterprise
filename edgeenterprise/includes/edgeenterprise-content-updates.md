@@ -2,6 +2,44 @@
 
 
 
+## Week of November 15, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/15/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/15/2021 | [Local site list for Internet Explorer (IE) mode](/DeployEdge/edge-ie-mode-local-site-list) | modified |
+| 11/15/2021 | [Microsoft Edge support for Windows Information Protection](/DeployEdge/microsoft-edge-security-windows-information-protection) | modified |
+| 11/16/2021 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 11/16/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/17/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
+| 11/17/2021 | [Windows updates to support Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates) | modified |
+| 11/17/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 11/17/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 11/17/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 11/17/2021 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
+| 11/19/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 11/19/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
+## Week of October 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/26/2021 | [Configure Microsoft Edge enterprise sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 10/26/2021 | [Modern security protection for vulnerable legacy apps](/DeployEdge/microsoft-edge-security-iemode-safer-than-ie) | added |
+| 10/27/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 10/27/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+| 10/27/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/27/2021 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 10/27/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 10/28/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/28/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 10/28/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 10/28/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+
+
 ## Week of October 18, 2021
 
 
@@ -21,61 +59,3 @@
 | 10/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 10/22/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 10/22/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-
-
-## Week of October 11, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/11/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/11/2021 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 10/11/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/11/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 10/14/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of October 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/4/2021 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
-| 10/5/2021 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
-| 10/5/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 10/5/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-
-
-## Week of September 27, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/27/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 9/28/2021 | [What is Internet Explorer mode?](/DeployEdge/edge-ie-mode) | modified |
-| 9/28/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 9/28/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 9/29/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 9/29/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 9/29/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 9/30/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 9/30/2021 | [Microsoft Edge password manager security ](/DeployEdge/microsoft-edge-security-password-manager-security) | modified |
-| 10/1/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 10/1/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-
-
-## Week of September 20, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/22/2021 | [ClickOnce and DirectInvoke in Microsoft Edge](/DeployEdge/edge-learn-more-co-di) | modified |
-| 9/22/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-| 9/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 9/22/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 9/23/2021 | [Microsoft Edge channel overview](/DeployEdge/microsoft-edge-channels) | modified |
-| 9/23/2021 | [Windows updates for Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates) | modified |
-| 9/23/2021 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
-| 9/24/2021 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
-| 9/24/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 9/24/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |

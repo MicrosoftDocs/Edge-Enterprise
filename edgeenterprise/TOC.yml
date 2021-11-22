@@ -1,4 +1,4 @@
-# last revised 10/26/2021 
+# last revised 11/02/2021 
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -45,12 +45,12 @@
      href: microsoft-edge-release-schedule.md
    - name: Security updates
      href: microsoft-edge-relnotes-security.md     
-   - name: Microsoft Edge policy mapping
-     items:
-      - name: Policy mapping overview
-        href: microsoft-edge-policy-map-overview.md
-      - name: Google Chrome to Microsoft Edge policy mapping
-        href: microsoft-edge-policy-map-chrome-to-newedge.md
+#   - name: Microsoft Edge policy mapping
+#     items:
+#      - name: Policy mapping overview
+#        href: microsoft-edge-policy-map-overview.md
+#      - name: Google Chrome to Microsoft Edge policy mapping
+#        href: microsoft-edge-policy-map-chrome-to-newedge.md
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -98,7 +98,7 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-   - name: Edge for Virtualization desktop infrastructure 
+   - name: Microsoft Edge for Virtual desktop infrastructure 
      href: edge-for-virtualized-desktop-infrastructure.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
@@ -165,7 +165,7 @@
       - name: Associate file extensions with Internet Explorer mode
         href: edge-ie-mode-add-guidance-filetype-associations.md       
       - name: IE mode troubleshooting and FAQ
-        href: edge-ie-mode-faq.yml
+        href: edge-ie-mode-faq.md
 
 # SECURITY AND PRIVACY
 - name: Microsoft Edge Security
