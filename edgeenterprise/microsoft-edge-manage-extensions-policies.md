@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
