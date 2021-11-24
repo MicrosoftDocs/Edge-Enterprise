@@ -26,7 +26,7 @@ A mixed content download happens when you start a download from an HTML page tha
 - One or more of the download location's redirects was loaded over an insecure HTTP connection.
 - The final download location was loaded over an insecure HTTP connection.
 
-Either scenario is a mixed content download because the request was made using secure HTTPS and both HTTP and HTTPS content are involved in reaching the final download destination. Modern browsers display warnings about this type of content to indicate to the user that this download may be transferred insecurely even though the original page accessed was secure.
+Either of the preceding scenarios is a mixed content download because the request was made using secure HTTPS and both HTTP and HTTPS connections are used to reach the final destination. Modern browsers display warnings about this type of content to indicate that this download may be transferred insecurely even though the original page was accessed securely.
 
 ## Download warnings and user options
 
