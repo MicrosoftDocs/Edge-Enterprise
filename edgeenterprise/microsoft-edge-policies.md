@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/17/2021
+ms.date: 11/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -28,11 +28,10 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 The following policies were added and deprecated for this documentation update.
 
-| Policy Name |	Caption |
+| Policy Name | Caption |
 |--|--|
-|[SmartScreenDnsRequestsEnabled](#smartscreendnsrequestsenabled)|Enable Microsoft Defender SmartScreen DNS requests|
-|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
-|[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled (DEPRECATED)|
+|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (DEPRECATED)|
 
 ## Available policies
 
@@ -465,6 +464,7 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
@@ -551,6 +551,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (deprecated)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
@@ -22303,6 +22304,63 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   [Back to top](#microsoft-edge---policies)
 
+  ### OpenMicrosoftLinksInEdgeEnabled
+
+  #### Always open links from certain Microsoft apps in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 97 or later
+
+  #### Description
+
+  Make Microsoft Edge open links from other supported Microsoft Apps, such as Microsoft Outlook and Microsoft Teams on Windows 10 and above, so that web links can be opened using the correct profile in Microsoft Edge. This does not change the browser set as the default in Windows settings.
+
+If you do not configure this policy, the end user will see a prompt to manage this policy the first time Microsoft Edge opens a link from supported Microsoft apps. Users can manage this policy in Microsoft Edge settings at any time. The default browser setting in Windows will not be changed based on the Microsoft Edge setting.
+
+If this policy is Enabled, Microsoft Edge will open web links from these apps, and will use the correct profile where possible, even when Microsoft Edge is not set as the default in Windows settings. This policy does not change the browser set as the default in Windows settings.
+
+If this policy is disabled, the browser set as the default in Windows settings will be used to open web links from these apps.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OpenMicrosoftLinksInEdgeEnabled
+  - GP name: Always open links from certain Microsoft apps in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OpenMicrosoftLinksInEdgeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### OverrideSecurityRestrictionsOnInsecureOrigin
 
   #### Control where security restrictions on insecure origins apply
@@ -27971,6 +28029,70 @@ If you don't configure this policy, or if you set it to an empty string or inval
   - Example value:
 ``` xml
 <string>10000-11999</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebSQLInThirdPartyContextEnabled
+
+  #### Force WebSQL in third-party contexts to be re-enabled (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 97 or later
+
+  #### Description
+
+  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It won't work in Microsoft Edge version 101.
+
+WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Microsoft Edge version 97 and will be fully removed in version 101.
+
+If you enable this policy, WebSQL in third-party contexts will be re-enabled.
+
+If you disable this policy or don't configure it, WebSQL in third-party contexts will stay off.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLInThirdPartyContextEnabled
+  - GP name: Force WebSQL in third-party contexts to be re-enabled (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLInThirdPartyContextEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebSQLInThirdPartyContextEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
