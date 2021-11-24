@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 11/22/2021
+ms.date: 11/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,10 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 96.0.1054.34: November 23
+
+Fixed various bugs and performance issues.
+
 ## Version 96.0.1054.29: November 19
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
@@ -47,6 +51,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - **Quickly view Office files in the browser.** Users can now view Office files including documents, spreadsheets, and presentations that they come across while browsing on Microsoft Edge right in the browser without needing to download the file and then open it in a different application. There will be no changes in the file open experience for Office files that are hosted on OneDrive or SharePoint.
   
 - **Freeform highlighting on PDFs.** The PDF viewing and markup experience is improved with the addition of freeform highlighters. You can highlight sections in PDFs that you don't have access to, and scanned documents.
+
+- **Control-flow Enforcement Technology (CET).** Microsoft Edge will begin supporting an even safer browsing mode that uses hardware-dependent control flow for browser processes on supported hardware (Intel 11th Gen. or AMD Zen 3). Note: Because this is a Controlled Feature Rollout you may not notice this feature enabled on all devices. You can enable or disable CET by manipulating Image File Execution Options (IFEO) using group policy.
 
 - **New warning dialog for typosquatting sites.** The browser will show a warning on some sites with URLs that look very similar to other sites. This UI uses client-side heuristics to warn users about sites that might be spoofing popular web sites. For more information, see [What is typosquatting?](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
   
