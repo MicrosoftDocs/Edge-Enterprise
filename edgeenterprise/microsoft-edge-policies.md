@@ -27864,7 +27864,7 @@ Use the preceding information when configuring this policy.
   
   #### Supported versions:
 
-  - On Windows since 94 or later
+  - On Windows since 96 or later
 
   #### Description
 
