@@ -17,14 +17,14 @@ description: "Microsoft Edge Lifecycle"
 This article describes the lifecycle policy that applies to Microsoft Edge.
 
 > [!NOTE]
-> This article applies to the Microsoft Edge versions 77 and higher.
+> This article applies to Microsoft Edge versions 77 and higher.
 
 > [!NOTE]
 > Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week major release cycle cadence. However, we recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle;** this option will only be available for customers with managed environments. [Refer to our announcement blog post](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## Overview of the lifecycle policy for Microsoft Edge
 
-Microsoft Edge features more frequent and more flexible updating capabilities. Because browser releases aren't bound to the Windows major releases, it's necessary to have the governing lifecycle policy updated to reflect this decoupling. Going forward, Microsoft Edge will follow the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). Security updates and servicing updates are only available on the latest Stable channel release and the latest Beta channel release. Using older releases of Microsoft Edge likely means you're missing the latest quality and security updates and isn't recommended.  Assisted Support is available as described in the following sections.
+Microsoft Edge features more frequent and more flexible updating capabilities. Because browser releases aren't bound to the Windows major releases, it's necessary to have the governing lifecycle policy updated to reflect this decoupling. Going forward, Microsoft Edge will follow the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). Security updates and servicing updates are only available on the latest Stable channel release and the latest Beta channel release. If you use older releases of Microsoft Edge, it's likely that you'll miss the latest quality and security updates. Using older versions isn't recommended. Assisted Support is available as described in the following sections.
 
 ## Service and assisted support timeline for Microsoft Edge versions 77-93
 
