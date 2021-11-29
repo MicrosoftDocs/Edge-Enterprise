@@ -28,18 +28,18 @@ Microsoft Edge features more frequent and more flexible updating capabilities. B
 
 ## Service and assisted support timeline for Microsoft Edge versions 77-93
 
-Microsoft Edge has a \6-week major release cycle cadence for Stable channel version 77 and continuing until version 93.  We provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release is approximately 18 weeks. The effective support duration for a Beta channel release is \~6 weeks; previous Beta channel releases aren't supported.  The following table summarizes the service and support timeline.
+Microsoft Edge has a 6-week major release cycle cadence for Stable channel version 77 and continuing until version 93.  We provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release is approximately 18 weeks. The effective support duration for a Beta channel release is ~6 weeks; previous Beta channel releases aren't supported.  The following table summarizes the service and support timeline.
 
 |     Release option              |     Major version release supported    |     Major version release serviced    |     Support coverage across releases    |     Servicing coverage    |
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
 |     Daily “Canary”              |     None                               |     None                              |     None                                |     None                  |
 |     Weekly “Dev”                |     None                               |     None                              |     None                                |     None                  |
-|     \6-week “Beta”               |     Current                            |     Current                           |     \6 weeks                             |     \6 weeks               |
-|     \6-week “Stable”             |     Current and \2 previous             |     Current                           |     \18 weeks                            |     \6 weeks               |
+|     `6`-week “Beta”               |     Current                            |     Current                           |     `6` weeks                             |     `6` weeks               |
+|     `6`-week “Stable”             |     Current and `2` previous             |     Current                           |     `18` weeks                            |     `6` weeks               |
 
 ## Service and assisted support timeline changes for Microsoft Edge version 94
 
-Starting with Stable channel version 94, Microsoft Edge is moving to a \4-week major release cycle cadence. We'll continue to provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release will be approximately 12 weeks.
+Starting with Stable channel version 94, Microsoft Edge is moving to a `4`-week major release cycle cadence. We'll continue to provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release will be approximately 12 weeks.
 
 We recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle**. Assisted Support will be available for the most recent two Extended Stable channel releases. The effective assisted support duration for an Extended Stable channel release will be approximately 16 weeks. Refer to the table below.
 
@@ -47,9 +47,9 @@ We recognize that enterprise customers who manage complex environments need more
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
 |     Daily “Canary”              |     None                               |     None                              |     None                                |     None                  |
 |     Weekly “Dev”                |     None                               |     None                              |     None                                |     None                  |
-|     \4-week “Beta”               |     Current                            |     Current                           |     \4 weeks                             |    \4 weeks               |
-|     \4-week “Stable”             |     Current and \2 previous             |     Current                           |     \12 weeks                            |     \4 weeks               |
-|     \8-week “Extended Stable”    |     Current and \1 previous             |     Current                           |     \16 weeks                            |     \8 weeks               |
+|     `4`-week “Beta”               |     Current                            |     Current                           |     `4` weeks                             |    `4` weeks               |
+|     `4`-week “Stable”             |     Current and `2` previous             |     Current                           |     `12` weeks                            |     `4` weeks               |
+|     `8`-week “Extended Stable”    |     Current and `1` previous             |     Current                           |     `16` weeks                            |     `8` weeks               |
 
 ## See also
 
