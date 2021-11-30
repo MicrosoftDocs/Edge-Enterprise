@@ -1,9 +1,9 @@
 ---
-title: Cloud Site List Management for Internet Explorer (IE) mode (Public Preview)"
+title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 11/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Learn how to configure and use Cloud Site List Management for IE mode using the Microsoft 365 Admin Center."
 ---
 
-# Cloud Site List Management for IE mode (Public Preview)
+# Cloud Site List Management for IE mode
 
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
@@ -23,18 +23,18 @@ As you transition your workflows and applications from IE11 to IE mode, **Cloud 
 To learn more, watch the [Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ) video.
 
 > [!NOTE]
-> This experience is now in public preview.
+> This experience is getting rolled out to all users and rollout is expected to finish by mid-December.
 
-The preview experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
+This experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
 ## Prerequisites
 
-The following prerequisites apply to this public preview.
+The following prerequisites apply to this feature.
 
 1. Customers must have an Azure AD tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
 3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
-   - To opt in to the public preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
+   - To opt in to this preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
 
 ## The preview experience
 
