@@ -164,7 +164,7 @@ You can manage Microsoft Edge kiosk mode assigned access single app via [Windows
 
 Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**).
 
-When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the [Microsoft Edge browser policies](./deployedge/microsoft-edge-policies.md) to configure the browsing experience to meet your unique requirements.
+When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the [Microsoft Edge browser policies](./microsoft-edge-policies.md) to configure the browsing experience to meet your unique requirements.
 
 ### Configure using Windows Settings
 
