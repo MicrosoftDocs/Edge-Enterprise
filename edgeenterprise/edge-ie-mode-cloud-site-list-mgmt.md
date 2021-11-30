@@ -131,7 +131,7 @@ You can add individual sites to any site list. After adding sites to the list, y
 3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
 
    > [!NOTE]
-   > The **Status** column for any entries added to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button _(next to the Search box)_ to select Addition pending to see all added entries that are pending publication.
+   > The **Status** column for any entries added to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
 
 ### View the change history for site entries
 
@@ -146,7 +146,19 @@ Use the following steps to delete a site entry.
 3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
-   > The **Status** column for any entries deleted from a Published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them.You can use the **Filter** button _(next to the Search box)_ to select Delete pending to see all deleted entries that are pending publication.
+   > The **Status** column for any entries deleted from a Published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them.You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
+
+### Copy a site to other site lists
+
+Use the following steps to copy a site entry from a site list to one or more site lists.
+
+1. Pick a site entry that you'd like to copy to another list. Select **Copy to more lists**.
+2. Select one or more site lists you'd like to copy to from the dropdown list.
+3. Select **Copy site** at the bottom of the pane.
+4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
+
+> [!NOTE]
+> The Status column for any entries copied to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending** publish to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
 
 ### Export a site list
 
