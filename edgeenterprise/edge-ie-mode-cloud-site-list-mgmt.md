@@ -64,14 +64,16 @@ Use the following steps as a guide to create site list, import a site list, and 
 3. You'll see the **Microsoft Edge site lists** option.
 
 > [!NOTE]
-> If you don't see this option on the Org Settings page while we are rolling out to all production instances, you will need to opt in to Targeted Release. For more information, see [here](#I-do-not-see-the-"Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that).
+> If you don't see this option on the Org Settings page while we are rolling out to all production instances, you'll need to opt in to Targeted Release. If you don't see the "Microsoft Edge site lists" option in the "Org Settings" page for the Microsoft 365 Admin Center, see .....
+> 
+<!-- For more information, see [here](#I-do-not-see-the-"Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that? -->
 
 ### Steps to create a site list
 
 1. On the Org Settings page, select **Microsoft Edge site lists**
 2. On the resulting page, select **Create a new list**.
 3. Enter a **Site list name** and a **Description**, and then select **Create**.
-4. After you get confirmation,select **Close panel**. 
+4. After you get confirmation,select **Close panel**.
 
 ### Steps to import a site list
 
@@ -87,14 +89,14 @@ Use the following steps as a guide to create site list, import a site list, and 
 1. To publish a site list, go back up a level to the Microsoft Edge site lists page. Select the breadcrumb above the site list name to go up a level.
 2. On the Microsoft Edge site lists page, select the site list you want to publish to the cloud, and then select **Publish site list**.
 3. On the right-hand panel, update the **Version number** and select **Publish** the bottom of the panel.
-4. After confirmation, select **Close panel**. 
+4. After confirmation, select **Close panel**.
 5. The **Published status** column, **Last published**, and **Last published by** are all updated.
 
 ## Associate the cloud-hosted site list with Microsoft Edge
 
 Use the following steps to associate the cloud-hosted site list with Microsoft Edge.
 
-1. To configure devices to use a published site list, click on the site list you want to assign to devices.
+1. To configure devices to use a published site list, select the site list you want to assign to devices.
 2. On the resulting page, copy the **Site list ID**.
 3. For the device group you pick, select **Enabled** and enter the **Site list ID** in the [Configure the Enterprise Mode Cloud Site List](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) policy.
 4. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
