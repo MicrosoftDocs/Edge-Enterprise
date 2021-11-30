@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Learn how to configure and use Cloud Site List Management for IE mode using the Microsoft 365 Admin Center."
 ---
 
-# Cloud Site List Management for IE mode
+# Cloud Site List Management for Internet Explorer (IE) mode
 
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
@@ -178,7 +178,7 @@ Microsoft Edge Site Lists stores its data and configuration in a service infrast
 
 ### Can users who haven’t signed in to Microsoft Edge download the site list?
 
-No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/docs.microsoft.com/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
+No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
 
 ### What is the default refresh interval after updates are made to site list contents?
 
@@ -193,7 +193,7 @@ Access to the site list requires explicit browser sign in for the first download
 
 ## Support and Feedback
 
-While in public preview, the Cloud Site List Management experience is covered by your existing [Microsoft Premier Support](https://www.microsoft.com/en-us/unifiedsupport/premier) contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+While in public preview, the Cloud Site List Management experience is covered by your existing [Microsoft Premier Support](https://www.microsoft.com/unifiedsupport/premier) contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## See also
 
