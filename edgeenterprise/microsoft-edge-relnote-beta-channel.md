@@ -160,7 +160,7 @@ Fixed various bugs and performance issues.
 ## Version 94.0.992.14: September 7
 
 Fixed various bugs and performance issues.
-
+<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 ---->
 <!-- archive from Version 94.0.992.9: September 2 to Version 92.0.902.40: July 6 -->
 <!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
 <!--- Archived from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 ---->
