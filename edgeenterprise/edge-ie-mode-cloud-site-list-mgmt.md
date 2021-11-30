@@ -23,7 +23,7 @@ As you transition your workflows and applications from IE11 to IE mode, **Cloud 
 To learn more, watch the [Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ) video.
 
 > [!NOTE]
-> This experience is getting rolled out to all users and rollout is expected to finish by mid-December.
+> This experience is currently getting rolled out to all users and is expected to finish by mid-December.
 
 This experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
@@ -55,23 +55,6 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 
 Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
 
-## Opt in to public preview
-
-While in public preview, you need to opt in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
-
-Use the following steps to change how your organization receives Microsoft 365 updates.
-
-> [!NOTE]
-> It can take up to 24 hours for the following configuration changes to take effect in Microsoft 365. If you opt out of a targeted release after enabling it, your users may lose access to features that haven't reached the scheduled release yet.
-
-1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
-2. To disable targeted release, select **Standard release**, then select **Save changes**.
-3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
-4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
-5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
-6. When you finish adding users, select **Save changes**.
-
-For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
 
 ## Publish enterprise site list to the cloud
 
@@ -79,11 +62,14 @@ Use the following steps as a guide to create site list, import a site list, and 
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
-3. You'll see the **Microsoft Edge site lists (Preview)** option.
+3. You'll see the **Microsoft Edge site lists** option.
+
+> [!NOTE]
+> If you do not see this option on the Org Settings page while we are rolling out to all production instances, you will need to opt in to Targeted Release. For more information, see [here](#I-do-not-see-the-"Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that).
 
 ### Steps to create a site list
 
-1. On the Org Settings page, select **Microsoft Edge site lists (Preview)**
+1. On the Org Settings page, select **Microsoft Edge site lists**
 2. On the resulting page, select **Create a new list**.
 3. Enter a **Site list name** and a **Description**, and then select **Create**.
 4. After you get confirmation,select **Close panel**. 
@@ -169,6 +155,21 @@ There are scenarios where you want to export a site list. For example, if you're
 3. Select **Export list** to download the site list XML file.
 
 ## FAQ
+
+### I do not see the "Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that?
+
+The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
+
+You can use the following steps:
+
+1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
+2. To disable targeted release, select **Standard release**, then select **Save changes**.
+3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
+4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
+5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
+6. When you finish adding users, select **Save changes**.
+
+For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
 
 ### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
