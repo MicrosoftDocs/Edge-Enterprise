@@ -57,7 +57,7 @@ Admins can create a new list or import an existing site list into the Microsoft 
 
 ## Publish enterprise site list to the cloud
 
-Use the following steps as a guide to create site list, import a site list, and publish the site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
+Use the following steps as a guide to create a site list, import a site list, and publish a site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
 2. On the left navigation pane, select **Settings > Org Settings**.
