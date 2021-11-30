@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 06/29/2021 
+ms.date: 11/30/2021 
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -68,7 +68,7 @@ The following table lists the features supported by kiosk mode in Microsoft Edge
 
 ## Use kiosk mode features
 
-Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command line options for Digital/Interactive signage and Public browsing.
+Microsoft Edge kiosk mode features can be invoked with the following Windows 10 command-line options for Digital/Interactive signage and Public browsing.
 
 ### Kiosk mode Digital/Interactive signage
  
@@ -84,12 +84,12 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### Kiosk mode Download Files on Exit
 
-To setup Edge to remove downloaded files when a Kiosk instance is closed, the below 2 Group Policies must be setup:
+To set up Microsoft Edge to remove downloaded files when a Kiosk instance is closed, the following two Group Policies must be configured:
 - [Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Enabled
-- [Set download directory](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+- [Set download directory](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
 
-### Additional command line options
+### Additional command-line options
 
 - **--no-first-run**: Disable the first Microsoft Edge run experience.
 
@@ -101,7 +101,7 @@ To setup Edge to remove downloaded files when a Kiosk instance is closed, the be
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session by closing the browser. Note: this flag will not restart Microsoft Edge after it is closed. A separate technology, such as Assigned Access or Shell Launch is required to automatically restart Edge after the idle timeout. Replace "value" in the next example with the number of minutes.
+- **--kiosk-idle-timeout-minutes=**: Change the time (in minutes) from the last user activity before Microsoft Edge kiosk mode resets the user's session by closing the browser. Note: this flag will not restart Microsoft Edge after it's closed. A separate technology, such as Assigned Access or Shell Launch is required to automatically restart Edge after the idle timeout. Replace "value" in the next example with the number of minutes.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -162,9 +162,9 @@ You can manage Microsoft Edge kiosk mode assigned access single app via [Windows
 
 ### Multi-app kiosk
 
-Microsoft Edge can be run with [multi-app assigned access](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**).
+Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**).
 
-When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the[Microsoft Edge browser policies](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) to configure the browsing experience to meet your unique requirements.
+When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the [Microsoft Edge browser policies](./deployedge/microsoft-edge-policies.md) to configure the browsing experience to meet your unique requirements.
 
 ### Configure using Windows Settings
 
@@ -183,15 +183,15 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Set up kiosk with assigned access":::
 
-4. On the **Set up a kiosk** page, click **Get started**.
+4. On the **Set up a kiosk** page, select **Get started**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Kiosk page -get started":::
 
-5. Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**.
+5. Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then select **Next**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Kiosk mode - create account":::
 
-6. On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.
+6. On the **Choose a kiosk app** page, select **Microsoft Edge**, and then select **Next**.
 
    > [!NOTE]
    > This only applies to Microsoft Edge Dev, Beta, and Stable channels.
@@ -214,7 +214,7 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Kiosk mode - enter idle time":::
 
-11. Click **Next**.
+11. Select **Next**.
 12. Close the **Settings** window to save and apply your choices.
 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Kiosk mode - finish set up":::
