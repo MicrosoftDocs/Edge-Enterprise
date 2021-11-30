@@ -42,14 +42,14 @@ There are three aspects to the preview experience.
 
 ### Publish enterprise site list to the cloud
 
-Admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the Microsoft 365 Admin Center and then publish it to the cloud location. 
+Admins can publish one or more site lists to an authenticated endpoint that Microsoft Edge clients within their tenant can download for the IE mode experience. Admins can import the existing enterprise site list XML into the Microsoft Edge Site Lists experience in the Microsoft 365 Admin Center and then publish it to the cloud location.
 
 ### Associate the cloud-hosted site list with Microsoft Edge
 
-With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
+With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationCloudSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) setting to configure one of the cloud-hosted site lists that Microsoft Edge can consume for IE mode. Users must be signed in to Microsoft Edge for the client to consume the site list from the cloud.
 
 > [!IMPORTANT]
-> When this policy is configured, it overrides the original [InternetExplorerIntegrationSiteList](/docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist) policy.
+> When this policy is configured, it overrides the original [InternetExplorerIntegrationSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist) policy.
 
 ### Manage site list contents on the Microsoft 365 Admin Center
 
@@ -64,7 +64,7 @@ Use the following steps as a guide to create site list, import a site list, and 
 3. You'll see the **Microsoft Edge site lists** option.
 
 > [!NOTE]
-> If you don't see this option on the Org Settings page while we are rolling out to all production instances, you'll need to opt in to Targeted Release. If you don't see the "Microsoft Edge site lists" option in the "Org Settings" page for the Microsoft 365 Admin Center, see .....
+> If you don't see this option on the Org Settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the "Microsoft Edge site lists" option in the "Org Settings" page for the Microsoft 365 Admin Center, see .....
 > 
 <!-- For more information, see [here](#I-do-not-see-the-"Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that? -->
 
@@ -122,7 +122,7 @@ You can add individual sites to any site list. After adding sites to the list, y
 
 ### View the change history for site entries
 
-1. Select the site entry that you want to see the change history for and then select **View comments**.
+1. Select the site entry that you want to see the change history for, and then select **View comments**.
 
 ### Delete a site from the site list
 
@@ -188,7 +188,7 @@ The site list is refreshed in Microsoft Edge every two hours. You can change thi
 
 Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user is not signed in to Microsoft Edge):
 
-- 60 seconds after you restart the browser. If the 60 second startup delay needs to be shorter, you can use the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy to change the amount of delay.
+- 60 seconds after you restart the browser. If the 60-second startup delay needs to be shorter, you can use the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy to change the amount of delay.
 - Every two hours when Microsoft Edge is running.
 
 ## Support and Feedback
