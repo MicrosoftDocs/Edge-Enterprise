@@ -143,7 +143,7 @@ Use the following steps to copy a site entry from a site list to one or more sit
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
    > [!NOTE]
-   > The Status column for any entries copied to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending** publish to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+   > The **Status** column for any entries copied to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending** publish to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
 
 ### Export a site list
 
@@ -159,7 +159,7 @@ There are scenarios where you want to export a site list. For example, if you're
 
 The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
-You can use the following steps:
+You can use the following steps to opt in:
 
 1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org settings**. Under the **Organization profile** tab, choose **Release preferences**.
 2. To disable targeted release, select **Standard release**, then select **Save changes**.
