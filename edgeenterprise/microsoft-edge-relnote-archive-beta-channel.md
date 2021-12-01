@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 11/30/2021
+ms.date: 12/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
