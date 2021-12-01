@@ -139,7 +139,9 @@ You can add individual sites to any site list. After adding sites to the list, y
 
 ### View the change history for site entries
 
-1. Select the site entry that you want to see the change history for, and then select **View comments**.
+To view the change history for site entries:
+
+- Select the site entry that you want to see the change history for, and then select **View comments**.
 
 ### Delete a site from the site list
 
