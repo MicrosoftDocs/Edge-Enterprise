@@ -60,17 +60,16 @@ Admins can create a new list or import an existing site list into the Microsoft 
 Use the following steps as a guide to create a site list, import a site list, and publish a site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your admin credentials.
-2. On the left navigation pane, select **Settings > Org Settings**.
+2. On the left navigation pane, select **Settings > Org settings**.
 3. You'll see the **Microsoft Edge site lists** option.
 
 > [!NOTE]
-> If you don't see this option on the Org Settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the "Microsoft Edge site lists" option in the "Org Settings" page for the Microsoft 365 Admin Center, see .....
-> 
-<!-- For more information, see [here](#I-do-not-see-the-"Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that? -->
+> If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
+>
 
 ### Steps to create a site list
 
-1. On the Org Settings page, select **Microsoft Edge site lists**
+1. On the Org settings page, select **Microsoft Edge site lists**
 2. On the resulting page, select **Create a new list**.
 3. Enter a **Site list name** and a **Description**, and then select **Create**.
 4. After you get confirmation,select **Close panel**.
@@ -157,13 +156,13 @@ There are scenarios where you want to export a site list. For example, if you're
 
 ## FAQ
 
-### I do not see the "Microsoft Edge site lists" option in the "Org Settings" page on Microsoft 365 Admin Center. Why is that?
+### I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
 
 The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
 You can use the following steps:
 
-1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
+1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org settings**. Under the **Organization profile** tab, choose **Release preferences**.
 2. To disable targeted release, select **Standard release**, then select **Save changes**.
 3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
 4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
