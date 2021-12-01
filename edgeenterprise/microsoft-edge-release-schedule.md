@@ -44,7 +44,7 @@ The following table tracks and provides information for major releases in both c
 | 94 | Released<br>Version | 02-Sep-2021<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-9409929-September-02) | 24-Sep-2021<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) | 24-Sep-2021<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
 | 95 | Released<br>Version | 28-Sep-2021<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-95010209-September-28) | 21-Oct-2021<br>[95.0.1020.30](/deployedge/microsoft-edge-relnote-stable-channel#version-950102030-october-21) | Not applicable |
 | 96 | Released<br>Version  | 01-Nov-2021<br>[96.0.1054.8](/DeployEdge/microsoft-edge-relnote-beta-channel?branch=pr-en-us-1163#version-96010548-november-1) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-stable-channel#version-960105429-november-19) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-stable-channel#version-960105429-november-19) |
-| 97 | Target release | Week of 30-Nov-2021 | Week of 06-Jan-2022 | Not applicable  |
+| 97 | Released<br>Version | 01-Dec-2021<br>[97.0.1072.21](/DeployEdge/microsoft-edge-relnote-beta-channel?branch=pr-en-us-1245#version-970107221-december-1) | Week of 06-Jan-2022 | Not applicable  |
 | 98 | Target release | Week of 11-Jan-2022 | Week of 03-Feb-2022 | Week of 03-Feb-2022 |
 | 99 | Target release | Week of 08-Feb-2022 | Week of 03-Mar-2022 | Not applicable  |
 | 100 | Target release | Week of 08-Mar-2022 | Week of 31-Mar-2022 | Week of 31-Mar-2022 |
