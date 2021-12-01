@@ -34,7 +34,7 @@ The following prerequisites apply to this feature.
 1. Customers must have an Azure AD tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
 3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
-   - To opt in to this preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, see [Opt in to public preview](#opt-in-to-public-preview).
+   - To opt in to this preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, follow the steps in [I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
 
 ## The preview experience
 
@@ -54,25 +54,6 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 ### Manage site list contents on the Microsoft 365 Admin Center
 
 Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
-
-## Opt in to public preview
-
-While in public preview, you need to opt in to view preview experiences in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
-
-Use the following steps to change how your organization receives Microsoft 365 updates.
-
-> [!NOTE]
-> It can take up to 24 hours for the following configuration changes to take effect in Microsoft 365. If you opt out of a targeted release after enabling it, your users may lose access to features that haven't reached the scheduled release yet.
-
-1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com) and then go to  **Settings > Org Setting**. Under the **Organization profile** tab, choose **Release preferences**.
-2. To disable targeted release, select **Standard release**, then select **Save changes**.
-3. To enable targeted release for all users in your organization, select **Targeted release for everyone**, then select **Save changes**.
-4. To enable targeted release for some people in your organization, select **Targeted release for selected users**, then select **Save changes**.
-5. Choose **Select users** to add users one at a time, or **Upload users** to add them in bulk.
-6. When you finish adding users, select **Save changes**.
-
-For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
-
 
 ## Publish enterprise site list to the cloud
 
