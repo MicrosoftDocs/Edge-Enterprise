@@ -38,11 +38,10 @@ The following prerequisites apply to this feature.
 1. Customers must have an Azure AD tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
 3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
-   - To opt in to this preview, a Global Administrator is required to opt the tenant in to Targeted release. For more information, follow the steps in [I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
 
-## The preview experience
+## Cloud Site List Management experience
 
-There are three aspects to the preview experience.
+There are three aspects to the experience.
 
 ### Publish enterprise site list to the cloud
 
@@ -197,7 +196,7 @@ Access to the site list requires explicit browser sign in for the first download
 
 ## Support and Feedback
 
-While in public preview, the Cloud Site List Management experience is covered by your existing [Microsoft Premier Support](https://www.microsoft.com/unifiedsupport/premier) contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+Support for Cloud Site List Management experience is covered by your existing [Microsoft Premier Support](https://www.microsoft.com/unifiedsupport/premier) contract. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## See also
 
