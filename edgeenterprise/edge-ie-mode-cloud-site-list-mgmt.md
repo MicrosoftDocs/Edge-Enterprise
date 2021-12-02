@@ -22,7 +22,7 @@ As you transition your workflows and applications from IE11 to IE mode, **Cloud 
 
 To learn more, watch the next video.
 
-[![New Cloud Site List Management for IE mode](media/edge-ie-mode-cloud-site-list-mgmt/0.png)]({https://www.youtube.com/watch?v=9-GovDcryXQl} "New Cloud Site List Management for IE mode")
+[![New Cloud Site List Management for IE mode](media/edge-ie-mode-cloud-site-list-mgmt/0.png)]({https://www.youtube.com/watch?v=9-GovDcryXQ} "New Cloud Site List Management for IE mode")
 
 <!--[Cloud site list management experience for IE mode](https://www.youtube.com/watch?v=9-GovDcryXQ) video. -->
 
