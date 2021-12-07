@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 12/06/2021
+ms.date: 12/07/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -65,7 +65,7 @@ After you understand the current state, you can determine the desired goals for 
 - What features are critical to configure as part of your initial deployment?
 - What is the process for addressing any identified compatibility or configuration issues?
 
-You should also understand the **pre-requisites** for features you're interested in, such as:
+You should also understand the **prerequisites** for features you're interested in, such as:
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Internet Explorer mode](./edge-ie-mode.md)
