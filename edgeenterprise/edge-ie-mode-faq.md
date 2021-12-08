@@ -241,6 +241,7 @@ Starting with Microsoft Edge Beta channel version 96, navigations that switch be
 
 In addition to Microsoft Edge version 96, you need to have the following Windows updates installed for this experience:
 
+
 - Windows 10 version 2004; Windows Server version 2004; Windows 10 version; Windows Server version 20H2 and Windows 10 version 21H1 - KB5006738 or later
 
   > [!NOTE]
