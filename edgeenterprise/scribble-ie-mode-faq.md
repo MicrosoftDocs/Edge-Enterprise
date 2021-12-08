@@ -3,7 +3,7 @@ title: "Scratch pad for IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/10/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -142,7 +142,19 @@ This is a known issue and is being investigated.
 
 ### You receive the following error message: "Could not retrieve EMIE site list."
 
-You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This could be due to a syntax error in the Site list XML file. 
+You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This could be due to a syntax error in the Site list XML file.
+
+### You receive the following error message “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'” 
+
+Certain applications may  require you to run the web page in IE mode. You can use the of IE mode feature in  Microsoft Edge.
+
+You can force a website to load in IE 11 by either configuring IE mode policies or use the reload in IE mode feature.
+
+You may also need to set the `compat-mode` attribute in Enterprise Mode Site List to **Default**. For more information, see [Enterprise Mode and the Enterprise Mode Site List](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1)
+
+> [!TIP]
+> Your users can easily view this site list and the compatibility mode by typing **about:compat** in IE 11 or Microsoft Edge.
+
 <!-- end error messages ---->
 ## General best practices and requirements for IE mode and managing compatibility for Internet Explorer in Microsoft Edge
 
