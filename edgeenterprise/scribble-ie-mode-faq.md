@@ -108,11 +108,33 @@ After the favicon cache is created, you won't be asked for a client certificate 
 
 This is a known issue. Using the **window.open()** or **window.moveTo()** methods to position the new window to a position of your choice may not work in IE mode due to a Chromium security restriction. For more information, see [Chrome doesn't allow JS moving window between dual monitors](https://bugs.chromium.org/p/chromium/issues/detail?id=234132).
 
-
-
- 
-
 Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon. 
+
+### Unexpected behavior while using Microsoft Edge when transitioning a site to IE mode 
+
+For example, consider the following scenario: 
+
+You visit `https://sitea.domain.com` in Microsoft Edge. On the page is a form, that submits its data to `https://siteb.domain.com`.
+
+- 'SiteA' is expected and is designed to load in Microsoft Edge
+- 'SiteB' is configured to open in IE mode, for compatibility requirements
+
+The transition from Microsoft Edge to IE mode causes some or all the following changes to take place:
+
+- the POST verb is changed to GET
+- the Referer header is removed
+- form content (the POST message body) is removed
+
+> [!NOTE]
+> This is a known issue that's being worked on and should be fixed in a future release.
+
+### "File > New session" isn’t available in Microsoft Edge
+
+Microsoft Edge doesn’t have the **File > New session** feature of Internet Explorer. We don’t have any plans to replicate this feature. However, you can make use of our Profile features and create multiple profiles so you can start a new session with another account.
+
+### Window.open doesn't fire with body onunload event in IE mode
+
+This is a known issue and is being investigated.
 
 
 <!--- begin error messages --->
