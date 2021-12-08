@@ -98,6 +98,21 @@ Two policy settings were added to Microsoft Edge from version 95 that let you sp
 - [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment)
 - [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment)
 
+### You may receive multiple authentication prompt when running a page in IE mode on Microsoft Edge
+
+The client certificate may be requested twice in IE mode. The first time around, the certificate selection dialog will be displayed in IE mode, and the second time around, the dialog will be displayed in Microsoft Edge. This is a design limitation that requires both the frame process and the window process to request for authentication.
+
+After the favicon cache is created, you won't be asked for a client certificate again unless you delete the cache. Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon.
+
+### The window.open or window.moveTo methods may not work as expected when running a page in IE mode on Microsoft Edge
+
+This is a known issue. Using the **window.open()** or **window.moveTo()** methods to position the new window to a position of your choice may not work in IE mode due to a Chromium security restriction. For more information, see [Chrome doesn't allow JS moving window between dual monitors](https://bugs.chromium.org/p/chromium/issues/detail?id=234132).
+
+
+
+ 
+
+Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon. 
 
 
 <!--- begin error messages --->
