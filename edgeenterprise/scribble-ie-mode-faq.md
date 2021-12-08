@@ -22,13 +22,13 @@ This article provides customer FAQs for Microsoft Edge IE mode.
 
 Internet Explorer 11 is being retired, and Microsoft Edge is the answer for accessing legacy and modern websites. If a legacy website doesn’t render or work correctly in Microsoft Edge you can use the IE mode feature in Microsoft Edge.
 
-You can force a website to load in IE 11 by using the reload in IE mode feature. For more information, see  [Enable the local site list experience](https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
+You can force a website to load in IE 11 by using the reload in IE mode feature. For more information, see  [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 ### How do I force a site to open in Microsoft Edge?
 
 If you have Microsoft Edge installed and if it’s the default browser (configured by either via policy or manually), then all websites should open in Microsoft Edge unless a site is listed in the compatibility list.
 
-If a website still loads in Internet Explorer 11 and if you don’t need Internet Explorer 11, you can disable it. For more information, see [Disable Internet Explorer 11](https://docs.microsoft.com/en-us/deployedge/edge-ie-disable-ie11).
+If a website still loads in Internet Explorer 11 and if you don’t need Internet Explorer 11, you can disable it. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
 If a website happens to load in IE mode in Microsoft Edge it’s because of an IE mode policy or a manual configuration that’s forcing Microsoft Edge to load the site in IE mode. Make sure you check the site in question to verify that it’s not in the IE Site list or in IE mode. You can do that by running [IE mode diagnostics](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information). Explore our [troubleshooting guide](/deployedge/edge-ie-mode-faq) to identify and fix any other issues.
 
@@ -100,7 +100,7 @@ Two policy settings were added to Microsoft Edge from version 95 that let you sp
 
 ### You may receive multiple authentication prompt when running a page in IE mode on Microsoft Edge
 
-The client certificate may be requested twice in IE mode. The first time around, the certificate selection dialog will be displayed in IE mode, and the second time around, the dialog will be displayed in Microsoft Edge. This is a design limitation that requires both the frame process and the window process to request for authentication.
+The client certificate may be requested twice in IE mode. The first time around, the certificate selection dialog will be displayed in IE mode, and the second time around, the dialog will be displayed in Microsoft Edge. This is a design limitation that requires both the frame process and the window process to request authentication.
 
 After the favicon cache is created, you won't be asked for a client certificate again unless you delete the cache. Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon.
 
