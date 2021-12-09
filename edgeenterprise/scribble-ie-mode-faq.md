@@ -44,13 +44,13 @@ This feature is available on Microsoft Edge version 92 or later. For this option
 
 ### Pop-ups or redirected websites aren’t loading in IE mode or in Internet Explorer 11
 
-Even after configuring IE mode, certain websites, especially websites that spawn a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
+Even after configuring IE mode, certain websites, especially websites that create a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
 
 For this kind of redirected website, you can make use of the `allow-redirect="true"` in the site list configuration. For more information, see [Updated schema elements](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
 
 ### Websites aren’t loading in IE mode when you launch Microsoft Edge for the first time
 
-Microsoft Edge needs to download the IE mode site list before it can apply IE mode settings. This process may not finish when the browser is starts. We have a policy that can force the loading of the site list before a website is loaded. For more information, see the[DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy.
+Microsoft Edge needs to download the IE mode site list before it can apply IE mode settings. This process may not finish when the browser is starts. We have a policy that can force the loading of the site list before a website is loaded. For more information, see the [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy.
 
 ### You’re unable to open files or pages that are located using file:// URLs in Microsoft Edge
 
