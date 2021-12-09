@@ -16,7 +16,7 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## December 7, 2021
+## December 8, 2021
 
 Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security patch.
 
