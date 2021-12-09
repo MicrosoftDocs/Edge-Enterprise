@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 12/07/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,10 +19,11 @@ This article describes the recommended practices for deploying Microsoft Edge in
 >[!NOTE]
 >This article applies to Microsoft Edge version 77 or later.
 
+## Article content
+
 The following sections provide specific guidance for planning your Microsoft Edge deployment.
 
-- [Plan your deployment of Microsoft Edge](#plan-your-deployment-of-microsoft-edge)
-  - [Evaluate your existing browser environment and browser needs](#evaluate-your-existing-browser-environment-and-browser-needs)
+   - [Evaluate your existing browser environment and browser needs](#evaluate-your-existing-browser-environment-and-browser-needs)
   - [Make sure your Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
   - [Determine your deployment methodology](#determine-your-deployment-methodology)
     - [Deploy to end users by role](#deploy-to-end-users-by-role)
