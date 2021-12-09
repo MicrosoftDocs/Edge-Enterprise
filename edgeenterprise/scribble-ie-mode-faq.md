@@ -58,11 +58,14 @@ This issue is because of a Chromium security restriction as described in [Restri
 
 ### Certain web pages open in Internet Explorer 11 instead of opening in Microsoft Edge
 
-If Microsoft Edge is the default browser (configured via policy [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) or manually [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6)), then all websites should open in Microsoft Edge unless the site is listed in the compatibility list.
+If Microsoft Edge is the default browser, then all websites should open in Microsoft Edge unless the site is listed in the compatibility list.
+
+> [!NOTE]
+> For more information about making Microsoft Edge the default browser, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) and [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6).
 
 If a website is still loads in Internet Explorer 11 and if you don’t this need this browser version, you can disable IE 11. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
-You can make use of IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode either by configuring IE mode policies or by using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
+You can use IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode either by configuring IE mode policies or by using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL settings can cause issues. Try removing these proxy settings and test to see if the issue is fixed. For more information, see [Auto configuration settings for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/auto-configuration-settings-for-ie11).
 
