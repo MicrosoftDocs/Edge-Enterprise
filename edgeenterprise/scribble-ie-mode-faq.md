@@ -140,6 +140,10 @@ This behavior is a known issue and is being investigated.
 <!--- begin error messages --->
 ## Error messages
 
+### Getting “The connection for this site is not secure” message when visiting certain sites with Microsoft Edge
+
+This may happen if you are trying to open a legacy website in IE mode and the site is configured to run in TLS 1.0 or TLS 1.1, which are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
+
 ### You receive the following error message: "Could not retrieve EMIE site list."
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This error could be caused by a syntax error in the Site list XML file.
