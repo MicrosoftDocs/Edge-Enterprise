@@ -3,7 +3,7 @@ title: "Scratch pad for IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2021
+ms.date: 12/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -66,25 +66,6 @@ You can make use of IE mode in Microsoft Edge to force the rendering of an IE 11
 
 Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL settings can cause issues. Try removing these proxy settings and test to see if the issue is fixed. For more information, see [Auto configuration settings for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/auto-configuration-settings-for-ie11).
 
-### You experience performance issues in Microsoft Edge when using IE mode
-
-If a site performs well in Internet Explorer 11, then it should perform well on Microsoft Edge when running in IE mode. If you experience performance issues, check the following configurations:
-
-- The site is properly configured to run in IE mode. To validate IE mode configuration and to run diagnostics, see [Get general diagnostic and configuration information](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information)
-- IE mode in Microsoft Edge is using the same document mode that was used in IE 11.To check document modes, see [Incorrect Document mode configurations](/deployedge/edge-ie-mode-faq#incorrect-document-mode-configurations).
-
-### Printing from a web page that uses ActiveX doesn’t work in Microsoft Edge
-
-Certain legacy websites use ActiveX controls to let users print a web page. These websites need to load in IE mode. You can use IE mode in Microsoft Edge to print pages from these websites.
-
-### Remote Desktop web client isn’t working
-
-Remote Desktop web client uses ActiveX controls to allow users to print. Sites that use this client need to load in IE mode. Follow the guidance in [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the Enterprise Mode IE schema guidelines. For more information, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
-
-### You’re unable to add a URL to the Enterprise Mode site list
-
-This issue could be caused by a syntax error. For more information, see [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
-
 ### You’re unable to download files from certain websites when running Microsoft Edge
 
 Certain legacy websites may experience download issues when browsing in Microsoft Edge. These websites need to load in IE mode.
@@ -104,38 +85,9 @@ The client certificate may be requested twice in IE mode. The first time around,
 
 After the favicon cache is created, you won't be asked for a client certificate again unless you delete the cache. Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon.
 
-### The window.open or window.moveTo methods may not work as expected when running a page in IE mode on Microsoft Edge
-
-This is a known issue. Using the **window.open()** or **window.moveTo()** methods to position the new window to a position of your choice may not work in IE mode due to a Chromium security restriction. For more information, see [Chrome doesn't allow JS moving window between dual monitors](https://bugs.chromium.org/p/chromium/issues/detail?id=234132).
-
-Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon. 
-
-### Unexpected behavior while using Microsoft Edge when transitioning a site to IE mode 
-
-For example, consider the following scenario: 
-
-You visit `https://sitea.domain.com` in Microsoft Edge. On the page is a form, that submits its data to `https://siteb.domain.com`.
-
-- 'SiteA' is expected and is designed to load in Microsoft Edge
-- 'SiteB' is configured to open in IE mode, for compatibility requirements
-
-The transition from Microsoft Edge to IE mode causes some or all the following changes to take place:
-
-- the POST verb is changed to GET
-- The Referer header is removed
-- Form content (the POST message body) is removed
-
-> [!NOTE]
-> This is a known issue that's being worked on and should be fixed in a future release.
-
 ### "File > New session" isn’t available in Microsoft Edge
 
 Microsoft Edge doesn’t have the **File > New session** feature of Internet Explorer. We don’t have any plans to replicate this feature. However, you can make use of our Profile features and create multiple profiles so you can start a new session with another account.
-
-### Window.open doesn't fire with body onunload event in IE mode
-
-This behavior is a known issue and is being investigated.
-
 
 <!--- begin error messages --->
 ## Error messages
@@ -148,7 +100,7 @@ This may happen if you are trying to open a legacy website in IE mode and the si
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This error could be caused by a syntax error in the Site list XML file.
 
-### You receive the following error message “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'” 
+### You receive the following error message “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'”
 
 Certain applications may require you to run the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
 
@@ -160,11 +112,3 @@ You may also need to set the `compat-mode` attribute in Enterprise Mode Site Lis
 > Your users can easily view this site list and the compatibility mode by typing **about:compat** in IE 11 or Microsoft Edge.
 
 <!-- end error messages ---->
-## General best practices and requirements for IE mode and managing compatibility for Internet Explorer in Microsoft Edge
-
-We recommend that you:
-
-- Install the latest version of Microsoft Edge. See the Stable channel release notes (/deployedge/microsoft-edge-relnote-stable-channel) 
-- Follow the guidance in the getting started guide. See [Microsoft Edge + Internet Explorer mode Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) 
-- Learn about IE mode. See [What is Internet Explorer (IE) mode?](/deployedge/edge-ie-mode)
-- Examined the trouble shooting guidance. See [Internet Explorer (IE) mode troubleshooting and FAQ](/deployedge/edge-ie-mode-faq).
