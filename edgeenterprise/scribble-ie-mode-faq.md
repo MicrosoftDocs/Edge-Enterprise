@@ -160,7 +160,7 @@ You may also need to set the `compat-mode` attribute in Enterprise Mode Site Lis
 
 We recommend that you:
 
-- Install the latest version of Microsoft Edge. See the Stable channel release notes (https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel) 
+- Install the latest version of Microsoft Edge. See the Stable channel release notes (/deployedge/microsoft-edge-relnote-stable-channel) 
 - Follow the guidance in the getting started guide. See [Microsoft Edge + Internet Explorer mode Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) 
-- Learn about IE mode. See [What is Internet Explorer (IE) mode?](https://docs.microsoft.com/en-us/deployedge/edge-ie-mode)
-- Examined the trouble shooting guidance. See [Internet Explorer (IE) mode troubleshooting and FAQ](https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-faq).
+- Learn about IE mode. See [What is Internet Explorer (IE) mode?](/deployedge/edge-ie-mode)
+- Examined the trouble shooting guidance. See [Internet Explorer (IE) mode troubleshooting and FAQ](/deployedge/edge-ie-mode-faq).
