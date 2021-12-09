@@ -20,23 +20,23 @@ This article provides customer FAQs for Microsoft Edge IE mode.
 
 ### How do I force a site to open in Internet Explorer 11?
 
-Internet Explorer 11 is being retired, and Microsoft Edge is the answer for accessing legacy and modern websites. If a legacy website doesn’t render or work correctly in Microsoft Edge you can use the IE mode feature in Microsoft Edge.
+Internet Explorer 11 is being retired, and Microsoft Edge is the answer for accessing legacy and modern websites. If a legacy website doesn’t render or work correctly in Microsoft Edge, you can use the IE mode feature in Microsoft Edge.
 
 You can force a website to load in IE 11 by using the reload in IE mode feature. For more information, see  [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 ### How do I force a site to open in Microsoft Edge?
 
-If you have Microsoft Edge installed and if it’s the default browser (configured by either via policy or manually), then all websites should open in Microsoft Edge unless a site is listed in the compatibility list.
+If Microsoft Edge is the default browser (configured by either via policy or manually), then all websites should open in Microsoft Edge unless a site is listed in the compatibility list.
 
 If a website still loads in Internet Explorer 11 and if you don’t need Internet Explorer 11, you can disable it. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
-If a website happens to load in IE mode in Microsoft Edge it’s because of an IE mode policy or a manual configuration that’s forcing Microsoft Edge to load the site in IE mode. Make sure you check the site in question to verify that it’s not in the IE Site list or in IE mode. You can do that by running [IE mode diagnostics](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information). Explore our [troubleshooting guide](/deployedge/edge-ie-mode-faq) to identify and fix any other issues.
+If a website happens to load in IE mode in Microsoft Edge, it’s because of an IE mode policy or a manual configuration that’s forcing Microsoft Edge to load the site in IE mode. Make sure you check the site in question to verify that it’s not in the IE Site list or in IE mode. You can do that by running [IE mode diagnostics](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information). Explore our [troubleshooting guide](/deployedge/edge-ie-mode-faq) to identify and fix any other issues.
 
 ## Things that don't work
 
 ### You're unable to configure IE mode feature in Microsoft Edge
 
-Verify you have followed the [prerequisites](/deployedge/edge-ie-mode#prerequisites) for IE mode, which includes enabling Internet Explorer 11 in Windows features. For more information, see  the [Microsoft Edge + Internet Explorer mode](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) Getting Started guide and [Internet Explorer (IE) mode troubleshooting and FAQ](/deployedge/edge-ie-mode-faq).
+Verify you,ve followed the [prerequisites](/deployedge/edge-ie-mode#prerequisites) for IE mode, which includes enabling Internet Explorer 11 in Windows features. For more information, see  the [Microsoft Edge + Internet Explorer mode](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) Getting Started guide and [Internet Explorer (IE) mode troubleshooting and FAQ](/deployedge/edge-ie-mode-faq).
 
 ### The "Reload in Internet Explorer mode" option is missing
 
@@ -46,7 +46,7 @@ This feature is available on Microsoft Edge version 92 or later. For this option
 
 Even after configuring IE mode, certain websites, especially websites that spawn a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
 
-For this kind of redirected website you can make use of the `allow-redirect="true"` in the site list configuration. For more information, see [Updated schema elements](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
+For this kind of redirected website, you can make use of the `allow-redirect="true"` in the site list configuration. For more information, see [Updated schema elements](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
 
 ### Websites aren’t loading in IE mode when you launch Microsoft Edge for the first time
 
@@ -54,36 +54,36 @@ Microsoft Edge needs to download the IE mode site list before it can apply IE mo
 
 ### You’re unable to open files or pages that are located using file:// URLs in Microsoft Edge
 
-This is a Chromium security restriction as described in [Restrictions on File Urls](https://textslashplain.com/2019/10/09/navigating-to-file-urls/). However, you can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
+This issue is because of a Chromium security restriction as described in [Restrictions on File Urls](https://textslashplain.com/2019/10/09/navigating-to-file-urls/). However, you can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
 
 ### Certain web pages open in Internet Explorer 11 instead of opening in Microsoft Edge
 
-If you have Microsoft Edge installed and if it’s the default browser (configured via policy [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) or manually [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6)) then all websites should open in Microsoft Edge unless the site is listed in the compatibility list.
+If Microsoft Edge is the default browser (configured via policy [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) or manually [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6)), then all websites should open in Microsoft Edge unless the site is listed in the compatibility list.
 
 If a website is still loads in Internet Explorer 11 and if you don’t this need this browser version, you can disable IE 11. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
-You can make use of IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode either by configuring IE mode policies or by using using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
+You can make use of IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode either by configuring IE mode policies or by using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL settings can cause issues. Try removing these proxy settings and test to see if the issue is fixed. For more information, see [Auto configuration settings for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/auto-configuration-settings-for-ie11).
 
 ### You experience performance issues in Microsoft Edge when using IE mode
 
-If a site performs well in Internet Explorer 11 then it should perform well on Microsoft Edge when running in IE mode. If you experience performance issues, check the following configurations:
+If a site performs well in Internet Explorer 11, then it should perform well on Microsoft Edge when running in IE mode. If you experience performance issues, check the following configurations:
 
 - The site is properly configured to run in IE mode. To validate IE mode configuration and to run diagnostics, see [Get general diagnostic and configuration information](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information)
 - IE mode in Microsoft Edge is using the same document mode that was used in IE 11.To check document modes, see [Incorrect Document mode configurations](/deployedge/edge-ie-mode-faq#incorrect-document-mode-configurations).
 
 ### Printing from a web page that uses ActiveX doesn’t work in Microsoft Edge
 
-Certain legacy websites use ActiveX controls to let users print a web page. These websites needs to load in IE mode. You can use IE mode in Microsoft Edge to print pages from these websites.
+Certain legacy websites use ActiveX controls to let users print a web page. These websites need to load in IE mode. You can use IE mode in Microsoft Edge to print pages from these websites.
 
 ### Remote Desktop web client isn’t working
 
-Remote Desktop web client uses ActiveX controls to allow users to print. Sites that use this client needs to load in IE mode. Follow the guidance in [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the Enterprise Mode IE schema guidelines. For more information, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
+Remote Desktop web client uses ActiveX controls to allow users to print. Sites that use this client need to load in IE mode. Follow the guidance in [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the Enterprise Mode IE schema guidelines. For more information, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
 
 ### You’re unable to add a URL to the Enterprise Mode site list
 
-This could be a syntax error. For more information, see [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
+This issue could be caused by a syntax error. For more information, see [Use the Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) and follow the [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#:~:text=Updated%20schema%20elements%20%2).
 
 ### You’re unable to download files from certain websites when running Microsoft Edge
 
@@ -91,16 +91,16 @@ Certain legacy websites may experience download issues when browsing in Microsof
 
 ### Child windows running in IE mode in Microsoft Edge may experience rendering issues like text wrapping, and content getting cut off
 
-The content area of a child window rendering in IE mode in Microsoft Edge is slightly different than what it is on Internet Explorer 11. If a web page has been designed with pixel-based alignments or positioning you may experience incorrect rendering, text wrapping, and so on.
+The content area of a child window rendering in IE mode in Microsoft Edge is slightly different than what it is on Internet Explorer 11. If a web page has been designed with pixel-based alignments or positioning, you may experience incorrect rendering, text wrapping, and so on.
 
 Two policy settings were added to Microsoft Edge from version 95 that let you specify custom adjustments to the height and width of pop-up windows generated from IE mode sites via the window.open method. You can use the following policies to adjust window size:
 
 - [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment)
 - [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment)
 
-### You may receive multiple authentication prompt when running a page in IE mode on Microsoft Edge
+### You may receive multiple authentication prompts when running a page in IE mode on Microsoft Edge
 
-The client certificate may be requested twice in IE mode. The first time around, the certificate selection dialog will be displayed in IE mode, and the second time around, the dialog will be displayed in Microsoft Edge. This is a design limitation that requires both the frame process and the window process to request authentication.
+The client certificate may be requested twice in IE mode. The first time around, the certificate selection dialog will be displayed in IE mode, and the second time around, the dialog will be displayed in Microsoft Edge. This behavior is a design limitation that requires both the frame process and the window process to request authentication.
 
 After the favicon cache is created, you won't be asked for a client certificate again unless you delete the cache. Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon.
 
@@ -122,8 +122,8 @@ You visit `https://sitea.domain.com` in Microsoft Edge. On the page is a form, t
 The transition from Microsoft Edge to IE mode causes some or all the following changes to take place:
 
 - the POST verb is changed to GET
-- the Referer header is removed
-- form content (the POST message body) is removed
+- The Referer header is removed
+- Form content (the POST message body) is removed
 
 > [!NOTE]
 > This is a known issue that's being worked on and should be fixed in a future release.
@@ -134,7 +134,7 @@ Microsoft Edge doesn’t have the **File > New session** feature of Internet Exp
 
 ### Window.open doesn't fire with body onunload event in IE mode
 
-This is a known issue and is being investigated.
+This behavior is a known issue and is being investigated.
 
 
 <!--- begin error messages --->
@@ -142,11 +142,11 @@ This is a known issue and is being investigated.
 
 ### You receive the following error message: "Could not retrieve EMIE site list."
 
-You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This could be due to a syntax error in the Site list XML file.
+You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This error could be caused by a syntax error in the Site list XML file.
 
 ### You receive the following error message “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'” 
 
-Certain applications may  require you to run the web page in IE mode. You can use the of IE mode feature in  Microsoft Edge.
+Certain applications may require you to run the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
 
 You can force a website to load in IE 11 by either configuring IE mode policies or use the reload in IE mode feature.
 
