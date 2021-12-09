@@ -79,8 +79,8 @@ The content area of a child window rendering in IE mode in Microsoft Edge is sli
 
 Two policy settings were added to Microsoft Edge from version 95 that let you specify custom adjustments to the height and width of pop-up windows generated from IE mode sites via the window.open method. You can use the following policies to adjust window size:
 
-- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment)
-- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment)
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - This setting lets you specify a custom adjustment to the height of popup windows generated from the Internet Explorer mode site.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) - This setting lets you specify a custom adjustment to the width of popup windows generated from the Internet Explorer mode site.
 
 ### You may receive multiple authentication prompts when running a page in IE mode on Microsoft Edge
 
