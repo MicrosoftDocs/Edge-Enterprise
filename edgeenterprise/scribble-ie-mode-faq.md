@@ -58,7 +58,7 @@ This issue is because of a Chromium security restriction as described in [Restri
 
 ### Certain web pages open in Internet Explorer 11 instead of opening in Microsoft Edge
 
-If Microsoft Edge is the default browser, then all websites should open in Microsoft Edge unless the site is listed in the compatibility list.
+If Microsoft Edge is the default browser, then all websites should open in Microsoft Edge unless the site is listed in the [compatibility view list](/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622935(v=vs.85)).
 
 > [!NOTE]
 > For more information about making Microsoft Edge the default browser, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) and [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6).
