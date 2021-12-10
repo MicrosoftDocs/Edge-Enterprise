@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2021
+ms.date: 12/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -418,6 +418,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
 |[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
@@ -455,7 +456,6 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
@@ -521,6 +521,7 @@ These tables list all of the browser-related group policies available in this re
 |[TranslateEnabled](#translateenabled)|Enable Translate|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (deprecated)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
@@ -19767,6 +19768,68 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InAppSupportEnabled
+
+  #### In-app support Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Microsoft Edge uses the in-app support feature (enabled by default) to allow users to contact our support agents directly from the browser. Also, by default, users can't disable (turn off) the in-app support feature.
+
+If you enable this policy or don't configure it, users can invoke in-app support.
+
+If you disable this policy, users can't invoke in-app support.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InAppSupportEnabled
+  - GP name: In-app support Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InAppSupportEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: InAppSupportEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InPrivateModeAvailability
 
   #### Configure InPrivate mode availability
@@ -22289,63 +22352,6 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
 ```
 0x00000001
-```
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### OpenMicrosoftLinksInEdgeEnabled
-
-  #### Always open links from certain Microsoft apps in Microsoft Edge
-
-  
-  
-  #### Supported versions:
-
-  - On Windows since 97 or later
-
-  #### Description
-
-  Make Microsoft Edge open links from other supported Microsoft Apps, such as Microsoft Outlook and Microsoft Teams on Windows 10 and above, so that web links can be opened using the correct profile in Microsoft Edge. This does not change the browser set as the default in Windows settings.
-
-If you do not configure this policy, the end user will see a prompt to manage this policy the first time Microsoft Edge opens a link from supported Microsoft apps. Users can manage this policy in Microsoft Edge settings at any time. The default browser setting in Windows will not be changed based on the Microsoft Edge setting.
-
-If this policy is Enabled, Microsoft Edge will open web links from these apps, and will use the correct profile where possible, even when Microsoft Edge is not set as the default in Windows settings. This policy does not change the browser set as the default in Windows settings.
-
-If this policy is disabled, the browser set as the default in Windows settings will be used to open web links from these apps.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: OpenMicrosoftLinksInEdgeEnabled
-  - GP name: Always open links from certain Microsoft apps in Microsoft Edge
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: OpenMicrosoftLinksInEdgeEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000000
 ```
 
   
@@ -26556,6 +26562,68 @@ If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### U2fSecurityKeyApiEnabled
+
+  #### Allow using the deprecated U2F Security Key API (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It won't work in Microsoft Edge version 104.
+
+If you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.
+
+If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ends in Microsoft Edge version 104.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: U2fSecurityKeyApiEnabled
+  - GP name: Allow using the deprecated U2F Security Key API (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: U2fSecurityKeyApiEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: U2fSecurityKeyApiEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
