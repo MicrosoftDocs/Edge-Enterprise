@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/24/2021
+ms.date: 12/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following policies were added and deprecated for this documentation update.
-
-| Policy Name | Caption |
-|--|--|
-|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
-|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (DEPRECATED)|
 
 ## Available policies
 
@@ -464,7 +455,6 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OpenMicrosoftLinksInEdgeEnabled](#openmicrosoftlinksinedgeenabled)|Always open links from certain Microsoft apps in Microsoft Edge|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
@@ -484,13 +474,13 @@ These tables list all of the browser-related group policies available in this re
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
-|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used as Microsoft Edge primary accounts|
+|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used to sign in to Microsoft Edge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (deprecated)|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
@@ -17381,23 +17371,23 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### Description
 
-  In Microsoft Edge, the Experimentation and Configuration Service is used to deploy Experimentation and Configuration payload.
+  The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.
 
 Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
 
-Configuration payload consists of a list of settings that Microsoft wants to deploy to Microsoft Edge to optimize user experience. For example, configuration payload may specify how often Microsoft Edge sends requests to the Experimentation and Configuration Service to retrieve the newest payload.
+Configuration payload consists of a list of recommended settings that Microsoft wants to deploy to optimize the user experience.
 
-Additionaly, configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+Configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
 
 If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.
 
-If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is delivered.
+If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.
 
-If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely.
+If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.
 
-If you don't configure this policy, on a managed device on Stable and Beta channels the behavior is the same as the 'ConfigurationsOnlyMode'.
+If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.
 
-If you don't configure this policy, on an unmanaged device the behavior is the same as the 'FullMode'.
+If you don't configure this policy on an unmanaged device, the behavior is the same as the 'FullMode'.
 
 Policy options mapping:
 
@@ -22304,63 +22294,6 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   [Back to top](#microsoft-edge---policies)
 
-  ### OpenMicrosoftLinksInEdgeEnabled
-
-  #### Always open links from certain Microsoft apps in Microsoft Edge
-
-  
-  
-  #### Supported versions:
-
-  - On Windows since 97 or later
-
-  #### Description
-
-  Make Microsoft Edge open links from other supported Microsoft Apps, such as Microsoft Outlook and Microsoft Teams on Windows 10 and above, so that web links can be opened using the correct profile in Microsoft Edge. This does not change the browser set as the default in Windows settings.
-
-If you do not configure this policy, the end user will see a prompt to manage this policy the first time Microsoft Edge opens a link from supported Microsoft apps. Users can manage this policy in Microsoft Edge settings at any time. The default browser setting in Windows will not be changed based on the Microsoft Edge setting.
-
-If this policy is Enabled, Microsoft Edge will open web links from these apps, and will use the correct profile where possible, even when Microsoft Edge is not set as the default in Windows settings. This policy does not change the browser set as the default in Windows settings.
-
-If this policy is disabled, the browser set as the default in Windows settings will be used to open web links from these apps.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: OpenMicrosoftLinksInEdgeEnabled
-  - GP name: Always open links from certain Microsoft apps in Microsoft Edge
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: OpenMicrosoftLinksInEdgeEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000000
-```
-
-  
-
-  [Back to top](#microsoft-edge---policies)
-
   ### OverrideSecurityRestrictionsOnInsecureOrigin
 
   #### Control where security restrictions on insecure origins apply
@@ -23589,7 +23522,7 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 
   ### RestrictSigninToPattern
 
-  #### Restrict which accounts can be used as Microsoft Edge primary accounts
+  #### Restrict which accounts can be used to sign in to Microsoft Edge
 
   
   
@@ -23599,11 +23532,13 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 
   #### Description
 
-  Determines which accounts can be set as browser primary accounts in Microsoft Edge (the account that is chosen during the Sync opt-in flow).
+  Determines which accounts can be used to sign in to the Microsoft Edge account that's chosen during the Sync opt-in flow.
 
-If a user tries to configure a browser primary account with a username that doesn't match this pattern, they are blocked and will get the appropriate error message. You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
+You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. If a user tries to sign in to the browser with an account whose username doesn't match this pattern, they are blocked and will get the appropriate error message. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
 
-If you don't configure this policy or leave it blank, users can set any account as a browser primary account in Microsoft Edge.
+If you don't configure this policy or leave it blank, users can use any account to sign in to Microsoft Edge.
+
+Note that signed-in profiles with a username that doesn't match this pattern will be signed out after this policy is enabled.
 
   #### Supported features:
 
@@ -23620,7 +23555,7 @@ If you don't configure this policy or leave it blank, users can set any account 
   ##### Group Policy (ADMX) info
 
   - GP unique name: RestrictSigninToPattern
-  - GP name: Restrict which accounts can be used as Microsoft Edge primary accounts
+  - GP name: Restrict which accounts can be used to sign in to Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -23962,9 +23897,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### SSLVersionMin
 
-  #### Minimum TLS version enabled (deprecated)
+  #### Minimum TLS version enabled
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
@@ -23972,11 +23907,13 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### Description
 
-  Support for suppressing the TLS 1.0/1.1 warning was removed from Microsoft Edge starting in version 91 and this policy stopped working then.
+  Sets the minimum supported version of TLS.
 
-Sets the minimum supported version of TLS. If you don't configure this policy, Microsoft Edge will show an error for TLS 1.0 and TLS 1.1, but the user will be able to bypass it.
+If you set this policy to 'tls1.2', Microsoft Edge will show an error for TLS 1.0 and TLS 1.1 and the user will not be able to bypass the error.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Any unrecognized value is ignored.
+If you don't configure this policy, Microsoft Edge will still show an error for TLS 1.0 and TLS 1.1 but the user will be able to bypass it.
+
+Support for suppressing the TLS 1.0/1.1 warning was removed from Microsoft Edge starting in version 91. The 'tls1' and 'tls1.1' values are no longer supported.
 
 Policy options mapping:
 
@@ -24003,7 +23940,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SSLVersionMin
-  - GP name: Minimum TLS version enabled (deprecated)
+  - GP name: Minimum TLS version enabled
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
