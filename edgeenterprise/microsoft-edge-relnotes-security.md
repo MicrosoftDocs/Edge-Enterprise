@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2021
+ms.date: 12/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,9 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## December 8, 2021
+## December 10, 2021
 
-Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security patch.
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 96.0.1054.53 or higher)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## November 19, 2021
 
