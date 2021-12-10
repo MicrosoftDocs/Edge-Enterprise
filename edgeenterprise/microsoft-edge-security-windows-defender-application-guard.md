@@ -46,6 +46,10 @@ The next screenshot shows an example of Application Guard's message showing that
 
 Application Guard support in the new Microsoft Edge  browser has functional parity with Microsoft Edge Legacy and includes several improvements.
 
+### Enable Upload Blocking
+
+Starting from Microsoft Edge 96, admins now have the option to block uploads while in the container, meaning that users cannot upload files from their local device to their Application Guard instance. This support can be controlled via policy. You can update the Edge policy [ApplicationGuardUploadBlockingEnabled](/deployedge/microsoft-edge-policies#applicationguarduploadblockingenabled) to enable or disable uploads in the container.
+
 ### Enable Application Guard in passive mode and browse Edge normally
 
 Starting from Microsoft Edge 94, users now have the option to configure passive mode, meaning that Application Guard ignores the site list configuration and users can browse Edge normally. This support can be controlled via policy. You can update the Edge policy [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) to enable or disable passive mode.
