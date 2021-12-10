@@ -28,7 +28,7 @@ In the Internet Explorer web platform, each of these decisions was called a URLA
 
 In Microsoft Edge, most per-site permissions are controlled by settings and policies expressed using a simple syntax with limited wild-card support. Windows Security Zones are still used for only a few configuration decisions.
 
-## Background: Windows Security Zones
+## Windows Security Zones
 
 To simplify configuration for the user or admin, the legacy platform classified sites into five different **Security Zones:** Local Machine, Local Intranet, Trusted, Internet, and Restricted Sites.
 
@@ -51,15 +51,43 @@ Enterprises can use Group Policy to provision site lists for individual polici
 
 There are also many policies (whose names contain **Default**) that control the default behavior for a given setting.
 
-Many of the settings are obscure (WebSerial, WebMIDI) and there’s often no reason to change a setting away from the default (Images).
+Many of the settings are obscure (WebSerial, WebMIDI) and there’s often no reason to change a setting from the default.
 
-## Common Questions
+## Security Zones in Microsoft Edge
 
-## Can the URL filter format match on a site’s IP address?
+While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a few cases. This is done to simplify deployment in Enterprises that have historically relied upon Zones configuration.
+
+The following behaviors are controlled by Zone policy:
+
+- When deciding whether to release Windows Integrated Authentication (Kerberos or NTLM) credentials automatically.
+- When deciding how to handle file downloads.
+- For Internet Explorer mode.
+
+## Credential release
+
+By default, Microsoft Edge will evaluate URLACTION_CREDENTIALS_USE to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
+
+## File downloads
+
+Evidence about the origins of a file download (also known as “[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)" is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
+
+If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, the Microsoft Edge download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn’t download – Blocked".  
+
+## IE mode
+
+IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/edge-ie-mode#configure-all-intranet-sites). When using this configuration, Microsoft Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a consequence they evaluate Zones settings for every policy decision just as Internet Explorer did.
+
+## Summary
+
+In most cases, Microsoft Edge settings can be left at their defaults. Administrators who wish to change the defaults for all sites or specific sites can use the appropriate Group Policies to specify Site Lists or default behaviors. In a handful of cases, such as credential release, file download, and IE mode, administrators will continue to control behavior by configuring Windows Security Zones settings.
+
+## Frequently asked questions
+
+### Can the URL filter format match on a site’s IP address?
 
 No, the format doesn't support specifying an IP-range for allowlists and blocklists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (for example, `http://127.0.0.1/`). If a hostname is used (`http://localhost`), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
 
-## Can URL filters match dotless host names?
+### Can URL filters match dotless host names?
 
 No. You must list each hostname, for example `https://payroll`, `https://stock`, `https://who`, and so on.
 
@@ -71,35 +99,7 @@ If you were forward-thinking enough to structure your intranet such that your ho
 
 - `https://sharepoint.contoso-intranet.com`
 
-You can configure each desired policy with a ***.contoso-intranet.com** entry and your entire intranet will be opted in.
-
-## Use of Security Zones in Microsoft Edge
-
-While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a few cases. This is done to simplify deployment in Enterprises that have historically relied upon Zones configuration.
-
-The following behaviors are controlled by Zone policy:
-
-- When deciding whether to release Windows Integrated Authentication (Kerberos/NTLM) credentials automatically.
-- When deciding how to handle file downloads.
-- For Internet Explorer mode.
-
-## Credential Release
-
-By default, Microsoft Edge will evaluate URLACTION_CREDENTIALS_USE to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
-
-## File downloads
-
-Evidence about the origins of a file download (also known as “[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/) is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
-
-If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, the Microsoft Edge download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn’t download – Blocked".  
-
-## IE mode
-
-IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/edge-ie-mode#configure-all-intranet-sites). When using this configuration, Microsoft Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a consequence they evaluate Zones settings for every policy decision just as Internet Explorer did.
-
-## Summary
-
-In most cases, Microsoft Edge settings can be left at their defaults. Administrators who wish to change the defaults for all sites or specific sites can use the appropriate Group Policies to specify Site Lists or default behaviors. In a handful of cases, such as credential release, file download, and IE mode, administrators will continue to control behavior by configuring Windows Security Zones settings.
+In the preceding scenario you can configure each policy with a ***.contoso-intranet.com** entry and your entire intranet will be opted in.
 
 ## See also
 
