@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2021
+ms.date: 12/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -19,16 +19,9 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
-
-## New policies
-
-The following policy was added to this documentation update.
-
-| Policy Name | Caption |
-|--|--|
-|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 
 ## Available policies
 
