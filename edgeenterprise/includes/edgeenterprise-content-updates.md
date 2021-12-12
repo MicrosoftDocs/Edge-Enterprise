@@ -2,6 +2,22 @@
 
 
 
+## Week of December 06, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/8/2021 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
+| 12/8/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 12/8/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/8/2021 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | modified |
+| 12/9/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 12/10/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 12/10/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/10/2021 | [Microsoft Edge channel overview](/DeployEdge/microsoft-edge-channels) | modified |
+| 12/10/2021 | [Learn how to configure initial preferences on Microsoft Edge.](/DeployEdge/initial-preferences-support-on-microsoft-edge-browser) | modified |
+
+
 ## Week of November 29, 2021
 
 
