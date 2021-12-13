@@ -3,7 +3,7 @@ title: "IE mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/09/2021
+ms.date: 12/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -181,7 +181,7 @@ You can use IEChooser to launch the Internet Explorer DevTools to debug the cont
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then you can select **Settings and more** (the ellipses icon ...) **> More Tools > Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
@@ -230,10 +230,6 @@ The ability to save links as web pages  requires the following minimum operating
 - Windows 10, version 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
 - Windows 10, version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
 - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
-
-### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
-
-Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To test these sites, can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
