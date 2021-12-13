@@ -233,7 +233,7 @@ The ability to save links as web pages  requires the following minimum operating
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To test these sites, can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode sites on Microsoft Edge. To test these sites, you can run Microsoft Edge with the `--ie-mode-test` command-line flag. Make sure that there are no other Microsoft Edge instances running. Then select **Settings and more** (the ellipses icon) ... **> More Tools > Open sites in Edge mode**.
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
