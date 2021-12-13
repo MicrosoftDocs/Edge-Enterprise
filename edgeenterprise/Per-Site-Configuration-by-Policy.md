@@ -45,13 +45,13 @@ Microsoft Edge Legacy inherited the Zones architecture from its Internet Explore
 
 Microsoft Edge makes limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
-When end users open  a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar or via various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
+When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar or via various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
 
 :::image type="content" source="media/per-site-configuration-by-policy/edge-page-info.png" alt-text="Page information and settings for the current page in the browser.":::
 
 Enterprises can use Group Policy to set up site lists for individual policies that control the browser’s behavior. To find these policies, open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for "ForUrls" to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed in the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
 
-There are also many policies (whose names contain **Default**) that control the default behavior for a given setting.
+There are also many policies (whose names contain "Default") that control the default behavior for a given setting.
 
 Many of the settings are obscure (WebSerial, WebMIDI) and there’s often no reason to change a setting from the default.
 
@@ -77,7 +77,7 @@ If the Windows Security Zone policy is configured to disable the setting for
 
 ## IE mode
 
-IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/edge-ie-mode#configure-all-intranet-sites). When using this configuration, Microsoft Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a consequence they evaluate Zones settings for every policy decision just as Internet Explorer did.
+IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/edge-ie-mode#configure-all-intranet-sites). When using this configuration, Microsoft Edge evaluates the Zone of a URL when deciding whether or not it should open in IE mode. Beyond this initial decision, IE mode tabs are really running Internet Explorer, and as a result they evaluate Zones settings for every policy decision just as Internet Explorer did.
 
 ## Summary
 
@@ -87,7 +87,7 @@ In most cases, Microsoft Edge settings can be left at their defaults. Administra
 
 ### Can the URL filter format match on a site’s IP address?
 
-No, the format doesn't support specifying an IP-range for allowlists and blocklists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (for example, `http://127.0.0.1/`). If a hostname is used (`http://localhost`), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
+No, the format doesn't support specifying an IP range for allowlists and blocklists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (for example, `http://127.0.0.1/`). If a hostname is used (`http://localhost`), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
 
 ### Can URL filters match dotless host names?
 
