@@ -49,7 +49,7 @@ When end users open  a settings page like `edge://settings/content/siteDetails
 
 :::image type="content" source="media/per-site-configuration-by-policy/edge-page-info.png" alt-text="Page information and settings for the current page in the browser.":::
 
-Enterprises can use Group Policy to set up site lists for individual policies that control the browser’s behavior. To find these policies, open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for **ForUrls** to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed in the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
+Enterprises can use Group Policy to set up site lists for individual policies that control the browser’s behavior. To find these policies, open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for "ForUrls" to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed in the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
 
 There are also many policies (whose names contain **Default**) that control the default behavior for a given setting.
 
