@@ -30,7 +30,7 @@ The first step is to create your plist. You can create the plist file with any t
 
 For a list of supported policies and their preference key names, see [Microsoft Edge browser policies reference](./microsoft-edge-policies.md). In the policy templates file, which can be downloaded from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise), there's a plist example (*itadminexample.plist*) in the **examples** folder. This file contains all supported data types that you can customize to define your policy settings.
 
-After you create the contents of your plist, name it using the Microsoft Edge preference domain, *com.microsoft.Edge*. The name is case-sensitive and shouldn't include the channel you are targeting because it applies to all Microsoft Edge channels. The plist file name must be **_com.microsoft.Edge.plist_**.
+After you create the contents of your plist, name it "*com.microsoft.Edge*", which is the  Microsoft Edge preference domain. This name is case-sensitive and shouldn't include the channel you're targeting because it applies to all Microsoft Edge channels. The plist file name must be **_com.microsoft.Edge.plist_**.
 
 > [!IMPORTANT]
 > Starting with build 78.0.249.2, all Microsoft Edge channels on macOS read from the **com.microsoft.Edge** preference domain. All prior releases read from a channel specific domain, such as **com.microsoft.Edge.Dev** for Dev channel.
