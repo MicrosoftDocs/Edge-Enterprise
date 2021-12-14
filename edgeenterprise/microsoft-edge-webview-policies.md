@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/24/2021
+ms.date: 12/02/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -19,15 +19,23 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following policy was added to this documentation update.
+
+| Policy Name | Caption |
+|--|--|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 
 ## Available policies
 
 These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
 
 - [Loader Override Settings](#loader-override-settings)
+- [Additional](#additional)
 
 
 ### [*Loader Override Settings*](#loader-override-settings-policies)
@@ -36,6 +44,11 @@ These tables list all of the group policies available in this release of Microso
 |-|-|
 |[BrowserExecutableFolder](#browserexecutablefolder)|Configure the location of the browser executable folder|
 |[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference|
+### [*Additional*](#additional-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 
 
 
@@ -148,6 +161,87 @@ To set the value for the release channel preference, provide a Value name and Va
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ## Additional policies
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### ExperimentationAndConfigurationServiceControl
+
+  #### Control communication with the Experimentation and Configuration Service
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 97 or later
+
+  #### Description
+
+  The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.
+
+Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
+
+Configuration payload consists of a list of recommended settings that Microsoft wants to deploy to optimize the user experience.
+
+Configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+
+If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.
+
+If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.
+
+If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.
+
+If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.
+
+If you don't configure this policy on an unmanaged device, the behavior is the same as the 'FullMode'.
+
+Policy options mapping:
+
+* FullMode (2) = Retrieve configurations and experiments
+
+* ConfigurationsOnlyMode (1) = Retrieve configurations only
+
+* RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExperimentationAndConfigurationServiceControl
+  - GP name: Control communication with the Experimentation and Configuration Service
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: ExperimentationAndConfigurationServiceControl
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
 ```
 
   

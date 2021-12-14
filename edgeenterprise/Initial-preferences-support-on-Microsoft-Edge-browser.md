@@ -1,5 +1,5 @@
 ---
-title: "Initial preferences support on Microsoft Edge browser"
+title: "Learn how to configure initial preferences on Microsoft Edge."
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
@@ -9,27 +9,32 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Initial preferences support on Microsoft Edge browser."
+description: "Learn how to configure initial preferences on Microsoft Edge."
 ---
 
 # Configure Microsoft Edge using Initial Preferences settings for the first run
 
-Use the following information to configure Microsoft Edge Initial Preferences settings on your Windows devices.
+Use the information in this article to configure Microsoft Edge Initial Preferences settings on your Windows devices.
 
 > [!Note]
 > This article applies to Microsoft Edge version 93 or later.
 
 ## Configure policy settings on Windows
 
-Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences, formerly named “Master Preferences”, to help admins configure browsers for the first run; see the list of the supported settings below.  
+Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences, formerly named “Master Preferences”, to help admins configure browsers for the first run. For more information, see the supported settings in the following [Preference settings](#preference-settings) table.
 
-When deployed, Initial Preferences act as the default browser settings on managed devices; these are the settings that are preferred by admins to be used as default but can be changed by users or are not available for some devices as they are not joined to an Active Directory® domain.
+When deployed, Initial Preferences act as the default browser settings on managed devices. These preferences are the settings preferred by admins to be used as default browser settings for the first run.
 
-Some examples of Intial Preferences settings include initial configuration of a default homepage or tabs with specific URLs.
+> [!NOTE]
+> Initial preferences can be changed by users and aren't available for some devices because they aren't joined to an Active Directory® domain.
 
-Preferences are copied from initial_preferences file only once and any change made to this file after configuration will not be respected. If a setting is managed by a [Microsoft Edge policy](/deployedge/microsoft-edge-policies) and configured in the initial_preferences file, the policy always takes precedence.
+Some examples of initial preferences settings include initial configuration of a default homepage or tabs with specific URLs.
 
-Below is the list of preferences setting that are currently supported by Microsoft Edge:
+Preferences are only copied once from the *initial_preferences* file, changes made to this file after configuration won't be respected. If a setting is managed by a [Microsoft Edge policy](/deployedge/microsoft-edge-policies) and configured in the *initial_preferences file*, the policy always takes precedence.
+
+### Preference settings
+
+The following table shows the settings that are currently supported by Microsoft Edge.
 
 | Preferences Category | Setting |
 | - | - |
@@ -43,19 +48,21 @@ Below is the list of preferences setting that are currently supported by Microso
 | homepage | Homepage_url |
 | homepage_is_newtabpage | homepage_is_newtabpage |
 | Session | restore_on_startup<br>startup_urls |
-| Extensions | Extensions : settings |
+| Extensions | Extensions: settings |
 
 ## 1: Download an example initial_preferences file
 
-To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). Extract the files, and open the `initial_preferences` file within the `examples` folder.
+To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](/edge/business/download). Extract the files in the download, and then open the *initial_preferences* file in the *examples* folder. The next screenshot shows the policy file options that are available to download
+
+:::image type="content" source="media/initial-preferences-support-on-microsoft-edge-browser/edge-policy-files.png" alt-text="Microsoft Edge policy files available for download.":::
 
 ## 2: Customize and validate the initial_preferences file
 
-Customize the preferences settings in the downloaded *initial_preferences* file and validate the changes to make sure that there are no errors in the JSON code. If you find errors, check the syntax and structure of the *initial_preferences* file, make corrections, and validate it again. Few example tools to validate JSON, Online [JSON Tools](https://jsonformatter.org/) or [JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
+Customize the preferences settings in the downloaded *initial_preferences* file and validate the changes to make sure that there are no errors in the JSON code. If you find errors, check the syntax and structure of the *initial_preferences* file, make corrections, and check it again. Few example tools to validate JSON, Online [JSON Tools](https://jsonformatter.org/) or [JSON editing in Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
 
 ## 3: Deploy preferences to users' computer
 
-Deploy the *initial_preferences* file to users' devices at the same time as Microsoft Edge Browser is deployed and place the file in the following location on the device.
+Deploy the *initial_preferences* file to users' devices at the same time as Microsoft Edge is deployed and put the file in the following location on the device.
 
 ### Windows (AMD64 and ARM64)
 
@@ -66,7 +73,8 @@ Deploy the *initial_preferences* file to users' devices at the same time as Micr
 |Canary | `"%LOCALAPPDATA%\Microsoft\Edge SxS\Application"` |
 | Dev | `"C:\Program Files (x86)\Microsoft\Edge Dev\Application"` |
 
-**Note**: The *initial_preferences* file needs to be deployed to the same folder as the msedge.exe file on users' Windows computers.  
+> [!NOTE]
+> The *initial_preferences* file needs to be deployed to the same folder as the *msedge.exe* file on users' Windows computers.  
 
 ### macOS
 
@@ -79,8 +87,8 @@ Deploy the *initial_preferences* file to users' devices at the same time as Micr
 
 ## Important notes: MSI / Pkg Deployment and *initial_preferences* interaction
 
-Initial preferences will only take effect when the initial_preferences file is deployed before the browser first run by the end users.  
+Initial preferences will only take effect after the *initial_preferences* file is deployed before the browser's first run by the end users.  
 
 ## See also
 
-- [The *initial_prefrences* example template file](https://www.microsoft.com/edge/business/download)
+- [The *initial_prefrences* example template file](/edge/business/download)
