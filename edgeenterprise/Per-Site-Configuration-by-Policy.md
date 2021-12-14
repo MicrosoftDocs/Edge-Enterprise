@@ -3,7 +3,7 @@ title: "Per Site configuration by policy"
 ms.author: collw
 author: dan-wesley
 manager: laurawi
-ms.date: 12/13/2021
+ms.date: 12/14/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
