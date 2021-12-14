@@ -3,7 +3,7 @@ title: "Filter format for Microsoft Edge URL policies"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -98,9 +98,9 @@ Any other **schema** is treated as a custom **schema**, but only the _schema:*_ 
 
 > [!NOTE]
 > Portions of this page are modifications based on work created and shared by Chromium.org and used according to terms 
-  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original [Chromium page can be found here](https://www.chromium.org/administrators/url-blacklist-filter-format).
+  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original [Chromium page can be found here](https://www.chromium.org/administrators/url-blocklist-filter-format).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## See also
 

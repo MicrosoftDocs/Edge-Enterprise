@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,18 +19,30 @@ This article describes the recommended practices for deploying Microsoft Edge in
 >[!NOTE]
 >This article applies to Microsoft Edge version 77 or later.
 
+## Article content
+
 The following sections provide specific guidance for planning your Microsoft Edge deployment.
 
-- [Evaluate browser environment and requirements](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Make sure Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
-- [Pick deployment methodology](#determine-your-deployment-methodology)
-- [Do site discovery](#do-site-discovery)
-- [Pick channel strategy](#determine-your-channel-strategy)
-- [Identify and configure policies](#define-and-configure-policies)
-- [Test App compatibility](#do-app-compatibility-testing)
-- [Microsoft Edge pilot](#deploy-microsoft-edge-to-a-pilot-group)
-- [Evaluate pilot](#validate-your-deployment)
-- [Deploy Microsoft Edge across the enterprise](#broad-deployment-of-microsoft-edge)
+   - [Evaluate your existing browser environment and browser needs](#evaluate-your-existing-browser-environment-and-browser-needs)
+  - [Make sure your Windows 10 devices are ready](#make-sure-your-windows-10-devices-are-ready)
+  - [Determine your deployment methodology](#determine-your-deployment-methodology)
+    - [Deploy to end users by role](#deploy-to-end-users-by-role)
+    - [Deploy to end users by site](#deploy-to-end-users-by-site)
+  - [Do site discovery](#do-site-discovery)
+    - [If you've already deployed and configured the legacy version of Microsoft Edge](#if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge)
+    - [If you've configured Internet Explorer as your default browser](#if-youve-configured-internet-explorer-as-your-default-browser)
+    - [Analyze site discovery data](#analyze-site-discovery-data)
+  - [Determine your channel strategy](#determine-your-channel-strategy)
+    - [Multiple devices and channels](#multiple-devices-and-channels)
+  - [Define and configure policies](#define-and-configure-policies)
+    - [Define your update strategy and policies](#define-your-update-strategy-and-policies)
+  - [Do app compatibility testing](#do-app-compatibility-testing)
+    - [Internal line of business app testing](#internal-line-of-business-app-testing)
+    - [Third party app support](#third-party-app-support)
+  - [Deploy Microsoft Edge to a pilot group](#deploy-microsoft-edge-to-a-pilot-group)
+  - [Validate your deployment](#validate-your-deployment)
+  - [Broad deployment of Microsoft Edge](#broad-deployment-of-microsoft-edge)
+  - [See also](#see-also)
 
 ## Evaluate your existing browser environment and browser needs
 
@@ -54,7 +66,7 @@ After you understand the current state, you can determine the desired goals for 
 - What features are critical to configure as part of your initial deployment?
 - What is the process for addressing any identified compatibility or configuration issues?
 
-You should also understand the **pre-requisites** for features you're interested in, such as:
+You should also understand the **prerequisites** for features you're interested in, such as:
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Internet Explorer mode](./edge-ie-mode.md)
@@ -136,7 +148,7 @@ After you've created your Enterprise Site List, we recommend identifying and con
 
 First, consider the first-run experience you want your users to have. If you want to automatically import settings from the current browser, configure the policy for [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun).
 
-For security policies, we recommend starting with the Microsoft Edge Security Baseline. The Security Baseline can be applied using the [recommended security configuration baseline settings](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) or by using [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
+For security policies, we recommend starting with the Microsoft Edge Security Baseline. The Security Baseline can be applied using the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) or by using [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
 
 For other policies, we recommend reviewing the policy configurations for [Microsoft Edge](./microsoft-edge-policies.md) and [Microsoft Edge Updates](./microsoft-edge-update-policies.md).
 
