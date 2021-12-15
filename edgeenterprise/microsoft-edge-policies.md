@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/03/2021
+ms.date: 12/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,15 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new and deprecated policies were added to this documentation update.
+
+| Policy Name |	Caption |
+|----|----|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (DEPRECATED)|
 
 ## Available policies
 
@@ -50,7 +59,6 @@ These tables list all of the browser-related group policies available in this re
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
 - [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
-
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -221,6 +229,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
+|[PrintStickySettings](#printstickysettings)|Print preview sticky settings|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
@@ -290,7 +299,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Get Image Descriptions from Microsoft Enabled|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -418,6 +427,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
 |[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
@@ -451,6 +461,7 @@ These tables list all of the browser-related group policies available in this re
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -520,6 +531,7 @@ These tables list all of the browser-related group policies available in this re
 |[TranslateEnabled](#translateenabled)|Enable Translate|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (deprecated)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
@@ -8153,6 +8165,86 @@ If you set this policy to zero or don't configure it, the system default resolut
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintStickySettings
+
+  #### Print preview sticky settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.
+
+If you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
+
+If you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
+
+This policy is only available if you enable or don't configure the [PrintingEnabled](#printingenabled) policy.
+
+Policy options mapping:
+
+* EnableAll (0) = Enable sticky settings for PDF and Webpages
+
+* DisableAll (1) = Disable sticky settings for PDF and Webpages
+
+* DisablePdf (2) = Disable sticky settings for PDF
+
+* DisableWebpage (3) = Disable sticky settings for Webpages
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintStickySettings
+  - GP name: Print preview sticky settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintStickySettings
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintStickySettings
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrinterTypeDenyList
 
   #### Disable printer types on the deny list
@@ -11104,7 +11196,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Get Image Descriptions from Microsoft Enabled
+  #### Let get image descriptions from Microsoft
 
   
   
@@ -11139,7 +11231,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   ##### Group Policy (ADMX) info
 
   - GP unique name: AccessibilityImageLabelsEnabled
-  - GP name: Get Image Descriptions from Microsoft Enabled
+  - GP name: Let get image descriptions from Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16166,6 +16258,8 @@ If you set the value of this policy to 0, the default cache size is used, and us
 
 If you don't configure this policy, the default size is used, but users can override it with the '--disk-cache-size' flag.
 
+Note: The value specified in this policy is used as a hint to various cache subsystems in the browser. The aggregate disk usage of all caches may therefore be larger than (but within the same order of magnitude as) the value specified.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -19766,6 +19860,68 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InAppSupportEnabled
+
+  #### In-app support Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Microsoft Edge uses the in-app support feature (enabled by default) to allow users to contact our support agents directly from the browser. Also, by default, users can't disable (turn off) the in-app support feature.
+
+If you enable this policy or don't configure it, users can invoke in-app support.
+
+If you disable this policy, users can't invoke in-app support.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InAppSupportEnabled
+  - GP name: In-app support Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InAppSupportEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: InAppSupportEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InPrivateModeAvailability
 
   #### Configure InPrivate mode availability
@@ -22028,6 +22184,68 @@ This policy is available only on Windows instances that are joined to a Microsof
   #### Mac information and settings
   
   - Preference Key Name: MetricsReportingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MicrosoftEdgeInsiderPromotionEnabled
+
+  #### Microsoft Edge Insider Promotion Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Shows content promoting the Microsoft Edge Insider channels on the About Microsoft Edge settings page.
+
+If you enable or don't configure this policy, the Microsoft Edge Insider promotion content will be shown on the About Microsoft Edge page.
+
+If you disable this policy, the Microsoft Edge Insider promotion content will not be shown on the About Microsoft Edge page.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftEdgeInsiderPromotionEnabled
+  - GP name: Microsoft Edge Insider Promotion Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftEdgeInsiderPromotionEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftEdgeInsiderPromotionEnabled
   - Example value:
 ``` xml
 <true/>
@@ -26498,6 +26716,68 @@ If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### U2fSecurityKeyApiEnabled
+
+  #### Allow using the deprecated U2F Security Key API (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It won't work in Microsoft Edge version 104.
+
+If you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.
+
+If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ends in Microsoft Edge version 104.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: U2fSecurityKeyApiEnabled
+  - GP name: Allow using the deprecated U2F Security Key API (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: U2fSecurityKeyApiEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: U2fSecurityKeyApiEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
