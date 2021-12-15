@@ -229,6 +229,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
+|[PrintStickySettings](#printstickysettings)|Print preview sticky settings|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
@@ -298,7 +299,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Get Image Descriptions from Microsoft Enabled|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -460,6 +461,7 @@ These tables list all of the browser-related group policies available in this re
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -8163,6 +8165,86 @@ If you set this policy to zero or don't configure it, the system default resolut
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintStickySettings
+
+  #### Print preview sticky settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.
+
+If you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
+
+If you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
+
+This policy is only available if you enable or don't configure the [PrintingEnabled](#printingenabled) policy.
+
+Policy options mapping:
+
+* EnableAll (0) = Enable sticky settings for PDF and Webpages
+
+* DisableAll (1) = Disable sticky settings for PDF and Webpages
+
+* DisablePdf (2) = Disable sticky settings for PDF
+
+* DisableWebpage (3) = Disable sticky settings for Webpages
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintStickySettings
+  - GP name: Print preview sticky settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintStickySettings
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintStickySettings
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrinterTypeDenyList
 
   #### Disable printer types on the deny list
@@ -11114,7 +11196,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Get Image Descriptions from Microsoft Enabled
+  #### Let get image descriptions from Microsoft
 
   
   
@@ -11149,7 +11231,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   ##### Group Policy (ADMX) info
 
   - GP unique name: AccessibilityImageLabelsEnabled
-  - GP name: Get Image Descriptions from Microsoft Enabled
+  - GP name: Let get image descriptions from Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16175,6 +16257,8 @@ If you enable this policy, Microsoft Edge uses the provided cache size regardles
 If you set the value of this policy to 0, the default cache size is used, and users can't change it.
 
 If you don't configure this policy, the default size is used, but users can override it with the '--disk-cache-size' flag.
+
+Note: The value specified in this policy is used as a hint to various cache subsystems in the browser. The aggregate disk usage of all caches may therefore be larger than (but within the same order of magnitude as) the value specified.
 
   #### Supported features:
 
@@ -22100,6 +22184,68 @@ This policy is available only on Windows instances that are joined to a Microsof
   #### Mac information and settings
   
   - Preference Key Name: MetricsReportingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MicrosoftEdgeInsiderPromotionEnabled
+
+  #### Microsoft Edge Insider Promotion Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Shows content promoting the Microsoft Edge Insider channels on the About Microsoft Edge settings page.
+
+If you enable or don't configure this policy, the Microsoft Edge Insider promotion content will be shown on the About Microsoft Edge page.
+
+If you disable this policy, the Microsoft Edge Insider promotion content will not be shown on the About Microsoft Edge page.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftEdgeInsiderPromotionEnabled
+  - GP name: Microsoft Edge Insider Promotion Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftEdgeInsiderPromotionEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftEdgeInsiderPromotionEnabled
   - Example value:
 ``` xml
 <true/>
