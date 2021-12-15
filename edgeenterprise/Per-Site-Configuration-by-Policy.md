@@ -1,19 +1,19 @@
 ---
-title: "Per Site configuration by policy"
+title: "Per-site configuration by policy"
 ms.author: collw
 author: dan-wesley
 manager: laurawi
-ms.date: 12/14/2021
+ms.date: 12/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Per Site configuration by policy"
+description: "Per-site configuration by policy"
 ---
-# Per Site configuration by policy
+# Per-site configuration by policy
 
-This article describes the per site configurations by policy and how the browser handles page loads from a site.
+This article describes the per-site configurations by policy and how the browser handles page loads from a site.
 
 ## The browser as a decision maker
 
@@ -45,7 +45,7 @@ Microsoft Edge Legacy inherited the Zones architecture from its Internet Explore
 
 Microsoft Edge makes limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
-When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar or via various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
+When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar. You can also use the various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
 
 :::image type="content" source="media/per-site-configuration-by-policy/edge-page-info.png" alt-text="Page information and settings for the current page in the browser.":::
 
@@ -57,23 +57,23 @@ Many of the settings are obscure (WebSerial, WebMIDI) and there’s often no rea
 
 ## Security Zones in Microsoft Edge
 
-While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a few cases. This is done to simplify deployment in Enterprises that have historically relied upon Zones configuration.
+While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a few cases. This approach simplifies deployment in Enterprises that have historically relied upon Zones configuration.
 
 The following behaviors are controlled by Zone policy:
 
-- When deciding whether to release Windows Integrated Authentication (Kerberos or NTLM) credentials automatically.
-- When deciding how to handle file downloads.
+- Deciding whether to release Windows Integrated Authentication (Kerberos or NTLM) credentials automatically.
+- Deciding how to handle file downloads.
 - For Internet Explorer mode.
 
 ## Credential release
 
-By default, Microsoft Edge will evaluate URLACTION_CREDENTIALS_USE to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
+By default, Microsoft Edge evaluates `URLACTION_CREDENTIALS_USE` to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
 
 ## File downloads
 
 Evidence about the origins of a file download (also known as “[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)" is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
 
-If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, the Microsoft Edge download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn’t download – Blocked".  
+If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, Microsoft Edge's download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn’t download – Blocked".  
 
 ## IE mode
 
@@ -81,7 +81,7 @@ IE mode can be configured to [open all Intranet sites in IE mode](/deployedge/
 
 ## Summary
 
-In most cases, Microsoft Edge settings can be left at their defaults. Administrators who wish to change the defaults for all sites or specific sites can use the appropriate Group Policies to specify Site Lists or default behaviors. In a handful of cases, such as credential release, file download, and IE mode, administrators will continue to control behavior by configuring Windows Security Zones settings.
+In most cases, Microsoft Edge settings can be left at their defaults. Administrators who wish to change the defaults for all sites or specific sites can use the appropriate Group Policies to specify Site Lists or default behaviors. In a handful of cases, such as credential release, file download, and IE mode, admins will continue to control behavior by configuring Windows Security Zones settings.
 
 ## Frequently asked questions
 
@@ -101,7 +101,7 @@ If you were forward-thinking enough to structure your intranet such that your ho
 
 - `https://sharepoint.contoso-intranet.com`
 
-In the preceding scenario you can configure each policy with a ***.contoso-intranet.com** entry and your entire intranet will be opted in.
+In the preceding scenario, you can configure each policy with a ***.contoso-intranet.com** entry and your entire intranet will be opted in.
 
 ## See also
 
