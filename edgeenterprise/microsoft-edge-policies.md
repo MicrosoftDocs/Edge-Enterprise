@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/09/2021
+ms.date: 12/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,15 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new and deprecated policies were added to this documentation update.
+
+| Policy Name |	Caption |
+|----|----|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (DEPRECATED)|
 
 ## Available policies
 
@@ -50,7 +59,6 @@ These tables list all of the browser-related group policies available in this re
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
 - [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
-
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
