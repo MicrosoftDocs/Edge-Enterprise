@@ -17,7 +17,7 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
 > [!NOTE]
-> This experience is only available to worldwide cloud instances.
+> This experience is currently only available to worldwide cloud instances.
 
 ## Overview
 
