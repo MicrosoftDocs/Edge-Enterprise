@@ -41,7 +41,7 @@ Microsoft Edge Legacy inherited the Zones architecture from its Internet Explore
 - Windows’ five built-in Zones were collapsed to three: Internet (Internet), Trusted (Intranet+Trusted), and Local Computer. The Restricted Sites Zone was removed.
 - Zone to URLAction mappings were hardcoded into the browser, ignoring Group Policies and settings in the Internet Control Panel.
 
-## Per Site permissions in Microsoft Edge
+## Per site permissions in Microsoft Edge
 
 Microsoft Edge makes limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
