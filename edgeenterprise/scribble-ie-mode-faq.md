@@ -34,7 +34,7 @@ If a website loads in IE mode in Microsoft Edge, it’s because of an IE mode po
 
 ## Things that don't work
 
-### You're unable to configure IE mode feature in Microsoft Edge
+### You can't configure IE mode in Microsoft Edge
 
 Verify you,ve followed the [prerequisites](/deployedge/edge-ie-mode#prerequisites) for IE mode, which includes enabling Internet Explorer 11 in Windows features. For more information, see  the [Microsoft Edge + Internet Explorer mode](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) Getting Started guide and [Internet Explorer (IE) mode troubleshooting and FAQ](/deployedge/edge-ie-mode-faq).
 
@@ -52,7 +52,7 @@ For this kind of redirected website, you can make use of the `allow-redirect="tr
 
 Microsoft Edge needs to download the IE mode site list before it can apply IE mode settings. This process may not finish when the browser is starts. We have a policy that can force the loading of the site list before a website is loaded. For more information, see the [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy.
 
-### You’re unable to open files or pages that are located using file:// URLs in Microsoft Edge
+### You can't open files or pages that are found by using file:// URLs in Microsoft Edge
 
 This issue is because of a Chromium security restriction as described in [Restrictions on File Urls](https://textslashplain.com/2019/10/09/navigating-to-file-urls/). However, you can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
 
@@ -69,7 +69,7 @@ You can use IE mode in Microsoft Edge to force the rendering of an IE 11 compati
 
 Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL settings can cause issues. Try removing these proxy settings and test to see if the issue is fixed. For more information, see [Auto configuration settings for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/auto-configuration-settings-for-ie11).
 
-### You’re unable to download files from certain websites when running Microsoft Edge
+### You can't download files from certain websites when running Microsoft Edge
 
 Certain legacy websites may experience download issues when browsing in Microsoft Edge. These websites need to load in IE mode.
 
@@ -90,26 +90,26 @@ After the favicon cache is created, you won't be asked for a client certificate 
 
 ### "File > New session" isn’t available in Microsoft Edge
 
-Microsoft Edge doesn’t have the **File > New session** feature of Internet Explorer. We don’t have any plans to replicate this feature. However, you can make use of our Profile features and create multiple profiles so you can start a new session with another account.
+Microsoft Edge doesn’t have the **File** > **New session** feature of Internet Explorer. We don’t have any plans to replicate this feature. However, you can make use of our Profile features and create multiple profiles so you can start a new session with another account.
 
 <!--- begin error messages --->
 ## Error messages
 
-### Getting “The connection for this site is not secure” message when visiting certain sites with Microsoft Edge
+### You get this error message: “The connection for this site is not secure”
 
 This error may happen if you're trying to open a legacy website in IE mode and the site's configured to run in TLS 1.0 or TLS 1.1, which are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
 
-### You receive the following error message: "Could not retrieve EMIE site list."
+### You get this error message: "Could not retrieve EMIE site list."
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. This error could be caused by a syntax error in the Site list XML file.
 
-### You receive the following error message “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'”
+### You get this message: “Error: 'This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath'”
 
-Certain applications may require you to run the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
+Certain applications may require you to load the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
 
 You can force a website to load in IE 11 by either configuring IE mode policies or use the reload in IE mode feature.
 
-You may also need to set the `compat-mode` attribute in Enterprise Mode Site List to **Default**. For more information, see [Enterprise Mode and the Enterprise Mode Site List](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1)
+You may also have to set the `compat-mode` attribute in Enterprise Mode Site List to **Default**. For more information, see [Enterprise Mode and the Enterprise Mode Site List](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1).
 
 > [!TIP]
 > Your users can easily view this site list and the compatibility mode by typing **about:compat** in IE 11 or Microsoft Edge.
