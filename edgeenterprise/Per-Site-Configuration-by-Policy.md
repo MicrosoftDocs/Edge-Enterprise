@@ -30,7 +30,7 @@ In Microsoft Edge, most per-site permissions are controlled by settings and poli
 
 ## Windows Security Zones
 
-To simplify configuration for the user or admin, the legacy platform classified sites into five different **Security Zones:** Local Machine, Local Intranet, Trusted, Internet, and Restricted Sites.
+To simplify configuration for the user or admin, the legacy platform classified sites into one of five different Security Zones. These Security Zones are: Local Machine, Local Intranet, Trusted, Internet, and Restricted Sites.
 
 When making a page load decision, the browser maps the website to a Zone, then consults the setting for the URLAction for that Zone to decide what to do. Reasonable defaults like “Automatically satisfy authentication challenges from my Intranet” means that most users never need to change any default settings.
 
