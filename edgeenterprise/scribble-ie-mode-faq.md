@@ -3,7 +3,7 @@ title: "Scratch pad for IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/09/2021
+ms.date: 12/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,7 +30,7 @@ If Microsoft Edge is the default browser (configured by either via policy or man
 
 If a website still loads in Internet Explorer 11 and if you don’t need Internet Explorer 11, you can disable it. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
-If a website happens to load in IE mode in Microsoft Edge, it’s because of an IE mode policy or a manual configuration that’s forcing Microsoft Edge to load the site in IE mode. Make sure you check the site in question to verify that it’s not in the IE Site list or in IE mode. You can do that by running [IE mode diagnostics](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information). Explore our [troubleshooting guide](/deployedge/edge-ie-mode-faq) to identify and fix any other issues.
+If a website loads in IE mode in Microsoft Edge, it’s because of an IE mode policy or a manual configuration that’s forcing Microsoft Edge to load the site in IE mode. Make sure you check the site in question to verify that it’s not in the IE Site list or in IE mode. You can do that by running [IE mode diagnostics](/deployedge/edge-ie-mode-faq#get-general-diagnostic-and-configuration-information). Explore our [troubleshooting guide](/deployedge/edge-ie-mode-faq) to identify and fix any other issues.
 
 ## Things that don't work
 
@@ -44,7 +44,7 @@ This feature is available on Microsoft Edge version 92 or later. For this option
 
 ### Pop-ups or redirected websites aren’t loading in IE mode or in Internet Explorer 11
 
-Even after configuring IE mode, certain websites, especially websites that create a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
+After configuring IE mode, certain websites, especially websites that create a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
 
 For this kind of redirected website, you can make use of the `allow-redirect="true"` in the site list configuration. For more information, see [Updated schema elements](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
 
@@ -63,9 +63,9 @@ If Microsoft Edge is the default browser, then all websites should open in Micro
 > [!NOTE]
 > For more information about making Microsoft Edge the default browser, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser) and [Change your default browser in Windows 10](/windows/change-your-default-browser-in-windows-10-020c58c6-7d77-797a-b74e-8f07946c5db6).
 
-If a website is still loads in Internet Explorer 11 and if you don’t this need this browser version, you can disable IE 11. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
+If a website is still loads in Internet Explorer 11 and if you don’t need this browser version, you can disable IE 11. For more information, see [Disable Internet Explorer 11](/deployedge/edge-ie-disable-ie11).
 
-You can use IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode either by configuring IE mode policies or by using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
+You can use IE mode in Microsoft Edge to force the rendering of an IE 11 compatible web page in Microsoft Edge. You can force a site to load in IE mode by configuring IE mode policies or by using the reload in IE mode feature. For more information, see [Configure IE mode policies](/deployedge/edge-ie-mode-policies) and [Enable the local site list experience](/deployedge/edge-ie-mode-local-site-list#enable-the-local-site-list-experience).
 
 Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL settings can cause issues. Try removing these proxy settings and test to see if the issue is fixed. For more information, see [Auto configuration settings for Internet Explorer 11](/internet-explorer/ie11-deploy-guide/auto-configuration-settings-for-ie11).
 
@@ -73,11 +73,11 @@ Sometimes a proxy configuration such as Internet Explorer’s AutoConfig URL set
 
 Certain legacy websites may experience download issues when browsing in Microsoft Edge. These websites need to load in IE mode.
 
-### Child windows running in IE mode in Microsoft Edge may experience rendering issues like text wrapping, and content getting cut off
+### Child windows running in IE mode in Microsoft Edge may experience rendering issues like text wrapping, and content getting truncated
 
-The content area of a child window rendering in IE mode in Microsoft Edge is slightly different than what it is on Internet Explorer 11. If a web page has been designed with pixel-based alignments or positioning, you may experience incorrect rendering, text wrapping, and so on.
+The content area of a child window that renders in IE mode in Microsoft Edge is slightly different than what it is on Internet Explorer 11. If a web page has been designed with pixel-based alignments or positioning, you may experience incorrect rendering, text wrapping, and so on.
 
-Two policy settings were added to Microsoft Edge from version 95 that let you specify custom adjustments to the height and width of pop-up windows generated from IE mode sites via the window.open method. You can use the following policies to adjust window size:
+Two policy settings were added to Microsoft Edge version 95 that let you specify custom adjustments to the height and width of pop-up windows that are generated from IE mode sites via the `window.open` method. You can use the following policies to adjust window size:
 
 - [InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - This setting lets you specify a custom adjustment to the height of popup windows generated from the Internet Explorer mode site.
 - [InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) - This setting lets you specify a custom adjustment to the width of popup windows generated from the Internet Explorer mode site.
@@ -97,7 +97,7 @@ Microsoft Edge doesn’t have the **File > New session** feature of Internet Exp
 
 ### Getting “The connection for this site is not secure” message when visiting certain sites with Microsoft Edge
 
-This may happen if you are trying to open a legacy website in IE mode and the site is configured to run in TLS 1.0 or TLS 1.1, which are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
+This error may happen if you're trying to open a legacy website in IE mode and the site's configured to run in TLS 1.0 or TLS 1.1, which are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
 
 ### You receive the following error message: "Could not retrieve EMIE site list."
 
