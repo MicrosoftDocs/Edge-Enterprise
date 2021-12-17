@@ -3,7 +3,7 @@ title: "Interrupting Downloads of Potentially Dangerous Files"
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Interrupting Downloads of Potentially Dangerous Files"
 
 # Interrupting Downloads of Potentially Dangerous Files
 
-Microsoft Edge’s File Type Policies component allows files to be classified by their level of “dangerousness”, such that harmless files (e.g. `.txt` files) can be downloaded freely, whilst potentially-dangerous files (e.g. `.dll` files) are subjected to a higher degree of vetting and a more security-conscious user-experience.
+Microsoft Edge’s File Type Policies component allows files to be classified by their level of “dangerousness”, such that harmless files (for example, `.txt` files) can be downloaded freely, while potentially dangerous files (for example, `.dll` files) are subjected to a higher degree of vetting and a more security-conscious user-experience.
 
 ## Determining the Danger Level of a File Type
 
@@ -24,8 +24,8 @@ The first two are simple: **NOT_DANGEROUS** means that the file is safe to downl
 
 The third setting **ALLOW_ON_USER_GESTURE** is more subtle. Such files are potentially dangerous, but most likely harmless if the user requested the download. Microsoft Edge will allow such downloads to proceed automatically if two conditions are met:
 
-1. There is a [user gesture](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that initiated the download (e.g., the user clicked a link to the download).
-2. There is a recorded prior visit to the referring origin (the page linking to the download) prior to the most recent midnight (i.e., yesterday or earlier). This implies that the user has a history of visiting the site.
+1. There is a [user gesture](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that initiated the download (for example, the user clicked a link to the download).
+2. There is a recorded prior visit to the referring origin (the page linking to the download) prior to the most recent midnight (that is, yesterday or earlier). This implies that the user has a history of visiting the site.
 
 The download will also proceed automatically if the user explicitly initiated it by using the **Save link as** context menu command, entered the download’s URL directly into the browser’s address bar, or if Microsoft Defender SmartScreen indicated that the file is safe.
 
