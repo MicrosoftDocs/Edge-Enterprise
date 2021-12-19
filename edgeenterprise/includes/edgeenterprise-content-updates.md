@@ -2,6 +2,25 @@
 
 
 
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/13/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 12/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 12/13/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/14/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/14/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 12/14/2021 | [Configure Microsoft Edge for macOS using a property list.](/DeployEdge/configure-microsoft-edge-on-mac) | modified |
+| 12/15/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 12/15/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 12/15/2021 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
+| 12/17/2021 | [Learn how Microsoft Edge handles mixed content downloads](/DeployEdge/edge-learnmore-mixed-content-downloads) | modified |
+| 12/17/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 12/17/2021 | [Local site list for Internet Explorer (IE) mode](/DeployEdge/edge-ie-mode-local-site-list) | modified |
+
+
 ## Week of December 06, 2021
 
 
