@@ -3,7 +3,7 @@ title: "Interrupting Downloads of Potentially Dangerous Files"
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 12/17/2021
+ms.date: 12/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
