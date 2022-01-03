@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "A detailed reference guide for configuring Microsoft Edge extensions using the ExtensionSettings policy."
 ---
 
-# Detailed guide to the ExtensionSettings policy
+# A detailed guide to configuring extensions using the ExtensionSettings policy
 
 Microsoft Edge offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string in the Windows Group Policy Editor or in the Windows Registry using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy.
 
