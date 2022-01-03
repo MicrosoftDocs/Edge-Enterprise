@@ -21,7 +21,7 @@ Microsoft Edge offers multiple ways to manage extensions. A common way is to set
 
 ## Before you begin
 
-You decide if you want to set all extension management settings here or set these controls through other policies.
+Decide if you want to set all extension management settings in the ExtensionSettings policy or set these controls through other policies.
   
 The ExtensionSettings policy can overwrite other policies that you've set elsewhere in group policy, including the following policies:
 
@@ -33,7 +33,7 @@ The ExtensionSettings policy can overwrite other policies that you've set elsewh
 
 ## ExtensionSettings policy fields
 
-This policy can control settings such as Update URL, where the extension will be downloaded from for initial install, and Blocked permissions, or which permissions aren't allowed to run. The available policy fields are described in the following table.
+This policy can control settings such as Update URL, where the extension will be downloaded from for initial install, and Blocked permissions. You can also use this policy to identify which permissions aren't allowed to run. The available policy fields are described in the following table.
 
 | Policy field | Description |
 |--|--|
@@ -46,20 +46,20 @@ This policy can control settings such as Update URL, where the extension will be
 | **update_url** | Only applies to force_installed and normal_installed. Specifies where Microsoft Edge should download an extension from. If the extension is hosted in the Microsoft Edge Add-ons website, use this location: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge uses the URL that you specify for the initial extension installation. For subsequent extension updates, Microsoft Edge uses the URL in the extension's manifest.   |
 | **runtime_allowed_hosts**| Allows extensions to interact with specified websites, even if they’re also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
 | **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
-| **override_update_url**| Available from Edge 93<br>If this is set to `true`, Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this is not set or is set to `false`, Edge uses the URL specified in the extension's manifest for updates.|
-| **toolbar_state**| Available from Edge 94<br>This policy setting allows you to force show an installed extension to the toolbar. The default state is `default_shown` for all extensions. Following states are possible for this setting<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users will not be able to hide the specificed extension icon from the toolbar.<br>-`default_hidden`: In this state, extensions are hidden from the toolbar on installation. Users can show them on the toolbar, if needed.<br>-`default_shown`: This is the deafult setting of all the installed extensions on the browser.
+| **override_update_url**| Available from Microsoft Edge 93<br>If this field is set to `true`, Microsoft Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this field isn't set or is set to `false`, Microsoft Edge uses the URL specified in the extension's manifest for updates.|
+| **toolbar_state**| Available from Microsoft Edge 94<br>This policy setting lets you force show an installed extension to the toolbar. The default state is `default_shown` for all extensions. Following states are possible for this setting<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users will not be able to hide the specified extension icon from the toolbar.<br>-`default_hidden`: In this state, extensions are hidden from the toolbar on installation. Users can show them on the toolbar, if needed.<br>-`default_shown`: This is the default setting of all the installed extensions on the browser.
 
-These are the keys which are allowed at the global scope (*): 
+The following keys are allowed at the global scope (*):
 
 - blocked_permissions
-- installation_mode - only `"blocked"`, `"allowed"` or `"removed"` are the valid values in this scope.
+- installation_mode - only `"blocked"`, `"allowed"`, or `"removed"` are the valid values in this scope.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
 - runtime_allowed_hosts
 - install_sources
 
-These are the keys which are allowed at an individual extension scope: 
+The following keys are allowed at an individual extension scope:
 
 - blocked_permissions
 - minimum_version_required
@@ -71,22 +71,22 @@ These are the keys which are allowed at an individual extension scope:
 - runtime_blocked_hosts
 - toolbar_state
 
-These are the keys which are allowed at an update URL scope: 
+The following keys are allowed at an update URL scope:
 
 - blocked_permissions
-- installation_mode  - only `"blocked"`, `"allowed"` or `"removed"` are the valid values in this scope.
+- installation_mode  - only `"blocked"`, `"allowed"`, or `"removed"` are the valid values in this scope.
 
 ## Configure using a JSON string in Windows Group Policy Editor
 
 The steps to use the extension settings policy using GPO assume that you've already imported the ADM/ADMX for Microsoft Edge Policies.
 
-1. Open the group policy editor and go to go to **Microsoft Edge > Extensions > Configure extension management setting policy**.
-2. Enable the policy and enter its compact JavaScript Object Notation (JSON) data in the text box as a single line with no line breaks.
+1. Open the group policy editor and go to **Microsoft Edge > Extensions > Configure extension management setting policy**.
+2. Enable the policy and enter its compact JavaScript Object Notation (JSON) data in the text box as a single line without line breaks.
 3. To validate the policy and compact it into a single line, use a JSON compression tool.
 
 ### Properly format JSON for the extension settings policy
 
-You need to understand the two parts to this policy — the default scope and the individual scope. The default scope is a catch-all for extensions without their own scope. The individual scope is applied to that extension only.  
+You need to understand the two parts to this policy—the default scope and the individual scope. The default scope is a catch-all for extensions without their own scope. The individual scope is applied to that extension only.  
 
 The default scope is identified by the asterisk (*). The next example defines a default scope and an individual extension scope.
 
@@ -120,7 +120,7 @@ The next JSON example blocks any extension from running on `.example.com` and bl
 
 #### Using installation_mode property to allow and block extensions
 
-- User can install all extensions - this is the default setting 
+- User can install all extensions -  the default setting
 
   `{ "*": {"installation_mode": "allowed" }}`
 - User can’t install any extensions.  
@@ -141,7 +141,7 @@ When using installation_mode as "force_installed", the extension is automaticall
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
   
-In the above example Instead of "force_installed", if you use "normal_installed", then the extension is automatically installed without user interaction, but they can disable the extension.  
+In the previous example, if you use "normal_installed" instead of "force_installed", then the extension is automatically installed without user interaction, but they can disable the extension.  
 
    > [!TIP]
    > Formatting a JSON string correctly can be tricky. Use a JSON checker before implementing the policy. Or try the early version of [Extension Settings Generator Tool](https://microsoft.github.io/edge-extension-settings-generator/minimal)
