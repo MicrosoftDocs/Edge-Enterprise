@@ -30,7 +30,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
    - Windows 10, version 2004; Windows 10, version 20H2 and Windows 10, version 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) or later
 
-2. Microsoft Edge version 92 (92.0.925.0 or later)
+2. Microsoft Edge version 92 (92.0.902.55 or later)
 
 > [!IMPORTANT]
 > This local site list feature isn't supported on Windows Server 2016 at this time.
