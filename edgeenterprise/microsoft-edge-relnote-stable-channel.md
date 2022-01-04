@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 97.0.0000.00: January 3
+## Version 97.0.0000.00: January 4
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2021).
 
@@ -34,7 +34,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **Use the current profile to sign into websites when multiple work or school accounts are signed in on a device.** When multiple work or school accounts are signed in on a device, users will be asked to choose an account from the account picker to continue their visits to websites. In this release, users will be prompted to allow Microsoft Edge to sign in to the websites automatically with the work and school account that's signed into current profile. Users can turn this feature on and off in **Settings** > **Profile preferences**.
 
-- **Add support for Microsoft Endpoint Data Loss Prevention (DLP) on macOS.**Microsoft Endpoint DLP policy enforcement will be available natively on macOS.
+- **Add support for Microsoft Endpoint Data Loss Prevention (DLP) on macOS.** Microsoft Endpoint DLP policy enforcement will be available natively on macOS.
 
 - **Automatic HTTPS.** Users will can upgrade navigations from HTTP to HTTPS on domains likely to support this more secure protocol. This support can also be configured to attempt delivery over HTTPS for all domains. Note: This feature is a Controlled Feature Rollout. If you don’t see this feature, check back as we continue our rollout.
 
