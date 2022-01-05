@@ -24,6 +24,23 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following new policies were added to this documentation update.
+
+| Policy Name |	Caption |
+|----|----|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
