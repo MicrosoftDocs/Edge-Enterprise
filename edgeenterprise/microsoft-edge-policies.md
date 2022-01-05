@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/15/2021
+ms.date: 01/05/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following new and deprecated policies were added to this documentation update.
-
-| Policy Name |	Caption |
-|----|----|
-|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
-|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (DEPRECATED)|
 
 ## Available policies
 
@@ -59,6 +50,7 @@ These tables list all of the browser-related group policies available in this re
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
 - [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
+
 
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
@@ -382,12 +374,16 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
@@ -492,6 +488,7 @@ These tables list all of the browser-related group policies available in this re
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
@@ -16857,6 +16854,70 @@ If you disable this policy, Microsoft Edge will not enhance images.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeFollowEnabled
+
+  #### Enable Follow service in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to enable Follow service and apply it to users.
+
+Users can use the Follow an influencer, site, or topic in Microsoft Edge..
+
+If you enable or don't configure this policy, Follow in Microsoft Edge can be applied.
+
+If you disable this policy, Microsoft Edge will not communicate with Follow service to provide the follow feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeFollowEnabled
+  - GP name: Enable Follow service in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeFollowEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeFollowEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeShoppingAssistantEnabled
 
   #### Shopping in Microsoft Edge Enabled
@@ -17249,6 +17310,214 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityMode
+
+  #### Enhance the security state in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  This policy lets you enhance the security state in Microsoft Edge.
+
+If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
+
+If you set this policy to 'BalancedMode', the security state would be in balanced mode.
+
+If you set this policy to 'StrictMode', the security state would be in strict mode.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+Policy options mapping:
+
+* StandardMode (0) = Standard mode
+
+* BalancedMode (1) = Balanced mode
+
+* StrictMode (2) = Strict mode
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityMode
+  - GP name: Enhance the security state in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityMode
+  - Example value:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityModeBypassListDomains
+
+  #### Configure the list of domains for which enhance security mode will not be enforced
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Configure the list of enhance security trusted domains. This means that
+enhance security mode will not be enforced when loading the sites in trusted domains.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeBypassListDomains
+  - GP name: Configure the list of domains for which enhance security mode will not be enforced
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityModeBypassListDomains
+  - Example value:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityModeEnforceListDomains
+
+  #### Configure the list of domains for which enhance security mode will always be enforced
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Configure the list of enhance security untrusted domains. This means that
+enhance security mode will always be enforced when loading the sites in untrusted domains.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeEnforceListDomains
+  - GP name: Configure the list of domains for which enhance security mode will always be enforced
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityModeEnforceListDomains
+  - Example value:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
 ```
   
 
@@ -20194,11 +20463,11 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   #### Description
 
-  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers.
+  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data.
 
 If you enable this policy, you can specify which data types should be included in navigations between Microsoft Edge and Internet Explorer mode.
 
-If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data and additional headers in navigations that change modes.
+If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data in navigations that change modes.
 
 To learn more, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
 
@@ -23151,19 +23420,19 @@ For more information about this policy see [https://go.microsoft.com/fwlink/?lin
 
   This setting lets you specify whether Internet Explorer will redirect navigations to sites that require a modern browser to Microsoft Edge.
 
-If you don't configure this policy or set it to 'Sitelist', beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
+If you don't configure this policy or set it to 'Sitelist' ('Redirect sites based on the incompatible sites sitelist' value 1), beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
 
 When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that began loading that site is closed if it had no prior content. Otherwise, it is navigated to a Microsoft help page explaining why the site was redirected to Microsoft Edge.
 
 When Microsoft Edge is launched to load a site from IE, an information bar is shown to the user explaining that the site works best in a modern browser.
 
-If you set this policy to 'Disable', Internet Explorer will not redirect any traffic to Microsoft Edge.
+If you set this policy to 'Disable' ('Prevent redirection', value 0), Internet Explorer will not redirect any traffic to Microsoft Edge.
 
 For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Policy options mapping:
 
-* Disable (0) = Disable
+* Disable (0) = Prevent redirection
 
 * Sitelist (1) = Redirect sites based on the incompatible sites sitelist
 
@@ -24182,6 +24451,72 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <string>tls1</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SandboxExternalProtocolBlocked
+
+  #### Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  Microsoft Edge will block navigations to external protocols inside a
+sandboxed iframe.
+
+If you enable or don't configure this policy, Microsoft Edge will block those navigations.
+
+If you disable this policy, Microsoft Edge will not block those navigations.
+
+This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 104.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SandboxExternalProtocolBlocked
+  - GP name: Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SandboxExternalProtocolBlocked
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SandboxExternalProtocolBlocked
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -28143,7 +28478,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Controls whether WebRTC will respect the Windows OS routing table rules when making peer to peer connections.
+  Controls whether WebRTC will respect the Windows OS routing table rules when making peer to peer connections, thus enabling split tunnel VPNs.
 
 If you disable this policy or don't configure it, WebRTC will not consider the routing table and may make peer to peer connections over any available network.
 
