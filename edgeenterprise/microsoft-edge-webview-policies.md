@@ -22,18 +22,6 @@ For information about an additional set of policies used to control how and when
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
-## New policies
-
-The following new policies were added to this documentation update.
-
-| Policy Name |	Caption |
-|----|----|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
-|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
-
 ## Available policies
 
 These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
