@@ -16,9 +16,9 @@ description: "Understand how Microsoft Edge identifies and interrupts downloads 
 
 Microsoft Edge’s File Type Policies component classifies files by their level of "dangerousness" to manage file downloads. A harmless file (for example, a `.txt` file) can be downloaded freely, while a potentially dangerous file like a `.dll` is subjected to a higher degree of vetting. This scrutiny provides a more security-conscious user experience.
 
-## Determining the danger level of a file type
+## How Microsoft Edge determines the danger level of a file type
 
-Microsoft Edge inherits its file type policies from the upstream Chromium browser. You can view these file types and their classification in the [download_file_types.asciipb](https://source.chromium.org/chromium/chromium/src/+/main:components/safe_browsing/core/resources/download_file_types.asciipb;drc=af17ad3f07c1d8a24381eb7669bec0c2ffb86521). In this file, you’ll see that each type has a danger_level, which is one of three values: `DANGEROUS`, `NOT_DANGEROUS`, or `ALLOW_ON_USER_GESTURE`.
+Microsoft Edge inherits its file type policies from the upstream Chromium browser. You can view these file types and their classification in the [download_file_types.asciipb](https://source.chromium.org/chromium/chromium/src/+/main:components/safe_browsing/core/resources/download_file_types.asciipb;drc=af17ad3f07c1d8a24381eb7669bec0c2ffb86521) file. In this file, you’ll see that each type has a **danger_level**, which is one of three values: `DANGEROUS`, `NOT_DANGEROUS`, or `ALLOW_ON_USER_GESTURE`.
 
 The following classifications are simple:
 
@@ -27,7 +27,7 @@ The following classifications are simple:
 
 The third setting, **ALLOW_ON_USER_GESTURE** is more subtle. These files are potentially dangerous, but most likely harmless if the user requests the download. Microsoft Edge will allow these downloads to continue automatically if one of the following conditions is met:
 
-- There's a [**user gesture**](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that started the download. For example, the user clicked a link to the download.
+- There's a [user gesture](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that started the download. For example, the user clicked a link to the download.
 - There's a recorded prior visit to the referring origin (the page that links to the download) before the most recent midnight (that is, yesterday or earlier). This recorded visit implies that the user has a history of visiting the site.
 
 The download will also continue automatically if the user explicitly starts it by using the **Save link as** context menu command, enters the download’s URL directly into the browser’s address bar, or if Microsoft Defender SmartScreen indicates that the file is safe.
