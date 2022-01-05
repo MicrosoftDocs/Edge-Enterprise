@@ -2,6 +2,33 @@
 
 
 
+## Week of December 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/22/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+
+
+## Week of December 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/13/2021 | [IE mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 12/13/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 12/13/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/14/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 12/14/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 12/14/2021 | [Configure Microsoft Edge for macOS using a property list.](/DeployEdge/configure-microsoft-edge-on-mac) | modified |
+| 12/15/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 12/15/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 12/15/2021 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
+| 12/17/2021 | [Learn how Microsoft Edge handles mixed content downloads](/DeployEdge/edge-learnmore-mixed-content-downloads) | modified |
+| 12/17/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 12/17/2021 | [Local site list for Internet Explorer (IE) mode](/DeployEdge/edge-ie-mode-local-site-list) | modified |
+
+
 ## Week of December 06, 2021
 
 
@@ -56,23 +83,3 @@
 | 11/24/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
 | 11/24/2021 | [Learn how Microsoft Edge handles mixed content downloads](/DeployEdge/edge-learnmore-mixed-content-downloads) | modified |
 | 11/24/2021 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
-
-
-## Week of November 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/15/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 11/15/2021 | [Local site list for Internet Explorer (IE) mode](/DeployEdge/edge-ie-mode-local-site-list) | modified |
-| 11/15/2021 | [Microsoft Edge support for Windows Information Protection](/DeployEdge/microsoft-edge-security-windows-information-protection) | modified |
-| 11/16/2021 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
-| 11/16/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 11/17/2021 | [Configure Microsoft Edge using Mobile Device Management](/DeployEdge/configure-edge-with-mdm) | modified |
-| 11/17/2021 | [Windows updates to support Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates) | modified |
-| 11/17/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 11/17/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 11/17/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 11/17/2021 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
-| 11/19/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 11/19/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |

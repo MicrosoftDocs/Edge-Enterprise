@@ -7,7 +7,7 @@ ms.date: 11/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn about mixed content downloads and how Microsoft Edge handles them."
 ---
