@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## January 4, 2022
 
-Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
+Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security patch.
 
 ## December 14, 2021
 
