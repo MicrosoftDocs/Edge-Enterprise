@@ -3,7 +3,7 @@ title: "Scratch pad for IE mode FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/05/2022
+ms.date: 01/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,17 +24,17 @@ This feature is available on Microsoft Edge version 92 or later. For this option
 
 ### Why aren't pop-ups or redirected websites loading in IE mode or in Internet Explorer 11?
 
-After configuring IE mode, certain websites, especially websites that create a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
+After configuring IE mode, certain websites, especially those that create a new window or a site that gets redirected may not render in IE mode or open in Internet Explorer 11.
 
 For this kind of redirected website, you can make use of the `allow-redirect="true"` in the site list configuration. For more information, see [Updated schema elements](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-elements).
 
 ### Why aren't websites loading in IE mode when I launch Microsoft Edge for the first time?
 
-Microsoft Edge needs to download the IE mode site list before it can apply IE mode settings. This process may not finish when the browser is starts. We have a policy that can force the loading of the site list before a website is loaded. For more information, see the [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy.
+Microsoft Edge needs to download the IE mode site list before it can apply IE mode settings. This process may not finish when the browser is starts. A policy is available that can force the loading of the site list before a website is loaded. For more information, see the [DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy.
 
 ### Why can't I open files or pages that are found by using file:// URLs in Microsoft Edge?
 
-This issue is because of a Chromium security restriction as described in [Restrictions on File Urls](https://textslashplain.com/2019/10/09/navigating-to-file-urls/). However, you can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
+Due to a Chromium security restriction, IE mode needs to be used. You can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
 
 ### Why are there rendering issues like text wrapping and content truncation when child windows are running in IE mode in Microsoft Edge?
 
@@ -51,9 +51,13 @@ The client certificate may be requested twice in IE mode. The first time around,
 
 After the favicon cache is created, you won't be asked for a client certificate again unless you delete the cache. Alternatively, you can set a rule in your server configuration, such as IIS, not to require a client certificate for the favicon.
 
-### Why isn't "File > New session" available in Microsoft Edge?
+### Where is the "File > New session" option in Microsoft Edge?
 
-Microsoft Edge doesn’t have the **File** > **New session** feature of Internet Explorer. We don’t have any plans to replicate this feature. However, you can make use of our Profile features and create multiple profiles so you can start a new session with another account.
+A modern browser solution is available by using multiple profiles in Microsoft Edge. This feature allows you to create a new session with another account. The following resources provide information about the benefits of multiple profiles and how to use them.
+
+- [Video: Microsoft Edge and Identity](/deployedge/microsoft-edge-video-identity)
+- [Using multiple profiles at work and at home is now easier with Microsoft Edge](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/)
+- [Sign in and create multiple profiles in Microsoft Edge](https://support.microsoft.com/en-us/topic/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435)
 
 <!--- begin error messages --->
 ## Error messages
