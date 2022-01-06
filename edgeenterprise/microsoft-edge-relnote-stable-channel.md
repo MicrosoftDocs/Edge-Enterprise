@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 97.0.1072.55: January 6
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2021).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-06-2022).
 
 ### Feature updates
 
