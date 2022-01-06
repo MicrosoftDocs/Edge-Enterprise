@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/04/2022
+ms.date: 01/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,15 +32,22 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Feature updates
 
-- **Use the current profile to sign into websites when multiple work or school accounts are signed in on a device.** When multiple work or school accounts are signed in on a device, users will be asked to choose an account from the account picker to continue their visits to websites. In this release, users will be prompted to allow Microsoft Edge to sign in to the websites automatically with the work and school account that's signed into the current profile. Users can turn this feature on and off in **Settings** > **Profile preferences**.
+- **Use the current profile to sign into websites when multiple work or school accounts are signed in on a device.** When multiple work or school accounts are signed in on a device, users will be asked to choose an account from the account picker to continue their visits to websites. In this release, users will be prompted to let Microsoft Edge sign in to the websites automatically with the work or school account that's signed into the current profile. Users can turn this feature on and off in **Settings** > **Profile preferences**.
 
 - **Add support for Microsoft Endpoint Data Loss Prevention (DLP) on macOS.** Microsoft Endpoint DLP policy enforcement will be available natively on macOS.
 
-- **Automatic HTTPS.** Users will can upgrade navigations from HTTP to HTTPS on domains likely to support this more secure protocol. This support can also be configured to attempt delivery over HTTPS for all domains. Note: This feature is a Controlled Feature Rollout. If you don’t see this feature, check back as we continue our rollout.
+- **Automatic HTTPS.** Users can upgrade navigations from HTTP to HTTPS on domains likely to support this more secure protocol. This support can also be configured to attempt delivery over HTTPS for all domains. Note: This feature is a Controlled Feature Rollout. If you don’t see this feature, check back as we continue our rollout.
 
 - **Block WebSQL in 3rd-party contexts.** Use of the legacy WebSQL feature will be blocked from 3rd-party frames. The [WebSQLInThirdPartyContextEnabled](/deployedge/microsoft-edge-policies#websqlinthirdpartycontextenabled) policy is available as an opt-out option until Microsoft Edge version 101. This change is happening in the Chromium project that Microsoft Edge is based on. For more information, see this [Chrome Platform Status](https://chromestatus.com/feature/5684870116278272) entry.
 
 - **Citations in Microsoft Edge.** Citing sources for research is a common requirement for students. They have to manage many research references and sources, which aren't easy tasks. They also have to translate these citations to proper citation formats like APA, MLA, and Chicago. This new "Citations" feature, now in Preview in Microsoft Edge, gives students a better way to manage and generate citations as they research online. With Citations turned on in Collections or from **Settings and more (Alt-F)**, Microsoft Edge automatically generates citations that students can use later so they can stay focused on their research. When they're done, they can easily compile these citations into a final deliverable. For more information, see [Previewing Citations in Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
+
+- **Control Flow Guard (CFG).** Microsoft Edge will start supporting more fine-grained protection by combating memory corruption vulnerabilities and by protecting indirect calls. CFG is only supported with Windows 8 and later. For more information, see [Control Flow Guard](/windows/win32/secbp/control-flow-guard).
+  
+  > [!NOTE]
+  > This is an evolving technology, please share your feedback to help us strengthen its support.
+
+- **Control-flow Enforcement Technology (CET) available with security feature.** When you enable "Enhance your security on the web", Microsoft Edge will support an even safer browsing mode that uses hardware-dependent control flow for browser processes. CET is available on the following supported hardware: Intel 11th Gen. or AMD Zen 3.
 
 ### Policy updates
 
