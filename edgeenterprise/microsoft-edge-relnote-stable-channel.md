@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 97.0.1072.55: January 6
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-06-2022).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-6-2022).
 
 ### Feature updates
 
@@ -42,7 +42,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **Citations in Microsoft Edge.** Citing sources for research is a common requirement for students. They have to manage many research references and sources, which aren't easy tasks. They also have to translate these citations to proper citation formats like APA, MLA, and Chicago. This new "Citations" feature, now in Preview in Microsoft Edge, gives students a better way to manage and generate citations as they research online. With Citations turned on in Collections or from **Settings and more (Alt-F)**, Microsoft Edge automatically generates citations that students can use later so they can stay focused on their research. When they're done, they can easily compile these citations into a final deliverable. For more information, see [Previewing Citations in Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
 
-- **Control Flow Guard (CFG).** Microsoft Edge will start supporting more fine-grained protection by combating memory corruption vulnerabilities and by protecting indirect calls. CFG is only supported with Windows 8 and later. For more information, see [Control Flow Guard](/windows/win32/secbp/control-flow-guard).
+- **Control Flow Guard (CFG).** Microsoft Edge will start supporting more fine-grained protection by combating memory corruption vulnerabilities and by protecting against indirect calls. CFG is only supported with Windows 8 and later. For more information, see [Control Flow Guard](/windows/win32/secbp/control-flow-guard).
   
   > [!NOTE]
   > This is an evolving technology, please share your feedback to help us strengthen its support.
