@@ -61,11 +61,11 @@ A modern browser solution is available by using multiple profiles in Microsoft E
 <!--- begin error messages --->
 ## Error messages
 
-### Error: “The connection for this site is not secure”
+### Error message: “The connection for this site is not secure”
 
 This error may happen if you're trying to open a legacy website in IE mode and the site's configured to run in TLS 1.0 or TLS 1.1. These protocols are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
 
-### Error: “This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath”
+### Error message: “This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath”
 
 Certain applications may require you to load the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
 
