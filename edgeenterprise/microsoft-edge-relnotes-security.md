@@ -26,6 +26,7 @@ This update contains the following Microsoft Edge-specific updates:
 - [CVE-2022-21929](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21929)
 - [CVE-2022-21930](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21930)
 - [CVE-2022-21931](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21931)
+- [CVE-2022-21970](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21970)
 
 ## December 14, 2021
 
