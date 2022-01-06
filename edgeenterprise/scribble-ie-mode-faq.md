@@ -57,7 +57,6 @@ A modern browser solution is available by using multiple profiles in Microsoft E
 
 - [Video: Microsoft Edge and Identity](/deployedge/microsoft-edge-video-identity)
 - [Using multiple profiles at work and at home is now easier with Microsoft Edge](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/)
-- [Sign in and create multiple profiles in Microsoft Edge](https://support.microsoft.com/en-us/topic/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435)
 
 <!--- begin error messages --->
 ## Error messages
