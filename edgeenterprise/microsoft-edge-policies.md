@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/05/2022
+ms.date: 01/06/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -31,9 +31,6 @@ The following new policies were added to this documentation update.
 | Policy Name |	Caption |
 |----|----|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 
 ## Available policies
@@ -393,9 +390,6 @@ These tables list all of the browser-related group policies available in this re
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
@@ -17327,214 +17321,8 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   [Back to top](#microsoft-edge---policies)
 
-  ### EnhanceSecurityMode
-
-  #### Enhance the security state in Microsoft Edge
-
   
   
-  #### Supported versions:
-
-  - On Windows and macOS since 98 or later
-
-  #### Description
-
-  This policy lets you enhance the security state in Microsoft Edge.
-
-If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
-
-If you set this policy to 'BalancedMode', the security state would be in balanced mode.
-
-If you set this policy to 'StrictMode', the security state would be in strict mode.
-
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
-
-Policy options mapping:
-
-* StandardMode (0) = Standard mode
-
-* BalancedMode (1) = Balanced mode
-
-* StrictMode (2) = Strict mode
-
-Use the preceding information when configuring this policy.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Integer
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: EnhanceSecurityMode
-  - GP name: Enhance the security state in Microsoft Edge
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: EnhanceSecurityMode
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000000
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: EnhanceSecurityMode
-  - Example value:
-``` xml
-<integer>0</integer>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### EnhanceSecurityModeBypassListDomains
-
-  #### Configure the list of domains for which enhance security mode will not be enforced
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 98 or later
-
-  #### Description
-
-  Configure the list of enhance security trusted domains. This means that
-enhance security mode will not be enforced when loading the sites in trusted domains.
-
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - List of strings
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: EnhanceSecurityModeBypassListDomains
-  - GP name: Configure the list of domains for which enhance security mode will not be enforced
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-
-  ##### Example value:
-
-```
-SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\1 = "mydomain.com"
-SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuniversity.edu"
-
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: EnhanceSecurityModeBypassListDomains
-  - Example value:
-``` xml
-<array>
-  <string>mydomain.com</string>
-  <string>myuniversity.edu</string>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### EnhanceSecurityModeEnforceListDomains
-
-  #### Configure the list of domains for which enhance security mode will always be enforced
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 98 or later
-
-  #### Description
-
-  Configure the list of enhance security untrusted domains. This means that
-enhance security mode will always be enforced when loading the sites in untrusted domains.
-
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - List of strings
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: EnhanceSecurityModeEnforceListDomains
-  - GP name: Configure the list of domains for which enhance security mode will always be enforced
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains
-  - Path (Recommended): N/A
-  - Value Name: 1, 2, 3, ...
-  - Value Type: list of REG_SZ
-
-  ##### Example value:
-
-```
-SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\1 = "mydomain.com"
-SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myuniversity.edu"
-
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: EnhanceSecurityModeEnforceListDomains
-  - Example value:
-``` xml
-<array>
-  <string>mydomain.com</string>
-  <string>myuniversity.edu</string>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
   ### EnterpriseHardwarePlatformAPIEnabled
 
   #### Allow managed extensions to use the Enterprise Hardware Platform API
