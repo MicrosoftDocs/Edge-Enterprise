@@ -183,19 +183,6 @@ You may also have to set the `compat-mode` attribute in Enterprise Mode Site Lis
 
 Yes, the Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022. To see what’s in scope, see [Lifecycle FAQ - Internet Explorer](/lifecycle/faq/internet-explorer-microsoft-edge). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, read [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-### How can I debug my legacy application while using IE mode on Microsoft Edge?
-
-You can use IEChooser to launch the Internet Explorer DevTools to debug the content of your IE mode tabs. To use IEChooser, follow these steps:
-
-1. Open IEChooser.
-   - Open the Run dialog box. For example, press the `Windows logo key` + `R`.
-   - Enter `%systemroot%\system32\f12\IEChooser.exe`, and then select **Ok**.
-2. In IEChooser, select the entry for the IE mode tab.
-
-### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
-
-Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
-
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
 Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you will need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
@@ -244,6 +231,19 @@ The ability to save links as web pages  requires the following minimum operating
 - Windows 10, version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
 - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
+### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
+
+Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
+
+### How can I debug my legacy application while using IE mode on Microsoft Edge?
+
+You can use IEChooser to launch the Internet Explorer DevTools to debug the content of your IE mode tabs. To use IEChooser, follow these steps:
+
+1. Open IEChooser.
+   - Open the Run dialog box. For example, press the `Windows logo key` + `R`.
+   - Enter `%systemroot%\system32\f12\IEChooser.exe`, and then select **Ok**.
+2. In IEChooser, select the entry for the IE mode tab.
+
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
 Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
@@ -256,6 +256,12 @@ https://support.microsoft.com/topic/november-22-2021-kb5007254-os-build-20348-38
 - Windows 10 version 2004; Windows Server version 2004; Windows 10 version; Windows Server version 20H2 and Windows 10 version 21H1 - [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) or later
 - Windows 10 version 1909 [KB5007189](
 https://support.microsoft.com/topic/november-9-2021-kb5007189-os-build-18362-1916-91b4647c-9979-4d84-8e64-efc8674e8c1f) or later
+
+
+
+
+
+
 
 ## See also
   
