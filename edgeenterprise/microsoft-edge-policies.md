@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/05/2022
+ms.date: 01/06/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,23 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following new policies were added to this documentation update.
-
-| Policy Name |	Caption |
-|----|----|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
-|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
-|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 
 ## Available policies
 
@@ -309,6 +292,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
 |[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -11269,6 +11253,77 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AddressBarEditingEnabled
+
+  #### Configure address bar editing
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, users can change the URL in the address bar.
+
+If you disable this policy, it prevents users from changing the URL in the address bar.
+
+Note: This policy doesn't prevent the browser from navigating to any URL. Users can still navigate to any URL by using the search option in the default New Tab Page, or using any link that leads to a web search engine. To ensure that users can only go to sites you expect, consider configuring the following policies in addition to this policy:
+
+- [NewTabPageLocation](#newtabpagelocation)
+
+- [HomepageLocation](#homepagelocation)
+
+- [HomepageIsNewTabPage](#homepageisnewtabpage)
+
+- [URLBlocklist](#urlblocklist) and [URLAllowlist](#urlallowlist) to scope the pages that browser can navigate to.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AddressBarEditingEnabled
+  - GP name: Configure address bar editing
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AddressBarEditingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AddressBarEditingEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
