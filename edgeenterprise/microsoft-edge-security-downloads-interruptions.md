@@ -3,7 +3,7 @@ title: "Identify and interrupt downloads of potentially dangerous files"
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 01/05/2022
+ms.date: 01/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,9 +20,9 @@ Microsoft Edge’s File Type Policies component classifies files by their level 
 
 Microsoft Edge inherits its file type policies from the upstream Chromium browser. You can view these file types and their classification in the [download_file_types.asciipb](https://source.chromium.org/chromium/chromium/src/+/main:components/safe_browsing/core/resources/download_file_types.asciipb;drc=af17ad3f07c1d8a24381eb7669bec0c2ffb86521) file. In this file, you’ll see that each type has a **danger_level**, which is one of three values: `DANGEROUS`, `NOT_DANGEROUS`, or `ALLOW_ON_USER_GESTURE`.
 
-The following classifications are simple:
+The following two classifications are simple:
 
-- **NOT_DANGEROUS** means that the file is safe to download, even if the download was accidental.
+- **NOT_DANGEROUS** means that the file is safe to download, even if the download request was accidental.
 - **DANGEROUS** means that the browser should always warn the user that the download may harm their device.
 
 The third setting, **ALLOW_ON_USER_GESTURE** is more subtle. These files are potentially dangerous, but most likely harmless if the user requests the download. Microsoft Edge will allow these downloads to continue automatically if one of the following conditions is met:
