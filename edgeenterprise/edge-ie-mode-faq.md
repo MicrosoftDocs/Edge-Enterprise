@@ -1,5 +1,5 @@
 ---
-title: "IE mode troubleshooting and FAQ"
+title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
@@ -17,7 +17,7 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 > [!NOTE]
 > The Internet Explorer 11 desktop application will be retired and go out of support on  June 15, 2022. To see the list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see the [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) blog post.
 
-This article provides troubleshooting tips and an FAQ for Microsoft Edge version 77 or later.
+This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
@@ -42,7 +42,7 @@ Users will experience the following symptoms:
 
 #### How to troubleshoot and fix
 
-The general strategy is to duplicate the same settings that worked with Internet Explorer 11 for a specific site in our IE mode site list entry. Use the F12 Developer Toolbar's "Emulation" tab in IE 11, shown in the next screenshot to investigate the scenario you want to fix. To open the Developer toolbar, press the F12 key and then select **Open DevTools**.
+The general strategy is to duplicate the same settings that worked with Internet Explorer 11 for a specific site in our IE mode site list. Use the F12 Developer Toolbar's "Emulation" tab in IE 11, shown in the next screenshot to investigate the scenario you want to fix. To open the Developer toolbar, press the F12 key and then select **Open DevTools**.
 
 ![Emulation tab on DevTools view](./media/edge-ie-mode-faq/edge-ie-mode-emulation-tab.png)
 
@@ -53,7 +53,8 @@ There are different messages that can be displayed for the Document mode, and in
 - Via X-UA-compatible meta tag
 - Via X-UA-compatible HTTP header
 
-The two X-UA-Compatible options indicate that either the webpage or the web server where the site is hosted, is showing the document mode that should be used by the browser.  
+The two X-UA-Compatible options indicate that either the webpage or the web server where the site is hosted is showing the document mode that should be used by the browser.  
+
 We want to honor the document mode in nearly all cases. To do that, we need to select one of the following modes in the IE mode site list entry for the site:
 
 - Default
@@ -97,7 +98,7 @@ Before we start analyzing a  failing workflow in Microsoft Edge, look at the add
 
 ![IE logo on Microsoft Edge menu bar.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
 
-If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
+If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this behavior points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
 Often, the redirect cycle happens so quickly that it’s difficult to identify the missing neutral sites. To help with this analysis, we use a tool that’s built into the Chromium engine: **net-export**.
 
