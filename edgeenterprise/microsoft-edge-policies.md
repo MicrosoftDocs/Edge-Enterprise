@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/03/2021
+ms.date: 01/06/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,15 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new policies were added to this documentation update.
+
+| Policy Name |	Caption |
+|----|----|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 
 ## Available policies
 
@@ -221,6 +230,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
+|[PrintStickySettings](#printstickysettings)|Print preview sticky settings|
 |[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
@@ -290,7 +300,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Get Image Descriptions from Microsoft Enabled|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -373,6 +383,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
+|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
@@ -418,6 +429,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
 |[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
@@ -451,6 +463,7 @@ These tables list all of the browser-related group policies available in this re
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -481,6 +494,7 @@ These tables list all of the browser-related group policies available in this re
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
@@ -520,6 +534,7 @@ These tables list all of the browser-related group policies available in this re
 |[TranslateEnabled](#translateenabled)|Enable Translate|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (deprecated)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
@@ -8153,6 +8168,86 @@ If you set this policy to zero or don't configure it, the system default resolut
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PrintStickySettings
+
+  #### Print preview sticky settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.
+
+If you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.
+
+If you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
+
+If you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
+
+This policy is only available if you enable or don't configure the [PrintingEnabled](#printingenabled) policy.
+
+Policy options mapping:
+
+* EnableAll (0) = Enable sticky settings for PDF and Webpages
+
+* DisableAll (1) = Disable sticky settings for PDF and Webpages
+
+* DisablePdf (2) = Disable sticky settings for PDF
+
+* DisableWebpage (3) = Disable sticky settings for Webpages
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintStickySettings
+  - GP name: Print preview sticky settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintStickySettings
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintStickySettings
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PrinterTypeDenyList
 
   #### Disable printer types on the deny list
@@ -11104,7 +11199,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Get Image Descriptions from Microsoft Enabled
+  #### Let get image descriptions from Microsoft
 
   
   
@@ -11139,7 +11234,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   ##### Group Policy (ADMX) info
 
   - GP unique name: AccessibilityImageLabelsEnabled
-  - GP name: Get Image Descriptions from Microsoft Enabled
+  - GP name: Let get image descriptions from Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16166,6 +16261,8 @@ If you set the value of this policy to 0, the default cache size is used, and us
 
 If you don't configure this policy, the default size is used, but users can override it with the '--disk-cache-size' flag.
 
+Note: The value specified in this policy is used as a hint to various cache subsystems in the browser. The aggregate disk usage of all caches may therefore be larger than (but within the same order of magnitude as) the value specified.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -16763,6 +16860,70 @@ If you disable this policy, Microsoft Edge will not enhance images.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeFollowEnabled
+
+  #### Enable Follow service in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to enable Follow service and apply it to users.
+
+Users can use the Follow an influencer, site, or topic in Microsoft Edge..
+
+If you enable or don't configure this policy, Follow in Microsoft Edge can be applied.
+
+If you disable this policy, Microsoft Edge will not communicate with Follow service to provide the follow feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeFollowEnabled
+  - GP name: Enable Follow service in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeFollowEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeFollowEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeShoppingAssistantEnabled
 
   #### Shopping in Microsoft Edge Enabled
@@ -17160,6 +17321,8 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   [Back to top](#microsoft-edge---policies)
 
+  
+  
   ### EnterpriseHardwarePlatformAPIEnabled
 
   #### Allow managed extensions to use the Enterprise Hardware Platform API
@@ -19766,6 +19929,68 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InAppSupportEnabled
+
+  #### In-app support Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Microsoft Edge uses the in-app support feature (enabled by default) to allow users to contact our support agents directly from the browser. Also, by default, users can't disable (turn off) the in-app support feature.
+
+If you enable this policy or don't configure it, users can invoke in-app support.
+
+If you disable this policy, users can't invoke in-app support.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InAppSupportEnabled
+  - GP name: In-app support Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InAppSupportEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: InAppSupportEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InPrivateModeAvailability
 
   #### Configure InPrivate mode availability
@@ -20038,11 +20263,11 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   #### Description
 
-  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers.
+  Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data.
 
 If you enable this policy, you can specify which data types should be included in navigations between Microsoft Edge and Internet Explorer mode.
 
-If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data and additional headers in navigations that change modes.
+If you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data in navigations that change modes.
 
 To learn more, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
 
@@ -22036,6 +22261,68 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   [Back to top](#microsoft-edge---policies)
 
+  ### MicrosoftEdgeInsiderPromotionEnabled
+
+  #### Microsoft Edge Insider Promotion Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Shows content promoting the Microsoft Edge Insider channels on the About Microsoft Edge settings page.
+
+If you enable or don't configure this policy, the Microsoft Edge Insider promotion content will be shown on the About Microsoft Edge page.
+
+If you disable this policy, the Microsoft Edge Insider promotion content will not be shown on the About Microsoft Edge page.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftEdgeInsiderPromotionEnabled
+  - GP name: Microsoft Edge Insider Promotion Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftEdgeInsiderPromotionEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftEdgeInsiderPromotionEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NativeWindowOcclusionEnabled
 
   #### Enable Native Window Occlusion (deprecated)
@@ -22933,19 +23220,19 @@ For more information about this policy see [https://go.microsoft.com/fwlink/?lin
 
   This setting lets you specify whether Internet Explorer will redirect navigations to sites that require a modern browser to Microsoft Edge.
 
-If you don't configure this policy or set it to 'Sitelist', beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
+If you don't configure this policy or set it to 'Sitelist' ('Redirect sites based on the incompatible sites sitelist' value 1), beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
 
 When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that began loading that site is closed if it had no prior content. Otherwise, it is navigated to a Microsoft help page explaining why the site was redirected to Microsoft Edge.
 
 When Microsoft Edge is launched to load a site from IE, an information bar is shown to the user explaining that the site works best in a modern browser.
 
-If you set this policy to 'Disable', Internet Explorer will not redirect any traffic to Microsoft Edge.
+If you set this policy to 'Disable' ('Prevent redirection', value 0), Internet Explorer will not redirect any traffic to Microsoft Edge.
 
 For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Policy options mapping:
 
-* Disable (0) = Disable
+* Disable (0) = Prevent redirection
 
 * Sitelist (1) = Redirect sites based on the incompatible sites sitelist
 
@@ -23964,6 +24251,72 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <string>tls1</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SandboxExternalProtocolBlocked
+
+  #### Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  Microsoft Edge will block navigations to external protocols inside a
+sandboxed iframe.
+
+If you enable or don't configure this policy, Microsoft Edge will block those navigations.
+
+If you disable this policy, Microsoft Edge will not block those navigations.
+
+This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 104.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SandboxExternalProtocolBlocked
+  - GP name: Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SandboxExternalProtocolBlocked
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SandboxExternalProtocolBlocked
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -26503,6 +26856,68 @@ If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If
 
   [Back to top](#microsoft-edge---policies)
 
+  ### U2fSecurityKeyApiEnabled
+
+  #### Allow using the deprecated U2F Security Key API (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It won't work in Microsoft Edge version 104.
+
+If you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.
+
+If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ends in Microsoft Edge version 104.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: U2fSecurityKeyApiEnabled
+  - GP name: Allow using the deprecated U2F Security Key API (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: U2fSecurityKeyApiEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: U2fSecurityKeyApiEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### URLAllowlist
 
   #### Define a list of allowed URLs
@@ -27863,7 +28278,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Controls whether WebRTC will respect the Windows OS routing table rules when making peer to peer connections.
+  Controls whether WebRTC will respect the Windows OS routing table rules when making peer to peer connections, thus enabling split tunnel VPNs.
 
 If you disable this policy or don't configure it, WebRTC will not consider the routing table and may make peer to peer connections over any available network.
 
