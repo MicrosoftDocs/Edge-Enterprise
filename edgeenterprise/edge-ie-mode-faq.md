@@ -164,6 +164,19 @@ You might see this error if you're remote debugging and navigate to a web page c
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication also isn't allowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
+### Error message: “The connection for this site is not secure”
+
+This error may happen if you're trying to open a legacy website in IE mode and the site's configured to run in TLS 1.0 or TLS 1.1. These protocols are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
+
+### Error message: “This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath”
+
+Certain applications may require you to load the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
+
+You may also have to set the `compat-mode` attribute in Enterprise Mode Site List to **Default**. For more information, see [Enterprise Mode and the Enterprise Mode Site List](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#enterprise-mode-and-the-enterprise-mode-site-list-1).
+
+> [!TIP]
+> Your users can easily view this site list and the compatibility mode by typing **about:compat** in Microsoft Edge.
+
 ## Frequently Asked Questions
 
 ### Will IE mode replace Internet Explorer 11?
