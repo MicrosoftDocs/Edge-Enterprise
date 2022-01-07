@@ -30,7 +30,7 @@ There are situations in which you want to reset your Microsoft Edge data in the 
 
 Before performing a reset, we recommend that you back up your favorites. Use the following steps to back up your favorites.
 
-1. In Microsoft Edge, select **Press Ctrl + Shift + O > Choose three dots > Click Export favourites**.
+1. In Microsoft Edge, select **Press Ctrl + Shift + O > Choose three dots > Click Export favorites**.
 2. Choose the file to where you want to save your favorites. You can type your own filename or use the name that Microsoft Edge provides by default,  "favorites_month_day_year.html" as a filename. For example, "favorites_07_05_21.html". If you need to restore your favorites later, you can do so from that file.
 3. Click **Save**.
 
