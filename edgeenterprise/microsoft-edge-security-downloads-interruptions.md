@@ -3,7 +3,7 @@ title: "Identify and interrupt downloads of potentially dangerous files"
 ms.author: kvice
 author: AndreaLBarr
 manager: srugh
-ms.date: 01/07/2022
+ms.date: 01/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -39,7 +39,7 @@ The download will also continue automatically if the user explicitly starts it b
 
 If a download for a potentially dangerous type starts without the required gesture, Microsoft Edge states that the download "was blocked". Commands named `Keep` and `Delete` are available from the **…** (ellipsis) option on the download item to let the user continue or cancel the download.
 
-:::image type="content" source="media/microsoft-edge-security-Download-interruptions/Dowload-was-blocked.png" alt-text="Download is blocked but user can keep or delete the download.":::
+:::image type="content" source="media/microsoft-edge-security-Download-interruptions/Dowload-was-blocked.png" alt-text="Download is blocked, user can keep or delete the download.":::
 
 On the `edge://downloads` page, the user will see the same options. The next screenshot shows and example of these options.
 
