@@ -56,7 +56,7 @@ Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.up
 
 ## Are Initial Preferences supported?
 
-Yes. For more information, see [Configure Microsoft Edge using Initial Preferences settings for the first run](./deployedge/initial-preferences-support-on-microsoft-edge-browser.md)
+Yes. For more information, see [Configure Microsoft Edge using Initial Preferences settings for the first run](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
 ## See also
 
