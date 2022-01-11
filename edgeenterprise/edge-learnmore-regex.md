@@ -22,13 +22,13 @@ Two regular expressions can be altered or concatenated to form a new regular exp
 
 The metacharacters _`\`_ , _+_ , and _?_ are repetition operators: *e<sub>1</sub>* _`\`_ matches a sequence of zero or more (possibly different) strings, each of which match *e<sub>1</sub>*; *e<sub>1</sub>* _+_ matches one or more; *e<sub>1</sub>* _?_ matches zero or one.
 
-The operator precedence, from weakest to strongest binding, is first alternation, then concatenation, and finally the repetition operators. Explicit parentheses can be used to force different meanings, just as in arithmetic expressions. Some examples: _ab|cd_ is equivalent to _(ab)|(cd)_ ; _`ab\`_ is equivalent to _`a(b\)`_ .
+The operator precedence, from weakest to strongest binding, is first alternation, then concatenation, and finally the repetition operators. Explicit parentheses can be used to force different meanings, as in arithmetic expressions. Some examples: _ab|cd_ is equivalent to _(ab)|(cd)_ ; _`ab\`_ is equivalent to _`a(b\)`_ .
 
-The syntax described so far is most of the traditional Unix _egrep_ regular expression syntax. This subset suffices to describe all regular languages: loosely speaking, a regular language is a set of strings that can be matched in a single pass through the text using only a fixed amount of memory. Newer regular expression facilities (notably Perl and those that have copied it) have added many new operators and escape sequences, which make the regular expressions more concise, and sometimes more cryptic, but usually not more powerful.
+The syntax described so far is most of the traditional Unix _egrep_ regular expression syntax. This subset suffices to describe all regular languages. A regular language is a set of strings that can be matched in a single pass through the text using only a fixed amount of memory. Newer regular expression facilities (notably Perl and those languages that have copied it) have added many new operators and escape sequences, which make the regular expressions more concise, and sometimes more cryptic, but not more powerful.
 
 This page lists the regular expression syntax accepted by RE2.
 
-It also lists some syntax accepted by PCRE, PERL and VIM.
+It also lists some syntax accepted by PCRE, PERL, and VIM.
 
 ## Syntax tables
 
