@@ -1,4 +1,4 @@
-# last revised 12/15/2021 
+# last revised 01/11/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -261,5 +261,5 @@
      href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
-   - name: Frequently asked questions
-     href: faqs-edge-in-the-enterprise.yml 
+#   - name: Frequently asked questions
+#     href: faqs-edge-in-the-enterprise.yml 
