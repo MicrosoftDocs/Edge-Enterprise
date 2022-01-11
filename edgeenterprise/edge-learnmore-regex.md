@@ -1,7 +1,7 @@
 ---
 title: "Regular Expression 2 syntax"
 ms.author: comanea
-author: AndreaLBarr
+author: dan-wesley
 manager: seanlyn
 ms.date: 01/11/2022
 audience: ITPro
@@ -24,7 +24,7 @@ The metacharacters _`\`_ , _+_ , and _?_ are repetition operators: *e<sub>1</sub
 
 The operator precedence, from weakest to strongest binding, is first alternation, then concatenation, and finally the repetition operators. Explicit parentheses can be used to force different meanings, as in arithmetic expressions. Some examples: _ab|cd_ is equivalent to _(ab)|(cd)_ ; _`ab\`_ is equivalent to _`a(b\)`_ .
 
-The syntax described so far is most of the traditional Unix _egrep_ regular expression syntax. This subset suffices to describe all regular languages. A regular language is a set of strings that can be matched in a single pass through the text using only a fixed amount of memory. Newer regular expression facilities (notably Perl and those languages that have copied it) have added many new operators and escape sequences, which make the regular expressions more concise, and sometimes more cryptic, but not more powerful.
+The syntax described so far is most of the traditional Unix _egrep_ regular expression syntax. This subset suffices to describe all regular languages. A regular language is a set of strings that can be matched in a single pass through the text using only a fixed amount of memory. Newer regular expression facilities (notably Perl and those languages that have copied it) have added many new operators and escape sequences. These changes make the regular expressions more concise, and sometimes more cryptic, but not more powerful.
 
 This page lists the regular expression syntax accepted by RE2.
 
