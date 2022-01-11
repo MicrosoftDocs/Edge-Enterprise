@@ -3,7 +3,7 @@ title: "Regular Expression 2 syntax"
 ms.author: comanea
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 08/12/2021
+ms.date: 01/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
