@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 01/03/2022
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -159,11 +159,11 @@ For Microsoft Edge, all settings will start under this key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
 
-The next key that you will create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location for settings that apply to Google Hangouts:
+The next key that you will create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location in the registry for settings that apply to Google Hangouts:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\nckgahadagoaajjgafhacjanaoiihapd`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
 
-For settings that apply to the Default Scope, use this location:
+For settings that apply to the Default Scope (asterisk), use the following location in the registry:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\*`
 
