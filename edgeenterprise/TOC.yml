@@ -1,4 +1,4 @@
-# last revised 12/15/2021 
+# last revised 01/11/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -174,7 +174,7 @@
      href: ms-edge-security-for-business.md
    - name: Modern security protection for vulnerable legacy apps
      href: microsoft-edge-security-iemode-safer-than-ie.md   
-   - name: Interrupting Downloads of Potentially Dangerous Files
+   - name: Identify and interrupt downloads of potentially dangerous files
      href: microsoft-edge-security-downloads-interruptions.md
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
@@ -261,5 +261,7 @@
      href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
-   - name: Frequently asked questions
-     href: faqs-edge-in-the-enterprise.yml 
+   - name: Microsoft Edge FAQ
+     href: microsoft-edge-frequently-asked-questions.md
+#   - name: Frequently asked questions
+#     href: faqs-edge-in-the-enterprise.yml 
