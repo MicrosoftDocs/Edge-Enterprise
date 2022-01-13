@@ -62,7 +62,6 @@ These tables list all of the browser-related group policies available in this re
 - [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
 
-
 ### [*Application Guard settings*](#application-guard-settings-policies)
 
 |Policy Name|Caption|
