@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/06/2022
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -6858,13 +6858,11 @@ If you disable this policy, users will no longer see strong password suggestions
 
   #### Description
 
-  Enable Microsoft Edge to save user passwords.
+  Enable Microsoft Edge to save user passwords. The next time a user visits a site with a saved password, Microsoft Edge will enter the password automatically.
 
-If you enable this policy, users can save their passwords in Microsoft Edge. The next time they visit the site, Microsoft Edge will enter the password automatically.
+If you enable or don't configure this policy, users can save and add their passwords in Microsoft Edge.
 
-If you disable this policy, users can't save new passwords, but they can still use previously saved passwords.
-
-If you enable or disable this policy, users can't change or override it in Microsoft Edge. If you don't configure it, users can save passwords, as well as turn this feature off.
+If you disable this policy, users can't save and add new passwords, but they can still use previously saved passwords.
 
   #### Supported features:
 
