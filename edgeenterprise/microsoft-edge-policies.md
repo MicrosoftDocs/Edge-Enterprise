@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/06/2022
+ms.date: 01/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,12 +26,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following new policies were added to this documentation update.
+The following new policies are in this documentation update.
 
 | Policy Name |	Caption |
 |----|----|
-|[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
-|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 
 ## Available policies
 
@@ -301,6 +303,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
 |[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
+|[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
@@ -390,6 +393,9 @@ These tables list all of the browser-related group policies available in this re
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
@@ -6863,13 +6869,11 @@ If you disable this policy, users will no longer see strong password suggestions
 
   #### Description
 
-  Enable Microsoft Edge to save user passwords.
+  Enable Microsoft Edge to save user passwords. The next time a user visits a site with a saved password, Microsoft Edge will enter the password automatically.
 
-If you enable this policy, users can save their passwords in Microsoft Edge. The next time they visit the site, Microsoft Edge will enter the password automatically.
+If you enable or don't configure this policy, users can save and add their passwords in Microsoft Edge.
 
-If you disable this policy, users can't save new passwords, but they can still use previously saved passwords.
-
-If you enable or disable this policy, users can't change or override it in Microsoft Edge. If you don't configure it, users can save passwords, as well as turn this feature off.
+If you disable this policy, users can't save and add new passwords, but they can still use previously saved passwords.
 
   #### Supported features:
 
@@ -11258,6 +11262,77 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AddressBarEditingEnabled
+
+  #### Configure address bar editing
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, users can change the URL in the address bar.
+
+If you disable this policy, it prevents users from changing the URL in the address bar.
+
+Note: This policy doesn't prevent the browser from navigating to any URL. Users can still navigate to any URL by using the search option in the default New Tab Page, or using any link that leads to a web search engine. To ensure that users can only go to sites you expect, consider configuring the following policies in addition to this policy:
+
+- [NewTabPageLocation](#newtabpagelocation)
+
+- [HomepageLocation](#homepagelocation)
+
+- [HomepageIsNewTabPage](#homepageisnewtabpage)
+
+- [URLBlocklist](#urlblocklist) and [URLAllowlist](#urlallowlist) to scope the pages that browser can navigate to.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AddressBarEditingEnabled
+  - GP name: Configure address bar editing
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AddressBarEditingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AddressBarEditingEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -17321,8 +17396,214 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EnhanceSecurityMode
+
+  #### Enhance the security state in Microsoft Edge
+
   
   
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  This policy lets you enhance the security state in Microsoft Edge.
+
+If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
+
+If you set this policy to 'BalancedMode', the security state would be in balanced mode.
+
+If you set this policy to 'StrictMode', the security state would be in strict mode.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+Policy options mapping:
+
+* StandardMode (0) = Standard mode
+
+* BalancedMode (1) = Balanced mode
+
+* StrictMode (2) = Strict mode
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityMode
+  - GP name: Enhance the security state in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityMode
+  - Example value:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityModeBypassListDomains
+
+  #### Configure the list of domains for which enhance security mode will not be enforced
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Configure the list of enhance security trusted domains. This means that
+enhance security mode will not be enforced when loading the sites in trusted domains.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeBypassListDomains
+  - GP name: Configure the list of domains for which enhance security mode will not be enforced
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityModeBypassListDomains
+  - Example value:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityModeEnforceListDomains
+
+  #### Configure the list of domains for which enhance security mode will always be enforced
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 98 or later
+
+  #### Description
+
+  Configure the list of enhance security untrusted domains. This means that
+enhance security mode will always be enforced when loading the sites in untrusted domains.
+
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeEnforceListDomains
+  - GP name: Configure the list of domains for which enhance security mode will always be enforced
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EnhanceSecurityModeEnforceListDomains
+  - Example value:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnterpriseHardwarePlatformAPIEnabled
 
   #### Allow managed extensions to use the Enterprise Hardware Platform API
