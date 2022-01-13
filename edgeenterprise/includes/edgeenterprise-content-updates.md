@@ -2,6 +2,26 @@
 
 
 
+## Week of January 03, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/3/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/4/2022 | [Per-site configuration by policy](/DeployEdge/per-site-configuration-by-policy) | modified |
+| 1/4/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/5/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/5/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/5/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 1/6/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 1/6/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/6/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/7/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/7/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/7/2022 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 1/7/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+
+
 ## Week of December 20, 2021
 
 
@@ -43,43 +63,3 @@
 | 12/10/2021 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
 | 12/10/2021 | [Microsoft Edge channel overview](/DeployEdge/microsoft-edge-channels) | modified |
 | 12/10/2021 | [Learn how to configure initial preferences on Microsoft Edge.](/DeployEdge/initial-preferences-support-on-microsoft-edge-browser) | modified |
-
-
-## Week of November 29, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/29/2021 | Microsoft Edge content notification | removed |
-| 11/29/2021 | [Microsoft Edge Lifecycle](/DeployEdge/microsoft-edge-support-lifecycle) | modified |
-| 11/30/2021 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
-| 11/30/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/1/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 12/1/2021 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 12/1/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 12/2/2021 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
-| 12/2/2021 | [Microsoft Edge Supported Operating Systems](/DeployEdge/microsoft-edge-supported-operating-systems) | modified |
-| 12/2/2021 | [Filter format for Microsoft Edge URL policies](/DeployEdge/edge-learnmmore-url-list-filter%20format) | modified |
-| 12/2/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 12/2/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/2/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 12/3/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 12/3/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-
-
-## Week of November 22, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/22/2021 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-| 11/22/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 11/22/2021 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 11/22/2021 | [Understand Data Loss Prevention in Microsoft Edge](/DeployEdge/microsoft-edge-security-dlp) | modified |
-| 11/22/2021 | [Use group policies to manage Microsoft Edge extensions](/DeployEdge/microsoft-edge-manage-extensions-policies) | modified |
-| 11/23/2021 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 11/23/2021 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 11/24/2021 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 11/24/2021 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 11/24/2021 | [Learn how Microsoft Edge handles mixed content downloads](/DeployEdge/edge-learnmore-mixed-content-downloads) | modified |
-| 11/24/2021 | [Associate file extensions with Internet Explorer mode](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modified |
