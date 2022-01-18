@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/07/2022
+ms.date: 01/18/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -122,9 +122,17 @@ In some cases, multiple neutral site entries are needed, depending on the specif
 
 In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you are aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
+## What if I need help with setting up Microsoft Edge and/or Internet Explorer mode?
+
+We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There’s also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), which is available at no extra charge to customers with 150 or more paid seats of Windows 10.
+
+We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) and our [IE mode blog series]( https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
+
 ## What if these steps don't fix the issue?
 
 This article is designed to help troubleshoot the most common IE mode configuration issues, but it might not cover every possible scenario. If you run into an issue that you can't fix and need help with, contact App Assure at [https://aka.ms/AppAssure](https://aka.ms/AppAssure) and we'll help you with your problem.
+
+
 
 ## Get general diagnostic and configuration information
 
