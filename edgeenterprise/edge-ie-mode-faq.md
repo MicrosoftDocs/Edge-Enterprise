@@ -24,7 +24,7 @@ This article provides troubleshooting tips and FAQ for Microsoft Edge version 77
 
 ## What if I need help with setting up Microsoft Edge or Internet Explorer mode?
 
-We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There’s also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), which is available at no extra charge to customers with 150 or more paid seats of Windows 10.
+We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There’s also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), available at no extra charge to customers with 150 or more paid seats of Windows 10.
 
 We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) and our [IE mode blog series](https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
 
@@ -203,9 +203,9 @@ However, rather than use the View in File Explorer option, the recommended appro
 The recommended alternatives for the no-merge functionality in Microsoft Edge are one of the following actions:
 
 1. Use Profiles in Microsoft Edge - Each profile maps to a different IE session for IE mode pages, so it behaves identically to the no-merge option.
-2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that both launches Microsoft Edge and changes the path for the session.
+2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that launches Microsoft Edge and changes the path for the session.
 
-If neither of the previous options work for your scenario, starting in Microsoft Edge version 93, IE mode on Microsoft Edge will support no-merge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the no-merge behavior in IE11.
+If neither of the previous options work for your scenario, starting in Microsoft Edge version 93, IE mode on Microsoft Edge will support no-merge. For an end user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the no-merge behavior in IE11.
 
 For each Microsoft Edge window, the first time an IE mode tab is visited within that window, if it’s a designated "no-merge" site, that window is locked into a different "no-merge" IE session.  This window stays locked from all other Microsoft Edge windows until the last IE mode tab is closed in the locked window. This follows previous behavior where users could launch IE with no-merge and launch Microsoft Edge without no-merge using other mechanisms. All sites opening in a new window (through window.open) will respect the merge nature of the parent process.
 
@@ -223,13 +223,13 @@ You can validate the no-merge behavior in Microsoft Edge version 93 or later by 
    </site>
    ```
 
-3. Navigate to any site configured as no-merge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session. Note that are multiple iexplore.exe processes in Task Manager.
+3. Navigate to any site configured as no-merge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session. Note that there are multiple iexplore.exe processes in Task Manager.
 
 If you have any feedback, reach out through one of our feedback channels: Microsoft support or the [TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) forum.
 
 ### Can I save links as webpages in Internet Explorer mode?
 
-Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy "*Allow Save Target As in Internet Explorer mode*" located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*. The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, re-opening the file will render the page in Microsoft Edge.
+Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy "*Allow Save Target As in Internet Explorer mode*" located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*. The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, reopening the file will render the page in Microsoft Edge.
 
 The ability to save links as web pages  requires the following minimum operating system updates:
 
@@ -242,7 +242,7 @@ The ability to save links as web pages  requires the following minimum operating
 
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
-Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
+Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps, you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
 
 ### How can I debug my legacy application while using IE mode on Microsoft Edge?
 
@@ -255,7 +255,7 @@ You can use IEChooser to launch the Internet Explorer DevTools to debug the cont
 
 ### My application requires transferring POST data between IE mode and Microsoft Edge. Is this supported?
 
-Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and additional HTTP headers. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
+Starting with Microsoft Edge Beta channel version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data and extra HTTP headers. However, if form data includes file attachments, they will not be transferred between engines. You can choose what data types should be included in such navigations using the [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) group policy.
 
 In addition to Microsoft Edge version 96, you need to have the following Windows updates installed for this experience:
 
