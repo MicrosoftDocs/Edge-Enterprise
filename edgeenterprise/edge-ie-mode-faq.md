@@ -128,15 +128,13 @@ In some cases, multiple neutral site entries are needed, depending on the specif
 
 In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you are aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
-
-
 ### What if these steps don't fix the issue?
 
 This article is designed to help troubleshoot the most common IE mode configuration issues, but it might not cover every possible scenario. If you run into an issue that you can't fix and need help with, contact App Assure at [https://aka.ms/AppAssure](https://aka.ms/AppAssure) and we'll help you with your problem.
 
 ## Get general diagnostic and configuration information
 
-You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
+You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. The "Internet Explorer mode diagnostic information" page might show diagnostic messages and you can export diagnostic data to an xml file. This diagnostic information page also provides configuration information for the following categories:
 
 - **Registry key check.** (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can select **Fix it** to resolve the problem.
 - **Internet Explorer mode.** Shows the API version that's used, based on the configuration and OS. If there's a problem, the user may be prompted to install a Windows Update.
