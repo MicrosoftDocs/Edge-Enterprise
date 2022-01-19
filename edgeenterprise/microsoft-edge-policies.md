@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/12/2022
+ms.date: 01/18/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,17 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following new policies are in this documentation update.
-
-| Policy Name |	Caption |
-|----|----|
-|[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
-|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
-|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 
 ## Available policies
 
@@ -308,6 +297,7 @@ These tables list all of the browser-related group policies available in this re
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
+|[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu|
 |[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete)|
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (deprecated)|
@@ -328,7 +318,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoOpenAllowedForURLs](#autoopenallowedforurls)|URLs where AutoOpenFileTypes can apply|
 |[AutoOpenFileTypes](#autoopenfiletypes)|List of file types that should be automatically opened on download|
 |[AutofillAddressEnabled](#autofilladdressenabled)|Enable AutoFill for addresses|
-|[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for credit cards|
+|[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for payment instruments|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
@@ -565,7 +555,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (deprecated)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
-|[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver (deprecated)|
+|[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
 
@@ -5433,7 +5423,7 @@ To block extensions from a particular third party store, you only need to block 
 
 Note that you can still use [ExtensionInstallForcelist](#extensioninstallforcelist) and [ExtensionInstallAllowlist](#extensioninstallallowlist) to allow / force install specific extensions even if the store is blocked using the JSON in the previous example.
 
-Note: For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
+Note: For Windows instances not joined to a Microsoft Active Directory domain and macOS instances not managed via MDM or joined to a domain via MCX, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
 
   #### Supported features:
@@ -11592,6 +11582,66 @@ If you disable this policy, whenever the user performs an action that triggers a
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AllowGamesMenu
+
+  #### Allow users to access the games menu
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  If you enable or don't configure this policy, users can access the games menu.
+
+If you disable this policy, users won't be able to access the games menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowGamesMenu
+  - GP name: Allow users to access the games menu
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowGamesMenu
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AllowGamesMenu
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AllowPopupsDuringPageUnload
 
   #### Allows a page to show popups during its unloading (obsolete)
@@ -13009,7 +13059,7 @@ Note that if you disable this policy you also stop all activity for all web form
 
   ### AutofillCreditCardEnabled
 
-  #### Enable AutoFill for credit cards
+  #### Enable AutoFill for payment instruments
 
   
   
@@ -13019,11 +13069,11 @@ Note that if you disable this policy you also stop all activity for all web form
 
   #### Description
 
-  Enables Microsoft Edge's AutoFill feature and lets users auto complete credit card information in web forms using previously stored information.
+  Enables Microsoft Edge's AutoFill feature and lets users auto complete payment instruments like credit or debit cards in web forms using previously stored information. This includes suggesting new payment instruments like Buy Now Pay Later (BNPL) in web forms and Express Checkout.
 
-If you disable this policy, AutoFill never suggests or fills credit card information, nor will it save additional credit card information that users might submit while browsing the web.
+If you enable this policy or don't configure it, users can control AutoFill for payment instruments.
 
-If you enable this policy or don't configure it, users can control AutoFill for credit cards.
+If you disable this policy, AutoFill never suggests, fills, or recommends new payment Instruments. Additionally, it won't save any payment instrument information that users submit while browsing the web.
 
   #### Supported features:
 
@@ -13040,7 +13090,7 @@ If you enable this policy or don't configure it, users can control AutoFill for 
   ##### Group Policy (ADMX) info
 
   - GP unique name: AutofillCreditCardEnabled
-  - GP name: Enable AutoFill for credit cards
+  - GP name: Enable AutoFill for payment instruments
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -28862,9 +28912,9 @@ If you don't configure the policy:
 
   ### WinHttpProxyResolverEnabled
 
-  #### Use Windows proxy resolver (deprecated)
+  #### Use Windows proxy resolver
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
@@ -28872,7 +28922,7 @@ If you don't configure the policy:
 
   #### Description
 
-  This policy is deprecated because it will be superseded by a similar feature in a future release, see https://crbug.com/1032820.
+  This policy will be superseded by a similar feature in a future release. For more information, see https://crbug.com/1032820.
 
 Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Microsoft Edge. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
 
@@ -28897,7 +28947,7 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
   ##### Group Policy (ADMX) info
 
   - GP unique name: WinHttpProxyResolverEnabled
-  - GP name: Use Windows proxy resolver (deprecated)
+  - GP name: Use Windows proxy resolver
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
