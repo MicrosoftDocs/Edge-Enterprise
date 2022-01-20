@@ -34,7 +34,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
-## Version  97.0.1072.55: January 6
+## Version 96.0.1054.72: January 6
 
 Fixed various bugs and performance issues for Extended Stable release.
 
