@@ -17474,7 +17474,7 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+<!-- For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). -->
 
 Policy options mapping:
 
