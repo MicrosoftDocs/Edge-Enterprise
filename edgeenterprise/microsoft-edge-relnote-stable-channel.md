@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2022
+ms.date: 01/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -97,6 +97,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) - Visual search enabled.
 - [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Force WebSQL in third-party contexts to be re-enabled.
 - [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - Allow Window and Tab capture by these origins.
+
+#### Obsoleted Policies
+
+- [AppCacheForceEnabled](/deployedge/microsoft-edge-policies#appcacheforceenabled) - Allows the AppCache feature to be re-enabled, even if it's turned off by default.
 
 ## Version 96.0.1054.62: December 17
 
