@@ -12182,7 +12182,7 @@ Use the preceding information when configuring this policy.
 
   ### AppCacheForceEnabled
 
-  #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
+  #### Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)
 
   OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
   
