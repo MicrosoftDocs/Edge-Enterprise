@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/19/2022
+ms.date: 01/21/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -12184,7 +12184,7 @@ Use the preceding information when configuring this policy.
 
   #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
 
-  
+  OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
   
   #### Supported versions:
 
