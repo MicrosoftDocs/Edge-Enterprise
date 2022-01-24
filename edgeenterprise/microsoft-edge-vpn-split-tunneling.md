@@ -14,7 +14,7 @@ description: "Enable Microsoft Edge and split tunnel VPN support for WebRTC (Web
 
 # Split tunnel VPN support for WebRTC (Web Real-Time Communication)
   
-This article describes Microsoft Edge and split tunnel VPN support for WebRTC. This support lets enterprise customers get the benefit of VPN split tunneling for peer-to-peer traffic on Microsoft Edge.
+This article describes Microsoft Edge and split tunnel VPN support for WebRTC. This support lets enterprise customers get the benefit of VPN split tunneling for peer-to-peer traffic on Microsoft Edge. VPN split tunneling improves peer-to-peer media streaming quality for users and reduces VPN server load.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 96 or later.
