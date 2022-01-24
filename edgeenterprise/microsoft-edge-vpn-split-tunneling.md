@@ -19,7 +19,7 @@ This article describes Microsoft Edge and split tunnel VPN support for WebRTC. T
 > [!NOTE]
 > This article applies to Microsoft Edge version 96 or later.
 
-## What is VPN split tunneling and why you should I use it?
+## What is VPN split tunneling and why should I use it?
 
 VPN split tunneling is a feature that enables users to use two different networks for traffic instead of having all the traffic routed through a VPN. Windows has supported this feature for native applications, and VPN split tunneling is also offered for Microsoft 365 applications over VPN split tunneling on on Windows. For more information, see [Overview: VPN split tunneling with Office 365 - Microsoft 365 Enterprise](/microsoft-365/enterprise/microsoft-365-vpn-split-tunnel?view=o365-worldwide&preserve-view=true). Microsoft Edge has also honored the VPN split tunneling configuration but support for the peer-to-peer traffic was missing.
 
