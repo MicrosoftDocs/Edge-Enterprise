@@ -27,7 +27,7 @@ We’ve heard about customers needs for routing peer-to-peer user traffic throug
 
 ## How to configure VPN split tunneling on Microsoft Edge
 
-To enable VPN split tunneling and configure the networks for your users, we recommend you start with the guidance in [Implementing VPN split tunneling for Office 365 - Microsoft 365 Enterprise](/microsoft-365/enterprise/microsoft-365-vpn-implement-split-tunnel?view=o365-worldwide&preserve-view=true). With the proper routing table configured based on the information described in the preceding article, you just need to take the additional step of enabling the [WebRtcRespectOsRoutingTableEnabled](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) policy. This policy enables support for Windows OS routing table rules when making peer to peer connections via WebRTC. Now you’re ready to provide improved peer-to-peer media streaming experience on Microsoft Edge!
+To enable VPN split tunneling and configure the networks for your users, we recommend you start with the guidance in [Implementing VPN split tunneling for Office 365 - Microsoft 365 Enterprise](/microsoft-365/enterprise/microsoft-365-vpn-implement-split-tunnel?view=o365-worldwide&preserve-view=true). With the proper routing table configured based on the information described in the preceding article, you just need to take the additional step of enabling the [WebRtcRespectOsRoutingTableEnabled](/deployedge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) policy. This policy enables support for Windows OS routing table rules when making peer to peer connections via WebRTC. Now you’re ready to provide improved peer-to-peer media streaming experience on Microsoft Edge!
 
 ## See also
 
