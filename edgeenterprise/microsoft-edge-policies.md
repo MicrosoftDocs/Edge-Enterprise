@@ -12249,7 +12249,6 @@ Use the preceding information when configuring this policy.
 
   OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
   
-  
   #### Supported versions:
 
   - On Windows and macOS since 84 or later
@@ -17546,6 +17545,7 @@ If you set this policy to 'StandardMode', the enhanced mode will be turned off a
 If you set this policy to 'BalancedMode', the security state would be in balanced mode.
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
+
 <!-- 
 For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). --->
 

@@ -1,4 +1,4 @@
-# last revised 01/11/2022
+# last revised 01/24/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -136,6 +136,8 @@
      href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
+   - name: Split tunnel VPN support for WebRTC
+     href: microsoft-edge-vpn-split-tunneling.md
    - name: Use Microsoft Edge in Internet Explorer mode
      items:
       - name: What is Internet Explorer (IE) mode?
