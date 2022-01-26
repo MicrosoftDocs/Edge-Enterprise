@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/21/2022
+ms.date: 01/26/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -30,7 +30,7 @@ The following new policies are in this documentation update.
 
 | Policy Name |	Caption |
 |---|---|
-|[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 
 ## Available policies
 
@@ -174,6 +174,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
@@ -6348,6 +6349,68 @@ This policy will only take effect when policy [ConfigureOnPremisesAccountAutoSig
 0x00000000
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SignInCtaOnNtpEnabled
+
+  #### Enable sign in click to action dialog
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  Configure this policy to show sign in click to action dialog on New tab page.
+
+If you enable or don't configure this policy, sign in click to action dialog is shown on New tab page.
+
+If you disable this policy, sign in click to action dialog isn't shown on the New tab page.
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SignInCtaOnNtpEnabled
+  - GP name: Enable sign in click to action dialog
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Identity and sign-in
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SignInCtaOnNtpEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SignInCtaOnNtpEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -15260,6 +15323,8 @@ Note that while this is an available option through Microsoft Edge, rather than 
 Sync your SharePoint files: https://go.microsoft.com/fwlink/p/?linkid=2166983
 Move or copy files in SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2167123
 
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances enrolled for device management.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -15297,6 +15362,13 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
       "FedAuth"
     ],
     "domain": "contoso.sharepoint.com"
+  },
+  {
+    "cookies": [
+      "rtFa",
+      "FedAuth"
+    ],
+    "domain": "contoso2.sharepoint.com"
   }
 ]
 ```
@@ -15304,7 +15376,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [{"cookies": ["rtFa", "FedAuth"], "domain": "contoso.sharepoint.com"}]
+  SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [{"cookies": ["rtFa", "FedAuth"], "domain": "contoso.sharepoint.com"}, {"cookies": ["rtFa", "FedAuth"], "domain": "contoso2.sharepoint.com"}]
   ```
   
 
@@ -17458,8 +17530,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Enhance the security state in Microsoft Edge
 
-  
-  
+    
   #### Supported versions:
 
   - On Windows and macOS since 98 or later
@@ -17474,7 +17545,8 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-<!-- For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). -->
+<!-- 
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). --->
 
 Policy options mapping:
 
