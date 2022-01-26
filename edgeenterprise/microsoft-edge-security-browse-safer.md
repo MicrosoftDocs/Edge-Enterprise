@@ -63,7 +63,7 @@ The next drawing shows the three categories of sites in an exception site list.
 Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they are not synced across your devices or sent to Microsoft at any time.
 
 > [!TIP]
-> You can view your own site engagement scores by going to *edge://site-engagement*.
+> Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site).You can view your own site engagement scores by going to *edge://site-engagement*.
 
 Furthermore, this algorithm learns from your behavior and manages the site list for you. That is, sites that users use most often will be treated the same way as users treat most of the web today. These sites can use JIT code and opt out the extra layer of security because of their familiarity and engagement frequency. In contrast, when a user navigates unfamiliar sites (sites not visited often) the site will enter in this new secure mode. We’re not claiming they’re bad sites; we’re saying they’re unfamiliar to you and Microsoft Edge. This being the case, we want to be more deliberate about what surface area is exposed to these sites.
 
