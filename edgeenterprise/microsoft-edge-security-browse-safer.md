@@ -53,12 +53,10 @@ Select the option that’s best for your browsing.
 
 Enhancing your security doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker has to predict which sites the user trusts, which makes exploitation more difficult.
 
-### Learn about Exception site lists
-
 The next drawing shows the three categories of sites in an exception site list.
 
 
-#### Intelligent Site List
+### Intelligent site list
 
 Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they are not synced across your devices or sent to Microsoft at any time.
 
@@ -67,16 +65,36 @@ Many users want a high level of control, and we believe that most of them prefer
 
 Furthermore, this algorithm learns from your behavior and manages the site list for you. That is, sites that users use most often will be treated the same way as users treat most of the web today. These sites can use JIT code and opt out the extra layer of security because of their familiarity and engagement frequency. In contrast, when a user navigates unfamiliar sites (sites not visited often) the site will enter in this new secure mode. We’re not claiming they’re bad sites; we’re saying they’re unfamiliar to you and Microsoft Edge. This being the case, we want to be more deliberate about what surface area is exposed to these sites.
 
-#### Manual Site List
+### Manual site list
 
 Users can manually add their own exceptions for their familiar websites. Adding a site to your unshared site list will remove the extra layer of protection to keep a site’s known reliability and compatibility. In other words, the security feature will be OFF for these manually added sites.
 
-#### Admin Site List
+#### Make an exception for security enhancements
+
+While preventing malware increases your security, you might want to create exceptions for certain familiar websites that you trust. Any site you add as an exception will always have this security feature turned off. The following steps show how to add a site to your exception list.
+
+1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
+2. Verify that **Enhance your security on the web** is turned on.
+3. **Under Enhance your security on the web**, select **Exceptions**.
+4. Select **Add a site**, type in the full URL, and then select **Add**.
+
+> [!NOTE]
+> You can use steps (1 - 3) to view sites in **Enhanced security mitigation exceptions**. You can **Edit** a site, **Remove** a site, or **Remove all** exceptions.
+
+### Admin site list
 
 Enterprise customers can create "Allow" or "Deny" lists to turn on or off security on sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see [Enhance the security state in Microsoft Edge](/deployedge/microsoft-edge-policies#enhancesecuritymode). You can find the complete list of policies in the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
+## User experience with enhanced security
 
+After a user turns on enhanced security, they'll see a banner with the words "Added security" in their URL navigation bar. This banner means that the current site is running JIT-less and protected with extra security mitigations.
 
+When you click on the banner, you will see the following dialog pop up. In addition to the  other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
+
+> [!NOTE]
+> This pop up dialogue only appears when enhanced security is turned on.
+
+The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list.
 
 ## See also
 
