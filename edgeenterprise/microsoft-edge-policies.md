@@ -17530,8 +17530,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Enhance the security state in Microsoft Edge
 
-  
-  
+    
   #### Supported versions:
 
   - On Windows and macOS since 98 or later
