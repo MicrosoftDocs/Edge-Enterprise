@@ -315,7 +315,7 @@ These tables list all of the browser-related group policies available in this re
 |[AlternateErrorPagesEnabled](#alternateerrorpagesenabled)|Suggest similar pages when a webpage can't be found|
 |[AlwaysOpenPdfExternally](#alwaysopenpdfexternally)|Always open PDF files externally|
 |[AmbientAuthenticationInPrivateModesEnabled](#ambientauthenticationinprivatemodesenabled)|Enable Ambient Authentication for InPrivate and Guest profiles|
-|[AppCacheForceEnabled](#appcacheforceenabled)|Allows the AppCache feature to be re-enabled, even if it's turned off by default|
+|[AppCacheForceEnabled](#appcacheforceenabled)|Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)|
 |[ApplicationLocaleValue](#applicationlocalevalue)|Set application locale|
 |[AudioCaptureAllowed](#audiocaptureallowed)|Allow or block audio capture|
 |[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|Sites that can access audio capture devices without requesting permission|
@@ -12245,8 +12245,9 @@ Use the preceding information when configuring this policy.
 
   ### AppCacheForceEnabled
 
-  #### Allows the AppCache feature to be re-enabled, even if it's turned off by default
+  #### Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)
 
+  OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
   
   
   #### Supported versions:
