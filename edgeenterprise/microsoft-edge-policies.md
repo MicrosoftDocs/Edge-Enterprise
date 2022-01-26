@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2022
+ms.date: 01/25/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new policies are in this documentation update.
+
+| Policy Name |	Caption |
+|---|---|
+|[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 
 ## Available policies
 
