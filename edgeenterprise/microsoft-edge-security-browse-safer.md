@@ -57,8 +57,9 @@ The following screenshot shows the Enhance your security on the web dialog, enab
 
 Enhancing your security doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker has to predict which sites the user trusts, which makes exploitation more difficult.
 
-The next drawing shows the three categories of sites in an exception site list.
+The next drawing shows the three categories of sites in an exception site list, based on how they're managed.
 
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-site-list-categories.png" alt-text="Types of site lists based on handling":::
 
 ### Intelligent site list
 
