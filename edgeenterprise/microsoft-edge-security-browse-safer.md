@@ -19,13 +19,13 @@ This article describes how Microsoft Edge supports enhancing your security on th
 
 Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse the unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
 
-The web platform has a lot of power designed to give site visitors a small and intuitive browsing experience through the use of Javascript, web notifications, permissions, and so on. That power and accessibility is reflected in a larger exposure area for exploits and security vulnerabilities that untrustworthy sites can use for malicious activity. By enhancing your security on the browser, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
+The web platform has a lot of power designed to give site visitors a small and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power and accessibility is reflected in a larger exposure area for exploits and security vulnerabilities that untrustworthy sites can use for malicious activity. By enhancing your security on the browser, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
 
-Unprecedented in-the-wild exploits (also referred called 0-days) are more frequent. This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser. From an historical perspective, in 2021, 41% of in-the-wild exploits were mitigated with this security feature alone.
+Unprecedented in-the-wild exploits (also referred to 0-days) are more frequent. This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser. From an historical perspective, in 2021, 41% of in-the-wild exploits were mitigated with this security feature alone.
 
 ## About this security feature
 
-The core of this feature starts by disabling the just-in-time (JIT) compiler in V8, to protect your browser with a series of protective guards. These protections include: Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Additionally, running JIT-less V8 will block writing to executable memory, which reduces the attack surface of the application for exploits.
+The core of this feature starts by disabling the just-in-time (JIT) compiler in V8, to protect your browser with a series of protective guards. These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Additionally, running JIT-less V8 will block writing to executable memory, which reduces the attack surface of the application for exploits.
 
 You can learn more about the experimentation results from the Microsoft Edge Security team’s blog post [published back in August 2021](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode) and [its continuation blog post in February 2022]().
 
@@ -55,7 +55,7 @@ The following screenshot shows the **Enhance your security on the web** dialog, 
 
 ## Site list Exceptions
 
-Enhancing your security doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker has to predict which sites the user trusts, which makes exploitation more difficult.
+Enhancing your security doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
 
 The next drawing shows the three categories of sites in an exception site list, based on how they're managed.
 
@@ -66,7 +66,7 @@ The next drawing shows the three categories of sites in an exception site list, 
 Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they are not synced across your devices or sent to Microsoft at any time.
 
 > [!TIP]
-> Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site).You can view your own site engagement scores by going to *edge://site-engagement*.
+> Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site). You can view your own site engagement scores by going to *edge://site-engagement*.
 
 Furthermore, this algorithm learns from your behavior and manages the site list for you. That is, sites that users use most often will be treated the same way as users treat most of the web today. These sites can use JIT code and opt out the extra layer of security because of their familiarity and engagement frequency. In contrast, when a user navigates unfamiliar sites (sites not visited often) the site will enter in this new secure mode. We’re not claiming they’re bad sites; we’re saying they’re unfamiliar to you and Microsoft Edge. This being the case, we want to be more deliberate about what surface area is exposed to these sites.
 
@@ -103,7 +103,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 When you click on the banner, you will see the following dialog pop up. In addition to the other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
 
 > [!NOTE]
-> This pop up dialogue only appears when enhanced security is turned on.
+> This pop-up dialogue only appears when enhanced security is turned on.
 
 The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the dialog when enhanced security is turned off.
 
