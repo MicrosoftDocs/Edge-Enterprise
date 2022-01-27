@@ -80,7 +80,7 @@ While preventing malware increases your security, you might want to create excep
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
-3. **Under Enhance your security on the web**, select **Exceptions**.
+3. Under **Enhance your security on the web**, select **Exceptions**.
 4. Select **Add a site**, type in the full URL, and then select **Add**.
 
 > [!NOTE]
@@ -96,7 +96,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you click on the banner, you will see the following dialog pop up. In addition to the  other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
+When you click on the banner, you will see the following dialog pop up. In addition to the other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
 
 > [!NOTE]
 > This pop up dialogue only appears when enhanced security is turned on.
