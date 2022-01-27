@@ -49,7 +49,7 @@ The following toggle settings are available:
 - Toggle On – Strict: This will turn on the feature for all the sites you visit. 
 Select the option that’s best for your browsing.
 
-The following screenshot shows the Enhance your security on the web dialog, enabled and set to provide Balanced security.
+The following screenshot shows the **Enhance your security on the web** dialog, enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
@@ -84,7 +84,11 @@ While preventing malware increases your security, you might want to create excep
 4. Select **Add a site**, type in the full URL, and then select **Add**.
 
 > [!NOTE]
-> You can use steps (1 - 3) to view sites in **Enhanced security mitigation exceptions**. You can **Edit** a site, **Remove** a site, or **Remove all** exceptions.
+> You can use steps (1 - 3) to view sites in **Enhanced security exceptions**. You can **Edit** a site, **Remove** a site, or **Remove all** exceptions.
+
+The next screenshot shows the dialog for security exceptions.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-exceptions.png" alt-text="Dialog for configuring security exceptions":::
 
 ### Admin site list
 
