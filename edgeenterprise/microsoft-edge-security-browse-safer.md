@@ -105,7 +105,7 @@ The toggle setting you pick will be remembered the next time you go to the site.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
 
-In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the dialog when enhanced security is turned off.
+In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the dialog when enhanced security is turned on.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-on.png" alt-text="Dialog with enhanced security turned on.":::
 
