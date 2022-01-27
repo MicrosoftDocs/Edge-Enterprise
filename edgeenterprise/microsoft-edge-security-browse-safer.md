@@ -19,7 +19,7 @@ This article describes how Microsoft Edge supports enhancing your security on th
 
 Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse the unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
 
-The web platform has a lot of power designed to give site visitors a small and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power and accessibility is reflected in a larger exposure area for exploits and security vulnerabilities that untrustworthy sites can use for malicious activity. By enhancing your security on the browser, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
+The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power and accessibility is reflected in a larger exposure area for exploits and security vulnerabilities that untrustworthy sites can use for malicious activity. By enhancing your security on the browser, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
 
 Unprecedented in-the-wild exploits (also referred to 0-days) are more frequent. This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser. From an historical perspective, in 2021, 41% of in-the-wild exploits were mitigated with this security feature alone.
 
@@ -46,7 +46,8 @@ The following toggle settings are available:
 
 - Toggle Off (Default): Feature is turned off
 - Toggle On – Balanced (Recommended): In this mode, your frequently browsed sites will be left out. The feature will only turn on when you browse sites that you don’t engage with often or are unknown to you.
-- Toggle On – Strict: This will turn on the feature for all the sites you visit. 
+- Toggle On – Strict: This will turn on the feature for all the sites you visit.
+
 Select the option that’s best for your browsing.
 
 The following screenshot shows the **Enhance your security on the web** dialog, enabled and set to provide Balanced security.
@@ -63,7 +64,7 @@ The next drawing shows the three categories of sites in an exception site list, 
 
 ### Intelligent site list
 
-Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they are not synced across your devices or sent to Microsoft at any time.
+Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they're not synced across your devices or sent to Microsoft at any time.
 
 > [!TIP]
 > Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site). You can view your own site engagement scores by going to *edge://site-engagement*.
@@ -92,7 +93,7 @@ The next screenshot shows the dialog for security exceptions.
 
 ### Admin site list
 
-Enterprise customers can create "Allow" or "Deny" lists to turn on or off security on sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see [Enhance the security state in Microsoft Edge](/deployedge/microsoft-edge-policies#enhancesecuritymode). You can find the complete list of policies in the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
+Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see [Enhance the security state in Microsoft Edge](/deployedge/microsoft-edge-policies#enhancesecuritymode). You can find the complete list of policies in the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
 ## User experience with enhanced security
 
