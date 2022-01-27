@@ -38,9 +38,9 @@ With **Enhance your security on the web**, Microsoft Edge puts your browser in a
 
 Use the following steps to set your security level.
 
-1. In Microsoft Edge, go to **Settings and more** > **Settings** > **Privacy, search, and services.** 
+1. In Microsoft Edge, go to **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Under **Security**, verify that **Enhance your security on the web** is enabled.
-3. Select the option that's best for your browsing. 
+3. Select the option that's best for your browsing.
 
 The following toggle settings are available:
 
@@ -48,6 +48,10 @@ The following toggle settings are available:
 - Toggle On – Balanced (Recommended): In this mode, your frequently browsed sites will be left out. The feature will only turn on when you browse sites that you don’t engage with often or are unknown to you.
 - Toggle On – Strict: This will turn on the feature for all the sites you visit. 
 Select the option that’s best for your browsing.
+
+The following screenshot shows the Enhance your security on the web dialog, enabled and set to provide Balanced security.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
 ## Site list Exceptions
 
@@ -89,12 +93,24 @@ Enterprise customers can create "Allow" or "Deny" lists to turn on or off securi
 
 After a user turns on enhanced security, they'll see a banner with the words "Added security" in their URL navigation bar. This banner means that the current site is running JIT-less and protected with extra security mitigations.
 
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
+
 When you click on the banner, you will see the following dialog pop up. In addition to the  other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
 
 > [!NOTE]
 > This pop up dialogue only appears when enhanced security is turned on.
 
-The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list.
+The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the dialog when enhanced security is turned off.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
+
+In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the dialog when enhanced security is turned off.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-on.png" alt-text="Dialog with enhanced security turned on.":::
+
+## Send us feedback
+
+We want to get your feedback on our next iteration of enhanced security. If something looks broken, or if you have feedback to share on these changes, we want to hear from you. Send us feedback to ....
 
 ## See also
 
