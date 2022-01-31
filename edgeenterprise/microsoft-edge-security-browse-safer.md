@@ -27,7 +27,7 @@ Unprecedented in-the-wild exploits (also referred to 0-days) are more frequent. 
 
 The core of this feature starts by disabling the just-in-time (JIT) compiler in V8, to protect your browser with a series of protective guards. These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Additionally, running JIT-less V8 will block writing to executable memory, which reduces the attack surface of the application for exploits.
 
-You can learn more about the experimentation results from the Microsoft Edge Security team’s blog post [published back in August 2021](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
+You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post published back in August 2021](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
 > [!NOTE]
 > Web Assembly isn’t currently supported in this mode. We're working on Web Assembly support over the next few months as we continue testing, experimenting, and further developing the feature.
