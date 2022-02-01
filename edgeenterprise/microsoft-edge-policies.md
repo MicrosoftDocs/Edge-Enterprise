@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/31/2022
+ms.date: 02/01/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,19 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new policies are in this documentation update.
+
+| Policy Name |	Caption |
+|---|---|
+|[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
+|[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
+|[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app|
+|[InternetExplorerIntegrationCloudUserSitesReporting](#internetexplorerintegrationcloudusersitesreporting)|Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app|
+|[RelatedMatchesCloudServiceEnabled](#relatedmatchescloudserviceenabled)|Configure Related Matches in Find on Page|
+|[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
 
 ## Available policies
 
