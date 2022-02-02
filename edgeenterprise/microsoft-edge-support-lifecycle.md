@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge Lifecycle"
 ms.author: srugh
-author: AndreaLBarr
+author: dan-wesley
 manager: seanlynd
-ms.date: 11/26/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,17 +25,6 @@ This article describes the lifecycle policy that applies to Microsoft Edge.
 ## Overview of the lifecycle policy for Microsoft Edge
 
 Microsoft Edge features more frequent and more flexible updating capabilities. Because browser releases aren't bound to the Windows major releases, it's necessary to have the governing lifecycle policy updated to reflect this decoupling. Going forward, Microsoft Edge will follow the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). Security updates and servicing updates are only available on the latest Stable channel release and the latest Beta channel release. If you use older releases of Microsoft Edge, it's likely that you'll miss the latest quality and security updates. Using older versions isn't recommended. Assisted Support is available as described in the following sections.
-
-## Service and assisted support timeline for Microsoft Edge versions 77-93
-
-Microsoft Edge has a 6-week major release cycle cadence for Stable channel version 77 and continuing until version 93.  We provide Assisted Support for the most recent three Stable channel releases and the latest Beta channel release. The effective assisted support duration for a Stable channel release is approximately 18 weeks. The effective support duration for a Beta channel release is ~6 weeks; previous Beta channel releases aren't supported.  The following table summarizes the service and support timeline.
-
-|     Release option              |     Major version release supported    |     Major version release serviced    |     Support coverage across releases    |     Servicing coverage    |
-|---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
-|     Daily “Canary”              |     None                               |     None                              |     None                                |     None                  |
-|     Weekly “Dev”                |     None                               |     None                              |     None                                |     None                  |
-|     `6`-week “Beta”               |     Current                            |     Current                           |     `6` weeks                             |     `6` weeks               |
-|     `6`-week “Stable”             |     Current and `2` previous             |     Current                           |     `18` weeks                            |     `6` weeks               |
 
 ## Service and assisted support timeline changes for Microsoft Edge version 94
 
