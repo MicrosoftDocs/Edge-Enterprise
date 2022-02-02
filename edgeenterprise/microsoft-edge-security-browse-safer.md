@@ -93,7 +93,7 @@ The next screenshot shows the dialog for security exceptions.
 
 ### Admin site list
 
-Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
+Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For a complete list of policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
 ## User experience with enhanced security
 
