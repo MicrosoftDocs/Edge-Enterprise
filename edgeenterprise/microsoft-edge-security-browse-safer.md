@@ -3,7 +3,7 @@ title: "Browse safer within Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 01/31/2022
+ms.date: 02/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,9 +19,9 @@ This article describes how Microsoft Edge supports enhancing your security on th
 
 Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse the unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
 
-The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power and accessibility is reflected in a larger exposure area for exploits and security vulnerabilities that untrustworthy sites can use for malicious activity. By enhancing your security on the browser, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
+The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power can translate to more exposure when a user visits an untrustworthy site. By empowering you to enhance your security on Microsoft Edge, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
 
-Unprecedented in-the-wild exploits (also referred to 0-days) are more frequent. This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser. From an historical perspective, in 2021, 41% of in-the-wild exploits were mitigated with this security feature alone.
+This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser. From an historical perspective, in 2021, 41% of in-the-wild exploits were mitigated with this security feature alone.
 
 ## About this security feature
 
@@ -93,7 +93,7 @@ The next screenshot shows the dialog for security exceptions.
 
 ### Admin site list
 
-Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see [Enhance the security state in Microsoft Edge](/deployedge/microsoft-edge-policies#enhancesecuritymode). You can find the complete list of policies in the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
+Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For more information about these policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
 ## User experience with enhanced security
 
