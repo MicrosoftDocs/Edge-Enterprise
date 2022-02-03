@@ -22,9 +22,9 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 98.
 
 This update contains the following Microsoft Edge-specific updates:
 
-- [CVE-2022-23261]
-- [CVE-2022-23262]
-- [CVE-2022-23263]
+- [CVE-2022-23261](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23261)
+- [CVE-2022-23262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23262)
+- [CVE-2022-23263](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23263)
 
 ## January 20, 2022
 
