@@ -1,5 +1,5 @@
 ---
-title: "Browse safer within Microsoft Edge"
+title: "Browse safer with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn how enhanced security supports safer browsing within Microsoft Edge."
+description: "Learn how enhanced security supports safer browsing with Microsoft Edge."
 ---
-# Browse safer within Microsoft Edge
+# Browse safer with Microsoft Edge
 
 This article describes how Microsoft Edge supports enhancing your security on the web.
 
@@ -23,9 +23,9 @@ The web platform has a lot of power designed to give site visitors a smooth and 
 
 This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser.
 
-## About this security feature
+## About “Enhance your Security on the Web”
 
-The core of this feature starts by disabling the just-in-time (JIT) compiler in V8, to protect your browser with a series of protective guards. These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Additionally, running JIT-less V8 will block writing to executable memory, which reduces the attack surface of the application for exploits.
+his feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling  advanced security guard rails included in the Windows operating system.   These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Together, these changes make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
 
 You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post published back in August 2021](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
@@ -56,7 +56,7 @@ The following screenshot shows the **Enhance your security on the web** dialog, 
 
 ## Site list Exceptions
 
-Enhancing your security doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
+**Enhance your security on the web** doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
 
 The next drawing shows the three categories of sites in an exception site list, based on how they're managed.
 
