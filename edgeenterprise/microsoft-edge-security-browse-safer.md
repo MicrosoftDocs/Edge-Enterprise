@@ -1,5 +1,5 @@
 ---
-title: "Browse safer with Microsoft Edge"
+title: "Browse safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
@@ -11,7 +11,7 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn how enhanced security supports safer browsing with Microsoft Edge."
 ---
-# Browse safer with Microsoft Edge
+# Browse safely with Microsoft Edge
 
 This article describes how Microsoft Edge supports enhancing your security on the web.
 
