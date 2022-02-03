@@ -177,7 +177,7 @@
    - name: Modern security protection for vulnerable legacy apps
      href: microsoft-edge-security-iemode-safer-than-ie.md 
    - name: Browse safer within Microsoft Edge
-     href: microsoft-edge-browse-safer.md
+     href: microsoft-edge-security-browse-safer.md
    - name: Identify and interrupt downloads of potentially dangerous files
      href: microsoft-edge-security-downloads-interruptions.md
    - name: Allow list for Microsoft Edge endpoints
