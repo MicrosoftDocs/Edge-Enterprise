@@ -25,7 +25,6 @@ This update contains the following Microsoft Edge-specific updates:
 - [CVE-2022-23261]
 - [CVE-2022-23262]
 - [CVE-2022-23263]
-- [CVE-2022-23264]
 
 ## January 20, 2022
 
