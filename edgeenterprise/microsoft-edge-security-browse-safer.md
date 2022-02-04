@@ -13,7 +13,7 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 ---
 # Browse safely with Microsoft Edge
 
-This article describes how Microsoft Edge supports enhancing your security on the web.
+This article describes how Microsoft Edge provides safer browsing to enhance your security on the web.
 
 ## Overview
 
@@ -54,17 +54,17 @@ The following screenshot shows the **Enhance your security on the web** dialog, 
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
-## Site list Exceptions
+## Site list exceptions
 
-**Enhance your security on the web** doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
+The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
 
-The next drawing shows the three categories of sites in an exception site list, based on how they're managed.
+The figure below shows the three categories of exception site lists, based on how they're managed.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-site-list-categories.png" alt-text="Types of site lists based on handling":::
 
 ### Intelligent site list
 
-Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, enhancing your security on the web uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they're not synced across your devices or sent to Microsoft at any time.
+Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, **Enhance your security on the web** uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they're not synced across your devices or sent to Microsoft at any time.
 
 > [!TIP]
 > Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site). You can view your own site engagement scores by going to *edge://site-engagement*.
@@ -73,11 +73,7 @@ Furthermore, this algorithm learns from your behavior and manages the site list 
 
 ### Manual site list
 
-Users can manually add their own exceptions for their familiar websites. Adding a site to your unshared site list will remove the extra layer of protection to keep a site’s known reliability and compatibility. In other words, the security feature will be OFF for these manually added sites.
-
-#### Make an exception for security enhancements
-
-While preventing malware increases your security, you might want to create exceptions for certain familiar websites that you trust. Any site you add as an exception will always have this security feature turned off. The following steps show how to add a site to your exception list.
+You might want to create exceptions for certain familiar websites that you trust. Any site you add as an exception will always have this security feature turned off. The following steps show how to add a site to your exception list.
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
@@ -101,7 +97,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you click on the banner, you will see the following dialog pop up. In addition to the other features you’re familiar with, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off.
+When you click on the banner, you'll see the following flyout dialog. In addition to the other security and privacy features in Microsoft Edge, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off. The next screenshot shows the feature turned off for the site.  
 
 > [!NOTE]
 > This pop-up dialogue only appears when enhanced security is turned on.
@@ -116,7 +112,7 @@ In contrast, if the toggle's turned on, the site will automatically be removed f
 
 ## Send us feedback
 
-We want to get your feedback on our next iteration of enhanced security. If something looks broken, or if you have feedback to share on these changes, we want to hear from you. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+We want to get your feedback on our next iteration to improve "Enhance security on the web". If something doesn't work the way you expect, or if you have feedback to share on these changes, we want to hear from you. You can reach out to Microsoft Support to report issues or feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## See also
 
