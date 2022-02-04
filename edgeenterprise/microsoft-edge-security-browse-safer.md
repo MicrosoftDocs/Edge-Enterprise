@@ -60,11 +60,13 @@ Balanced mode is an adaptive mode that builds on user’s behavior on a particul
 
 Each user will have their own unique site list, automatically populated based on their behavior and manually adjusted, to provide a tailored experience. A list that’s unique to each user means that attackers must predict which sites the user trusts, which makes broad exploitation more difficult.
 
-The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
+The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or automatically populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
 
-The next figure shows the three categories of exceptional site lists, based on how they're managed.
+The following approaches are used to manage exception lists:
 
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-site-list-categories.png" alt-text="Types of site lists based on handling":::
+- automatically
+- manually
+- with enterprise controls
 
 ### Automatic exception list
 
