@@ -23,7 +23,7 @@ The web platform has a lot of power designed to give site visitors a smooth and 
 
 This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser.
 
-## About “Enhance your Security on the Web”
+## About “Enhance your security on the web”
 
 This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling advanced security guard rails included in the Windows operating system. These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
 
