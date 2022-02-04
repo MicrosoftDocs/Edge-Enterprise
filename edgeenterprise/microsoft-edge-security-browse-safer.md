@@ -3,7 +3,7 @@ title: "Browse safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/03/2022
+ms.date: 02/4/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -50,7 +50,7 @@ The following toggle settings are available:
 
 Select the option that’s best for your browsing.
 
-The following screenshot shows the **Enhance your security on the web** dialog, enabled and set to provide Balanced security.
+The following screenshot shows the "Enhance your security on the web" dialog, enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
@@ -100,7 +100,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 When you click on the banner, you'll see the following flyout dialog. In addition to the other security and privacy features in Microsoft Edge, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off. The next screenshot shows the feature turned off for the site.  
 
 > [!NOTE]
-> This pop-up dialogue only appears when enhanced security is turned on.
+> This flyout only appears when enhanced security is turned on.
 
 The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the dialog when enhanced security is turned off.
 
