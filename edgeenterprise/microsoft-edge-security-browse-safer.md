@@ -25,16 +25,16 @@ This feature aims to raise the security bar against V8-related exploits and neut
 
 ## About “Enhance your Security on the Web”
 
-his feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling  advanced security guard rails included in the Windows operating system.   These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Together, these changes make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
+This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling  advanced security guard rails included in the Windows operating system.   These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. Together, these changes make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
 
-You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post published back in August 2021](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
+You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
 > [!NOTE]
 > Web Assembly isn’t currently supported in this mode. We're working on Web Assembly support over the next few months as we continue testing, experimenting, and further developing the feature.
 
 ## What's new in Microsoft Edge security settings
 
-With **Enhance your security on the web**, Microsoft Edge puts your browser in a mode where the security of your browser takes priority, giving you an extra layer of protection when browsing the web. You’ll still enjoy browsing when visiting top sites.
+With **Enhance your security on the web**, Microsoft Edge puts your browser in a mode where the security of your browser takes priority, giving you an extra layer of protection when browsing the web.
 
 Use the following steps to set your security level.
 
@@ -56,7 +56,7 @@ The following screenshot shows the "Enhance your security on the web" dialog, en
 
 ## Site list exceptions
 
-The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in one a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
+The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or intelligently populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
 
 The figure below shows the three categories of exception site lists, based on how they're managed.
 
@@ -64,7 +64,7 @@ The figure below shows the three categories of exception site lists, based on ho
 
 ### Intelligent site list
 
-Many users want a high level of control, and we believe that most of them prefer to have many aspects of security feature automatically managed while still offering manual site list management. To address this, **Enhance your security on the web** uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they're not synced across your devices or sent to Microsoft at any time.
+Many users want a high level of control, and we believe that most of them prefer to have many aspects of security automatically managed while still offering manual site list management. To address this, **Enhance your security on the web** uses an algorithm that runs locally in the browser. It’s also worth noting that site engagement scores are computed on your device and never leave it. This means that they're not synced across your devices or sent to Microsoft at any time.
 
 > [!TIP]
 > Site engagement scores can range from 0 (the user has no relationship with the site) to 100 (the user is heavily engaged with the site). You can view your own site engagement scores by going to *edge://site-engagement*.
@@ -89,7 +89,7 @@ The next screenshot shows the dialog for security exceptions.
 
 ### Admin site list
 
-Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for sites they specify. Admins can configure this security feature using Group Policy settings. For a complete list of policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
+Enterprise customers can create "Allow" or "Deny" lists to turn security on or off for specified sites. Admins can configure this security feature using Group Policy settings. For a complete list of policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
 ## User experience with enhanced security
 
