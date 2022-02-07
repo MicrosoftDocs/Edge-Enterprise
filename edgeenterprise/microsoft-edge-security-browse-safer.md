@@ -50,7 +50,7 @@ The following toggle settings are available:
 
 Select the option that’s best for your browsing.
 
-The following screenshot shows the "Enhance your security on the web" dialog, enabled and set to provide Balanced security.
+The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
