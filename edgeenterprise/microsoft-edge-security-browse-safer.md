@@ -103,11 +103,11 @@ When you click on the banner, you'll see the following flyout. In addition to th
 > [!NOTE]
 > This only appears when enhanced security is turned on.
 
-The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the dialog when enhanced security is turned off.
+The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the configuration page when enhanced security is turned off.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
 
-In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the dialog when enhanced security is turned on.
+In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the configuration page when enhanced security is turned on.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-on.png" alt-text="Dialog with enhanced security turned on.":::
 
