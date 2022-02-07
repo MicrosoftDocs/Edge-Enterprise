@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/05/2022
+ms.date: 02/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new policies are in this documentation update.
+
+| Policy Name |	Caption |
+|---|---|
+|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 
 ## Available policies
 
@@ -17745,8 +17753,8 @@ If you set this policy to 'StandardMode', the enhanced mode will be turned off a
 If you set this policy to 'BalancedMode', the security state would be in balanced mode.
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
-
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+<!---
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). --->
 
 Policy options mapping:
 
