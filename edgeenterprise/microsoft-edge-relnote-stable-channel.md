@@ -30,6 +30,7 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
 
+
 ### Feature updates
 
 - **Enhance your security on the web.** This is a browsing mode in Microsoft Edge where browser security takes priority, giving users an extra layer of protection when browsing the web. Administrators can apply group policies to end-user desktops (Windows, macOS, and Linux) to help protect against in-the-wild exploits (also referred to 0-days). The following group policies support this browsing mode:
