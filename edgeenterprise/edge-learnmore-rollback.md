@@ -25,7 +25,7 @@ Rollback lets you replace your Microsoft Edge browser version with an earlier ve
 
 ## Before you begin
 
-It's important to understand how the rollback feature is installed in a Microsoft Edge environment. You can deploy rollback using two different methods: manually with an MSI or by using Microsoft Edge update and Group Policy. We also wencourage using a selection of Group Policies for a smoother deployment.
+It's important to understand how the rollback feature is installed in a Microsoft Edge environment. You can deploy rollback using two different methods: manually with an MSI or by using Microsoft Edge update and Group Policy. We also encourage using a selection of Group Policies for a smoother deployment.
 
 ### Recommendations
 
