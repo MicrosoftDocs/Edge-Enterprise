@@ -16,6 +16,7 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 This article describes how Microsoft Edge provides enhanced security on the web.
 
 ## Overview
+
 Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
 
 The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using JavaScript, web notifications, permissions, and so on. That power can translate to more exposure when a user visits an untrustworthy site. By empowering you to enhance your security on Microsoft Edge, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
