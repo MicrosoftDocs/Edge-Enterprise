@@ -31,9 +31,9 @@ This feature aims to raise the security bar against V8-related exploits and neut
 - [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard)
 - [Control Flow Guard (CFG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#control-flow-guard-cfg)
 
-These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
+These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
-You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
+You might also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Also, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
 > [!NOTE]
 > Sites that use WebAssembly (WASM) are not currently supported in this mode. If you require access to a site that needs WASM, consider adding it to your exception list as described below.
