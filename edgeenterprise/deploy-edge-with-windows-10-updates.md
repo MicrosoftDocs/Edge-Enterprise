@@ -18,7 +18,14 @@ The article provides information for users who are deploying Microsoft Edge by u
 
 ## For Windows 10 release 20H2
 
-Windows 10 version 20H2 already has Microsoft Edge installed as its default browser.
+Windows 10 20H2 and later include Microsoft Edge pre-installed as the default browser. However, version 84 of Edge which shipped with Windows 10 20H2, and version 92 of Edge which shipped with Windows 10 21H2, are now outdated. While Microsoft Edge will automatically update itself to a newer version after a user has logged on, since the timing of the update is dependant upon various factors, this can be somewhat unpredicatable. For organisations that desire greater control and want to ensure that Edge (Stable channel) is updated to the latest version prior to user logon, the following PowerShell command can be used to force an Edge update during Windows OOBE.
+
+`Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"`
+
+If using Windows Autopilot, it is possible to wrap this script as a .intunewin file using the [Microsoft Win32 content prep tool](/mem/intune/apps/apps-win32-prepare). It can then be set as a required app for the Enrollment Status Page (ESP) if desired.
+
+> [!NOTE]
+> If you currently leverage policies such as [Target Channel override](/deployedge/microsoft-edge-update-policies#target-channel-override) or [Target Version override](/deployedge/microsoft-edge-update-policies#targetversionprefix) to remain on an older version of Edge, be aware that the above script will not take any policies into account, and will simply update to the latest version. By default, Edge does not downgrade itself, including once such policies are later received.
 
 ## For Windows 10 releases RS4 through 20H1
 
