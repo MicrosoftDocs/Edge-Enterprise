@@ -28095,7 +28095,8 @@ Set this policy to 'ForceDisabled' to force the full version of the  User-Agent 
 
 To learn more about the User-Agent string, read here:
 
-https://docs.microsoft.com/en-us/microsoft-edge/web-platform/user-agent-guidance.
+https://go.microsoft.com/fwlink/?linkid=2186267.
+
 
 
 Policy options mapping:
