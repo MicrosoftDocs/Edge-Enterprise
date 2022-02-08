@@ -16,16 +16,21 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 This article describes how Microsoft Edge provides enhanced security on the web.
 
 ## Overview
-
 Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
 
-The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using Javascript, web notifications, permissions, and so on. That power can translate to more exposure when a user visits an untrustworthy site. By empowering you to enhance your security on Microsoft Edge, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
+The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using JavaScript, web notifications, permissions, and so on. That power can translate to more exposure when a user visits an untrustworthy site. By empowering you to enhance your security on Microsoft Edge, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
 
 This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser.
 
 ## About “Enhance your security on the web”
 
-This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling advanced security guard rails included in the Windows operating system. These protections include Control-flow Enforcement Technology (CET), Arbitrary Code Guard (ACG), and Control Flow Guard (CFG) for the rendering process. These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
+This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling advanced security guard rails included in the Windows operating system. These protections include the following:
+
+- [Control-flow Enforcement Technology (CET)](/windows/win32/secbp/control-flow-guard#what-is-control-flow-guard)
+- [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard)
+- [Control Flow Guard (CFG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#control-flow-guard-cfg)
+
+These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user.
 
 You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
@@ -98,7 +103,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you click on the banner, you'll see the following flyout. In addition to the other security and privacy features in Microsoft Edge, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off. The next screenshot shows the feature turned off for the site.  
+When you select the banner, you'll see the following flyout. In addition to the other security and privacy features in Microsoft Edge, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off. The next screenshot shows the feature turned off for the site.  
 
 > [!NOTE]
 > This only appears when enhanced security is turned on.
