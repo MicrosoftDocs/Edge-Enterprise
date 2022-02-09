@@ -133,3 +133,4 @@ Fixed various bugs and performance issues.
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+
