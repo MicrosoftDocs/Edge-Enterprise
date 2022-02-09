@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/07/2022
+ms.date: 02/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23904,7 +23904,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   #### Description
 
-  Allows you to set whether users can view Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
+  Allows you to set whether users can view publicly accessible Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
 
 If you enable or don't configure this policy, these files can be viewed in Microsoft Edge using Office Viewer instead of downloading the files.
 
