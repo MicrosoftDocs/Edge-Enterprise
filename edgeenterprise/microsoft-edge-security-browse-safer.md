@@ -25,7 +25,7 @@ Microsoft Edge is adding enhanced security protections to provide an additional 
 The web platform is designed to give you a rich browsing experience, using powerful technologies like JavaScript. On the other hand, that power can translate to more
 exposure when you visit a malicious site. With enhanced security, Microsoft Edge helps reduce the risk of an attack by automatically applying more conservative security settings on unfamiliar sites and adapts over time as you continue to browse.  
 
-## Expect the unexpected
+## Defense in depth
 
 Microsoft Edge is already the most secure browser for business but since security threats can evolve rapidly, Microsoft Edge will now go a step further to help prepare for the unexpected. Enhanced security adds an additional layer of protection, providing ‘defense in depth’ to make browsing even safer.
 
