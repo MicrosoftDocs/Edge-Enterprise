@@ -20,6 +20,10 @@ These release notes provide information about security fixes that are included i
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 98.0.1108.50)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2022-23264](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23264)
+
 ## February 3, 2022
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 98.0.1108.43)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
