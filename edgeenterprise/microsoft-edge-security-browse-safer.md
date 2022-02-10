@@ -27,7 +27,7 @@ exposure when you visit a malicious site. With enhanced security, Microsoft Edge
 
 ## Defense in depth
 
-Microsoft Edge is already the most secure browser for business but since security threats can evolve rapidly, Microsoft Edge will now go a step further to help prepare for the unexpected. Enhanced security adds an additional layer of protection, providing ‘defense in depth’ to make browsing even safer.
+Enhanced security adds an additional layer of protection, providing 'defense in depth' to make browsing even safer.
 
 Under the hood, enhanced security in Microsoft Edge mitigates memory-related vulnerabilities by disabling just in time JavaScript compilation and enabling additional operating system protections for the browser. These protections include the following:
 
