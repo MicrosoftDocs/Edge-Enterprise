@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/08/2022
+ms.date: 02/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,23 +15,28 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 
 This article describes how Microsoft Edge provides enhanced security on the web.
 
+> [!NOTE]
+> This article applies to Microsoft Edge version 98 or later.
+
 ## Overview
 
-Microsoft Edge is designed to give you more control over your browser’s security when browsing the web and visiting unfamiliar sites. With enhanced security, users can browse unfamiliar parts of the web more securely, protected by additional security mitigations and protections.
+Microsoft Edge is adding enhanced security protections to provide an additional layer of protection when browsing the web and visiting unfamiliar sites.
 
-The web platform has a lot of power designed to give site visitors a smooth and intuitive browsing experience using JavaScript, web notifications, permissions, and so on. That power can translate to more exposure when a user visits an untrustworthy site. By empowering you to enhance your security on Microsoft Edge, we're shifting conventional and well-established assumptions on how we think about protecting users from the unknown and unfamiliar.  
+The web platform is designed to give you a rich browsing experience, using powerful technologies like JavaScript. On the other hand, that power can translate to more
+exposure when you visit a malicious site. With enhanced security, Microsoft Edge helps reduce the risk of an attack by automatically applying more conservative security settings on unfamiliar sites and adapts over time as you continue to browse.  
 
-This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by running JIT-less engines and enabling additional guards for the browser.
+## Expect the unexpected
 
-## About “Enhance your security on the web”
+Microsoft Edge is already the most secure browser for business but since security threats can evolve rapidly, Microsoft Edge will now go a step further to help prepare for the unexpected. Enhanced security adds an additional layer of protection, providing ‘defense in depth’ to make browsing even safer.
 
-This feature aims to raise the security bar against V8-related exploits and neutralize them. Effective neutralization is achieved by disabling just-in-time (JIT) JavaScript compilation and enabling advanced security guard rails included in the Windows operating system. These protections include the following:
+Under the hood, enhanced security in Microsoft Edge mitigates memory-related vulnerabilities by disabling just in time JavaScript compilation and enabling additional operating system protections for the browser. These protections include the following:
 
 - [Control-flow Enforcement Technology (CET)](/windows/win32/secbp/control-flow-guard#what-is-control-flow-guard)
 - [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard)
 - [Control Flow Guard (CFG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#control-flow-guard-cfg)
 
-These changes and protections make more difficult than ever before for a malicious site to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
+When combined, these changes help provide ‘defense in depth’ because they make it more difficult than ever before for a malicious site 
+to leverage an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode)..
 
 You might also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Also, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
@@ -40,7 +45,7 @@ You might also be interested to learn more about the first line [security protec
 
 ## What's new in Microsoft Edge security settings
 
-With **Enhance your security on the web**, Microsoft Edge puts your browser in a mode where the security of your browser takes priority, giving you an extra layer of protection when browsing the web.
+With **Enhance your security on the web**, Microsoft Edge gives you an extra layer of protection when browsing the web.
 
 Use the following steps to configure added security.
 
@@ -54,33 +59,25 @@ The following toggle settings are available:
 - Toggle On – Balanced (Recommended): Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user’s usual tasks on the web.
 - Toggle On – Strict: Microsoft Edge will apply added security protections for all the sites a user visits. Users may report some challenges accomplishing their usual tasks.
 
-Select the option that’s best for your browsing.
-
 The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
-## How "Balanced" mode works
+### How "Balanced" mode works
 
 Balanced mode is an adaptive mode that builds on user’s behavior on a particular device, and Microsoft’s understanding of risk across the web to give sites that users are most likely to use and trust full access to the web platform, while limiting what new and unfamiliar sites can do.
 
-Each user will have their own unique site list, automatically populated based on their behavior and manually adjusted, to provide a tailored experience. A list that’s unique to each user means that attackers must predict which sites the user trusts, which makes broad exploitation more difficult.
+### How "Strict" mode works
 
-The feature doesn’t have a single centralized list of sites. This strategy is designed to reduce the risk of attack where an attacker can exploit an XSS vulnerability in a site and use that vulnerability to attack other sites in the list. In contrast, each user will have their own unique site list, manually or automatically populated to provide a tailored experience. A list that’s unique to each user means that an attacker must predict which sites the user trusts, which makes exploitation more difficult.
+As the name suggests, Strict Mode applies these security protections to all sites by default. However, you 
+can still manually add sites to the exception site list and enterprise admin configuration will still apply, if 
+present. Strict mode is not appropriate for most end users because it may require some level of 
+configuration for the user to complete their normal tasks.
 
-The following approaches are used to manage exception lists:
+### Exception site list
 
-- automatically
-- manually
-- with enterprise controls
-
-### Automatic exception list
-
-Many users want added security without the need to manually manage a list of exception sites. In Balanced mode, Microsoft Edge will apply enhanced security to sites that a user doesn't frequently visit while preserving compatibility for most tasks.
-
-### Manual exception list
-
-Users can also create exceptions for certain familiar websites that they trust. Use the following steps show how to add a site to your exception list.
+In both Balanced and Strict mode, you can also create exceptions for certain familiar websites that you 
+trust. Use the following steps to add a site to your exception list.
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
@@ -100,22 +97,16 @@ Enterprise Admins can configure this security feature using Group Policy setting
 
 ## User experience with enhanced security
 
-After a user turns on enhanced security, they'll see a banner with the words "Added security" in their URL navigation bar when they visit certain sites. This banner means that the current site is  protected with extra security mitigations as described above.
+After a user turns on enhanced security, they'll see a banner with the words "Added security" in their URL navigation bar when Microsoft Edge is applying enhanced security for a particular site.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you select the banner, you'll see the following flyout. In addition to the other security and privacy features in Microsoft Edge, this new security feature will be listed on the flyout as "Enhance security for this site". You can use this dialog to toggle enhanced security for the site on or off. The next screenshot shows the feature turned off for the site.  
-
-> [!NOTE]
-> This only appears when enhanced security is turned on.
-
-The toggle setting you pick will be remembered the next time you go to the site. Additionally, when you turn the toggle off, the site will be automatically added to your Manual site list. This results in the site being added to your Exceptions directly from the browser without opening the **Settings** page. The next screenshot shows the configuration page when enhanced security is turned off.
+When you select the banner, you will see the following flyout. You can toggle "Enhance security for this site" to manually enable or disable enhanced security for a particular site. If you change the "Enhance security for this site" toggle, Microsoft Edge will add that site to the exception site list. The next screenshot shows the feature turned off for the site.  
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
 
-In contrast, if the toggle's turned on, the site will automatically be removed from your Manual site list. The next screenshot shows the configuration page when enhanced security is turned on.
-
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-on.png" alt-text="Dialog with enhanced security turned on.":::
+> [!NOTE]
+> “Enhance security for this site” only appears when enhanced security is enabled in the settings page.
 
 ## Send us feedback
 
