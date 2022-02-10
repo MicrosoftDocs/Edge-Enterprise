@@ -3,7 +3,7 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 08/05/2021
+ms.date: 02/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -65,6 +65,7 @@ The following prerequisites apply to using Microsoft Edge with IE mode.
 
  | Operating system | Version       | Updates |
  |------------------|---------------|---------|
+ | Windows 11       |               |         |
  | Windows 10       | 1909 or later |         |
  | Windows 10       | 1903          | [KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) or later |
  | Windows Server   | 1903          | [KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) or later |

@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2022
+ms.date: 02/10/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -12,7 +12,6 @@ ms.collection: M365-modern-desktop
 ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
-
 # Microsoft Edge - Policies
 
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
@@ -23,14 +22,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following new policies are in this documentation update.
-
-| Policy Name |	Caption |
-|---|---|
-|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 
 ## Available policies
 
@@ -381,7 +372,6 @@ These tables list all of the browser-related group policies available in this re
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
-|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
@@ -14231,7 +14221,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
-It won't work in Microsoft Edge version 92, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+It won't work in Microsoft Edge version 104, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
 
   #### Supported features:
@@ -16805,136 +16795,6 @@ Incorrectly formatted templates will be ignored.
 
   [Back to top](#microsoft-edge---policies)
 
-  ### DoNotSilentlyBlockProtocolsFromOrigins
-
-  #### Define a list of protocols that can not be silently blocked by anti-flood protection
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 99 or later
-
-  #### Description
-
-  Allows you to create a list of protocols, and for each protocol an associated list of allowed origin patterns. These origins won't be silently blocked from launching an external application by anti-flood protection. The trailing separator shouldn't be included when listing the protocol. For example, list "skype" instead of "skype:" or "skype://".
-
-If you configure this policy, a protocol will only be permitted to bypass being silently blocked by anti-flood protection if:
-
-- the protocol is listed
-
-- the origin of the site trying to launch the protocol matches one of the origin patterns in that protocol's allowed_origins list.
-
-If either condition is false, the external protocol launch may be blocked by anti-flood protection.
-
-If you don't configure this policy, no protocols can bypass being silently blocked.
-
-The origin matching patterns use a similar format to those for the [URLBlocklist](#urlblocklist) policy, that are documented at [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
-
-However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
-
-This policy doesn't work as expected with file://* wildcards.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Dictionary
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: DoNotSilentlyBlockProtocolsFromOrigins
-  - GP name: Define a list of protocols that can not be silently blocked by anti-flood protection
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: DoNotSilentlyBlockProtocolsFromOrigins
-  - Value Type: REG_SZ
-
-  ##### Example value:
-
-```
-SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
-  {
-    "allowed_origins": [
-      "example.com",
-      "http://www.example.com:8080"
-    ],
-    "protocol": "spotify"
-  },
-  {
-    "allowed_origins": [
-      "https://example.com",
-      "https://.mail.example.com"
-    ],
-    "protocol": "msteams"
-  },
-  {
-    "allowed_origins": [
-      "*"
-    ],
-    "protocol": "msoutlook"
-  }
-]
-```
-
-  ##### Compact example value:
-
-  ```
-  SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
-  ```
-  
-
-  #### Mac information and settings
-  
-  - Preference Key Name: DoNotSilentlyBlockProtocolsFromOrigins
-  - Example value:
-``` xml
-<key>DoNotSilentlyBlockProtocolsFromOrigins</key>
-<array>
-  <dict>
-    <key>allowed_origins</key>
-    <array>
-      <string>example.com</string>
-      <string>http://www.example.com:8080</string>
-    </array>
-    <key>protocol</key>
-    <string>spotify</string>
-  </dict>
-  <dict>
-    <key>allowed_origins</key>
-    <array>
-      <string>https://example.com</string>
-      <string>https://.mail.example.com</string>
-    </array>
-    <key>protocol</key>
-    <string>msteams</string>
-  </dict>
-  <dict>
-    <key>allowed_origins</key>
-    <array>
-      <string>*</string>
-    </array>
-    <key>protocol</key>
-    <string>msoutlook</string>
-  </dict>
-</array>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
   ### DownloadDirectory
 
   #### Set download directory
@@ -17754,9 +17614,6 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-<!---
-
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321). --->
 
 Policy options mapping:
 
@@ -17827,7 +17684,6 @@ Use the preceding information when configuring this policy.
   Configure the list of enhance security trusted domains. This means that
 enhance security mode will not be enforced when loading the sites in trusted domains.
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
   #### Supported features:
 
@@ -19033,7 +18889,7 @@ For this policy to work as intended,
 
   If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the enabled data types.
 
@@ -27025,7 +26881,7 @@ If you don't set this policy or apply it as recommended, users will be able to t
 
   If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the disabled data types.
 
@@ -28096,7 +27952,6 @@ Set this policy to 'ForceDisabled' to force the full version of the  User-Agent 
 To learn more about the User-Agent string, read here:
 
 https://go.microsoft.com/fwlink/?linkid=2186267.
-
 
 
 Policy options mapping:
