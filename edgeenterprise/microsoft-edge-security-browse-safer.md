@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/10/2022
+ms.date: 02/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,24 +20,15 @@ This article describes how Microsoft Edge provides enhanced security on the web.
 
 ## Overview
 
-Microsoft Edge is adding enhanced security protections to provide an another layer of protection when browsing the web and visiting unfamiliar sites.
-
-The web platform is designed to give you a rich browsing experience, using powerful technologies like JavaScript. On the other hand, that power can translate to more
-exposure when you visit a malicious site. With enhanced security, Microsoft Edge helps reduce the risk of an attack by automatically applying more conservative security settings on unfamiliar sites and adapts over time as you continue to browse.  
+Microsoft Edge is adding enhanced security protections to provide an additional layer of protection when browsing the web and visiting unfamiliar sites. The web platform is designed to give you a rich browsing experience using powerful technologies like JavaScript. On the other hand, that power can translate to more exposure when you visit a malicious site. With enhanced security, Microsoft Edge helps reduce the risk of an attack by automatically applying more conservative security settings on unfamiliar sites and adapts over time as you continue to browse.
 
 ## Defense in depth
 
-Enhanced security adds another layer of protection, providing 'defense in depth' to make browsing even safer.
-
-Under the hood, enhanced security in Microsoft Edge mitigates memory-related vulnerabilities by disabling just in time JavaScript compilation and enabling additional operating system protections for the browser. These protections include:
-
-- [Control-flow Enforcement Technology (CET)](/windows/win32/secbp/control-flow-guard#what-is-control-flow-guard)
-- [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard)
-- [Control Flow Guard (CFG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#control-flow-guard-cfg)
+Behind the scenes, enhanced security in Microsoft Edge mitigates memory-related vulnerabilities by disabling just in time JavaScript compilation and enabling additional operating system protections for the browser. These protections include [Control-flow Enforcement Technology (CET)](/windows/win32/secbp/control-flow-guard#what-is-control-flow-guard) and [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard).
 
 When combined, these changes help provide 'defense in depth' because they make it more difficult than ever before for a malicious site to leverage an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
 
-You might also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Also, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
+You may also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Notably, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
 > [!NOTE]
 > Sites that use WebAssembly (WASM) are not currently supported in this mode. If you require access to a site that needs WASM, consider adding it to your exception list as described below.
@@ -102,7 +93,7 @@ When you select the banner, you'll see the following flyout. You can toggle "Enh
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
 
 > [!NOTE]
-> “Enhance security for this site” only appears when enhanced security is enabled in the settings page.
+> "Enhance security for this site" only appears when enhanced security is enabled in the settings page.
 
 ## Send us feedback
 
