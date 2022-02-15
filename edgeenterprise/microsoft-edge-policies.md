@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/10/2022
+ms.date: 02/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -12,6 +12,7 @@ ms.collection: M365-modern-desktop
 ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
+
 # Microsoft Edge - Policies
 
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
@@ -301,7 +302,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu|
 |[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete)|
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
-|[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (deprecated)|
+|[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
 |[AlternateErrorPagesEnabled](#alternateerrorpagesenabled)|Suggest similar pages when a webpage can't be found|
@@ -372,6 +373,7 @@ These tables list all of the browser-related group policies available in this re
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
+|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
@@ -389,7 +391,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499](#exemptdomainfiletypepairsfromfiletypedownloadwarnings_downstream_38042499)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
@@ -11905,17 +11907,17 @@ If you enable or don't configure this policy, users can play the surf game.
 
   ### AllowSyncXHRInPageDismissal
 
-  #### Allow pages to send synchronous XHR requests during page dismissal (deprecated)
+  #### Allow pages to send synchronous XHR requests during page dismissal (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 99.
   #### Supported versions:
 
-  - On Windows and macOS since 79 or later
+  - On Windows and macOS since 79, until 99
 
   #### Description
 
-  This policy is deprecated because it's only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it's found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It won't work in Microsoft Edge version 93.
+  This policy is obsolete because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it was found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It doesn't work in Microsoft Edge after version 99.
 
 This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
 
@@ -11938,7 +11940,7 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowSyncXHRInPageDismissal
-  - GP name: Allow pages to send synchronous XHR requests during page dismissal (deprecated)
+  - GP name: Allow pages to send synchronous XHR requests during page dismissal (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16795,6 +16797,136 @@ Incorrectly formatted templates will be ignored.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DoNotSilentlyBlockProtocolsFromOrigins
+
+  #### Define a list of protocols that can not be silently blocked by anti-flood protection
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  Allows you to create a list of protocols, and for each protocol an associated list of allowed origin patterns. These origins won't be silently blocked from launching an external application by anti-flood protection. The trailing separator shouldn't be included when listing the protocol. For example, list "skype" instead of "skype:" or "skype://".
+
+If you configure this policy, a protocol will only be permitted to bypass being silently blocked by anti-flood protection if:
+
+- the protocol is listed
+
+- the origin of the site trying to launch the protocol matches one of the origin patterns in that protocol's allowed_origins list.
+
+If either condition is false, the external protocol launch may be blocked by anti-flood protection.
+
+If you don't configure this policy, no protocols can bypass being silently blocked.
+
+The origin matching patterns use a similar format to those for the [URLBlocklist](#urlblocklist) policy, that are documented at [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+However, origin matching patterns for this policy cannot contain "/path" or "@query" elements. Any pattern that does contain a "/path" or "@query" element will be ignored.
+
+This policy doesn't work as expected with file://* wildcards.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DoNotSilentlyBlockProtocolsFromOrigins
+  - GP name: Define a list of protocols that can not be silently blocked by anti-flood protection
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DoNotSilentlyBlockProtocolsFromOrigins
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
+  {
+    "allowed_origins": [
+      "example.com",
+      "http://www.example.com:8080"
+    ],
+    "protocol": "spotify"
+  },
+  {
+    "allowed_origins": [
+      "https://example.com",
+      "https://.mail.example.com"
+    ],
+    "protocol": "msteams"
+  },
+  {
+    "allowed_origins": [
+      "*"
+    ],
+    "protocol": "msoutlook"
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DoNotSilentlyBlockProtocolsFromOrigins
+  - Example value:
+``` xml
+<key>DoNotSilentlyBlockProtocolsFromOrigins</key>
+<array>
+  <dict>
+    <key>allowed_origins</key>
+    <array>
+      <string>example.com</string>
+      <string>http://www.example.com:8080</string>
+    </array>
+    <key>protocol</key>
+    <string>spotify</string>
+  </dict>
+  <dict>
+    <key>allowed_origins</key>
+    <array>
+      <string>https://example.com</string>
+      <string>https://.mail.example.com</string>
+    </array>
+    <key>protocol</key>
+    <string>msteams</string>
+  </dict>
+  <dict>
+    <key>allowed_origins</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>protocol</key>
+    <string>msoutlook</string>
+  </dict>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DownloadDirectory
 
   #### Set download directory
@@ -17614,6 +17746,7 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
 Policy options mapping:
 
@@ -17684,6 +17817,7 @@ Use the preceding information when configuring this policy.
   Configure the list of enhance security trusted domains. This means that
 enhance security mode will not be enforced when loading the sites in trusted domains.
 
+For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
   #### Supported features:
 
@@ -17915,7 +18049,7 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
 
   #### Disable download file type extension-based warnings for specified file types on domains
 
@@ -17964,7 +18098,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
   - GP name: Disable download file type extension-based warnings for specified file types on domains
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
@@ -17972,7 +18106,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
@@ -17980,14 +18114,14 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\2 = {"file_extension": "swf", "domains": ["*"]}
 
 ```
 
   #### Mac information and settings
   
-  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
   - Example value:
 ``` xml
 <array>
@@ -23760,7 +23894,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   #### Description
 
-  Allows you to set whether users can view publicly accessible Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
+  Allows you to set whether users can view Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
 
 If you enable or don't configure this policy, these files can be viewed in Microsoft Edge using Office Viewer instead of downloading the files.
 
@@ -27951,7 +28085,7 @@ Set this policy to 'ForceDisabled' to force the full version of the  User-Agent 
 
 To learn more about the User-Agent string, read here:
 
-https://go.microsoft.com/fwlink/?linkid=2186267.
+[https://go.microsoft.com/fwlink/?linkid=2186267](https://go.microsoft.com/fwlink/?linkid=2186267)
 
 
 Policy options mapping:
