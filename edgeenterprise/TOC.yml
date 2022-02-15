@@ -1,4 +1,4 @@
-# last revised 01/11/2022
+# last revised 02/04/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -136,6 +136,8 @@
      href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
+   - name: Split tunnel VPN support for WebRTC
+     href: microsoft-edge-vpn-split-tunneling.md
    - name: Use Microsoft Edge in Internet Explorer mode
      items:
       - name: What is Internet Explorer (IE) mode?
@@ -173,7 +175,9 @@
    - name: Security for your business
      href: ms-edge-security-for-business.md
    - name: Modern security protection for vulnerable legacy apps
-     href: microsoft-edge-security-iemode-safer-than-ie.md   
+     href: microsoft-edge-security-iemode-safer-than-ie.md 
+   - name: Browse more safely with Microsoft Edge
+     href: microsoft-edge-security-browse-safer.md
    - name: Identify and interrupt downloads of potentially dangerous files
      href: microsoft-edge-security-downloads-interruptions.md
    - name: Allow list for Microsoft Edge endpoints

@@ -3,7 +3,7 @@ title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 06/29/2021
+ms.date: 01/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -114,7 +114,7 @@ Now that your devices are generating data, it's time to collect this data in Con
 7. In the **Connect to Windows Management Instrumentation (WMI)** dialog box, enter the name of a computer where Enterprise Site Discovery is configured. If you're connecting to another computer, you'll need credentials with permission to access WMI.
 8. In the **WMI Namespace** text box, enter **root\cimv2\IETelemetry**
 9. Choose **Connect**
-10. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes **IESystemINfo**, **IEUrlInfo**, and **IECountInfo*.
+10. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes **IESystemINfo**, **IEUrlInfo**, and **IECountInfo**.
 11. Click **OK** to close the **Class qualifiers** dialog box and the other open dialogs.
 
 After the client updates settings from the management point, data will be reported when the next hardware inventory runs (by default every seven days).

@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/06/2022
+ms.date: 02/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,37 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+
+## February 14, 2022
+
+Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
+
+## February 10, 2022
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 98.0.1108.50)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2022-23264](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23264)
+
+## February 3, 2022
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 98.0.1108.43)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2022-23261](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23261)
+- [CVE-2022-23262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23262)
+- [CVE-2022-23263](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23263)
+
+## January 20, 2022
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 97.0.1072.69)**, which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific update: 
+
+- [CVE-2022-23258](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23258)
 
 ## January 6, 2022
 
