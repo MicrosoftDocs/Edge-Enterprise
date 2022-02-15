@@ -3,7 +3,7 @@ title: "Disable Internet Explorer 11"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,7 @@ The following Windows updates and Microsoft Edge software are required:
 
 - Windows updates
 
+  - Windows 11
   - Windows 10, version 21H1 or later
   - Windows 10, version 2004; Windows Server version 2004; Windows 10, version 20H2; Windows Server version 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) or later
   - Windows 10 version 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) or later
