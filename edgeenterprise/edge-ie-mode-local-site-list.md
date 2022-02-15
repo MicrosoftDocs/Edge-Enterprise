@@ -3,7 +3,7 @@ title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/15/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
 1. Windows updates
 
+   - Windows 11
    - Windows 10, version 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) or later  
 
    - Windows 10, version 2004; Windows 10, version 20H2 and Windows 10, version 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) or later
