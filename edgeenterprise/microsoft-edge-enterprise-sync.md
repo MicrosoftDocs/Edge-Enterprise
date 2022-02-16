@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -47,11 +47,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
   
   - For customers that only have Azure AD P1 or P2, it’s required to enable the Azure AD Enterprise State Roaming feature to use Microsoft Edge Enterprise Sync. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
 
-- Microsoft 365 Business Premium, Business Standard, or **Business Basic \***
-
-   > [!IMPORTANT]
-   > **\*** We found a problem with **Business Basic** for Sync and we’re working on a fix. In the interim, this isn’t working as intended.
-
+- Microsoft 365 Business Premium, Business Standard, or Business Basic
 - Office 365 E1 and above
 - Azure Information Protection (AIP) (P1 or P2)
 - All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, Microsoft 365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
