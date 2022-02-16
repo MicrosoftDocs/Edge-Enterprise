@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/12/2022
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that were added to this article update.
+
+| Name | Description |
+|--|--|
+|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 
 ## Available policies
 
@@ -17746,8 +17754,6 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
-
 Policy options mapping:
 
 * StandardMode (0) = Standard mode
@@ -17817,7 +17823,6 @@ Use the preceding information when configuring this policy.
   Configure the list of enhance security trusted domains. This means that
 enhance security mode will not be enforced when loading the sites in trusted domains.
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
   #### Supported features:
 
@@ -17883,7 +17888,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuni
   Configure the list of enhance security untrusted domains. This means that
 enhance security mode will always be enforced when loading the sites in untrusted domains.
 
-For more information about this policy see [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
   #### Supported features:
 
