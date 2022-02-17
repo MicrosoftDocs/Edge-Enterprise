@@ -55,13 +55,13 @@ The following table shows a list of Microsoft Edge commands that can be configur
 |print |Ctrl + P |Print the current page in Microsoft Edge |
 |read_aloud_toggle_start_shortcut |Ctrl + Shift + U |Start or stop Read Aloud |
 |reload |Ctrl + R or F5 |Refresh the current page |
-|reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 |"Refresh the current page| ignoring cached content "|
-|restore_tab |Ctrl + Shift + T |"Reopen the last closed tab| and switch to it "|
+|reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 | Refresh the current page, ignoring cached content |
+|restore_tab |Ctrl + Shift + T | Reopen the last closed tab, and switch to it |
 |save_page |Ctrl + S |Save the current page |
 |select_last_tab |Ctrl + 9 |Switch to the last tab |
 |select_next_tab |Ctrl + Tab or Ctrl + PgDn |Switch to the next tab |
 |select_previous_tab |Ctrl + Shift + Tab or Ctrl + PgUp |Switch to the previous tab |
-|"select_tab_0 [1|2| ... 7] "|"Ctrl + 1| 2| ... 8 "|Switch to a specific tab |
+|"elect_tab_0 \[1, 2, ... 7\] | Ctrl + 1, 2, ... 8 |Switch to a specific tab |
 |show_app_menu |Alt + E or Alt + F |"Open the Settings and more ""..."" menu "|
 |show_avatar_menu |Ctrl + Shift + M |Sign in as a different user or browse as a Guest |
 |show_favorite_bar |Ctrl + Shift + B |Show or hide the favorites bar |
