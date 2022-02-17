@@ -14,9 +14,11 @@ description: "Learn about configurable Microsoft Edge commands."
 
 # Configurable Microsoft Edge commands
 
-The following table shows a list of Microsoft Edge commands that can be configured via the [ConfigureKeyboardShortcut] policy. To see a list of all available shortcuts in Microsoft Edge, see [Keyboard shortcuts in Microsoft Edge](https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad#ID0EBBD=Windows).
+This article describes the Microsoft Edge commands that can be configured via the [ConfigureKeyboardShortcut] policy. To see a list of all available shortcuts in Microsoft Edge, see [Keyboard shortcuts in Microsoft Edge](https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad#ID0EBBD=Windows).
 
 ## Configurable commands
+
+The following table shows the configurable commands, how to use them, and what they do.
 
 |**Command** |**Default Windows Shortcuts** |**Does this** |
 |:-----|:-----|:-----|
@@ -84,7 +86,7 @@ The following table shows a list of Microsoft Edge commands that can be configur
 |dev_tools_console  |Ctrl + Shift + J |Open Developer Tools to the Console tab |
 |dev_tools_inspect  |Ctrl + Shift + C |Open Developer Tools to the Elements tab |
 |focus_inactive_popup_for_accessibility  |Alt + Shift + A |Set focus to infobar or notification |
-|toggle_tabstrip_orientation  |"Ctrl + Shift + | "|Turn Vertical tabs on or off |
+|toggle_tabstrip_orientation  | Ctrl + Shift + , |Turn Vertical tabs on or off |
 |show_reading_view_bar  |Alt + Shift + R |Set focus to the first item in the Immersive Reader toolbar |
 
 ## See also
