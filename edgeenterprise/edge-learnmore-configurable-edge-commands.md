@@ -52,7 +52,7 @@ The following table shows a list of Microsoft Edge commands that can be configur
 |new_window |Ctrl + N |Open a new window |
 |open_file |Ctrl + O |Open a file from your computer in Edge |
 |paste_and_go |Ctrl + Shift + L |Paste and search or Paste and go (if it's a URL) |
-|print |Ctrl + P |Print the current page in Edge |
+|print |Ctrl + P |Print the current page in Microsoft Edge |
 |read_aloud_toggle_start_shortcut |Ctrl + Shift + U |Start or stop Read Aloud |
 |reload |Ctrl + R or F5 |Refresh the current page |
 |reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 |"Refresh the current page| ignoring cached content "|
