@@ -63,8 +63,8 @@ The following table shows the configurable commands, how to use them, and what t
 |paste_and_go |Ctrl + Shift + L |Paste and search or Paste and go (if it's a URL) |
 |print |Ctrl + P |Print the current page in Edge |
 |read_aloud_toggle_start_shortcut |Ctrl + Shift + U |Start or stop Read Aloud |
-|reload |Ctrl + R or F5 |Refresh the current page |
-|reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 |Refresh the current page, ignoring cached content |
+|refresh |Ctrl + R or F5 |Refresh the current page |
+|refresh_bypassing_cache |Ctrl + Shift + R or Shift + F5 |Refresh the current page, ignoring cached content |
 |restore_tab |Ctrl + Shift + T |Reopen the last closed tab, and switch to it |
 |save_page |Ctrl + S |Save the current page |
 |select_last_tab |Ctrl + 9 |Switch to the last tab |
@@ -74,8 +74,8 @@ The following table shows the configurable commands, how to use them, and what t
 |show_app_menu |Alt + E or Alt + F |Open the Settings and more ... menu |
 |show_avatar_menu |Ctrl + Shift + M |Sign in as a different user or browse as a Guest |
 |show_downloads |Ctrl + J |Open Downloads |
-|show_favorite_bar |Ctrl + Shift + B |Show or hide the favorites bar |
-|show_favorite_manager |Ctrl + Shift + O |Open Favorites |
+|show_favorites_bar |Ctrl + Shift + B |Show or hide the favorites bar |
+|show_favorites_manager |Ctrl + Shift + O |Open Favorites |
 |show_history |Ctrl + H |Open History |
 |show_reading_view_bar  |Alt + Shift + R |Set focus to the first item in the Immersive Reader toolbar |
 |task_manager |Shift + Esc |Open Browser task manager |
