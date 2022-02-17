@@ -19,6 +19,7 @@ This article describes the Microsoft Edge commands that can be configured via th
 ## Configurable commands
 
 The following table shows the configurable commands, how to use them, and what they do.
+
 |**Command** |**Default Shortcuts** |**Does this** |
 |:-----|:-----|:-----|
 |area_select_web_objects  |Ctrl + Shift + X |Start Web select |
