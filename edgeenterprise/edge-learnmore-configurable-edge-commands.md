@@ -64,8 +64,8 @@ The following table shows the configurable commands, how to use them, and what t
 |print |Ctrl + P |Print the current page in Edge |
 |read_aloud_toggle_start_shortcut |Ctrl + Shift + U |Start or stop Read Aloud |
 |reload |Ctrl + R or F5 |Refresh the current page |
-|reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 |Refresh the current page| ignoring cached content |
-|restore_tab |Ctrl + Shift + T |Reopen the last closed tab| and switch to it |
+|reload_bypassing_cache |Ctrl + Shift + R or Shift + F5 |Refresh the current page, ignoring cached content |
+|restore_tab |Ctrl + Shift + T |Reopen the last closed tab, and switch to it |
 |save_page |Ctrl + S |Save the current page |
 |select_last_tab |Ctrl + 9 |Switch to the last tab |
 |select_next_tab |Ctrl + Tab or Ctrl + PgDn |Switch to the next tab |
@@ -82,7 +82,7 @@ The following table shows the configurable commands, how to use them, and what t
 |toggle_collections |Ctrl + Shift + Y |Open Collections |
 |toggle_mute_active_tab |Ctrl + M |Mute or unmute the current tab |
 |toggle_reading_view_shortcut |F9 |Enter or exit Immersive Reader |
-|toggle_tabstrip_orientation  |Ctrl + Shift + | |Turn Vertical tabs on or off |
+|toggle_tabstrip_orientation  |Ctrl + Shift + , |Turn Vertical tabs on or off |
 |view_source |Ctrl + U |View source |
 |webcapture_shortcut  |Ctrl + Shift + S |Start Web capture |
 |zoom_minus |Ctrl + Minus (-) |Zoom out |
