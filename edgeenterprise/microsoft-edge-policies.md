@@ -399,7 +399,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499](#exemptdomainfiletypepairsfromfiletypedownloadwarnings_downstream_38042499)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
@@ -18053,7 +18053,7 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
   #### Disable download file type extension-based warnings for specified file types on domains
 
@@ -18102,7 +18102,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - GP name: Disable download file type extension-based warnings for specified file types on domains
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
@@ -18110,7 +18110,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
@@ -18118,14 +18118,14 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\2 = {"file_extension": "swf", "domains": ["*"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
 
 ```
 
   #### Mac information and settings
   
-  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
 <array>
