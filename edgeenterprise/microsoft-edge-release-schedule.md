@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 02/18/2022
+ms.date: 02/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ This article describes the release cadence and anticipated release schedule for 
 
 Microsoft provides four options, called channels, to manage how often Microsoft Edge is updated with new features. For more information about our channels, their release cycle, and support levels, see the [Channel overview](./microsoft-edge-channels.md#channel-overview).
 
-Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week major release cycle cadence. However, we recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle**; this option will only be available for customers with managed environments. [Refer to our announcement blog post](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week major release cycle cadence. However, we recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge will offer an **Extended Stable option aligned to a longer, 8-week major release cycle**. This option will only be available for customers with managed environments. For more information, see [How to opt-in to the Extended Stable release cycle option beginning with Microsoft Edge 94](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## Release schedule
 
