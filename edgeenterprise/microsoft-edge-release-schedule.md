@@ -24,14 +24,14 @@ Starting with Stable channel version 94, Microsoft Edge is moving to a 4-week ma
 
 ## Release schedule
 
-The following table lists the planned release dates for the Beta and Stable channels.
+The following table lists the planned and actual release dates for the Beta, Stable, and Extended Stable channels.
 
 > [!NOTE]
 > Release dates are approximate and might vary based on build status.
 
 ### Microsoft Edge releases
 
-The following table tracks and provides information for major releases in all channels.
+The following table tracks and provides information for the major releases.
 
 | Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week | Extended Stable Channel<br>Release week |
 |:-----|:-----|:-----|:-----|:-----|
