@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 02/17/2022
+ms.date: 02/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 98.0.1108.56: February 17
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Stable and Extended Stable release.
 
 ## Version 98.0.1108.55: February 16
 
