@@ -3,7 +3,7 @@ title: "Configurable Microsoft Edge commands"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/17/2022
+ms.date: 02/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn about configurable Microsoft Edge commands."
 
 # Configurable Microsoft Edge commands
 
-This article describes the Microsoft Edge commands that can be configured via the **ConfigureKeyboardShortcut** policy. To see a list of all available shortcuts in Microsoft Edge, see [Keyboard shortcuts in Microsoft Edge](https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad#ID0EBBD=Windows).
+This article describes the Microsoft Edge commands that can be configured via the **ConfigureKeyboardShortcut** policy. To see a list of all the available shortcuts in Microsoft Edge, see [Keyboard shortcuts in Microsoft Edge](https://support.microsoft.com/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad#ID0EBBD=Windows).
 
 ## Configurable commands
 
