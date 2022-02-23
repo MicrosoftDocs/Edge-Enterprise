@@ -128,7 +128,7 @@ The Enterprise Site Discovery package includes two sample reports. One report sh
 Use the following procedure to create a sample report that uses three data sources: the sites a user visits, information about their system, and the document modes used by the sites. This report helps you identify sites that may depend on legacy document modes.
 
 1. Copy the report **SCCM_Report-Site_Discovery.rdl** to your Configuration Manager server.
-2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder).
 3. Double-click **SCCM_Report-Site_Discovery.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, click **No**.
 5. After the report opens, expand **Data Sources** and double-click **DataSource1**.
@@ -150,7 +150,7 @@ Use the following procedure to create a sample report that uses three data sourc
 Use the following procedure to create a sample report that uses one data source: the sites that are using ActiveX controls. Since Internet Explorer is the only browser that support ActiveX controls, these sites may require IE mode.
 
 1. Copy the report **SCCM Report Sample - ActiveX.rdl** to your Configuration Manager server.
-2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Install [Microsoft Report Builder](/sql/reporting-services/install-windows/install-report-builder).
 3. Double-click **SCCM Report Sample - ActiveX.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, click **No**.
 5. After the report opens, expand **Data Sources** and double-click **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
