@@ -31,8 +31,6 @@ The following table lists the planned and actual release dates for the Beta, Sta
 
 ### Microsoft Edge releases
 
-The following table provides information for the Beta, Stable, and Extended Stable channel releases.
-
 | Version | Release status | Beta Channel<br>Release week | Stable Channel<br>Release week | Extended Stable Channel<br>Release week |
 |:-----|:-----|:-----|:-----|:-----|
 | 88 | Released<br>Version | 09-Dec-2020<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-88070518-december-9) | 21-Jan-2021<br>[88.0.705.50](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-88070550-january-21)|  |
