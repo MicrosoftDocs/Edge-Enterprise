@@ -57,9 +57,9 @@ The trigger for Beta and Stable major releases is an equivalent Chromium release
 
 ## Progressive rollouts
 
-The date reference (Released/Release week) for the Stable channel references the beginning of the progressive roll out.
+The date reference (Released/Release week) for the Stable channel references the beginning of the progressive rollout.
 
-We use a progressive rollout model which means that new release availability for any given device could be staggered over upcoming days. For more information, see [Progressive rollouts for Microsoft Edge Stable Channel](/deployedge/microsoft-edge-update-progressive-rollout).
+We use a progressive rollout model, which means that new release availability for any given device could be staggered over upcoming days. For more information, see [Progressive rollouts for Microsoft Edge Stable Channel](/deployedge/microsoft-edge-update-progressive-rollout).
 
 ## See also
 
