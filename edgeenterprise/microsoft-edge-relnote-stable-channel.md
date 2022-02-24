@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 98.0.1108.62: February 24
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Stable and Extended Stable release.
 
 ## Version 98.0.1108.56: February 17
 
