@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/14/2022
+ms.date: 02/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ Microsoft Edge is adding enhanced security protections to provide an additional 
 
 Enhanced security in Microsoft Edge mitigates memory-related vulnerabilities by disabling just-in-time (JIT) JavaScript compilation and enabling additional operating system protections for the browser. These protections include [Hardware-enforced Stack Protection](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340) and [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard).
 
-When combined, these changes help provide 'defense in depth' because they make it more difficult than ever before for a malicious site to leverage an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode).
+When combined, these changes help provide 'defense in depth' because they make it more difficult than ever before for a malicious site to leverage an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode) and [Introducing Enhanced Security for Microsoft Edge](https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/).
 
 You may also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Notably, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
