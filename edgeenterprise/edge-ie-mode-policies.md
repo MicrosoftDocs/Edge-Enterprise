@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Configure IE mode policies"
 # Configure IE mode policies
 
 >[!Note]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022. For a list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). To set up Microsoft Edge, see the [Microsoft Edge setup guide](https://assistants.microsoft.com/microsoftedgesetupguide). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to configure IE mode policies.
 
@@ -135,7 +135,10 @@ You can prevent your users from using Internet Explorer for sites that don't nee
    - Microsoft Edge Dev version 77 or later
    - Microsoft Edge Canary version 77 or later
    - Microsoft Edge version 45 or earlier
-9. Click **OK** or **Apply** to save these settings.
+9. Click **OK** or **Apply** to save these settings.  
+
+    > [!TIP]
+    > To find sites that you need to add to your IE mode site list, see [Configure IE mode for Microsoft Edge](https://assistants.microsoft.com/configureiemode) guide. If you already have a site list, the tools in this guide will help you apply it to the right users.
 
 ## See also
 
