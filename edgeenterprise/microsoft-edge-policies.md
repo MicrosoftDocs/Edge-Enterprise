@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/16/2022
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -29,8 +29,8 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 The following table lists the new policies that were added to this article update.
 
 | Name | Description |
-|--|--|
-|[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
+|-----|-----|
+|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
 
 ## Available policies
 
@@ -399,7 +399,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499](#exemptdomainfiletypepairsfromfiletypedownloadwarnings_downstream_38042499)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
@@ -411,6 +411,7 @@ These tables list all of the browser-related group policies available in this re
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
+|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
 |[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
@@ -17823,7 +17824,6 @@ Use the preceding information when configuring this policy.
   Configure the list of enhance security trusted domains. This means that
 enhance security mode will not be enforced when loading the sites in trusted domains.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -17887,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuni
 
   Configure the list of enhance security untrusted domains. This means that
 enhance security mode will always be enforced when loading the sites in untrusted domains.
-
 
   #### Supported features:
 
@@ -18053,7 +18052,7 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   [Back to top](#microsoft-edge---policies)
 
-  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
   #### Disable download file type extension-based warnings for specified file types on domains
 
@@ -18102,7 +18101,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - GP name: Disable download file type extension-based warnings for specified file types on domains
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
@@ -18110,7 +18109,7 @@ Note that while the preceding example shows the suppression of file type extensi
 
   ##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Path (Recommended): N/A
   - Value Name: 1, 2, 3, ...
   - Value Type: list of REG_SZ
@@ -18118,14 +18117,14 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499\2 = {"file_extension": "swf", "domains": ["*"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
 
 ```
 
   #### Mac information and settings
   
-  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Downstream_38042499
+  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
 <array>
@@ -18885,6 +18884,95 @@ This enterprise policy is disabled by default.
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ForceMajorVersionToMinorPositionInUserAgent
+
+  #### Enable or disable freezing the User-Agent string at major version 99
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 99 or later
+
+  #### Description
+
+  This policy controls whether the User-Agent string major
+version should be frozen at 99.
+
+The User-Agent request header lets websites identify the application,
+operating system, vendor, and/or version of the requesting user agent.
+Some websites make assumptions about how this header is formatted and may
+encounter issues with version strings that include three digits in the
+major position (for example, 100.0.0.0).
+
+Setting the policy to 'Default' or leaving it unset will default to
+browser settings for the User-Agent string major version.
+If set to 'ForceEnabled', the User-Agent string will always report the
+major version as 99 and include the browser's major version in the minor
+position. For example, browser version 101.0.0.0 would send a User-Agent
+request header that reports version 99.101.0.0.
+If set to 'ForceDisabled', the User-Agent string will not freeze the
+major version.
+
+This policy is temporary and will be deprecated in the future. Note that
+if this policy and
+User-Agent Reduction are
+both enabled, the User-Agent version string will always be 99.0.0.0.
+
+Policy options mapping:
+
+* Default (0) = Default to browser settings for User-Agent string version.
+
+* ForceDisabled (1) = The User-Agent string will not freeze the major version.
+
+* ForceEnabled (2) = The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceMajorVersionToMinorPositionInUserAgent
+  - GP name: Enable or disable freezing the User-Agent string at major version 99
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceMajorVersionToMinorPositionInUserAgent
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ForceMajorVersionToMinorPositionInUserAgent
+  - Example value:
+``` xml
+<integer>0</integer>
 ```
   
 
