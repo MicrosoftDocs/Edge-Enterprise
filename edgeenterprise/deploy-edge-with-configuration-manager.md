@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge using System Center Configuration Manager"
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,9 @@ Review the information in [Introduction to application management in Configurati
 Download the Microsoft Edge Enterprise installation files (**MicrosoftEdgeDevEnterpriseX64.msi** and/or **MicrosoftEdgeDevEnterpriseX86.msi**) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise).
 
 Make sure you store the Microsoft Edge installation files in an accessible network location.
+
+> [!TIP]
+> Use the [Microsoft Edge setup guide](https://assistants.microsoft.com/microsoftedgesetupguide) to automate Configuration Manager steps.
 
 ## Create the application
 
