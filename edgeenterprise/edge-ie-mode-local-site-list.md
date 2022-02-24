@@ -3,7 +3,7 @@ title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/15/2022
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,6 +41,8 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 IE mode is powered by the configuration of the Enterprise Mode Site List. While you are identifying and configuring sites on the site list to use IE mode, your users no longer need to wait or fall back to the standalone IE11 application.
 
 Starting with Microsoft Edge version 92, repeated access to *unconfigured* IE mode sites is easier. Users can reload sites in IE mode. They can add these sites to their local site list to automatically render in IE mode for 30 days, while the organization’s site list gets updated. When [IE11 is disabled](/deployedge/edge-ie-disable-ie11) in your environment, your users are no longer solely dependent on the organization’s site list.
+
+You can send an email to your users that explains how to reload sites in IE mode using the [Microsoft Edge onboarding](https://assistants.microsoft.com/microsoftedgesetupguide) guide.
 
 You can configure this experience through group policies for your organization.
 
