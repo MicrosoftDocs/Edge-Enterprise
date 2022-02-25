@@ -3,7 +3,7 @@ title: "Configurable Microsoft Edge commands"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/23/2022
+ms.date: 02/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,8 +88,6 @@ The following table shows the configurable commands, how to use them, and what t
 |zoom_in |Ctrl + Plus (+) |Zoom in |
 |zoom_out |Ctrl + Minus (-) |Zoom out |
 |zoom_reset |Ctrl + 0 (zero) |Reset page zoom level |
-
-
 
 ## See also
 
