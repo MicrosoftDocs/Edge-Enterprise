@@ -25,9 +25,9 @@ The following table shows the configurable commands, how to use them, and what t
 |back |Alt + Left arrow |Go back one page |
 |caret_browsing_toggle |F7 |Turn caret browsing on or off |
 |clear_browsing_data |Ctrl + Shift + Delete |Open clear browsing data options |
-|close_find_or_stop |Esc |Stop loading page; Close focused dialog or pop-up |
+|close_find_or_stop |Esc |Stop loading page; Close Find dialog when it's not in focus |
 |close_tab |Ctrl + W or Ctrl + F4 |Close the current tab |
-|close_window |Ctrl + Shift + W or ALT + F4 |Close the current window |
+|close_window |Ctrl + Shift + W or Alt + F4  |Close the current window |
 |collections |Ctrl + Shift + Y |Open Collections |
 |dev_tools |Ctrl + Shift + I |Open Developer Tools |
 |dev_tools_console  |Ctrl + Shift + J |Open Developer Tools to the Console tab |
@@ -40,7 +40,7 @@ The following table shows the configurable commands, how to use them, and what t
 |favorites |Ctrl + Shift + O |Open Favorites |
 |find |Ctrl + F |Open Find on page |
 |find_next |Ctrl + G or F3 |Jump to the next match for Find on page |
-|find_previous |Ctrl + Shift + G |Jump to the previous match for Find on page |
+|find_previous | Ctrl + Shift + G or Shift + F3 |Jump to the previous match for Find on page |
 |focus_address_bar |Alt + D or Ctrl + L or F4 |Select the URL in the address bar to edit |
 |focus_app_toolbar |Alt + Shift + T |Set focus to the first item in the app bar toolbar |
 |focus_favorites |Alt + Shift + B |Set focus to the first item in the favorites bar toolbar |
