@@ -3,7 +3,7 @@ title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,7 +35,7 @@ The following instructions show an entry that associates Microsoft Edge with IE 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 ```
 
@@ -75,7 +75,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]
