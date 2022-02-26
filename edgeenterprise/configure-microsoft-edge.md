@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for Windows"
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/14/2022
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Learn how to configure Microsoft Edge policy settings on Windows d
 
 # Configure Microsoft Edge policy settings on Windows
 
-Use the following information to configure Microsoft Edge policy settings on your Windows devices.
+Use the following information to configure Microsoft Edge policy settings on your Windows devices. If you haven’t set up Microsoft Edge, see the [Microsoft Edge setup guide](https://assistants.microsoft.com/microsoftedgesetupguide).
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.

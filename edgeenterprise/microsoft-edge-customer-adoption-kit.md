@@ -3,7 +3,7 @@ title: "Microsoft Edge customer adoption materials"
 ms.author: collw
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -91,4 +91,5 @@ If you're interested in learning more about the benefits of Microsoft Edge, [vis
 
 ## See also
 
+- [Microsoft Edge setup guide](https://assistants.microsoft.com/microsoftedgesetupguide)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
