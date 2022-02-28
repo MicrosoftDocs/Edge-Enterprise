@@ -3,7 +3,7 @@ title: "Configurable Microsoft Edge commands"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/25/2022
+ms.date: 02/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
