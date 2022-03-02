@@ -35,7 +35,7 @@ The following prerequisites apply to this feature.
 
 1. Customers must have an Azure AD tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
+3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
 
 ## Cloud Site List Management experience
 
@@ -110,6 +110,7 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 ## Manage site list contents on the Microsoft 365 Admin Center
 
 You can add individual site entries, delete site entries and view change history for comments.
+
 If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
 ### Add individual sites to the site list
@@ -247,4 +248,3 @@ Support for Cloud Site List Management experience is covered by your existing [M
 
 - [About IE mode](./edge-ie-mode.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-  
