@@ -206,7 +206,7 @@ To view the change history: Select the entry that you want to see the change his
 
 ## FAQ
 
-### I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
+### I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
 
 The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
