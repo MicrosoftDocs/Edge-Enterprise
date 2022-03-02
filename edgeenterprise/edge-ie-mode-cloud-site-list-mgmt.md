@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/24/2022
+ms.date: 03/022022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -39,7 +39,7 @@ The following prerequisites apply to this feature.
 
 ## Cloud Site List Management experience
 
-There are three aspects to the experience.
+There are four aspects to the experience.
 
 ### Publish enterprise site list to the cloud
 
@@ -55,6 +55,10 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 ### Manage site list contents on the Microsoft 365 Admin Center
 
 Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
+
+### View site feedback on the Microsoft 365 Admin Center
+
+With Microsoft Edge version 99, admins can use the [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) and [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) policies to identify gaps in their site list with site feedback. They can view sites that users have added to their [local site lists](/deployedge/edge-ie-mode-local-site-list), and potentially misconfigured neutral sites.
 
 ## Publish enterprise site list to the cloud
 
@@ -155,6 +159,49 @@ There are scenarios where you want to export a site list. For example, if you're
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
 2. On the resulting page, you’ll see the site list entries and the **Export list** option.
 3. Select **Export list** to download the site list XML file.
+
+### View site feedback on the Microsoft 365 Admin Center
+
+The Site feedback tab shows the sites that users are adding to their local IE Mode site list, as well as potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
+
+> [!NOTE]
+> This feature is currently rolling out to all users and is expected to finish rolling out by mid-March.
+
+#### Add a site to site lists
+
+Use the following steps to add a site to one or more site lists from site feedback.
+
+1. Pick the entry that you want to add. Select **Add to site lists**.  
+2. Select one or more site lists to add to from the dropdown. Pick the engine that should be used to open the site and add comments as needed.
+3. Select **Add site** at the bottom of the pane.
+
+   > [!NOTE]
+   > The status for this entry will update to **Resolved** because it was Added. This site will now appear on the site list(s) you selected.
+
+#### Pause incoming feedback on a site
+
+You can postpone acting on a pending entry by pausing feedback. You can pause feedback for 30 days or indefinitely. Use the following steps to pause incoming feedback.  
+
+1. Pick an entry that you want to pause feedback on. Select **Pause Feedback**.  
+2. Add comments as needed and select how long you'd like to pause feedback for.  
+3. Select **Pause** at the bottom of the pane.
+
+    > [!NOTE]
+    > The status for this entry will update to **Resolved** because it was **Paused**. If you paused for 30 days, then after 30 days if there's any incoming feedback, the entry's status will refresh back to **Pending** for you to act on.
+
+#### Delete feedback on a site
+
+Use the following steps to delete an entry.
+
+1. Pick the entry that you want to delete. Select **Delete feedback**.
+2. Select **Delete** on the pop-up dialog.
+
+    > [!NOTE]
+    > If you delete an entry, it might reappear in the future as incoming feedback if users continue to add the site to their local site lists or if Microsoft Edge detects it as a potentially misconfigured neutral site.
+
+#### View the change history for site feedback entries
+
+To view the change history: Select the entry that you want to see the change history for, and then select **View history** in the pane.
 
 ## FAQ
 
