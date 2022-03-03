@@ -34,7 +34,7 @@ The following table lists the new polices that are part of this article update.
 |[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
 |[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
 |[ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](#controldefaultstateofallowextensionfromotherstoressettingenabled)|Configure default state of Allow extensions from other stores setting|
-|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match<br>Note: This policy in new category named "[Other](#other)" |
+|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match<br>**Note:** This policy- is in new category named "[**Other**](#other)" |
 |[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 
@@ -317,7 +317,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let reader users get image descriptions from Microsoft|
 |[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
@@ -11717,7 +11717,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Let get image descriptions from Microsoft
+  #### Let reader users get image descriptions from Microsoft
 
   
   
