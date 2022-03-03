@@ -34,7 +34,7 @@ The following table lists the new policies that are part of this article update.
 |[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
 |[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
 |[ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](#controldefaultstateofallowextensionfromotherstoressettingenabled)|Configure default state of Allow extensions from other stores setting|
-|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match<br>**Note:** This policy is in new category named "[**Other**](#other)" |
+|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match<br>**Note:** This policy is in a new category named "[**Other**](#other)" |
 |[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 
