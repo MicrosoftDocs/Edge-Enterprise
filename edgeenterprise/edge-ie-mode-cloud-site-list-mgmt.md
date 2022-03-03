@@ -41,10 +41,10 @@ The following prerequisites apply to this feature.
 
 There are four aspects to the Cloud Site List Management experience:
 
-- Publish the enterprise site list to the cloud.
-- Associate the cloud site list with Microsoft Edge.
-- Manage site list contents on the Microsoft 365 Admin Center.
-- View site feedback on the Microsoft 365 Admin Center.
+- Publishing the enterprise site list to the cloud.
+- Associating the cloud site list with Microsoft Edge.
+- Managing site list contents on the Microsoft 365 Admin Center.
+- Viewing site feedback on the Microsoft 365 Admin Center.
 
 ### Publish enterprise site list to the cloud
 
