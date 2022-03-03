@@ -192,7 +192,7 @@ You can postpone acting on a pending entry by pausing feedback. You can pause fe
 
 #### Delete feedback on a site
 
-Use the following steps to delete an entry.
+Use the following steps to delete a feedback entry.
 
 1. Pick the entry that you want to delete. Select **Delete feedback**.
 2. Select **Delete** on the pop-up dialog.
