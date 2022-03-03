@@ -208,7 +208,7 @@ Use the following steps to delete a feedback entry.
 
 #### View the change history for site feedback entries
 
-To view the change history: Select the entry that you want to see the change history for, and then select **View history** in the pane.
+To view the change history: Select the entry that you want to see the change history for, and then select **Feedback history** in the side pane.
 
 ## FAQ
 
