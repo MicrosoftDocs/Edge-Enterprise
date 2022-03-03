@@ -76,7 +76,6 @@ Use the following steps as a guide to create a site list, import a site list, an
    > [!NOTE]
    > If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
 
-
 ### Steps to create a site list
 
 1. On the Org settings page, select **Microsoft Edge site lists**
@@ -91,7 +90,7 @@ Use the following steps as a guide to create a site list, import a site list, an
 3. On the right-hand panel, select **Browse**.
 4. Select the file you want to import and then select **Upload** on the bottom of the panel.
 5. You can skim through the URLs in the uploaded file. If you want to pick a different file, you can select **Upload a different file** at the top of the panel. If everything looks correct, select **Add** at the bottom of the panel.
-6. After your list is imported, select **Close panel**. 
+6. After your list is imported, select **Close panel**.
 
 ### Steps to publish a site list
 
@@ -141,7 +140,7 @@ To view the change history for site entries:
 Use the following steps to delete a site entry.
 
 1. Pick the site list entry that you’d like to delete a site from. Select **Delete site**.
-2. Select **Delete** at the bottom of the pane.
+2. Select **Delete** at the bottom of the panel.
 3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
@@ -153,7 +152,7 @@ Use the following steps to copy a site entry from a site list to one or more sit
 
 1. Pick a site entry that you'd like to copy to another list. Select **Copy to more lists**.
 2. Select one or more site lists you'd like to copy to from the dropdown list.
-3. Select **Copy site** at the bottom of the pane.
+3. Select **Copy site** at the bottom of the panel.
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
    > [!NOTE]
@@ -180,10 +179,10 @@ Use the following steps to add a site to one or more site lists from site feedba
 
 1. Pick the entry that you want to add. Select **Add to site lists**.  
 2. Select one or more site lists to add to from the dropdown. Pick the engine that should be used to open the site and add comments as needed.
-3. Select **Add site** at the bottom of the pane.
+3. Select **Add site** at the bottom of the panel.
 
    > [!NOTE]
-   > The status for this entry will update to **Resolved** because it was Added. This site will now appear on the site list(s) you selected.
+   > The status for this entry will update to **Resolved** because it was **Added**. This site will now appear on the site list(s) you selected.
 
 #### Pause incoming feedback on a site
 
@@ -191,7 +190,7 @@ You can postpone acting on a pending entry by pausing feedback. You can pause fe
 
 1. Pick an entry that you want to pause feedback on. Select **Pause Feedback**.  
 2. Add comments as needed and select how long you'd like to pause feedback for.  
-3. Select **Pause** at the bottom of the pane.
+3. Select **Pause** at the bottom of the panel.
 
     > [!NOTE]
     > The status for this entry will update to **Resolved** because it was **Paused**. If you paused for 30 days, then after 30 days if there's any incoming feedback, the entry's status will refresh back to **Pending** for you to act on.
@@ -208,7 +207,9 @@ Use the following steps to delete a feedback entry.
 
 #### View the change history for site feedback entries
 
-To view the change history: Select the entry that you want to see the change history for, and then select **Feedback history** in the side pane.
+To view the change history:
+
+- Select the entry that you want to see the change history for, and then select **Feedback history** in the side panel.
 
 ## FAQ
 
