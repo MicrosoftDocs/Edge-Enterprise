@@ -74,7 +74,8 @@ Use the following steps as a guide to create a site list, import a site list, an
 3. You'll see the **Microsoft Edge site lists** option.
 
    > [!NOTE]
-   > If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
+   > If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
+
 
 ### Steps to create a site list
 
