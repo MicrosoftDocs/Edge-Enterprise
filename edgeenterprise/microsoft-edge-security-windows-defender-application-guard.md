@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 03/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -124,7 +124,7 @@ The following articles provide the information you need to install, configure, a
 
 - [System requirements](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
 - [Install Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Configure Microsoft Defender group policy settings](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Configure Application Guard group policy settings](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Test Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
 ## Frequently Asked Questions
