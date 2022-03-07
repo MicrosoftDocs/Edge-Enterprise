@@ -27,6 +27,7 @@ This article explains how to configure session cookie sharing from a Microsoft E
 To share session cookies from Microsoft Edge to Internet Explorer:
 
 - Windows updates
+
   - Windows 11
   - Windows 10 version 2004, Windows Server version 2004 - KB4571744 or higher
   -	Windows 10 version 1909, Windows Server version 1909 – KB4566116 or higher
@@ -45,7 +46,12 @@ To share session cookies from Microsoft Edge to Internet Explorer:
 To share session cookies between Microsoft Edge and Explorer:
 
 - Windows updates
-  - TBD
+  
+  - Windows 11 - KB5010414 or higher
+  - Windows Server 2022 - KB5010421 or higher
+  - Windows 10 version 20H2 - KB5010415 or higher
+  - Windows 10 version 21H1 - KB5010415 or higher 
+  - Windows 10 version 21H2-  KB5010415 or higher 
 - Microsoft Edge version 100 or later
 - [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
@@ -84,11 +90,12 @@ The following table describes the \<shared-cookie\> element added to support the
 #### Sharing example
 
 ```xml
-<site-list version="1">
-<shared-cookie domain=".contoso.com" name="cookie1"></shared-cookie> 
-<shared-cookie host="subdomain.contoso.com" name="cookie2" path="/a/b/c">
-</shared-cookie>
-</site-list>
+<site-list version="1"> 
+<shared-cookie domain=".contoso.com" name="cookie1"></shared-cookie>  
+<shared-cookie host="subdomain.contoso.com" name="cookie2" path="/a/b/c"> 
+</shared-cookie> 
+<shared-cookie host="subdomain.contoso.com" name="cookie3" source-engine="MSEdge"></shared-cookie> 
+</site-list> 
 ```
 
 ## See also
