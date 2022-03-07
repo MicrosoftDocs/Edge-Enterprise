@@ -166,14 +166,14 @@ There are scenarios where you want to export a site list. For example, if you're
 2. On the resulting page, you’ll see the site list entries and the **Export list** option.
 3. Select **Export list** to download the site list XML file.
 
-### View site feedback on the Microsoft 365 Admin Center
+## View site feedback on the Microsoft 365 Admin Center
 
 The Site feedback tab shows the sites that users are adding to their local IE Mode site list, as well as potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
 
 > [!NOTE]
 > This feature is currently rolling out to all users and is expected to finish rolling out by mid-March.
 
-#### Add a site to site lists
+### Add a site to site lists
 
 Use the following steps to add a site to one or more site lists from site feedback.
 
@@ -184,7 +184,7 @@ Use the following steps to add a site to one or more site lists from site feedba
    > [!NOTE]
    > The status for this entry will update to **Resolved** because it was **Added**. This site will now appear on the site list(s) you selected.
 
-#### Pause incoming feedback on a site
+### Pause incoming feedback on a site
 
 You can postpone acting on a pending entry by pausing feedback. You can pause feedback for 30 days or indefinitely. Use the following steps to pause incoming feedback.  
 
@@ -195,7 +195,7 @@ You can postpone acting on a pending entry by pausing feedback. You can pause fe
     > [!NOTE]
     > The status for this entry will update to **Resolved** because it was **Paused**. If you paused for 30 days, then after 30 days if there's any incoming feedback, the entry's status will refresh back to **Pending** for you to act on.
 
-#### Delete feedback on a site
+### Delete feedback on a site
 
 Use the following steps to delete a feedback entry.
 
@@ -205,7 +205,7 @@ Use the following steps to delete a feedback entry.
     > [!NOTE]
     > If you delete an entry, it might reappear in the future as incoming feedback if users continue to add the site to their local site lists or if Microsoft Edge detects it as a potentially misconfigured neutral site.
 
-#### View the change history for site feedback entries
+### View the change history for site feedback entries
 
 To view the change history:
 
