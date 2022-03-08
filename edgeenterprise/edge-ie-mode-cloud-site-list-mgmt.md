@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/24/2022
+ms.date: 03/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
 > [!NOTE]
-> This experience is currently only available to worldwide cloud instances.
+> This user experience is currently only available to worldwide cloud instances.
 
 ## Overview
 
@@ -35,11 +35,16 @@ The following prerequisites apply to this feature.
 
 1. Customers must have an Azure AD tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
-3. Admins need to be an [Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
+3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
 
 ## Cloud Site List Management experience
 
-There are three aspects to the experience.
+There are four aspects to the Cloud Site List Management experience:
+
+- Publishing the enterprise site list to the cloud.
+- Associating the cloud site list with Microsoft Edge.
+- Managing site list contents on the Microsoft 365 Admin Center.
+- Viewing site feedback on the Microsoft 365 Admin Center.
 
 ### Publish enterprise site list to the cloud
 
@@ -56,6 +61,10 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 
 Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
 
+### View site feedback on the Microsoft 365 Admin Center
+
+With Microsoft Edge version 99, admins can use the [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) and [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) policies to identify gaps in their site list with site feedback. They can view sites that users have added to their [local site lists](/deployedge/edge-ie-mode-local-site-list), and potentially misconfigured neutral sites.
+
 ## Publish enterprise site list to the cloud
 
 Use the following steps as a guide to create a site list, import a site list, and publish a site list. Before you can complete these steps, sign in the Microsoft 365 admin center.
@@ -65,7 +74,7 @@ Use the following steps as a guide to create a site list, import a site list, an
 3. You'll see the **Microsoft Edge site lists** option.
 
    > [!NOTE]
-   > If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
+   > If you don't see this option on the Org settings page while we are rolling out to all production instances, you'll need to opt in to **Targeted release**. If you don't see the **Microsoft Edge site lists** option, see this FAQ: [I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?](#i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that).
 
 ### Steps to create a site list
 
@@ -81,7 +90,7 @@ Use the following steps as a guide to create a site list, import a site list, an
 3. On the right-hand panel, select **Browse**.
 4. Select the file you want to import and then select **Upload** on the bottom of the panel.
 5. You can skim through the URLs in the uploaded file. If you want to pick a different file, you can select **Upload a different file** at the top of the panel. If everything looks correct, select **Add** at the bottom of the panel.
-6. After your list is imported, select **Close panel**. 
+6. After your list is imported, select **Close panel**.
 
 ### Steps to publish a site list
 
@@ -106,6 +115,7 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 ## Manage site list contents on the Microsoft 365 Admin Center
 
 You can add individual site entries, delete site entries and view change history for comments.
+
 If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
 ### Add individual sites to the site list
@@ -130,7 +140,7 @@ To view the change history for site entries:
 Use the following steps to delete a site entry.
 
 1. Pick the site list entry that you’d like to delete a site from. Select **Delete site**.
-2. Select **Delete** at the bottom of the pane.
+2. Select **Delete** at the bottom of the panel.
 3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
@@ -142,7 +152,7 @@ Use the following steps to copy a site entry from a site list to one or more sit
 
 1. Pick a site entry that you'd like to copy to another list. Select **Copy to more lists**.
 2. Select one or more site lists you'd like to copy to from the dropdown list.
-3. Select **Copy site** at the bottom of the pane.
+3. Select **Copy site** at the bottom of the panel.
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
    > [!NOTE]
@@ -156,9 +166,54 @@ There are scenarios where you want to export a site list. For example, if you're
 2. On the resulting page, you’ll see the site list entries and the **Export list** option.
 3. Select **Export list** to download the site list XML file.
 
+## View site feedback on the Microsoft 365 Admin Center
+
+The Site feedback tab shows the sites that users are adding to their local IE Mode site list, as well as potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
+
+> [!NOTE]
+> This feature is currently rolling out to all users and is expected to finish rolling out by mid-March.
+
+### Add a site to site lists
+
+Use the following steps to add a site to one or more site lists from site feedback.
+
+1. Pick the entry that you want to add. Select **Add to site lists**.  
+2. Select one or more site lists to add to from the dropdown. Pick the engine that should be used to open the site and add comments as needed.
+3. Select **Add site** at the bottom of the panel.
+
+   > [!NOTE]
+   > The status for this entry will update to **Resolved** because it was **Added**. This site will now appear on the site list(s) you selected.
+
+### Pause incoming feedback on a site
+
+You can postpone acting on a pending entry by pausing feedback. You can pause feedback for 30 days or indefinitely. Use the following steps to pause incoming feedback.  
+
+1. Pick an entry that you want to pause feedback on. Select **Pause Feedback**.  
+2. Add comments as needed and select how long you'd like to pause feedback for.  
+3. Select **Pause** at the bottom of the panel.
+
+    > [!NOTE]
+    > The status for this entry will update to **Resolved** because it was **Paused**. If you paused for 30 days, then after 30 days if there's any incoming feedback, the entry's status will refresh back to **Pending** for you to act on.
+
+### Delete feedback on a site
+
+Use the following steps to delete a feedback entry.
+
+1. Pick the entry that you want to delete. Select **Delete feedback**.
+2. Select **Delete** on the pop-up dialog.
+
+    > [!NOTE]
+    > If you delete an entry, it might reappear in the future as incoming feedback if users continue to add the site to their local site lists or if Microsoft Edge detects it as a potentially misconfigured neutral site.
+
+### View the change history for site feedback entries
+
+To view the change history:
+
+- Select the entry that you want to see the change history for, and then select **Feedback history** in the side panel.
+
 ## FAQ
 
-### I do not see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
+### I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
 
 The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
@@ -200,4 +255,3 @@ Support for Cloud Site List Management experience is covered by your existing [M
 
 - [About IE mode](./edge-ie-mode.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
-  
