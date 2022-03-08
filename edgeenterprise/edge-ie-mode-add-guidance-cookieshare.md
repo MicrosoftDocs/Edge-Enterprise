@@ -3,7 +3,7 @@ title: "Cookie sharing between Microsoft Edge and Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/07/2022
+ms.date: 03/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Learn how to share cookies between Microsoft Edge and Internet Exp
 >[!Note]
 > The Internet Explorer (IE) 11 desktop application will be retired and go out of support on June 15, 2022. To see what’s in scope and out of scope when IE 11 is retired, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). The same IE 11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-This article explains how to configure session cookie sharing from a Microsoft Edge process to an Internet Explorer process, while using Internet Explorer mode.
+This article explains how to configure session cookie sharing between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
@@ -43,7 +43,7 @@ To share session cookies from Microsoft Edge to Internet Explorer:
 - Microsoft Edge version 87 or later
 - [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
-To share session cookies between Microsoft Edge and Explorer:
+To share session cookies between Microsoft Edge and Internet Explorer:
 
 - Windows updates
   
@@ -62,7 +62,7 @@ A common configuration in large organizations is to have an application that wor
 By default, the Microsoft Edge and Internet Explorer processes don't share session cookies, and this lack of sharing can be inconvenient in some cases. For example, when a user has to reauthenticate in Internet Explorer mode or when signing out of a Microsoft Edge session doesn’t sign out of the Internet Explorer mode session. In these scenarios, you can configure specific cookies set by SSO to be sent from Microsoft Edge to Internet Explorer so the authentication experience becomes more seamless by eliminating the need to reauthenticate.
 
 > [!NOTE]
-> Before Microsoft Edge version 100, session cookies can only be shared from Microsoft Edge to Internet Explorer. Sharing session cookies in reverse (from Internet Explorer to Microsoft Edge) isn't possible.
+> Starting with Microsoft Edge version 100, sharing session cookies in reverse (from Internet Explorer to Microsoft Edge) is possible.
 
 ## How cookie sharing works
 
