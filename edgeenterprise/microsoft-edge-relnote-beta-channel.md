@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge release notes for Beta Channel"
-ms.author: aguta
+ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/07/2022
+ms.date: 03/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ These release notes provide information about new features and non-security upda
 
 - **Improvements to the Cloud Site List Management experience for IE Mode.** Identify gaps in your enterprise site list by configuring reporting of site feedback with the [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) and [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) policies. You can view local site list URLs from users and potentially misconfigured neutral site URLs in the Microsoft Edge site lists experience in the Microsoft 365 Admin Center. To learn more, see [Cloud Site List Management for Internet Explorer (IE) mode](/deployedge/edge-ie-mode-cloud-site-list-mgmt).**Note:** This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **Bidirectional Cookie Sharing for IE mode.** This feature expands on the cookie sharing capability already available and lets users sync specific session cookies from Internet Explorer/IE mode to Microsoft Edge.
+- **Bidirectional Cookie Sharing for IE mode.** This feature expands on the cookie sharing capability already available and lets users sync specific session cookies from Internet Explorer/IE mode to Microsoft Edge. For more information, see [Cookie sharing between Microsoft Edge and Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 - **Preview PDF files in Microsoft Outlook and File Explorer.** Users can view a PDF file in a lightweight and rich read-only preview.  Available for Outlook Desktop PDF attachments or for local PDF files using File Explorer.  
 
