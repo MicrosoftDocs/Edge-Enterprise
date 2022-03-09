@@ -44,8 +44,8 @@ The following table lists the planned and actual release dates for major release
 | 96 | Released<br>Version  | 01-Nov-2021<br>[96.0.1054.8](/DeployEdge/microsoft-edge-relnote-archive-beta-channel?branch=pr-en-us-1163#version-96010548-november-1) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) | 19-Nov-2021<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) |
 | 97 | Released<br>Version | 01-Dec-2021<br>[97.0.1072.21](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-970107221-december-1) | 06-Jan-2022<br>[97.0.1072.55](/deployedge/microsoft-edge-relnote-stable-channel#version-970107255-january-6)| Not applicable  |
 | 98 | Released<br>Version | 14-Jan-2022<br>[98.0.1108.23](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-980110823-january-14) | 03-Feb-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) | 03-Feb-2022<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) |
-| 99 | Target release | 09-Feb-2022<br>[99.0.1150.11](/deployedge/microsoft-edge-relnote-beta-channel#version-990115011-february-9) | 03-Mar-2022<br>[99.0.1150.30](/deployedge/microsoft-edge-relnote-stable-channel#version-990115030-march-3) | Not applicable  |
-| 100 | Target release | Week of 08-Mar-2022 | Week of 31-Mar-2022 | Week of 31-Mar-2022 |
+| 99 | Released<br>Version | 09-Feb-2022<br>[99.0.1150.11](/deployedge/microsoft-edge-relnote-beta-channel#version-990115011-february-9) | 03-Mar-2022<br>[99.0.1150.30](/deployedge/microsoft-edge-relnote-stable-channel#version-990115030-march-3) | Not applicable  |
+| 100 | Released<br>Version | Week of 08-Mar-2022 | Week of 31-Mar-2022 | Week of 31-Mar-2022 |
 | 101 | Target release | Week of 05-Apr-2022 | Week of 28-Apr-2022 | Not applicable |
 | 102 | Target release | Week of 03-May-2022 | Week of 26-May-2022 | Week of 26-May-2022 |
 | 103 | Target release | Week of 01-Jun-2022 | Week of 23-Jun-2022 | Not applicable |
