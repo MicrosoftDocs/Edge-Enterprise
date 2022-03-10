@@ -51,6 +51,10 @@ These release notes provide information about new features and non-security upda
 
 - [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Allow pages to send synchronous XHR requests during page dismissal
 
+## Version 99.0.1150.39: March 10
+
+Fixed various bugs and performance issues.
+
 ## Version 99.0.1150.30: March 2
 
 Fixed various bugs and performance issues.
