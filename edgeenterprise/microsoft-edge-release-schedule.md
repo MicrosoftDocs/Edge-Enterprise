@@ -51,7 +51,7 @@ The following table lists the planned and actual release dates for major release
 | 103 | Target release | Week of 01-Jun-2022 | Week of 23-Jun-2022 | Not applicable |
 | 104 | Target release | Week of 28-Jun-2022 | Week of 04-Aug-2022 | Week of 04-Aug-2022 |
 
-## Release Process
+## Release process
 
 The trigger for Beta and Stable major releases is an equivalent Chromium release.
 
