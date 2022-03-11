@@ -124,7 +124,7 @@ You can add individual sites to any site list. After adding sites to the list, y
 
 1. Go to the site list where you want to add a site.
 2. Select **Add a site**.
-3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
+3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and then select **Save**.
 
    > [!NOTE]
    > The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
@@ -135,7 +135,7 @@ Use the following steps to delete a site entry.
 
 1. Pick the site entry that you’d like to delete from the site list. Select **Delete site**.
 2. Select **Delete** in the dialog pop-up.
-3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
+3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the **Filter** button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
    > The **Status** column for any entries deleted from a published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
