@@ -84,8 +84,8 @@ The following table describes the \<shared-cookie\> element added to support the
 
 ```xml
 <site-list version="1"> 
-<shared-cookie domain=".contoso.com" name="cookie1"></shared-cookie>  
-<shared-cookie host="subdomain.contoso.com" name="cookie2" path="/a/b/c"> 
+<shared-cookie domain=".contoso.com" name="cookie1"></shared-cookie>  
+<shared-cookie host="subdomain.contoso.com" name="cookie2" path="/a/b/c"> 
 </shared-cookie> 
 <shared-cookie host="subdomain.contoso.com" name="cookie3" source-engine="MSEdge"></shared-cookie> 
 </site-list> 
