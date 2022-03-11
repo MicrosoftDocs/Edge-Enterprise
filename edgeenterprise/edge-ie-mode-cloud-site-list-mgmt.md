@@ -127,7 +127,7 @@ You can add individual sites to any site list. After adding sites to the list, y
 3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
 
    > [!NOTE]
-   > The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+   > The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Delete a site from the site list
 
@@ -156,7 +156,7 @@ Use the following steps to copy a site entry from a site list to one or more sit
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
    > [!NOTE]
-   > The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+   > The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Add a shared cookie to the site list
 
@@ -167,7 +167,7 @@ You can add individual shared cookies to any site list. After adding shared cook
 3. Enter the domain and cookie name. Add comments as needed and then select **Save**.
 
 > [!NOTE]
-> The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+> The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Delete a shared cookie from the site list
 
@@ -196,7 +196,7 @@ Use the following steps to copy a shared cookie entry from a site list to one or
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
 > [!NOTE]
-> The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+> The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Export a site list
 
