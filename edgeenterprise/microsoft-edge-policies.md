@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/07/2022
+ms.date: 03/14/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,17 +26,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are part of this article update.
+The following table lists the new and deprecated policies that are part of this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[DefaultWebHidGuardSetting](#defaultwebhidguardsetting)|Control use of the WebHID API|
-|[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
-|[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
-|[ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](#controldefaultstateofallowextensionfromotherstoressettingenabled)|Configure default state of Allow extensions from other stores setting|
-|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match |
-|[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
-|[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
+|[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
+|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
+|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 
 ## Available policies
 
@@ -317,7 +313,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let reader users get image descriptions from Microsoft|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let screen reader users get image descriptions from Microsoft|
 |[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
@@ -350,7 +346,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
-|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates|
+|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
@@ -401,6 +397,7 @@ These tables list all of the browser-related group policies available in this re
 |[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
+|[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
@@ -498,6 +495,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
+|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
@@ -11717,7 +11715,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Let reader users get image descriptions from Microsoft
+  #### Let screen reader users get image descriptions from Microsoft
 
   
   
@@ -11752,7 +11750,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   ##### Group Policy (ADMX) info
 
   - GP unique name: AccessibilityImageLabelsEnabled
-  - GP name: Let get image descriptions from Microsoft
+  - GP name: Let screen reader users get image descriptions from Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -13978,9 +13976,9 @@ If you don't configure this policy, background mode is initially turned off, and
 
   ### BackgroundTemplateListUpdatesEnabled
 
-  #### Enables background updates to the list of available templates for Collections and other features that use templates
+  #### Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -13988,7 +13986,9 @@ If you don't configure this policy, background mode is initially turned off, and
 
   #### Description
 
-  Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
+  This policy is deprecated because we are moving to a new policy. It won't work in Microsoft Edge as soon as version 104. The new policy to use is [EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled).
+
+Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
 
 If you enable this setting or the setting is unconfigured, the list of available templates will be downloaded in the background from a Microsoft service every 24 hours.
 
@@ -14009,7 +14009,7 @@ If you disable this setting the list of available templates will be downloaded o
   ##### Group Policy (ADMX) info
 
   - GP unique name: BackgroundTemplateListUpdatesEnabled
-  - GP name: Enables background updates to the list of available templates for Collections and other features that use templates
+  - GP name: Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -17521,6 +17521,69 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeAssetDeliveryServiceEnabled
+
+  #### Allow features to download assets from the Asset Delivery Service
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101 or later
+
+  #### Description
+
+  The Asset Delivery Service is a general pipeline used to deliver assets to the Microsoft Edge Clients.
+These assets can be config files or Machine Learning models that power the features that use this service.
+
+If you enable or don't configure this policy, features can download assets from the Asset Delivery Service.
+
+If you disable this policy, features won't be able to download assets needed for them to run correctly.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeAssetDeliveryServiceEnabled
+  - GP name: Allow features to download assets from the Asset Delivery Service
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeAssetDeliveryServiceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeAssetDeliveryServiceEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -22221,7 +22284,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   #### Description
 
-  This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes.
+  This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes. The minimum refresh interval is 30 minutes.
 
 This setting is applicable only when the [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) or [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) setting is configured.
 
@@ -24045,6 +24108,68 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PDFSecureMode
+
+  #### Secure mode and Certificate-based Digital Signature validation in native PDF reader
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  The policy enables Digital Signature validation for PDF files in a secure environment, which shows the correct validation status of the signatures.
+
+If you enable this policy, PDF files with Certificate-based digital signatures are opened with an option to view and verify the validity of the signatures with high security.
+
+If you disable or don't configure this policy, the capability to view and verify the signature will not be available.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PDFSecureMode
+  - GP name: Secure mode and Certificate-based Digital Signature validation in native PDF reader
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PDFSecureMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PDFSecureMode
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PaymentMethodQueryEnabled
 
   #### Allow websites to query for available payment methods
@@ -24492,7 +24617,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   #### Description
 
-  Allows you to set whether users can view Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
+  Allows you to set whether users can view publicly accessible Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
 
 If you enable or don't configure this policy, these files can be viewed in Microsoft Edge using Office Viewer instead of downloading the files.
 
