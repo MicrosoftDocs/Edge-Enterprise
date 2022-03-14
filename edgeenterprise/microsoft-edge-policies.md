@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/25/2022
+ms.date: 03/14/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,6 +24,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following table lists the new and deprecated policies that are part of this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
+|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
+|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -39,6 +49,7 @@ These tables list all of the browser-related group policies available in this re
 - [Kiosk Mode settings](#kiosk-mode-settings)
 - [Manageability](#manageability)
 - [Native Messaging](#native-messaging)
+- [Other](#other)
 - [Password manager and protection](#password-manager-and-protection)
 - [Performance](#performance)
 - [Permit or deny screen capture](#permit-or-deny-screen-capture)
@@ -87,6 +98,7 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultPluginsSetting](#defaultpluginssetting)|Default Adobe Flash setting (obsolete)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Default pop-up window setting|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
+|[DefaultWebHidGuardSetting](#defaultwebhidguardsetting)|Control use of the WebHID API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
 |[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Allow read access via the File System API on these sites|
 |[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
@@ -114,6 +126,8 @@ These tables list all of the browser-related group policies available in this re
 |[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Allow notifications to set Microsoft Edge as default PDF reader|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
+|[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
+|[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
@@ -140,6 +154,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[BlockExternalExtensions](#blockexternalextensions)|Blocks external extensions from being installed|
+|[ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](#controldefaultstateofallowextensionfromotherstoressettingenabled)|Configure default state of Allow extensions from other stores setting|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Allow specific extensions to be installed|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
@@ -186,6 +201,11 @@ These tables list all of the browser-related group policies available in this re
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
+### [*Other*](#other-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
 
 |Policy Name|Caption|
@@ -293,10 +313,11 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
-|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let get image descriptions from Microsoft|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let screen reader users get image descriptions from Microsoft|
 |[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
+|[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
 |[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu|
@@ -325,7 +346,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
-|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates|
+|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
@@ -376,6 +397,7 @@ These tables list all of the browser-related group policies available in this re
 |[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
+|[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
@@ -416,6 +438,7 @@ These tables list all of the browser-related group policies available in this re
 |[HeadlessModeEnabled](#headlessmodeenabled)|Control use of the Headless Mode|
 |[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
 |[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Hide the one-time redirection dialog and the banner on Microsoft Edge|
+|[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 |[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
@@ -472,6 +495,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
+|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
@@ -2155,6 +2179,76 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefaultWebHidGuardSetting
+
+  #### Control use of the WebHID API
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  Setting the policy to 3 lets websites ask for access to HID devices. Setting the policy to 2 denies access to HID devices.
+
+Leaving it unset lets websites ask for access, but users can change this setting.
+
+This policy can be overridden for specific url patterns using the [WebHidAskForUrls](#webhidaskforurls) and [WebHidBlockedForUrls](#webhidblockedforurls) policies.
+
+Policy options mapping:
+
+* BlockWebHid (2) = Do not allow any site to request access to HID devices via the WebHID API
+
+* AskWebHid (3) = Allow sites to ask the user to grant access to a HID device
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultWebHidGuardSetting
+  - GP name: Control use of the WebHID API
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultWebHidGuardSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DefaultWebHidGuardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DefaultWebUsbGuardSetting
 
   #### Control use of the WebUSB API
@@ -2783,7 +2877,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   This setting allows file URL links to intranet zone files from intranet zone HTTPS websites to open Windows File Explorer for that file or directory.
 
-If you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer for that file or directory.
+If you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer to the parent directory of the file and select the file. Intranet zone directory URL links originating from intranet zone HTTPS pages will open Windows File Explorer to the directory with no items in the directory selected.
 
 If you disable or don't configure this policy, file URL links will not open.
 
@@ -4038,6 +4132,160 @@ If you disable this setting, spotlight experiences and recommendations are turne
 
   [Back to top](#microsoft-edge---policies)
 
+  ### WebHidAskForUrls
+
+  #### Allow the WebHID API on these sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  Setting the policy lets you list the URL patterns that specify which sites can ask users to grant them access to a HID device.
+
+Leaving the policy unset means [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+For URL patterns that don't match the policy, the following values are applied in order of precedence:
+
+  * [WebHidBlockedForUrls](#webhidblockedforurls) (if there is a match),
+
+  * [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) (if set), or
+
+  * Users' personal settings.
+
+URL patterns must not conflict with [WebHidBlockedForUrls](#webhidblockedforurls). Neither policy takes precedence if a URL matches both patterns.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebHidAskForUrls
+  - GP name: Allow the WebHID API on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebHidAskForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebHidAskForUrls\1 = "https://microsoft.com"
+SOFTWARE\Policies\Microsoft\Edge\WebHidAskForUrls\2 = "https://chromium.org"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebHidAskForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://microsoft.com</string>
+  <string>https://chromium.org</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebHidBlockedForUrls
+
+  #### Block the WebHID API on these sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  Setting the policy lets you list the URL patterns that specify which sites can't ask users to grant them access to a HID device.
+
+Leaving the policy unset means [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) applies for all sites, if it's set. If not, users' personal settings apply.
+
+For URL patterns that don't match the policy, the following values are applied in order of precedence:
+
+  * [WebHidAskForUrls](#webhidaskforurls) (if there is a match),
+
+  * [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) (if set), or
+
+  * Users' personal settings.
+
+URL patterns can't conflict with [WebHidAskForUrls](#webhidaskforurls). Neither policy takes precedence if a URL matches both patterns.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebHidBlockedForUrls
+  - GP name: Block the WebHID API on these sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebHidBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebHidBlockedForUrls\1 = "https://microsoft.com"
+SOFTWARE\Policies\Microsoft\Edge\WebHidBlockedForUrls\2 = "https://chromium.org"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebHidBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://microsoft.com</string>
+  <string>https://chromium.org</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WebUsbAllowDevicesForUrls
 
   #### Grant access to specific sites to connect to specific USB devices
@@ -5047,6 +5295,75 @@ External extensions and their installation are documented at [Alternate extensio
   #### Mac information and settings
   
   - Preference Key Name: BlockExternalExtensions
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled
+
+  #### Configure default state of Allow extensions from other stores setting
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101 or later
+
+  #### Description
+
+  This policy allows you to control the default state of the Allow extensions from other stores setting.
+This policy can't be used to stop installation of extensions from other stores such as Chrome Web Store.
+To stop installation of extensions from other stores, use the Extension Settings policy: [https://go.microsoft.com/fwlink/?linkid=2187098](https://go.microsoft.com/fwlink/?linkid=2187098).
+
+When enabled, Allow extensions from other stores will be turned on. So, users won't have to turn on the flag manually
+while installing extensions from other supported stores such as Chrome Web Store. However a user can override this setting.
+If the user has already turned on the setting and then turned it off, this setting may not work.
+If the Admin first sets the policy as Enabled, but then changes it to not configured or disabled, it will have no impact on
+user settings and the setting will remain as it is.
+
+When disabled or not configured, the user can manage the Allow extensions from other store setting.
+
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled
+  - GP name: Configure default state of Allow extensions from other stores setting
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Extensions
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled
   - Example value:
 ``` xml
 <true/>
@@ -6847,6 +7164,71 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Other policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PromptOnMultipleMatchingCertificates
+
+  #### Prompt the user to select a certificate when multiple certificates match
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  This policy controls whether the user is prompted to select a client certificate when more than one certificate matches [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
+This configuration is the same with [ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches) and we prefer using this configuration.
+If this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.
+If this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PromptOnMultipleMatchingCertificates
+  - GP name: Prompt the user to select a certificate when multiple certificates match
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Other
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PromptOnMultipleMatchingCertificates
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PromptOnMultipleMatchingCertificates
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -11333,7 +11715,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 
   ### AccessibilityImageLabelsEnabled
 
-  #### Let get image descriptions from Microsoft
+  #### Let screen reader users get image descriptions from Microsoft
 
   
   
@@ -11368,7 +11750,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   ##### Group Policy (ADMX) info
 
   - GP unique name: AccessibilityImageLabelsEnabled
-  - GP name: Let get image descriptions from Microsoft
+  - GP name: Let screen reader users get image descriptions from Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -11589,6 +11971,70 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AdsTransparencyEnabled
+
+  #### Configure if the ads transparency feature is enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  Lets you decide whether the ads transparency feature is enabled. This behavior only applies to the "balanced" mode of tracking prevention, and does not impact "basic" or "strict" modes. Your users' tracking prevention level can be configured using the [TrackingPrevention](#trackingprevention) policy. AdsTransparencyEnabled will only have an effect if [TrackingPrevention](#trackingprevention) is set to TrackingPreventionBalanced or is not configured.
+
+If you enable or don't configure this policy, transparency metadata provided by ads will be available to the user when the feature is active.
+
+When the feature is enabled, Tracking Prevention will enable exceptions for the associated ad providers that have met Microsoft's privacy standards.
+
+If you disable this policy, Tracking Prevention will not adjust its behavior even when transparency metadata is provided by ads.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AdsTransparencyEnabled
+  - GP name: Configure if the ads transparency feature is enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AdsTransparencyEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AdsTransparencyEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -13530,9 +13976,9 @@ If you don't configure this policy, background mode is initially turned off, and
 
   ### BackgroundTemplateListUpdatesEnabled
 
-  #### Enables background updates to the list of available templates for Collections and other features that use templates
+  #### Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -13540,7 +13986,9 @@ If you don't configure this policy, background mode is initially turned off, and
 
   #### Description
 
-  Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
+  This policy is deprecated because we are moving to a new policy. It won't work in Microsoft Edge as soon as version 104. The new policy to use is [EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled).
+
+Lets you enable or disable background updates to the list of available templates for Collections and other features that use templates.  Templates are used to extract rich metadata from a webpage when the page is saved to a collection.
 
 If you enable this setting or the setting is unconfigured, the list of available templates will be downloaded in the background from a Microsoft service every 24 hours.
 
@@ -13561,7 +14009,7 @@ If you disable this setting the list of available templates will be downloaded o
   ##### Group Policy (ADMX) info
 
   - GP unique name: BackgroundTemplateListUpdatesEnabled
-  - GP name: Enables background updates to the list of available templates for Collections and other features that use templates
+  - GP name: Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -17078,6 +17526,69 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeAssetDeliveryServiceEnabled
+
+  #### Allow features to download assets from the Asset Delivery Service
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101 or later
+
+  #### Description
+
+  The Asset Delivery Service is a general pipeline used to deliver assets to the Microsoft Edge Clients.
+These assets can be config files or Machine Learning models that power the features that use this service.
+
+If you enable or don't configure this policy, features can download assets from the Asset Delivery Service.
+
+If you disable this policy, features won't be able to download assets needed for them to run correctly.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeAssetDeliveryServiceEnabled
+  - GP name: Allow features to download assets from the Asset Delivery Service
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeAssetDeliveryServiceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeAssetDeliveryServiceEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeCollectionsEnabled
 
   #### Enable the Collections feature
@@ -18643,6 +19154,8 @@ Use the preceding information when configuring this policy.
 
   Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
 
+This configuration is the same with [PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates) that is preferable.
+
 If you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls) if and only if there is more than one certificate.
 
 If you set this policy to False or don't configure it, Microsoft Edge will automatically select a certificate even if there are multiple matches for a certificate. The user will not be prompted to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
@@ -19747,6 +20260,70 @@ Users will continue to be redirected to Microsoft Edge when they encounter an in
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### HideRestoreDialogEnabled
+
+  #### Hide restore pages dialog after browser crash
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  This policy gives an option to hide the "Restore pages" dialog after Microsoft Edge has crashed. The "Restore pages" dialog gives users the option to restore the pages that were previously open before Microsoft Edge crashed.
+
+If you enable this policy, the "Restore pages" dialog will not be shown.
+
+If you disable or don't set this policy, the "Restore pages" dialog will be shown.
+
+If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) or [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled) policy since that prevents history from being saved which also disables the dialog.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: HideRestoreDialogEnabled
+  - GP name: Hide restore pages dialog after browser crash
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: HideRestoreDialogEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: HideRestoreDialogEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -21707,7 +22284,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   #### Description
 
-  This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes.
+  This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes. The minimum refresh interval is 30 minutes.
 
 This setting is applicable only when the [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) or [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) setting is configured.
 
@@ -23531,6 +24108,68 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PDFSecureMode
+
+  #### Secure mode and Certificate-based Digital Signature validation in native PDF reader
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  The policy enables Digital Signature validation for PDF files in a secure environment, which shows the correct validation status of the signatures.
+
+If you enable this policy, PDF files with Certificate-based digital signatures are opened with an option to view and verify the validity of the signatures with high security.
+
+If you disable or don't configure this policy, the capability to view and verify the signature will not be available.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PDFSecureMode
+  - GP name: Secure mode and Certificate-based Digital Signature validation in native PDF reader
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PDFSecureMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PDFSecureMode
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PaymentMethodQueryEnabled
 
   #### Allow websites to query for available payment methods
@@ -23978,7 +24617,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 
   #### Description
 
-  Allows you to set whether users can view Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
+  Allows you to set whether users can view publicly accessible Office files on the web that aren't on OneDrive or SharePoint. (For example: Word documents, PowerPoint presentations, and Excel spreadsheets)
 
 If you enable or don't configure this policy, these files can be viewed in Microsoft Edge using Office Viewer instead of downloading the files.
 
@@ -24100,14 +24739,17 @@ For more information about this policy see [https://go.microsoft.com/fwlink/?lin
   #### Description
 
   This setting lets you specify whether Internet Explorer will redirect navigations to sites that require a modern browser to Microsoft Edge.
-
-If you don't configure this policy or set it to 'Sitelist' ('Redirect sites based on the incompatible sites sitelist' value 1), beginning in M87, Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
-
-When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that began loading that site is closed if it had no prior content. Otherwise, it is navigated to a Microsoft help page explaining why the site was redirected to Microsoft Edge.
-
-When Microsoft Edge is launched to load a site from IE, an information bar is shown to the user explaining that the site works best in a modern browser.
-
 If you set this policy to 'Disable' ('Prevent redirection', value 0), Internet Explorer will not redirect any traffic to Microsoft Edge.
+
+If you set this policy to 'Sitelist', starting with Microsoft Edge major release 87 , Internet Explorer (IE) will redirect sites that require a modern browser to Microsoft Edge. (Note: The Sitelist setting is 'Redirect sites based on the incompatible sites sitelist', value 1).
+
+When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that started loading the site is closed if it had no prior content. Otherwise, the user is taken to a Microsoft help page that explains why the site was redirected to Microsoft Edge. When Microsoft Edge is launched to load an IE site, an information bar explains that the site works best in a modern browser.
+
+If you want to redirect all navigations, you can configure the Disable Internet Explorer 11 policy, which redirects all navigations from IE11 to Microsoft Edge. It also hides the IE11 app icon from the user after the first launch.
+
+If don't configure this policy:
+  - Starting with Microsoft Edge major release 87, you will have the same experience as setting the policy to 'Sitelist': Internet Explorer will redirect sites that require a modern browser to Microsoft Edge.
+  - In the future, the default for your organization might change to automatically redirect all navigations. If you don't want automatic redirection, set this policy to 'Disable' or 'Sitelist'.
 
 For more information about this policy see  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
