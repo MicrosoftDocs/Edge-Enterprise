@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/14/2022
+ms.date: 03/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,16 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are part of this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
-|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
-|[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 
 ## Available policies
 
@@ -189,6 +179,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configure address bar editing for kiosk mode public browsing experience|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Delete files downloaded as part of kiosk session when Microsoft Edge closes|
+|[KioskSwipeGesturesEnabled](#kioskswipegesturesenabled)|Swipe gestures in Microsoft Edge kiosk mode enabled|
 ### [*Manageability*](#manageability-policies)
 
 |Policy Name|Caption|
@@ -370,6 +361,7 @@ These tables list all of the browser-related group policies available in this re
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
+|[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
@@ -474,6 +466,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
@@ -543,6 +536,7 @@ These tables list all of the browser-related group policies available in this re
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
+|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services|
 |[SmartActionsBlockList](#smartactionsblocklist)|Block smart actions for a list of services|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
@@ -6897,6 +6891,63 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): N/A
   - Value Name: KioskDeleteDownloadsOnExit
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### KioskSwipeGesturesEnabled
+
+  #### Swipe gestures in Microsoft Edge kiosk mode enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 101 or later
+
+  #### Description
+
+  This policy only applies to Microsoft Edge kiosk mode.
+
+If you enable this policy or don't configure it, swipe gestures will behave as expected.
+
+If you disable this policy, the user will not be able to use swipe gestures (for example navigate forwards and backwards, refresh page).
+
+For detailed information on configuring kiosk mode, see [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: KioskSwipeGesturesEnabled
+  - GP name: Swipe gestures in Microsoft Edge kiosk mode enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Kiosk Mode settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: KioskSwipeGesturesEnabled
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -14672,7 +14723,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
-It won't work in Microsoft Edge version 104, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+It won't work in Microsoft Edge version 107, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
 
   #### Supported features:
@@ -15604,6 +15655,76 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>3</integer>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ConfigureKeyboardShortcuts
+
+  #### Configure the list of commands for which to disable keyboard shortcuts
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 101 or later
+
+  #### Description
+
+  Configure the list of Microsoft Edge commands for which to disable keyboard shortcuts.
+
+See [https://go.microsoft.com/fwlink/?linkid=2186950](https://go.microsoft.com/fwlink/?linkid=2186950) for a list of possible commands to disable.
+
+If you enable this policy, commands in the 'disabled' list will no longer be activated by keyboard shortcuts.
+
+If you disable this policy, all keyboard shortcuts behave as usual.
+
+Note: Disabling a command will only remove its shortcut mapping. Commands in the 'disabled' list will still function if accessed via browser UI.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ConfigureKeyboardShortcuts
+  - GP name: Configure the list of commands for which to disable keyboard shortcuts
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ConfigureKeyboardShortcuts
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {
+  "disabled": [
+    "new_tab"
+  ]
+}
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {"disabled": ["new_tab"]}
+  ```
+  
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17458,11 +17579,13 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 
   Configures the type of downloads that Microsoft Edge completely blocks, without letting users override the security decision.
 
-Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings.
+Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of known or potentially dangerous downloads or that have dangerous file type extensions.
 
-Set 'BlockPotentiallyDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of potentially dangerous or unwanted downloads.
+Set 'BlockPotentiallyDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of potentially dangerous or unwanted downloads or that have dangerous file type extensions.
 
 Set 'BlockAllDownloads' to block all downloads.
+
+Set 'BlockMaliciousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of known malicious downloads.
 
 If you don't configure this policy or set the 'DefaultDownloadSecurity' option, the downloads go through the usual security restrictions based on Microsoft Defender SmartScreen analysis results.
 
@@ -17474,11 +17597,13 @@ Policy options mapping:
 
 * DefaultDownloadSecurity (0) = No special restrictions
 
-* BlockDangerousDownloads (1) = Block dangerous downloads
+* BlockDangerousDownloads (1) = Block malicious downloads and dangerous file types
 
-* BlockPotentiallyDangerousDownloads (2) = Block potentially dangerous or unwanted downloads
+* BlockPotentiallyDangerousDownloads (2) = Block potentially dangerous or unwanted downloads and dangerous file types
 
 * BlockAllDownloads (3) = Block all downloads
+
+* BlockMaliciousDownloads (4) = Block malicious downloads
 
 Use the preceding information when configuring this policy.
 
@@ -22583,6 +22708,66 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerModeEnableSavePageAs
+
+  #### Allow Save page as in Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 101 or later
+
+  #### Description
+
+  This policy enables 'Save page as' functionality in Internet Explorer mode.
+Users can use this option to save the current page in the browser. When a user re-opens a saved page, it will be loaded in the default browser.
+
+If you enable this policy, the "Save page as" option will be clickable in "More tools".
+
+If you disable or don't configure this policy, users can't select the "Save page as" option in "More tools".
+
+Note: To make the "Ctrl+S" shortcut work, users must enable the Internet Explorer policy, 'Enable extended hot key in Internet Explorer mode'.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerModeEnableSavePageAs
+  - GP name: Allow Save page as in Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerModeEnableSavePageAs
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerModeTabInEdgeModeAllowed
 
   #### Allow sites configured for Internet Explorer mode to open in Microsoft Edge
@@ -27206,6 +27391,68 @@ If you disable or don't configure this policy, a user can opt out of site isolat
   #### Mac information and settings
   
   - Preference Key Name: SitePerProcess
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SiteSafetyServicesEnabled
+
+  #### Allow users to configure Site safety services
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101 or later
+
+  #### Description
+
+  This policy disables site safety services from showing top site info in the page info dialog.
+
+If you enable this policy or don't configure it, the top site info will be shown.
+
+If you disable this policy, the top site info will not be shown.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SiteSafetyServicesEnabled
+  - GP name: Allow users to configure Site safety services
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SiteSafetyServicesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SiteSafetyServicesEnabled
   - Example value:
 ``` xml
 <true/>
