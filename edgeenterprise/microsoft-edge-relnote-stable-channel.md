@@ -26,11 +26,13 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 99.0.1150.46: March 17 
+## Version 98.0.1108.84: March 17
 
-This update contains the following Microsoft Edge-specific security update:
+Fixed various bugs and performance issues for Extended Stable release.
 
-- [CVE-2022-26899](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26899). For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+## Version 99.0.1150.46: March 17
+
+This update contains the following Microsoft Edge-specific security update: [CVE-2022-26899](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26899). For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
 
