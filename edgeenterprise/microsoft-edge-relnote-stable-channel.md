@@ -32,8 +32,6 @@ Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 99.0.1150.46: March 17
 
-This update contains the following Microsoft Edge-specific security update: [CVE-2022-26899](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26899). For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
 
 ## Version 99.0.1150.39: March 10
