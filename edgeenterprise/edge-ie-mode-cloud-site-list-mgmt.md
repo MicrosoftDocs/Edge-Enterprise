@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2022
+ms.date: 03/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -110,41 +110,41 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 4. You can run **gpupdate/force** from  the Command Prompt to update the device with the policy or wait for the group policy to take effect. After the policy is updated, you can verify that Microsoft Edge is reading the cloud site list by going to [edge://compat/enterprise](edge://compat/enterprise). You need to be signed into Microsoft Edge.
 
 > [!NOTE]
-> After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the Force Update button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
+> After publishing a site list the first time and updating group policy, you need to restart Microsoft Edge. Wait 60 seconds or select the **Force Update** button on [edge://compat/enterprise](edge://compat/enterprise). When publishing updates to an already associated site list, there may be an older version of the site list in the cache. This entry will be refreshed after 60 seconds. For more information, see [What happens if users log out of Microsoft Edge?](#what-happens-if-users-log-out-of-microsoft-edge).
 
 ## Manage site list contents on the Microsoft 365 Admin Center
 
-You can add individual site entries, delete site entries and view change history for comments.
+You can add, edit, delete site list contents, and view comment history to track changes to individual entries for sites and shared cookies.
 
 If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
-### Add individual sites to the site list
+### Add a site to the site list
 
-You can add individual sites to any site list. After adding sites to the list, you can use the predefined filters using the **Filter** button (next to the Search input area) to view updates to the list.
+You can add individual sites to any site list. After adding sites to the list, you can use the predefined filters using the **Filter** button (next to the Search box) to view updates to the list.
 
 1. Go to the site list where you want to add a site.
 2. Select **Add a site**.
-3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and select **Save**.
+3. Enter the site address and pick the engine that should be used to open the site. Add comments as needed and then select **Save**.
 
    > [!NOTE]
-   > The **Status** column for any entries added to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
-
-### View the change history for site entries
-
-To view the change history for site entries:
-
-- Select the site entry that you want to see the change history for, and then select **View comments**.
+   > The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Delete a site from the site list
 
 Use the following steps to delete a site entry.
 
-1. Pick the site list entry that you’d like to delete a site from. Select **Delete site**.
-2. Select **Delete** at the bottom of the panel.
-3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the Filter button and filtering for sites in the **Delete pending** state.
+1. Pick the site entry that you’d like to delete from the site list. Select **Delete site**.
+2. Select **Delete** in the dialog pop-up.
+3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the **Filter** button and filtering for sites in the **Delete pending** state.
 
    > [!NOTE]
-   > The **Status** column for any entries deleted from a Published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them.You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
+   > The **Status** column for any entries deleted from a published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
+
+### View the change history for site entries
+
+To view the change history for site entries:
+
+- Select the site entry that you want to see the change history for, and then select **View history**.
 
 ### Copy a site to other site lists
 
@@ -156,15 +156,56 @@ Use the following steps to copy a site entry from a site list to one or more sit
 4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
 
    > [!NOTE]
-   > The **Status** column for any entries copied to a Published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the Published Status column shows **Changes pending** publish to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all added entries that are pending publication.
+   > The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
+
+### Add a shared cookie to the site list
+
+You can add individual shared cookies to any site list. After adding shared cookies to the list, you can use the predefined filters using the **Filter** button (next to the Search box) to view updates to the list.
+
+1. Go to the site list where you want to add a shared cookie.
+2. Select **Add a shared cookie**.
+3. Enter the domain and cookie name. Add comments as needed and then select **Save**.
+
+> [!NOTE]
+> The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
+
+### Delete a shared cookie from the site list
+
+Use the following steps to delete a shared cookie entry.
+
+1. Pick the entry that you’d like to delete from the site list. Select **Delete shared cookie**.
+2. Select **Delete** in the dialog pop-up.
+3. After you see confirmation that an entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted shared cookies before publishing by selecting the **Filter** button and filtering for cookies in the **Delete pending** state.
+
+> [!NOTE]
+> The **Status** column for any entries deleted from a published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
+
+### View the change history for shared cookies
+
+To view the change history for shared cookies:
+
+- Select the entry that you want to see the change history for, and then select **View history**.
+
+### Copy a shared cookie to other site lists
+
+Use the following steps to copy a shared cookie entry from a site list to one or more site lists.
+
+1. Pick an entry that you'd like to copy to another list. Select **Copy to more lists**.
+2. Select one or more site lists you'd like to copy to from the dropdown list.
+3. Select **Copy cookie** at the bottom of the panel.
+4. After you see confirmation that a site entry has been copied, it will stay on the site list you copied it from. It will also appear on the site list(s) you copied it to.
+
+> [!NOTE]
+> The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Export a site list
 
 There are scenarios where you want to export a site list. For example, if you're unable to move your site list to the cloud right away or if you need to maintain a hybrid environment with site lists in the cloud and on-premises. You can use the Cloud Site List Management experience to manage updates to a site list in a central location and export the site list to the on-premises host.
 
+To export a site list:
+
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
-2. On the resulting page, you’ll see the site list entries and the **Export list** option.
-3. Select **Export list** to download the site list XML file.
+2. Select **Export list** to download the site list XML file
 
 ## View site feedback on the Microsoft 365 Admin Center
 
