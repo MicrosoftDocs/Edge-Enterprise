@@ -1,5 +1,5 @@
 ---
-title: "What is Internet Explorer mode?"
+title: "Policy placeholder"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn how Internet Explorer mode in Microsoft Edge provides access to sites that need Internet Explorer 11 and access to modern sites."
+description: "Learn how policy placeholder."
 ---
 
-# What is Internet Explorer (IE) mode?
+# Policy placeholder
 
 
 ## level 1 head
@@ -20,7 +20,4 @@ description: "Learn how Internet Explorer mode in Microsoft Edge provides access
 
 ## See also
 
-- [About IE mode](./edge-ie-mode.md)
-- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Security for your business](./ms-edge-security-for-business)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
