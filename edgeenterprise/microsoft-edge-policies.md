@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/15/2022
+ms.date: 03/17/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,17 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[KioskSwipeGesturesEnabled](#kioskswipegesturesenabled)|Swipe gestures in Microsoft Edge kiosk mode enabled|
-|[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
-|[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
-|[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services|
 
 ## Available policies
 
@@ -179,6 +168,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
@@ -494,6 +484,7 @@ These tables list all of the browser-related group policies available in this re
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -6501,6 +6492,67 @@ If you disable this policy, a basic username and password prompt will be used to
   [Back to top](#microsoft-edge---policies)
 
   ## Identity and sign-in policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeDefaultProfileEnabled
+
+  #### Default Profile Setting Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 101 or later
+
+  #### Description
+
+  Configuring this policy will let you set a default profile in Microsoft Edge to be used when opening the browser rather than the last profile used. This policy won't affect when "--profile-directory" parameter has been specified. Set the value to "Default" to refer to the default profile. The value is case sensitive.
+The value of the policy is the name of the profile (case sensitive) and can be configured with string that is the name of a specific profile.
+The value "Edge Kids Mode" and "Guest Profile" are considered not useful values because they not supposed to be a default profile.
+This policy won't impact the following scenarios:
+  1) Settings specified in "Profile preferences for sites" in "Profile preferences"
+  2) Links opening from Outlook and Teams.
+
+The following statements are under the condition of not specify the "--profile-directory" and configured value is not "Edge Kids Mode" or "Guest Profile":
+If you enable this policy and configure it with a specific profile name and the specified profile can be found, Microsoft Edge will use the specified profile when launching and the setting of "Default profile for external link" is changed to the specified profile name and greyed out.
+If you enable this policy and configure it with a specific profile name but it can't be found, the policy will behave like it's never been set before.
+If you enable this policy, but don't configure or disable it, the policy will behave like it's never been set before.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeDefaultProfileEnabled
+  - GP name: Default Profile Setting Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeDefaultProfileEnabled
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"Default"
+```
+
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -23972,6 +24024,68 @@ If you disable this policy, the Microsoft Edge Insider promotion content will no
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MicrosoftOfficeMenuEnabled
+
+  #### Allow users to access the Microsoft Office menu
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  When users can access the Microsoft Office menu, they can get access to Office applications such as Microsoft Word and Microsoft Excel.
+
+If you enable or don't configure this policy, users can open the Microsoft Office menu.
+
+If you disable this policy, users won't be able to access the Microsoft Office menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftOfficeMenuEnabled
+  - GP name: Allow users to access the Microsoft Office menu
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftOfficeMenuEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftOfficeMenuEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
