@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/21/2022
+ms.date: 03/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,6 @@ These release notes provide information about security fixes that are included i
 ## March 26, 2022
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 99.0.1150.xx)**, which incorporates the latest Security Updates of the Chromium project. This update contains a fix for [CVE-2022-0609], which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
 
 ## March 17, 2022
 
