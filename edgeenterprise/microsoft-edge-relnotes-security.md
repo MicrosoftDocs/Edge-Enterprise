@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/29/2022
+ms.date: 03/30/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
