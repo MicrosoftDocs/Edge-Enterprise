@@ -1,6 +1,6 @@
 ---
 title: "Archived release notes for Microsoft Edge Stable Channel"
-ms.author: aguta
+ms.author: leahtu
 author: dan-wesley
 manager: srugh
 ms.date: 03/31/2022
