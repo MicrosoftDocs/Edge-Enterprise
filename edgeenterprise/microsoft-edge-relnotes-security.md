@@ -25,13 +25,12 @@ This update contains the following Microsoft Edge-specific updates:
 - [CVE-2022-24523]()
 - [CVE-2022-24475]()
 - [CVE-2022-26891]()
-- [CVE-2022-26895]()
-- [CVE-2022-26894]()
-- [CVE-2022-26900]()
-- [CVE-2022-26908]()
-- [CVE-2022-26909]()
-- [CVE-2022-26912]()
-- [CVE-2022-1139]()
+- [CVE-2022-26895](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26895)
+- [CVE-2022-26894](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26894)
+- [CVE-2022-26900](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26900)
+- [CVE-2022-26908](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26908)
+- [CVE-2022-26909](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26909)
+- [CVE-2022-26912](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26912)
 
 ## March 26, 2022
 
