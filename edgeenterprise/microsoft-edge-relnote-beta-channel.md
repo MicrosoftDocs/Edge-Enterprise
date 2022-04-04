@@ -27,8 +27,6 @@ These release notes provide information about new features and non-security upda
 
 - **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. This can be done without manually quitting Microsoft Edge.
 
-- **Improvements to the Enterprise Site List Manager.** You can configure session cookie sharing between Microsoft Edge and Internet Explorer in the enterprise site list. You can access the Enterprise Site List Manager at *edge://compat/SiteListManager*.
-
 - **Launch Progressive Web Apps (PWAs) from Favorites Bar.** Improvements to the PWA launch experience will begin to show up starting with an Apps icon that can be added to the toolbar.
 
 - **Manage the "Allow extensions from other stores" setting.** Use the [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) policy to control the default state of the "Allow extensions from other stores" setting.
