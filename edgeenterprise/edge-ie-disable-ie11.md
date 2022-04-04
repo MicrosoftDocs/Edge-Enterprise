@@ -3,7 +3,7 @@ title: "Disable Internet Explorer 11"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/15/2022
+ms.date: 04/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,6 @@ The following Windows updates and Microsoft Edge software are required:
 
 - Windows updates
 
-  - Windows 11
   - Windows 10, version 21H1 or later
   - Windows 10, version 2004; Windows Server version 2004; Windows 10, version 20H2; Windows Server version 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) or later
   - Windows 10 version 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) or later
@@ -36,7 +35,6 @@ The following Windows updates and Microsoft Edge software are required:
   - Windows Server 2012: [KB4601348](https://support.microsoft.com/topic/february-9-2021-kb4601348-monthly-rollup-2c338c0c-73d6-fb80-cc91-f1a86e80db0c) or later
   
 - Microsoft Edge Stable Channel
-
 
 ## Overview
 
@@ -67,7 +65,7 @@ If your Enterprise Mode Site List contains applications that are configured to o
 
 To disable Internet Explorer 11 using group policy, follow these steps:
 
-1. Ensure you have the pre-requisite operating system updates. This step will update the ADMX files on your machine directly (specifically inetres.adml and inetres.admx). Please note that if you want to update your Central Store, you will need to copy over the .adml and .admx files from a machine that has the pre-requisite updates. For more information, see [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Ensure you have the pre-requisite operating system updates. This step will update the ADMX files on your machine directly (specifically inetres.adml and inetres.admx). Please note that if you want to update your Central Store, you will need to copy over the .adml and .admx files from a machine that has the pre-requisite updates or download the latest Windows 10 Admin templates from [here](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06). For more information, see [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Open the Group Policy Editor.
 3. Go to ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
 4. Double-click **Disable Internet Explorer 11 as a standalone browser**.
@@ -78,7 +76,7 @@ To disable Internet Explorer 11 using group policy, follow these steps:
    - **Always** if you want to notify users every time they're redirected from IE11.
    - **Once per user** if you want to notify users only the first time they are redirected.
 
-7. Click **OK** or **Apply** to save this policy setting.
+7. Select **OK** or **Apply** to save this policy setting.
 
 ## See also
 

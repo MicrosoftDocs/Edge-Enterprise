@@ -1,9 +1,9 @@
 ---
 title: "Learn how to configure initial preferences on Microsoft Edge."
 ms.author: collw
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 07/27/2021
+ms.date: 03/23/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -52,7 +52,7 @@ The following table shows the settings that are currently supported by Microsoft
 
 ## 1: Download an example initial_preferences file
 
-To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](/edge/business/download). Extract the files in the download, and then open the *initial_preferences* file in the *examples* folder. The next screenshot shows the policy file options that are available to download
+To get started, download the "Policy" file from the [Microsoft Edge Enterprise landing page](https://www.microsoft.com/edge/business/download). Extract the files in the download, and then open the *initial_preferences* file in the *examples* folder. The next screenshot shows the policy file options that are available to download
 
 :::image type="content" source="media/initial-preferences-support-on-microsoft-edge-browser/edge-policy-files.png" alt-text="Microsoft Edge policy files available for download.":::
 
