@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -179,7 +179,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-
+<!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
 <!-- archive from Version 98.0.1108.23: January 14 to Version 97.0.1072.28: December 8 -->
 <!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
 <!--- archive from Version 96.0.1054.8: November 1 to Version 95.0.1020.14: October 5  --->
