@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/22/2022
+ms.date: 04/04/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,14 +24,17 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
+## Deprecated and obsoleted policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the deprecated and obsolete policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
-|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu|
+|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
+
+
 
 ## Available policies
 
@@ -376,7 +379,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -423,7 +426,7 @@ These tables list all of the browser-related group policies available in this re
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
 |[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
-|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"|
+|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
@@ -590,7 +593,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (deprecated)|
+|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -6118,7 +6121,7 @@ If you don't configure this policy, all four schemes are used.
 
   - Can be mandatory: Yes
   - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
+  - Dynamic Policy Refresh: Yes
 
   #### Data Type:
 
@@ -7309,7 +7312,6 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   #### Description
 
   This policy controls whether the user is prompted to select a client certificate when more than one certificate matches [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
-This configuration is the same with [ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches) and we prefer using this configuration.
 If this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.
 If this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.
 
@@ -16098,17 +16100,17 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CrossOriginWebAssemblyModuleSharingEnabled
 
-  #### Specifies whether WebAssembly modules can be sent cross-origin
+  #### Specifies whether WebAssembly modules can be sent cross-origin (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 98.
   #### Supported versions:
 
-  - On Windows and macOS since 95 or later
+  - On Windows and macOS since 95, until 98
 
   #### Description
 
-  Specifies whether WebAssembly modules can be sent to another window or worker cross-origin. Cross-origin WebAssembly module sharing will be deprecated as part of the efforts to deprecate document.domain, see https://github.com/mikewest/deprecating-document-domain. This policy allows re-enabling of cross-origin WebAssembly module sharing. This offers a longer transition period in the deprecation process.
+  Specifies whether WebAssembly modules can be sent to another window or worker cross-origin. Cross-origin WebAssembly module sharing was deprecated as part of the efforts to deprecate document.domain, see https://github.com/mikewest/deprecating-document-domain. This policy allowed re-enabling of cross-origin WebAssembly module sharing. This policy is obsolete because it was intended to offer a longer transition period in the deprecation process.
 
 If you enable this policy, sites can send WebAssembly modules cross-origin
 without restrictions.
@@ -16131,7 +16133,7 @@ WebAssembly modules to windows and workers in the same origin.
   ##### Group Policy (ADMX) info
 
   - GP unique name: CrossOriginWebAssemblyModuleSharingEnabled
-  - GP name: Specifies whether WebAssembly modules can be sent cross-origin
+  - GP name: Specifies whether WebAssembly modules can be sent cross-origin (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19339,9 +19341,9 @@ Use the preceding information when configuring this policy.
 
   ### ForceCertificatePromptsOnMultipleMatches
 
-  #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
+  #### Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -19349,9 +19351,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
+  This policy is deprecated because we are moving to a new policy. It won't work in Microsoft Edge version 104. The new policy to use is [PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates).
 
-This configuration is the same with [PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates) that is preferable.
+Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
 
 If you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in [AutoSelectCertificateForUrls](#autoselectcertificateforurls) if and only if there is more than one certificate.
 
@@ -19372,7 +19374,7 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
   ##### Group Policy (ADMX) info
 
   - GP unique name: ForceCertificatePromptsOnMultipleMatches
-  - GP name: Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
+  - GP name: Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -20810,7 +20812,7 @@ If you disable this policy, extensions aren't imported at first run, and users c
 
 If you don't configure this policy, extensions are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Microsoft Edge imports extensions on first run, but users can select or clear the **favorites** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports extensions on first run, but users can select or clear the **extensions** option during manual import.
 
 **Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -25500,6 +25502,8 @@ If you disable this policy, Microsoft Edge will not launch the renderer process 
 Only turn off the policy if there are compatibility issues with
 third-party software that must run inside Microsoft Edge's renderer processes.
 
+This policy is only supported on Windows 10 devices.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -26179,7 +26183,7 @@ If you enable or don't configure this policy, Microsoft Edge will block those na
 
 If you disable this policy, Microsoft Edge will not block those navigations.
 
-This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 104.
+This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 117.
 
 
   #### Supported features:
@@ -30433,19 +30437,19 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   ### WebSQLInThirdPartyContextEnabled
 
-  #### Force WebSQL in third-party contexts to be re-enabled (deprecated)
+  #### Force WebSQL in third-party contexts to be re-enabled (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 100.
   #### Supported versions:
 
-  - On Windows and macOS since 97 or later
+  - On Windows and macOS since 97, until 100
 
   #### Description
 
-  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It won't work in Microsoft Edge version 101.
+  This policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It doesn't work in Microsoft Edge after version 100.
 
-WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Microsoft Edge version 97 and will be fully removed in version 101.
+WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Microsoft Edge version 97 and was fully removed in version 101.
 
 If you enable this policy, WebSQL in third-party contexts will be re-enabled.
 
@@ -30466,7 +30470,7 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSQLInThirdPartyContextEnabled
-  - GP name: Force WebSQL in third-party contexts to be re-enabled (deprecated)
+  - GP name: Force WebSQL in third-party contexts to be re-enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
