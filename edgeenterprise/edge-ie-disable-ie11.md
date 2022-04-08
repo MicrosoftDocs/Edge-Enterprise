@@ -55,7 +55,7 @@ When you enable the **Disable Internet Explorer 11 as a standalone browser** pol
 
 As part of setting the policy for this experience, you can optionally show a redirect message for each user who tries to launch IE11. This message can be set to display "Always" or "Once per user". By default, the redirect message shown in the next screenshot is never shown.
 
-:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg.png" alt-text="Alert when trying to open IE after when a redirect to Microsoft Edge is active.":::
+:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg2.png" alt-text="Alert when trying to open IE after when a redirect to Microsoft Edge is active.":::
 
 If your Enterprise Mode Site List contains applications that are configured to open in the IE11 app and you disable IE11 with this policy, they will open in IE mode on Microsoft Edge.
 
