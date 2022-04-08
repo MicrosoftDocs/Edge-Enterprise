@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/04/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -24,17 +24,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Deprecated and obsoleted policies
+## New policies
 
-The following table lists the deprecated and obsolete policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
-|:-----|:-----|
-|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
-|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
-|[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
-
-
+|:----|:----|
+|[AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins)|List of origins that allow all HTTP authentication|
 
 ## Available policies
 
@@ -51,7 +47,6 @@ These tables list all of the browser-related group policies available in this re
 - [Kiosk Mode settings](#kiosk-mode-settings)
 - [Manageability](#manageability)
 - [Native Messaging](#native-messaging)
-- [Other](#other)
 - [Password manager and protection](#password-manager-and-protection)
 - [Performance](#performance)
 - [Permit or deny screen capture](#permit-or-deny-screen-capture)
@@ -167,6 +162,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins)|List of origins that allow all HTTP authentication|
 |[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Specifies a list of servers that Microsoft Edge can delegate user credentials to|
 |[AuthSchemes](#authschemes)|Supported authentication schemes|
@@ -205,11 +201,6 @@ These tables list all of the browser-related group policies available in this re
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
-### [*Other*](#other-policies)
-
-|Policy Name|Caption|
-|-|-|
-|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
 
 |Policy Name|Caption|
@@ -509,6 +500,7 @@ These tables list all of the browser-related group policies available in this re
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
+|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
@@ -5410,6 +5402,22 @@ See the Microsoft Edge extensions documentation for more information about these
 
 Note: This policy also affects extensions and apps to be force-installed using [ExtensionInstallForcelist](#extensioninstallforcelist).
 
+Policy options mapping:
+
+* extension (extension) = Extension
+
+* theme (theme) = Theme
+
+* user_script (user_script) = User script
+
+* hosted_app (hosted_app) = Hosted app
+
+* legacy_packaged_app (legacy_packaged_app) = Legacy packaged app
+
+* platform_app (platform_app) = Platform app
+
+Use the preceding information when configuring this policy.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -5974,6 +5982,70 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Back to top](#microsoft-edge---policies)
 
   ## HTTP authentication policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AllHttpAuthSchemesAllowedForOrigins
+
+  #### List of origins that allow all HTTP authentication
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 102 or later
+
+  #### Description
+
+  Set this policy to specify which origins allow all the HTTP authentication schemes Microsoft Edge supports regardless of the [AuthSchemes](#authschemes) policy.
+
+Format the origin pattern according to this format (https://www.chromium.org/administrators/url-blocklist-filter-format). Up to 1,000 exceptions can be defined in [AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins).
+Wildcards are allowed for the whole origin or parts of the origin. Parts include the scheme, host, or port.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllHttpAuthSchemesAllowedForOrigins
+  - GP name: List of origins that allow all HTTP authentication
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins\1 = "*.example.com"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AllHttpAuthSchemesAllowedForOrigins
+  - Example value:
+``` xml
+<array>
+  <string>*.example.com</string>
+</array>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -7290,70 +7362,6 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   - Example value:
 ``` xml
 <false/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ## Other policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### PromptOnMultipleMatchingCertificates
-
-  #### Prompt the user to select a certificate when multiple certificates match
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 100 or later
-
-  #### Description
-
-  This policy controls whether the user is prompted to select a client certificate when more than one certificate matches [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
-If this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.
-If this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: PromptOnMultipleMatchingCertificates
-  - GP name: Prompt the user to select a certificate when multiple certificates match
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Other
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: PromptOnMultipleMatchingCertificates
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  #### Mac information and settings
-  
-  - Preference Key Name: PromptOnMultipleMatchingCertificates
-  - Example value:
-``` xml
-<true/>
 ```
   
 
@@ -24857,6 +24865,66 @@ If you don't configure this policy, the user will be able to change this setting
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PromptOnMultipleMatchingCertificates
+
+  #### Prompt the user to select a certificate when multiple certificates match
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 100 or later
+
+  #### Description
+
+  This policy controls whether the user is prompted to select a client certificate when more than one certificate matches [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
+If this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.
+If this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PromptOnMultipleMatchingCertificates
+  - GP name: Prompt the user to select a certificate when multiple certificates match
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PromptOnMultipleMatchingCertificates
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PromptOnMultipleMatchingCertificates
+  - Example value:
+``` xml
+<true/>
 ```
   
 
