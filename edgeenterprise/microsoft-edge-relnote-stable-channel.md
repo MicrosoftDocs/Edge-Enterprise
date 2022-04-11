@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 100.0.1185.39: April 11
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Stable and Extended Stable release.
 
 ## Version 100.0.1185.36: April 7
 
