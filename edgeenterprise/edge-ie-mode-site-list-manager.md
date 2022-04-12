@@ -77,7 +77,7 @@ Use the following steps to add individual shared cookies to your site list. To l
 
 1. In the Enterprise Site List Manager, select **Add a shared cookie**.
 2. Enter the domain you’d like to add in the **Domain** box. Enter the name of the cookie in the **Cookie Name** box.
-3. If the cookie is a host-only cookie, then check**Host Only**.
+3. If the cookie is a host-only cookie, then check **Host Only**.
 4. If needed, enter the path in the **Path** box.
 5. Select one of the following options from the **Source Engine** list:
 
@@ -103,7 +103,7 @@ To export the site list, follow these steps:
 
 You can save the file locally or to a network share. However, you must make sure you deploy it to the location specified in your registry key. For more information, see [Turn on Internet Explorer mode and use a site list](./edge-ie-mode-policies.md).
 
-### Import multiple sites to your site list
+### Import multiple sites and shared cookies to your site list
 
 After you create your .xml file, you can bulk add sites or shared cookies to the editor using **Import from XML**.
 
