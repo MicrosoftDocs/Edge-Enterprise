@@ -46,7 +46,7 @@ Use the following steps to add individual sites to your site list.
 > You can only add specific URLs, not Internet or Intranet Zones.
 
 1. In the Enterprise Site List Manager, select **Add a site**.
-2. Type the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
+2. Enter the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
 3. Select one of the following options from the **Open in** list:
 
    - **IE11**. Opens the site in the IE11 application.
@@ -80,9 +80,9 @@ Use the following steps to add individual shared cookies to your site list. To l
 4. If needed, enter the path in the **Path** box.
 5. Select one of the following options from the **Source Engine** list:
 
-   - **MSEdge**: Share session cookies from Microsoft Edge to Internet Explorer.
-   - **IE11**: Share session cookies from Internet Explorer to Microsoft Edge.
-   - **Both**: Share session cookies to and from Microsoft Edge and Internet Explorer.
+   - **MSEdge**. Share session cookies from Microsoft Edge to Internet Explorer.
+   - **IE11**. Share session cookies from Internet Explorer to Microsoft Edge.
+   - **Both**. Share session cookies to and from Microsoft Edge and Internet Explorer.
 
 6. Enter any comments about the shared cookie in the **Comment** box.
 7. Select **Add** to add the shared cookie.
