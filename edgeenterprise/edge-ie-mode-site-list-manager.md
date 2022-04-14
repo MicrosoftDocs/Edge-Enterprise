@@ -3,19 +3,19 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/12/2022
+ms.date: 04/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Enable and use Enterprise Site List Manager in Microsoft Edge"
+description: "Learn how to enable and use Enterprise Site List Manager in Microsoft Edge"
 ---
 
 # Enterprise Site List Manager in Microsoft Edge
 
 >[!Note]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
 
@@ -30,10 +30,9 @@ Future improvements to the tool for Internet Explorer mode will be available thr
 
 ## Enabling access to Enterprise Site List Manager
 
-You can configure access to the tool by using the [EnterpriseModeSiteListManagerAllowed](./microsoft-edge-policies.md#enterprisemodesitelistmanagerallowed) group policy.
+You can configure access to the site list manager tool by using the [EnterpriseModeSiteListManagerAllowed](./microsoft-edge-policies.md#enterprisemodesitelistmanagerallowed) group policy.
 
-If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. 
-If disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
+If this policy is enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. If the policy is disabled, users won't see the entry point to Enterprise Site List Manager in the left navigation pane, which is the default behavior.
 
 ## Using the Enterprise Site List Manager
 
@@ -65,9 +64,9 @@ Use the following steps to add individual sites to your site list.
 
    The path within a domain can require a different compatibility mode from the domain itself. For example, the domain might look fine in the default IE11 browser, but the path might have problems and require the use of Enterprise Mode. If you added the domain previously, your original compatibility choice is still selected. However, if the domain is new, **IE8 Enterprise Mode** is automatically selected.
 
-   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update and will continue to load in Enterprise Mode, as usual. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
+   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update. These sites will continue to load in Enterprise Mode. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
 
-5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see [here](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
+5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see [the updated schema attributes](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
 6. Type any comments about the website into the **Comment** box. Administrators can only see comments while they’re in this tool and these comments are retained in the site list xml.
 7. Select **Add** to add the site to your site list.
 
@@ -136,7 +135,7 @@ You can save the file locally or to a network share. However, you must make sure
 
 You can edit attributes of existing shared cookie entries in the Enterprise Site List Manager. You can also add, remove, or delete associated comments. Use the following steps to edit shared cookies.
 
-1. In the Enterprise Site List Manager, click the ellipsis (**…**) and choose **Edit cookie** for the domain you want to edit.
+1. In the Enterprise Site List Manager, select the ellipsis (**…**) and choose **Edit cookie** for the domain you want to edit.
 2. You can edit any attribute of the site entry except the Domain. Select **Save** after you finish editing.
 
 > [!NOTE]
