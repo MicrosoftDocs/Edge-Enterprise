@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/11/2022
+ms.date: 04/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,9 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## April 11, 2022
+## April 14, 2022
 
-Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security patch.
+Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security fix. Turn on **enhanced security mode** on to help prevent the exploit (CVE-2022-1364) that exists in the wild. Learn more about [enhanced security](/DeployEdge/microsoft-edge-security-browse-safer).
 
 ## April 7, 2022
 
