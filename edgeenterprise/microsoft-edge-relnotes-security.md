@@ -16,10 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## April 14 2022
+## April 14, 2022
 
-Microsoft is aware of the recent exploits existing in the wild. We are actively working on releasing a security patch. Turn on **enhanced security mode** on to help prevent the exploit (CVE-2022-1364) that exists in the wild. Learn more about [enhanced security](/DeployEdge/microsoft-edge-security-browse-safer).
-
+Microsoft is aware of the recent exploits existing in the wild. We are actively working on releasing a security fix. Turn on **enhanced security mode** on to help prevent the exploit (CVE-2022-1364) that exists in the wild. Learn more about [enhanced security](/DeployEdge/microsoft-edge-security-browse-safer).
 
 ## April 7, 2022
 
