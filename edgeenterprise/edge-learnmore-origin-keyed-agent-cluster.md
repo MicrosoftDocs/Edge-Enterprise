@@ -22,6 +22,63 @@ description: "Microsoft Edge will disable modifying 'document.domain' to relax t
 
 ## Introduction
 
+The domain property of the Document interface gets or sets the domain part of the origin of the current document, as used by the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
+
+On Microsoft Edge, websites will be unable to set `document.domain`. You'll need to use alternative approaches, such as `postMessage()` or the Channel Messaging API, to communicate cross-origin. We're targeting Microsoft Edge version 106 to ship this change at the earliest.
+
+If your website relies on same-origin policy relaxation via `document.domain` to function correctly, the site will need to send an `Origin-Agent-Cluster: ?0` header, as will all other documents that require that behavior.
+
+> [!NOTE]
+> `document.domain` has no effect if only one document sets it.
+
+## Why make `document.domain` immutable?
+
+Many websites set `document.domain` to allow communication between "same-site but cross-origin" pages.
+
+> [!IMPORTANT]
+> Same-site but cross-origin sites have the same [eTLD+1](https://web.dev/same-site-same-origin/#:~:text=the%20whole%20site%20name%20is%20known%20as%20the%20etld%2B1) but different subdomains.
+
+Here's how `document.domain` is used.
+
+Let's say a page on `https://parent.example.com` embeds an iframe page from `https://video.example.com`. These pages have the same eTLD+1 (`example.com`) with different subdomains. When both pages' `document.domain` is set to `'example.com'`, the browser treats the two origins as if they are same-origin.
+
+The next example shows how to create a cross-origin DOM manipulation on `https://parent.example.com` against `https://video.example.com`.
+
+The following code shows how to set the `document.domain` for `https://parent.example.com`:
+
+```
+
+// Confirm the current origin of "parent.example.com" 
+
+console.log(document.domain); 
+
+// Set the document.domain 
+
+document.domain = 'example.com'; 
+
+console.log(document.domain); 
+
+```
+
+The following code shows how to set the `document.domain` for `https://video.example.com`: 
+
+```
+
+// Confirm the current origin of "video.example.com" 
+
+console.log(document.domain); 
+
+// Set the document.domain 
+
+document.domain = 'example.com'; 
+
+console.log(document.domain); 
+
+```
+
+Websites set `document.domain` to make it possible for same-site documents to communicate more easily. Because this change [relaxes the same-origin policy](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction), the parent page can access the iframe's document and traverse the DOM tree, and vice versa.
+
+This is a convenient technique; but  it introduces a security risk.  
 
 ## Security concerns with `document.domain`
 
@@ -29,7 +86,7 @@ description: "Microsoft Edge will disable modifying 'document.domain' to relax t
 
 ## Alternative cross-origin communication
 
-At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin `postMessage()` or the [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
+At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin `postMessage()` or the [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
 
 The following 3 actions happen in a postMessage() example:
 
