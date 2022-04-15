@@ -29,17 +29,73 @@ description: "Microsoft Edge will disable modifying 'document.domain' to relax t
 
 ## Alternative cross-origin communication
 
+At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin `postMessage()` or the [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
 
+The following 3 actions happen in a postMessage() example:
+
+1. `https://parent.example.com` requests `https://video.example.com` in an iframe to manipulate the DOM by sending a message via `postMessage()`.
+2. `https://video.example.com` manipulates DOM as soon as it receives the message and notifies  the parent of its success.
+3. `https://parent.example.com` acknowledges the success.
+
+
+On `https://parent.example.com`:
+
+```DOS
+
+// Send a message to https://video.example.com 
+
+iframe.postMessage('Request DOM manipulation', 'https://video.example.com'); 
+
+// Receive messages 
+
+iframe.addEventListener('message', (event) => { 
+
+  // Reject all messages except ones from https://video.example.com 
+
+  if (event.origin !== 'https://video.example.com') return; 
+
+  // Filter success messages 
+
+  if (event.data === 'succeeded') { 
+
+    // DOM manipulation is succeeded 
+
+  } 
+
+}); 
+
+```
+
+On `https://video.example.com`:
+
+```DOS
+
+// Receive messages 
+
+window.addEventListener('message', (event) => { 
+
+  // Reject all messages except ones from https://parent.example.com 
+
+  if (event.origin !== 'https://parent.example.com') return; 
+
+  // Do a DOM manipulation on https://video.example.com. 
+
+  // Send a success message to https://parent.example.com 
+
+  event.source.postMessage('succeeded', event.origin); 
+
+}); 
+
+```
 
 ### Send the `Origin-Agent-Cluster: ?0` header as a last resort
 
 If you have strong reasons to continue setting `document.domain`, you can send `Origin-Agent-Cluster: ?0` response header along with the target document.
 
-``` 
-
+```dos
 Origin-Agent-Cluster: ?0 
-
 ```
+
 
 The `Origin-Agent-Cluster` header instructs the browser whether the document should be handled by the origin-keyed agent cluster or not. To learn more about `Origin-Agent-Cluster`, read [Requesting performance isolation with the Origin-Agent-Cluster header](https://web.dev/origin-agent-cluster/).
 
