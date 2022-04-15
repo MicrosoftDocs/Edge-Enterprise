@@ -55,6 +55,14 @@ The following organizations support deprecating `document.domain` in the interes
 
 ## Other resources
 
-- [`Document.domain`](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
+- [Document.domain](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
 - [Origin Isolation and Deprecating `document.domain`](https://github.com/mikewest/deprecating-document-domain/)
 - [Deprecating `document.domain` setter](https://github.com/w3ctag/design-reviews/issues/564)
+
+## Content license
+
+> [!NOTE]
+> Portions of this page are modifications based on work created and shared by Chromium.org and used according to terms 
+  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original page can be found [here](https://github.com/google/re2/wiki/Syntax).
+  
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
