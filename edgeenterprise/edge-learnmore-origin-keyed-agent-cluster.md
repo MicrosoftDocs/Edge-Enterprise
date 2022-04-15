@@ -82,7 +82,27 @@ This is a convenient technique; but  it introduces a security risk.
 
 ## Security concerns with `document.domain`
 
+Security concerns around `document.domain` have led to a change in the specification that warns users about this concern and tells them to avoid using it if possible. The current discussion with [other browser vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in the same direction.
 
+The following example shows how an attacker can manipulate `document.domain`.
+
+If a hosting service provides different subdomains per user, an attacker can set `document.domain` to pretend they are the same-origin as another user's page. An attacker can host a website under a shared hosting service, which serves sites through the same IP address with different port numbers. In this scenario, the attacker can pretend to be on the same-site-but-same-origin as yours. This is possible because `document.domain` ignores the port number part of the domain.
+
+To learn more about the security implications of setting `document.domain`, read the [Document.domain article on MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
+
+> [!NOTE]
+> Microsoft Edge plans to make `document.domain` immutable in Microsoft Edge version 106.
+
+## How will I know if my site is affected? 
+
+If your website is affected by this change, Microsoft Edge will show a warning in the DevTools Issues panel. The following screenshot shows an example of this warning.
+
+<screenshot here>
+
+If you have a reporting endpoint set up, you will also be sent deprecation reports. Learn more about [how to use the Reporting API](https://web.dev/reporting-api/) with existing report collection services or by building your own reporting solution.
+
+> [!TIP]
+> You can run your site through the [LightHouse deprecated API](https://web.dev/deprecations/) audit to find all APIs that are scheduled to be removed from Microsoft Edge.
 
 ## Alternative cross-origin communication
 
@@ -168,7 +188,7 @@ The following organizations support deprecating `document.domain` in the interes
 
 ## Other resources
 
-- [Document.domain](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
+- [Document.domain](https://developer.mozilla.org/docs/Web/API/Document/domain)
 - [Origin Isolation and Deprecating `document.domain`](https://github.com/mikewest/deprecating-document-domain/)
 - [Deprecating `document.domain` setter](https://github.com/w3ctag/design-reviews/issues/564)
 
