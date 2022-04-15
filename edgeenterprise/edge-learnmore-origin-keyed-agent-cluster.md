@@ -18,7 +18,7 @@ description: "Microsoft Edge will disable modifying 'document.domain' to relax t
 > This article applies to Microsoft Edge Stable version 106 or later.
 
 > [!WARNING]
-> f your website relies on relaxing the same-origin policy via `document.domain`, your action is required. Continue to read more about why this is changing or go to the [Alternative cross-origin communication](#alternative-cross-origin-communication) for cross-origin communication.
+> If your website relies on relaxing the same-origin policy via `document.domain`, your action is required. Continue to read more about why this is changing or go to the [Alternative cross-origin communication](#alternative-cross-origin-communication) for cross-origin communication.
 
 ## Introduction
 
@@ -40,7 +40,7 @@ The following 3 actions happen in a postMessage() example:
 
 On `https://parent.example.com`:
 
-```DOS
+```
 
 // Send a message to https://video.example.com 
 
@@ -68,7 +68,7 @@ iframe.addEventListener('message', (event) => {
 
 On `https://video.example.com`:
 
-```DOS
+```
 
 // Receive messages 
 
@@ -92,7 +92,7 @@ window.addEventListener('message', (event) => {
 
 If you have strong reasons to continue setting `document.domain`, you can send `Origin-Agent-Cluster: ?0` response header along with the target document.
 
-```dos
+```
 Origin-Agent-Cluster: ?0 
 ```
 
@@ -121,4 +121,4 @@ The following organizations support deprecating `document.domain` in the interes
 > Portions of this page are modifications based on work created and shared by Chromium.org and used according to terms 
   described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original page can be found [here](https://github.com/google/re2/wiki/Syntax).
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
