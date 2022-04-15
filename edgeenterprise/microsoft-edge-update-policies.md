@@ -25,11 +25,11 @@ For information about other policies available in Microsoft Edge, check out [Mic
 ## Available policies
 These tables list all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-|||
-|-|-|
-|[Applications](#applications)|[Preferences](#preferences)|
-|[Proxy Server](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
-|[Microsoft Edge WebView](#microsoft-edge-webview)||
+- [Applications](#applications)
+- [Preferences](#preferences)
+- [Proxy Server](#proxy-server)
+- [Microsoft Edge Update](#microsoft-edge-update)
+- [Microsoft Edge WebView](#microsoft-edge-webview)
 
 ### [Applications](#applications-policies)
 |Policy Name|Caption|
