@@ -22,7 +22,7 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 100
 
 This update also contains the following Microsoft Edge-specific update:
 
-- [CVE-2022-29144]((https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29144)
+- [CVE-2022-29144](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29144)
 
 ## April 7, 2022
 
