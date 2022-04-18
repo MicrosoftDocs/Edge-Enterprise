@@ -40,7 +40,7 @@ Many websites set `document.domain` to allow communication between "same-site bu
 
 Here's how `document.domain` is used.
 
-Let's say a page on `https://parent.example.com` embeds an iframe page from `https://video.example.com`. These pages have the same eTLD+1 (`example.com`) with different subdomains. When both pages' `document.domain` is set to `'example.com'`, the browser treats the two origins as if they are same-origin.
+Let's say a page on `https://parent.example.com` embeds an iframe page from `https://video.example.com`. These pages have the same eTLD+1 (`example.com`) with different subdomains. When both pages' `document.domain` is set to `'example.com'`, the browser treats the two origins as if they're same-origin.
 
 The next example shows how to create a cross-origin DOM manipulation on `https://parent.example.com` against `https://video.example.com`.
 
@@ -78,7 +78,7 @@ console.log(document.domain);
 
 Websites set `document.domain` to make it possible for same-site documents to communicate more easily. Because this change [relaxes the same-origin policy](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction), the parent page can access the iframe's document and traverse the DOM tree, and vice versa.
 
-This is a convenient technique; but  it introduces a security risk.  
+This technique is convenient; but  it introduces a security risk.  
 
 ## Security concerns with `document.domain`
 
@@ -86,7 +86,7 @@ Security concerns around `document.domain` have led to a change in the specifica
 
 The following example shows how an attacker can manipulate `document.domain`.
 
-If a hosting service provides different subdomains per user, an attacker can set `document.domain` to pretend they are the same-origin as another user's page. An attacker can host a website under a shared hosting service, which serves sites through the same IP address with different port numbers. In this scenario, the attacker can pretend to be on the same-site-but-same-origin as yours. This is possible because `document.domain` ignores the port number part of the domain.
+If a hosting service provides different subdomains per user, an attacker can set `document.domain` to pretend they're the same-origin as another user's page. An attacker can host a website under a shared hosting service, which serves sites through the same IP address with different port numbers. In this scenario, the attacker can pretend to be on the same-site-but-same-origin as yours.  This attack is possible because `document.domain` ignores the port number part of the domain.
 
 To learn more about the security implications of setting `document.domain`, read the [Document.domain article on MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
@@ -99,7 +99,7 @@ If your website is affected by this change, Microsoft Edge will show a warning i
 
 :::image type="content" source="media/edge-learnmore-origin-keyed-agent-cluster/document-domain-modification-warning.png" alt-text="Warning when document.domain is modified.":::
 
-If you have a reporting endpoint set up, you will also be sent deprecation reports. Learn more about [how to use the Reporting API](https://web.dev/reporting-api/) with existing report collection services or by building your own reporting solution.
+If you have a reporting endpoint set up, you'll also be sent deprecation reports. Learn more about [how to use the Reporting API](https://web.dev/reporting-api/) with existing report collection services or by building your own reporting solution.
 
 > [!TIP]
 > You can run your site through the [LightHouse deprecated API](https://web.dev/deprecations/) audit to find all APIs that are scheduled to be removed from Microsoft Edge.
@@ -108,7 +108,7 @@ If you have a reporting endpoint set up, you will also be sent deprecation repor
 
 At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin `postMessage()` or the [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
 
-The following 3 actions happen in a postMessage() example:
+The following three actions happen in a postMessage() example:
 
 1. `https://parent.example.com` requests `https://video.example.com` in an iframe to manipulate the DOM by sending a message via `postMessage()`.
 2. `https://video.example.com` manipulates DOM as soon as it receives the message and notifies  the parent of its success.
