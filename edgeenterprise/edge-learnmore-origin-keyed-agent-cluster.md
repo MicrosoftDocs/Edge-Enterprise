@@ -108,9 +108,9 @@ If you have a reporting endpoint set up, you'll also be sent deprecation reports
 
 ## Alternative cross-origin communication
 
-At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin `postMessage()` or the [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
+At this time, you have two options to replace `document.domain` for your website. In most use cases, cross-origin [postMessage()](https://developer.mozilla.org/docs/Web/API/Window/postMessage) or the [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
 
-The following three actions happen in a postMessage() example:
+The following list explains the steps a developer needs to take to use `postMessage()` instead of `document.domain` for cross-origin DOM manipulation.
 
 1. `https://parent.example.com` requests `https://video.example.com` in an iframe to manipulate the DOM by sending a message via `postMessage()`.
 2. `https://video.example.com` manipulates DOM as soon as it receives the message and notifies  the parent of its success.
