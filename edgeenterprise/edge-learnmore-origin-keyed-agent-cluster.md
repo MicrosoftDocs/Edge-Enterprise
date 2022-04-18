@@ -116,8 +116,7 @@ The following list shows the steps a developer needs to take to use `postMessage
 2. `https://video.example.com` manipulates DOM as soon as it receives the message and notifies  the parent of its success.
 3. `https://parent.example.com` acknowledges the success.
 
-
-On `https://parent.example.com`:
+For step 1 on `https://parent.example.com`:
 
 ```
 
@@ -145,7 +144,7 @@ iframe.addEventListener('message', (event) => {
 
 ```
 
-On `https://video.example.com`:
+For step 2 on `https://video.example.com`:
 
 ```
 
