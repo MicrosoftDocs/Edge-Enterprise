@@ -104,7 +104,7 @@ If your website is affected by this change, Microsoft Edge will show a warning i
 If you have a reporting endpoint set up, you'll also be sent deprecation reports. Learn more about [how to use the Reporting API](https://web.dev/reporting-api/) with existing report collection services or by building your own reporting solution.
 
 > [!TIP]
-> You can run your site through the [LightHouse deprecated API](https://web.dev/deprecations/) audit to find all APIs that are scheduled to be removed from Microsoft Edge.
+> You can run your site through the [LightHouse deprecated API audit](https://web.dev/deprecations/) to find all APIs that are scheduled to be removed from Microsoft Edge.
 
 ## Alternative cross-origin communication
 
@@ -174,7 +174,6 @@ If you have strong reasons to continue setting `document.domain`, you can send `
 ```
 Origin-Agent-Cluster: ?0 
 ```
-
 
 The `Origin-Agent-Cluster` header instructs the browser whether the document should be handled by the origin-keyed agent cluster or not. To learn more about `Origin-Agent-Cluster`, read [Requesting performance isolation with the Origin-Agent-Cluster header](https://web.dev/origin-agent-cluster/).
 
