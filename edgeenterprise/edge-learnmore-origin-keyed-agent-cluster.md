@@ -76,6 +76,8 @@ console.log(document.domain);
 
 ```
 
+Now you can perform cross-origin DOM manipulation on `https://parent.example.com` against `https://video.example.com`.
+
 Websites set `document.domain` to make it possible for same-site documents to communicate more easily. Because this change [relaxes the same-origin policy](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction), the parent page can access the iframe's document and traverse the DOM tree, and vice versa.
 
 This technique is convenient; but  it introduces a security risk.  
