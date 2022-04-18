@@ -3,7 +3,7 @@ title: "Microsoft Edge will disable modifying 'document.domain' to relax the sam
 ms.author: niarci
 author: dan-wesley
 manager: erikan
-ms.date: 04/07/2022
+ms.date: 04/18/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -97,7 +97,7 @@ To learn more about the security implications of setting `document.domain`, read
 
 If your website is affected by this change, Microsoft Edge will show a warning in the DevTools Issues panel. The following screenshot shows an example of this warning.
 
-<screenshot here>
+:::image type="content" source="media/edge-learnmore-origin-keyed-agent-cluster/document-domain-modification-warning.png" alt-text="Warning when document.domain is modified.":::
 
 If you have a reporting endpoint set up, you will also be sent deprecation reports. Learn more about [how to use the Reporting API](https://web.dev/reporting-api/) with existing report collection services or by building your own reporting solution.
 
