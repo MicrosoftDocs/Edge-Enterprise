@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/12/2022
+ms.date: 04/14/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,14 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu|
 
 ## Available policies
 
@@ -491,6 +483,7 @@ These tables list all of the browser-related group policies available in this re
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
+|[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
@@ -16653,12 +16646,14 @@ For detailed information on valid language variants, see [https://go.microsoft.c
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
-and
-[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) policy where the list has at least one entry.
+and one of either the
+[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) or the [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) policy where the list has at least one entry.
 
 The timeout behavior of this policy can be configured with the [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout) policy.
 
 If you set this policy to 'All', when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs delay navigating until the browser has downloaded the site list. Sites configured to open in Internet Explorer mode by the site list will load in Internet Explorer mode, even during the initial navigation of the browser. Sites that cannot possibly be configured to open in Internet Explorer, such as any site with a scheme other than http:, https:, file:, or ftp: do not delay navigating and load immediately in Edge mode.
+
+When used in conjunction with the [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) policy, during first launch of Microsoft Edge, there is a delay because implicit sign-in needs to finish before Microsoft Edge attempts to download the site list from the Microsoft cloud, since this requires authentication to the cloud service.
 
 If you set this policy to 'None' or don't configure it, when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs will navigate immediately, and not wait for the browser to download the Enterprise Mode Site List. Sites configured to open in Internet Explorer mode by the site list will open in Microsoft Edge mode until the browser has finished downloading the Enterprise Mode Site List.
 
@@ -24304,6 +24299,61 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NetworkServiceSandboxEnabled
+
+  #### Enable the network service sandbox
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 102 or later
+
+  #### Description
+
+  This policy controls whether or not the network service process runs sandboxed.
+If this policy is enabled, the network service process will run sandboxed.
+If this policy is disabled, the network service process will run unsandboxed. This leaves users open to additional security risks related to running the network service unsandboxed.
+If this policy is not set, the default configuration for the network sandbox will be used. This may vary depending on Microsoft Edge release, currently running field trials, and platform.
+This policy is intended to give enterprises flexibility to disable the network sandbox if they use third party software that interferes with the network service sandbox.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NetworkServiceSandboxEnabled
+  - GP name: Enable the network service sandbox
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NetworkServiceSandboxEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
