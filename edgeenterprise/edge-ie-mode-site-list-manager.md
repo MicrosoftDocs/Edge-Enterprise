@@ -3,7 +3,7 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/14/2022
+ms.date: 04/20/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
