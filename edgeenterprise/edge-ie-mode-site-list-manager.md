@@ -3,24 +3,24 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 04/20/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Enable and use Enterprise Site List Manager in Microsoft Edge"
+description: "Learn how to enable and use Enterprise Site List Manager in Microsoft Edge"
 ---
 
 # Enterprise Site List Manager in Microsoft Edge
 
 >[!Note]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 89 or later.
+> This article applies to Microsoft Edge version 89 or later. The shared cookies capability is available on Microsoft Edge version 101 or later.
 
 ## Overview
 
@@ -30,10 +30,9 @@ Future improvements to the tool for Internet Explorer mode will be available thr
 
 ## Enabling access to Enterprise Site List Manager
 
-You can configure access to the tool by using the [EnterpriseModeSiteListManagerAllowed](./microsoft-edge-policies.md#enterprisemodesitelistmanagerallowed) group policy.
+You can configure access to the site list manager tool by using the [EnterpriseModeSiteListManagerAllowed](./microsoft-edge-policies.md#enterprisemodesitelistmanagerallowed) group policy.
 
-If enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. 
-If disabled, users will not see the entry point to Enterprise Site List Manager in the left navigation pane. This is the default behavior.
+If this policy is enabled, your users will see an option named Enterprise Site List Manager on the left navigation pane in *edge://compat*. If the policy is disabled, users won't see the entry point to Enterprise Site List Manager in the left navigation pane, which is the default behavior.
 
 ## Using the Enterprise Site List Manager
 
@@ -46,8 +45,8 @@ Use the following steps to add individual sites to your site list.
 > [!NOTE]
 > You can only add specific URLs, not Internet or Intranet Zones.
 
-1. In the Enterprise Site List Manager, click **Add a site**.
-2. Type the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
+1. In the Enterprise Site List Manager, select **Add a site**.
+2. Enter the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
 3. Select one of the following options from the **Open in** list:
 
    - **IE11**. Opens the site in the IE11 application.
@@ -65,36 +64,56 @@ Use the following steps to add individual sites to your site list.
 
    The path within a domain can require a different compatibility mode from the domain itself. For example, the domain might look fine in the default IE11 browser, but the path might have problems and require the use of Enterprise Mode. If you added the domain previously, your original compatibility choice is still selected. However, if the domain is new, **IE8 Enterprise Mode** is automatically selected.
 
-   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update and will continue to load in Enterprise Mode, as usual. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
+   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update. These sites will continue to load in Enterprise Mode. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
 
-5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see [here](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
+5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see `allow-redirect` in [updated schema attributes](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
 6. Type any comments about the website into the **Comment** box. Administrators can only see comments while they’re in this tool and these comments are retained in the site list xml.
-7. Click **Add** to add the site to your site list.
+7. Select **Add** to add the site to your site list.
+
+### Add shared cookies to your site list
+
+Use the following steps to add individual shared cookies to your site list. To learn more about cookie sharing, see [Cookie sharing between Microsoft Edge and Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+
+1. In the Enterprise Site List Manager, select **Add a shared cookie**.
+2. Enter the domain you’d like to add in the **Domain** box. Enter the name of the cookie in the **Cookie Name** box.
+3. If the cookie is a host-only cookie, then check **Host Only**.
+4. If needed, enter the path in the **Path** box.
+5. Select one of the following options from the **Source Engine** list:
+
+   - **MSEdge**. Share session cookies from Microsoft Edge to Internet Explorer.
+   - **IE11**. Share session cookies from Internet Explorer to Microsoft Edge.
+   - **Both**. Share session cookies to and from Microsoft Edge and Internet Explorer.
+
+6. Enter any comments about the shared cookie in the **Comment** box.
+7. Select **Add** to add the shared cookie.
 
 ### Export site list to XML
 
-After you create your site list in the Enterprise Site List Manager, you can export the contents to an Enterprise Mode (.EMIE) or XML file. 
+After you create your site list in the Enterprise Site List Manager, you can export the contents to an Enterprise Mode (.EMIE) or XML file.
 
 > [!NOTE]
-> This file includes all of your URLs, including your compatibility mode selections and should be stored somewhere safe.
+> This file includes all your URLs and shared cookies and should be stored somewhere safe.
 
 To export the site list, follow these steps:
 
-1. In the Enterprise Site List Manager, click **Export to XML**.
+1. In the Enterprise Site List Manager, select **Export to XML**.
 2. Enter a **Version number** and a **File name**.
-3. Click **Export**.
+3. Select **Export**.
 
 You can save the file locally or to a network share. However, you must make sure you deploy it to the location specified in your registry key. For more information, see [Turn on Internet Explorer mode and use a site list](./edge-ie-mode-policies.md).
 
-### Import multiple sites to your site list
+### Import multiple sites and shared cookies to your site list
 
-After you create your .xml file, you can bulk add sites to the editor using **Import from XML**.
+After you create your .xml file, you can bulk add sites or shared cookies to the editor using **Import from XML**.
 
-If you want to replace all the contents in the editor, click  the ellipsis (…) and then choose **Clear list**. After you clear the editor, use the following steps to import the site.
+If you want to replace all the contents in the editor, select the ellipsis (**…**) and then choose **Clear list**. After you clear the editor, use the following steps to import the site list.
 
-1. In the Enterprise Site List Manager, click **Import from XML**. 
-2. Click **Choose file** to select your site list to add the included sites to the tool. Pick the site list you want to add and then click **Open**. Supported formats for Import are .xml, .emie or .txt containing the v.2 schema for Enterprise Mode Site List. See [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
-3. Click **Load** to add the sites from the file tp the editor.
+1. In the Enterprise Site List Manager, select **Import from XML**.
+2. Select **Choose file** to select your site list to add the included sites or shared cookies to the tool. Pick the site list you want to add and then select **Open**.
+
+   Supported formats for Import are .xml, .emie, or .txt containing the v.2 schema for Enterprise Mode Site List. See [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+
+3. Select **Load** to add the sites or shared cookies from the file to the editor.
 
 You can save the file locally or to a network share. However, you must make sure you deploy it to the location specified in your registry key. For more information, see [Turn on Internet Explorer mode and use a site list](./edge-ie-mode-policies.md).
 
@@ -102,25 +121,35 @@ You can save the file locally or to a network share. However, you must make sure
 
  You can edit attributes of existing site entries in the Enterprise Site List Manager. You can also add, remove, or delete associated comments.
 
-1. In the Enterprise Site List Manager, click the ellipsis (…) and choose **Edit site** for the URL you want to edit.
-2. You can edit any attribute of the site entry except the URL. Click **Save** after you finish editing.
+1. In the Enterprise Site List Manager, select the ellipsis (**…**) and choose **Edit site** for the URL you want to edit.
+2. You can edit any attribute of the site entry except the URL. Select **Save** after you finish editing.
 
    > [!NOTE]
    > If you want to delete a site entry, choose **Delete site** in step 1.
 
-3. Click **Export to XML**, and save the updated file.
+3. Select **Export to XML**, and save the updated file.
 
 You can save the file locally or to a network share. However, you must make sure you deploy it to the location specified in your registry key. For more information, see [Turn on Internet Explorer mode and use a site list](./edge-ie-mode-policies.md).
 
+### Edit shared cookies in your site list
+
+You can edit attributes of existing shared cookie entries in the Enterprise Site List Manager. You can also add, remove, or delete associated comments. Use the following steps to edit shared cookies.
+
+1. In the Enterprise Site List Manager, select the ellipsis (**…**) and choose **Edit cookie** for the domain you want to edit.
+2. You can edit any attribute of the site entry except the Domain. Select **Save** after you finish editing.
+
+> [!NOTE]
+> If you want to delete a shared cookie entry, choose **Delete shared cookie** in step 1.
+
 ### Preview your site list in XML format
 
-You can preview the sites in the editor in XML format before you export and save to your site list location. Click **XML preview** to open the file in a new tab.
+You can preview the sites and shared cookies in the editor in XML format before you export and save to your site list location. Select **XML preview** to open the file in a new tab.
 
 ### Search in the Enterprise Site List Manager
 
-You can search to see if a specific site already appears in your site list so you don’t try to add it again.
+You can search to see if a specific site or shared cookie already appears in your site list so you don’t try to add it again.
 
-To search, type part of the URL into the **Filter sites by URL** search box on the top right-hand corner of the editor.
+To search, type part of the URL or domain into the search box in the top right-hand corner of the editor.
 
 ## See also
 
