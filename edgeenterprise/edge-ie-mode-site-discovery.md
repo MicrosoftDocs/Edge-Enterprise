@@ -20,7 +20,7 @@ description: "Guide to using Enterprise Site Discovery to prepare for IE mode."
 This article provides a step-by-step guide to using Enterprise Site Discovery with Microsoft Endpoint Configuration Manager.
 
 > [!TIP]
-> Unless your environment requires using the step in this guide, we recommend that you use  the [Microsoft Edge deployment wizard](https://aka.ms/edgeadvisor) and script it generates to configure Enterprise Site Discovery.
+> Unless your environment requires using the steps in this guide, we recommend that you use  the [Microsoft Edge deployment wizard](https://aka.ms/edgeadvisor) and script it generates to configure Enterprise Site Discovery.
 
 Enterprise Site Discovery can help you configure your Enterprise Mode Site List. Enterprise Site Discovery will help you:
 
