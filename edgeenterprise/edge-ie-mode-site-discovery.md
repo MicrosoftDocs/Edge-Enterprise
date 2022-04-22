@@ -48,58 +48,70 @@ Before you can connect to Windows Management Instrumentation (WMI) to retrieve s
 
 From the **Enterprise Site Discovery Setup and Configuration Package**, extract the contents to a folder in your definitive software library file share. Example: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Next, create a package in Microsoft Endpoint Configuration Manager, as described in the [documentation](/configmgr/apps/deploy-use/packages-and-programs), selecting the following options:
+Next, create a package in Microsoft Endpoint Configuration Manager, as described in [Packages and programs in Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs).
 
-- On the **Package** page, select **Name** and specify the name **Enable Site Discovery**
-- On the **Package** page, select **This package contains source files**
-- On the **Package** page, specify the source folder you extracted the files to (for example, **\\\\DSL\\EnterpriseSiteDiscovery**)
+Configure the new package with the following settings:
+
+- On the **Package** page:
+  - select **Name** and specify the name **Enable Site Discovery**
+  - select **This package contains source files**
+  - specify the source folder you extracted the files to (for example, **\\\\DSL\\EnterpriseSiteDiscovery**)
 - On the **Program Type** page, choose **Standard Program**
-- On the **Standard Program** page, enter the command line to configure Site Discovery on the device as follows:
-  ```dos
-  powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1
-  ```
-  > [!NOTE]
-  > The script supports using command line switches for `-ZoneAllowList` and `-SiteAllowList`. For this step-by-step, we will configure these options via group policy (below).
-- On the **Standard Program** page, select the option to run **Hidden**.
-- On the **Standard Program** page, under **Program can run**, select the option **Whether or not a user is logged in**
+- On the **Standard Program** page, enter the following command to configure Site Discovery on the device:
 
-After creating the package, double-click on the package name **Enable Site Discovery** to view its properties. In the **After running** property, select **Configuration manager restarts computer**. WMI data collection will begin after the devices reboot.
+  ```dos
+  
+    powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1
+
+  ```
+
+  > [!NOTE]
+  > The script supports using command line switches for `-ZoneAllowList` and `-SiteAllowList`. For this step-by-step, we will configure these options via [group policy](#configure-enterprise-site-discovery-via-group-policy).
+
+- On the **Standard Program** page:
+  - select the option to run **Hidden**
+  - under **Program can run**, select the option **Whether or not a user is logged in**
+
+After creating the package, double-click on the package name **Enable Site Discovery** to view its properties. For the **After running** property, select **Configuration manager restarts computer**. WMI data collection will start after the devices reboot.
 
 > [!NOTE]
 > You can configure the amount of time a user has to restart the device as described in the [client settings documentation](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
 ## Configure Enterprise Site Discovery via Group Policy
 
-With Enterprise Site Discovery enabled, you can configure what data you'll collect. Consider local laws and regulatory requirements as described [here](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+With Enterprise Site Discovery enabled, you can configure what data you'll collect. Consider local laws and regulatory requirements as described in [What data is collected?](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
-1. Open Group Policy Editor
-2. Click **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer** 
+1. Open the Group Policy Editor
+2. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer**
 3. Double-click **Turn on Site Discovery WMI output**
 4. Select **Enabled**
-5. Click **OK** or **Apply** to save this policy setting
+5. Select **OK** or **Apply** to save this policy setting
 
-You can limit the zones in which you collect site data:
+You can pick the zones where you want to collect site data:
 
 1. Double-click **Limit Site Discovery output by Zone**
 2. Select **Enabled**
-3. Enter a bitmask indicating which zones to enable site discover for:
-    1. Restricted Sites zone
-    2. Internet zone
-    3. Trusted Sites zone
-    4. Local Intranet zone
-    5. Local Machine zone
-    
-    Example 1: **00010** will collect data only for the Local Intranet zone
+3. Enter a bitmask to indicate which of the following zones to enable site discovery for.
+   > [!NOTE]
+   > To configure zone(s) included in site discovery, a binary number is formed based on the selected zones. The decimal representation of this number is used to represent this number in policy.
 
+    - Restricted Sites zone
+    - Internet zone
+    - Trusted Sites zone
+    - Local Intranet zone
+    - Local Machine zone
+
+    Example 1: **00010** will collect data only for the Local Intranet zone
     Example 2: **10111** will collect data for all zones except the Internet zone
-4. Click **OK** or **Apply** to save this policy setting
+
+4. Select **OK** or **Apply** to save this policy setting
 
 You can limit the domains for which you collect site data:
 
 1. Double-click **Limit Site Discovery output by domain**
 2. Select **Enabled**
 3. Enter the domains you want to collect data for, one domain per line
-4. Click **OK** or **Apply** to save this policy setting
+4. Select **OK** or **Apply** to save this policy setting
 
 ## Collect Site Discovery data using Configuration Manager
 
