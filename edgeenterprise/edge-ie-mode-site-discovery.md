@@ -91,22 +91,23 @@ You can pick the zones where you want to collect site data:
 
 1. Double-click **Limit Site Discovery output by Zone**.
 2. Select **Enabled**.
-3. Enter a bitmask to indicate which of the following zones to enable site discovery for.
+3. Set the **Zone Mask**  to indicate which of the following zones to enable site discovery for.
+
+    - Restricted Sites Zone
+    - Internet Zone
+    - Trusted Sites Zone
+    - Local Intranet Zone
+    - Local Machine Zone
    > [!NOTE]
    > To configure zone(s) included in site discovery, a binary number is formed based on the selected zones. The decimal representation of this number is used to represent this number in policy.
 
-    - Restricted Sites zone
-    - Internet zone
-    - Trusted Sites zone
-    - Local Intranet zone
-    - Local Machine zone
-
-    Example 1: **00010** will collect data only for the Local Intranet zone
-    Example 2: **10111** will collect data for all zones except the Internet zone
+    Examples:
+    Zone Mask 2: **00010** will collect data for the Local Intranet zone only
+    Zone Mask 6: **00110** will collect data for Intranet and Trusted site zones only
 
 4. Select **OK** or **Apply** to save this policy setting.
 
-You can limit the domains for which you collect site data:
+You can also limit the domains for which you collect site data:
 
 1. Double-click **Limit Site Discovery output by domain**.
 2. Select **Enabled**.
