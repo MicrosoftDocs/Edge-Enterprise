@@ -107,7 +107,7 @@ You can pick the zones where you want to collect site data:
 
 4. Select **OK** or **Apply** to save this policy setting.
 
-You can also limit the domains for which you collect site data:
+You can also limit the domains for which to collect site data:
 
 1. Double-click **Limit Site Discovery output by domain**.
 2. Select **Enabled**.
@@ -128,7 +128,7 @@ Now that your devices are generating data, it's time to collect this data in Con
 8. In the **WMI Namespace** text box, enter **root\cimv2\IETelemetry**.
 9. Choose **Connect**.
 10. In the **Add Hardware Inventory Class** dialog box, in the **Inventory classes** list, select the WMI classes **IESystemINfo**, **IEUrlInfo**, and **IECountInfo**.
-11. Select **OK** to close the **Class qualifiers** dialog box and the other open dialogs.
+11. Select **OK** to close the **Class qualifiers** dialog and the other open dialogs.
 
 After the client updates settings from the management point, data will be reported when the next hardware inventory runs (by default every seven days).
 
@@ -145,15 +145,19 @@ Use the steps as a guide to create a sample report that uses three data sources.
 3. Double-click **SCCM_Report-Site_Discovery.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, select **No**.
 5. After the report opens, expand **Data Sources** and double-click **DataSource1**.
-6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select the **Build...** button.
+6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...** .
 7. In the **Connection Properties** window, select **Server Name** and enter the name of the Configuration Manager server. Then, in **Select or enter a database name** select the name of the Configuration Manager database from the dropdown list.
 8. Select **OK** to close the **Connection Properties** window.
 9. Select **Test Connection** to test the connection. If the connection's successful, select **OK** to close the **Data Source Properties** window.
 10. Repeat Steps 5 through 9 for **Data Source 2**.
 11. Expand **Datasets** and double-click **DataSet1**.
-12. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** with the database name you selected in Step 7.
+12. In the **Dataset Properties** window,click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
+
+    > [!IMPORTANT]
+    > Rename the 4 other instances of **CM_A1B** in the query to the database name.
+
 13. Repeat steps 11 through 12 for **DataSet2**, **DataSet3**, and **DataSet4**.
-14. In the **Home** tab of the ribbon, click the **Run** button to test the report.
+14. In the **Home** tab of the ribbon, select the **Run** button to test the report.
 15. Save the report.
 16. Close Microsoft Report Builder.
 17. Rename the file to **Site Discovery.rdl**
@@ -167,12 +171,16 @@ Use the following procedure to create a sample report that uses one data source:
 3. Double-click **SCCM Report Sample - ActiveX.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, select **No**.
 5. After the report opens, expand **Data Sources** and double-click **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
-6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then click the **Build...** button.
+6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...**.
 7. In the **Connection Properties** window, select **Server Name** and enter the name of the Configuration Manager server. Then, in **Select or enter a database name** select the name of the Configuration Manager database from the dropdown list.
 8. Click **OK** to close the **Connection Properties** window.
 9. Select **Test Connection** to test the connection. If the connection is successful, select **OK** to close the **Data Source Properties** window.
 10. Expand **Datasets** and double-click **DataSet1**.
-11. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** with the database name you selected in Step 7.
+11. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
+
+    > [!IMPORTANT]
+    > Rename the 4 other instances of **CM_A1B** in the query to the database name.
+
 12. In the **Home** tab of the ribbon, click the **Run** button to test the report.
 13. Save the report.
 14. Close Microsoft Report Builder.
@@ -203,18 +211,21 @@ Now that you've customized and uploaded the reports, you can view them in Config
 
 When you're finished collecting data, disable Enterprise Site Discovery. Create a second package to disable Enterprise Site Discovery in Microsoft Endpoint Configuration Manager, as described in the [Packages and programs in Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs). Configure the following options:
 
-- On the **Package** page, select **Name** and specify the name **Disable Site Discovery**.
-- On the **Package** page, select **This package contains source files**.
-- On the **Package** page, specify the source folder you extracted the files to (for example, **\\\\DSL\\EnterpriseSiteDiscovery**).
+- On the **Package** page:
+  - select **Name** and specify the name **Disable Site Discovery**.
+  - select **This package contains source files**.
+  - specify the source folder you extracted the files to (for example, **\\\\DSL\\EnterpriseSiteDiscovery**).
 - On the **Program Type** page, choose **Standard Program**.
 - On the **Standard Program** page, enter the following command line to disable Site Discovery on the device:
 
   ```dos
   powershell.exe -ExecutionPolicy Bypass .\IETelemetrySetUp-Win8.ps1 -IEFeatureOff
+
   ```
 
-- On the **Standard Program** page, select the run **Hidden** option.
-- On the **Standard Program** page, under **Program can run**, select the option **Whether or not a user is logged in**.
+- On the **Standard Program** page:
+  - select the run **Hidden** option.
+  - under **Program can run**, select the option **Whether or not a user is logged in**.
 
 ## See also
 
