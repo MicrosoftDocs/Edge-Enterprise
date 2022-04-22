@@ -3,7 +3,7 @@ title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 02/23/2022
+ms.date: 04/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,9 @@ description: "Guide to using Enterprise Site Discovery to prepare for IE mode."
 > The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 This article provides a step-by-step guide to using Enterprise Site Discovery with Microsoft Endpoint Configuration Manager.
+
+> [!TIP]
+> Unless your environment requires using the step in this guide, we recommend that you use  the [Microsoft Edge deployment wizard](https://aka.ms/edgeadvisor) and script it generates to configure Enterprise Site Discovery.
 
 Enterprise Site Discovery can help you configure your Enterprise Mode Site List. Enterprise Site Discovery will help you:
 
@@ -145,7 +148,11 @@ Use the steps as a guide to create a sample report that uses three data sources.
 3. Double-click **SCCM_Report-Site_Discovery.rdl** to open the report in Report Builder.
 4. The first time you try to open the report, it will try to contact the server where it was created. When prompted to **Connect to Report Server**, select **No**.
 5. After the report opens, expand **Data Sources** and double-click **DataSource1**.
-6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...** .
+6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...**.
+
+> [!NOTE]
+> Ensure that you select Microsoft SQL Server as the Data Source. By default, Report Builder defaults to Microsoft SQL Server Analysis Services.
+
 7. In the **Connection Properties** window, select **Server Name** and enter the name of the Configuration Manager server. Then, in **Select or enter a database name** select the name of the Configuration Manager database from the dropdown list.
 8. Select **OK** to close the **Connection Properties** window.
 9. Select **Test Connection** to test the connection. If the connection's successful, select **OK** to close the **Data Source Properties** window.
@@ -158,9 +165,8 @@ Use the steps as a guide to create a sample report that uses three data sources.
 
 13. Repeat steps 11 through 12 for **DataSet2**, **DataSet3**, and **DataSet4**.
 14. In the **Home** tab of the ribbon, select the **Run** button to test the report.
-15. Save the report.
-16. Close Microsoft Report Builder.
-17. Rename the file to **Site Discovery.rdl**
+15. Save the report and close Microsoft Report Builder.
+17. Rename the report file to **Site Discovery.rdl**
 
 ### Configure the ActiveX sample report
 
