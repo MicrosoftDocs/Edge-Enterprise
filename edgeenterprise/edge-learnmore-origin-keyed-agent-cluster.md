@@ -3,7 +3,7 @@ title: "Microsoft Edge will disable modifying 'document.domain'"
 ms.author: niarci
 author: dan-wesley
 manager: erikan
-ms.date: 04/18/2022
+ms.date: 04/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
