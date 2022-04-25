@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/17/2022
+ms.date: 04/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -212,7 +212,7 @@ To export a site list:
 The Site feedback tab shows the sites that users are adding to their local IE Mode site list, as well as potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
 
 > [!NOTE]
-> This feature is currently rolling out to all users and is expected to finish rolling out by mid-March.
+> This feature is currently only available for worldwide cloud instances.
 
 ### Add a site to site lists
 
