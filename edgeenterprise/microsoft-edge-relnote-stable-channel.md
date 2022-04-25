@@ -45,7 +45,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 ### Policy updates
 #### New policies
 #### Deprecated policies
+
 #### Obsoleted policies
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Force WebSQL in third-party contexts to be re-enabled
 
 ## Version 100.0.1185.50: April 21
 
