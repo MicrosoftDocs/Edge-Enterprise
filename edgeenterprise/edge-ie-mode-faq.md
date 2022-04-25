@@ -30,7 +30,7 @@ We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started g
 
 ## Are there any tools that I can use to guide me through IE mode troubleshooting?
 
-Yes, the [Microsoft Virtual Agent](https://cdn-vsa-dev.services.microsoft.com/en-us/v1.0/?partnerId=8291cfc8-5886-446f-bffc-89ab61532d99&initialQuery=32630600) provides a scenario-based guided walkthrough for troubleshooting IE mode.
+Yes, the [Microsoft Virtual Agent](https://go.microsoft.com/fwlink/?linkid=2194137) provides a scenario-based guided walkthrough for troubleshooting IE mode.
 
 ## Common IE mode issues
 
