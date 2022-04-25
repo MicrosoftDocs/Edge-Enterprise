@@ -28,6 +28,8 @@ These release notes provide information about new features and non-security upda
 
 ## Version 101.0.0000.00: April ??
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-15-2022).
+
 ### Feature updates
 
 - **Ability to set the default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to use when opening the browser instead of the last profile that was used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
