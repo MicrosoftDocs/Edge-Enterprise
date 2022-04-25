@@ -36,7 +36,7 @@ This guide assumes you're experienced with using Microsoft Endpoint Configuratio
 
 - Microsoft Endpoint Configuration Manager
 - Microsoft SQL Server Reporting Services
-- (Optional) Configuration Manager Reporting Services Point Role is is configured
+- (Optional) Configuration Manager Reporting Services Point Role is configured
 
 ## Download Enterprise Site Discovery Tools
 
@@ -79,6 +79,14 @@ After creating the package, double-click on the package name **Enable Site Disco
 
 > [!NOTE]
 > You can configure the amount of time a user has to restart the device as described in the [client settings documentation](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
+
+To confirm that data collection's working, visit a couple of websites and run the following PowerShell command to verify that data's being populated in the WMI namespace.
+
+```powershell
+
+Get-WmiObject -Namespace “root/cimv2/IETelemetry” -Class IEURLInfo | Select-Object URL, NumberOfVisits, CrashCount, DocMode | Sort-Object
+
+```
 
 ## Configure Enterprise Site Discovery via Group Policy
 
@@ -151,7 +159,7 @@ Use the steps as a guide to create a sample report that uses three data sources.
 6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...**.
 
 > [!NOTE]
-> Ensure that you select Microsoft SQL Server as the Data Source. By default, Report Builder defaults to Microsoft SQL Server Analysis Services.
+> Ensure that you select Microsoft SQL Server as the Data Source. Report Builder defaults to Microsoft SQL Server Analysis Services as the data source.
 
 7. In the **Connection Properties** window, select **Server Name** and enter the name of the Configuration Manager server. Then, in **Select or enter a database name** select the name of the Configuration Manager database from the dropdown list.
 8. Select **OK** to close the **Connection Properties** window.
@@ -179,7 +187,7 @@ Use the following procedure to create a sample report that uses one data source:
 5. After the report opens, expand **Data Sources** and double-click **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
 6. In the **Data Source Properties** window, select **Use a connection embedded in my report** and then select **Build...**.
 7. In the **Connection Properties** window, select **Server Name** and enter the name of the Configuration Manager server. Then, in **Select or enter a database name** select the name of the Configuration Manager database from the dropdown list.
-8. Click **OK** to close the **Connection Properties** window.
+8. Select **OK** to close the **Connection Properties** window.
 9. Select **Test Connection** to test the connection. If the connection is successful, select **OK** to close the **Data Source Properties** window.
 10. Expand **Datasets** and double-click **DataSet1**.
 11. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
@@ -187,7 +195,7 @@ Use the following procedure to create a sample report that uses one data source:
     > [!IMPORTANT]
     > Rename the 4 other instances of **CM_A1B** in the query to the database name.
 
-12. In the **Home** tab of the ribbon, click the **Run** button to test the report.
+12. In the **Home** tab of the ribbon, select the **Run** button to test the report.
 13. Save the report.
 14. Close Microsoft Report Builder.
 15. Rename the file to **ActiveX**
