@@ -158,7 +158,7 @@ Use the steps as a guide to create a sample report that uses three data sources.
 9. Select **Test Connection** to test the connection. If the connection's successful, select **OK** to close the **Data Source Properties** window.
 10. Repeat Steps 5 through 9 for **Data Source 2**.
 11. Expand **Datasets** and double-click **DataSet1**.
-12. In the **Dataset Properties** window,click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
+12. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
 
     > [!IMPORTANT]
     > Rename the 4 other instances of **CM_A1B** in the query to the database name.
