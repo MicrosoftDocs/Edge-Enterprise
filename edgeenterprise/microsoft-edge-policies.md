@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/19/2022
+ms.date: 04/26/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,11 +26,11 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
 
 ## Available policies
 
@@ -536,6 +536,7 @@ These tables list all of the browser-related group policies available in this re
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
@@ -27212,6 +27213,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Back to top](#microsoft-edge---policies)
 
+  ### SetTimeoutWithout1MsClampEnabled
+
+  #### Control Javascript setTimeout() function minimum timeout (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101 or later
+
+  #### Description
+
+  When the policy is set to Enabled, the Javascript setTimeout() with a timeout of 0ms will no longer be fixed to 1ms to schedule timer-based callbacks.
+When the policy is set to Disabled, the Javascript setTimeout() with a timeout of 0ms will be fixed to 1ms to schedule timer-based callbacks.
+When the policy is unset, use the browser's default behavior for setTimeout() function.
+
+This is a web standards compliancy feature, but it may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
+It also may affect sites with a lot of setTimeout()s with a timeout of 0ms usage. For example, increasing CPU load.
+
+For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.
+
+This is a temporary policy that is planned to be removed in Microsoft Edge Stable 105.
+This deadline may be extended if there is a need for enterprises.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SetTimeoutWithout1MsClampEnabled
+  - GP name: Control Javascript setTimeout() function minimum timeout (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SetTimeoutWithout1MsClampEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SetTimeoutWithout1MsClampEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ShadowStackCrashRollbackBehavior
 
   #### Configure ShadowStack crash rollback behavior
@@ -27423,15 +27493,15 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
 
   Show Microsoft Rewards experience and notifications.
 If you enable this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
 
 If you disable this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will not see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will not see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be disabled and toggled off.
 
 If you don't configure this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
 
   #### Supported features:
