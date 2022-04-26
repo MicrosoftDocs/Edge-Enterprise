@@ -33,3 +33,7 @@ Fixed various bugs.
   - When playing in the background, users can control Read Aloud (pause, resume, play forwards, or play backwards) via the notification panel and lock screen.
   - When users go to another tab in Microsoft Edge while using Read Aloud, they can use a floating control bar to pause, resume, or close Read Aloud.
   - When a device’s silent toggle is on, it doesn’t affect Read Aloud playback as long as media volume is turned up.
+  
+## See also
+
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
