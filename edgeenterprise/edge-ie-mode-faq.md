@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/18/2022
+ms.date: 04/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,6 +27,10 @@ This article provides troubleshooting tips and FAQ for Microsoft Edge version 77
 We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There’s also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), available at no extra charge to customers with 150 or more paid seats of Windows 10.
 
 We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) and our [IE mode blog series](https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
+
+## Are there any tools that I can use to guide me through IE mode troubleshooting?
+
+Yes, the [Microsoft Virtual Agent](https://go.microsoft.com/fwlink/?linkid=2194137) provides a scenario-based guided walkthrough for troubleshooting IE mode.
 
 ## Common IE mode issues
 
