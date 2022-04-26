@@ -34,7 +34,7 @@
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
    - name: Mobile Stable Channel Release Notes
-     href: microsoft-edge-relnote-stable-mobile-channel.md
+     href: microsoft-edge-relnote-mobile-stable-channel.md
    - name: Stable Channel Release Notes
      href: microsoft-edge-relnote-stable-channel.md
    - name: Stable Channel archived release notes
