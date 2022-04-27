@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Edge password manager security "
-ms.author: v-andreabarr
-author: AndreaLBarr
+ms.author: v-danwesley
+author: dan-wesley
 manager: collw
 ms.date: 09/30/2021
 audience: ITPro
