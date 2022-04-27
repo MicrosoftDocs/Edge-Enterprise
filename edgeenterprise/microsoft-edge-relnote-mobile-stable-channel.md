@@ -29,7 +29,7 @@ Fixed various bugs.
 
 ### Feature updates
 
-- **Read aloud background play and play in silent mode (iOS and Android)**
+- **Read Aloud: background play and play in silent mode (iOS and Android)**
   - When playing in the background, users can control Read Aloud (pause, resume, play forwards, or play backwards) via the notification panel and lock screen.
   - When a user switches tabs in Microsoft Edge while using Read Aloud, they can use a floating control bar to pause, resume, or close Read Aloud.
   - When a device’s silent toggle is on, it doesn’t affect Read Aloud playback as long as media volume is turned up.
