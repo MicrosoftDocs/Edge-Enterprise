@@ -18472,7 +18472,7 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in "Browse more safely with Microsoft Edge".
+Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
 Policy options mapping:
 
