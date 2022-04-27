@@ -3,7 +3,7 @@ title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/25/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -166,11 +166,7 @@ Use the steps as a guide to create a sample report that uses three data sources.
 9. Select **Test Connection** to test the connection. If the connection's successful, select **OK** to close the **Data Source Properties** window.
 10. Repeat Steps 5 through 9 for **Data Source 2**.
 11. Expand **Datasets** and double-click **DataSet1**.
-12. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
-
-    > [!IMPORTANT]
-    > Rename the 4 other instances of **CM_A1B** in the query to the database name.
-
+12. In the **Dataset Properties** window, click in the **Query:** textbox. Copy the query to Notepad and then find and replace **CM_A1B** with the database name you selected in Step 7. Paste the updated query into the **Query:** textbox.
 13. Repeat steps 11 through 12 for **DataSet2**, **DataSet3**, and **DataSet4**.
 14. In the **Home** tab of the ribbon, select the **Run** button to test the report.
 15. Save the report and close Microsoft Report Builder.
@@ -190,11 +186,7 @@ Use the following procedure to create a sample report that uses one data source:
 8. Select **OK** to close the **Connection Properties** window.
 9. Select **Test Connection** to test the connection. If the connection is successful, select **OK** to close the **Data Source Properties** window.
 10. Expand **Datasets** and double-click **DataSet1**.
-11. In the **Dataset Properties** window, click in the **Query:** textbox and replace **USE CM_A1B** in the first line of the query with the database name you selected in Step 7.
-
-    > [!IMPORTANT]
-    > Rename the 4 other instances of **CM_A1B** in the query to the database name.
-
+11. In the **Dataset Properties** window, click in the **Query:** textbox. Copy the query to Notepad and then find and replace **CM_A1B** with the database name you selected in Step 7. Paste the updated query into the **Query:** textbox.
 12. In the **Home** tab of the ribbon, select the **Run** button to test the report.
 13. Save the report.
 14. Close Microsoft Report Builder.
