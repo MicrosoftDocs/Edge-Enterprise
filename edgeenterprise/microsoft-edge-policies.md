@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/26/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -18464,13 +18464,15 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  This policy lets you enhance the security state in Microsoft Edge.
+  This policy lets you enhance the security state in Microsoft Edge. 
 
 If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
 
 If you set this policy to 'BalancedMode', the security state would be in balanced mode.
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
+
+Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
 Policy options mapping:
 
