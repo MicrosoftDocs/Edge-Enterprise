@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/21/2022
+ms.date: 04/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,43 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 101.0.1210.32: April 28
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-28-2022).
+
+### Feature updates
+
+- **Ability to set the default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to use when opening the browser instead of the last profile that was used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
+
+- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site that requires HTTP certificate authentication. This can be done without manually quitting Microsoft Edge.
+
+- **Launch Progressive Web Apps (PWAs) from the favorites bar.** Improvements to the PWA launch experience will start appearing with an Apps icon that can be added to the toolbar.
+
+- **Manage the "Allow extensions from other stores" setting.** Now you can use the [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) policy to set the default state of the "Allow extensions from other stores" setting.
+
+- **Improvements to the Enterprise Site List Manager.** Now you can configure shared cookies between Microsoft Edge and Internet Explorer on your enterprise site list. You can access the [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) at *edge://compat/SiteListManager*.
+
+### Policy updates
+
+#### New policies
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - Configure the list of commands for which to disable keyboard shortcuts
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - Configure default state of Allow extensions from other stores setting
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - Allow features to download assets from the Asset Delivery Service
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - Default Profile Setting Enabled
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - Allow Save page as in Internet Explorer mode
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Swipe gestures in Microsoft Edge kiosk mode enabled
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Allow users to access the Microsoft Office menu
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - Allow users to configure Site safety services
+
+#### Deprecated policies
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
+
+#### Obsoleted policies
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Force WebSQL in third-party contexts to be re-enabled
 
 ## Version 100.0.1185.50: April 21
 
@@ -165,64 +202,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-10-2022).
 
-## Version 98.0.1108.43: February 3
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
-
-### Feature updates
-
-- **Enhance your security on the web.** This is a browsing mode in Microsoft Edge where browser security takes priority, giving users an extra layer of protection when browsing the web. Administrators can apply group policies to end-user desktops (Windows, macOS, and Linux) to help protect against in-the-wild exploits (also referred to 0-days). The following group policies support this browsing mode:
-
-  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **Upcoming three-digit version number in user agent string.** Starting with version 100, Microsoft Edge will send a three-digit version number in the User-Agent header, for example "Edg/**100**". Starting with Microsoft Edge 97, site owners can test this upcoming user agent string by enabling the **#force-major-version-to-100** experiment flag in *edge://flags* to ensure their User-Agent parsing logic is robust and works as expected.
-
-- **Deprecate WebRTC's Plan B SDP semantics.** This change deprecates a legacy Session Description Protocol (SDP) dialect called Plan B. This SDP format is being replaced by the Unified Plan, which is a spec-compliant and cross-browser compatible SDP format. For more information, see the Chrome Platform Status entry [PSA: Plan B should throw in M96 Beta and Stable](https://chromestatus.com/feature/5823036655665152), and [PSA: Plan B throwing in Stable and Extended Deprecation Trial End Date](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU). Requesting a [Trial for RTCPeerConnection Plan B SDP Semantics](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169) allows sites to continue to use the deprecated API until version 101.
-
-- **Overlay scrollbars added to Microsoft Edge.** We've updated our scrollbars with an overlay-based design. Users can turn this feature on in *edge://flags*.
-
-### Policy updates
-
-#### New Policies
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Configure address bar editing
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Allow users to access the games menu
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Enable Follow service in Microsoft Edge
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Enhance the security state in Microsoft Edge
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - Configure the list of domains for which enhance security mode will not be enforced
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - Configure the list of domains for which enhance security mode will always be enforced
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - In-app support Enabled
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge Insider Promotion Enabled
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Print preview sticky settings
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Allow using the deprecated U2F Security Key API
-
-## Version 97.0.1072.76: January 27
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Upcoming three-digit version number in user agent string.** Starting with version 100, Microsoft Edge will send a three-digit version number in the User-Agent header, for example "Edg/**100**". Starting with Microsoft Edge 97, site owners can test this upcoming user agent string by enabling the **#force-major-version-to-100** experiment flag in *edge://flags* to ensure their User-Agent parsing logic is robust and works as expected.
-
-## Version 96.0.1054.75: January 21
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 97.0.1072.69: January 20
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-20-2022).
-
-## Version 97.0.1072.62: January 13
-
-Fixed various bugs and performance issues.
-
-## Version 96.0.1054.72: January 6
-
-Fixed various bugs and performance issues for Extended Stable release.
-
+<!--- from Version 98.0.1108.43: February 3 to Version 96.0.1054.72: January 6  -->
 <!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
 <!-- archive from Version 95.0.1020.30: October 21 to Version 94.0.992.37: September 30 -->
