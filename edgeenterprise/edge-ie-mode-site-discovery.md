@@ -3,7 +3,7 @@ title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/27/2022
+ms.date: 04/29/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
