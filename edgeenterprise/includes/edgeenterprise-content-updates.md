@@ -2,6 +2,19 @@
 
 
 
+## Week of April 25, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/25/2022 | [Microsoft Edge will disable modifying 'document.domain'](/DeployEdge/edge-learnmore-origin-keyed-agent-cluster) | added |
+| 4/26/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 4/28/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+| 4/28/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 4/28/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 4/29/2022 | [Enterprise Site Discovery Step by Step Guide](/DeployEdge/edge-ie-mode-site-discovery) | modified |
+
+
 ## Week of April 18, 2022
 
 
@@ -29,18 +42,3 @@
 | 4/8/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 | 4/8/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 4/8/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-
-
-## Week of March 21, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/21/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 3/22/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 3/22/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 3/23/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 3/23/2022 | [Learn how to configure initial preferences on Microsoft Edge.](/DeployEdge/initial-preferences-support-on-microsoft-edge-browser) | modified |
-| 3/24/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 3/24/2022 | [Local site list for Internet Explorer (IE) mode](/DeployEdge/edge-ie-mode-local-site-list) | modified |
-| 3/25/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
