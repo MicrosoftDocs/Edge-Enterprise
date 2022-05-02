@@ -1,9 +1,9 @@
 ---
 title: "Configure Microsoft Edge kiosk mode"
-ms.author: aguta
-author: aguta
+ms.author: v-danwesley
+author: dan-wesley
 manager: srugh
-ms.date: 11/30/2021 
+ms.date: 05/02/2022 
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -235,7 +235,6 @@ We currently don't support the following features and recommend that you turn of
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 - [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
 - [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
-- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
