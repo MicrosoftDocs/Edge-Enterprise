@@ -28,6 +28,8 @@ Fixed various bugs and performance issues.
 ### Policy updates
 
 #### New policies
+#### Deprecated policies
+#### Obsoleted policies
 
 ## Version 101.0.1210.31: April 27
 
