@@ -122,7 +122,7 @@ The following table lists provider support statements for Microsoft Edge.
 | SurveyMonkey  | SurveyMonkey | https://help.surveymonkey.com/articles/en_US/kb/What-browser-versions-do-you-support   |
 | Tableau  | Tableau Server  | https://www.tableau.com/products/techspecs#server |
 | Tableau  | Tableau Online  | https://www.tableau.com/products/techspecs#online  |
-| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/archive/files/66907/service-specification_nov_21_2019-pdf.aspx/                          service-specification   |
+| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/archive/files/66907/service-specification_nov_21_2019-pdf.aspx                          service-specification   |
 | TIBCO | Tibco Cloud Spotfire  | https://docs.tibco.com/pub/spotfire/general/sr/GUID-12C6E934-C84C-499B-9DAC-DD510854E4E1.html |
 | Verint | Verint Community   | https://community.telligent.com/community/11/w/user-documentation/63073/what-are-the-system-requirements   |
 | Visma  | Visma UX, Nordic Cool 4    | https://ux.visma.com/weblibrary/latest/  |
