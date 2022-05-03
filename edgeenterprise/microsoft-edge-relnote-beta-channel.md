@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/02/2022
+ms.date: 05/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,10 @@ These release notes provide information about new features and non-security upda
 Fixed various bugs and performance issues.
 
 ### Feature updates
+
+- **Outlook for Microsoft Edge Sidebar.** This sidebar lets users quickly and easily access Outlook Mail and Calendar. Administrators can control the Outlook Sidebar by using the [OutlookHubMenuEnable](/deployedge/microsoft-edge-policies#outlookhubmenuenabled) policy.
+
+- **Microsoft Office for Microsoft Edge Sidebar.** This sidebar lets users quickly and easily access Microsoft Office documents and apps. Administrators can control the Microsoft Office Sidebar by using the [MicrosoftOfficeMenuEnabled](/deployedge/microsoft-edge-policies#microsoftofficemenuenabled) policy.
 
 ### Policy updates
 
