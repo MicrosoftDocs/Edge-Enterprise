@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/02/2022
+ms.date: 05/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,8 +37,6 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 ### Feature updates
 
 - **Ability to set the default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to use when opening the browser instead of the last profile that was used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
-
-- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site that requires HTTP certificate authentication. This can be done without manually quitting Microsoft Edge.
 
 - **Launch Progressive Web Apps (PWAs) from the favorites bar.** Improvements to the PWA launch experience will start appearing with an Apps icon that can be added to the toolbar.
 
