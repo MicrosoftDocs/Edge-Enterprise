@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/03/2022
+ms.date: 05/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,8 +32,11 @@ Fixed various bugs and performance issues.
 ### Policy updates
 
 #### New policies
-#### Deprecated policies
-#### Obsoleted policies
+
+- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins) - List of origins that allow all HTTP authentication
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
+- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
 
 ## Version 101.0.1210.31: April 27
 
