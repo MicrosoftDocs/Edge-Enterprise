@@ -19,9 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 101.0.1210.39: May 5
-
-Fixed various bugs and performance issues.
+## Version 102.0.xxxx.xx: May x
 
 ### Feature updates
 
@@ -37,6 +35,10 @@ Fixed various bugs and performance issues.
 - [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
 - [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
 - [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
+
+## Version 101.0.1210.39: May 5
+
+Fixed various bugs and performance issues.
 
 ## Version 101.0.1210.31: April 27
 
