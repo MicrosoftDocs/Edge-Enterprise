@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 102.0.xxxx.xx: May x
+## Version 102.0.xxxx.xx: May 5
 
 ### Feature updates
 
@@ -64,9 +64,9 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Ability to set default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to be used when opening the browser rather than the last profile used. This policy will not be applicable if the `--profile-directory` parameter has been specified.
+- **Ability to set default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to be used when opening the browser rather than the last profile used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
 
-- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. This can be done without manually quitting Microsoft Edge.
+- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. Switching can be done without manually quitting Microsoft Edge.
 
 - **Launch Progressive Web Apps (PWAs) from Favorites Bar.** Improvements to the PWA launch experience will begin to show up starting with an Apps icon that can be added to the toolbar.
 
