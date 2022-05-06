@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge with Windows 10 updates"
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 06/29/2021
+ms.date: 05/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ Windows 10 20H2 and later include Microsoft Edge pre-installed as the default br
 If using Windows Autopilot, it is possible to wrap this script as a .intunewin file using the [Microsoft Win32 content prep tool](/mem/intune/apps/apps-win32-prepare). It can then be set as a required app for the Enrollment Status Page (ESP) if desired.
 
 > [!NOTE]
-> If you currently leverage policies such as [Target Channel override](/deployedge/microsoft-edge-update-policies#target-channel-override) or [Target Version override](/deployedge/microsoft-edge-update-policies#targetversionprefix) to remain on an older version of Edge, be aware that the above script will not take any policies into account, and will simply update to the latest version. By default, Edge does not downgrade itself, including once such policies are later received.
+> If you currently leverage policies such as [Target Channel override](/deployedge/microsoft-edge-update-policies#target-channel-override) or [Target Version override](/deployedge/microsoft-edge-update-policies#targetversionprefix) to remain on an older version of Microsoft Edge, be aware that the above script will not take any policies into account, and will simply update to the latest version. By default, Microsoft Edge does not downgrade itself, including once such policies are later received.
 
 ## For Windows 10 releases RS4 through 20H1
 
