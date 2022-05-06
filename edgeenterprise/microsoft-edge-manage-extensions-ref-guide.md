@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 01/12/2022
+ms.date: 05/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -135,8 +135,14 @@ The next JSON example blocks any extension from running on `.example.com` and bl
 
 When using installation_mode as "force_installed", the extension is automatically installed without user interaction. A user can’t disable or remove the extension. If an extension is "normal" or "force" installed, the **update_url** field must also be defined. This field points to the location where the extension can be installed from. Use the following locations for the **update_url** field:
 
-- If the extension you’re downloading is hosted on the Microsoft Edge Add-ons store, use [https://edge.microsoft.com/extensionwebstorebase/v1/crx](https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-- If the extension you’re downloading is hosted on the Chrome Web Store, use [https://clients2.google.com/service/update2/crx](https://clients2.google.com/service/update2/crx).
+- If the extension you’re downloading is hosted on the Microsoft Edge Add-ons store, use the location in the following JSON example:
+
+   `{"nckgahadaanghapdoaajjgafhacjaoii": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
+
+- If the extension you’re downloading is hosted on the Chrome Web Store, use the location in the following JSON example:
+
+   `{"nckgiihapdoaajjgafhacjgahadaanao": {"installation_mode": "force_installed","update_url": "https://clients2.google.com/service/update2/crx"}}`
+
 - If you’re hosting the extension on your own server, use the URL where Microsoft Edge can download the packed extension (.crx file). JSON example:
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
