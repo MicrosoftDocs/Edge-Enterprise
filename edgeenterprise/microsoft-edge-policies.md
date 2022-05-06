@@ -18465,7 +18465,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  This policy lets you enhance the security state in Microsoft Edge.
+  This policy lets you enhance the security state in Microsoft Edge. 
 
 If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
 
