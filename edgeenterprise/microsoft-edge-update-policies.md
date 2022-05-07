@@ -336,11 +336,11 @@ We recommend that users install the latest version of the Microsoft Edge browser
 
 Before temporarily rolling back your browser version, we recommend that you turn on Sync ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) for all users in your organization. If you don't turn on Sync, there is a risk of permanent browsing data loss. Use this policy at your own risk.
 
-Note: All versions available for rollback can be viewed here [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).
+Note: All versions available for rollback can be viewed here [EdgeEnterprise](https://aka.ms/EdgeEnterprise).
 
 This policy applies to Microsoft Edge version 86 or later.
 
-See [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) for more information.
+See [Edge support for WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection) for more information.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
