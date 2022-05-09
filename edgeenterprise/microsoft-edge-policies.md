@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/27/2022
+ms.date: 05/06/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -30,7 +30,7 @@ The following table lists the new and deprecated policies that are in this artic
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
+|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 
 ## Available policies
 
@@ -542,7 +542,7 @@ These tables list all of the browser-related group policies available in this re
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services|
@@ -570,6 +570,7 @@ These tables list all of the browser-related group policies available in this re
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
+|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 |[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
 |[UserDataDir](#userdatadir)|Set the user data directory|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
@@ -27614,7 +27615,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   ### ShowRecommendationsEnabled
 
-  #### Allow recommendations and promotional notifications from Microsoft Edge
+  #### Allow feature recommendations and browser assistance notifications from Microsoft Edge
 
   
   
@@ -27624,11 +27625,13 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   #### Description
 
-  This policy setting lets you decide whether employees should receive recommendations and in-product assistance notifications from Microsoft Edge.
+  This setting controls the in-browser assistance notifications which are intended to help users get the most out of Microsoft Edge. This is done by recommending features and by helping them use  browser features. These notifications take the form of dialog boxes, flyouts, coach marks and banners in the browser.  An example of an  assistance notification would be when a user has many tabs opened in the browser.  In this instance Microsoft Edge may prompt the user to try out the vertical tabs feature which is designed to give better browser tab management.
 
-If you enable or don't configure this setting, employees receive recommendations / notifications from Microsoft Edge.
+Disabling this policy will stop this message from appearing again even if the user has too many tabs open.
+      Any features that have been disabled by a management policy are not suggested to users.
+If you enable or don't configure this setting, users will receive recommendations or notifications from Microsoft Edge.
+      If you disable this setting, users will not receive any recommendations or notifications from Microsoft Edge
 
-If you disable this setting, employees will not receive any recommendations / notifications from Microsoft Edge.
 
   #### Supported features:
 
@@ -27645,7 +27648,7 @@ If you disable this setting, employees will not receive any recommendations / no
   ##### Group Policy (ADMX) info
 
   - GP unique name: ShowRecommendationsEnabled
-  - GP name: Allow recommendations and promotional notifications from Microsoft Edge
+  - GP name: Allow feature recommendations and browser assistance notifications from Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -29428,6 +29431,70 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
   #### Mac information and settings
   
   - Preference Key Name: UserAgentClientHintsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UserAgentClientHintsGREASEUpdateEnabled
+
+  #### Control the User-Agent Client Hints GREASE Update feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 102 or later
+
+  #### Description
+
+  The User-Agent GREASE specification recommends the inclusion of additional GREASE characters beyond the current semicolon and space, and recommends that the arbitrary version number be varied over time.
+
+When enabled, the User-Agent Client Hints GREASE Update feature aligns the User-Agent GREASE algorithm with the latest version from the specification.  The updated specification may break some websites that restrict the characters that requests may contain. For more information, see the following specification: https://wicg.github.io/ua-client-hints/#grease
+
+If this policy is enabled or not configured, the User-Agent GREASE algorithm from the specification will be used. If the policy is disabled, the prior User-Agent GREASE algorithm will be used.
+
+This policy is a temporary measure and will be removed in a future release.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UserAgentClientHintsGREASEUpdateEnabled
+  - GP name: Control the User-Agent Client Hints GREASE Update feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UserAgentClientHintsGREASEUpdateEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: UserAgentClientHintsGREASEUpdateEnabled
   - Example value:
 ``` xml
 <true/>
