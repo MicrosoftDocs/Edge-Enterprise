@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 02/16/2022
+ms.date: 05/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,7 +33,7 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Extensions
 - Open tabs (available in Microsoft Edge version 88 or later)
 - History (available in Microsoft Edge version 88 or later)
-
+<!---- maybe delete the following because it's covered in troubleshooting --------->
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
 
 > [!NOTE]
