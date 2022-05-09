@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/02/2021 #Required; mm/dd/yyyy format.
+  ms.date: 05/04/2022 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -71,6 +71,8 @@ landingContent:
             url: microsoft-edge-video-security-compatibility-manageability.md
           - text: Security
             url: ms-edge-security-for-business.md
+          - text: Microsoft Security Baselines Blog
+            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
           - text: Privacy
             url: microsoft-edge-enterprise-privacy-settings.md
  # Card 4 (col 1, 2nd row)
@@ -93,8 +95,8 @@ landingContent:
             url: microsoft-edge-webview-policies.md
 #          - text: Policy mapping overview
 #            url: microsoft-edge-policy-map-overview.md
-          - text: Microsoft Security Baselines Blog
-            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
+#          - text: Microsoft Security Baselines Blog
+#            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
   # Card 6 (col 3, 2nd row)
   - title: Engage with community or get help
     linkLists:
