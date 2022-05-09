@@ -83,5 +83,6 @@ Microsoft Edge is a cross-platform application with an expanded scope for syncin
 ## See also
 
 - [Diagnose and fix Microsoft Edge sync issues](microsoft-edge-troubleshoot-enterprise-sync.md)
+- [Microsoft Edge enterprise sync FAQ](microsoft-edge-enterprise-sync-faq.md)
 - [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
