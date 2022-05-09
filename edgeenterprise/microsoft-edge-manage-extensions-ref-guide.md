@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 05/06/2022
+ms.date: 05/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
