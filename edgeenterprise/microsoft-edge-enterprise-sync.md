@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/09/2022
+ms.date: 05/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ This article explains how admins can configure Microsoft Edge to sync user favor
 If you're not an admin, use the following article as a guide to learn how to sign-in and sync Microsoft Edge across devices: [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
-> Applies to Microsoft Edge version 77 or later unless otherwise noted.
+> Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
 
 ## Introduction
 
@@ -45,6 +45,14 @@ After sync is configured, sync functionality is enabled via user consent. Users 
 
 ## Prerequisites
 
+The following prerequisites apply to Microsoft Edge enterprise sync:
+
+- Microsoft Edge version number that supports the desired sync functions
+- Subscription to a cloud service in a supported environment
+- Azure Information Protection (AIP) (P1 or P2)
+
+## Supported environments
+
 Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for any of the following subscriptions:
 
 - Azure AD Premium (P1 or P2)
@@ -53,7 +61,6 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 - Office 365 E1 and above
-- Azure Information Protection (AIP) (P1 or P2)
 - All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, Microsoft 365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
 
 ## Sync group policies
@@ -63,7 +70,7 @@ Admins can use the following group policies to configure and manage Microsoft Ed
 - [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): Disables data synchronization.  This policy disables cloud synchronization only and has no impact on the RoamingProfileSupportEnabled policy.
 - [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): Disables saving browsing history and sync and open tabs sync.
 - [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): When this policy is set to disabled, history sync will also be disabled.
-- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled):Configure the list of data types that are excluded from synchronization. Use this to limit the type of data uploaded to the Microsoft Edge synchronization service.
+- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): Configure the list of data types that are excluded from synchronization. Use this to limit the type of data uploaded to the Microsoft Edge synchronization service.
 - [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): Allow Active Directory (AD) profiles to use on-premises storage. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator.) For more information, see [On-premises sync for Active Directory (AD) users](./microsoft-edge-on-premises-sync.md).
 - [ForceSync](/deployedge/microsoft-edge-policies#forcesync): Force synchronization of browser data and don't show the sync consent prompt. Users can't disable this policy.
 
