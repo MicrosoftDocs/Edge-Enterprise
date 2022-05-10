@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/06/2022
+ms.date: 05/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,14 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 
 ## Available policies
 
@@ -18465,7 +18457,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  This policy lets you enhance the security state in Microsoft Edge. 
+  This policy lets you enhance the security state in Microsoft Edge.
 
 If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
 
