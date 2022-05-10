@@ -15,7 +15,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 # Diagnose and fix Microsoft Edge sync issues
 
 This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
-<!--- maybe delete following ----->
+
  If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Reset** sync. If this doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
 
 > [!NOTE]
@@ -37,12 +37,12 @@ The next screenshot shows an example of an identity error. The error is "**Last 
 2. Log on to your Azure portal and verify that your Azure license is valid.
 3. Sign out your account on all Microsoft Edge browsers on all the computers and/or mobile devices - not just the one you're using.
 4. Make sure you're on the latest version of Microsoft Edge that supports all the sync features (at least 98.0.1108.43 (Official build) (64-bit)).
-5. Sign back into your profile on Microsoft Edge. We recommend that you do a sync reset. For more information, see [Perform a reset to fix a synchronization problem](https://docs.microsoft.com/en-us/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
+5. Sign back into your profile on Microsoft Edge. We recommend that you do a sync reset. For more information, see [Perform a reset to fix a synchronization problem](/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
 6. Verify that your account is enabled for syncing. On a new tab, go to: *edge://sync-internals/*. The Summary section, shown in the next screenshot shows that sync is enabled.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/summary-confirm-sync-working.png" alt-text="Summary from  sync-internals":::
 
-7. Verify that the device you're on is getting sync'ed. Go to *edge://sync-internals/* and select the **Sync Node Browser** tab. Open the **Device info** folder to see what devices are in the sync list.
+7. Verify that the device you're on is getting sync'ed. Go to *edge://sync-internals/* and select the **Sync Node Browser** tab. Open the **Device info** folder to see which devices are in the sync list.
 8. Check your sign-in status. Go to *edge://sign-in/*. The next screenshot shows the sign-in status for a user.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-get-signin-status-for-sync.png" alt-text="Get sign in status from sign-internals":::
@@ -98,10 +98,10 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 6. If the issue isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
-### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying…”
+### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying.”
 
 1. Try to sign out and then sign in.
-2. Go to *edge://sync-internals*. If the following error is shown under the **Type info** section, skip to the  [Cryptographer error encountered](#issue-cryptographer-error-encountered)**Cryptographer error encountered** issue.
+2. Go to *edge://sync-internals*. If the following error appears under the **Type info** section, skip to the  [Cryptographer error encountered](#issue-cryptographer-error-encountered) issue.
 
    `"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered"`
 
