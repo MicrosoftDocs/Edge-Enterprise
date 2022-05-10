@@ -92,7 +92,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
    If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. Scoping can be removed with the [Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell applet.
 
-5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AIPServiceConfiguration ](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps) PowerShell cmdlet shows the status of the service.
+5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AIPServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps) PowerShell cmdlet shows the status of the service.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Check to see if IPCv3Service is enabled.":::
 
