@@ -64,8 +64,8 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 > [!NOTE]
 > Because the source of this error usually needs a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin.
 
-1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](/azure/information-protection/activate-office365). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
-2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Enable Enterprise State Roaming in Azure Active Directory](/azure/information-protection/activate-office365).
+1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://support.microsoft.com/en-us/office/microsoft-365-and-office-customer-support-96162163-b3aa-498b-bbbb-5e757b0f31da?msclkid=6c36af5ccff311ec864392cbe22a9839). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Activating the protection service from Azure Information Protection](/azure/information-protection/activate-service).
 3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). If you need to enable ESR, see these instructions: [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
    > [!NOTE]
@@ -98,10 +98,10 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 6. If the issue isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
-### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying.”
+### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying...”
 
 1. Try to sign out and then sign in.
-2. Go to *edge://sync-internals*. If the following error appears under the **Type info** section, skip to the  [Cryptographer error encountered](#issue-cryptographer-error-encountered) issue.
+2. Go to *edge://sync-internals*. If the following error appears under the **Type info** section, skip to the [Cryptographer error encountered](#issue-cryptographer-error-encountered) issue.
 
    `"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered"`
 
@@ -118,7 +118,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
       - `https://api.aadrm.com` (for most tenants)
       - `https://api.aadrm.de` (for tenants in Germany)
       - `https://api.aadrm.cn` (for tenants in China)
-   - [Windows Notification Service endpoints](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Enterprise Firewall Configurations to Support WNS Traffic](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. If the issue still isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
