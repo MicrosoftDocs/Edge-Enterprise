@@ -27,7 +27,7 @@ It's important to understand the difference between identity issues and sync iss
 
 Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
-The next screenshot shows an example of an identity error. The error is "**Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea**", which is found in *edge://sync-internals* under **Credentials**:
+The next screenshot shows an example of an identity error. The error is **Last Token Error, EDGE_AUTH_ERROR: 3, 54, 3ea**, which is found in *edge://sync-internals* under **Credentials**:
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue2.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
