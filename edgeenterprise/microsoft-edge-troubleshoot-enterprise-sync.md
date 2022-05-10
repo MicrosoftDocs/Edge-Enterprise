@@ -16,7 +16,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 
 This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 <!--- maybe delete following ----->
-If a user is experiencing an issue syncing browser data across their devices they can try [resetting sync](edge-learnmore-reset-data-in-cloud.md). If this doesn't work, admins or support staff can use the following guidance to fix a sync issue.
+ If a user is experiencing an issue syncing browser data across their devices they can reset sync in **Settings** > **Profiles** > **Reset** sync. If this doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
