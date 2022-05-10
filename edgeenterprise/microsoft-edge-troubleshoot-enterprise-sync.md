@@ -47,7 +47,7 @@ The next screenshot shows an example of an identity error. The error is **Last T
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-get-signin-status-for-sync.png" alt-text="Get sign in status from sign-internals":::
 
-9. Check to see if there are any policies that might prevent syncing. Go to *edge://policy/* to see the Policies page. The next screenshot shows an example of active policies for a signed in user.
+9. Check to see if there are any policies that might prevent syncing. Go to *edge://policy/* to see the Policies page. The next screenshot shows an example of active policies for a signed in user. This page also shows Policy Precedence and Microsoft Edge Update Policies.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-ts-get-active-policies.png" alt-text="Policies page for signed in user":::
 
