@@ -3,27 +3,27 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
 author: AndreaLBarr
 manager: silvanam
-ms.date: 07/27/2021
+ms.date: 05/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Guidance and tools an Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
+description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot and fix common enterprise sync issues"
 ---
 
 # Diagnose and fix Microsoft Edge sync issues
 
-This article provides troubleshooting guidance for the most commonly encountered sync issues in an Azure Active Directory (Azure AD) environment. It also includes the recommended tools for gathering the logs needed for troubleshooting a sync issue.
-
+This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
+<!--- maybe delete following ----->
 If a user is experiencing an issue syncing browser data across their devices they can try [resetting sync](edge-learnmore-reset-data-in-cloud.md). If this doesn't work, admins or support staff can use the following guidance to fix a sync issue.
 
 > [!NOTE]
 > Applies to Microsoft Edge version 77 or later unless otherwise noted.
 
-## Identity issues versus sync issues
+## Before you begin: identity issues versus sync issues
 
-Before you begin it's important to understand the difference between identity issues and sync issues. A popular use case for maintaining user identity in the browser is to support sync. For this reason, identity issues are frequently confused with sync issues. Understand the difference between identity and sync issue before you start troubleshooting sync.
+It's important to understand the difference between identity issues and sync issues. A popular use case for maintaining user identity in the browser is to support sync. For this reason, identity issues are frequently confused with sync issues. Understand the difference between identity and sync issue before you start troubleshooting sync.
 
 Before you treat an issue as a sync issue, check to see if the user is signed into the browser with a valid account.
 
@@ -31,11 +31,35 @@ The next screenshot shows an example of an identity error. The error is "**Last 
 
 :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue2.png" alt-text="Last Token Error EDGE_AUTH_ERROR: 3,54, 3ea":::
 
+## Basic troubleshooting steps
+
+1. Log in to your Office 365 or Microsoft 365 admin portal and verify that your license is valid.
+2. Log in to your Azure portal and verify that your Azure license is valid.
+3. Sign out your account on all Microsoft Edge browsers on all the computers and/or mobile devices - not just the one you're using.
+4. Make sure you're on the latest version of Microsoft Edge that supports all the sync features (at least 98.0.1108.43 (Official build) (64-bit)).
+5. Sign back into your profile on Microsoft Edge. We recommend that you do a sync reset. For more information, see [Perform a reset to fix a synchronization problem](https://docs.microsoft.com/en-us/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
+6. Verify that your account is enabled for syncing. On a new tab, go to: *edge://sync-internals/*. The Summary section, shown in the next screenshot shows that sync is enabled.
+
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/summary-confirm-sync-working.png" alt-text="Summary from  sync-internals":::
+
+7. Verify that the device you're on is getting sync'ed. Go to *edge://sync-internals/* and select the **Sync Node Browser** tab. Open the **Device info** folder to see what devices are in the sync list.
+8. Check your sign-in status. Go to *edge://sign-in/*. The next screenshot shows the sign-in status for a user.
+
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-get-signin-status-for-sync.png" alt-text="Get sign in status from sign-internals":::
+
+9. Check to see if there are any policies that might prevent syncing. Go to *edge://policy/* to see the Policies page. The next screenshot shows an example of active policies for a signed in user.
+
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-ts-get-active-policies.png" alt-text="Policies page for signed in user":::
+
+
+
+
+
 ## Common sync issues
 
-### Issue: Can't access M365 or Azure Information Protection subscription
+### Issue: Can't access Microsoft 365 or Azure Information Protection subscription
 
-Do you have a previous M365 or Azure Information Protection (AIP) subscription that expired and then replaced with a new subscription? If so, then the tenant ID has changed and the service data needs to be reset. See the instructions for resetting data in the **Cryptographer error encountered** issue.
+Do you have a previous Microsoft 365 or Azure Information Protection (AIP) subscription that expired and then replaced with a new subscription? If so, then the tenant ID has changed and the service data needs to be reset. See the instructions for resetting data in the **Cryptographer error encountered** issue.
 
 ### Issue: “Sync is not available for this account.”
 
@@ -88,12 +112,12 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 4. If the server endpoint is empty, or if server cannot be pinged and a firewall is present in the environment, confirm that the necessary service endpoints are available to the client computer.
 
    - Microsoft Edge sync service endpoints:
-     - [https://edge-enterprise.activity.windows.com](https://edge-enterprise.activity.windows.com)
-     - [https://edge.activity.windows.com](https://edge.activity.windows.com)
+     - `https://edge-enterprise.activity.windows.com`
+     - `https://edge.activity.windows.com`
     - Azure Information Protection endpoints:
-      - [https://api.aadrm.com](https://api.aadrm.com) (for most tenants)
-      - [https://api.aadrm.de](https://api.aadrm.de) (for tenants in Germany)
-      - [https://api.aadrm.cn](https://api.aadrm.cn) (for tenants in China)
+      - `https://api.aadrm.com` (for most tenants)
+      - `https://api.aadrm.de` (for tenants in Germany)
+      - `https://api.aadrm.cn` (for tenants in China)
    - [Windows Notification Service endpoints](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. If the issue still isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
@@ -111,7 +135,7 @@ This error is visible under **Type info** in *edge://sync-internals* and may mea
 
 ### Issue: “Sync has been turned off by your administrator.”
 
-Make sure that the [SyncDisabled policy](./microsoft-edge-policies.md#syncdisabled)  is not set.
+Make sure that the [SyncDisabled policy](./microsoft-edge-policies.md#syncdisabled) isn't set.
 
 ## See also
 
