@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/10/2022
+ms.date: 05/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,12 +20,6 @@ These release notes provide information about new features and non-security upda
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## Version 102.0.1245.7: May 10
-
-### Feature updates
-
-- **Outlook for Microsoft Edge Sidebar.** This sidebar lets users quickly and easily access Outlook Mail and Calendar. Administrators can control the Outlook Sidebar by using the [OutlookHubMenuEnable](/deployedge/microsoft-edge-policies#outlookhubmenuenabled) policy.
-
-- **Microsoft Office for Microsoft Edge Sidebar.** This sidebar lets users quickly and easily access Microsoft Office documents and apps. Administrators can control the Microsoft Office Sidebar by using the [MicrosoftOfficeMenuEnabled](/deployedge/microsoft-edge-policies#microsoftofficemenuenabled) policy.
 
 ### Policy updates
 
