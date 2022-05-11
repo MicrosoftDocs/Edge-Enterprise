@@ -72,10 +72,10 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 
 Admins can use the following group policies to configure and manage Microsoft Edge sync:
 
-- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): Disables data synchronization.  This policy disables cloud synchronization only and has no impact on the RoamingProfileSupportEnabled policy.
+- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): Disables data synchronization.  This policy disables cloud synchronization only and has no affect on the RoamingProfileSupportEnabled policy.
 - [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): Disables saving browsing history and sync and open tabs sync.
 - [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): When this policy is set to disabled, history sync will also be disabled.
-- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): Configure the list of data types that are excluded from synchronization. Use this to limit the type of data uploaded to the Microsoft Edge synchronization service.
+- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): Configure the list of data types that are excluded from synchronization. Use this policy to limit the type of data uploaded to the Microsoft Edge synchronization service.
 - [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): Allow Active Directory (AD) profiles to use on-premises storage. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator.) For more information, see [On-premises sync for Active Directory (AD) users](./microsoft-edge-on-premises-sync.md).
 - [ForceSync](/deployedge/microsoft-edge-policies#forcesync): Force synchronization of browser data and don't show the sync consent prompt. Users can't disable this policy.
 
@@ -86,7 +86,7 @@ Configuration options for Microsoft Edge sync are available through the Azure In
 > [!CAUTION]
 > Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. Any onboarding control policy that's used to restrict Microsoft Edge sync will also restrict other applications from protecting content using AIP.
 
-To restrict sync to certain set of users, you can enable the [AIP onboarding control policy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) for those users. If sync is still not available after ensuring that all necessary users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
+To restrict sync to certain set of users, you can enable the [AIP onboarding control policy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) for those users. If sync still isn't available after all the necessary users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
