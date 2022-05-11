@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/10/2022
+ms.date: 05/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,8 +33,6 @@ Microsoft Edge sync enables users to access their browsing data across all their
 - Extensions
 - Open tabs (available in Microsoft Edge version 88 or later)
 - History (available in Microsoft Edge version 88 or later)
-<!---- maybe delete the following because it's covered in troubleshooting --------->
-Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
 
 > [!NOTE]
 > Additional device connectivity and configuration data (such as device name, device make,  and device model) is uploaded to support sync functionality.
@@ -42,6 +40,9 @@ Sync functionality is enabled via user consent and users can turn sync on or off
 ### Sync functionality and user sync configuration
 
 After sync is configured, sync functionality is enabled via user consent. Users can turn sync on or off for each of the supported data types. For more information, see [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/en-us/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+
+> [!NOTE]
+> If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
 
 ## Prerequisites
 
@@ -60,6 +61,10 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
   - For customers that only have Azure AD P1 or P2, it’s required to enable the Azure AD Enterprise State Roaming feature to use Microsoft Edge Enterprise Sync. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
+
+  > [!NOTE]
+  > Business Basic is supported, but some existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP.
+
 - Office 365 E1 and above
 - All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, Microsoft 365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
 
@@ -79,7 +84,7 @@ Admins can use the following group policies to configure and manage Microsoft Ed
 Configuration options for Microsoft Edge sync are available through the Azure Information Protection (AIP) service. When AIP is enabled for a tenant, all users can sync Microsoft Edge data, regardless of licensing. For more information and instructions on how to enable AIP, see [Activating the protection service from Azure Information Protection (AIP)](/azure/information-protection/activate-office365).
 
 > [!CAUTION]
-> Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. In addition, any onboarding control policy used to restrict Microsoft Edge sync will also restrict other applications from protecting content using AIP.
+> Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. Any onboarding control policy that's used to restrict Microsoft Edge sync will also restrict other applications from protecting content using AIP.
 
 To restrict sync to certain set of users, you can enable the [AIP onboarding control policy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) for those users. If sync is still not available after ensuring that all necessary users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
 
