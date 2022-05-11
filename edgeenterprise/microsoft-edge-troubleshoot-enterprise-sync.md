@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
 author: AndreaLBarr
 manager: silvanam
-ms.date: 05/10/2022
+ms.date: 05/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ This article provides troubleshooting guidance for the most common sync issues i
  If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Reset** sync. If this doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
 
 > [!NOTE]
-> Applies to Microsoft Edge version 77 or later unless otherwise noted.
+> Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
 
 ## Before you begin: identity issues versus sync issues
 
@@ -33,8 +33,8 @@ The next screenshot shows an example of an identity error. The error is **Last T
 
 ## Basic troubleshooting steps
 
-1. Log on to your Office 365 or Microsoft 365 admin portal and verify that your license is valid.
-2. Log on to your Azure portal and verify that your Azure license is valid.
+1. Sign in your Office 365 or Microsoft 365 admin portal and verify that your license is valid.
+2. Sign in your Azure portal and verify that your Azure license is valid.
 3. Sign out your account on all Microsoft Edge browsers on all the computers and/or mobile devices - not just the one you're using.
 4. Make sure you're on the latest version of Microsoft Edge that supports all the sync features (at least 98.0.1108.43 (Official build) (64-bit)).
 5. Sign back into your profile on Microsoft Edge. We recommend that you do a sync reset. For more information, see [Perform a reset to fix a synchronization problem](/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
@@ -64,8 +64,8 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 > [!NOTE]
 > Because the source of this error usually needs a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin.
 
-1. Verify that the enterprise tenant has a supported M365 subscription. The current list of available subscription types is [provided here](https://support.microsoft.com/en-us/office/microsoft-365-and-office-customer-support-96162163-b3aa-498b-bbbb-5e757b0f31da?msclkid=6c36af5ccff311ec864392cbe22a9839). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
-2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP) available. If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Activating the protection service from Azure Information Protection](/azure/information-protection/activate-service).
+1. Verify that the enterprise tenant has one of the supported subscriptions in [Configure Microsoft Edge enterprise sync](microsoft-edge-enterprise-sync). To find out which subscription you have, see [What subscription do I have?](/microsoft-365/admin/admin-overview/what-subscription-do-i-have?view=o365-worldwide). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP). If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Activating the protection service from Azure Information Protection](/azure/information-protection/activate-service).
 3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). If you need to enable ESR, see these instructions: [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
    > [!NOTE]
