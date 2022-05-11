@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/09/2022
+ms.date: 05/10/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -169,6 +169,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
+|[GuidedSwitchEnabled](#guidedswitchenabled)|Guided Switch Enabled|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
@@ -465,6 +466,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
+|[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
@@ -6634,6 +6636,71 @@ If you enable this policy, but don't configure or disable it, the policy will be
 "Default"
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### GuidedSwitchEnabled
+
+  #### Guided Switch Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 103 or later
+
+  #### Description
+
+  Allows Microsoft Edge to prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
+
+If you enable this policy, you'll be prompted to switch to another account if the current profile doesn't work for the requesting link.
+
+If you disable this policy, you won't be prompted to switch to another account when there's a profile and link mismatch.
+
+If this policy isn't configured, guided switch is turned on by default. A user can override this value in the browser settings.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: GuidedSwitchEnabled
+  - GP name: Guided Switch Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: GuidedSwitchEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: GuidedSwitchEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -18465,8 +18532,6 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
 Policy options mapping:
 
 * StandardMode (0) = Standard mode
@@ -22958,6 +23023,63 @@ If you disable or don't configure this policy, the Reload in Internet Explorer m
 
 ```
 0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerZoomDisplay
+
+  #### Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 103 or later
+
+  #### Description
+
+  Lets you display zoom in IE Mode tabs similar to how it was displayed in Internet Explorer, where the DPI scale of the display is factored in.
+
+For example, if you have a page zoomed to 200% on a 100 DPI scale display and you change the display to 150 DPI, Microsoft Edge would still display the zoom as 200%. However, Internet Explorer factors in the DPI scale and displays 300%.
+
+If you enable this policy, zoom values will be displayed with the DPI scale included for IE Mode tabs.
+
+If you disable or don't configure this policy, zoom values will be displayed without DPI scale included for IE Mode tabs
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerZoomDisplay
+  - GP name: Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerZoomDisplay
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
 ```
 
   
