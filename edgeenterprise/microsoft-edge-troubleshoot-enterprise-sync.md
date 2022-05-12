@@ -16,7 +16,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 
 This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
- If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Reset** sync. If this doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
+ If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Reset** sync. If the sync reset doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
@@ -71,7 +71,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
    > [!NOTE]
    > ESR doesn't need to stay on. You can turn off ESR if this step fixes the issue.
 
-4. Confirm that Azure Information Protection is not scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell) . The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
+4. Confirm that Azure Information Protection isn't scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell) . The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
@@ -128,11 +128,11 @@ This error is visible under **Type info** in *edge://sync-internals* and might m
 
 `"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered".`
 
-Uae the following steps to fix this issue:
+Use the following steps to fix this issue:
 
 1. Restart Microsoft Edge and go to *edge://sync-internals*. Look at the **AAD Account Key Status** section to see if any of the following messages are present:
    - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
-   - "No permissions" in "Last MIP Result": It is possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
+   - "No permissions" in "Last MIP Result": It's possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
    - Other errors may mean there's a server configuration issue.
 2. If a data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
 
