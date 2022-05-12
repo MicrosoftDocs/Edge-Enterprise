@@ -143,5 +143,6 @@ Make sure that the [SyncDisabled policy](./microsoft-edge-policies.md#syncdisabl
 ## See also
 
 - [Microsoft Edge Enterprise Sync](microsoft-edge-enterprise-sync.md)
+- [Microsoft Edge enterprise sync FAQ](microsoft-edge-enterprise-sync-faq.md)
 - [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
