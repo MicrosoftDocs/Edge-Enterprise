@@ -131,7 +131,7 @@ This error is visible under **Type info** in *edge://sync-internals* and might m
 Use the following steps to fix this issue:
 
 1. Restart Microsoft Edge and go to *edge://sync-internals*. Look at the **AAD Account Key Status** section to see if any of the following messages are present:
-   - Last MIP Result = "Success": the cryptographer error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
+   - Last MIP Result = "Success": This error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
    - Last MIP Result = "No permissions": It's possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
    - Other errors may mean there's a server configuration issue.
 2. If a data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
