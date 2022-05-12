@@ -64,14 +64,14 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 > [!NOTE]
 > Because the source of this error usually needs a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin.
 
-1. Verify that the enterprise tenant has one of the supported subscriptions in [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync). To find out which subscription you have, see [What subscription do I have?](/microsoft-365/admin/admin-overview/what-subscription-do-i-have?view=o365-worldwide). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
+1. Verify that the enterprise tenant has one of the supported subscriptions in [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync). To find out which subscription you have, see [What subscription do I have?](/microsoft-365/admin/admin-overview/what-subscription-do-i-have). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
 2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP). If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Activating the protection service from Azure Information Protection](/azure/information-protection/activate-service).
 3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). If you need to enable ESR, see these instructions: [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
    > [!NOTE]
    > ESR doesn't need to stay on. You can turn off ESR if this step fixes the issue.
 
-4. Confirm that Azure Information Protection isn't scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell) . The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
+4. Confirm that Azure Information Protection isn't scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell) . The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
@@ -90,9 +90,9 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. Scoping can be removed with the [Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell applet.
+   If scoping is enabled, the affected user should either be added to the security group for the scope, or the scope should be removed. Scoping can be removed with the [Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) PowerShell applet.
 
-5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AIPServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps) PowerShell cmdlet shows the status of the service.
+5. Confirm that the IPCv3Service is turned on in the tenant. The [Get-AIPServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) PowerShell cmdlet shows the status of the service.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Check to see if IPCv3Service is enabled.":::
 
