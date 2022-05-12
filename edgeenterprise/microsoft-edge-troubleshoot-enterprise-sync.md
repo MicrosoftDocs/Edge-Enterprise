@@ -107,7 +107,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 3. Try pinging the server endpoint. The server endpoint for a client is available in *edge://sync-internals*. The next screenshot shows endpoint information under **Environment Info**.
 
-   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-endpoint-info.png" alt-text="Endpoint information":::
+   :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-endpoint-info2.png" alt-text="Endpoint information":::
 
 4. If the server endpoint is empty, or if server can't be pinged because there's a firewall in the environment, confirm that the necessary service endpoints are available to the client device.
 
