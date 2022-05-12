@@ -16,7 +16,7 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 
 This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
 
-If you're not an admin, use the following article as a guide to learn how to sign-in and sync Microsoft Edge across devices: [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+If you're not an admin, use this article as a guide to learn how to sign-in and sync Microsoft Edge across devices: [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
@@ -73,7 +73,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 
 Admins can use the following group policies to configure and manage Microsoft Edge sync:
 
-- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): Disables data synchronization.  This policy disables cloud synchronization only and has no affect on the RoamingProfileSupportEnabled policy.
+- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): Disables data synchronization.  This policy disables cloud synchronization only and has no effect on the RoamingProfileSupportEnabled policy.
 - [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): Disables saving browsing history and sync and open tabs sync.
 - [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): When this policy is set to disabled, history sync will also be disabled.
 - [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): Configure the list of data types that are excluded from synchronization. Use this policy to limit the type of data uploaded to the Microsoft Edge synchronization service.
