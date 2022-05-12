@@ -71,7 +71,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
    > [!NOTE]
    > ESR doesn't need to stay on. You can turn off ESR if this step fixes the issue.
 
-4. Confirm that Azure Information Protection isn't scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell) . The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
+4. Confirm that Azure Information Protection isn't scoped via an onboarding policy. You can use the [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy) PowerShell cmdlet to see if scoping is enabled. Make sure the aIPService PowerShell monitor is installed. You can get it here: [Install the AIPService PowerShell module for Azure Information Protection](/azure/information-protection/install-powershell). The next two examples show an unscoped configuration and a configuration scoped to a specific security group.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
@@ -131,8 +131,8 @@ This error is visible under **Type info** in *edge://sync-internals* and might m
 Use the following steps to fix this issue:
 
 1. Restart Microsoft Edge and go to *edge://sync-internals*. Look at the **AAD Account Key Status** section to see if any of the following messages are present:
-   - "Success" in "Last MIP Result": the cryptographer error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
-   - "No permissions" in "Last MIP Result": It's possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
+   - Last MIP Result = "Success": the cryptographer error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
+   - Last MIP Result = "No permissions": It's possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
    - Other errors may mean there's a server configuration issue.
 2. If a data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
 
