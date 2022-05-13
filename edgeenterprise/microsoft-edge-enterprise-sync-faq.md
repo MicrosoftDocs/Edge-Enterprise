@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 05/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ The data is encrypted in transport using TLS 1.2 or greater. All data types are 
 
 ### Why don’t open tab and history data have more client-side encryption?
 
-To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process would not be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) or [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) policies.
+To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process wouldn't be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) or [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) policies.
 
 ### Can tenant admins bring their own key?
 
@@ -40,7 +40,7 @@ No.
 
 ### What terms of service does enterprise sync fall under?
 
-Terms of service for Microsoft Edge sync falls under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Azure AD subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
+Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Azure AD subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
 
 ### Does Microsoft Edge support Government Community Cloud (GCC) High compliance?
 
@@ -48,13 +48,13 @@ Not today. For customers in the GCC High cloud, Microsoft Edge sync is disabled.
 
 ## Applying Sync
 
-### Why isn’t Microsoft Edge sync supported in all M365 subscriptions?
+### Why isn’t Microsoft Edge sync supported in all Microsoft 365 subscriptions?
 
-Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which is not available in all M365 subscriptions.
+Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which isn't available in all Microsoft 365 subscriptions.
 
 ### Is Microsoft Edge sync based on Enterprise State Roaming?
 
-No. ESR can be used to enable sync, but Microsoft Edge sync is not a part of ESR. For more information, see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync) and [Microsoft Edge and Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
+No. ESR can be used to enable sync, but Microsoft Edge sync isn't a part of ESR. For more information, see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync) and [Microsoft Edge and Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
 
 ### Will Microsoft Edge ever support syncing between Microsoft Edge and IE?
 
@@ -62,7 +62,7 @@ There are no plans to support this syncing. If you still need IE in your environ
 
 ### Will Microsoft Edge sync with Microsoft Edge Legacy?
 
-No, it won't. We believe connecting these two ecosystems will lead to compromises in the reliability of sync in the Microsoft Edge. We will ensure that existing data is migrated to the Microsoft Edge. Users will also be able to import data from browser of their choice, which also means that Microsoft Edge won't have a way to sync with IE.
+No, it won't. We believe connecting these two ecosystems will lead to compromises in the reliability of sync in the Microsoft Edge. We'll ensure that existing data is migrated to the Microsoft Edge. Users will also be able to import data from browser of their choice, which also means that Microsoft Edge won't have a way to sync with IE.
 
 ## Managing Sync
 
