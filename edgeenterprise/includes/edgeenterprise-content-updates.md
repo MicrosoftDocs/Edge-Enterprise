@@ -2,6 +2,18 @@
 
 
 
+## Week of May 09, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/9/2022 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
+| 5/9/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 5/10/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 5/10/2022 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 5/11/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+
+
 ## Week of May 02, 2022
 
 
