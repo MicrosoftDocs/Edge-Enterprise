@@ -15,8 +15,8 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 # Configure Microsoft Edge enterprise sync
 
 This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
-
-If you're not an admin, use  [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674) as a guide to learn how to sign-in and sync Microsoft Edge across devices.
+<!---
+If you're not an admin, use  [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674) as a guide to learn how to sign-in and sync Microsoft Edge across devices. ---->
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
@@ -39,7 +39,7 @@ Microsoft Edge sync enables users to access their browsing data across all their
 
 ### Sync functionality and user sync configuration
 
-After sync is configured, sync functionality is enabled via user consent. Users can turn sync on or off for each of the supported data types. For more information, see [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/en-us/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+After sync is configured, sync functionality is enabled via user consent. Users can turn sync on or off for each of the supported data types. For more information, see [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
