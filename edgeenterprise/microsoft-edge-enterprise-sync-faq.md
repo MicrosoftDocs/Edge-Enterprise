@@ -3,26 +3,26 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/13/2022
+ms.date: 05/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Frequently asked questions for Microsoft Edge enterprise sync."
+description: "Frequently asked questions about Microsoft Edge enterprise sync."
 ---
 
 # Microsoft Edge enterprise sync FAQ
 
 This article answers frequently asked questions about enterprise sync for Microsoft Edge version 77 or later.
 
-## Security and Server/Data Compliance
+## Security and Server/Data compliance
 
 ### Is the synced data encrypted?
 
-The data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern) policy.
+Yes, the data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except those used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern) policy.
 
-### Why don’t open tab and history data have more client-side encryption?
+### Why isn't there more client-side encryption on open tab and history data?
 
 To reduce resource utilization on end-user devices, history data is generated server-side based on open tab roaming data. This process wouldn't be possible with client-side encryption of this data. To disable open tab and history sync, apply the [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) or [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) policies.
 
@@ -32,7 +32,7 @@ Yes, through [Azure Information Protection](https://azure.microsoft.com/servic
 
 ### Where is Microsoft Edge sync data stored?
 
-Synced data for Azure AD accounts is stored in secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
+Synced data for Azure AD accounts is stored on secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
 
 ### Does the data ever leave Microsoft's cloud, aside from syncing to Microsoft Edge?
 
@@ -50,7 +50,7 @@ Not today. For customers in the GCC High cloud, Microsoft Edge sync is disabled.
 
 ### Why isn’t Microsoft Edge sync supported in all Microsoft 365 subscriptions?
 
-Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which isn't available in all Microsoft 365 subscriptions.
+Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which isn't available for all Microsoft 365 subscriptions.
 
 ### Is Microsoft Edge sync based on Enterprise State Roaming?
 
