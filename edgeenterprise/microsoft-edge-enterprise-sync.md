@@ -16,7 +16,7 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 
 This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
 
-If you're not an admin, use this article as a guide to learn how to sign-in and sync Microsoft Edge across devices: [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+If you're not an admin, use  [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674) as a guide to learn how to sign-in and sync Microsoft Edge across devices.
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
