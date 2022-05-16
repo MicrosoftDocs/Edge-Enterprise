@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/12/2022
+ms.date: 05/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
