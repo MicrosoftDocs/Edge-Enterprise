@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
 author: AndreaLBarr
 manager: silvanam
-ms.date: 05/13/2022
+ms.date: 05/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
