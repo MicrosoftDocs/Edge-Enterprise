@@ -3,7 +3,7 @@ title: "On-premises sync for Active Directory (AD) users"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/16/2022
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -58,7 +58,7 @@ On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multip
 Because on-premises sync works by moving a user data file between computers, on-premises sync doesn't sync changes between simultaneous sessions. For this reason, on-premises sync works best when used on one computer at a time. If there are simultaneous on-premises sessions running, data on any of the computers may be unexpectedly overwritten by data from another computer the next time you start a browser session.
 
 > [!NOTE]
-> Microsoft Edge locks the **profile.pb** file when on-premises sync is enabled. If folder redirection is used to share a single **profile.pb** file between different computers, then only one instance of Microsoft Edge using that file can be started.
+> Microsoft Edge locks the **profile.pb** file when on-premises sync is enabled. If folder redirection is used to share a single **profile.pb** file between different computers, then only one instance of Microsoft Edge that uses the shared file can be started.
 
 ### Using other sync policies with on-premises sync
 
