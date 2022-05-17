@@ -24,15 +24,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[GuidedSwitchEnabled](#guidedswitchenabled)|Guided Switch Enabled|
-|[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
-
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -478,6 +469,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
 |[MAUEnabled](#mauenabled)|Always use Microsoft AutoUpdate as the updater for Microsoft Edge|
@@ -496,6 +488,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
@@ -8084,6 +8077,8 @@ Use the preceding information when configuring this policy.
 
   This policy setting lets you configure when efficiency mode will become active. By default, efficiency mode will be active when the device is unplugged and the battery is low. On devices with no battery, the default is for efficiency mode to never become active.
 
+Individual sites may be blocked from participating in efficiency mode by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
+
 Set this policy to 'AlwaysActive' and efficiency mode will always be active.
 
 Set this policy to 'NeverActive' and efficiency mode will never become active.
@@ -10038,7 +10033,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by sleeping tabs.
+  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by sleeping tabs. Sites in this list are also excluded from other performance optimizations like efficiency mode and tab discard.
 
 If the policy [SleepingTabsEnabled](#sleepingtabsenabled) is disabled, this list is not used and no sites will be put to sleep automatically.
 
@@ -10178,6 +10173,8 @@ Tabs are only put to sleep automatically when the policy [SleepingTabsEnabled](#
 If you don't configure this policy, users can choose the timeout value.
 
 Policy options mapping:
+
+* 30Seconds (30) = 30 seconds of inactivity
 
 * 5Minutes (300) = 5 minutes of inactivity
 
@@ -18541,8 +18538,6 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
 Policy options mapping:
 
 * StandardMode (0) = Standard mode
@@ -23237,6 +23232,65 @@ If you disable or don't configure this policy, pages will be isolated on a per-S
 
   [Back to top](#microsoft-edge---policies)
 
+  ### LiveCaptionsAllowed
+
+  #### Live captions allowed
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 103 or later
+
+  #### Description
+
+  Allow users to turn the Live captions feature on or off.
+
+Live captions is an accessibility feature that converts speech from the audio that plays in Microsoft Edge in to text and shows this text in a separate window. The entire process happens on the device and no audio or caption text ever leaves the device.
+
+If you enable or don't configure this policy, users can turn this feature on or off at edge://settings/accessibility.
+
+If you disable this policy, users will not be able to turn this accessibility feature on. If speech recognition files have been downloaded previously, they will be deleted from the device in 30 days. We recommend avoiding this option unless it's needed in your environment.
+
+If users choose to turn on Live captions, speech recognition files (approximately 100 megabytes) will be downloaded to the device on first run and then periodically to improve performance and accuracy. These files will be deleted after 30 days.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: LiveCaptionsAllowed
+  - GP name: Live captions allowed
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: LiveCaptionsAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### LocalBrowserDataShareEnabled
 
   #### Enable Windows to search local Microsoft Edge browsing data
@@ -24554,6 +24608,70 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### OriginAgentClusterDefaultEnabled
+
+  #### Origin-keyed agent clustering enabled by default
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 103 or later
+
+  #### Description
+
+  The Origin-Agent-Cluster: HTTP header controls whether a document is isolated in an origin-keyed agent cluster or in a site-keyed agent cluster. This has security implications because an origin-keyed agent cluster allows isolating documents by origin. The consequence of this for developers is that the document.domain accessor can no longer be set when origin-keyed agent clustering is enabled.
+
+If you enable or don't configure this policy, documents without the Origin-Agent-Cluster: header will be assigned to origin-keyed agent clustering by default. On these documents, the document.domain accessor will not be settable.
+
+If you disable this policy, documents without the Origin-Agent-Cluster: header will be assigned to site-keyed agent clusters by default. On these documents, the document.domain accessor will be settable.
+
+See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/fwlink/?linkid=2191896) for additional details.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OriginAgentClusterDefaultEnabled
+  - GP name: Origin-keyed agent clustering enabled by default
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OriginAgentClusterDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: OriginAgentClusterDefaultEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
