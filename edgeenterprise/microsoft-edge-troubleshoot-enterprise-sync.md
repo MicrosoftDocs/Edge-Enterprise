@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
 author: AndreaLBarr
 manager: silvanam
-ms.date: 05/16/2022
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 
 This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
- If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Reset** sync. If the sync reset doesn't work, an admin or support staff member can use the following guidance to fix a sync issue.
+ If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Sync** > **Reset sync**. If the sync reset doesn't work, an admin or support staff member can use the guidance in this article to fix a sync issue.
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
