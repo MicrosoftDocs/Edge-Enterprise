@@ -20,7 +20,7 @@ This article describes the steps for resetting your Microsoft Edge data in the c
 > This article applies to Microsoft Edge version 88 or later unless otherwise noted.
 
 > [!NOTE]
-> If your tenant is in a GCC Mod environment, your tenant admin will need to file a support request with Microsoft to reset your data.
+> If your tenant is in a Government Community Cloud (GCC) Moderate environment, your tenant admin will need to file a support request with Microsoft to reset your data.
 
 ## Overview
 
