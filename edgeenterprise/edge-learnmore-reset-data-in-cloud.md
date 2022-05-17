@@ -48,7 +48,7 @@ Use the following steps to do a reset.
 If you want to remove your data from Microsoft’s cloud, use the following steps to do a reset.
 
 1. Stop synchronization on devices except the device you're performing the reset on. In Microsoft Edge, select **Settings** > **Profiles** > **Sync** > **Turn off sync**.  
-2. After you stop synchronization, select **Settings** > **Profiles** > **Sync** > **Reset sync**. In the **Reset sync** dialog box, DO NOT choose "Resume sync on this device after resetting sync", and then select **Reset**.
+2. After you stop synchronization, select **Settings** > **Profiles** > **Sync** > **Reset sync**. In the **Reset sync** dialog box, clear "Resume sync on this device after resetting sync", and then select **Reset**.
 
 ## What to expect during and after a data reset
 
