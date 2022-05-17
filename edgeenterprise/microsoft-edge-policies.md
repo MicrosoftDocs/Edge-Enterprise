@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/11/2022
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -16,13 +16,21 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 # Microsoft Edge - Policies
 
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
-
 For information about an additional set of policies used to control how and when Microsoft Edge is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 
 ## Available policies
 
@@ -18538,6 +18546,8 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
+Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
 Policy options mapping:
 
 * StandardMode (0) = Standard mode
@@ -18547,6 +18557,8 @@ Policy options mapping:
 * StrictMode (2) = Strict mode
 
 Use the preceding information when configuring this policy.
+
+
 
   #### Supported features:
 
