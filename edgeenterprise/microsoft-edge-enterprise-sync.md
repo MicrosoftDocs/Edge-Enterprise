@@ -83,14 +83,16 @@ Admins can use the following group policies to configure and manage Microsoft Ed
 - [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): Allow Active Directory (AD) profiles to use on-premises storage. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator.) For more information, see [On-premises sync for Active Directory (AD) users](./microsoft-edge-on-premises-sync.md).
 - [ForceSync](/deployedge/microsoft-edge-policies#forcesync): Force synchronization of browser data and don't show the sync consent prompt. Users can't disable this policy.
 
-## Configure Microsoft Edge sync
+## Use Azure Information Protection to configure Microsoft Edge sync
 
-Configuration options for Microsoft Edge sync are available through the Azure Information Protection (AIP) service. When AIP is enabled for a tenant, all users can sync Microsoft Edge data, regardless of licensing. For more information and instructions on how to enable AIP, see [Activating the protection service from Azure Information Protection (AIP)](/azure/information-protection/activate-office365).
+Configuration options for Microsoft Edge sync are available through the Azure Information Protection (AIP) service. When AIP is enabled for a tenant, all users can sync Microsoft Edge data, regardless of licensing. The protection service might be activated automatically, by using PowerShell, or by using the Azure portal. For more information and instructions on how to enable AIP, see [Activating the protection service from Azure Information Protection (AIP)](/azure/information-protection/activate-office365).
 
 > [!CAUTION]
 > Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. Any onboarding control policy that's used to restrict Microsoft Edge sync will also restrict other applications from protecting content using AIP.
 
-You can use the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) cmdlet to set the policy that controls user on-boarding for Azure Information Protection. If sync still isn't available after all the specified users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
+### Control user onboarding for a phased deployment
+
+You can use the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) cmdlet to set the policy that controls user on-boarding for Azure Information Protection. If sync still isn't available after all the specified users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet. For more information, see [Configuring onboarding controls for a phased deployment](/azure/information-protection/activate-service#configuring-onboarding-controls-for-a-phased-deployment).
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
