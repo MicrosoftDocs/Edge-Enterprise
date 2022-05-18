@@ -57,7 +57,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 - Azure AD Premium (P1 or P2)
   
   > [!NOTE]
-  > Customers that only have Azure AD P1 or P2 need to enable Azure AD Enterprise State Roaming to provide AIP, which is required for Microsoft Edge sync. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
+  > Customers that only have Azure AD P1 or P2 must enable Azure AD Enterprise State Roaming (ESR). Microsoft Edge sync isn’t part of ESR, but ESR is required to provide the AIP functionality that’s needed for the P1 and P2 configurations. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 
@@ -96,7 +96,7 @@ You can use the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipse
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
-Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, the Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## See also
 
