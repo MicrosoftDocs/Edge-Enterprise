@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/16/2022
+ms.date: 05/18/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,8 +15,6 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 # Configure Microsoft Edge enterprise sync
 
 This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
-<!---
-If you're not an admin, use  [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674) as a guide to learn how to sign-in and sync Microsoft Edge across devices. ---->
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
@@ -42,7 +40,7 @@ Microsoft Edge sync enables users to access their browsing data across all their
 After sync is configured, sync functionality is enabled via user consent. Users can turn sync on or off for each of the supported data types. For more information, see [Sign in to sync Microsoft Edge across devices](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
-> If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Reset sync**.
+> If a user is experiencing a sync issue, they might need to reset sync in **Settings** > **Profiles** > **Sync** > **Reset sync**.
 
 ## Prerequisites
 
@@ -67,7 +65,12 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
   > Business Basic is supported, but some existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant.
 
 - Office 365 E1 and above
-- All EDU subscriptions (Microsoft Apps for Students or Faculty, Exchange Online for Students or Faculty, O365 A1 or above, Microsoft 365 A1 or above, or Azure Information Protection P1 or P2 for Students or Faculty)
+- All EDU subscriptions, including:
+  - Microsoft Apps for Students or Faculty
+  - Exchange Online for Students or Faculty
+  - O365 A1 or above
+  - Microsoft 365 A1 or above
+  - Azure Information Protection P1 or P2 for Students or Faculty
 
 ## Sync group policies
 
@@ -87,7 +90,7 @@ Configuration options for Microsoft Edge sync are available through the Azure In
 > [!CAUTION]
 > Activating Azure Information Protection will also allow other applications, such as Microsoft Word or Microsoft Outlook, to protect content with AIP. Any onboarding control policy that's used to restrict Microsoft Edge sync will also restrict other applications from protecting content using AIP.
 
-To restrict sync to certain set of users, you can enable the [AIP onboarding control policy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) for those users. If sync still isn't available after all the necessary users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
+You can enable the [AIP onboarding control policy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?preserve-view=true&view=azureipps) to onboard a set of users for sync. If sync still isn't available after all the specified users are onboarded, ensure that the IPCv3Service is enabled using the [Get-AIPServiceIPCv3](/powershell/module/aipservice/get-aipserviceipcv3?preserve-view=true&view=azureipps) PowerShell cmdlet.
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
