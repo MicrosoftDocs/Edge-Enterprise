@@ -1,4 +1,4 @@
-# last revised 05/17/2022
+# last revised 05/19/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -82,7 +82,7 @@
 # CONFIGURE
 - name: Configure Microsoft Edge
   items:
-   - name: Configure for Windows
+   - name: Configure for Windows with group policies
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
