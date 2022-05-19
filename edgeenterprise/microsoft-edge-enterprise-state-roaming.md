@@ -3,7 +3,7 @@ title: "Microsoft Edge and Enterprise State Roaming"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 05/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -58,7 +58,7 @@ We will provide control and visibility over who syncs settings in your organizat
 
 ### Management
 
-Admins will be able to control which members in your organization can enable sync. See [Configure Microsoft Edge sync](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync) and [Sync group policies](microsoft-edge-enterprise-sync.md#sync-group-policies). Additionally, users can turn sync on/off for each of their devices as well as toggle each data attribute individually for sync.
+Admins will be able to control which members in your organization can enable sync. See [Use Azure Information Protection to configure Microsoft Edge sync](microsoft-edge-enterprise-sync.md#use-azure-information-protection-to-configure-microsoft-edge-sync) and [Sync group policies](microsoft-edge-enterprise-sync.md#sync-group-policies). Additionally, users can turn sync on/off for each of their devices as well as toggle each data attribute individually for sync.
 
 ### Key management
 
