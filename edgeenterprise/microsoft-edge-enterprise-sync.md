@@ -21,7 +21,7 @@ This article explains how admins can configure Microsoft Edge to sync user favor
 
 ## Introduction
 
-Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. The following data can be synchronized:
+Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. Users can sync the following data:
 
 - Favorites
 - Passwords
