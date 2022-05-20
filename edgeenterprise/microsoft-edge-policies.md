@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/27/2022
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -16,7 +16,6 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 # Microsoft Edge - Policies
 
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
-
 For information about an additional set of policies used to control how and when Microsoft Edge is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
@@ -26,11 +25,12 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new and deprecated policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 
 ## Available policies
 
@@ -177,6 +177,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
+|[GuidedSwitchEnabled](#guidedswitchenabled)|Guided Switch Enabled|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
@@ -473,8 +474,10 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
+|[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
 |[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
 |[MAUEnabled](#mauenabled)|Always use Microsoft AutoUpdate as the updater for Microsoft Edge|
@@ -493,6 +496,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
@@ -542,7 +546,7 @@ These tables list all of the browser-related group policies available in this re
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow recommendations and promotional notifications from Microsoft Edge|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
 |[SitePerProcess](#siteperprocess)|Enable site isolation for every site|
 |[SiteSafetyServicesEnabled](#sitesafetyservicesenabled)|Allow users to configure Site safety services|
@@ -570,6 +574,7 @@ These tables list all of the browser-related group policies available in this re
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
+|[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 |[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
 |[UserDataDir](#userdatadir)|Set the user data directory|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Limits the number of user data snapshots retained for use in case of emergency rollback|
@@ -6645,6 +6650,71 @@ If you enable this policy, but don't configure or disable it, the policy will be
 
   [Back to top](#microsoft-edge---policies)
 
+  ### GuidedSwitchEnabled
+
+  #### Guided Switch Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 103 or later
+
+  #### Description
+
+  Allows Microsoft Edge to prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
+
+If you enable this policy, you'll be prompted to switch to another account if the current profile doesn't work for the requesting link.
+
+If you disable this policy, you won't be prompted to switch to another account when there's a profile and link mismatch.
+
+If this policy isn't configured, guided switch is turned on by default. A user can override this value in the browser settings.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: GuidedSwitchEnabled
+  - GP name: Guided Switch Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: GuidedSwitchEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: GuidedSwitchEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ImplicitSignInEnabled
 
   #### Enable implicit sign-in
@@ -8014,6 +8084,8 @@ Use the preceding information when configuring this policy.
   #### Description
 
   This policy setting lets you configure when efficiency mode will become active. By default, efficiency mode will be active when the device is unplugged and the battery is low. On devices with no battery, the default is for efficiency mode to never become active.
+
+Individual sites may be blocked from participating in efficiency mode by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
 Set this policy to 'AlwaysActive' and efficiency mode will always be active.
 
@@ -9969,7 +10041,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by sleeping tabs.
+  Define a list of sites, based on URL patterns, that are not allowed to be put to sleep by sleeping tabs. Sites in this list are also excluded from other performance optimizations like efficiency mode and tab discard.
 
 If the policy [SleepingTabsEnabled](#sleepingtabsenabled) is disabled, this list is not used and no sites will be put to sleep automatically.
 
@@ -10109,6 +10181,8 @@ Tabs are only put to sleep automatically when the policy [SleepingTabsEnabled](#
 If you don't configure this policy, users can choose the timeout value.
 
 Policy options mapping:
+
+* 30Seconds (30) = 30 seconds of inactivity
 
 * 5Minutes (300) = 5 minutes of inactivity
 
@@ -18464,7 +18538,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  This policy lets you enhance the security state in Microsoft Edge. 
+  This policy lets you enhance the security state in Microsoft Edge.
 
 If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
 
@@ -18483,6 +18557,8 @@ Policy options mapping:
 * StrictMode (2) = Strict mode
 
 Use the preceding information when configuring this policy.
+
+
 
   #### Supported features:
 
@@ -22971,6 +23047,63 @@ If you disable or don't configure this policy, the Reload in Internet Explorer m
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerZoomDisplay
+
+  #### Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 103 or later
+
+  #### Description
+
+  Lets you display zoom in IE Mode tabs similar to how it was displayed in Internet Explorer, where the DPI scale of the display is factored in.
+
+For example, if you have a page zoomed to 200% on a 100 DPI scale display and you change the display to 150 DPI, Microsoft Edge would still display the zoom as 200%. However, Internet Explorer factors in the DPI scale and displays 300%.
+
+If you enable this policy, zoom values will be displayed with the DPI scale included for IE Mode tabs.
+
+If you disable or don't configure this policy, zoom values will be displayed without DPI scale included for IE Mode tabs
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerZoomDisplay
+  - GP name: Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerZoomDisplay
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### IntranetRedirectBehavior
 
   #### Intranet Redirection Behavior
@@ -23107,6 +23240,65 @@ If you disable or don't configure this policy, pages will be isolated on a per-S
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### LiveCaptionsAllowed
+
+  #### Live captions allowed
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 103 or later
+
+  #### Description
+
+  Allow users to turn the Live captions feature on or off.
+
+Live captions is an accessibility feature that converts speech from the audio that plays in Microsoft Edge in to text and shows this text in a separate window. The entire process happens on the device and no audio or caption text ever leaves the device.
+
+If you enable or don't configure this policy, users can turn this feature on or off at edge://settings/accessibility.
+
+If you disable this policy, users will not be able to turn this accessibility feature on. If speech recognition files have been downloaded previously, they will be deleted from the device in 30 days. We recommend avoiding this option unless it's needed in your environment.
+
+If users choose to turn on Live captions, speech recognition files (approximately 100 megabytes) will be downloaded to the device on first run and then periodically to improve performance and accuracy. These files will be deleted after 30 days.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: LiveCaptionsAllowed
+  - GP name: Live captions allowed
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: LiveCaptionsAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -24428,6 +24620,70 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### OriginAgentClusterDefaultEnabled
+
+  #### Origin-keyed agent clustering enabled by default
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 103 or later
+
+  #### Description
+
+  The Origin-Agent-Cluster: HTTP header controls whether a document is isolated in an origin-keyed agent cluster or in a site-keyed agent cluster. This has security implications because an origin-keyed agent cluster allows isolating documents by origin. The consequence of this for developers is that the document.domain accessor can no longer be set when origin-keyed agent clustering is enabled.
+
+If you enable or don't configure this policy, documents without the Origin-Agent-Cluster: header will be assigned to origin-keyed agent clustering by default. On these documents, the document.domain accessor will not be settable.
+
+If you disable this policy, documents without the Origin-Agent-Cluster: header will be assigned to site-keyed agent clusters by default. On these documents, the document.domain accessor will be settable.
+
+See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/fwlink/?linkid=2191896) for additional details.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OriginAgentClusterDefaultEnabled
+  - GP name: Origin-keyed agent clustering enabled by default
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: OriginAgentClusterDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: OriginAgentClusterDefaultEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -27614,7 +27870,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   ### ShowRecommendationsEnabled
 
-  #### Allow recommendations and promotional notifications from Microsoft Edge
+  #### Allow feature recommendations and browser assistance notifications from Microsoft Edge
 
   
   
@@ -27624,11 +27880,13 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 
   #### Description
 
-  This policy setting lets you decide whether employees should receive recommendations and in-product assistance notifications from Microsoft Edge.
+  This setting controls the in-browser assistance notifications which are intended to help users get the most out of Microsoft Edge. This is done by recommending features and by helping them use  browser features. These notifications take the form of dialog boxes, flyouts, coach marks and banners in the browser.  An example of an  assistance notification would be when a user has many tabs opened in the browser.  In this instance Microsoft Edge may prompt the user to try out the vertical tabs feature which is designed to give better browser tab management.
 
-If you enable or don't configure this setting, employees receive recommendations / notifications from Microsoft Edge.
+Disabling this policy will stop this message from appearing again even if the user has too many tabs open.
+      Any features that have been disabled by a management policy are not suggested to users.
+If you enable or don't configure this setting, users will receive recommendations or notifications from Microsoft Edge.
+      If you disable this setting, users will not receive any recommendations or notifications from Microsoft Edge
 
-If you disable this setting, employees will not receive any recommendations / notifications from Microsoft Edge.
 
   #### Supported features:
 
@@ -27645,7 +27903,7 @@ If you disable this setting, employees will not receive any recommendations / no
   ##### Group Policy (ADMX) info
 
   - GP unique name: ShowRecommendationsEnabled
-  - GP name: Allow recommendations and promotional notifications from Microsoft Edge
+  - GP name: Allow feature recommendations and browser assistance notifications from Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -29428,6 +29686,70 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
   #### Mac information and settings
   
   - Preference Key Name: UserAgentClientHintsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UserAgentClientHintsGREASEUpdateEnabled
+
+  #### Control the User-Agent Client Hints GREASE Update feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 102 or later
+
+  #### Description
+
+  The User-Agent GREASE specification recommends the inclusion of additional GREASE characters beyond the current semicolon and space, and recommends that the arbitrary version number be varied over time.
+
+When enabled, the User-Agent Client Hints GREASE Update feature aligns the User-Agent GREASE algorithm with the latest version from the specification.  The updated specification may break some websites that restrict the characters that requests may contain. For more information, see the following specification: https://wicg.github.io/ua-client-hints/#grease
+
+If this policy is enabled or not configured, the User-Agent GREASE algorithm from the specification will be used. If the policy is disabled, the prior User-Agent GREASE algorithm will be used.
+
+This policy is a temporary measure and will be removed in a future release.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UserAgentClientHintsGREASEUpdateEnabled
+  - GP name: Control the User-Agent Client Hints GREASE Update feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UserAgentClientHintsGREASEUpdateEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: UserAgentClientHintsGREASEUpdateEnabled
   - Example value:
 ``` xml
 <true/>

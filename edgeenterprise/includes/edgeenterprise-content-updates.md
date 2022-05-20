@@ -2,6 +2,26 @@
 
 
 
+## Week of May 09, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/9/2022 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
+| 5/9/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 5/10/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 5/10/2022 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 5/11/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+
+
+## Week of May 02, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/6/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+
+
 ## Week of April 25, 2022
 
 
@@ -29,23 +49,3 @@
 |------|------------|--------|
 | 4/19/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 4/20/2022 | [Enterprise Site List Manager in Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager) | modified |
-
-
-## Week of April 04, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/4/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 4/4/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 4/4/2022 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 4/4/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 4/7/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 4/7/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 4/7/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 4/7/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 4/8/2022 | [Disable Internet Explorer 11](/DeployEdge/edge-ie-disable-ie11) | modified |
-| 4/8/2022 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 4/8/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 4/8/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 4/8/2022 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
