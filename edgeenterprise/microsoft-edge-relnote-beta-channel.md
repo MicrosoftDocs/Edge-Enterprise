@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/05/2022
+ms.date: 05/20/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,29 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 102.0.1245.18: May 20
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.14: May 16
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.12: May 13
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.7: May 10
+
+### Policy updates
+
+#### New policies
+
+- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins) - List of origins that allow all HTTP authentication
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
+- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
 
 ## Version 101.0.1210.39: May 5
 
@@ -47,9 +70,9 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Ability to set default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to be used when opening the browser rather than the last profile used. This policy will not be applicable if the `--profile-directory` parameter has been specified.
+- **Ability to set default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to be used when opening the browser rather than the last profile used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
 
-- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. This can be done without manually quitting Microsoft Edge.
+- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. Switching can be done without manually quitting Microsoft Edge.
 
 - **Launch Progressive Web Apps (PWAs) from Favorites Bar.** Improvements to the PWA launch experience will begin to show up starting with an Apps icon that can be added to the toolbar.
 
@@ -97,58 +120,8 @@ Fixed various bugs and performance issues.
 
 - **Streamlining Microsoft 365 Application Protocol Activations.** Microsoft 365 Application Protocol Activations on trusted Microsoft cloud storage services will now launch certain Microsoft 365 applications directly, including SharePoint subdomains and Microsoft OneDrive URLs. You can use the policies [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) and [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) to enable the application protocol activation prompts if desired, and to define other applications and services where warnings are enabled or disabled.
 
-## Version 100.0.1185.10: March 17
 
-### Feature updates
-
-- **Improvements to the Cloud Site List Management experience for IE Mode.** You can configure session cookie sharing between Microsoft Edge and Internet Explorer for IE Mode on your site list in the Microsoft 365 Admin Center. **Note:** This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout
-
-- **Preview PDF files in Microsoft Outlook and File Explorer.** Users can view a PDF file in a lightweight and rich read-only preview.  Available for Outlook Desktop PDF attachments or for local PDF files using File Explorer.  
-
-- **Installed web app synchronization across all desktop devices.** Websites or Progressive Web Apps (PWAs) that have been installed as applications will synchronize across all desktop devices that you've signed into and enabled sync on. They'll show as "Available apps" for you to install. An app removed from one device will sync the removal on all devices.
-
-### Policy updates
-
-#### New policies
-
-- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configure if the ads transparency feature is enabled
-- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Control use of the WebHID API
-- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Hide restore pages dialog after browser crash
-- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Secure mode and Certificate-based Digital Signature validation in native PDF reader
-- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Prompt the user to select a certificate when multiple certificates match
-- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Allow the WebHID API on these sites
-- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Block the WebHID API on these sites
-
-#### Deprecated policy
-
-- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Enables background updates to the list of available templates for Collections and other features that use templates
-
-#### Obsoleted policy
-
-- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Allow pages to send synchronous XHR requests during page dismissal
-
-## Version 99.0.1150.39: March 10
-
-### Feature updates
-
-- **Improvements to the Cloud Site List Management experience for IE Mode.** Identify gaps in your enterprise site list by configuring reporting of site feedback with the [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) and [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) policies. You can view local site list URLs from users and potentially misconfigured neutral site URLs in the Microsoft Edge site lists experience in the Microsoft 365 Admin Center. To learn more, see [View site feedback on the Microsoft 365 Admin Center](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Note:** This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 99.0.1150.30: March 2
-
-Fixed various bugs and performance issues.
-
-## Version 99.0.1150.25: February 25
-
-Fixed various bugs and performance issues.
-
-## Version 99.0.1150.21: February 22
-
-Fixed various bugs and performance issues.
-
-## Version 99.0.1150.16: February 14
-
-Fixed various bugs and performance issues.
-
+<!--- from Version 100.0.1185.10: March 17 to Version 99.0.1150.16: February 14 --->
 <!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
 <!-- archive from Version 98.0.1108.23: January 14 to Version 97.0.1072.28: December 8 -->
 <!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
