@@ -26,13 +26,13 @@ With Windows 10, [Azure Active Directory (Azure AD)](/azure/active-directory/fun
 As a result of Microsoft Edge adopting the Chromium platform, its sync solution is now disconnected from Windows sync framework. This disconnect affects the relationship of Microsoft Edge to the ESR offering.
 
 > [!IMPORTANT]
-> The new Microsoft Edge does not participate in the ESR offering.
+> Microsoft Edge does not participate in the ESR offering.
 
 ## What’s changing with Microsoft Edge?
 
-With Microsoft Edge, the sync solution isn’t tied to Windows sync ecosystem. This sync solution lets us offer Microsoft Edge across all the platforms, such as Windows 7, Windows 8.1, iOS, Android and macOS. We're also able to offer sync for non-primary accounts on Windows. In addition, we can ship Microsoft Edge at a more frequent and flexible release cadence than Windows. (For more information, see [Windows updates to support the next version of Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md). All these factors highlighted the need to reassess Microsoft Edge participation in the ESR offering.
+With Microsoft Edge, the sync solution isn’t tied to the Windows sync ecosystem. This sync solution lets us offer Microsoft Edge across all the platforms, such as Windows 7, Windows 8.1, iOS, Android and macOS. We're also able to offer sync for non-primary accounts on Windows. In addition, we can ship Microsoft Edge at a more frequent and flexible release cadence than Windows. (For more information, see [Windows updates to support the next version of Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md). All these factors highlighted the need to reassess Microsoft Edge participation in the ESR offering.
 
-ESR is framed as a Windows product offering with promises about how data from Windows devices is handled, but Microsoft Edge sync will extend beyond Windows devices. And, as the data roams across these devices, it makes it difficult to define the Microsoft Edge sync offering in the context of ESR. To simplify how sync works and is managed, and to accommodate the changes that are highlighted, a decision was made to pull Microsoft Edge out of the ESR offering.
+ESR is framed as a Windows product offering with promises about how data from Windows devices is handled, but Microsoft Edge sync will extend this functionality beyond Windows devices. Because the data roams across these devices, it makes it difficult to define the Microsoft Edge sync offering in the context of ESR. To simplify how sync works and is managed, and to accommodate the changes that are highlighted, a decision was made to pull Microsoft Edge out of the ESR offering.
 
 ## Does this mean that Enterprises will lose the abilities they had as part of ESR?
 
