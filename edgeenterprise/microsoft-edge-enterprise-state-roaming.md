@@ -82,7 +82,7 @@ The following data attributes will sync in the new version of Microsoft Edge at 
 The preceding list of attributes is different than the attributes that could be synced in Microsoft Edge Legacy. (For details about Microsoft Edge Legacy settings, see [Windows 10 roaming settings](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference).) Users can selectively enable/disable these attributes using Microsoft Edge settings. Given the difference in attributes between the two versions (for example, history), users might be asked to give sync consent again.
 
 > [!NOTE]
-> Unlike Microsoft Edge Legacy, the new Microsoft Edge doesn't use Windows credential Manager for passwords and as a result, won't sync passwords with Internet Explorer or other apps that use Windows Credential manager.
+> Unlike Microsoft Edge Legacy, Microsoft Edge doesn't use Windows credential Manager for passwords and as a result, won't sync passwords with Internet Explorer or other apps that use Windows Credential manager.
 
 ## Terms of service
 
