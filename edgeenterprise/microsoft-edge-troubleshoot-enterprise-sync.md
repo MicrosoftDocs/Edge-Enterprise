@@ -33,6 +33,10 @@ The next screenshot shows an example of an identity error. The error is **Last T
 
 ## Basic troubleshooting steps
 
+Before you start troubleshooting, check the [Common sync issues](#common-sync-issues) to see if any of these issues apply to your sync issue.
+
+Use the following steps as a guide for troubleshooting a sync issue.
+
 1. Sign in your Office 365 or Microsoft 365 admin portal and verify that your license is valid.
 2. Sign in your Azure portal and verify that your Azure license is valid.
 3. Sign out your account on all Microsoft Edge browsers on all the computers and/or mobile devices - not just the one you're using.
