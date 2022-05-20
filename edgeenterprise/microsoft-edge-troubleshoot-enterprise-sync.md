@@ -33,7 +33,7 @@ The next screenshot shows an example of an identity error. The error is **Last T
 
 ## Basic troubleshooting steps
 
-Before you start troubleshooting, check the [Common sync issues](#common-sync-issues) to see if any of these issues apply to your sync issue.
+Before you start troubleshooting, check the [Common sync issues](#common-sync-issues) to see if any of these issues apply to your sync problem.
 
 Use the following steps as a guide for troubleshooting a sync issue.
 
