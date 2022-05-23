@@ -3,7 +3,7 @@ title: "On-premises sync for Active Directory (AD) users"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 05/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ Syncing user data in Microsoft Edge normally requires either a Microsoft Account
 
 ## How it works
 
-Microsoft Edge allows profiles to be associated with Active Directory (AD) accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APPDATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer. Microsoft Edge only reads and writes from this file; it is the admin's responsibility to ensure that the file is moved as needed.
+Microsoft Edge allows profiles to be associated with Active Directory (AD) accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APPDATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer. Microsoft Edge only reads and writes from this file; it's the admin's responsibility to ensure that the file is moved as needed.
 
 ## Use on-premises sync
 
@@ -37,7 +37,7 @@ To enable on-premises sync in Microsoft Edge, configure the [RoamingProfileSuppo
 
 ### Ensure that a profile is associated with an Active Directory account
 
-On-premises sync only works with the profile associated with an Active Directory (AD) account. If no such profile exists, on-premises sync will not function. To ensure that users sign on with an AD account, configure the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. For on-premises sync, Microsoft Edge only relies on AD to establish an identity for the user data, and there's no direct relationship between how Microsoft Edge reads and writes on-premises data to how the admin has configured roaming for an AD user.
+On-premises sync only works with the profile associated with an Active Directory (AD) account. If this profile doesn't exist, on-premises sync won't work. To ensure that users sign on with an AD account, configure the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. For on-premises sync, Microsoft Edge only relies on AD to establish an identity for the user data, and there's no direct relationship between how Microsoft Edge reads and writes on-premises data to how the admin has configured roaming for an AD user.
 
 ### Change the location of the user data (optional)
 
@@ -58,7 +58,7 @@ On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multip
 Because on-premises sync works by moving a user data file between computers, on-premises sync doesn't sync changes between simultaneous sessions. For this reason, on-premises sync works best when used on one computer at a time. If there are simultaneous on-premises sessions running, data on any of the computers may be unexpectedly overwritten by data from another computer the next time you start a browser session.
 
 > [!NOTE]
-> Microsoft Edge locks the **profile.pb** file when on-premises sync is enabled. If folder redirection is used to share a single **profile.pb** file between different computers, then only one instance of Microsoft Edge using that file can be started.
+> Microsoft Edge locks the **profile.pb** file when on-premises sync is enabled. If folder redirection is used to share a single **profile.pb** file between different computers, then only one instance of Microsoft Edge that uses the shared file can be started.
 
 ### Using other sync policies with on-premises sync
 
