@@ -92,8 +92,8 @@ The default scope is identified by the asterisk (*). The next example defines a 
 
 ```json
 { 
-   “*”: {}, 
-   “nckgahadagoaajjgafhacjanaoiihapd”: {} 
+   "*": {}, 
+   "nckgahadagoaajjgafhacjanaoiihapd": {} 
 } 
 ```
 
