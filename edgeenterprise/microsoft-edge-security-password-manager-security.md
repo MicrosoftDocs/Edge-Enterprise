@@ -90,7 +90,7 @@ Data syncing and Microsoft Edge:
 
 - Data syncing can be enabled or disabled as desired across the organization.
 
-- Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Information Protection.
+- Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Purview Information Protection.
 
 ## Why do Microsoft security baselines recommend disabling the password manager?
 
