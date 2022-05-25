@@ -44,7 +44,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Adaptive (Workday)    | Workday Adaptive Planning   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
 | Airtable   | Airtable   | https://support.airtable.com/hc/en-us/articles/217990018-What-are-the-technical-requirements-for-using-Airtable- |
-| Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/5.2/concepts/supported-platforms-ACS.html  |
+| Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/content-services/5.2/support/  |
 | Alteryx  | Alteryx Analytics Platform  | https://help.alteryx.com/current/product-activation-and-licensing/version-support-policy  |
 | Aprimo  | Aprimo Cloud Marketing Studio | https://help.aprimo.com/Content/Marketing_Operations_Help/aprimo_basics/browsers_configuring_concept.html |
 | Asana  | Asana | https://asana.com/guide/help/faq/connectivity#gl-browsers |
@@ -54,7 +54,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Atlassian  | Jira   | https://confluence.atlassian.com/adminjiraserver/supported-platforms-938846830.html  |
 | Atlassian  | All other cloud products  | https://confluence.atlassian.com/cloud/supported-browsers-744721663.html  |
 | Atlassian   | Trello   | https://help.trello.com/article/735-what-browsers-and-mobile-platforms-does-trello-support  |
-| Autodesk   | AutoCAD Web  | https://knowledge.autodesk.com/support/autocad-web-app/learn-explore/caas/CloudHelp/cloudhelp/ENU/AutoCAD-Web-Help/files/AutoCAD-Web-Help-browsers-html-html.html |
+| Autodesk   | AutoCAD Web  | https://knowledge.autodesk.com/support/autocad-web-app/learn-explore/caas/CloudHelp/cloudhelp/ENU/AutoCAD-Web-Help/files/Settings-and-Preferences/AutoCAD-Web-Help-browsers-html-html.html |
 | Bentley Systems  | iTwin Services - Design Validation   | https://communities.bentley.com/products/digital-twin-cloud-services/itwin-services/w/design-validation-wiki/43947/technical-requirements   |
 | Box  | Box  | https://support.box.com/hc/en-us/articles/360052807333-Box-officially-supports-the-new-Microsoft-Edge-Browser              |
 | Cisco  | WebRTC  | https://www.cisco.com/c/dam/en/us/td/docs/conferencing/ciscoMeetingApps/WebRTC_important_info/Release_Notes_CMA_webRTC_latest.pdf  |
@@ -74,7 +74,7 @@ The following table lists provider support statements for Microsoft Edge.
 | FreshBooks | FreshBooks  | https://support.freshbooks.com/hc/en-us/articles/360003047891-Which-web-browsers-can-I-use-with-FreshBooks-                     |
 | Freshworks  | Freshdeck   | https://support.freshdesk.com/support/solutions/articles/227719-system-and-browser-requirements-for-freshdesk |
 | Gainsight  | Gainsight  | https://support.gainsight.com/PX/Install_PX/Browser_Compatibility_%2F%2F_Supported_Browser_List   |
-| GE | Predix Design System  | https://www.ge.com/digital/documentation/predix-services/c_supported_browsers_for._web_applications.html  |
+| GE | Predix Design System  | https://www.ge.com/digital/documentation/predix-essentials/latest/supported-software-devices.html  |
 | Genesys   | eServices, Administrator Extension, Pulse  | https://docs.genesys.com/Documentation/System/Current/SOE/Welcome#t-1  |
 | GitLab  | GitLab  | https://docs.gitlab.com/ee/install/requirements.html |
 | GoToMeeting (LogMeIn) | GoToMeeting (LogMeIn)  | https://support.goto.com/meeting/help/system-requirements-for-organizers-g2m010024 |
@@ -94,7 +94,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Jaggaer  | Jaggaer One | https://library.jaggaer.com/wp-content/uploads/Supported-Browsers-Devices.pdf |
 | Laserfiche  | Laserfiche  | https://support.laserfiche.com/kb/1014127/laserfiche-compatibility-information-for-microsoft-edge-based-on-chromium  |
 | LexisNexis  | LexisNexis  | https://www.lexisnexis.com/en-us/gateway.page   |
-| Magneto Commerce  | Magneto  | https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements_browsers.html |
+| Magneto Commerce  | Magneto  | https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html |
 | Marketo | Engage | https://docs.marketo.com/display/public/DOCS/Supported+Browsers  |
 | MathWorks | MATLAB Online, Grader, Drive,  ThingSpeak  | https://www.mathworks.com/support/requirements/browser-requirements.html  |
 | Mavenlink| Mavenlink | https://mavenlink.zendesk.com/hc/en-us/articles/202489914-Mavenlink-Requirements |
@@ -122,7 +122,7 @@ The following table lists provider support statements for Microsoft Edge.
 | SurveyMonkey  | SurveyMonkey | https://help.surveymonkey.com/articles/en_US/kb/What-browser-versions-do-you-support   |
 | Tableau  | Tableau Server  | https://www.tableau.com/products/techspecs#server |
 | Tableau  | Tableau Online  | https://www.tableau.com/products/techspecs#online  |
-| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/company/legal/                          service-specification   |
+| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/archive/files/66907/service-specification_nov_21_2019-pdf.aspx                          service-specification   |
 | TIBCO | Tibco Cloud Spotfire  | https://docs.tibco.com/pub/spotfire/general/sr/GUID-12C6E934-C84C-499B-9DAC-DD510854E4E1.html |
 | Verint | Verint Community   | https://community.telligent.com/community/11/w/user-documentation/63073/what-are-the-system-requirements   |
 | Visma  | Visma UX, Nordic Cool 4    | https://ux.visma.com/weblibrary/latest/  |
