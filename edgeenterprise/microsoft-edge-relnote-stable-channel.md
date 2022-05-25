@@ -30,8 +30,6 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-24-2022).
 
-### Feature updates
-
 ### Policy updates
 
 #### New policies
