@@ -124,7 +124,7 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 1. A user opens a link to a page that requests DirectInvoke support and gets the prompt in the next screenshot.
 
-   ![Prompt to open file](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
+   ![Prompt to open file from page requesting support](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
 
 2. When the user selects **Open**, the requested file handler is opened. In this example, Microsoft Word is used to open the document that's shown in the previous screenshot.
 
@@ -135,7 +135,7 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 1. When a user opens a link to a page that requests DirectInvoke support, DirectInvoke behaves the same as when ClickOnce is disabled. They'll see a message in the download tray that's similar to the one in the next screenshot.
 
-   ![Prompt to open file](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
+   ![Prompt to open file when DirectInvoke disabled](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
 ## See also
 
