@@ -101,7 +101,7 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 1. A user opens a link to a page that requests ClickOnce support and gets the prompt in the next screenshot.
 
-   ![Prompt to open an unsafe file](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
+   ![Prompt to open an unsafe file with ClickOnce enabled](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
 
 2. After the user selects **Open**, ClickOnce attempts to launch the application.
 
