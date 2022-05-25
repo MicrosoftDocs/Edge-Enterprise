@@ -37,8 +37,8 @@ The following table shows which channels and versions of Microsoft Edge support 
 | Highlight  | 81.0.416.53         |
 | Text notes | 88.0.705.50 |
 | Read aloud | 84.0.522.63  |
-| View Microsoft Information Protection (MIP) protected files in the same business tenant | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
-| View Microsoft Information Protection (MIP) protected files across business tenants | 91.0.864.37  |
+| View Microsoft Purview Information Protection protected files in the same business tenant | Windows support in 80.0.361.48<br>Mac support in 81.0.416.53 |
+| View Microsoft Purview Information Protection protected files across business tenants | 91.0.864.37  |
 |  View Information Rights Management (IRM) protected files  | 83.0.478.37            |
 
 
@@ -105,7 +105,7 @@ Read aloud for PDF adds the convenience of listening to PDF content while carryi
 
 ### Protected PDFs
 
-[Microsoft Information Protection (MIP)](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) enables users to collaborate with others securely, while adhering to your organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
+[Microsoft Purview Information Protection](/microsoft-365/compliance/protect-information?preserve-view=true&view=o365-worldwide) enables users to collaborate with others securely, while adhering to your organization's compliance policies. After a file is protected, the actions users can take on it are determined by the permissions assigned to them.
 
 > [!IMPORTANT]
 > A license is required for MIP. For more information, see this [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
