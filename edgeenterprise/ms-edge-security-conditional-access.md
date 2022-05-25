@@ -29,11 +29,11 @@ On a compliant device, the identity accessing the resource should match the iden
 
 ![Conditional access message in browser](./media/edge-security/microsoft-edge-security-conditional-access.png)
 
-To continue, you have to switch to the required profile (if you've one) or create a profile with matching identity.
+To continue, you have to switch to the required profile (if you have one) or create a profile with matching identity.
 
 To sign in and work with your profile, select the account picture in the top right corner of the browser. You can use the dropdown menu to:
 
-- Select another profile. Select the profile name.
+- Pick another profile. Select the profile name.
 - Create a profile. Select **Add a profile**.
 - Manage your profiles. Select **Manage profile settings**.
 
