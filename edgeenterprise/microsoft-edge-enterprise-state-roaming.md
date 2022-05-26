@@ -3,7 +3,7 @@ title: "Microsoft Edge and Enterprise State Roaming"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 05/20/2022
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Microsoft Edge and Enterprise State Roaming"
 This article explains how Microsoft Edge participation in the Enterprise State Roaming (ESR) offering is changing to better support sync across platforms and devices.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
+> This article applies to Microsoft Edge version 77 or later unless otherwise noted.
 
 ## Introduction
 
@@ -73,11 +73,12 @@ The following data attributes will sync in the new version of Microsoft Edge at 
 
 - Favorites
 - Passwords
-- Form-fill
-- History
-- Open tabs (sessions)
-- Settings (preferences)
+- Addresses and more (form-fill)
+- Collections
+- Settings
 - Extensions
+- Open tabs (available in Microsoft Edge version 88 or later)
+- History (available in Microsoft Edge version 88 or later)
 
 The preceding list of attributes is different than the attributes that could be synced in Microsoft Edge Legacy. (For details about Microsoft Edge Legacy settings, see [Windows 10 roaming settings](/azure/active-directory/devices/enterprise-state-roaming-windows-settings-reference).) Users can selectively enable/disable these attributes using Microsoft Edge settings. Given the difference in attributes between the two versions (for example, history), users might be asked to give sync consent again.
 
