@@ -1,9 +1,9 @@
 ---
 title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
-author: AndreaLBarr
+author: dan-wesley
 manager: silvanam
-ms.date: 05/20/2022
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -61,7 +61,7 @@ Use the following steps as a guide for troubleshooting a sync issue.
 
 Do you have a previous Microsoft 365 or Azure Information Protection (AIP) subscription that expired and then replaced with a new subscription? If so, then the tenant ID has changed and the service data needs to be reset. See the instructions for resetting data in [Issue: Cryptographer error encountered](#issue-cryptographer-error-encountered).
 
-### Issue: “Sync is not available for this account.”
+### Issue: "Sync is not available for this account."
 
 If this error is encountered for an Azure Active Directory account, or if DISABLED_BY_ADMIN appears in *edge://sync-internals*, follow the steps in the next procedure sequentially until the problem is fixed.
 
@@ -102,7 +102,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 6. If the issue isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
-### Issue: Stuck at "Setting up sync..." or “Couldn’t connect to the sync server. Retrying...”
+### Issue: Stuck at "Setting up sync..." or "Couldn’t connect to the sync server. Retrying..."
 
 1. Try to sign out and then sign in.
 2. Go to *edge://sync-internals*. If the following error appears under the **Type info** section, skip to the [Cryptographer error encountered](#issue-cryptographer-error-encountered) issue.
@@ -140,7 +140,7 @@ Use the following steps to fix this issue:
    - Other errors may mean there's a server configuration issue.
 2. If a data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
 
-### Issue: “Sync has been turned off by your administrator.”
+### Issue: "Sync has been turned off by your administrator."
 
 Make sure that the [SyncDisabled policy](./microsoft-edge-policies.md#syncdisabled) isn't set.
 
