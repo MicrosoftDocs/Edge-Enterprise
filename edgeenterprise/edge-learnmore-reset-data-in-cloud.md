@@ -3,7 +3,7 @@ title: "Reset Microsoft Edge data in the cloud"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/17/2022
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,9 +18,6 @@ This article describes the steps for resetting your Microsoft Edge data in the c
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 88 or later unless otherwise noted.
-
-> [!NOTE]
-> If your tenant is in a Government Community Cloud (GCC) Moderate environment, your tenant admin will need to file a support request with Microsoft to reset your data.
 
 ## Overview
 
