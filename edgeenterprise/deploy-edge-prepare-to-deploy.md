@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge in your environment"
-ms.author: ryhecht
-author: RyanHechtMSFT
+ms.author: v-danwesley
+author: dan-wesley
 manager: tinad
-ms.date: 06/29/2021
+ms.date: 05/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
