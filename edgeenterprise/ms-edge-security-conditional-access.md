@@ -3,13 +3,13 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: srugh
 author: srugh
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 05/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge and Conditional Access"
+description: "Microsoft Edge support for Conditional Access"
 ---
 
 # Microsoft Edge and Conditional Access
@@ -19,7 +19,7 @@ This article describes how Microsoft Edge supports Conditional Access, and how t
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using a variety of devices and apps from anywhere. As a result of this, just focusing on who can access a resource is not sufficient. You also need to factor in how a resource is accessed. Azure Active Directory (Azure AD) Conditional Access helps you master the balance between security and productivity.
+A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Azure Active Directory (Azure AD) Conditional Access helps you master the balance between security and productivity.
 
 ## Accessing Conditional Access protected resources in Microsoft Edge
 
@@ -31,17 +31,17 @@ On a compliant device, the identity accessing the resource should match the iden
 
 To continue, you have to switch to the required profile (if you have one) or create a profile with matching identity.
 
-To sign in and work with your profile, click the account picture in the top right corner of the browser. You can use the dropdown menu to:
+To sign in and work with your profile, select the account picture in the top right corner of the browser. You can use the dropdown menu to:
 
-- Select another profile. Click the profile name.
-- Create a profile. Click **Add a profile**.
-- Manage your profiles. Click **Manage profile settings**.
+- Pick another profile. Select the profile name.
+- Create a profile. Select **Add a profile**.
+- Manage your profiles. Select **Manage profile settings**.
 
 This support is available across all platforms, including all supported versions of Windows and macOS.
 
 ### How to deploy Conditional Access in Azure Active Directory
 
-[Deploy Conditional Access](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help deploy Conditional Access in Azure Active Directory.
+[Deploy Conditional Access](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help plan and deploy Conditional Access in Azure Active Directory.
 
 ## See also
 
