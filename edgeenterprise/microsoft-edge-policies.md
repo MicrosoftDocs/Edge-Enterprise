@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/23/2022
+ms.date: 05/30/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
