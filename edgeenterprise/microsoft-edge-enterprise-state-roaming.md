@@ -3,7 +3,7 @@ title: "Microsoft Edge and Enterprise State Roaming"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 05/26/2022
+ms.date: 05/31/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
