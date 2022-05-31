@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/26/2022
+ms.date: 05/31/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,23 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 103.0.xxxx.xx: June x
+
+## Feature updates
+
+- **Ability to control automatic profile switching.** The [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) policy lets Microsoft Edge prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
+
+- **Enhanced security for web browsing.** Users can navigate the web safely with improved reliability and stability thanks to the rewritten web defense client (previously known as Microsoft Defender SmartScreen) on Microsoft Edge for Windows.
+
+### Policy updates
+
+#### New policies
+
+- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) - Guided Switch Enabled
+- [InternetExplorerZoomDisplay](/DeployEdge/microsoft-edge-policies#internetexplorerzoomdisplay) - Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+- [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) - Live captions allowed
+- [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Origin-keyed agent clustering enabled by default
 
 ## Version 102.0.1245.25: May 26
 
