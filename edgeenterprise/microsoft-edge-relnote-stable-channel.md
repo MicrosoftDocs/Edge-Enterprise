@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/26/2022
+ms.date: 05/31/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 102.0.1245.xx: May 31
+## Version 102.0.1245.30: May 31
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-31-2022).
 
