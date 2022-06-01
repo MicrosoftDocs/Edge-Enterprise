@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 05/31/2022
+ms.date: 06/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,13 +29,13 @@ Fixed various bugs.
 
 ### Feature updates
 
-- **Support switching network stack between Chromium and iOS (iOS only).** The [NetworkStackPref] policy lets you choose the network preference for Microsoft Edge for iOS.
+- **Support switching network stack between Chromium and iOS (iOS only).** The [NetworkStackPref](/mem/intune/apps/manage-microsoft-edge#switch-network-stack-between-chromium-and-ios) policy lets you choose the network preference for Microsoft Edge for iOS.
 
 ### Policy updates
 
 #### New policies
 
-- [NetworkStackPref] - Choose the network preference for Microsoft Edge for iOS
+- [NetworkStackPref](/mem/intune/apps/manage-microsoft-edge#switch-network-stack-between-chromium-and-ios) - Choose the network preference for Microsoft Edge for iOS
 
 ## Version 101.0.1210.43: May 9
 
