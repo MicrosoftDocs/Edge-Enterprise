@@ -29,6 +29,8 @@ Fixed various bugs and performance issues.
 
 - **Ability to control automatic profile switching.** The [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) policy lets Microsoft Edge prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
 
+- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. Switching can be done without manually quitting Microsoft Edge.
+
 - **Enhanced security for web browsing.** Users can navigate the web safely with improved reliability and stability thanks to the rewritten web defense client (previously known as Microsoft Defender SmartScreen) on Microsoft Edge for Windows.
 
 ### Policy updates
