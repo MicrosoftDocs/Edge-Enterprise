@@ -1,4 +1,4 @@
-# last revised 05/19/2022
+# last revised 06/03/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -18,6 +18,8 @@
      href: deploy-edge-hands-on-lab.md
    - name: Windows Blogs - Microsoft Edge Developer
      href: https://blogs.windows.com/msedgedev/
+   - name: Microsoft Edge FAQ
+     href: microsoft-edge-frequently-asked-questions.md
 # PLAN
 - name: Plan for Microsoft Edge
   items:
@@ -269,7 +271,7 @@
      href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
-   - name: Microsoft Edge FAQ
-     href: microsoft-edge-frequently-asked-questions.md
+#   - name: Microsoft Edge FAQ
+#     href: microsoft-edge-frequently-asked-questions.md
 #   - name: Frequently asked questions
 #     href: faqs-edge-in-the-enterprise.yml 
