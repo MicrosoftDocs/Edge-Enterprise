@@ -19,7 +19,6 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
