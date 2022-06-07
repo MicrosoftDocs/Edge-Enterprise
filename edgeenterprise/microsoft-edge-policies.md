@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/17/2022
+ms.date: 06/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -16,6 +16,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 # Microsoft Edge - Policies
 
 The latest version of Microsoft Edge includes the following policies. You can use these policies to configure how Microsoft Edge runs in your organization.
+
 For information about an additional set of policies used to control how and when Microsoft Edge is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
@@ -29,8 +30,9 @@ The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
-|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
+|[BrowserCodeIntegritySetting](#browsercodeintegritysetting)|Configure browser process code integrity guard setting|
+|[ImportOnEachLaunch](#importoneachlaunch)|Allow import of data from other browsers on each Microsoft Edge launch|
+|[PasswordManagerRestrictLengthEnabled](#passwordmanagerrestrictlengthenabled)|Restrict the length of passwords that can be saved in the Password Manager|
 
 ## Available policies
 
@@ -209,6 +211,7 @@ These tables list all of the browser-related group policies available in this re
 |[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
 |[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
+|[PasswordManagerRestrictLengthEnabled](#passwordmanagerrestrictlengthenabled)|Restrict the length of passwords that can be saved in the Password Manager|
 |[PasswordMonitorAllowed](#passwordmonitorallowed)|Allow users to be alerted if their passwords are found to be unsafe|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
@@ -346,6 +349,7 @@ These tables list all of the browser-related group policies available in this re
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
+|[BrowserCodeIntegritySetting](#browsercodeintegritysetting)|Configure browser process code integrity guard setting|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
 |[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Enable browser legacy extension point blocking|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
@@ -444,6 +448,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImportFavorites](#importfavorites)|Allow importing of favorites|
 |[ImportHistory](#importhistory)|Allow importing of browsing history|
 |[ImportHomepage](#importhomepage)|Allow importing of home page settings|
+|[ImportOnEachLaunch](#importoneachlaunch)|Allow import of data from other browsers on each Microsoft Edge launch|
 |[ImportOpenTabs](#importopentabs)|Allow importing of open tabs|
 |[ImportPaymentInfo](#importpaymentinfo)|Allow importing of payment info|
 |[ImportSavedPasswords](#importsavedpasswords)|Allow importing of saved passwords|
@@ -7639,6 +7644,68 @@ If you disable this policy, users can't save and add new passwords, but they can
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PasswordManagerRestrictLengthEnabled
+
+  #### Restrict the length of passwords that can be saved in the Password Manager
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 104 or later
+
+  #### Description
+
+  Make Microsoft Edge restrict the length of usernames and/or passwords that can be saved in the Password Manager.
+
+If you enable this policy, Microsoft Edge will not let the user save credentials with usernames and/or passwords longer than 256 characters.
+
+If you disable or don't configure this policy, Microsoft Edge will let the user save credentials with arbitrarily long usernames and/or passwords.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PasswordManagerRestrictLengthEnabled
+  - GP name: Restrict the length of passwords that can be saved in the Password Manager
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PasswordManagerRestrictLengthEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PasswordManagerRestrictLengthEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PasswordMonitorAllowed
 
   #### Allow users to be alerted if their passwords are found to be unsafe
@@ -14447,6 +14514,75 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 
   [Back to top](#microsoft-edge---policies)
 
+  ### BrowserCodeIntegritySetting
+
+  #### Configure browser process code integrity guard setting
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 104 or later
+
+  #### Description
+
+  This policy controls the use of code integrity guard in the browser process, which only allows Microsoft signed binaries to load.
+
+Setting this policy to Enabled will enable code integrity guard in the browser process.
+
+Setting this policy to Audit or leaving the policy unset will enable audit mode for code integrity guard in the browser process. Audit mode will emit logs to the event viewer under Security-Mitigations and CodeIntegrity providers when a binary is loaded after CIG was enabled that is not Microsoft signed.
+
+Setting this policy to Disabled will prevent the browser from enabling code integrity guard in the browser process.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management.
+
+Policy options mapping:
+
+* Disabled (0) = Do not enable code integrity guard in the browser process.
+
+* Audit (1) = Enable code integrity guard audit mode in the browser process.
+
+* Enabled (2) = Enable code integrity guard enforcement in the browser process.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BrowserCodeIntegritySetting
+  - GP name: Configure browser process code integrity guard setting
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BrowserCodeIntegritySetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### BrowserGuestModeEnabled
 
   #### Enable guest mode
@@ -18546,8 +18682,6 @@ If you set this policy to 'BalancedMode', the security state would be in balance
 
 If you set this policy to 'StrictMode', the security state would be in strict mode.
 
-Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
 Policy options mapping:
 
 * StandardMode (0) = Standard mode
@@ -18558,7 +18692,7 @@ Policy options mapping:
 
 Use the preceding information when configuring this policy.
 
-
+Note: Sites that use WebAssembly (WASM) are not currently supported when EnhanceSecurityMode is enabled. If you require access to a site that needs WASM, consider adding it to your exception list as described in [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
   #### Supported features:
 
@@ -21153,6 +21287,63 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImportOnEachLaunch
+
+  #### Allow import of data from other browsers on each Microsoft Edge launch
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 104 or later
+
+  #### Description
+
+  If you enable this policy, users will see a prompt to import their browsing data from other browsers on each Microsoft Edge launch.
+
+If you disable this policy, users will never see a prompt to import their browsing data from other browsers on each Microsoft Edge launch.
+
+If the policy is left unconfigured, users can activate this feature from a Microsoft Edge prompt or from the Settings page.
+
+Note: A similar policy named [AutoImportAtFirstRun](#autoimportatfirstrun) exists. This policy should be used if you want to import supported data from other browsers only once while setting up your device.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImportOnEachLaunch
+  - GP name: Allow import of data from other browsers on each Microsoft Edge launch
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImportOnEachLaunch
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
