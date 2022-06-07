@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 05/31/2022
+ms.date: 06/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -156,7 +156,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins)|List of origins that allow all HTTP authentication|
 |[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
-|[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Specifies a list of servers that Google Chrome can delegate user credentials to|
+|[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Specifies a list of servers that Microsoft Edge can delegate user credentials to|
 |[AuthSchemes](#authschemes)|Supported authentication schemes|
 |[AuthServerAllowlist](#authserverallowlist)|Configure list of allowed authentication servers|
 |[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Allow Basic authentication for HTTP|
@@ -334,7 +334,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
-|[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Google Chrome closes|
+|[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
@@ -352,12 +352,12 @@ These tables list all of the browser-related group policies available in this re
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
-|[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Google Chrome closes|
-|[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Google Chrome closes|
+|[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Microsoft Edge closes|
+|[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Microsoft Edge closes|
 |[ClickOnceEnabled](#clickonceenabled)|Allow users to open files using the ClickOnce protocol|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
-|[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Google Chrome|
+|[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
@@ -368,7 +368,7 @@ These tables list all of the browser-related group policies available in this re
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
-|[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Google Chrome as default browser|
+|[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
@@ -438,6 +438,7 @@ These tables list all of the browser-related group policies available in this re
 |[ImportFavorites](#importfavorites)|Allow importing of favorites|
 |[ImportHistory](#importhistory)|Allow importing of browsing history|
 |[ImportHomepage](#importhomepage)|Allow importing of home page settings|
+|[ImportOnEachLaunch](#importoneachlaunch)|Allow import of data from other browsers on each Microsoft Edge launch|
 |[ImportOpenTabs](#importopentabs)|Allow importing of open tabs|
 |[ImportPaymentInfo](#importpaymentinfo)|Allow importing of payment info|
 |[ImportSavedPasswords](#importsavedpasswords)|Allow importing of saved passwords|
@@ -495,7 +496,7 @@ These tables list all of the browser-related group policies available in this re
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Google Chrome, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
@@ -514,15 +515,15 @@ These tables list all of the browser-related group policies available in this re
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
-|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used to sign in to Google Chrome|
+|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used to sign in to Microsoft Edge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
-|[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Google Chrome profile data|
+|[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
 |[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
 |[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
-|[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Google Chrome closes|
+|[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
@@ -612,14 +613,14 @@ These tables list all of the browser-related group policies available in this re
 
   #### Description
 
-  Configures the proxy settings for Google Chrome Application Guard.
-If you enable this policy, Google Chrome Application Guard ignores other sources of proxy configurations.
+  Configures the proxy settings for Microsoft Edge Application Guard.
+If you enable this policy, Microsoft Edge Application Guard ignores other sources of proxy configurations.
 
-If you don't configure this policy, Google Chrome Application Guard uses the proxy configuration of the host.
+If you don't configure this policy, Microsoft Edge Application Guard uses the proxy configuration of the host.
 
-This policy does not affect the proxy configuration of Google Chrome outside of Application Guard (on the host).
+This policy does not affect the proxy configuration of Microsoft Edge outside of Application Guard (on the host).
 
-The ProxyMode field lets you specify the proxy server used by Google Chrome Application Guard.
+The ProxyMode field lets you specify the proxy server used by Microsoft Edge Application Guard.
 
 The ProxyPacUrl field is a URL to a proxy .pac file.
 
@@ -1363,7 +1364,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 Set the policy to 'SessionOnly' to clear cookies when the session closes.
 
-If you don't configure this policy, the default 'AllowCookies' is used, and users can change this setting in Google Chrome Settings. (If you don't want users to be able to change this setting, set the policy.)
+If you don't configure this policy, the default 'AllowCookies' is used, and users can change this setting in Microsoft Edge Settings. (If you don't want users to be able to change this setting, set the policy.)
 
 Policy options mapping:
 
@@ -1775,9 +1776,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Allows you to set whether Google Chrome will run the v8 JavaScript engine with JIT (Just In Time) compiler enabled or not.
+  Allows you to set whether Microsoft Edge will run the v8 JavaScript engine with JIT (Just In Time) compiler enabled or not.
 
-Disabling the JavaScript JIT will mean that Google Chrome may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Google Chrome to render web content in a more secure configuration.
+Disabling the JavaScript JIT will mean that Microsoft Edge may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Microsoft Edge to render web content in a more secure configuration.
 
 This policy can be overridden for specific URL patterns using the [JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) and [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) policies.
 
@@ -3141,7 +3142,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   Allows you to set a list of site url patterns that specify sites which are not allowed to run JavaScript JIT (Just In Time) compiler enabled.
 
-Disabling the JavaScript JIT will mean that Google Chrome may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Google Chrome to render web content in a more secure configuration.
+Disabling the JavaScript JIT will mean that Microsoft Edge may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Microsoft Edge to render web content in a more secure configuration.
 
 For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
@@ -4031,11 +4032,11 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [
 
   #### Description
 
-  This policy setting lets you decide whether employees should receive recommendations to set Google Chrome as PDF handler.
+  This policy setting lets you decide whether employees should receive recommendations to set Microsoft Edge as PDF handler.
 
-If you enable or don't configure this setting, employees receive recommendations from Google Chrome to set itself as the default PDF handler.
+If you enable or don't configure this setting, employees receive recommendations from Microsoft Edge to set itself as the default PDF handler.
 
-If you disable this setting, employees will not receive any notifications from Google Chrome to set itself as the default PDF handler.
+If you disable this setting, employees will not receive any notifications from Microsoft Edge to set itself as the default PDF handler.
 
   #### Supported features:
 
@@ -4556,7 +4557,7 @@ If you don't configure this policy, the default search provider is enabled, and 
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX..
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 
   #### Supported features:
 
@@ -4620,7 +4621,7 @@ This policy is optional. If not configured, the default, UTF-8, is used.
 
 This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -4700,7 +4701,7 @@ See [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpost
 
 This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -4768,7 +4769,7 @@ Specify Google's Image Search URL Post Params as:
 
 If you don't set this policy, image search requests are sent using the GET method.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -4832,7 +4833,7 @@ This policy is optional. If you don't configure it, no keyword activates the sea
 
 This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -4898,7 +4899,7 @@ If you don't enable this policy or if you leave it empty, the host name specifie
 
 'DefaultSearchProviderName' should be set to an organization-approved encrypted search provider that corresponds to the encrypted search provider set in DTBC-0008. This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -4966,7 +4967,7 @@ Specify Google's search URL as: '{google:baseURL}search?q={searchTerms}&{google:
 
 This policy is required when you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy; if you don't enable the latter policy, this policy is ignored.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -5036,7 +5037,7 @@ Google's suggest URL can be specified as: '{google:baseURL}complete/search?outpu
 
 This policy is applied only if you enable the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policies.
 
-Starting in Google Chrome 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
+Starting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the [ManagedSearchEngines](#managedsearchengines) policy.
 
   #### Supported features:
 
@@ -5388,7 +5389,7 @@ When disabled or not configured, the user can manage the Allow extensions from o
 
   #### Description
 
-  Setting the policy controls which apps and extensions may be installed in Google Chrome, which hosts they can interact with, and limits runtime access.
+  Setting the policy controls which apps and extensions may be installed in Microsoft Edge, which hosts they can interact with, and limits runtime access.
 
 If you don't set this policy, there aren't any restrictions on acceptable extension and app types.
 
@@ -5402,7 +5403,7 @@ Extensions and apps which have a type that's not on the list won't be installed.
 
 * "hosted_app"
 
-See the Google Chrome extensions documentation for more information about these types.
+See the Microsoft Edge extensions documentation for more information about these types.
 
 Note: This policy also affects extensions and apps to be force-installed using [ExtensionInstallForcelist](#extensioninstallforcelist).
 
@@ -5552,7 +5553,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 A blocklist value of '\*' means all extensions are blocked unless they are explicitly listed in the allowlist.
 
-If this policy isn't set, the user can install any extension in Google Chrome.
+If this policy isn't set, the user can install any extension in Microsoft Edge.
 
   #### Supported features:
 
@@ -5617,9 +5618,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   Set this policy to specify a list of apps and extensions that install silently, without user interaction. Users can't uninstall or turn off this setting. Permissions are granted implicitly, including the enterprise.deviceAttributes and enterprise.platformKeys extension APIs. Note: These 2 APIs aren't available to apps and extensions that aren't force-installed.
 
-If you don't set this policy, no apps or extensions are autoinstalled and users can uninstall any app in Google Chrome.
+If you don't set this policy, no apps or extensions are autoinstalled and users can uninstall any app in Microsoft Edge.
 
-This policy supercedes [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. If a previously force-installed app or extension is removed from this list, Google Chrome automatically uninstalls it.
+This policy supercedes [ExtensionInstallBlocklist](#extensioninstallblocklist) policy. If a previously force-installed app or extension is removed from this list, Microsoft Edge automatically uninstalls it.
 
 For Windows instances not joined to a Microsoft Active Directory domain, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
@@ -5759,7 +5760,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Description
 
-  Setting this policy controls extension management settings for Google Chrome, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
+  Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
 This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to true, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
@@ -6001,7 +6002,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### Description
 
-  Set this policy to specify which origins allow all the HTTP authentication schemes Google Chrome supports regardless of the [AuthSchemes](#authschemes) policy.
+  Set this policy to specify which origins allow all the HTTP authentication schemes Microsoft Edge supports regardless of the [AuthSchemes](#authschemes) policy.
 
 Format the origin pattern according to this format (https://www.chromium.org/administrators/url-blocklist-filter-format). Up to 1,000 exceptions can be defined in [AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins).
 Wildcards are allowed for the whole origin or parts of the origin. Parts include the scheme, host, or port.
@@ -6115,7 +6116,7 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 
   ### AuthNegotiateDelegateAllowlist
 
-  #### Specifies a list of servers that Google Chrome can delegate user credentials to
+  #### Specifies a list of servers that Microsoft Edge can delegate user credentials to
 
   
   
@@ -6125,11 +6126,11 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 
   #### Description
 
-  Configure the list of servers that Google Chrome can delegate to.
+  Configure the list of servers that Microsoft Edge can delegate to.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
 
-If you don't configure this policy Google Chrome won't delegate user credentials even if a server is detected as Intranet.
+If you don't configure this policy Microsoft Edge won't delegate user credentials even if a server is detected as Intranet.
 
   #### Supported features:
 
@@ -6146,7 +6147,7 @@ If you don't configure this policy Google Chrome won't delegate user credentials
   ##### Group Policy (ADMX) info
 
   - GP unique name: AuthNegotiateDelegateAllowlist
-  - GP name: Specifies a list of servers that Google Chrome can delegate user credentials to
+  - GP name: Specifies a list of servers that Microsoft Edge can delegate user credentials to
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/HTTP authentication
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -6249,11 +6250,11 @@ If you don't configure this policy, all four schemes are used.
 
   #### Description
 
-  Specifies which servers to enable for integrated authentication. Integrated authentication is only enabled when Google Chrome receives an authentication challenge from a proxy or from a server in this list.
+  Specifies which servers to enable for integrated authentication. Integrated authentication is only enabled when Microsoft Edge receives an authentication challenge from a proxy or from a server in this list.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
 
-If you don't configure this policy, Google Chrome tries to detect if a server is on the intranet - only then will it respond to IWA requests. If the server is on the internet, IWA requests from it are ignored by Google Chrome.
+If you don't configure this policy, Microsoft Edge tries to detect if a server is on the intranet - only then will it respond to IWA requests. If the server is on the internet, IWA requests from it are ignored by Microsoft Edge.
 
   #### Supported features:
 
@@ -6595,7 +6596,7 @@ If you disable this policy, a basic username and password prompt will be used to
 
   #### Description
 
-  Configuring this policy will let you set a default profile in Google Chrome to be used when opening the browser rather than the last profile used. This policy won't affect when "--profile-directory" parameter has been specified. Set the value to "Default" to refer to the default profile. The value is case sensitive.
+  Configuring this policy will let you set a default profile in Microsoft Edge to be used when opening the browser rather than the last profile used. This policy won't affect when "--profile-directory" parameter has been specified. Set the value to "Default" to refer to the default profile. The value is case sensitive.
 The value of the policy is the name of the profile (case sensitive) and can be configured with string that is the name of a specific profile.
 The value "Edge Kids Mode" and "Guest Profile" are considered not useful values because they not supposed to be a default profile.
 This policy won't impact the following scenarios:
@@ -6778,13 +6779,13 @@ If you disable this setting, implicit sign-in will be disabled.
 
   #### Description
 
-  This policy allows users to decide whether to use the OneAuth library for sign-in and token fetch in Google Chrome on Windows 10 RS3 and above.
+  This policy allows users to decide whether to use the OneAuth library for sign-in and token fetch in Microsoft Edge on Windows 10 RS3 and above.
 
-If you disable or don't configure this policy, signin process will use Windows Account Manager. Google Chrome would be able to use accounts you logged in to Windows, Microsoft Office, or other Microsoft applications for login, without the needing of password. Or you can provide valid account and password to sign in, which will be stored in Windows Account Manager for future usage. You will be able to investigate all accounts stored in Windows Account Manager through Windows Settings -> Accounts -> Email and accounts page.
+If you disable or don't configure this policy, signin process will use Windows Account Manager. Microsoft Edge would be able to use accounts you logged in to Windows, Microsoft Office, or other Microsoft applications for login, without the needing of password. Or you can provide valid account and password to sign in, which will be stored in Windows Account Manager for future usage. You will be able to investigate all accounts stored in Windows Account Manager through Windows Settings -> Accounts -> Email and accounts page.
 
 If you enable this policy, OneAuth authentication flow will be used for account signin. The OneAuth authentication flow has fewer dependencies and can work without Windows shell. The account you use would not be stored in the Email and accounts page.
 
-This policy will only take effect on Windows 10 RS3 and above. On Windows 10 below RS3, OneAuth is used for authentication in Google Chrome by default.
+This policy will only take effect on Windows 10 RS3 and above. On Windows 10 below RS3, OneAuth is used for authentication in Microsoft Edge by default.
 
   #### Supported features:
 
@@ -6837,7 +6838,7 @@ This policy will only take effect on Windows 10 RS3 and above. On Windows 10 bel
 
   Configure this policy to decide whether only on-premises accounts are enabled for implicit sign-in.
 
-If you enable this policy, only on-premises accounts will be enabled for implicit sign-in. Google Chrome won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
+If you enable this policy, only on-premises accounts will be enabled for implicit sign-in. Microsoft Edge won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
 
 If you disable or don't configure this policy, all accounts will be enabled for implicit sign-in.
 
@@ -6954,7 +6955,7 @@ If you disable this policy, sign in click to action dialog isn't shown on the Ne
 
   #### Description
 
-  Configure this policy to decide whether WAM is used for authentication in Google Chrome on Windows 10 RS1 and RS2.
+  Configure this policy to decide whether WAM is used for authentication in Microsoft Edge on Windows 10 RS1 and RS2.
 
 If you enable this setting, WAM will be used in the authentication flow on Windows 10 RS1 and RS2.
 
@@ -6962,7 +6963,7 @@ If you disable or don't configure this setting, OneAuth libraries will be used i
 
 Note that if this policy is enabled, then previous sign-in sessions (which used OneAuth by default) cannot be used. Please sign out of those profiles.
 
-This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 and above, WAM is used for authentication in Google Chrome by default.
+This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 and above, WAM is used for authentication in Microsoft Edge by default.
 
   #### Supported features:
 
@@ -7325,7 +7326,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   Setting this policy specifies which native messaging hosts shouldn't be loaded. A deny list value of * means all native messaging hosts are denied unless they're explicitly allowed.
 
-If you leave this policy unset , Google Chrome loads all installed native messaging hosts.
+If you leave this policy unset , Microsoft Edge loads all installed native messaging hosts.
 
   #### Supported features:
 
@@ -7388,9 +7389,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Description
 
-  If you set this policy to Enabled or leave it unset, Google Chrome can use native messaging hosts installed at the user level.
+  If you set this policy to Enabled or leave it unset, Microsoft Edge can use native messaging hosts installed at the user level.
 
-If you set this policy to Disabled, Google Chrome can only use these hosts if they're installed at the system level.
+If you set this policy to Disabled, Microsoft Edge can only use these hosts if they're installed at the system level.
 
   #### Supported features:
 
@@ -7514,13 +7515,13 @@ If you disable this policy, users will no longer see strong password suggestions
 
   #### Description
 
-  Configure the list of domains where Google Chrome should disable the password manager. This means that Save and Fill workflows will be disabled, ensuring that passwords for those websites can't be saved or auto filled into web forms.
+  Configure the list of domains where Microsoft Edge should disable the password manager. This means that Save and Fill workflows will be disabled, ensuring that passwords for those websites can't be saved or auto filled into web forms.
 
 If you enable this policy, the password manager will be disabled for the specified set of domains.
 
 If you disable or don't configure this policy, password manager will work as usual for all domains.
 
-If you configure this policy, that is, add domains for which password manager is blocked, users can't change or override the behavior in Google Chrome. In addition, users can't use password manager for those URLs.
+If you configure this policy, that is, add domains for which password manager is blocked, users can't change or override the behavior in Microsoft Edge. In addition, users can't use password manager for those URLs.
 
   #### Supported features:
 
@@ -7583,9 +7584,9 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordManagerBlocklist\2 = "https://login.con
 
   #### Description
 
-  Enable Google Chrome to save user passwords. The next time a user visits a site with a saved password, Google Chrome will enter the password automatically.
+  Enable Microsoft Edge to save user passwords. The next time a user visits a site with a saved password, Microsoft Edge will enter the password automatically.
 
-If you enable or don't configure this policy, users can save and add their passwords in Google Chrome.
+If you enable or don't configure this policy, users can save and add their passwords in Microsoft Edge.
 
 If you disable this policy, users can't save and add new passwords, but they can still use previously saved passwords.
 
@@ -7641,15 +7642,15 @@ If you disable this policy, users can't save and add new passwords, but they can
   
   #### Supported versions:
 
-  - On Windows and macOS since 103 or later
+  - On Windows and macOS since 104 or later
 
   #### Description
 
-  Make Google Chrome restrict the length of usernames and/or passwords that can be saved in the Password Manager.
+  Make Microsoft Edge restrict the length of usernames and/or passwords that can be saved in the Password Manager.
 
-If you enable this policy, Google Chrome will not let the user save credentials with usernames and/or passwords longer than 256 characters.
+If you enable this policy, Microsoft Edge will not let the user save credentials with usernames and/or passwords longer than 256 characters.
 
-If you disable or don't configure this policy, Google Chrome will let the user save credentials with arbitrarily long usernames and/or passwords.
+If you disable or don't configure this policy, Microsoft Edge will let the user save credentials with arbitrarily long usernames and/or passwords.
 
   #### Supported features:
 
@@ -7708,9 +7709,9 @@ If you disable or don't configure this policy, Google Chrome will let the user s
 
   #### Description
 
-  Allow Google Chrome to monitor user passwords.
+  Allow Microsoft Edge to monitor user passwords.
 
-If you enable this policy and a user consents to enabling the policy, the user will get alerted if any of their passwords stored in Google Chrome are found to be unsafe. Google Chrome will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
+If you enable this policy and a user consents to enabling the policy, the user will get alerted if any of their passwords stored in Microsoft Edge are found to be unsafe. Microsoft Edge will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
 
 If you disable this policy, users will not be asked for permission to enable this feature. Their passwords will not be scanned and they will not be alerted either.
 
@@ -7852,7 +7853,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  Configure the list of enterprise login URLs (HTTP and HTTPS schemes only) where Google Chrome should capture the salted hashes of passwords and use it for password reuse detection.
+  Configure the list of enterprise login URLs (HTTP and HTTPS schemes only) where Microsoft Edge should capture the salted hashes of passwords and use it for password reuse detection.
 
 If you enable this policy, the password protection service captures fingerprints of passwords on the defined URLs.
 
@@ -8223,9 +8224,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Allows Google Chrome processes to start at OS sign-in and restart in background after the last browser window is closed.
+  Allows Microsoft Edge processes to start at OS sign-in and restart in background after the last browser window is closed.
 
-If Google Chrome is running in background mode, the browser might not close when the last window is closed and the browser won't be restarted in background when the window closes. See the [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about what happens after configuring Google Chrome background mode behavior.
+If Microsoft Edge is running in background mode, the browser might not close when the last window is closed and the browser won't be restarted in background when the window closes. See the [BackgroundModeEnabled](#backgroundmodeenabled) policy for information about what happens after configuring Microsoft Edge background mode behavior.
 
 If you enable this policy, startup boost is turned on.
 
@@ -8574,9 +8575,9 @@ SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\2 = "[*.]example.
 
   #### Description
 
-  Overrides Google Chrome default printer selection rules. This policy determines the rules for selecting the default printer in Google Chrome, which happens the first time a user tries to print a page.
+  Overrides Microsoft Edge default printer selection rules. This policy determines the rules for selecting the default printer in Microsoft Edge, which happens the first time a user tries to print a page.
 
-When this policy is set, Google Chrome tries to find a printer that matches all of the specified attributes and uses it as default printer. If there are multiple printers that meet the criteria, the first printer that matches is used.
+When this policy is set, Microsoft Edge tries to find a printer that matches all of the specified attributes and uses it as default printer. If there are multiple printers that meet the criteria, the first printer that matches is used.
 
 If you don't configure this policy or no matching printers are found within the timeout, the printer defaults to the built-in PDF printer or no printer, if the PDF printer isn't available.
 
@@ -8704,15 +8705,15 @@ If you enable this policy, users always print headers and footers.
 
   #### Description
 
-  Controls how Google Chrome prints on Microsoft Windows.
+  Controls how Microsoft Edge prints on Microsoft Windows.
 
 Printing to a PostScript printer on Microsoft Windows different PostScript generation methods can affect printing performance.
 
-If you set this policy to Default, Google Chrome will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.
+If you set this policy to Default, Microsoft Edge will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.
 
-If you set this policy to Type42, Google Chrome will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.
+If you set this policy to Type42, Microsoft Edge will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.
 
-If you don't configure this policy, Google Chrome will be in Default mode.
+If you don't configure this policy, Microsoft Edge will be in Default mode.
 
 Policy options mapping:
 
@@ -8771,7 +8772,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Tells Google Chrome to use the system default printer as the default choice in Print Preview instead of the most recently used printer.
+  Tells Microsoft Edge to use the system default printer as the default choice in Print Preview instead of the most recently used printer.
 
 If you disable this policy or don't configure it, Print Preview uses the most recently used printer as the default destination choice.
 
@@ -8833,13 +8834,13 @@ If you enable this policy, Print Preview uses the OS system default printer as t
 
   #### Description
 
-  Controls how Google Chrome prints on Windows.
+  Controls how Microsoft Edge prints on Windows.
 
 When printing to a non-PostScript printer on Windows, sometimes print jobs need to be rasterized to print correctly.
 
-If you set this policy to 'Full' or don't configure it, Google Chrome will do full page rasterization if necessary.
+If you set this policy to 'Full' or don't configure it, Microsoft Edge will do full page rasterization if necessary.
 
-If you set this policy to 'Fast', Google Chrome will reduce the amount of rasterization which can help reduce print job sizes and increase printing speed.
+If you set this policy to 'Fast', Microsoft Edge will reduce the amount of rasterization which can help reduce print job sizes and increase printing speed.
 
 Policy options mapping:
 
@@ -8898,7 +8899,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Controls print image resolution when Google Chrome prints PDFs with rasterization.
+  Controls print image resolution when Microsoft Edge prints PDFs with rasterization.
 
 When printing a PDF using the Print to image option, it can be beneficial to specify a print resolution other than a device's printer setting or the PDF default.  A high resolution will significantly increase the processing and printing time while a low resolution can lead to poor imaging quality.
 
@@ -8962,15 +8963,15 @@ If you set this policy to zero or don't configure it, the system default resolut
 
   #### Description
 
-  Specifies whether print preview should apply last used settings for Google Chrome PDF and webpages.
+  Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.
 
-If you set this policy to 'EnableAll' or don't configure it, Google Chrome applies the last used print preview settings for both PDF and webpages.
+If you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.
 
-If you set this policy to 'DisableAll', Google Chrome doesn't apply the last used print preview settings for both PDF and webpages.
+If you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.
 
-If you set this policy to 'DisablePdf', Google Chrome doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
+If you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.
 
-If you set this policy to 'DisableWebpage', Google Chrome doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
+If you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.
 
 This policy is only available if you enable or don't configure the [PrintingEnabled](#printingenabled) policy.
 
@@ -9048,7 +9049,7 @@ Placing all printer types on the deny list effectively disables printing, becaus
 
 If you don't configure this policy, or the printer list is empty, all printer types are discoverable.
 
-Printer destinations include extension printers and local printers. Extension printers are also known as print provider destinations, and include any destination that belongs to a Google Chrome extension.
+Printer destinations include extension printers and local printers. Extension printers are also known as print provider destinations, and include any destination that belongs to a Microsoft Edge extension.
 Local printers are also known as native printing destinations, and include destinations available to the local machine and shared network printers.
 
 In Microsoft version 93 or later, if you set this policy to 'pdf' it also disables the 'save as Pdf' option from the right click context menu.
@@ -9262,11 +9263,11 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Enables printing in Google Chrome and prevents users from changing this setting.
+  Enables printing in Microsoft Edge and prevents users from changing this setting.
 
 If you enable this policy or don't configure it, users can print.
 
-If you disable this policy, users can't print from Google Chrome. Printing is disabled in the wrench menu, extensions, JavaScript applications, and so on. Users can still print from plug-ins that bypass Google Chrome while printing. For example, certain Adobe Flash applications have the print option in their context menu, which isn't covered by this policy.
+If you disable this policy, users can't print from Microsoft Edge. Printing is disabled in the wrench menu, extensions, JavaScript applications, and so on. Users can still print from plug-ins that bypass Microsoft Edge while printing. For example, certain Adobe Flash applications have the print option in their context menu, which isn't covered by this policy.
 
   #### Supported features:
 
@@ -9482,9 +9483,9 @@ Use the preceding information when configuring this policy.
 
   Shows the system print dialog instead of print preview.
 
-If you enable this policy, Google Chrome opens the system print dialog instead of the built-in print preview when a user prints a page.
+If you enable this policy, Microsoft Edge opens the system print dialog instead of the built-in print preview when a user prints a page.
 
-If you don't configure or disable this policy, print commands trigger the Google Chrome print preview screen.
+If you don't configure or disable this policy, print commands trigger the Microsoft Edge print preview screen.
 
   #### Supported features:
 
@@ -9692,15 +9693,15 @@ SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 
 
   #### Description
 
-  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Google Chrome version 91.
+  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Microsoft Edge version 91.
 
-Defines a list of hosts for which Google Chrome bypasses any proxy.
+Defines a list of hosts for which Microsoft Edge bypasses any proxy.
 
 This policy is applied only if the [ProxySettings](#proxysettings) policy isn't specified and you have selected either fixed_servers or pac_script in the [ProxyMode](#proxymode) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.
 
-If you enable this policy, you can create a list of hosts for which Google Chrome doesn't use a proxy.
+If you enable this policy, you can create a list of hosts for which Microsoft Edge doesn't use a proxy.
 
-If you don't configure this policy, no list of hosts is created for which Google Chrome bypasses a proxy. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
+If you don't configure this policy, no list of hosts is created for which Microsoft Edge bypasses a proxy. Leave this policy unconfigured if you've specified any other method for setting proxy policies.
 
 For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -9760,9 +9761,9 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 
   #### Description
 
-  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Google Chrome version 91.
+  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Microsoft Edge version 91.
 
-If you set this policy to Enabled you can specify the proxy server Google Chrome uses and prevents users from changing proxy settings. Google Chrome ignores all proxy-related options specified from the command line. The policy is only applied if the [ProxySettings](#proxysettings) policy isn't specified.
+If you set this policy to Enabled you can specify the proxy server Microsoft Edge uses and prevents users from changing proxy settings. Microsoft Edge ignores all proxy-related options specified from the command line. The policy is only applied if the [ProxySettings](#proxysettings) policy isn't specified.
 
 Other options are ignored if you choose one of the following options:
   * direct = Never use a proxy server and always connect directly
@@ -9847,7 +9848,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Google Chrome version 91.
+  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Microsoft Edge version 91.
 
 Specifies the URL for a proxy auto-config (PAC) file.
 
@@ -9915,7 +9916,7 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
 
   #### Description
 
-  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Google Chrome version 91.
+  This policy is deprecated, use [ProxySettings](#proxysettings) instead. It won't work in Microsoft Edge version 91.
 
 Specifies the URL of the proxy server.
 
@@ -9983,9 +9984,9 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
 
   #### Description
 
-  Configures the proxy settings for Google Chrome.
+  Configures the proxy settings for Microsoft Edge.
 
-If you enable this policy, Google Chrome ignores all proxy-related options specified from the command line.
+If you enable this policy, Microsoft Edge ignores all proxy-related options specified from the command line.
 
 If you don't configure this policy, users can choose their own proxy settings.
 
@@ -9997,11 +9998,11 @@ This policy overrides the following individual policies:
 [ProxyBypassList](#proxybypasslist)
 
 Setting the [ProxySettings](#proxysettings) policy accepts the following fields:
-  * ProxyMode, which lets you specify the proxy server used by Google Chrome and prevents users from changing proxy settings
+  * ProxyMode, which lets you specify the proxy server used by Microsoft Edge and prevents users from changing proxy settings
   * ProxyPacUrl, a URL to a proxy .pac file
   * ProxyPacMandatory, a boolean flag which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script
   * ProxyServer, a URL for the proxy server
-  * ProxyBypassList, a list of proxy hosts that Google Chrome bypasses
+  * ProxyBypassList, a list of proxy hosts that Microsoft Edge bypasses
 
 For ProxyMode, if you choose the value:
   * direct, a proxy is never used and all other fields are ignored.
@@ -10164,7 +10165,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Description
 
-  This policy setting lets you configure whether to turn on sleeping tabs. Sleeping tabs reduces CPU, battery, and memory usage by putting idle background tabs to sleep. Google Chrome uses heuristics to avoid putting tabs to sleep that do useful work in the background, such as display notifications, play sound, and stream video. By default, sleeping tabs is turned on.
+  This policy setting lets you configure whether to turn on sleeping tabs. Sleeping tabs reduces CPU, battery, and memory usage by putting idle background tabs to sleep. Microsoft Edge uses heuristics to avoid putting tabs to sleep that do useful work in the background, such as display notifications, play sound, and stream video. By default, sleeping tabs is turned on.
 
 Individual sites may be blocked from being put to sleep by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
@@ -10841,7 +10842,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  Configures the default home page in Google Chrome. You can set the home page to a URL you specify or to the new tab page.
+  Configures the default home page in Microsoft Edge. You can set the home page to a URL you specify or to the new tab page.
 
 If you enable this policy, the Home button is set to the new tab page as configured by the user or with the policy [NewTabPageLocation](#newtabpagelocation) and the URL set with the policy [HomepageLocation](#homepagelocation) is not taken into consideration.
 
@@ -10907,7 +10908,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  Configures the default home page URL in Google Chrome.
+  Configures the default home page URL in Microsoft Edge.
 
 The home page is the page opened by the Home button. The pages that open on startup are controlled by the [RestoreOnStartup](#restoreonstartup) policies.
 
@@ -11047,17 +11048,17 @@ Use the preceding information when configuring this policy.
 
   This policy didn't work as expected due to changes in operational requirements. Therefore it's obsolete and should not be used.
 
-Specifies the company logo to use on the new tab page in Google Chrome.
+Specifies the company logo to use on the new tab page in Microsoft Edge.
 
 The policy should be configured as a string that expresses the logo(s) in JSON format. For example: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
 
-You configure this policy by specifying the URL from which Google Chrome can download the logo and its cryptographic hash (SHA-256), which is used to verify the integrity of the download. The logo must be in PNG or SVG format, and its file size must not exceed 16 MB. The logo is downloaded and cached, and it will be redownloaded whenever the URL or the hash changes. The URL must be accessible without any authentication.
+You configure this policy by specifying the URL from which Microsoft Edge can download the logo and its cryptographic hash (SHA-256), which is used to verify the integrity of the download. The logo must be in PNG or SVG format, and its file size must not exceed 16 MB. The logo is downloaded and cached, and it will be redownloaded whenever the URL or the hash changes. The URL must be accessible without any authentication.
 
 The 'default_logo' is required and will be used when there's no background image. If 'light_logo' is provided, it will be used when the user's new tab page has a background image. We recommend a horizontal logo with a transparent background that is left-aligned and vertically centered. The logo should have a minimum height of 32 pixels and an aspect ratio from 1:1 to 4:1. The 'default_logo' should have proper contrast against a white/black background while the 'light_logo' should have proper contrast against a background image.
 
-If you enable this policy, Google Chrome downloads and shows the specified logo(s) on the new tab page. Users can't override or hide the logo(s).
+If you enable this policy, Microsoft Edge downloads and shows the specified logo(s) on the new tab page. Users can't override or hide the logo(s).
 
-If you disable or don't configure this policy, Google Chrome will show no company logo or a Microsoft logo on the new tab page.
+If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
 
 For help with determining the SHA-256 hash, see [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
 
@@ -11213,7 +11214,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 
   #### Description
 
-  Hides the default top sites from the new tab page in Google Chrome.
+  Hides the default top sites from the new tab page in Microsoft Edge.
 
 If you set this policy to true, the default top site tiles are hidden.
 
@@ -11347,13 +11348,13 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  By default, Google Chrome displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
+  By default, Microsoft Edge displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
 
 [ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
 
 The 'url' field is required; 'title' and 'pinned' are optional. If 'title' is not provided, the URL is used as the default title. If 'pinned' is not provided, the default value is false.
 
-Google Chrome presents these in the order listed, from left to right, with all pinned tiles displayed ahead of non-pinned tiles.
+Microsoft Edge presents these in the order listed, from left to right, with all pinned tiles displayed ahead of non-pinned tiles.
 
 If the policy is set as mandatory, the 'pinned' field will be ignored and all tiles will be pinned. The tiles can't be deleted by the user and will always appear at the front of the quick links list.
 
@@ -11652,15 +11653,15 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Specify how Google Chrome behaves when it starts.
+  Specify how Microsoft Edge behaves when it starts.
 
 If you want a new tab to always open on startup, choose 'RestoreOnStartupIsNewTabPage'.
 
-If you want to reopen URLs that were open the last time Google Chrome closed, choose 'RestoreOnStartupIsLastSession'. The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).
+If you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'RestoreOnStartupIsLastSession'. The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).
 
 If you want to open a specific set of URLs, choose 'RestoreOnStartupIsURLs'.
 
-Disabling this setting is equivalent to leaving it not configured. Users will be able to change it in Google Chrome.
+Disabling this setting is equivalent to leaving it not configured. Users will be able to change it in Microsoft Edge.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -11797,7 +11798,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   #### Description
 
-  Shows the Home button on Google Chrome's toolbar.
+  Shows the Home button on Microsoft Edge's toolbar.
 
 Enable this policy to always show the Home button. Disable it to never show the button.
 
@@ -12130,9 +12131,9 @@ Note: This policy doesn't prevent the browser from navigating to any URL. Users 
 
   #### Description
 
-  Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Google Chrome address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Google Chrome with their Azure AD account for that organization.
-If you disable this policy, users can't see internal results in the Google Chrome address bar suggestion list.
-Starting with Google Chrome version 89, Microsoft Search in Bing suggestions will be available even if Bing isn't the user's default search provider.
+  Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Azure AD account for that organization.
+If you disable this policy, users can't see internal results in the Microsoft Edge address bar suggestion list.
+Starting with Microsoft Edge version 89, Microsoft Search in Bing suggestions will be available even if Bing isn't the user's default search provider.
 
   #### Supported features:
 
@@ -12328,7 +12329,7 @@ If you enable this policy or don't configure it, users can delete the browsing a
 
 If you disable this policy, users can't delete browsing and download history. Disabling this policy will disable history sync and open tab sync.
 
-If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Google Chrome closes, regardless of how this policy is configured.
+If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you enable both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how this policy is configured.
 
   #### Supported features:
 
@@ -12386,7 +12387,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
 
   #### Description
 
-  Allow access to local files by letting Google Chrome display file selection dialogs.
+  Allow access to local files by letting Microsoft Edge display file selection dialogs.
 
 If you enable or don't configure this policy, users can open file selection dialogs as normal.
 
@@ -12514,7 +12515,7 @@ When the policy is set to enabled, pages are allowed to show popups while they'r
 
 When the policy is set to disabled or unset, pages aren't allowed to show popups while they're being unloaded. This is as per the spec: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
 
-This policy was removed in Google Chrome 88 and is ignored if set.
+This policy was removed in Microsoft Edge 88 and is ignored if set.
 
   #### Supported features:
 
@@ -12632,7 +12633,7 @@ If you enable or don't configure this policy, users can play the surf game.
 
   #### Description
 
-  This policy is obsolete because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it was found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It doesn't work in Google Chrome after version 99.
+  This policy is obsolete because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it was found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It doesn't work in Microsoft Edge after version 99.
 
 This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
 
@@ -12704,7 +12705,7 @@ If this list is empty, Token Binding will be disabled.
 
 This policy is only available on Windows 10 devices with Virtual Secure Mode capability.
 
-Starting in Google Chrome 86, this policy no longer supports dynamic refresh.
+Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
 
   #### Supported features:
 
@@ -12825,13 +12826,13 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Allow Google Chrome to issue a connection to a web service to generate URL and search suggestions for connectivity issues such as DNS errors.
+  Allow Microsoft Edge to issue a connection to a web service to generate URL and search suggestions for connectivity issues such as DNS errors.
 
 If you enable this policy, a web service is used to generate url and search suggestions for network errors.
 
 If you disable this policy, no calls to the web service are made and a standard error page is shown.
 
-If you don't configure this policy, Google Chrome respects the user preference that's set under Services at edge://settings/privacy.
+If you don't configure this policy, Microsoft Edge respects the user preference that's set under Services at edge://settings/privacy.
 Specifically, there's a **Suggest similar pages when a webpage can't be found** toggle, which the user can switch on or off. Note that if you have enable this policy (AlternateErrorPagesEnabled), the Suggest similar pages when a webpage can't be found setting is turned on, but the user can't change the setting by using the toggle. If you disable this policy, the Suggest similar pages when a webpage can't be found setting is turned off, and the user can't change the setting by using the toggle.
 
   #### Supported features:
@@ -12890,13 +12891,13 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 
   #### Description
 
-  Disables the internal PDF viewer in Google Chrome.
+  Disables the internal PDF viewer in Microsoft Edge.
 
-If you enable this policy Google Chrome treats PDF files as downloads and lets users open them with the default application.
+If you enable this policy Microsoft Edge treats PDF files as downloads and lets users open them with the default application.
 
-If Google Chrome is the default PDF reader, PDF files aren't downloaded and will continue to open in Microsoft Edge.
+If Microsoft Edge is the default PDF reader, PDF files aren't downloaded and will continue to open in Microsoft Edge.
 
-If you don't configure this policy or disable it, Google Chrome will open PDF files (unless the user disables it).
+If you don't configure this policy or disable it, Microsoft Edge will open PDF files (unless the user disables it).
 
   #### Supported features:
 
@@ -12954,7 +12955,7 @@ If you don't configure this policy or disable it, Google Chrome will open PDF fi
 
   #### Description
 
-  Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Google Chrome.
+  Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Microsoft Edge.
 
 Ambient Authentication is http authentication with default credentials when explicit credentials aren't provided via NTLM/Kerberos/Negotiate challenge/response schemes.
 
@@ -12968,7 +12969,7 @@ If you set the policy to 'All', it allows ambient authentication for all session
 
 Note that ambient authentication is always allowed on regular profiles.
 
-In Google Chrome version 81 and later, if the policy is left not set, ambient authentication will be enabled in regular sessions only.
+In Microsoft Edge version 81 and later, if the policy is left not set, ambient authentication will be enabled in regular sessions only.
 
 Policy options mapping:
 
@@ -13038,9 +13039,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Support for AppCache and this policy was removed from Google Chrome starting in version 97.
+  Support for AppCache and this policy was removed from Microsoft Edge starting in version 97.
 
-If you set this policy to true, the AppCache is enabled, even when AppCache in Google Chrome is not available by default.
+If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
 
 If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
 
@@ -13100,11 +13101,11 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 
   #### Description
 
-  Configures the application locale in Google Chrome and prevents users from changing the locale.
+  Configures the application locale in Microsoft Edge and prevents users from changing the locale.
 
-If you enable this policy, Google Chrome uses the specified locale. If the configured locale isn't supported, 'en-US' is used instead.
+If you enable this policy, Microsoft Edge uses the specified locale. If the configured locale isn't supported, 'en-US' is used instead.
 
-If you disable or don't configure this setting, Google Chrome uses either the user-specified preferred locale (if configured) or the fallback locale 'en-US'.
+If you disable or don't configure this setting, Microsoft Edge uses either the user-specified preferred locale (if configured) or the fallback locale 'en-US'.
 
   #### Supported features:
 
@@ -13408,13 +13409,13 @@ This policy is intended to give enterprises flexibility to disable the audio san
 
   If you enable this policy, all supported datatypes and settings from the specified browser will be silently and automatically imported at first run. During the First Run Experience, the import section will also be skipped.
 
-The browser data from Google Chrome Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
+The browser data from Microsoft Edge Legacy will always be silently migrated at the first run, irrespective of the value of this policy.
 
 If this policy is set to 'FromDefaultBrowser', then the datatypes corresponding to the default browser on the managed device will be imported.
 
-If the browser specified as the value of this policy is not present in the managed device, Google Chrome will simply skip the import without any notification to the user.
+If the browser specified as the value of this policy is not present in the managed device, Microsoft Edge will simply skip the import without any notification to the user.
 
-If you set this policy to 'DisabledAutoImport', the import section of the first-run experience is skipped entirely and Google Chrome doesn't import browser data and settings automatically.
+If you set this policy to 'DisabledAutoImport', the import section of the first-run experience is skipped entirely and Microsoft Edge doesn't import browser data and settings automatically.
 
 If this policy is set to the value of 'FromInternetExplorer', the following datatypes will be imported from Internet Explorer:
 1. Favorites or bookmarks
@@ -13867,7 +13868,7 @@ If you disable this policy, AutoFill never suggests or fills in address informat
 
 If you enable this policy or don't configure it, users can control AutoFill for addresses in the user interface.
 
-Note that if you disable this policy you also stop all activity for all web forms, except payment and password forms. No further entries are saved, and Google Chrome won't suggest or AutoFill any previous entries.
+Note that if you disable this policy you also stop all activity for all web forms, except payment and password forms. No further entries are saved, and Microsoft Edge won't suggest or AutoFill any previous entries.
 
   #### Supported features:
 
@@ -13925,7 +13926,7 @@ Note that if you disable this policy you also stop all activity for all web form
 
   #### Description
 
-  Enables Google Chrome's AutoFill feature and lets users auto complete payment instruments like credit or debit cards in web forms using previously stored information. This includes suggesting new payment instruments like Buy Now Pay Later (BNPL) in web forms and Express Checkout.
+  Enables Microsoft Edge's AutoFill feature and lets users auto complete payment instruments like credit or debit cards in web forms using previously stored information. This includes suggesting new payment instruments like Buy Now Pay Later (BNPL) in web forms and Express Checkout.
 
 If you enable this policy or don't configure it, users can control AutoFill for payment instruments.
 
@@ -14187,7 +14188,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   ### BackgroundModeEnabled
 
-  #### Continue running background apps after Google Chrome closes
+  #### Continue running background apps after Microsoft Edge closes
 
   
   
@@ -14197,7 +14198,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Allows Google Chrome processes to start at OS sign-in and keep running after the last browser window is closed. In this scenario, background apps and the current browsing session remain active, including any session cookies. An open background process displays an icon in the system tray and can always be closed from there.
+  Allows Microsoft Edge processes to start at OS sign-in and keep running after the last browser window is closed. In this scenario, background apps and the current browsing session remain active, including any session cookies. An open background process displays an icon in the system tray and can always be closed from there.
 
 If you enable this policy, background mode is turned on.
 
@@ -14220,7 +14221,7 @@ If you don't configure this policy, background mode is initially turned off, and
   ##### Group Policy (ADMX) info
 
   - GP unique name: BackgroundModeEnabled
-  - GP name: Continue running background apps after Google Chrome closes
+  - GP name: Continue running background apps after Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -14332,7 +14333,7 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 
 * You had your IP allowlisted for having an ad free search experience.
 
-* You were experiencing an ad-free search experience on Google Chrome Legacy and want to upgrade to the new version of Google Chrome.
+* You were experiencing an ad-free search experience on Microsoft Edge Legacy and want to upgrade to the new version of Microsoft Edge.
 
   #### Supported features:
 
@@ -14455,7 +14456,7 @@ If you don't configure this policy, third-party cookies are enabled but users ca
   #### Description
 
   Allows users to create new profiles, using the **Add profile** option.
-If you enable this policy or don't configure it, Google Chrome allows users to use **Add profile** on the Identity flyout menu or the Settings page to create new profiles.
+If you enable this policy or don't configure it, Microsoft Edge allows users to use **Add profile** on the Identity flyout menu or the Settings page to create new profiles.
 
 If you disable this policy, users cannot add new profiles from the Identity flyout menu or the Settings page.
 
@@ -14584,11 +14585,11 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Enable the option to allow the use of guest profiles in Google Chrome. In a guest profile, the browser doesn't import browsing data from existing profiles, and it deletes browsing data when all guest profiles are closed.
+  Enable the option to allow the use of guest profiles in Microsoft Edge. In a guest profile, the browser doesn't import browsing data from existing profiles, and it deletes browsing data when all guest profiles are closed.
 
-If you enable this policy or don't configure it, Google Chrome lets users browse in guest profiles.
+If you enable this policy or don't configure it, Microsoft Edge lets users browse in guest profiles.
 
-If you disable this policy, Google Chrome doesn't let users browse in guest profiles.
+If you disable this policy, Microsoft Edge doesn't let users browse in guest profiles.
 
   #### Supported features:
 
@@ -14646,11 +14647,11 @@ If you disable this policy, Google Chrome doesn't let users browse in guest prof
 
   #### Description
 
-  Sets the ProcessExtensionPointDisablePolicy on Google Chrome's browser process to block code injection from legacy third party applications.
+  Sets the ProcessExtensionPointDisablePolicy on Microsoft Edge's browser process to block code injection from legacy third party applications.
 
 If you enable or don't configure this policy, the ProcessExtensionPointDisablePolicy is applied to block legacy extension points in the browser process.
 
-If you disable this policy, the ProcessExtensionPointDisablePolicy is not applied to block legacy extension points in the browser process. This has a detrimental effect on Google Chrome's security and stability as unknown and potentially hostile code can load inside Google Chrome's browser process. Only turn off the policy if there are compatibility issues with third-party software that must run inside Google Chrome's browser process.
+If you disable this policy, the ProcessExtensionPointDisablePolicy is not applied to block legacy extension points in the browser process. This has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's browser process. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's browser process.
 
   #### Supported features:
 
@@ -14701,11 +14702,11 @@ If you disable this policy, the ProcessExtensionPointDisablePolicy is not applie
 
   #### Description
 
-  Prevents Google Chrome from occasionally sending queries to a browser network time service to retrieve an accurate timestamp.
+  Prevents Microsoft Edge from occasionally sending queries to a browser network time service to retrieve an accurate timestamp.
 
-If you disable this policy, Google Chrome will stop sending queries to a browser network time service.
+If you disable this policy, Microsoft Edge will stop sending queries to a browser network time service.
 
-If you enable this policy or don't configure it, Google Chrome will occasionally send queries to a browser network time service.
+If you enable this policy or don't configure it, Microsoft Edge will occasionally send queries to a browser network time service.
 
   #### Supported features:
 
@@ -14763,9 +14764,9 @@ If you enable this policy or don't configure it, Google Chrome will occasionally
 
   #### Description
 
-  Specify whether a user can sign into Google Chrome with their account and use account-related services like sync and single sign on. To control the availability of sync, use the [SyncDisabled](#syncdisabled) policy instead.
+  Specify whether a user can sign into Microsoft Edge with their account and use account-related services like sync and single sign on. To control the availability of sync, use the [SyncDisabled](#syncdisabled) policy instead.
 
-If you set this policy to 'Disable', make sure that you also set the [NonRemovableProfileEnabled](#nonremovableprofileenabled) policy to disabled because [NonRemovableProfileEnabled](#nonremovableprofileenabled) disables the creation of an automatically signed in browser profile. If both policies are set, Google Chrome will use the 'Disable browser sign-in' policy and behave as if [NonRemovableProfileEnabled](#nonremovableprofileenabled) is set to disabled.
+If you set this policy to 'Disable', make sure that you also set the [NonRemovableProfileEnabled](#nonremovableprofileenabled) policy to disabled because [NonRemovableProfileEnabled](#nonremovableprofileenabled) disables the creation of an automatically signed in browser profile. If both policies are set, Microsoft Edge will use the 'Disable browser sign-in' policy and behave as if [NonRemovableProfileEnabled](#nonremovableprofileenabled) is set to disabled.
 
 If you set this policy to 'Enable', users can sign into the browser. Signing into the browser doesn't mean that sync is turned on by default; the user must separately opt-in to use this feature.
 
@@ -14839,10 +14840,10 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Configures browsing data lifetime settings for Google Chrome.
+  Configures browsing data lifetime settings for Microsoft Edge.
 This policy controls the lifetime of selected browsing data. This policy has no effect if Sync is enabled.
 The available data types are the 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' and 'hosted_app_data'.
-Google Chrome will regularly remove data of selected types that is older than 'time_to_live_in_hours'. The deletion of expired data will happen 15 seconds after the browser starts then every hour while the browser is running.
+Microsoft Edge will regularly remove data of selected types that is older than 'time_to_live_in_hours'. The deletion of expired data will happen 15 seconds after the browser starts then every hour while the browser is running.
 
 
   #### Supported features:
@@ -14943,7 +14944,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   Controls whether to use the built-in DNS client.
 
-This policy controls which software stack is used to communicate with the DNS server: the operating system DNS client, or Google Chrome's built-in DNS client. This policy does not affect which DNS servers are used: if, for example, the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It also does not control if DNS-over-HTTPS is used; Google Chrome always uses the built-in resolver for DNS-over-HTTPS requests. Please see the [DnsOverHttpsMode](#dnsoverhttpsmode) policy for information on controlling DNS-over-HTTPS.
+This policy controls which software stack is used to communicate with the DNS server: the operating system DNS client, or Microsoft Edge's built-in DNS client. This policy does not affect which DNS servers are used: if, for example, the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It also does not control if DNS-over-HTTPS is used; Microsoft Edge always uses the built-in resolver for DNS-over-HTTPS requests. Please see the [DnsOverHttpsMode](#dnsoverhttpsmode) policy for information on controlling DNS-over-HTTPS.
 
 If you enable this policy, the built-in DNS client is used, if it's available.
 
@@ -15009,7 +15010,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
-It won't work in Google Chrome version 107, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+It won't work in Microsoft Edge version 107, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
 
 
   #### Supported features:
@@ -15047,11 +15048,11 @@ It won't work in Google Chrome version 107, when support for the legacy certific
 
   #### Description
 
-  If this policy is not configured, or is set to enabled, then Google Chrome will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
+  If this policy is not configured, or is set to enabled, then Microsoft Edge will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
 
 CECPQ2 results in larger TLS messages which, in very rare cases, can trigger bugs in some networking hardware. This policy can be set to False to disable CECPQ2 while networking issues are resolved.
 
-This policy is a temporary measure and will be removed in future versions of Google Chrome.
+This policy is a temporary measure and will be removed in future versions of Microsoft Edge.
 
   #### Supported features:
 
@@ -15111,13 +15112,13 @@ This policy is a temporary measure and will be removed in future versions of Goo
 
   This policy lets you configure support of CORS non-wildcard request headers.
 
-Google Chrome version 97 introduces support for CORS non-wildcard request headers. When a script makes a cross-origin network request via fetch() and XMLHttpRequest with a script-added Authorization header, the header must be explicitly allowed by the Access-Control-Allow-Headers header in the CORS preflight response. "Explicitly" here means that the wild card symbol "*" doesn't cover the Authorization header. See [https://go.microsoft.com/fwlink/?linkid=2180022](https://go.microsoft.com/fwlink/?linkid=2180022) for more detail.
+Microsoft Edge version 97 introduces support for CORS non-wildcard request headers. When a script makes a cross-origin network request via fetch() and XMLHttpRequest with a script-added Authorization header, the header must be explicitly allowed by the Access-Control-Allow-Headers header in the CORS preflight response. "Explicitly" here means that the wild card symbol "*" doesn't cover the Authorization header. See [https://go.microsoft.com/fwlink/?linkid=2180022](https://go.microsoft.com/fwlink/?linkid=2180022) for more detail.
 
-If you enable or don't configure the policy, Google Chrome will support the CORS non-wildcard request headers and behave as previously described.
+If you enable or don't configure the policy, Microsoft Edge will support the CORS non-wildcard request headers and behave as previously described.
 
-If you disable this policy, Google Chrome will allow the wildcard symbol ("*") in the Access-Control-Allow-Headers header in the CORS preflight response to cover the Authorization header.
+If you disable this policy, Microsoft Edge will allow the wildcard symbol ("*") in the Access-Control-Allow-Headers header in the CORS preflight response to cover the Authorization header.
 
-This policy is a temporary workaround for the new CORS non-wildcard request header feature. It's intended to be removed after Google Chrome version 103.
+This policy is a temporary workaround for the new CORS non-wildcard request header feature. It's intended to be removed after Microsoft Edge version 103.
 
   #### Supported features:
 
@@ -15253,7 +15254,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 This policy lets you disable Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted because they were not properly publicly disclosed, continue to be used for enterprise hosts.
 
-In order for Certificate Transparency enforcement to be disabled, you must set the hash to a subjectPublicKeyInfo appearing in a CA certificate that is recognized as a legacy certificate authority (CA). A legacy CA is a CA that has been publicly trusted by default by one or more operating systems supported by Google Chrome.
+In order for Certificate Transparency enforcement to be disabled, you must set the hash to a subjectPublicKeyInfo appearing in a CA certificate that is recognized as a legacy certificate authority (CA). A legacy CA is a CA that has been publicly trusted by default by one or more operating systems supported by Microsoft Edge.
 
 You specify a subjectPublicKeyInfo hash by concatenating the hash algorithm name, the "/" character, and the Base64 encoding of that hash algorithm applied to the DER-encoded subjectPublicKeyInfo of the specified certificate. This Base64 encoding is the same format as an SPKI Fingerprint, as defined in RFC 7469, Section 2.4. Unrecognized hash algorithms are ignored. The only supported hash algorithm at this time is "sha256".
 
@@ -15381,7 +15382,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   ### ClearBrowsingDataOnExit
 
-  #### Clear browsing data when Google Chrome closes
+  #### Clear browsing data when Microsoft Edge closes
 
   
   
@@ -15391,13 +15392,13 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   #### Description
 
-  Google Chrome doesn't clear the browsing data by default when it closes. Browsing data includes information entered in forms, passwords, and even the websites visited.
+  Microsoft Edge doesn't clear the browsing data by default when it closes. Browsing data includes information entered in forms, passwords, and even the websites visited.
 
-If you enable this policy, all browsing data is deleted each time Google Chrome closes. Note that if you enable this policy, it takes precedence over how you configured [DefaultCookiesSetting](#defaultcookiessetting)
+If you enable this policy, all browsing data is deleted each time Microsoft Edge closes. Note that if you enable this policy, it takes precedence over how you configured [DefaultCookiesSetting](#defaultcookiessetting)
 
 If you disable or don't configure this policy, users can configure the Clear browsing data option in Settings.
 
-If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Google Chrome closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
+If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Microsoft Edge closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
@@ -15416,7 +15417,7 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
   ##### Group Policy (ADMX) info
 
   - GP unique name: ClearBrowsingDataOnExit
-  - GP name: Clear browsing data when Google Chrome closes
+  - GP name: Clear browsing data when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -15447,7 +15448,7 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 
   ### ClearCachedImagesAndFilesOnExit
 
-  #### Clear cached images and files when Google Chrome closes
+  #### Clear cached images and files when Microsoft Edge closes
 
   
   
@@ -15457,15 +15458,15 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 
   #### Description
 
-  Google Chrome doesn't clear cached images and files by default when it closes.
+  Microsoft Edge doesn't clear cached images and files by default when it closes.
 
-If you enable this policy, cached images and files will be deleted each time Google Chrome closes.
+If you enable this policy, cached images and files will be deleted each time Microsoft Edge closes.
 
 If you disable this policy, users cannot configure the cached images and files option in edge://settings/clearBrowsingDataOnClose.
 
 If you don't configure this policy, users can choose whether cached images and files are cleared on exit.
 
-If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you configure both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Google Chrome closes, regardless of how you configured [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
+If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy, because they both deal with deleting data. If you configure both, the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how you configured [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
   #### Supported features:
 
@@ -15482,7 +15483,7 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
   ##### Group Policy (ADMX) info
 
   - GP unique name: ClearCachedImagesAndFilesOnExit
-  - GP name: Clear cached images and files when Google Chrome closes
+  - GP name: Clear cached images and files when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -15529,7 +15530,7 @@ If you enable this policy, users can open files using the ClickOnce protocol. Th
 
 If you disable this policy, users can't open files using the ClickOnce protocol. Instead, the file will be saved to the file system using the browser. This policy overrides the user's ClickOnce setting in the edge://flags/ page.
 
-If you don't configure this policy, users with Google Chrome versions before Google Chrome 87 can't open files using the ClickOnce protocol by default. However, they have the option to enable the use of the ClickOnce protocol with the edge://flags/ page. Users with Google Chrome versions 87 and later can open files using the ClickOnce protocol by default but have the option to disable the ClickOnce protocol with edge://flags/ page.
+If you don't configure this policy, users with Microsoft Edge versions before Microsoft Edge 87 can't open files using the ClickOnce protocol by default. However, they have the option to enable the use of the ClickOnce protocol with the edge://flags/ page. Users with Microsoft Edge versions 87 and later can open files using the ClickOnce protocol by default but have the option to disable the ClickOnce protocol with edge://flags/ page.
 
 Disabling ClickOnce may prevent ClickOnce applications (.application files) from launching properly.
 
@@ -15584,7 +15585,7 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 
   #### Description
 
-  List specific services and export targets that users can't access in the Collections feature in Google Chrome. This includes displaying additional data from Bing and exporting collections to Microsoft products or external partners.
+  List specific services and export targets that users can't access in the Collections feature in Microsoft Edge. This includes displaying additional data from Bing and exporting collections to Microsoft products or external partners.
 
 If you enable this policy, services and export targets that match the given list are blocked.
 
@@ -15679,9 +15680,9 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
   #### Description
 
-  If disabled, this policy prevents security warnings from appearing when Google Chrome is launched with potentially dangerous command-line flags.
+  If disabled, this policy prevents security warnings from appearing when Microsoft Edge is launched with potentially dangerous command-line flags.
 
-If enabled or unset, security warnings are displayed when these command-line flags are used to launch Google Chrome.
+If enabled or unset, security warnings are displayed when these command-line flags are used to launch Microsoft Edge.
 
 For example, the --disable-gpu-sandbox flag generates this warning:  You're using an unsupported command-line flag: --disable-gpu-sandbox. This poses stability and security risks.
 
@@ -15733,7 +15734,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   ### ComponentUpdatesEnabled
 
-  #### Enable component updates in Google Chrome
+  #### Enable component updates in Microsoft Edge
 
   
   
@@ -15743,15 +15744,15 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  If you enable or don't configure this policy, component updates are enabled in Google Chrome.
+  If you enable or don't configure this policy, component updates are enabled in Microsoft Edge.
 
-If you disable this policy or set it to false, component updates are disabled for all components in Google Chrome.
+If you disable this policy or set it to false, component updates are disabled for all components in Microsoft Edge.
 
 However, some components are exempt from this policy. This includes any component that doesn't contain executable code, that doesn't significantly alter the behavior of the browser, or that's critical for security. That is, updates that are deemed "critical for security" are still applied even if you disable this policy.
 
 Examples of such components include the certificate revocation lists and security lists like tracking prevention lists.
 
-Please note that disabling this policy can potentially prevent the Google Chrome developers from providing critical security fixes in a timely manner and is thus not recommended.
+Please note that disabling this policy can potentially prevent the Microsoft Edge developers from providing critical security fixes in a timely manner and is thus not recommended.
 
 
   #### Supported features:
@@ -15769,7 +15770,7 @@ Please note that disabling this policy can potentially prevent the Google Chrome
   ##### Group Policy (ADMX) info
 
   - GP unique name: ComponentUpdatesEnabled
-  - GP name: Enable component updates in Google Chrome
+  - GP name: Enable component updates in Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -15810,7 +15811,7 @@ Please note that disabling this policy can potentially prevent the Google Chrome
 
   #### Description
 
-  Specify whether to send Do Not Track requests to websites that ask for tracking info. Do Not Track requests let the websites you visit know that you don't want your browsing activity to be tracked. By default, Google Chrome doesn't send Do Not Track requests, but users can turn on this feature to send them.
+  Specify whether to send Do Not Track requests to websites that ask for tracking info. Do Not Track requests let the websites you visit know that you don't want your browsing activity to be tracked. By default, Microsoft Edge doesn't send Do Not Track requests, but users can turn on this feature to send them.
 
 If you enable this policy, Do Not Track requests are always sent to websites asking for tracking info.
 
@@ -15957,7 +15958,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Configure the list of Google Chrome commands for which to disable keyboard shortcuts.
+  Configure the list of Microsoft Edge commands for which to disable keyboard shortcuts.
 
 See [https://go.microsoft.com/fwlink/?linkid=2186950](https://go.microsoft.com/fwlink/?linkid=2186950) for a list of possible commands to disable.
 
@@ -16033,15 +16034,15 @@ On every launch, Microsoft Edge will try to sign-in using this policy, as long a
 
 If you have configured the [BrowserSignin](#browsersignin) policy to disabled, this policy will not take any effect.
 
-If you enable this policy and set it to 'SignInAndMakeDomainAccountNonRemovable', Google Chrome will automatically sign in users that are on domain joined machines using their Active Directory accounts.
+If you enable this policy and set it to 'SignInAndMakeDomainAccountNonRemovable', Microsoft Edge will automatically sign in users that are on domain joined machines using their Active Directory accounts.
 
-If you set this policy to 'Disabled' or don't set it, Google Chrome will not automatically sign in users that are on domain joined machines with Active Directory accounts.
+If you set this policy to 'Disabled' or don't set it, Microsoft Edge will not automatically sign in users that are on domain joined machines with Active Directory accounts.
 
-From Google Chrome 89 onwards, if there is an existing on-premises profile with [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy disabled and machine is now hybrid joined i.e it has an Azure AD account, it will auto-upgrade the on-premises profile to Azure AD profile to get full Azure AD sync facilities.
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy disabled and machine is now hybrid joined i.e it has an Azure AD account, it will auto-upgrade the on-premises profile to Azure AD profile to get full Azure AD sync facilities.
 
-From Google Chrome 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
+From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
 
-From Google Chrome 94 onwards, if policy [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) is enabled, and this policy is set to 'SignInAndMakeDomainAccountNonRemovable', it will take effect even on hybrid joined environment. Google Chrome will automatically sign in users using their Active Directory domain account even if there are MSA or AAD accounts.
+From Microsoft Edge 94 onwards, if policy [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) is enabled, and this policy is set to 'SignInAndMakeDomainAccountNonRemovable', it will take effect even on hybrid joined environment. Microsoft Edge will automatically sign in users using their Active Directory domain account even if there are MSA or AAD accounts.
 
 Policy options mapping:
 
@@ -16167,7 +16168,7 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
 
   #### Description
 
-  If you set this policy to 'ShareAllowed' (the default), users will be able to access the Share experience from the Settings and More Menu in Google Chrome to share with other apps on the system.
+  If you set this policy to 'ShareAllowed' (the default), users will be able to access the Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.
 
 If you set this policy to 'ShareDisallowed', users won't be able to access the Share experience. If the Share button is on the toolbar, it will also be hidden.
 
@@ -16504,7 +16505,7 @@ If you disable this policy, DNS interception checks aren't performed.
 
   ### DefaultBrowserSettingEnabled
 
-  #### Set Google Chrome as default browser
+  #### Set Microsoft Edge as default browser
 
   
   
@@ -16514,13 +16515,13 @@ If you disable this policy, DNS interception checks aren't performed.
 
   #### Description
 
-  If you set this policy to True, Google Chrome always checks whether it's the default browser on startup and, if possible, automatically registers itself.
+  If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
 
-If you set this policy to False, Google Chrome is stopped from ever checking if it's the default and turns user controls off for this option.
+If you set this policy to False, Microsoft Edge is stopped from ever checking if it's the default and turns user controls off for this option.
 
-If you don't set this policy, Google Chrome lets users control whether it's the default and, if not, whether user notifications should appear.
+If you don't set this policy, Microsoft Edge lets users control whether it's the default and, if not, whether user notifications should appear.
 
-Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Google Chrome the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) for more information.
+Note for Windows administrators: This policy only works for PCs running Windows 7. For later versions of Windows, you have to deploy a "default application associations" file that makes Microsoft Edge the handler for the https and http protocols (and, optionally, the ftp protocol and file formats such as .html, .htm, .pdf, .svg, .webp). See [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) for more information.
 
   #### Supported features:
 
@@ -16537,7 +16538,7 @@ Note for Windows administrators: This policy only works for PCs running Windows 
   ##### Group Policy (ADMX) info
 
   - GP unique name: DefaultBrowserSettingEnabled
-  - GP name: Set Google Chrome as default browser
+  - GP name: Set Microsoft Edge as default browser
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16850,7 +16851,7 @@ For detailed information on valid language variants, see [https://go.microsoft.c
 
   #### Description
 
-  Lets you specify whether Google Chrome tabs wait to navigate until the browser has downloaded the initial Enterprise Mode Site List. This setting is intended for the scenario where the browser home page should load in Internet Explorer mode, and it is important that is does so on browser first run after IE mode is enabled. If this scenario does not exist, we recommend not enabling this setting because it can negatively impact the performance of loading the home page. The setting only applies when Google Chrome does not have a cached Enterprise Mode Site List, such as on browser first run after IE mode is enabled.
+  Lets you specify whether Microsoft Edge tabs wait to navigate until the browser has downloaded the initial Enterprise Mode Site List. This setting is intended for the scenario where the browser home page should load in Internet Explorer mode, and it is important that is does so on browser first run after IE mode is enabled. If this scenario does not exist, we recommend not enabling this setting because it can negatively impact the performance of loading the home page. The setting only applies when Microsoft Edge does not have a cached Enterprise Mode Site List, such as on browser first run after IE mode is enabled.
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
@@ -16859,11 +16860,11 @@ and one of either the
 
 The timeout behavior of this policy can be configured with the [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout) policy.
 
-If you set this policy to 'All', when Google Chrome does not have a cached version of the Enterprise Mode Site List, tabs delay navigating until the browser has downloaded the site list. Sites configured to open in Internet Explorer mode by the site list will load in Internet Explorer mode, even during the initial navigation of the browser. Sites that cannot possibly be configured to open in Internet Explorer, such as any site with a scheme other than http:, https:, file:, or ftp: do not delay navigating and load immediately in Edge mode.
+If you set this policy to 'All', when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs delay navigating until the browser has downloaded the site list. Sites configured to open in Internet Explorer mode by the site list will load in Internet Explorer mode, even during the initial navigation of the browser. Sites that cannot possibly be configured to open in Internet Explorer, such as any site with a scheme other than http:, https:, file:, or ftp: do not delay navigating and load immediately in Edge mode.
 
 When used in conjunction with the [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) policy, during first launch of Microsoft Edge, there is a delay because implicit sign-in needs to finish before Microsoft Edge attempts to download the site list from the Microsoft cloud, since this requires authentication to the cloud service.
 
-If you set this policy to 'None' or don't configure it, when Google Chrome does not have a cached version of the Enterprise Mode Site List, tabs will navigate immediately, and not wait for the browser to download the Enterprise Mode Site List. Sites configured to open in Internet Explorer mode by the site list will open in Microsoft Edge mode until the browser has finished downloading the Enterprise Mode Site List.
+If you set this policy to 'None' or don't configure it, when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs will navigate immediately, and not wait for the browser to download the Enterprise Mode Site List. Sites configured to open in Internet Explorer mode by the site list will open in Microsoft Edge mode until the browser has finished downloading the Enterprise Mode Site List.
 
 Policy options mapping:
 
@@ -16922,11 +16923,11 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy determines whether user browsing data from Google Chrome Legacy will be deleted after migrating to the Google Chrome version 81 or later.
+  This policy determines whether user browsing data from Microsoft Edge Legacy will be deleted after migrating to the Microsoft Edge version 81 or later.
 
-If you set this policy to "Enabled", all browsing data from Google Chrome Legacy after migrating to the Google Chrome version 81 or later will be deleted. This policy must be set before migrating to the Google Chrome version 81 or later to have any effect on existing browsing data.
+If you set this policy to "Enabled", all browsing data from Microsoft Edge Legacy after migrating to the Microsoft Edge version 81 or later will be deleted. This policy must be set before migrating to the Microsoft Edge version 81 or later to have any effect on existing browsing data.
 
-If you set this policy to "Disabled", or the policy is not configured, user browsing data isn't deleted after migrating to the Google Chrome version 83 or later.
+If you set this policy to "Disabled", or the policy is not configured, user browsing data isn't deleted after migrating to the Microsoft Edge version 83 or later.
 
   #### Supported features:
 
@@ -17053,7 +17054,7 @@ Use the preceding information when configuring this policy.
 
   This policy controls sending required and optional diagnostic data about browser usage to Microsoft.
 
-Required diagnostic data is collected keep Google Chrome secure, up to date and performing as expected.
+Required diagnostic data is collected keep Microsoft Edge secure, up to date and performing as expected.
 
 Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.
 
@@ -17063,13 +17064,13 @@ Use one of the following settings to configure this policy:
 
 'Off' turns off required and optional diagnostic data collection. This option is not recommended.
 
-'RequiredData' sends required diagnostic data but turns off optional diagnostic data collection. Google Chrome will send required diagnostic data to keep Google Chrome secure, up to date and performing as expected.
+'RequiredData' sends required diagnostic data but turns off optional diagnostic data collection. Microsoft Edge will send required diagnostic data to keep Microsoft Edge secure, up to date and performing as expected.
 
 'OptionalData' sends optional diagnostic data includes data about browser usage, websites that are visited, crash reports sent to Microsoft for product and service improvement.
 
 On Windows 7/macOS, this policy controls sending required and optional data to Microsoft.
 
-If you don't configure this policy or disable it, Google Chrome will default to the user's preference.
+If you don't configure this policy or disable it, Microsoft Edge will default to the user's preference.
 
 Policy options mapping:
 
@@ -17198,7 +17199,7 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 
   Prevent web pages from accessing the graphics processing unit (GPU). Specifically, web pages can't access the WebGL API and plug-ins can't use the Pepper 3D API.
 
-If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Google Chrome might, by default, still require command line arguments to be passed in order to use these APIs.
+If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Microsoft Edge might, by default, still require command line arguments to be passed in order to use these APIs.
 
 If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to true.
 
@@ -17324,7 +17325,7 @@ Please note this policy controls screenshots taken from within the browser itsel
 
   Configures the directory to use to store cached files.
 
-If you enable this policy, Google Chrome uses the provided directory regardless of whether the user has specified the '--disk-cache-dir' flag. To avoid data loss or other unexpected errors, don't configure this policy to a volume's root directory or to a directory used for other purposes, because Google Chrome manages its contents.
+If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified the '--disk-cache-dir' flag. To avoid data loss or other unexpected errors, don't configure this policy to a volume's root directory or to a directory used for other purposes, because Microsoft Edge manages its contents.
 
 See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables you can use when specifying directories and paths.
 
@@ -17388,7 +17389,7 @@ If you don't configure this policy, the default cache directory is used, and use
 
   Configures the size of the cache, in bytes, used to store files on the disk.
 
-If you enable this policy, Google Chrome uses the provided cache size regardless of whether the user has specified the '--disk-cache-size' flag. The value specified in this policy isn't a hard boundary but rather a suggestion to the caching system; any value below a few megabytes is too small and will be rounded up to a reasonable minimum.
+If you enable this policy, Microsoft Edge uses the provided cache size regardless of whether the user has specified the '--disk-cache-size' flag. The value specified in this policy isn't a hard boundary but rather a suggestion to the caching system; any value below a few megabytes is too small and will be rounded up to a reasonable minimum.
 
 If you set the value of this policy to 0, the default cache size is used, and users can't change it.
 
@@ -17458,7 +17459,7 @@ https://www.w3.org/TR/screen-capture/#feature-policy-integration
 However, if this policy is Disabled, this requirement is not enforced,
 and getDisplayMedia() is allowed from contexts that would otherwise be
 forbidden. This Enterprise policy is temporary; it's intended to be
-removed after Google Chrome version 100.
+removed after Microsoft Edge version 100.
 It is intended to unblock Enterprise users whose application is non-spec compliant,
 but needs time to be fixed.
 
@@ -17799,11 +17800,11 @@ SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
 
   Configures the directory to use when downloading files.
 
-If you enable this policy, Google Chrome uses the provided directory regardless of whether the user has specified one or chosen to be prompted for download location every time. See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
+If you enable this policy, Microsoft Edge uses the provided directory regardless of whether the user has specified one or chosen to be prompted for download location every time. See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
 
 If you disable or don't configure this policy, the default download directory is used, and the user can change it.
 
-If you set an invalid path, Google Chrome will default to the user's default download directory.
+If you set an invalid path, Microsoft Edge will default to the user's default download directory.
 
 If the folder specified by the path doesn't exist, the download will trigger a prompt that asks the user where they want to save their download.
 
@@ -17865,7 +17866,7 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 
   #### Description
 
-  Configures the type of downloads that Google Chrome completely blocks, without letting users override the security decision.
+  Configures the type of downloads that Microsoft Edge completely blocks, without letting users override the security decision.
 
 Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of known or potentially dangerous downloads or that have dangerous file type extensions.
 
@@ -18016,9 +18017,9 @@ If you disable this policy, features won't be able to download assets needed for
 
   Lets you allow users to access the Collections feature, where they can collect, organize, share, and export content more efficiently and with Office integration.
 
-If you enable or don't configure this policy, users can access and use the Collections feature in Google Chrome.
+If you enable or don't configure this policy, users can access and use the Collections feature in Microsoft Edge.
 
-If you disable this policy, users can't access and use Collections in Google Chrome.
+If you disable this policy, users can't access and use Collections in Microsoft Edge.
 
   #### Supported features:
 
@@ -18076,13 +18077,13 @@ If you disable this policy, users can't access and use Collections in Google Chr
 
   #### Description
 
-  This policy lets you configure the Discover feature in Google Chrome.
+  This policy lets you configure the Discover feature in Microsoft Edge.
 
 Working in the background when enabled, this feature sends URLs to Microsoft Bing to search for related recommendations.
 
-If you enable or don't configure this policy, you can use the Discover button on Google Chrome to start using this feature.
+If you enable or don't configure this policy, you can use the Discover button on Microsoft Edge to start using this feature.
 
-If you disable this policy, you can't use the Discover feature in Google Chrome.
+If you disable this policy, you can't use the Discover feature in Microsoft Edge.
 
   #### Supported features:
 
@@ -18140,11 +18141,11 @@ If you disable this policy, you can't use the Discover feature in Google Chrome.
 
   #### Description
 
-  Set whether Google Chrome can automatically enhance images to show you sharper images with better color, lighting, and contrast.
+  Set whether Microsoft Edge can automatically enhance images to show you sharper images with better color, lighting, and contrast.
 
-If you enable this policy or don't configure the policy, Google Chrome will automatically enhance images on specific web applications.
+If you enable this policy or don't configure the policy, Microsoft Edge will automatically enhance images on specific web applications.
 
-If you disable this policy, Google Chrome will not enhance images.
+If you disable this policy, Microsoft Edge will not enhance images.
 
   #### Supported features:
 
@@ -18202,13 +18203,13 @@ If you disable this policy, Google Chrome will not enhance images.
 
   #### Description
 
-  Allows the Google Chrome browser to enable Follow service and apply it to users.
+  Allows the Microsoft Edge browser to enable Follow service and apply it to users.
 
 Users can use the Follow an influencer, site, or topic in Microsoft Edge..
 
-If you enable or don't configure this policy, Follow in Google Chrome can be applied.
+If you enable or don't configure this policy, Follow in Microsoft Edge can be applied.
 
-If you disable this policy, Google Chrome will not communicate with Follow service to provide the follow feature.
+If you disable this policy, Microsoft Edge will not communicate with Follow service to provide the follow feature.
 
   #### Supported features:
 
@@ -18469,9 +18470,9 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   This policy doesn't work because conflicting states should be avoided. This policy was used to enable/disable download of the domain actions list, but it didn't always achieve the desired state. The Experimentation and Configuration Service, which handles the download, has its own policy to configure what is downloaded from the service. Use the [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) policy instead.
 
-In Google Chrome, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
+In Microsoft Edge, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
 
-Microsoft keeps a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Google Chrome. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+Microsoft keeps a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
 
 When the browser starts up and then periodically afterwards, the browser will contact the Experimentation and Configuration Service that contains the most up to date list of compatibility actions to perform. This list is saved locally after it is first retrieved so that subsequent requests will only update the list if the server's copy has changed.
 
@@ -18539,9 +18540,9 @@ If you don't configure this policy, the list of Domain Actions will continue to 
 
   Online revocation checks don't provide a significant security benefit and are disabled by default.
 
-If you enable this policy, Google Chrome will perform soft-fail, online OCSP/CRL checks. "Soft fail" means that if the revocation server can't be reached, the certificate will be considered valid.
+If you enable this policy, Microsoft Edge will perform soft-fail, online OCSP/CRL checks. "Soft fail" means that if the revocation server can't be reached, the certificate will be considered valid.
 
-If you disable the policy or don't configure it, Google Chrome won't perform online revocation checks.
+If you disable the policy or don't configure it, Microsoft Edge won't perform online revocation checks.
 
   #### Supported features:
 
@@ -18599,11 +18600,11 @@ If you disable the policy or don't configure it, Google Chrome won't perform onl
 
   #### Description
 
-  When this setting is enabled, Google Chrome allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.
+  When this setting is enabled, Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.
 
-Note that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Google Chrome 92 releasing in mid 2021.
+Note that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Microsoft Edge 92 releasing in mid 2021.
 
-If you don't set this policy or set it to false, or the SHA-1 certificate chains to a publicly trusted certificate root, then Google Chrome won't allow certificates signed by SHA-1.
+If you don't set this policy or set it to false, or the SHA-1 certificate chains to a publicly trusted certificate root, then Microsoft Edge won't allow certificates signed by SHA-1.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -18663,9 +18664,9 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   #### Description
 
-  This policy lets you enhance the security state in Google Chrome.
+  This policy lets you enhance the security state in Microsoft Edge.
 
-If you set this policy to 'StandardMode', the enhanced mode will be turned off and Google Chrome will fallback to its standard security mode.
+If you set this policy to 'StandardMode', the enhanced mode will be turned off and Microsoft Edge will fallback to its standard security mode.
 
 If you set this policy to 'BalancedMode', the security state would be in balanced mode.
 
@@ -19148,9 +19149,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  There is a list of restricted ports built into Google Chrome. Connections to these ports will fail. This policy allows bypassing that list. The set of ports is defined as a comma-separated list that outgoing connections should be permitted on.
+  There is a list of restricted ports built into Microsoft Edge. Connections to these ports will fail. This policy allows bypassing that list. The set of ports is defined as a comma-separated list that outgoing connections should be permitted on.
 
-Ports are restricted to prevent Google Chrome from being used as a vector to exploit various network vulnerabilities. Setting this policy may expose your network to attacks. This policy is intended as a temporary workaround for error code "ERR_UNSAFE_PORT" while migrating a service running on a blocked port to a standard port (for example port 80 or 443).
+Ports are restricted to prevent Microsoft Edge from being used as a vector to exploit various network vulnerabilities. Setting this policy may expose your network to attacks. This policy is intended as a temporary workaround for error code "ERR_UNSAFE_PORT" while migrating a service running on a blocked port to a standard port (for example port 80 or 443).
 
 Malicious websites can easily detect that this policy is set, and for which ports, then use that information to target attacks.
 
@@ -19239,11 +19240,11 @@ If you enable this policy, when an external protocol confirmation prompt is show
 
 If you disable this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
 
-Prior to Google Chrome 83, if you don't configure this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
+Prior to Microsoft Edge 83, if you don't configure this policy, the "Always allow" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.
 
-On Google Chrome 83, if you don't configure this policy, the checkbox visibility is controlled by the "Enable remembering protocol launch prompting preferences" flag in edge://flags
+On Microsoft Edge 83, if you don't configure this policy, the checkbox visibility is controlled by the "Enable remembering protocol launch prompting preferences" flag in edge://flags
 
-As of Google Chrome 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
+As of Microsoft Edge 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select "Always allow" to skip all future confirmation prompts for the protocol on this site.
 
   #### Supported features:
 
@@ -19565,7 +19566,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is deprecated because we are moving to a new policy. It won't work in Google Chrome version 104. The new policy to use is [PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates).
+  This policy is deprecated because we are moving to a new policy. It won't work in Microsoft Edge version 104. The new policy to use is [PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates).
 
 Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with [AutoSelectCertificateForUrls](#autoselectcertificateforurls). If you don't configure [AutoSelectCertificateForUrls](#autoselectcertificateforurls) for a site, the user will always be prompted to select a certificate.
 
@@ -20031,9 +20032,9 @@ For this policy to work as intended,
 
   #### Description
 
-  If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Google Chrome synchronization service.
+  If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Google Chrome version 100. Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the enabled data types.
 
@@ -20170,13 +20171,13 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Set the availability of full screen mode - all Google Chrome UI is hidden and only web content is visible.
+  Set the availability of full screen mode - all Microsoft Edge UI is hidden and only web content is visible.
 
 If you enable this policy or don't configure it, the user, apps, and extensions with appropriate permissions can enter full screen mode.
 
 If you disable this policy, users, apps, and extensions can't enter full screen mode.
 
-Opening Google Chrome in kiosk mode using the command line is unavailable when full screen mode is disabled.
+Opening Microsoft Edge in kiosk mode using the command line is unavailable when full screen mode is disabled.
 
   #### Supported features:
 
@@ -20486,11 +20487,11 @@ If you disable this policy, hardware acceleration is disabled.
 
   #### Description
 
-  This policy setting lets you decide whether users can launch Google Chrome in headless mode.
+  This policy setting lets you decide whether users can launch Microsoft Edge in headless mode.
 
-If you enable or don't configure this policy, Google Chrome allows use of the headless mode.
+If you enable or don't configure this policy, Microsoft Edge allows use of the headless mode.
 
-If you disable this policy, Google Chrome denies use of the headless mode.
+If you disable this policy, Microsoft Edge denies use of the headless mode.
 
   #### Supported features:
 
@@ -20548,7 +20549,7 @@ If you disable this policy, Google Chrome denies use of the headless mode.
 
   #### Description
 
-  If you enable this policy, the First-run experience and the splash screen will not be shown to users when they run Google Chrome for the first time.
+  If you enable this policy, the First-run experience and the splash screen will not be shown to users when they run Microsoft Edge for the first time.
 
 For the configuration options shown in the First Run Experience, the browser will default to the following:
 
@@ -20689,7 +20690,7 @@ Users will continue to be redirected to Microsoft Edge when they encounter an in
 
   #### Description
 
-  This policy gives an option to hide the "Restore pages" dialog after Google Chrome has crashed. The "Restore pages" dialog gives users the option to restore the pages that were previously open before Google Chrome crashed.
+  This policy gives an option to hide the "Restore pages" dialog after Microsoft Edge has crashed. The "Restore pages" dialog gives users the option to restore the pages that were previously open before Microsoft Edge crashed.
 
 If you enable this policy, the "Restore pages" dialog will not be shown.
 
@@ -20753,7 +20754,7 @@ If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingd
 
   #### Description
 
-  Shows a launcher bar on the right side of Google Chrome's screen.
+  Shows a launcher bar on the right side of Microsoft Edge's screen.
 
 Enable this policy to always show the Sidebar.
 Disable this policy to never show the Sidebar.
@@ -20816,7 +20817,7 @@ If you don't configure the policy, users can choose whether to show the Sidebar.
 
   #### Description
 
-  Allows users to import autofill form data from another browser into Google Chrome.
+  Allows users to import autofill form data from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import autofill data is automatically selected.
 
@@ -20824,7 +20825,7 @@ If you disable this policy, autofill form data isn't imported at first run, and 
 
 If you don't configure this policy, autofill data is imported at first run, and users can choose whether to import this data manually during later browsing sessions.
 
-You can set this policy as a recommendation. This means that Google Chrome will import autofill data on first run, but users can select or clear **autofill data** option during manual import.
+You can set this policy as a recommendation. This means that Microsoft Edge will import autofill data on first run, but users can select or clear **autofill data** option during manual import.
 
 **Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS) and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
 
@@ -20884,7 +20885,7 @@ You can set this policy as a recommendation. This means that Google Chrome will 
 
   #### Description
 
-  Allows users to import browser settings from another browser into Google Chrome.
+  Allows users to import browser settings from another browser into Microsoft Edge.
 
 If you enable this policy, the **Browser settings** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -20892,7 +20893,7 @@ If you disable this policy, browser settings aren't imported at first run, and u
 
 If you don't configure this policy, browser settings are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports the settings on first run, but users can select or clear the **browser settings** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports the settings on first run, but users can select or clear the **browser settings** option during manual import.
 
 **Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -20952,13 +20953,13 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import Cookies from another browser into Google Chrome.
+  Allows users to import Cookies from another browser into Microsoft Edge.
 
 If you disable this policy, Cookies aren't imported on first run.
 
 If you don't configure this policy, Cookies are imported on first run.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports Cookies on first run.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports Cookies on first run.
 
 **Note**: This policy currently manages importing Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -21018,7 +21019,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import extensions from another browser into Google Chrome.
+  Allows users to import extensions from another browser into Microsoft Edge.
 
 If you enable this policy, the **Extensions** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -21026,7 +21027,7 @@ If you disable this policy, extensions aren't imported at first run, and users c
 
 If you don't configure this policy, extensions are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports extensions on first run, but users can select or clear the **extensions** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports extensions on first run, but users can select or clear the **extensions** option during manual import.
 
 **Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -21086,7 +21087,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import favorites from another browser into Google Chrome.
+  Allows users to import favorites from another browser into Microsoft Edge.
 
 If you enable this policy, the **Favorites** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -21094,7 +21095,7 @@ If you disable this policy, favorites aren't imported at first run, and users ca
 
 If you don't configure this policy, favorites are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports favorites on first run, but users can select or clear the **favorites** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports favorites on first run, but users can select or clear the **favorites** option during manual import.
 
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (on macOS) browsers.
 
@@ -21154,7 +21155,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import their browsing history from another browser into Google Chrome.
+  Allows users to import their browsing history from another browser into Microsoft Edge.
 
 If you enable this policy, the **Browsing history** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -21162,7 +21163,7 @@ If you disable this policy, browsing history data isn't imported at first run, a
 
 If you don't configure this policy, browsing history data is imported at first run, and users can choose whether to import it manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports browsing history on first run, but users can select or clear the **history** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports browsing history on first run, but users can select or clear the **history** option during manual import.
 
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), Mozilla Firefox (on Windows 7, 8, and 10 and on macOS), and Apple Safari (macOS) browsers.
 
@@ -21222,7 +21223,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import their home page setting from another browser into Google Chrome.
+  Allows users to import their home page setting from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import the home page setting is automatically selected.
 
@@ -21230,7 +21231,7 @@ If you disable this policy, the home page setting isn't imported at first run, a
 
 If you don't configure this policy, the home page setting is imported at first run, and users can choose whether to import this data manually during later browsing sessions.
 
-You can set this policy as a recommendation. This means that Google Chrome imports the home page setting on first run, but users can select or clear the **home page** option during manual import.
+You can set this policy as a recommendation. This means that Microsoft Edge imports the home page setting on first run, but users can select or clear the **home page** option during manual import.
 
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
 
@@ -21278,6 +21279,63 @@ You can set this policy as a recommendation. This means that Google Chrome impor
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ImportOnEachLaunch
+
+  #### Allow import of data from other browsers on each Microsoft Edge launch
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 104 or later
+
+  #### Description
+
+  If you enable this policy, users will see a prompt to import their browsing data from other browsers on each Microsoft Edge launch.
+
+If you disable this policy, users will never see a prompt to import their browsing data from other browsers on each Microsoft Edge launch.
+
+If the policy is left unconfigured, users can activate this feature from a Microsoft Edge prompt or from the Settings page.
+
+Note: A similar policy named [AutoImportAtFirstRun](#autoimportatfirstrun) exists. This policy should be used if you want to import supported data from other browsers only once while setting up your device.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImportOnEachLaunch
+  - GP name: Allow import of data from other browsers on each Microsoft Edge launch
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImportOnEachLaunch
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ImportOpenTabs
 
   #### Allow importing of open tabs
@@ -21290,7 +21348,7 @@ You can set this policy as a recommendation. This means that Google Chrome impor
 
   #### Description
 
-  Allows users to import open and pinned tabs from another browser into Google Chrome.
+  Allows users to import open and pinned tabs from another browser into Microsoft Edge.
 
 If you enable this policy, the **Open tabs** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -21298,7 +21356,7 @@ If you disable this policy, open tabs aren't imported at first run, and users ca
 
 If you don't configure this policy, open tabs are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports open tabs on first run, but users can select or clear the **Open tabs** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports open tabs on first run, but users can select or clear the **Open tabs** option during manual import.
 
 **Note**: This policy currently only supports importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -21358,7 +21416,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import payment info from another browser into Google Chrome.
+  Allows users to import payment info from another browser into Microsoft Edge.
 
 If you enable this policy, the **payment info** check box is automatically selected in the **Import browser data** dialog box.
 
@@ -21366,7 +21424,7 @@ If you disable this policy, payment info isn't imported at first run, and users 
 
 If you don't configure this policy, payment info is imported at first run, and users can choose whether to import it manually during later browsing sessions.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports payment info on first run, but users can select or clear the **payment info** option during manual import.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports payment info on first run, but users can select or clear the **payment info** option during manual import.
 
 **Note:** This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -21426,7 +21484,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import saved passwords from another browser into Google Chrome.
+  Allows users to import saved passwords from another browser into Microsoft Edge.
 
 If you enable this policy, the option to manually import saved passwords is automatically selected.
 
@@ -21434,7 +21492,7 @@ If you disable this policy, saved passwords aren't imported on first run, and us
 
 If you don't configure this policy, passwords are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
-You can set this policy as a recommendation. This means that Google Chrome imports passwords on first run, but users can select or clear the **passwords** option during manual import.
+You can set this policy as a recommendation. This means that Microsoft Edge imports passwords on first run, but users can select or clear the **passwords** option during manual import.
 
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10), Google Chrome (on Windows 7, 8, and 10 and on macOS), and Mozilla Firefox (on Windows 7, 8, and 10 and on macOS) browsers.
 
@@ -21494,7 +21552,7 @@ You can set this policy as a recommendation. This means that Google Chrome impor
 
   #### Description
 
-  Allows users to import search engine settings from another browser into Google Chrome.
+  Allows users to import search engine settings from another browser into Microsoft Edge.
 
 If you enable, this policy, the option to import search engine settings is automatically selected.
 
@@ -21502,7 +21560,7 @@ If you disable this policy, search engine settings aren't imported at first run,
 
 If you don't configure this policy, search engine settings are imported at first run, and users can choose whether to import this data manually during later browsing sessions.
 
-You can set this policy as a recommendation. This means that Google Chrome imports search engine settings on first run, but users can select or clear the **search engine** option during manual import.
+You can set this policy as a recommendation. This means that Microsoft Edge imports search engine settings on first run, but users can select or clear the **search engine** option during manual import.
 
 **Note**: This policy currently manages importing from Internet Explorer (on Windows 7, 8, and 10).
 
@@ -21562,13 +21620,13 @@ You can set this policy as a recommendation. This means that Google Chrome impor
 
   #### Description
 
-  Allows users to import Shortcuts from another browser into Google Chrome.
+  Allows users to import Shortcuts from another browser into Microsoft Edge.
 
 If you disable this policy, Shortcuts aren't imported on first run.
 
 If you don't configure this policy, Shortcuts are imported on first run.
 
-You can also set this policy as a recommendation. This means that Google Chrome imports Shortcuts on first run.
+You can also set this policy as a recommendation. This means that Microsoft Edge imports Shortcuts on first run.
 
 **Note**: This policy currently manages importing from Google Chrome (on Windows 7, 8, and 10 and on macOS).
 
@@ -21628,7 +21686,7 @@ You can also set this policy as a recommendation. This means that Google Chrome 
 
   #### Description
 
-  Allows users to import Startup settings from another browser into Google Chrome.
+  Allows users to import Startup settings from another browser into Microsoft Edge.
 
 If you enable this policy, the Startup settings are always imported.
 
@@ -21636,7 +21694,7 @@ If you disable this policy, startup settings are not imported at first run or at
 
 If you don't configure this policy, startup settings are imported at first run, and users can choose whether to import this data manually by selecting browser settings option during later browsing sessions.
 
-You can set this policy as a recommendation. This means that Google Chrome will import startup settings on first run, but users can select or clear **browser settings** option during manual import.
+You can set this policy as a recommendation. This means that Microsoft Edge will import startup settings on first run, but users can select or clear **browser settings** option during manual import.
 
 **Note**: This policy currently manages importing from Microsoft Edge Legacy and Google Chrome (on Windows 7, 8, and 10) browsers.
 
@@ -21689,7 +21747,7 @@ You can set this policy as a recommendation. This means that Google Chrome will 
 
   #### Description
 
-  Google Chrome uses the in-app support feature (enabled by default) to allow users to contact our support agents directly from the browser. Also, by default, users can't disable (turn off) the in-app support feature.
+  Microsoft Edge uses the in-app support feature (enabled by default) to allow users to contact our support agents directly from the browser. Also, by default, users can't disable (turn off) the in-app support feature.
 
 If you enable this policy or don't configure it, users can invoke in-app support.
 
@@ -21751,7 +21809,7 @@ If you disable this policy, users can't invoke in-app support.
 
   #### Description
 
-  Specifies whether the user can open pages in InPrivate mode in Google Chrome.
+  Specifies whether the user can open pages in InPrivate mode in Microsoft Edge.
 
 If you don't configure this policy or set it to 'Enabled', users can open pages in InPrivate mode.
 
@@ -21954,13 +22012,13 @@ Note that the policy is applied per renderer process, with the most recent value
 
   This setting lets you enable reporting of sites that might need to be configured as a neutral site on the Enterprise Mode Site List. The user must be signed into Microsoft Edge with a valid work or school account for reports to be sent, and the user's account tenant must match the tenant specified by the policy.
 
-If you configure this policy, Google Chrome will send a report to the M365 Admin Center Site Lists app when a navigation appears stuck redirecting back and forth between the Microsoft Edge and Internet Explorer engines several times. This usually indicates that redirection to an authentication server is switching engines, which repeatedly fails in a loop. The report will show the URL of the site that is the redirect target, minus any query string or fragment. The user's identity isn't reported.
+If you configure this policy, Microsoft Edge will send a report to the M365 Admin Center Site Lists app when a navigation appears stuck redirecting back and forth between the Microsoft Edge and Internet Explorer engines several times. This usually indicates that redirection to an authentication server is switching engines, which repeatedly fails in a loop. The report will show the URL of the site that is the redirect target, minus any query string or fragment. The user's identity isn't reported.
 
-For this reporting to work correctly, you must have successfully visited the Microsoft Edge Site Lists app in the M365 Admin Center at least once. This activates a per-tenant storage account used to store these reports. Google Chrome will still attempt to send reports if this step hasn't been completed. However, the reports will not be stored in the Site Lists app.
+For this reporting to work correctly, you must have successfully visited the Microsoft Edge Site Lists app in the M365 Admin Center at least once. This activates a per-tenant storage account used to store these reports. Microsoft Edge will still attempt to send reports if this step hasn't been completed. However, the reports will not be stored in the Site Lists app.
 
 When enabling this policy, you must specify your O365 tenant ID. To learn more about finding your O365 tenant ID, see [https://go.microsoft.com/fwlink/?linkid=2185668](https://go.microsoft.com/fwlink/?linkid=2185668)
 
-If you disable or don't configure this policy, Google Chrome will never send reports about potentially misconfigured neutral sites to the Site Lists app.
+If you disable or don't configure this policy, Microsoft Edge will never send reports about potentially misconfigured neutral sites to the Site Lists app.
 
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)
 
@@ -22074,13 +22132,13 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   This setting lets you enable reporting of sites that Microsoft Edge users add to their local IE Mode site list. The user must be signed into Microsoft Edge with a valid work or school account for reports to be sent, and the user's account tenant must match the tenant specified by the policy.
 
-If you configure this policy, Google Chrome will send a report to the M365 Admin Center Site Lists app when a user adds a site to their local IE mode site list. The report will show the URL of the site the user added, minus any query string or fragment. The user's identity isn't reported.
+If you configure this policy, Microsoft Edge will send a report to the M365 Admin Center Site Lists app when a user adds a site to their local IE mode site list. The report will show the URL of the site the user added, minus any query string or fragment. The user's identity isn't reported.
 
-For this reporting to work correctly, you must have successfully visited the Microsoft Edge Site Lists app in the M365 Admin Center at least once. This activates a per-tenant storage account used to store these reports. Google Chrome will still attempt to send reports if this step hasn't been completed. However, the reports will not be stored in the Site Lists app.
+For this reporting to work correctly, you must have successfully visited the Microsoft Edge Site Lists app in the M365 Admin Center at least once. This activates a per-tenant storage account used to store these reports. Microsoft Edge will still attempt to send reports if this step hasn't been completed. However, the reports will not be stored in the Site Lists app.
 
 When enabling this policy, you must specify your O365 tenant ID. To learn more about finding your O365 tenant ID, see [https://go.microsoft.com/fwlink/?linkid=2185668](https://go.microsoft.com/fwlink/?linkid=2185668)
 
-If you disable or don't configure this policy, Google Chrome will never send reports about URLs added to a user's local site list to the Site Lists app.
+If you disable or don't configure this policy, Microsoft Edge will never send reports about URLs added to a user's local site list to the Site Lists app.
 
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)
 
@@ -22335,7 +22393,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy controls the availability of the --ie-mode-file-url command line argument which is used to launch Google Chrome with a local file specified on the command line into Internet Explorer mode.
+  This policy controls the availability of the --ie-mode-file-url command line argument which is used to launch Microsoft Edge with a local file specified on the command line into Internet Explorer mode.
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
@@ -22834,7 +22892,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Google Chrome after version 94. To allow users to open applications in Internet Explorer mode, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. Alternatively, users can still use the --ie-mode-test flag.
+  This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. Alternatively, users can still use the --ie-mode-test flag.
 
 This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
 
@@ -23436,13 +23494,13 @@ If users choose to turn on Live captions, speech recognition files (approximatel
 
   #### Description
 
-  Enables Windows to index Google Chrome browsing data stored locally on the user's device and allows users to find and launch previously stored browsing data directly from Windows features such as the search box on the taskbar in Windows.
+  Enables Windows to index Microsoft Edge browsing data stored locally on the user's device and allows users to find and launch previously stored browsing data directly from Windows features such as the search box on the taskbar in Windows.
 
-If you enable this policy or don't configure it, Google Chrome will publish local browsing data to the Windows Indexer.
+If you enable this policy or don't configure it, Microsoft Edge will publish local browsing data to the Windows Indexer.
 
-If you disable this policy, Google Chrome will not share data to the Windows Indexer.
+If you disable this policy, Microsoft Edge will not share data to the Windows Indexer.
 
-Note that if you disable this policy, Google Chrome will remove the data shared with Windows on the device and stop sharing any new browsing data.
+Note that if you disable this policy, Microsoft Edge will remove the data shared with Windows on the device and stop sharing any new browsing data.
 
   #### Supported features:
 
@@ -23493,7 +23551,7 @@ Note that if you disable this policy, Google Chrome will remove the data shared 
 
   #### Description
 
-  Allow suggestions from suggestion providers on the device (local providers), for example, Favorites and Browsing History, in Google Chrome's Address Bar and Auto-Suggest List.
+  Allow suggestions from suggestion providers on the device (local providers), for example, Favorites and Browsing History, in Microsoft Edge's Address Bar and Auto-Suggest List.
 
 If you enable this policy, suggestions from local providers are used.
 
@@ -23764,7 +23822,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 
   Configures a list of managed favorites.
 
-The policy creates a list of favorites. Each favorite contains the keys "name" and "url," which hold the favorite's name and its target. You can configure a subfolder by defining a favorites without an "url" key but with an additional "children" key that contains a list of favorites as defined above (some of which may be folders again). Google Chrome amends incomplete URLs as if they were submitted via the Address Bar, for example "microsoft.com" becomes "https://microsoft.com/".
+The policy creates a list of favorites. Each favorite contains the keys "name" and "url," which hold the favorite's name and its target. You can configure a subfolder by defining a favorites without an "url" key but with an additional "children" key that contains a list of favorites as defined above (some of which may be folders again). Microsoft Edge amends incomplete URLs as if they were submitted via the Address Bar, for example "microsoft.com" becomes "https://microsoft.com/".
 
 These favorites are placed in a folder that can't be modified by the user (but the user can choose to hide it from the favorites bar). By default the folder name is "Managed favorites" but you can change it by adding to the list of favorites a dictionary containing the key "toplevel_name" with the desired folder name as the value.
 
@@ -23895,11 +23953,11 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 
   #### Description
 
-  Lets you configure a list of up to 10 search engines, one of which must be marked as the default search engine. Starting in Google Chrome version 100, you can configure up to 100 engines.
+  Lets you configure a list of up to 10 search engines, one of which must be marked as the default search engine. Starting in Microsoft Edge version 100, you can configure up to 100 engines.
 
-You do not need to specify the encoding. Starting in Google Chrome 80, the suggest_url and image_search_url parameters are optional. The optional parameter, image_search_post_params (consists of comma-separated name/value pairs), is available starting in Google Chrome 80.
+You do not need to specify the encoding. Starting in Microsoft Edge 80, the suggest_url and image_search_url parameters are optional. The optional parameter, image_search_post_params (consists of comma-separated name/value pairs), is available starting in Microsoft Edge 80.
 
-Starting in Google Chrome 83, you can enable search engine discovery with the optional allow_search_engine_discovery parameter. This parameter must be the first item in the list. If allow_search_engine_discovery isn't specified, search engine discovery will be disabled by default. Starting in Google Chrome 84, you can set this policy as a recommended policy to allow search provider discovery. You don't need to add the optional allow_search_engine_discovery parameter. Starting in Google Chrome 100, setting this policy as a recommended policy will also allow users to manually add new search engines from their Google Chrome settings.
+Starting in Microsoft Edge 83, you can enable search engine discovery with the optional allow_search_engine_discovery parameter. This parameter must be the first item in the list. If allow_search_engine_discovery isn't specified, search engine discovery will be disabled by default. Starting in Microsoft Edge 84, you can set this policy as a recommended policy to allow search provider discovery. You don't need to add the optional allow_search_engine_discovery parameter. Starting in Microsoft Edge 100, setting this policy as a recommended policy will also allow users to manually add new search engines from their Microsoft Edge settings.
 
 If you enable this policy, users can't add, remove, or change any search engine in the list. Users can set their default search engine to any search engine in the list.
 
@@ -24252,13 +24310,13 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 
   This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
-This policy enables reporting of usage and crash-related data about Google Chrome to Microsoft.
+This policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
 
 Enable this policy to send reporting of usage and crash-related data to Microsoft. Disable this policy to not send the data to Microsoft. In both cases, users can't change or override the setting.
 
-On Windows 10, if you don't configure this policy, Google Chrome will default to the Windows diagnostic data setting. If you enable this policy, Google Chrome will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Google Chrome will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If you enable this policy, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
-On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Google Chrome will default to the user's preference.
+On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
 
@@ -24444,13 +24502,13 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 
   #### Description
 
-  This policy is deprecated, use the '[WindowOcclusionEnabled](#windowocclusionenabled)' policy instead. It won't work in Google Chrome version 92.
+  This policy is deprecated, use the '[WindowOcclusionEnabled](#windowocclusionenabled)' policy instead. It won't work in Microsoft Edge version 92.
 
-Enables native window occlusion in Google Chrome.
+Enables native window occlusion in Microsoft Edge.
 
-If you enable this setting, to reduce CPU and power consumption Google Chrome will detect when a window is covered by other windows, and will suspend work painting pixels.
+If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
 
-If you disable this setting Google Chrome will not detect when a window is covered by other windows.
+If you disable this setting Microsoft Edge will not detect when a window is covered by other windows.
 
 If this policy is left not set, occlusion detection will be enabled.
 
@@ -24503,7 +24561,7 @@ If this policy is left not set, occlusion detection will be enabled.
 
   #### Description
 
-  Allows you to set a timeout, in seconds, for Google Chrome tabs waiting to navigate until the browser has downloaded the initial Enterprise Mode Site List.
+  Allows you to set a timeout, in seconds, for Microsoft Edge tabs waiting to navigate until the browser has downloaded the initial Enterprise Mode Site List.
 
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
@@ -24512,7 +24570,7 @@ and
 and
 [DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload) is set to "All eligible navigations" (1).
 
-Tabs will not wait longer than this timeout for the Enterprise Mode Site List to download. If the browser has not finished downloading the Enterprise Mode Site List when the timeout expires, Google Chrome tabs will continue navigating anyway. The value of the timeout should be no greater than 20 seconds and no fewer than 1 second.
+Tabs will not wait longer than this timeout for the Enterprise Mode Site List to download. If the browser has not finished downloading the Enterprise Mode Site List when the timeout expires, Microsoft Edge tabs will continue navigating anyway. The value of the timeout should be no greater than 20 seconds and no fewer than 1 second.
 
 If you set the timeout in this policy to a value greater than the default of 2 seconds, an information bar is shown to the user after 2 seconds. The information bar contains a button that allows the user to quit waiting for the Enterprise Mode Site List download to complete.
 
@@ -24642,7 +24700,7 @@ Use the preceding information when configuring this policy.
   This policy controls whether or not the network service process runs sandboxed.
 If this policy is enabled, the network service process will run sandboxed.
 If this policy is disabled, the network service process will run unsandboxed. This leaves users open to additional security risks related to running the network service unsandboxed.
-If this policy is not set, the default configuration for the network sandbox will be used. This may vary depending on Google Chrome release, currently running field trials, and platform.
+If this policy is not set, the default configuration for the network sandbox will be used. This may vary depending on Microsoft Edge release, currently running field trials, and platform.
 This policy is intended to give enterprises flexibility to disable the network sandbox if they use third party software that interferes with the network service sandbox.
 
   #### Supported features:
@@ -24704,9 +24762,9 @@ If you want to configure browser sign in, use the [BrowserSignin](#browsersignin
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
 
-From Google Chrome 89 onwards, if there is an existing on-premises profile with sync disabled and machine is hybrid joined, it will auto-upgrade the on-premises profile to Azure AD profile and make it non-removable instead of creating a new non-removable Azure AD profile.
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with sync disabled and machine is hybrid joined, it will auto-upgrade the on-premises profile to Azure AD profile and make it non-removable instead of creating a new non-removable Azure AD profile.
 
-From Google Chrome 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
+From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
 
   #### Supported features:
 
@@ -24821,7 +24879,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
 
   #### Description
 
-  This policy is used to manage access to the Outlook menu from Google Chrome.
+  This policy is used to manage access to the Outlook menu from Microsoft Edge.
 
 If you enable or don't configure this policy, users can access the Outlook menu.
 If you disable this policy, users can't access the Outlook menu.
@@ -25065,7 +25123,7 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   ### PersonalizationReportingEnabled
 
-  #### Allow personalization of ads, Google Chrome, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft
+  #### Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft
 
   
   
@@ -25075,11 +25133,11 @@ If you enable this policy or don't set this policy, websites can check if the us
 
   #### Description
 
-  This policy prevents Microsoft from collecting a user's Google Chrome browsing history, favorites and collections, usage, and other browsing data to be used for personalizing advertising, search, news, Google Chrome and other Microsoft services.
+  This policy prevents Microsoft from collecting a user's Microsoft Edge browsing history, favorites and collections, usage, and other browsing data to be used for personalizing advertising, search, news, Microsoft Edge and other Microsoft services.
 
 This setting is not available for child accounts or enterprise accounts.
 
-If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Google Chrome will default to the user's preference.
+If you disable this policy, users can't change or override the setting. If this policy is enabled or not configured, Microsoft Edge will default to the user's preference.
 
   #### Supported features:
 
@@ -25096,7 +25154,7 @@ If you disable this policy, users can't change or override the setting. If this 
   ##### Group Policy (ADMX) info
 
   - GP unique name: PersonalizationReportingEnabled
-  - GP name: Allow personalization of ads, Google Chrome, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft
+  - GP name: Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -25137,7 +25195,7 @@ If you disable this policy, users can't change or override the setting. If this 
 
   #### Description
 
-  Google Chrome uses the Pin to taskbar wizard to help users pin suggested sites to the taskbar. The Pin to taskbar wizard feature is enabled by default and accessible to the user through the Settings and more menu.
+  Microsoft Edge uses the Pin to taskbar wizard to help users pin suggested sites to the taskbar. The Pin to taskbar wizard feature is enabled by default and accessible to the user through the Settings and more menu.
 
 If you enable this policy or don't configure it, users can call the Pin to taskbar wizard from the Settings and More menu. The wizard can also be called via a protocol launch.
 
@@ -25194,13 +25252,13 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   #### Description
 
-  This policy is obsolete because it does not work independently of browser sign in. It does not work in Google Chrome after version 90. If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
+  This policy is obsolete because it does not work independently of browser sign in. It does not work in Microsoft Edge after version 90. If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
 
 Lets you configure whether to turn on Proactive Authentication in Microsoft Edge.
 
-If you enable this policy, Google Chrome tries to seamlessly authenticate to websites and services using the account which is signed-in to the browser.
+If you enable this policy, Microsoft Edge tries to seamlessly authenticate to websites and services using the account which is signed-in to the browser.
 
-If you disable this policy, Google Chrome does not try to authenticate with websites or services using single sign-on (SSO). Authenticated experiences like the Enterprise New Tab Page will not work (e.g. recent and recommended Office documents will not be available).
+If you disable this policy, Microsoft Edge does not try to authenticate with websites or services using single sign-on (SSO). Authenticated experiences like the Enterprise New Tab Page will not work (e.g. recent and recommended Office documents will not be available).
 
 If you don't configure this policy, Proactive Authentication is turned on.
 
@@ -25260,11 +25318,11 @@ If you don't configure this policy, Proactive Authentication is turned on.
 
   #### Description
 
-  Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Google Chrome, choose their default browser, or learn about product features.
+  Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features.
 
-If you enable this policy (set it true) or don't configure it, Google Chrome can show full-tab content to users to provide product information.
+If you enable this policy (set it true) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
 
-If you disable (set to false) this policy, Google Chrome can't show full-tab content to users.
+If you disable (set to false) this policy, Microsoft Edge can't show full-tab content to users.
 
   #### Supported features:
 
@@ -25444,7 +25502,7 @@ If this policy is set to False or not set, the user may only be prompted when no
 
   #### Description
 
-  Allows use of the QUIC protocol in Google Chrome.
+  Allows use of the QUIC protocol in Microsoft Edge.
 
 If you enable this policy or don't configure it, the QUIC protocol is allowed.
 
@@ -25701,7 +25759,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Specifies how the user receives related matches in Find on Page, which provides spellcheck, synonyms, and Q&A results in Google Chrome.
+  Specifies how the user receives related matches in Find on Page, which provides spellcheck, synonyms, and Q&A results in Microsoft Edge.
 
 If you enable or don't configure this policy, users can receive related matches in Find on Page on all sites. The results are processed in a cloud service.
 
@@ -25763,9 +25821,9 @@ If you disable this policy, users can receive related matches in Find on Page on
 
   #### Description
 
-  Notify users that they need to restart Google Chrome to apply a pending update.
+  Notify users that they need to restart Microsoft Edge to apply a pending update.
 
-If you don't configure this policy, Google Chrome adds a recycle icon at the far right of the top menu bar to prompt users to restart the browser to apply the update.
+If you don't configure this policy, Microsoft Edge adds a recycle icon at the far right of the top menu bar to prompt users to restart the browser to apply the update.
 
 If you enable this policy and set it to 'Recommended', a recurring warning prompts users that a restart is recommended. Users can dismiss this warning and defer the restart.
 
@@ -25837,9 +25895,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Allows you to set the time period, in milliseconds, over which users are notified that Google Chrome must be relaunched to apply a pending update.
+  Allows you to set the time period, in milliseconds, over which users are notified that Microsoft Edge must be relaunched to apply a pending update.
 
-Over this time period, the user will be repeatedly informed of the need for an update. In Google Chrome the app menu changes to indicate that a relaunch is needed once one third of the notification period passes. This notification changes color once two thirds of the notification period passes, and again once the full notification period has passed. The additional notifications enabled by the [RelaunchNotification](#relaunchnotification) policy follow this same schedule.
+Over this time period, the user will be repeatedly informed of the need for an update. In Microsoft Edge the app menu changes to indicate that a relaunch is needed once one third of the notification period passes. This notification changes color once two thirds of the notification period passes, and again once the full notification period has passed. The additional notifications enabled by the [RelaunchNotification](#relaunchnotification) policy follow this same schedule.
 
 If not set, the default period of 604800000 milliseconds (one week) is used.
 
@@ -26062,15 +26120,15 @@ If you disable this policy, users are not allowed to use remote debugging.
   Launches Renderer processes into an App Container for
 additional security benefits.
 
-If you don't configure this policy, Google Chrome will launch the renderer process in an app
+If you don't configure this policy, Microsoft Edge will launch the renderer process in an app
 container in a future update.
 
-If you enable this policy, Google Chrome will launch the renderer process in an app container.
+If you enable this policy, Microsoft Edge will launch the renderer process in an app container.
 
-If you disable this policy, Google Chrome will not launch the renderer process in an app container.
+If you disable this policy, Microsoft Edge will not launch the renderer process in an app container.
 
 Only turn off the policy if there are compatibility issues with
-third-party software that must run inside Google Chrome's renderer processes.
+third-party software that must run inside Microsoft Edge's renderer processes.
 
 This policy is only supported on Windows 10 devices.
 
@@ -26124,7 +26182,7 @@ This policy is only supported on Windows 10 devices.
   #### Description
 
   Setting the policy to Enabled or leaving it unset turns Renderer Code Integrity on.
-Setting the policy to Disabled has a detrimental effect on Google Chrome's security and stability as unknown and potentially hostile code can load inside Google Chrome's renderer processes. Only turn off the policy if there are compatibility issues with third-party software that must run inside Google Chrome's renderer processes.
+Setting the policy to Disabled has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's renderer processes. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's renderer processes.
 
   #### Supported features:
 
@@ -26175,11 +26233,11 @@ Setting the policy to Disabled has a detrimental effect on Google Chrome's secur
 
   #### Description
 
-  Control whether online revocation checks (OCSP/CRL checks) are required. If Google Chrome can't get revocation status information, these certificates are treated as revoked ("hard-fail").
+  Control whether online revocation checks (OCSP/CRL checks) are required. If Microsoft Edge can't get revocation status information, these certificates are treated as revoked ("hard-fail").
 
-If you enable this policy, Google Chrome always performs revocation checking for server certificates that successfully validate and are signed by locally-installed CA certificates.
+If you enable this policy, Microsoft Edge always performs revocation checking for server certificates that successfully validate and are signed by locally-installed CA certificates.
 
-If you don't configure or disable this policy, then Google Chrome uses the existing online revocation checking settings.
+If you don't configure or disable this policy, then Microsoft Edge uses the existing online revocation checking settings.
 
   #### Supported features:
 
@@ -26230,15 +26288,15 @@ If you don't configure or disable this policy, then Google Chrome uses the exist
 
   #### Description
 
-  Allow Google Chrome to issue a dataless connection to a web service to probe networks for connectivity in cases like hotel and airport Wi-Fi.
+  Allow Microsoft Edge to issue a dataless connection to a web service to probe networks for connectivity in cases like hotel and airport Wi-Fi.
 
 If you enable this policy, a web service is used for network connectivity tests.
 
-If you disable this policy, Google Chrome uses native APIs to try to resolve network connectivity and navigation issues.
+If you disable this policy, Microsoft Edge uses native APIs to try to resolve network connectivity and navigation issues.
 
-**Note**: Except on Windows 8 and later versions of Windows, Google Chrome *always* uses native APIs to resolve connectivity issues.
+**Note**: Except on Windows 8 and later versions of Windows, Microsoft Edge *always* uses native APIs to resolve connectivity issues.
 
-If you don't configure this policy, Google Chrome respects the user preference that's set under Services at edge://settings/privacy.
+If you don't configure this policy, Microsoft Edge respects the user preference that's set under Services at edge://settings/privacy.
 Specifically, there's a **Use a web service to help resolve navigation errors** toggle, which the user can switch on or off. Be aware that if you have enabled this policy (ResolveNavigationErrorsUseWebService), the **Use a web service to help resolve navigation errors** setting is turned on, but the user can't change the setting by using the toggle. If you have disabled this policy, the **Use a web service to help resolve navigation errors** setting is turned off, and the user can't change the setting by using the toggle.
 
   #### Supported features:
@@ -26287,7 +26345,7 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 
   ### RestrictSigninToPattern
 
-  #### Restrict which accounts can be used to sign in to Google Chrome
+  #### Restrict which accounts can be used to sign in to Microsoft Edge
 
   
   
@@ -26297,11 +26355,11 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 
   #### Description
 
-  Determines which accounts can be used to sign in to the Google Chrome account that's chosen during the Sync opt-in flow.
+  Determines which accounts can be used to sign in to the Microsoft Edge account that's chosen during the Sync opt-in flow.
 
 You can configure this policy to match multiple accounts using a Perl style regular expression for the pattern. If a user tries to sign in to the browser with an account whose username doesn't match this pattern, they are blocked and will get the appropriate error message. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
 
-If you don't configure this policy or leave it blank, users can use any account to sign in to Google Chrome.
+If you don't configure this policy or leave it blank, users can use any account to sign in to Microsoft Edge.
 
 Note that signed-in profiles with a username that doesn't match this pattern will be signed out after this policy is enabled.
 
@@ -26320,7 +26378,7 @@ Note that signed-in profiles with a username that doesn't match this pattern wil
   ##### Group Policy (ADMX) info
 
   - GP unique name: RestrictSigninToPattern
-  - GP name: Restrict which accounts can be used to sign in to Google Chrome
+  - GP name: Restrict which accounts can be used to sign in to Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -26363,7 +26421,7 @@ Note that signed-in profiles with a username that doesn't match this pattern wil
 
   Configures the directory to use to store the roaming copy of profiles.
 
-If you enable this policy, Google Chrome uses the provided directory to store a roaming copy of the profiles, as long as you've also enabled the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy. If you disable the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy or don't configure it, the value stored in this policy isn't used.
+If you enable this policy, Microsoft Edge uses the provided directory to store a roaming copy of the profiles, as long as you've also enabled the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy. If you disable the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy or don't configure it, the value stored in this policy isn't used.
 
 See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables you can use.
 
@@ -26408,7 +26466,7 @@ If you don't configure this policy, the default roaming profile path is used.
 
   ### RoamingProfileSupportEnabled
 
-  #### Enable using roaming copies for Google Chrome profile data
+  #### Enable using roaming copies for Microsoft Edge profile data
 
   
   
@@ -26418,7 +26476,7 @@ If you don't configure this policy, the default roaming profile path is used.
 
   #### Description
 
-  Enable this policy to use roaming profiles on Windows. The settings stored in Google Chrome profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator through the [RoamingProfileLocation](#roamingprofilelocation) policy).
+  Enable this policy to use roaming profiles on Windows. The settings stored in Microsoft Edge profiles (favorites and preferences) are also saved to a file stored in the Roaming user profile folder (or the location specified by the administrator through the [RoamingProfileLocation](#roamingprofilelocation) policy).
 
 If you disable this policy or don't configure it, only the regular local profiles are used.
 
@@ -26441,7 +26499,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/f
   ##### Group Policy (ADMX) info
 
   - GP unique name: RoamingProfileSupportEnabled
-  - GP name: Enable using roaming copies for Google Chrome profile data
+  - GP name: Enable using roaming copies for Microsoft Edge profile data
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -26539,7 +26597,7 @@ If you disable this policy or don't configure it, Adobe Flash content from other
 
   #### Description
 
-  Google Chrome shows a warning page when users visit sites that have SSL errors.
+  Microsoft Edge shows a warning page when users visit sites that have SSL errors.
 
 If you enable or don't configure (default) this policy, users can click through these warning pages.
 
@@ -26601,7 +26659,7 @@ If you disable this policy, users are blocked from clicking through any warning 
 
   #### Description
 
-  Google Chrome shows a warning page when users visit sites that have SSL errors.
+  Microsoft Edge shows a warning page when users visit sites that have SSL errors.
 
 If you enable or don't configure the [SSLErrorOverrideAllowed](#sslerroroverrideallowed) policy, this policy does nothing.
 
@@ -26674,11 +26732,11 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   Sets the minimum supported version of TLS.
 
-If you set this policy to 'tls1.2', Google Chrome will show an error for TLS 1.0 and TLS 1.1 and the user will not be able to bypass the error.
+If you set this policy to 'tls1.2', Microsoft Edge will show an error for TLS 1.0 and TLS 1.1 and the user will not be able to bypass the error.
 
-If you don't configure this policy, Google Chrome will still show an error for TLS 1.0 and TLS 1.1 but the user will be able to bypass it.
+If you don't configure this policy, Microsoft Edge will still show an error for TLS 1.0 and TLS 1.1 but the user will be able to bypass it.
 
-Support for suppressing the TLS 1.0/1.1 warning was removed from Google Chrome starting in version 91. The 'tls1' and 'tls1.1' values are no longer supported.
+Support for suppressing the TLS 1.0/1.1 warning was removed from Microsoft Edge starting in version 91. The 'tls1' and 'tls1.1' values are no longer supported.
 
 Policy options mapping:
 
@@ -26749,11 +26807,11 @@ Use the preceding information when configuring this policy.
   Microsoft Edge will block navigations to external protocols inside a
 sandboxed iframe.
 
-If you enable or don't configure this policy, Google Chrome will block those navigations.
+If you enable or don't configure this policy, Microsoft Edge will block those navigations.
 
-If you disable this policy, Google Chrome will not block those navigations.
+If you disable this policy, Microsoft Edge will not block those navigations.
 
-This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Google Chrome version 117.
+This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 117.
 
 
   #### Supported features:
@@ -26802,7 +26860,7 @@ This can be used by administrators who need more time to update their internal w
 
   ### SaveCookiesOnExit
 
-  #### Save cookies when Google Chrome closes
+  #### Save cookies when Microsoft Edge closes
 
   
   
@@ -26840,7 +26898,7 @@ If you disable or don't configure this policy, the user's personal configuration
   ##### Group Policy (ADMX) info
 
   - GP unique name: SaveCookiesOnExit
-  - GP name: Save cookies when Google Chrome closes
+  - GP name: Save cookies when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -27074,7 +27132,7 @@ If you disable this policy, web page scrolling to specific text fragments via a 
 
   #### Description
 
-  Enables web search suggestions in Google Chrome's Address Bar and Auto-Suggest List and prevents users from changing this policy.
+  Enables web search suggestions in Microsoft Edge's Address Bar and Auto-Suggest List and prevents users from changing this policy.
 
 If you enable this policy, web search suggestions are used.
 
@@ -27254,13 +27312,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
-This policy enables sending info about websites visited in Google Chrome to Microsoft to improve services like search.
+This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
 
-Enable this policy to send info about websites visited in Google Chrome to Microsoft. Disable this policy to not send info about websites visited in Google Chrome to Microsoft. In both cases, users can't change or override the setting.
+Enable this policy to send info about websites visited in Microsoft Edge to Microsoft. Disable this policy to not send info about websites visited in Microsoft Edge to Microsoft. In both cases, users can't change or override the setting.
 
-On Windows 10, if you don't configure this policy, Google Chrome will default to the Windows diagnostic data setting. If this policy is enabled Google Chrome will only send info about websites visited in Google Chrome if the Windows Diagnostic data setting is set to Full. If this policy is disabled Google Chrome will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
-On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Google Chrome will default to the user's preference.
+On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
 
 To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
 
@@ -27673,13 +27731,13 @@ This deadline may be extended if there is a need for enterprises.
 
   #### Description
 
-  Google Chrome includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
+  Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
 
 Using this policy, you may control the behavior of the Hardware-enforced Stack Protection feature after a crash triggered by this feature is encountered.
 
 Set this policy to 'Disable' to disable the feature.
 
-Set this policy to 'DisableUntilUpdate' to disable the feature until Google Chrome updates next time.
+Set this policy to 'DisableUntilUpdate' to disable the feature until Microsoft Edge updates next time.
 
 Set this policy to 'Enable' to keep the feature enabled.
 
@@ -27748,7 +27806,7 @@ If you enable this policy, sites are allowed to use SharedArrayBuffers with no r
 
 If you disable or don't configure this policy, sites are allowed to use SharedArrayBuffers only when cross-origin isolated.
 
-Google Chrome will require cross-origin isolation when using SharedArrayBuffers from Google Chrome 91 onward for Web Compatibility reasons.
+Microsoft Edge will require cross-origin isolation when using SharedArrayBuffers from Microsoft Edge 91 onward for Web Compatibility reasons.
 
   #### Supported features:
 
@@ -27941,7 +27999,7 @@ If you don't configure this policy:
 
   This policy didn't work as expected due to changes in operational requirements. Therefore it's deprecated and should not be used.
 
-Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Google Chrome the shortcut takes users to their Microsoft Office apps and docs.
+Specifies whether to include a shortcut to Office.com in the favorites bar. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs.
   If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
   If you disable this policy, the shortcut isn't shown.
 
@@ -28067,7 +28125,7 @@ If you enable or don't configure this setting, users will receive recommendation
 
   Enable support for Signed HTTP Exchange (SXG).
 
-If this policy isn't set or enabled, Google Chrome will accept web contents served as Signed HTTP Exchanges.
+If this policy isn't set or enabled, Microsoft Edge will accept web contents served as Signed HTTP Exchanges.
 
 If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 
@@ -28643,7 +28701,7 @@ This policy does not affect other types of mixed content other than audio, video
 
   #### Description
 
-  Suppresses the warning that appears when Google Chrome is running on a computer or operating system that is no longer supported.
+  Suppresses the warning that appears when Microsoft Edge is running on a computer or operating system that is no longer supported.
 
 If this policy is false or unset, the warnings will appear on such unsupported computers or operating systems.
 
@@ -28703,7 +28761,7 @@ If this policy is false or unset, the warnings will appear on such unsupported c
 
   #### Description
 
-  Disables data synchronization in Google Chrome. This policy also prevents the sync consent prompt from appearing.
+  Disables data synchronization in Microsoft Edge. This policy also prevents the sync consent prompt from appearing.
 
 This policy disables cloud synchronization only and has no impact on the [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy.
 
@@ -28765,9 +28823,9 @@ If you don't set this policy or apply it as recommended, users will be able to t
 
   #### Description
 
-  If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Google Chrome synchronization service.
+  If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Google Chrome version 100. Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the disabled data types.
 
@@ -28834,9 +28892,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 This policy controls a security feature in TLS 1.3 that protects connections against downgrade attacks. It is backwards-compatible and will not affect connections to compliant TLS 1.2 servers or proxies. However, older versions of some TLS-intercepting proxies have an implementation flaw which causes them to be incompatible.
 
-If you enable this policy or don't set it, Google Chrome will enable these security protections for all connections.
+If you enable this policy or don't set it, Microsoft Edge will enable these security protections for all connections.
 
-If you disable this policy, Google Chrome will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
+If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
 
 This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -28973,9 +29031,9 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   This policy doesn't work, use [SleepingTabsEnabled](#sleepingtabsenabled) instead.
 
-Controls whether Google Chrome can freeze tabs that are in the background for at least 5 minutes.
+Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
 
-Tab freezing reduces CPU, battery, and memory usage. Google Chrome uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
+Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
 
 If you enable or don't configure this policy, tabs that have been in the background for at least 5 minutes might be frozen.
 
@@ -29041,7 +29099,7 @@ If you disable this policy, no tabs will be frozen.
 
 If you disable this policy, popups that target _blank are permitted to access (via JavaScript) the page that requested to open the popup.
 
-This policy will be obsoleted in Google Chrome version 95.
+This policy will be obsoleted in Microsoft Edge version 95.
 
   #### Supported features:
 
@@ -29157,7 +29215,7 @@ This policy will be obsoleted in Google Chrome version 95.
 
   #### Description
 
-  Configures the amount of memory that a single Google Chrome instance can use before tabs start getting discarded to save memory. The memory used by the tab will be freed and the tab will have to be reloaded when switched to.
+  Configures the amount of memory that a single Microsoft Edge instance can use before tabs start getting discarded to save memory. The memory used by the tab will be freed and the tab will have to be reloaded when switched to.
 
 If you enable this policy, the browser will start to discard tabs to save memory once the limitation is exceeded. However, there is no guarantee that the browser is always running under the limit. Any value under 1024 will be rounded up to 1024.
 
@@ -29291,9 +29349,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Enables the integrated Microsoft translation service on Google Chrome.
+  Enables the integrated Microsoft translation service on Microsoft Edge.
 
-If you enable this policy, Google Chrome offers translation functionality to the user by showing an integrated translate flyout when appropriate, and a translate option on the right-click context menu.
+If you enable this policy, Microsoft Edge offers translation functionality to the user by showing an integrated translate flyout when appropriate, and a translate option on the right-click context menu.
 
 Disable this policy to disable all built-in translate features.
 
@@ -29419,7 +29477,7 @@ If you disable this setting, travel assistance will be disabled and  users will 
 
   #### Description
 
-  'Warning: 3DES will be completely removed from Google Chrome in version 95 (around October 2021) and this policy will stop working then.
+  'Warning: 3DES will be completely removed from Microsoft Edge in version 95 (around October 2021) and this policy will stop working then.
 
 If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
 
@@ -29479,11 +29537,11 @@ If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If
 
   #### Description
 
-  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It won't work in Google Chrome version 104.
+  This policy is deprecated because it's intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It won't work in Microsoft Edge version 104.
 
 If you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.
 
-If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ends in Google Chrome version 104.
+If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ends in Microsoft Edge version 104.
 
   #### Supported features:
 
@@ -29763,7 +29821,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy is obsolete because it was intended for short-term adaptation purposes only. It doesn't work in Google Chrome after version 93.
+  This policy is obsolete because it was intended for short-term adaptation purposes only. It doesn't work in Microsoft Edge after version 93.
 
 When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
 
@@ -29972,11 +30030,11 @@ Use the preceding information when configuring this policy.
 
   Set the directory to use for storing user data.
 
-If you enable this policy, Google Chrome uses the specified directory regardless of whether the user has set the '--user-data-dir' command-line flag.
+If you enable this policy, Microsoft Edge uses the specified directory regardless of whether the user has set the '--user-data-dir' command-line flag.
 
 If you don't enable this policy, the default profile path is used, but the user can override it by using the '--user-data-dir' flag. Users can find the directory for the profile at edge://version/ under profile path.
 
-To avoid data loss or other errors, don't configure this policy to a volume's root directory or to a directory that's used for other purposes, because Google Chrome manages its contents.
+To avoid data loss or other errors, don't configure this policy to a volume's root directory or to a directory that's used for other purposes, because Microsoft Edge manages its contents.
 
 See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) for a list of variables that can be used.
 
@@ -30091,7 +30149,7 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
 
   #### Description
 
-  Google Chrome uses the Edge Feedback feature (enabled by default) to allow users to send feedback, suggestions or customer surveys and to report any issues with the browser. Also, by default, users can't disable (turn off) the Edge Feedback feature.
+  Microsoft Edge uses the Edge Feedback feature (enabled by default) to allow users to send feedback, suggestions or customer surveys and to report any issues with the browser. Also, by default, users can't disable (turn off) the Edge Feedback feature.
 
 If you enable this policy or don't configure it, users can invoke Edge Feedback.
 
@@ -30400,7 +30458,7 @@ If you disable this policy, visual search will be disabled and you won't be able
 
   #### Description
 
-  Allows you to turn off WPAD (Web Proxy Auto-Discovery) optimization in Google Chrome.
+  Allows you to turn off WPAD (Web Proxy Auto-Discovery) optimization in Microsoft Edge.
 
 If you disable this policy, WPAD optimization is disabled, which makes the browser wait longer for DNS-based WPAD servers.
 
@@ -30479,7 +30537,7 @@ default.)
 Microsoft Windows desktop shortcuts).
 
 - fallback_app_name
-(Starting with Google Chrome version 90,
+(Starting with Microsoft Edge version 90,
 allows you to override the app name if it is not a
 Progressive Web App (PWA), or the app name that is temporarily
 installed if it is a PWA but authentication is required before the
@@ -30490,13 +30548,13 @@ the latter will be ignored.)
 
 - custom_name
 (Allows you to permanently override the app name for all web
-apps and PWAs. Not currently supported in Google Chrome.)
+apps and PWAs. Not currently supported in Microsoft Edge.)
 
 - custom_icon
 (Allows you to override the app icon of installed apps. The icons have to
 be square, maximal 1 MB in size, and in one of the following formats:
 jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file. Not currently supported in Google Chrome.)
+hash of the icon file. Not currently supported in Microsoft Edge.)
 
   #### Supported features:
 
@@ -30827,7 +30885,7 @@ If you disable or don't set this policy, these TLS/DTLS versions are
 disabled.
 
 This policy is temporary and will be removed in a future version
-of Google Chrome.
+of Microsoft Edge.
 
   #### Supported features:
 
@@ -31152,9 +31210,9 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Description
 
-  This policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It doesn't work in Google Chrome after version 100.
+  This policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It doesn't work in Microsoft Edge after version 100.
 
-WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Google Chrome version 97 and was fully removed in version 101.
+WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Microsoft Edge version 97 and was fully removed in version 101.
 
 If you enable this policy, WebSQL in third-party contexts will be re-enabled.
 
@@ -31347,13 +31405,13 @@ If you don't configure the policy:
 
   This policy will be superseded by a similar feature in a future release. For more information, see https://crbug.com/1032820.
 
-Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Google Chrome. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
+Use Windows to resolve proxies for all browser networking instead of the proxy resolver built into Microsoft Edge. The Windows proxy resolver enables Windows proxy features such as DirectAccess/NRPT.
 
-This policy comes with the problems described by https://crbug.com/644030. It causes PAC files to be fetched and executed by Windows code, including PAC files set via the [ProxyPacUrl](#proxypacurl) policy. Since Network Fetches for the PAC file happen via Windows instead of Google Chrome code, network policies such as [DnsOverHttpsMode](#dnsoverhttpsmode) will not apply to network fetches for a PAC file.
+This policy comes with the problems described by https://crbug.com/644030. It causes PAC files to be fetched and executed by Windows code, including PAC files set via the [ProxyPacUrl](#proxypacurl) policy. Since Network Fetches for the PAC file happen via Windows instead of Microsoft Edge code, network policies such as [DnsOverHttpsMode](#dnsoverhttpsmode) will not apply to network fetches for a PAC file.
 
 If you enable this policy, the Windows proxy resolver will be used.
 
-If you disable or don't configure this policy, the Google Chrome proxy resolver will be used.
+If you disable or don't configure this policy, the Microsoft Edge proxy resolver will be used.
 
   #### Supported features:
 
@@ -31404,11 +31462,11 @@ If you disable or don't configure this policy, the Google Chrome proxy resolver 
 
   #### Description
 
-  Enables window occlusion in Google Chrome.
+  Enables window occlusion in Microsoft Edge.
 
-If you enable this setting, to reduce CPU and power consumption Google Chrome will detect when a window is covered by other windows, and will suspend work painting pixels.
+If you enable this setting, to reduce CPU and power consumption Microsoft Edge will detect when a window is covered by other windows, and will suspend work painting pixels.
 
-If you disable this setting Google Chrome will not detect when a window is covered by other windows.
+If you disable this setting Microsoft Edge will not detect when a window is covered by other windows.
 
 If this policy is left not set, window hiding detection will be enabled.
 
