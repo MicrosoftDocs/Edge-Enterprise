@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/21/2022
+ms.date: 06/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
 > [!NOTE]
-> This user experience is currently only available to worldwide cloud instances.
+> This user experience is currently only available to worldwide and GCC cloud instances.
 
 ## Overview
 
