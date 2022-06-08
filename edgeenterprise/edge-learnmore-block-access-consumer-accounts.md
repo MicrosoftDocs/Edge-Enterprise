@@ -14,7 +14,7 @@ description: "Block access to consumer accounts"
 
 # Block access to consumer accounts
 
-You can prevent users from signing into Google services using any accounts other than those you provided them with. Reasons for doing this are to prevent users on your corporate network using their personal Gmail accounts or a managed Google account from another domain.
+You can prevent users from signing into Google services using any accounts other than the accounts you provided them with. Reasons for blocking access are to prevent users on your corporate network using their personal Gmail accounts, or accessing a managed Google account from another domain.
 
 Users might see the following message when you block access to consumer accounts:
 "This account is not allowed to sign in within this network".
@@ -68,7 +68,7 @@ Read specific instructions on how to block Google services from the following pr
 
 ### Configure the network to block accounts
 
-Use the following steps to prevent users from signing in to Google services using Google Accounts other than those you explicitly specify.
+Use the following steps to prevent users from signing in to Google services using Google Accounts other than the accounts you explicitly specify.
 
 1. Route all  outbound traffic to google.com through your web proxy servers.
 2. Enable SSL interception on the proxy server.
@@ -83,10 +83,10 @@ Use the following steps to prevent users from signing in to Google services usin
    - Add the HTTP header **X-GoogApps-Allowed-Domains:** followed by a comma-separated list with the allowed domain names.
 
       > [!IMPORTANT]
-      > Make sure the list includes the domain you registered with Google Workspace and any    secondary domains you added.
-      > Example: X-GoogApps-Allowed-Domains: mydomain1.com, mydomain2.com
+      > Make sure the list includes the domain you registered with Google Workspace and any secondary domains you added.
+      > Example: `X-GoogApps-Allowed-Domains: mydomain1.com, mydomain2.com`
 
-5. To let users to sign in to specific accounts, add the following values to the header:
+5. To let users sign in to specific accounts, add the following values to the header:
 
    - **domain_name** for accounts on specific domains, such as altostrat.com and tenorstrat.com for accounts ending in @altostrat.com and tenorstrat.com
    - **consumer_accounts** for consumer Google Accounts, such as @gmail.com and @googlemail.com
@@ -95,7 +95,7 @@ Use the following steps to prevent users from signing in to Google services usin
 6. (Optional, but recommended) Create a proxy policy to prevent users from inserting their own headers.
 
 > [!NOTE]
-> - This blocks sign-in access to Google consumer services other than Google Search, but doesn’t necessarily prevent anonymous access.<br>
+> - This proxy configuration blocks sign-in access to Google consumer services other than Google Search, but doesn’t necessarily prevent anonymous access.<br>
 > - When you add the X-GoogApps-Allowed-Domains HTTP header, users will see errors accessing delegated mailboxes from a domain that's not in the header.
 
 ## Content license
