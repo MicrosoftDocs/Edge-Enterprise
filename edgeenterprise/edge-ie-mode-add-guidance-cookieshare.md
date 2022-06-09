@@ -90,7 +90,9 @@ The following table describes the \<shared-cookie\> element added to support the
 <shared-cookie host="subdomain.contoso.com" name="cookie3" source-engine="MSEdge"></shared-cookie> 
 </site-list> 
 ```
-
+> [!NOTE]
+> Enterprise Site List Manager doesn't support multiple cookie names with the same host value.
+> 
 ## See also
 
 - [About IE mode](./edge-ie-mode.md)
