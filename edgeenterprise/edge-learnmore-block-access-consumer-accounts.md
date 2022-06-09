@@ -80,7 +80,7 @@ Use the following steps to prevent users from signing in to Google services usin
 4. For each google.com request:
 
    - Intercept the request.
-   - Add the HTTP header `X-GoogApps-Allowed-Domains`, followed by a comma-separated list with the allowed domain names.
+   - Add the HTTP header `X-GoogApps-Allowed-Domains:`, followed by a comma-separated list with the allowed domain names.
 
       > [!IMPORTANT]
       > Make sure the list includes the domain you registered with Google Workspace and any secondary domains you added.
@@ -96,7 +96,7 @@ Use the following steps to prevent users from signing in to Google services usin
 
 > [!NOTE]
 > - This proxy configuration blocks sign-in access to Google consumer services other than Google Search, but doesn’t necessarily prevent anonymous access.<br>
-> - When you add the `X-GoogApps-Allowed-Domains` HTTP header, users will see errors accessing delegated mailboxes from a domain that's not in the header.
+> - When you add the `X-GoogApps-Allowed-Domains:` HTTP header, users will see errors accessing delegated mailboxes from a domain that's not in the header.
 
 ## Content license
 
