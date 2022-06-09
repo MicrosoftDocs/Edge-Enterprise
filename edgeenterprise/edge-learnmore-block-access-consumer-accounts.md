@@ -57,7 +57,7 @@ Use the following steps as a guide to set up a proxy server to block accounts. F
 Choose a web proxy server that you can configure to only allow users on your network to access Google services using specific Google Accounts from your domain. With this server you must be able to:
 
 - **Add a header to all traffic directed to google.com.** Use this header to identify the domains from which users can access Google services.
-- **Support SSL interception.** Because most traffic through your Google service is encrypted, your proxy server needs to support SSL interception.
+- **Support Secure Sockets Layer (SSL) interception.** Because most traffic through your Google service is encrypted, your proxy server needs to support SSL interception.
 
 Read specific instructions on how to block Google services from the following proxy service providers. Select a server that meets your needs.
 
@@ -86,7 +86,7 @@ Use the following steps to prevent users from signing in to Google services usin
       > Make sure the list includes the domain you registered with Google Workspace and any secondary domains you added.
       > Example: `X-GoogApps-Allowed-Domains: mydomain1.com, mydomain2.com`
 
-5. To let users sign in to specific accounts, add the following values to the header:
+5. Add the following values to the header, to let users sign in to specific accounts:
 
    - **domain_name** for accounts on specific domains, such as altostrat.com and tenorstrat.com for accounts ending in @altostrat.com and tenorstrat.com
    - **consumer_accounts** for consumer Google Accounts, such as @gmail.com and @googlemail.com
