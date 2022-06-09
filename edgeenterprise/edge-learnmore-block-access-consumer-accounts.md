@@ -6,6 +6,7 @@ manager: collw
 ms.date: 06/09/2022
 audience: ITPro
 ms.topic: conceptual
+ms.custom: generated
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
