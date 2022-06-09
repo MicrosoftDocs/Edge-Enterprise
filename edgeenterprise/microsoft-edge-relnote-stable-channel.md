@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 102.0.1245.xx: May 13
+## Version 102.0.1245.39: June 9
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-9-2022).
 
