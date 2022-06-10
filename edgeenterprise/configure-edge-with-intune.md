@@ -108,4 +108,4 @@ For more information about Windows 10 profiles, see [Use Windows 10 templates to
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Manage web access by using Microsoft Edge with Microsoft Intune](/intune/manage-microsoft-edge)
 - [Use Windows 10 templates to configure group policy settings in Microsoft Intune](/intune/administrative-templates-windows)
-- [Deploy Microsoft Edge using Microsoft Intune](/intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Deploy Microsoft Edge using Microsoft Intune](/intune/apps/apps-windows-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)

@@ -66,7 +66,7 @@ Some examples of these permissions are: access to a USB port, storage or viewing
 The extensions options assume that you already have Microsoft Edge managed for your users. For more information about setting up administrative templates for Microsoft Edge policies, see:
 
 -	[Configure Microsoft Edge policy settings on Windows](/DeployEdge/configure-microsoft-edge)
--	[Configure for Windows with Intune](/mem/intune/configuration/administrative-templates-configure-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+-	[Configure for Windows with Intune](/mem/intune/configuration/administrative-templates-configure-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)
 -	[Configure for Windows with Mobile Device Management](/deployedge/configure-edge-with-mdm)
 -	[Configure for macOS using a .plist](/deployedge/configure-microsoft-edge-on-mac)
 -	[Configure for macOS with Jamf](/deployedge/configure-microsoft-edge-on-mac-jamf)

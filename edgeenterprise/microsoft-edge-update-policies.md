@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
@@ -340,7 +340,7 @@ Note: All versions available for rollback can be viewed here [EdgeEnterprise](ht
 
 This policy applies to Microsoft Edge version 86 or later.
 
-See [Edge support for WIP](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection) for more information.
+See [Edge support for WIP](./microsoft-edge-security-windows-information-protection.md) for more information.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings

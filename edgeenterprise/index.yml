@@ -47,9 +47,9 @@ landingContent:
           - text: Video - Deploy Microsoft Edge
             url: microsoft-edge-video-deploy.md
           - text: Deploy to Windows
-            url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+            url: /configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
           - text: Deploy to macOS
-            url: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+            url: /intune/apps/apps-edge-macos/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
  # Card 3 (col 3, 1st row)
   - title: Configure Microsoft Edge
     linkLists:
