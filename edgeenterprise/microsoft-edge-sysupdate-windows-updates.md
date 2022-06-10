@@ -49,7 +49,7 @@ Along with the previous changes, there are changes that will happen regardless o
   
 ## Older versions of Windows
 
-To deploy Microsoft Edge on a device running a Windows version older than Windows 10 RS4, use [Configuration Manager](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-windows-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), or upgrade to a supported version of Windows 10. The following article lists the currently supported versions of Windows 10 and Windows 11.
+To deploy Microsoft Edge on a device running a Windows version older than Windows 10 RS4, use [Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), [Microsoft Intune](/mem/intune/apps/apps-windows-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), or upgrade to a supported version of Windows 10. The following article lists the currently supported versions of Windows 10 and Windows 11.
 
 - [Supported versions of Windows client](/windows/release-health/supported-versions-windows-client)
 
