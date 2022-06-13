@@ -14,7 +14,7 @@ description: "Regular Expression 2 syntax"
 
 # Regular Expression 2 (re2.h) syntax
 
-Regular expressions are a notation for describing sets of character strings. When a string is in the set described by a regular expression, we often say that the regular expression matches the string.
+Regular expressions are a notation for describing sets of character strings. When a string is in the set described by a regular expression, we often say that the regular expression *matches* the string.
 
 The simplest regular expression is a single literal character. Except for the metacharacters like `*+?()|`, characters match themselves. To match a metacharacter, escape it with a backslash: `\+` matches a literal plus character.
 
