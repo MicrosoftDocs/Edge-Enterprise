@@ -20,7 +20,7 @@ The simplest regular expression is a single literal character. Except for the me
 
 Two regular expressions can be altered or concatenated to form a new regular expression: if *e<sub>1</sub>* matches _s_ and *e<sub>2</sub>* matches _t_, then *e<sub>1</sub>* | *e<sub>2</sub>* matches _s_ or _t_, and *e<sub>1</sub>* *e<sub>2</sub>*  matches _st_.
 
-The metacharacters _`\`_ , _+_ , and _?_ are repetition operators: *e<sub>1</sub>* _`\`_ matches a sequence of zero or more (possibly different) strings, each of which match *e<sub>1</sub>*; *e<sub>1</sub>* _+_ matches one or more; *e<sub>1</sub>* _?_ matches zero or one.
+The metacharacters _*_ , _+_ , and _?_ are repetition operators: *e<sub>1</sub>* _`\`_ matches a sequence of zero or more (possibly different) strings, each of which match *e<sub>1</sub>*; *e<sub>1</sub>* _+_ matches one or more; *e<sub>1</sub>* _?_ matches zero or one.
 
 The operator precedence, from weakest to strongest binding, is first alternation, then concatenation, and finally the repetition operators. Explicit parentheses can be used to force different meanings, as in arithmetic expressions. Some examples: _ab|cd_ is equivalent to _(ab)|(cd)_ ; _`ab\`_ is equivalent to _`a(b\)`_ .
 
