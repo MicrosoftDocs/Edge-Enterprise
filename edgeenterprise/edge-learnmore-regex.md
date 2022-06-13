@@ -3,7 +3,7 @@ title: "Regular Expression 2 syntax"
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 01/11/2022
+ms.date: 06/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,7 @@ description: "Regular Expression 2 syntax"
 
 Regular expressions are a notation for describing sets of character strings. When a string is in the set described by a regular expression, we often say that the regular expression matches the string.
 
-The simplest regular expression is a single literal character. Except for the metacharacters like `\*+?()|`, characters match themselves. To match a metacharacter, escape it with a backslash: `\+` matches a literal plus character.
+The simplest regular expression is a single literal character. Except for the metacharacters like `*+?()|`, characters match themselves. To match a metacharacter, escape it with a backslash: `\+` matches a literal plus character.
 
 Two regular expressions can be altered or concatenated to form a new regular expression: if *e<sub>1</sub>* matches _s_ and *e<sub>2</sub>* matches _t_, then *e<sub>1</sub>* | *e<sub>2</sub>* matches _s_ or _t_, and *e<sub>1</sub>* *e<sub>2</sub>*  matches _st_.
 
