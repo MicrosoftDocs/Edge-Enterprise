@@ -114,7 +114,10 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 
 ## Manage site list contents on the Microsoft 365 Admin Center
 
-You can add, edit, delete site list contents, and view comment history to track changes to individual entries for sites and shared cookies.
+You can add, edit, delete site list contents, and view comment history to track changes to individual entries for sites and shared session cookies.
+
+> [!NOTE]
+> Persistent-cookies, which have been created with an `Expires-attribute`, can't be shared between Microsoft Edge and Internet Explorer.
 
 If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
@@ -159,9 +162,6 @@ Use the following steps to copy a site entry from a site list to one or more sit
    > The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
 ### Add a shared session cookie to the site list
-
-> [!NOTE]
-> Persistent-cookies, which have been created with an `Expires-attribute`, can't be shared between Microsoft Edge and Internet Explorer.
 
 You can add individual shared session cookies to any site list. After adding shared cookies to the list, you can use the predefined filters using the **Filter** button (next to the Search box) to view updates to the list.
 
