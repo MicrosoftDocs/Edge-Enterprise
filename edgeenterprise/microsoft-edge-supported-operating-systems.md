@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 11/08/2021
+ms.date: 06/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -34,6 +34,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
+- Windows 10 Enterprise 2021 LTSC 
 - Windows 10 Enterprise multi-session
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT Enterprise 2019 LTSC ****

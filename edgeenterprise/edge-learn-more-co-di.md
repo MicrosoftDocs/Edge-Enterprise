@@ -3,20 +3,20 @@ title: "ClickOnce and DirectInvoke in Microsoft Edge"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/21/2021
+ms.date: 05/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Learn about ClickOnce and DirectInvoke in Microsoft Edge."
+description: "Learn about the ClickOnce and DirectInvoke features in Microsoft Edge."
 ---
 
 # Understand the ClickOnce and DirectInvoke features in Microsoft Edge
 
 ClickOnce and DirectInvoke are features available in IE and Microsoft Edge that support the use of a file handler to download files from a website. Although they serve different purposes, both features let websites specify that a file requested for download is passed to a file handler on the user's device. ClickOnce requests are handled by the native file handler in Windows. DirectInvoke requests are handled by a registered file handler specified by the website hosting the file.
 
-After setting up ClickOnce or DirectInvoke, the ClickOnce or DirectInvoke prompts can be bypassed by setting up additional enterprise policies. These policies can support either bypassing the ClickOnce or DirectInvoke prompts for specified file types for all domains or for specified file types from specified domains.
+After setting up ClickOnce or DirectInvoke, the ClickOnce or DirectInvoke prompts can be bypassed by setting up other enterprise policies. These policies can support either bypassing the ClickOnce or DirectInvoke prompts for specified file types for all domains or for specified file types from specified domains.
 
 For more information about these features, see:
 
@@ -61,11 +61,11 @@ Support for ClickOnce and DirectInvoke:
 
 ## ClickOnce and DirectInvoke file handling security
 
-ClickOnce and DirectInvoke are protected by Microsoft Defender SmartScreen's URL reputation scanning service.
+ClickOnce and DirectInvoke are protected by Microsoft 365 Defender SmartScreen's URL reputation scanning service.
 
-If a ClickOnce or a DirectInvoke request is flagged by the Microsoft Defender SmartScreen URL reputation service as unsafe, users with ClickOnce or DirectInvoke enabled will see two popups.
+If a ClickOnce or a DirectInvoke request is flagged by the Microsoft 365 Defender SmartScreen URL reputation service as unsafe, users with ClickOnce or DirectInvoke enabled will see two popups.
 
-The first popup asks the user if they want to open the file. This popup is displayed regardless of whether the file was flagged as safe or unsafe. The user can **Report the file as unsafe**, **Cancel** the request, or click **Open** to continue.
+The first popup asks the user if they want to open the file. This popup is displayed regardless of whether the file was flagged as safe or unsafe. The user can **Report the file as unsafe**, **Cancel** the request, or select **Open** to continue.
 
    ![Prompt to open file](./media/edge-learn-more-co-di/edge-clickonce-modal-1.png)
 
@@ -86,9 +86,12 @@ The second popup only shows up if:
 
 There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users. These two policies are [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) and [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.
 
-To specify file type(s) that the ClickOnce or DirectInvoke prompts should be bypassed for, use the policy labeled in the Group Policy Editor as “List of file types that should be automatically opened on download”. This will allow specified file types to be automatically opened after download for all domains.  
+To specify file type(s) that the ClickOnce or DirectInvoke prompts should be bypassed for, use the policy labeled in the Group Policy Editor as "List of file types that should be automatically opened on download". This policy setting will let specified file types to be automatically opened after download for all domains.  
 
-To bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two additional policies labelled in the Group Policy Editor as “List of file types that should be automatically opened on download” and “URLs where AutoOpen-FileTypes can apply”. Please note that the policy “URLs where AutoOpen- FileTypes can apply” is a supporter policy for “List of file types that should be automatically opened on download” and does nothing on its own.  
+You can bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two more policies. These policies are labeled in the Group Policy Editor as "List of file types that should be automatically opened on download" and "URLs where AutoOpen-FileTypes can apply".
+
+> [!NOTE]
+> The policy "URLs where AutoOpen- FileTypes can apply" is a supporting policy for "List of file types that should be automatically opened on download" and does nothing on its own.  
 
 ## ClickOnce and DirectInvoke behavior
 
@@ -98,13 +101,13 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 1. A user opens a link to a page that requests ClickOnce support and gets the prompt in the next screenshot.
 
-   ![Prompt to open an unsafe file](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
+   ![Prompt to open an unsafe file with ClickOnce enabled](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
 
-2. After the user clicks **Open**, ClickOnce attempts to launch the application.
+2. After the user selects **Open**, ClickOnce attempts to launch the application.
 
    ![ClickOnce tries to launch application](./media/edge-learn-more-co-di/edge-clickonce-enabled-launch-app.png)
 
-3. After the user clicks **Open**, the browser shows a popup that asks the user if they're sure they want to install the application.
+3. After the user selects **Open**, the browser shows a popup that asks the user if they're sure they want to install the application.
 
    ![Prompt to open the file](./media/edge-learn-more-co-di/edge-clickonce-enabled-2.png)
 
@@ -113,7 +116,7 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 ### ClickOnce disabled
 
-1. When a user opens a link to a page that requests ClickOnce support, they will see a message in the download tray that is similar to the one in the next screenshot.
+1. When a user opens a link to a page that requests ClickOnce support, they'll see a message in the download tray that is similar to the one in the next screenshot.
 
    ![File download prompt](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
@@ -121,18 +124,18 @@ The following examples show file handling when ClickOnce and DirectInvoke are en
 
 1. A user opens a link to a page that requests DirectInvoke support and gets the prompt in the next screenshot.
 
-   ![Prompt to open file](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
+   ![Prompt to open file from page requesting support](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
 
-2. When the user clicks **Open**, the requested file handler is opened. In this example, Microsoft Word is used to open the document that's shown in the previous screenshot.
+2. When the user selects **Open**, the requested file handler is opened. In this example, Microsoft Word is used to open the document that's shown in the previous screenshot.
 
    > [!NOTE]
    > The interface, messaging, and options shown by the DirectInvoke file handler will vary depending on the type and configuration of the file that's accessed.
 
 ### DirectInvoke disabled
 
-1. When a user opens a link to a page that requests DirectInvoke support, DirectInvoke behaves the same as when ClickOnce is disabled. They will see a message in the download tray that's similar to the one in the next screenshot.
+1. When a user opens a link to a page that requests DirectInvoke support, DirectInvoke behaves the same as when ClickOnce is disabled. They'll see a message in the download tray that's similar to the one in the next screenshot.
 
-   ![Prompt to open file](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
+   ![Prompt to open file when DirectInvoke disabled](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
 ## See also
 
