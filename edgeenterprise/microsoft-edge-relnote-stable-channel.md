@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 102.0.1245.41: June 13
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-13-2022).
+Stable and Extended Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-13-2022).
 
 ## Version 102.0.1245.39: June 9
 
