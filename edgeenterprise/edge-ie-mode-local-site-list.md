@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Learn how to enable local site lists and easy access to IE mode"
+description: "Learn how to enable local site lists and configure easy access to IE mode"
 ---
 
 # Configure local site list for Internet Explorer (IE) mode
