@@ -76,7 +76,7 @@ It also lists some syntax accepted by PCRE, PERL, and VIM.
 | x{-n} | (≡ x{n}?) (NOT SUPPORTED) VIM |
 | x= | (≡ x?) (NOT SUPPORTED) VIM |
 
-Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject forms that create a minimum or maximum repetition count above 1000. Unlimited repetitions are not subject to this restriction.
+Implementation restriction: The counting forms `x{n,m}`, `x{n,}`, and `x{n}` reject forms that create a minimum or maximum repetition count above 1000. Unlimited repetitions are not subject to this restriction.
 
 |&nbsp;| Possessive repetitions |
 | --- | --- |
