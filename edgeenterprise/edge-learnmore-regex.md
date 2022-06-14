@@ -109,7 +109,7 @@ Implementation restriction: The counting forms x{n,m}, x{n,}, and x{n} reject fo
 | s | let . match \n (default false) |
 | U | ungreedy: swap meaning of x\* and x\*?, x+ and x+?, etc (default false) |
 
-Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
+Flag syntax is `xyz` (set) or `-xyz` (clear) or `xy-z` (set `xy`, clear `z`).
 
 |&nbsp;| Empty strings |
 | --- | --- |
