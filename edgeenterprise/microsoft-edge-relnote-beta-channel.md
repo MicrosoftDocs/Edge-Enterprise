@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/10/2022
+ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,7 +35,7 @@ Fixed various bugs and performance issues.
 
 - **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. Switching can be done without manually quitting Microsoft Edge.
 
-- **Enhanced security for web browsing.** Users can navigate the web safely with improved reliability and stability thanks to the rewritten web defense client (previously known as Microsoft Defender SmartScreen) on Microsoft Edge for Windows.
+- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows. The [NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) policy will allow enterprise customers to continue using the legacy version of the library until it’s deprecated in Microsoft Edge version 105.
 
 ### Policy updates
 
