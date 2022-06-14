@@ -3,7 +3,7 @@ title: "Regular Expression 2 syntax"
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/13/2022
+ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -127,14 +127,14 @@ Flag syntax is xyz (set) or -xyz (clear) or xy-z (set xy, clear z).
 | re@&lt;! | after text not matching re (NOT SUPPORTED) VIM |
 | \zs | sets start of match (= \K) (NOT SUPPORTED) VIM |
 | \ze | sets end of match (NOT SUPPORTED) VIM |
-| \%^ | beginning of file (NOT SUPPORTED) VIM |
-| \%$ | end of file (NOT SUPPORTED) VIM |
-| \%V | on screen (NOT SUPPORTED) VIM |
-| \%# | cursor position (NOT SUPPORTED) VIM |
-| \%&#39;m | mark m position (NOT SUPPORTED) VIM |
-| \%23l | in line 23 (NOT SUPPORTED) VIM |
-| \%23c | in column 23 (NOT SUPPORTED) VIM |
-| \%23v | in virtual column 23 (NOT SUPPORTED) VIM |
+| \\%^ | beginning of file (NOT SUPPORTED) VIM |
+| \\%$ | end of file (NOT SUPPORTED) VIM |
+| \\%V | on screen (NOT SUPPORTED) VIM |
+| \\%# | cursor position (NOT SUPPORTED) VIM |
+| \\%&#39;m | mark m position (NOT SUPPORTED) VIM |
+| \\%23l | in line 23 (NOT SUPPORTED) VIM |
+| \\%23c | in column 23 (NOT SUPPORTED) VIM |
+| \\%23v | in virtual column 23 (NOT SUPPORTED) VIM |
 
 |&nbsp;| Escape sequences |
 | --- | --- |
