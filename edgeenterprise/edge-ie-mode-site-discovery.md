@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: collw
-author: v-danwesley
+author: dan-wesley
 manager: collw
 ms.date: 06/15/2022
 audience: ITPro
