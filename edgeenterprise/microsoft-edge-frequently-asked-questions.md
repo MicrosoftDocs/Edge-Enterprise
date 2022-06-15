@@ -3,7 +3,7 @@ title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/11/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,11 @@ Select the ellipses icon (**...**) in the upper-right corner of Microsoft Edge, 
 
 ## What about Internet Explorer 11?
 
-The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022. To see what's in scope, see [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+>[!Note]
+> The Internet Explorer 11 desktop application has [retired and is out of support as of June 15, 2022](https://aka.ms/IEJune15Blog) for certain versions of Windows 10.  
+>
+> - You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how >](https://aka.ms/IEmodewebsite)
+> - The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update. [Disable IE today>](/deployedge/edge-ie-disable-ie11)  
 
 ## Does Microsoft Edge support ActiveX controls or Browser Helper Objects like Silverlight or Java?
 
@@ -52,7 +56,7 @@ Yes. Configuring Microsoft Edge on Windows 10 using Microsoft Intune and Mobile 
 
 Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) that can be used for the initial deployment of Microsoft Edge via WSUS. After initial deployment, automatic updates are configured by default. For more information, see [Update in WSUS for the new Microsoft Edge for Windows 10, version 1809, 1903, 1909, and 2004: October 29, 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
 
- Manual updates can be done through a configuration management tool, like [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
+ Manual updates can be done through a configuration management tool, like [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json).
 
 ## Are Initial Preferences supported?
 

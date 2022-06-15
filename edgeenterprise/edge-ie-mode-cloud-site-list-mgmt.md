@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/21/2022
+ms.date: 06/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
 > [!NOTE]
-> This user experience is currently only available to worldwide cloud instances.
+> This user experience is currently only available to worldwide and GCC cloud instances.
 
 ## Overview
 
@@ -114,7 +114,10 @@ Use the following steps to associate the cloud-hosted site list with Microsoft E
 
 ## Manage site list contents on the Microsoft 365 Admin Center
 
-You can add, edit, delete site list contents, and view comment history to track changes to individual entries for sites and shared cookies.
+You can add, edit, delete site list contents, and view comment history to track changes to individual entries for sites and shared session cookies.
+
+> [!NOTE]
+> Persistent-cookies, which have been created with an `Expires-attribute`, can't be shared between Microsoft Edge and Internet Explorer.
 
 If you have hybrid scenarios that require your site list to be hosted on-premises, you can export your site list from the Microsoft 365 Admin Center. Use the following steps as a guide for managing site list content.
 
@@ -158,9 +161,9 @@ Use the following steps to copy a site entry from a site list to one or more sit
    > [!NOTE]
    > The **Status** column for any entries copied to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published in order for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
-### Add a shared cookie to the site list
+### Add a shared session cookie to the site list
 
-You can add individual shared cookies to any site list. After adding shared cookies to the list, you can use the predefined filters using the **Filter** button (next to the Search box) to view updates to the list.
+You can add individual shared session cookies to any site list. After adding shared cookies to the list, you can use the predefined filters using the **Filter** button (next to the Search box) to view updates to the list.
 
 1. Go to the site list where you want to add a shared cookie.
 2. Select **Add a shared cookie**.
@@ -169,9 +172,9 @@ You can add individual shared cookies to any site list. After adding shared cook
 > [!NOTE]
 > The **Status** column for any entries added to a published site list will show **Addition pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Addition pending** to see all the added entries that are pending publication.
 
-### Delete a shared cookie from the site list
+### Delete a shared session cookie from the site list
 
-Use the following steps to delete a shared cookie entry.
+Use the following steps to delete a shared session cookie entry.
 
 1. Pick the entry that you’d like to delete from the site list. Select **Delete shared cookie**.
 2. Select **Delete** in the dialog pop-up.
@@ -180,15 +183,15 @@ Use the following steps to delete a shared cookie entry.
 > [!NOTE]
 > The **Status** column for any entries deleted from a published site list will show **Delete pending**. If you navigate to the list of site lists by selecting **Microsoft Edge site lists** at the top of the screen, you'll see that the **Published Status** column shows **Changes pending publish** to indicate that latest updates to the site list need to be published for users to receive them. You can use the **Filter** button (next to the Search box) to select **Delete pending** to see all deleted entries that are pending publication.
 
-### View the change history for shared cookies
+### View the change history for shared session cookies
 
-To view the change history for shared cookies:
+To view the change history for shared session cookies:
 
 - Select the entry that you want to see the change history for, and then select **View history**.
 
-### Copy a shared cookie to other site lists
+### Copy a shared session cookie to other site lists
 
-Use the following steps to copy a shared cookie entry from a site list to one or more site lists.
+Use the following steps to copy a shared session cookie entry from a site list to one or more site lists.
 
 1. Pick an entry that you'd like to copy to another list. Select **Copy to more lists**.
 2. Select one or more site lists you'd like to copy to from the dropdown list.
