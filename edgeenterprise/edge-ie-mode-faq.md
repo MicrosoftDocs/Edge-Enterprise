@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 04/25/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,8 +14,11 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 
 # Internet Explorer (IE) mode troubleshooting and FAQ
 
-> [!NOTE]
-> The Internet Explorer 11 desktop application will be retired and go out of support on  June 15, 2022. To see the list of what’s in scope, see the [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. To learn more, see the [The future of Internet Explorer on Windows 10 is in Microsoft Edge](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) blog post.
+>[!Note]
+> The Internet Explorer 11 desktop application has [retired and is out of support as of June 15, 2022](https://aka.ms/IEJune15Blog) for certain versions of Windows 10.  
+>
+> - You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how >](https://aka.ms/IEmodewebsite)
+> - The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update. [Disable IE today>](/deployedge/edge-ie-disable-ie11)  
 
 This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
 
@@ -31,6 +34,10 @@ We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started g
 ## Are there any tools that I can use to guide me through IE mode troubleshooting?
 
 Yes, the [Microsoft Virtual Agent](https://go.microsoft.com/fwlink/?linkid=2194137) provides a scenario-based guided walkthrough for troubleshooting IE mode.
+
+There's also the next video, which provides IE mode troubleshooting tips and tricks.
+
+[![IE mode troubleshooting tips and tricks](media/edge-ie-mode-faq/0.png)](https://www.youtube.com/watch?v=nf8K96KWhjM "IE mode troubleshooting tips and tricks").
 
 ## Common IE mode issues
 
@@ -130,7 +137,7 @@ The following steps describe how to troubleshoot a neutral site configuration.
 
 In some cases, multiple neutral site entries are needed, depending on the specific site architecture in place. If the workflow still fails after adding a new neutral site, repeat the process to capture a new net-export log and perform another pass.
 
-In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you are aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you're aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ### What if these steps don't fix the issue?
 
@@ -196,7 +203,7 @@ Yes, the Internet Explorer 11 desktop application will be retired and go out of 
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
-Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you will need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you'll need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
 However, rather than use the View in File Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) or [Move or copy files in SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
 
@@ -306,7 +313,12 @@ Microsoft Edge needs to download the IE mode site list before it can apply IE mo
 
 ### Why can't I open files or pages that are found by using file:// URLs in Microsoft Edge?
 
-Because of a Chromium security restriction, IE mode needs to be used. You can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
+For security reasons, Microsoft Edge doesn't allow access to file:// URLs from pages served by HTTP or HTTPS.
+
+If you want this functionality, the following two workarounds are available:
+
+- You can use the [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) group policy to permit links from HTTPS pages to open Intranet Zone file shares in Windows Explorer.
+- Pages loaded from the Intranet Zone into Microsoft Edge’s IE mode feature are permitted to navigate directly to URLs using the **file://** protocol.
 
 ## See also
   
