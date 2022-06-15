@@ -309,7 +309,12 @@ Microsoft Edge needs to download the IE mode site list before it can apply IE mo
 
 ### Why can't I open files or pages that are found by using file:// URLs in Microsoft Edge?
 
-Because of a Chromium security restriction, IE mode needs to be used. You can use Microsoft Edge’s IE mode feature to load web pages hosted on the **file://** protocol within an intranet zone. You can use of the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) group policy to enable this functionality.
+For security reasons, Microsoft Edge doesn't allow access to file:// URLs from pages served by HTTP or HTTPS.
+
+If you want this functionality, the following two workarounds are available:
+
+- You can use the [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) group policy to permit links from HTTPS pages to open Intranet Zone file shares in Windows Explorer.
+- Pages loaded from the Intranet Zone into Microsoft Edge’s IE mode feature are permitted to navigate directly to URLs using the **file://** protocol.
 
 ## See also
   
