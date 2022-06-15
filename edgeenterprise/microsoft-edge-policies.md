@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/14/2022
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,21 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and obsoleted policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
+|[AskBeforeCloseEnabled](#askbeforecloseenabled)|Get user confirmation before closing a browser window with multiple tabs|
+|[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
+|[PDFXFAEnabled](#pdfxfaenabled)|XFA support in native PDF reader enabled|
+|[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
+|[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
+|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (obsolete)|
 
 ## Available policies
 
