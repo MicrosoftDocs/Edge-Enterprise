@@ -35,6 +35,10 @@ We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started g
 
 Yes, the [Microsoft Virtual Agent](https://go.microsoft.com/fwlink/?linkid=2194137) provides a scenario-based guided walkthrough for troubleshooting IE mode.
 
+There's also the next video, which provides IE mode troubleshooting tips and tricks.
+
+[![IE mode troubleshooting tips and tricks](media/edge-ie-mode-faq/0.png)](https://www.youtube.com/watch?v=nf8K96KWhjM "IE mode troubleshooting tips and tricks").
+
 ## Common IE mode issues
 
 Use this section as a guide to help you troubleshoot and fix the two most common issues when moving to Microsoft Edge with IE mode. These issues are:
@@ -133,7 +137,7 @@ The following steps describe how to troubleshoot a neutral site configuration.
 
 In some cases, multiple neutral site entries are needed, depending on the specific site architecture in place. If the workflow still fails after adding a new neutral site, repeat the process to capture a new net-export log and perform another pass.
 
-In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you are aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you're aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ### What if these steps don't fix the issue?
 
@@ -199,7 +203,7 @@ Yes, the Internet Explorer 11 desktop application will be retired and go out of 
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
-Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you will need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+Starting with Microsoft Edge version 95, you can enable the **View in File Explorer** capability for SharePoint Online Modern Document Libraries. For this experience to be visible and work for your users, you'll need to enable the Microsoft Edge ["Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy and update your SharePoint Online tenant configuration. Learn more: [View SharePoint files with File Explorer in Microsoft Edge - SharePoint in Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
 However, rather than use the View in File Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [Sync SharePoint and Teams files with your computer](https://support.microsoft.com/office/sync-sharepoint-and-teams-files-with-your-computer-6de9ede8-5b6e-4503-80b2-6190f3354a88?ui=en-us&rs=en-us&ad=us) or [Move or copy files in SharePoint](https://support.microsoft.com/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc?ui=en-us&rs=en-us&ad=us).
 
