@@ -3,7 +3,7 @@ title: "Block access to consumer accounts"
 ms.author: v-danwesley
 author: dan-wesley
 manager: collw
-ms.date: 06/15/2022
+ms.date: 06/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.custom: generated
@@ -28,6 +28,9 @@ Users might see the following message when you block access to consumer accounts
 This policy causes the **X-GoogApps-Allowed-Domains:** header to be appended to all HTTP and HTTPS requests to all google.com domains. This header is followed by a comma-separated list with the allowed domain names.
 
 Example: `X-GoogApps-Allowed-Domains: mydomain1.com, mydomain2.com`
+
+> [!NOTE]
+> Microsoft Edge, which is built on Chromium, is inheriting this upstream policy from the Chromium open source project.
 
 ## Configure policy settings
 
