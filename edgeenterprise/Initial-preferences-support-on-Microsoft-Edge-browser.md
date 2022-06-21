@@ -91,4 +91,4 @@ Initial preferences will only take effect after the *initial_preferences* file i
 
 ## See also
 
-- [Policy download containing *initial_prefrences* example template file](https://www.microsoft.com/edge/business/download)
+- [Policy download containing *initial_preferences* example template file](https://www.microsoft.com/edge/business/download)
