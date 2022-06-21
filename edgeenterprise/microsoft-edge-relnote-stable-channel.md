@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 103.0.1264.X: June XX
 
-## Feature updates
+### Feature updates
 
 - **Ability to control automatic profile switching.** The [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) policy lets Microsoft Edge prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
 
