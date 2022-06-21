@@ -2,6 +2,19 @@
 
 
 
+## Week of June 13, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/15/2022 | [Enterprise Site Discovery Step by Step Guide](/DeployEdge/edge-ie-mode-site-discovery) | modified |
+| 6/15/2022 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
+| 6/15/2022 | [Internet Explorer (IE) mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 6/15/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 6/16/2022 | [Block access to consumer accounts](/DeployEdge/edge-learnmore-block-access-consumer-accounts) | added |
+| 6/16/2022 | [Regular Expression 2 syntax](/DeployEdge/edge-learnmore-regex) | modified |
+
+
 ## Week of June 06, 2022
 
 
@@ -46,15 +59,3 @@
 | 5/17/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 5/17/2022 | [Reset Microsoft Edge data in the cloud](/DeployEdge/edge-learnmore-reset-data-in-cloud) | modified |
 | 5/19/2022 | [Configure Microsoft Edge for Windows with policy settings](/DeployEdge/configure-microsoft-edge) | modified |
-
-
-## Week of May 09, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/9/2022 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
-| 5/9/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 5/10/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 5/10/2022 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 5/11/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
