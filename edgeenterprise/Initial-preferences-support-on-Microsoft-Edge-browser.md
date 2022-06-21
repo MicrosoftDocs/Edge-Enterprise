@@ -3,7 +3,7 @@ title: "Learn how to configure initial preferences on Microsoft Edge."
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/23/2022
+ms.date: 06/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -91,4 +91,4 @@ Initial preferences will only take effect after the *initial_preferences* file i
 
 ## See also
 
-- [The *initial_prefrences* example template file](/edge/business/download)
+- [Policy download location](https://www.microsoft.com/edge/business/download)
