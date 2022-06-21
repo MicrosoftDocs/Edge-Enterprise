@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/15/2022
+ms.date: 06/21/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,18 +26,12 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
-|[AskBeforeCloseEnabled](#askbeforecloseenabled)|Get user confirmation before closing a browser window with multiple tabs|
-|[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
-|[PDFXFAEnabled](#pdfxfaenabled)|XFA support in native PDF reader enabled|
-|[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
-|[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
-|[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (obsolete)|
+|[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Double Click feature in Microsoft Edge enabled (only available in China)|
+
 
 ## Available policies
 
@@ -403,6 +397,7 @@ These tables list all of the browser-related group policies available in this re
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
 |[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
+|[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Double Click feature in Microsoft Edge enabled (only available in China)|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
@@ -10342,9 +10337,11 @@ Use the preceding information when configuring this policy.
 
   Allows the Microsoft Edge browser to load new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
 
-If you enable this policy, Microsoft Edge will use SmartScreen implementation from new library (libSmartScreenN).
+If you enable or don't configure this policy, Microsoft Edge will use the new SmartScreen library (libSmartScreenN).
 
-If you disable or don't configure this policy, Microsoft Edge will continue using the SmartScreen implementation from old library (libSmartScreen).
+If you disable this policy, Microsoft Edge will use the old SmartScreen library (libSmartScreen).
+
+Before Microsoft Edge version 103, if you don't configure this policy, Microsoft Edge will use the old SmartScreen library (libSmartScreen).
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
@@ -17928,6 +17925,70 @@ SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
     <string>msoutlook</string>
   </dict>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DoubleClickCloseTabEnabled
+
+  #### Double Click feature in Microsoft Edge enabled (only available in China)
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 104 or later
+
+  #### Description
+
+  This policy lets you configure the double click feature in Microsoft Edge.
+
+Double Click lets users close a tab by a double clicking the left mouse button.
+
+If you enable or don't configure this policy, you can use the double click feature to close a tab on Microsoft Edge to start using this feature.
+
+If you disable this policy, you can't use the double click feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DoubleClickCloseTabEnabled
+  - GP name: Double Click feature in Microsoft Edge enabled (only available in China)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DoubleClickCloseTabEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DoubleClickCloseTabEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
