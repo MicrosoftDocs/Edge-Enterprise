@@ -45,6 +45,10 @@ These release notes provide information about new features and non-security upda
 - [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) - Live captions allowed
 - [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Origin-keyed agent clustering enabled by default
 
+#### Additional policy changes
+
+- [SleepingTabsTimeout](deployedge/microsoft-edge-policies#sleepingtabstimeout) - Set the background tab inactivity timeout for sleeping tabs. **Note:** A timeout of 30 seconds of inactivity was added to this policy.
+
 ## Version 102.0.1245.44: June 16
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
