@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 06/21/2022
+ms.date: 06/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
