@@ -51,7 +51,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 #### Additional policy changes
 
-- [SleepingTabsTimeout](deployedge/microsoft-edge-policies#sleepingtabstimeout) - Set the background tab inactivity timeout for sleeping tabs. **Note:** A timeout of 30 seconds of inactivity was added to this policy.
+- [SleepingTabsTimeout](/DeployEdge/microsoft-edge-policies#sleepingtabstimeout) - Set the background tab inactivity timeout for sleeping tabs. **Note:** A timeout of 30 seconds of inactivity was added to this policy.
 
 ## Version 102.0.1245.44: June 16
 
