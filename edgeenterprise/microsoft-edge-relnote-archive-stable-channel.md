@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 05/31/2022
+ms.date: 06/23/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,77 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 100.0.1185.29: April 1
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-1-2022).
+
+### Feature updates
+
+- **Three-digit version number in the User-agent string.** Microsoft Edge will now send a three-digit version number, such as Edg/100 in the User-Agent header. This may confuse scripts or server-side analytics that use a buggy parser to determine the User-Agent string version number. You can use the [ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent) policy to control whether the User-Agent string major version should be frozen at 99. Also, the **#force-major-version-to-minor** flag is available in *edge://flags* to freeze the major version in the User-Agent string to 99.
+
+- **Streamlining Microsoft 365 Application Protocol Activations.** Microsoft 365 Application Protocol Activations on trusted Microsoft cloud storage services will now launch certain Microsoft 365 applications directly, including SharePoint subdomains and Microsoft OneDrive URLs. You can use the policies [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) and [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) to enable the application protocol activation prompts if desired, and to define other applications and services where warnings are enabled or disabled.
+
+- **Hardware-enforced Stack Protection.** Microsoft Edge will continue supporting more fine-grained protection by combating memory corruption vulnerabilities and by protecting indirect calls. Hardware-enforced stack protection is only supported by Windows 8 and later. For more information, see [Hardware-enforced Stack Protection](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340). This feature behavior can be controlled using the [ShadowStackCrashRollbackBehavior](/deployedge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) policy.
+
+- **Preview PDF files in Microsoft Outlook and File Explorer.** Users can view a PDF file in a lightweight and rich read-only preview. This feature is available for Outlook Desktop PDF attachments or for local PDF files using File Explorer.
+
+- **Open Digitally Signed PDF files.** Digital signatures are used extensively to validate the authenticity of a document and changes made in a document. You can use the [PDFSecureMode](/deployedge/microsoft-edge-policies#pdfsecuremode) policy to enable digital signature validation for PDF files, directly from the browser, without the need for any add-ins.
+
+### Policy updates
+
+#### New policies
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - Configure if the ads transparency feature is enabled
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - Control use of the WebHID API
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - Hide restore pages dialog after browser crash
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - Secure mode and Certificate-based Digital Signature validation in native PDF reader
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - Prompt the user to select a certificate when multiple certificates match
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - Allow the WebHID API on these sites
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - Block the WebHID API on these sites
+
+#### Deprecated policy
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - Enables background updates to the list of available templates for Collections and other features that use templates
+
+#### Obsoleted policy
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - Allow pages to send synchronous XHR requests during page dismissal
+
+## Version 98.0.1108.92: March 26
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 99.0.1150.55: March 26
+
+> [!Important]
+> This update contains a fix for [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
+
+## Version 99.0.1150.52: March 24
+
+Fixed various bugs and performance issues.
+
+## Version 98.0.1108.84: March 17
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 99.0.1150.46: March 17
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
+
+## Version 99.0.1150.39: March 10
+
+Fixed various bugs and performance issues.
+
+## Version 98.0.1108.76: March 9
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 99.0.1150.36: March 7
+
+Fixed various bugs and performance issues.
 
 ## Version 99.0.1150.30: March 3
 
