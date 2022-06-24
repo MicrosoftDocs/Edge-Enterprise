@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/23/2022
+ms.date: 06/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,7 @@ This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2022-30192](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30192)
 - [CVE-2022-33638](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-33638)
+- [CVE-2022-33639](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-33639)
 
 ## June 13, 2022
 
