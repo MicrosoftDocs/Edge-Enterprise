@@ -2,6 +2,18 @@
 
 
 
+## Week of June 20, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/21/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 6/22/2022 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
+| 6/23/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 6/23/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 6/23/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+
+
 ## Week of June 13, 2022
 
 
@@ -48,14 +60,3 @@
 | 5/25/2022 | [Microsoft Edge and Conditional Access](/DeployEdge/ms-edge-security-conditional-access) | modified |
 | 5/25/2022 | [ClickOnce and DirectInvoke in Microsoft Edge](/DeployEdge/edge-learn-more-co-di) | modified |
 | 5/26/2022 | [Deploy Microsoft Edge with Windows 10 updates](/DeployEdge/deploy-edge-with-windows-10-updates) | modified |
-
-
-## Week of May 16, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/17/2022 | [Microsoft Edge enterprise sync FAQ](/DeployEdge/microsoft-edge-enterprise-sync-faq) | modified |
-| 5/17/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 5/17/2022 | [Reset Microsoft Edge data in the cloud](/DeployEdge/edge-learnmore-reset-data-in-cloud) | modified |
-| 5/19/2022 | [Configure Microsoft Edge for Windows with policy settings](/DeployEdge/configure-microsoft-edge) | modified |
