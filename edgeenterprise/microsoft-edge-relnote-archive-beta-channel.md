@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/06/2022
+ms.date: 06/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,41 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 # Archived release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 102.0.1245.7: May 10
+
+### Policy updates
+
+#### New policies
+
+- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins) - List of origins that allow all HTTP authentication
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
+- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
+
+## Version 101.0.1210.39: May 5
+
+Fixed various bugs and performance issues.
+
+## Version 101.0.1210.31: April 27
+
+Fixed various bugs and performance issues.
+
+## Version 101.0.1210.26: April 22
+
+Fixed various bugs and performance issues.
+
+## Version 101.0.1210.19: April 18
+
+Fixed various bugs and performance issues.
+
+## Version 101.0.1210.14: April 12
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Improvements to the Enterprise Site List Manager.** Now you can configure shared cookies between Microsoft Edge and Internet Explorer on your enterprise site list. You can access the [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) at *edge://compat/SiteListManager*.
 
 ## Version 101.0.1210.10: April 8
 
