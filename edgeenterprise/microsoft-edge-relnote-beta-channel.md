@@ -94,41 +94,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 102.0.1245.7: May 10
-
-### Policy updates
-
-#### New policies
-
-- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins) - List of origins that allow all HTTP authentication
-- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
-- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
-- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
-
-## Version 101.0.1210.39: May 5
-
-Fixed various bugs and performance issues.
-
-## Version 101.0.1210.31: April 27
-
-Fixed various bugs and performance issues.
-
-## Version 101.0.1210.26: April 22
-
-Fixed various bugs and performance issues.
-
-## Version 101.0.1210.19: April 18
-
-Fixed various bugs and performance issues.
-
-## Version 101.0.1210.14: April 12
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Improvements to the Enterprise Site List Manager.** Now you can configure shared cookies between Microsoft Edge and Internet Explorer on your enterprise site list. You can access the [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) at *edge://compat/SiteListManager*.
-
+<!--- from Version 102.0.1245.7: May 10 to Version 101.0.1210.14: April 12 ---->
 <!--- from Version 101.0.1210.10: April 8 to Version 100.0.1185.12: March 18 --->
 <!--- from Version 100.0.1185.10: March 17 to Version 99.0.1150.16: February 14 --->
 <!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
