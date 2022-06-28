@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/15/2022
+ms.date: 06/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,7 +88,7 @@ IE mode can use the existing policy configuring the Enterprise Site List for Int
 5. Select **Enabled**.
 6. Under **Options**, type the location of website list. You can use one of the following locations:
     - (Recommended) HTTPS location: **https**:**//iemode/sites.xml**
-    - Local network file: **\\\network\shares\sites.xml**
+    - Local network file:**\\\network\shares\sites.xml**
     - Local file: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Click **OK** or **Apply** to save these settings.
 
