@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/27/2022
+ms.date: 06/29/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
+|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 
 ## Available policies
 
@@ -408,7 +418,8 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
+|[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
@@ -453,6 +464,7 @@ These tables list all of the browser-related group policies available in this re
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
+|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 |[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
 |[InternetExplorerIntegrationCloudUserSitesReporting](#internetexplorerintegrationcloudusersitesreporting)|Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app|
@@ -9061,6 +9073,8 @@ Local printers are also known as native printing destinations, and include desti
 
 In Microsoft version 93 or later, if you set this policy to 'pdf' it also disables the 'save as Pdf' option from the right click context menu.
 
+In Microsoft version 103 or later, if you set this policy to 'onedrive' it also disables the 'save as Pdf (OneDrive)' option from print preview.
+
 Policy options mapping:
 
 * privet (privet) = Zeroconf-based (mDNS + DNS-SD) protocol destinations
@@ -9070,6 +9084,8 @@ Policy options mapping:
 * pdf (pdf) = The 'Save as PDF' destination. (93 or later, also disables from context menu)
 
 * local (local) = Local printer destinations
+
+* onedrive (onedrive) = Save as PDF (OneDrive) printer destinations. (103 or later)
 
 Use the preceding information when configuring this policy.
 
@@ -12841,7 +12857,7 @@ If you don't provide a domain name or leave this policy unset, users can access 
 
 Users cannot change or override this setting.
 
-Note: This policy causes the X-GoogApps-Allowed-Domains header to be appended to all HTTP and HTTPS requests to all google.com domains, as described in https://support.google.com/a/answer/1668854.
+Note: This policy causes the X-GoogApps-Allowed-Domains header to be appended to all HTTP and HTTPS requests to all google.com domains, as described in [https://go.microsoft.com/fwlink/?linkid=2197973](https://go.microsoft.com/fwlink/?linkid=2197973).
 
   #### Supported features:
 
@@ -17935,7 +17951,7 @@ SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
 
   This policy lets you configure the double click feature in Microsoft Edge.
 
-Double Click lets users close a tab by a double clicking the left mouse button.
+Double Click lets users close a tab by double clicking the left mouse button.
 
 If you enable or don't configure this policy, you can use the double click feature to close a tab on Microsoft Edge to start using this feature.
 
@@ -19242,9 +19258,9 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### Disable download file type extension-based warnings for specified file types on domains
+  #### Disable download file type extension-based warnings for specified file types on domains (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -19252,7 +19268,9 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   #### Description
 
-  You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
+  This policy is being deprecated in favor of [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings) because of a type mismatch that caused errors in Mac. This policy will be made obsolete after version 108. If you set both policies, values from this policy will be overridden if they're set differently in [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings).
+
+You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
 
 Files with file type extensions specified for domains identified by this policy will still be subject to non-file type extension-based security warnings such as mixed-content download warnings and Microsoft Defender SmartScreen warnings.
 
@@ -19290,7 +19308,7 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Group Policy (ADMX) info
 
   - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - GP name: Disable download file type extension-based warnings for specified file types on domains
+  - GP name: Disable download file type extension-based warnings for specified file types on domains (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19318,6 +19336,125 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 <array>
   <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
   <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExemptFileTypeDownloadWarnings
+
+  #### Disable download file type extension-based warnings for specified file types on domains
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 105 or later
+
+  #### Description
+
+  You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
+
+Files with file type extensions specified for domains identified by this policy will still be subject to non-file type extension-based security warnings such as mixed-content download warnings and Microsoft Defender SmartScreen warnings.
+
+If you disable this policy or don't configure it, file types that trigger extension-based download warnings will show warnings to the user.
+
+If you enable this policy:
+
+* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* The file type extension entered must be in lower-cased ASCII. The leading separator should not be included when listing the file type extension, so list "jnlp" should be used instead of ".jnlp".
+
+Example:
+
+The following example value would prevent file type extension-based download warnings on swf, exe, and jnlp extensions for *.contoso.com domains. It will show the user a file type extension-based download warning on any other domain for exe and jnlp files, but not for swf files.
+
+[
+  { "file_extension": "jnlp", "domains": ["contoso.com"] },
+  { "file_extension": "exe", "domains": ["contoso.com"] },
+  { "file_extension": "swf", "domains": ["*"] }
+]
+
+Note that while the preceding example shows the suppression of file type extension-based download warnings for "swf" files for all domains, applying suppression of such warnings for all domains for any dangerous file type extension is not recommended due to security concerns. It is shown in the example merely to demonstrate the ability to do so.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExemptFileTypeDownloadWarnings
+  - GP name: Disable download file type extension-based warnings for specified file types on domains
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ExemptFileTypeDownloadWarnings
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExemptFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ExemptFileTypeDownloadWarnings
+  - Example value:
+``` xml
+<key>ExemptFileTypeDownloadWarnings</key>
+<array>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -22265,6 +22402,63 @@ Note that the policy is applied per renderer process, with the most recent value
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationAlwaysWaitForUnload
+
+  #### Wait for Internet Explorer mode tabs to completely unload before ending the browser session
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 105 or later
+
+  #### Description
+
+  This policy causes Microsoft Edge to continue running until all Internet Explorer tabs have completely finished unloading. This allows Internet Explorer plugins like ActiveX controls to perform additional critical work even after the browser has been closed. However, this can cause stability and performance issues, and Microsoft Edge processes may remain active in the background with no visible windows if the webpage or plugin prevents Internet Explorer from unloading. This policy should only be used if your organization depends on a plugin that requires this behavior.
+
+If you enable this policy, Microsoft Edge will always wait for Internet Explorer mode tabs to fully unload before ending the browser session.
+
+If you disable or don't configure this policy, Microsoft Edge will not always wait for Internet Explorer mode tabs to fully unload before ending the browser session.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationAlwaysWaitForUnload
+  - GP name: Wait for Internet Explorer mode tabs to completely unload before ending the browser session
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationAlwaysWaitForUnload
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -25346,7 +25540,7 @@ If you disable or don't configure this policy, the capability to view and verify
 
 If you enable this policy, XFA support in the native PDF reader will be enabled.
 
-If you disable this policy, Microsoft Edge will not enable XFA support in the native PDF reader.
+If you disable or don't configure this policy, Microsoft Edge will not enable XFA support in the native PDF reader.
 
   #### Supported features:
 
