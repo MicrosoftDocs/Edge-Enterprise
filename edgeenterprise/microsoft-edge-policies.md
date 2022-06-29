@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/23/2022
+ms.date: 06/29/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
 
 ## Available policies
 
