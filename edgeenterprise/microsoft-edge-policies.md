@@ -31,8 +31,8 @@ The following table lists the new and deprecated policies that are in this artic
 | Policy Name | Caption |
 |:-----|:-----|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
-|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
+|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 
 ## Available policies
 
