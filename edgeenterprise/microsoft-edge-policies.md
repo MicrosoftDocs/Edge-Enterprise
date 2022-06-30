@@ -31681,6 +31681,8 @@ Policy options mapping:
 
 * DisableNonProxiedUdp (disable_non_proxied_udp) = Use TCP unless proxy server supports UDP. This doesn't expose the local IP address
 
+Note: This policy does not provide an option to exclude specific domains. 
+
 Use the preceding information when configuring this policy.
 
   #### Supported features:
