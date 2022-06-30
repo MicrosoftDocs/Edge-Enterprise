@@ -22,7 +22,7 @@ Microsoft has released the latest Microsoft Edge Stable Channel (Version 103.0.1
 
 This update contains the following Microsoft Edge-specific update:
 
-- [CVE-2022-CVE-2022-33680](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-CVE-2022-33680)
+- [CVE-2022-33680](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-33680)
 
 ## June 23, 2022
 
