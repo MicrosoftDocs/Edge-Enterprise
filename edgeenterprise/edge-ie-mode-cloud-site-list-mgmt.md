@@ -212,7 +212,7 @@ To export a site list:
 
 ### Restore a previous version of a site list
 
-Use the following steps as a guide to restore a site list to a previous version.
+Use the following steps as a guide to restore the previous version of a site list.
 
 > [!NOTE]
 > Only the last 3 published versions of a site list are saved. When you publish more than 3 versions, the oldest version will be permanently deleted, and you will no longer be able to restore that version. If you want to keep a copy of a site list, you should export it before publishing a new version.
