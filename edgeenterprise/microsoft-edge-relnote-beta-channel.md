@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/30/2022
+ms.date: 07/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,6 +38,10 @@ These release notes provide information about new features and non-security upda
 #### Obsoleted policy
 
 - [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Allow using the deprecated U2F Security Key API
+
+## Version 103.0.1264.45: July 1
+
+Fixed various bugs and performance issues.
 
 ## Version 103.0.1264.37: June 22
 
