@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 06/15/2022
+ms.date: 07/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,8 +41,6 @@ When a user goes to a site that is incompatible with Internet Explorer, they wil
     - Windows 8.1
     - Windows 7
 
-
-
 ## Redirection experience
 
 On redirection to Microsoft Edge, users are shown the one-time dialog in the next screenshot. This dialog explains why they're getting redirected and prompts for consent to copy their browsing data and preferences from Internet Explorer to Microsoft Edge. The following browsing data will be imported: Favorites, Passwords, Search engines, open tabs, History, settings, cookies, and the Home Page.
@@ -61,7 +59,7 @@ The website incompatibility banner:
 - offers to make Microsoft Edge as the default browser
 - gives the user the option to explore Microsoft Edge
 
-When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that started loading the site is closed if it had no prior content. Otherwise, the active tab view goes to a  Microsoft [support](https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=en-US&rs=en-US&ad=US) page that explains why the site was redirected to Microsoft Edge.
+When a site is redirected from Internet Explorer to Microsoft Edge, the Internet Explorer tab that started loading the site is navigated to a Microsoft [support](https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=en-US&rs=en-US&ad=US) page that explains why the site was redirected to Microsoft Edge.
 
 > [!NOTE]
 > After a redirection users can go back to using Internet Explorer for sites that are not on the Internet Explorer incompatibility list.  
