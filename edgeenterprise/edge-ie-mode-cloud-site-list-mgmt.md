@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/13/2022
+ms.date: 07/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -210,9 +210,27 @@ To export a site list:
 1. On the Microsoft Edge site lists page, select the site list that you want to export.
 2. Select **Export list** to download the site list XML file
 
+### Restore a previous version of a site list
+
+Use the following steps as a guide to restore a site list to a previous version.
+
+> [!NOTE]
+> Only the last 3 published versions of a site list are saved. When you publish more than 3 versions, the oldest version will be permanently deleted, and you will no longer be able to restore that version. If you want to keep a copy of a site list, you should export it before publishing a new version.
+
+1. On the Microsoft Edge site lists page, select the list that you'd like to restore to a previous version.
+2. Select a previous version from the **Version** dropdown list.
+3. You can view the contents of a previous version of the site list. You can also export it if you want to save a copy by selecting **Export** in the message bar.
+4. After reviewing??, select **Restore** in the message bar.
+5. If you have unpublished changes in the current version of the site list, you can choose to include them by selecting the checkbox??.
+
+   > [!NOTE]
+   > If you don't include the unpublished changes, they will be lost when you restore the previous version.
+
+6. Select **Restore** at the bottom of the panel to restore the previous version.
+
 ## View site feedback on the Microsoft 365 Admin Center
 
-The Site feedback tab shows the sites that users are adding to their local IE Mode site list, as well as potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
+The Site feedback tab shows the sites that users are adding to their local IE Mode site list, and potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
 
 > [!NOTE]
 > This feature is currently only available for worldwide cloud instances.
@@ -259,7 +277,7 @@ To view the change history:
 
 ### I don't see the "Microsoft Edge site lists" option in the "Org settings" page on Microsoft 365 Admin Center. Why is that?
 
-The experience will be available when rollout completes by mid-December. While the experience is rolling out, you will need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
+The experience will be available when rollout completes by mid-December. While the experience is rolling out, you'll need to opt in to view this experience in the Microsoft 365 Admin Center. You must be a global admin in Microsoft 365 to opt in.
 
 You can use the following steps to opt in:
 
@@ -286,7 +304,7 @@ The site list is refreshed in Microsoft Edge every two hours. You can change thi
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge will not try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user is not signed in to Microsoft Edge):
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge won't try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user isn't signed in to Microsoft Edge):
 
 - 60 seconds after you restart the browser.
 - Every two hours when Microsoft Edge is running. The 120-minute refresh interval can be changed by using the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy. The minimum refresh interval is 30 minutes.
