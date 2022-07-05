@@ -220,8 +220,8 @@ Use the following steps as a guide to restore a site list to a previous version.
 1. On the Microsoft Edge site lists page, select the list that you'd like to restore to a previous version.
 2. Select a previous version from the **Version** dropdown list.
 3. You can view the contents of a previous version of the site list. You can also export it if you want to save a copy by selecting **Export** in the message bar.
-4. After reviewing??, select **Restore** in the message bar.
-5. If you have unpublished changes in the current version of the site list, you can choose to include them by selecting the checkbox??.
+4. After picking the version you want to restore, select **Restore** in the message bar.
+5. If you have unpublished changes in the current version of the site list, you can choose to include them by selecting the checkbox in the panel.
 
    > [!NOTE]
    > If you don't include the unpublished changes, they will be lost when you restore the previous version.
