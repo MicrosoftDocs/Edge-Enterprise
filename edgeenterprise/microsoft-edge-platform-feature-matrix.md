@@ -40,7 +40,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |-----------------|--------|---------|-------|-------|-------|-----|
 |Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|Yes|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (domain joined)|Yes|Yes|Yes|No|Yes|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
-|Automatic Sign In (OS default account is MSA)|Yes (1709+)|No|No|No|No|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Automatic Sign In (OS default account is MSA)|Yes (1709+)|No|No|No|Yes|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Browser to Web Single Sign On (SSO)|Yes|Yes|Yes|Yes|Yes|[Browser-Web SSO](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
 |Guided Switch/"Automatic Profile Switching"|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |Multiple Profiles|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
