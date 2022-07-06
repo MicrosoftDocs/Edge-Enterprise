@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,13 +38,13 @@ The following tables summarize feature support for the Windows and macOS platfor
 
 |Identity features| Win 10 | Win 8.1 | Win 7 | macOS | Linux | URL |
 |-----------------|--------|---------|-------|-------|-------|-----|
-|Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|No|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
-|Automatic Sign In (domain joined)|Yes|Yes|Yes|No|No|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|Yes|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Automatic Sign In (domain joined)|Yes|Yes|Yes|No|Yes|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (OS default account is MSA)|Yes (1709+)|No|No|No|No|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Browser to Web Single Sign On (SSO)|Yes|Yes|Yes|Yes|Yes|[Browser-Web SSO](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
 |Guided Switch/"Automatic Profile Switching"|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |Multiple Profiles|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
-|On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|No|[On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync) |
+|On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|Yes|[On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync) |
 |Seamless SSO|Yes (1709+)|Yes|Yes|Yes|Yes|[Seamless SSO](/deployedge/microsoft-edge-security-identity#seamless-sso)|
 |SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|No|No|[SSO with PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
 |Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|Yes|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
