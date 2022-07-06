@@ -76,7 +76,7 @@ The **Reload in Internet Explorer mode** icon can be pinned to the toolbar. The 
 
 When the option is selected, the site reloads in IE mode. The IE mode indicator icon is visible to the left of the address bar. The flyout shows an option that users can toggle to **Open the page in Compatibility view** which adds the page to the Internet Explorer Compatibility view settings list and refreshes the page. Also, there's an option that users can toggle to **Open the page in Internet Explorer mode** next time. This adds the specific page the user is on to the local site list and will automatically open in IE mode for the next 30 days.
 
-:::image type="content" source="media/Edge-hybrid-IE-mode/site-has-been-reloaded-in-ie-mode-screenshot.png" alt-text="This page is open in Internet Explorer Mode":::
+:::image type="content" source="media/Edge-hybrid-IE-mode/site-has-been-reloaded-in-ie-mode-screenshot2.png" alt-text="This page is open in Internet Explorer Mode":::
 
 After a site has been reloaded in IE mode, "in-page" navigation will stay in IE mode (for example, a link, script, a form on the page, or a server-side redirect from another "in-page" navigation).  
 
