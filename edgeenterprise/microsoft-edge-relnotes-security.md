@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## July 6, 2022
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 102.0.1245.56)**, which incorporates the latest Security Updates of the Chromium project. This update contains a fix for [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), that has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 103.0.1264.49)**, which incorporates the latest Security Updates of the Chromium project. This update contains a fix for [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), that has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## June 30, 2022
 
