@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 07/07/2022
+ms.date: 07/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,7 +42,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Automatic Sign In (domain joined)|Yes|Yes|Yes|No|No|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (OS default account is MSA)|Yes (1709+)|No|No|No|No|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Browser to Web Single Sign On (SSO)|Yes|Yes|Yes|Yes|Yes|[Browser-Web SSO](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
-|Guided Switch/"Automatic Profile Switching"|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
+|Guided Switch/"Automatic Profile Switching"|Yes|Yes|Yes|Yes|No|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |Multiple Profiles|Yes|Yes|Yes|Yes|Yes|[Using multiple profiles at work and at home](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/) |
 |On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|No|[On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync) |
 |Seamless SSO|Yes (1709+)|Yes|Yes|Yes|Yes|[Seamless SSO](/deployedge/microsoft-edge-security-identity#seamless-sso)|
