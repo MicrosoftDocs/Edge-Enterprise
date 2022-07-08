@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,7 +28,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 
 | Security features |Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
-|Azure Active Directory (Azure AD) Conditional Access|Yes|Yes|Yes|Yes|No|[Azure AD Conditional Access](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
+|Azure Active Directory (Azure AD) Conditional Access|Yes|Yes|Yes|Yes|Yes|[Azure AD Conditional Access](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
 |Microsoft Defender Application Guard|Yes (1890+)|No|No|No|No|[Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard) |
 |Microsoft Defender SmartScreen|Yes|Yes|Yes|Yes|Yes|[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) |
 |Microsoft Endpoint DLP|Yes|No|No|No|No|[Microsoft Endpoint DLP](/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|
@@ -38,7 +38,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 
 |Identity features| Win 10 | Win 8.1 | Win 7 | macOS | Linux | URL |
 |-----------------|--------|---------|-------|-------|-------|-----|
-|Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|No|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
+|Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|Yes|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (domain joined)|Yes|Yes|Yes|No|No|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (OS default account is MSA)|Yes (1709+)|No|No|No|No|[MSA](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Browser to Web Single Sign On (SSO)|Yes|Yes|Yes|Yes|Yes|[Browser-Web SSO](https://www.microsoft.com/microsoft-365/roadmap?featureid=66332)|
@@ -47,7 +47,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |On-premises sync for Active Directory (AD)|Yes|Yes|Yes|No|No|[On-premises sync for Active Directory (AD) users](/deployedge/microsoft-edge-on-premises-sync) |
 |Seamless SSO|Yes (1709+)|Yes|Yes|Yes|Yes|[Seamless SSO](/deployedge/microsoft-edge-security-identity#seamless-sso)|
 |SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|No|No|[SSO with PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
-|Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|Yes|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
+|Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|No|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
 
 |Additional features|Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
