@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 05/09/2022
+ms.date: 07/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -47,7 +47,7 @@ This policy can control settings such as Update URL, where the extension will be
 | **runtime_allowed_hosts**| Allows extensions to interact with specified websites, even if they’re also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
 | **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
 | **override_update_url**| Available from Microsoft Edge 93<br>If this field is set to `true`, Microsoft Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this field isn't set or is set to `false`, Microsoft Edge uses the URL specified in the extension's manifest for updates.|
-| **toolbar_state**| Available from Microsoft Edge 94<br>This policy setting lets you force show an installed extension to the toolbar. The default state is `default_shown` for all extensions. Following states are possible for this setting<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users will not be able to hide the specified extension icon from the toolbar.<br>-`default_hidden`: In this state, extensions are hidden from the toolbar on installation. Users can show them on the toolbar, if needed.<br>-`default_shown`: This is the default setting of all the installed extensions on the browser. |
+| **toolbar_state**| Available from Microsoft Edge 103<br>This policy setting lets you force show an installed extension to the toolbar. The default state is `default_hidden` for all extensions. Following states are possible for this setting<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users won't be able to hide the specified extension icon from the toolbar.<br>-`default_hidden`: This is the default setting for all the installed extensions on the browser.<br>-`default_shown`: In this state, extensions are shown on the toolbar on installation. Users can hide them from the toolbar, if needed. |
 
 The following keys are allowed at the global scope (*):
 
@@ -165,7 +165,7 @@ For Microsoft Edge, all settings will start under this key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\`
 
-The next key that you will create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location in the registry for settings that apply to Google Hangouts:
+The next key that you'll create is either the Extension ID for individual scope or an asterisk (*) for the Default Scope. For example, you'd use the following location in the registry for settings that apply to Google Hangouts:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\nckgahadagoaajjgafhacjanaoiihapd`
 
@@ -173,7 +173,7 @@ For settings that apply to the Default Scope (asterisk), use the following locat
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings\*`
 
-Different settings will require different formats, depending on whether they are a string or an array of strings. Array values require [＂value＂]. String values can be entered as is. The following list shows which settings are arrays or strings:
+Different settings will require different formats, depending on whether they're a string or an array of strings. Array values require [＂value＂]. String values can be entered as is. The following list shows which settings are arrays or strings:
 
 - Installation_mode = String
 - update_url = String
@@ -183,7 +183,6 @@ Different settings will require different formats, depending on whether they are
 - runtime_blocked_hosts = Array of strings
 - runtime_allowed_hosts = Array of Strings
 - blocked_install_message = String
-
 
 ## See also
 
