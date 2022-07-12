@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/11/2022
+ms.date: 07/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -215,7 +215,7 @@ To export a site list:
 Use the following steps as a guide to restore the previous version of a site list.
 
 > [!NOTE]
-> Only the last 3 published versions of a site list are saved. When you publish more than 3 versions, the oldest version will be permanently deleted, and you will no longer be able to restore that version. If you want to keep a copy of a site list, you should export it before publishing a new version.
+> Only the last 3 published versions of a site list are saved. When you publish more than 3 versions, the saved version with the lowest version number will be permanently deleted, and you will no longer be able to restore that version. If you want to keep a copy of a site list, you should export it before publishing a new version.
 
 1. On the Microsoft Edge site lists page, select the list that you'd like to restore to a previous version.
 2. Select a previous version from the **Version** dropdown list.
