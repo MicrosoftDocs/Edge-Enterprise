@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/12/2022
+ms.date: 07/13/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,7 +32,7 @@ Fixed various bugs and performance issues. We recommend that users install this 
 
 ### Known issue
 
-The 32-bit(x86) version of Microsoft Edge crashes on startup on devices running Windows 10, Version 1809 with Non-security update KB5015880 (OS 17763.3224) installed. Enterprise users encountering this issue on Microsoft Edge Extended Stable channel version 102 need to disable the  [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy.
+The 32-bit (x86) version of Microsoft Edge crashes on startup on devices running Windows 10, Version 1809 with Non-security update KB5015880 (OS 17763.3224) installed. Enterprise users encountering this issue on Microsoft Edge Extended Stable channel version 102 need to disable the  [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy.
 
 ## Version 103.0.1264.49: July 6
 
