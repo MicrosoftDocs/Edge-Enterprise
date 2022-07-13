@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/29/2022
+ms.date: 07/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -18965,7 +18965,7 @@ Policy options mapping:
 
 * StrictMode (2) = Strict mode
 
-* BasicMode (2) = Basic mode
+* BasicMode (3) = Basic mode
 
 Use the preceding information when configuring this policy.
 
