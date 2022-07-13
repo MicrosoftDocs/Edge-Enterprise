@@ -32,7 +32,7 @@ Fixed various bugs and performance issues. We recommend that users install this 
 
 ### Known issue
 
-The 32-bit (x86) version of Microsoft Edge crashes on startup on devices running Windows 10, Version 1809 with Non-security update KB5015880 (OS 17763.3224) installed. Enterprise users encountering this issue on Microsoft Edge Extended Stable channel version 102 need to disable the  [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy.
+Microsoft Edge on 32-bit (x86) Windows 10 Version 1809 may experience startup issues with the upcoming July Non-Security Windows Updates (KB5015880 - 17763.3224). This is fixed with the latest Edge Stable channel version 103. Enterprise users encountering this issue on Microsoft Edge Extended Stable channel version 102 need to disable the  [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy.
 
 ## Version 103.0.1264.49: July 6
 
