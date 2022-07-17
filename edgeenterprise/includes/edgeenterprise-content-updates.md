@@ -2,6 +2,15 @@
 
 
 
+## Week of July 11, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/11/2022 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
+| 7/13/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
 ## Week of July 04, 2022
 
 
@@ -47,11 +56,3 @@
 | 6/15/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 6/16/2022 | [Block access to consumer accounts](/DeployEdge/edge-learnmore-block-access-consumer-accounts) | added |
 | 6/16/2022 | [Regular Expression 2 syntax](/DeployEdge/edge-learnmore-regex) | modified |
-
-
-## Week of June 06, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/7/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
