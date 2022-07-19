@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/31/2022
+ms.date: 07/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -47,7 +47,7 @@ Use the following steps as a guide for troubleshooting a sync issue.
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/summary-confirm-sync-working.png" alt-text="Summary from  sync-internals":::
 
 7. Verify that the device you're on is getting sync'ed. Go to *edge://sync-internals/* and select the **Sync Node Browser** tab. Open the **Device info** folder to see which devices are in the sync list.
-8. Check your sign-in status. Go to *edge://sign-in/*. The next screenshot shows the sign-in status for a user.
+8. Check your sign-in status. Go to *edge://signin-internals/*. The next screenshot shows the sign-in status for a user.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-get-signin-status-for-sync.png" alt-text="Get sign in status from sign-internals":::
 
