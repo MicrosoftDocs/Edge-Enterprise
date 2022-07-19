@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/29/2022
+ms.date: 07/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,16 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
-|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 
 ## Available policies
 
@@ -16041,7 +16031,9 @@ If configured, this policy makes a choice on behalf of the user. The options in 
 
 * 4 = (Not currently used)
 
-The richer formats may not be well-supported in some paste destinations and/or websites. As such, if this policy is to be configured, then the plain URL option is recommended.
+The richer formats may not be well-supported in some paste destinations and/or websites. In these scenarios, the plain URL option is recommended when configuring this policy.
+
+The recommended policy is available in Microsoft Edge 105 or later.
 
 Policy options mapping:
 
@@ -16056,7 +16048,7 @@ Use the preceding information when configuring this policy.
   #### Supported features:
 
   - Can be mandatory: Yes
-  - Can be recommended: No
+  - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
 
   #### Data Type:
@@ -16070,13 +16062,13 @@ Use the preceding information when configuring this policy.
   - GP unique name: ConfigureFriendlyURLFormat
   - GP name: Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
 
   ##### Windows Registry Settings
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: ConfigureFriendlyURLFormat
   - Value Type: REG_DWORD
 
@@ -18965,7 +18957,7 @@ Policy options mapping:
 
 * StrictMode (2) = Strict mode
 
-* BasicMode (2) = Basic mode
+* BasicMode (3) = Basic mode
 
 Use the preceding information when configuring this policy.
 
@@ -31670,6 +31662,8 @@ If you set this policy to "AllowAllInterfaces" or "AllowPublicAndPrivateInterfac
 If you set this policy to "AllowPublicInterfaceOnly" or "DisableNonProxiedUdp", WebRTC doesn't expose the local IP address.
 
 If you don't set this policy, or if you disable it, WebRTC exposes the local IP address.
+
+Note: This policy does not provide an option to exclude specific domains.
 
 Policy options mapping:
 
