@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/18/2022
+ms.date: 07/20/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -81,7 +81,7 @@ Use the following steps as a guide to create a site list, import a site list, an
 1. On the Org settings page, select **Microsoft Edge site lists**
 2. On the resulting page, select **Create a new list**.
 3. Enter a **Site list name** and a **Description**, and then select **Create**.
-4. After you get confirmation,select **Close panel**.
+4. After you get confirmation, select **Close panel**.
 
 ### Steps to import a site list
 
