@@ -14,9 +14,39 @@ description: "Learn how the Enterprise new tab page supports context switching a
 
 # Microsoft Edge Enterprise new tab page
 
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard.png" alt-text="New tab page dashboard from Microsoft 365":::
 
-## level 1 head
+## Microsoft 365 feed
 
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list.png" alt-text="Microsoft 365 feed list":::
+
+## Recent SharePoint sites card
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites.png" alt-text="List of recent SharePoint sites":::
+
+## Quick Access list
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
+
+## Upcoming events card
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-calendar-card.png" alt-text="List of upcoming events from user calendar":::
+
+## Important emails
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-important-email.png" alt-text="List of important emails":::
+
+## To Do task list
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do.png" alt-text="To do task list":::
+
+## Address bar
+
+d
+
+## How to make Microsoft 365 as the default tab
+
+f
 
 ## See also
 
