@@ -44,7 +44,7 @@ description: "Learn how the Enterprise new tab page supports context switching a
 
 d
 
-## How to make Microsoft 365 as the default tab
+## How to make Microsoft 365 the default tab
 
 f
 
