@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 07/21/2022
+ms.date: 07/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,7 +42,7 @@ Tired of jumping through hoops to get to your SharePoint sites? Here’s a short
 
 ## Quick Access list
 
-Our research shows that information workers can handle tens, if not hundreds of files over a given week. This can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the link at the bottom of the list to hop to Office.com and find it there.
+Our research shows that information workers can handle tens, if not hundreds of files over a given week. This can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the **More in Office.com** link at the bottom of the list to hop to Office.com and find it there.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
 
@@ -54,25 +54,33 @@ One of the most important aspects of keeping up with a fast-paced work environme
 
 ## Important emails
 
-
+We see that information workers are receiving an average of 200 email communications a day in the modern workplace! How are you supposed to keep up on those and get your work done? This experience uses AI models to only show your most important emails based on who sent them, their urgency, and other factors to let you feel confident you’re not missing anything important while you get your work done. No more checking Outlook every 3 minutes in case your manager emailed you!
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-important-email.png" alt-text="List of important emails":::
 
 ## To Do task list
 
+One of the most effective ways for many users to stay productive when they’re getting overwhelmed is to make a to do list. This keeps users organized and can be cathartic to check items off the list when they are feeling stressed. We have To Do integration in the browser so you can get all the greatness of [Microsoft To Do](https://todo.microsoft.com/tasks/) in an easily accessible format.
+
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do.png" alt-text="To do task list":::
 
 ## Address bar
 
-d
+Trying to find something for work, but can’t quite figure out where to start? Just search for it! The Microsoft Edge Address bar (URL box) supports finding work content through Microsoft Search for Bing (MSB). Type your query and search or select one of the auto-suggested work results in Microsoft Suggests. You can also click on "Search [your company]" banner for work information only. 
 
 ## How to make Microsoft 365 the default tab
 
-f
+If you’re a user, click the **Microsoft 365** tab at the bottom of your new tab page in Microsoft Edge and when you return to the page it should be set as the default!
+
+For tenant admins, if you’d like to have your organization automatically set Microsoft 365 as the default tab, follow these steps:
+
+1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
+2. Go to **Org settings** > **News**.
+3. Under **News**, **select Microsoft Edge new tab page**.
+4. Select the toggle in the next screenshot that says "Users default to Microsoft 365".
+
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Microsoft 365 as default tab":::
 
 ## See also
 
-- [About IE mode](./edge-ie-mode.md)
-- [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Security for your business](./ms-edge-security-for-business)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
