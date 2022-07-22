@@ -14,7 +14,7 @@ description: "Learn how the Enterprise new tab page supports context switching a
 
 # Microsoft Edge Enterprise new tab page
 
-The Enterprise new tab page is a direct response to a new challenge that workers face daily: frequent context switching. Our research indicates that in addition to managing schedules, workers juggle roughly three projects a day — and on average, switch between them two to three times a day. Couple that with a torrent of emails, pings, and calls (which, when combined, can easily number in the triple digits) and they’re constantly switching contexts throughout their day. Finally, pile on the difficulty of hybrid workplaces and it’s no wonder they want to work smarter not harder.
+The Enterprise new tab page is a direct response to a new challenge that workers face daily: frequent context switching. Our research shows that in addition to managing schedules, workers juggle roughly three projects a day — and on average, switch between them two to three times a day. Couple that with a torrent of emails, pings, and calls (which, when combined, can easily number in the triple digits) and they’re constantly switching contexts throughout their day. Finally, add on the challenge of hybrid workplaces and it’s no wonder they want to work smarter not harder.
 
 ## The role of the browser
 
@@ -42,15 +42,19 @@ Tired of jumping through hoops to get to your SharePoint sites? Here’s a short
 
 ## Quick Access list
 
-Our research shows that information workers can handle tens, if not hundreds of files over a given week. This can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the link at the bottom of the list to hop to Office.com and find it there.
+Our research shows that information workers can handle tens, if not hundreds of files over a given week. This can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the link at the bottom of the list to hop to Office.com and find it there.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
 
 ## Upcoming events card
 
+One of the most important aspects of keeping up with a fast-paced work environment is knowing what meetings you have coming up and when they're scheduled. As if it wasn’t hard difficult enough to begin with, hybrid work has increased the number of meetings for many workers, causing overload. No productivity dashboard is complete without a glanceable calendar to make sure you’re prepared for your meetings. And with one click you can join your Teams meeting or send a message to other attendees if you happen to be running late.
+
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-calendar-card.png" alt-text="List of upcoming events from user calendar":::
 
 ## Important emails
+
+
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-important-email.png" alt-text="List of important emails":::
 
