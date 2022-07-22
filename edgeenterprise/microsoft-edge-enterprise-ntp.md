@@ -18,7 +18,7 @@ The Enterprise new tab page is a direct response to a new challenge that workers
 
 ## The role of the browser
 
-As the browser becomes central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by simply opening a new tab and then selecting the **Microsoft 365** tab.
+As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by simply opening a new tab and then selecting the **Microsoft 365** tab.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard.png" alt-text="New tab page dashboard from Microsoft 365":::
 
@@ -30,13 +30,19 @@ We’re continuously looking to improve the browser experience so we want to get
 
 ## Microsoft 365 feed
 
+Do you feel overwhelmed by trying to keep up with all the updates at work? The Microsoft 365 feed is personalized to you and your work. This feed uses Microsoft 365 data to bring you the most important information happening around your organization. From at mentions, to files being edited, to meeting recordings you might want to catch-up on, to colleague promotions, and so much more. This experience helps keep you up to date on the most important information at a glance.
+
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list.png" alt-text="Microsoft 365 feed list":::
 
 ## Recent SharePoint sites card
 
+Tired of jumping through hoops to get to your SharePoint sites? Here’s a shortcut to help you get the information you need to be productive, even faster.
+
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites.png" alt-text="List of recent SharePoint sites":::
 
 ## Quick Access list
+
+Our research shows that information workers can handle tens, if not hundreds of files over a given week. This can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the link at the bottom of the list to hop to Office.com and find it there.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
 
