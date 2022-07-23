@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## July 22, 2022
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 103.0.1264.xx)**. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 103.0.1264.71)**. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## July 6, 2022
 
