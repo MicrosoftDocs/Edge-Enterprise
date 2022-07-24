@@ -2,6 +2,14 @@
 
 
 
+## Week of July 18, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/19/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+
+
 ## Week of July 11, 2022
 
 
@@ -43,16 +51,3 @@
 | 6/23/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
 | 6/23/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
 | 6/23/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-
-
-## Week of June 13, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/15/2022 | [Enterprise Site Discovery Step by Step Guide](/DeployEdge/edge-ie-mode-site-discovery) | modified |
-| 6/15/2022 | [Cloud Site List Management for Internet Explorer (IE) mode"](/DeployEdge/edge-ie-mode-cloud-site-list-mgmt) | modified |
-| 6/15/2022 | [Internet Explorer (IE) mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
-| 6/15/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 6/16/2022 | [Block access to consumer accounts](/DeployEdge/edge-learnmore-block-access-consumer-accounts) | added |
-| 6/16/2022 | [Regular Expression 2 syntax](/DeployEdge/edge-learnmore-regex) | modified |
