@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/19/2022
+ms.date: 07/26/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -491,6 +491,7 @@ These tables list all of the browser-related group policies available in this re
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
+|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
@@ -8077,15 +8078,23 @@ This policy only affects the browser password reveal button, it doesn't affect w
 
 This group policy configures the radio button selector that enables this feature for users. It also has a frequency control where users can specify how often they would like to be prompted for authentication.
 
-If you set this policy to 'Automatically, disable this policy, or don't configure this policy, autofill will not have any authentication flow.'
+If you set this policy to 'Automatically', disable this policy, or don't configure this policy, autofill will not have any authentication flow.
 
-If you set this policy to 'With device password', then users will need to enter their device password (or preferred mode of authentication under Windows Hello if on Windows - PIN, face recognition or fingerprint and equivalent options on mac) to prove their identity, and only then will their password get auto-filled. Also, The frequency for authentication prompt would be set to 'Always' by default, however users can change it to the other option as well which is 'Once every browsing session'.
+If you set this policy to 'WithDevicePassword', users will have to enter their device password (or preferred mode of authentication under Windows) to prove their identity before their password is auto filled. Authentication modes include Windows Hello, PIN, face recognition, or fingerprint. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+
+If you set this policy to 'WithCustomPrimaryPassword', users will be asked to create their custom password and then to be redirected to Settings. After the custom password is set, users can authenticate themselves using the custom password and their passwords will get auto-filled after successful authentication. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+
+If you set this policy to 'AutofillOff', saved passwords will no longer be suggested for autofill.
 
 Policy options mapping:
 
 * Automatically (0) = Automatically
 
 * WithDevicePassword (1) = With device password
+
+* WithCustomPrimaryPassword (2) = With custom primary password
+
+* AutofillOff (3) = Autofill off
 
 Use the preceding information when configuring this policy.
 
@@ -24880,6 +24889,71 @@ If you disable this policy, the Microsoft Edge Insider promotion content will no
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MicrosoftEditorProofingEnabled
+
+  #### Spell checking provided by Microsoft Editor
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 105 or later
+
+  #### Description
+
+  The Microsoft Editor service provides enhanced spell and grammar checking for editable text fields on web pages.
+
+If you enable or don't configure this policy, Microsoft Editor spell check can be used for eligible text fields.
+
+If you disable this policy, spell check can only be provided by local engines that use platform or Hunspell services. The results from these engines might be less informative than the results Microsoft Editor can provide.
+
+If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, or the user disables spell checking in the settings page, this policy will have no effect.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftEditorProofingEnabled
+  - GP name: Spell checking provided by Microsoft Editor
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftEditorProofingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftEditorProofingEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
