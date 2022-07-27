@@ -52,14 +52,6 @@ One of the most important aspects of keeping up with a fast-paced work environme
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-calendar-card.png" alt-text="List of upcoming events from user calendar":::
 
-<!---
-## Important emails
-
-We see that information workers are receiving an average of 200 email communications a day in the modern workplace! How are you supposed to keep up on those and get your work done? This experience uses AI models to only show your most important emails based on who sent them, their urgency, and other factors to let you feel confident you’re not missing anything important while you get your work done. No more checking Outlook every 3 minutes in case your manager emailed you!
-
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-important-email.png" alt-text="List of important emails":::
---->
-
 ## To Do task list
 
 One of the most effective ways for many users to stay productive when they’re getting overwhelmed is to make a to do list. This keeps users organized and can be cathartic to check items off the list when they are feeling stressed. We have To Do integration in the browser so you can get all the greatness of [Microsoft To Do](https://todo.microsoft.com/tasks/) in an easily accessible format.
