@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 07/27/2022
+ms.date: 07/29/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ The Enterprise new tab page is a direct response to a new challenge that workers
 
 As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Microsoft 365** tab.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard.png" alt-text="New tab page dashboard from Microsoft 365":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Microsoft 365":::
 
 This dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we’ll highlight some of the top features that can help keep your employees productive.
 
@@ -50,7 +50,7 @@ Our research shows that information workers can handle tens, if not hundreds of 
 
 One of the most important aspects of keeping up with a fast-paced work environment is knowing what meetings you have coming up and when they're scheduled. As if it wasn’t hard difficult enough to begin with, hybrid work has increased the number of meetings for many workers, causing overload. No productivity dashboard is complete without a glanceable calendar to make sure you’re prepared for your meetings. And with one click you can join your Teams meeting or send a message to other attendees if you happen to be running late.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-calendar-card.png" alt-text="List of upcoming events from user calendar":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-upcoming-events.png" alt-text="List of upcoming events from user calendar":::
 
 ## To Do task list
 
