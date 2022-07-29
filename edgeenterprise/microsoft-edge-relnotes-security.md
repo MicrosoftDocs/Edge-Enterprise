@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 07/06/2022
+ms.date: 07/22/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,10 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## July 22, 2022
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 103.0.1264.71)**. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## July 6, 2022
 
