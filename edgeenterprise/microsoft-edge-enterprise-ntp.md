@@ -56,7 +56,7 @@ One of the most important aspects of keeping up with a fast-paced work environme
 
 One of the most effective ways for many users to stay productive when they’re getting overwhelmed is to make a to do list. This keeps users organized and can be cathartic to check items off the list when they are feeling stressed. We have To Do integration in the browser so you can get all the greatness of [Microsoft To Do](https://todo.microsoft.com/tasks/) in an easily accessible format.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do.png" alt-text="To do task list":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-to-do-50.png" alt-text="To do task list":::
 
 ## Address bar
 
