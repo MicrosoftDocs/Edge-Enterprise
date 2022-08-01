@@ -32,7 +32,7 @@ We’re continuously looking to improve the browser experience so we want to get
 
 Do you feel overwhelmed by trying to keep up with all the updates at work? The Microsoft 365 feed is personalized to you and your work. This feed uses Microsoft 365 data to bring you the most important information happening around your organization. From at mentions, to files being edited, to meeting recordings you might want to catch-up on, to colleague promotions, and so much more. This experience helps keep you up to date on the most important information at a glance.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list.png" alt-text="Microsoft 365 feed list":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list-new-50.png" alt-text="Microsoft 365 feed list":::
 
 ## Recent SharePoint sites card
 
