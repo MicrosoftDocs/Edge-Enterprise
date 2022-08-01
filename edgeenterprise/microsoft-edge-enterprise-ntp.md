@@ -38,7 +38,7 @@ Do you feel overwhelmed by trying to keep up with all the updates at work? The M
 
 Tired of jumping through hoops to get to your SharePoint sites? Here’s a shortcut to help you get the information you need to be productive, even faster.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites.png" alt-text="List of recent SharePoint sites":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites-50.png" alt-text="List of recent SharePoint sites":::
 
 ## Quick Access list
 
@@ -50,7 +50,7 @@ Our research shows that information workers can handle tens, if not hundreds of 
 
 One of the most important aspects of keeping up with a fast-paced work environment is knowing what meetings you have coming up and when they're scheduled. As if it wasn’t hard difficult enough to begin with, hybrid work has increased the number of meetings for many workers, causing overload. No productivity dashboard is complete without a glanceable calendar to make sure you’re prepared for your meetings. And with one click you can join your Teams meeting or send a message to other attendees if you happen to be running late.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-upcoming-events.png" alt-text="List of upcoming events from user calendar":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-upcoming-events-50.png" alt-text="List of upcoming events from user calendar":::
 
 ## To Do task list
 
