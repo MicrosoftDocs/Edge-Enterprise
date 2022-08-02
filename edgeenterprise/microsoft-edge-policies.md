@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/28/2022
+ms.date: 08/02/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,11 +26,12 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
+|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
+|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
 
 ## Available policies
 
@@ -500,6 +501,7 @@ These tables list all of the browser-related group policies available in this re
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
+|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
@@ -585,6 +587,7 @@ These tables list all of the browser-related group policies available in this re
 |[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (obsolete)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
+|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
 |[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
@@ -14684,6 +14687,8 @@ Setting this policy to Disabled will prevent the browser from enabling code inte
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management.
 
+This policy will only take effect on Windows 10 RS2 and above.
+
 Policy options mapping:
 
 * Disabled (0) = Do not enable code integrity guard in the browser process.
@@ -15797,13 +15802,11 @@ Use the preceding information when configuring this policy.
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "local_pdf"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_word"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_excel"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\6 = "send_onenote"
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "send_pinterest"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "collections_share"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "local_pdf"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "send_word"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_excel"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_onenote"
 
 ```
 
@@ -15813,13 +15816,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
   - Example value:
 ``` xml
 <array>
-  <string>pinterest_suggestions</string>
   <string>collections_share</string>
   <string>local_pdf</string>
   <string>send_word</string>
   <string>send_excel</string>
   <string>send_onenote</string>
-  <string>send_pinterest</string>
 </array>
 ```
   
@@ -24967,6 +24968,71 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, or the
 
   [Back to top](#microsoft-edge---policies)
 
+  ### MicrosoftEditorSynonymsEnabled
+
+  #### Synonyms are provided when using Microsoft Editor spell checker
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 105 or later
+
+  #### Description
+
+  The Microsoft Editor service provides enhanced spell and grammar checking for editable text fields on web pages, and synonyms can be suggested as an integrated feature.
+
+If you enable this policy, Microsoft Editor spell checker will provide synonyms for suggestions for misspelled words.
+
+If you disable or don't configure this policy, Microsoft Editor spell checker will not provide synonyms for suggestions for misspelled words.
+
+If the [SpellcheckEnabled](#spellcheckenabled) policy or the [MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled) policy are set to disabled, or the user disables spell checking or chooses not to use Microsoft Editor spell checker in the settings page, this policy will have no effect.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftEditorSynonymsEnabled
+  - GP name: Synonyms are provided when using Microsoft Editor spell checker
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftEditorSynonymsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftEditorSynonymsEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### MicrosoftOfficeMenuEnabled
 
   #### Allow users to access the Microsoft Office menu
@@ -25414,11 +25480,13 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
   
   #### Supported versions:
 
-  - On Windows and macOS since 102 or later
+  - On Windows and macOS since 102, until 105
 
   #### Description
 
-  This policy is used to manage access to the Outlook menu from Microsoft Edge.
+  This policy doesn't work because the Outlook menu is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+This policy is used to manage access to the Outlook menu from Microsoft Edge.
 
 If you enable or don't configure this policy, users can access the Outlook menu.
 If you disable this policy, users can't access the Outlook menu.
@@ -30473,6 +30541,69 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UnthrottledNestedTimeoutEnabled
+
+  #### JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 105 or later
+
+  #### Description
+
+  This policy is deprecated because it is a temporary policy for web standards compliance. It won't work in Microsoft Edge as soon as version 107.
+If you enable this policy, the JavaScript setTimeout and setInterval, with an interval smaller than 4ms, will not be clamped. This improves short horizon performance, but websites abusing the API will still eventually have their setTimeout usages clamped.
+If you disable or don't configure policy, the JavaScript setTimeout and setInterval, with an interval smaller than 4ms, will be clamped.
+
+This is a web standards compliancy feature that may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
+It also may affect sites with a lot of usage of a timeout of 0ms for setTimeout. For example, increasing CPU load.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UnthrottledNestedTimeoutEnabled
+  - GP name: JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UnthrottledNestedTimeoutEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: UnthrottledNestedTimeoutEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
