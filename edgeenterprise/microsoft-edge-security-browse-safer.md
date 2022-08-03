@@ -52,7 +52,7 @@ The following toggle settings are available:
 
 The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Basic security.
 
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog2.png" alt-text="Dialog to configure balanced security on the web.":::
 
 ### How "Basic" mode works
 
