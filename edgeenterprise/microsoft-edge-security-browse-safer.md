@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 04/27/2022
+ms.date: 08/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,7 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 This article describes how Microsoft Edge provides enhanced security on the web.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 98 or later.
+> This article applies to Microsoft Edge version 104 or later.
 
 ## Overview
 
@@ -46,12 +46,17 @@ Use the following steps to configure added security.
 The following toggle settings are available:
 
 - Toggle Off (Default): Feature is turned off
-- Toggle On – Balanced (Recommended): Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user’s usual tasks on the web.
+- Toggle On – Basic (Recommended): Microsoft Edge will apply added security protection to the less visited sites. This preserves the user experience for the most popular sites on the web.  
+- Toggle On – Balanced: Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user’s usual tasks on the web.
 - Toggle On – Strict: Microsoft Edge will apply added security protections for all the sites a user visits. Users may report some challenges accomplishing their usual tasks.
 
 The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
+
+### How "Basic" mode works
+
+Basic mode is a static mode that only applies these security mitigations to non-top sites. This mode doesn't take a user’s behavior into account and only enables the feature on less visited sites.
 
 ### How "Balanced" mode works
 
@@ -63,8 +68,7 @@ As the name suggests, Strict Mode applies these security protections to all site
 
 ### Exception site list
 
-In both Balanced and Strict mode, you can also create exceptions for certain familiar websites that you 
-trust. Use the following steps to add a site to your exception list.
+In Basic, Balanced, and Strict mode, you can also create exceptions for certain familiar websites that you trust. Use the following steps to add a site to your exception list.
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
@@ -82,18 +86,25 @@ The next screenshot shows the settings page for security exceptions.
 
 Enterprise Admins can configure this security feature using Group Policy settings, including creating "Allow" and "Deny" lists to explicitly enhance security for their users when visiting certain sites, or disable the mode for others. For a complete list of policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
+> [!NOTE]
+> Setting the [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode) policy to 'StrictMode' or setting the [DefaultJavaScriptJitSetting](/deployedge/microsoft-edge-policies#defaultjavascriptjitsetting) policy to BlockJavaScriptJit will have the same effect by changing the **Enhance your security on the web** setting in *edge://settings/privacy* to 'Strict'.
+
 ## User experience with enhanced security
 
 After a user turns on enhanced security, they'll see a banner with the words "Added security" in their URL navigation bar when Microsoft Edge is applying enhanced security for a particular site.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you select the banner, you'll see the following flyout. You can toggle "Enhance security for this site" to manually enable or disable enhanced security for a particular site. If you change the "Enhance security for this site" toggle, Microsoft Edge will add that site to the exception site list. The next screenshot shows the feature turned off for the site.  
-
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off.png" alt-text="Dialog with enhanced security turned off.":::
+When you select the banner, you will see the following flyout. You can select "Enhance security for this site" to redirect you to a second flyout that shows the security settings for the current site and gives the user the option to toggle security on or off.
 
 > [!NOTE]
-> "Enhance security for this site" only appears when enhanced security is enabled in the settings page.
+> "Enhance security for this site" only appears when enhanced security is enabled in Microsoft Edge Settings.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-option.png" alt-text="Shows the option to enhance security for current site.":::
+
+In the flyout shown in the next screenshot, you can manually enable or disable enhanced security for a particular site. If you change the "Use enhanced security for this site" toggle, Microsoft Edge will proactively add that site to the exception site list. You can always remove it by going to the settings page.
+
+:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-toggle.png" alt-text="Shows security settings for site with toggle to turn security on or off.":::
 
 ## Send us feedback
 
