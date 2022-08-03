@@ -50,7 +50,7 @@ The following toggle settings are available:
 - Toggle On – Balanced: Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user’s usual tasks on the web.
 - Toggle On – Strict: Microsoft Edge will apply added security protections for all the sites a user visits. Users may report some challenges accomplishing their usual tasks.
 
-The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Balanced security.
+The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security enabled and set to provide Basic security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog.png" alt-text="Dialog to configure balanced security on the web.":::
 
