@@ -95,7 +95,7 @@ After a user turns on enhanced security, they'll see a banner with the words "Ad
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::
 
-When you select the banner, you will see the following flyout. You can select "Enhance security for this site" to redirect you to a second flyout that shows the security settings for the current site and gives the user the option to toggle security on or off.
+When you select the banner, you'll see the next flyout. You can select "Enhance security for this site" to redirect you to a second flyout that shows the security settings for the current site and gives the user the option to toggle security on or off.
 
 > [!NOTE]
 > "Enhance security for this site" only appears when enhanced security is enabled in Microsoft Edge Settings.
