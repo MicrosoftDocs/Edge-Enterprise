@@ -56,7 +56,7 @@ The following screenshot shows the "Enhance your security on the web" configurat
 
 ### How "Basic" mode works
 
-Basic mode is a static mode that only applies these security mitigations to non-top sites. This mode doesn't take a user’s behavior into account and only enables the feature on less visited sites.
+Basic mode is a static mode that only applies these security mitigations to less visited sites. This mode doesn't take a user’s behavior into account and only enables the feature on less visited sites.
 
 ### How "Balanced" mode works
 
