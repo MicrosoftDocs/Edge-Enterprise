@@ -102,7 +102,10 @@ When you select the banner, you will see the following flyout. You can select "E
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-option.png" alt-text="Shows the option to enhance security for current site.":::
 
-In the flyout shown in the next screenshot, you can manually enable or disable enhanced security for a particular site. If you change the "Use enhanced security for this site" toggle, Microsoft Edge will proactively add that site to the exception site list. You can always remove it by going to the settings page.
+In the flyout shown in the next screenshot, you can manually enable or disable enhanced security for a particular site. If you change the "Use enhanced security for this site" toggle, Microsoft Edge will proactively add that site to the exception site list.
+
+> [!NOTE]
+> You can always remove this site by updating the exception site list in **Settings** > **Privacy, search, and services** > **Enhanced security exceptions**.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-toggle.png" alt-text="Shows security settings for site with toggle to turn security on or off.":::
 
