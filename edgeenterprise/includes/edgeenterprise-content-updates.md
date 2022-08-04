@@ -2,6 +2,15 @@
 
 
 
+## Week of July 25, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/27/2022 | [Microsoft Edge Enterprise new tab page](/DeployEdge/microsoft-edge-enterprise-ntp) | added |
+| 7/28/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+
+
 ## Week of July 18, 2022
 
 
@@ -39,15 +48,3 @@
 | 6/28/2022 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
 | 6/29/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
 | 6/30/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-
-
-## Week of June 20, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/21/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 6/22/2022 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 6/23/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 6/23/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 6/23/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
