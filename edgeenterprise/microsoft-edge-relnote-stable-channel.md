@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 104.0.xxxx.xx: August 4
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-4-2022).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-5-2022).
 
 ### Feature updates
 
