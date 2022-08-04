@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 08/03/2022
+ms.date: 08/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
