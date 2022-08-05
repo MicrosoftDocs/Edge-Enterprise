@@ -169,61 +169,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues for Extended Stable release.
 
-## Version 101.0.1210.32: April 28
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-28-2022).
-
-### Feature updates
-
-- **Ability to set the default profile.** The [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) policy will let you set a default profile to use when opening the browser instead of the last profile that was used. This policy won't be applicable if the `--profile-directory` parameter has been specified.
-
-- **Launch Progressive Web Apps (PWAs) from the favorites bar.** Improvements to the PWA launch experience will start appearing with an Apps icon that can be added to the toolbar.
-
-- **Manage the "Allow extensions from other stores" setting.** Now you can use the [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) policy to set the default state of the "Allow extensions from other stores" setting.
-
-- **Improvements to the Enterprise Site List Manager.** Now you can configure shared cookies between Microsoft Edge and Internet Explorer on your enterprise site list. You can access the [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager) at *edge://compat/SiteListManager*.
-
-### Policy updates
-
-#### New policies
-
-- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - Configure the list of commands for which to disable keyboard shortcuts
-- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - Configure default state of Allow extensions from other stores setting
-- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - Allow features to download assets from the Asset Delivery Service
-- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - Default Profile Setting Enabled
-- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - Allow Save page as in Internet Explorer mode
-- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Swipe gestures in Microsoft Edge kiosk mode enabled
-- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Allow users to access the Microsoft Office menu
-- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - Allow users to configure Site safety services
-
-#### Deprecated policies
-
-- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls"
-
-#### Obsoleted policies
-
-- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Force WebSQL in third-party contexts to be re-enabled
-
-## Version 100.0.1185.50: April 21
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-## Version 100.0.1185.44: April 15
-
-> [!Important]
-> This update contains a fix for [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-15-2022).
-
-## Version 100.0.1185.39: April 11
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-## Version 100.0.1185.36: April 7
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-7-2022).
-
-
+<!-- from Version 101.0.1210.32: April 28 to Version 100.0.1185.36: April 7 -->
 <!---from Version 100.0.1185.29: April 1  to  Version 99.0.1150.36: March 7 --->
 <!--- from Version 99.0.1150.30: March 3 to Version 98.0.1108.50: February 10 --->
 <!--- from Version 98.0.1108.43: February 3 to Version 96.0.1054.72: January 6  -->
