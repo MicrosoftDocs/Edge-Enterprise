@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/20/2022
+ms.date: 08/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -231,9 +231,6 @@ Use the following steps as a guide to restore the previous version of a site lis
 ## View site feedback on the Microsoft 365 Admin Center
 
 The Site feedback tab shows the sites that users are adding to their local IE Mode site list, and potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
-
-> [!NOTE]
-> This feature is currently only available for worldwide cloud instances.
 
 ### Add a site to site lists
 
