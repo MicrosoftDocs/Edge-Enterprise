@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 08/01/2022
+ms.date: 08/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
