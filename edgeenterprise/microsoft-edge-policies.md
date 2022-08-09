@@ -27124,7 +27124,7 @@ Note that signed-in profiles with a username that doesn't match this pattern wil
   ##### Example value:
 
 ```
-".*@contoso.com"
+.*@contoso.com
 ```
 
   #### Mac information and settings
