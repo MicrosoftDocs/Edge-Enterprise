@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: v-danwesley
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 08/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge identity support and configuration"
 
 # Microsoft Edge identity support and configuration
 
-This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD), and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Azure Active Directory (Azure AD) accounts belonging to the global cloud or the GCC sovereign cloud. We are working on adding support for other sovereign clouds.
+This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD), and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Azure Active Directory (Azure AD) accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
 
 > [!NOTE]
 > This applies  to Microsoft Edge version 77 or later.
@@ -41,7 +41,7 @@ Microsoft Edge uses the OS default account to auto sign into the browser. Depend
 - **The device is hybrid/AAD-J:** Available on Win10, down-level Windows, and corresponding server versions.
 The user gets automatically signed in with their Azure AD account.
 - **The device is domain joined:** Available on Win10, down-level Windows, and corresponding server versions.
-By default, the user will not get automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Azure AD accounts, consider hybrid joining your devices.
+By default, the user won't get automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Azure AD accounts, consider hybrid joining your devices.
 - **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge will sign in automatically with the MSA account.
 
 ### Manual sign-in
@@ -62,21 +62,21 @@ On some platforms, you can configure Microsoft Edge to automatically sign into w
 
 ### SSO with Primary Refresh Token (PRT)
 
-Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they will get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
 A Primary Refresh Token (PRT) is an Azure AD key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### Seamless SSO
 
-Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they will get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
 Seamless Single Sign-On automatically signs users in when they're on corporate devices connected to a corporate network. When enabled, users don't need to type in their passwords to sign in to Azure AD. Typically they don't even have to type in their usernames. For more information, see [Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
 ### Windows Integrated Authentication (WIA)
 
-Microsoft Edge also supports Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allow-list for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
+Microsoft Edge also supports Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allowlist for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
 
-To support WIA-based SSO on Microsoft Edge (version 77 and later), you might also have to do some server-side configuration. You will probably have to configure the Active Directory Federation Services (AD FS) property **WiaSupportedUserAgents** to add support for the new Microsoft Edge user agent string. For instructions on how to do this, see [View WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) settings and [Change WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings) settings. An example of the Microsoft Edge user agent string on Windows 10 is shown below, and you can learn more about the [Microsoft Edge UA string here](/microsoft-edge/web-platform/user-agent-string). 
+To support WIA-based SSO on Microsoft Edge (version 77 and later), you might also have to do some server-side configuration. You'll probably have to configure the Active Directory Federation Services (AD FS) property **WiaSupportedUserAgents** to add support for the new Microsoft Edge user agent string. For instructions on how to do this, see [View WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) settings and [Change WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings) settings. An example of the Microsoft Edge user agent string on Windows 10 is shown below, and you can learn more about the [Microsoft Edge UA string here](/microsoft-edge/web-platform/user-agent-string). 
 
 The following example of a UA string is for the latest Dev Channel build when this article was published:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
@@ -86,7 +86,10 @@ For services that require delegating Negotiate credentials, Microsoft Edge suppo
 
 ### Proactive Authentication
 
-Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page. You can control it using the [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled) policy.
+Proactive authentication is an optimization over browser to website SSO that front loads authentication to certain first party websites. This improves address bar performance if the user is using Bing as the search engine. This gives users personalized and Microsoft Search for Business (MSB) search results. It also enables allowing authentication to key services such as the Office New Tab Page.
+
+> [!NOTE]
+> If you want to configure browser sign in after version 90, use the [BrowserSignin](/deployedge/microsoft-edge-policies#browsersignin) policy. For Microsoft Edge version 90 or lower, you can control this service using the [ProactiveAuthEnabled](/deployedge/microsoft-edge-policies#proactiveauthenabled) policy.
 
 ### Windows Hello CredUI for NTLM Authentication
 
