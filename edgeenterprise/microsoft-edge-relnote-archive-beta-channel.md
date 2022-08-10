@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 06/28/2022
+ms.date: 08/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,45 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 # Archived release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 103.0.1264.13: June 2
+
+### Feature updates
+
+- **Ability to control automatic profile switching.** The [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) policy lets Microsoft Edge prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.
+
+- **Client Certificate Switcher.** This feature will offer a way for users to clear the remembered certificate and resurface the certificate picker when visiting a site requiring http certificate authentication. Switching can be done without manually quitting Microsoft Edge.
+
+- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows. The [NewSmartScreenLibraryEnabled](microsoft-edge-policies.md#newsmartscreenlibraryenabled) policy will allow enterprise customers to continue using the legacy version of the library until it’s deprecated in Microsoft Edge version 105.
+
+### Policy updates
+
+#### New policies
+
+- [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) - Guided Switch Enabled
+- [InternetExplorerZoomDisplay](/DeployEdge/microsoft-edge-policies#internetexplorerzoomdisplay) - Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer
+- [LiveCaptionsAllowed](/DeployEdge/microsoft-edge-policies#livecaptionsallowed) - Live captions allowed
+- [OriginAgentClusterDefaultEnabled](/DeployEdge/microsoft-edge-policies#originagentclusterdefaultenabled) - Origin-keyed agent clustering enabled by default
+
+## Version 102.0.1245.25: May 26
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.22: May 24
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.18: May 20
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.14: May 16
+
+Fixed various bugs and performance issues.
+
+## Version 102.0.1245.12: May 13
+
+Fixed various bugs and performance issues.
 
 ## Version 102.0.1245.7: May 10
 
