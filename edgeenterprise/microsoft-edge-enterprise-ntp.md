@@ -22,7 +22,7 @@ As the browser role grows to become central for workers to finish everyday tasks
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Microsoft 365":::
 
-This dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we’ll highlight some of the top features that can help keep your employees productive.
+The dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we’ll highlight some of the top features that can help keep your employees productive.
 
 We’re continuously looking to improve the browser experience so we want to get your feedback, which you can provide by pressing alt + shift + I to open the **Send feedback** dialog where you can share your thoughts.
 
