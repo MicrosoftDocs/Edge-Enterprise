@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/05/2022
+ms.date: 08/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -48,7 +48,7 @@ The following table lists the planned and actual release dates for major release
 | 100 | Released<br>Version | 17-Mar-2022<br>[100.0.1185.10](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1000118510-march-17) | 01-Apr-2022<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1000118529-april-1) | 01-Apr-2022<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1000118529-april-1) |
 | 101 | Released<br>Version | 08-Apr-2022<br>[101.0.1210.10](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1010121010-april-8) | 28-Apr-2022<br>[101.0.1210.32](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-1010121032-april-28) | Not applicable |
 | 102 | Released<br>Version | 10-May-2022<br>[102.0.1245.7](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-102012457-may-10) | 31-May-2022<br>[102.0.1245.30](/deployedge/microsoft-edge-relnote-stable-channel#version-1020124530-may-31) | 31-May-2022<br>[102.0.1245.30](/deployedge/microsoft-edge-relnote-stable-channel#version-1020124530-may-31) |
-| 103 | Released<br>Version | 02-Jun-2022<br>[103.0.1264.13](/deployedge/microsoft-edge-relnote-beta-channel#version-1030126413-june-2) | 23-Jun-2022<br>[103.0.1264.37](/deployedge/microsoft-edge-relnote-stable-channel#version-1030126437-june-23) | Not applicable |
+| 103 | Released<br>Version | 02-Jun-2022<br>[103.0.1264.13](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1030126413-june-2) | 23-Jun-2022<br>[103.0.1264.37](/deployedge/microsoft-edge-relnote-stable-channel#version-1030126437-june-23) | Not applicable |
 | 104 | Released<br>Version | 07-Jul-2022<br>[104.0.1293.14](/DeployEdge/microsoft-edge-relnote-beta-channel#version-1040129314-july-7) | 05-Aug-2022<br>[104.0.1293.47](/deployedge/microsoft-edge-relnote-stable-channel#version-1040129347-august-5) | 05-Aug-2022<br>[104.0.1293.47](/deployedge/microsoft-edge-relnote-stable-channel#version-1040129347-august-5) |
 | 105 | Target release | Week of 09-Aug-2022 | Week of 01-Sep-2022 | Not applicable |
 | 106 | Target release | Week of 06-Sep-2022 | Week of 29-Sep-2022 | Week of 29-Sep-2022 |
