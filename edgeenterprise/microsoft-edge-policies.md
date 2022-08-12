@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/02/2022
+ms.date: 08/11/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
-|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
 
 ## Available policies
 
@@ -237,6 +228,7 @@ These tables list all of the browser-related group policies available in this re
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Default printer selection rules|
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
+|[PrintPdfAsImageDefault](#printpdfasimagedefault)|Print PDF as Image Default|
 |[PrintPostScriptMode](#printpostscriptmode)|Print PostScript Mode|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
@@ -8089,23 +8081,15 @@ This policy only affects the browser password reveal button, it doesn't affect w
 
 This group policy configures the radio button selector that enables this feature for users. It also has a frequency control where users can specify how often they would like to be prompted for authentication.
 
-If you set this policy to 'Automatically', disable this policy, or don't configure this policy, autofill will not have any authentication flow.
+If you set this policy to 'Automatically, disable this policy, or don't configure this policy, autofill will not have any authentication flow.'
 
-If you set this policy to 'WithDevicePassword', users will have to enter their device password (or preferred mode of authentication under Windows) to prove their identity before their password is auto filled. Authentication modes include Windows Hello, PIN, face recognition, or fingerprint. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
-
-If you set this policy to 'WithCustomPrimaryPassword', users will be asked to create their custom password and then to be redirected to Settings. After the custom password is set, users can authenticate themselves using the custom password and their passwords will get auto-filled after successful authentication. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
-
-If you set this policy to 'AutofillOff', saved passwords will no longer be suggested for autofill.
+If you set this policy to 'With device password', then users will need to enter their device password (or preferred mode of authentication under Windows Hello if on Windows - PIN, face recognition or fingerprint and equivalent options on mac) to prove their identity, and only then will their password get auto-filled. Also, The frequency for authentication prompt would be set to 'Always' by default, however users can change it to the other option as well which is 'Once every browsing session'.
 
 Policy options mapping:
 
 * Automatically (0) = Automatically
 
 * WithDevicePassword (1) = With device password
-
-* WithCustomPrimaryPassword (2) = With custom primary password
-
-* AutofillOff (3) = Autofill off
 
 Use the preceding information when configuring this policy.
 
@@ -8717,6 +8701,68 @@ If you enable this policy, users always print headers and footers.
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintPdfAsImageDefault
+
+  #### Print PDF as Image Default
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 106 or later
+
+  #### Description
+
+  Controls if Microsoft Edge makes the Print as image option the default when printing PDFs.
+
+If you enable this policy, Microsoft Edge will default to setting the Print as image option in the Print Preview when printing a PDF.
+
+If you disable or don't configure this policy, Microsoft Edge will not default to setting the Print as image option in the Print Preview when printing a PDF.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintPdfAsImageDefault
+  - GP name: Print PDF as Image Default
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PrintPdfAsImageDefault
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintPdfAsImageDefault
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -18298,11 +18344,13 @@ If you disable this policy, users can't access and use Collections in Microsoft 
   
   #### Supported versions:
 
-  - On Windows and macOS since 97 or later
+  - On Windows and macOS since 97, until 105
 
   #### Description
 
-  This policy lets you configure the Discover feature in Microsoft Edge.
+  This policy doesn't work because Discover is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+This policy lets you configure the Discover feature in Microsoft Edge.
 
 Working in the background when enabled, this feature sends URLs to Microsoft Bing to search for related recommendations.
 
@@ -31004,6 +31052,8 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
   #### Description
 
   Microsoft Edge uses the Edge Feedback feature (enabled by default) to allow users to send feedback, suggestions or customer surveys and to report any issues with the browser. Also, by default, users can't disable (turn off) the Edge Feedback feature.
+
+Starting in Microsoft Edge 105, if the user is signed into Microsoft Edge with their work or school account, their feedback is associated with their account and organization.
 
 If you enable this policy or don't configure it, users can invoke Edge Feedback.
 
