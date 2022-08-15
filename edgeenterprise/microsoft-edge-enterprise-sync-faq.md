@@ -70,9 +70,9 @@ No, it won't. We believe connecting these two ecosystems will lead to compromise
 
 Not directly, but you can determine which profiles can sign on to Microsoft Edge using the [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern) policy.
 
-### Is it possible to prevent sign-in and sync with enterprise account from an unmanaged device?
+### Is it possible to prevent sign-in and sync with enterprise account on an unmanaged/non-compliant device?
 
-Not directly, there isn't any mechanism to block Azure AD sign-in to Microsoft Edge on unmanaged devices. However, there is a work around. Sync needs access to two resources `https://activity.microsoft.com` and `https://aadrm.com`. You can block sync on unmanaged devices by putting `https://aadrm.com` behind a Conditional Access policy. For more information, see [Common Conditional Access Policies](/azure/active-directory/conditional-access/concept-conditional-access-policy-common).
+Currently it's not possible to prevent Azure AD sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, Sync can be blocked on such devices by putting `https://aadrm.com` behind a CA policy.
 
 ## See also
 
