@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 05/16/2022
+ms.date: 08/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -69,6 +69,10 @@ No, it won't. We believe connecting these two ecosystems will lead to compromise
 ### Is it possible to stop my users from syncing with a personal tenant?
 
 Not directly, but you can determine which profiles can sign on to Microsoft Edge using the [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern) policy.
+
+### Is it possible to prevent sign-in and sync with an enterprise account on an unmanaged/non-compliant device?
+
+Currently it's not possible to prevent Azure AD sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, enterprise sync can be blocked on such devices by putting `https://aadrm.com` behind a CA policy.
 
 ## See also
 
