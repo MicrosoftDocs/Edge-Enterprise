@@ -26,7 +26,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 ## Version 104.0.1293.60: August 17
 
 > [!IMPORTANT]
-> This update contains a fix for [CVE-2022-2856], which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-17-2022).
 
