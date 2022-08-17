@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/12/2022
+ms.date: 08/17/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,14 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[PrintPdfAsImageDefault](#printpdfasimagedefault)|Print PDF as Image Default|
 
 ## Available policies
 
@@ -402,7 +394,7 @@ These tables list all of the browser-related group policies available in this re
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
-|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge|
+|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
@@ -509,7 +501,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
-|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu|
+|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
 |[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
 |[PDFXFAEnabled](#pdfxfaenabled)|XFA support in native PDF reader enabled|
@@ -18346,10 +18338,10 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 
   ### EdgeDiscoverEnabled
 
-  #### Discover feature In Microsoft Edge
+  #### Discover feature In Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
   #### Supported versions:
 
   - On Windows and macOS since 97, until 105
@@ -18381,7 +18373,7 @@ If you disable this policy, you can't use the Discover feature in Microsoft Edge
   ##### Group Policy (ADMX) info
 
   - GP unique name: EdgeDiscoverEnabled
-  - GP name: Discover feature In Microsoft Edge
+  - GP name: Discover feature In Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -25530,10 +25522,10 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
 
   ### OutlookHubMenuEnabled
 
-  #### Allow users to access the Outlook menu
+  #### Allow users to access the Outlook menu (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
   #### Supported versions:
 
   - On Windows and macOS since 102, until 105
@@ -25562,7 +25554,7 @@ If you disable this policy, users can't access the Outlook menu.
   ##### Group Policy (ADMX) info
 
   - GP unique name: OutlookHubMenuEnabled
-  - GP name: Allow users to access the Outlook menu
+  - GP name: Allow users to access the Outlook menu (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
