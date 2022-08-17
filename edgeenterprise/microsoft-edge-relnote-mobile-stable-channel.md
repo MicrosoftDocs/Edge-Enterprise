@@ -23,6 +23,13 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
+## Version 104.0.1293.60: August 17
+
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-2856], which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-17-2022).
+
 ## Version 104.0.1293.58: August 16
 
 Fixed various bugs.
