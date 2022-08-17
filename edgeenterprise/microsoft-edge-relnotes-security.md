@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## August 17, 2022
 
-Microsoft has released the latest **Microsoft Edge Mobile Stable Channel (Version 104.0.1293.60)**. This update contains a fix for [CVE-2022-2856], which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has released the latest **Microsoft Edge Mobile Stable Channel (Version 104.0.1293.60)**. This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## August 5, 2022
 
