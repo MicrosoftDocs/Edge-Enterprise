@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2022
+ms.date: 08/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,9 +26,12 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 104,0.1293.xx: August 18
+## Version 104.0.1293.63 : August 19
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-18-2022).
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-19-2022).
 
 ### Feature updates
 
