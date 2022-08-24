@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/17/2022
+ms.date: 08/24/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
-|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
 
 ## Available policies
 
@@ -1163,6 +1154,8 @@ Note there cannot be conflicting URL patterns set between these three policies:
 
 For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
 
+To allow third-party cookies to be set, specify a pair of URL patterns delimited by a comma. The first value in the pair specifies the third-party site that should be allowed to use cookies. The second value in the pair specifies the top-level site that the first value should be applied on. The first value in the pair supports * but the second value does not.
+
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
 
   #### Supported features:
@@ -1197,6 +1190,8 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\3 = "https://loaded-as-third-party.fabrikam.com,https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\4 = "*,https://www.contoso.com"
 
 ```
 
@@ -1208,6 +1203,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 <array>
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
+  <string>https://loaded-as-third-party.fabrikam.com,https://www.contoso.com</string>
+  <string>*,https://www.contoso.com</string>
 </array>
 ```
   
@@ -6214,6 +6211,8 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
 
 You can configure the policy by using these values: 'basic', 'digest', 'ntlm', and 'negotiate'. Separate multiple values with commas.
 
+Note: All values for this policy are case sensitive.
+
 If you don't configure this policy, all four schemes are used.
 
   #### Supported features:
@@ -8090,15 +8089,23 @@ This policy only affects the browser password reveal button, it doesn't affect w
 
 This group policy configures the radio button selector that enables this feature for users. It also has a frequency control where users can specify how often they would like to be prompted for authentication.
 
-If you set this policy to 'Automatically, disable this policy, or don't configure this policy, autofill will not have any authentication flow.'
+If you set this policy to 'Automatically', disable this policy, or don't configure this policy, autofill will not have any authentication flow.
 
-If you set this policy to 'With device password', then users will need to enter their device password (or preferred mode of authentication under Windows Hello if on Windows - PIN, face recognition or fingerprint and equivalent options on mac) to prove their identity, and only then will their password get auto-filled. Also, The frequency for authentication prompt would be set to 'Always' by default, however users can change it to the other option as well which is 'Once every browsing session'.
+If you set this policy to 'WithDevicePassword', users will have to enter their device password (or preferred mode of authentication under Windows) to prove their identity before their password is auto filled. Authentication modes include Windows Hello, PIN, face recognition, or fingerprint. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+
+If you set this policy to 'WithCustomPrimaryPassword', users will be asked to create their custom password and then to be redirected to Settings. After the custom password is set, users can authenticate themselves using the custom password and their passwords will get auto-filled after successful authentication. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+
+If you set this policy to 'AutofillOff', saved passwords will no longer be suggested for autofill.
 
 Policy options mapping:
 
 * Automatically (0) = Automatically
 
 * WithDevicePassword (1) = With device password
+
+* WithCustomPrimaryPassword (2) = With custom primary password
+
+* AutofillOff (3) = Autofill off
 
 Use the preceding information when configuring this policy.
 
