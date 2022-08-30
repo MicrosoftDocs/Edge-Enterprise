@@ -3,7 +3,7 @@ title: "Disable Internet Explorer 11"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 06/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,11 @@ description: "Learn how to disable Internet Explorer 11 and use Internet Explore
 # Disable Internet Explorer 11
 
 >[!Note]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> The Internet Explorer 11 desktop application has [retired and is out of support as of June 15, 2022](https://aka.ms/IEJune15Blog) for certain versions of Windows 10.  
+>
+> - You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how >](https://aka.ms/IEmodewebsite)
+> - The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update.
+
 
 This article describes how to disable Internet Explorer 11 as a standalone browser in your environment.
 
@@ -36,7 +40,6 @@ The following Windows updates and Microsoft Edge software are required:
   
 - Microsoft Edge Stable Channel
 
-
 ## Overview
 
 For organizations that require Internet Explorer 11 (IE11) for legacy compatibility, Internet Explorer mode (IE mode) on Microsoft Edge provides a seamless, single browser experience. Users can access legacy applications from within Microsoft Edge without having to switch back to IE11.
@@ -50,15 +53,16 @@ After you configure IE mode, you can disable IE11 as a standalone browser **with
 
 When you enable the **Disable Internet Explorer 11 as a standalone browser** policy, all IE11 activity is redirected to Microsoft Edge and users have the following experience:
 
-- The IE11 icon on the Start Menu will be removed, but the one on the taskbar will remain.
+- IE11 icons on the Start Menu and on the task bar will be removed.
 - When users try to launch shortcuts or file associations that use IE11, they will be redirected to open the same file/URL in Microsoft Edge.
 - When users try to launch IE11 by directly invoking the iexplore.exe binary, Microsoft Edge will launch instead.
 
 As part of setting the policy for this experience, you can optionally show a redirect message for each user who tries to launch IE11. This message can be set to display "Always" or "Once per user". By default, the redirect message shown in the next screenshot is never shown.
 
-:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg.png" alt-text="Alert when trying to open IE after when a redirect to Microsoft Edge is active.":::
+:::image type="content" source="media/edge-ie-disable-ie11/disable-ie-redirect-msg2.png" alt-text="Alert when trying to open IE after when a redirect to Microsoft Edge is active.":::
 
 If your Enterprise Mode Site List contains applications that are configured to open in the IE11 app and you disable IE11 with this policy, they will open in IE mode on Microsoft Edge.
+
 > [!NOTE]
 > There was a known issue with the user flow when a site is configured to open in the IE11 application and the disable IE11 policy is set. The issue has been fixed in Microsoft Edge versions 91.0.840.0 or later.
 
@@ -66,9 +70,9 @@ If your Enterprise Mode Site List contains applications that are configured to o
 
 To disable Internet Explorer 11 using group policy, follow these steps:
 
-1. Ensure you have the pre-requisite operating system updates. This step will update the ADMX files on your machine directly (specifically inetres.adml and inetres.admx). Please note that if you want to update your Central Store, you will need to copy over the .adml and .admx files from a machine that has the pre-requisite updates. For more information, see [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Ensure you have the pre-requisite operating system updates. This step will update the ADMX files on your machine directly (specifically inetres.adml and inetres.admx). Please note that if you want to update your Central Store, you will need to copy over the .adml and .admx files from a machine that has the pre-requisite updates or download the latest Windows 10 Admin templates from [here](https://www.microsoft.com/download/details.aspx?id=103124&msclkid=eae4a72fb1fb11ecb97ca3096b36cc06). For more information, see [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Open the Group Policy Editor.
-3. Go to ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***. 
+3. Go to ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***.
 4. Double-click **Disable Internet Explorer 11 as a standalone browser**.
 5. Select **Enabled**.
 6. Under **Options**, pick one of the following values:
@@ -77,7 +81,7 @@ To disable Internet Explorer 11 using group policy, follow these steps:
    - **Always** if you want to notify users every time they're redirected from IE11.
    - **Once per user** if you want to notify users only the first time they are redirected.
 
-7. Click **OK** or **Apply** to save this policy setting.
+7. Select **OK** or **Apply** to save this policy setting.
 
 ## See also
 

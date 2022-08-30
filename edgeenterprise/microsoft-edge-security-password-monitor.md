@@ -1,7 +1,7 @@
 ---
 title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
-author: AndreLBarr
+author: AndreaLBarr
 manager: tulasim
 ms.date: 07/12/2021
 audience: ITPro

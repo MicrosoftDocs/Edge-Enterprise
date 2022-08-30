@@ -117,7 +117,7 @@ The following Citrix policies are known to slow rendering of html pages with lar
 - Automatic keyboard display
 - Remote the combo box
 
-For more information, see [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html) for more information. Disabling these policies should mitigate the issue.
+For more information, see [Mobile experience policy settings (citrix.com)](https://docs.citrix.com/en-us/xenapp-and-xendesktop/7-15-ltsr/policies/reference/ica-policy-settings/mobile-experience-policy-settings.html) for more information. Disabling these policies should mitigate the issue.
 
 ### Windows Account Manager authorization scenarios (that is, Azure sync) fail in Microsoft Edge when run as a Citrix seamless application
 

@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 06/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,10 @@ description: "Configure IE mode policies"
 # Configure IE mode policies
 
 >[!Note]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [see the FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> The Internet Explorer 11 desktop application has [retired and is out of support as of June 15, 2022](https://aka.ms/IEJune15Blog) for certain versions of Windows 10.  
+>
+> - You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how >](https://aka.ms/IEmodewebsite)
+> - The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update. [Disable IE today>](/deployedge/edge-ie-disable-ie11)  
 
 This article explains how to configure IE mode policies.
 
@@ -32,7 +35,7 @@ Configuring IE mode requires three steps:
     2. Otherwise,  follow the rest of the steps in [Redirect sites from IE to Microsoft Edge](/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> Policies to enable IE mode can be configured through Intune. For more information, see [Add Microsoft Edge to Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) and [Configure Microsoft Edge policies with Microsoft Intune](./configure-edge-with-intune.md).
+> Policies to enable IE mode can be configured through Intune. For more information, see [Add Microsoft Edge to Microsoft Intune](/intune/apps/apps-windows-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json) and [Configure Microsoft Edge policies with Microsoft Intune](./configure-edge-with-intune.md).
 
 ## Configure Internet Explorer integration
 
@@ -85,7 +88,7 @@ IE mode can use the existing policy configuring the Enterprise Site List for Int
 5. Select **Enabled**.
 6. Under **Options**, type the location of website list. You can use one of the following locations:
     - (Recommended) HTTPS location: **https**:**//iemode/sites.xml**
-    - Local network file: **\\\network\shares\sites.xml**
+    - Local network file:**\\\network\shares\sites.xml**
     - Local file: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Click **OK** or **Apply** to save these settings.
 
@@ -135,7 +138,10 @@ You can prevent your users from using Internet Explorer for sites that don't nee
    - Microsoft Edge Dev version 77 or later
    - Microsoft Edge Canary version 77 or later
    - Microsoft Edge version 45 or earlier
-9. Click **OK** or **Apply** to save these settings.
+9. Click **OK** or **Apply** to save these settings.  
+
+    > [!TIP]
+    > To find sites that you need to add to your IE mode site list, see [Configure IE mode for Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188235) guide. If you already have a site list, the tools in this guide will help you apply it to the right users.
 
 ## See also
 
