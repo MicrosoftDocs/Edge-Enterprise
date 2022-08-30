@@ -31,7 +31,7 @@ When combined, these changes help provide 'defense in depth' because they make i
 You may also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Notably, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
 > [!NOTE]
-> WebAssembly is now supported in enhanced security mode for x64 Windows systems. Additional cross-platform support is expected in the near future.
+> WebAssembly is now supported in enhanced security mode for x64 Windows systems. Additional cross-platform support is expected in the future.
 
 ## What's new in Microsoft Edge security settings
 
