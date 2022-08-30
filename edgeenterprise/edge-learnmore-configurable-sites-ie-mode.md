@@ -3,7 +3,7 @@ title: "Microsoft Edge and Configurable sites in IE mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,6 +20,7 @@ This article explains the Configurable sites feature of the Enterprise Mode Site
 
 - Windows updates
 
+  - Windows 11
   - Windows 10 version 1909, Windows server version 1909 – KB4550945  or higher
   - Windows 10 version 1903, Windows server version 1903 – KB4550945  or higher
   - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB4550969 or higher

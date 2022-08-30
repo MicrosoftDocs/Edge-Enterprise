@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge password manager security "
-ms.author: v-andreabarr
-author: AndreaLBarr
+ms.author: v-danwesley
+author: dan-wesley
 manager: collw
-ms.date: 09/30/2021
+ms.date: 08/25/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge password manager security"
 ---
-# Microsoft Edge password manager security 
+# Microsoft Edge password manager security
 
 The frequently asked questions in this article describe how Microsoft Edge's built-in password manager provides security for user passwords.
 
@@ -20,7 +20,7 @@ The frequently asked questions in this article describe how Microsoft Edge's bui
 
 ## How are passwords stored in Microsoft Edge and how safe is this approach?
 
-Microsoft Edge stores passwords encrypted on disk. They're encrypted using AES256 and the encryption key is saved in an operating system (OS) storage area. This technique is called local data encryption. Although not all of the browser’s data is encrypted, sensitive data such as passwords, credit card numbers, and cookies are encrypted when they are saved.
+Microsoft Edge stores passwords encrypted on disk. They're encrypted using AES and the encryption key is saved in an operating system (OS) storage area. This technique is called local data encryption. Although not all of the browser’s data is encrypted, sensitive data such as passwords, credit card numbers, and cookies are encrypted when they are saved.
 
 The Microsoft Edge password manager encrypts passwords so they can only be accessed when a user is logged on to the operating system. Even if an attacker has admin rights or offline access and can get to the locally stored data, the system is designed to prevent the attacker from getting the plaintext passwords of a user who isn't logged in.
 
@@ -36,7 +36,7 @@ The profile’s encryption key is protected using Chromium's OSCrypt and u
 
 - On Linux, the storage area is Gnome Keyring or KWallet
 
-All these storage areas encrypt the AES256 key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture.
+All these storage areas encrypt the AES key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture.
 
 However, physically local attacks and malware are outside the threat model and, under these conditions, encrypted data would be vulnerable. If your computer's infected with malware, an attacker can get decrypted access to the browser's storage areas. The attacker's code, running as your user account, can do anything you can do.
 
@@ -90,7 +90,7 @@ Data syncing and Microsoft Edge:
 
 - Data syncing can be enabled or disabled as desired across the organization.
 
-- Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Information Protection.
+- Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Purview Information Protection.
 
 ## Why do Microsoft security baselines recommend disabling the password manager?
 

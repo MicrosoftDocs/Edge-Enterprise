@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: dan-wesley #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/02/2021 #Required; mm/dd/yyyy format.
+  ms.date: 05/04/2022 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -47,9 +47,9 @@ landingContent:
           - text: Video - Deploy Microsoft Edge
             url: microsoft-edge-video-deploy.md
           - text: Deploy to Windows
-            url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+            url: /configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
           - text: Deploy to macOS
-            url: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+            url: /intune/apps/apps-edge-macos/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
  # Card 3 (col 3, 1st row)
   - title: Configure Microsoft Edge
     linkLists:
@@ -71,6 +71,8 @@ landingContent:
             url: microsoft-edge-video-security-compatibility-manageability.md
           - text: Security
             url: ms-edge-security-for-business.md
+          - text: Microsoft Security Baselines Blog
+            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
           - text: Privacy
             url: microsoft-edge-enterprise-privacy-settings.md
  # Card 4 (col 1, 2nd row)
@@ -93,8 +95,8 @@ landingContent:
             url: microsoft-edge-webview-policies.md
 #          - text: Policy mapping overview
 #            url: microsoft-edge-policy-map-overview.md
-          - text: Microsoft Security Baselines Blog
-            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
+#          - text: Microsoft Security Baselines Blog
+#            url: "https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines"
   # Card 6 (col 3, 2nd row)
   - title: Engage with community or get help
     linkLists:

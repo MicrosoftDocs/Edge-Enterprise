@@ -6,12 +6,11 @@ metadata:
   manager: laurawi
   ms.date: 06/29/2021
   audience: ITPro
-  ms.topic: conceptual
+  ms.topic: faq
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: "Frequently asked questions (FAQ) about deploying Microsoft Edge in the enterprise"
-    
 title: Frequently asked questions (FAQ) about Microsoft Edge in the enterprise
 summary: |
   > [!NOTE]
@@ -53,7 +52,7 @@ sections:
         answer: |
           Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) that can be used for the initial deployment of the new Microsoft Edge via WSUS. After initial deployment, automatic updates are configured by default. For more information, see [Update in WSUS for the new Microsoft Edge for Windows 10, version 1809, 1903, 1909, and 2004: October 29, 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
           
-          Manual updates can be done through a configuration management tool, such as [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
+          Manual updates can be done through a configuration management tool, such as [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json).
       
       - question: Are master preferences supported?
         answer: |

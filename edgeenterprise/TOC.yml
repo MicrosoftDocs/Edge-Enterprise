@@ -1,4 +1,4 @@
-# last revised 12/15/2021 
+# last revised 07/27/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -18,6 +18,8 @@
      href: deploy-edge-hands-on-lab.md
    - name: Windows Blogs - Microsoft Edge Developer
      href: https://blogs.windows.com/msedgedev/
+   - name: Microsoft Edge FAQ
+     href: microsoft-edge-frequently-asked-questions.md
 # PLAN
 - name: Plan for Microsoft Edge
   items:
@@ -33,6 +35,8 @@
      href: microsoft-edge-browser-usage-report.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
+   - name: Mobile Stable Channel Release Notes
+     href: microsoft-edge-relnote-mobile-stable-channel.md
    - name: Stable Channel Release Notes
      href: microsoft-edge-relnote-stable-channel.md
    - name: Stable Channel archived release notes
@@ -68,22 +72,22 @@
      href: deploy-edge-with-windows-10-updates.md
    - name: Deploy to Windows with Configuration Manager 
 #     href: deploy-edge-with-configuration-manager.md
-     href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+     href: /configmgr/apps/deploy-use/deploy-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
    - name: Deploy to Windows with Intune
 #    href: deploy-edge-with-intune.md
-     href: /intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+     href: /intune/apps/apps-windows-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
    - name: Deploy to macOS with Jamf
      href: deploy-edge-mac-jamf.md
    - name: Deploy to macOS with Intune
 #    href: deploy-edge-mac-intune.md
-     href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+     href: /intune/apps/apps-edge-macos/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
 # CONFIGURE
 - name: Configure Microsoft Edge
   items:
-   - name: Configure for Windows
+   - name: Configure for Windows with group policies
      href: configure-microsoft-edge.md
    - name: Configure for Windows with Intune
-     href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+     href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json
    - name: Configure Microsoft Edge using Initial Preferences settings for the first run
      href: Initial-preferences-support-on-Microsoft-Edge-browser.md
    - name: Per-site configuration by policy
@@ -102,6 +106,8 @@
      href: edge-for-virtualized-desktop-infrastructure.md
    - name: Configurations and experimentation
      href: edge-configuration-and-experiments.md
+   - name: Enterprise new tab page
+     href: microsoft-edge-enterprise-ntp.md
    - name: Identity support and configuration
      href: microsoft-edge-security-identity.md
    - name: Microsoft Edge and Enterprise State Roaming
@@ -136,6 +142,8 @@
      href: microsoft-edge-pdf.md
    - name: Set Microsoft Edge as the default browser
      href: edge-default-browser.md
+   - name: Split tunnel VPN support for WebRTC
+     href: microsoft-edge-vpn-split-tunneling.md
    - name: Use Microsoft Edge in Internet Explorer mode
      items:
       - name: What is Internet Explorer (IE) mode?
@@ -158,7 +166,7 @@
            href: edge-ie-mode-site-list-manager.md         
       - name: Keep in-page navigation in IE mode
         href: edge-learnmore-inpage-nav.md    
-      - name: Cookie sharing from Microsoft Edge to Internet Explorer
+      - name: Cookie sharing between Microsoft Edge and Internet Explorer
         href: edge-ie-mode-add-guidance-cookieshare.md
       - name: Configurable sites in IE mode
         href: edge-learnmore-configurable-sites-ie-mode.md
@@ -173,8 +181,10 @@
    - name: Security for your business
      href: ms-edge-security-for-business.md
    - name: Modern security protection for vulnerable legacy apps
-     href: microsoft-edge-security-iemode-safer-than-ie.md   
-   - name: Interrupting Downloads of Potentially Dangerous Files
+     href: microsoft-edge-security-iemode-safer-than-ie.md 
+   - name: Browse more safely with Microsoft Edge
+     href: microsoft-edge-security-browse-safer.md
+   - name: Identify and interrupt downloads of potentially dangerous files
      href: microsoft-edge-security-downloads-interruptions.md
    - name: Allow list for Microsoft Edge endpoints
      href: microsoft-edge-security-endpoints.md
@@ -213,14 +223,18 @@
      items:
       - name: Backwards compatibility for Enterprise New tab page
         href: edge-learnmore-ntp-backward-compatibility.md
+      - name: Block access to consumer accounts
+        href: edge-learnmore-block-access-consumer-accounts.md
       - name: ClickOnce and DirectInvoke
         href: edge-learn-more-co-di.md
       - name: Command-line options to configure proxy settings
         href: edge-learnmore-cmdline-options-proxy-settings.md
-#      - name: Configurable sites in IE mode
-#        href: edge-learnmore-configurable-sites-ie-mode.md
+      - name: Configurable Microsoft Edge commands
+        href: edge-learnmore-configurable-edge-commands.md
       - name: Filter format for URL list-based policies
         href: edge-learnmmore-url-list-filter format.md
+      - name: Microsoft Edge will disable modifying document.domain
+        href: edge-learnmore-origin-keyed-agent-cluster.md
 #      - name: Keep in-page navigation in IE mode
 #        href: edge-learnmore-inpage-nav.md
       - name: Mixed content downloads
@@ -233,7 +247,7 @@
         href: edge-learnmore-neededge.md
       - name: Regular Expression 2 (re2.h) syntax
         href: edge-learnmore-regex.md
-      - name: Reset Microsoft Edge data
+      - name: Reset Microsoft Edge data in the cloud
         href: edge-learnmore-reset-data-in-cloud.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
@@ -261,5 +275,7 @@
      href: microsoft-edge-video-security-smartscreen.md
    - name: Video - Security, compatibility, and manageability
      href: microsoft-edge-video-security-compatibility-manageability.md 
-   - name: Frequently asked questions
-     href: faqs-edge-in-the-enterprise.yml 
+#   - name: Microsoft Edge FAQ
+#     href: microsoft-edge-frequently-asked-questions.md
+#   - name: Frequently asked questions
+#     href: faqs-edge-in-the-enterprise.yml 
