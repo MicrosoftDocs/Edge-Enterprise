@@ -68,6 +68,8 @@ By default, the Microsoft Edge and Internet Explorer processes don't share sessi
 > [!NOTE]
 > Before Microsoft Edge version 99, session cookies can only be shared from Microsoft Edge to Internet Explorer. Starting with Microsoft Edge version 99, sharing session cookies in reverse (from Internet Explorer to Microsoft Edge) is possible.
 
+> [!NOTE]
+> Persistent cookies, which have been created with an Expires-attribute, are not in scope for this feature and cannot be shared between Microsoft Edge and Internet Explorer.
 ## How cookie sharing works
 
 The Enterprise Mode site list XML is extended to allow more elements to specify session cookies that need to be shared between Microsoft Edge and Internet Explorer.
