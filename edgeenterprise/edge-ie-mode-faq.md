@@ -221,6 +221,9 @@ For each Microsoft Edge window, the first time an IE mode tab is visited within 
 > [!NOTE]
 > Session switching isn’t supported. Navigations within the same IE mode tab will use the same session.
 
+> [!NOTE]
+> [Sharing cookies](/deployedge/edge-ie-mode-add-guidance-cookieshare) from IE mode to Microsoft Edge mode is not supported in no-merge IE mode sessions.
+
 You can validate the no-merge behavior in Microsoft Edge version 93 or later by following these steps:
 
 1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later.
