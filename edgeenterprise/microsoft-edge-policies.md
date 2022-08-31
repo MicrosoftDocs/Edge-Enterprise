@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/24/2022
+ms.date: 08/31/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
 
 ## Available policies
 
@@ -213,6 +223,8 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -455,6 +467,7 @@ These tables list all of the browser-related group policies available in this re
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configure InPrivate mode availability|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
 |[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
 |[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app|
 |[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
@@ -8169,7 +8182,7 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  This policy setting lets you configure when efficiency mode will become active. By default, efficiency mode will be active when the device is unplugged and the battery is low. On devices with no battery, the default is for efficiency mode to never become active.
+  This policy setting lets you configure when efficiency mode will become active. By default, efficiency mode is set to 'BalancedSavings'. On devices with no battery, the default is for efficiency mode to never become active.
 
 Individual sites may be blocked from participating in efficiency mode by configuring the policy [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls).
 
@@ -8177,11 +8190,17 @@ Set this policy to 'AlwaysActive' and efficiency mode will always be active.
 
 Set this policy to 'NeverActive' and efficiency mode will never become active.
 
-Set this policy to 'ActiveWhenUnplugged' and efficiency mode will become active when the device is unplugged. If the device does not have a battery, efficiency mode will never become active.
+Set this policy to 'ActiveWhenUnplugged' and efficiency mode will become active when the device is unplugged.
 
-Set this policy to 'ActiveWhenUnpluggedBatteryLow' and efficiency mode will become active when the device is unplugged and the battery is low. If the device does not have a battery, efficiency mode will never become active.
+Set this policy to 'ActiveWhenUnpluggedBatteryLow' and efficiency mode will become active when the device is unplugged and the battery is low.
 
-If you don't configure this policy, users can choose the efficiency mode option in edge://settings/system.
+Set this policy to 'BalancedSavings' and when the device is unplugged, efficiency mode will take moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode will take additional steps to save battery.
+
+Set this policy to 'MaximumSavings' and when the device is unplugged or unplugged and the battery is low, efficiency mode takes additional steps to save battery.
+
+If the device does not have a battery, efficiency mode will never become active in any mode other than 'AlwaysActive' unless the setting or [EfficiencyModeEnabled](#efficiencymodeenabled) policy is enabled.
+
+This policy has no effect if the [EfficiencyModeEnabled](#efficiencymodeenabled) policy is disabled.
 
 Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
 
@@ -8194,6 +8213,10 @@ Policy options mapping:
 * ActiveWhenUnplugged (2) = Efficiency mode is active when the device is unplugged
 
 * ActiveWhenUnpluggedBatteryLow (3) = Efficiency mode is active when the device is unplugged and the battery is low
+
+* BalancedSavings (4) = When the device is unplugged, efficiency mode takes moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode takes additional steps to save battery.
+
+* MaximumSavings (5) = When the device is unplugged or unplugged and the battery is low, efficiency mode takes additional steps to save battery.
 
 Use the preceding information when configuring this policy.
 
@@ -8236,6 +8259,138 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>3</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EfficiencyModeEnabled
+
+  #### Efficiency mode enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 106 or later
+
+  #### Description
+
+  Enables efficiency mode which helps extend battery life by saving computer resources. By default, efficiency mode is enabled for devices with a battery and disabled otherwise.
+
+If you enable this policy, efficiency mode will become active according to the setting chosen by the user. You can configure the efficiency mode setting using the [EfficiencyMode](#efficiencymode) policy. If the device does not have a battery, efficiency mode will always be active.
+
+If you disable this policy, efficiency mode will never become active. The [EfficiencyMode](#efficiencymode) and [EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled) policies will have no effect.
+
+If you don't configure this policy, efficiency mode will be enabled for devices with a battery and disabled otherwise. Users can choose the efficiency mode option they want in edge://settings/system.
+
+Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EfficiencyModeEnabled
+  - GP name: Efficiency mode enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EfficiencyModeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EfficiencyModeEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EfficiencyModeOnPowerEnabled
+
+  #### Enable efficiency mode when the device is connected to a power source
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 106 or later
+
+  #### Description
+
+  Allows efficiency mode to become active when the device is connected to a power source. On devices with no battery, this policy has no effect.
+
+If you enable this policy, efficiency mode will become active when the device is connected to a power source.
+
+If you disable or don't configure this policy, efficiency mode will never become active when the device is connected to a power source.
+
+This policy has no effect if the [EfficiencyModeEnabled](#efficiencymodeenabled) policy is disabled.
+
+Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=2173921](https://go.microsoft.com/fwlink/?linkid=2173921)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EfficiencyModeOnPowerEnabled
+  - GP name: Enable efficiency mode when the device is connected to a power source
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EfficiencyModeOnPowerEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EfficiencyModeOnPowerEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -22476,6 +22631,67 @@ Note that the policy is applied per renderer process, with the most recent value
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationAlwaysUseOSCapture
+
+  #### Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 106 or later
+
+  #### Description
+
+  Configure this policy to control whether Microsoft Edge will use the "OS capture engine" or the "Browser capture engine" when capturing browser windows in the same process using the screen-share APIs.
+
+You should configure this policy if you want to capture the contents of Internet Explorer mode tabs. However, enabling this policy may negatively impact performance when capturing browser windows in the same process.
+
+This policy only affects window capture, not tab capture. The contents of Internet Explorer mode tabs will not be captured when you choose to capture only a single tab, even if you configure this policy.
+
+If you enable this policy, Microsoft Edge will always use the OS capture engine for window capture. Internet Explorer mode tabs will have their contents captured.
+
+If you disable or don't configure this policy, Microsoft Edge will use the Browser capture engine for browser windows in the same process. Internet Explorer mode tabs in these windows will not have their contents captured.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2174004](https://go.microsoft.com/fwlink/?linkid=2174004)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationAlwaysUseOSCapture
+  - GP name: Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationAlwaysUseOSCapture
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
