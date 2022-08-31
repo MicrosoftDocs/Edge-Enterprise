@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/26/2022
+ms.date: 08/31/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
 
 ## Available policies
 
