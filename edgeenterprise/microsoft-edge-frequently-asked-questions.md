@@ -3,7 +3,7 @@ title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/15/2022
+ms.date: 08/30/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,7 +42,7 @@ Microsoft Edge supports import from existing installs of Microsoft Edge, Chrome,
 
 ## What's the difference between the Stable, Beta, Dev, and Canary channels/builds?
 
-The Stable channel of Microsoft Edge is the most stable channel we offer with enterprise-focused features ready for you to [pilot and evaluate](https://aka.ms/EdgeEnterprise) across your organization. The Beta channel allows you to validate the next Stable release with a representative set of users. The Stable and Beta channels are updated approximately every six weeks. The Dev and Canary channels continue to update weekly and daily, respectively. Offline installers (MSIs and PKG files) are available only for Stable, Beta, and Dev channels. For more information, see [Overview of Microsoft Edge channels](./microsoft-edge-channels.md).
+The Stable channel of Microsoft Edge is the most stable channel we offer with enterprise-focused features ready for you to [pilot and evaluate](https://aka.ms/EdgeEnterprise) across your organization. The Beta channel allows you to validate the next Stable release with a representative set of users. The Stable and Beta channels are updated approximately every four weeks. The Dev and Canary channels continue to update weekly and daily, respectively. Offline installers (MSIs and PKG files) are available only for Stable, Beta, and Dev channels. For more information, see [Overview of Microsoft Edge channels](./microsoft-edge-channels.md).
 
 ## What kind of extension support do I have with Microsoft Edge?
 
