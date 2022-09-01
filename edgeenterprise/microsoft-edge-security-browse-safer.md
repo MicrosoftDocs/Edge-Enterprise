@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 08/04/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,7 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 This article describes how Microsoft Edge provides enhanced security on the web.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 104 or later.
+> This article applies to Microsoft Edge version 105 or later.
 
 ## Overview
 
@@ -31,7 +31,7 @@ When combined, these changes help provide 'defense in depth' because they make i
 You may also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Notably, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
 > [!NOTE]
-> Sites that use WebAssembly (WASM) are not currently supported in this mode. If you require access to a site that needs WASM, consider adding it to your exception site list as described in [Exception site list](#exception-site-list).
+> WebAssembly is now supported in enhanced security mode for x64 Windows systems. Additional cross-platform support is expected in the future.
 
 ## What's new in Microsoft Edge security settings
 
@@ -66,17 +66,17 @@ Balanced mode is an adaptive mode that builds on user’s behavior on a particul
 
 As the name suggests, Strict Mode applies these security protections to all sites by default. However, you can still manually add sites to the exception site list and enterprise admin configuration will still apply, if present. Strict mode isn't appropriate for most end users because it may require some level of configuration for the user to complete their normal tasks.
 
-### Exception site list
+### Enhanced security sites
 
-In Basic, Balanced, and Strict mode, you can also create exceptions for certain familiar websites that you trust. Use the following steps to add a site to your exception list.
+In Basic, Balanced, and Strict mode, you can also create exceptions for certain familiar websites that you trust or wish to enforce this mode on. Use the following steps to add a site to your list.
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
-3. Under **Enhance your security on the web**, select **Exceptions**.
+3. Under **Enhance your security on the web**, select **Manage enhanced security for sites**.
 4. Select **Add a site**, type in the full URL, and then select **Add**.
 
 > [!NOTE]
-> You can use steps (1 - 3) to view sites in **Enhanced security exceptions**. You can **Edit** a site, **Remove** a site, or **Remove all** exceptions.
+> You can use steps (1 - 3) to view sites in **enhanced security sites.**. You can **Edit** a site, **Remove** a site, or **Remove all** exceptions.
 
 The next screenshot shows the settings page for security exceptions.
 
