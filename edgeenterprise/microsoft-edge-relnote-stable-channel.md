@@ -61,6 +61,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - [GuidedSwitchEnabled](/DeployEdge/microsoft-edge-policies#guidedswitchenabled) - Add Linux platform support
 
+## Version 104.0.1293.78: September 1, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
+
 ## Version 104.0.1293.70: August 25, 2022
 
 Fixed various bugs and performance issues.
