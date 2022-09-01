@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 08/05/2022
+ms.date: 09/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,39 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 102.0.1245.30: May 31, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-31-2022).
+
+### Policy updates
+
+#### New policies
+
+- [AllHttpAuthSchemesAllowedForOrigins](/DeployEdge/microsoft-edge-policies#allhttpauthschemesallowedfororigins) - List of origins that allow all HTTP authentication
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [NetworkServiceSandboxEnabled](/DeployEdge/microsoft-edge-policies#networkservicesandboxenabled) - Enable the network service sandbox
+- [UserAgentClientHintsGREASEUpdateEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsgreaseupdateenabled) - Control the User-Agent Client Hints GREASE Update feature
+
+## Version 101.0.1210.53: May 19, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 100.0.1185.60: May 13, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 101.0.1210.47: May 13, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-13-2022).
+
+## Version 101.0.1210.39: May 5, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 100.0.1185.57: May 2, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 101.0.1210.32: April 28
 
