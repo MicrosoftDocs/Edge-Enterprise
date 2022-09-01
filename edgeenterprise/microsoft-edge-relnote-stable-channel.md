@@ -29,7 +29,7 @@ These release notes provide information about new features and non-security upda
 ## Version 105.0.1343.X: September 2, 2022
 
 > [!IMPORTANT]
-> This update contains a fix for [CVE-2022-XXXX](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-XXXX), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
 
