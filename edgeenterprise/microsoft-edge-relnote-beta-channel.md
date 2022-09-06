@@ -19,6 +19,27 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 106.0.XXXX.XX: September X, 2022
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+
+### Policy updates
+
+#### New policies
+
+- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) - Efficiency mode enabled
+- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) - Enable efficiency mode when the device is connected to a power source
+- [InternetExplorerIntegrationAlwaysUseOSCapture](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
+
+#### Obsoleted policies
+
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
+
+
 ## Version 105.0.1343.27: September 2, 2022
 
 Fixed various bugs and performance issues.
