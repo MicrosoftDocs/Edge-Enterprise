@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2022
+ms.date: 09/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,9 +22,6 @@ These release notes provide information about new features and non-security upda
 ## Version 106.0.XXXX.XX: September X, 2022
 
 Fixed various bugs and performance issues.
-
-### Feature updates
-
 
 ### Policy updates
 
