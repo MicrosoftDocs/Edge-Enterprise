@@ -3,7 +3,7 @@ title: "Microsoft Edge support for Windows Information Protection"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 11/15/2021
+ms.date: 09/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Microsoft Edge support for Windows Information Protection"
 This article describes how Microsoft Edge supports Windows Information Protection (WIP).
 
 > [!NOTE]
-> This applies to Microsoft Edge version 81 or later.
+> This applies to Microsoft Edge version 81 or later. Windows information protection will be discontinued over time. For more information, see [Announcing the sunset of Windows Information Protection (WIP)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-the-sunset-of-windows-information-protection-wip/ba-p/3579282).
 
 ## Overview
 
