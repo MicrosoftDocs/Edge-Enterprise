@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/31/2022
+ms.date: 09/07/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,16 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
-|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
-|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
 
 ## Available policies
 
@@ -10968,6 +10958,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   #### Description
 
   This policy setting lets you configure whether Microsoft Defender SmartScreen checks download reputation from a trusted source.
+
+In Windows, the policy determines a trusted source by checking its Internet zone. If the source comes from the local system, intranet, or trusted sites zone, then the download is considered trusted and safe.
 
 If you enable or don't configure this setting, Microsoft Defender SmartScreen checks the download's reputation regardless of source.
 
