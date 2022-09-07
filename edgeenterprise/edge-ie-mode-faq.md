@@ -238,7 +238,7 @@ If you have any feedback, reach out through one of our feedback channels: Micros
 
 ### Can I save links as webpages in Internet Explorer mode?
 
-Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy "*Allow Save Target As in Internet Explorer mode*" located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*. The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, reopening the file will render the page in Microsoft Edge.
+Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy "*Allow Save Target As in Internet Explorer mode*" located at **Computer Configuration > Administrative Templates > Windows Components > Internet Explorer**. The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, reopening the file will render the page in Microsoft Edge.
 
 The ability to save links as web pages  requires the following minimum operating system updates:
 
@@ -251,7 +251,7 @@ The ability to save links as web pages  requires the following minimum operating
 
 ### Can I save webpages in Internet Explorer mode?
 
-Yes, you can enable the Ctrl+S shortcut for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy "*Enable extended hot keys in Internet Explorer mode*" located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*. 
+Yes, you can enable the Ctrl+S shortcut for Internet Explorer (IE) mode in Microsoft Edge. To do this, configure the group policy "*Enable extended hot keys in Internet Explorer mode*" located at **Computer Configuration > Administrative Templates > Windows Components > Internet Explorer**. 
 
 The ability to use Ctrl+S in IE-Mode requires the following minimum operating system updates:
 
@@ -259,13 +259,12 @@ The ability to use Ctrl+S in IE-Mode requires the following minimum operating sy
 - Windows 10, version 1909: [KB5001337](https://support.microsoft.com/en-us/topic/april-13-2021-kb5001337-os-build-18363-1500-e7336837-2aaa-4f73-995c-ab2ba5013727) or later
 - Windows 10, version 2004, Windows 10, version 20H2: [KB4601319](https://support.microsoft.com/en-us/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde) or later
 
-In addition to the shortcut Ctrl+S, the menu-entry in Edge under **Settings and more** (the ellipses icon ...) > **More Tools** > **Save page as** can be enabled in Edge 101 (and newer) via the following Group Policy: *Allow Save page as in Internet Explorer mode* located at *Computer Configuration > Administrative Templates > Microsoft Edge*. 
-The ability to use teh "Save page as" .menuitem  requires the following minimum operating system updates:
+In addition to the shortcut Ctrl+S, the menuitem **Save page as** in Edge under **Settings and more** (the ellipses icon ...) > **More Tools** can be enabled in Edge 101 (and newer) via the following Group Policy: *Allow Save page as in Internet Explorer mode* located at **Computer Configuration > Administrative Templates > Microsoft Edge**. 
+The ability to use the "Save page as" menuitem requires the following minimum operating system updates:
 - Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2 : [KB5014666](https://support.microsoft.com/en-us/topic/june-28-2022-kb5014666-os-builds-19042-1806-19043-1806-and-19044-1806-preview-4bd911df-f290-4753-bdec-a83bc8709eb6) or later
 - Windows Server 2022 : [KB5014665](https://support.microsoft.com/en-us/topic/june-23-2022-kb5014665-os-build-20348-803-preview-feebab2b-1851-4119-a531-89ca80300b10) or later
 - Windows 11 : [KB5014668](https://support.microsoft.com/en-us/topic/june-23-2022-kb5014668-os-build-22000-778-preview-2b5f1da6-d602-48b4-b443-96b460e3c38d) or later
 
-The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, reopening the file will render the page in Microsoft Edge.
 ### Can I test a site in Microsoft Edge while it is configured to open IE mode in the Enterprise Mode Site List?
 
 Yes, while you are modernizing your legacy sites, you can test IE mode configured applications on Microsoft Edge. To test these apps, you can configure the [InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) policy. If you enable this policy, your users can open IE mode sites in Microsoft Edge by selecting **Settings and more** (the ellipses icon ...) > **More Tools** > **Open sites in Edge mode**.
