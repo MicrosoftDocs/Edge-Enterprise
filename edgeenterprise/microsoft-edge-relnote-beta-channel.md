@@ -31,11 +31,14 @@ Fixed various bugs and performance issues.
 - [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) - Enable efficiency mode when the device is connected to a power source
 - [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
 
+#### Deprecated policies
+
+- [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) – Allows the Microsoft Edge browser to load the new SmartScreen library for any SmartScreen checks on site URLs or application downloads.
+
 #### Obsoleted policies
 
 - [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
 - [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
-
 
 ## Version 105.0.1343.27: September 2, 2022
 
