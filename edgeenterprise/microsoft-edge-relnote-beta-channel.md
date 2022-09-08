@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/07/2022
+ms.date: 09/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,10 @@ These release notes provide information about new features and non-security upda
 ## Version 106.0.XXXX.XX: September X, 2022
 
 Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows, which was introduced in Microsoft Edge version 103. The [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy is now deprecated in Microsoft Edge version 106 and will be obsolete in Microsoft Edge version 107.
 
 ### Policy updates
 
