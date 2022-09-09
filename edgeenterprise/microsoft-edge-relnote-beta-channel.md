@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 09/08/2022
+ms.date: 09/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 106.0.XXXX.XX: September X, 2022
+## Version 106.0.1370.X: September X, 2022
 
 Fixed various bugs and performance issues.
 
@@ -121,46 +121,8 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 104.0.1293.14: July 7
 
-### Policy updates
-
-#### New policies
-
-- [AllowedDomainsForApps](/DeployEdge/microsoft-edge-policies#alloweddomainsforapps) - Define domains allowed to access Google Workspace
-- [AskBeforeCloseEnabled](/DeployEdge/microsoft-edge-policies#askbeforecloseenabled) - Get user confirmation before closing a browser window with multiple tabs
-- [BrowserCodeIntegritySetting](/DeployEdge/microsoft-edge-policies#browsercodeintegritysetting) - Configure browser process code integrity guard setting
-- [DoubleClickCloseTabEnabled](/DeployEdge/microsoft-edge-policies#doubleclickclosetabenabled) - Double Click feature in Microsoft Edge enabled (only available in China)
-- [ImportOnEachLaunch](/DeployEdge/microsoft-edge-policies#importoneachlaunch) - Allow import of data from other browsers on each Microsoft Edge launch
-- [QuickSearchShowMiniMenu](/DeployEdge/microsoft-edge-policies#quicksearchshowminimenu) - Enables Microsoft Edge mini menu
-- [PasswordManagerRestrictLengthEnabled](/DeployEdge/microsoft-edge-policies#passwordmanagerrestrictlengthenabled) - Restrict the length of passwords that can be saved in the Password Manager
-- [PDFXFAEnabled](/DeployEdge/microsoft-edge-policies#pdfxfaenabled) - XFA support in native PDF reader enabled
-- [TextPredictionEnabled](/DeployEdge/microsoft-edge-policies#textpredictionenabled) - Text prediction enabled by default
-
-#### Obsoleted policy
-
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Allow using the deprecated U2F Security Key API
-
-## Version 103.0.1264.45: July 1
-
-Fixed various bugs and performance issues.
-
-## Version 103.0.1264.37: June 22
-
-Fixed various bugs and performance issues.
-
-## Version 103.0.1264.32: June 20
-
-Fixed various bugs and performance issues.
-
-## Version 103.0.1264.21: June 10
-
-Fixed various bugs and performance issues.
-
-## Version 103.0.1264.17: June 6
-
-Fixed various bugs and performance issues.
-
+<!--- from Version 104.0.1293.14: July 7 to Version 103.0.1264.17: June 6 ---->
 <!--- from Version 103.0.1264.13: June 2 to Version 102.0.1245.12: May 13 ---->
 <!--- from Version 102.0.1245.7: May 10 to Version 101.0.1210.14: April 12 ---->
 <!--- from Version 101.0.1210.10: April 8 to Version 100.0.1185.12: March 18 --->
