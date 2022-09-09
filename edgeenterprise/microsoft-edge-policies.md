@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/05/2022
+ms.date: 09/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -32637,7 +32637,7 @@ If this policy is left not set, window hiding detection will be enabled.
 
   [Back to top](#microsoft-edge---policies)
 
-
+<!------Dev 107.0.1375.0-------------->
 ## See also
 
 - [Configuring Microsoft Edge](configure-microsoft-edge.md)
