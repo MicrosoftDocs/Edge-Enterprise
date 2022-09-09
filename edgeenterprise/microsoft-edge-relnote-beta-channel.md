@@ -44,6 +44,10 @@ Fixed various bugs and performance issues.
 - [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
 - [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
 
+## Version 105.0.1343.34: September 9, 2022
+
+Fixed various bugs and performance issues.
+
 ## Version 105.0.1343.27: September 2, 2022
 
 Fixed various bugs and performance issues.
