@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/07/2022
+ms.date: 09/09/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,7 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
 
 ## Available policies
 
@@ -16956,7 +16955,7 @@ If you set this policy to disabled the search context menu item that relies on y
 
 If this policy is set to enabled or not set, the context menu item for your default search provider and sidebar search will be available.
 
-The policy value is only appled when the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy is enabled, and is not applicable otherwise.
+The policy value is only applied when the [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) policy is enabled, and is not applicable otherwise.
 
   #### Supported features:
 
@@ -32638,7 +32637,7 @@ If this policy is left not set, window hiding detection will be enabled.
 
   [Back to top](#microsoft-edge---policies)
 
-
+<!------Dev 107.0.1375.0-------------->
 ## See also
 
 - [Configuring Microsoft Edge](configure-microsoft-edge.md)
