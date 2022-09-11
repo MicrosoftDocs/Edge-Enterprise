@@ -2,6 +2,15 @@
 
 
 
+## Week of September 05, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/7/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
+| 9/7/2022 | [Internet Explorer (IE) mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+
+
 ## Week of August 29, 2022
 
 
@@ -45,17 +54,3 @@
 | 8/10/2022 | [Microsoft Edge identity support and configuration](/DeployEdge/microsoft-edge-security-identity) | modified |
 | 8/11/2022 | [Microsoft Edge Enterprise new tab page](/DeployEdge/microsoft-edge-enterprise-ntp) | modified |
 | 8/12/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-
-
-## Week of August 01, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/1/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 8/2/2022 | [Microsoft Edge Browser Policy Documentation](/DeployEdge/microsoft-edge-policies) | modified |
-| 8/3/2022 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 8/4/2022 | [Browse more safely with Microsoft Edge](/DeployEdge/microsoft-edge-security-browse-safer) | modified |
-| 8/5/2022 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 8/5/2022 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 8/5/2022 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
