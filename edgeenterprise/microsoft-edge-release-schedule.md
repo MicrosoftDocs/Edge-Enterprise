@@ -54,6 +54,8 @@ The following table lists the planned and actual release dates for major release
 | 106 | Target release | Week of 06-Sep-2022 | Week of 29-Sep-2022 | Week of 29-Sep-2022 |
 | 107 | Target release | Week of 04-Oct-2022 | Week of 27-Oct-2022 | Not applicable |
 | 108 | Target release | Week of 01-Nov-2022 | Week of 01-Dec-2022 | Week of 01-Dec-2022 |
+| 109 | Target release | Week of 06-Dec-2022 | Week of 12-Jan-2023 | Not applicable |
+| 110 | Target release | Week of 18-Jan-2023 | Week of 09-Feb-2023 | Week of 09-Feb-2023 |
 
 ## Release process
 
