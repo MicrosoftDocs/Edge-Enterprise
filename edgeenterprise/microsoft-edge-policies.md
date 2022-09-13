@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/09/2022
+ms.date: 09/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -269,7 +269,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (deprecated)|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings|
@@ -468,6 +468,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
 |[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Open local files in Internet Explorer mode file extension allow list|
 |[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a file:// link in Internet Explorer mode|
+|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Allow local MHTML files to open automatically in Internet Explorer mode|
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Specify the number of days that a site remains on the local IE mode site list|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
@@ -497,7 +498,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
-|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -550,7 +551,7 @@ These tables list all of the browser-related group policies available in this re
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
-|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (deprecated)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
@@ -10549,9 +10550,9 @@ Use the preceding information when configuring this policy.
 
   ### NewSmartScreenLibraryEnabled
 
-  #### Enable new SmartScreen library
+  #### Enable new SmartScreen library (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -10559,7 +10560,9 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Allows the Microsoft Edge browser to load new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
+  This policy is deprecated because it is a temporary policy to support the update to a new SmartScreen client. It won't work in Microsoft Edge as soon as version 107.
+
+Allows the Microsoft Edge browser to load the new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
 
 If you enable or don't configure this policy, Microsoft Edge will use the new SmartScreen library (libSmartScreenN).
 
@@ -10567,9 +10570,8 @@ If you disable this policy, Microsoft Edge will use the old SmartScreen library 
 
 Before Microsoft Edge version 103, if you don't configure this policy, Microsoft Edge will use the old SmartScreen library (libSmartScreen).
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-
-This temporary policy was created to support the update of a new SmartScreen client. This policy will be deprecated and removed along with the legacy client.
+This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
+This also includes macOS instances that are that are managed via MDM or joined to a domain via MCX.
 
   #### Supported features:
 
@@ -10586,7 +10588,7 @@ This temporary policy was created to support the update of a new SmartScreen cli
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewSmartScreenLibraryEnabled
-  - GP name: Enable new SmartScreen library
+  - GP name: Enable new SmartScreen library (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
   - GP ADMX file name: MSEdge.admx
@@ -23313,6 +23315,70 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalMhtFileAllowed
+
+  #### Allow local MHTML files to open automatically in Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 106 or later
+
+  #### Description
+
+  This policy controls whether local mht or mhtml files launched from the command line can open automatically in Internet Explorer mode based on the file content without specifying the --ie-mode-file-url command line.
+
+This setting works in conjunction with:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'
+and
+[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed) is enabled or not configured.
+
+If you enable or don't configure this policy, local mht or mhtml files can launch in Microsoft Edge or Internet Explorer mode to best view the file.
+
+If you disable this policy, local mht or mhtml files will launch in Microsoft Edge.
+
+Note that if you use the --ie-mode-file-url command line argument for launching local mht or mhtml files, it takes precedence over how you configured this policy.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationLocalMhtFileAllowed
+  - GP name: Allow local MHTML files to open automatically in Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationLocalMhtFileAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationLocalSiteListExpirationDays
 
   #### Specify the number of days that a site remains on the local IE mode site list
@@ -25307,9 +25373,9 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy or the [MicrosoftEditorPro
 
   ### MicrosoftOfficeMenuEnabled
 
-  #### Allow users to access the Microsoft Office menu
+  #### Allow users to access the Microsoft Office menu (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -25317,7 +25383,9 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy or the [MicrosoftEditorPro
 
   #### Description
 
-  When users can access the Microsoft Office menu, they can get access to Office applications such as Microsoft Word and Microsoft Excel.
+  This policy is deprecated because it's been replaced by the Microsoft Edge sidebar. Microsoft Office applications are now available in the sidebar, which can be managed by HubsSidebarEnabled policy.
+
+When users can access the Microsoft Office menu, they can get access to Office applications such as Microsoft Word and Microsoft Excel.
 
 If you enable or don't configure this policy, users can open the Microsoft Office menu.
 
@@ -25338,7 +25406,7 @@ If you disable this policy, users won't be able to access the Microsoft Office m
   ##### Group Policy (ADMX) info
 
   - GP unique name: MicrosoftOfficeMenuEnabled
-  - GP name: Allow users to access the Microsoft Office menu
+  - GP name: Allow users to access the Microsoft Office menu (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -28724,9 +28792,9 @@ This deadline may be extended if there is a need for enterprises.
 
   ### ShadowStackCrashRollbackBehavior
 
-  #### Configure ShadowStack crash rollback behavior
+  #### Configure ShadowStack crash rollback behavior (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -28734,7 +28802,9 @@ This deadline may be extended if there is a need for enterprises.
 
   #### Description
 
-  Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
+  This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with Hardware-enforced Stack Protection. It won't work in Microsoft Edge as soon as version 109.
+
+Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
 
 Using this policy, you may control the behavior of the Hardware-enforced Stack Protection feature after a crash triggered by this feature is encountered.
 
@@ -28769,7 +28839,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ShadowStackCrashRollbackBehavior
-  - GP name: Configure ShadowStack crash rollback behavior
+  - GP name: Configure ShadowStack crash rollback behavior (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -32637,7 +32707,7 @@ If this policy is left not set, window hiding detection will be enabled.
 
   [Back to top](#microsoft-edge---policies)
 
-<!------Dev 107.0.1375.0-------------->
+
 ## See also
 
 - [Configuring Microsoft Edge](configure-microsoft-edge.md)
