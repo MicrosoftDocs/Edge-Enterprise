@@ -9,7 +9,7 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,6 +23,17 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Allow local MHTML files to open automatically in Internet Explorer mode|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (deprecated)|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (deprecated)|
 
 ## Available policies
 
