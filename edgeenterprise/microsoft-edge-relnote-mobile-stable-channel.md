@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2022
+ms.date: 09/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,11 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
-## Version 104.0.1293.60: August 17
+## Version 105.0.1343.38: September 13, 2022
+
+Fixed various bugs.
+
+## Version 104.0.1293.60: August 17, 2022
 
 > [!IMPORTANT]
 > This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
