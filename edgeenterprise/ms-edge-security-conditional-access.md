@@ -39,6 +39,9 @@ To sign in and work with your profile, select the account picture in the top rig
 
 This support is available across all platforms, including all supported versions of Windows and macOS.
 
+> [!NOTE]
+> Conditional Access is not supported in InPrivate mode, as there's no concept of a signed in profile in this mode.
+
 ### How to deploy Conditional Access in Azure Active Directory
 
 [Deploy Conditional Access](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help plan and deploy Conditional Access in Azure Active Directory.

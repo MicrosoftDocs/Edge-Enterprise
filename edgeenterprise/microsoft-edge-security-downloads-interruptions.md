@@ -25,7 +25,7 @@ The following two classifications are simple:
 - **NOT_DANGEROUS** means that the file is safe to download, even if the download request was accidental.
 - **DANGEROUS** means that the browser should always warn the user that the download may harm their device.
 
-The third setting, **ALLOW_ON_USER_GESTURE** is more subtle. These files are potentially dangerous, but most likely harmless if the user requests the download. Microsoft Edge will allow these downloads to continue automatically if one of the following conditions is met:
+The third setting, **ALLOW_ON_USER_GESTURE** is more subtle. These files are potentially dangerous, but most likely harmless if the user requests the download. Microsoft Edge will allow these downloads to continue automatically if **two** conditions are **both** met:
 
 - There's a [user gesture](https://textslashplain.com/2020/05/18/browser-basics-user-gestures/) associated with the network request that started the download. For example, the user clicked a link to the download.
 - There's a recorded prior visit to the referring origin (the page that links to the download) before the most recent midnight (that is, yesterday or earlier). This recorded visit implies that the user has a history of visiting the site.
