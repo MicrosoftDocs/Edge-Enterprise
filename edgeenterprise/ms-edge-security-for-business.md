@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 06/22/2022
+ms.date: 09/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ Let's get into the details, starting with **external threats** and then looking 
 
 Built into Microsoft Edge, Microsoft Defender SmartScreen blocks more [phishing](https://aka.ms/EdgePhishingReport) and [malware](https://aka.ms/EdgeMalwareReport) attempts than Google Chrome's Safe Browsing, according to an independent study from CyberRatings.org. Microsoft Defender SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
 
-[Microsoft Edge SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) blocked 92.3% of phishing attempts during the  [CyberRatings.org Web Browsers vs. Phishing](https://aka.ms/EdgePhishingReport)  test and 97.4% of malware attempts during the [CyberRatings.org Web Browsers vs. Malware](https://aka.ms/EdgeMalwareReport) test compared to Chrome's Safe Browsing's rates of 84.6% and 86.3%, respectively.
+[Microsoft Edge SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) blocked 91.6% of phishing attempts during the  [CyberRatings.org Web Browsers vs. Phishing](https://aka.ms/EdgePhishingReport) test and 97.0% of malware attempts during the [CyberRatings.org Web Browsers vs. Malware](https://aka.ms/EdgeMalwareReport) test compared to Chrome's Safe Browsing's rates of 89.6% and 88.4%, respectively.
 
 ### The only browser on Windows 10 that natively supports hardware isolation
 
