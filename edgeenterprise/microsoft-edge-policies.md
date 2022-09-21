@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/13/2022
+ms.date: 09/20/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,17 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Allow local MHTML files to open automatically in Internet Explorer mode|
-|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (deprecated)|
-|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (deprecated)|
 
 ## Available policies
 
@@ -226,6 +215,7 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
 |[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
+|[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -305,6 +295,7 @@ These tables list all of the browser-related group policies available in this re
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (obsolete)|
 |[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
+|[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
 ### [*TyposquattingChecker settings*](#typosquattingchecker-settings-policies)
 
@@ -589,7 +580,7 @@ These tables list all of the browser-related group policies available in this re
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
-|[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance|
+|[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance (obsolete)|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
 |[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (obsolete)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
@@ -8398,6 +8389,72 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PerformanceDetectorEnabled
+
+  #### Performance Detector Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107 or later
+
+  #### Description
+
+  The performance detector detects tab performance issues and recommends actions to fix the performance issues.
+
+If you enable or don't configure this policy, performance detector is turned on.
+
+If you disable this policy, performance detector is turned off.
+
+The user can configure its behavior in edge://settings/system.
+
+Learn more about performance detector: https://aka.ms/EdgePerformanceDetector
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PerformanceDetectorEnabled
+  - GP name: Performance Detector Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PerformanceDetectorEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PerformanceDetectorEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### StartupBoostEnabled
 
   #### Enable startup boost
@@ -12038,6 +12095,66 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   <string>https://contoso.com</string>
   <string>https://www.fabrikam.com</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RestoreOnStartupUserURLsEnabled
+
+  #### Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107 or later
+
+  #### Description
+
+  If you enable this policy, users are allowed to add and remove their own URLs to open when starting Edge while maintaining the admin specified mandatory list of sites specified by setting [RestoreOnStartup](#restoreonstartup) policy to open a list of URLS and providing the list of sites in the [RestoreOnStartupURLs](#restoreonstartupurls) policy.
+
+If you disable or don't configure this policy, there is no change to how the [RestoreOnStartup](#restoreonstartup) and [RestoreOnStartupURLs](#restoreonstartupurls) policies work.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RestoreOnStartupUserURLsEnabled
+  - GP name: Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RestoreOnStartupUserURLsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: RestoreOnStartupUserURLsEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -23334,7 +23451,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   
   #### Supported versions:
 
-  - On Windows since 106 or later
+  - On Windows since 107 or later
 
   #### Description
 
@@ -30547,17 +30664,18 @@ If you don't configure the policy, users can choose whether to use the translati
 
   ### TravelAssistanceEnabled
 
-  #### Enable travel assistance
+  #### Enable travel assistance (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
   #### Supported versions:
 
-  - On Windows and macOS since 93 or later
+  - On Windows and macOS since 93, until 105
 
   #### Description
 
-  Configure this policy to allow/disallow travel assistance.
+  This policy is obsolete as the feature is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy. It doesn't work in Microsoft Edge after version 105.
+Configure this policy to allow/disallow travel assistance.
 
 The travel assistance feature gives helpful and relevant information to a user who performs Travel related task within the browser. This feature provides trusted and validated suggestions / information  to the users from across sources gathered by Microsoft.
 
@@ -30580,7 +30698,7 @@ If you disable this setting, travel assistance will be disabled and  users will 
   ##### Group Policy (ADMX) info
 
   - GP unique name: TravelAssistanceEnabled
-  - GP name: Enable travel assistance
+  - GP name: Enable travel assistance (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -31618,6 +31736,8 @@ If you enable or don't configure this policy, visual search will be enabled via 
 
 If you disable this policy, visual search will be disabled and you won't be able to get more info about images via hover, context menu, and search in sidebar.
 
+Note: Visual Search in Web Capture is still managed by [WebCaptureEnabled](#webcaptureenabled) policy.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -31898,7 +32018,9 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   #### Description
 
-  Enables the web capture feature in Microsoft Edge that allows users to capture web content and annotate the capture using inking tools.
+  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools.
+Starting with Microsoft Edge version 107, users can also perform visual image search on the captured content.
+
 If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
 If you disable this policy, users can't access the web capture feature in Microsoft Edge.
 
