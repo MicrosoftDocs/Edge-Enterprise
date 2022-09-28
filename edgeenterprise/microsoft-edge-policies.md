@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/27/2022
+ms.date: 09/28/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,6 +23,19 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
+|[DefaultShareAdditionalOSRegionSetting](#defaultshareadditionalosregionsetting)|Set the default "share additional operating system region" setting|
+|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
+|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
 
 ## Available policies
 
