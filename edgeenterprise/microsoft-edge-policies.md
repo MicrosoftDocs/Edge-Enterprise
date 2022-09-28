@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/21/2022
+ms.date: 09/28/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,13 +26,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
-|[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured|
-|[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance (obsolete)|
+|[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
+|[DefaultShareAdditionalOSRegionSetting](#defaultshareadditionalosregionsetting)|Set the default "share additional operating system region" setting|
+|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
+|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
 
 ## Available policies
 
@@ -181,6 +184,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
 |[GuidedSwitchEnabled](#guidedswitchenabled)|Guided Switch Enabled|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
+|[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
@@ -389,6 +393,7 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
+|[DefaultShareAdditionalOSRegionSetting](#defaultshareadditionalosregionsetting)|Set the default "share additional operating system region" setting|
 |[DefinePreferredLanguages](#definepreferredlanguages)|Define an ordered list of preferred languages that websites should display in if the site supports the language|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
 |[DeleteDataOnMigration](#deletedataonmigration)|Delete old browser data on migration|
@@ -419,10 +424,12 @@ These tables list all of the browser-related group policies available in this re
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuraton for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
@@ -617,7 +624,9 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
+|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -5661,7 +5670,7 @@ For Windows instances not joined to a Microsoft Active Directory domain, forced 
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, or joined to a domain via MCX.
 
-The source code of any extension can be altered by users with developer tools, potentially rendering the extension unfunctional. If this is a concern, configure the DeveloperToolsDisabled policy.
+The source code of any extension can be altered by users with developer tools, potentially rendering the extension unfunctional. If this is a concern, configure the [DeveloperToolsAvailability](#developertoolsavailability) policy.
 
 Each list item of the policy is a string that contains an extension ID and, optionally, an "update" URL separated by a semicolon (;). The extension ID is the 32-letter string found, for example, on edge://extensions when in Developer mode. If specified, the "update" URL should point to an Update Manifest XML document ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). By default, the Microsoft Edge Add-ons website's update URL is used. The "update" URL set in this policy is only used for the initial installation; subsequent updates of the extension use the update URL in the extension's manifest.
 
@@ -6800,6 +6809,68 @@ If you disable this setting, implicit sign-in will be disabled.
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### LinkedAccountEnabled
+
+  #### Enable the linked account feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107 or later
+
+  #### Description
+
+  Microsoft Edge guides a user to the account management page where they can link a Microsoft Account (MSA) to an Azure Active Directory (Azure AD) account.
+
+If you enable or don't configure this policy, linked account information will be shown on a flyout. When the Azure AD profile doesn't have a linked account it will show "Add account".
+
+If you disable this policy, linked accounts will be turned off and no extra information will be shown.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: LinkedAccountEnabled
+  - GP name: Enable the linked account feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: LinkedAccountEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: LinkedAccountEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17285,6 +17356,87 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefaultShareAdditionalOSRegionSetting
+
+  #### Set the default "share additional operating system region" setting
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 108 or later
+
+  #### Description
+
+  This policy controls the default value for the "share additional operating system region" setting in Microsoft Edge.
+
+The "share additional operating system region" Microsoft Edge setting controls whether the OS Regional format setting will be shared with the web through the default JavaScript locale. If shared, websites will be able to query the OS Regional format using JavaScript code, for example; "Intl.DateTimeFormat().resolvedOptions().locale".
+
+If you set this policy to "Limited", the OS Regional format will only be shared if its language part matches the Microsoft Edge display language.
+
+If you set this policy to "Always", the OS Regional format will always be shared. This value could cause unexpected website behavior if the OS Regional format language is different from the Microsoft Edge display language. For example, if a website uses the JavaScript default locale to format dates, the names of the days and months can be displayed in one language while the surrounding text is displayed in another language.
+
+If you set this policy to "Never", the OS Regional format will never be shared.
+
+Example 1: In this example the OS Regional format is set to "en-GB" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Limited", or "Always".
+
+Example 2: In this example the OS Regional format is set to "es-MX" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Always" but will not if the policy is set to "Limited",.
+
+
+Policy options mapping:
+
+* Limited (0) = Limited
+
+* Always (1) = Always share the OS Regional format
+
+* Never (2) = Never share the OS Regional format
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultShareAdditionalOSRegionSetting
+  - GP name: Set the default "share additional operating system region" setting
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: DefaultShareAdditionalOSRegionSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DefaultShareAdditionalOSRegionSetting
+  - Example value:
+``` xml
+<integer>0</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DefinePreferredLanguages
 
   #### Define an ordered list of preferred languages that websites should display in if the site supports the language
@@ -19374,6 +19526,63 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EnhanceSecurityModeBypassIntranet
+
+  #### Enhanced Security Mode configuraton for Intranet zone sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 107 or later
+
+  #### Description
+
+  Microsoft Edge will apply Enhanced Security Mode on Intranet zone sites by default. This may lead to Intranet zone sites acting in an unexcected manner.
+
+If you enable this policy, Microsoft Edge won't apply Enhanced Security Mode on Intranet zone sites.
+
+If you disable or don't configure this policy, Microsoft Edge will apply Enhanced Security Mode on Intranet zone sites.
+
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2195852](https://go.microsoft.com/fwlink/?linkid=2195852)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeBypassIntranet
+  - GP name: Enhanced Security Mode configuraton for Intranet zone sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityModeBypassIntranet
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnhanceSecurityModeBypassListDomains
 
   #### Configure the list of domains for which enhance security mode will not be enforced
@@ -19613,6 +19822,72 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 0x00000000
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EventPathEnabled
+
+  #### Re-enable the Event.path API until Microsoft Edge version 115
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 115
+
+  #### Description
+
+  Starting in Microsoft Edge version 109, the non-standard API Event.path will be removed to improve web compatibility. This policy re-enables the API until version 115.
+
+If you enable this policy, the Event.path API will be available.
+
+If you disable this policy, the Event.path API will be unavailable.
+
+If this policy is not set, the Event.path API will be in the following default states: available before version 109, and unavailable in version 109 to version 114.
+
+This policy will be made obsolete after Microsoft Edge version 115.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EventPathEnabled
+  - GP name: Re-enable the Event.path API until Microsoft Edge version 115
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EventPathEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EventPathEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -32541,6 +32816,66 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   [Back to top](#microsoft-edge---policies)
 
+  ### WebSQLAccess
+
+  #### Force WebSQL to be enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107 or later
+
+  #### Description
+
+  WebSQL is on by default as of Microsoft Edge version 101, but can be disabled via a Microsoft Edge flag.
+If you enable this policy, WebSQL cannot be disabled.
+If you disable or don't configure this policy, WebSQL can be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLAccess
+  - GP name: Force WebSQL to be enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLAccess
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebSQLAccess
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WebSQLInThirdPartyContextEnabled
 
   #### Force WebSQL in third-party contexts to be re-enabled (obsolete)
@@ -32597,6 +32932,66 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
   #### Mac information and settings
   
   - Preference Key Name: WebSQLInThirdPartyContextEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebSQLNonSecureContextEnabled
+
+  #### Force WebSQL in non-secure contexts to be enabled (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 110
+
+  #### Description
+
+  This policy is deprecated because it is a temporary policy to support WebSQL in non-secure contexts. It won't work in Microsoft Edge as soon as version 110.
+If you enable this policy, WebSQL in non-secure contexts will be enabled.
+If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the broser.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLNonSecureContextEnabled
+  - GP name: Force WebSQL in non-secure contexts to be enabled (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLNonSecureContextEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebSQLNonSecureContextEnabled
   - Example value:
 ``` xml
 <true/>
