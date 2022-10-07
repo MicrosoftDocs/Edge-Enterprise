@@ -1,0 +1,41 @@
+---
+title: "Microsoft Edge Workspaces"
+ms.author: gennlu
+author: dan-wesley
+manager: kawong
+ms.date: 10/07/2022
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: "Learn about Edge Workspaces and how they can benefit users in your organization."
+---
+
+# Microsoft Edge Workspaces (Public Preview)
+
+This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
+
+> [!NOTE]
+> This is a preview feature. Preview features or services are in development and are available as a preview so you can get early access and send us feedback.
+
+## Overview
+
+Edge Workspaces provides an incredible way for customers to organize their browsing tasks into dedicated windows. Each Edge Workspace contains its own sets of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. Workspaces are accessible anywhere customers use Microsoft Edge with their Azure Active Directory (Azure AD) accounts.
+
+### Edge Workspace scenarios
+
+The following are key scenarios for using Edge Workspaces in your organization.
+
+- Onboarding individuals to a project or working on projects with multiple teams can be difficult. With so many websites and files emailed back and forth, it’s hard to keep up with everything. Instead of sharing links back and forth, you can create a workspace with a shared set of open websites and working files to onboard a new individual or to make sure your team is on the same page.
+- If an individual is working on multiple projects, they can create a workspace to organize the open tabs they have for each project. Whenever they want to work on that project, they can easily open its Edge Workspace and have everything they need in one place.
+
+## Prerequisites
+
+
+## level 1 head
+
+
+## See also
+
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
