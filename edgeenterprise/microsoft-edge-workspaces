@@ -32,9 +32,74 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Prerequisites
 
+- Users must have an Azure AD tenant and Microsoft Edge version 106 or greater installed.
+- To enable via group policy, Admins must have Microsoft Edge version 106 or greater installed and version 107 of the policy files.
+  - Edge Workspaces can also be enabled on a case-by-case basis using the Microsoft Edge flag: **#edge-workspaces**.
+- Admins need to be a Microsoft Edge Administrator or a Global Administrator on the tenant to access the Microsoft Edge site lists experience.
+- Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
-## level 1 head
+> [!IMPORTANT]
+> Remember that each user in a shared Edge Workspace brings their own identity, authentication, and cookies to the open websites. A user may might have access to a specific workspace, but might not have access to all the websites loaded in the workspace.
 
+## Enable workspaces for users
+
+To enable Edge workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled] policy. Eligible individuals can to enable Edge Workspaces by enabling the **#edge-workspaces** flag in Microsoft Edge.
+
+> [!NOTE]
+> Native Microsoft Intune support for enabling Edge Workspaces will be available with Microsoft Edge version 107.
+
+## The Edge Workplaces user experience
+
+Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page.
+
+Imagine a scenario where a team member is being onboarded to a new project or is being added to a project in progress. Instead of sending multiple links back and forth over email, it’s productive and convenient to share all the links as open tabs in a workspace. What’s more, the user will be able to see which tab each group member is on and, if tabs are updated, will see those updates happen in real-time.
+
+To learn more about how to get your users started with Edge Workspaces, visit: [URL].
+
+### Workspaces sharing
+
+A workspace shares the following information:
+
+- The workspace’s browser tabs, favorites, and history with your team in real time.  
+- The active tab for each group member that has the workspace open.
+
+A workspace doesn't share the following information:
+
+- A user's logins, passwords, downloads, collections, extensions, and cookies.  
+- Personal browser settings such as appearance or search engine.
+- Any tabs or data from outside the workspace.
+- Website content that only the user can access. For example, if the user logs in to their email in a shared Edge Workspace, only the user will see their email content.
+- A user’s device screen. Users sharing a workspace won’t see how other users interact with an open website or website content that they don’t have access to.
+
+## Providing feedback
+
+Your feedback while using Edge Workspaces is valuable to help us improve the product!
+
+You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Workspaces menu. These buttons are next to the question: Are you satisfied with Workspaces?
+
+> [!NOTE]
+> While in preview, this experience is supported by Microsoft Support, and customers with Premier support can leverage this to report any feedback, or concerns.
+
+## Frequently Asked Questions
+
+### I see the "Restart workspace" message. Why do I see this message and what should I expect?
+
+This is due to a temporary connectivity issue because Microsoft Edge can’t connect to the service that provides and supports Edge Workspaces.
+
+### I see the "Update Microsoft Edge message". Why do I see this message and what should I expect?
+answer
+
+### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
+answer
+
+### My user got the following error. What should they do?
+answer
+
+### Can I lock down an Edge workspace after I share it (Read-only) so that I’m the only one who can close or open tabs?
+No.
+
+### If I close a tab in a workspace, does that close it for everyone in the workspace?
+Yes.
 
 ## See also
 
