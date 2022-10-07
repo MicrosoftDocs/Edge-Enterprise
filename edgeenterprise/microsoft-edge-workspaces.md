@@ -1,8 +1,8 @@
 ---
 title: "Microsoft Edge Workspaces"
-ms.author: gennlu
+ms.author: danielfi
 author: dan-wesley
-manager: kawong
+manager: kjellarsen
 ms.date: 10/07/2022
 audience: ITPro
 ms.topic: conceptual
