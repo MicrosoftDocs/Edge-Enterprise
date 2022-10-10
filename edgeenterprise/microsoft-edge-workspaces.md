@@ -54,7 +54,7 @@ Edge Workspaces lets users share a set of browser tabs so working groups can vie
 
 Imagine a scenario where a team member is being onboarded to a new project or is being added to a project in progress. Instead of sending multiple links back and forth over email, it’s productive and convenient to share all the links as open tabs in a workspace. What’s more, the user will be able to see which tab each group member is on and, if tabs are updated, will see those updates happen in real-time.
 
-To learn more about how to get your users started with Edge Workspaces, visit: [Getting started with Microsoft Edge Workspaces (public preview)](https://prod.support.services.microsoft.com/en-us/topic/63a5a6d7-3db4-468f-aba8-fdd00dce4c35?preview=true).
+To learn more about how to get your users started with Edge Workspaces, visit: [Getting started with Microsoft Edge Workspaces (public preview)](https://prod.support.services.microsoft.com/topic/63a5a6d7-3db4-468f-aba8-fdd00dce4c35?preview=true).
 
 ### Workspaces sharing
 
