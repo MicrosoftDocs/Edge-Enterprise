@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 10/07/2022
+ms.date: 10/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -43,18 +43,18 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Enable workspaces for users
 
-To enable Edge workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled] policy. Eligible individuals can to enable Edge Workspaces by enabling the **#edge-workspaces** flag in Microsoft Edge.
+To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled]() policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
 
 > [!NOTE]
 > Native Microsoft Intune support for enabling Edge Workspaces will be available with Microsoft Edge version 107.
 
-## The Edge Workplaces user experience
+## The Edge Workspaces user experience
 
 Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page.
 
 Imagine a scenario where a team member is being onboarded to a new project or is being added to a project in progress. Instead of sending multiple links back and forth over email, it’s productive and convenient to share all the links as open tabs in a workspace. What’s more, the user will be able to see which tab each group member is on and, if tabs are updated, will see those updates happen in real-time.
 
-To learn more about how to get your users started with Edge Workspaces, visit: [URL].
+To learn more about how to get your users started with Edge Workspaces, visit: [Getting started with Microsoft Edge Workspaces (public preview)](https://prod.support.services.microsoft.com/en-us/topic/63a5a6d7-3db4-468f-aba8-fdd00dce4c35?preview=true).
 
 ### Workspaces sharing
 
