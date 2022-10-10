@@ -41,6 +41,8 @@ You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebar
 2. To block the sidebar and all sidebar apps, select **Disabled**.
 3. To allow the sidebar, select **Enabled**.
 
+:::image type="content" source="media/microsoft-edge-sidebar/show-hub-sidebar.png" alt-text="Use the group policy editor to enable sidebar":::
+
 ## Block specific sidebar apps
 
 You can use the [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policy to control which sidebar apps are blocked.
@@ -59,6 +61,8 @@ Use the following steps as a guide to block a sidebar app.
    - The Sidebar Internals JSON file includes a manifest for all sidebar apps, including an `extension_id` parameter for each app. You can use these values to configure the policy.
    - When adding multiple ID’s use a separate row for each ID.
 5. To block all sidebar apps, refer to [Allow or block the sidebar in group policy](#allow-or-block-the-sidebar-in-group-policy). Disabling the HubsSidebarEnabled policy will block all sidebar apps by default.
+
+:::image type="content" source="media/microsoft-edge-sidebar/control-extenison-installation.png" alt-text="Use policy editor to control which extensions can be installed.":::
 
 ## Force enable specific sidebar apps
 
