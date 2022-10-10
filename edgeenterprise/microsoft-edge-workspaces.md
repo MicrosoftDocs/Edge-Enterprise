@@ -101,6 +101,9 @@ No.
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
 Yes.
 
+### Where is my workspace data stored and how is it protected?
+answer
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
