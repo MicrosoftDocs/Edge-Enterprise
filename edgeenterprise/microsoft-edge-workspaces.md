@@ -46,7 +46,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Enable workspaces for users
 
-To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
+To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107.0.1402.2 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
 
 > [!NOTE]
 > Native Microsoft Intune support for enabling Edge Workspaces will be available with Microsoft Edge version 107.
@@ -78,7 +78,7 @@ A workspace doesn't share the following information:
 
 Your feedback while using Edge Workspaces is valuable to help us improve the product!
 
-You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Edge Workspace menu. These buttons are next to the question: Are you satisfied with Workspaces?
+You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Edge Workspace menu. These buttons are next to the question: "Are you satisfied with Workspaces?".
 
 > [!NOTE]
 > While in preview, this experience is supported by Microsoft Support, and customers with Premier support can leverage this to report any feedback, or concerns.
