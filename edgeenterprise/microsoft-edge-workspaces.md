@@ -111,11 +111,11 @@ answer
 
 ### Can I lock down an Edge workspace after I share it (Read-only) so that I’m the only one who can close or open tabs?
 
-No.
+No. Right now, anyone whom the Edge Workspace is shared with can open or close any tab. If someone closes a tab you want to keep, you can always reopen it as a new tab.
 
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
 
-Yes.
+Yes. Tabs in Edge Workspaces are shared in real-time for everyone. If someone closes a tab, it closes that tab for everyone that's using the workspace.
 
 ### Where is my workspace data stored and how is it protected?
 
