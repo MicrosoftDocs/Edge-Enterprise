@@ -93,13 +93,13 @@ This is due to a temporary connectivity issue because Microsoft Edge can’t con
 
 ### I see the "Update Microsoft Edge message". Why do I see this message and what should I expect?
 
-answer
+The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
 :::image type="content" source="media/microsoft-edge-workspaces/error-update-edge.png" alt-text="Prompt to update Microsoft Edge":::
 
 ### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
 
-answer
+This message is shown the first time a user clicks the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
 
 :::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
 
