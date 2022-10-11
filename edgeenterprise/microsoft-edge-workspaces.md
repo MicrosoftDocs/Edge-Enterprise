@@ -97,7 +97,7 @@ This is due to a temporary connectivity issue because Microsoft Edge can’t con
 
 :::image type="content" source="media/microsoft-edge-workspaces/restart-workspace.png" alt-text="Prompt to restart workspace":::
 
-### I see the "Update Microsoft Edge message". Why do I see this message and what should I expect?
+### I see the "Update Microsoft Edge" message. Why do I see this message and what should I expect?
 
 The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
