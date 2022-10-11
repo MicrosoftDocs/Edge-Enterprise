@@ -89,24 +89,33 @@ This is due to a temporary connectivity issue because Microsoft Edge can’t con
 :::image type="content" source="media/microsoft-edge-workspaces/restart-workspace.png" alt-text="Prompt to restart workspace":::
 
 ### I see the "Update Microsoft Edge message". Why do I see this message and what should I expect?
+
 answer
+
 :::image type="content" source="media/microsoft-edge-workspaces/error-update-edge.png" alt-text="Prompt to update Microsoft Edge":::
 
 ### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
+
 answer
+
 :::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
 
 ### My user got the following error. What should they do?
+
 answer
+
 :::image type="content" source="media/microsoft-edge-workspaces/error-unable-to-load.png" alt-text="Unable to load error message for workspaces":::
 
 ### Can I lock down an Edge workspace after I share it (Read-only) so that I’m the only one who can close or open tabs?
+
 No.
 
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
+
 Yes.
 
 ### Where is my workspace data stored and how is it protected?
+
 answer
 
 ## See also
