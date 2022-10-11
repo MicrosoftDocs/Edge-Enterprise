@@ -85,6 +85,12 @@ You can leave feedback by clicking the **Like** or **Dislike** button at the bot
 
 ## Frequently Asked Questions
 
+### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
+
+This message is shown the first time a user clicks the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
+
+:::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
+
 ### I see the "Restart workspace" message. Why do I see this message and what should I expect?
 
 This is due to a temporary connectivity issue because Microsoft Edge can’t connect to the service that provides and supports Edge Workspaces.
@@ -96,12 +102,6 @@ This is due to a temporary connectivity issue because Microsoft Edge can’t con
 The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
 :::image type="content" source="media/microsoft-edge-workspaces/error-update-edge.png" alt-text="Prompt to update Microsoft Edge":::
-
-### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
-
-This message is shown the first time a user clicks the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
-
-:::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
 
 ### My user got the following error. What should they do?
 
