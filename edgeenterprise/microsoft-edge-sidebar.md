@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: kylemiller
 author: dan-wesley
 manager: hariragu
-ms.date: 10/10/2022
+ms.date: 10/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,7 +22,7 @@ For a growing number of people, the browser has become the place where work happ
 
 ## Use group policies to manage the sidebar
 
-Admins have several multiple policy options for deploying and managing the sidebar in their organization. The following policies can be applied to the sidebar and the individual apps referenced by the sidebar.
+Admins have several policy options for deploying and managing the sidebar in their organization. The following policies can be applied to the sidebar and the individual apps referenced by the sidebar.
 
 | Policy Name | Caption |
 |:-----|:-----|
