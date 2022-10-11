@@ -78,7 +78,7 @@ A workspace doesn't share the following information:
 
 Your feedback while using Edge Workspaces is valuable to help us improve the product!
 
-You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Workspaces menu. These buttons are next to the question: Are you satisfied with Workspaces?
+You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Edge Workspace menu. These buttons are next to the question: Are you satisfied with Workspaces?
 
 > [!NOTE]
 > While in preview, this experience is supported by Microsoft Support, and customers with Premier support can leverage this to report any feedback, or concerns.
