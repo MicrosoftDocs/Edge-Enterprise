@@ -22,7 +22,7 @@ This article describes the productivity benefits Edge Workspaces will bring to y
 ## Overview
 
 Edge Workspaces provides an incredible way for customers to organize their browsing tasks into dedicated windows. Each Edge Workspace contains its own sets of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. Workspaces are accessible anywhere customers use Microsoft Edge with their Azure Active Directory (Azure AD) accounts.
-
+<br>
 <iframe width="560" height="315" src=https://www.youtube.com/embed/bNRY9Zm1QY8 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Edge Workspace scenarios
