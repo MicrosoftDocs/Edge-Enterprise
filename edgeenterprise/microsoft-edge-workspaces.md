@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 10/10/2022
+ms.date: 10/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -43,7 +43,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Enable workspaces for users
 
-To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled]() policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
+To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
 
 > [!NOTE]
 > Native Microsoft Intune support for enabling Edge Workspaces will be available with Microsoft Edge version 107.
