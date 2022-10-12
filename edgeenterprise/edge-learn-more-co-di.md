@@ -1,9 +1,9 @@
 ---
 title: "ClickOnce and DirectInvoke in Microsoft Edge"
 ms.author: collw
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 05/25/2022
+ms.date: 10/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -91,7 +91,7 @@ To specify file type(s) that the ClickOnce or DirectInvoke prompts should be byp
 You can bypass the ClickOnce or DirectInvoke prompts for specific file types for specific domains by setting up two more policies. These policies are labeled in the Group Policy Editor as "List of file types that should be automatically opened on download" and "URLs where AutoOpen-FileTypes can apply".
 
 > [!NOTE]
-> The policy "URLs where AutoOpen- FileTypes can apply" is a supporting policy for "List of file types that should be automatically opened on download" and does nothing on its own.  
+> The policy "URLs where AutoOpen- FileTypes can apply" is a supporting policy for "List of file types that should be automatically opened on download" and does nothing on its own. <br><br>To get the ClickOnce protocol launch behavior, the ClickOnceEnabled policy must not be configured as Disabled, even if the AutoOpenFileTypes “List of file types that should be automatically opened on download” policy is set.
 
 ## ClickOnce and DirectInvoke behavior
 
