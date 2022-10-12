@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 10/11/2022
+ms.date: 10/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,7 +41,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
 > [!IMPORTANT]
-> Remember that each user in a shared Edge Workspace brings their own identity, authentication, and cookies to the open websites. A user may might have access to a specific workspace, but might not have access to all the websites loaded in the workspace.
+> Remember that each user in a shared Edge Workspace brings their own identity, authentication, and cookies to the open websites. A user might have access to a specific workspace, but might not have access to all the websites loaded in the workspace.
 
 ## Enable workspaces for users
 
