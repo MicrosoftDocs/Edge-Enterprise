@@ -105,7 +105,7 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 
 ### My user got the following error. What should they do?
 
-answer
+The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
 :::image type="content" source="media/microsoft-edge-workspaces/error-unable-to-load.png" alt-text="Unable to load error message for workspaces":::
 
@@ -119,7 +119,7 @@ Yes. Tabs in Edge Workspaces are shared in real-time for everyone. If someone cl
 
 ### Where is my workspace data stored and how is it protected?
 
-answer
+Workspace data is stored in their personal OneDrive for business and carries the same protections as all other content stored in OneDrive.
 
 ## See also
 
