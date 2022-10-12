@@ -30,7 +30,7 @@ Edge Workspaces provides an incredible way for customers to organize their brows
 
 The following are key scenarios for using Edge Workspaces in your organization.
 
-- Onboarding individuals to a project or working on projects with multiple teams can be difficult. With so many websites and files emailed back and forth, it’s hard to keep up with everything. Instead of sharing links back and forth, you can create a workspace with a shared set of open websites and working files to onboard a new individual or to make sure your team is on the same page.
+- Onboarding individuals to a project or working on projects with multiple teams can be difficult. With so many websites and files emailed back and forth, it’s hard to keep up with everything. Instead of sharing links back and forth, you can create a workspace with a shared set of open websites and working files and send one link to quickly onboard a new individual or to make sure your team is on the same page.
 - If an individual is working on multiple projects, they can create a workspace to organize the open tabs they have for each project. Whenever they want to work on that project, they can easily open its Edge Workspace and have everything they need in one place.
 
 ## Prerequisites
