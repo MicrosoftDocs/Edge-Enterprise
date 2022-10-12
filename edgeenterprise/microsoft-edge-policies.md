@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/28/2022
+ms.date: 10/12/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -24,19 +24,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
-|[DefaultShareAdditionalOSRegionSetting](#defaultshareadditionalosregionsetting)|Set the default "share additional operating system region" setting|
-|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
-|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
-|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
-|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
-
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -45,6 +32,7 @@ These tables list all of the browser-related group policies available in this re
 - [Cast](#cast)
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
+- [Edge Workspaces settings](#edge-workspaces-settings)
 - [Experimentation](#experimentation)
 - [Extensions](#extensions)
 - [HTTP authentication](#http-authentication)
@@ -146,6 +134,11 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|Default search provider search URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
+### [*Edge Workspaces settings*](#edge-workspaces-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[EdgeWorkspacesEnabled](#edgeworkspacesenabled)|Enable Workspaces|
 ### [*Experimentation*](#experimentation-policies)
 
 |Policy Name|Caption|
@@ -367,7 +360,7 @@ These tables list all of the browser-related group policies available in this re
 |[BrowserSignin](#browsersignin)|Browser sign-in settings|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
-|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)|
+|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)|
 |[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS|
 |[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
@@ -627,6 +620,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -5199,6 +5193,73 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <string>bing</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Edge Workspaces settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeWorkspacesEnabled
+
+  #### Enable Workspaces
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 106 or later
+
+  #### Description
+
+  Microsoft Edge Workspaces helps improve productivity for users in your organization.
+
+If you enable this policy, users will be able to access the Microsoft Edge Workspaces feature.
+If you disable or don't configure this policy, users will not be able to access the Microsoft Edge Workspaces feature.
+
+To learn more about the feature, see [https://go.microsoft.com/fwlink/?linkid=2209950](https://go.microsoft.com/fwlink/?linkid=2209950)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeWorkspacesEnabled
+  - GP name: Enable Workspaces
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Edge Workspaces settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeWorkspacesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EdgeWorkspacesEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -15581,19 +15642,19 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   ### BuiltinCertificateVerifierEnabled
 
-  #### Determines whether the built-in certificate verifier will be used to verify server certificates (deprecated)
+  #### Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 106.
   #### Supported versions:
 
-  - On macOS since 83 or later
+  - On macOS since 83, until 106
 
   #### Description
 
-  This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
+  This policy is obsolete because it was a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
 
-It won't work in Microsoft Edge version 107, when support for the legacy certificate verifier on Mac OS X is planned to be removed.
+The policy doesn't work in Microsoft Edge version 107.
 
 
   #### Supported features:
@@ -18594,7 +18655,7 @@ If the folder specified by the path doesn't exist, the download will trigger a p
 
   Configures the type of downloads that Microsoft Edge completely blocks, without letting users override the security decision.
 
-Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of known or potentially dangerous downloads or that have dangerous file type extensions.
+Set 'BlockDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of known dangerous downloads or that have dangerous file type extensions.
 
 Set 'BlockPotentiallyDangerousDownloads' to allow all downloads except for those that carry Microsoft Defender SmartScreen warnings of potentially dangerous or unwanted downloads or that have dangerous file type extensions.
 
@@ -32992,6 +33053,68 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
   #### Mac information and settings
   
   - Preference Key Name: WebSQLNonSecureContextEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebSelectEnabled
+
+  #### Web Select Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 107 or later
+
+  #### Description
+
+  Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
+
+If you enable or don't configure this policy, Web select is available through the right click context menu and the CTRL+SHIFT+X keyboard shortcut.
+
+If you disable this policy, Web select won't be available.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSelectEnabled
+  - GP name: Web Select Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSelectEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebSelectEnabled
   - Example value:
 ``` xml
 <true/>
