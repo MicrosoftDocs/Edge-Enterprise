@@ -119,7 +119,7 @@ Yes. Tabs in Edge Workspaces are shared in real-time for everyone. If someone cl
 
 ### Where is my workspace data stored and how is it protected?
 
-Workspace data is stored in their personal OneDrive for business and carries the same protections as all other content stored in OneDrive.
+Workspace data is stored in your personal OneDrive for business and carries the same protections as all the other content stored in OneDrive.
 
 ## See also
 
