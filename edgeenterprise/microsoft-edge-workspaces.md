@@ -38,7 +38,6 @@ The following are key scenarios for using Edge Workspaces in your organization.
 - Users must have an Azure AD tenant and Microsoft Edge version 106 or greater installed.
 - To enable via group policy, Admins must have Microsoft Edge version 106 or greater installed and version 107 of the policy files.
   - Edge Workspaces can also be enabled on a case-by-case basis using the Microsoft Edge flag: **#edge-workspaces**.
-- Admins need to be a Microsoft Edge Administrator or a Global Administrator on the tenant to access the Microsoft Edge site lists experience.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
 > [!IMPORTANT]
