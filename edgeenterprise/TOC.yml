@@ -1,4 +1,4 @@
-# last revised 10/11/2022
+# last revised 10/12/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 - name: Microsoft Edge documentation
@@ -122,6 +122,8 @@
      items:
       - name: Manage extensions in the enterprise
         href: microsoft-edge-manage-extensions.md
+      - name: Manage the sidebar in Microsoft Edge
+        href: microsoft-edge-sidebar.md
       - name: Use group policies to manage extensions
         href: microsoft-edge-manage-extensions-policies.md
       - name: Self-host Microsoft Edge extensions
