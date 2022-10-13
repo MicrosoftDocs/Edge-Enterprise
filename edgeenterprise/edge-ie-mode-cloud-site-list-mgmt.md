@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 08/10/2022
+ms.date: 10/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -61,7 +61,7 @@ With Microsoft Edge version 93, admins can use the [InternetExplorerIntegrationC
 
 Admins can create a new list or import an existing site list into the Microsoft Edge site lists experience. They can add, edit, delete site list contents, and view comment history to track changes to individual entries. The next section explains how to opt in to public preview and access the Microsoft Edge site lists experience in the Microsoft 365 Admin Center.
 
-### View site feedback on the Microsoft 365 Admin Center
+### Manage site feedback on the Microsoft 365 Admin Center
 
 With Microsoft Edge version 99, admins can use the [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) and [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) policies to identify gaps in their site list with site feedback. They can view sites that users have added to their [local site lists](/deployedge/edge-ie-mode-local-site-list), and potentially misconfigured neutral sites.
 
@@ -228,7 +228,7 @@ Use the following steps as a guide to restore the previous version of a site lis
 
 6. Select **Restore** at the bottom of the panel to restore the previous version.
 
-## View site feedback on the Microsoft 365 Admin Center
+## Manage site feedback on the Microsoft 365 Admin Center
 
 The Site feedback tab shows the sites that users are adding to their local IE Mode site list, and potentially misconfigured neutral sites reported by Microsoft Edge. You'll see the site address, the number of users who are adding this site, and which published, cloud-hosted site lists the feedback came from. You can act on an individual entry by adding it to an existing site list(s), pausing, or deleting the feedback. You can also view change history and comments.
 
@@ -305,6 +305,11 @@ Access to the site list requires explicit browser sign in for the first download
 
 - 60 seconds after you restart the browser.
 - Every two hours when Microsoft Edge is running. The 120-minute refresh interval can be changed by using the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy. The minimum refresh interval is 30 minutes.
+
+### Where is the cloud site list hosted?
+
+The data is stored in Substrate Data Store which ensures that the data is stored in a compliant location and confers to local data handling rules. Substrate decides what region the data is stored based on the geo location you have chosen for your tenant.
+
 
 ## Support and Feedback
 
