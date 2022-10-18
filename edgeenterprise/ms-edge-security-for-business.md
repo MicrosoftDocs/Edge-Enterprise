@@ -22,7 +22,7 @@ Let's get into the details, starting with **external threats** and then looking 
 
 ### Highest-rated protection against phishing and malware
 
-Built into Microsoft Edge, Microsoft Defender SmartScreen blocks more [phishing](https://aka.ms/EdgePhishingReport) and [malware](https://aka.ms/EdgeMalwareReport) attempts than Google Chrome's Safe Browsing, according to an independent study from CyberRatings.org. Microsoft Defender SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
+Built into Microsoft Edge, Microsoft Defender SmartScreen blocks more phishing and malware attempts than Google Chrome's Safe Browsing, according to an independent study from CyberRatings.org. Microsoft Defender SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
 
 [Microsoft Edge SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) blocked 91.6% of phishing attempts during the  "CyberRatings.org Web Browsers vs. Phishing" test and 97.0% of malware attempts during the "CyberRatings.org Web Browsers vs. Malware" test compared to Chrome's Safe Browsing's rates of 89.6% and 88.4%, respectively.
 
@@ -30,7 +30,7 @@ To read the CyberRatings reports:
 
 - go to [Browse safer on the web](https://aka.ms/EdgeSecurityClaim)
 - click the SmartScreen tab
-- select [phishing](https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/473cac993bd24ae1947bd86e910d4d01.pdf) or [malware protection]( https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/49958f5a10e748b28f1a235f6aac8d1e.pdf ) to read the reports.
+- select [phishing](https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/473cac993bd24ae1947bd86e910d4d01.pdf) or [malware protection](https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/49958f5a10e748b28f1a235f6aac8d1e.pdf) to read the reports.
 
 ### The only browser on Windows 10 that natively supports hardware isolation
 
