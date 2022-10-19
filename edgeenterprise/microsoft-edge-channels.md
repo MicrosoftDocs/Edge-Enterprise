@@ -3,7 +3,7 @@ title: "Microsoft Edge channel overview"
 ms.author: srugh
 author: RyanHechtMSFT
 manager: seanlynd
-ms.date: 12/10/2021
+ms.date: 10/14/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -51,9 +51,9 @@ The Canary Channel ships daily and is the most bleeding edge of all the channels
 
 ### Extended Stable Channel
 
-Unlike our preview channels (Canary, Dev, and Beta), the Extended Stable Channel isn't available as a separate browser application. This channel is an enterprise release option for the Microsoft Edge Stable application that's aligned to a longer, 8-week major release cycle. This is opposed to the 4-week major release cycle for the Stable channel. While we recommend updating Stable on its 4-week release cycle, Extended Stable exists to more effectively serve organizations that may require a longer timeline to test and validate new browser versions.
+Unlike our preview channels (Canary, Dev, and Beta), the Extended Stable Channel isn't available as a separate browser application. This channel is an enterprise release option for the Microsoft Edge Stable application that's aligned to a longer, 8-week major release cycle. This option is opposed to the 4-week major release cycle for the Stable channel. While we recommend updating Stable on its 4-week release cycle, Extended Stable exists to more effectively serve organizations that may require a longer timeline to test and validate new browser versions.
 
-The 8-week “Extended Stable” release option for Microsoft Edge Stable delivers cumulative feature updates that align with _even-numbered_ releases beginning with Microsoft Edge 94. Feature updates from odd-numbered releases will be packaged and delivered as part of the subsequent even-numbered release. For example, if an organization selects the 8-week “Extended Stable” release cycle with Microsoft Edge 94, they'll get subsequent feature updates with Microsoft Edge 96, Microsoft Edge 98, and so on. While feature updates are packaged and delivered with new version releases based on the selected release cycle, important security patches and fixes will be delivered as needed independent of the selected release option to help maintain browser security. Customers can opt into the Extended Stable release option at any time, and it will take effect with the next Extended Stable release.
+The 8-week “Extended Stable” release option for Microsoft Edge Stable delivers cumulative feature updates that align with _even-numbered_ releases beginning with Microsoft Edge 94. Feature updates from odd-numbered releases will be packaged and delivered as part of the subsequent even-numbered release. For example, if an organization selects the 8-week “Extended Stable” release cycle with Microsoft Edge 94, they'll get subsequent feature updates with Microsoft Edge 96, Microsoft Edge 98, and so on. While feature updates are packaged and delivered with new version releases based on the selected release cycle, important security patches and fixes will be delivered as needed. These security updates are independent of the selected release option to help maintain browser security. Customers can opt into the Extended Stable release option at any time, and it will take effect with the next Extended Stable release.
 
 ![Example comparing Microsoft Edge Stable and Extended Stable release cycle options.](./media/microsoft-edge-channels/extended-stable-explainer.png)
 
@@ -67,7 +67,7 @@ If you automatically update Microsoft Edge, you can use group policy objects to 
 2. Select **Target Channel override** and then select **Enabled**.
 3. Under **Options**, pick **“Extended Stable”** from the Policy dropdown list.
 
-When the next update to the Extended Stable channel is released that has a version number higher than what your device currently has installed, Microsoft Edge will automatically update onto the Extended Stable channel. The version string on `edge://settings/help` will indicate that you are running a different channel.
+When the next update to the Extended Stable channel is released that has a version number higher than what your device currently has installed, Microsoft Edge will automatically update onto the Extended Stable channel. The version string on `edge://settings/help` will indicate that you're running a different channel.
 
 > [!NOTE]
 > Opting-in to Extended Stable will take effect when there is a new update on the Extended Stable channel with a larger version number (major or minor) than what is currently installed on your device. If you are running the latest version of Microsoft Edge Stable and opt-in to Extended Stable, it will take effect with the next patch or update of Microsoft Edge.
@@ -82,17 +82,20 @@ Microsoft Edge Administrative Templates can be managed similarly to local Group 
 
 The “**Target Channel override**” setting can be found under the “_Microsoft Edge Update >Applications>Microsoft Edge_” subfolders. It should be set to “**Extended Stable**” 
 
-When the next update to the Extended Stable channel is released that has a version number larger than what your device currently has installed, Microsoft Edge will automatically update onto the Extended Stable channel. The version string on `edge://settings/help` will indicate that you are running a different channel.
+When the next update to the Extended Stable channel is released that has a version number larger than what your device currently has installed, Microsoft Edge will automatically update onto the Extended Stable channel. The version string on `edge://settings/help` will indicate that you're running a different channel.
 
 ##### Opting in to Extended Stable on Windows via Configuration Manager
 
 Refer to our guide on [updating Microsoft Edge with Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge#update-microsoft-edge) for more information on how to synchronize and approve Microsoft Edge updates in Configuration Manager.
 
-Extended Stable updates are distributed in the software library under the “Microsoft Edge” product category, similar to existing updates for the Stable, Beta, and Dev channels. However, unlike Beta and Dev, which apply to their own browser applications, the Extended Stable updates apply to Microsoft Edge Stable application. Therefore, for your Windows Update client to determine whether to apply Stable or Extended Stable updates, it checks the status of the “Target Channel override” group policy. If the policy is not configured or is set to “Stable,” Stable updates will apply. If it is set to “Extended Stable,” then Extended Stable updates will apply. Follow the instructions above for opting in to Extended Stable with Automatic Updates for instructions on how to properly set the Group Policy. 
+Extended Stable updates are distributed in the software library under the “Microsoft Edge” product category, similar to existing updates for the Stable, Beta, and Dev channels. However, unlike Beta and Dev, which apply to their own browser applications, the Extended Stable updates apply to Microsoft Edge Stable application. Therefore, for your Windows Update client to determine whether to apply Stable or Extended Stable updates, it checks the status of the “Target Channel override” group policy. If the policy isn't configured or is set to “Stable,” Stable updates will apply. If it's set to “Extended Stable,” then Extended Stable updates will apply. Follow the instructions above for opting in to Extended Stable with Automatic Updates for instructions on how to properly set the Group Policy.
+
+> [!NOTE]
+> If you use Configuration Manager or MSI packages to install an Extended Stable update, the page at *edge://settings/help* will not indicate that Extended Stable channel is in use. This page will only show Extended Stable as the channel name when EdgeUpdate is used to update Microsoft Edge.
 
 ## Flighting Pre-release Channels in your Organization
 
-The “Target Channel override” group policy can also be used to seamlessly flight pre-release channels of Microsoft Edge in your organization without your users needing to use a second web browser application. For example, you can set the “Target Channel override” policy to “Beta” for a representative sample set of users in your organization. When those users open Microsoft Edge, they'll be running the Beta channel release rather than Stable (probably without even realizing it!). This policy setting can give you an early insight into how the next version of Microsoft Edge will perform in your enterprise and help validate that everything works as expected. You’ll get early signals from your users who encounter any issues and can ensure they are remediated prior to the release being published to the Stable Channel. As a part of troubleshooting a user’s problem, the version string at `edge://settings/help` will inform you if the user’s channel is different than the default Stable channel.
+The “Target Channel override” group policy can also be used to seamlessly flight pre-release channels of Microsoft Edge in your organization without your users needing to use a second web browser application. For example, you can set the “Target Channel override” policy to “Beta” for a representative sample set of users in your organization. When those users open Microsoft Edge, they'll be running the Beta channel release rather than Stable (probably without even realizing it!). This policy setting can give you an early insight into how the next version of Microsoft Edge will perform in your enterprise and help validate that everything works as expected. You’ll get early signals from your users who encounter any issues and can ensure they're remediated prior to the release being published to the Stable Channel. As a part of troubleshooting a user’s problem, the version string at *edge://settings/help* will inform you if the user’s channel is different than the default Stable channel.
 
 > [!NOTE]
 > Since build on the “Beta” and “Dev” channels of Microsoft Edge have major version numbers larger than that of “Stable,” if you take an update to the “Beta” or “Dev” channel and wish to revert back to Stable, [Microsoft Edge’s rollback feature](/DeployEdge/edge-learnmore-rollback) will be required. Simply setting “Target Channel override” back to Stable will mean you will receive NO updates until the latest Stable release has a greater version number than the version of Microsoft Edge you are presently running on your device.

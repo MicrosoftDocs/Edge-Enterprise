@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 06/06/2022
+ms.date: 10/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -58,7 +58,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### macOS
 
-- Sierra (10.12) and later
+- High Sierra (10.13) and later
 
 ### iOS
 
