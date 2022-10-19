@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 06/22/2022
+ms.date: 10/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Microsoft Edge security for your business"
 
 # Microsoft Edge security for your business
 
-Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows 10**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows 10—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits. For more information, watch [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md).
+Microsoft Edge is built on top of the Chromium open source project—the same project that is core to Google Chrome—meaning it shares the same well-engineered and well-tested security architecture and design at its foundation. The Microsoft Edge security story doesn't stop there. In fact, **Microsoft Edge is more secure than Google Chrome for your business on Windows**. It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows—there's no additional software required to achieve this secure baseline. Furthermore, when paired with native support for Microsoft 365 security and compliance services, Microsoft Edge brings additional, powerful security capabilities and features that help protect against data loss for even more benefits. For more information, watch [Video: Microsoft Edge security, compatibility, and manageability](microsoft-edge-video-security-compatibility-manageability.md).
 
 Let's get into the details, starting with **external threats** and then looking at **internal risks and information protection**.
 
@@ -22,15 +22,24 @@ Let's get into the details, starting with **external threats** and then looking 
 
 ### Highest-rated protection against phishing and malware
 
-Built into Microsoft Edge, Microsoft Defender SmartScreen blocks more [phishing](https://aka.ms/EdgePhishingReport) and [malware](https://aka.ms/EdgeMalwareReport) attempts than Google Chrome's Safe Browsing, according to an independent study from CyberRatings.org. Microsoft Defender SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
+Built into Microsoft Edge, Microsoft Defender SmartScreen blocks more phishing and malware attempts than Google Chrome's Safe Browsing, according to an independent test from CyberRatings.org. Microsoft Defender SmartScreen provides real-time reputation checks of sites and downloads as users work online, and is part of the [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), which draws signals and insights generated from Microsoft's large network of global assets, researchers, and partners. By running checks against dynamic, cloud-based lists of dangerous sites and downloads, Microsoft Edge helps to detect and block even ephemeral threats that quickly disappear.  
 
-[Microsoft Edge SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) blocked 92.3% of phishing attempts during the  [CyberRatings.org Web Browsers vs. Phishing](https://aka.ms/EdgePhishingReport)  test and 97.4% of malware attempts during the [CyberRatings.org Web Browsers vs. Malware](https://aka.ms/EdgeMalwareReport) test compared to Chrome's Safe Browsing's rates of 84.6% and 86.3%, respectively.
+[Microsoft Edge SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) blocked 91.6% of phishing attempts during the  "CyberRatings.org Web Browsers vs. Phishing" test and 97.0% of malware attempts during the "CyberRatings.org Web Browsers vs. Malware" test compared to Chrome's Safe Browsing's rates of 89.6% and 88.4%, respectively.
 
-### The only browser on Windows 10 that natively supports hardware isolation
+To read the CyberRatings reports:
 
-Microsoft Edge is the only browser on Windows 10 that natively supports hardware isolation capabilities. As part of Windows 10 Pro or Enterprise, Microsoft Defender Application Guard (Application Guard) runs untrusted sites in a kernel isolated from the local device and internal networks. The untrusted sites are run in a "container" so when an attack emerges, it's sandboxed from the rest of the corporate network. For more information, see [Microsoft Edge support for Application Guard](./microsoft-edge-security-windows-defender-application-guard.md).
+- go to [Browse safer on the web](https://aka.ms/EdgeSecurityClaim)
+- click the SmartScreen tab
+- select [phishing](https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/473cac993bd24ae1947bd86e910d4d01.pdf) or [malware protection](https://edgefrecdn.azureedge.net/shared/cms/lrs1c69a1j/public-files/49958f5a10e748b28f1a235f6aac8d1e.pdf) to read the reports.
 
-For Chrome, an extension is available to use Windows 10 hardware isolation—the MDAG extension. This extension then launches Microsoft Edge in order to use Application Guard's kernel level isolation. Additionally, to achieve similar kernel level isolation for a Chrome-only solution, one needs third party isolation software.
+> [!NOTE]
+> At this time these reports are only available in American English.
+
+### The only browser on Windows that natively supports hardware isolation
+
+Microsoft Edge is the only browser on Windows that natively supports hardware isolation capabilities. As part of Windows Pro or Enterprise, Microsoft Defender Application Guard (Application Guard) runs untrusted sites in a kernel isolated from the local device and internal networks. The untrusted sites are run in a "container" so when an attack emerges, it's sandboxed from the rest of the corporate network. For more information, see [Microsoft Edge support for Application Guard](./microsoft-edge-security-windows-defender-application-guard.md).
+
+For Chrome, an extension is available to use Windows hardware isolation—the MDAG extension. This extension then launches Microsoft Edge in order to use Application Guard's kernel level isolation. Additionally, to achieve similar kernel level isolation for a Chrome-only solution, one needs third party isolation software.
 
 > [!NOTE]
 > Application Guard is available on Windows 10, 1809 and above. Application Guard isn't available on Windows 10 Home editions.
@@ -46,7 +55,7 @@ Aside from protecting against external threats, IT admins also must protect agai
 > [!NOTE]
 > Azure AD Conditional Access requires a Microsoft 365 E3 (or higher) or a Microsoft 365 Business Premium subscription.
 
-**Microsoft Edge is the only browser to natively support Windows Information Protection (WIP)**, which provides protection to corporate data to help prevent accidental leaks by users on Windows 10 devices. [Microsoft Edge support for WIP](./microsoft-edge-security-windows-information-protection.md) can be configured to only allow IT mandated apps to access corporate data. It also provides leak controls—such as clipboard protection, encrypting files on download, and preventing file uploads to unauthorized network shares or cloud location—with a seamless user experience. WIP works on a perimeter-based configuration, where IT admins define the corporate boundary and all data inside that boundary is considered corporate. Chrome isn't enlightened for WIP with leak controls.
+**Microsoft Edge is the only browser to natively support Windows Information Protection (WIP)**, which provides protection to corporate data to help prevent accidental leaks by users on Windows devices. [Microsoft Edge support for WIP](./microsoft-edge-security-windows-information-protection.md) can be configured to only allow IT mandated apps to access corporate data. It also provides leak controls—such as clipboard protection, encrypting files on download, and preventing file uploads to unauthorized network shares or cloud location—with a seamless user experience. WIP works on a perimeter-based configuration, where IT admins define the corporate boundary and all data inside that boundary is considered corporate. Chrome isn't enlightened for WIP with leak controls.
 
 > [!NOTE]
 > Windows Information Protection (WIP) configuration requires licensing Microsoft Intune or Microsoft Endpoint Configuration Manager, or using a 3rd party mobile device management (MDM) solution, which may have additional licensing requirements.
