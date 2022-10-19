@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/12/2022
+ms.date: 10/19/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -30,10 +30,8 @@ The following table lists the new and obsoleted policies that are in this articl
 
 | Policy Name | Caption |
 |:-----|:-----|
-| [Edge Workspaces settings](#edge-workspaces-settings) | Enable Workspaces |
-| [WebSelectEnabled](#webselectenabled)|Web Select Enabled|
-| [BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)|
-
+|[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (obsolete)|
 
 ## Available policies
 
@@ -288,7 +286,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (deprecated)|
+|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (obsolete)|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
 |[SmartScreenAllowListDomains](#smartscreenallowlistdomains)|Configure the list of domains for which Microsoft Defender SmartScreen won't trigger warnings|
@@ -303,6 +301,7 @@ These tables list all of the browser-related group policies available in this re
 |[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
+|[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
 |[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
@@ -428,7 +427,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
-|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuraton for Intranet zone sites|
+|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
@@ -10771,17 +10770,17 @@ Use the preceding information when configuring this policy.
 
   ### NewSmartScreenLibraryEnabled
 
-  #### Enable new SmartScreen library (deprecated)
+  #### Enable new SmartScreen library (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 107.
   #### Supported versions:
 
-  - On Windows and macOS since 95 or later
+  - On Windows and macOS since 95, until 107
 
   #### Description
 
-  This policy is deprecated because it is a temporary policy to support the update to a new SmartScreen client. It won't work in Microsoft Edge as soon as version 107.
+  This policy doesn't work because it was only intended to be a short-term mechanism to support the update to a new SmartScreen client.
 
 Allows the Microsoft Edge browser to load the new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
 
@@ -10809,7 +10808,7 @@ This also includes macOS instances that are that are managed via MDM or joined t
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewSmartScreenLibraryEnabled
-  - GP name: Enable new SmartScreen library (deprecated)
+  - GP name: Enable new SmartScreen library (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
   - GP ADMX file name: MSEdge.admx
@@ -11496,6 +11495,68 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NewTabPageAppLauncherEnabled
+
+  #### Hide App Launcher on Microsoft Edge new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 108 or later
+
+  #### Description
+
+  By default, the App Launcher is shown every time a user opens a new tab page.
+
+If you enable or don't configure this policy, there is no change on the Microsoft Edge new tab page and App Launcher is there for users.
+
+If you disable this policy, App Launcher doesn't appear and users won't be able to launch M365 apps from Microsoft Edge new tab page via the App Launcher.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageAppLauncherEnabled
+  - GP name: Hide App Launcher on Microsoft Edge new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageAppLauncherEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewTabPageAppLauncherEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -19540,7 +19601,7 @@ If you set this policy to 'BasicMode', the security state will be in basic mode.
 
 Note: Sites that use WebAssembly (WASM) are not currently supported when [EnhanceSecurityMode](#enhancesecuritymode) is enabled. If you require access to a site that uses WASM, consider adding it to your exception list as described in [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
 
-For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2195852](https://go.microsoft.com/fwlink/?linkid=2195852)
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
 
 Policy options mapping:
 
@@ -19600,7 +19661,7 @@ Use the preceding information when configuring this policy.
 
   ### EnhanceSecurityModeBypassIntranet
 
-  #### Enhanced Security Mode configuraton for Intranet zone sites
+  #### Enhanced Security Mode configuration for Intranet zone sites
 
   
   
@@ -19610,13 +19671,13 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Microsoft Edge will apply Enhanced Security Mode on Intranet zone sites by default. This may lead to Intranet zone sites acting in an unexcected manner.
+  Microsoft Edge will apply Enhanced Security Mode on Intranet zone sites by default. This may lead to Intranet zone sites acting in an unexpected manner.
 
 If you enable this policy, Microsoft Edge won't apply Enhanced Security Mode on Intranet zone sites.
 
 If you disable or don't configure this policy, Microsoft Edge will apply Enhanced Security Mode on Intranet zone sites.
 
-For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2195852](https://go.microsoft.com/fwlink/?linkid=2195852)
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
 
   #### Supported features:
 
@@ -19633,7 +19694,7 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
   ##### Group Policy (ADMX) info
 
   - GP unique name: EnhanceSecurityModeBypassIntranet
-  - GP name: Enhanced Security Mode configuraton for Intranet zone sites
+  - GP name: Enhanced Security Mode configuration for Intranet zone sites
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21870,12 +21931,10 @@ If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingd
 
   #### Description
 
-  Shows a launcher bar on the right side of Microsoft Edge's screen.
+  Sidebar is a launcher bar on the right side of Microsoft Edge's screen.
 
-Enable this policy to always show the Sidebar.
-Disable this policy to never show the Sidebar.
-
-If you don't configure the policy, users can choose whether to show the Sidebar.
+If you enable or don't configure this policy, the Sidebar will be shown.
+If you disable this policy, the Sidebar will never be shown.
 
   #### Supported features:
 
