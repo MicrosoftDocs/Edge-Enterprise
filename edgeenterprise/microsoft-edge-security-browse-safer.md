@@ -19,7 +19,7 @@ This article describes how Microsoft Edge provides enhanced security on the web.
 > This article applies to Microsoft Edge version 105 or later.
 
 > [!IMPORTANT]
-> Developers should be aware that the WebAssembly (WASM) interpreter running in enhanced security mode will not yield the expected level of performance. We recommend adding your site as an [exception](#enhanced-security-sites) to opt-out of enhanced security mode for site users.
+> Developers should be aware that the WebAssembly (WASM) interpreter running in enhanced security mode might not yield the expected level of performance. We recommend adding your site as an [exception](#enhanced-security-sites) to opt-out of enhanced security mode for site users.
 
 ## Overview
 
