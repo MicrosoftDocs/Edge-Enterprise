@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: kylemiller
 author: dan-wesley
 manager: hariragu
-ms.date: 10/13/2022
+ms.date: 10/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -53,7 +53,7 @@ You can use the [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#
 
 Use the following steps as a guide to block a sidebar app.
 
-1. Open the group policy management editor and go to **Administrative Templates** > **Microsoft Edge** > **Extensions** and then select **Control which extensions cannot be enabled**.
+1. Open the group policy management editor and go to **Administrative Templates** > **Microsoft Edge** > **Extensions** and then select **Control which extensions cannot be installed**.
 2. Select **Enabled**.
 3. Click **Show**.
 4. Enter the extension ID of the sidebar app that you want to block.
