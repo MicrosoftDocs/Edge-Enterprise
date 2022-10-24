@@ -3,7 +3,7 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 06/15/2022
+ms.date: 10/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,10 +15,10 @@ description: "A step-by-step guide to configuring the Enterprise Mode Site list 
 # Enterprise site configuration strategy
 
 >[!Note]
-> The Internet Explorer 11 desktop application has [retired and is out of support as of June 15, 2022](https://aka.ms/IEJune15Blog) for certain versions of Windows 10.  
+> The retired, out-of-support Internet Explorer 11 (IE11) desktop application will be permanently disabled on certain versions of Windows 10 as part of the February 2023 Windows security update (“B”) release scheduled for February 14, 2023. [Learn more](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) 
 >
-> - You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how >](https://aka.ms/IEmodewebsite)
-> - The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update. [Disable IE today>](/deployedge/edge-ie-disable-ie11)  
+> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption. [Learn how](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/control-ie-retirement-on-your-own-schedule-with-the-disable-ie/ba-p/3627725)
+> 
 
 This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.
 
@@ -26,37 +26,7 @@ For more information on the schema for the Enterprise Mode Site List XML file, s
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-<!--
-## Updated schema elements
 
-The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
-
-| **Element** | **Description** |
-| --- | --- |
-| \<open-in app="**true**"\> | A child element that controls what browser is used for sites. This element is required for sites that need to **open in IE11**.|
-
-**Example:**
-
-``` xml
-<site url="contoso.com">
-
-  <open-in app="true">IE11</open-in>
-
-</site>
-```
-
-The following table shows the possible values of the \<open-in\> element:
-
-| **Value** | **Description** |
-| --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
-| **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
-| **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
-| **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
-|**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
-
->[!NOTE]
-> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
 
 ## Configuration strategy
 
@@ -64,12 +34,6 @@ The following steps are part of a site configuration strategy for IE mode:
 1. Prepare your site list
 2. Configure neutral sites
 3. (Optional) Use cookie sharing if necessary
-
-<!--
-Step 1.  – if you don’t have one use Site Discovery Step-by-Step
-Step 2 – Neutral sites + sticky mode
-        Use more examples and explain sticky mode better
-Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
 
 ## Prepare your site list
 
