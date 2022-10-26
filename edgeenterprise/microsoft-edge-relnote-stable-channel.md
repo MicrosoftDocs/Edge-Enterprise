@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/20/2022
+ms.date: 10/26/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,6 +31,10 @@ These release notes provide information about new features and non-security upda
 ### Feature updates
 
 **MSA-AAD Account Linking.** Microsoft is enabling users who have a personal Microsoft account (an MSA) and a Microsoft user account through their work or school (an Azure Active Directory account) to "link" the two types of accounts together. "Linked accounts" means that users will be able to see some of the content from their personal account alongside the tailored content from their work or school account. They are also able to earn Microsoft Rewards points in their personal account from their activities while using their work or school account. Additional blended experiences may be made available. This feature can be controlled by using the [LinkedAccountEnabled](/deployedge/microsoft-edge-policies#linkedaccountenabled) policy. For more information, see ***Updated Link Needed***
+
+- **Microsoft Edge sidebar.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window. For enterprise customers, the following experiences are currently turned on by default: Search, Discover, Office.com, and Outlook. Administrators can control the availability and configure the Microsoft Edge sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled), [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist), and [ExtensionInstallForceList](/deployedge/microsoft-edge-policies#extensioninstallforcelist) policies. The extension ID for each sidebar app can be found at *edge://sidebar-internals*.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
+
+- **New policy to give more flexibility in Microsoft Edge startup.** The [RestoreOnStartupUserURLsEnabled](/deployedge/microsoft-edge-policies#restoreonstartupuserurlsenabled) policy lets users add and remove their own URLs to open when starting Microsoft Edge while maintaining the mandatory list of sites specified by the admin.
 
 ### Policy updates
 
