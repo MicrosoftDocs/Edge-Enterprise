@@ -1,0 +1,9 @@
+{
+  "redirection": [
+    {
+  "source_path": "edgeenterprise/faqs-edge-in-the-enterprise.yml",
+  "redirect_url": "/DeployEdge/microsoft-edge-frequently-asked-questions",
+  "redirect_document_id": true
+    }
+  ]
+ }
