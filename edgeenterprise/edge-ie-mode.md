@@ -3,7 +3,7 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 10/28/2022
+ms.date: 10/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
