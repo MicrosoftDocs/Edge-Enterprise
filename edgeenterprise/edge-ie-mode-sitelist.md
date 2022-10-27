@@ -3,7 +3,7 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 10/28/2022
+ms.date: 10/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
