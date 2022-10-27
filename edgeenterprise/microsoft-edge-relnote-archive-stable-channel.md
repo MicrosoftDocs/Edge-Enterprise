@@ -16,7 +16,7 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
-## Version 104.0.1293.63 : August 19
+## Version 104.0.1293.63: August 19
 
 > [!IMPORTANT]
 > This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
