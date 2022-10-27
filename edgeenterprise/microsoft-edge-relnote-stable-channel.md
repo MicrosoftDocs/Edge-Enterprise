@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 106.0.1370.59: October 27, 2022
 
-Fixed various bugs and performance issues Extended Stable release.
+Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 107.0.1418.24: October 27, 2022
 
