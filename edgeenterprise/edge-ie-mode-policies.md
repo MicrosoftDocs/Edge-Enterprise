@@ -3,7 +3,7 @@ title: "Configure IE mode Policies"
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/28/2022
+ms.date: 10/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
