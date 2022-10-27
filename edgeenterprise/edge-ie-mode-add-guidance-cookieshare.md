@@ -3,7 +3,7 @@ title: "Cookie sharing between Microsoft Edge and Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/25/2022
+ms.date: 10/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
