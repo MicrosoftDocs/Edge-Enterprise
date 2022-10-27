@@ -3,7 +3,7 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/25/2022
+ms.date: 10/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
