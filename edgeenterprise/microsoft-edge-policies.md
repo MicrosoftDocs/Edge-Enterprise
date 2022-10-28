@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/19/2022
+ms.date: 10/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (obsolete)|
 
 ## Available policies
 
@@ -426,6 +417,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
+|[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
@@ -16714,7 +16706,8 @@ Note: Disabling a command will only remove its shortcut mapping. Commands in the
 ```
 SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {
   "disabled": [
-    "new_tab"
+    "new_tab",
+    "fullscreen"
   ]
 }
 ```
@@ -16722,7 +16715,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {"disabled": ["new_tab"]}
+  SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {"disabled": ["new_tab", "fullscreen"]}
   ```
   
 
@@ -19577,6 +19570,74 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EncryptedClientHelloEnabled
+
+  #### TLS Encrypted ClientHello Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 108 or later
+
+  #### Description
+
+  Encrypted ClientHello (ECH) is an extension to TLS that encrypts the sensitive fields of ClientHello to improve privacy.
+
+If ECH is enabled, Microsoft Edge might or might not use ECH depending on server support, the availability of the HTTPS DNS record, or the rollout status.
+
+If you enable or do not configure this policy, Microsoft Edge will follow the default rollout process for ECH.
+
+If this policy is disabled, Microsoft Edge will not enable ECH.
+
+Because ECH is an evolving protocol, Microsoft Edge's implementation is subject to change.
+
+As such, this policy is a temporary measure to control the initial experimental implementation. It will be replaced with final controls as the protocol finalizes.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EncryptedClientHelloEnabled
+  - GP name: TLS Encrypted ClientHello Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EncryptedClientHelloEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: EncryptedClientHelloEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnhanceSecurityMode
 
   #### Enhance the security state in Microsoft Edge
@@ -21869,7 +21930,7 @@ Users will continue to be redirected to Microsoft Edge when they encounter an in
 
   This policy gives an option to hide the "Restore pages" dialog after Microsoft Edge has crashed. The "Restore pages" dialog gives users the option to restore the pages that were previously open before Microsoft Edge crashed.
 
-If you enable this policy, the "Restore pages" dialog will not be shown.
+If you enable this policy, the "Restore pages" dialog will not be shown. In the event of a crash, Microsoft Edge will not restore previous tabs and will start the session with a new tab page.
 
 If you disable or don't set this policy, the "Restore pages" dialog will be shown.
 
@@ -32301,6 +32362,14 @@ be square, maximal 1 MB in size, and in one of the following formats:
 jpeg, png, gif, webp, ico. The hash value has to be the SHA256
 hash of the icon file. Not currently supported in Microsoft Edge.)
 
+- install_as_shortcut
+(Starting with Microsoft Edge
+version 107). If enabled the given url will be installed as a shortcut,
+as if done via the "Create Shortcut..." option in the desktop browser GUI.
+Note that when installed as a shortcut it won't be updated if the manifest in url changes.
+If disabled or unset, the web app at the given url will be installed normally.
+Not currently supported in Microsoft Edge.)
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -32349,6 +32418,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "custom_name": "Spreadsheets",
     "default_launch_container": "window",
+    "install_as_shortcut": true,
     "url": "https://app.contoso.edu/sheets"
   },
   {
@@ -32364,7 +32434,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "install_as_shortcut": true, "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
   ```
   
 
@@ -32402,6 +32472,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>Spreadsheets</string>
     <key>default_launch_container</key>
     <string>window</string>
+    <key>install_as_shortcut</key>
+    <true/>
     <key>url</key>
     <string>https://app.contoso.edu/sheets</string>
   </dict>
