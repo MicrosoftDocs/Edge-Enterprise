@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/20/2022
+ms.date: 10/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,44 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 106.0.1370.59: October 27, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 107.0.1418.24: October 27, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-27-2022).
+
+### Feature updates
+
+- **Microsoft Edge sidebar.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window. For enterprise customers, the following experiences are currently turned on by default: Search, Discover, Office.com, and Outlook. Administrators can control the availability and configure the Microsoft Edge sidebar using the [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled), [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist), and [ExtensionInstallForceList](/deployedge/microsoft-edge-policies#extensioninstallforcelist) policies. The extension ID for each sidebar app can be found at *edge://sidebar-internals*.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
+
+- **New policy to give more flexibility in Microsoft Edge startup.** The [RestoreOnStartupUserURLsEnabled](/deployedge/microsoft-edge-policies#restoreonstartupuserurlsenabled) policy lets users add and remove their own URLs to open when starting Microsoft Edge while maintaining the mandatory list of sites specified by the admin.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - Enable Workspaces
+- [EnhanceSecurityModeBypassIntranet](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypassintranet) - Enhanced Security Mode configuraton for Intranet zone sites
+- [EventPathEnabled](/DeployEdge/microsoft-edge-policies#eventpathenabled) - Re-enable the Event.path API until Microsoft Edge version 115
+- [InternetExplorerIntegrationLocalMhtFileAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalmhtfileallowed) - Allow local MHTML files to open automatically in Internet Explorer mode
+- [LinkedAccountEnabled](/DeployEdge/microsoft-edge-policies#linkedaccountenabled) - Enable the linked account feature
+- [PerformanceDetectorEnabled](/DeployEdge/microsoft-edge-policies#performancedetectorenabled) - Performance Detector Enabled
+- [RestoreOnStartupUserURLsEnabled](/DeployEdge/microsoft-edge-policies#restoreonstartupuserurlsenabled) - Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured
+- [DefaultShareAdditionalOSRegionSetting](/DeployEdge/microsoft-edge-policies#defaultshareadditionalosregionsetting) - Set the default "share additional operating system region" setting
+- [WebSelectEnabled](/DeployEdge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
+- [WebSQLAccess](/DeployEdge/microsoft-edge-policies#websqlaccess) - Force WebSQL to be enabled
+- [WebSQLNonSecureContextEnabled](/DeployEdge/microsoft-edge-policies#websqlnonsecurecontextenabled) - Force WebSQL in non-secure contexts to be enabled
+
+#### Deprecated policy
+
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - Allow users to access the Microsoft Office menu
+
+#### Obsoleted policy
+
+- [BuiltinCertificateVerifierEnabled](/DeployEdge/microsoft-edge-policies#builtincertificateverifierenabled) - Determines whether the built-in certificate verifier will be used to verify server certificates
 
 ## Version 106.0.1370.52: October 20, 2022
 
@@ -147,98 +185,7 @@ Fixed various bugs and performance issues for Extended Stable release.
 
 Fixed various bugs and performance issues.
 
-## Version 104.0.1293.63 : August 19
-
-> [!IMPORTANT]
-> This update contains a fix for [CVE-2022-2856](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2856), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-19-2022).
-
-### Feature updates
-
-- **Search in the Microsoft Edge sidebar.** Easily access an updated sidebar search via Microsoft Edge sidebar, including easy access to Microsoft Search in Bing for organizations. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Gaming for the Microsoft Edge sidebar.** Play popular casual games for free. Administrators can control the availability of the Games menu in the Microsoft Edge sidebar. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Discover in the Microsoft Edge sidebar.** Discover content relevant to the page you’re browsing including summaries, source information, and more. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Get your favorite tools in the Microsoft Edge sidebar.** Easily access commonly used tools while you browse the web, including Calculator, Internet speed test, and Unit converter. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Outlook in the Microsoft Edge sidebar.** Quickly and easily access Outlook Mail and Calendar. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Office in the Microsoft Edge sidebar.** Quickly and easily access Microsoft Office documents and apps. Administrators can control the Microsoft Office menu in the Microsoft Edge sidebar. Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 104.0.1293.54: August 11
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-## Version 104.0.1293.47: August 5
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-5-2022).
-
-### Feature updates
-
-- **Enhance your security on the web**. Improvements to **Enhance your security on the web** in *edge://settings/privacy* now include **Basic** as the new default option. With this option, Microsoft Edge will apply added security protection to the less visited sites. This feature preserves the user experience for the most popular sites on the web. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **Import Chrome data without Chrome during First Run Experience.** This feature lets a user bring in their Chrome data by logging in to their Google account during Microsoft Edge's First Run Experience. This feature can be turned off by disabling First Run Experience with the [HideFirstRunExperience](/deployedge/microsoft-edge-policies#hidefirstrunexperience) policy, or by setting [AutoImportAtFirstRun](/deployedge/microsoft-edge-policies#autoimportatfirstrun) to 'DisabledAutoImport'.
-
-### Policy updates
-
-#### New policies
-
-- [AllowedDomainsForApps](/DeployEdge/microsoft-edge-policies#alloweddomainsforapps) - Define domains allowed to access Google Workspace
-- [AskBeforeCloseEnabled](/DeployEdge/microsoft-edge-policies#askbeforecloseenabled) - Get user confirmation before closing a browser window with multiple tabs
-- [BrowserCodeIntegritySetting](/DeployEdge/microsoft-edge-policies#browsercodeintegritysetting) - Configure browser process code integrity guard setting
-- [DoubleClickCloseTabEnabled](/DeployEdge/microsoft-edge-policies#doubleclickclosetabenabled) - Double Click feature in Microsoft Edge enabled (only available in China)
-- [ImportOnEachLaunch](/DeployEdge/microsoft-edge-policies#importoneachlaunch) - Allow import of data from other browsers on each Microsoft Edge launch
-- [QuickSearchShowMiniMenu](/DeployEdge/microsoft-edge-policies#quicksearchshowminimenu) - Enables Microsoft Edge mini menu
-- [PasswordManagerRestrictLengthEnabled](/DeployEdge/microsoft-edge-policies#passwordmanagerrestrictlengthenabled) - Restrict the length of passwords that can be saved in the Password Manager
-- [PDFXFAEnabled](/DeployEdge/microsoft-edge-policies#pdfxfaenabled) - XFA support in native PDF reader enabled
-- [TextPredictionEnabled](/DeployEdge/microsoft-edge-policies#textpredictionenabled) - Text prediction enabled by default
-
-#### Obsoleted policy
-
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Allow using the deprecated U2F Security Key API
-
-## Version 103.0.1264.77: July 28
-
-Fixed various bugs and performance issues.
-
-## Version 102.0.1245.62: July 27
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 103.0.1264.71: July 22
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-22-2022).
-
-## Version 103.0.1264.62: July 14
-
-Fixed various bugs and performance issues. We recommend that users install this update to address the following issue.
-
-### Known issue
-
-Microsoft Edge on 32-bit (x86) Windows 10 Version 1809 may experience startup issues with the upcoming July Non-Security Windows Updates (KB5015880 - 17763.3224). This is fixed with the latest Microsoft Edge Stable channel release, version 103.0.1264.62. Enterprise users encountering this issue on Microsoft Edge Extended Stable channel version 102 need to disable the  [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy.
-
-## Version 103.0.1264.49: July 6
-
-> [!Important]
-> This update contains a fix for [CVE-2022-2294](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-2294), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-6-2022).
-
-## Version 102.0.1245.56: July 6
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 103.0.1264.44: June 30
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-30-2022).
-
-## Version 102.0.1245.50: June 23
-
-Fixed various bugs and performance issues for Extended Stable release.
-
+<!--- from Version 104.0.1293.63: August 19 to Version 102.0.1245.50: June 23 ---->
 <!--- from Version 103.0.1264.37: June 23 to Version 102.0.1245.33: June 3 ---->
 <!--- from Version 103.0.1264.37: June 23 to Version 102.0.1245.33: June 3 ---->
 <!--- from Version 102.0.1245.30: May 31 to Version 100.0.1185.57: May 2 ---->
