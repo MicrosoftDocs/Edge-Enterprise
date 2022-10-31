@@ -28,11 +28,17 @@ These release notes provide information about new features and non-security upda
 
 ## Version 107.0.1418.26: October 29, 2022
 
-Fixed various bugs and performance issues.
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022).
 
 ## Version 106.0.1370.61: October 29, 2022
 
-Fixed various bugs and performance issues for Extended Stable release.
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022)
 
 ## Version 106.0.1370.59: October 27, 2022
 
