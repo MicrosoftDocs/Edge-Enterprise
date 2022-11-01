@@ -27,7 +27,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues.
 
-## Version 107.0.1418.52: October 20, 2022
+## Version 106.0.1370.52: October 20, 2022
 
 Fixed various bugs and performance issues.
 
