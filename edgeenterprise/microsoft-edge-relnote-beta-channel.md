@@ -38,6 +38,10 @@ These release notes provide information about new features and non-security upda
 
 - [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Enable new SmartScreen library
 
+## Version 107.0.1418.23: October 26, 2022
+
+Fixed various bugs and performance issues.
+
 ## Version 107.0.1418.20: October 24, 2022
 
 Fixed various bugs and performance issues.
