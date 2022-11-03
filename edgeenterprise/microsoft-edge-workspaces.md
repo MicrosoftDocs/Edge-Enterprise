@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 10/12/2022
+ms.date: 11/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,7 +35,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Prerequisites
 
-- Users must have an Azure AD tenant and Microsoft Edge version 106 or greater installed.
+- Users must have an Azure Active Directory (Azure AD) tenant and Microsoft Edge version 106 or greater installed.
 - To enable via group policy, Admins must have Microsoft Edge version 106 or greater installed and version 107 of the policy files.
   - Edge Workspaces can also be enabled on a case-by-case basis using the Microsoft Edge flag: **#edge-workspaces**.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
@@ -119,6 +119,15 @@ Yes. Tabs in Edge Workspaces are shared in real-time for everyone. If someone cl
 ### Where is my workspace data stored and how is it protected?
 
 Workspace data is stored in your personal OneDrive for business and carries the same protections as all the other content stored in OneDrive.
+
+### Can you share an Edge Workspace with people outside of your organization?
+
+No, Edge Workspaces can only be shared within the same Azure AD tenant.
+
+### Are there limitations to where and how I can use Edge Workspaces?
+
+Edge Workspaces created within an Azure AD tenant are only available to users in that same tenant when they are logged into Microsoft Edge with their matching Azure AD account.
+
 
 ## See also
 
