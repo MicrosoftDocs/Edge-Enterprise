@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/12/2022
+ms.date: 11/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -286,6 +286,10 @@ You can use the following steps to opt in:
 6. When you finish adding users, select **Save changes**.
 
 For more information, see [Set up the Standard or Targeted release options - Microsoft 365 admin](/microsoft-365/admin/manage/release-options-in-office-365)
+
+### Can I manage my site list data programmatically instead of using the M365 Admin Center experience?
+
+Yes, there's a set of Microsoft Graph APIs for Cloud site list management that are currently in preview. Learn more here: [Use the Edge API in Microsoft Graph - Microsoft Graph beta](/graph/api/resources/browser-edge-api-overview?view=graph-rest-beta).
 
 ### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
