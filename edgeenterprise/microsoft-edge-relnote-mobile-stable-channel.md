@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/25/2022
+ms.date: 11/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,22 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 107.0.1418.36: November 4, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.33: November 2, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.28: November 2, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 106.0.1370.52: October 20, 2022
+
+Fixed various bugs and performance issues.
 
 ## Version 106.0.1370.47: October 17, 2022
 

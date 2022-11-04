@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/27/2022
+ms.date: 11/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,15 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## October 31, 2022
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 107.0.1418.26)**. This update contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Microsoft has also updated **Microsoft Edge Extended Stable Channel (Version 106.0.1370.61)**, which contains the fix to CVE-2022-3723.
+
+> [!NOTE]
+> It's worth highlighting that [Microsoft Edge’s enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
 
 ## October 27, 2022
 
@@ -40,8 +49,7 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 105
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 105.0.1343.27)**. This update contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-> [!NOTE]
-> Extended Stable channel has also been updated to 104.0.1293.81, which contains the fix.
+Microsoft has also updated **Microsoft Edge Extended Stable Channel (104.0.1293.81)**, which contains the fix to CVE-2022-3075.
 
 ## September 1, 2022
 
