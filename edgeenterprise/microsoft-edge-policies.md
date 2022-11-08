@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/04/2022
+ms.date: 11/03/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -1018,7 +1018,7 @@ By default, Google Cast is enabled.
 
   #### Description
 
-  Set this policy to true to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
+  Set this policy to True to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
 
 If you don't configure this policy or if you disable it, users can pin or remove the icon by using its contextual menu.
 
@@ -5869,7 +5869,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
-This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to true, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to True, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
 
@@ -10013,7 +10013,7 @@ A website is deemed secure if it meets the definition of a secure context in htt
 
 When this policy is either not set or set to false, the default behavior for requests from insecure contexts to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests feature, which may be set by a field trial or on the command line.
 
-When this policy is set to true, insecure websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
+When this policy is set to True, insecure websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
 
   #### Supported features:
 
@@ -11736,7 +11736,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 
   Hides the default top sites from the new tab page in Microsoft Edge.
 
-If you set this policy to true, the default top site tiles are hidden.
+If you set this policy to True, the default top site tiles are hidden.
 
 If you set this policy to false or don't configure it, the default top site tiles remain visible.
 
@@ -11870,7 +11870,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   By default, Microsoft Edge displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
 
-[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
+[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": True/false }, ... ]
 
 The 'url' field is required; 'title' and 'pinned' are optional. If 'title' is not provided, the URL is used as the default title. If 'pinned' is not provided, the default value is false.
 
@@ -13685,7 +13685,7 @@ Use the preceding information when configuring this policy.
 
   Support for AppCache and this policy was removed from Microsoft Edge starting in version 97.
 
-If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
+If you set this policy to True, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
 
 If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
 
@@ -17989,7 +17989,7 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 
 If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Microsoft Edge might, by default, still require command line arguments to be passed in order to use these APIs.
 
-If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to true.
+If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to True.
 
   #### Supported features:
 
@@ -23752,7 +23752,7 @@ Use the preceding information when configuring this policy.
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
-If you set this policy to true, or don't configure it, the user is allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
+If you set this policy to True, or don't configure it, the user is allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
 
 If you set this policy to false, the user isn't allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
 
@@ -23875,11 +23875,11 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
-If you set this policy to true, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.
+If you set this policy to True, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.
 
 If you set this policy to false or don't configure it, the context menu item will not be added.
 
-If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to true, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
+If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to True, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
 
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
@@ -26934,7 +26934,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
 
   Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features.
 
-If you enable this policy (set it true) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
+If you enable this policy (set it True) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
 
 If you disable (set to false) this policy, Microsoft Edge can't show full-tab content to users.
 
@@ -30317,7 +30317,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 This policy controls the treatment for mixed content (HTTP content in HTTPS sites) in the browser.
 
-If you set this policy to true or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
+If you set this policy to True or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
 
 If you set the policy to false, auto upgrades will be disabled for audio and video, and no warning will be shown for images.
 
@@ -31218,7 +31218,7 @@ If you disable this setting, travel assistance will be disabled and  users will 
 
   'Warning: 3DES will be completely removed from Microsoft Edge in version 95 (around October 2021) and this policy will stop working then.
 
-If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
+If the policy is set to True, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
 
   #### Supported features:
 
