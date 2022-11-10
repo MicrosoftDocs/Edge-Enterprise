@@ -96,51 +96,9 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 106.0.1370.15: September 15, 2022
 
-Fixed various bugs and performance issues.
 
-### Feature updates
-
-- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows and macOS. The new SmartScreen library was first made available on Windows with Microsoft Edge version 103, and now makes its debut on macOS with Microsoft Edge version 106. The [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy is now deprecated in Microsoft Edge version 106 and will be obsolete in Microsoft Edge version 107.
-
-### Policy updates
-
-#### New policies
-
-- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) - Efficiency mode enabled
-- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) - Enable efficiency mode when the device is connected to a power source
-- [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
-
-#### Deprecated policies
-
-- [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) – Allows the Microsoft Edge browser to load the new SmartScreen library for any SmartScreen checks on site URLs or application downloads.
-
-#### Obsoleted policies
-
-- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
-
-## Version 105.0.1343.34: September 9, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.27: September 2, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.23: August 31, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.17: August 26, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.10: August 19, 2022
-
-Fixed various bugs and performance issues.
-
+<!-- from Version 106.0.1370.15: September 15, 2022 to Version Version 105.0.1343.10: August 19, 2022 ---->
 <!--- from Version 105.0.1343.7: August 16, 2022 to Version 104.0.1293.21: July 14 ---->
 <!--- from Version 104.0.1293.14: July 7 to Version 103.0.1264.17: June 6 ---->
 <!--- from Version 103.0.1264.13: June 2 to Version 102.0.1245.12: May 13 ---->
