@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/17/2022
+ms.date: 11/10/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -62,7 +62,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### iOS
 
-Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 11.0 or later. Microsoft Edge for iPad Pro&trade; requires iOS 11.0 or later. Microsoft Edge is supported on the two most recent versions of iOS. When a new version of iOS is released, the Microsoft Edge Operating System requirement becomes the then-current two most recent versions: the new version of iOS and the previous version.
+Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 14.0 or later. Microsoft Edge for iPad Pro&trade; requires iOS 14.0 or later. Microsoft Edge is supported on the two most recent versions of iOS. When a new version of iOS is released, the Microsoft Edge Operating System requirement becomes the then-current two most recent versions: the new version of iOS and the previous version.
 
 ### Android
 
