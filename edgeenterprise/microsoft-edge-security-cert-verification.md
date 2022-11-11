@@ -46,5 +46,5 @@ In Microsoft Edge 111, we plan to remove support for the **MicrosoftRootStoreEna
 
 ## See also
 
-- [Security for your business](./ms-edge-security-for-business)
+- [Microsoft Edge security for your business](ms-edge-security-for-business.md)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
