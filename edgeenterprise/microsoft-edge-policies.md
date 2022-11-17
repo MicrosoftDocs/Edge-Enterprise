@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/08/2022
+ms.date: 11/16/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -116,6 +116,9 @@ These tables list all of the browser-related group policies available in this re
 |[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Allow notifications to set Microsoft Edge as default PDF reader|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
+|[WebHidAllowAllDevicesForUrls](#webhidallowalldevicesforurls)|Allow listed sites to connect to any HID device|
+|[WebHidAllowDevicesForUrls](#webhidallowdevicesforurls)|Allow listed sites connect to specific HID devices|
+|[WebHidAllowDevicesWithHidUsagesForUrls](#webhidallowdeviceswithhidusagesforurls)|Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage|
 |[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
 |[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
@@ -425,7 +428,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (deprecated)|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
@@ -513,6 +516,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
+|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -593,7 +597,7 @@ These tables list all of the browser-related group policies available in this re
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
 |[TravelAssistanceEnabled](#travelassistanceenabled)|Enable travel assistance (obsolete)|
-|[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS|
+|[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS (obsolete)|
 |[U2fSecurityKeyApiEnabled](#u2fsecuritykeyapienabled)|Allow using the deprecated U2F Security Key API (obsolete)|
 |[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
@@ -621,7 +625,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
-|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (deprecated)|
+|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
@@ -4173,6 +4177,295 @@ If you disable this setting, spotlight experiences and recommendations are turne
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebHidAllowAllDevicesForUrls
+
+  #### Allow listed sites to connect to any HID device
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  This setting allows you to list sites which are automatically granted permission to access all available devices.
+
+The URLs must be valid or the policy is ignored. Only the origin (scheme, host and port) of the URL is evaluated.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+This policy overrides [DefaultWebHidGuardSetting](#defaultwebhidguardsetting), [WebHidAskForUrls](#webhidaskforurls), [WebHidBlockedForUrls](#webhidblockedforurls) and the user's preferences.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebHidAllowAllDevicesForUrls
+  - GP name: Allow listed sites to connect to any HID device
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebHidAllowAllDevicesForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebHidAllowAllDevicesForUrls\1 = "https://microsoft.com"
+SOFTWARE\Policies\Microsoft\Edge\WebHidAllowAllDevicesForUrls\2 = "https://chromium.org"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebHidAllowAllDevicesForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://microsoft.com</string>
+  <string>https://chromium.org</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebHidAllowDevicesForUrls
+
+  #### Allow listed sites connect to specific HID devices
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  This setting lets you list the URLs that specify which sites are automatically granted permission to access a HID device with the given vendor and product IDs.
+
+Setting the policy Each item in the list requires both devices and urls fields for the item to be valid, otherwise the item is ignored.
+
+  * Each item in the devices field must have a vendor_id and may have a product_id field.
+
+  * Omitting the product_id field will create a policy matching any device with the specified vendor ID.
+
+  * An item which has a product_id field without a vendor_id field is invalid and is ignored.
+
+If you don't set this policy, that means [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) applies, if it's set. If not, the user's personal setting applies.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+URLs in this policy shouldn't conflict with those configured through [WebHidBlockedForUrls](#webhidblockedforurls). If they do, this policy takes precedence over [WebHidBlockedForUrls](#webhidblockedforurls).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebHidAllowDevicesForUrls
+  - GP name: Allow listed sites connect to specific HID devices
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebHidAllowDevicesForUrls
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesForUrls = [
+  {
+    "devices": [
+      {
+        "product_id": 5678,
+        "vendor_id": 1234
+      }
+    ],
+    "urls": [
+      "https://microsoft.com",
+      "https://chromium.org"
+    ]
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://microsoft.com", "https://chromium.org"]}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebHidAllowDevicesForUrls
+  - Example value:
+``` xml
+<key>WebHidAllowDevicesForUrls</key>
+<array>
+  <dict>
+    <key>devices</key>
+    <array>
+      <dict>
+        <key>product_id</key>
+        <integer>5678</integer>
+        <key>vendor_id</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+    <key>urls</key>
+    <array>
+      <string>https://microsoft.com</string>
+      <string>https://chromium.org</string>
+    </array>
+  </dict>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebHidAllowDevicesWithHidUsagesForUrls
+
+  #### Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  This setting allows you to list the URLs that specify which sites are automatically granted permission to access a HID device containing a top-level collection with the given HID usage.
+
+Each item in the list requires both usages and urls fields for the policy to be valid.
+
+  * Each item in the usages field must have a usage_page and may have a usage field.
+
+  * Omitting the usage field will create a policy matching any device containing a top-level collection with a usage from the specified usage page.
+
+  * An item which has a usage field without a usage_page field is invalid and is ignored.
+
+If you don't set this policy, that means [DefaultWebHidGuardSetting](#defaultwebhidguardsetting) applies, if it's set. If not, the user's personal setting applies.
+
+For detailed information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+URLs in this policy shouldn't conflict with those configured through [WebHidBlockedForUrls](#webhidblockedforurls). If they do, this policy takes precedence over [WebHidBlockedForUrls](#webhidblockedforurls).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebHidAllowDevicesWithHidUsagesForUrls
+  - GP name: Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebHidAllowDevicesWithHidUsagesForUrls
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesWithHidUsagesForUrls = [
+  {
+    "urls": [
+      "https://microsoft.com",
+      "https://chromium.org"
+    ],
+    "usages": [
+      {
+        "usage": 5678,
+        "usage_page": 1234
+      }
+    ]
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesWithHidUsagesForUrls = [{"urls": ["https://microsoft.com", "https://chromium.org"], "usages": [{"usage": 5678, "usage_page": 1234}]}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WebHidAllowDevicesWithHidUsagesForUrls
+  - Example value:
+``` xml
+<key>WebHidAllowDevicesWithHidUsagesForUrls</key>
+<array>
+  <dict>
+    <key>urls</key>
+    <array>
+      <string>https://microsoft.com</string>
+      <string>https://chromium.org</string>
+    </array>
+    <key>usages</key>
+    <array>
+      <dict>
+        <key>usage</key>
+        <integer>5678</integer>
+        <key>usage_page</key>
+        <integer>1234</integer>
+      </dict>
+    </array>
+  </dict>
+</array>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -20088,17 +20381,17 @@ This policy will be made obsolete after Microsoft Edge version 115.
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### Disable download file type extension-based warnings for specified file types on domains (deprecated)
+  #### Disable download file type extension-based warnings for specified file types on domains
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
-  - On Windows and macOS since 85 or later
+  - On Windows and macOS since 85, until 109
 
   #### Description
 
-  This policy is being deprecated in favor of [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings) because of a type mismatch that caused errors in Mac. This policy will be made obsolete after version 108. If you set both policies, values from this policy will be overridden if they're set differently in [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings).
+  This policy has been obsoleted in favor of [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings) because of a type mismatch that caused errors in Mac.
 
 You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
 
@@ -20138,7 +20431,7 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Group Policy (ADMX) info
 
   - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - GP name: Disable download file type extension-based warnings for specified file types on domains (deprecated)
+  - GP name: Disable download file type extension-based warnings for specified file types on domains
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -26040,6 +26333,69 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 
   [Back to top](#microsoft-edge---policies)
 
+  ### MicrosoftRootStoreEnabled
+
+  #### Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
+When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+
+This policy will be removed in Microsoft Edge for Microsoft Windows and macOS once support for using the platform supplied certificate verifier and roots are planned to be removed.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftRootStoreEnabled
+  - GP name: Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftRootStoreEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: MicrosoftRootStoreEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NativeWindowOcclusionEnabled
 
   #### Enable Native Window Occlusion (deprecated)
@@ -29334,21 +29690,21 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   
   #### Supported versions:
 
-  - On Windows and macOS since 101 or later
+  - On Windows and macOS since 101, until 109
 
   #### Description
 
-  When the policy is set to Enabled, the Javascript setTimeout() with a timeout of 0ms will no longer be fixed to 1ms to schedule timer-based callbacks.
-When the policy is set to Disabled, the Javascript setTimeout() with a timeout of 0ms will be fixed to 1ms to schedule timer-based callbacks.
-When the policy is unset, use the browser's default behavior for setTimeout() function.
+  This policy is obsolete and doesn't work in Microsoft Edge after version 109.
+This policy was only provided temporarily to allow Enterprises to adapt to the new clamping behavior.
 
-This is a web standards compliancy feature, but it may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
-It also may affect sites with a lot of setTimeout()s with a timeout of 0ms usage. For example, increasing CPU load.
+   When the policy is set to Enabled, the Javascript setTimeout() with a timeout of 0ms will no longer be fixed to 1ms to schedule timer-based callbacks.
+   When the policy is set to Disabled, the Javascript setTimeout() with a timeout of 0ms will be fixed to 1ms to schedule timer-based callbacks.
+   When the policy is unset, use the browser's default behavior for setTimeout() function.
 
-For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.
+   This is a web standards compliancy feature, but it may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
+   It also may affect sites with a lot of setTimeout()s with a timeout of 0ms usage. For example, increasing CPU load.
 
-This is a temporary policy that is planned to be removed in Microsoft Edge Stable 105.
-This deadline may be extended if there is a need for enterprises.
+   For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.
 
 
   #### Supported features:
@@ -31206,17 +31562,17 @@ If you disable this setting, travel assistance will be disabled and  users will 
 
   ### TripleDESEnabled
 
-  #### Enable 3DES cipher suites in TLS
+  #### Enable 3DES cipher suites in TLS (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 96.
   #### Supported versions:
 
-  - On Windows and macOS since 93 or later
+  - On Windows and macOS since 93, until 96
 
   #### Description
 
-  'Warning: 3DES will be completely removed from Microsoft Edge in version 95 (around October 2021) and this policy will stop working then.
+  'This policy was removed in version 97 after 3DES was removed from Microsoft Edge.
 
 If the policy is set to True, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
 
@@ -31235,7 +31591,7 @@ If the policy is set to True, then 3DES cipher suites in TLS will be enabled. If
   ##### Group Policy (ADMX) info
 
   - GP unique name: TripleDESEnabled
-  - GP name: Enable 3DES cipher suites in TLS
+  - GP name: Enable 3DES cipher suites in TLS (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -33145,17 +33501,17 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
 
   ### WebSQLNonSecureContextEnabled
 
-  #### Force WebSQL in non-secure contexts to be enabled (deprecated)
+  #### Force WebSQL in non-secure contexts to be enabled
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
-  - On Windows and macOS since 107, until 110
+  - On Windows and macOS since 107 or later
 
   #### Description
 
-  This policy is deprecated because it is a temporary policy to support WebSQL in non-secure contexts. It won't work in Microsoft Edge as soon as version 110.
+  WebSQL in non-secure contexts is on by default as of Microsoft Edge 105.
 If you enable this policy, WebSQL in non-secure contexts will be enabled.
 If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the broser.
 
@@ -33174,7 +33530,7 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSQLNonSecureContextEnabled
-  - GP name: Force WebSQL in non-secure contexts to be enabled (deprecated)
+  - GP name: Force WebSQL in non-secure contexts to be enabled
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
