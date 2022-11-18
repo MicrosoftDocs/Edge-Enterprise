@@ -44,6 +44,7 @@ Microsoft recommends that enterprises that have break-and-inspect proxies or oth
 
 In Microsoft Edge 111, we plan to remove support for the **MicrosoftRootStoreEnabled** policy.
 
+
 ## See also
 
 - [Microsoft Edge security for your business](ms-edge-security-for-business.md)
