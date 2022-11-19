@@ -30,7 +30,6 @@ The following table lists the new, deprecated, and obsoleted policies that are i
 
 | Policy Name | Caption |
 |:-----|:-----|
-
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsoleted)|
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS (obsoleted)|
