@@ -38,6 +38,10 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-10-2022).
 
+## Version 106.0.1370.72: November 10, 2022
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
 ## Version 107.0.1418.35: November 3, 2022
 
 Fixed various bugs and performance issues.
