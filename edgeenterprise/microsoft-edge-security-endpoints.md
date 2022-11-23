@@ -107,7 +107,7 @@ The service that Microsoft Edge uses to download the cloud-hosted site list for 
 
 ## Microsoft Defender SmartScreen services
 
-[Microsoft Defender SmartScreen](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-security-smartscreen) helps protect users from malicious sites and downloads.
+[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) helps protect users from malicious sites and downloads.
 
 - `https://*.smartscreen.microsoft.com/`
 - `https://*.smartscreen-prod.microsoft.com`
