@@ -111,6 +111,7 @@ The service that Microsoft Edge uses to download the cloud-hosted site list for 
 
 - `https://*.smartscreen.microsoft.com/`
 - `https://*.smartscreen-prod.microsoft.com`
+- `https://*.urs.microsoft.com/`
 
 ## Other browser support services
 
