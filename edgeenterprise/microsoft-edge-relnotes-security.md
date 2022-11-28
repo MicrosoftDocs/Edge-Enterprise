@@ -20,7 +20,7 @@ These release notes provide information about security fixes that are included i
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 107.0.1418.62)**. This update contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-Microsoft has also updated **Microsoft Edge Extended Stable Channel (Version 106.0.1370.86)**, which contains the fix to CVE-2022-4135.
+Microsoft has also updated **Microsoft Edge Extended Stable Channel (Version 106.0.1370.86)**, which contains the fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135).
 
 ## November 10, 2022
 
