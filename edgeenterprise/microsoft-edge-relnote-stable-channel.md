@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 11/17/2022
+ms.date: 11/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,24 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 107.0.1418.62: November 28, 2022
+
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022).
+
+## Version 106.0.1370.86: November 28, 2022
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022)
+
+## Version 107.0.1418.56: November 21, 2022
+
+Fixed various bugs and performance issues.
+
 ## Version 107.0.1418.52: November 17, 2022
 
 Fixed various bugs and performance issues.
@@ -33,6 +51,10 @@ Fixed various bugs and performance issues.
 ## Version 107.0.1418.42: November 10, 2022
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-10-2022).
+
+## Version 106.0.1370.72: November 10, 2022
+
+Fixed various bugs and performance issues for Extended Stable channel.
 
 ## Version 107.0.1418.35: November 3, 2022
 

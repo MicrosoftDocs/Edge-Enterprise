@@ -105,6 +105,14 @@ The service that Microsoft Edge uses to download the cloud-hosted site list for 
 
 - `https://edge.microsoft.com/`
 
+## Microsoft Defender SmartScreen services
+
+[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) helps protect users from malicious sites and downloads.
+
+- `https://*.smartscreen.microsoft.com/`
+- `https://*.smartscreen-prod.microsoft.com`
+- `https://*.urs.microsoft.com/`
+
 ## Other browser support services
 
 Provide metadata for browser features such as tracking protection, certificate revocation lists, and other browser component updates. Provide downloadable spellcheck dictionaries and ad-blocking block lists. Provide services to support browser features such as collections, autofill, and extension store.
