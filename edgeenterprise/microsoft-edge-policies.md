@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/18/2022
+ms.date: 11/29/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,21 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new, deprecated, and obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsoleted)|
-|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
-|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
-|[TripleDESEnabled](#tripledesenabled)|Enable 3DES cipher suites in TLS (obsoleted)|
-|[WebHidAllowAllDevicesForUrls](#webhidallowalldevicesforurls)|Allow listed sites to connect to any HID device|
-|[WebHidAllowDevicesForUrls](#webhidallowdevicesforurls)|Allow listed sites connect to specific HID devices|
-|[WebHidAllowDevicesWithHidUsagesForUrls](#webhidallowdeviceswithhidusagesforurls)|Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage|
-|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsoleted in future) |
 
 ## Available policies
 
@@ -88,9 +73,12 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AutoSelectCertificateForUrls](#autoselectcertificateforurls)|Automatically select client certificates for these sites|
+|[AutomaticDownloadsAllowedForUrls](#automaticdownloadsallowedforurls)|Allow multiple automatic downloads in quick succession on specific sites|
+|[AutomaticDownloadsBlockedForUrls](#automaticdownloadsblockedforurls)|Block multiple automatic downloads in quick succession on specific sites|
 |[CookiesAllowedForUrls](#cookiesallowedforurls)|Allow cookies on specific sites|
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Block cookies on specific sites|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limit cookies from specific websites to the current session|
+|[DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting)|Default automatic downloads setting|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configure cookies|
 |[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Control use of the File System API for reading|
 |[DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)|Control use of the File System API for writing|
@@ -388,6 +376,8 @@ These tables list all of the browser-related group policies available in this re
 |[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Microsoft Edge closes|
 |[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Microsoft Edge closes|
 |[ClickOnceEnabled](#clickonceenabled)|Allow users to open files using the ClickOnce protocol|
+|[ClipboardAllowedForUrls](#clipboardallowedforurls)|Allow clipboard use on specific sites|
+|[ClipboardBlockedForUrls](#clipboardblockedforurls)|Block clipboard use on specific sites|
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
@@ -402,6 +392,7 @@ These tables list all of the browser-related group policies available in this re
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
+|[DefaultClipboardSetting](#defaultclipboardsetting)|Default clipboard site permission|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|Control use of the Serial API|
@@ -1166,6 +1157,136 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AutomaticDownloadsAllowedForUrls
+
+  #### Allow multiple automatic downloads in quick succession on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, that are allowed to perform multiple automatic downloads in quick succession.
+If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set. If it isn't set, then the user's personal setting applies.
+For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutomaticDownloadsAllowedForUrls
+  - GP name: Allow multiple automatic downloads in quick succession on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutomaticDownloadsAllowedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutomaticDownloadsBlockedForUrls
+
+  #### Block multiple automatic downloads in quick succession on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Define a list of sites, based on URL patterns, where multiple automatic downloads in quick succession aren't allowed.
+If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set.  If it isn't set, then the user's personal setting applies.
+For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutomaticDownloadsBlockedForUrls
+  - GP name: Block multiple automatic downloads in quick succession on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsBlockedForUrls\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsBlockedForUrls\2 = "[*.]contoso.com"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutomaticDownloadsBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://contoso.com</string>
+  <string>[*.]contoso.com</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CookiesAllowedForUrls
 
   #### Allow cookies on specific sites
@@ -1402,6 +1523,73 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultAutomaticDownloadsSetting
+
+  #### Default automatic downloads setting
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Set whether websites can perform multiple automatic downloads in quick succession. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).
+If you don't configure this policy, multiple automatic downloads can be performed in all sites, and the user can change this setting.
+
+Policy options mapping:
+
+* AllowAutomaticDownloads (1) = Allow all websites to perform automatic downloads
+
+* BlockAutomaticDownloads (2) = Don't allow any website to perform automatic downloads
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultAutomaticDownloadsSetting
+  - GP name: Default automatic downloads setting
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultAutomaticDownloadsSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DefaultAutomaticDownloadsSetting
+  - Example value:
+``` xml
+<integer>1</integer>
 ```
   
 
@@ -16589,6 +16777,144 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ClipboardAllowedForUrls
+
+  #### Allow clipboard use on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  Configure the list of URL patterns that specify which sites can use the clipboard site permission.
+
+Setting the policy lets you create a list of URL patterns that specify which sites can use the clipboard site permission. This doesn't include all clipboard operations on origins that match the patterns. For example, users will still be able to paste using keyboard shortcuts because this isn't controlled by the clipboard site permission.
+
+Leaving the policy unset means [DefaultClipboardSetting](#defaultclipboardsetting) applies for all sites if it's set. If it isn't set, the user's personal setting applies.
+
+For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ClipboardAllowedForUrls
+  - GP name: Allow clipboard use on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ClipboardAllowedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ClipboardAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ClipboardAllowedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ClipboardAllowedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ClipboardBlockedForUrls
+
+  #### Block clipboard use on specific sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  Configure the list of URL patterns that specify which sites can use the clipboard site permission.
+
+Setting the policy lets you create a list of URL patterns that specify sites that can't use the clipboard site permission. This doesn't include all clipboard operations on origins that match the patterns. For example, users will still be able to paste using keyboard shortcuts because this isn't controlled by the clipboard site permission.
+
+Leaving the policy unset means [DefaultClipboardSetting](#defaultclipboardsetting) applies for all sites if it's set. If it isn't set, the user's personal setting applies.
+
+For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ClipboardBlockedForUrls
+  - GP name: Block clipboard use on specific sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ClipboardBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ClipboardBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ClipboardBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ClipboardBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CollectionsServicesAndExportsBlockList
 
   #### Block access to a specified list of services and export targets in Collections
@@ -17577,6 +17903,80 @@ Note for Windows administrators: This policy only works for PCs running Windows 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultClipboardSetting
+
+  #### Default clipboard site permission
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  This policy controls the default value for the clipboard site permission.
+
+Setting the policy to 2 in the registry blocks sites from using the clipboard site permission.
+
+Setting the policy to 3 in the registry or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.
+
+This policy can be overridden for specific URL patterns using the [ClipboardAllowedForUrls](#clipboardallowedforurls) and[ClipboardBlockedForUrls](#clipboardblockedforurls) policies.
+
+This policy only affects clipboard operations controlled by the clipboard site permission and doesn't affect sanitized clipboard writes or trusted copy and paste operations.
+
+Policy options mapping:
+
+* BlockClipboard (2) = Do not allow any site to use the clipboard site permission
+
+* AskClipboard (3) = Allow sites to ask the user to grant the clipboard site permission
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultClipboardSetting
+  - GP name: Default clipboard site permission
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultClipboardSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: DefaultClipboardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
 ```
   
 
