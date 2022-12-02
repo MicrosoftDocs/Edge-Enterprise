@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 11/04/2022
+ms.date: 12/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -72,6 +72,36 @@ A workspace doesn't share the following information:
 - Any tabs or data from outside the workspace.
 - Website content that only the user can access. For example, if the user logs in to their email in a shared Edge Workspace, only the user will see their email content.
 - A user’s device screen. Users sharing a workspace won’t see how other users interact with an open website or website content that they don’t have access to.
+
+## Configure navigation settings policy
+
+You can configure Workspaces navigation using the **WorkspacesNavigationSettings** policy.
+
+The following general rules apply to Workspaces navigation:
+
+- Only top-level navigations are shared among users. Iframe or subframe navigations are not shared.
+- Only user-initiated navigations are shared.  Page-initiated navigations that do not have a corresponding user gesture are not shared.
+- POST requests are not shared.
+
+These basic rules produce consistent behavior for users sharing tabs in a workspace. However, sometimes additional customization can further optimize the shared navigation experience of Workspaces users.
+
+### Specifying matching patterns
+
+To define customized Workspaces navigation behavior, you must first describe the set of URL patterns to which the behavior will apply. You can list these patterns using either the `url_patterns` property, the `url_regex_patterns` property, or both properties.
+
+-`url_patterns`: The format used for the `url_patterns` property is described in [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+- `url_regex_patterns`: When using the `url_patterns` property is not expressive enough, you can use general regular expressions in the `url_regex_patterns` property.  Rules for using regular expressions are given in [Regular Expression 2 (re2.h) syntax](/DeployEdge/edge-learnmore-regex).
+
+### Navigation options
+
+You can associate any or all of the following options with a set of URL patterns.
+
+- **do_not_send_from** – If a navigation otherwise qualifies to be shared with all Workspace users, this option will cause the navigation to not be shared if the referrer URL matches one of your patterns. Note that for a same-document navigation, the referrer is considered the URL of the document itself, not the original referrer of the page.
+- **do_not_send_to**  – If a navigation otherwise qualifies to be shared with all Workspace users, this option will cause the navigation to not be shared if the destination URL matches one of your patterns.
+-  **prefer_initial_url** – If a navigation qualifies to be shared with all Workspace users and there were server-side redirects during the navigation, by default the URL that is shared is the final URL. Using the prefer_initial_url option will cause the initial URL to be shared, so long as it is not a POST request.
+- **remove_all_query_parameters** - If a navigation qualifies to be shared with all Workspace users, using this option causes the query string to be removed before the navigation is shared.
+- **query_parameters_to_be_removed** - If a navigation qualifies to be shared with all Workspace users, using this option causes only the specified named query string arguments to be removed from the query string before the navigation is shared. 
+
 
 ## Providing feedback
 
