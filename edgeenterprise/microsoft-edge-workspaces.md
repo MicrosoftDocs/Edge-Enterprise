@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Learn about Edge Workspaces and how they can benefit users in your organization."
+description: "Learn about Microsoft Edge Workspaces and how they can benefit users in your organization."
 ---
 
 # Microsoft Edge Workspaces (Public Preview)
@@ -79,9 +79,9 @@ You can configure Workspaces navigation using the **WorkspacesNavigationSettings
 
 The following general rules apply to Workspaces navigation:
 
-- Only top-level navigations are shared among users. Iframe or subframe navigations are not shared.
-- Only user-initiated navigations are shared.  Page-initiated navigations that do not have a corresponding user gesture are not shared.
-- POST requests are not shared.
+- Only top-level navigations are shared among users. IFrame or subframe navigations aren't shared.
+- Only user-initiated navigations are shared.  Page-initiated navigations that don't have a corresponding user gesture are not shared.
+- POST requests aren't shared.
 
 These basic rules produce consistent behavior for users sharing tabs in a workspace. However, sometimes additional customization can further optimize the shared navigation experience of Workspaces users.
 
@@ -90,15 +90,15 @@ These basic rules produce consistent behavior for users sharing tabs in a worksp
 To define customized Workspaces navigation behavior, you must first describe the set of URL patterns to which the behavior will apply. You can list these patterns using either the `url_patterns` property, the `url_regex_patterns` property, or both properties.
 
 -`url_patterns`: The format used for the `url_patterns` property is described in [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
-- `url_regex_patterns`: When using the `url_patterns` property is not expressive enough, you can use general regular expressions in the `url_regex_patterns` property.  Rules for using regular expressions are given in [Regular Expression 2 (re2.h) syntax](/DeployEdge/edge-learnmore-regex).
+- `url_regex_patterns`: When using the `url_patterns` property isn't expressive enough, you can use general regular expressions in the `url_regex_patterns` property.  Rules for using regular expressions are given in [Regular Expression 2 (re2.h) syntax](/DeployEdge/edge-learnmore-regex).
 
 ### Navigation options
 
 You can associate any or all of the following options with a set of URL patterns.
 
-- **do_not_send_from** – If a navigation otherwise qualifies to be shared with all Workspace users, this option will cause the navigation to not be shared if the referrer URL matches one of your patterns. Note that for a same-document navigation, the referrer is considered the URL of the document itself, not the original referrer of the page.
+- **do_not_send_from** – If a navigation otherwise qualifies to be shared with all Workspace users, this option will cause the navigation to not be shared if the referrer URL matches one of your patterns. For a same-document navigation, the referrer is considered the URL of the document itself, not the original referrer of the page.
 - **do_not_send_to**  – If a navigation otherwise qualifies to be shared with all Workspace users, this option will cause the navigation to not be shared if the destination URL matches one of your patterns.
--  **prefer_initial_url** – If a navigation qualifies to be shared with all Workspace users and there were server-side redirects during the navigation, by default the URL that is shared is the final URL. Using the prefer_initial_url option will cause the initial URL to be shared, so long as it is not a POST request.
+-  **prefer_initial_url** – If a navigation qualifies to be shared with all Workspace users and there were server-side redirects during the navigation, by default the URL that is shared is the final URL. Using the prefer_initial_url option will cause the initial URL to be shared, so long as it isn't a POST request.
 - **remove_all_query_parameters** - If a navigation qualifies to be shared with all Workspace users, using this option causes the query string to be removed before the navigation is shared.
 - **query_parameters_to_be_removed** - If a navigation qualifies to be shared with all Workspace users, using this option causes only the specified named query string arguments to be removed from the query string before the navigation is shared. 
 
@@ -116,13 +116,13 @@ You can leave feedback by clicking the **Like** or **Dislike** button at the bot
 
 ### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
 
-This message is shown the first time a user clicks the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
+This message is shown the first time a user selects the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
 
 :::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
 
 ### I see the "Restart workspace" message. Why do I see this message and what should I expect?
 
-This is due to a temporary connectivity issue because Microsoft Edge can’t connect to the service that provides and supports Edge Workspaces.
+This message is due to a temporary connectivity issue because Microsoft Edge can’t connect to the service that provides and supports Edge Workspaces.
 
 :::image type="content" source="media/microsoft-edge-workspaces/restart-workspace.png" alt-text="Prompt to restart workspace":::
 
@@ -156,7 +156,7 @@ No, Edge Workspaces can only be shared within the same Azure AD tenant.
 
 ### Are there limitations to where and how I can use Edge Workspaces?
 
-Edge Workspaces created within an Azure AD tenant are only available to users in that same tenant when they are logged into Microsoft Edge with their matching Azure AD account.
+Edge Workspaces created within an Azure AD tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Azure AD account.
 
 
 ## See also
