@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 11/28/2022
+ms.date: 12/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,14 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## December 2, 2022
+
+Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
+
+## November 29, 2022
+
+Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
 
 ## November 28, 2022
 
