@@ -3,7 +3,7 @@ title: "Allow list for Microsoft Edge endpoints"
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 11/02/2021
+ms.date: 12/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,8 +88,7 @@ These endpoints manage the reading and writing of synced data, rights management
 
 - Microsoft Edge sync service endpoints:
 
-  - `https://edge-enterprise.activity.windows.com`
-  - `https://edge.activity.windows.com`
+  - `https://edge.microsoft.com`
 
 - Azure Information Protection endpoints:
 
