@@ -88,7 +88,7 @@ These endpoints manage the reading and writing of synced data, rights management
 
 - Microsoft Edge sync service endpoints:
 
-  - `https://edge.microsoft.com/sync`
+  - `https://edge.microsoft.com`
 
 - Azure Information Protection endpoints:
 
