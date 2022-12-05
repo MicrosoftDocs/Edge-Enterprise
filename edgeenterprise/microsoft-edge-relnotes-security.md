@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/02/2022
+ms.date: 12/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,13 +16,16 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## December 2, 2022
+## December 5, 2022
 
-Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version  108.0.1462.42)**. This update contains a fix for [CVE-2022-4262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4262), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-## November 29, 2022
 
-Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2022-41115](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41115)
+- [CVE-2022-44688](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-44688)
+- [CVE-2022-44708](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-44708)
 
 ## November 28, 2022
 
