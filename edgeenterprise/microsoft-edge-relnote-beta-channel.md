@@ -57,44 +57,8 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 108.0.1462.15: November 10, 2022
-
-### Feature update
-
-- **Graph APIs for Cloud Site List Management.** New Graph APIs that allow IT admins in organizations to create, manage, and publish their site lists for IE mode in the cloud.  For more information, see [Use the Edge API in Microsoft Graph](/graph/api/resources/browser-edge-api-overview?view=graph-rest-beta).
-
-- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows, Mac, and Linux. The new SmartScreen library was first made available on Windows and Mac, and now makes its debut on Linux with Microsoft Edge version 108. Microsoft Edge version 108 also brings new product optimizations (that is better proxy handling) and bug fixes by having the SmartScreen library leverage Microsoft Edge’s built-in network stack.
-
-### Policy updates
-
-#### New policies
-
-- [EncryptedClientHelloEnabled](/DeployEdge/microsoft-edge-policies#encryptedclienthelloenabled) - TLS Encrypted ClientHello Enabled
-- [NewTabPageAppLauncherEnabled](/DeployEdge/microsoft-edge-policies#newtabpageapplauncherenabled) - Hide App Launcher on Microsoft Edge new tab page
-
-#### Obsoleted policy
-
-- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Enable new SmartScreen library
-
-## Version 107.0.1418.23: October 26, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.20: October 24, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.16: October 20, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.13: October 18, 2022
-
-Fixed various bugs and performance issues.
-
-
+<!--- from Version 108.0.1462.15: November 10, 2022 to Version 107.0.1418.13: October 18, 2022 -->
 <!--- from Version 107.0.1418.8: October 13, 2022 to Version 106.0.1370.17: September 16, 2022 -->
-
 <!-- from Version 106.0.1370.15: September 15, 2022 to Version Version 105.0.1343.10: August 19, 2022 ---->
 <!--- from Version 105.0.1343.7: August 16, 2022 to Version 104.0.1293.21: July 14 ---->
 <!--- from Version 104.0.1293.14: July 7 to Version 103.0.1264.17: June 6 ---->
