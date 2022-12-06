@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/05/2022
+ms.date: 12/06/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,8 @@ These release notes provide information about new features and non-security upda
 ## Version 109.0.1462.xx: December xx, 2022
 
 ### Feature update
+
+- **MSA-AAD Account Linking.** Microsoft is enabling users who have a personal Microsoft account (an MSA) and a Microsoft user account through their work or school (an Azure Active Directory account) to "link" the two types of accounts together. "Linked accounts" means that users will be able to see some of the content from their personal account alongside the tailored content from their work or school account. They are also able to earn Microsoft Rewards points in their personal account from their activities while using their work or school account. Additional blended experiences may be made available.  For more information, see the [Account Linking FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-faq-c66effb9-02e6-49c0-89e1-ae4d8644e6f7) and the [Account Linking IT Admins FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-it-admins-faq-72f0dc4e-b632-439e-b90c-347043a7b75a). Tenant admins can learn how to control this feature in the Message Center section of the Microsoft 365 Admin Center.
 
 ### Policy updates
 
