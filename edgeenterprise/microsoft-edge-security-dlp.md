@@ -55,7 +55,7 @@ For more detailed information about user activities you can audit and manage, se
 > [!NOTE]
 > Windows information protection will be discontinued over time. For more information, see [Announcing the sunset of Windows Information Protection (WIP)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-the-sunset-of-windows-information-protection-wip/ba-p/3579282).
 
-Check out [Support for Windows Information Protection](./microsoft-edge-security-windows-information-protection.md), which describes how Microsoft Edge supports Windows Information Protection (WIP). You can learn moe about system requirements, benefits, and supported features in the following sections:
+Check out [Support for Windows Information Protection](./microsoft-edge-security-windows-information-protection.md), which describes how Microsoft Edge supports Windows Information Protection (WIP). You can learn more about system requirements, benefits, and supported features in the following sections:
 
 - [System Requirements](./microsoft-edge-security-windows-information-protection.md#system-requirements)
 - [Windows Information Protection Benefits](./microsoft-edge-security-windows-information-protection.md#windows-information-protection-benefits)
