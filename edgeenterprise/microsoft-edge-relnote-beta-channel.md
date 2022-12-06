@@ -19,6 +19,18 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 109.0.1462.xx: December xx, 2022
+
+### Feature update
+
+### Policy updates
+
+#### New policies
+
+#### Deprecated policies
+
+#### Obsoleted policies
+
 ## Version 108.0.1462.42: December 5, 2022
 
 Fixed various bugs and performance issues.
