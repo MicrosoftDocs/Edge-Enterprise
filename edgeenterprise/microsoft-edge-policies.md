@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/06/2022
+ms.date: 12/04/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -407,7 +407,7 @@ These tables list all of the browser-related group policies available in this re
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
-|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped|
+|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
 |[DoNotSilentlyBlockProtocolsFromOrigins](#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
@@ -434,7 +434,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsolete)|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
@@ -566,6 +566,7 @@ These tables list all of the browser-related group policies available in this re
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
+|[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
@@ -18939,25 +18940,26 @@ Note: The value specified in this policy is used as a hint to various cache subs
 
   ### DisplayCapturePermissionsPolicyEnabled
 
-  #### Specifies whether the display-capture permissions-policy is checked or skipped
+  #### Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
   #### Supported versions:
 
-  - On Windows and macOS since 95 or later
+  - On Windows and macOS since 95, until 109
 
   #### Description
 
-  The display-capture permissions-policy gates access to getDisplayMedia(),
+  This policy is obsolete. The policy was a temporary workaround for non-spec-compliant enterprise applications.
+
+This policy stopped working in Microsoft Edge 107 and was obsoleted in Microsoft Edge 110.
+
+The display-capture permissions-policy gates access to getDisplayMedia(),
 as per this spec:
 https://www.w3.org/TR/screen-capture/#feature-policy-integration
 However, if this policy is Disabled, this requirement is not enforced,
 and getDisplayMedia() is allowed from contexts that would otherwise be
-forbidden. This Enterprise policy is temporary; it's intended to be
-removed after Microsoft Edge version 100.
-It is intended to unblock Enterprise users whose application is non-spec compliant,
-but needs time to be fixed.
+forbidden.
 
 If you enable or don't configure this policy, sites can only call getDisplayMedia() from
 contexts which are allowlisted by the display-capture permissions-policy.
@@ -18981,7 +18983,7 @@ Note that other restrictions may still apply.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DisplayCapturePermissionsPolicyEnabled
-  - GP name: Specifies whether the display-capture permissions-policy is checked or skipped
+  - GP name: Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -20796,10 +20798,10 @@ This policy will be made obsolete after Microsoft Edge version 115.
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### Disable download file type extension-based warnings for specified file types on domains
+  #### Disable download file type extension-based warnings for specified file types on domains (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
   #### Supported versions:
 
   - On Windows and macOS since 85, until 109
@@ -20846,7 +20848,7 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Group Policy (ADMX) info
 
   - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - GP name: Disable download file type extension-based warnings for specified file types on domains
+  - GP name: Disable download file type extension-based warnings for specified file types on domains (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -29562,6 +29564,68 @@ If you disable this policy, web page scrolling to specific text fragments via a 
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SearchFiltersEnabled
+
+  #### Search Filters Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109 or later
+
+  #### Description
+
+  Lets you filter your autosuggestions by selecting a filter from the search filters ribbon. For example, if you select the "Favorites" filter, only favorites suggestions will be shown.
+
+If you enable or don't configure this policy, the autosuggestion dropdown defaults to displaying the ribbon of available filters.
+
+If you disable this policy, the autosuggestion dropdown won't display the ribbon of available filters.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchFiltersEnabled
+  - GP name: Search Filters Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: SearchFiltersEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SearchFiltersEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
