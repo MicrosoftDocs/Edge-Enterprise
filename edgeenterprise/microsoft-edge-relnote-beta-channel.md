@@ -65,7 +65,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-
+<!---                   --->
 <!--- from Version 108.0.1462.15: November 10, 2022 to Version 107.0.1418.13: October 18, 2022 -->
 <!--- from Version 107.0.1418.8: October 13, 2022 to Version 106.0.1370.17: September 16, 2022 -->
 <!-- from Version 106.0.1370.15: September 15, 2022 to Version Version 105.0.1343.10: August 19, 2022 ---->
