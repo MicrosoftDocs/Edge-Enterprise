@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/12/2022
+ms.date: 12/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -46,10 +46,11 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 ### Windows Server
 
 - Windows Server 2008 R2
-  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, 
-[see our release schedule](/deployedge/microsoft-edge-release-schedule)).
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2012
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2012 R2
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
 - Windows Server 2022 (LTSC)
