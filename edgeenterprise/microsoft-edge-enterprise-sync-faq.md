@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/01/2022
+ms.date: 12/05/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,6 +45,10 @@ Terms of service for Microsoft Edge sync fall under the Microsoft software licen
 ### Does Microsoft Edge support Government Community Cloud (GCC) High compliance?
 
 Not today. For customers in the GCC High cloud, Microsoft Edge sync is disabled.
+
+### Does Microsoft Edge sync support Microsoft Azure operated by 21Vianet?
+
+Not today. For customers in Microsoft Azure operated by 21Vianet, Microsoft Edge sync is not supported.
 
 ## Applying Sync
 
