@@ -3,7 +3,7 @@ title: "Install Microsoft Edge for mobile platforms in China"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2022
+ms.date: 12/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,7 +27,7 @@ Microsoft Edge for Android can be installed from the following app stores.
 - [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx) (not available everywhere)
 - [Huawei](https://appgallery.huawei.com/#/app/C100148961)
 - [Xiaomi](https://app.mi.com/details?id=com.microsoft.emmx&ref=search)
-- [Oppo](https://www.oppo.com/cn/smartphones/)
+- Oppo
 - [Vivo](http://info.appstore.vivo.com.cn/detail/1996695)
 - [Samsung](https://galaxystore.samsung.com/detail/com.microsoft.emmx)
 - [Baidu](https://shouji.baidu.com/detail/3240736)
