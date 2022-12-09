@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/05/2022
+ms.date: 12/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,9 +28,12 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### Windows Client
 
-- Windows 7 **
+- Windows 7
+  - In alignment with [Windows 7 Extended Security Update (ESU)](/lifecycle/products/windows-7) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows 8.1
-- Windows 10 SAC 1709 and later ***
+  - In alignment with [Windows 8/8.1](/lifecycle/products/windows-81) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
+
+- Windows 10 SAC 1709 and later **
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
@@ -42,18 +45,19 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### Windows Server
 
-- Windows Server 2008 R2 **
+- Windows Server 2008 R2
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2012
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2012 R2
+  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
 - Windows Server 2022 (LTSC)
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** We will continue to support Microsoft Edge on Windows 7 and on Windows Server 2008 R2 until January 15, 2023. These operating systems are out of support and Microsoft recommends you move to a supported operating system such as Windows 10. While Microsoft Edge helps keep you more secure on the web, your PC may still be vulnerable to security risks. In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Without the Windows 7 Extended Security updates Internet Explorer functionality will be vulnerable to security risks. Additionally, IE mode functionality may cease to work without the continued servicing through the extended security updates. Microsoft Edge on Windows 7 can be updated using the built-in auto update engine or using Configuration Manager and WSUS.
->
-> *** In the same fashion as above, for Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure. Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.
+> ** For Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure. Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.
 >
 > **** The Microsoft Edge OPK is available on MOO for IoT OEMs to preinstall and distribute as part of their Windows 10 IoT Enterprise based solution.
 
@@ -92,3 +96,4 @@ Microsoft Edge does not support Chromebooks.
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy)
 - [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)
+
