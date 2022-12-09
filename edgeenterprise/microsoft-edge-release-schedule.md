@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/07/2022
+ms.date: 12/09/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -56,6 +56,12 @@ The following table lists the planned and actual release dates for major release
 | 108 | Released <br>Version | 10-Nov-2022<br>[108.0.1462.15](/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-1080146215-november-10-2022) | 05-Dec-2022<br>[108.0.1462.42](/deployedge/microsoft-edge-relnote-stable-channel#version-1080146242-december-5-2022) | 05-Dec-2022<br>[108.0.1462.42](/deployedge/microsoft-edge-relnote-stable-channel#version-1080146242-december-5-2022) |
 | 109 | Released<br>Version | 07-Dec-2022<br>[109.0.1518.14](/DeployEdge/microsoft-edge-relnote-beta-channel#version-1090151814-december-07-2022) | Week of 12-Jan-2023 | Not applicable |
 | 110 | Target release | Week of 18-Jan-2023 | Week of 09-Feb-2023 | Week of 09-Feb-2023 |
+| 111 | Target release | Week of 14-Feb-2023 | Week of 09-Mar-2023 | Not applicable |
+| 112 | Target release | Week of 14-Mar-2023 | Week of 06-Apr-2023 | Week of 06-Apr-2023 |
+| 113 | Target release | Week of 11-Apr-2023 | Week of 04-May-2023 | Not applicable |
+| 114 | Target release | Week of 09-May-2023 | Week of 01-Jun-2023 | Week of 01-Jun-2023 |
+| 115 | Target release | Week of 06-Jun-2023 | Week of 29-Jun-2023 | Not applicable |
+| 116 | Target release | Week of 18-Jul-2023 | Week of 10-Aug-2023 | Week of 10-Aug-2023 |
 
 ## Release process
 
