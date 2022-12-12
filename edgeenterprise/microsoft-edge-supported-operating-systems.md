@@ -29,9 +29,9 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 ### Windows Client
 
 - Windows 7
-  - In alignment with [Windows 7 Extended Security Update (ESU)](/lifecycle/products/windows-7) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
+  - With [Windows 7 Extended Security Update (ESU)](/lifecycle/products/windows-7) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 - Windows 8.1
-  - In alignment with [Windows 8/8.1](/lifecycle/products/windows-81) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
+  - With [Windows 8/8.1](/lifecycle/products/windows-81) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
 
 - Windows 10 SAC 1709 and later **
 - Windows 10 Enterprise 2015 LTSC
