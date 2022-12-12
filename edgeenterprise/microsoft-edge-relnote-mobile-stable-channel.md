@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2022
+ms.date: 12/12/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
