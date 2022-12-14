@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/07/2022
+ms.date: 12/14/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,13 +26,12 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
-|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
-|[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsolete)|
+|[WorkspacesNavigationSettings](#workspacesnavigationsettings)|Configure navigation settings per groups of URLs in Microsoft Edge Workspaces|
+|[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 
 ## Available policies
 
@@ -155,6 +154,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[EdgeWorkspacesEnabled](#edgeworkspacesenabled)|Enable Workspaces|
+|[WorkspacesNavigationSettings](#workspacesnavigationsettings)|Configure navigation settings per groups of URLs in Microsoft Edge Workspaces|
 ### [*Experimentation*](#experimentation-policies)
 
 |Policy Name|Caption|
@@ -577,6 +577,7 @@ These tables list all of the browser-related group policies available in this re
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
+|[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
@@ -5769,6 +5770,155 @@ To learn more about the feature, see [https://go.microsoft.com/fwlink/?linkid=22
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WorkspacesNavigationSettings
+
+  #### Configure navigation settings per groups of URLs in Microsoft Edge Workspaces
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  This setting lets you to define groups of URLs, and apply specific Microsoft Edge Workspaces navigation settings to each group.
+
+If this policy is configured, Microsoft Edge Workspaces will use the configured settings when deciding whether and how to share navigations among collaborators in a Microsoft Edge Workspace.
+
+If this policy is not configured, Microsoft Edge Workspaces will use only default and internally configured navigation settings.
+
+For more information about configuration options, see [https://go.microsoft.com/fwlink/?linkid=2218655](https://go.microsoft.com/fwlink/?linkid=2218655)
+
+Note, format url_patterns according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). You can configure the url_regex_patterns in this policy to match multiple URLs using a Perl style regular expression for the pattern. Note that pattern matches are case sensitive. For more information about the regular expression rules that are used, refer to https://go.microsoft.com/fwlink/p/?linkid=2133903.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WorkspacesNavigationSettings
+  - GP name: Configure navigation settings per groups of URLs in Microsoft Edge Workspaces
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Edge Workspaces settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WorkspacesNavigationSettings
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WorkspacesNavigationSettings = [
+  {
+    "navigation_options": {
+      "do_not_send_to": true,
+      "remove_all_query_parameters": true
+    },
+    "url_patterns": [
+      "https://contoso.com",
+      "https://www.fabrikam.com",
+      ".exact.hostname.com"
+    ]
+  },
+  {
+    "navigation_options": {
+      "query_parameters_to_remove": [
+        "username",
+        "login_hint"
+      ]
+    },
+    "url_patterns": [
+      "https://adatum.com"
+    ]
+  },
+  {
+    "navigation_options": {
+      "do_not_send_from": true,
+      "prefer_initial_url": true
+    },
+    "url_regex_patterns": [
+      "\\Ahttps://.*?tafe\\..*?trs.*?\\.fabrikam.com/Sts"
+    ]
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WorkspacesNavigationSettings = [{"navigation_options": {"do_not_send_to": true, "remove_all_query_parameters": true}, "url_patterns": ["https://contoso.com", "https://www.fabrikam.com", ".exact.hostname.com"]}, {"navigation_options": {"query_parameters_to_remove": ["username", "login_hint"]}, "url_patterns": ["https://adatum.com"]}, {"navigation_options": {"do_not_send_from": true, "prefer_initial_url": true}, "url_regex_patterns": ["\\Ahttps://.*?tafe\\..*?trs.*?\\.fabrikam.com/Sts"]}]
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: WorkspacesNavigationSettings
+  - Example value:
+``` xml
+<key>WorkspacesNavigationSettings</key>
+<array>
+  <dict>
+    <key>navigation_options</key>
+    <dict>
+      <key>do_not_send_to</key>
+      <true/>
+      <key>remove_all_query_parameters</key>
+      <true/>
+    </dict>
+    <key>url_patterns</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>https://www.fabrikam.com</string>
+      <string>.exact.hostname.com</string>
+    </array>
+  </dict>
+  <dict>
+    <key>navigation_options</key>
+    <dict>
+      <key>query_parameters_to_remove</key>
+      <array>
+        <string>username</string>
+        <string>login_hint</string>
+      </array>
+    </dict>
+    <key>url_patterns</key>
+    <array>
+      <string>https://adatum.com</string>
+    </array>
+  </dict>
+  <dict>
+    <key>navigation_options</key>
+    <dict>
+      <key>do_not_send_from</key>
+      <true/>
+      <key>prefer_initial_url</key>
+      <true/>
+    </dict>
+    <key>url_regex_patterns</key>
+    <array>
+      <string>\Ahttps://.*?tafe\..*?trs.*?\.fabrikam.com/Sts</string>
+    </array>
+  </dict>
+</array>
 ```
   
 
@@ -15733,9 +15883,9 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 
 Setting this policy to Enabled will enable code integrity guard in the browser process.
 
-Setting this policy to Audit or leaving the policy unset will enable audit mode for code integrity guard in the browser process. Audit mode will emit logs to the event viewer under Security-Mitigations and CodeIntegrity providers when a binary is loaded after CIG was enabled that is not Microsoft signed.
+Setting this policy to Disabled, or if the policy is not set, will prevent the browser from enabling code integrity guard in the browser process.
 
-Setting this policy to Disabled will prevent the browser from enabling code integrity guard in the browser process.
+The policy value Audit (1) is obsolete as of version 110. Setting this value is equivalent to the Disabled value.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances that enrolled for device management.
 
@@ -15781,7 +15931,7 @@ Use the preceding information when configuring this policy.
   ##### Example value:
 
 ```
-0x00000001
+0x00000000
 ```
 
   
@@ -18215,7 +18365,7 @@ Use the preceding information when configuring this policy.
 
   This policy controls the default value for the "share additional operating system region" setting in Microsoft Edge.
 
-The "share additional operating system region" Microsoft Edge setting controls whether the OS Regional format setting will be shared with the web through the default JavaScript locale. If shared, websites will be able to query the OS Regional format using JavaScript code, for example; "Intl.DateTimeFormat().resolvedOptions().locale".
+The "share additional operating system region" Microsoft Edge setting controls whether the OS Regional format setting will be shared with the web through the default JavaScript locale. If shared, websites will be able to query the OS Regional format using JavaScript code, for example; "Intl.DateTimeFormat().resolvedOptions().locale". The default value for the setting is "Limited".
 
 If you set this policy to "Limited", the OS Regional format will only be shared if its language part matches the Microsoft Edge display language.
 
@@ -18225,7 +18375,9 @@ If you set this policy to "Never", the OS Regional format will never be shared.
 
 Example 1: In this example the OS Regional format is set to "en-GB" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Limited", or "Always".
 
-Example 2: In this example the OS Regional format is set to "es-MX" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Always" but will not if the policy is set to "Limited",.
+Example 2: In this example the OS Regional format is set to "es-MX" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Always" but will not if the policy is set to "Limited".
+
+For more information about this setting, see https://learn.microsoft.com/microsoft-edge/web-platform/os-regional-settings
 
 
 Policy options mapping:
@@ -29636,6 +29788,80 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SearchInSidebarEnabled
+
+  #### Search in Sidebar enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Search in Sidebar allows users to open search result in sidebar (including sidebar search for Progressive Web Apps).
+
+If you configure this policy to 'EnableSearchInSidebar' or don't configure it,  Search in sidebar will be enabled.
+
+If you configure this policy to 'DisableSearchInSidebarForKidsMode', Search in sidebar will be disabled when in Kids mode. Some methods that would normally invoke sidebar search will invoke a traditional search instead.
+
+If you configure this policy to 'DisableSearchInSidebar', Search in sidebar will be disabled. Some methods that would normally invoke sidebar search will invoke a traditional search instead.
+
+Policy options mapping:
+
+* EnableSearchInSidebar (0) = Enable search in sidebar
+
+* DisableSearchInSidebarForKidsMode (1) = Disable search in sidebar for Kids Mode
+
+* DisableSearchInSidebar (2) = Disable search in sidebar
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchInSidebarEnabled
+  - GP name: Search in Sidebar enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchInSidebarEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: SearchInSidebarEnabled
+  - Example value:
+``` xml
+<integer>0</integer>
 ```
   
 
