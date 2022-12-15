@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 12/14/2022
+ms.date: 12/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
