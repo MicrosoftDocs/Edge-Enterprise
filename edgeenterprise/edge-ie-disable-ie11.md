@@ -15,7 +15,7 @@ description: "Learn how to disable Internet Explorer 11 and use Internet Explore
 # Disable Internet Explorer 11
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
 [Learn more >](https://aka.ms/iemodefaq)  
 >
 > We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.

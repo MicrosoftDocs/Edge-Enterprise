@@ -15,7 +15,7 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 # Internet Explorer (IE) mode troubleshooting and FAQ
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
 [Learn more >](https://aka.ms/iemodefaq)  
 >
 >We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
@@ -201,7 +201,7 @@ You may also have to set the `compat-mode` attribute in Enterprise Mode Site Lis
 ### Will IE mode replace Internet Explorer 11?
 
 Yes.
-The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.
+The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
 [Learn more >](https://aka.ms/iemodefaq)
 
 We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
