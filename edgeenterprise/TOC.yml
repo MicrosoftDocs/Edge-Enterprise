@@ -1,4 +1,4 @@
-# last revised 11/18/2022
+# last revised 12/08/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -31,6 +31,8 @@
      href: microsoft-edge-browser-usage-report.md
    - name: Ready for Microsoft Edge
      href: deploy-edge-ready-for-edge.md
+   - name: Install Microsoft Edge for mobile platforms in China
+     href: microsoft-edge-install-mobile-china.md
    - name: Mobile Stable Channel Release Notes
      href: microsoft-edge-relnote-mobile-stable-channel.md
    - name: Stable Channel Release Notes
