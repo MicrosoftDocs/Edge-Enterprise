@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/27/2022
+ms.date: 12/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,9 +15,10 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 # Internet Explorer (IE) mode troubleshooting and FAQ
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 (IE11) desktop application will be permanently disabled on certain versions of Windows 10 as part of the February 2023 Windows security update (“B”) release scheduled for February 14, 2023. [Learn more](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)  
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.
+[Learn more >](https://aka.ms/iemodefaq)  
 >
-> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption. [Learn how](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/control-ie-retirement-on-your-own-schedule-with-the-disable-ie/ba-p/3627725)
+>We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
 >
 
 This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
@@ -200,9 +201,10 @@ You may also have to set the `compat-mode` attribute in Enterprise Mode Site Lis
 ### Will IE mode replace Internet Explorer 11?
 
 Yes.
-The retired, out-of-support Internet Explorer 11 (IE11) desktop application will be permanently disabled on certain versions of Windows 10 as part of the February 2023 Windows security update (“B”) release scheduled for February 14, 2023. [Learn more](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)
- 
-We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption. [Learn how](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/control-ie-retirement-on-your-own-schedule-with-the-disable-ie/ba-p/3627725)
+The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.
+[Learn more >](https://aka.ms/iemodefaq)
+
+We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
