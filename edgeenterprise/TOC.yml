@@ -1,8 +1,6 @@
 # last revised 12/08/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
-- name: Microsoft Edge documentation
-  href: /microsoft-edge/
 # GET STARTED
 - name: Get started with Microsoft Edge
   items:
@@ -12,8 +10,6 @@
      href: https://www.microsoftedgeinsider.com/whats-new
    - name: Customer adoption materials
      href: microsoft-edge-customer-adoption-kit.md
-   - name: Explore documentation resources
-     href: /microsoft-edge/
    - name: Microsoft Edge hands-on deployment lab
      href: deploy-edge-hands-on-lab.md
    - name: Windows Blogs - Microsoft Edge Developer
