@@ -29,6 +29,8 @@ These release notes provide information about new features and non-security upda
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-16-2022).
 
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
 ## Version 108.0.1462.46: December 8, 2022
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
