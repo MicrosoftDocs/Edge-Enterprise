@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/15/2022
+ms.date: 12/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -11,7 +11,6 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge release notes for Stable Channel"
 ---
-
 # Release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel.
@@ -26,7 +25,9 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 108.0.1462.54: December 15, 2022
+## Version 108.0.1462.54: December 16, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-16-2022).
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
 
