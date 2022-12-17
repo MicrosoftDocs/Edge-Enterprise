@@ -1,4 +1,4 @@
-# last revised 12/08/2022
+# last revised 12/15/2022
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -221,6 +221,8 @@
      href: microsoft-edge-policies.md
    - name: Update policy reference
      href: microsoft-edge-update-policies.md
+   - name: Mobile policy reference
+     href: microsoft-edge-mobile-policies.md
    - name: WebView2 policy reference
      href: microsoft-edge-webview-policies.md
    - name: Learn more reference
