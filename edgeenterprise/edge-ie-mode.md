@@ -91,8 +91,8 @@ The following prerequisites apply to using Microsoft Edge with IE mode.
  | Windows Server   |  2008 R2**    | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) or later; or [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) or later |
   > [!IMPORTANT]
   > ** For Windows 10 SAC releases that are out of support but Microsoft Edge is supported it is recommended to upgrade to a supported Win10 SAC release as soon as possible to remain secure. Microsoft Edge being supported in this state should be considered a temporary bridge to getting to a supported OS state.
-
-**** The Microsoft Edge OPK is available on MOO for IoT OEMs to preinstall and distribute as part of their Windows 10 IoT Enterprise based solution.
+  >
+  >**** The Microsoft Edge OPK is available on MOO for IoT OEMs to preinstall and distribute as part of their Windows 10 IoT Enterprise based solution.
 
 2. The Microsoft Edge administrative template. For more information, see [Configure Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer 11 enabled in Windows Features.
