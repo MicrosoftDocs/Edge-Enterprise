@@ -38,7 +38,7 @@ These tables list all of the browser-related policies available in this release 
 - [DefaultSearchProviderName](#defaultsearchprovidername)
 - [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)
 - [DefaultSearchProviderSearchURLPostParams](#defaultsearchproviderimageurlpostparams)
-- [DefaultSearchProviderAlternateURLs](#defaultsearchprovideraternateurls)
+- [DefaultSearchProviderAlternateURLs](#defaultsearchprovideralternateurls)
 - [DefaultSearchProviderEncodings](#defaultsearchproviderencodings)
 - [DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)
 - [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)
