@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/16/2022
+ms.date: 12/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -27,6 +27,7 @@ These tables list all of the browser-related policies available in this release 
 - [URLBlocklist](#urlblocklist)
 - [SSLErrorOverrideAllowed](#sslerroroverrideallowed)
 - [CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)
+- [CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)
 - [NtlmV2Enabled](#ntlmv2enabled)
 - [AuthSchemes](#authschemes)
 - [DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)
@@ -328,6 +329,56 @@ CertificateTransparencyEnforcementDisabledForUrls
 [
  "example.com",
  ".example.com"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### CertificateTransparencyEnforcementDisabledForCas
+
+#### Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy turns off enforcement of Certificate Transparency disclosure requirements for a list of subjectPublicKeyInfo hashes. Enterprise hosts can keep using certificates that otherwise wouldn't be trusted (because they weren't properly publicly disclosed). To turn off enforcement, the hash must meet one of these conditions:
+
+\* It's of the server certificate's subjectPublicKeyInfo.
+
+\* It's of a subjectPublicKeyInfo that appears in a Certificate Authority (CA) certificate in the certificate chain. That CA certificate is constrained through the X.509v3 nameConstraints extension, one or more directoryName nameConstraints are present in the permittedSubtrees, and the directoryName has an organizationName attribute.
+
+\* It's of a subjectPublicKeyInfo that appears in a CA certificate in the certificate chain, the CA certificate has one or more organizationName attributes in the certificate Subject, and the server's certificate has the same number of organizationName attributes, in the same order, and with byte-for-byte identical values.
+
+Specify a subjectPublicKeyInfo hash by linking the hash algorithm name, a slash, and the Base64 encoding of that hash algorithm applied to the DER-encoded subjectPublicKeyInfo of the specified certificate. Base64 encoding format matches that of an SPKI Fingerprint. The only recognized hash algorithm is sha256; others are ignored.
+
+Leaving the policy unset means that if certificates requiring disclosure through Certificate Transparency aren't disclosed, then Google Chrome doesn't trust those certificates.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+CertificateTransparencyEnforcementDisabledForCas
+```
+
+##### Example value:
+
+```
+[
+ "sha256/AAAAAAAAAAAAAAAAAAAAAA==",
+ "sha256//////////////////////w=="
 ]
 ```
 
