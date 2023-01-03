@@ -2,6 +2,14 @@
 
 
 
+## Week of December 26, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/27/2022 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
+
+
 ## Week of December 12, 2022
 
 
