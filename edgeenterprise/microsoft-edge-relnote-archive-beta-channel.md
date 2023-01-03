@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/06/2022
+ms.date: 01/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -818,6 +818,8 @@ Please note: we are experimenting with this feature and this behavior won’t be
 
 - **Improvements to font rendering**. Improvements have been made to the rendering of text to improve clarity and reduce blurriness.
 Please note: this is a Controlled Feature Rollout. If you don’t see this feature, check back shortly as we continue our rollout.
+
+- **Microsoft Editor.**  Microsoft Editor offers enhanced spellchecking, grammar checking, and text predictions. [Learn more](https://support.microsoft.com/en-us/office/microsoft-editor-checks-grammar-and-more-in-documents-mail-and-the-web-91ecbe1b-d021-4e9e-a82e-abc4cd7163d7).
 
 ### Policy updates
 
