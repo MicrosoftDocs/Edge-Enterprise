@@ -30,8 +30,7 @@ The following table lists the new and obsoleted policies that are in this articl
 
 | Policy Name | Caption |
 |:-----|:-----|
-[Immersive Reader settings](#immersive-reader-settings)
-[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings|
+[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings |
 [ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 
 ## Available policies
