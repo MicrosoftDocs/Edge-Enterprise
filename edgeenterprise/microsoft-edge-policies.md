@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/14/2022
+ms.date: 01/04/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,12 +26,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[WorkspacesNavigationSettings](#workspacesnavigationsettings)|Configure navigation settings per groups of URLs in Microsoft Edge Workspaces|
-|[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
+[Immersive Reader settings](#immersive-reader-settings)
+[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings|
+[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 
 ## Available policies
 
@@ -46,6 +47,7 @@ These tables list all of the browser-related group policies available in this re
 - [Extensions](#extensions)
 - [HTTP authentication](#http-authentication)
 - [Identity and sign-in](#identity-and-sign-in)
+- [Immersive Reader settings](#immersive-reader-settings)
 - [Kiosk Mode settings](#kiosk-mode-settings)
 - [Manageability](#manageability)
 - [Native Messaging](#native-messaging)
@@ -198,6 +200,12 @@ These tables list all of the browser-related group policies available in this re
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
+### [*Immersive Reader settings*](#immersive-reader-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge|
+|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
 |Policy Name|Caption|
@@ -256,6 +264,7 @@ These tables list all of the browser-related group policies available in this re
 |[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
 |[PrintPdfAsImageDefault](#printpdfasimagedefault)|Print PDF as Image Default|
 |[PrintPostScriptMode](#printpostscriptmode)|Print PostScript Mode|
+|[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
 |[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
 |[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
@@ -587,7 +596,7 @@ These tables list all of the browser-related group policies available in this re
 |[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
 |[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
 |[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Control Javascript setTimeout() function minimum timeout (deprecated)|
-|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (deprecated)|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
@@ -645,8 +654,8 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Edge bar|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Edge bar at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
@@ -7830,6 +7839,134 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Immersive Reader settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImmersiveReaderGrammarToolsEnabled
+
+  #### Enable Grammar Tools feature within Immersive Reader in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Enables the Grammar Tools feature within Immersive Reader in Microsoft Edge.
+This helps improve reading comprehension by splitting words into syllables and highlighting nouns, verbs, adverbs, and adjectives.
+
+If you enable this policy or don't configure it, the Grammar Tools option shows up within Immersive Reader.
+If you disable this policy, users can't access the Grammar Tools feature within Immersive Reader.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImmersiveReaderGrammarToolsEnabled
+  - GP name: Enable Grammar Tools feature within Immersive Reader in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Immersive Reader settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImmersiveReaderGrammarToolsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ImmersiveReaderGrammarToolsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImmersiveReaderPictureDictionaryEnabled
+
+  #### Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Enables the Picture Dictionary feature within Immersive Reader in Microsoft Edge.
+This feature helps in reading comprehension by letting a user to click on any single word and see an illustration related to the meaning.
+
+If you enable this policy or don't configure it, the Picture Dictionary option shows up within Immersive Reader.
+If you disable this policy, users can't access the Picture Dictionary feature within Immersive Reader.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImmersiveReaderPictureDictionaryEnabled
+  - GP name: Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Immersive Reader settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImmersiveReaderPictureDictionaryEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ImmersiveReaderPictureDictionaryEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Kiosk Mode settings policies
 
   [Back to top](#microsoft-edge---policies)
@@ -9862,6 +9999,100 @@ Use the preceding information when configuring this policy.
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PrintPreviewStickySettings
+
+  #### Configure the sticky print preview settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  Configuring  this  policy  sets  the  print  preview  settings  as  the  most  recent  choice  in  Print  Preview  instead  of  the  default  print  preview  settings .
+
+Each  item  of  this  policy  expects  a  boolean :
+
+Layout  specifies  if  the  webpage  layout  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  webpage  layout  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+
+Size  specifies  if  the  page  size  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  size  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+
+Scale  Type  specifies  if  the  scaling  percentage  and  scale  type  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  scale  percentage  and  scale  type  both  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+
+Margins  specifies  if  the  page  margin  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  margins  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+
+If  you  enable  this  policy ,  the  selected  values  will  use  the  most  recent  choice  in  Print  Preview .
+
+If  you  disable  or  don't  configure  this  policy ,  print  preview  settings  will  not  be  impacted .
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PrintPreviewStickySettings
+  - GP name: Configure the sticky print preview settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Printing
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Printing
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PrintPreviewStickySettings
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrintPreviewStickySettings = {
+  "layout": false,
+  "margins": true,
+  "scaleType": false,
+  "size": true
+}
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\PrintPreviewStickySettings = {"layout": false, "margins": true, "scaleType": false, "size": true}
+  ```
+  
+
+  #### Mac information and settings
+  
+  - Preference Key Name: PrintPreviewStickySettings
+  - Example value:
+``` xml
+<key>PrintPreviewStickySettings</key>
+<dict>
+  <key>layout</key>
+  <false/>
+  <key>margins</key>
+  <true/>
+  <key>scaleType</key>
+  <false/>
+  <key>size</key>
+  <true/>
+</dict>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -30468,13 +30699,13 @@ This policy was only provided temporarily to allow Enterprises to adapt to the n
 
   ### ShadowStackCrashRollbackBehavior
 
-  #### Configure ShadowStack crash rollback behavior (deprecated)
+  #### Configure ShadowStack crash rollback behavior (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
   #### Supported versions:
 
-  - On Windows since 95 or later
+  - On Windows since 95, until 109
 
   #### Description
 
@@ -30515,7 +30746,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ShadowStackCrashRollbackBehavior
-  - GP name: Configure ShadowStack crash rollback behavior (deprecated)
+  - GP name: Configure ShadowStack crash rollback behavior (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -34338,7 +34569,7 @@ If you disable this policy, Web select won't be available.
 
   ### WebWidgetAllowed
 
-  #### Enable the Edge bar
+  #### Enable the Search bar
 
   
   
@@ -34348,22 +34579,21 @@ If you disable this policy, Web select won't be available.
 
   #### Description
 
-  Enables the Edge bar. When enabled, users can use the Edge bar to search the web from their desktop or from an application. The Edge bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The Edge bar also includes feed tiles that users can click to see more information on msn.com in a new Microsoft Edge browser tab or window. The feed tiles may include ads. The Edge bar can be launched from the Microsoft Edge settings or from the "More tools" menu in Microsoft Edge.
+  Enables the search bar. When enabled, users can use the search bar to search the web from their desktop or from an application. The search bar provides a search box that shows web suggestions and opens all web searches in Microsoft Edge. The search box provides search (powered by Bing) and URL suggestions. The search bar can be launched  from the "More tools" menu or jump list in Microsoft Edge.
 
 If you enable or don't configure this policy:
-  The Edge bar will be automatically enabled for all profiles.
-  In the Microsoft Edge settings, users will see option to launch the Edge bar.
-  In the Microsoft Edge settings, users will see the menu item to run the Edge bar at Windows startup (auto-start).
-    The option to enable the Edge bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
-    If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the Edge bar at startup will be toggled off.
-  Users will see the menu item to launch the Edge bar from the Microsoft Edge "More tools" menu. Users can launch the Edge bar from "More tools".
-  The Edge bar can be turned off by the "Quit" option in the System tray or by closing the Edge bar from the taskbar. The Edge bar will be restarted on system reboot if auto-start is enabled.
+The search bar will be automatically enabled for all profiles.
+The option to enable the search bar at startup will be toggled on if the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) policy is enabled.
+If the [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
+Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
+Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
+The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+
 
 If you disable this policy:
-  The Edge bar will be disabled for all profiles.
-  The option to launch the Edge bar from Microsoft Edge Settings will be disabled.
-  The option to launch start the Edge bar at Windows startup (auto-start) will be disabled.
-  The option to launch the Edge bar from Microsoft Edge "More tools" menu will be disabled.
+The search bar will be disabled for all profiles.
+The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
+The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
 
   #### Supported features:
 
@@ -34380,7 +34610,7 @@ If you disable this policy:
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetAllowed
-  - GP name: Enable the Edge bar
+  - GP name: Enable the Search bar
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -34404,7 +34634,7 @@ If you disable this policy:
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Allow the Edge bar at Windows startup
+  #### Allow the Search bar at Windows startup
 
   
   
@@ -34414,18 +34644,18 @@ If you disable this policy:
 
   #### Description
 
-  Allows the Edge bar to start running at Windows startup.
+  Allows the Search bar to start running at Windows startup.
 
 If you enable:
-  The Edge bar will start running at Windows startup by default.
-  If the Edge bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Edge bar on Windows startup.
+  The Search bar will start running at Windows startup by default.
+  If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
 If you disable this policy:
-  The Edge bar will not start at Windows startup for all profiles.
+  The Search bar will not start at Windows startup for all profiles.
   The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
 If you don't configure the policy:
-  The Edge bar will not start at Windows startup for all profiles.
+  The Search bar will not start at Windows startup for all profiles.
   The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
 
   #### Supported features:
@@ -34443,7 +34673,7 @@ If you don't configure the policy:
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetIsEnabledOnStartup
-  - GP name: Allow the Edge bar at Windows startup
+  - GP name: Allow the Search bar at Windows startup
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
