@@ -3,7 +3,7 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: srugh
-ms.date: 10/27/2022
+ms.date: 12/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,9 +15,10 @@ description: "A step-by-step guide to configuring the Enterprise Mode Site list 
 # Enterprise site configuration strategy
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 (IE11) desktop application will be permanently disabled on certain versions of Windows 10 as part of the February 2023 Windows security update (“B”) release scheduled for February 14, 2023. [Learn more](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) 
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
+[Learn more >](https://aka.ms/iemodefaq)
 >
-> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption. [Learn how](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/control-ie-retirement-on-your-own-schedule-with-the-disable-ie/ba-p/3627725)
+> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
 > 
 
 This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.

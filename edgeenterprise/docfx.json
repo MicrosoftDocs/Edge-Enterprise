@@ -43,7 +43,6 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/DeployEdge/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
       "recommendations": true,
       "searchScope": ["Microsoft Edge"],
       "feedback_system": "GitHub",
