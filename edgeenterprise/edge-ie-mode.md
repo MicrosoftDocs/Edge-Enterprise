@@ -3,7 +3,7 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 10/27/2022
+ms.date: 12/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,9 +15,10 @@ description: "Learn how Internet Explorer mode in Microsoft Edge provides access
 # What is Internet Explorer (IE) mode?
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 (IE11) desktop application will be permanently disabled on certain versions of Windows 10 as part of the February 2023 Windows security update (“B”) release scheduled for February 14, 2023. [Learn more](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)  
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
+[Learn more >](https://aka.ms/iemodefaq)
 >
-> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption. [Learn how](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/control-ie-retirement-on-your-own-schedule-with-the-disable-ie/ba-p/3627725)  
+> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.  
 >
 
 We created Internet Explorer (IE) mode in Microsoft Edge for organizations that still need Internet Explorer 11 for backward compatibility with existing websites but also need a modern browser. This feature makes it easier for organizations to use one browser, for legacy web/apps or for a modern web/app. This article provides an introduction to using Microsoft Edge with IE mode.
@@ -88,8 +89,6 @@ The following prerequisites apply to using Microsoft Edge with IE mode.
  | Windows Server   | 2012           | Install [KB4492872](https://support.microsoft.com/help/4492872/update-for-internet-explorer-april-16-2019) to upgrade to Internet Explorer 11; then install [KB4507447](https://support.microsoft.com/help/4507447/windows-server-2012-update-kb4507447) or later; or [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) or later |
  | Windows 7        |  SP1**        | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) or later; or [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) or later |
  | Windows Server   |  2008 R2**    | [KB4507437](https://support.microsoft.com/help/4507437/windows-7-update-kb4507437) or later; or [KB4511872](https://support.microsoft.com/help/4511872/cumulative-security-update-for-internet-explorer) or later |
-  > [!IMPORTANT]
-  > ** Windows 7 and Windows Server 2008 R2 will be supported by Microsoft Edge even after those operating systems go out of support. In order for IE mode to be supported on these operating systems the devices will need to have the [Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). We recommend that you upgrade to a supported operating system as soon as possible in order to remain secure. Support for Microsoft Edge with the Extended Security Updates should be considered a temporary bridge to getting to a supported OS state.
 
 2. The Microsoft Edge administrative template. For more information, see [Configure Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer 11 enabled in Windows Features.
