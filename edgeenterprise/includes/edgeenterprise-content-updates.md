@@ -2,6 +2,14 @@
 
 
 
+## Week of January 02, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/3/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+
+
 ## Week of December 26, 2022
 
 
