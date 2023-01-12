@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/04/2023
+ms.date: 01/10/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings |
-[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 
 ## Available policies
 
@@ -18313,11 +18304,11 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 
   This policy controls the default value for the clipboard site permission.
 
-Setting the policy to 2 in the registry blocks sites from using the clipboard site permission.
+Setting the policy to 2 blocks sites from using the clipboard site permission.
 
-Setting the policy to 3 in the registry or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.
+Setting the policy to 3 or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.
 
-This policy can be overridden for specific URL patterns using the [ClipboardAllowedForUrls](#clipboardallowedforurls) and[ClipboardBlockedForUrls](#clipboardblockedforurls) policies.
+This policy can be overridden for specific URL patterns using the [ClipboardAllowedForUrls](#clipboardallowedforurls) and [ClipboardBlockedForUrls](#clipboardblockedforurls) policies.
 
 This policy only affects clipboard operations controlled by the clipboard site permission and doesn't affect sanitized clipboard writes or trusted copy and paste operations.
 
