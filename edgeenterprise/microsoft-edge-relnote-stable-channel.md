@@ -27,7 +27,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 108.0.1462.87: January 15, 2023
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 109.0.1518.55: January 15, 2023
 
