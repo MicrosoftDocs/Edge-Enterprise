@@ -28,7 +28,7 @@ Admins have several policy options for deploying and managing the sidebar in the
 |:-----|:-----|
 | [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) | Show Hubs Sidebar |
 | [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) | Control which extensions cannot be installed |
-| [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist)) |  Allow specific extensions to be installed |
+| [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) |  Allow specific extensions to be installed |
 | [ExtensionInstallForceList](/deployedge/microsoft-edge-policies#extensioninstallforcelist) | Control which extensions are installed silently |
 
 > [!NOTE]
