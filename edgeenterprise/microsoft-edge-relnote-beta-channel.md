@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/09/2022
+ms.date: 01/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,6 +19,30 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 109.0.1518.55: January 15, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.52: January 13, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.49: January 11, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.44: January 6, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.26: December 20, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.23: December 14, 2022
+
+Fixed various bugs and performance issues.
+
 ## Version 109.0.1518.14: December 7, 2022
 
 ### Feature update
@@ -33,7 +57,7 @@ These release notes provide information about new features and non-security upda
 
 - [WebHidAllowAllDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowalldevicesforurls) - Allow listed sites to connect to any HID device
 - [WebHidAllowDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdevicesforurls) - Allow listed sites connect to specific HID devices
-- [WebHidAllowDevicesWithHidUsagesForUrl](/DeployEdge/microsoft-edge-policies#webhidallowdeviceswithhidusagesforurl) - Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
+- [WebHidAllowDevicesWithHidUsagesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdeviceswithhidusagesforurls) - Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
 - [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
 - [DefaultClipboardSetting](/DeployEdge/microsoft-edge-policies#defaultclipboardsetting) - Default clipboard site permission
 - [ClipboardAllowedForUrls](/DeployEdge/microsoft-edge-policies#clipboardallowedforurls) - Allow clipboard use on specific sites
