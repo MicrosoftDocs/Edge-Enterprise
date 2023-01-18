@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2022
+ms.date: 01/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -11,7 +11,6 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge release notes for Stable Channel"
 ---
-
 # Release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel.
@@ -25,6 +24,62 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 108.0.1462.87: January 15, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 109.0.1518.55: January 15, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 109.0.1518.52: January 13, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.83: January 12, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 109.0.1518.49: January 12, 2023
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-12-2023).
+
+### Feature updates
+
+- **Account Linking between a personal Microsoft account (MSA) and Azure Active Directory (AAD) account.** Microsoft is enabling users to link a personal Microsoft account (MSA) and Azure Active Directory (AAD) account through work or school.  Once linked, users can earn Microsoft Rewards points for Microsoft Bing searches done in their browser or Windows search box while signed in with their work or school account. For more information, see the [Account Linking FAQ](https://support.microsoft.com/account-billing/account-linking-faq-c66effb9-02e6-49c0-89e1-ae4d8644e6f7) and the [Account Linking IT Admins FAQ](https://support.microsoft.com/account-billing/account-linking-it-admins-faq-72f0dc4e-b632-439e-b90c-347043a7b75a). Tenant admins can also control this feature in the Message Center section of the Microsoft 365 Admin Center or by using the [LinkedAccountEnabled](/deployedge/microsoft-edge-policies#linkedaccountenabled) policy.
+
+- **TLS server certificate verification changes.** In Microsoft Edge version 110, the certificate trust list and the certificate verifier will be decoupled from the host operating system’s root store.  Instead, the default certificate trust list and the certificate verifier will be provided by and shipped with the browser.  The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy is now available for testing to control when the built-in root store and certificate verifier are used.  Support for the policy is planned to be removed in Microsoft Edge version 111.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification | Microsoft Learn](/deployedge/microsoft-edge-security-cert-verification).  **Note:** This is a controlled feature rollout in Microsoft Edge version 109.  If you don't see this feature, check back as we continue our rollout.
+
+- **Text prediction.**  To help you write faster and with fewer mistakes, Microsoft Edge provides word and sentence predictions for long-form editable text fields on web pages.  Administrators can control the availability of text predictions using the [TextPredictionEnabled](/deployedge/microsoft-edge-policies#textpredictionenabled) policy.  Text prediction is currently only available in English within the US, India, and Australia.  We will continue to add new languages and regions in future versions of Microsoft Edge.  
+
+### Policy updates
+
+#### New policies
+
+- [WebHidAllowAllDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowalldevicesforurls) - Allow listed sites to connect to any HID device
+- [WebHidAllowDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdevicesforurls) - Allow listed sites connect to specific HID devices
+- [WebHidAllowDevicesWithHidUsagesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdeviceswithhidusagesforurls) - Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
+- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+- [DefaultClipboardSetting](/DeployEdge/microsoft-edge-policies#defaultclipboardsetting) - Default clipboard site permission
+- [ClipboardAllowedForUrls](/DeployEdge/microsoft-edge-policies#clipboardallowedforurls) - Allow clipboard use on specific sites
+- [ClipboardBlockedForUrls](/DeployEdge/microsoft-edge-policies#clipboardblockedforurls) - Block clipboard use on specific sites
+- [SearchFiltersEnabled](/DeployEdge/microsoft-edge-policies#searchfiltersenabled) - Search Filters Enabled
+
+#### Deprecated policies
+
+- [SetTimeoutWithout1MsClampEnabled](/DeployEdge/microsoft-edge-policies#settimeoutwithout1msclampenabled) - Control Javascript setTimeout() function minimum timeout
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
+
+## Version 108.0.1462.76: January 5, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+## Version 108.0.1462.54: December 16, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-16-2022).
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
 
 ## Version 108.0.1462.46: December 8, 2022
 
@@ -121,7 +176,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 #### New policies
 
 - [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - Enable Workspaces
-- [EnhanceSecurityModeBypassIntranet](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypassintranet) - Enhanced Security Mode configuraton for Intranet zone sites
+- [EnhanceSecurityModeBypassIntranet](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypassintranet) - Enhanced Security Mode configuration for Intranet zone sites
 - [EventPathEnabled](/DeployEdge/microsoft-edge-policies#eventpathenabled) - Re-enable the Event.path API until Microsoft Edge version 115
 - [InternetExplorerIntegrationLocalMhtFileAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalmhtfileallowed) - Allow local MHTML files to open automatically in Internet Explorer mode
 - [LinkedAccountEnabled](/DeployEdge/microsoft-edge-policies#linkedaccountenabled) - Enable the linked account feature
@@ -156,69 +211,8 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 106.0.1370.34: October 3, 2022
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-3-2022).
-
-### Feature updates
-
-- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows and macOS. The new SmartScreen library was first made available on Windows with Microsoft Edge version 103, and now makes its debut on macOS with Microsoft Edge version 106. The [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy is now deprecated in Microsoft Edge version 106 and will be obsolete in Microsoft Edge version 108.
-
-- **Increased Work Results in the Microsoft Edge address bar.** We’ve increased the maximum number of work results that display in the address bar from 2 to 4, which offers greater visibility into the work content available to you as you search. This feature requires the [AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) policy enabled to work.
-
-### Policy updates
-
-#### New policies
-
-- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) - Efficiency mode enabled
-- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) - Enable efficiency mode when the device is connected to a power source
-- [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) - Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
-
-#### Deprecated policies
-
-- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) - Enable new SmartScreen library
-- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) - Configure ShadowStack crash rollback behavior
-
-#### Obsoleted policies
-
-- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
-
-## Version 105.0.1343.53: September 26, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.50: September 22, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 105.0.1343.42: September 15, 2022
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2022).
-
-## Version 104.0.1293.91: September 15, 2022
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 105.0.1343.33: September 8, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 104.0.1293.81: September 2, 2022
-
-> [!IMPORTANT]
-> This update to Extended Stable contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-2-2022)
-
-## Version 105.0.1343.27: September 2, 2022
-
-> [!IMPORTANT]
-> This update contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
-
-
+<!--- from Version 106.0.1370.34: October 3, 2022 to Version 105.0.1343.27: September 2, 2022 -->
 <!--- from Version 105.0.1343.25: September 1, 2022 to  Version 104.0.1293.70: August 25, 2022 -->
 
 <!--- from Version 104.0.1293.63: August 19 to Version 102.0.1245.50: June 23 ---->

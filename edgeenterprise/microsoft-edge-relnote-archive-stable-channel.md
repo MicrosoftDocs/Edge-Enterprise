@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 12/05/2022
+ms.date: 01/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,68 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 106.0.1370.34: October 3, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-3-2022).
+
+### Feature updates
+
+- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows and macOS. The new SmartScreen library was first made available on Windows with Microsoft Edge version 103, and now makes its debut on macOS with Microsoft Edge version 106. The [NewSmartScreenLibraryEnabled](/deployedge/microsoft-edge-policies#newsmartscreenlibraryenabled) policy is now deprecated in Microsoft Edge version 106 and will be obsolete in Microsoft Edge version 108.
+
+- **Increased Work Results in the Microsoft Edge address bar.** We’ve increased the maximum number of work results that display in the address bar from 2 to 4, which offers greater visibility into the work content available to you as you search. This feature requires the [AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled) policy enabled to work.
+
+### Policy updates
+
+#### New policies
+
+- [EfficiencyModeEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeenabled) - Efficiency mode enabled
+- [EfficiencyModeOnPowerEnabled](/DeployEdge/microsoft-edge-policies#efficiencymodeonpowerenabled) - Enable efficiency mode when the device is connected to a power source
+- [InternetExplorerIntegrationAlwaysUseOSCapture](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture) - Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs
+
+#### Deprecated policies
+
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) - Enable new SmartScreen library
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) - Configure ShadowStack crash rollback behavior
+
+#### Obsoleted policies
+
+- [OutlookHubMenuEnabled](/DeployEdge/microsoft-edge-policies#outlookhubmenuenabled) - Allow users to access the Outlook menu
+- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Discover feature In Microsoft Edge
+
+## Version 105.0.1343.53: September 26, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 105.0.1343.50: September 22, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 105.0.1343.42: September 15, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2022).
+
+## Version 104.0.1293.91: September 15, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 105.0.1343.33: September 8, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 104.0.1293.81: September 2, 2022
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-2-2022)
+
+## Version 105.0.1343.27: September 2, 2022
+
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-3075](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3075), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-2-2022).
 
 ## Version 105.0.1343.25: September 1, 2022
 
@@ -811,36 +873,36 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Feature updates
 
-**Users can easily get to Internet Explorer mode on Microsoft Edge**. Starting with Microsoft Edge version 92, users can reload a site in Internet Explorer mode on Microsoft Edge instead of relying on the standalone IE 11 application while waiting for a site to be configured in the Enterprise Mode Site List. Users will be prompted to add the site to their local site list such that navigating to the same page in Microsoft Edge will automatically render in IE mode for the next 30 days. You can use the [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) policy to configure this experience and allow access to the IE mode entry points as well as the ability to add sites to the local site list. You can use the [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) policy to adjust the number of days to keep sites on the local site list. Note that KB5003698 or later is required for Windows 10, version 1909; or KB5003690 or later is required for Windows 10, version 2004, Windows 10, version 20H2, or Windows 10, version 21H1 for the end-to-end experience. For more information, see [Local site list in IE mode](/deployedge/edge-ie-mode-local-site-list).
+- **Users can easily get to Internet Explorer mode on Microsoft Edge**. Starting with Microsoft Edge version 92, users can reload a site in Internet Explorer mode on Microsoft Edge instead of relying on the standalone IE 11 application while waiting for a site to be configured in the Enterprise Mode Site List. Users will be prompted to add the site to their local site list such that navigating to the same page in Microsoft Edge will automatically render in IE mode for the next 30 days. You can use the [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) policy to configure this experience and allow access to the IE mode entry points as well as the ability to add sites to the local site list. You can use the [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) policy to adjust the number of days to keep sites on the local site list. Note that KB5003698 or later is required for Windows 10, version 1909; or KB5003690 or later is required for Windows 10, version 2004, Windows 10, version 20H2, or Windows 10, version 21H1 for the end-to-end experience. For more information, see [Local site list in IE mode](/deployedge/edge-ie-mode-local-site-list).
 
-**MHTML files will default to opening in Internet Explorer mode**. Starting in Microsoft Edge version 92 Stable, MHTML file types will automatically open in Internet Explorer mode on Microsoft Edge instead of the Internet Explorer (IE11) application. This is most commonly observed while trying to view Outlook emails in a browser. This change will occur only if IE11 is the default handler for this file type. If you'd prefer to change this, you can do so prior to installing the Stable version 92 update using [this guidance](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+- **MHTML files will default to opening in Internet Explorer mode**. Starting in Microsoft Edge version 92 Stable, MHTML file types will automatically open in Internet Explorer mode on Microsoft Edge instead of the Internet Explorer (IE11) application. This is most commonly observed while trying to view Outlook emails in a browser. This change will occur only if IE11 is the default handler for this file type. If you'd prefer to change this, you can do so prior to installing the Stable version 92 update using [this guidance](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
-**"Disable developer mode extensions" warning can be dismissed for 2 weeks**. Beginning with Microsoft Edge version 92, you can snooze the warning "Disable developer mode extensions" for 2 weeks by selecting the option in the warning dialog dropdown.
+- **"Disable developer mode extensions" warning can be dismissed for 2 weeks**. Beginning with Microsoft Edge version 92, you can snooze the warning "Disable developer mode extensions" for 2 weeks by selecting the option in the warning dialog dropdown.
 
-**Manage your extensions right from the toolbar**. The all-new extensions menu on the toolbar will allow you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
+- **Manage your extensions right from the toolbar**. The all-new extensions menu on the toolbar will allow you to hide/pin extensions easily. The quick links to manage extensions and find new extensions will make it easy for you to find new extensions and manage your existing ones.
 
-**Default for autoplay will be set to Limit**.  To help you maintain your focus online, we have changed the default for autoplaying media to Limit from Allow, beginning with Microsoft Edge version 92.
+- **Default for autoplay will be set to Limit**.  To help you maintain your focus online, we have changed the default for autoplaying media to Limit from Allow, beginning with Microsoft Edge version 92.
 
-**Payment instruments are now synced across devices**. Beginning with Microsoft Edge version 92, you have the option to synchronize your payment information across your signed in devices. Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+- **Payment instruments are now synced across devices**. Beginning with Microsoft Edge version 92, you have the option to synchronize your payment information across your signed in devices. Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
 Currently this feature is available only in the US and only for MSA users (not AAD)
 
-**Improvements to font rendering**. Improvements have been made to the rendering of text to improve clarity and reduce blurriness. Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
+- **Improvements to font rendering**. Improvements have been made to the rendering of text to improve clarity and reduce blurriness. Please note: this is a Controlled Feature Rollout. If you don’t see this feature, please check back shortly as we continue our rollout.
 
-**Toolbar button features like Favorites and Collections will remember the user's choice to pin them to the side of the window**. Now enabled by default, if the user chooses to pin a toolbar button, it will always open in the pinned state until they decide to unpin.
+- **Toolbar button features like Favorites and Collections will remember the user's choice to pin them to the side of the window**. Now enabled by default, if the user chooses to pin a toolbar button, it will always open in the pinned state until they decide to unpin.
+a
+- **Users can now manage the 'Allow single sign-on for work or school sites using this profile' option via group policy**.  'Allow single sign-on for work or school sites using this profile' allows non-AAD profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-AAD profiles only.  You can use the [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) policy to configure the behavior.  
 
-**Users can now manage the 'Allow single sign-on for work or school sites using this profile' option via group policy**.  'Allow single sign-on for work or school sites using this profile' allows non-AAD profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-AAD profiles only.  You can use the [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) policy to configure the behavior.  
+- **Password health**. It’s important to use strong, unique passwords across different accounts to stay safe online. However, that's easier said than done and most users exhibit poor password habits like using weak passwords that are easy to guess, or reuse the same strong passwords across accounts.<br>
 
-**Password health**
-It’s important to use strong, unique passwords across different accounts to stay safe online. However, that's easier said than done and most users exhibit poor password habits like using weak passwords that are easy to guess, or reuse the same strong passwords across accounts.
-
-With this latest version of Microsoft Edge, your task of using strong and unique passwords becomes a little bit easier! Microsoft Edge will now tell you whether saved passwords are strong enough and also indicate whether they’ve been used across multiple sites, helping you stay safer online. You can find your password health information in your list of saved passwords in the edge://settings/passwords page.
+   With this latest version of Microsoft Edge, your task of using strong and unique passwords becomes a little bit easier! Microsoft Edge will now tell you whether saved passwords are strong enough and also indicate whether they’ve been used across multiple sites, helping you stay safer online. You can find your password health information in your list of saved passwords in the edge://settings/passwords page.
   
-**Added privacy for your saved passwords**
-If you are using a device you share with others or have left your computer unlocked for whatever reason, you can now opt for a second verification using your device password to avoid others getting access to your website passwords. Simple!
+- **Added privacy for your saved passwords**. If you are using a device you share with others or have left your computer unlocked for whatever reason, you can now opt for a second verification using your device password to avoid others getting access to your website passwords. Simple!
 
-**Outlook extension**.  Stay on top of your Microsoft Outlook inbox, calendar, tasks and more without having to open a new browser window.  You can get the new Outlook extension here: [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+- **Outlook extension**.  Stay on top of your Microsoft Outlook inbox, calendar, tasks and more without having to open a new browser window.  You can get the new Outlook extension here: [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
 
-**In alignment with the Chromium open source project, Microsoft Edge is updating the way it renders tables on web pages**. This change fixes known issues and brings Microsoft Edge closer to the specified way tables are meant to render across the web/other browsers. We recommend that you test important workflows in your environment for unexpected issues. A full explainer is available [here](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
+- **In alignment with the Chromium open source project, Microsoft Edge is updating the way it renders tables on web pages**. This change fixes known issues and brings Microsoft Edge closer to the specified way tables are meant to render across the web/other browsers. We recommend that you test important workflows in your environment for unexpected issues. A full explainer is available [here](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
+
+- **Microsoft Editor.**  Microsoft Editor offers enhanced spellchecking, grammar checking, and text predictions. [Learn more](https://support.microsoft.com/en-us/office/microsoft-editor-checks-grammar-and-more-in-documents-mail-and-the-web-91ecbe1b-d021-4e9e-a82e-abc4cd7163d7). 
 
 ### New Policies
 
