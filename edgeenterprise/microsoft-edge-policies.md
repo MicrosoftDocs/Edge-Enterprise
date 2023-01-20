@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/18/2023
+ms.date: 01/20/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,15 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[AutofillMembershipsEnabled](#autofillmembershipsenabled)|Save and fill memberships|
+|[InternetExplorerModeClearDataOnExitEnabled](#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
 
 ## Available policies
 
@@ -361,6 +370,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoOpenFileTypes](#autoopenfiletypes)|List of file types that should be automatically opened on download|
 |[AutofillAddressEnabled](#autofilladdressenabled)|Enable AutoFill for addresses|
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Enable AutoFill for payment instruments|
+|[AutofillMembershipsEnabled](#autofillmembershipsenabled)|Save and fill memberships|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
@@ -509,6 +519,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerModeClearDataOnExitEnabled](#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
@@ -13192,7 +13203,8 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   
   #### Supported versions:
 
-  - On Windows and macOS since 107 or later
+  - On Windows since 107 or later
+  - On macOS since 111 or later
 
   #### Description
 
@@ -13230,7 +13242,7 @@ If you disable or don't configure this policy, there is no change to how the [Re
   ##### Example value:
 
 ```
-0x00000000
+0x00000001
 ```
 
   #### Mac information and settings
@@ -13238,7 +13250,7 @@ If you disable or don't configure this policy, there is no change to how the [Re
   - Preference Key Name: RestoreOnStartupUserURLsEnabled
   - Example value:
 ``` xml
-<false/>
+<true/>
 ```
   
 
@@ -15555,6 +15567,70 @@ If you disable this policy, AutoFill never suggests, fills, or recommends new pa
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutofillMembershipsEnabled
+
+  #### Save and fill memberships
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 110 or later
+
+  #### Description
+
+  This policy lets you decide whether users can have their membership info (for example, program name and membership number) automatically saved and used to fill form fields while using Microsoft Edge. By default, users can choose whether to enable it or not.
+
+If you enable this policy, users can only have their membership info automatically saved and used to fill form fields while using Microsoft Edge.
+
+If you don't configure this policy, users can choose whether to have their membership info automatically saved and used to fill form fields while using Microsoft Edge.
+
+If you disable this policy, users can't have their membership info automatically saved and used to fill form fields while using Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutofillMembershipsEnabled
+  - GP name: Save and fill memberships
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: AutofillMembershipsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: AutofillMembershipsEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -25559,6 +25635,63 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
 
 ```
 0x00000004
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerModeClearDataOnExitEnabled
+
+  #### Clear history for IE and IE mode every time you exit
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 111 or later
+
+  #### Description
+
+  This policy controls whether browsing history is deleted from Internet Explorer and Internet Explorer mode every time Microsoft Edge is closed.
+
+Users can configure this setting in the 'Clear browsing data for Internet Explorer' option in the Privacy, search, and services menu of Settings.
+
+If you enable this policy, on browser exit Internet Explorer browsing history will be cleared.
+
+If you disable or do not configure this policy, Internet Explorer browsing history will not be cleared on browser exit.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerModeClearDataOnExitEnabled
+  - GP name: Clear history for IE and IE mode every time you exit
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerModeClearDataOnExitEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
