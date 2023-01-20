@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/19/2023
+ms.date: 01/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 110.0.0000.00: January 00, 2023
+## Version 110.0.1587.17: January 20, 2023
 
 ### Feature update
 
