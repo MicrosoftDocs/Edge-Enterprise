@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: kylemiller
 author: dan-wesley
 manager: hariragu
-ms.date: 10/19/2022
+ms.date: 01/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,6 +28,7 @@ Admins have several policy options for deploying and managing the sidebar in the
 |:-----|:-----|
 | [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) | Show Hubs Sidebar |
 | [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) | Control which extensions cannot be installed |
+| [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) |  Allow specific extensions to be installed |
 | [ExtensionInstallForceList](/deployedge/microsoft-edge-policies#extensioninstallforcelist) | Control which extensions are installed silently |
 
 > [!NOTE]
@@ -63,6 +64,29 @@ Use the following steps as a guide to block a sidebar app.
 5. To block all sidebar apps, refer to [Allow or block the sidebar in group policy](#allow-or-block-the-sidebar-in-group-policy). Disabling the HubsSidebarEnabled policy will block all sidebar apps by default.
 
 :::image type="content" source="media/microsoft-edge-sidebar/control-extenison-installation.png" alt-text="Use policy editor to control which extensions can be installed.":::
+
+## Allow specific sidebar apps
+
+You can use the [ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#extensioninstallblocklist) and [ExtensionInstallAllowlist](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policies to allow specific sidebar apps while blocking the rest of the sidebar apps. Use the following steps as a guide to exempt a specific sidebar app from the blocklist.
+
+1. Open the group policy management editor and go to **Administrative Templates** > **Microsoft Edge** > **Extensions** and then select "Control which extensions cannot be enabled".
+2. Select **Enabled**.
+3. Click **Show**.
+4. Enter **\***.
+
+   Use group policy to see what extensions can't be enabled:
+:::image type="content" source="media/microsoft-edge-sidebar/control-extension-cannot-be-installed-2.png" alt-text="Use group policy to control which extensions cannot be installed.":::
+
+5. In the group policy management editor, go to **Administrative Templates** > **Microsoft Edge** > **Extensions** and then select "Allow specific extensions to be installed".
+6. Enter the **Extension ID** of the sidebar app that you want to allow.
+   1. You can find Extension IDs for sidebar apps by going to *edge://sidebar-internals* from the omnibox in Microsoft Edge.
+   1. The resulting manifest (which can be exported to JSON file) lists all the  sidebar apps including an `extension_id` parameter for each app. You can use these values to configure the policy.
+   1. When adding multiple ID’s, use a separate row for each ID.
+7. The user can then choose to enable/disable the allowed sidebar app. To force enable a sidebar app, refer to the next section which has information about the [ExtensionInstallForcelist](/deployedge/microsoft-edge-policies#extensioninstallforcelist) policy.
+
+   Use group policy to allow the installation of specific extensions:
+
+   :::image type="content" source="media/microsoft-edge-sidebar/allow-install-specific-extension.png" alt-text="Use group policy to install specific extensions.":::
 
 ## Force enable specific sidebar apps
 
