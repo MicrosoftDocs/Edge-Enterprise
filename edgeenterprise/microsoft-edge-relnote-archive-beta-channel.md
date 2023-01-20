@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 01/03/2023
+ms.date: 01/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,52 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 # Archived release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+## Version 109.0.1518.14: December 7, 2022
+
+### Feature update
+
+- **MSA-AAD Account Linking.** Microsoft is enabling users who have a personal Microsoft account (an MSA) and a Microsoft user account through their work or school (an Azure Active Directory account) to "link" the two types of accounts together. "Linked accounts" means that users will be able to see some of the content from their personal account alongside the tailored content from their work or school account. They're also able to earn Microsoft Rewards points in their personal account from their activities while using their work or school account. More blended experiences may be made available.  For more information, see the [Account Linking FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-faq-c66effb9-02e6-49c0-89e1-ae4d8644e6f7) and the [Account Linking IT Admins FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-it-admins-faq-72f0dc4e-b632-439e-b90c-347043a7b75a). Tenant admins can learn how to control this feature in the Message Center section of the Microsoft 365 Admin Center. Also, this feature can be controlled by using the [LinkedAccountEnabled](/deployedge/microsoft-edge-policies#linkedaccountenabled) policy.
+
+- **TLS server certificate verification changes.**  In Microsoft Edge version 110, the certificate trust list and the certificate verifier will be decoupled from the host operating system’s root store.  Instead, the default certificate trust list and the certificate verifier will be provided by and shipped with the browser.  The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy is now available for testing to control when the built-in root store and certificate verifier are used.  Support for the policy is planned for removal in Microsoft Edge version 111.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).  **Note:** This feature is a controlled feature rollout in Microsoft Edge version 109.  If you don't see this feature, check back as we continue our rollout.  
+
+### Policy updates
+
+#### New policies
+
+- [WebHidAllowAllDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowalldevicesforurls) - Allow listed sites to connect to any HID device
+- [WebHidAllowDevicesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdevicesforurls) - Allow listed sites connect to specific HID devices
+- [WebHidAllowDevicesWithHidUsagesForUrls](/DeployEdge/microsoft-edge-policies#webhidallowdeviceswithhidusagesforurls) - Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage
+- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+- [DefaultClipboardSetting](/DeployEdge/microsoft-edge-policies#defaultclipboardsetting) - Default clipboard site permission
+- [ClipboardAllowedForUrls](/DeployEdge/microsoft-edge-policies#clipboardallowedforurls) - Allow clipboard use on specific sites
+- [ClipboardBlockedForUrls](/DeployEdge/microsoft-edge-policies#clipboardblockedforurls) - Block clipboard use on specific sites
+- [SearchFiltersEnabled](/DeployEdge/microsoft-edge-policies#searchfiltersenabled) - Search Filters Enabled
+
+#### Deprecated policies
+
+- [SetTimeoutWithout1MsClampEnabled](/DeployEdge/microsoft-edge-policies#settimeoutwithout1msclampenabled) - Control Javascript setTimeout() function minimum timeout
+- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
+
+## Version 108.0.1462.42: December 5, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.38: December 2, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.35: November 28, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.28: November 21, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.20: November 14, 2022
+
+Fixed various bugs and performance issues.
 
 ## Version 108.0.1462.15: November 10, 2022
 
@@ -1279,7 +1325,7 @@ Fixed various bugs and performance issues.
 
 * **Enforce enabling Sync by default across the enterprise.**  Administrators can enable synchronization for Azure Active Directory (Azure AD) accounts by default with the [ForceSync](./microsoft-edge-policies.md#forcesync) policy.
 
-* **PDF updates:**
+- **PDF updates:**
 
   * Table of contents for PDF Documents. Beginning with version 86, Microsoft Edge has added support for table of contents that lets users easily navigate through PDF documents.
   * Access all PDF functionalities on small form factor screens. Access all the capabilities of the Microsoft Edge PDF reader on devices with small screen sizes.
