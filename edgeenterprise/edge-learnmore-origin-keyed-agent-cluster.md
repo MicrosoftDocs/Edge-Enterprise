@@ -15,7 +15,7 @@ description: "Microsoft Edge will disable modifying 'document.domain'"
 # Microsoft Edge will disable modifying `document.domain`
 
 > [!NOTE]
-> This article applies to Microsoft Edge Stable version 109 or later.
+> This article applies to Microsoft Edge Stable version 112 or later.
 
 > [!WARNING]
 > If your website relies on relaxing the same-origin policy via `document.domain`, your action is required. Continue to read more about why this is changing or go to the [Alternative cross-origin communication](#alternative-cross-origin-communication) to learn about alternative mechanisms to achieve cross-origin communication.
@@ -24,7 +24,7 @@ description: "Microsoft Edge will disable modifying 'document.domain'"
 
 The "domain" property of the Document interface gets or sets the domain part of the origin of the current document, as used by the [same-origin policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
 
-Starting in Microsoft Edge version 109, attempts to modify the `document.domain` property using JavaScript will be ignored. You'll need to use alternative approaches, such as `postMessage()` or the Channel Messaging API, to communicate cross-origin.
+Starting in Microsoft Edge version 112, attempts to modify the `document.domain` property using JavaScript will be ignored. You'll need to use alternative approaches, such as `postMessage()` or the Channel Messaging API, to communicate cross-origin.
 
 As an alternative, if your website relies on same-origin policy relaxation via `document.domain` to function correctly, the site may send an `Origin-Agent-Cluster: ?0` header; this header must be sent from all other documents that require the relaxation.
 
