@@ -9,7 +9,7 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,15 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[AutofillMembershipsEnabled](#autofillmembershipsenabled)|Save and fill memberships|
-|[InternetExplorerModeClearDataOnExitEnabled](#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
 
 ## Available policies
 
@@ -18380,11 +18371,11 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 
   This policy controls the default value for the clipboard site permission.
 
-Setting the policy to 2 in the registry blocks sites from using the clipboard site permission.
+Setting the policy to 2 blocks sites from using the clipboard site permission.
 
-Setting the policy to 3 in the registry or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.
+Setting the policy to 3 or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.
 
-This policy can be overridden for specific URL patterns using the [ClipboardAllowedForUrls](#clipboardallowedforurls) and[ClipboardBlockedForUrls](#clipboardblockedforurls) policies.
+This policy can be overridden for specific URL patterns using the [ClipboardAllowedForUrls](#clipboardallowedforurls) and [ClipboardBlockedForUrls](#clipboardblockedforurls) policies.
 
 This policy only affects clipboard operations controlled by the clipboard site permission and doesn't affect sanitized clipboard writes or trusted copy and paste operations.
 
