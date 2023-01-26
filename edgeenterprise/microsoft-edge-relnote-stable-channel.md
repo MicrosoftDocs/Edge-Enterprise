@@ -2,8 +2,8 @@
 title: "Microsoft Edge release notes for Stable Channel"
 ms.author: leahtu
 author: dan-wesley
-manager: srugh
-ms.date: 01/25/2023
+manager: collw
+ms.date: 01/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
