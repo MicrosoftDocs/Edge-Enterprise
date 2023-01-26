@@ -1,6 +1,6 @@
 ---
 title: "Release notes for Microsoft Edge Security Updates"
-ms.author: pchquini
+ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
 ms.date: 01/26/2023
