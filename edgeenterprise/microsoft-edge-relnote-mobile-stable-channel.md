@@ -27,6 +27,8 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues.
 
+This release contains several security fixes for iOS and Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 ## Version 109.0.1518.58: January 18, 2023
 
 Fixed various bugs and performance issues for Android.
