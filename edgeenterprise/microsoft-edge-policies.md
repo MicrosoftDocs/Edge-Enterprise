@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/24/2023
+ms.date: 01/31/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,7 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
 
 ## Available policies
 
@@ -18666,7 +18665,7 @@ Example 1: In this example the OS Regional format is set to "en-GB" and the brow
 
 Example 2: In this example the OS Regional format is set to "es-MX" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Always" but will not if the policy is set to "Limited".
 
-For more information about this setting, see https://learn.microsoft.com/microsoft-edge/web-platform/os-regional-settings
+For more information about this setting, see [https://go.microsoft.com/fwlink/?linkid=2222282](https://go.microsoft.com/fwlink/?linkid=2222282)
 
 
 Policy options mapping:
