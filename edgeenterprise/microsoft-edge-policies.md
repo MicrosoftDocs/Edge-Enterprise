@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/31/2023
+ms.date: 02/03/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -534,6 +534,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
+|[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -15643,15 +15644,13 @@ If you disable this policy, users can't have their membership info automatically
 
 This feature helps protect against man-in-the-middle attacks by enforcing more secure connections, but users might experience more connection errors.
 
-Note: The 'UpgradeCapableDomains' configuration requires a component list, and will not upgrade these connections if [ComponentUpdatesEnabled](#componentupdatesenabled) is set to 'Disabled'.
-
-If you don't configure this policy, [AutomaticHttpsDefault](#automatichttpsdefault) will be enabled, and will only upgrade connections on domains likely to support HTTPS.
+Starting in Microsoft Edge 111, "UpgradePossibleDomains" is deprecated and is treated the same as "DisableAutomaticHttps". It won't work in Microsoft Edge version 114.
 
 Policy options mapping:
 
 * DisableAutomaticHttps (0) = Automatic HTTPS functionality is disabled.
 
-* UpgradeCapableDomains (1) = Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.
+* UpgradeCapableDomains (1) = (Deprecated) Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.
 
 * AlwaysUpgrade (2) = All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.
 
@@ -27316,6 +27315,63 @@ This policy will be removed in Microsoft Edge for Microsoft Windows and macOS on
 ``` xml
 <false/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MouseGestureEnabled
+
+  #### Mouse Gesture Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 112 or later
+
+  #### Description
+
+  This policy lets you configure the Mouse Gesture feature in Microsoft Edge.
+
+This feature provides an easy way for users to complete tasks like scroll forward or backward, open new tab, refresh page, etc. They can finish a task by pressing and holding the mouse right button to draw certain patterns on a webpage, instead of clicking the buttons or using keyboard shortcuts.
+
+If you enable or don't configure this policy, you can use the Mouse Gesture feature on Microsoft Edge to start using this feature.
+
+If you disable this policy, you can't use the Mouse Gesture feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MouseGestureEnabled
+  - GP name: Mouse Gesture Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MouseGestureEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
