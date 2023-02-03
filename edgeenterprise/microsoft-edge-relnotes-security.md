@@ -22,7 +22,9 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 109
 
 This update contains the following Microsoft Edge-specific update:
 
-- [CVE-2023-21720](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21720)
+- **CVE-2023-21720**
+<!---
+- [CVE-2023-21720](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21720) --->
 
 ## January 26, 2023
 
