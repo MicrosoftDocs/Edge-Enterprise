@@ -2,6 +2,15 @@
 
 
 
+## Week of January 30, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/2/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/2/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+
+
 ## Week of January 23, 2023
 
 
@@ -46,11 +55,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 1/3/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-
-
-## Week of December 26, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/27/2022 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
