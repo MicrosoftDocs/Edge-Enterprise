@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 10/19/2022
+ms.date: 01/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,7 +16,8 @@ description: "Learn how enhanced security supports safer browsing with Microsoft
 This article describes how Microsoft Edge provides enhanced security on the web.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 105 or later.
+> This article applies to Microsoft Edge version 111 or later. Some users might see enhanced security turned on by default due to ongoing development and testing. If you want to turn the security feature off, refer to the [What's new in Microsoft Edge security settings](#whats-new-in-microsoft-edge-security-settings) in this article.
+
 
 > [!IMPORTANT]
 > Developers should be aware that the WebAssembly (WASM) interpreter running in enhanced security mode might not yield the expected level of performance. We recommend adding your site as an [exception](#enhanced-security-sites) to opt-out of enhanced security mode for site users.
