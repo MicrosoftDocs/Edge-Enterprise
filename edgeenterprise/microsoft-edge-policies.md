@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/03/2023
+ms.date: 02/06/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,14 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
 
 ## Available policies
 
