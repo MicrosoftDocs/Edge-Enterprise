@@ -3,7 +3,7 @@ title: "Provision favorites for Microsoft Edge"
 ms.author: capoon
 author: dan-wesley
 manager: abutcher
-ms.date: 04/11/2022
+ms.date: 02/07/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -44,7 +44,7 @@ Use the following steps to provision favorites and folders for your users.
 
    ![Dialog for exporting favorites to a Windows folder.](media/edge-learnmore-provision-favorites/provision-favorites-export.png)
 
-6. Open the Group Policy Editor, navigate to *Computer Configuration/Administrative Templates/* and pick **Configure Favorites**. Enable the "Configure Favorites" policy. Under **Options:**, paste the exported contents in the Configure favorites text area then select **Apply**. The next screenshot shows an example of the "Managed favorites" folder from step 5.
+6. Open the Group Policy Editor, navigate to *Computer Configuration/Administrative Templates/Microsoft Edge/* and pick **Configure Favorites**. Enable the "Configure Favorites" policy. Under **Options:**, paste the exported contents in the Configure favorites text area then select **Apply**. The next screenshot shows an example of the "Managed favorites" folder from step 5.
 
    ![Use gpedit to enable and configure "Configure favorites" policy.](media/edge-learnmore-provision-favorites/provision-favorites-gpedit.png)
 
