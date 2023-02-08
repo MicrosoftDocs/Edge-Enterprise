@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 11/18/2022
+ms.date: 02/08/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,11 +38,11 @@ Starting in Microsoft Edge 109, an enterprise policy (**MicrosoftRootStoreEnable
 
 Devices that aren’t managed by the enterprise will start receiving the feature via a Controlled Feature Rollout (CFR). For more information, see [Microsoft Edge configurations and experimentation](/deployedge/edge-configuration-and-experiments), which explains how CFRs in Microsoft Edge work. For enterprise-managed devices, the existing platform-provided implementation will continue to be used in Microsoft Edge 109.
 
-Starting with Microsoft Edge 110, the default will change for all devices, including enterprise-managed ones, to use the verifier implementation and CTL shipped with the browser. The **MicrosoftRootStoreEnabled** policy will continue to be available in this release to allow enterprises to revert to the previous behavior if unexpected issues are found and to report the issues to Microsoft.
+Starting with Microsoft Edge 111, the default will change for all devices, including enterprise-managed ones, to use the verifier implementation and CTL shipped with the browser. The **MicrosoftRootStoreEnabled** policy will continue to be available in this release to allow enterprises to revert to the previous behavior if unexpected issues are found and to report the issues to Microsoft.
 
 Microsoft recommends that enterprises that have break-and-inspect proxies or other scenarios involving TLS server certificates issued by roots not in the Microsoft CTL to proactively test with the policy enabled in Microsoft Edge 109 and report any compatibility issues to Microsoft.
 
-In Microsoft Edge 111, we plan to remove support for the **MicrosoftRootStoreEnabled** policy.
+In Microsoft Edge 113, we plan to remove support for the **MicrosoftRootStoreEnabled** policy.
 
 
 ## See also
