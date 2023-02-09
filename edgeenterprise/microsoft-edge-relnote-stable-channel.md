@@ -217,6 +217,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022)
 
+## Version 106.0.1370.59: October 27, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
+
 <!--- from Version 107.0.1418.24: October 27, 2022 to Version 106.0.1370.37: October 6, 2022 -->
 <!--- from Version 106.0.1370.34: October 3, 2022 to Version 105.0.1343.27: September 2, 2022 -->
 <!--- from Version 105.0.1343.25: September 1, 2022 to  Version 104.0.1293.70: August 25, 2022 -->
