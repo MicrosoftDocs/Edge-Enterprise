@@ -27,6 +27,8 @@ These release notes provide information about new features and non-security upda
 
 ## Version 110.0.0000.00: February x, 2023
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-2-2023).
+
 ### Feature updates
 
 - **New Immersive Reader policies.** Immersive Reader in Microsoft Edge simplifies web page layouts, removes clutter, and helps you customize your reading experience. Using these new policies ([ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#immersivereadergrammartoolsenabled) and [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled)), administrators can control the availability of Grammar Tools and Picture Dictionary features within Immersive Reader.
