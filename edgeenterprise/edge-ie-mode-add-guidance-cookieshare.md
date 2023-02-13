@@ -3,7 +3,7 @@ title: "Cookie sharing between Microsoft Edge and Internet Explorer"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/14/2023
+ms.date: 12/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,10 @@ description: "Learn how to share cookies between Microsoft Edge and Internet Exp
 # Cookie sharing between Microsoft Edge and Internet Explorer
 
 > [!NOTE]
-> The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
+[Learn more >](https://aka.ms/iemodefaq)
+>
+> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
 
 This article explains how to configure session cookie sharing between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
 
