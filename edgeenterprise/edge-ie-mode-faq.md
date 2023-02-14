@@ -3,7 +3,7 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/16/2022
+ms.date: 02/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,11 +15,7 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 # Internet Explorer (IE) mode troubleshooting and FAQ
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
-[Learn more >](https://aka.ms/iemodefaq)  
->
->We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
->
+> The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
 
@@ -201,10 +197,7 @@ You may also have to set the `compat-mode` attribute in Enterprise Mode Site Lis
 ### Will IE mode replace Internet Explorer 11?
 
 Yes.
-The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
-[Learn more >](https://aka.ms/iemodefaq)
-
-We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
+The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 ### Can I use "View in File Explorer" in SharePoint Online on Microsoft Edge?
 
