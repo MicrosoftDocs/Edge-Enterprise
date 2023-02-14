@@ -3,7 +3,7 @@ title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 12/16/2022
+ms.date: 02/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,11 +27,7 @@ Select the ellipses icon (**...**) in the upper-right corner of Microsoft Edge, 
 ## What about Internet Explorer 11?
 
 >[!Note]
-> The retired, out-of-support Internet Explorer 11 desktop application is scheduled to be permanently disabled through a Microsoft Edge update on certain versions of Windows 10 on February 14, 2023.<br>
-[Learn more >](https://aka.ms/iemodefaq)
->
-> We highly recommend setting up IE mode in Microsoft Edge and disabling IE11 prior to this date to ensure your organization does not experience business disruption.
->
+> The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 ## Does Microsoft Edge support ActiveX controls or Browser Helper Objects like Silverlight or Java?
 
