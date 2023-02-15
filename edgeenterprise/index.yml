@@ -89,10 +89,10 @@ landingContent:
         links:
           - text: Browser policy reference
             url: microsoft-edge-policies.md
-          - text: Update policy reference
-            url: microsoft-edge-update-policies.md
           - text: Mobile policy reference
             url: microsoft-edge-mobile-policies.md
+          - text: Update policy reference
+            url: microsoft-edge-update-policies.md
           - text: WebView2 policy reference
             url: microsoft-edge-webview-policies.md
 #          - text: Policy mapping overview
