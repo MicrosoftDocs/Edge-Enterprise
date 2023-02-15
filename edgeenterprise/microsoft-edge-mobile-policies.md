@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/27/2022
+ms.date: 02/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -54,6 +54,17 @@ These tables list all of the browser-related policies available in this release 
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 - [CookiesBlockedForUrls](#cookiesblockedforurls)
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
+- [EdgeNewTabPageCustomURL](#edgenewtabpagecustomurl)
+- [EdgeMyApps](#edgemyapps)
+- [EdgeDefaultHTTPS](#edgedefaulthttps)
+- [EdgeDisableShareUsageData](#edgedisableshareusagedata)
+- [EdgeDisableShareBrowsingHistory](#edgedisablesharebrowsinghistory)
+- [EdgeDisabledFeatures](#edgedisabledfeatures)
+- [EdgeEnableKioskMode](#edgeenablekioskmode)
+- [EdgeShowAddressBarInKioskMode](#edgeshowaddressbarinkioskmode)
+- [EdgeShowBottomBarInKioskMode](#edgeshowbottombarinkioskmode)
+- [EdgeSyncDisabled](#edgesyncdisabled)
+- [EdgeNetworkStackPref](#edgenetworkstackpref)
 
 [Back to top](#microsoft-edge-mobile---policies)
 
@@ -1527,6 +1538,382 @@ CookiesSessionOnlyForUrls
  "https://www.example.com",
  "[*.]example.edu"
 ]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### EdgeNewTabPageCustomURL
+
+#### Homepage instead of New Tab Page experience
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+Edge for iOS and Android allows organizations to disable the New Tab Page experience and instead have a web site launch when the user opens a new tab. 
+
+While this is a supported scenario, Microsoft recommends organizations take advantage of the New Tab Page experience to provide dynamic content that is relevant to the user.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeNewTabPageCustomURL
+```
+
+##### Example value:
+
+```
+https://www.bing.com
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### EdgeMyApps
+
+#### My Apps bookmark
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, users have the My Apps bookmark configured within the organization folder inside Edge for iOS and Android.
+
+- true = Shows My Apps within the Edge for iOS and Android bookmarks 
+- false (Default) = Hides My Apps within Edge for iOS and Android
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeMyApps
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeDefaultHTTPS
+
+#### Default protocol handler
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, Edge for iOS and Android uses the HTTPS protocol handler when the user doesn't specify the protocol in the URL. 
+
+Generally, this is considered a best practice, but can be disabled.
+
+- true (Default) = Default protocol handler is HTTPS 
+- false = Default protocol handler is HTTP
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeDefaultHTTPS
+```
+
+##### Example value (Android):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeDisableShareUsageData
+### EdgeDisableShareBrowsingHistory
+
+#### Disable data sharing for personalization
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, Edge for iOS and Android prompts users for usage data collection and sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing by preventing this prompt from being shown to end users.
+
+EdgeDisableShareUsageData:
+- true = Disables this prompt from displaying to end users
+- false (Default) =  Users are prompted to share usage data
+
+EdgeDisableShareBrowsingHistory:
+- true = Disables this prompt from displaying to end users
+- false (Default) =  Users are prompted to share browsing history
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeDisableShareUsageData
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeDisabledFeatures
+
+#### Disable specific features
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+Edge for iOS and Android allows organizations to disable certain features that are enabled by default. To disable these features, configure the following setting:
+
+- password = Disables prompts that offer to save passwords for the end user 
+- inprivate = Disables InPrivate browsing 
+- autofill = Disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information. 
+
+To disable multiple features, separate values with |. For example, inprivate|password disables both InPrivate and password storage.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+String
+
+Android:string
+
+#### Android restriction name:
+
+```
+EdgeDisabledFeatures
+```
+
+##### Example value:
+
+```
+inprivate | password
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeEnableKioskMode
+### EdgeShowAddressBarInKioskMode
+### EdgeShowBottomBarInKioskMode
+
+#### Kiosk mode experiences on Android devices
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+#### Description
+
+Edge for Android can be enabled as a kiosk app with the following settings:
+
+EdgeEnableKioskMode:
+
+- true = Enables kiosk mode for Edge for Android 
+- false (Default) = Disables kiosk mode
+
+EdgeShowAddressBarInKioskMode:
+
+- true = Shows the address bar in kiosk mode 
+- false (Default) = Hides the address bar when kiosk mode is enabled
+
+EdgeShowBottomBarInKioskMode
+
+- true = Shows the bottom action bar in kiosk mode 
+- false (Default) =  Hides the bottom bar when kiosk mode is enabled
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeEnableKioskMode
+EdgeShowAddressBarInKioskMode
+EdgeShowBottomBarInKioskMode
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeSyncDisabled
+
+#### Manage account synchronization
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. 
+
+The data supported by sync includes:
+
+Favorites
+
+Passwords
+
+Addresses and more (autofill form entry)
+
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. 
+
+For more information see [Microsoft Edge Sync](https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-enterprise-sync).
+
+Organizations have the capability to disable Edge sync on iOS and Android.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeSyncDisabled
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeNetworkStackPref
+
+#### Switch network stack between Chromium and iOS
+
+#### Supported on:
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+The layers of the network architecture are called the network stack. 
+The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
+
+By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services and auto search suggestions. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
+
+Organizations can modify their network stack preference by configuring the following setting.
+
+- 0 (Default) = Use the Chromium network stack 
+- 1 = Use the iOS network stack
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Integer
+
+iOS:choice
+
+#### Android restriction name:
+
+```
+EdgeNetworkStackPref
+```
+
+##### Example value:
+
+```
+0
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
