@@ -138,7 +138,6 @@ These tables list all of the browser-related policies available in this release 
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-
 ### PasswordManagerEnabled
 
 #### Enable saving passwords to the password manager
