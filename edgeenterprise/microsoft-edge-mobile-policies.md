@@ -1168,6 +1168,90 @@ https://www.bing.com
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+### EdgeMyApps
+
+#### My Apps bookmark
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, users have the My Apps bookmark configured within the organization folder inside Edge for iOS and Android.
+
+- true = Shows My Apps within the Edge for iOS and Android bookmarks 
+- false (Default) = Hides My Apps within Edge for iOS and Android
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeMyApps
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeDefaultHTTPS
+
+#### Default protocol handler
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 111
+* Microsoft Edge (iOS and iPadOS) since version 111
+
+#### Description
+
+By default, Edge for iOS and Android uses the HTTPS protocol handler when the user doesn't specify the protocol in the URL. 
+
+Generally, this is considered a best practice, but can be disabled.
+
+- true (Default) = Default protocol handler is HTTPS 
+- false = Default protocol handler is HTTP
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+EdgeDefaultHTTPS
+```
+
+##### Example value (Android):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### EdgeDisableShareUsageData
 #### Disable data sharing usage data for personalization
