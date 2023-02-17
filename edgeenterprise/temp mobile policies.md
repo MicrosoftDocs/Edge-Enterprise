@@ -45,7 +45,6 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeSyncDisabled](#edgesyncdisabled)  |   Manage account synchronization  |
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
 
-
 ### [*Proxy server*](#proxy-server)
 
 |Policy Name|Caption|
@@ -56,14 +55,270 @@ These tables list all of the browser-related policies available in this release 
 
 |Policy Name|Caption|
 |:-|-|
-| [-NtlmV2Enabled]()   |     |
-| [AuthSchemes]()   |     |
-| [DisableAuthNegotiateCnameLookup]()   |     |
-| [AuthServerAllowlist]()   |     |
-| [AuthAndroidNegotiateAccountType]()   |     |
-| [AuthNegotiateDelegateAllowlist]()   |     |
-| []()   |     |
+| [NtlmV2Enabled](#ntlmv2enabled)  | Enable NTLMv2 authentication    |
+| [AuthSchemes](#authschemes)  |  Supported authentication schemes   |
+| [DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)   |  Disable CNAME lookup when negotiating Kerberos authentication   |
+| [AuthServerAllowlist](#authserverallowlist)  |  Authentication server allowlist   |
+| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype) |  Account type for HTTP Negotiate authentication   |
+| [AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)  |  Kerberos delegation server allowlist   |
 
+### NtlmV2Enabled
+
+#### Enable NTLMv2 authentication
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy to Enabled or leaving it unset turns NTLMv2 on.
+
+Setting the policy to Disabled turns NTLMv2 off.
+
+All recent versions of Samba and Microsoft® Windows® servers support NTLMv2. This should only be turned off for backward compatibility as it reduces the security of authentication.
+
+- true = Turn NTLMv2 on
+- false = Turn NTLMv2 off
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+NtlmV2Enabled
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### AuthSchemes
+
+#### Supported authentication schemes
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy specifies which HTTP authentication schemes Microsoft Edge supports.
+
+Leaving the policy unset employs all 4 schemes.
+
+Valid values:
+
+\* basic
+
+\* digest
+
+\* ntlm
+
+\* negotiate
+
+Note: Separate multiple values with commas.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+AuthSchemes
+```
+
+##### Example value:
+
+```
+basic,digest,ntlm,negotiate
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### DisableAuthNegotiateCnameLookup
+
+#### Disable CNAME lookup when negotiating Kerberos authentication
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy to Enabled skips CNAME lookup. The server name is used as entered when generating the Kerberos SPN.
+
+Setting the policy to Disabled or leaving it unset means CNAME lookup determines the canonical name of the server when generating the Kerberos SPN.
+
+- true = Disable CNAME lookup during Kerberos authentication
+- false = Use CNAME lookup during Kerberos authentication
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DisableAuthNegotiateCnameLookup
+```
+
+##### Example value:
+
+```
+false
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### AuthServerAllowlist
+
+#### Authentication server allowlist
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy specifies which servers should be allowed for integrated authentication. Integrated authentication is only on when Microsoft Edge gets an authentication challenge from a proxy or from a server in this permitted list.
+
+Leaving the policy unset means Microsoft Edge tries to detect if a server is on the intranet. Only then will it respond to IWA requests. If a server is detected as internet, then Microsoft Edge ignores IWA requests from it.
+
+Note: Separate multiple server names with commas. Wildcards, *, are allowed.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+AuthServerAllowlist
+```
+
+##### Example value:
+
+```
+*.example.com,example.com
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### AuthAndroidNegotiateAccountType
+
+#### Account type for HTTP Negotiate authentication
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Android System WebView since version 109
+
+#### Description
+
+Setting the policy specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For details, see The Chromium Projects ( https://goo.gl/hajyfN )
+
+Leaving the policy unset turns off HTTP Negotiate authentication on Android.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : No
+- Per Profile : No
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+AuthAndroidNegotiateAccountType
+```
+
+##### Example value:
+
+```
+com.example.spnego
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### AuthNegotiateDelegateAllowlist
+
+#### Kerberos delegation server allowlist
+
+#### Supported on:
+
+Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy assigns servers that Microsoft Edge may delegate to. Separate multiple server names with commas. Wildcards, *, are allowed.
+
+Leaving the policy unset means Microsoft Edge won't delegate user credentials, even if a server is detected as intranet.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+AuthNegotiateDelegateAllowlist
+```
+
+##### Example value:
+
+```
+*.example.com,foobar.example.com
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### [*Content settings*](#content-settings)
 
@@ -113,9 +368,7 @@ These tables list all of the browser-related policies available in this release 
 | [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
 
-
-## Edge specific policiesZZ
-
+## Edge specific policies
 
 ### EdgeNewTabPageCustomURL
 
