@@ -324,13 +324,242 @@ AuthNegotiateDelegateAllowlist
 
 |Policy Name|Caption|
 |:-|-|
-| [DefaultPopupsSetting]()   |     |
-| [DefaultCookiesSetting]()   |     |
-| [CookiesAllowedForUrls]()   |     |
-| [CookiesBlockedForUrls]()   |     |
-| [CookiesSessionOnlyForUrls]()   |     |
-| []()   |     |
-| []()   |     |
+| [DefaultPopupsSetting](#defaultpopupssetting)   |  Default pop-ups setting   |
+| [DefaultCookiesSetting](#defaultcookiessetting)   |   Default cookies setting   |
+| [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
+| [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
+| [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)   |  Limit cookies from matching URLs to the current session  |
+
+### DefaultPopupsSetting
+
+#### Default pop-ups setting
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+Setting the policy to 1 lets websites display pop-ups. Setting the policy to 2 denies pop-ups.
+
+Leaving it unset means BlockPopups applies, but users can change this setting.
+
+- 1 = Allow all sites to show pop-ups
+- 2 = Do not allow any site to show pop-ups
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Integer
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultPopupsSetting
+```
+
+##### Example value:
+
+```
+1
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultCookiesSetting
+
+#### Default cookies setting
+
+#### Supported on:
+
+Microsoft Edge (Android) since version 109
+
+#### Description
+
+Unless the RestoreOnStartup policy is set to permanently restore URLs from previous sessions, then setting CookiesSessionOnlyForUrls lets you make a list of URL patterns that specify sites that can and can't set cookies for one session.
+
+Leaving the policy unset results in the use of DefaultCookiesSetting for all sites, if it's set. If not, the user's personal setting applies. URLs not covered by the patterns specified also result in the use of defaults.
+
+While no specific policy takes precedence, see CookiesBlockedForUrls and CookiesAllowedForUrls. URL patterns among these 3 policies must not conflict.
+
+- 1 = Allow all sites to set local data
+- 2 = Do not allow any site to set local data
+- 4 = Keep cookies for the duration of the session
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Integer
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultCookiesSetting
+```
+
+##### Example value:
+
+```
+1
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### CookiesAllowedForUrls
+
+#### Allow cookies on these sites
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Allows you to set a list of url patterns that specify sites which are allowed to set cookies.
+
+If this policy is left not set the global default value will be used for all sites either from the DefaultCookiesSetting policy if it is set, or the user's personal configuration otherwise.
+
+See also policies CookiesBlockedForUrls and CookiesSessionOnlyForUrls. Note that there must be no conflicting URL patterns between these three policies - it is unspecified which policy takes precedence.
+
+For detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+CookiesAllowedForUrls
+```
+
+##### Example value:
+
+```
+[
+ "https://www.example.com",
+ "[*.]example.edu"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### CookiesBlockedForUrls
+
+#### Block cookies on these sites
+
+#### Supported on:
+
+Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy lets you make a list of URL patterns that specify sites that can't set cookies.
+
+Leaving the policy unset results in the use of DefaultCookiesSetting for all sites, if it's set. If not, the user's personal setting applies.
+
+While no specific policy takes precedence, see CookiesAllowedForUrls and CookiesSessionOnlyForUrls. URL patterns among these 3 policies must not conflict.
+
+For detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+CookiesBlockedForUrls
+```
+
+##### Example value:
+
+```
+[
+ "https://www.example.com",
+ "[*.]example.edu"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### CookiesSessionOnlyForUrls
+
+#### Limit cookies from matching URLs to the current session
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+#### Description
+
+Unless the RestoreOnStartup policy is set to permanently restore URLs from previous sessions, then setting CookiesSessionOnlyForUrls lets you make a list of URL patterns that specify sites that can and can't set cookies for one session.
+
+Leaving the policy unset results in the use of DefaultCookiesSetting for all sites, if it's set. If not, the user's personal setting applies. URLs not covered by the patterns specified also result in the use of defaults.
+
+While no specific policy takes precedence, see CookiesBlockedForUrls and CookiesAllowedForUrls. URL patterns among these 3 policies must not conflict.
+
+For detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+CookiesSessionOnlyForUrls
+```
+
+##### Example value:
+
+```
+[
+ "https://www.example.com",
+ "[*.]example.edu"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### [*Default search provider*](#default-search-provider)
 
