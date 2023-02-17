@@ -21,13 +21,13 @@ The latest version of Microsoft Edge includes the following policies. You can us
 
 These tables list all of the browser-related policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-[Edge specific](#edge-specific)
-[Proxy server](#proxy-server)
-[HTTP authentication](#http-authentication)
-[Content settings](#content-settings)
-[Default search provider](#default-search-provider)
-[Password manager and protection](#password-manager-and-protection)
-[Additional](#additional)
+- [Edge specific](#edge-specific)
+- [Proxy server](#proxy-server)
+- [HTTP authentication](#http-authentication)
+- [Content settings](#content-settings)
+- [Default search provider](#default-search-provider)
+- [Password manager and protection](#password-manager-and-protection)
+- [Additional](#additional)
 
 ### [*Edge specific*](#edge-specific)
 
@@ -1590,19 +1590,6 @@ ProxySettings = {
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-
-## HTTP authentication policiesZZ
-
-[Back to top](#microsoft-edge-mobile---policies)
-
-## Content settings policiesZZ
-
-[Back to top](#microsoft-edge-mobile---policies)
-
-## Default search provider policiesZZ
-
-[Back to top](#microsoft-edge-mobile---policies)
-
 ## Password manager and protection policies
 
 ### PasswordManagerEnabled
@@ -1652,9 +1639,7 @@ true
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-## Additional policiesZZ
-
-[Back to top](#microsoft-edge-mobile---policies)
+## Additional policies
 
 ### URLAllowlist
 
