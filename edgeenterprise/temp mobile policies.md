@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/15/2023
+ms.date: 02/17/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -565,18 +565,545 @@ CookiesSessionOnlyForUrls
 
 |Policy Name|Caption|
 |:-|-|
-| [DefaultSearchProviderEnabled]()   |     |
-| [DefaultSearchProviderName]()   |     |
-| [DefaultSearchProviderSearchURL]()   |     |
-| [DefaultSearchProviderSearchURLPostParams]()   |     |
-| [DefaultSearchProviderAlternateURLs]()   |     |
-| [DefaultSearchProviderEncodings]()   |     |
-| [DefaultSearchProviderImageURL]()   |     |
-| [DefaultSearchProviderImageURLPostParams]()   |     |
-| [DefaultSearchProviderKeyword]()   |     |
-| [DefaultSearchProviderNewTabURL]()   |     |
-| [DefaultSearchProviderSuggestURL]()   |     |
-| [DefaultSearchProviderSuggestURLPostParams]()   |     |
+| [DefaultSearchProviderEnabled](#defaultsearchproviderenabled)   |     |
+| [DefaultSearchProviderName](#defaultsearchprovidername)   | Default search provider name   |
+| [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)   |  Default search provider search URL   |
+| [DefaultSearchProviderSearchURLPostParams](#defaultsearchprovidersearchurlpostparams)   |  Parameters for search URL which uses POST   |
+| [DefaultSearchProviderAlternateURLs](#defaultsearchprovideralternateurls)   |  List of alternate URLs for the default search provider   |
+| [DefaultSearchProviderEncodings](#defaultsearchproviderencodings)   |  Default search provider encodings   |
+| [DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)   |  Parameter providing search-by-image feature for the default search provider   |
+| [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)   |  Parameters for image URL which uses POST   |
+| [DefaultSearchProviderKeyword](#defaultsearchproviderkeyword)   |  Default search provider keyword   |
+| [DefaultSearchProviderNewTabURL](#defaultsearchprovidernewtaburl)   |  Default search provider new tab page URL   |
+| [DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)   |  Default search provider suggest URL  |
+| [DefaultSearchProviderSuggestURLPostParams](#defaultsearchprovidersuggesturlpostparams)   |   Parameters for suggest URL which uses POST  |
+
+### DefaultSearchProviderEnabled
+
+#### Enable the default search provider
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+Setting the policy to Enabled means a default search is performed when a user enters non-URL text in the address bar. To specify the default search provider, set the rest of the default search policies. If you leave those policies empty, the user can choose the default provider. Setting the policy to Disabled means there's no search when the user enters non-URL text in the address bar.
+
+If you set the policy, users can't change it in Microsoft Edge. If not set, the default search provider is on, and users can set the search provider list.
+
+- true = Enable the default search provider
+- false = Disable the default search provider
+- not set = Enable the default search provider and allow users to modify the search provier list
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+Boolean
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderEnabled
+```
+
+##### Example value:
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### DefaultSearchProviderName
+
+#### Default search provider name
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderName specifies the default search provider's name.
+
+Leaving DefaultSearchProviderName unset means the hostname specified by the search URL is used.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderName
+```
+
+##### Example value:
+
+```
+My Intranet Search
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### DefaultSearchProviderSearchURL
+
+#### Default search provider search URL
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderSearchURL specifies the URL of the search engine used during a default search. The URL should include the string '{searchTerms}', replaced in the query by the user's search terms.
+
+You can specify Google's search URL as: '{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}'.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderSearchURL
+```
+
+##### Example value:
+
+```
+https://search.my.company/search?q={searchTerms}
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderSearchURLPostParams
+
+#### Parameters for search URL which uses POST
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderSearchURLPostParams specifies the parameters when searching a URL with POST. It consists of comma-separated, name-value pairs. If a value is a template parameter, such as '{searchTerms}', real search terms data replaces it.
+
+Leaving DefaultSearchProviderSearchURLPostParams unset means search requests are sent using the GET method.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderSearchURLPostParams
+```
+
+##### Example value:
+
+```
+q={searchTerms},ie=utf-8,oe=utf-8
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderAlternateURLs
+
+#### List of alternate URLs for the default search provider
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderAlternateURLs specifies a list of alternate URLs for extracting search terms from the search engine. The URLs should include the string '{searchTerms}'.
+
+Leaving DefaultSearchProviderAlternateURLs unset means no alternate URLs are used to extract search terms.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderAlternateURLs
+```
+
+##### Example value:
+
+```
+[
+ "https://search.my.company/suggest#q={searchTerms}",
+ "https://search.my.company/suggest/search#q={searchTerms}"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderEncodings
+
+#### Default search provider encodings
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, setting DefaultSearchProviderEncodings specifies the character encodings supported by the search provider. Encodings are code page names such as UTF-8, GB2312, and ISO-8859-1. They're tried in the order provided.
+
+Leaving DefaultSearchProviderEncodings unset puts UTF-8 in use.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderEncodings
+```
+
+##### Example value:
+
+```
+[
+ "UTF-8",
+ "UTF-16",
+ "GB2312",
+ "ISO-8859-1"
+]
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderImageURL
+
+#### Parameter providing search-by-image feature for the default search provider
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderImageURL specifies the URL of the search engine used for image search. (If DefaultSearchProviderImageURLPostParams is set, then image search requests use the POST method instead.)
+
+Leaving DefaultSearchProviderImageURL unset means no image search is used.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderImageURL
+```
+
+##### Example value:
+
+```
+https://search.my.company/searchbyimage/upload
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderImageURLPostParams
+
+#### Parameters for image URL which uses POST
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderImageURLPostParams specifies the parameters during image search with POST. It consists of comma-separated, name-value pairs. If a value is a template parameter, such as {imageThumbnail}, real image thumbnail data replaces it.
+
+Leaving DefaultSearchProviderImageURLPostParams unset means image search request is sent using the GET method.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderImageURLPostParams
+```
+
+##### Example value:
+
+```
+content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderKeyword
+
+#### Default search provider keyword
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderKeyword specifies the keyword or shortcut used in the address bar to trigger the search for this provider.
+
+Leaving DefaultSearchProviderKeyword unset means no keyword activates the search provider.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderKeyword
+```
+
+##### Example value:
+
+```
+mis
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderNewTabURL
+
+#### Default search provider new tab page URL
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderNewTabURL specifies the URL of the search engine used to provide a New Tab page.
+
+Leaving DefaultSearchProviderNewTabURL unset means no new tab page is provided.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderNewTabURL
+```
+
+##### Example value:
+
+```
+https://search.my.company/newtab
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderSuggestURL
+
+#### Default search provider suggest URL
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderSuggestURL specifies the URL of the search engine to provide search suggestions. The URL should include the string '{searchTerms}', replaced in the query by the user's search terms.
+
+You can specify Bing's search URL as: '{bing:baseURL}search?q={searchTerms}'.
+
+specify Google's search URL as: '{google:baseURL}complete/search?output=chrome&q={searchTerms}'.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderSuggestURL
+```
+
+##### Example value:
+
+```
+https://search.my.company/suggest?q={searchTerms}
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### DefaultSearchProviderSuggestURLPostParams
+
+#### Parameters for suggest URL which uses POST
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 109
+
+- Microsoft Edge (iOS and iPadOS) since version 109
+
+#### Description
+
+If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderSuggestURLPostParams specifies the parameters during suggestion search with POST. It consists of comma-separated, name-value pairs. If a value is a template parameter, such as '{searchTerms}', real search terms data replaces it.
+
+Leaving DefaultSearchProviderSuggestURLPostParams unset unset means suggest search requests are sent using the GET method.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+- Can Be Recommended : Yes
+
+#### Data Type:
+
+String
+
+Android:choice
+
+#### Android restriction name:
+
+```
+DefaultSearchProviderSuggestURLPostParams
+```
+
+##### Example value:
+
+```
+q={searchTerms},ie=utf-8,oe=utf-8
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### [*Password manager and protection*](#password-manager-and-protection)
 
