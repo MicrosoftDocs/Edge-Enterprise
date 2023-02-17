@@ -62,6 +62,56 @@ These tables list all of the browser-related policies available in this release 
 | [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype) |  Account type for HTTP Negotiate authentication   |
 | [AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)  |  Kerberos delegation server allowlist   |
 
+### [*Content settings*](#content-settings)
+
+|Policy Name|Caption|
+|:-|-|
+| [DefaultPopupsSetting](#defaultpopupssetting)   |  Default pop-ups setting   |
+| [DefaultCookiesSetting](#defaultcookiessetting)   |   Default cookies setting   |
+| [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
+| [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
+| [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)   |  Limit cookies from matching URLs to the current session  |
+
+### [*Default search provider*](#default-search-provider)
+
+|Policy Name|Caption|
+|:-|-|
+| [DefaultSearchProviderEnabled](#defaultsearchproviderenabled)   |     |
+| [DefaultSearchProviderName](#defaultsearchprovidername)   | Default search provider name   |
+| [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)   |  Default search provider search URL   |
+| [DefaultSearchProviderSearchURLPostParams](#defaultsearchprovidersearchurlpostparams)   |  Parameters for search URL which uses POST   |
+| [DefaultSearchProviderAlternateURLs](#defaultsearchprovideralternateurls)   |  List of alternate URLs for the default search provider   |
+| [DefaultSearchProviderEncodings](#defaultsearchproviderencodings)   |  Default search provider encodings   |
+| [DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)   |  Parameter providing search-by-image feature for the default search provider   |
+| [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)   |  Parameters for image URL which uses POST   |
+| [DefaultSearchProviderKeyword](#defaultsearchproviderkeyword)   |  Default search provider keyword   |
+| [DefaultSearchProviderNewTabURL](#defaultsearchprovidernewtaburl)   |  Default search provider new tab page URL   |
+| [DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)   |  Default search provider suggest URL  |
+| [DefaultSearchProviderSuggestURLPostParams](#defaultsearchprovidersuggesturlpostparams)   |   Parameters for suggest URL which uses POST  |
+
+### [*Password manager and protection*](#password-manager-and-protection)
+
+|Policy Name|Caption|
+|:-|-|
+| [PasswordManagerEnabled](#passwordmanagerenabled) | Enable saving passwords to the password manager |
+
+### [*Additional*](#additional)
+
+|Policy Name|Caption|
+|:-|-|
+| [URLAllowlist](#urlallowlist)    |  Allow access to a list of URLs |
+| [URLBlocklist](#urlblocklist)   |  Block access to a list of URLs   |
+| [SSLErrorOverrideAllowed](#sslerroroverrideallowed)   |  Allow proceeding from the SSL warning page   |
+| [CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)   |  Disable Certificate Transparency enforcement for a list of URLs   |
+| [CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)   |  Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes   |
+| [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)   | Disable saving browser history    |
+| [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
+| [TranslateEnabled](#translateenabled)   | Enable Translate    |
+
+## HTTP authentication
+
+[Back to top](#microsoft-edge-mobile---policies)
+
 ### NtlmV2Enabled
 
 #### Enable NTLMv2 authentication
@@ -320,15 +370,9 @@ AuthNegotiateDelegateAllowlist
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-### [*Content settings*](#content-settings)
+## Content settings
 
-|Policy Name|Caption|
-|:-|-|
-| [DefaultPopupsSetting](#defaultpopupssetting)   |  Default pop-ups setting   |
-| [DefaultCookiesSetting](#defaultcookiessetting)   |   Default cookies setting   |
-| [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
-| [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
-| [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)   |  Limit cookies from matching URLs to the current session  |
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### DefaultPopupsSetting
 
@@ -561,22 +605,9 @@ CookiesSessionOnlyForUrls
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-### [*Default search provider*](#default-search-provider)
+## Default search provider
 
-|Policy Name|Caption|
-|:-|-|
-| [DefaultSearchProviderEnabled](#defaultsearchproviderenabled)   |     |
-| [DefaultSearchProviderName](#defaultsearchprovidername)   | Default search provider name   |
-| [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)   |  Default search provider search URL   |
-| [DefaultSearchProviderSearchURLPostParams](#defaultsearchprovidersearchurlpostparams)   |  Parameters for search URL which uses POST   |
-| [DefaultSearchProviderAlternateURLs](#defaultsearchprovideralternateurls)   |  List of alternate URLs for the default search provider   |
-| [DefaultSearchProviderEncodings](#defaultsearchproviderencodings)   |  Default search provider encodings   |
-| [DefaultSearchProviderImageURL](#defaultsearchproviderimageurl)   |  Parameter providing search-by-image feature for the default search provider   |
-| [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams)   |  Parameters for image URL which uses POST   |
-| [DefaultSearchProviderKeyword](#defaultsearchproviderkeyword)   |  Default search provider keyword   |
-| [DefaultSearchProviderNewTabURL](#defaultsearchprovidernewtaburl)   |  Default search provider new tab page URL   |
-| [DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)   |  Default search provider suggest URL  |
-| [DefaultSearchProviderSuggestURLPostParams](#defaultsearchprovidersuggesturlpostparams)   |   Parameters for suggest URL which uses POST  |
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### DefaultSearchProviderEnabled
 
@@ -1105,26 +1136,9 @@ q={searchTerms},ie=utf-8,oe=utf-8
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-### [*Password manager and protection*](#password-manager-and-protection)
-
-|Policy Name|Caption|
-|:-|-|
-| [PasswordManagerEnabled](#passwordmanagerenabled) | Enable saving passwords to the password manager |
-
-### [*Additional*](#additional)
-
-|Policy Name|Caption|
-|:-|-|
-| [URLAllowlist](#urlallowlist)    |  Allow access to a list of URLs |
-| [URLBlocklist](#urlblocklist)   |  Block access to a list of URLs   |
-| [SSLErrorOverrideAllowed](#sslerroroverrideallowed)   |  Allow proceeding from the SSL warning page   |
-| [CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)   |  Disable Certificate Transparency enforcement for a list of URLs   |
-| [CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)   |  Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes   |
-| [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)   | Disable saving browser history    |
-| [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
-| [TranslateEnabled](#translateenabled)   | Enable Translate    |
-
 ## Edge specific policies
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### EdgeNewTabPageCustomURL
 
@@ -1623,6 +1637,10 @@ EdgeNetworkStackPref
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+## Proxy server
+
+[Back to top](#microsoft-edge-mobile---policies)
+
 ### ProxySettings
 
 #### Proxy settings
@@ -1676,6 +1694,8 @@ ProxySettings = {
 
 ## Password manager and protection policies
 
+[Back to top](#microsoft-edge-mobile---policies)
+
 ### PasswordManagerEnabled
 
 #### Enable saving passwords to the password manager
@@ -1724,6 +1744,8 @@ true
 [Back to top](#microsoft-edge-mobile---policies)
 
 ## Additional policies
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### URLAllowlist
 
