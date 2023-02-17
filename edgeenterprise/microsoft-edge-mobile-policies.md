@@ -1309,12 +1309,6 @@ true
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-
-## Proxy server policies
-
-[Back to top](#microsoft-edge-mobile---policies)
-
-
 ### EdgeDisableShareBrowsingHistory
 
 #### Disable data sharing browsing history for personalization
@@ -1637,7 +1631,7 @@ EdgeNetworkStackPref
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-## Proxy server
+## Proxy server policies
 
 [Back to top](#microsoft-edge-mobile---policies)
 
