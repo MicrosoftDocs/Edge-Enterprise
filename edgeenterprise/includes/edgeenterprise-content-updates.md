@@ -2,6 +2,17 @@
 
 
 
+## Week of February 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/13/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
+| 2/14/2023 | [Internet Explorer (IE) mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
+| 2/16/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/16/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+
+
 ## Week of February 06, 2023
 
 
@@ -47,13 +58,3 @@
 | 1/20/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 | 1/20/2023 | [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) | modified |
 | 1/20/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-
-
-## Week of January 09, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/12/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 1/12/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 1/12/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
