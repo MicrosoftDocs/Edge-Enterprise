@@ -60,38 +60,8 @@ Fixed various bugs for Android.
 
 - **Support Shared Device Mode (Android only).** Starting with Microsoft Edge 108 for Android, shared device mode will be supported as public preview. For more information, see [Microsoft applications that support shared device mode](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode).
 
-## Version 108.0.1462.43: December 7, 2022
 
-Fixed various bugs and performance issues for iOS.
-
-## Version 107.0.1418.52: November 17, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.42: November 14, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.36: November 4, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.33: November 2, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.28: November 2, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 106.0.1370.52: October 20, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 106.0.1370.47: October 17, 2022
-
-Fixed various bugs and performance issues.
-
+<!-- Version 108.0.1462.43: December 7, 2022 to Version 106.0.1370.47: October 17, 2022 -->
 <!-- Version 105.0.1343.38: September 13, 2022 to Version 101.0.1210.32: April 29, 2022 -->
 
 ## See also
