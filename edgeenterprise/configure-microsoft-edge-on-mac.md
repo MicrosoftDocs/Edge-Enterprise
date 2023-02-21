@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for macOS using a property list."
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 12/14/2021
+ms.date: 02/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -41,13 +41,13 @@ The last step is to deploy your plist to your users' Mac devices using your pref
 
 1. In Terminal, use the following command to create a plist for Microsoft Edge on your desktop with your preferred settings:
 
-   ```cmd
+   ```text
    /usr/bin/defaults write ~/Desktop/com.microsoft.Edge.plist RestoreOnStartup -int 1
    ```
 
 2. Convert the plist from binary to plain text format:
 
-   ```cmd
+   ```text
    /usr/bin/plutil -convert xml1 ~/Desktop/com.microsoft.Edge.plist
    ```
 
