@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 02/21/2023
+ms.date: 02/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,10 @@ All the Stable channel security updates are listed in [Release notes for Microso
 ## Version 110.0.1587.54: February 21, 2023
 
 Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge for iOS supports Microsoft Tunnel for MAM solution.** For more information, see [Learn about using Microsoft Tunnel with Mobile Application Management](/mem/intune/protect/microsoft-tunnel-mam).
 
 ## Version 109.0.1518.70: January 26, 2023
 
