@@ -1,4 +1,4 @@
-# last revised 12/15/2022
+# last revised 02/22/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -35,6 +35,8 @@
      href: microsoft-edge-install-mobile-china.md
    - name: Mobile Stable Channel Release Notes
      href: microsoft-edge-relnote-mobile-stable-channel.md
+   - name: Mobile Stable Channel archived release notes
+     href: microsoft-edge-relnote-archive-mobile-stable-channel.md
    - name: Stable Channel Release Notes
      href: microsoft-edge-relnote-stable-channel.md
    - name: Stable Channel archived release notes
