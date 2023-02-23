@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 12/15/2022
+ms.date: 02/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,39 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+
+## Version 108.0.1462.43: December 7, 2022
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 107.0.1418.52: November 17, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.42: November 14, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.36: November 4, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.33: November 2, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.28: November 2, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 106.0.1370.52: October 20, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 106.0.1370.47: October 17, 2022
+
+Fixed various bugs and performance issues.
 
 ## Version 105.0.1343.38: September 13, 2022
 
