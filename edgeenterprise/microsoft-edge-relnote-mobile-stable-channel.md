@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/23/2023
+ms.date: 02/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,14 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 110.0.1587.54: February 21, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge for iOS supports Microsoft Tunnel for MAM solution.** For more information, see [Learn about using Microsoft Tunnel with Mobile Application Management](/mem/intune/protect/microsoft-tunnel-mam).
 
 ## Version 109.0.1518.70: January 26, 2023
 
@@ -56,38 +64,8 @@ Fixed various bugs for Android.
 
 - **Support Shared Device Mode (Android only).** Starting with Microsoft Edge 108 for Android, shared device mode will be supported as public preview. For more information, see [Microsoft applications that support shared device mode](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode).
 
-## Version 108.0.1462.43: December 7, 2022
 
-Fixed various bugs and performance issues for iOS.
-
-## Version 107.0.1418.52: November 17, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.42: November 14, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.36: November 4, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.33: November 2, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.28: November 2, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 106.0.1370.52: October 20, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 106.0.1370.47: October 17, 2022
-
-Fixed various bugs and performance issues.
-
+<!-- Version 108.0.1462.43: December 7, 2022 to Version 106.0.1370.47: October 17, 2022 -->
 <!-- Version 105.0.1343.38: September 13, 2022 to Version 101.0.1210.32: April 29, 2022 -->
 
 ## See also
