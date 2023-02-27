@@ -31,6 +31,10 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-25-2023).
 
+## Version 110.0.1587.56: February 23, 2023
+
+Fixed various bugs and performance issues.
+
 ## Version 110.0.1587.50: February 17, 2023
 
 Fixed various bugs and performance issues.
