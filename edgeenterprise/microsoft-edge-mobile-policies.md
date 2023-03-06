@@ -15,7 +15,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 
 # Microsoft Edge Mobile - Policies
 
-The latest version of Microsoft Edge includes the following policies which you can deploy to configure how Microsoft Edge mobile runs in your organization. You can use the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html) for iOS or [Set up managed configurations](https://developer.android.com/work/managed-configurations) for Android). The MDM OS channel in Microsoft Intune is Managed Devices App Configuration Policy (ACP). If you're not using Microsoft Intune, you need to consult your Unified Endpoint Management (UEM) documentation to learn how to deploy through mobile device management.
+The latest version of Microsoft Edge includes the following policies that you can deploy to configure how Microsoft Edge mobile runs in your organization. You can use the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html) for iOS or [Set up managed configurations](https://developer.android.com/work/managed-configurations) for Android). The MDM OS channel in Microsoft Intune is Managed Devices App Configuration Policy (ACP). If you're not using Microsoft Intune, you need to consult your Unified Endpoint Management (UEM) documentation to learn how to deploy through mobile device management.
 
 ## Available policies
 
