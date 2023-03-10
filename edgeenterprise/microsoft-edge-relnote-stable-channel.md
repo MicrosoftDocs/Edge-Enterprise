@@ -29,13 +29,13 @@ These release notes provide information about new features and non-security upda
 
 ### Feature update
 
-- **A New Microsoft Edge Sidebar.** In this release, the Sidebar introduces several new features and improvements aimed at enhancing productivity, convenience, and the user experience. Here are some of the highlights:
+- **A New Microsoft Edge Sidebar.** In this release, the Sidebar introduces several new features and improvements aimed at enhancing productivity, convenience, and the user experience. Here are some of the highlights:<br><br>
 
   - **The New Discover:** Edge Copilot is a powerful tool that helps users boost their productivity and efficiency. It provides intelligent suggestions and insights based on the context of the web page and the user's goals. As the new Bing icon in the Toolbar, Edge Copilot helps users compose better emails, search the web faster, learn new skills, all done more conveniently.  
   - **Enhanced Sidebar Visibility:** With the new Auto-Hide functionality, a user can maximize the productivity and convenience of the sidebar without sacrificing valuable screen space. The Edge Sidebar can be hidden when a user isn't using it and it only reappears when a user needs it.  
   - **Evolved Sidebar Interaction:** The new Hover functionality lets users open the Sidebar by hovering on the Bing icon in the Toolbar. This enhances user productivity and convenience by providing a seamless and intuitive way to access their most used tools.  
 
-  Admins retain the ability to control and customize the Sidebar and its experiences, as needed by using the following settings:
+  Admins retain the ability to control and customize the Sidebar and its experiences, as needed by using the following settings:<br><br>
 
   - If admins enable the Sidebar, users will have access to the Sidebar and Edge Copilot experience. The Sidebar will show at all times in the browser frame. Clicking on the Bing icon in the Toolbar will invoke the new Discover experience.
   - If admins choose the 'not configured' setting, users will have access to the Sidebar and Edge Copilot experience. Unlike when the Sidebar is 'enabled', their users will have the ability to always-show or auto-hide the Sidebar.
