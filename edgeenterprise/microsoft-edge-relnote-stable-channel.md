@@ -45,7 +45,7 @@ These release notes provide information about new features and non-security upda
 
   For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) and [Microsoft Privacy Statement (Search, Microsoft Edge, and artificial intelligence)](https://privacy.microsoft.com/privacystatement).
 
-- **Microsoft Feed on Microsoft 365 Edge New Tab Page.** We're rolling out a new experience to the Microsoft 365 tab of the Edge Enterprise New Tab Page. This experience will feature a new layout that centers on a larger version of the Microsoft Feed, featuring more productivity content, and moves the productivity cards including Important Emails, Recent SharePoint sites, Upcoming events, and To Do to the right-hand side.
+- **Microsoft Feed on Microsoft 365 Edge New Tab Page.** We're rolling out a new experience to the Microsoft 365 tab of the Edge Enterprise New Tab Page. This experience will feature a new layout that centers on a larger version of the Microsoft Feed, featuring more productivity content, and moves the productivity cards including Important Emails, Recent SharePoint sites, Upcoming events, and To Do to the right-hand side of the Microsoft 365 tab.
 
 - **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for macOS x64 and Linux x64. More cross-platform (ARM64) support is expected in the future. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
