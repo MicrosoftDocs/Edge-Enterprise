@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: kylemiller
 author: dan-wesley
 manager: hariragu
-ms.date: 01/20/2023
+ms.date: 03/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,6 +42,8 @@ You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebar
 2. To block the sidebar and all sidebar apps, select **Disabled**.
 3. To allow the sidebar, select **Enabled**.
 
+Note that blocking the sidebar will remove access to the new Discover app which appears in the toolbar (Microsoft Edge 111 or later).
+
 :::image type="content" source="media/microsoft-edge-sidebar/show-hub-sidebar.png" alt-text="Use the group policy editor to enable sidebar":::
 
 ## Block specific sidebar apps
@@ -49,8 +51,7 @@ You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebar
 You can use the [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policy to control which sidebar apps are blocked.
 
 > [!NOTE]
-> During the rollout of Microsoft Edge 107, the following sidebar app experiences are turned on by default for Enterprise customers: Search, Discover, Office.com, and Outlook. <br> 
-> Admins can use the following guidance to reconfigure the sidebar as desired for their organization.
+> Starting with the Microsoft Edge 111 stable release, the methods described below can’t  be used to block the Discover app, which has been updated to include the new Edge Copilot. To block Discover, you must disable the Show Hubs Sidebar policy as outlined in the previous section. Note that this will also block access to the sidebar and all apps therein. 
 
 Use the following steps as a guide to block a sidebar app.
 
