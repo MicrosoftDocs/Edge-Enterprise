@@ -56,7 +56,7 @@ These release notes provide information about new features and non-security upda
 - [InternetExplorerModeClearDataOnExitEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) - Clear history for IE and IE mode every time you exit
 - [MouseGestureEnabled](/DeployEdge/microsoft-edge-policies#mousegestureenabled) - Mouse Gesture Enabled
 - [PrintPreviewStickySettings](/DeployEdge/microsoft-edge-policies#printpreviewstickysettings) - Configure the sticky print preview settings
-=======
+
 ## Version 110.0.1587.69: March 9, 2023
 
 Fixed various bugs and performance issues.
