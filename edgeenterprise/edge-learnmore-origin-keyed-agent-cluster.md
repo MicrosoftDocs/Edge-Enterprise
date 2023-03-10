@@ -14,9 +14,6 @@ description: "Microsoft Edge will disable modifying 'document.domain'"
 
 # Microsoft Edge will disable modifying `document.domain`
 
-> [!NOTE]
-> This article applies to Microsoft Edge Stable version 112 or later.
-
 > [!WARNING]
 > If your website relies on relaxing the same-origin policy via `document.domain`, your action is required. Continue to read more about why this is changing or go to the [Alternative cross-origin communication](#alternative-cross-origin-communication) to learn about alternative mechanisms to achieve cross-origin communication.
 
