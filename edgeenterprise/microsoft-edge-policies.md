@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/07/2023
+ms.date: 03/13/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -10008,21 +10008,21 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Configuring  this  policy  sets  the  print  preview  settings  as  the  most  recent  choice  in  Print  Preview  instead  of  the  default  print  preview  settings .
+  Configuring this policy sets the print preview settings as the most recent choice in Print Preview instead of the default print preview settings.
 
-Each  item  of  this  policy  expects  a  boolean :
+Each item of this policy expects a boolean:
 
-Layout  specifies  if  the  webpage  layout  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  webpage  layout  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Layout specifies if the webpage layout should be kept sticky or not in print preview settings. If we set this to True the webpage layout uses the recent choice otherwise it will set to default value.
 
-Size  specifies  if  the  page  size  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  size  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Size specifies if the page size should be kept sticky or not in print preview settings. If we set this to True the page size uses the recent choice otherwise it will set to default value.
 
-Scale  Type  specifies  if  the  scaling  percentage  and  scale  type  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  scale  percentage  and  scale  type  both  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Scale Type specifies if the scaling percentage and scale type should be kept sticky or not in print preview settings. If we set this to True the scale percentage and scale type both uses the recent choice oherwise it will set to default value.
 
-Margins  specifies  if  the  page  margin  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  margins  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Margins specifies if the page margin should be kept sticky or not in print preview settings. If we set this to True the page margins uses the recent choice otherwise it will set to default value.
 
-If  you  enable  this  policy ,  the  selected  values  will  use  the  most  recent  choice  in  Print  Preview .
+If you enable this policy, the selected values will use the most recent choice in Print Preview.
 
-If  you  disable  or  don't  configure  this  policy ,  print  preview  settings  will  not  be  impacted .
+If you disable or don't configure this policy, print preview settings will not be impacted.
 
   #### Supported features:
 
