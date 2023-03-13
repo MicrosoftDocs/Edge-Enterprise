@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 02/09/2023
+ms.date: 03/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,83 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- from Version 108.0.1462.42: December 5, 2022 to Version 106.0.1370.59: October 27, 2022 -->
+## Version 108.0.1462.42: December 5, 2022
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-4262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4262), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-5-2022)
+
+### Feature updates
+
+- **Graph APIs for Cloud Site List Management.** New Graph APIs that allow IT admins in organizations to create, manage, and publish their site lists for IE mode in the cloud.  For more information, see [Use the Edge API in Microsoft Graph](/graph/api/resources/browser-edge-api-overview?view=graph-rest-beta&preserve-view=true).
+
+- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows, Mac, and Linux. The new SmartScreen library was first made available on Windows and Mac, and now makes its debut on Linux with Microsoft Edge version 108. Microsoft Edge version 108 also brings new product optimizations (that is, better proxy handling) and bug fixes by having the SmartScreen library leverage Microsoft Edge’s built-in network stack.
+
+### Policy updates
+
+#### New policies
+
+- [EncryptedClientHelloEnabled](/DeployEdge/microsoft-edge-policies#encryptedclienthelloenabled) - TLS Encrypted ClientHello Enabled
+- [NewTabPageAppLauncherEnabled](/DeployEdge/microsoft-edge-policies#newtabpageapplauncherenabled) - Hide App Launcher on Microsoft Edge new tab page
+
+#### Obsoleted policy
+
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Enable new SmartScreen library
+
+## Version 107.0.1418.62: November 28, 2022
+
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022).
+
+## Version 106.0.1370.86: November 28, 2022
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022)
+
+## Version 107.0.1418.56: November 21, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.52: November 17, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.42: November 10, 2022
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-10-2022).
+
+## Version 106.0.1370.72: November 10, 2022
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
+## Version 107.0.1418.35: November 3, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 107.0.1418.26: October 29, 2022
+
+> [!IMPORTANT]
+> This update contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022).
+
+## Version 106.0.1370.61: October 29, 2022
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022)
+
+## Version 106.0.1370.59: October 27, 2022
+
+Fixed various bugs and performance issues for Extended Stable release.
 
 <!--- from Version 107.0.1418.24: October 27, 2022 to Version 106.0.1370.37: October 6, 2022 -->
 
