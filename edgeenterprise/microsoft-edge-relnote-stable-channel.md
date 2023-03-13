@@ -65,6 +65,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-13-2023).
+
 ## Version 110.0.1587.63: March 3, 2023
 
 Fixed various bugs and performance issues.
