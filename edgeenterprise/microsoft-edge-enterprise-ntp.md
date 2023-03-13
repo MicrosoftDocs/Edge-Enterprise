@@ -74,7 +74,7 @@ One of the most effective ways for many users to stay productive when they’re 
 
 Trying to find something for work, but can’t quite figure out where to start? Just search for it! The Microsoft Edge address bar (location bar or URL bar) supports finding work content through Microsoft Search for Bing (MSB). Type your query and search or select one of the auto-suggested work results in Microsoft Suggests. You can also select "my organization" in the Microsoft search banner for work information only.
 
-## Make Microsoft 365 the default tab
+## How to make Microsoft 365 the default tab
 
 The new tab page will remember the last tab the user selected, so simply selecting the Microsoft 365 tab will set it as default.
 
