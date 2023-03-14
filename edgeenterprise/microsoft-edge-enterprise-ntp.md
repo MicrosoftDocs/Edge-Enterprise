@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 03/13/2023
+ms.date: 03/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -86,6 +86,15 @@ For tenant admins, if you’d like to have your organization automatically set M
 4. Select "Users default to Microsoft 365".
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Microsoft 365 as default tab":::
+
+## How to disable My Feed or Microsoft 365 tabs
+
+Tenant admins can disable the My Feed or Microsoft 365 tabs using the Microsoft 365 admin center by following these steps:
+
+1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
+2. Go to **Org settings** > **News**.
+3. Under **News**, **select Microsoft Edge new tab page**.
+4. Uncheck "Show Microsoft 365 content…" or "Show My Feed content…".
 
 ## See also
 
