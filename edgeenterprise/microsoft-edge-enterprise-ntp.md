@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: trnohra
 author: dan-wesley
 manager: collw
-ms.date: 08/11/2022
+ms.date: 03/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,11 +28,23 @@ We’re continuously looking to improve the browser experience so we want to get
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feedback.png" alt-text="Send browser feedback":::
 
-## Microsoft 365 feed
+## Microsoft Feed
 
-Do you feel overwhelmed by trying to keep up with all the updates at work? The Microsoft 365 feed is personalized to you and your work. This feed uses Microsoft 365 data to bring you the most important information happening around your organization. From at mentions, to files being edited, to meeting recordings you might want to catch-up on, to colleague promotions, and so much more. This experience helps keep you up to date on the most important information at a glance.
+Microsoft Feed helps you discover and learn about people and interests relevant at work. The feed shows you a mix of content and activity from across Microsoft 365 to help you stay connected to your colleagues and informed about what's happening around you.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-feed-list-new-50.png" alt-text="Microsoft 365 feed list":::
+You might, for example, see updates to documents you’re working on with others, links shared with you in Teams chats, suggested tasks to follow up, highlights about colleagues, and much more.
+
+[Learn more about Microsoft Feed.](https://support.microsoft.com/office/discover-and-learn-with-microsoft-feed-9c190800-e348-46b7-9d46-41c628b80ebb?storagetype=live)
+
+## Microsoft Feed is personal and personalized
+
+Microsoft Feed is personalized to you. What you see in your feed is different from what your colleagues see in theirs.  
+
+You will only see documents or other content directly shared with you or that you have access to in any case. This can be documents that are stored in a shared folder in OneDrive or on a SharePoint site that you have access to, or a link that someone sent you in an email conversation or a Teams chat.
+
+Documents are not stored in Microsoft Feed. If you want to change permissions on any of your documents, you can do this from where the documents are stored, such as OneDrive or SharePoint. Microsoft Feed always respects the permissions that are set on documents, and will not show your documents to people who don't have access to them.
+
+When you or others share a document as an attachment in email, or through a Teams chat, only people in the email conversation or the Teams chat will see that document in their feed.
 
 ## Recent SharePoint sites card
 
@@ -40,9 +52,9 @@ Tired of jumping through hoops to get to your SharePoint sites? Here’s a short
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-sharepoint-sites-50.png" alt-text="List of recent SharePoint sites":::
 
-## Quick Access list
+## My Content
 
-Our research shows that information workers can handle tens, if not hundreds of files over a given week. This volume can get overwhelming when you don’t know where each file is saved or who sent it to you. This module ranks files we think are most important to you to help you find them quickly. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or use the **More in Office.com** link at the bottom of the list to hop to Office.com and find it there.
+Our research shows that information workers can handle tens, if not hundreds of files over a given week. This volume can get overwhelming when you don’t know where each file is saved or who sent it to you. Select My Content to find the files that are most important to you. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or select **More at Microsoft 365** at the bottom of the list to find more.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
 
@@ -64,16 +76,25 @@ Trying to find something for work, but can’t quite figure out where to start? 
 
 ## How to make Microsoft 365 the default tab
 
-If you’re a user, click the **Microsoft 365** tab at the bottom of your new tab page in Microsoft Edge and when you return to the page it should be set as the default!
+The new tab page will remember the last tab the user selected, so simply selecting the Microsoft 365 tab will set it as default.
 
 For tenant admins, if you’d like to have your organization automatically set Microsoft 365 as the default tab, follow these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
 2. Go to **Org settings** > **News**.
 3. Under **News**, **select Microsoft Edge new tab page**.
-4. Select the toggle in the next screenshot that says "Users default to Microsoft 365".
+4. Select "Users default to Microsoft 365".
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Microsoft 365 as default tab":::
+
+## How to disable My Feed or Microsoft 365 tabs
+
+Tenant admins can disable the My Feed or Microsoft 365 tabs using the Microsoft 365 admin center by following these steps:
+
+1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
+2. Go to **Org settings** > **News**.
+3. Under **News**, **select Microsoft Edge new tab page**.
+4. Uncheck "Show Microsoft 365 content…" or "Show My Feed content…".
 
 ## See also
 
