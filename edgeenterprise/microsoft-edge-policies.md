@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/14/2023
+ms.date: 03/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,6 +23,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
 
 ## Available policies
 
