@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 03/09/2023
+ms.date: 03/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,9 +25,47 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 111.0.1661.41: March 13, 2023
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-13-2023).
+
+### Feature update
+
+- **A New Microsoft Edge Sidebar.** In this release, the Sidebar introduces several new features and improvements aimed at enhancing productivity, convenience, and the user experience. Here are some of the highlights:<br><br>
+
+  - **The New Discover:** Edge Copilot is a powerful tool that helps users boost their productivity and efficiency. It provides intelligent suggestions and insights based on the context of the web page and the user's goals. As the new Bing icon in the Toolbar, Edge Copilot helps users compose better emails, search the web faster, learn new skills, all done more conveniently.  
+  - **Enhanced Sidebar Visibility:** With the new Auto-Hide functionality, a user can maximize the productivity and convenience of the sidebar without sacrificing valuable screen space. The Edge Sidebar can be hidden when a user isn't using it and it only reappears when a user needs it.  
+  - **Evolved Sidebar Interaction:** The new Hover functionality lets users open the Sidebar by hovering on the Bing icon in the Toolbar. This enhances user productivity and convenience by providing a seamless and intuitive way to access their most used tools.  
+
+  Admins retain the ability to control and customize the Sidebar and its experiences, as needed by using the following settings:<br><br>
+
+  - If admins enable the Sidebar, users will have access to the Sidebar and Edge Copilot experience. The Sidebar will show at all times in the browser frame. Clicking on the Bing icon in the Toolbar will invoke the new Discover experience.
+  - If admins choose the 'not configured' setting, users will have access to the Sidebar and Edge Copilot experience. Unlike when the Sidebar is 'enabled', their users will have the ability to always-show or auto-hide the Sidebar.
+  - If admins disable the Sidebar, Discover and the Sidebar will be inaccessible for their users. **Note:** In this release, Admins do not have the ability to disable Discover and keep the Sidebar.
+
+  Additional customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.
+
+  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) and [Microsoft Privacy Statement (Search, Microsoft Edge, and artificial intelligence)](https://privacy.microsoft.com/privacystatement).
+
+- **Microsoft Feed on Microsoft 365 Edge New Tab Page.** We're rolling out a new experience to the Microsoft 365 tab of the Edge Enterprise New Tab Page. This experience will feature a new layout that centers on a larger version of the Microsoft Feed, featuring more productivity content, and moves the productivity cards including Important Emails, Recent SharePoint sites, Upcoming events, and To Do to the right-hand side of the Microsoft 365 tab.
+
+- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for macOS x64 and Linux x64. More cross-platform (ARM64) support is expected in the future. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **New policy to clear IE mode data on browser exit.** The [InternetExplorerModeClearDataOnExitEnabled](/deployedge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) policy controls whether browsing history is deleted from Internet Explorer and Internet Explorer mode every time Microsoft Edge is closed. Users can also configure this setting in the 'Clear browsing data for Internet Explorer' option in the Privacy, search, and services menu of Settings (*edge://settings/privacy*).
+
+### Policy updates
+
+#### New policies
+
+- [InternetExplorerModeClearDataOnExitEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) - Clear history for IE and IE mode every time you exit
+- [MouseGestureEnabled](/DeployEdge/microsoft-edge-policies#mousegestureenabled) - Mouse Gesture Enabled
+- [PrintPreviewStickySettings](/DeployEdge/microsoft-edge-policies#printpreviewstickysettings) - Configure the sticky print preview settings
+
 ## Version 110.0.1587.69: March 9, 2023
 
 Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-13-2023).
 
 ## Version 110.0.1587.63: March 3, 2023
 
@@ -175,82 +213,7 @@ Fixed various bugs and performance issues for Stable and Extended Stable release
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
 
-## Version 108.0.1462.42: December 5, 2022
-
-> [!IMPORTANT]
-> This update to Extended Stable contains a fix for [CVE-2022-4262](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4262), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-5-2022)
-
-### Feature updates
-
-- **Graph APIs for Cloud Site List Management.** New Graph APIs that allow IT admins in organizations to create, manage, and publish their site lists for IE mode in the cloud.  For more information, see [Use the Edge API in Microsoft Graph](/graph/api/resources/browser-edge-api-overview?view=graph-rest-beta&preserve-view=true).
-
-- **More reliable web defense.** Browse the web with more reliable protection thanks to the rewritten [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) library for Microsoft Edge on Windows, Mac, and Linux. The new SmartScreen library was first made available on Windows and Mac, and now makes its debut on Linux with Microsoft Edge version 108. Microsoft Edge version 108 also brings new product optimizations (that is, better proxy handling) and bug fixes by having the SmartScreen library leverage Microsoft Edge’s built-in network stack.
-
-### Policy updates
-
-#### New policies
-
-- [EncryptedClientHelloEnabled](/DeployEdge/microsoft-edge-policies#encryptedclienthelloenabled) - TLS Encrypted ClientHello Enabled
-- [NewTabPageAppLauncherEnabled](/DeployEdge/microsoft-edge-policies#newtabpageapplauncherenabled) - Hide App Launcher on Microsoft Edge new tab page
-
-#### Obsoleted policy
-
-- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) Enable new SmartScreen library
-
-## Version 107.0.1418.62: November 28, 2022
-
-> [!IMPORTANT]
-> This update contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022).
-
-## Version 106.0.1370.86: November 28, 2022
-
-> [!IMPORTANT]
-> This update to Extended Stable contains a fix for [CVE-2022-4135](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4135), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-28-2022)
-
-## Version 107.0.1418.56: November 21, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.52: November 17, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.42: November 10, 2022
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-10-2022).
-
-## Version 106.0.1370.72: November 10, 2022
-
-Fixed various bugs and performance issues for Extended Stable channel.
-
-## Version 107.0.1418.35: November 3, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 107.0.1418.26: October 29, 2022
-
-> [!IMPORTANT]
-> This update contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022).
-
-## Version 106.0.1370.61: October 29, 2022
-
-> [!IMPORTANT]
-> This update to Extended Stable contains a fix for [CVE-2022-3723](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-3723), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-31-2022)
-
-## Version 106.0.1370.59: October 27, 2022
-
-Fixed various bugs and performance issues for Extended Stable release.
-
+<!-- from Version 108.0.1462.42: December 5, 2022 to Version 106.0.1370.59: October 27, 2022 -->
 <!--- from Version 107.0.1418.24: October 27, 2022 to Version 106.0.1370.37: October 6, 2022 -->
 <!--- from Version 106.0.1370.34: October 3, 2022 to Version 105.0.1343.27: September 2, 2022 -->
 <!--- from Version 105.0.1343.25: September 1, 2022 to  Version 104.0.1293.70: August 25, 2022 -->
