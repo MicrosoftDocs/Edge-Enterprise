@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Edge for macOS switch from Microsoft Autoupdate to EdgeUpdater"
+title: "Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater"
 ms.author: azeigler
 author: dan-wesley
 manager: edmaurer
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Starting with version 113, Microsoft Edge for macOS will switch from Microsoft Autoupdate to EdgeUpdater"
+description: "Starting with version 113, Microsoft Edge for macOS will switch from Microsoft AutoUpdate to EdgeUpdater"
 ---
 
-# Microsoft Edge for macOS switches from Microsoft Autoupdate to EdgeUpdater
+# Microsoft Edge for macOS switches from Microsoft AutoUpdate to EdgeUpdater
 
 Starting with Microsoft Edge 113, Microsoft Edge for macOS will start using a new updater named named EdgeUpdater.
 
@@ -25,12 +25,12 @@ EdgeUpdater provides an update experience tailored to browser usage, with fast, 
 
 ## Installation and recommendations
 
-When Microsoft Edge 113 is installed it will automatically start using EdgeUpdater instead of Microsoft Autoupdate (MAU).
+When Microsoft Edge 113 is installed it will automatically start using EdgeUpdater instead of Microsoft AutoUpdate (MAU).
 
 We recommend that you let Microsoft Edge update itself. If you choose to manually update Microsoft Edge for macOS, you need to set the new **UpdateDefault** preference to your desired choice.
 
 > [!NOTE]
-> If you use Microsoft Autoupdate preferences to prevent browser updates, you will need to transition to the new EdgeUpdater **UpdateDefault** policy before version 113 to prevent future automatic updates.
+> If you use Microsoft AutoUpdate preferences to prevent browser updates, you will need to transition to the new EdgeUpdater **UpdateDefault** policy before version 113 to prevent future automatic updates.
 
 ## See also
 
