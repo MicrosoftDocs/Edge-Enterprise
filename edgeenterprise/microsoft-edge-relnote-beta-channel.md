@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: collw
-ms.date: 03/16/2023
+ms.date: 03/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,22 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 112.0.1722.11: March 17, 2023
+
+### Feature update
+
+- **Microsoft Edge Sidebar Improvements.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window.  In this release, the sidebar has been enhanced to increase productivity and improve user experience.  As communicated in our last release ([Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel#version-1110166141-march-13-2023)), the sidebar now includes a toolbar button by default to access the experience. If admins enable the Discover app, hovering and clicking the toolbar button will invoke both the sidebar tower, and the new discover experience. With this release, admins now have the ability to disable the Discover app and still keep the Sidebar. In this situation, the Sidebar tower will always be shown. If a user would like to hide their sidebar from always showing, they can do this in their Sidebar settings (*edge://settings/sidebar*). Additionally, Enterprise users can choose to 'always show' or 'auto hide', when an admin 'enables' the Sidebar. More customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
+
+- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for ARM64. Cross-platform support is now available for x64 Windows, x64 macOS, x64 Linux and ARM64 systems.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Added features for web app policy.** The [WebAppInstallForceList](/deployedge/microsoft-edge-policies#webappinstallforcelist) policy lets administrators configure a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off.  This policy now supports `custom_name`, which permanently overrides the app name of installed apps and `custom_icon`, which permanently overrides the app icon of installed apps.
+
+### Policy updates
+
+#### New policies
+
+- [CryptoWalletEnabled](/DeployEdge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature
 
 ## Version 111.0.1661.43: March 16, 2023
 
@@ -59,39 +75,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 111.0.1661.15: February 16, 2023
-
-### Feature update
-
-- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for macOS x64 and Linux x64. More cross-platform (ARM64) support is expected in the future. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **New policy to clear IE mode data on browser exit.** The [InternetExplorerModeClearDataOnExitEnabled](/deployedge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) policy controls whether browsing history is deleted from Internet Explorer and Internet Explorer mode every time Microsoft Edge is closed. Users can also configure this setting in the 'Clear browsing data for Internet Explorer' option in the Privacy, search, and services menu of Settings (*edge://settings/privacy*).
-
-### Policy updates
-
-#### New policies
-
-- [InternetExplorerModeClearDataOnExitEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) - Clear history for IE and IE mode every time you exit
-- [MouseGestureEnabled](/DeployEdge/microsoft-edge-policies#mousegestureenabled) - Mouse Gesture Enabled
-- [PrintPreviewStickySettings](/DeployEdge/microsoft-edge-policies#printpreviewstickysettings) - Configure the sticky print preview settings
-
-## Version 110.0.1587.40: February 8, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.35: February 3, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.30: January 30, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.22: January 24, 2023
-
-Fixed various bugs and performance issues.
-
-<!---                   --->
+<!-- from Version 111.0.1661.15: February 16, 2023 to Version 110.0.1587.22: January 24, 2023 -->
 <!--- from Version 110.0.1587.17: January 20, 2023 to Version 109.0.1518.23: December 14, 2022 -->
 <!--- from Version 109.0.1518.14: December 7, 2022 to Version 108.0.1462.20: November 14, 2022 -->
 <!--- from Version 108.0.1462.15: November 10, 2022 to Version 107.0.1418.13: October 18, 2022 -->
