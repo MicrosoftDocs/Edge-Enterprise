@@ -35,6 +35,10 @@ These release notes provide information about new features and non-security upda
 
 - [CryptoWalletEnabled](/DeployEdge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature
 
+## Version 111.0.1661.43: March 16, 2023
+
+Fixed various bugs and performance issues.
+
 ## Version 111.0.1661.41: March 13, 2023
 
 Fixed various bugs and performance issues.
