@@ -44,22 +44,22 @@ To create and deploy a plist, follow these steps:
 1. Create a file named "com.microsoft.EdgeUpdater.plist".
 2. Paste the following contents into the plist file:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" http://www.apple.com/DTDs/PropertyList-1.0.dtd>
-<plist version="1.0">
-<dict>
-    <key>updatePolicies</key>
-    <dict>
-        <key>global</key>
-        <dict>
-            <key>UpdateDefault</key>
-            <integer>3</integer>
-        </dict>
-    </dict>
-</dict>
-</plist>
-```
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" http://www.apple.com/DTDs/PropertyList-1.0.dtd>
+   <plist version="1.0">
+   <dict>
+       <key>updatePolicies</key>
+       <dict>
+           <key>global</key>
+           <dict>
+               <key>UpdateDefault</key>
+               <integer>3</integer>
+           </dict>
+       </dict>
+   </dict>
+   </plist>
+   ```
 
 3. Deploy your plist.
 
