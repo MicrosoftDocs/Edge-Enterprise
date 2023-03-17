@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 03/16/2023
+ms.date: 03/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,10 +26,6 @@ These release notes provide information about new features and non-security upda
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
 ## Version 111.0.1661.44: March 16, 2023
-
-### Feature update
-
-- **New Microsoft Edge PDF experience policy.**  As part of the Adobe and Microsoft collaboration to re-envision the future workplace and your digital experiences, we are natively embedding the Adobe Acrobat PDF engine into the Microsoft Edge built-in PDF reader, with a release scheduled in March 2023. Administrators can start testing the new Microsoft Edge PDF reader which is powered by the Adobe Acrobat PDF engine by enabling the NewPDFReaderEnabled policy.  For more information, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).  
 
 ### Policy updates
 
