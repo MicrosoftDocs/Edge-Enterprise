@@ -30,7 +30,7 @@ When Microsoft Edge 113 is installed, it will automatically start using EdgeUpda
 > [!NOTE]
 > Microsoft Edge will automatically start using EdgeUpdater, but you still have to set policies to manage update behavior.
 
-## Policies
+### Policies
 
 You can use the following policies to manage updates:
 
