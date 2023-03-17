@@ -30,20 +30,20 @@ When Microsoft Edge 113 is installed, it will automatically start using EdgeUpda
 > [!NOTE]
 > Microsoft Edge will automatically start using EdgeUpdater, but you still have to set policies to manage update behavior.
 
-### Policies
-
-You can use the following policies to manage updates:
-
-- [UpdateDefault](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#updatedefault) - This policy determines whether updates to a specified application are allowed. This can also be set globally.
-- [UpdatesSuppressed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#updatessuppressed) - This policy is to set a time period in which updates are suppressed, in local system time. During this time the updater will not check for updates.
-- [AutoUpdateCheckPeriodMinutes](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) - This policy sets how often the updater checks for updates, in minutes.
-
 We recommend that you let Microsoft Edge update itself. If you choose to manually update Microsoft Edge for macOS, you need to set the new **UpdateDefault** preference to your desired choice.
 
 > [!NOTE]
 > If you use Microsoft AutoUpdate preferences to prevent browser updates, you will need to transition to the new EdgeUpdater **UpdateDefault** policy before version 113 to prevent future automatic updates.
 
-## EdgeUpdater configuration example
+## Policies
+
+You can use the following policies to manage updates:
+
+- [UpdateDefault](/deployedge/microsoft-edge-update-policies#updatedefault) - This policy determines whether updates to a specified application are allowed. This can also be set globally.
+- [UpdatesSuppressed](/deployedge/microsoft-edge-update-policies#updatessuppressed) - This policy is to set a time period in which updates are suppressed, in local system time. During this time the updater will not check for updates.
+- [AutoUpdateCheckPeriodMinutes](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) - This policy sets how often the updater checks for updates, in minutes.
+
+## Update configuration example
 
 This section shows how to use a plist to disable EdgeUpdater and turn off updates.
 
