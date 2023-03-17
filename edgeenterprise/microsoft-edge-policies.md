@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/13/2023
+ms.date: 03/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,14 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
 
 ## Available policies
 
@@ -270,8 +278,8 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow insecure websites to make requests to more-private network endpoints|
-|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from insecure contexts|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to more-private network endpoints|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from in an insecure manner|
 ### [*Proxy server*](#proxy-server-policies)
 
 |Policy Name|Caption|
@@ -592,6 +600,7 @@ These tables list all of the browser-related group policies available in this re
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
+|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
@@ -1183,7 +1192,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are allowed to perform multiple automatic downloads in quick succession.
+  Define a list of sites, based on URL patterns, that are allowed to perform multiple successive automatic downloads.
 If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set. If it isn't set, then the user's personal setting applies.
 For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -1248,7 +1257,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls\2 = "[*.]conto
 
   #### Description
 
-  Define a list of sites, based on URL patterns, where multiple automatic downloads in quick succession aren't allowed.
+  Define a list of sites, based on URL patterns, where multiple successive automatic downloads aren't allowed.
 If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set.  If it isn't set, then the user's personal setting applies.
 For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -1554,7 +1563,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Set whether websites can perform multiple automatic downloads in quick succession. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).
+  Set whether websites can perform multiple downloads successively without user interaction. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).
 If you don't configure this policy, multiple automatic downloads can be performed in all sites, and the user can change this setting.
 
 Policy options mapping:
@@ -10871,7 +10880,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   ### InsecurePrivateNetworkRequestsAllowed
 
-  #### Specifies whether to allow insecure websites to make requests to more-private network endpoints
+  #### Specifies whether to allow websites to make requests to more-private network endpoints
 
   
   
@@ -10881,7 +10890,11 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   #### Description
 
-  Controls whether insecure websites are allowed to make requests to more-private network endpoints.
+  Controls whether websites are allowed to make requests to more-private network endpoints.
+
+When this policy is enabled, all Private Network Access checks are disabled for all origins. This may allow attackers to perform cross-site request forgery (CSRF) attacks on private network servers.
+
+When this policy is disabled or not configured, the default behavior for requests to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests, PrivateNetworkAccessSendPreflights, and PrivateNetworkAccessRespectPreflightResults feature flags. These flags may be controlled by experimentation or set via the command line.
 
 This policy relates to the Private Network Access specification. See https://wicg.github.io/private-network-access/ for more details.
 
@@ -10890,11 +10903,7 @@ A network endpoint is more private than another if:
 2) Its IP address is private and the other is public.
 In the future, depending on spec evolution, this policy might apply to all cross-origin requests directed at private IPs or localhost.
 
-A website is deemed secure if it meets the definition of a secure context in https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts. Otherwise, it will be treated as an insecure context.
-
-When this policy is either not set or set to false, the default behavior for requests from insecure contexts to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests feature, which may be set by a field trial or on the command line.
-
-When this policy is set to True, insecure websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
+When this policy enabled, websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
 
   #### Supported features:
 
@@ -10911,7 +10920,7 @@ When this policy is set to True, insecure websites are allowed to make requests 
   ##### Group Policy (ADMX) info
 
   - GP unique name: InsecurePrivateNetworkRequestsAllowed
-  - GP name: Specifies whether to allow insecure websites to make requests to more-private network endpoints
+  - GP name: Specifies whether to allow websites to make requests to more-private network endpoints
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -10942,7 +10951,7 @@ When this policy is set to True, insecure websites are allowed to make requests 
 
   ### InsecurePrivateNetworkRequestsAllowedForUrls
 
-  #### Allow the listed sites to make requests to more-private network endpoints from insecure contexts
+  #### Allow the listed sites to make requests to more-private network endpoints from in an insecure manner
 
   
   
@@ -10952,13 +10961,11 @@ When this policy is set to True, insecure websites are allowed to make requests 
 
   #### Description
 
-  List of URL patterns. Private network requests initiated from insecure websites served by matching origins are allowed.
+  List of URL patterns. Requests initiated from websites served by matching origins are not subject to Private Network Access checks.
 
 If this policy is not set, this policy behaves as if set to the empty list.
 
 For origins not covered by the patterns specified here, the global default value will be used either from the [InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed) policy, if it is set, or the user's personal configuration otherwise.
-
-Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
 For detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
@@ -10977,7 +10984,7 @@ For detailed information on valid URL patterns, see [Filter format for URL list-
   ##### Group Policy (ADMX) info
 
   - GP unique name: InsecurePrivateNetworkRequestsAllowedForUrls
-  - GP name: Allow the listed sites to make requests to more-private network endpoints from insecure contexts
+  - GP name: Allow the listed sites to make requests to more-private network endpoints from in an insecure manner
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16602,7 +16609,7 @@ If you enable this policy, the built-in DNS client is used, if it's available.
 
 If you disable this policy, the built-in DNS client is only used when DNS-over-HTTPS is in use.
 
-If you don't configure this policy, the built-in DNS client is enabled by default on macOS and Android (when neither Private DNS nor VPN are enabled).
+If you don't configure this policy, the built-in DNS client is enabled by default on Windows, macOS and Android (when neither Private DNS nor VPN are enabled).
 
   #### Supported features:
 
@@ -31066,6 +31073,69 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShowAcrobatSubscriptionButton
+
+  #### Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 111 or later
+
+  #### Description
+
+  This policy lets the native PDF viewer in Microsoft Edge show a button that
+lets a user looking for advanced digital document features to discover and subscribe to premium offerings. This is done via the Acrobat extension.
+If you enable or don't configure this policy, the button will show up on the native PDF viewer in Microsoft Edge. A user will be
+able to buy Adobe subscription to access their premium offerings. If you disable this policy, the button won't be visible
+on the native PDF viewer in Microsoft Edge. A user won't be able to discover Adobe's advanced PDF tools or buy their subscriptions.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowAcrobatSubscriptionButton
+  - GP name: Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowAcrobatSubscriptionButton
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowAcrobatSubscriptionButton
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ShowMicrosoftRewards
 
   #### Show Microsoft Rewards experiences
@@ -33825,14 +33895,14 @@ fallback_app_name are provided,
 the latter will be ignored.)
 
 - custom_name
-(Allows you to permanently override the app name for all web
-apps and PWAs. Not currently supported in Microsoft Edge.)
+(Starting with Microsoft Edge version 112,
+allows you to override the app name of installed apps.)
 
 - custom_icon
-(Allows you to override the app icon of installed apps. The icons have to
-be square, maximal 1 MB in size, and in one of the following formats:
-jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file. Not currently supported in Microsoft Edge.)
+(Starting with Microsoft Edge version 112,
+allows you to override the app icon of installed apps. The icons have to
+be square, have a maximum file size of 1 MB, and in one of the following formats:
+jpeg, png, gif, webp, ico. The hash value has to be the SHA256 hash of the icon file.)
 
 - install_as_shortcut
 (Starting with Microsoft Edge
