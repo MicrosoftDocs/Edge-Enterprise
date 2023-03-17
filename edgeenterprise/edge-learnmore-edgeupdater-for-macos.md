@@ -63,7 +63,7 @@ To create and deploy a plist, follow these steps:
 
 3. Deploy your plist.
 
-   Using Microsoft Intune, create a new device configuration profile targeting the macOS platform and select the **Preference file** profile type. Target **com.microsoft.EdgeUpdater** as the preference domain name and upload your plist. For more information, see [Add a property list file to macOS devices using Microsoft Intune](/mem/intune/configuration/preference-file-settings-macos).<br><br>
+   Using Microsoft Intune, create a new device configuration profile targeting the macOS platform and select the **Preference file** profile type. Target **com.microsoft.EdgeUpdater** as the preference domain name and upload your plist. For more information, see [Add a property list file to macOS devices using Microsoft Intune](/mem/intune/configuration/preference-file-settings-macos).<br>
 
    For Jamf, upload the .plist file as a **Custom Settings** payload.
 
@@ -71,7 +71,10 @@ To test your configuration on a local device:
 
 1. Copy the "com.microsoft.EdgeUpdater.plist" to */Library/Managed Preferences/com.microsoft.EdgeUpdater.plist*.
 2. Change ownership of the managed preference with this command:
-`sudo chown root:wheel /Library/Managed Preferences/com.microsoft.EdgeUpdater.plist`
+
+   ```bash
+   sudo chown root:wheel /Library/Managed Preferences/com.microsoft.EdgeUpdater.plist
+   ```
 
 ## See also
 
