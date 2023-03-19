@@ -2,6 +2,21 @@
 
 
 
+## Week of March 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/13/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 3/13/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+| 3/13/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
+| 3/14/2023 | [Microsoft Edge Enterprise new tab page](/DeployEdge/microsoft-edge-enterprise-ntp) | modified |
+| 3/16/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 3/17/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 3/17/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 3/17/2023 | [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/DeployEdge/edge-learnmore-edgeupdater-for-macos) | added |
+
+
 ## Week of March 06, 2023
 
 
@@ -28,13 +43,3 @@
 | 2/14/2023 | [Internet Explorer (IE) mode troubleshooting and FAQ](/DeployEdge/edge-ie-mode-faq) | modified |
 | 2/16/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 | 2/16/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-
-
-## Week of February 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/9/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 2/9/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 2/9/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
