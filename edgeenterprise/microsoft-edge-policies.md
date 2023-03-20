@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/15/2023
+ms.date: 03/20/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -30,7 +30,8 @@ The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
+|[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 
 ## Available policies
 
@@ -407,6 +408,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -547,6 +549,7 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
+|[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
@@ -18171,6 +18174,61 @@ WebAssembly modules to windows and workers in the same origin.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### CryptoWalletEnabled
+
+  #### Enable CryptoWallet feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 112 or later
+
+  #### Description
+
+  Enables CryptoWallet feature in Microsoft Edge.
+
+If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+
+If you disable this policy, users can't use CryptoWallet feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CryptoWalletEnabled
+  - GP name: Enable CryptoWallet feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CryptoWalletEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CustomHelpLink
 
   #### Specify custom help link
@@ -27629,6 +27687,68 @@ This policy is intended to give enterprises flexibility to disable the network s
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NewPDFReaderEnabled
+
+  #### Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 111 or later
+
+  #### Description
+
+  The policy lets Microsoft Edge launch the new version of the built-in PDF reader that's powered by Adobe Acrobat's PDF rendering engine. The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF handling, and greater accessibility.
+
+If you enable this policy, Microsoft Edge will use the new Adobe Acrobat powered built-in PDF reader to open all PDF files.
+
+If you disable or don't configure this policy, Microsoft Edge will use the existing PDF reader to open all PDF files.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewPDFReaderEnabled
+  - GP name: Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: NewPDFReaderEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewPDFReaderEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
