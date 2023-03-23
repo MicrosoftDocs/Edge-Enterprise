@@ -2,14 +2,14 @@
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
-manager: tahills
-ms.date: 11/15/2021
+manager: venkatk
+ms.date: 03/23/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Documentation for all policies supported by the Microsoft Edge Updater"
 ---
 
@@ -17,19 +17,19 @@ description: "Documentation for all policies supported by the Microsoft Edge Upd
 
 The latest version of Microsoft Edge includes the following policies that you can use to control how and when Microsoft Edge is updated.
 
-For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](./microsoft-edge-policies.md)
+For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
 ## Available policies
-These tables list all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
+These tables lists all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-- [Applications](#applications)
-- [Preferences](#preferences)
-- [Proxy Server](#proxy-server)
-- [Microsoft Edge Update](#microsoft-edge-update)
-- [Microsoft Edge WebView](#microsoft-edge-webview)
+|||
+|-|-|
+|[Applications](#applications)|[Preferences](#preferences)|
+|[Proxy Server](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
+|[Microsoft Edge WebView2 Runtime](#microsoft-edge-webview2-runtime)||
 
 ### [Applications](#applications-policies)
 |Policy Name|Caption|
@@ -44,12 +44,15 @@ These tables list all of the update-related group policies available in this rel
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Rollback to Target version (per channel)|
 |[TargetVersionPrefix](#targetversionprefix)|Target version override (per channel)|
 |[TargetChannel](#targetchannel)|Target Channel override (per channel)|
+|[RemoveDesktopShortcutDefault](#removedesktopshortcutdefault)|Remove Desktop Shortcuts upon update default|
+|[RemoveDesktopShortcut](#removedesktopshortcut)|Remove Desktop Shortcuts upon update (per channel)|
+|[EdgePreview](#edgepreview)|Allow users in the Windows Insider Program to be enrolled in Edge Preview (per channel)|
 
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Microsoft AutoUpdate check period override|
-|[UpdatesSuppressed](#updatessuppressed)|Time period in each day to suppress Microsoft AutoUpdate check|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Auto-update check period override|
+|[UpdatesSuppressed](#updatessuppressed)|Time period in each day to suppress auto-update check|
 
 ### [Proxy Server](#proxy-server-policies)
 |Policy Name|Caption|
@@ -63,7 +66,7 @@ These tables list all of the update-related group policies available in this rel
 |-|-|
 |[UpdaterExperimentationAndConfigurationServiceControl](#updaterexperimentationandconfigurationservicecontrol)|Control updater's communication with the Experimentation and Configuration Service|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### [Microsoft Edge WebView2 Runtime](#microsoft-edge-webview2-runtime-policies)
 |Policy Name|Caption|
 |-|-|
 |[Install](#install-webview)|Allow installation|
@@ -147,11 +150,17 @@ Specifies whether a Microsoft Edge channel can be installed on domain-joined dev
 
   If you enable this policy for a channel, Microsoft Edge will not be blocked from installation.
 
-  If you disable this policy for a channel, Microsoft Edge will be blocked from installation.
+  If you disable this policy for a channel (or set it to 'Installs disabled'), Microsoft Edge will be blocked from installation.
 
   If you don't configure this policy for a channel, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install that channel of Microsoft Edge.
 
-  This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs, 'Microsoft Edge' will only be deployed machine-wide.
+
+If you set this policy to Force Installs (Machine-Wide), 'Microsoft Edge' may only be deployed machine-wide if Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
+
+If you set this policy to Force Installs (Per-User), 'Microsoft Edge' may only be deployed on a Per-User basis to all machines if Microsoft Edge Update is pre-installed Per-User. Requires Microsoft Edge Update 1.3.155.43 or higher.
+
+This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: Install
@@ -194,7 +203,7 @@ If you select manual updates, make sure you periodically check for updates by us
 
 If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override default](#updatedefault)' policy.
 
-For more information, see [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406).
+See [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) for more information.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
@@ -227,15 +236,15 @@ This policy is available only on Windows instances that are joined to a Microsof
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
-This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side by side.
+This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side.
 
 If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Disabled” setting.
 
 The “Disabled” setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Not Configured” setting.
 
-When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side by side after Microsoft Edge (Chromium-based) is installed.
+When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
 
-For this group policy to take effect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
+For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
 
 Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side browser experience are not supported.
 #### Windows information and settings
@@ -336,11 +345,11 @@ We recommend that users install the latest version of the Microsoft Edge browser
 
 Before temporarily rolling back your browser version, we recommend that you turn on Sync ([https://go.microsoft.com/fwlink/?linkid=2133032](https://go.microsoft.com/fwlink/?linkid=2133032)) for all users in your organization. If you don't turn on Sync, there is a risk of permanent browsing data loss. Use this policy at your own risk.
 
-Note: All versions available for rollback can be viewed here [EdgeEnterprise](https://aka.ms/EdgeEnterprise).
+Note: All versions available for rollback can be viewed here [https://aka.ms/EdgeEnterprise](https://aka.ms/EdgeEnterprise).
 
 This policy applies to Microsoft Edge version 86 or later.
 
-See [Edge support for WIP](./microsoft-edge-security-windows-information-protection.md) for more information.
+See [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) for more information.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
@@ -375,13 +384,13 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 When this policy is enabled, and auto-update is enabled, Microsoft Edge will be updated to the version specified by this policy value.
 
-The policy value must be a specific Microsoft Edge version, for example, 83.0.499.12.
+The policy value must be a specific Microsoft Edge version, e.g. 83.0.499.12.
 
 If a device has newer version of Microsoft Edge than the value specified, Microsoft Edge will remain on the newer version and not downgrade to the specified version.
 
 If the specified version does not exist, or is improperly formatted, then Microsoft Edge will remain on its current version and not update to future versions automatically.
 
-For more information, see [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707).
+See [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) for more information.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
 #### Windows information and settings
@@ -416,7 +425,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 #### Description
 Specifies which Channel Microsoft Edge should be updated to.
 
-If you enable this policy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
+If you enable this poicy, the Microsoft Edge will be updated to the Channel according to how you configure the following options:
 
   - Stable: Microsoft Edge will be updated to the latest stable version.
   - Beta: Microsoft Edge will be updated to the latest beta version.
@@ -432,6 +441,62 @@ This policy is available only on Windows instances that are joined to a Microsof
 - GP name: Target Channel override
 - GP path: 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: 
+  - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Value Type: REG_SZ
+##### Example value:
+```
+dev
+```
+[Back to top](#microsoft-edge---update-policies)
+
+
+### RemoveDesktopShortcutDefault
+#### Remove Desktop Shortcuts upon update default
+>Microsoft Edge Update 1.3.155.1 and later
+
+#### Description
+Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.
+
+  If you set this policy to "Force delete system-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
+  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
+  If you don't configure this policy, nothing will happen to existing Microsoft Edge desktop shortcuts.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: RemoveDesktopShortcutDefault
+- GP name: Remove Desktop Shortcuts upon update default
+- GP path: Administrative Templates/Microsoft Edge Update/Applications
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: RemoveDesktopShortcutDefault
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
+
+
+### RemoveDesktopShortcut
+#### Remove Desktop Shortcuts upon update
+>Microsoft Edge Update 1.3.155.1 and later
+
+#### Description
+If you set this policy to "Force delete system-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.
+  If you set this policy to "Force delete system-level and user-level Desktop Shortcuts", any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.
+  If you don't configure this policy, nothing will happen to existing Microsoft Edge desktop shortcuts.
+
+  If you don't configure this policy for a channel, the '[Remove Desktop Shortcuts upon update default](#removedesktopshortcutdefault)' policy configuration determines desktop shortcut removal.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: RemoveDesktopShortcut
+- GP name: Remove Desktop Shortcuts upon update
+- GP path: 
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
@@ -439,14 +504,51 @@ This policy is available only on Windows instances that are joined to a Microsof
 ##### Windows Registry Settings
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: 
-  - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
-  - (Beta): TargetChannel{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
-  - (Canary): TargetChannel{65C35B14-6C1D-4122-AC46-7148CC9D6497}
-  - (Dev): TargetChannel{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
-- Value Type: REG_SZ
+  - (Stable): RemoveDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta): RemoveDesktopShortcut{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary): RemoveDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): RemoveDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Value Type: REG_DWORD
 ##### Example value:
 ```
-dev
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
+
+
+### EdgePreview
+#### Allow users in the Windows Insider Program to be enrolled in Edge Preview
+>Microsoft Edge Update 1.3.168.21 and later
+
+#### Description
+Lets you specify whether users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update. A device will not be enrolled in Edge Preview if TargetVersionPrefix is enabled or TargetChannel is configured.
+
+  - If you enable this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
+
+  - If you disable this policy, users in the Windows Insider Program cannot be enrolled in Edge Preview via Microsoft Edge Update.
+
+  - If you don't configure this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update by default.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: EdgePreview
+- GP name: Allow users in the Windows Insider Program to be enrolled in Edge Preview
+- GP path: 
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: 
+  - (Stable): EdgePreview{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta): EdgePreview{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary): EdgePreview{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): EdgePreview{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -486,7 +588,7 @@ The 'Update policy override default' and per-application 'Update policy override
 >Microsoft Edge Update 1.3.33.5 and later
 
 #### Description
-If you enable this policy, update checks are suppressed each day starting at Hour:Minute for Duration (in minutes). Duration isn't affected by daylight saving time. For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.
+If you enable this policy, update checks are suppressed each day starting at Hour:Minute for a period of Duration (in minutes). Duration isn't affected by daylight saving time. For example, if the start time is 22:00 and the duration is 480 minutes, updates will be suppressed for exactly 8 hours, regardless of whether daylight saving time starts or ends during this period.
 
   If you disable or don't configure this policy, update checks aren't suppressed during any specific period.
 #### Windows information and settings
@@ -516,7 +618,7 @@ start min  : 0x00000002
 
 [Back to top](#microsoft-edge---update-policies)
 ### ProxyMode
-#### Choose how to specify a proxy server setting
+#### Choose how to specify a proxy server settings
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -524,7 +626,7 @@ Allows you to specify the proxy server settings that are used by Microsoft Edge 
 
   If you enable this policy, you can choose between the following proxy server options:
    - If you choose to never use a proxy server and always connect directly, all other options are ignored.
-   - If you choose to use system proxy settings or autodetect the proxy server, all other options are ignored.
+   - If you choose to use system proxy settings or auto-detect the proxy server, all other options are ignored.
    - If you choose fixed server proxy mode, you can specify further options in '[Address or URL of a proxy server](#proxyserver)' policy.
    - If you choose to use a .pac proxy script, you must specify the URL for the script in '[URL to proxy .pac file](#proxypacurl)' policy.
 
@@ -534,7 +636,7 @@ Allows you to specify the proxy server settings that are used by Microsoft Edge 
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: ProxyMode
-- GP name: Choose how to specify a proxy server setting
+- GP name: Choose how to specify a proxy server settings
 - GP path: Administrative Templates/Microsoft Edge Update/Proxy Server
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
@@ -642,7 +744,7 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 [Back to top](#microsoft-edge---update-policies)
 
 
-## Microsoft Edge WebView policies
+## Microsoft Edge WebView2 Runtime policies
 
 [Back to top](#microsoft-edge---update-policies)
 ### Install (WebView)
@@ -650,16 +752,22 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
-Lets you specify whether Microsoft Edge WebView can be installed using Microsoft Edge Update.
+Lets you specify whether the WebView2 Runtime can be installed using Microsoft Edge Update.
 
-  - If you enable this policy, users can install Microsoft Edge WebView through Microsoft Edge Update.
-  - If you disable this policy, users cannot install Microsoft Edge WebView through Microsoft Edge Update.
-  - If you don't configure this policy, the '[Allow installation default](#installdefault)' policy configuration determines whether users can install Microsoft Edge WebView through Microsoft Edge Update.
+  If you enable this policy, users can install the WebView2 Runtime through Microsoft Edge Update.
+
+  If you disable this policy (or set it to 'Installs disabled'), users cannot install the WebView2 Runtime through Microsoft Edge Update.
+
+  If you set this policy to Always allow Machine-Wide Installs but not Per-User Installs, the WebView2 Runtime will only be deployed machine-wide.
+
+  If you set the policy to Force Installs (Machine-Wide), users can install the WebView2 Runtime to all machines where Microsoft Edge Update is pre-installed. Requires Microsoft Edge Update 1.3.155.43 or higher.
+
+  If you don't configure this policy, the WebView2 Runtime will be installed through Microsoft Edge Update.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: Install
 - GP name: Allow installation
-- GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView
+- GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView2 Runtime
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
@@ -678,10 +786,10 @@ Lets you specify whether Microsoft Edge WebView can be installed using Microsoft
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
-Lets you specify whether or not automatic updates are enabled for Microsoft Edge WebView. Microsoft Edge WebView is a component used by applications to display web content.
-  Automatic updates are enabled by default. Disabling automatic updates for Microsoft Edge WebView might cause compatibility issues with applications that depend on this component.
+Lets you specify whether or not automatic updates are enabled for the WebView2 Runtime. The WebView2 Runtime is a component used by applications to display web content.
+  Automatic updates are enabled by default. Disabling automatic updates for the WebView2 Runtime might cause compatibility issues with applications that depend on this component.
 
-  If you enable this policy, Microsoft Edge Update handles Microsoft Edge WebView updates according to how you configure the following options:
+  If you enable this policy, Microsoft Edge Update handles the WebView2 Runtime updates according to how you configure the following options:
   - Always allow updates: Updates are automatically downloaded and applied
   - Updates disabled: Updates are never downloaded or applied
 
@@ -690,7 +798,7 @@ Lets you specify whether or not automatic updates are enabled for Microsoft Edge
 ##### Group Policy (ADMX) info
 - GP unique name: Update
 - GP name: Update policy override
-- GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView
+- GP path: Administrative Templates/Microsoft Edge Update/Microsoft Edge WebView2 Runtime
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
@@ -703,6 +811,7 @@ Lets you specify whether or not automatic updates are enabled for Microsoft Edge
 ```
 [Back to top](#microsoft-edge---update-policies)
 
+
 ## See also
-  - [Configuring Microsoft Edge](./configure-microsoft-edge.md)
+  - [Configuring Microsoft Edge](configure-microsoft-edge.md)
   - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
