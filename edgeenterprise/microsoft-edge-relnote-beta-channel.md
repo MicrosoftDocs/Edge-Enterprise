@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: collw
-ms.date: 03/21/2023
+ms.date: 03/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,6 +19,10 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 112.0.1722.23: March 28, 2023
+
+Fixed various bugs and performance issues.
+
 ## Version 112.0.1722.15: March 21, 2023
 
 Fixed various bugs and performance issues.
@@ -26,8 +30,6 @@ Fixed various bugs and performance issues.
 ## Version 112.0.1722.11: March 17, 2023
 
 ### Feature update
-
-- **Microsoft Edge Sidebar Improvements.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window.  In this release, the sidebar has been enhanced to increase productivity and improve user experience.  As communicated in our last release ([Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel#version-1110166141-march-13-2023)), the sidebar now includes a toolbar button by default to access the experience. If admins enable the Discover app, hovering and clicking the toolbar button will invoke both the sidebar tower, and the new discover experience. With this release, admins now have the ability to disable the Discover app and still keep the Sidebar. In this situation, the Sidebar tower will always be shown. If a user would like to hide their sidebar from always showing, they can do this in their Sidebar settings (*edge://settings/sidebar*). Additionally, Enterprise users can choose to 'always show' or 'auto hide', when an admin 'enables' the Sidebar. More customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
 
 - **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for ARM64. Cross-platform support is now available for x64 Windows, x64 macOS, x64 Linux and ARM64 systems.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
