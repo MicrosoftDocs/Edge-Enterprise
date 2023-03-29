@@ -1598,9 +1598,9 @@ Passwords
 
 Addresses and more (autofill form entry)
 
-Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. 
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
-For more information see [Microsoft Edge Sync](https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-enterprise-sync).
+For more information see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync).
 
 Organizations have the capability to disable Edge sync on iOS and Android.
 
