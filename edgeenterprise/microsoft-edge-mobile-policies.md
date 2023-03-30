@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/08/2023
+ms.date: 03/29/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -64,6 +64,7 @@ These tables list all of the browser-related policies available in this release 
 | [AuthServerAllowlist](#authserverallowlist)  |  Authentication server allowlist   |
 | [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype) |  Account type for HTTP Negotiate authentication   |
 | [AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)  |  Kerberos delegation server allowlist   |
+| [AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins) | List of origins allowing all HTTP authentication  |
 
 ### [*Content settings*](#content-settings)
 
@@ -369,6 +370,46 @@ AuthNegotiateDelegateAllowlist
 
 ```
 *.example.com,foobar.example.com
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### AllHttpAuthSchemesAllowedForOrigins
+
+#### List of origins allowing all HTTP authentication
+
+#### Supported on:
+
+* Microsoft Edge (Android) since version 109
+
+#### Description
+
+Setting the policy specifies for which origins to allow all the HTTP authentication schemes Google Chrome supports regardless of the AuthSchemes policy.
+
+Format the origin pattern according to this format (https://go.microsoft.com/fwlink/?linkid=2095322). Up to 1,000 exceptions can be defined in AllHttpAuthSchemesAllowedForOrigins. Wildcards are allowed for the whole origin or parts of the origin, either the scheme, host, port.
+
+#### Supported features:
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+List of strings
+
+Android:string
+
+#### Android restriction name:
+
+```
+AllHttpAuthSchemesAllowedForOrigins
+```
+
+##### Example value (Android):
+
+```
+[
+ "*.example.com"
+]
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -1557,9 +1598,9 @@ Passwords
 
 Addresses and more (autofill form entry)
 
-Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. 
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above.
 
-For more information see [Microsoft Edge Sync](https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-enterprise-sync).
+For more information see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync).
 
 Organizations have the capability to disable Edge sync on iOS and Android.
 
