@@ -85,8 +85,8 @@ Use the following steps as a guide to create a site list, import a site list, an
 
 ### Steps to import a site list
 
-1. Select the site list you want to populate.
-2. On the resulting page, select **Import list**.
+1.	Select the site list you want to populate (The option to import the updated site list will only appear if an existing site list is selected beforehand).
+2. From the listed options that become available, select **Import list**.
 3. On the right-hand panel, select **Browse**.
 4. Select the file you want to import and then select **Upload** on the bottom of the panel.
 5. You can skim through the URLs in the uploaded file. If you want to pick a different file, you can select **Upload a different file** at the top of the panel. If everything looks correct, select **Add** at the bottom of the panel.

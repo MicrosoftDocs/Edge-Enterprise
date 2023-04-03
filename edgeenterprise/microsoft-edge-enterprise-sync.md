@@ -62,7 +62,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 
   > [!NOTE]
-  > Business Basic is supported, but some existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant.
+  > Business Basic or Business Standard is supported, but existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant. Business Premium includes Azure Active Directory Premium Plan 1 and Edge Enterprise Sync Services are available, see [Microsoft 365 Small and Medium-sized Businesses](https://aka.ms/M365BusinessPlans).
 
 - Office 365 E1 and above
 - All EDU subscriptions, including:
