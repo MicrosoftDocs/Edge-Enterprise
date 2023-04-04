@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/24/2023
+ms.date: 03/28/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,7 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
 
 ## Available policies
 
@@ -271,8 +270,8 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow insecure websites to make requests to more-private network endpoints|
-|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from insecure contexts|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to more-private network endpoints|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from in an insecure manner|
 ### [*Proxy server*](#proxy-server-policies)
 
 |Policy Name|Caption|
@@ -400,6 +399,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
+|[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
@@ -535,10 +535,12 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
+|[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
+|[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
@@ -592,6 +594,7 @@ These tables list all of the browser-related group policies available in this re
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Configure ShadowStack crash rollback behavior (obsolete)|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
+|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
@@ -1183,7 +1186,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   #### Description
 
-  Define a list of sites, based on URL patterns, that are allowed to perform multiple automatic downloads in quick succession.
+  Define a list of sites, based on URL patterns, that are allowed to perform multiple successive automatic downloads.
 If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set. If it isn't set, then the user's personal setting applies.
 For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -1248,7 +1251,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls\2 = "[*.]conto
 
   #### Description
 
-  Define a list of sites, based on URL patterns, where multiple automatic downloads in quick succession aren't allowed.
+  Define a list of sites, based on URL patterns, where multiple successive automatic downloads aren't allowed.
 If you don't configure this policy, [DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting) applies for all sites, if it's set.  If it isn't set, then the user's personal setting applies.
 For more detailed information about valid URL patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
@@ -1554,7 +1557,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   #### Description
 
-  Set whether websites can perform multiple automatic downloads in quick succession. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).
+  Set whether websites can perform multiple downloads successively without user interaction. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).
 If you don't configure this policy, multiple automatic downloads can be performed in all sites, and the user can change this setting.
 
 Policy options mapping:
@@ -10008,21 +10011,21 @@ Use the preceding information when configuring this policy.
 
   #### Description
 
-  Configuring  this  policy  sets  the  print  preview  settings  as  the  most  recent  choice  in  Print  Preview  instead  of  the  default  print  preview  settings .
+  Configuring this policy sets the print preview settings as the most recent choice in Print Preview instead of the default print preview settings.
 
-Each  item  of  this  policy  expects  a  boolean :
+Each item of this policy expects a boolean:
 
-Layout  specifies  if  the  webpage  layout  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  webpage  layout  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Layout specifies if the webpage layout should be kept sticky or not in print preview settings. If we set this to True the webpage layout uses the recent choice otherwise it will set to default value.
 
-Size  specifies  if  the  page  size  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  size  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Size specifies if the page size should be kept sticky or not in print preview settings. If we set this to True the page size uses the recent choice otherwise it will set to default value.
 
-Scale  Type  specifies  if  the  scaling  percentage  and  scale  type  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  scale  percentage  and  scale  type  both  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Scale Type specifies if the scaling percentage and scale type should be kept sticky or not in print preview settings. If we set this to True the scale percentage and scale type both uses the recent choice oherwise it will set to default value.
 
-Margins  specifies  if  the  page  margin  should  be  kept  sticky  or  not  in  print  preview  settings .  If  we  set  this  to  True  the  page  margins  uses  the  recent  choice  otherwise  it  will  set  to  default  value .
+Margins specifies if the page margin should be kept sticky or not in print preview settings. If we set this to True the page margins uses the recent choice otherwise it will set to default value.
 
-If  you  enable  this  policy ,  the  selected  values  will  use  the  most  recent  choice  in  Print  Preview .
+If you enable this policy, the selected values will use the most recent choice in Print Preview.
 
-If  you  disable  or  don't  configure  this  policy ,  print  preview  settings  will  not  be  impacted .
+If you disable or don't configure this policy, print preview settings will not be impacted.
 
   #### Supported features:
 
@@ -10871,7 +10874,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   ### InsecurePrivateNetworkRequestsAllowed
 
-  #### Specifies whether to allow insecure websites to make requests to more-private network endpoints
+  #### Specifies whether to allow websites to make requests to more-private network endpoints
 
   
   
@@ -10881,7 +10884,11 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   #### Description
 
-  Controls whether insecure websites are allowed to make requests to more-private network endpoints.
+  Controls whether websites are allowed to make requests to more-private network endpoints.
+
+When this policy is enabled, all Private Network Access checks are disabled for all origins. This may allow attackers to perform cross-site request forgery (CSRF) attacks on private network servers.
+
+When this policy is disabled or not configured, the default behavior for requests to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests, PrivateNetworkAccessSendPreflights, and PrivateNetworkAccessRespectPreflightResults feature flags. These flags may be controlled by experimentation or set via the command line.
 
 This policy relates to the Private Network Access specification. See https://wicg.github.io/private-network-access/ for more details.
 
@@ -10890,11 +10897,7 @@ A network endpoint is more private than another if:
 2) Its IP address is private and the other is public.
 In the future, depending on spec evolution, this policy might apply to all cross-origin requests directed at private IPs or localhost.
 
-A website is deemed secure if it meets the definition of a secure context in https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts. Otherwise, it will be treated as an insecure context.
-
-When this policy is either not set or set to false, the default behavior for requests from insecure contexts to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests feature, which may be set by a field trial or on the command line.
-
-When this policy is set to True, insecure websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
+When this policy enabled, websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.
 
   #### Supported features:
 
@@ -10911,7 +10914,7 @@ When this policy is set to True, insecure websites are allowed to make requests 
   ##### Group Policy (ADMX) info
 
   - GP unique name: InsecurePrivateNetworkRequestsAllowed
-  - GP name: Specifies whether to allow insecure websites to make requests to more-private network endpoints
+  - GP name: Specifies whether to allow websites to make requests to more-private network endpoints
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -10942,7 +10945,7 @@ When this policy is set to True, insecure websites are allowed to make requests 
 
   ### InsecurePrivateNetworkRequestsAllowedForUrls
 
-  #### Allow the listed sites to make requests to more-private network endpoints from insecure contexts
+  #### Allow the listed sites to make requests to more-private network endpoints from in an insecure manner
 
   
   
@@ -10952,13 +10955,11 @@ When this policy is set to True, insecure websites are allowed to make requests 
 
   #### Description
 
-  List of URL patterns. Private network requests initiated from insecure websites served by matching origins are allowed.
+  List of URL patterns. Requests initiated from websites served by matching origins are not subject to Private Network Access checks.
 
 If this policy is not set, this policy behaves as if set to the empty list.
 
 For origins not covered by the patterns specified here, the global default value will be used either from the [InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed) policy, if it is set, or the user's personal configuration otherwise.
-
-Note that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.
 
 For detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
@@ -10977,7 +10978,7 @@ For detailed information on valid URL patterns, see [Filter format for URL list-
   ##### Group Policy (ADMX) info
 
   - GP unique name: InsecurePrivateNetworkRequestsAllowedForUrls
-  - GP name: Allow the listed sites to make requests to more-private network endpoints from insecure contexts
+  - GP name: Allow the listed sites to make requests to more-private network endpoints from in an insecure manner
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -15644,15 +15645,13 @@ If you disable this policy, users can't have their membership info automatically
 
 This feature helps protect against man-in-the-middle attacks by enforcing more secure connections, but users might experience more connection errors.
 
-Note: The 'UpgradeCapableDomains' configuration requires a component list, and will not upgrade these connections if [ComponentUpdatesEnabled](#componentupdatesenabled) is set to 'Disabled'.
-
-If you don't configure this policy, [AutomaticHttpsDefault](#automatichttpsdefault) will be enabled, and will only upgrade connections on domains likely to support HTTPS.
+Starting in Microsoft Edge 111, "UpgradePossibleDomains" is deprecated and is treated the same as "DisableAutomaticHttps". It won't work in Microsoft Edge version 114.
 
 Policy options mapping:
 
 * DisableAutomaticHttps (0) = Automatic HTTPS functionality is disabled.
 
-* UpgradeCapableDomains (1) = Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.
+* UpgradeCapableDomains (1) = (Deprecated) Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.
 
 * AlwaysUpgrade (2) = All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.
 
@@ -16604,7 +16603,7 @@ If you enable this policy, the built-in DNS client is used, if it's available.
 
 If you disable this policy, the built-in DNS client is only used when DNS-over-HTTPS is in use.
 
-If you don't configure this policy, the built-in DNS client is enabled by default on macOS and Android (when neither Private DNS nor VPN are enabled).
+If you don't configure this policy, the built-in DNS client is enabled by default on Windows, macOS and Android (when neither Private DNS nor VPN are enabled).
 
   #### Supported features:
 
@@ -18166,6 +18165,61 @@ WebAssembly modules to windows and workers in the same origin.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### CryptoWalletEnabled
+
+  #### Enable CryptoWallet feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 112 or later
+
+  #### Description
+
+  Enables CryptoWallet feature in Microsoft Edge.
+
+If you enable this policy or don't configure it, users can use CryptoWallet feature which allows users to securely store, manage and transact digital assets such as Bitcoin, Ethereum and other cryptocurrencies. Therefore, Microsoft Edge may access Microsoft servers to communicate with the web3 world during the use of the CryptoWallet feature.
+
+If you disable this policy, users can't use CryptoWallet feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CryptoWalletEnabled
+  - GP name: Enable CryptoWallet feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CryptoWalletEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CustomHelpLink
 
   #### Specify custom help link
@@ -18666,7 +18720,7 @@ Example 1: In this example the OS Regional format is set to "en-GB" and the brow
 
 Example 2: In this example the OS Regional format is set to "es-MX" and the browser display language is set to "en-US". Then the OS Regional format will be shared if the policy is set to "Always" but will not if the policy is set to "Limited".
 
-For more information about this setting, see https://learn.microsoft.com/microsoft-edge/web-platform/os-regional-settings
+For more information about this setting, see [https://go.microsoft.com/fwlink/?linkid=2222282](https://go.microsoft.com/fwlink/?linkid=2222282)
 
 
 Policy options mapping:
@@ -27321,6 +27375,63 @@ This policy will be removed in Microsoft Edge for Microsoft Windows and macOS on
 
   [Back to top](#microsoft-edge---policies)
 
+  ### MouseGestureEnabled
+
+  #### Mouse Gesture Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 112 or later
+
+  #### Description
+
+  This policy lets you configure the Mouse Gesture feature in Microsoft Edge.
+
+This feature provides an easy way for users to complete tasks like scroll forward or backward, open new tab, refresh page, etc. They can finish a task by pressing and holding the mouse right button to draw certain patterns on a webpage, instead of clicking the buttons or using keyboard shortcuts.
+
+If you enable or don't configure this policy, you can use the Mouse Gesture feature on Microsoft Edge to start using this feature.
+
+If you disable this policy, you can't use the Mouse Gesture feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MouseGestureEnabled
+  - GP name: Mouse Gesture Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MouseGestureEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NativeWindowOcclusionEnabled
 
   #### Enable Native Window Occlusion (deprecated)
@@ -27567,6 +27678,68 @@ This policy is intended to give enterprises flexibility to disable the network s
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NewPDFReaderEnabled
+
+  #### Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 111 or later
+
+  #### Description
+
+  The policy lets Microsoft Edge launch the new version of the built-in PDF reader that's powered by Adobe Acrobat's PDF rendering engine. The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF handling, and greater accessibility.
+
+If you enable this policy, Microsoft Edge will use the new Adobe Acrobat powered built-in PDF reader to open all PDF files.
+
+If you disable or don't configure this policy, Microsoft Edge will use the existing PDF reader to open all PDF files.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewPDFReaderEnabled
+  - GP name: Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: NewPDFReaderEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: NewPDFReaderEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -31011,6 +31184,69 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShowAcrobatSubscriptionButton
+
+  #### Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 111 or later
+
+  #### Description
+
+  This policy lets the native PDF viewer in Microsoft Edge show a button that
+lets a user looking for advanced digital document features to discover and subscribe to premium offerings. This is done via the Acrobat extension.
+If you enable or don't configure this policy, the button will show up on the native PDF viewer in Microsoft Edge. A user will be
+able to buy Adobe subscription to access their premium offerings. If you disable this policy, the button won't be visible
+on the native PDF viewer in Microsoft Edge. A user won't be able to discover Adobe's advanced PDF tools or buy their subscriptions.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowAcrobatSubscriptionButton
+  - GP name: Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowAcrobatSubscriptionButton
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowAcrobatSubscriptionButton
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ShowMicrosoftRewards
 
   #### Show Microsoft Rewards experiences
@@ -33770,14 +34006,14 @@ fallback_app_name are provided,
 the latter will be ignored.)
 
 - custom_name
-(Allows you to permanently override the app name for all web
-apps and PWAs. Not currently supported in Microsoft Edge.)
+(Starting with Microsoft Edge version 112,
+allows you to override the app name of installed apps.)
 
 - custom_icon
-(Allows you to override the app icon of installed apps. The icons have to
-be square, maximal 1 MB in size, and in one of the following formats:
-jpeg, png, gif, webp, ico. The hash value has to be the SHA256
-hash of the icon file. Not currently supported in Microsoft Edge.)
+(Starting with Microsoft Edge version 112,
+allows you to override the app icon of installed apps. The icons have to
+be square, have a maximum file size of 1 MB, and in one of the following formats:
+jpeg, png, gif, webp, ico. The hash value has to be the SHA256 hash of the icon file.)
 
 - install_as_shortcut
 (Starting with Microsoft Edge

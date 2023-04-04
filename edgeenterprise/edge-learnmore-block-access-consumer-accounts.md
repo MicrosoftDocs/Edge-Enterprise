@@ -3,7 +3,7 @@ title: "Block access to consumer accounts"
 ms.author: v-danwesley
 author: dan-wesley
 manager: collw
-ms.date: 06/16/2022
+ms.date: 03/30/2023
 audience: ITPro
 ms.topic: conceptual
 ms.custom: generated
@@ -15,7 +15,7 @@ description: "Block access to consumer accounts"
 
 # Block access to consumer accounts
 
-You can prevent users from signing into Google services using any accounts other than the accounts you provided them with. Reasons for blocking access are to prevent users on your corporate network using their personal Gmail accounts, or accessing a managed Google account from another domain.
+The [AllowedDomainsForApps](/deployedge/microsoft-edge-policies#alloweddomainsforapps) policy prevents users from signing into Google services using any accounts other than the accounts you provided them with. Reasons for blocking access are to prevent users on your corporate network using their personal Gmail accounts, or accessing a managed Google account from another domain.
 
 Users might see the following message when you block access to consumer accounts:
 "This account is not allowed to sign in within this network".
