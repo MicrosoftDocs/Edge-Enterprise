@@ -50,7 +50,8 @@
       "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
       "uhfHeaderId": "MSDocsHeader-MSEdge",
       "contributors_to_exclude": [
-        "dstrome"
+        "dstrome",
+        "beccarobins"
       ]
     },
     "fileMetadata": {},
