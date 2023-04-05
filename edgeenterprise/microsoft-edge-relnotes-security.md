@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## April X, 2023
 
-Microsoft has released the latest **Microsoft Edge Stable Channel (Version 111.0.1661.XX)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.XXXX.XX)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 This update contains the following Microsoft Edge-specific updates:
 
