@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 03/30/2023
+ms.date: 04/05/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,26 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 112.0.XXXX.X: April X, 2023
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-X-2023).
+
+### Feature update
+
+- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for ARM64. Cross-platform support is now available for x64 Windows, x64 macOS, x64 Linux and ARM64 systems. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Added features for web app policy.** The [WebAppInstallForceList](/deployedge/microsoft-edge-policies#webappinstallforcelist) policy lets administrators configure a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off. This policy now supports custom_name, which permanently overrides the app name of installed apps and custom_icon, which permanently overrides the app icon of installed apps.
+
+- **In-browser JSON viewer.**  Improvements to how JSON files are displayed in the browser, which includes a color-coded tree view with line numbers and the ability to collapse and expand the data.  This functionality will trigger automatically when the browser navigates to a JSON file on the web or the user opens a local one.  Additional features and enhancements will roll out as available.  For more information, see [View formatted JSON - Microsoft Edge Development](/microsoft-edge/devtools-guide-chromium/json-viewer/json-viewer).  Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout or you can navigate to `edge://flags` and search for JSON Viewer to manually enable.  
+
+•	Updated new tab page policy. The [NewTabPageHideDefaultTopSites](/deployedge/microsoft-edge-policies#newtabpagehidedefaulttopsites) policy hides the default top sites from the new tab page in Microsoft Edge. Starting on March 20th, when the policy is enabled it will also remove sponsored quick links from the new tab page.
+
+### Policy updates
+
+#### New policies
+
+- [CryptoWalletEnabled](/DeployEdge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature
 
 ## Version 111.0.1661.62: March 30, 2023
 
