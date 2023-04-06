@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 04/05/2023
+ms.date: 04/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
