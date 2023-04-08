@@ -34,7 +34,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
    - Windows 10, version 2004; Windows 10, version 20H2 and Windows 10, version 21H - [KB5005260](https://support.microsoft.com/topic/kb5005260-servicing-stack-update-for-windows-10-version-2004-20h2-and-21h1-august-10-2021-ec4c5daa-2cec-4b06-be93-037f150fe3ba) and [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) or later
    
-   - Windows Server 2016 - [KB5022838[(https://support.microsoft.com/en-us/topic/february-14-2023-kb5022838-os-build-14393-5717-1b9a609e-7ae7-4102-bad5-5994eddf154b) or later
+   - Windows Server 2016 - [KB5022838](https://support.microsoft.com/en-us/topic/february-14-2023-kb5022838-os-build-14393-5717-1b9a609e-7ae7-4102-bad5-5994eddf154b) or later
 
 2. Microsoft Edge version 92 (92.0.902.55 or later)
 
