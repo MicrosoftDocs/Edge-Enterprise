@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/05/2023
+ms.date: 04/09/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,17 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ReadAloudEnabled](#readaloudenabled)|Enable Read Aloud feature in Microsoft Edge|
-|[RestorePdfView](#restorepdfview)|Restore PDF view|
-|[ShowDownloadsToolbarButton](#showdownloadstoolbarbutton)|Show Downloads button on the toolbar|
-|[TabServicesEnabled](#tabservicesenabled)|Tab Services enabled|
 
 ## Available policies
 
