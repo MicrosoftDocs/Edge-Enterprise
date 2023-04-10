@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/29/2023
+ms.date: 04/07/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -1367,7 +1367,6 @@ true
 
 By default, Edge for iOS and Android prompts users for sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing
 
-
 EdgeDisableShareBrowsingHistory:
 - true = Disables this prompt from displaying to end users
 - false (Default) =  Users are prompted to share browsing history data
@@ -1411,9 +1410,16 @@ true
 
 Edge for iOS and Android allows organizations to disable certain features that are enabled by default. To disable these features, configure the following setting:
 
-- password = Disables prompts that offer to save passwords for the end user 
-- inprivate = Disables InPrivate browsing 
-- autofill = Disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information. 
+- password = Disables prompts that offer to save passwords for the end user
+- inprivate = Disables InPrivate browsing
+- autofill = Disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.
+
+**Note:** The following new policy settings are available starting with Microsoft Edge version 112.
+
+- translator = Disables translator
+- readaloud = Disables Read Aloud
+- drop = Disables Drop, which lets you send documents and messages to different devices directly from your browser.
+- developertools grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only)
 
 To disable multiple features, separate values with |. For example, inprivate|password disables both InPrivate and password storage.
 
