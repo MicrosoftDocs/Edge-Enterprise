@@ -34,7 +34,7 @@ Updates will be released on the cadence documented in the [release notes](/secur
 
 ## Rollout timeline and testing guidance
 
-Starting in Microsoft Edge 109, an enterprise policy (**[MicrosoftRootStoreEnabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies#microsoftrootstoreenabled)**) and a flag in *edge://flags* (“Microsoft Root Store”) is available to control when the built-in root store and certificate verifier are used.
+Starting in Microsoft Edge 109, an enterprise policy (**[MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled)**) and a flag in *edge://flags* (“Microsoft Root Store”) is available to control when the built-in root store and certificate verifier are used.
 
 Devices that aren't managed by the enterprise started receiving the feature via a Controlled Feature Rollout (CFR) in Microsoft Edge 109 and reached 100% of non-managed devices in Edge 111. For more information, see [Microsoft Edge configurations and experimentation](/deployedge/edge-configuration-and-experiments), which explains how CFRs in Microsoft Edge work. For enterprise-managed devices, the existing platform-provided implementation was used through Microsoft Edge 111.
 
@@ -47,7 +47,7 @@ In Microsoft Edge 113, we plan to remove support for the **MicrosoftRootStoreEna
 ## Known revocation checking behavior differences on Windows
 The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements for certificate revocation lists (CRLs) than the old, platform-based verifier. Additionally, the new verifier _does not_ support LDAP-based CRL URIs.
 
-If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
+If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
 
 If you encounter `ERR_CERT_NO_REVOCATION_MECHANISM`, you should confirm that the CRL at the URI specified by the certificate returns a **DER encoded** (not PEM encoded) response.
 
