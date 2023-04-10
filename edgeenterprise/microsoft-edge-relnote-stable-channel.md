@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 04/06/2023
+ms.date: 04/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,6 +38,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - **In-browser JSON viewer.**  Improvements to how JSON files are displayed in the browser, which includes a color-coded tree view with line numbers and the ability to collapse and expand the data.  This functionality will trigger automatically when the browser navigates to a JSON file on the web or the user opens a local one.  Additional features and enhancements will roll out as available.  For more information, see [View formatted JSON - Microsoft Edge Development](/microsoft-edge/devtools-guide-chromium/json-viewer/json-viewer).  Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout or you can navigate to `edge://flags` and search for JSON Viewer to manually enable.  
 
 - **Updated new tab page policy.** The [NewTabPageHideDefaultTopSites](/deployedge/microsoft-edge-policies#newtabpagehidedefaulttopsites) policy hides the default top sites from the new tab page in Microsoft Edge. Starting on March 20th, when the policy is enabled it will also remove sponsored quick links from the new tab page.
+
+- **Edit and save web images in Microsoft Edge.** You can right click on the desired web image and without leaving your browser window, crop, adjust lighting and color, and add filters. From there, you can save the edited image for later use. You can also start editing simply by hovering over an image and selecting edit image from the menu.
 
 ### Policy updates
 
