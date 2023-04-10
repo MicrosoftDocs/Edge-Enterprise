@@ -19,6 +19,23 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 113.0.XXXX.XX: April XX, 2023
+
+### Feature update
+
+- **Improvements to enhanced security mode.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  Updates this release include a new flyout to improve user’s experience when a site is not working as expected. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS.** Microsoft Edge for macOS will start using a new updater called EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft Autoupdate to prevent browser updates, you will need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
+
+### Policy updates
+
+#### New policies
+
+- [RestorePdfView](/DeployEdge/microsoft-edge-policies#restorepdfview) - Restore PDF view
+- [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+- [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
+
 ## Version 112.0.1722.39: April 10, 2023
 
 Fixed various bugs and performances issues.
