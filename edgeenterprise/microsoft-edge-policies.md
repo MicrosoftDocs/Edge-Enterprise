@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/28/2023
+ms.date: 04/09/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -557,6 +557,7 @@ These tables list all of the browser-related group policies available in this re
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
 |[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
+|[ReadAloudEnabled](#readaloudenabled)|Enable Read Aloud feature in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RelatedMatchesCloudServiceEnabled](#relatedmatchescloudserviceenabled)|Configure Related Matches in Find on Page|
@@ -568,6 +569,7 @@ These tables list all of the browser-related group policies available in this re
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
+|[RestorePdfView](#restorepdfview)|Restore PDF view|
 |[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used to sign in to Microsoft Edge|
 |[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
@@ -595,6 +597,7 @@ These tables list all of the browser-related group policies available in this re
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context|
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
+|[ShowDownloadsToolbarButton](#showdownloadstoolbarbutton)|Show Downloads button on the toolbar|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
@@ -613,6 +616,7 @@ These tables list all of the browser-related group policies available in this re
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
 |[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete)|
+|[TabServicesEnabled](#tabservicesenabled)|Tab Services enabled|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
@@ -13201,7 +13205,8 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   #### Description
 
-  If you enable this policy, users are allowed to add and remove their own URLs to open when starting Edge while maintaining the admin specified mandatory list of sites specified by setting [RestoreOnStartup](#restoreonstartup) policy to open a list of URLS and providing the list of sites in the [RestoreOnStartupURLs](#restoreonstartupurls) policy.
+  This policy only works if you set the [RestoreOnStartup](#restoreonstartup) policy to 'Open a list of URLs' (4) and the [RestoreOnStartupURLs](#restoreonstartupurls) policy as mandatory.
+If you enable this policy, users are allowed to add and remove their own URLs to open when starting Edge while maintaining the admin specified mandatory list of sites specified by setting [RestoreOnStartup](#restoreonstartup) policy to open a list of URLS and providing the list of sites in the [RestoreOnStartupURLs](#restoreonstartupurls) policy.
 
 If you disable or don't configure this policy, there is no change to how the [RestoreOnStartup](#restoreonstartup) and [RestoreOnStartupURLs](#restoreonstartupurls) policies work.
 
@@ -28746,6 +28751,68 @@ If you disable this policy, these files will be downloaded to be viewed.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ReadAloudEnabled
+
+  #### Enable Read Aloud feature in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  Enables the Read Aloud feature within Microsoft Edge.
+Using this feature, users can listen to the content on the web page. This enables users to multi-task or improve their reading comprehension by hearing content at their own pace.
+
+If you enable this policy or don't configure it, the Read Aloud option shows up in the address bar, right click context menu, more menu, on the PDF toolbar, and within Immersive Reader.
+If you disable this policy, users can't access the Read Aloud feature from the address bar, right click context menu, more menu, on the PDF toolbar, and within Immersive Reader.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ReadAloudEnabled
+  - GP name: Enable Read Aloud feature in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ReadAloudEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ReadAloudEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge
@@ -29465,6 +29532,68 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
   #### Mac information and settings
   
   - Preference Key Name: ResolveNavigationErrorsUseWebService
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RestorePdfView
+
+  #### Restore PDF view
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  Enables PDF View Recovery in Microsoft Edge.
+
+If you enable or don't configure this policy Microsoft Edge will recover the last state of PDF view and land users to the section where they ended reading in the last session.
+
+If you disable this policy Microsoft Edge will recover the last state of PDF view and land users at the start of the PDF file.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RestorePdfView
+  - GP name: Restore PDF view
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RestorePdfView
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: RestorePdfView
   - Example value:
 ``` xml
 <true/>
@@ -31247,6 +31376,68 @@ on the native PDF viewer in Microsoft Edge. A user won't be able to discover Ado
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShowDownloadsToolbarButton
+
+  #### Show Downloads button on the toolbar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 114 or later
+
+  #### Description
+
+  Set this policy to always show the Downloads button on the toolbar.
+
+If you enable this policy, the Downloads button is pinned to the toolbar.
+
+If you disable or don't configure the policy, the Downloads button isn't shown on the toolbar by default. Users can toggle the Downloads button in edge://settings/appearance.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowDownloadsToolbarButton
+  - GP name: Show Downloads button on the toolbar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowDownloadsToolbarButton
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: ShowDownloadsToolbarButton
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ShowMicrosoftRewards
 
   #### Show Microsoft Rewards experiences
@@ -32409,6 +32600,68 @@ If you disable this policy, no tabs will be frozen.
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TabServicesEnabled
+
+  #### Tab Services enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  Allows the Microsoft Edge browser to suggest tab and tab group functionality based on the current tab content.
+
+If you enable or don't configure this policy, tab information will be sent to the service to gather suggestions to help with tab organization.
+
+If you disable this policy, then no tab information will be sent to the service.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TabServicesEnabled
+  - GP name: Tab Services enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: TabServicesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+  
+  - Preference Key Name: TabServicesEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
