@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 04/10/2023
+ms.date: 04/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,10 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 112.0.1722.46: April 13, 2023
+
+Fixed various bugs and performance issues.
 
 ## Version 112.0.1722.39: April 10, 2023
 
@@ -164,7 +168,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **New Immersive Reader policies.** Immersive Reader in Microsoft Edge simplifies web page layouts, removes clutter, and helps you customize your reading experience. Using these new policies ([ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#immersivereadergrammartoolsenabled) and [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled)), administrators can control the availability of Grammar Tools and Picture Dictionary features within Immersive Reader.
 
-- **Enabling sync for Azure Active Directory signed in customers.** Microsoft Edge sync roams data across all signed in instances of Microsoft Edge. This data includes favorites, passwords, browsing history, open tabs, settings, apps, collections, and extensions.  For Azure Active Directory users who have sync turned off, after the browser is launched they'll see a notification prompt and have sync turned on for all signed in instances of Microsoft Edge. This sync enablement includes other devices where they're signed in. Additionally, if a user’s other devices don’t have history and open tabs sync on, those two toggles will be turned on. Organizations using the [SyncDisabled](/deployedge/microsoft-edge-policies#syncdisabled) policy won't be affected by this change.
+- **Enabling sync for Azure Active Directory signed in customers.** Microsoft Edge sync roams data across all signed in instances of Microsoft Edge. This data includes favorites, passwords, browsing history, open tabs, settings, apps, collections, and extensions.  For Azure Active Directory users who have sync turned off, after the browser is launched they'll see a notification prompt and have sync turned on for all signed in instances of Microsoft Edge. This sync enablement includes other devices where they're signed in. Additionally, if a user's other devices don't have history and open tabs sync on, those two toggles will be turned on. Organizations using the [SyncDisabled](/deployedge/microsoft-edge-policies#syncdisabled) policy won't be affected by this change.
 
 - **Drop.** Microsoft Edge now offers a simple way to send files and notes across all your signed in mobile and desktop devices. Using the desktop version of Microsoft Edge, Drop can be managed through the sidebar (*edge://settings/sidebar*).  Administrators can control the availability of Drop using the [EdgeEDropEnabled](/deployedge/microsoft-edge-policies#edgeedropenabled) policy.
 
