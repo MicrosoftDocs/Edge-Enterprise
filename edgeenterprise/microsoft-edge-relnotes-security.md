@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 04/06/2023
+ms.date: 04/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,12 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## April 14, 2023
+
+Microsoft is aware of the recent exploits existing in the wild. We are actively working on releasing a security fix.
+
+While we get the security fix rolled out, it is worth highlighting that [Microsoft Edge's enhanced security mode feature](/DeployEdge/microsoft-edge-security-browse-safer) mitigates this vulnerability. You can opt-in to this security feature and have peace of mind knowing that Microsoft Edge is protecting you against this exploit. **Note:** After the security fix is released, make sure you update your browser.
 
 ## April 6, 2023
 
@@ -132,7 +138,7 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 107.0
 Microsoft has also updated **Microsoft Edge Extended Stable Channel (Version 106.0.1370.61)**, which contains the fix to CVE-2022-3723.
 
 > [!NOTE]
-> It's worth highlighting that [Microsoft Edge’s enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
+> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
 
 ## October 27, 2022
 
