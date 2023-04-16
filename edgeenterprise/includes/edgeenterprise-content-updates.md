@@ -2,6 +2,20 @@
 
 
 
+## Week of April 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/11/2023 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
+| 4/11/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 4/11/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
+| 4/12/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 4/13/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 4/13/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 4/14/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+
+
 ## Week of April 03, 2023
 
 
@@ -82,10 +96,3 @@
 | 3/17/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
 | 3/17/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
 | 3/17/2023 | [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/DeployEdge/edge-learnmore-edgeupdater-for-macos) | added |
-
-
-## Week of March 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
