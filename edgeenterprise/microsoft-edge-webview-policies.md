@@ -19,7 +19,6 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
 
@@ -30,91 +29,82 @@ These tables list all of the group policies available in this release of Microso
 - [Loader Override Settings](#loader-override-settings)
 - [Additional](#additional)
 
-
 ### [*Loader Override Settings*](#loader-override-settings-policies)
 
 |Policy Name|Caption|
 |-|-|
 |[BrowserExecutableFolder](#browserexecutablefolder)|Configure the location of the browser executable folder|
 |[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference|
+
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
 |-|-|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 
-
-
-
-  ## Loader Override Settings policies
+## Loader Override Settings policies
 
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+### BrowserExecutableFolder
 
-  #### Configure the location of the browser executable folder
+#### Configure the location of the browser executable folder
 
-  
-  
-  #### Supported versions:
+#### Supported versions
 
-  - On Windows since 87 or later
+- On Windows since 87 or later
 
-  #### Description
+#### Description
 
   This policy configures WebView2 applications to use the WebView2 Runtime in the specified path. The folder should contain the following files: msedgewebview2.exe, msedge.dll, and so on.
 
 To set the value for the folder path, provide a Value name and Value pair. Set value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
 
-  #### Supported features:
+#### Supported features
 
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+- Can be mandatory: Yes
+- Can be recommended: No
+- Dynamic Policy Refresh: Yes
 
-  #### Data Type:
+#### Data Type
 
-  - List of strings
+- List of strings
 
-  #### Windows information and settings
+#### Windows information and settings
 
-  ##### Group Policy (ADMX) info
+##### Group Policy (ADMX) info
 
-  - GP unique name: BrowserExecutableFolder
-  - GP name: Configure the location of the browser executable folder
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdgeWebView2.admx
+- GP unique name: BrowserExecutableFolder
+- GP name: Configure the location of the browser executable folder
+- GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+- GP path (Recommended): N/A
+- GP ADMX file name: MSEdgeWebView2.admx
 
-  ##### Windows Registry Settings
+##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
-  - Path (Recommended): N/A
-  - Value Name: list of REG_SZ
-  - Value Type: list of REG_SZ
+- Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
+- Path (Recommended): N/A
+- Value Name: list of REG_SZ
+- Value Type: list of REG_SZ
 
-  ##### Example value:
+##### Example value
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
-  
-
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+### ReleaseChannelPreference
 
-  #### Set the release channel search order preference
+#### Set the release channel search order preference
 
-  
-  
-  #### Supported versions:
+#### Supported versions
 
-  - On Windows since 87 or later
+- On Windows since 87 or later
 
-  #### Description
+#### Description
 
   The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.
 
@@ -122,59 +112,55 @@ To reverse the default search order, set this policy to 1.
 
 To set the value for the release channel preference, provide a Value name and Value pair. Set value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
 
-  #### Supported features:
+#### Supported features
 
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+- Can be mandatory: Yes
+- Can be recommended: No
+- Dynamic Policy Refresh: Yes
 
-  #### Data Type:
+#### Data Type
 
-  - List of strings
+- List of strings
 
-  #### Windows information and settings
+#### Windows information and settings
 
-  ##### Group Policy (ADMX) info
+##### Group Policy (ADMX) info
 
-  - GP unique name: ReleaseChannelPreference
-  - GP name: Set the release channel search order preference
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdgeWebView2.admx
+- GP unique name: ReleaseChannelPreference
+- GP name: Set the release channel search order preference
+- GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+- GP path (Recommended): N/A
+- GP ADMX file name: MSEdgeWebView2.admx
 
-  ##### Windows Registry Settings
+##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
-  - Path (Recommended): N/A
-  - Value Name: list of REG_SZ
-  - Value Type: list of REG_SZ
+- Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
+- Path (Recommended): N/A
+- Value Name: list of REG_SZ
+- Value Type: list of REG_SZ
 
-  ##### Example value:
+##### Example value
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 
-  
+  [Back to top](#microsoft-edge-webview2---policies)
+
+## Additional policies
 
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ## Additional policies
+### ExperimentationAndConfigurationServiceControl
 
-  [Back to top](#microsoft-edge-webview2---policies)
+#### Control communication with the Experimentation and Configuration Service
 
-  ### ExperimentationAndConfigurationServiceControl
+#### Supported versions
 
-  #### Control communication with the Experimentation and Configuration Service
+- On Windows since 97 or later
 
-  
-  
-  #### Supported versions:
-
-  - On Windows since 97 or later
-
-  #### Description
+#### Description
 
   The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.
 
@@ -196,51 +182,48 @@ If you don't configure this policy on an unmanaged device, the behavior is the s
 
 Policy options mapping:
 
-* FullMode (2) = Retrieve configurations and experiments
+- FullMode (2) = Retrieve configurations and experiments
 
-* ConfigurationsOnlyMode (1) = Retrieve configurations only
+- ConfigurationsOnlyMode (1) = Retrieve configurations only
 
-* RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
+- RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
 
 Use the preceding information when configuring this policy.
 
-  #### Supported features:
+#### Supported features
 
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
+- Can be mandatory: Yes
+- Can be recommended: No
+- Dynamic Policy Refresh: Yes
 
-  #### Data Type:
+#### Data Type
 
-  - Integer
+- Integer
 
-  #### Windows information and settings
+#### Windows information and settings
 
-  ##### Group Policy (ADMX) info
+##### Group Policy (ADMX) info
 
-  - GP unique name: ExperimentationAndConfigurationServiceControl
-  - GP name: Control communication with the Experimentation and Configuration Service
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdgeWebView2.admx
+- GP unique name: ExperimentationAndConfigurationServiceControl
+- GP name: Control communication with the Experimentation and Configuration Service
+- GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+- GP path (Recommended): N/A
+- GP ADMX file name: MSEdgeWebView2.admx
 
-  ##### Windows Registry Settings
+##### Windows Registry Settings
 
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
-  - Path (Recommended): N/A
-  - Value Name: ExperimentationAndConfigurationServiceControl
-  - Value Type: REG_DWORD
+- Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+- Path (Recommended): N/A
+- Value Name: ExperimentationAndConfigurationServiceControl
+- Value Type: REG_DWORD
 
-  ##### Example value:
+##### Example value
 
 ```
 0x00000002
 ```
 
-  
-
   [Back to top](#microsoft-edge-webview2---policies)
-
 
 ## See also
 
