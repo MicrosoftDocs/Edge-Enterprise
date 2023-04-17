@@ -9,7 +9,7 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -652,7 +652,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
-|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled|
+|[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup|
@@ -27325,15 +27325,17 @@ If you disable this policy, users won't be able to access the Microsoft Office m
   
   #### Supported versions:
 
-  - On Windows and macOS since 109 or later
+  - On Windows and macOS since 109, until 112
 
   #### Description
 
-  When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
-When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
-When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+  This policy doesn't work because support for using the platform-supplied certificate verifier and roots was removed.
 
-This policy will be removed in Microsoft Edge for Microsoft Windows and macOS once support for using the platform supplied certificate verifier and roots are planned to be removed.
+When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+
+When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
+
+When this policy is not set, the Microsoft Root Store or system provided roots may be used.
 
 
   #### Supported features:
@@ -31325,12 +31327,11 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
 
   #### Description
 
-  This policy lets the native PDF viewer in Microsoft Edge show a button that
-lets a user looking for advanced digital document features to discover and subscribe to premium offerings. This is done via the Acrobat extension.
-If you enable or don't configure this policy, the button will show up on the native PDF viewer in Microsoft Edge. A user will be
-able to buy Adobe subscription to access their premium offerings. If you disable this policy, the button won't be visible
-on the native PDF viewer in Microsoft Edge. A user won't be able to discover Adobe's advanced PDF tools or buy their subscriptions.
+  This policy lets the native PDF viewer in Microsoft Edge show a button that lets a user looking for advanced digital document features to discover and subscribe to premium offerings. This is done via the Acrobat extension.
 
+If you enable or don't configure this policy, the button will show up on the native PDF viewer in Microsoft Edge. A user will be able to buy Adobe subscription to access their premium offerings.
+
+If you disable this policy, the button won't be visible on the native PDF viewer in Microsoft Edge. A user won't be able to discover Adobe's advanced PDF tools or buy their subscriptions.
 
   #### Supported features:
 
@@ -35051,17 +35052,17 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
 
   ### WebSQLNonSecureContextEnabled
 
-  #### Force WebSQL in non-secure contexts to be enabled
+  #### Force WebSQL in non-secure contexts to be enabled (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 112.
   #### Supported versions:
 
-  - On Windows and macOS since 107 or later
+  - On Windows and macOS since 107, until 112
 
   #### Description
 
-  WebSQL in non-secure contexts is on by default as of Microsoft Edge 105.
+  This policy doesn't work because WebSQL in non-secure contexts is on by default as of Microsoft Edge 105.
 If you enable this policy, WebSQL in non-secure contexts will be enabled.
 If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the broser.
 
@@ -35080,7 +35081,7 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSQLNonSecureContextEnabled
-  - GP name: Force WebSQL in non-secure contexts to be enabled
+  - GP name: Force WebSQL in non-secure contexts to be enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
