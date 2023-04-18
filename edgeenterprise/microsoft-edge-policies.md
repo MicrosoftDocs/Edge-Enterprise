@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/09/2023
+ms.date: 04/13/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -1027,7 +1027,7 @@ By default, Google Cast is enabled.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableMediaRouter
   - Example value:
 ``` xml
@@ -1049,7 +1049,7 @@ By default, Google Cast is enabled.
 
   #### Description
 
-  Set this policy to True to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
+  Set this policy to true to show the Cast toolbar icon on the toolbar or the overflow menu. Users won't be able to remove it.
 
 If you don't configure this policy or if you disable it, users can pin or remove the icon by using its contextual menu.
 
@@ -1089,7 +1089,7 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowCastIconInToolbar
   - Example value:
 ``` xml
@@ -1166,7 +1166,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoSelectCertificateForUrls
   - Example value:
 ``` xml
@@ -1230,7 +1230,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsAllowedForUrls\2 = "[*.]conto
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutomaticDownloadsAllowedForUrls
   - Example value:
 ``` xml
@@ -1295,7 +1295,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutomaticDownloadsBlockedForUrls\2 = "[*.]conto
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutomaticDownloadsBlockedForUrls
   - Example value:
 ``` xml
@@ -1378,7 +1378,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\4 = "*,https://www.contos
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CookiesAllowedForUrls
   - Example value:
 ``` xml
@@ -1457,7 +1457,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CookiesBlockedForUrls
   - Example value:
 ``` xml
@@ -1536,7 +1536,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CookiesSessionOnlyForUrls
   - Example value:
 ``` xml
@@ -1606,7 +1606,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultAutomaticDownloadsSetting
   - Example value:
 ``` xml
@@ -1678,7 +1678,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultCookiesSetting
   - Example value:
 ``` xml
@@ -1746,7 +1746,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultFileSystemReadGuardSetting
   - Example value:
 ``` xml
@@ -1814,7 +1814,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultFileSystemWriteGuardSetting
   - Example value:
 ``` xml
@@ -1884,7 +1884,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultGeolocationSetting
   - Example value:
 ``` xml
@@ -1952,7 +1952,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultImagesSetting
   - Example value:
 ``` xml
@@ -2022,7 +2022,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultInsecureContentSetting
   - Example value:
 ``` xml
@@ -2094,7 +2094,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultJavaScriptJitSetting
   - Example value:
 ``` xml
@@ -2162,7 +2162,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultJavaScriptSetting
   - Example value:
 ``` xml
@@ -2232,7 +2232,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultNotificationsSetting
   - Example value:
 ``` xml
@@ -2304,7 +2304,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultPluginsSetting
   - Example value:
 ``` xml
@@ -2372,7 +2372,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultPopupsSetting
   - Example value:
 ``` xml
@@ -2440,7 +2440,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultWebBluetoothGuardSetting
   - Example value:
 ``` xml
@@ -2510,7 +2510,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultWebHidGuardSetting
   - Example value:
 ``` xml
@@ -2580,7 +2580,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultWebUsbGuardSetting
   - Example value:
 ``` xml
@@ -2646,7 +2646,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FileSystemReadAskForUrls
   - Example value:
 ``` xml
@@ -2715,7 +2715,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FileSystemReadBlockedForUrls
   - Example value:
 ``` xml
@@ -2784,7 +2784,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FileSystemWriteAskForUrls
   - Example value:
 ``` xml
@@ -2853,7 +2853,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FileSystemWriteBlockedForUrls
   - Example value:
 ``` xml
@@ -2920,7 +2920,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImagesAllowedForUrls
   - Example value:
 ``` xml
@@ -2987,7 +2987,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImagesBlockedForUrls
   - Example value:
 ``` xml
@@ -3054,7 +3054,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InsecureContentAllowedForUrls
   - Example value:
 ``` xml
@@ -3121,7 +3121,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InsecureContentBlockedForUrls
   - Example value:
 ``` xml
@@ -3247,7 +3247,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: JavaScriptAllowedForUrls
   - Example value:
 ``` xml
@@ -3314,7 +3314,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: JavaScriptBlockedForUrls
   - Example value:
 ``` xml
@@ -3384,7 +3384,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: JavaScriptJitAllowedForSites
   - Example value:
 ``` xml
@@ -3455,7 +3455,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: JavaScriptJitBlockedForSites
   - Example value:
 ``` xml
@@ -3529,7 +3529,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
   - Example value:
 ``` xml
@@ -3599,7 +3599,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Example value:
 ``` xml
@@ -3664,7 +3664,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NotificationsAllowedForUrls
   - Example value:
 ``` xml
@@ -3729,7 +3729,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NotificationsBlockedForUrls
   - Example value:
 ``` xml
@@ -3798,7 +3798,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PluginsAllowedForUrls
   - Example value:
 ``` xml
@@ -3867,7 +3867,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PluginsBlockedForUrls
   - Example value:
 ``` xml
@@ -3932,7 +3932,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PopupsAllowedForUrls
   - Example value:
 ``` xml
@@ -3997,7 +3997,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PopupsBlockedForUrls
   - Example value:
 ``` xml
@@ -4078,7 +4078,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RegisteredProtocolHandlers
   - Example value:
 ``` xml
@@ -4151,7 +4151,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAllowAllPortsForUrls\1 = "https://www.exa
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SerialAllowAllPortsForUrls
   - Example value:
 ``` xml
@@ -4248,7 +4248,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAllowUsbDevicesForUrls = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SerialAllowUsbDevicesForUrls
   - Example value:
 ``` xml
@@ -4340,7 +4340,7 @@ If you disable this setting, employees will not receive any notifications from M
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowPDFDefaultRecommendationsEnabled
   - Example value:
 ``` xml
@@ -4461,7 +4461,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidAllowAllDevicesForUrls\2 = "https://chrom
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebHidAllowAllDevicesForUrls
   - Example value:
 ``` xml
@@ -4556,7 +4556,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesForUrls = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebHidAllowDevicesForUrls
   - Example value:
 ``` xml
@@ -4666,7 +4666,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidAllowDevicesWithHidUsagesForUrls = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebHidAllowDevicesWithHidUsagesForUrls
   - Example value:
 ``` xml
@@ -4758,7 +4758,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidAskForUrls\2 = "https://chromium.org"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebHidAskForUrls
   - Example value:
 ``` xml
@@ -4835,7 +4835,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidBlockedForUrls\2 = "https://chromium.org"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebHidBlockedForUrls
   - Example value:
 ``` xml
@@ -4922,7 +4922,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebUsbAllowDevicesForUrls
   - Example value:
 ``` xml
@@ -5004,7 +5004,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebUsbAskForUrls
   - Example value:
 ``` xml
@@ -5071,7 +5071,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebUsbBlockedForUrls
   - Example value:
 ``` xml
@@ -5150,7 +5150,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderEnabled
   - Example value:
 ``` xml
@@ -5218,7 +5218,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderEncodings
   - Example value:
 ``` xml
@@ -5294,7 +5294,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderImageURL
   - Example value:
 ``` xml
@@ -5362,7 +5362,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderImageURLPostParams
   - Example value:
 ``` xml
@@ -5426,7 +5426,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderKeyword
   - Example value:
 ``` xml
@@ -5492,7 +5492,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderName
   - Example value:
 ``` xml
@@ -5560,7 +5560,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderSearchURL
   - Example value:
 ``` xml
@@ -5630,7 +5630,7 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderSuggestURL
   - Example value:
 ``` xml
@@ -5707,7 +5707,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageSearchBox
   - Example value:
 ``` xml
@@ -5774,7 +5774,7 @@ To learn more about the feature, see [https://go.microsoft.com/fwlink/?linkid=22
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeWorkspacesEnabled
   - Example value:
 ``` xml
@@ -5879,7 +5879,7 @@ SOFTWARE\Policies\Microsoft\Edge\WorkspacesNavigationSettings = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WorkspacesNavigationSettings
   - Example value:
 ``` xml
@@ -6002,7 +6002,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FeatureFlagOverridesControl
   - Example value:
 ``` xml
@@ -6071,7 +6071,7 @@ External extensions and their installation are documented at [Alternate extensio
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BlockExternalExtensions
   - Example value:
 ``` xml
@@ -6140,7 +6140,7 @@ When disabled or not configured, the user can manage the Allow extensions from o
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled
   - Example value:
 ``` xml
@@ -6231,7 +6231,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionAllowedTypes
   - Example value:
 ``` xml
@@ -6297,7 +6297,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionInstallAllowlist
   - Example value:
 ``` xml
@@ -6364,7 +6364,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionInstallBlocklist
   - Example value:
 ``` xml
@@ -6441,7 +6441,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionInstallForcelist
   - Example value:
 ``` xml
@@ -6509,7 +6509,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionInstallSources
   - Example value:
 ``` xml
@@ -6535,7 +6535,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Setting this policy controls extension management settings for Microsoft Edge, including any controlled by existing extension-related policies. This policy supersedes any legacy policies that might be set.
 
-This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to True, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
+This policy maps an extension ID or an update URL to its specific setting only. A default configuration can be set for the special ID "*", which applies to all extensions without a custom configuration in this policy. With an update URL, configuration applies to extensions with the exact update URL stated in the extension manifest. If the 'override_update_url' flag is set to true, the extension is installed and updated using the update URL specified in the [ExtensionInstallForcelist](#extensioninstallforcelist) policy or in 'update_url' field in this policy. The flag 'override_update_url' is ignored if the 'update_url' is the Edge Add-ons website update URL. For more details, check out the detailed guide to ExtensionSettings policy available at [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 To block extensions from a particular third party store, you only need to block the update_url for that store. For example, if you want to block extensions from Chrome Web Store, you can use the following JSON.
 
@@ -6651,7 +6651,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExtensionSettings
   - Example value:
 ``` xml
@@ -6815,7 +6815,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins\1 = "*.exam
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllHttpAuthSchemesAllowedForOrigins
   - Example value:
 ``` xml
@@ -6877,7 +6877,7 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowCrossOriginAuthPrompt
   - Example value:
 ``` xml
@@ -6939,7 +6939,7 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AuthNegotiateDelegateAllowlist
   - Example value:
 ``` xml
@@ -7003,7 +7003,7 @@ If you don't configure this policy, all four schemes are used.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AuthSchemes
   - Example value:
 ``` xml
@@ -7065,7 +7065,7 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AuthServerAllowlist
   - Example value:
 ``` xml
@@ -7127,7 +7127,7 @@ This policy setting is ignored (and Basic is always forbidden) if the [AuthSchem
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BasicAuthOverHttpEnabled
   - Example value:
 ``` xml
@@ -7189,7 +7189,7 @@ If you disable this policy or don't configure it, the canonical name of the serv
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DisableAuthNegotiateCnameLookup
   - Example value:
 ``` xml
@@ -7251,7 +7251,7 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableAuthNegotiatePort
   - Example value:
 ``` xml
@@ -7292,7 +7292,7 @@ If you don't configure this policy, NTLMv2 is enabled by default.
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NtlmV2Enabled
   - Example value:
 ``` xml
@@ -7475,7 +7475,7 @@ If this policy isn't configured, guided switch is turned on by default. A user c
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: GuidedSwitchEnabled
   - Example value:
 ``` xml
@@ -7594,7 +7594,7 @@ If you disable this policy, linked accounts will be turned off and no extra info
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: LinkedAccountEnabled
   - Example value:
 ``` xml
@@ -7770,7 +7770,7 @@ If you disable this policy, sign in click to action dialog isn't shown on the Ne
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SignInCtaOnNtpEnabled
   - Example value:
 ``` xml
@@ -7895,7 +7895,7 @@ If you disable this policy, users can't access the Grammar Tools feature within 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImmersiveReaderGrammarToolsEnabled
   - Example value:
 ``` xml
@@ -7957,7 +7957,7 @@ If you disable this policy, users can't access the Picture Dictionary feature wi
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImmersiveReaderPictureDictionaryEnabled
   - Example value:
 ``` xml
@@ -8198,7 +8198,7 @@ If you disable this policy, Microsoft Edge will not communicate with Intune to r
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MAMEnabled
   - Example value:
 ``` xml
@@ -8264,7 +8264,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NativeMessagingAllowlist
   - Example value:
 ``` xml
@@ -8329,7 +8329,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NativeMessagingBlocklist
   - Example value:
 ``` xml
@@ -8392,7 +8392,7 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NativeMessagingUserLevelHosts
   - Example value:
 ``` xml
@@ -8458,7 +8458,7 @@ If you disable this policy, users will no longer see strong password suggestions
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordGeneratorEnabled
   - Example value:
 ``` xml
@@ -8524,7 +8524,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordManagerBlocklist\2 = "https://login.con
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordManagerBlocklist
   - Example value:
 ``` xml
@@ -8589,7 +8589,7 @@ If you disable this policy, users can't save and add new passwords, but they can
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordManagerEnabled
   - Example value:
 ``` xml
@@ -8651,7 +8651,7 @@ If you disable or don't configure this policy, Microsoft Edge will let the user 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordManagerRestrictLengthEnabled
   - Example value:
 ``` xml
@@ -8730,7 +8730,7 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordMonitorAllowed
   - Example value:
 ``` xml
@@ -8796,7 +8796,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordProtectionChangePasswordURL
   - Example value:
 ``` xml
@@ -8862,7 +8862,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordProtectionLoginURLs
   - Example value:
 ``` xml
@@ -8941,7 +8941,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordProtectionWarningTrigger
   - Example value:
 ``` xml
@@ -9007,7 +9007,7 @@ This policy only affects the browser password reveal button, it doesn't affect w
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PasswordRevealEnabled
   - Example value:
 ``` xml
@@ -9087,7 +9087,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrimaryPasswordSetting
   - Example value:
 ``` xml
@@ -9185,7 +9185,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EfficiencyMode
   - Example value:
 ``` xml
@@ -9251,7 +9251,7 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EfficiencyModeEnabled
   - Example value:
 ``` xml
@@ -9317,7 +9317,7 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EfficiencyModeOnPowerEnabled
   - Example value:
 ``` xml
@@ -9383,7 +9383,7 @@ Learn more about performance detector: https://aka.ms/EdgePerformanceDetector
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PerformanceDetectorEnabled
   - Example value:
 ``` xml
@@ -9514,7 +9514,7 @@ SOFTWARE\Policies\Microsoft\Edge\SameOriginTabCaptureAllowedByOrigins\2 = "[*.]e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SameOriginTabCaptureAllowedByOrigins
   - Example value:
 ``` xml
@@ -9585,7 +9585,7 @@ SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureAllowedByOrigins\2 = "[*.]example.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ScreenCaptureAllowedByOrigins
   - Example value:
 ``` xml
@@ -9656,7 +9656,7 @@ SOFTWARE\Policies\Microsoft\Edge\TabCaptureAllowedByOrigins\2 = "[*.]example.edu
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TabCaptureAllowedByOrigins
   - Example value:
 ``` xml
@@ -9727,7 +9727,7 @@ SOFTWARE\Policies\Microsoft\Edge\WindowCaptureAllowedByOrigins\2 = "[*.]example.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WindowCaptureAllowedByOrigins
   - Example value:
 ``` xml
@@ -9800,7 +9800,7 @@ Omitting a field means all values match; for example, if you don't specify conne
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultPrinterSelection
   - Example value:
 ``` xml
@@ -9864,7 +9864,7 @@ If you enable this policy, users always print headers and footers.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintHeaderFooter
   - Example value:
 ``` xml
@@ -9926,7 +9926,7 @@ If you disable or don't configure this policy, Microsoft Edge will not default t
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintPdfAsImageDefault
   - Example value:
 ``` xml
@@ -10077,7 +10077,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintPreviewStickySettings = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintPreviewStickySettings
   - Example value:
 ``` xml
@@ -10149,7 +10149,7 @@ If you enable this policy, Print Preview uses the OS system default printer as t
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintPreviewUseSystemDefaultPrinter
   - Example value:
 ``` xml
@@ -10278,7 +10278,7 @@ If you set this policy to zero or don't configure it, the system default resolut
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintRasterizePdfDpi
   - Example value:
 ``` xml
@@ -10358,7 +10358,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintStickySettings
   - Example value:
 ``` xml
@@ -10443,7 +10443,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrinterTypeDenyList
   - Example value:
 ``` xml
@@ -10514,7 +10514,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintingAllowedBackgroundGraphicsModes
   - Example value:
 ``` xml
@@ -10582,7 +10582,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintingBackgroundGraphicsDefault
   - Example value:
 ``` xml
@@ -10644,7 +10644,7 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintingEnabled
   - Example value:
 ``` xml
@@ -10719,7 +10719,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintingPaperSizeDefault
   - Example value:
 ``` xml
@@ -10800,7 +10800,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PrintingWebpageLayout
   - Example value:
 ``` xml
@@ -10862,7 +10862,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UseSystemPrintDialog
   - Example value:
 ``` xml
@@ -10937,7 +10937,7 @@ When this policy enabled, websites are allowed to make requests to any network e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InsecurePrivateNetworkRequestsAllowed
   - Example value:
 ``` xml
@@ -11003,7 +11003,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InsecurePrivateNetworkRequestsAllowedForUrls
   - Example value:
 ``` xml
@@ -11078,7 +11078,7 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProxyBypassList
   - Example value:
 ``` xml
@@ -11165,7 +11165,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProxyMode
   - Example value:
 ``` xml
@@ -11233,7 +11233,7 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProxyPacUrl
   - Example value:
 ``` xml
@@ -11301,7 +11301,7 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProxyServer
   - Example value:
 ``` xml
@@ -11399,7 +11399,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProxySettings
   - Example value:
 ``` xml
@@ -11479,7 +11479,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SleepingTabsBlockedForUrls
   - Example value:
 ``` xml
@@ -11548,7 +11548,7 @@ If you don't configure this setting, users can choose whether to use sleeping ta
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SleepingTabsEnabled
   - Example value:
 ``` xml
@@ -11632,7 +11632,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SleepingTabsTimeout
   - Example value:
 ``` xml
@@ -11705,7 +11705,7 @@ This also includes macOS instances that are that are managed via MDM or joined t
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewSmartScreenLibraryEnabled
   - Example value:
 ``` xml
@@ -11769,7 +11769,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PreventSmartScreenPromptOverride
   - Example value:
 ``` xml
@@ -11834,7 +11834,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PreventSmartScreenPromptOverrideForFiles
   - Example value:
 ``` xml
@@ -11902,7 +11902,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SmartScreenAllowListDomains
   - Example value:
 ``` xml
@@ -11969,7 +11969,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SmartScreenDnsRequestsEnabled
   - Example value:
 ``` xml
@@ -12035,7 +12035,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SmartScreenEnabled
   - Example value:
 ``` xml
@@ -12160,7 +12160,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SmartScreenPuaEnabled
   - Example value:
 ``` xml
@@ -12230,7 +12230,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HomepageIsNewTabPage
   - Example value:
 ``` xml
@@ -12298,7 +12298,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HomepageLocation
   - Example value:
 ``` xml
@@ -12368,7 +12368,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageAllowedBackgroundTypes
   - Example value:
 ``` xml
@@ -12430,7 +12430,7 @@ If you disable this policy, App Launcher doesn't appear and users won't be able 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageAppLauncherEnabled
   - Example value:
 ``` xml
@@ -12518,7 +12518,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageCompanyLogo
   - Example value:
 ``` xml
@@ -12598,7 +12598,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageContentEnabled
   - Example value:
 ``` xml
@@ -12622,7 +12622,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 
   Hides the default top sites from the new tab page in Microsoft Edge.
 
-If you set this policy to True, the default top site tiles are hidden.
+If you set this policy to true, the default top site tiles are hidden.
 
 If you set this policy to false or don't configure it, the default top site tiles remain visible.
 
@@ -12660,7 +12660,7 @@ If you set this policy to false or don't configure it, the default top site tile
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageHideDefaultTopSites
   - Example value:
 ``` xml
@@ -12732,7 +12732,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageLocation
   - Example value:
 ``` xml
@@ -12756,7 +12756,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
   By default, Microsoft Edge displays quick links on the new tab page from user-added shortcuts and top sites based on browsing history. With this policy, you can configure up to three quick link tiles on the new tab page, expressed as a JSON object:
 
-[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": True/false }, ... ]
+[ { "url": "https://www.contoso.com", "title": "Contoso Portal", "pinned": true/false }, ... ]
 
 The 'url' field is required; 'title' and 'pinned' are optional. If 'title' is not provided, the URL is used as the default title. If 'pinned' is not provided, the default value is false.
 
@@ -12817,7 +12817,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageManagedQuickLinks
   - Example value:
 ``` xml
@@ -12891,7 +12891,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPagePrerenderEnabled
   - Example value:
 ``` xml
@@ -12955,7 +12955,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageQuickLinksEnabled
   - Example value:
 ``` xml
@@ -13037,7 +13037,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewTabPageSetFeedType
   - Example value:
 ``` xml
@@ -13115,7 +13115,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RestoreOnStartup
   - Example value:
 ``` xml
@@ -13179,7 +13179,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RestoreOnStartupURLs
   - Example value:
 ``` xml
@@ -13244,7 +13244,7 @@ If you disable or don't configure this policy, there is no change to how the [Re
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RestoreOnStartupUserURLsEnabled
   - Example value:
 ``` xml
@@ -13306,7 +13306,7 @@ If you don't configure the policy, users can choose whether to show the home but
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowHomeButton
   - Example value:
 ``` xml
@@ -13374,7 +13374,7 @@ If you don't configure this policy, Edge TyposquattingChecker is turned on but u
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TyposquattingCheckerEnabled
   - Example value:
 ``` xml
@@ -13440,7 +13440,7 @@ If you don't configure this policy, users can control whether to use SSO using o
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AADWebSiteSSOUsingThisProfileEnabled
   - Example value:
 ``` xml
@@ -13506,7 +13506,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AccessibilityImageLabelsEnabled
   - Example value:
 ``` xml
@@ -13577,7 +13577,7 @@ Note: This policy doesn't prevent the browser from navigating to any URL. Users 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AddressBarEditingEnabled
   - Example value:
 ``` xml
@@ -13637,7 +13637,7 @@ Starting with Microsoft Edge version 89, Microsoft Search in Bing suggestions wi
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AddressBarMicrosoftSearchInBingProviderEnabled
   - Example value:
 ``` xml
@@ -13703,7 +13703,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AdsSettingForIntrusiveAdsSites
   - Example value:
 ``` xml
@@ -13767,7 +13767,7 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AdsTransparencyEnabled
   - Example value:
 ``` xml
@@ -13833,7 +13833,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowDeletingBrowserHistory
   - Example value:
 ``` xml
@@ -13895,7 +13895,7 @@ If you disable this policy, whenever the user performs an action that triggers a
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowFileSelectionDialogs
   - Example value:
 ``` xml
@@ -13955,7 +13955,7 @@ If you disable this policy, users won't be able to access the games menu.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowGamesMenu
   - Example value:
 ``` xml
@@ -14019,7 +14019,7 @@ This policy was removed in Microsoft Edge 88 and is ignored if set.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowPopupsDuringPageUnload
   - Example value:
 ``` xml
@@ -14079,7 +14079,7 @@ If you enable or don't configure this policy, users can play the surf game.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowSurfGame
   - Example value:
 ``` xml
@@ -14143,7 +14143,7 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowSyncXHRInPageDismissal
   - Example value:
 ``` xml
@@ -14269,7 +14269,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowTrackingForUrls
   - Example value:
 ``` xml
@@ -14336,7 +14336,7 @@ Note: This policy causes the X-GoogApps-Allowed-Domains header to be appended to
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AllowedDomainsForApps
   - Example value:
 ``` xml
@@ -14401,7 +14401,7 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AlternateErrorPagesEnabled
   - Example value:
 ``` xml
@@ -14465,7 +14465,7 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AlwaysOpenPdfExternally
   - Example value:
 ``` xml
@@ -14549,7 +14549,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AmbientAuthenticationInPrivateModesEnabled
   - Example value:
 ``` xml
@@ -14573,7 +14573,7 @@ Use the preceding information when configuring this policy.
 
   Support for AppCache and this policy was removed from Microsoft Edge starting in version 97.
 
-If you set this policy to True, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
+If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
 
 If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
 
@@ -14611,7 +14611,7 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AppCacheForceEnabled
   - Example value:
 ``` xml
@@ -14728,7 +14728,7 @@ If you disable or don't configure this policy, a browser window with multiple ta
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AskBeforeCloseEnabled
   - Example value:
 ``` xml
@@ -14792,7 +14792,7 @@ This policy affects all types of audio inputs, not only the built-in microphone.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AudioCaptureAllowed
   - Example value:
 ``` xml
@@ -14852,7 +14852,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AudioCaptureAllowedUrls
   - Example value:
 ``` xml
@@ -14979,7 +14979,7 @@ This policy is intended to give enterprises flexibility to disable the audio san
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AudioSandboxEnabled
   - Example value:
 ``` xml
@@ -15092,7 +15092,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoImportAtFirstRun
   - Example value:
 ``` xml
@@ -15154,7 +15154,7 @@ If you disable this policy, the AutoLaunch Protocols component is disabled.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoLaunchProtocolsComponentEnabled
   - Example value:
 ``` xml
@@ -15256,7 +15256,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoLaunchProtocolsFromOrigins
   - Example value:
 ``` xml
@@ -15355,7 +15355,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoOpenAllowedForURLs
   - Example value:
 ``` xml
@@ -15431,7 +15431,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoOpenFileTypes
   - Example value:
 ``` xml
@@ -15498,7 +15498,7 @@ Note that if you disable this policy you also stop all activity for all web form
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutofillAddressEnabled
   - Example value:
 ``` xml
@@ -15560,7 +15560,7 @@ If you disable this policy, AutoFill never suggests, fills, or recommends new pa
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutofillCreditCardEnabled
   - Example value:
 ``` xml
@@ -15624,7 +15624,7 @@ If you disable this policy, users can't have their membership info automatically
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutofillMembershipsEnabled
   - Example value:
 ``` xml
@@ -15696,7 +15696,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutomaticHttpsDefault
   - Example value:
 ``` xml
@@ -15763,7 +15763,7 @@ A tab will need to be closed and re-opened for this policy to take effect.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoplayAllowed
   - Example value:
 ``` xml
@@ -15829,7 +15829,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: AutoplayAllowlist
   - Example value:
 ``` xml
@@ -15953,7 +15953,7 @@ If you disable this setting the list of available templates will be downloaded o
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BackgroundTemplateListUpdatesEnabled
   - Example value:
 ``` xml
@@ -16025,7 +16025,7 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BingAdsSuppression
   - Example value:
 ``` xml
@@ -16089,7 +16089,7 @@ If you don't configure this policy, third-party cookies are enabled but users ca
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BlockThirdPartyCookies
   - Example value:
 ``` xml
@@ -16150,7 +16150,7 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BrowserAddProfileEnabled
   - Example value:
 ``` xml
@@ -16283,7 +16283,7 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BrowserGuestModeEnabled
   - Example value:
 ``` xml
@@ -16400,7 +16400,7 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BrowserNetworkTimeQueriesEnabled
   - Example value:
 ``` xml
@@ -16476,7 +16476,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BrowserSignin
   - Example value:
 ``` xml
@@ -16559,7 +16559,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BrowsingDataLifetime
   - Example value:
 ``` xml
@@ -16644,7 +16644,7 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BuiltInDnsClientEnabled
   - Example value:
 ``` xml
@@ -16684,7 +16684,7 @@ The policy doesn't work in Microsoft Edge version 107.
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: BuiltinCertificateVerifierEnabled
   - Example value:
 ``` xml
@@ -16746,7 +16746,7 @@ This policy is a temporary measure and will be removed in future versions of Mic
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CECPQ2Enabled
   - Example value:
 ``` xml
@@ -16812,7 +16812,7 @@ This policy is a temporary workaround for the new CORS non-wildcard request head
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CORSNonWildcardRequestHeadersSupport
   - Example value:
 ``` xml
@@ -16883,7 +16883,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForCas
   - Example value:
 ``` xml
@@ -16954,7 +16954,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Example value:
 ``` xml
@@ -17025,7 +17025,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CertificateTransparencyEnforcementDisabledForUrls
   - Example value:
 ``` xml
@@ -17094,7 +17094,7 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ClearBrowsingDataOnExit
   - Example value:
 ``` xml
@@ -17160,7 +17160,7 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ClearCachedImagesAndFilesOnExit
   - Example value:
 ``` xml
@@ -17287,7 +17287,7 @@ SOFTWARE\Policies\Microsoft\Edge\ClipboardAllowedForUrls\2 = "[*.]example.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ClipboardAllowedForUrls
   - Example value:
 ``` xml
@@ -17356,7 +17356,7 @@ SOFTWARE\Policies\Microsoft\Edge\ClipboardBlockedForUrls\2 = "[*.]example.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ClipboardBlockedForUrls
   - Example value:
 ``` xml
@@ -17444,7 +17444,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "sen
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CollectionsServicesAndExportsBlockList
   - Example value:
 ``` xml
@@ -17514,7 +17514,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CommandLineFlagSecurityWarningsEnabled
   - Example value:
 ``` xml
@@ -17581,7 +17581,7 @@ Please note that disabling this policy can potentially prevent the Microsoft Edg
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ComponentUpdatesEnabled
   - Example value:
 ``` xml
@@ -17645,7 +17645,7 @@ If you don't configure this policy, users can choose whether to send these reque
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ConfigureDoNotTrack
   - Example value:
 ``` xml
@@ -17730,7 +17730,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ConfigureFriendlyURLFormat
   - Example value:
 ``` xml
@@ -17940,7 +17940,7 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ConfigureOnlineTextToSpeech
   - Example value:
 ``` xml
@@ -18009,7 +18009,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ConfigureShare
   - Example value:
 ``` xml
@@ -18160,7 +18160,7 @@ WebAssembly modules to windows and workers in the same origin.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CrossOriginWebAssemblyModuleSharingEnabled
   - Example value:
 ``` xml
@@ -18279,7 +18279,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: CustomHelpLink
   - Example value:
 ``` xml
@@ -18343,7 +18343,7 @@ If you disable this policy, DNS interception checks aren't performed.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DNSInterceptionChecksEnabled
   - Example value:
 ``` xml
@@ -18407,7 +18407,7 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultBrowserSettingEnabled
   - Example value:
 ``` xml
@@ -18481,7 +18481,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultClipboardSetting
   - Example value:
 ``` xml
@@ -18545,7 +18545,7 @@ The policy value is only applied when the [DefaultSearchProviderEnabled](#defaul
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSearchProviderContextMenuAccessAllowed
   - Example value:
 ``` xml
@@ -18617,7 +18617,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSensorsSetting
   - Example value:
 ``` xml
@@ -18689,7 +18689,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultSerialGuardSetting
   - Example value:
 ``` xml
@@ -18772,7 +18772,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefaultShareAdditionalOSRegionSetting
   - Example value:
 ``` xml
@@ -18836,7 +18836,7 @@ For detailed information on valid language variants, see [https://go.microsoft.c
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DefinePreferredLanguages
   - Example value:
 ``` xml
@@ -19037,7 +19037,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DeveloperToolsAvailability
   - Example value:
 ``` xml
@@ -19123,7 +19123,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DiagnosticData
   - Example value:
 ``` xml
@@ -19208,7 +19208,7 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
 
 If you don't configure or disable this policy, it potentially allows web pages to use the WebGL API and plug-ins to use the Pepper 3D API. Microsoft Edge might, by default, still require command line arguments to be passed in order to use these APIs.
 
-If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to True.
+If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is set to false, the setting for 'Disable3DAPIs' policy is ignored - it's the equivalent of setting 'Disable3DAPIs' policy to true.
 
   #### Supported features:
 
@@ -19244,7 +19244,7 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: Disable3DAPIs
   - Example value:
 ``` xml
@@ -19308,7 +19308,7 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DisableScreenshots
   - Example value:
 ``` xml
@@ -19372,7 +19372,7 @@ If you don't configure this policy, the default cache directory is used, and use
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DiskCacheDir
   - Example value:
 ``` xml
@@ -19438,7 +19438,7 @@ Note: The value specified in this policy is used as a hint to various cache subs
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DiskCacheSize
   - Example value:
 ``` xml
@@ -19512,7 +19512,7 @@ Note that other restrictions may still apply.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DisplayCapturePermissionsPolicyEnabled
   - Example value:
 ``` xml
@@ -19588,7 +19588,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DnsOverHttpsMode
   - Example value:
 ``` xml
@@ -19654,7 +19654,7 @@ Incorrectly formatted templates will be ignored.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DnsOverHttpsTemplates
   - Example value:
 ``` xml
@@ -19756,7 +19756,7 @@ SOFTWARE\Policies\Microsoft\Edge\DoNotSilentlyBlockProtocolsFromOrigins = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DoNotSilentlyBlockProtocolsFromOrigins
   - Example value:
 ``` xml
@@ -19848,7 +19848,7 @@ If you disable this policy, you can't use the double click feature in Microsoft 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DoubleClickCloseTabEnabled
   - Example value:
 ``` xml
@@ -19910,17 +19910,17 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   ##### Example value:
 
 ```
-"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+"\n        Linux-based OSes (including Mac): /home/${user_name}/Downloads\n        Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DownloadDirectory
   - Example value:
 ``` xml
 <string>
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads</string>
+        Linux-based OSes (including Mac): /home/${user_name}/Downloads
+        Windows: C:\Users\${user_name}\Downloads</string>
 ```
   
 
@@ -20002,7 +20002,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: DownloadRestrictions
   - Example value:
 ``` xml
@@ -20065,7 +20065,7 @@ If you disable this policy, features won't be able to download assets needed for
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeAssetDeliveryServiceEnabled
   - Example value:
 ``` xml
@@ -20127,7 +20127,7 @@ If you disable this policy, users can't access and use Collections in Microsoft 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeCollectionsEnabled
   - Example value:
 ``` xml
@@ -20193,7 +20193,7 @@ If you disable this policy, you can't use the Discover feature in Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeDiscoverEnabled
   - Example value:
 ``` xml
@@ -20257,7 +20257,7 @@ If you disable this policy, you can't use the Drop feature in Microsoft Edge.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeEDropEnabled
   - Example value:
 ``` xml
@@ -20319,7 +20319,7 @@ If you disable this policy, Microsoft Edge will not enhance images.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeEnhanceImagesEnabled
   - Example value:
 ``` xml
@@ -20383,7 +20383,7 @@ If you disable this policy, Microsoft Edge will not communicate with Follow serv
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeFollowEnabled
   - Example value:
 ``` xml
@@ -20447,7 +20447,7 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EdgeShoppingAssistantEnabled
   - Example value:
 ``` xml
@@ -20507,7 +20507,7 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EditFavoritesEnabled
   - Example value:
 ``` xml
@@ -20582,7 +20582,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableDeprecatedWebPlatformFeatures
   - Example value:
 ``` xml
@@ -20654,7 +20654,7 @@ If you don't configure this policy, the list of Domain Actions will continue to 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableDomainActionsDownload
   - Example value:
 ``` xml
@@ -20716,7 +20716,7 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableOnlineRevocationChecks
   - Example value:
 ``` xml
@@ -20780,7 +20780,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnableSha1ForLocalAnchors
   - Example value:
 ``` xml
@@ -20848,7 +20848,7 @@ As such, this policy is a temporary measure to control the initial experimental 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EncryptedClientHelloEnabled
   - Example value:
 ``` xml
@@ -20930,7 +20930,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnhanceSecurityMode
   - Example value:
 ``` xml
@@ -21048,7 +21048,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeBypassListDomains\2 = "myuni
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnhanceSecurityModeBypassListDomains
   - Example value:
 ``` xml
@@ -21112,7 +21112,7 @@ SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myun
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnhanceSecurityModeEnforceListDomains
   - Example value:
 ``` xml
@@ -21175,7 +21175,7 @@ This policy also applies to component extensions.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EnterpriseHardwarePlatformAPIEnabled
   - Example value:
 ``` xml
@@ -21296,7 +21296,7 @@ This policy will be made obsolete after Microsoft Edge version 115.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: EventPathEnabled
   - Example value:
 ``` xml
@@ -21379,7 +21379,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Example value:
 ``` xml
@@ -21482,7 +21482,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptFileTypeDownloadWarnings = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExemptFileTypeDownloadWarnings
   - Example value:
 ``` xml
@@ -21585,7 +21585,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExperimentationAndConfigurationServiceControl
   - Example value:
 ``` xml
@@ -21668,7 +21668,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts\1 = "10080"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExplicitlyAllowedNetworkPorts
   - Example value:
 ``` xml
@@ -21738,7 +21738,7 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Example value:
 ``` xml
@@ -21800,7 +21800,7 @@ If you disable this policy, the family page will not be shown, and Kids Mode wil
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FamilySafetySettingsEnabled
   - Example value:
 ``` xml
@@ -21864,7 +21864,7 @@ If this policy is not configured, then the user can decide to use the favorites 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FavoritesBarEnabled
   - Example value:
 ``` xml
@@ -21926,7 +21926,7 @@ If you disable or don't configure this policy, the default value of 0 seconds is
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: FetchKeepaliveDurationSecondsOnShutdown
   - Example value:
 ``` xml
@@ -22002,7 +22002,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceBingSafeSearch
   - Example value:
 ``` xml
@@ -22066,7 +22066,7 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceCertificatePromptsOnMultipleMatches
   - Example value:
 ``` xml
@@ -22130,7 +22130,7 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceEphemeralProfiles
   - Example value:
 ``` xml
@@ -22192,7 +22192,7 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceGoogleSafeSearch
   - Example value:
 ``` xml
@@ -22256,7 +22256,7 @@ This enterprise policy is disabled by default.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceLegacyDefaultReferrerPolicy
   - Example value:
 ``` xml
@@ -22345,7 +22345,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceMajorVersionToMinorPositionInUserAgent
   - Example value:
 ``` xml
@@ -22468,7 +22468,7 @@ For this policy to work as intended,
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceSync
   - Example value:
 ``` xml
@@ -22531,7 +22531,7 @@ SOFTWARE\Policies\Microsoft\Edge\ForceSyncTypes\1 = "favorites"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceSyncTypes
   - Example value:
 ``` xml
@@ -22607,7 +22607,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ForceYouTubeRestrict
   - Example value:
 ``` xml
@@ -22730,7 +22730,7 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: GloballyScopeHTTPAuthCacheEnabled
   - Example value:
 ``` xml
@@ -22798,7 +22798,7 @@ Popular, single-word search terms will require manual selection of search sugges
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Example value:
 ``` xml
@@ -22861,7 +22861,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HSTSPolicyBypassList
   - Example value:
 ``` xml
@@ -22923,7 +22923,7 @@ If you disable this policy, hardware acceleration is disabled.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HardwareAccelerationModeEnabled
   - Example value:
 ``` xml
@@ -22985,7 +22985,7 @@ If you disable this policy, Microsoft Edge denies use of the headless mode.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HeadlessModeEnabled
   - Example value:
 ``` xml
@@ -23069,7 +23069,7 @@ Note: The specific configuration options shown to the user in the First Run Expe
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HideFirstRunExperience
   - Example value:
 ``` xml
@@ -23190,7 +23190,7 @@ If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingd
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HideRestoreDialogEnabled
   - Example value:
 ``` xml
@@ -23251,7 +23251,7 @@ If you disable this policy, the Sidebar will never be shown.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: HubsSidebarEnabled
   - Example value:
 ``` xml
@@ -23319,7 +23319,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportAutofillFormData
   - Example value:
 ``` xml
@@ -23387,7 +23387,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportBrowserSettings
   - Example value:
 ``` xml
@@ -23453,7 +23453,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportCookies
   - Example value:
 ``` xml
@@ -23521,7 +23521,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportExtensions
   - Example value:
 ``` xml
@@ -23589,7 +23589,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportFavorites
   - Example value:
 ``` xml
@@ -23657,7 +23657,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportHistory
   - Example value:
 ``` xml
@@ -23725,7 +23725,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportHomepage
   - Example value:
 ``` xml
@@ -23850,7 +23850,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportOpenTabs
   - Example value:
 ``` xml
@@ -23918,7 +23918,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportPaymentInfo
   - Example value:
 ``` xml
@@ -23986,7 +23986,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportSavedPasswords
   - Example value:
 ``` xml
@@ -24054,7 +24054,7 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportSearchEngine
   - Example value:
 ``` xml
@@ -24120,7 +24120,7 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ImportShortcuts
   - Example value:
 ``` xml
@@ -24243,7 +24243,7 @@ If you disable this policy, users can't invoke in-app support.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InAppSupportEnabled
   - Example value:
 ``` xml
@@ -24317,7 +24317,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InPrivateModeAvailability
   - Example value:
 ``` xml
@@ -24377,7 +24377,7 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: InsecureFormsWarningsEnabled
   - Example value:
 ``` xml
@@ -24444,7 +24444,7 @@ Note that the policy is applied per renderer process, with the most recent value
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: IntensiveWakeUpThrottlingEnabled
   - Example value:
 ``` xml
@@ -24972,7 +24972,7 @@ Use the preceding information when configuring this policy.
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
-If you set this policy to True, or don't configure it, the user is allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
+If you set this policy to true, or don't configure it, the user is allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
 
 If you set this policy to false, the user isn't allowed to use the --ie-mode-file-url command line argument for launching local files in Internet Explorer mode.
 
@@ -25095,11 +25095,11 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 This setting works in conjunction with:
 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
 
-If you set this policy to True, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.
+If you set this policy to true, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.
 
 If you set this policy to false or don't configure it, the context menu item will not be added.
 
-If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to True, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
+If the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to true, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.
 
 To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
@@ -26044,7 +26044,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: IntranetRedirectBehavior
   - Example value:
 ``` xml
@@ -26108,7 +26108,7 @@ If you disable or don't configure this policy, pages will be isolated on a per-S
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: IsolateOrigins
   - Example value:
 ``` xml
@@ -26292,7 +26292,7 @@ This policy requires a browser restart to finish applying.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: LocalProvidersEnabled
   - Example value:
 ``` xml
@@ -26334,7 +26334,7 @@ If you disable or don't configure this policy, Microsoft Edge will be updated by
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MAUEnabled
   - Example value:
 ``` xml
@@ -26396,7 +26396,7 @@ If you enable this policy or don't configure it, users will be able to use the S
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MSAWebSiteSSOUsingThisProfileAllowed
   - Example value:
 ``` xml
@@ -26475,7 +26475,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ManagedConfigurationPerOrigin
   - Example value:
 ``` xml
@@ -26589,7 +26589,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ManagedFavorites
   - Example value:
 ``` xml
@@ -26733,7 +26733,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ManagedSearchEngines
   - Example value:
 ``` xml
@@ -26851,7 +26851,7 @@ Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MathSolverEnabled
   - Example value:
 ``` xml
@@ -26917,7 +26917,7 @@ If you don't configure this policy, the default value (32) is used.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MaxConnectionsPerProxy
   - Example value:
 ``` xml
@@ -26981,7 +26981,7 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MediaRouterCastAllowAllIPs
   - Example value:
 ``` xml
@@ -27051,7 +27051,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MetricsReportingEnabled
   - Example value:
 ``` xml
@@ -27113,7 +27113,7 @@ If you disable this policy, the Microsoft Edge Insider promotion content will no
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MicrosoftEdgeInsiderPromotionEnabled
   - Example value:
 ``` xml
@@ -27178,7 +27178,7 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, or the
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MicrosoftEditorProofingEnabled
   - Example value:
 ``` xml
@@ -27243,7 +27243,7 @@ If the [SpellcheckEnabled](#spellcheckenabled) policy or the [MicrosoftEditorPro
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MicrosoftEditorSynonymsEnabled
   - Example value:
 ``` xml
@@ -27307,7 +27307,7 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MicrosoftOfficeMenuEnabled
   - Example value:
 ``` xml
@@ -27372,7 +27372,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: MicrosoftRootStoreEnabled
   - Example value:
 ``` xml
@@ -27624,7 +27624,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NetworkPredictionOptions
   - Example value:
 ``` xml
@@ -27741,7 +27741,7 @@ If you disable or don't configure this policy, Microsoft Edge will use the exist
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: NewPDFReaderEnabled
   - Example value:
 ``` xml
@@ -27868,7 +27868,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: OriginAgentClusterDefaultEnabled
   - Example value:
 ``` xml
@@ -27931,7 +27931,7 @@ If you disable this policy, users can't access the Outlook menu.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: OutlookHubMenuEnabled
   - Example value:
 ``` xml
@@ -27997,7 +27997,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: OverrideSecurityRestrictionsOnInsecureOrigin
   - Example value:
 ``` xml
@@ -28062,7 +28062,7 @@ If you disable or don't configure this policy, the capability to view and verify
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PDFSecureMode
   - Example value:
 ``` xml
@@ -28124,7 +28124,7 @@ If you disable or don't configure this policy, Microsoft Edge will not enable XF
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PDFXFAEnabled
   - Example value:
 ``` xml
@@ -28186,7 +28186,7 @@ If you enable this policy or don't set this policy, websites can check if the us
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PaymentMethodQueryEnabled
   - Example value:
 ``` xml
@@ -28248,7 +28248,7 @@ If you disable this policy, users can't change or override the setting. If this 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PersonalizationReportingEnabled
   - Example value:
 ``` xml
@@ -28371,7 +28371,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ProactiveAuthEnabled
   - Example value:
 ``` xml
@@ -28395,7 +28395,7 @@ If you don't configure this policy, Proactive Authentication is turned on.
 
   Control the presentation of full-tab promotional or educational content. This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features.
 
-If you enable this policy (set it True) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
+If you enable this policy (set it true) or don't configure it, Microsoft Edge can show full-tab content to users to provide product information.
 
 If you disable (set to false) this policy, Microsoft Edge can't show full-tab content to users.
 
@@ -28433,7 +28433,7 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PromotionalTabsEnabled
   - Example value:
 ``` xml
@@ -28495,7 +28495,7 @@ If you don't configure this policy, the user will be able to change this setting
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PromptForDownloadLocation
   - Example value:
 ``` xml
@@ -28555,7 +28555,7 @@ If this policy is set to False or not set, the user may only be prompted when no
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: PromptOnMultipleMatchingCertificates
   - Example value:
 ``` xml
@@ -28619,7 +28619,7 @@ QUIC is a transport layer network protocol that can improve performance of web a
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: QuicAllowed
   - Example value:
 ``` xml
@@ -28681,7 +28681,7 @@ If you disable this policy, the Microsoft Edge mini menu will not be shown when 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: QuickSearchShowMiniMenu
   - Example value:
 ``` xml
@@ -28743,7 +28743,7 @@ If you disable this policy, these files will be downloaded to be viewed.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: QuickViewOfficeFilesEnabled
   - Example value:
 ``` xml
@@ -28805,7 +28805,7 @@ If you disable this policy, users can't access the Read Aloud feature from the a
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ReadAloudEnabled
   - Example value:
 ``` xml
@@ -28998,7 +28998,7 @@ If you disable this policy, users can receive related matches in Find on Page on
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RelatedMatchesCloudServiceEnabled
   - Example value:
 ``` xml
@@ -29072,7 +29072,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RelaunchNotification
   - Example value:
 ``` xml
@@ -29134,7 +29134,7 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RelaunchNotificationPeriod
   - Example value:
 ``` xml
@@ -29216,7 +29216,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RelaunchWindow
   - Example value:
 ``` xml
@@ -29294,7 +29294,7 @@ If you disable this policy, users are not allowed to use remote debugging.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RemoteDebuggingAllowed
   - Example value:
 ``` xml
@@ -29532,7 +29532,7 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ResolveNavigationErrorsUseWebService
   - Example value:
 ``` xml
@@ -29594,7 +29594,7 @@ If you disable this policy Microsoft Edge will recover the last state of PDF vie
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RestorePdfView
   - Example value:
 ``` xml
@@ -29658,7 +29658,7 @@ Note that signed-in profiles with a username that doesn't match this pattern wil
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RestrictSigninToPattern
   - Example value:
 ``` xml
@@ -29836,7 +29836,7 @@ If you disable this policy or don't configure it, Adobe Flash content from other
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: RunAllFlashInAllowMode
   - Example value:
 ``` xml
@@ -29898,7 +29898,7 @@ If you disable this policy, users are blocked from clicking through any warning 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SSLErrorOverrideAllowed
   - Example value:
 ``` xml
@@ -29966,7 +29966,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SSLErrorOverrideAllowedForOrigins
   - Example value:
 ``` xml
@@ -30043,7 +30043,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SSLVersionMin
   - Example value:
 ``` xml
@@ -30109,7 +30109,7 @@ This can be used by administrators who need more time to update their internal w
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SandboxExternalProtocolBlocked
   - Example value:
 ``` xml
@@ -30180,7 +30180,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SaveCookiesOnExit
   - Example value:
 ``` xml
@@ -30245,7 +30245,7 @@ If you disable this policy or don't configure it, browsing history is saved.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SavingBrowserHistoryDisabled
   - Example value:
 ``` xml
@@ -30309,7 +30309,7 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ScreenCaptureAllowed
   - Example value:
 ``` xml
@@ -30371,7 +30371,7 @@ If you disable this policy, web page scrolling to specific text fragments via a 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ScrollToTextFragmentEnabled
   - Example value:
 ``` xml
@@ -30433,7 +30433,7 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SearchFiltersEnabled
   - Example value:
 ``` xml
@@ -30507,7 +30507,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SearchInSidebarEnabled
   - Example value:
 ``` xml
@@ -30571,7 +30571,7 @@ If this policy is left not set, search suggestions are enabled but the user can 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SearchSuggestEnabled
   - Example value:
 ``` xml
@@ -30632,7 +30632,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SecurityKeyPermitAttestation
   - Example value:
 ``` xml
@@ -30753,7 +30753,7 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SendSiteInfoToImproveServices
   - Example value:
 ``` xml
@@ -30821,7 +30821,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SensorsAllowedForUrls
   - Example value:
 ``` xml
@@ -30892,7 +30892,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SensorsBlockedForUrls
   - Example value:
 ``` xml
@@ -30963,7 +30963,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SerialAskForUrls
   - Example value:
 ``` xml
@@ -31034,7 +31034,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SerialBlockedForUrls
   - Example value:
 ``` xml
@@ -31106,7 +31106,7 @@ This policy was only provided temporarily to allow Enterprises to adapt to the n
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SetTimeoutWithout1MsClampEnabled
   - Example value:
 ``` xml
@@ -31241,7 +31241,7 @@ Microsoft Edge will require cross-origin isolation when using SharedArrayBuffers
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SharedArrayBufferUnrestrictedAccessAllowed
   - Example value:
 ``` xml
@@ -31305,7 +31305,7 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SharedLinksEnabled
   - Example value:
 ``` xml
@@ -31367,7 +31367,7 @@ If you disable this policy, the button won't be visible on the native PDF viewer
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowAcrobatSubscriptionButton
   - Example value:
 ``` xml
@@ -31429,7 +31429,7 @@ If you disable or don't configure the policy, the Downloads button isn't shown o
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowDownloadsToolbarButton
   - Example value:
 ``` xml
@@ -31498,7 +31498,7 @@ If you don't configure this policy:
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowMicrosoftRewards
   - Example value:
 ``` xml
@@ -31560,7 +31560,7 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowOfficeShortcutInFavoritesBar
   - Example value:
 ``` xml
@@ -31624,7 +31624,7 @@ If you enable or don't configure this setting, users will receive recommendation
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: ShowRecommendationsEnabled
   - Example value:
 ``` xml
@@ -31686,7 +31686,7 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SignedHTTPExchangeEnabled
   - Example value:
 ``` xml
@@ -31749,7 +31749,7 @@ If you disable or don't configure this policy, a user can opt out of site isolat
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SitePerProcess
   - Example value:
 ``` xml
@@ -31811,7 +31811,7 @@ If you disable this policy, the top site info will not be shown.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SiteSafetyServicesEnabled
   - Example value:
 ``` xml
@@ -31886,7 +31886,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SmartActionsBlockList
   - Example value:
 ``` xml
@@ -31954,7 +31954,7 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SpeechRecognitionEnabled
   - Example value:
 ``` xml
@@ -32014,7 +32014,7 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SpellcheckEnabled
   - Example value:
 ``` xml
@@ -32162,7 +32162,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 This policy controls the treatment for mixed content (HTTP content in HTTPS sites) in the browser.
 
-If you set this policy to True or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
+If you set this policy to true or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
 
 If you set the policy to false, auto upgrades will be disabled for audio and video, and no warning will be shown for images.
 
@@ -32202,7 +32202,7 @@ This policy does not affect other types of mixed content other than audio, video
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: StricterMixedContentTreatmentEnabled
   - Example value:
 ``` xml
@@ -32262,7 +32262,7 @@ If this policy is false or unset, the warnings will appear on such unsupported c
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SuppressUnsupportedOSWarning
   - Example value:
 ``` xml
@@ -32324,7 +32324,7 @@ If you don't set this policy or apply it as recommended, users will be able to t
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SyncDisabled
   - Example value:
 ``` xml
@@ -32387,7 +32387,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: SyncTypesListDisabled
   - Example value:
 ``` xml
@@ -32455,7 +32455,7 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TLS13HardeningForLocalAnchorsEnabled
   - Example value:
 ``` xml
@@ -32526,7 +32526,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TLSCipherSuiteDenyList
   - Example value:
 ``` xml
@@ -32596,7 +32596,7 @@ If you disable this policy, no tabs will be frozen.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TabFreezingEnabled
   - Example value:
 ``` xml
@@ -32658,7 +32658,7 @@ If you disable this policy, then no tab information will be sent to the service.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TabServicesEnabled
   - Example value:
 ``` xml
@@ -32718,7 +32718,7 @@ If you disable this policy, popups that target _blank are permitted to access (v
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TargetBlankImpliesNoOpener
   - Example value:
 ``` xml
@@ -32776,7 +32776,7 @@ If you disable this policy, popups that target _blank are permitted to access (v
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TaskManagerEndProcessEnabled
   - Example value:
 ``` xml
@@ -32838,7 +32838,7 @@ If you disable this policy, text predictions will not be provided in eligible te
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TextPredictionEnabled
   - Example value:
 ``` xml
@@ -32900,7 +32900,7 @@ If you don't set this policy, the browser will only attempt to save memory when 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TotalMemoryLimitMb
   - Example value:
 ``` xml
@@ -32972,7 +32972,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TrackingPrevention
   - Example value:
 ``` xml
@@ -33036,7 +33036,7 @@ If you don't configure the policy, users can choose whether to use the translati
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TranslateEnabled
   - Example value:
 ``` xml
@@ -33101,7 +33101,7 @@ If you disable this setting, travel assistance will be disabled and  users will 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TravelAssistanceEnabled
   - Example value:
 ``` xml
@@ -33125,7 +33125,7 @@ If you disable this setting, travel assistance will be disabled and  users will 
 
   'This policy was removed in version 97 after 3DES was removed from Microsoft Edge.
 
-If the policy is set to True, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
+If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
 
   #### Supported features:
 
@@ -33161,7 +33161,7 @@ If the policy is set to True, then 3DES cipher suites in TLS will be enabled. If
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: TripleDESEnabled
   - Example value:
 ``` xml
@@ -33223,7 +33223,7 @@ If you disable this policy or don't configure it, the U2F Security Key API is di
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: U2fSecurityKeyApiEnabled
   - Example value:
 ``` xml
@@ -33300,7 +33300,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: URLAllowlist
   - Example value:
 ``` xml
@@ -33383,7 +33383,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: URLBlocklist
   - Example value:
 ``` xml
@@ -33454,7 +33454,7 @@ It also may affect sites with a lot of usage of a timeout of 0ms for setTimeout.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UnthrottledNestedTimeoutEnabled
   - Example value:
 ``` xml
@@ -33508,7 +33508,7 @@ Use the preceding information when configuring this policy.
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UpdatePolicyOverride
   - Example value:
 ``` xml
@@ -33572,7 +33572,7 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UserAgentClientHintsEnabled
   - Example value:
 ``` xml
@@ -33636,7 +33636,7 @@ This policy is a temporary measure and will be removed in a future release.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UserAgentClientHintsGREASEUpdateEnabled
   - Example value:
 ``` xml
@@ -33715,7 +33715,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UserAgentReduction
   - Example value:
 ``` xml
@@ -33781,7 +33781,7 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UserDataDir
   - Example value:
 ``` xml
@@ -33900,7 +33900,7 @@ If you disable this policy, users can't invoke Edge Feedback.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: UserFeedbackAllowed
   - Example value:
 ``` xml
@@ -33965,7 +33965,7 @@ If you enable or don't configure this policy, the tab layout will still be at th
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: VerticalTabsAllowed
   - Example value:
 ``` xml
@@ -34029,7 +34029,7 @@ This policy affects all types of video inputs, not only the built-in camera.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: VideoCaptureAllowed
   - Example value:
 ``` xml
@@ -34089,7 +34089,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: VideoCaptureAllowedUrls
   - Example value:
 ``` xml
@@ -34213,7 +34213,7 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WPADQuickCheckEnabled
   - Example value:
 ``` xml
@@ -34346,7 +34346,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebAppInstallForceList
   - Example value:
 ``` xml
@@ -34453,7 +34453,7 @@ If you disable this policy, users can't access the web capture feature in Micros
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebCaptureEnabled
   - Example value:
 ``` xml
@@ -34515,7 +34515,7 @@ If you set this policy to False or don't set this policy, the Web Components v0 
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebComponentsV0Enabled
   - Example value:
 ``` xml
@@ -34583,7 +34583,7 @@ to override incompatible policies.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebDriverOverridesIncompatiblePolicies
   - Example value:
 ``` xml
@@ -34647,7 +34647,7 @@ of Microsoft Edge.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebRtcAllowLegacyTLSProtocols
   - Example value:
 ``` xml
@@ -34715,7 +34715,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebRtcLocalIpsAllowedUrls
   - Example value:
 ``` xml
@@ -34796,7 +34796,7 @@ Use the preceding information when configuring this policy.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebRtcLocalhostIpHandling
   - Example value:
 ``` xml
@@ -34916,7 +34916,7 @@ If you don't configure this policy, or if you set it to an empty string or inval
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebRtcUdpPortRange
   - Example value:
 ``` xml
@@ -34976,7 +34976,7 @@ If you disable or don't configure this policy, WebSQL can be disabled.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebSQLAccess
   - Example value:
 ``` xml
@@ -35040,7 +35040,7 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebSQLInThirdPartyContextEnabled
   - Example value:
 ``` xml
@@ -35100,7 +35100,7 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebSQLNonSecureContextEnabled
   - Example value:
 ``` xml
@@ -35162,7 +35162,7 @@ If you disable this policy, Web select won't be available.
 ```
 
   #### Mac information and settings
-  
+
   - Preference Key Name: WebSelectEnabled
   - Example value:
 ``` xml
