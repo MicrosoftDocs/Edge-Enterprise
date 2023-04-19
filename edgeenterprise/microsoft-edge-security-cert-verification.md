@@ -61,7 +61,7 @@ If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](
 
 The new Chromium-based verifier currently enforces "Baseline Requirement" max ages to CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. If this creates problems in your environment, you are encouraged to share more information about the impact via [Chromium issue 971714](https://crbug.com/971714).
 
-Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you are encouraged  you are encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
+Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you are encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
 
 If you encounter `ERR_CERT_NO_REVOCATION_MECHANISM`, you should confirm that the CRL at the URI specified by the certificate returns a **DER encoded** (not PEM encoded) response.
 
