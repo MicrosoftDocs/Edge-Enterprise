@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 04/10/2023
+ms.date: 04/18/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -44,14 +44,28 @@ Microsoft recommends that enterprises that have break-and-inspect proxies or oth
 
 In Microsoft Edge 113, we plan to remove support for the **MicrosoftRootStoreEnabled** policy.
 
+## Known locally-trusted certificate behavior differences on Windows
+The new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection will fail with `ERR_CERT_INVALID`.
+
+There are a few ways to check if this applies to your certificate:
+1. A network log captured via `about:net-export` will include the string `ERROR: Unconsumed critical extension` in the `CERT_VERIFIER_TASK` with an OID value of `2B060104018237150A`.
+2. Open the certificate with the Windows certificate viewer, select "Critical Extensions Only" in the "Show" filter, and check if a "Application Policies" field in present.
+3. Run `certutil.exe` with the `-dump` switch and review the output to check for a critical Application Policies extension field.
+
+If your certificate currently uses this extension, please reissue the certificate and remove the use of the application policies field. You should instead rely solely on the enhanced key usage field (OID `2.5.29.37`) instead to specify allowed usages.
+
 ## Known revocation checking behavior differences on Windows
 The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements for certificate revocation lists (CRLs) than the old, platform-based verifier. Additionally, the new verifier _does not_ support LDAP-based CRL URIs.
 
 If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
 
+The new Chromium-based verifier currently enforces "Baseline Requirement" max ages to CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. If this creates problems in your environment, you are encouraged to share more information about the impact via [Chromium issue 971714](https://crbug.com/971714).
+
+Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you are encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
+
 If you encounter `ERR_CERT_NO_REVOCATION_MECHANISM`, you should confirm that the CRL at the URI specified by the certificate returns a **DER encoded** (not PEM encoded) response.
 
-If you encounter `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors, you should confirm that the certificate issuer is also the CRL issuer, the certificate's `cRLIssuer` field is not set, and the URI hosting the CRL uses the HTTP protocol.
+If you encounter `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors, you should confirm that the certificate issuer is also the CRL issuer, the certificate's `cRLIssuer` field is not set, the URI hosting the CRL both uses the HTTP protocol and is not on a host configured to use HSTS, and that the CRL was issued recently enough.
 
 ## See also
 
