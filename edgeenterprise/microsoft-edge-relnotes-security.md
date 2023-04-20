@@ -18,12 +18,16 @@ These release notes provide information about security fixes that are included i
 
 ## April 19, 2023
 
-Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.1722.54)** which incorporates the latest Security Updates of the Chromium project. This update contains a fix for [CVE-2023-2136](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2136), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+> [!NOTE]
+> This fix only applies to theLinux, macOS, and Android operating systems.
+
+For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## April 14, 2023
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.1722.48).** This update contains a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
 
 ## April 6, 2023
 
