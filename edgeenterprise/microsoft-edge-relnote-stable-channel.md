@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 04/20/2023
+ms.date: 04/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -72,12 +72,12 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
-## Version 109.0.1518.95: March 26, 2023
+## Version 109.0.1518.95: March 23, 2023
 
 > [!NOTE]
 > This update was done for our M109 Windows down-level extended support.  We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-26-2023).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-23-2023).
 
 ## Version 111.0.1661.54: March 24, 2023
 
