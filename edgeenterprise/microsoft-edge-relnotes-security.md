@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## April 24, 2023
 
-Microsoft has a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033) and [CVE-2023-2136](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2136) to **Microsoft Edge Stable Channel (Version 109.01518.100)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.
+Microsoft has a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033) and [CVE-2023-2136](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2136) to **Microsoft Edge Stable Channel (Version 109.0.1518.100)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.
 
 ## April 21, 2023
 
