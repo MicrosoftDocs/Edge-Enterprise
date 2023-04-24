@@ -16,6 +16,10 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
+## April xx, 2023
+
+Microsoft has a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033) and [CVE-2023-2136](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2136) to **Microsoft Edge Stable Channel (Version 109.01518.100)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.
+
 ## April 21, 2023
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.1722.58)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
@@ -54,7 +58,7 @@ This update contains the following Microsoft Edge-specific updates:
 
 ## March 23, 2023
 
-Microsoft has a fix for [CVE-2023-0941](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-0941) to Microsoft Edge Stable Channel (Version 109.0.1518.95), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.  
+Microsoft has a fix for [CVE-2023-0941](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-0941) to **Microsoft Edge Stable Channel (Version 109.0.1518.95)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.  
 
 ## March 23, 2023
 
