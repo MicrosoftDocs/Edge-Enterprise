@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 04/14/2023
+ms.date: 04/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,19 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 109.0.1518.100: April 24, 2023
+
+> [!NOTE]
+> This update was done for our M109 Windows down-level extended support. We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-24-2023).
+
+## Version 112.0.1722.58: April 21, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-21-2023).
 
 ## Version 112.0.1722.48: April 14, 2023
 
@@ -74,7 +87,18 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **New Microsoft Edge PDF experience policy.**  As part of the Adobe and Microsoft collaboration to re-envision the future workplace and your digital experiences, we are natively embedding the Adobe Acrobat PDF engine into the Microsoft Edge built-in PDF reader, with a release scheduled in March 2023. Administrators can start testing the new Microsoft Edge PDF reader which is powered by the Adobe Acrobat PDF engine by enabling the [NewPDFReaderEnabled](/deployedge/microsoft-edge-policies#newpdfreaderenabled) policy.  For more information, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).  
 
-- **Microsoft Edge Sidebar Improvements.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window.  In this release, the sidebar has been enhanced to increase productivity and improve user experience.  As communicated in our last release ([Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel#version-1110166141-march-13-2023)), the sidebar now includes a toolbar button by default to access the experience. If admins enable the Discover app, hovering and clicking the toolbar button will invoke both the sidebar tower, and the new discover experience. With this release, admins now have the ability to disable the Discover app and still keep the Sidebar. In this situation, the Sidebar tower will always be shown. If a user would like to hide their sidebar from always showing, they can do this in their Sidebar settings (*edge://settings/sidebar*). Additionally, Enterprise users can choose to 'always show' or 'auto hide', when an admin 'enables' the Sidebar. More customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
+- **Microsoft Edge Sidebar Improvements.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window. In this release, the sidebar has been enhanced to increase productivity and improve user experience. As communicated in our last release ([Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel#version-1110166141-march-13-2023)), the sidebar now includes a toolbar button by default to access the experience. If admins enable the Discover app, hovering and clicking the toolbar button will invoke both the sidebar tower, and the new discover experience.
+
+   With this release, admins now have the ability to disable the Discover app and still keep the Sidebar. In this situation, the Sidebar tower will always be shown. If an Admin chooses to enable the Sidebar but disable the Discover experience, the Sidebar can only be always shown or completely hidden. This default visibility can be changed in the Sidebar settings (*edge://settings/sidebar*).
+ 
+   When an admin enables the Sidebar and the Discover experience, enterprise users can choose to 'always show' or 'auto hide'. More customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
+
+## Version 109.0.1518.95: March 23, 2023
+
+> [!NOTE]
+> This update was done for our M109 Windows down-level extended support.  We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-23-2023).
 
 ## Version 110.0.1587.78: March 23, 2023
 
