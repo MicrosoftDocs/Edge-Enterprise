@@ -59,7 +59,10 @@ The following toggle settings are available:
 
 The following screenshot shows the "Enhance your security on the web" configuration page, with Balanced security mode enabled and set to provide Balanced security.
 
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog2.png" alt-text="Dialog to configure balanced security on the web.":::
+
+![Dialog to configure balanced security on the web.](media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog2.png)
+
+<!--:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog2.png" alt-text="Dialog to configure balanced security on the web."::: -->
 
 ### How "Balanced" mode works
 
