@@ -3,7 +3,7 @@ title: "Browse more safely with Microsoft Edge"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 04/06/2023
+ms.date: 04/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,7 +18,6 @@ This article describes how Microsoft Edge provides enhanced security on the web.
 > [!NOTE]
 > This article applies to Microsoft Edge version 111 or later. Some users might see enhanced security turned on by default due to ongoing development and testing. If you want to turn the security feature off, refer to the [What's new in Microsoft Edge security settings](#whats-new-in-microsoft-edge-security-settings) in this article.
 
-
 > [!IMPORTANT]
 > Developers should be aware that the WebAssembly (WASM) interpreter running in enhanced security mode might not yield the expected level of performance. We recommend adding your site as an [exception](#enhanced-security-sites) to opt-out of enhanced security mode for site users.
 
@@ -30,7 +29,7 @@ Microsoft Edge is adding enhanced security protections to provide an extra layer
 
 Enhanced security mode in Microsoft Edge mitigates memory-related vulnerabilities by disabling just-in-time (JIT) JavaScript compilation and enabling additional operating system protections for the browser. These protections include [Hardware-enforced Stack Protection](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340) and [Arbitrary Code Guard (ACG)](/microsoft-365/security/defender-endpoint/exploit-protection-reference?view=o365-worldwide#arbitrary-code-guard&preserve-view=true).
 
-When combined, these changes help provide 'defense in depth' because they make it more difficult than ever before for a malicious site to use an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team’s [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode) and [Introducing Enhanced Security for Microsoft Edge](https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/).
+When combined, these changes help provide 'defense in depth' because they make it more difficult than ever before for a malicious site to use an unpatched vulnerability to write to executable memory and attack an end user. You can learn more about the experimentation results from the Microsoft Edge Security team's [blog post](https://microsoftedge.github.io/edgevr/posts/Super-Duper-Secure-Mode) and [Introducing Enhanced Security for Microsoft Edge](https://microsoftedge.github.io/edgevr/posts/Introducing-Enhanced-Security-for-Microsoft-Edge/).
 
 You may also be interested to learn more about the first line [security protections in Microsoft Edge](/deployedge/ms-edge-security-for-business). Notably, you may want to learn more about how [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) protects users from phishing scams and malware downloads.
 
@@ -41,6 +40,11 @@ You may also be interested to learn more about the first line [security protecti
 
 With **Enhance your security on the web**, Microsoft Edge gives you an extra layer of protection when browsing the web.
 
+> [!NOTE]
+> Enhanced security on the web runs on  unfamiliar sites without the just in time (JIT) compilation to reduce attack surface, making it difficult for malicious sites to exploit.
+>
+>This additional protection includes Windows operating system mitigations such as Hardware Enforced Stack Protection, Arbitrary Code Guard (ACG), and Control Flow Guard (CFG).
+
 Use the following steps to configure added security.
 
 1. In Microsoft Edge, go to **Settings and more** > **Settings** > **Privacy, search, and services**.
@@ -49,22 +53,17 @@ Use the following steps to configure added security.
 
 The following toggle settings are available:
 
-- Toggle Off (Default): Feature is turned off
-- Toggle On – Basic (Recommended): Microsoft Edge will apply added security protection to the less visited sites. This setting preserves the user experience for the most popular sites on the web.  
-- Toggle On – Balanced: Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user’s usual tasks on the web.
+- Toggle Off (Default): Feature is turned off  
+- Toggle On – Balanced (Recommended): Microsoft Edge will apply added security protections when users visit  unfamiliar sites but bypass those protections for commonly visited sites. This combination provides a practical level of protection against attackers while preserving the user experience for a user's usual tasks on the web.
 - Toggle On – Strict: Microsoft Edge will apply added security protections for all the sites a user visits. Users may report some challenges accomplishing their usual tasks.
 
-The following screenshot shows the "Enhance your security on the web" configuration page, with enhanced security mode enabled and set to provide Basic security.
+The following screenshot shows the "Enhance your security on the web" configuration page, with Balanced security mode enabled and set to provide Balanced security.
 
 :::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-dialog2.png" alt-text="Dialog to configure balanced security on the web.":::
 
-### How "Basic" mode works
-
-Basic mode is a static mode that only applies these security mitigations to less visited sites. This mode doesn't take a user’s behavior into account and only enables the feature on less visited sites.
-
 ### How "Balanced" mode works
 
-Balanced mode is an adaptive mode that builds on user’s behavior on a particular device, and Microsoft’s understanding of risk across the web to give sites that users are most likely to use and trust full access to the web platform, while limiting what new and unfamiliar sites can do.
+Balanced mode is an adaptive mode that builds on user's behavior on a particular device, and Microsoft's understanding of risk across the web to give sites that users are most likely to use and trust full access to the web platform, while limiting what new and unfamiliar sites can do when visited.
 
 ### How "Strict" mode works
 
@@ -72,7 +71,7 @@ As the name suggests, Strict Mode applies these security protections to all site
 
 ### Enhanced security sites
 
-In Basic, Balanced, and Strict mode, you can also create exceptions for certain familiar websites that you trust or wish to enforce this mode on. Use the following steps to add a site to your list.
+In Balanced and Strict mode, you can also create exceptions for certain familiar websites that you trust or wish to enforce these modes on. Use the following steps to add a site to your list.
 
 1. In Microsoft Edge, select **Settings and more** > **Settings** > **Privacy, search, and services**.
 2. Verify that **Enhance your security on the web** is turned on.
