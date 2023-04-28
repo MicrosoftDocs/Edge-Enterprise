@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 04/24/2023
+ms.date: 04/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,10 @@ Microsoft has a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/
 ## April 21, 2023
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.1722.58)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific update:
+
+- [CVE-2023-29334](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29334)
 
 ## April 19, 2023
 
