@@ -2,6 +2,13 @@
 
 
 
+## Week of April 24, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of April 17, 2023
 
 
@@ -84,13 +91,3 @@
 | 3/31/2023 | [Provision favorites for Microsoft Edge](/DeployEdge/edge-learnmore-provision-favorites) | added |
 | 3/31/2023 | [Plan your kiosk mode transition](/DeployEdge/microsoft-edge-kiosk-mode-transition-plan) | added |
 | 3/31/2023 | [Microsoft Edge Enterprise Sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
-
-
-## Week of March 20, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/23/2023 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
-| 3/24/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 3/24/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
