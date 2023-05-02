@@ -27,6 +27,8 @@ These release notes provide information about new features and non-security upda
 
 ## Version 113.0.xxxx.xx: May x, 2023
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-21-2023).
+
 ### Feature update
 
 - **Improvements to enhanced security mode.**  Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  In this release updates include consolidating the security level settings to Balanced and Strict mode.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
