@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 04/18/2023
+ms.date: 05/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -42,24 +42,26 @@ Starting with Microsoft Edge 112, the default changed for all Windows and macOS 
 
 Microsoft recommends that enterprises that have break-and-inspect proxies or other scenarios involving TLS server certificates issued by roots not in the Microsoft CTL to proactively identify and report any compatibility issues to Microsoft.
 
-In Microsoft Edge 113, we plan to remove support for the **MicrosoftRootStoreEnabled** policy.
+In Microsoft Edge 115, support for the **MicrosoftRootStoreEnabled** policy will be removed.
 
 ## Known locally-trusted certificate behavior differences on Windows
-The new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection will fail with `ERR_CERT_INVALID`.
+Prior to Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
+
+This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection fails with `ERR_CERT_INVALID`.
 
 There are a few ways to check if this applies to your certificate:
 1. A network log captured via `about:net-export` will include the string `ERROR: Unconsumed critical extension` in the `CERT_VERIFIER_TASK` with an OID value of `2B060104018237150A`.
 2. Open the certificate with the Windows certificate viewer, select "Critical Extensions Only" in the "Show" filter, and check if a "Application Policies" field in present.
 3. Run `certutil.exe` with the `-dump` switch and review the output to check for a critical Application Policies extension field.
 
-If your certificate currently uses this extension, please reissue the certificate and remove the use of the application policies field. You should instead rely solely on the enhanced key usage field (OID `2.5.29.37`) instead to specify allowed usages.
+If your certificate currently uses this extension, please test that it now works in Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
 
 ## Known revocation checking behavior differences on Windows
 The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements for certificate revocation lists (CRLs) than the old, platform-based verifier. Additionally, the new verifier _does not_ support LDAP-based CRL URIs.
 
 If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
 
-The new Chromium-based verifier currently enforces "Baseline Requirement" max ages to CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. If this creates problems in your environment, you are encouraged to share more information about the impact via [Chromium issue 971714](https://crbug.com/971714).
+Before Edge 114, the new Chromium-based verifier enforces "Baseline Requirement" max ages for CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. In Edge 114, these requirements are no longer enforced for non-publicly trusted certificates. See [Chromium issue 971714](https://crbug.com/971714) for more details.
 
 Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you are encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
 
