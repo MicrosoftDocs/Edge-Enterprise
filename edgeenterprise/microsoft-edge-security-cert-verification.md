@@ -45,7 +45,7 @@ Microsoft recommends that enterprises that have break-and-inspect proxies or oth
 In Microsoft Edge 115, support for the **MicrosoftRootStoreEnabled** policy will be removed.
 
 ## Known locally-trusted certificate behavior differences on Windows
-Prior to Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
+Prior to Microsoft Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Microsoft Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
 
 This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection fails with `ERR_CERT_INVALID`.
 
@@ -54,14 +54,14 @@ There are a few ways to check if this applies to your certificate:
 2. Open the certificate with the Windows certificate viewer, select "Critical Extensions Only" in the "Show" filter, and check if a "Application Policies" field in present.
 3. Run `certutil.exe` with the `-dump` switch and review the output to check for a critical Application Policies extension field.
 
-If your certificate currently uses this extension, please test that it now works in Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
+If your certificate currently uses this extension, please test that it now works in Microsoft Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
 
 ## Known revocation checking behavior differences on Windows
 The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements for certificate revocation lists (CRLs) than the old, platform-based verifier. Additionally, the new verifier _does not_ support LDAP-based CRL URIs.
 
 If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
 
-Before Edge 114, the new Chromium-based verifier enforces "Baseline Requirement" max ages for CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. In Edge 114, these requirements are no longer enforced for non-publicly trusted certificates. See [Chromium issue 971714](https://crbug.com/971714) for more details.
+Before Microsoft Edge 114, the new Chromium-based verifier enforces "Baseline Requirement" max ages for CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") does not exceed those maximums. In Microsoft Edge 114, these requirements are no longer enforced for non-publicly trusted certificates. See [Chromium issue 971714](https://crbug.com/971714) for more details.
 
 Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you are encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
 
