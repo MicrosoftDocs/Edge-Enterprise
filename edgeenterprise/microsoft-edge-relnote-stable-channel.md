@@ -37,7 +37,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **New policy for PDF View Settings.** The [RestorePdfView](/deployedge/microsoft-edge-policies#restorepdfview) policy lets Admins control PDF View Recovery in Microsoft Edge.  When enabled or if the policy isn't configured, Microsoft Edge will recover the last state of PDF view and land users on the section where they ended reading in the last session.
 
-Updated Microsoft Root Store policy. The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy will now be supported in Microsoft Edge version 113 and 114.  It will be removed in Microsoft Edge version 115.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).
+- **Updated Microsoft Root Store policy.** The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy will now be supported in Microsoft Edge version 113 and 114.  It will be removed in Microsoft Edge version 115.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).
 
 ### Policy updates
 
