@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/07/2023
+ms.date: 05/03/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -130,7 +130,7 @@ Setting the policy to Enabled or leaving it unset turns NTLMv2 on.
 
 Setting the policy to Disabled turns NTLMv2 off.
 
-All recent versions of Samba and Microsoft® Windows® servers support NTLMv2. This should only be turned off for backward compatibility as it reduces the security of authentication.
+All recent versions of Samba and Microsoft&reg; Windows&reg; servers support NTLMv2. This should only be turned off for backward compatibility as it reduces the security of authentication.
 
 - true = Turn NTLMv2 on
 - false = Turn NTLMv2 off
@@ -1699,7 +1699,7 @@ Setting the policy configures the proxy settings for Chrome and ARC-apps, which 
 
 Leaving the policy unset lets users choose their proxy settings.
 
-Setting the ProxySettings policy accepts the following fields: * ProxyMode, which lets you specify the proxy server Chrome uses and prevents users from changing proxy settings * ProxyPacUrl, a URL to a proxy .pac file * ProxyPacMandatory, which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script * ProxyServer, a URL of the proxy server * ProxyBypassList, a list of hosts for which the proxy will be bypassed
+Setting the ProxySettings policy accepts the following fields: * ProxyMode, which lets you specify the proxy server Microsoft Edge uses and prevents users from changing proxy settings * ProxyPacUrl, a URL to a proxy .pac file * ProxyPacMandatory, which prevents the network stack from falling back to direct connections with invalid or unavailable PAC script * ProxyServer, a URL of the proxy server * ProxyBypassList, a list of hosts for which the proxy will be bypassed
 
 The ProxyServerMode field is deprecated in favor of the ProxyMode field.
 
