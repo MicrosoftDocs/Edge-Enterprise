@@ -23,7 +23,7 @@ These release notes provide information about new features and non-security upda
 
 ### Feature update
 
-- **Microsoft Edge PDF Share.** Users now have an easy option to share PDF documents as a link or attachment directly from the PDF toolbar.  Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Microsoft Edge PDF Share.** Users now have an easy option to share PDF documents as a link or attachment directly from the PDF toolbar.  **Note:** This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ## Version 113.0.1774.27: May 1, 2023
 
