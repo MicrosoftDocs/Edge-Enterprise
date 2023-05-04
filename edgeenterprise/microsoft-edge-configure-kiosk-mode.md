@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: v-danwesley
 author: dan-wesley
 manager: srugh
-ms.date: 05/02/2022 
+ms.date: 05/04/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -225,7 +225,10 @@ Windows Settings is the simplest way to set up one or two single-app kiosk devic
 
 With the release of this preview version of kiosk mode we're continuing work on improving the product and adding new features.
 
-We currently don't support the following features and recommend that you turn off:
+We currently don't support the following features, they don't work with kiosk mode.
+
+> [!IMPORTANT]
+> Turn off any feature policies that are enabled by default.
 
 - [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
 - [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
@@ -237,7 +240,6 @@ We currently don't support the following features and recommend that you turn of
 - [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
-- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## See also
 
