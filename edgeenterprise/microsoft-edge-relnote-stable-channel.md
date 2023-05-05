@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 05/03/2023
+ms.date: 05/04/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -48,6 +48,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
 - [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
 - [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
+
+## Version 112.0.1722.71: May 4, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 112.0.1722.68: May 1, 2023
 
