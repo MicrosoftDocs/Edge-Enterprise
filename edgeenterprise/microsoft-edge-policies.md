@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/30/2023
+ms.date: 05/03/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -27325,7 +27325,7 @@ If you disable this policy, users won't be able to access the Microsoft Office m
   
   #### Supported versions:
 
-  - On Windows and macOS since 109, until 112
+  - On Windows and macOS since 109, until 114
 
   #### Description
 

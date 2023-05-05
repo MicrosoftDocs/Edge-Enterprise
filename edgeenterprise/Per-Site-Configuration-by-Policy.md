@@ -3,7 +3,7 @@ title: "Per-site configuration by policy"
 ms.author: collw
 author: dan-wesley
 manager: laurawi
-ms.date: 01/04/2022
+ms.date: 05/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -32,32 +32,32 @@ In Microsoft Edge, most per-site permissions are controlled by settings and poli
 
 To simplify configuration for the user or admin, the legacy platform classified sites into one of five different Security Zones. These Security Zones are: Local Machine, Local Intranet, Trusted, Internet, and Restricted Sites.
 
-When making a page load decision, the browser maps the website to a Zone, then consults the setting for the URLAction for that Zone to decide what to do. Reasonable defaults like “Automatically satisfy authentication challenges from my Intranet” means that most users never need to change any default settings.
+When making a page load decision, the browser maps the website to a Zone, then consults the setting for the URLAction for that Zone to decide what to do. Reasonable defaults like "Automatically satisfy authentication challenges from my Intranet" means that most users never need to change any default settings.
 
-Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via “Site to Zone Assignment List” policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, other heuristics could [assign sites to the Local Intranet Zone](/archive/blogs/ieinternals/the-intranet-zone). In particular, dotless host names (for example, `http://payroll`) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
+Users can use the Internet Control Panel to assign specific sites to Zones and to configure the permission results for each zone. In managed environments, administrators can use Group Policy to assign specific sites to Zones (via "Site to Zone Assignment List" policy) and specify the settings for URLActions on a per-zone basis. Beyond manual administrative or user assignment of sites to Zones, other heuristics could [assign sites to the Local Intranet Zone](/archive/blogs/ieinternals/the-intranet-zone). In particular, dotless host names (for example, `http://payroll`) were assigned to the Intranet Zone. If a Proxy Configuration script was used, any sites configured to bypass the proxy would be mapped to the Intranet Zone.
 
-Microsoft Edge Legacy inherited the Zones architecture from its Internet Explorer predecessor with a few simplifying changes:
+EdgeHTML, used in WebView1 controls and Microsoft Edge Legacy, inherited the Zones architecture from its Internet Explorer predecessor with a few simplifying changes:
 
-- Windows’ five built-in Zones were collapsed to three: Internet (Internet), Trusted (Intranet+Trusted), and Local Computer. The Restricted Sites Zone was removed.
+- Windows' five built-in Zones were collapsed to three: Internet (Internet), Trusted (Intranet+Trusted), and Local Computer. The Restricted Sites Zone was removed.
 - Zone to URLAction mappings were hardcoded into the browser, ignoring Group Policies and settings in the Internet Control Panel.
 
 ## Per site permissions in Microsoft Edge
 
 Microsoft Edge makes limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
-When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they’ll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar. You can also use the various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
+When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they'll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar. You can also use the various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
 
-:::image type="content" source="media/per-site-configuration-by-policy/edge-page-info.png" alt-text="Page information and settings for the current page in the browser.":::
+![Page information and settings for the current page in the browser.](media/per-site-configuration-by-policy/edge-page-info.png)
 
-Enterprises can use Group Policy to set up site lists for individual policies that control the browser’s behavior. To find these policies, open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for "ForUrls" to find the policies that allow and block behavior based on the loaded site’s URL. Most of the relevant settings are listed in the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
+Enterprises can use Group Policy to set up site lists for individual policies that control the browser's behavior. To find these policies, open the [Microsoft Edge Group Policy documentation](/deployedge/microsoft-edge-policies) and search for "ForUrls" to find the policies that allow and block behavior based on the loaded site's URL. Most of the relevant settings are listed in the [Group Policy for Content Settings](/deployedge/microsoft-edge-policies#content-settings) section.
 
 There are also many policies (whose names contain "Default") that control the default behavior for a given setting.
 
-Many of the settings are obscure (WebSerial, WebMIDI) and there’s often no reason to change a setting from the default.
+Many of the settings are obscure (WebSerial, WebMIDI) and there's often no reason to change a setting from the default.
 
 ## Security Zones in Microsoft Edge
 
-While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows’ Security Zones by default in a few cases. This approach simplifies deployment in Enterprises that have historically relied upon Zones configuration.
+While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows' Security Zones by default in a few cases. This approach simplifies deployment in Enterprises that have historically relied upon Zones configuration.
 
 The following behaviors are controlled by Zone policy:
 
@@ -71,9 +71,9 @@ By default, Microsoft Edge evaluates `URLACTION_CREDENTIALS_USE` to decide w
 
 ## File downloads
 
-Evidence about the origins of a file download (also known as “[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)" is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
+Evidence about the origins of a file download (also known as "[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)" is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
 
-If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, Microsoft Edge's download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn’t download – Blocked".  
+If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, Microsoft Edge's download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn't download – Blocked".  
 
 ## IE mode
 
@@ -85,7 +85,7 @@ In most cases, Microsoft Edge settings can be left at their defaults. Administra
 
 ## Frequently asked questions
 
-### Can the URL filter format match on a site’s IP address?
+### Can the URL filter format match on a site's IP address?
 
 No, the format doesn't support specifying an IP range for allowlists and blocklists. It does support specification of individual IP **literals**, but such rules are only respected if the user navigates to the site using said literal (for example, `http://127.0.0.1/`). If a hostname is used (`http://localhost`), the IP Literal rule will not be respected even though the resolved IP of the host matches the filter-listed IP.
 
