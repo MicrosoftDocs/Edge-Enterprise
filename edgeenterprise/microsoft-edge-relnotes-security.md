@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 05/02/2023
+ms.date: 05/05/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,9 +16,23 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## May 2, 2023
+## May 5, 2023
 
-Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 113.0.1774.35)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2023-29350](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29350)
+- [CVE-2023-29354](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29354)
+
+## May 4, 2023
+
+Microsoft has released the latest **Microsoft Edge Extended Stable Channel (Version Version 112.0.1722.71)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2023-29350](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29350)
+- [CVE-2023-29354](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29354)
 
 ## April 24, 2023
 
@@ -44,6 +58,10 @@ For more information, see the [Security Update Guide](https://msrc.microsoft.com
 ## April 14, 2023
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0.1722.48).** This update contains a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific update:
+
+-[CVE-2023-29334](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29334)
 
 ## April 6, 2023
 
