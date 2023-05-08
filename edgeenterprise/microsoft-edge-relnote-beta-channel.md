@@ -27,7 +27,7 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- **Microsoft Edge PDF Share.** Users now have an easy option to share PDF documents as a link or attachment directly from the PDF toolbar.  **Note:** This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Microsoft Edge PDF Share.** Users now have an easy option to share PDF documents as a link or attachment directly from the PDF toolbar.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ## Version 113.0.1774.27: May 1, 2023
 
@@ -45,9 +45,9 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- **Improvements to enhanced security mode.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  Updates this release include a new flyout to improve user's experience when a site is not working as expected. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Improvements to enhanced security mode.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  Updates this release include a new flyout to improve user's experience when a site isn't working as expected. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS.** Microsoft Edge for macOS will start using a new updater called EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft Autoupdate to prevent browser updates, you will need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
+- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS.** Microsoft Edge for macOS now uses a new updater called EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft AutoUpdate to prevent browser updates, you'll need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
 
 ### Policy updates
 
