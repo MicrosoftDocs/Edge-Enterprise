@@ -19,6 +19,31 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+
+## Version 114.0.xxxx.xx: May 8, 2023
+
+### Feature update
+
+- **(Preview) Microsoft Edge Workspaces.** Edge Workspaces provides a way for customers to organize their browsing tasks into dedicated windows. Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page. Each Edge Workspace contains its own sets of tabs and favorites, created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. For more information about this public preview, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces).
+
+- **Introducing Edge Bar to move the sidebar to the Windows desktop.**  Users of the Microsoft Edge sidebar will soon have the option to access their pinned apps and sites directly from their Windows desktop! As an opt-in experience, users can activate Edge Bar by clicking a "popout" icon near the base of the sidebar in the browser. Edge Bar augments the OS work area to enable a seamless side-by-side experience that works with any Windows app. This includes Microsoft Edge itself. Users enjoy streamlined access to the same set of powerful AI tools and web-based services without launching a browser window. The Edge Bar enhances productivity regardless of where they are in Windows.  Administrators can control the availability using the [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled).
+
+### Policy updates
+
+#### New policies
+
+- [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) - Standalone Sidebar Enabled
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+
+#### Obsoleted policy
+
+- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+
+#### Additional policy changes
+
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - BasicMode is deprecated
+- [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - If policy is not configured users will be able to access the Microsoft Edge Workspaces feature
+
 ## Version 113.0.1774.35: May 5, 2023
 
 Fixed various bugs and performance issues.
