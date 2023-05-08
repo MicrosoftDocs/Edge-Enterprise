@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/03/2023
+ms.date: 05/04/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -1898,6 +1898,7 @@ URLBlocklist
 #### Supported on:
 
 - Microsoft Edge (Android) since version 109
+- Microsoft Edge (iOS) since version 113
 
 #### Description
 
