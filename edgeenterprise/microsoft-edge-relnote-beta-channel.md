@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: collw
-ms.date: 05/08/2023
+ms.date: 05/09/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,30 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 114.0.1823.11: May 9, 2023
+
+### Feature update
+
+- **(Preview) Microsoft Edge Workspaces.** Edge Workspaces gives customers a way to organize their browsing tasks into dedicated windows. Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page. Each Edge Workspace contains its own sets of tabs and favorites, created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. For more information about this public preview, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces).
+
+- **Option to attach the Edge sidebar to the Windows desktop.**  Users of the Microsoft Edge sidebar will soon have the option to access their apps and sites directly from their Windows desktop. As an opt-in experience, users can attach the sidebar to their Windows desktop by clicking a "popout" icon near the base of the sidebar in the browser. This enables a side-by-side experience that works with any Windows app—including Microsoft Edge itself. Users enjoy streamlined access to the same set of powerful AI tools and web-based services, including Bing Chat, without launching a browser window, enhancing productivity regardless of where they are in Windows. Administrators can control the availability using the [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled).
+
+### Policy updates
+
+#### New policies
+
+- [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) - Standalone Sidebar Enabled
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+
+#### Obsoleted policy
+
+- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+
+#### Additional policy changes
+
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - BasicMode is deprecated
+- [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - If policy is not configured users will be able to access the Microsoft Edge Workspaces feature
 
 ## Version 113.0.1774.35: May 5, 2023
 
@@ -47,7 +71,7 @@ Fixed various bugs and performance issues.
 
 - **Improvements to enhanced security mode.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  Updates this release include a new flyout to improve user's experience when a site isn't working as expected. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS.** Microsoft Edge for macOS now uses a new updater called EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft AutoUpdate to prevent browser updates, you'll need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
+- **Switch from Microsoft AutoUpdate to EdgeUpdater for macOS.** Microsoft Edge for macOS now uses a new updater named EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft AutoUpdate to prevent browser updates, you'll need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
 
 ### Policy updates
 
