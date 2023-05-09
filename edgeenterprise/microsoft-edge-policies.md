@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/03/2023
+ms.date: 05/09/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -23,6 +23,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu (deprecated)|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[StandaloneHubsSidebarEnabled](#standalonehubssidebarenabled)|Standalone Sidebar Enabled|
 
 ## Available policies
 
@@ -337,7 +347,7 @@ These tables list all of the browser-related group policies available in this re
 |[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
-|[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu|
+|[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu (deprecated)|
 |[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete)|
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
@@ -416,6 +426,7 @@ These tables list all of the browser-related group policies available in this re
 |[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
 |[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
@@ -438,6 +449,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
@@ -609,6 +621,7 @@ These tables list all of the browser-related group policies available in this re
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
 |[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
+|[StandaloneHubsSidebarEnabled](#standalonehubssidebarenabled)|Standalone Sidebar Enabled|
 |[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (obsolete)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suppress the unsupported OS warning|
 |[SyncDisabled](#syncdisabled)|Disable synchronization of data using Microsoft sync services|
@@ -5735,8 +5748,8 @@ Use the preceding information when configuring this policy.
 
   Microsoft Edge Workspaces helps improve productivity for users in your organization.
 
-If you enable this policy, users will be able to access the Microsoft Edge Workspaces feature.
-If you disable or don't configure this policy, users will not be able to access the Microsoft Edge Workspaces feature.
+If you enable or don't configure this policy, users will be able to access the Microsoft Edge Workspaces feature.
+If you disable this policy, users will not be able to access the Microsoft Edge Workspaces feature.
 
 To learn more about the feature, see [https://go.microsoft.com/fwlink/?linkid=2209950](https://go.microsoft.com/fwlink/?linkid=2209950)
 
@@ -13907,9 +13920,9 @@ If you disable this policy, whenever the user performs an action that triggers a
 
   ### AllowGamesMenu
 
-  #### Allow users to access the games menu
+  #### Allow users to access the games menu (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -13917,7 +13930,9 @@ If you disable this policy, whenever the user performs an action that triggers a
 
   #### Description
 
-  If you enable or don't configure this policy, users can access the games menu.
+  This policy is deprecated because it can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+If you enable or don't configure this policy, users can access the games menu.
 
 If you disable this policy, users won't be able to access the games menu.
 
@@ -13936,7 +13951,7 @@ If you disable this policy, users won't be able to access the games menu.
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowGamesMenu
-  - GP name: Allow users to access the games menu
+  - GP name: Allow users to access the games menu (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -19318,6 +19333,68 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DiscoverPageContextEnabled
+
+  #### Enable Discover access to page contents for AAD profiles
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  This policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
+
+If you enable or don't configure this policy, Discover will have access to page contents.
+
+If you disable this policy, Discover will not be able to access page contents.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DiscoverPageContextEnabled
+  - GP name: Enable Discover access to page contents for AAD profiles
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DiscoverPageContextEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DiscoverPageContextEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DiskCacheDir
 
   #### Set disk cache directory
@@ -20858,6 +20935,76 @@ As such, this policy is a temporary measure to control the initial experimental 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EnforceLocalAnchorConstraintsEnabled
+
+  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  X.509 certificates may encode constraints, such as Name Constraints, in extensions in the certificate. RFC 5280 specifies that enforcing such constraints on trust anchor certificates is optional.
+
+Starting in Microsoft Edge 112, such constraints in certificates loaded from the platform certificate store will now be enforced.
+
+This policy exists as a temporary opt-out in case an enterprise encounters issues with the constraints encoded in their private roots. In that case this policy may be used to temporarily disable enforcement of the constraints while correcting the certificate issues.
+
+If you enable this policy or don't configure it, Microsoft Edge will enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+If you disable this policy, Microsoft Edge will not enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
+
+This policy is planned to be removed in Microsoft Edge version 115.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnforceLocalAnchorConstraintsEnabled
+  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnforceLocalAnchorConstraintsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnforceLocalAnchorConstraintsEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnhanceSecurityMode
 
   #### Enhance the security state in Microsoft Edge
@@ -20880,7 +21027,9 @@ If you set this policy to 'StrictMode', the security state will be in strict mod
 
 If you set this policy to 'BasicMode', the security state will be in basic mode.
 
-Note: Sites that use WebAssembly (WASM) are not currently supported when [EnhanceSecurityMode](#enhancesecuritymode) is enabled. If you require access to a site that uses WASM, consider adding it to your exception list as described in [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+Note: Sites that use WebAssembly (WASM) are not supported on 32-bit systems when [EnhanceSecurityMode](#enhancesecuritymode) is enabled. If you require access to a site that uses WASM, consider adding it to your exception list as described in [https://go.microsoft.com/fwlink/?linkid=2183321](https://go.microsoft.com/fwlink/?linkid=2183321).
+
+Starting in Microsoft Edge 113, 'BasicMode' is deprecated and is treated the same as 'BalancedMode'. It won't work in Microsoft Edge version 116.
 
 For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
 
@@ -20892,7 +21041,7 @@ Policy options mapping:
 
 * StrictMode (2) = Strict mode
 
-* BasicMode (3) = Basic mode
+* BasicMode (3) = (Deprecated) Basic mode
 
 Use the preceding information when configuring this policy.
 
@@ -32140,6 +32289,60 @@ If a language is included in both the [SpellcheckLanguage](#spellchecklanguage) 
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### StandaloneHubsSidebarEnabled
+
+  #### Standalone Sidebar Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 114 or later
+
+  #### Description
+
+  Standalone Sidebar is an optional mode for the Sidebar in Microsoft Edge. When this mode is activated by a user, the Sidebar appears in a fixed position on the Microsoft Windows desktop, and is hidden from the browser application frame.
+
+If you enable or don't configure this policy, users will have the ability to activate the Standalone Sidebar.
+If you disable this policy, options to activate Standalone Sidebar will be hidden or made unavailable. Note that blocking [HubsSidebarEnabled](#hubssidebarenabled) will also prevent users from accessing Standalone Sidebar.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: StandaloneHubsSidebarEnabled
+  - GP name: Standalone Sidebar Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: StandaloneHubsSidebarEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
