@@ -65,43 +65,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 113.0.1774.9: April 12, 2023
-
-### Feature update
-
-- **Improvements to enhanced security mode.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  Updates this release include a new flyout to improve user's experience when a site isn't working as expected. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **Switch from Microsoft AutoUpdate to EdgeUpdater for macOS.** Microsoft Edge for macOS now uses a new updater named EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft AutoUpdate to prevent browser updates, you'll need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates.  For more information, see [Microsoft Edge for macOS switch from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
-
-### Policy updates
-
-#### New policies
-
-- [RestorePdfView](/DeployEdge/microsoft-edge-policies#restorepdfview) - Restore PDF view
-- [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
-- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
-- [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
-
-## Version 112.0.1722.39: April 10, 2023
-
-Fixed various bugs and performances issues.
-
-## Version 112.0.1722.33: April 5, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.31: April 3, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.23: March 28, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.15: March 21, 2023
-
-Fixed various bugs and performance issues.
-
+<!-- Version 113.0.1774.9: April 12, 2023 to Version 112.0.1722.15: March 21, 2023 -->
 <!-- from Version 112.0.1722.11: March 17, 2023 to Version 111.0.1661.22: February 24, 2023 -->
 <!-- from Version 111.0.1661.15: February 16, 2023 to Version 110.0.1587.22: January 24, 2023 -->
 <!--- from Version 110.0.1587.17: January 20, 2023 to Version 109.0.1518.23: December 14, 2022 -->
