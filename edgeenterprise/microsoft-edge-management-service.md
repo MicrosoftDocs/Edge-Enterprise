@@ -1,18 +1,18 @@
 ---
-title: "Something"
+title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
-manager: srugh
+manager: arunesh.chandra
 ms.date: 05/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "description of something"
+description: "Provides steps for configuring the Microsoft Edge management service."
 ---
 
-# Something
+# Microsoft Edge management service
 
 ## section 1
 
