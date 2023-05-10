@@ -27,7 +27,7 @@ These release notes provide information about new features and non-security upda
 
 - **Option to attach the Edge sidebar to the Windows desktop.**  Users of the Microsoft Edge sidebar will be able to access their apps and sites directly from their Windows desktop. As an opt-in experience, users can attach the sidebar to their Windows desktop by clicking a "popout" icon near the base of the sidebar in the browser. This enables a side-by-side experience that works with any Windows app—including Microsoft Edge itself. Users enjoy streamlined access to the same set of powerful AI tools and web-based services, including Bing Chat, without launching a browser window, enhancing productivity regardless of where they are in Windows. Administrators can control the availability using the [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled).
 
-- **Enhanced security mode on by default.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites. Enhanced security mode is turned on by default for x64 Windows, x64 macOS, x64 Linux, and ARM64 systems. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Enhanced security mode on by default.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting less familiar sites. Enhanced security mode is turned on by default for x64 Windows, x64 macOS, x64 Linux, and ARM64 systems. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
