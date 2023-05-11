@@ -47,7 +47,39 @@ Use these steps to access the preview experience:
 
 ## Get started with configuration profiles
 
-placeholder text
+A configuration profile contains all the browser policy configurations, including extension settings. We've expanded configuration profiles to handle all browser policies.
+
+> [!NOTE]
+> If you created a profile to manage your extensions during private preview, then you'll find those configurations in the profile with the same name.
+
+Each configuration profile can only be assigned to one Azure Active Directory (Azure AD) group, and each group can only be assigned one configuration profile. However, the group that you select can contain other (nested) groups. If a user is a member of multiple Azure AD groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "1" being the highest priority that you can assign.
+
+#### Create a configuration profile
+
+Follow these steps to create a configuration profile:
+
+1. Under the **Policy management** pivot, select **Add a profile**.  
+1. Under **Add a configuration profile**, enter a profile name and description and then select **Add**.  
+
+After confirmation, you'll be able to go to the profile and configure the policies and extensions you want to use.
+
+#### Copy a configuration profile
+
+Follow these steps to copy a configuration profile:
+
+1. Under the **Policy management** pivot, select the profile you want to make a copy.
+1. Select **Copy profile**.
+1. Under **Copy configuration profile**, enter a profile name and description and then select **Add**.
+
+After confirmation, the new profile is created with the same configurations as the profile you copied.
+
+#### Reorder priority of configuration profile
+
+Follow these steps to reorder the priority of a configuration profile:
+
+1. Under the **Policy management** pivot, select **Reorder priority**  
+1. Select a profile to change and pick its priority number from the dropdown.  
+1. Select **Save** after you finish making your changes.  
 
 ### Manage extensions
 
