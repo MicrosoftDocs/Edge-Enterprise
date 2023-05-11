@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 04/19/2023
+ms.date: 05/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,18 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 113.0.xxxx.xx: May xx, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Open in Microsoft Edge option (iOS only).** This option is available for saving files to OneDrive.
+
+- **Net-export supports open-in (iOS only).** This option now supports open-in instead of using the native mail app.
+
+- **Shared Device Mode (SDM) for Edge mobile.** Generally available for Android.
 
 ## Version 112.0.1722.54: April 19, 2023
 
