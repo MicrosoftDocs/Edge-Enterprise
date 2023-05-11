@@ -78,7 +78,7 @@ After confirmation, the new profile is created with the same configurations as t
 Follow these steps to reorder the priority of a configuration profile:
 
 1. Under the **Policy management** pivot, select **Reorder priority**  
-1. Select a profile to change and pick its priority number from the dropdown.  
+1. Select a profile to change and under **Reorder profile priority**, pick a priority number from the dropdown list.  
 1. Select **Save** after you finish making your changes.  
 
 #### Configure a policy for a configuration profile
@@ -87,7 +87,7 @@ Follow these steps to configure a policy for a configuration profile:
 
 1. Under the **Policy management** pivot, select the profile you want to configure a policy for  
 1. Under the **Policies** pivot, select **Add policy**  
-1. Search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
+1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
 
 #### Assign a configuration profile to an Azure AD group
@@ -99,7 +99,7 @@ Follow these steps to assign a configuration profile to an Azure AD group:
 
 1. Under the **Policy management** pivot, select the profile you want to assign.
 1. Under the **Group assignment** pivot, select **Add group**.
-1. Select the group to assign the profile to.
+1. Under **Select a security group**, select the group to assign the profile to.
 1. Select **Add**. The profile will now be applied to all users in the selected group.
 
 ### Manage extensions
