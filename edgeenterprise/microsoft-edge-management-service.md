@@ -125,6 +125,30 @@ Follow these steps to export extension settings:
 
 After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
 
+#### Manage profile settings for an extension
+
+Follow these steps to manage profile settings:
+
+1. Select a profile and go to the **Extensions** pivot.
+1. Select **Manage profile** to configure any of the settings in the following table.
+
+   | Setting | Description |
+   |:-----|:-----|
+   | Block all extensions | Users can't install any extensions (unless the extension is on the allow list). |
+   | Allowed types of apps and extensions| Specify what types of app or extensions users are allowed to install. |
+   | Install sources| Specify which URLs are allowed to install extensions. For URL pattern examples, see the [Defining match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns). |
+   | External extensions | Allow or block installation of external extensions. |
+   | Message for users when extension is blocked | Set a custom message that displays if users try to install a blocked extension. |
+   | Blocked hosts | Prevent extensions from interacting with or modifying websites that you specify. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
+   | Allowed hosts | Allow extensions to interact with or modify websites, even if they're defined in blocked hosts. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
+   | Block extensions that require these permissions | Prevent users from installing/running extensions that need the permissions you select. |
+
+1. When you're finished configuring extension settings, select **Save**.
+
+#### Add an extension
+
+#### Manage an extension
+
 ## Configure Microsoft Edge to use a configuration profile
 
 placeholder text
