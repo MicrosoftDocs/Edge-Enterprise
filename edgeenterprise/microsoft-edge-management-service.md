@@ -104,7 +104,26 @@ Follow these steps to assign a configuration profile to an Azure AD group:
 
 ### Manage extensions
 
-placeholder text
+To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add the an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
+
+#### Import existing extension settings to an existing configuration profile
+
+Follow these steps to import extension settings:
+
+1. Select the profile you want to import extension settings to and go to the **Extensions** pivot.
+1. Select **Import JSON**.
+1. Under **Import JSON**, browse for the JSON file that contains your extension settings and then select **Import**. Importing might overwrite any previous configurations. Note that it may take some time to complete the import if the file is large.
+
+After confirmation, your profile will be populated with the imported settings.
+
+#### Export extension settings to configure the ExtensionSettings policy
+
+Follow these steps to export extension settings:
+
+1. Select the profile you want to export extension settings from and go to the **Extensions** pivot.
+1. Select **Export JSON** and the export will start downloading.
+
+After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
 
 ## Configure Microsoft Edge to use a configuration profile
 
