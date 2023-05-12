@@ -42,15 +42,12 @@ For more information, see [Set up the Standard or Targeted release options](/mic
 
 Use these steps to access the preview experience:
 
-1. Go to the Microsoft 365 admin center and login.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage) and login.
 1. In the main left navigation bar, go to **Settings** > **Microsoft Edge**.  
 
 ## Get started with configuration profiles
 
-A configuration profile contains all the browser policy configurations, including extension settings. We've expanded configuration profiles to handle all browser policies.
-
-> [!NOTE]
-> If you created a profile to manage your extensions during private preview, then you'll find those configurations in the profile with the same name.
+A configuration profile contains all the browser policy configurations, including extension settings.
 
 Each configuration profile can only be assigned to one Azure Active Directory (Azure AD) group, and each group can only be assigned one configuration profile. However, the group that you select can contain other (nested) groups. If a user is a member of multiple Azure AD groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "1" being the highest priority that you can assign.
 
@@ -58,7 +55,7 @@ Each configuration profile can only be assigned to one Azure Active Directory (A
 
 Follow these steps to create a configuration profile:
 
-1. Under the **Policy management** pivot, select **Add a profile**.  
+1. Under the **Configuration profiles** pivot, select **Add a profile**.  
 1. Under **Add a configuration profile**, enter a profile name and description and then select **Add**.  
 
 After confirmation, you'll be able to go to the profile and configure the policies and extensions you want to use.
@@ -67,7 +64,7 @@ After confirmation, you'll be able to go to the profile and configure the polici
 
 Follow these steps to copy a configuration profile:
 
-1. Under the **Policy management** pivot, select the profile you want to make a copy.
+1. Under the **Configuration profiles** pivot, select the profile you want to make a copy.
 1. Select **Copy profile**.
 1. Under **Copy configuration profile**, enter a profile name and description and then select **Add**.
 
@@ -77,15 +74,15 @@ After confirmation, the new profile is created with the same configurations as t
 
 Follow these steps to reorder the priority of a configuration profile:
 
-1. Under the **Policy management** pivot, select **Reorder priority**  
-1. Select a profile to change and under **Reorder profile priority**, pick a priority number from the dropdown list.  
+1. Under the **Configuration profiles** pivot, select the profile you want to change and select  **Reorder priority**.
+1. Under **Reorder profile priority**, pick a priority number from the dropdown list.
 1. Select **Save** after you finish making your changes.  
 
 #### Configure a policy for a configuration profile
 
 Follow these steps to configure a policy for a configuration profile:
 
-1. Under the **Policy management** pivot, select the profile you want to configure a policy for  
+1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for  
 1. Under the **Policies** pivot, select **Add policy**  
 1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
@@ -97,7 +94,7 @@ Follow these steps to configure a policy for a configuration profile:
 
 Follow these steps to assign a configuration profile to an Azure AD group:
 
-1. Under the **Policy management** pivot, select the profile you want to assign.
+1. Under the **Configuration profiles** pivot, select the profile you want to assign.
 1. Under the **Group assignment** pivot, select **Add group**.
 1. Under **Select a security group**, select the group to assign the profile to.
 1. Select **Add**. The profile will now be applied to all users in the selected group.
@@ -238,7 +235,7 @@ If you don't want to assign the profile using group assignment in the Microsoft 
 Use these steps as a guide for setting an enrollment token:
 
 1. Repeat the previous steps to enable EAC.
-1. Log in to the Microsoft 365 Admin Center. Go to **Settings**> **Org settings** > **Microsoft Edge site lists**. Under the **Policy management** pivot, go to the profile you want to assign.
+1. Log in to the Microsoft 365 Admin Center. Go to **Settings**> **Org settings** > **Microsoft Edge site lists**. Under the **Configuration profiles** pivot, go to the profile you want to assign.
 1. Under the **Group assignment** pivot, copy the Profile ID.
 1. Set the [EdgeAdminCenterEnrollmentToken] policy value to the profile ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
 
