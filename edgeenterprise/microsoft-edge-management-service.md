@@ -147,7 +147,67 @@ Follow these steps to manage profile settings:
 
 #### Add an extension
 
+Follow these steps to add an extension:
+
+1. Select a profile and go to the **Extensions** pivot.
+1. Select **Add extension**.
+1. Under **Add an extension**, select an extension from the **Microsoft Edge Add-ons** store or specify an external extension ID.
+1. Select **Add**.
+
 #### Manage an extension
+
+After adding an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
+
+##### Manage extension policy
+
+Decide if an extension is allowed, blocked, or forced by setting its installation policy. Follow these steps to configure this setting:
+
+1. Select an extension.
+1. Select **Manage installation policy** and choose one of the following options from the dropdown list:
+
+   - Allow: Users can install the extension. This is the default setting.
+   - Block: Users can't install the extension. You could remove the extension if users previously installed it. Also, you can write a message that displays when users try to install the extension.
+   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+
+1. Select **Save**.
+
+##### Manage hosts
+
+Control what websites extensions can access. Prevent extensions from altering web pages by specifying which URLs should block extensions from making changes or reading data from. Allow extensions to interact with or modify websites, even if they're defined in blocked hosts. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. Follow these steps to configure this setting:
+
+1. Select an extension.
+1. Select **Manage hosts**. In the **Hosts** window, specify blocked and allowed host URLs.
+1. Select **Save**.
+
+##### Manage permissions
+
+Prevent users from installing and using the extension if it requires certain permissions that your organization doesn't allow. Follow these steps to configure this setting:
+
+1. Select an extension.
+1. Select **Manage permissions**. You can choose to use the default permissions that were defined in the profile settings or change these permissions. Use the **Permissions** window to allow all permissions, or customize permissions by choosing certain permissions that aren't allowed.
+1. Select **Save**.
+
+##### Edit minimum version
+
+Specify the minimum version required for the extension. The extension will be disabled if it's a version older than what's specified, even if its installation policy is forced. The format of the version string is the same as the one used in the extension manifest. Follow these steps to configure this setting:
+
+1. Select an extension.
+1. Select **Edit minimum version**. In the **Minimum version required** window, enter the minimum version in the textbox.
+1. Select **Save**.
+
+##### Manage toolbar state
+
+Choose how an extension is displayed in the toolbar. Follow these steps to configure this setting:
+
+1. Select an extension.
+1. Choose one of the following options:
+
+   - Hidden: This is the default setting.
+   - Shown: Show the extension on installation. Users can hide it from the toolbar.
+   - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
+
+1. Select **Save**.
 
 ## Configure Microsoft Edge to use a configuration profile
 
