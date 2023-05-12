@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: arunesh.chandra
-ms.date: 05/10/2023
+ms.date: 05/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -248,6 +248,34 @@ Use these steps as a guide for setting an enrollment token:
 
 1. If Microsoft Edge is open, restart it.
 
+#### Control policy source precedence
+
+As stated previously, if policy is set in MDM or GPM, that value will override any value provided by EAC. If you want the EAC policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry. You must use Edge Canary 114.0.1823.0.
+
+> [!IMPORTANT]
+> This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
+
+Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your profile ID and restart Microsoft Edge if it's open.
+
+```
+reg add HKLM\Software\Policies\Microsoft\Edge /v CloudPolicyOverridesPlatformPolicy /t REG_ DWORD /d 1 
+```
+
+#### Control user/device policy precedence
+
+Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In EAC the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeAdminCenterEnrollmentToken] is applied as Device Policy.
+
+If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [CloudUserPolicyOverridesCloudMachinePolicy] policy. You must use Edge Canary 114.0.1823.0.
+
+
+> [!IMPORTANT]
+> This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
+
+Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your profile ID and restart Microsoft Edge if it's open.
+
+```
+reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
+```
 
 ## Feedback and support
 
