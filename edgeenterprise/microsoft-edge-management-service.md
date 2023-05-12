@@ -82,8 +82,8 @@ Follow these steps to reorder the priority of a configuration profile:
 
 Follow these steps to configure a policy for a configuration profile:
 
-1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for  
-1. Under the **Policies** pivot, select **Add policy**  
+1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for.  
+1. Under the **Policies** pivot, select **Add policy**. 
 1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
 
