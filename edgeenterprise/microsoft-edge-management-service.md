@@ -201,7 +201,7 @@ Specify the minimum version required for the extension. The extension will be di
 Choose how an extension is displayed in the toolbar. Follow these steps to configure this setting:
 
 1. Select an extension.
-1. Choose one of the following options:
+1. Under **Toolbar state**, choose one of the following options:
 
    - Hidden: This is the default setting.
    - Shown: Show the extension on installation. Users can hide it from the toolbar.
