@@ -211,15 +211,43 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
 
 ## Configure Microsoft Edge to use a configuration profile
 
-placeholder text
+After configuring a profile, the next step is to assign the profile.  
+
+> [!NOTE]
+> Any policies you apply with Edge Admin Center (EAC) will be overridden if they conflict with an existing Group Policy Object (GOP) or Mobile Device Management (MDM) policy that's set on the device.
 
 ### Enable the Edge Admin Center
 
-placeholder text
+Use the following steps as a guide to enable the Edge Admin Center (EAC).
+
+1. Enable [EdgeAdminCenter] by setting the [EdgeAdminCenterEnabled] policy to 1 and the [EdgeAdminCenterUseOCPSEndpoint] policy to 1. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
+
+   ```
+   reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterEnabled /t REG_DWORD /d 1
+   reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterUseOCPSEndpoint /t REG_DWORD /d 1
+   ```
+
+1. If Microsoft Edge is open, restart it.
+
+If  MIcrosoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see Assign a configuration profile to an Azure Active Directory group.
 
 ### Set an enrollment token
 
-placeholder text
+If you don't want to assign the profile using group assignment in the Microsoft 365 Admin Center, then you can assign it through group policy. Each profile has a unique profile ID which is the value you can use for the [EdgeAdminCenterEnrollmentToken] policy to assign the profile. After assignment, the users will receive the profile and the settings will be applied when they're signed into the Edge browser. These policies will be applied in addition to any from group assignment in the Microsoft 365 Admin Center.
+
+Use these steps as a guide for setting an enrollment token:
+
+1. Repeat the previous steps to enable EAC.
+1. Log in to the Microsoft 365 Admin Center. Go to **Settings**> **Org settings** > **Microsoft Edge site lists**. Under the **Policy management** pivot, go to the profile you want to assign.
+1. Under the **Group assignment** pivot, copy the Profile ID.
+1. Set the [EdgeAdminCenterEnrollmentToken] policy value to the profile ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
+
+    ```
+    reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterEnrollmentToken /t REG_SZ /d 1bba4530-7d23-4512-acda-89248f8e3d47 
+    ```
+
+1. If Microsoft Edge is open, restart it.
+
 
 ## Feedback and support
 
