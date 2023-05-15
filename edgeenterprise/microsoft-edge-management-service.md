@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: arunesh.chandra
-ms.date: 05/12/2023
+ms.date: 05/15/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -101,7 +101,7 @@ Follow these steps to assign a configuration profile to an Azure AD group:
 
 ### Manage extensions
 
-To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add the an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
+To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
 
 #### Import existing extension settings to an existing configuration profile
 
@@ -122,12 +122,12 @@ Follow these steps to export extension settings:
 
 After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
 
-#### Manage profile settings for an extension
+#### Manage settings for all extensions
 
 Follow these steps to manage profile settings:
 
 1. Select a profile and go to the **Extensions** pivot.
-1. Select **Manage profile** to configure any of the settings in the following table.
+1. Select **Manage extensions** to configure any of the settings in the following table.
 
    | Setting | Description |
    |:-----|:-----|
@@ -205,6 +205,18 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
    - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
 
 1. Select **Save**.
+
+#### Manage sidebar apps
+
+To manage sidebar apps for a profile, go to the profile and navigate to the **Extensions** pivot. You can allow, block, or force enable specific sidebar apps.
+
+Use the following steps to manage sidebar apps:
+
+1. Select **Add extension**.
+1. Under **Add an extension**, navigate to the **Sidebar apps** pivot and select an app.
+1. Select **Add**.
+
+After adding a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
 ## Configure Microsoft Edge to use a configuration profile
 
