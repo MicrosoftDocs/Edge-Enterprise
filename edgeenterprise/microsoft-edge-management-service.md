@@ -238,7 +238,7 @@ Use the following steps as a guide to enable the Edge Admin Center (EAC).
 
 1. If Microsoft Edge is open, restart it.
 
-If  MIcrosoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see Assign a configuration profile to an Azure Active Directory group.
+If  MIcrosoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Azure AD group](#assign-a-configuration-profile-to-an-azure-ad-group) group.
 
 ### Set an enrollment token
 
