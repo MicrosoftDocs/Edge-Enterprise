@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/08/2023
+ms.date: 05/12/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -403,6 +403,7 @@ These tables list all of the browser-related group policies available in this re
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
+|[DefaultBrowserSettingsCampaignEnabled](#defaultbrowsersettingscampaignenabled)|Enables default browser settings campaigns|
 |[DefaultClipboardSetting](#defaultclipboardsetting)|Default clipboard site permission|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Allow default search provider context menu search access|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Default sensors setting|
@@ -18422,6 +18423,62 @@ Note for Windows administrators: This policy only works for PCs running Windows 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefaultBrowserSettingsCampaignEnabled
+
+  #### Enables default browser settings campaigns
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 113 or later
+
+  #### Description
+
+  This policy enables the default browser settings campaign. If a user clicks to accept the campaign, their default browser and/or default search engine will be changed to Microsoft Edge and Microsoft Bing, respectively. If the user dismisses the campaign, the user's browser settings will remain unchanged.
+
+If you enable or don't configure this policy, users will be prompted to set Microsoft Edge as the default browser and Microsoft Bing as the default search engine, if they do not have those browser settings.
+
+If you disable this policy, users will not be prompted to set Microsoft Edge as the default browser, or to set Microsoft Bing as the default search engine.
+
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultBrowserSettingsCampaignEnabled
+  - GP name: Enables default browser settings campaigns
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultBrowserSettingsCampaignEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DefaultClipboardSetting
 
   #### Default clipboard site permission
@@ -20949,7 +21006,7 @@ If you disable this policy, Microsoft Edge will not enforce constraints encoded 
 
 This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
 
-This policy is planned to be removed in Microsoft Edge version 115.
+This policy is planned to be removed in Microsoft Edge version 118.
 
   #### Supported features:
 
