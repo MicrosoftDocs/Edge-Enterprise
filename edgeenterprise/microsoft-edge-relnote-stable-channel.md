@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 04/27/2023
+ms.date: 05/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,48 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 113.0.1774.42: May 11, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 112.0.1722.77: May 9, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 113.0.1774.35: May 5, 2023
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-5-2023).
+
+### Feature update
+
+- **Improvements to enhanced security mode.**  Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  In this release updates include consolidating the security level settings to Balanced and Strict mode.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS**. Microsoft Edge for macOS will start using a new updater named EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft Autoupdate to prevent browser updates, you will need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates. For more information, see [Microsoft Edge for macOS switches from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
+
+- **New policy for PDF View Settings.** The [RestorePdfView](/deployedge/microsoft-edge-policies#restorepdfview) policy lets Admins control PDF View Recovery in Microsoft Edge.  When enabled or if the policy isn't configured, Microsoft Edge will recover the last state of PDF view and land users on the section where they ended reading in the last session.
+
+- **Updated Microsoft Root Store policy.** The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy will now be supported in Microsoft Edge version 113 and 114.  It will be removed in Microsoft Edge version 115.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).
+
+### Policy updates
+
+#### New policies
+
+- [DiscoverPageContextEnabled](/DeployEdge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles
+- [DefaultBrowserSettingsCampaignEnabled](/DeployEdge/microsoft-edge-policies#DefaultBrowserSettingsCampaignEnabled) - Enables default browser settings campaigns
+- [EnforceLocalAnchorConstraintsEnabled](/DeployEdge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) - Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store
+- [RestorePdfView](/DeployEdge/microsoft-edge-policies#restorepdfview) - Restore PDF view
+- [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+- [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
+
+## Version 112.0.1722.71: May 4, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 112.0.1722.68: May 1, 2023
+
+Fixed various bugs and performance issues.
 
 ## Version 112.0.1722.64: April 27, 2023
 
@@ -195,82 +237,7 @@ Fixed various bugs and performance issues for Stable and Extended Stable release
 
 Fixed various bugs and performance issues.
 
-## Version 110.0.1587.41: February 9, 2023
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-9-2023).
-
-### Feature updates
-
-- **New Immersive Reader policies.** Immersive Reader in Microsoft Edge simplifies web page layouts, removes clutter, and helps you customize your reading experience. Using these new policies ([ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#immersivereadergrammartoolsenabled) and [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled)), administrators can control the availability of Grammar Tools and Picture Dictionary features within Immersive Reader.
-
-- **Enabling sync for Azure Active Directory signed in customers.** Microsoft Edge sync roams data across all signed in instances of Microsoft Edge. This data includes favorites, passwords, browsing history, open tabs, settings, apps, collections, and extensions.  For Azure Active Directory users who have sync turned off, after the browser is launched they'll see a notification prompt and have sync turned on for all signed in instances of Microsoft Edge. This sync enablement includes other devices where they're signed in. Additionally, if a user's other devices don't have history and open tabs sync on, those two toggles will be turned on. Organizations using the [SyncDisabled](/deployedge/microsoft-edge-policies#syncdisabled) policy won't be affected by this change.
-
-- **Drop.** Microsoft Edge now offers a simple way to send files and notes across all your signed in mobile and desktop devices. Using the desktop version of Microsoft Edge, Drop can be managed through the sidebar (*edge://settings/sidebar*).  Administrators can control the availability of Drop using the [EdgeEDropEnabled](/deployedge/microsoft-edge-policies#edgeedropenabled) policy.
-
-### Policy updates
-
-#### New policies
-
-- [AutofillMembershipsEnabled](/DeployEdge/microsoft-edge-policies#autofillmembershipsenabled) - Save and fill memberships
-- [ImmersiveReaderGrammarToolsEnabled](/DeployEdge/microsoft-edge-policies#immersivereadergrammartoolsenabled) - Enable Grammar Tools feature within Immersive Reader in Microsoft Edge
-- [ImmersiveReaderPictureDictionaryEnabled](/DeployEdge/microsoft-edge-policies#immersivereaderpicturedictionaryenabled) - Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge
-- [PrintPreviewStickySettings](/DeployEdge/microsoft-edge-policies#printpreviewstickysettings) - Configure the sticky print preview settings
-- [SearchInSidebarEnabled](/DeployEdge/microsoft-edge-policies#searchinsidebarenabled) - Search in Sidebar enabled
-- [WorkspacesNavigationSettings](/DeployEdge/microsoft-edge-policies#workspacesnavigationsettings) - Configure navigation settings per groups of URLs in Microsoft Edge Workspaces
-
-#### Obsoleted policies
-
-- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) - Specifies whether the display-capture permissions-policy is checked or skipped
-- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/DeployEdge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains
-- [SetTimeoutWithout1MsClampEnabled](/DeployEdge/microsoft-edge-policies#settimeoutwithout1msclampenabled) - Control Javascript setTimeout() function minimum timeout
-- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Configure ShadowStack crash rollback behavior
-
-## Version 109.0.1518.78: February 2, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-2-2023).
-
-## Version 109.0.1518.70: January 26, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-26-2023).
-
-## Version 108.0.1462.95: January 26, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-26-2023).
-
-## Version 109.0.1518.69: January 25, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 109.0.1518.61: January 19, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-19-2023).
-
-## Version 108.0.1462.87: January 15, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 109.0.1518.55: January 15, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 109.0.1518.52: January 13, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-13-2023).
-
-## Version 108.0.1462.83: January 12, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
+<!-- from Version Version 110.0.1587.41: February 9, 2023 to Version 108.0.1462.83: January 12, 2023 -->
 <!-- from Version 109.0.1518.49: January 12, 2023 to Version 108.0.1462.46: December 8, 2022 -->
 <!-- from Version 108.0.1462.42: December 5, 2022 to Version 106.0.1370.59: October 27, 2022 -->
 <!--- from Version 107.0.1418.24: October 27, 2022 to Version 106.0.1370.37: October 6, 2022 -->
