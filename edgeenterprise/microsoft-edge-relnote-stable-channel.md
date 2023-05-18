@@ -52,7 +52,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Feature update
 
-- **Improvements to downloads security.**Microsoft Edge now has the capability to scan archives (.zip, .rar, .7z) for any malwares using Microsoft Defender SmartScreen. This functionality is currently available on Windows only and provides extra protection where known malwares were being distributed within these archives.
+- **Improvements to downloads security.** Microsoft Edge now has the capability to scan archives (.zip, .rar, .7z) for any malwares using Microsoft Defender SmartScreen. This functionality is currently available on Windows only and provides extra protection where known malwares were being distributed within these archives.
 
 - **Improvements to enhanced security mode.**  Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  In this release updates include consolidating the security level settings to Balanced and Strict mode.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
