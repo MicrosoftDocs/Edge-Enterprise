@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge for Business"
-ms.author: arunesh.chandra
+ms.author: archandr
 author: dan-wesley
 manager: likuba
 ms.date: 05/19/2023
@@ -22,6 +22,7 @@ This article describes the benefits that Microsoft Edge for Business will bring 
 ## Introduction
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
+
 This preview experience encompasses the features summarized in the following table.
 
 | Name | Description | Status |
@@ -77,7 +78,7 @@ There are 2 ways to change switching:
 - Use the following Omnibar Switching icon to switch back to the preferred profile. This action will make the browser remember your choice for that URL.
 - Go to *edge://settings/profiles/multiProfileSettings* and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
-### Does the switching preference sync across other Edge channels?
+### Does the switching preference sync across other Microsoft Edge channels?
 
 No, currently it does not. You will have to make switching preferences on each channel separately.  
 
