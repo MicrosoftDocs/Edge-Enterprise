@@ -76,7 +76,12 @@ Your feedback while using Microsoft Edge for Business is valuable because it hel
 There are 2 ways to change switching:
 
 - Use the following Omnibar Switching icon to switch back to the preferred profile. This action will make the browser remember your choice for that URL.
+
+  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon.png)
+
 - Go to *edge://settings/profiles/multiProfileSettings* and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
+
+ ![Choose preferred browser for sites.](media/microsoft-edge-for-business/preferred-browser-for-sites.png)
 
 ### Does the switching preference sync across other Microsoft Edge channels?
 
