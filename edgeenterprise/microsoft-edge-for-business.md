@@ -102,10 +102,14 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
+The early preview will provide switching for the following sites:
+
 - Amazon
 - BestBuy
 - Target
 - Walmart
+
+Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that will automatically open in the personal browser window as the experience continues to expand.
 
 ### How can users control which browser window a website will open in?
 
