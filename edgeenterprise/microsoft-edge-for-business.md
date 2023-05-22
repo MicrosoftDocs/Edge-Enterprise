@@ -44,6 +44,7 @@ The early preview includes some visual treatments for the work profile, a lightl
 To enable the early preview, users need to use Microsoft Edge version 112 or higher.
 
 Users can enable different aspects of the early preview with the following flags:
+
 - *edge://flags/#edge-project-kodiak* (overall experience)
 - *edge://flags/#edge-project-kodiak-look-and-feel* (work browser visual treatment)
 - *edge://flags/#edge-project-kodiak-policy-filter* (lightly managed personal profile)
@@ -51,7 +52,7 @@ Users can enable different aspects of the early preview with the following flags
 
 ## The Microsoft Edge for Business user experience
 
-Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
+Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup, the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
 
 ### Enable personal browsing for users
 
