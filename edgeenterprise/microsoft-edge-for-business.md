@@ -100,7 +100,7 @@ There are two ways to change which browser window is used to open a website: 
 
 No, currently it doesn't. You have to make switching preferences on each channel separately.  
 
-### What sites does it switch on?
+### What sites does the browser window switch on?
 
 - Amazon
 - BestBuy
