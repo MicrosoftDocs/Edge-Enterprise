@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: arunesh.chandra
-ms.date: 05/15/2023
+ms.date: 05/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
