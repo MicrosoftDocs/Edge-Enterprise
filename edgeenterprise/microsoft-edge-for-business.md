@@ -52,7 +52,7 @@ Users can enable different aspects of the early preview with the following flags
 
 ## The Microsoft Edge for Business user experience
 
-Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup, the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
+Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup, the user can start browsing as normal. Work related sites such as sites that need a user's work sign-in and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
 
 ### Enable personal browsing for users
 
@@ -99,7 +99,7 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
-### Will favorites, history, and passwords be shared between the Edge for Business and personal browser windows?
+### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
 No – browser favorites, history, and passwords won't be shared between the browser windows.
 
