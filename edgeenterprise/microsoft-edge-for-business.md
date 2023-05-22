@@ -33,7 +33,7 @@ This preview experience encompasses the features summarized in the following tab
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
 |  Company branding   |  Increase familiarity and trust with company branding.    |  Coming soon     |
 
-You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory (AAD) account. This ensures that all your M365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*.  The next section has more information about flags you can use to enable different aspects of this experience.
+You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory account. This ensures that all your Microsoft 365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*.  The next section has more information about flags you can use to enable different aspects of this experience.
 
 [Insert video from Build]
 
@@ -51,7 +51,7 @@ Users can enable different aspects of the early preview with the following flags
 
 ## The Microsoft Edge for Business user experience
 
-Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time set up the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
+Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
 
 ### Enable personal browsing for users
 
@@ -73,7 +73,7 @@ Your feedback while using Microsoft Edge for Business is valuable because it hel
 
 ### How can I correct the wrong switching decision made by the browser?
 
-There are 2 ways to change switching:
+There are two ways to change switching:
 
 - Use the following Omnibar Switching icon to switch back to the preferred profile. This action will make the browser remember your choice for that URL.
 
@@ -85,7 +85,7 @@ There are 2 ways to change switching:
 
 ### Does the switching preference sync across other Microsoft Edge channels?
 
-No, currently it does not. You have to make switching preferences on each channel separately.  
+No, currently it doesn't. You have to make switching preferences on each channel separately.  
 
 ### What sites does it switch on?
 
@@ -100,7 +100,7 @@ The option to manage how sites open appears in the browsing window that opens fo
 
 ### Will favorites, history, and passwords be shared between the Edge for Business and personal browser windows?
 
-No – browser favorites, history, and passwords will not be shared between the browser windows.
+No – browser favorites, history, and passwords won't be shared between the browser windows.
 
 ## See also
 
