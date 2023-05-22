@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 02/22/2023
+ms.date: 05/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,6 +16,33 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
+<!-- Version Version 109.0.1518.58: January 18, 2023 to Version 108.0.1462.45: December 8, 2022  -->
+## Version 109.0.1518.58: January 18, 2023
+
+Fixed various bugs and performance issues for Android.
+
+> [!NOTE]
+> Release version 109 supports more than 30 policies. For more information, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
+
+## Version 108.0.1462.77: January 6, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 108.0.1462.62: December 21, 2022
+
+Fixed various bugs and performance issues.
+
+## Version 108.0.1462.48: December 12, 2022
+
+Fixed various bugs and performance issues for Android.
+
+## Version 108.0.1462.45: December 8, 2022
+
+Fixed various bugs for Android.
+
+### Feature updates
+
+- **Support Shared Device Mode (Android only).** Starting with Microsoft Edge 108 for Android, shared device mode will be supported as public preview. For more information, see [Microsoft applications that support shared device mode](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode).
 
 ## Version 108.0.1462.43: December 7, 2022
 
@@ -104,5 +131,5 @@ Fixed various bugs.
 - **Read Aloud: background play and play in silent mode (iOS and Android)**
   - When playing in the background, users can control Read Aloud (pause, resume, play forwards, or play backwards) via the notification panel and lock screen.
   - When a user switches tabs in Microsoft Edge while using Read Aloud, they can use a floating control bar to pause, resume, or close Read Aloud.
-  - When a device’s silent toggle is on, it doesn’t affect Read Aloud playback as long as media volume is turned up.
+  - When a device's silent toggle is on, it doesn't affect Read Aloud playback as long as media volume is turned up.
   
