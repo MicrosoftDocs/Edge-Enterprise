@@ -14,7 +14,7 @@ description: "Information about Microsoft Edge for Business Preview"
 
 # Microsoft Edge for Business (Early Preview)
 
-This article describes the benefits that Microsoft Edge for Business will bring to your users and explains how to enable this feature and its functions in your organization.
+This article describes the benefits that Microsoft Edge for Business brings to your users and explains how to enable this feature and its functions in your organization.
 
 > [!NOTE]
 > This is a preview feature. Preview features or services are in development and are available as a preview so you can get early access and send us feedback.
@@ -39,9 +39,10 @@ You enable Microsoft Edge for Business by logging into the browser using your Az
 
 ## About this early preview
 
-The early preview will include some visual treatments for the work profile, a lightly managed personal profile, and automatic switching between work and personal profiles for a limited number of websites.
+The early preview includes some visual treatments for the work profile, a lightly managed personal profile, and automatic switching between work and personal profiles for a limited number of websites.
 
 To enable the early preview, users need to use Microsoft Edge version 112 or higher.
+
 Users can enable different aspects of the early preview with the following flags:
 - *edge://flags/#edge-project-kodiak* (overall experience)
 - *edge://flags/#edge-project-kodiak-look-and-feel* (work browser visual treatment)
@@ -50,11 +51,11 @@ Users can enable different aspects of the early preview with the following flags
 
 ## The Microsoft Edge for Business user experience
 
-Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time set up the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, will automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
+Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time set up the user can start browsing as normal. Work related sites such as sites that need a user's work login and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
 
 ### Enable personal browsing for users
 
-The personal browsing option will be enabled by default, and users will have the option to create a personal browser profile. You can turn off the personal profile with a policy that prevents Microsoft Edge from creating a new profile. If you've already configured this policy, then the personal browsing option will not be available to your users.
+The personal browsing option is enabled by default, and users have the option to create a personal browser profile. You can turn off the personal profile with a policy that prevents Microsoft Edge from creating a new profile. If you've already configured this policy, then the personal browsing option won't be available to your users.
 
 ### Enable automatic switching for users
 
