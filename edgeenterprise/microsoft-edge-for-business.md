@@ -17,23 +17,27 @@ description: "Information about Microsoft Edge for Business Preview"
 This article describes the benefits that Microsoft Edge for Business brings to your users and explains how to enable this feature and its functions in your organization.
 
 > [!NOTE]
-> This is a preview feature. Preview features or services are in development and are available as a preview so you can get early access and send us feedback.
+> Edge for Business is available in early preview. Preview features and experiences are in development and are available so you can get early access and send us feedback.
 
 ## Introduction
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-This preview experience encompasses the features summarized in the following table.
+Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (AAD) login, upon general availability. Learn more about Microsoft Edge for Business.  
+
+Microsoft Edge for Business is in preview today on managed devices, and available in private preview for unmanaged BYOPC devices.  
+
+This preview encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-|  Separation of work and personal profiles    |  Easily separate between visually different work and lightly managed personal profiles for better productivity and security.    |  Early preview <br> (See following instructions)   |
-|  Automatic profile switching    |  Maintain seamless work and personal context separation automatically based on browsing patterns.   |  Early preview <br> (See following Instructions)     |
-|  Enterprise controls    | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available     |
+|  Separation of work and personal browser windows  |  Easily distinguish between work and personal browser windows through visual elements and feature availability.    |  Early preview <br> (See following instructions)   |
+|  Automatic switching between work and personal browser windows |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Early preview <br> (See following instructions)     |
+|  Company branding within the work browser window  |  Increase familiarity and trust with company branding.  |  Coming soon     |
+|  Enterprise controls on managed devices   | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available<br>(Same as non-preview)     |
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
-|  Company branding   |  Increase familiarity and trust with company branding.    |  Coming soon     |
 
-You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory account. This login ensures that all your Microsoft 365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
+Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
 
 [Insert video from Build]
 
