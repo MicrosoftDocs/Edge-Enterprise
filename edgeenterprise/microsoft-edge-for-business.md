@@ -27,10 +27,10 @@ This preview experience encompasses the features summarized in the following tab
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-|  Separation of work and personal profiles    |  Easily separate between visually different work and lightly managed personal profiles for better productivity and security.    |  Early preview <br> (Instructions below)   |
-|  Automatic profile switching    |  Maintain seamless work and personal context separation automatically based on browsing patterns.   |  Early preview <br> (Instructions below)     |
+|  Separation of work and personal profiles    |  Easily separate between visually different work and lightly managed personal profiles for better productivity and security.    |  Early preview <br> (See following instructions)   |
+|  Automatic profile switching    |  Maintain seamless work and personal context separation automatically based on browsing patterns.   |  Early preview <br> (See following Instructions)     |
 |  Enterprise controls    | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available     |
-|  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(Onboarding instructions below) |
+|  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
 |  Company branding   |  Increase familiarity and trust with company branding.    |  Coming soon     |
 
 You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory (AAD) account. This ensures that all your M365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*.  The next section has more information about flags you can use to enable different aspects of this experience.
@@ -85,7 +85,7 @@ There are 2 ways to change switching:
 
 ### Does the switching preference sync across other Microsoft Edge channels?
 
-No, currently it does not. You will have to make switching preferences on each channel separately.  
+No, currently it does not. You have to make switching preferences on each channel separately.  
 
 ### What sites does it switch on?
 
@@ -96,7 +96,7 @@ No, currently it does not. You will have to make switching preferences on each c
 
 ### How can users control which browser window a website will open in?
 
-The option to manage how sites open will appear in the browsing window that opens following the selection to open the URL in a different browser. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
+The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
 ### Will favorites, history, and passwords be shared between the Edge for Business and personal browser windows?
 
