@@ -33,7 +33,7 @@ This preview experience encompasses the features summarized in the following tab
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
 |  Company branding   |  Increase familiarity and trust with company branding.    |  Coming soon     |
 
-You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory account. This ensures that all your Microsoft 365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*.  The next section has more information about flags you can use to enable different aspects of this experience.
+You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory account. This login ensures that all your Microsoft 365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
 
 [Insert video from Build]
 
