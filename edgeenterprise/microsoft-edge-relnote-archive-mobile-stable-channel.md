@@ -16,7 +16,7 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
-<!-- Version Version 109.0.1518.58: January 18, 2023 to Version 108.0.1462.45: December 8, 2022  -->
+<!-- Version 109.0.1518.58: January 18, 2023 to Version 108.0.1462.45: December 8, 2022  -->
 ## Version 109.0.1518.58: January 18, 2023
 
 Fixed various bugs and performance issues for Android.
