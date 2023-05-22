@@ -37,58 +37,68 @@ This preview encompasses the experiences summarized in the following table.
 |  Enterprise controls on managed devices   | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available<br>(Same as non-preview)     |
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
 
-Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
+Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
 
 [Insert video from Build]
 
 ## About this early preview
 
-The early preview includes some visual treatments for the work profile, a lightly managed personal profile, and automatic switching between work and personal profiles for a limited number of websites.
+The early preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
 
-To enable the early preview, users need to use Microsoft Edge version 112 or higher.
+The lightly managed personal browser window will have the same security and compliance posture as Microsoft Edge for Business, with the same security, compliance and update policy. All the other work specific policies will only apply to Microsoft Edge for Business (Azure AD profile).
 
-Users can enable different aspects of the early preview with the following flags:
+Edge for Business is available in early preview on managed devices on Microsoft Edge version 112 or later. To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
 
-- *edge://flags/#edge-project-kodiak* (overall experience)
-- *edge://flags/#edge-project-kodiak-look-and-feel* (work browser visual treatment)
-- *edge://flags/#edge-project-kodiak-policy-filter* (lightly managed personal profile)
-- *edge://flags/#edge-automatic-profile-switching* (automatic switching)
+- *edge://flags/#edge-project-kodiak*
+- *edge://flags/#edge-project-kodiak-look-and-feel*
+- *edge://flags/#edge-project-kodiak-policy-filter*
+- *edge://flags/#edge-automatic-profile-switching*
 
-## The Microsoft Edge for Business user experience
+> [!NOTE]
+>
+> - Users must have a new or existing personal profile to use the personal browser window capability.
+> - Edge for Business visual treatment and branding is not currently available on mobile as part of the preview.
+> - IT admin management capabilities will be available soon.
 
-Configuring and activating the user experience is straight forward and easy to do. First, the user opens Microsoft Edge on a work device to launch Microsoft Edge for Business. The next step is to enable the personal browser window in the profile flyout. After this one-time setup, the user can start browsing as normal. Work related sites such as sites that need a user's work sign-in and Microsoft 365 apps and services, automatically open in the work browser window. A growing set of popular sites will automatically open in the personal browser window.
+### Unmanaged BYOPC preview
 
-### Enable personal browsing for users
+> [!NOTE]
+> This preview requires tenant onboarding.
 
-The personal browsing option is enabled by default, and users have the option to create a personal browser profile. You can turn off the personal profile with a policy that prevents Microsoft Edge from creating a new profile. If you've already configured this policy, then the personal browsing option won't be available to your users.
+To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
-### Enable automatic switching for users
+- Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
+- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
+- Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure Active Directory (Azure AD).
 
-Automatic switching is enabled by default. There will be a separate automatic switching policy that can be disabled.
+Participation requirements:
 
-## Security and Compliance
+- Access to a test enterprise tenant for validation.
+- Provide ongoing feedback about your experience with preview features via our Teams channel.
+- Complete Validation scenarios and provide your feedback.
+- Engage with the Microsoft product group during the preview.
 
-The personal browser will have the same security and compliance posture as Microsoft Edge for Business. Controls for security and compliance will remain with IT, whether the user has Microsoft Edge for Business or the personal browser open.
+> [!IMPORTANT]
+> Production use of the private preview is not supported. Migration of private preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
 
 ## Provide feedback
 
-Your feedback while using Microsoft Edge for Business is valuable because it helps us improve the product! You can leave feedback by (?)
+Your feedback while using Microsoft Edge for Business is valuable and it helps us improve the product! Please provide feedback at [http://microsoftedgeinsider.com/](http://microsoftedgeinsider.com/).
 
 ## Frequently Asked Questions
 
-### How can I correct the wrong switching decision made by the browser?
+### How can I correct a wrong browser window decision made by the browser?
 
-There are two ways to change switching:
+There are two ways to change which browser window is used to open a website:  
 
-- Use the following Omnibar Switching icon to switch back to the preferred profile. This action will make the browser remember your choice for that URL.
+- Use the following Omnibar Switching icon to switch back to the preferred browser window. This action will make the browser remember your choice for that URL.
 
   ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon.png)
 
 - Go to *edge://settings/profiles/multiProfileSettings* and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
- ![Choose preferred browser for sites.](media/microsoft-edge-for-business/preferred-browser-for-sites.png)
-
-### Does the switching preference sync across other Microsoft Edge channels?
+### Does the browser window switching preference sync across other Microsoft Edge channels?
 
 No, currently it doesn't. You have to make switching preferences on each channel separately.  
 
@@ -101,7 +111,7 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### How can users control which browser window a website will open in?
 
-The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
+The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
