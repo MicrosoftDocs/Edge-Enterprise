@@ -2,6 +2,15 @@
 
 
 
+## Week of May 15, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/18/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 5/18/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
 ## Week of May 08, 2023
 
 
@@ -47,17 +56,3 @@
 | 4/18/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
 | 4/20/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
 | 4/21/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of April 10, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/11/2023 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
-| 4/11/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 4/11/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
-| 4/12/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 4/13/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 4/13/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 4/14/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
