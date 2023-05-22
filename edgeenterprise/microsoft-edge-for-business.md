@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,8 +30,7 @@ This preview experience encompasses the features summarized in the following tab
 |  Separation of work and personal profiles    |  Easily separate between visually different work and lightly managed personal profiles for better productivity and security.    |  Early preview <br> (Instructions below)   |
 |  Automatic profile switching    |  Maintain seamless work and personal context separation automatically based on browsing patterns.   |  Early preview <br> (Instructions below)     |
 |  Enterprise controls    | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available     |
-|  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>
-(Onboarding instructions below) |
+|  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(Onboarding instructions below) |
 |  Company branding   |  Increase familiarity and trust with company branding.    |  Coming soon     |
 
 You enable Microsoft Edge for Business by logging into the browser using your Azure Active Directory (AAD) account. This ensures that all your M365 services are accessible in your profile. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*.  The next section has more information about flags you can use to enable different aspects of this experience.
