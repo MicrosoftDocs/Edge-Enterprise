@@ -102,7 +102,7 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
-   - name: Microsoft Edge for business
+   - name: Microsoft Edge for Business
      href: microsoft-edge-for-business.md
    - name: Microsoft Edge Workspaces
      href: microsoft-edge-workspaces.md
