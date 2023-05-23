@@ -23,7 +23,7 @@ This article describes the benefits that Microsoft Edge for Business will bring 
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (AAD) login, upon general availability. Learn more about Microsoft Edge for Business.  
+Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (AAD) login, upon general availability. [Learn more](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-ai-productivity-management-sidebar-apps/) about Microsoft Edge for Business.  
 
 Microsoft Edge for Business is in preview today on managed devices, and available in private preview for unmanaged BYOPC devices.  
 
