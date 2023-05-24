@@ -30,7 +30,6 @@ The following table lists the new and deprecated policies that are in this artic
 
 | Policy Name | Caption |
 |:-----|:-----|
-
 |[ComposeInlineEnabled](#composeinlineenabled)| Compose is enabled for writing on the web |
 |[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
 |[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) | Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (DEPRECATED) |
