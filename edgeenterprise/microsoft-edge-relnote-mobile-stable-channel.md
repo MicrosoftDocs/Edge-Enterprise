@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 05/12/2023
+ms.date: 05/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,12 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 113.0.1774.50: May 18, 2023
+
+Fixed various bugs and performance issues.
+
+This release contains several security fixes for Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## Version 113.1774.36: May 8, 2023
 
@@ -81,34 +87,7 @@ Fixed various bugs and performance issues.
 
 This release contains several security fixes for iOS and Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-## Version 109.0.1518.58: January 18, 2023
-
-Fixed various bugs and performance issues for Android.
-
-> [!NOTE]
-> Release version 109 supports more than 30 policies. For more information, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies).
-
-## Version 108.0.1462.77: January 6, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 108.0.1462.62: December 21, 2022
-
-Fixed various bugs and performance issues.
-
-## Version 108.0.1462.48: December 12, 2022
-
-Fixed various bugs and performance issues for Android.
-
-## Version 108.0.1462.45: December 8, 2022
-
-Fixed various bugs for Android.
-
-### Feature updates
-
-- **Support Shared Device Mode (Android only).** Starting with Microsoft Edge 108 for Android, shared device mode will be supported as public preview. For more information, see [Microsoft applications that support shared device mode](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode).
-
-
+<!-- Version Version 109.0.1518.58: January 18, 2023 to Version 108.0.1462.45: December 8, 2022  -->
 <!-- Version 108.0.1462.43: December 7, 2022 to Version 106.0.1370.47: October 17, 2022 -->
 <!-- Version 105.0.1343.38: September 13, 2022 to Version 101.0.1210.32: April 29, 2022 -->
 
