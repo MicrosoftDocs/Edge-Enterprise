@@ -1,4 +1,4 @@
-# last revised 03/16/2023
+# last revised 05/22/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -102,6 +102,8 @@
 # USE ENTERPRISE FEATURES
 - name: Use Microsoft Edge enterprise features 
   items:
+   - name: Microsoft Edge for Business
+     href: microsoft-edge-for-business.md
    - name: Microsoft Edge Workspaces
      href: microsoft-edge-workspaces.md
    - name: Microsoft Edge for Virtual desktop infrastructure 
