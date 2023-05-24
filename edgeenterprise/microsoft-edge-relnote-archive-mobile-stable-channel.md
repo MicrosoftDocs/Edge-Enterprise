@@ -1,5 +1,5 @@
 ---
-title: "Archived release notes for Microsoft Edge Stable Channel"
+title: "Archived - release notes for Microsoft Edge Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 ---
 
-# Archived release notes for Microsoft Edge Mobile Stable Channel
+# Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
