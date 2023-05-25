@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 05/18/2023
+ms.date: 05/25/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,6 +37,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
+
+### Feature update
+
+- **Microsoft recommended browser settings.** This new prompt in Microsoft Edge lets users benefit from the Microsoft recommended settings. This feature gives users the option to set Microsoft Edge as the default browser and/or set Microsoft Bing as the default search engine, if they aren't already selected. If a user accepts the prompt, their default browser is updated to Microsoft Edge, and their default search engine will be updated to Microsoft Bing. Administrators can control the availability of the default browser settings campaign using the [DefaultBrowserSettingsCampaignEnabled](/deployedge/microsoft-edge-policies#defaultbrowsersettingscampaignenabled) policy.
 
 ## Version 113.0.1774.42: May 11, 2023
 
