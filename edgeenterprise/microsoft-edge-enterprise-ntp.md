@@ -18,9 +18,9 @@ The Enterprise new tab page is a direct response to a new challenge that workers
 
 ## The role of the browser
 
-As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Word feed** tab.
+As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Work feed** tab.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Work feed":::
+:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Microsoft 365":::
 
 The dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we’ll highlight some of the top features that can help keep your employees productive.
 
@@ -30,7 +30,7 @@ We’re continuously looking to improve the browser experience so we want to get
 
 ## Microsoft Feed
 
-Microsoft Feed helps you discover and learn about people and interests relevant at work. The feed shows you a mix of content and activity from across Work feed to help you stay connected to your colleagues and informed about what's happening around you.
+Microsoft Feed helps you discover and learn about people and interests relevant at work. The feed shows you a mix of content and activity from across Microsoft 365 to help you stay connected to your colleagues and informed about what's happening around you.
 
 You might, for example, see updates to documents you’re working on with others, links shared with you in Teams chats, suggested tasks to follow up, highlights about colleagues, and much more.
 
@@ -54,7 +54,7 @@ Tired of jumping through hoops to get to your SharePoint sites? Here’s a short
 
 ## My Content
 
-Our research shows that information workers can handle tens, if not hundreds of files over a given week. This volume can get overwhelming when you don’t know where each file is saved or who sent it to you. Select My Content to find the files that are most important to you. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or select **More at Work feed** at the bottom of the list to find more.
+Our research shows that information workers can handle tens, if not hundreds of files over a given week. This volume can get overwhelming when you don’t know where each file is saved or who sent it to you. Select My Content to find the files that are most important to you. Don’t see them here? That’s okay, you can either use our new Work Search features (information later) to look up the file name or the name of the colleague who sent it to you, or select **More at Microsoft 365** at the bottom of the list to find more.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-quick-access-files.png" alt-text="Quick access to files list":::
 
@@ -80,16 +80,18 @@ The new tab page will remember the last tab the user selected, so simply selecti
 
 For tenant admins, if you’d like to have your organization automatically set Work feed as the default tab, follow these steps:
 
-1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
-2. Go to **Org settings** > **News**.
-3. Under **News**, **select Microsoft Edge new tab page**.
-4. Select "Users default to Work feed".
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
+2. Go to **Org settings > News**.
+3. Under **News**, select **Microsoft Edge new tab page**.
+4. *Clear* the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
+5. To re-enable the feature, check the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
+6. To make it a default feed, **Set Users default to Work feed**.
 
 :::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Work feed as default tab":::
 
-## How to disable My Feed or Microsoft feed tabs
+## How to disable My Feed or Work feed tabs
 
-Tenant admins can disable the My Feed or Work feed tabs using the Work feed admin center by following these steps:
+Tenant admins can disable the My Feed or Work feed tabs using the Microsoft 365 admin center by following these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
 2. Go to **Org settings** > **News**.
