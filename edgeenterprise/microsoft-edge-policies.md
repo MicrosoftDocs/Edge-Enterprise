@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/12/2023
+ms.date: 05/24/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,11 +26,13 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[DefaultBrowserSettingsCampaignEnabled](#defaultbrowsersettingscampaignenabled)|Enables default browser settings campaigns|
+|[ComposeInlineEnabled](#composeinlineenabled)| Compose is enabled for writing on the web |
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) | Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (DEPRECATED) |
 
 ## Available policies
 
@@ -399,6 +401,7 @@ These tables list all of the browser-related group policies available in this re
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
+|[ComposeInlineEnabled](#composeinlineenabled)|Compose is enabled for writing on the web|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
@@ -594,6 +597,7 @@ These tables list all of the browser-related group policies available in this re
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
 |[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
@@ -17605,6 +17609,68 @@ Please note that disabling this policy can potentially prevent the Microsoft Edg
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ComposeInlineEnabled
+
+  #### Compose is enabled for writing on the web
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure Compose in Microsoft Edge. Compose provides help for writing with AI-generated text, which lets the user get ideas for writing. This includes elaborating on text, re-writing, changing tone, formatting the text, and more.
+
+If you enable or don't configure this policy, Compose can provide text generation for eligible fields, which are text editable and don't have an autocomplete attribute.
+
+If you disable this policy, Compose will not be able to provide text generation for eligible fields. Compose will still be available for prompt-based text generation through the sidebar and must be managed with either [EdgeDiscoverEnabled](#edgediscoverenabled) policy or [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ComposeInlineEnabled
+  - GP name: Compose is enabled for writing on the web
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ComposeInlineEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ComposeInlineEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ConfigureDoNotTrack
 
   #### Configure Do Not Track
@@ -20985,6 +21051,76 @@ As such, this policy is a temporary measure to control the initial experimental 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnforceLocalAnchorConstraintsEnabled
+
+  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  X.509 certificates may encode constraints, such as Name Constraints, in extensions in the certificate. RFC 5280 specifies that enforcing such constraints on trust anchor certificates is optional.
+
+Starting in Microsoft Edge 112, such constraints in certificates loaded from the platform certificate store will now be enforced.
+
+This policy exists as a temporary opt-out in case an enterprise encounters issues with the constraints encoded in their private roots. In that case this policy may be used to temporarily disable enforcement of the constraints while correcting the certificate issues.
+
+If you enable this policy or don't configure it, Microsoft Edge will enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+If you disable this policy, Microsoft Edge will not enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
+
+This policy is planned to be removed in Microsoft Edge version 118.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnforceLocalAnchorConstraintsEnabled
+  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnforceLocalAnchorConstraintsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnforceLocalAnchorConstraintsEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -30569,6 +30705,68 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
   #### Mac information and settings
 
   - Preference Key Name: SearchFiltersEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SearchForImageEnabled
+
+  #### Search for image enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure the Image Search feature in the right-click context menu.
+
+If you enable or don't configure this policy, then the "Search the web for image" option will be visible in the context menu.
+
+If you disable this policy, then the "Search the web for image" will not be visible in the context menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchForImageEnabled
+  - GP name: Search for image enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchForImageEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SearchForImageEnabled
   - Example value:
 ``` xml
 <true/>
