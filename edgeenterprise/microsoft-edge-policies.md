@@ -22360,7 +22360,7 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
 
   Controls whether user profiles are switched to ephemeral mode. An ephemeral profile is created when a session begins, is deleted when the session ends, and is associated with the user's original profile.
 
-If you enable this policy, profiles run in ephemeral mode. This lets users work from their own devices without saving browsing data to those devices. If you enable this policy as an OS policy (by using GPO on Windows, for example), it applies to every profile on the system.
+If you enable this policy, profiles run in ephemeral mode. This lets users work from their own devices without saving browsing data to those devices. If you enable this policy as an OS policy (by using GPO on Windows, for example), it applies to every profile on the system. Additionally, use of ephemeral profiles negates implicit sign-in functionality. If you enable this policy, user interaction during sign-in is expected.
 
 If you disable this policy or don't configure it, users get their regular profiles when they sign in to the browser.
 
