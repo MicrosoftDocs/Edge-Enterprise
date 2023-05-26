@@ -7043,9 +7043,13 @@ If you don't configure this policy, all four schemes are used.
 
   Specifies which servers to enable for integrated authentication. Integrated authentication is only enabled when Microsoft Edge receives an authentication challenge from a proxy or from a server in this list.
 
-Separate multiple server names with commas. Wildcards (*) are allowed.
+If you enable and configure this policy, Microsoft Edge will no longer attempt to identify whether or not a server is on the intranet.  Instead, only the servers from this list will be eligible for automatic submission of IWA credentials.  
 
-If you don't configure this policy, Microsoft Edge tries to detect if a server is on the intranet - only then will it respond to IWA requests. If the server is on the internet, IWA requests from it are ignored by Microsoft Edge.
+If you disable or don't configure this policy, Microsoft Edge tries to detect if a server is on the intranet before responding to an authentication challenge.  Only those servers identified as being on the intranet will be eligible for automatic submission of IWA credentials.
+
+On Windows operating systems, use of this policy will cause Microsoft Edge to ignore security zone-based hints, such as dotless host names or hosts which bypass a configured proxy server, to identify a server as residing on the intranet.  Those servers which received automatic submission of IWA credentials before implementation of this policy will have to be added to this list to remain eligible.
+
+Separate multiple server name entries with commas.  Wildcards (*) are allowed.
 
   #### Supported features:
 
@@ -7077,7 +7081,7 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
   ##### Example value:
 
 ```
-"*contoso.com,contoso.com"
+"*contoso.com,contoso.com,contoso"
 ```
 
   #### Mac information and settings
@@ -7085,7 +7089,7 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
   - Preference Key Name: AuthServerAllowlist
   - Example value:
 ``` xml
-<string>*contoso.com,contoso.com</string>
+<string>*contoso.com,contoso.com,contoso</string>
 ```
   
 
