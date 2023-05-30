@@ -2,6 +2,16 @@
 
 
 
+## Week of May 22, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/22/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-mobile-stable-channel) | modified |
+| 5/22/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 5/23/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | added |
+
+
 ## Week of May 15, 2023
 
 
@@ -43,16 +53,3 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-
-
-## Week of April 17, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/17/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 4/17/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 4/17/2023 | [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) | modified |
-| 4/18/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 4/20/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
-| 4/21/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
