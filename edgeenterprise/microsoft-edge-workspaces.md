@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 05/03/2023
+ms.date: 05/30/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,9 @@ ms.collection: M365-modern-desktop
 description: "Learn about Microsoft Edge Workspaces and how they can benefit users in your organization."
 ---
 
-# Microsoft Edge Workspaces (Public Preview)
+# Microsoft Edge Workspaces
 
 This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
-
-> [!NOTE]
-> This is a preview feature. Preview features or services are in development and are available as a preview so you can get early access and send us feedback. Workspaces preview will be enabled by default for enterprises in Beta 114.
 
 ## Overview
 
@@ -35,20 +32,16 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Prerequisites
 
-- Users must have an Azure Active Directory (Azure AD) tenant and Microsoft Edge version 106 or greater installed.
-- To enable via group policy, Admins must have Microsoft Edge version 106 or greater installed and version 107 of the policy files.
-  - Edge Workspaces can also be enabled on a case-by-case basis using the Microsoft Edge flag: **#edge-workspaces**.
+- Users must have an Azure Active Directory (Azure AD) tenant and Microsoft Edge version 114 or greater installed.
+- To manage via group policy, Admins must have Microsoft Edge version 114 or greater installed and version 107 of the policy files.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
 > [!IMPORTANT]
 > Remember that each user in a shared Edge Workspace brings their own identity, authentication, and cookies to the open websites. A user might have access to a specific workspace, but might not have access to all the websites loaded in the workspace.
 
-## Enable workspaces for users
+## Manage workspaces for users
 
-To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107.0.1402.2 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Eligible individuals can enable Edge Workspaces by enabling the **edge://flags#edge-workspaces** flag in Microsoft Edge.
-
-> [!NOTE]
-> Native Microsoft Intune support for enabling Edge Workspaces will be available with Microsoft Edge version 107.
+To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107.0.1402.2 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Edge Workspaces is enabled for users signed in with an Azure AD account on Edge version 114 or later. You can manage Edge Workspaces for your users by using the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy.
 
 ## The Edge Workspaces user experience
 
@@ -56,7 +49,7 @@ Edge Workspaces lets users share a set of browser tabs so working groups can vie
 
 Imagine a scenario where a team member is being onboarded to a new project or is being added to a project in progress. Instead of sending multiple links back and forth over email, it's productive and convenient to share all the links as open tabs in a workspace. What's more, the user will be able to see which tab each group member is on and, if tabs are updated, will see those updates happen in real-time.
 
-To learn more about how to get your users started with Edge Workspaces, visit: [Getting started with Microsoft Edge Workspaces (public preview)](https://prod.support.services.microsoft.com/topic/63a5a6d7-3db4-468f-aba8-fdd00dce4c35?preview=true).
+To learn more about how to get your users started with Edge Workspaces, visit: [Discover your edge at work](https://aka.ms/LearnAboutEdgeWorkspaces).
 
 ### Workspaces sharing
 
@@ -102,15 +95,11 @@ You can associate any or all of the following options with a set of URL patterns
 - **remove_all_query_parameters** - If a navigation qualifies to be shared with all Workspace users, using this option causes the query string to be removed before the navigation is shared.
 - **query_parameters_to_be_removed** - If a navigation qualifies to be shared with all Workspace users, using this option causes only the specified named query string arguments to be removed from the query string before the navigation is shared. 
 
-
 ## Providing feedback
 
 Your feedback while using Edge Workspaces is valuable to help us improve the product!
 
 You can leave feedback by clicking the **Like** or **Dislike** button at the bottom of the Edge Workspace menu. These buttons are next to the question: "Are you satisfied with Workspaces?".
-
-> [!NOTE]
-> While in preview, this experience is supported by Microsoft Support, and customers with Premier support can leverage this to report any feedback, or concerns.
 
 ## Frequently Asked Questions
 
@@ -118,13 +107,13 @@ You can leave feedback by clicking the **Like** or **Dislike** button at the bot
 
 This message is shown the first time a user selects the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
 
-:::image type="content" source="media/microsoft-edge-workspaces/firstrun-welcome.png" alt-text="Welcome screen first time Workspaces is opened.":::
+![The welcome screen the first time a user opens Workspaces.](media/microsoft-edge-workspaces/firstrun-welcome.png)
 
 ### I see the "Restart workspace" message. Why do I see this message and what should I expect?
 
 This message is due to a temporary connectivity issue because Microsoft Edge can't connect to the service that provides and supports Edge Workspaces.
 
-:::image type="content" source="media/microsoft-edge-workspaces/restart-workspace.png" alt-text="Prompt to restart workspace":::
+![Information message about reconnecting to restart a workspace.](media/microsoft-edge-workspaces/restart-workspace.png)
 
 ### I see the "Update Microsoft Edge" message. Why do I see this message and what should I expect?
 
@@ -157,7 +146,6 @@ No, Edge Workspaces can only be shared within the same Azure AD tenant.
 ### Are there limitations to where and how I can use Edge Workspaces?
 
 Edge Workspaces created within an Azure AD tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Azure AD account.
-
 
 ## See also
 
