@@ -26,6 +26,24 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 114.0.1774.xx: June 1, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
+
+### Feature update
+
+- **Microsoft Edge Workspaces.** Edge Workspaces provides a way for customers to organize their browsing tasks into dedicated windows. Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page.  Each Edge Workspace contains its own set of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. For more information, see Microsoft Edge Workspaces.
+
+### Policy updates
+
+#### New policies
+
+#### Obsoleted policy
+
+#### Additional policy changes
+
 ## Version 113.0.1774.57: May 25, 2023
 
 Fixed various bugs and performance issues.
