@@ -109,7 +109,7 @@ You can leave feedback by clicking the **Like** or **Dislike** button at the bot
 
 ### My users got the following message when they opened Edge Workspaces for the first time. What does this message mean and what should they do?
 
-This message is shown the first time a user selects the Workspaces menu in the browser. They have the option to get more information or click **Continue** to create a workspace.
+This message is shown the first time a user selects the Workspaces menu in the browser. They have the option to get more information or click **Create new** to create a workspace.
 
 ![The welcome screen the first time a user opens Workspaces.](media/microsoft-edge-workspaces/firstrun-welcome.png)
 
