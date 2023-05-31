@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 05/30/2023
+ms.date: 05/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,7 +33,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 ## Prerequisites
 
 - Users must have an Azure Active Directory (Azure AD) tenant and Microsoft Edge version 114 or greater installed.
-- To manage via group policy, Admins must have Microsoft Edge version 114 or greater installed and version 107 of the policy files.
+- To manage via group policy, Admins must have Microsoft Edge version 114 or greater installed and version 114 of the policy files.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Manage workspaces for users
 
-To enable Edge Workspaces for users in your organization, download the Microsoft Edge policy file (version 107.0.1402.2 or greater) and enable the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy. Edge Workspaces is enabled for users signed in with an Azure AD account on Edge version 114 or later. You can manage Edge Workspaces for your users by using the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy.
+Edge Workspaces is enabled for users signed in with an Azure AD account on Edge version 114 or later. You can manage Edge Workspaces for your users by using the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy.
 
 ## The Edge Workspaces user experience
 
@@ -109,7 +109,7 @@ This message is shown the first time a user selects the Workspaces menu in the b
 
 ![The welcome screen the first time a user opens Workspaces.](media/microsoft-edge-workspaces/firstrun-welcome.png)
 
-### I see the "Restart workspace" message. Why do I see this message and what should I expect?
+### I see the "Reconnecting to Workspace service" message. Why do I see this message and what should I expect?
 
 This message is due to a temporary connectivity issue because Microsoft Edge can't connect to the service that provides and supports Edge Workspaces.
 
@@ -119,13 +119,13 @@ This message is due to a temporary connectivity issue because Microsoft Edge can
 
 The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
-:::image type="content" source="media/microsoft-edge-workspaces/error-update-edge.png" alt-text="Prompt to update Microsoft Edge":::
+![Prompt to update Microsoft Edge](media/microsoft-edge-workspaces/error-update-edge.png)
 
 ### My user got the following error. What should they do?
 
 The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
-:::image type="content" source="media/microsoft-edge-workspaces/error-unable-to-load.png" alt-text="Unable to load error message for workspaces":::
+![Unable to load error message for workspaces](media/microsoft-edge-workspaces/error-unable-to-load.png)
 
 ### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close or open tabs?
 
