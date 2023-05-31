@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/24/2023
+ms.date: 05/31/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -23,16 +23,6 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ComposeInlineEnabled](#composeinlineenabled)| Compose is enabled for writing on the web |
-|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
-|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) | Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (DEPRECATED) |
 
 ## Available policies
 
@@ -34497,6 +34487,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   #### Supported versions:
 
   - On Windows since 95 or later
+  - On macOS since 114 or later
 
   #### Description
 
@@ -34541,6 +34532,13 @@ Note: Visual Search in Web Capture is still managed by [WebCaptureEnabled](#webc
 0x00000000
 ```
 
+  #### Mac information and settings
+
+  - Preference Key Name: VisualSearchEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
