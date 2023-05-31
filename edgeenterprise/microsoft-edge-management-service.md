@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: arunesh.chandra
-ms.date: 05/22/2023
+ms.date: 05/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 The Microsoft Edge management service is an area in the M365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
 > [!NOTE]
-> This experience is in public preview. We'll start rolling out this experience on May 23 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+> This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
 
 ## Set up a Targeted release
 
@@ -35,7 +35,7 @@ For more information, see [Set up the Standard or Targeted release options](/mic
 
 ## Prerequisites
 
-- You must have Microsoft Edge Canary 114.0.1814.0 or greater installed.
+- You must have Microsoft Edge 115 Beta 1 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
 
 ## Access the preview experience
@@ -83,7 +83,7 @@ Follow these steps to reorder the priority of a configuration profile:
 Follow these steps to configure a policy for a configuration profile:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for.  
-1. Under the **Policies** pivot, select **Add policy**. 
+1. Under the **Policies** pivot, select **Select policy**.
 1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
 
@@ -95,9 +95,9 @@ Follow these steps to configure a policy for a configuration profile:
 Follow these steps to assign a configuration profile to an Azure AD group:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to assign.
-1. Under the **Group assignment** pivot, select **Add group**.
+1. Under the **Group assignment** pivot, select **Select group**.
 1. Under **Select a security group**, select the group to assign the profile to.
-1. Select **Add**. The profile will now be applied to all users in the selected group.
+1. Select **Select**. The profile will now be applied to all users in the selected group.
 
 ### Manage extensions
 
@@ -147,13 +147,13 @@ Follow these steps to manage profile settings:
 Follow these steps to add an extension:
 
 1. Select a profile and go to the **Extensions** pivot.
-1. Select **Add extension**.
-1. Under **Add an extension**, select an extension from the **Microsoft Edge Add-ons** store or specify an external extension ID.
-1. Select **Add**.
+1. Select **Select extension**.
+1. Under **Select an extension**, select an extension from the **Microsoft Edge Add-ons** store or specify an external extension ID.
+1. Select **Select**.
 
 #### Manage an extension
 
-After adding an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
+After selecting an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
 
 ##### Manage extension policy
 
@@ -212,24 +212,24 @@ To manage sidebar apps for a profile, go to the profile and navigate to the **Ex
 
 Use the following steps to manage sidebar apps:
 
-1. Select **Add extension**.
-1. Under **Add an extension**, navigate to the **Sidebar apps** pivot and select an app.
-1. Select **Add**.
+1. Select **Select extension**.
+1. Under **Select an extension**, navigate to the **Sidebar apps** pivot and select an app.
+1. Select **Select**.
 
-After adding a sidebar app, you can configure its installation policy to Allow, Block, or Force.
+After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
 ## Configure Microsoft Edge to use a configuration profile
 
 After configuring a profile, the next step is to assign the profile.  
 
 > [!NOTE]
-> Any policies you apply with Edge Admin Center (EAC) will be overridden if they conflict with an existing Group Policy Object (GOP) or Mobile Device Management (MDM) policy that's set on the device.
+> Any policies you apply with Edge Admin Center (EAC) will be overridden if they conflict with an existing Group Policy Object (GPO) or Mobile Device Management (MDM) policy that's set on the device.
 
-### Enable the Edge Admin Center
+### Enable the Microsoft Edge Management Service
 
-Use the following steps as a guide to enable the Edge Admin Center (EAC).
+Use the following steps as a guide to enable the Microsoft Edge Management Service.
 
-1. Enable [EdgeAdminCenter] by setting the [EdgeAdminCenterEnabled] policy to 1 and the [EdgeAdminCenterUseOCPSEndpoint] policy to 1. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
+1. Enable the Microsoft Edge Management Service by setting the [EdgeAdminCenterEnabled] policy to 1 and the [EdgeAdminCenterUseOCPSEndpoint] policy to 1. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
 
    ```
    reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterEnabled /t REG_DWORD /d 1
@@ -246,10 +246,10 @@ If you don't want to assign the profile using group assignment in the Microsoft 
 
 Use these steps as a guide for setting an enrollment token:
 
-1. Repeat the previous steps to enable EAC.
-1. Log in to the Microsoft 365 Admin Center. Go to **Settings**> **Org settings** > **Microsoft Edge site lists**. Under the **Configuration profiles** pivot, go to the profile you want to assign.
-1. Under the **Group assignment** pivot, copy the Profile ID.
-1. Set the [EdgeAdminCenterEnrollmentToken] policy value to the profile ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your profile ID):
+1. Repeat the previous steps to enable Microsoft Edge Management Service.
+1. Log in to the Microsoft 365 Admin Center. Go to **Settings** > **Microsoft Edge**. Under the **Configuration profiles** pivot, go to the profile you want to assign.
+1. Copy the token ID.
+1. Set the [EdgeAdminCenterEnrollmentToken] policy value to the token ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your token ID):
 
     ```
     reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterEnrollmentToken /t REG_SZ /d 1bba4530-7d23-4512-acda-89248f8e3d47 
@@ -259,12 +259,12 @@ Use these steps as a guide for setting an enrollment token:
 
 #### Control policy source precedence
 
-As stated previously, if policy is set in MDM or GPM, that value will override any value provided by EAC. If you want the EAC policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry. You must use Edge Canary 114.0.1823.0.
+As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge Managment Service. If you want the Microsoft Edge Management Service policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
 
 > [!IMPORTANT]
 > This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
 
-Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your profile ID and restart Microsoft Edge if it's open.
+Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
 
 ```
 reg add HKLM\Software\Policies\Microsoft\Edge /v CloudPolicyOverridesPlatformPolicy /t REG_ DWORD /d 1 
@@ -272,15 +272,14 @@ reg add HKLM\Software\Policies\Microsoft\Edge /v CloudPolicyOverridesPlatformPol
 
 #### Control user/device policy precedence
 
-Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In EAC the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeAdminCenterEnrollmentToken] is applied as Device Policy.
+Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge Management Service the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeAdminCenterEnrollmentToken] is applied as Device Policy.
 
-If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [CloudUserPolicyOverridesCloudMachinePolicy] policy. You must use Edge Canary 114.0.1823.0.
-
+If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [CloudUserPolicyOverridesCloudMachinePolicy] policy.
 
 > [!IMPORTANT]
 > This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
 
-Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your profile ID and restart Microsoft Edge if it's open.
+Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
 
 ```
 reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
