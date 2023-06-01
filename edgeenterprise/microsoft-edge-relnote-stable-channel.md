@@ -26,11 +26,11 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 114.0.1774.xx: June 1, 2023
+## Version 114.0.1774.xx: June 2, 2023
 
 Fixed various bugs and performance issues.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-2-2023).
 
 ### Feature update
 
