@@ -11869,8 +11869,8 @@ The Microsoft Defender SmartScreen download protection service won't check downl
 If you enable this policy, Microsoft Defender SmartScreen trusts these domains.
 If you disable or don't set this policy, default Microsoft Defender SmartScreen protection is applied to all resources.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-Also note that this policy does not apply if your organization has enabled Microsoft Defender Advanced Threat Protection. You must configure your allow and block lists in Microsoft Defender Security Center instead.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10/11 Pro or Enterprise instances that enrolled for device management, or macOS instances that are managed via MDM or joined to a domain via MCX.
+Also note that this policy does not apply if your organization has Microsoft Defender for Endpoint enabled. You must configure your allow and block lists in the [Microsoft 365 Defender Portal](https://security.microsoft.com) instead (_Settings > Endpoints > Indicators_).
 
   #### Supported features:
 
