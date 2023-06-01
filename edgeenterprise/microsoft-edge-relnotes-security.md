@@ -23,7 +23,7 @@ Microsoft has released the latest **Microsoft Edge Extended Stable Channel (Vers
 This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2023-29345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29345)
-- [CVE-2023-xxxxx](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-xxxxx)
+- [CVE-2023-33143](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-33143)
 
 ## May 18, 2023
 
