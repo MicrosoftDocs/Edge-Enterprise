@@ -218,7 +218,7 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
-##### View extension requests
+### View extension requests
 
 > [!NOTE]
 > This feature is rolling out starting June 12. Please check back again later if you don't see it.
