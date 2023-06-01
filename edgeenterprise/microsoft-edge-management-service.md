@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: arunesh.chandra
-ms.date: 05/31/2023
+ms.date: 06/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,7 +18,7 @@ The Microsoft Edge management service is an area in the M365 admin center where 
 
 > [!NOTE]
 > This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
-
+<!-- ====================================================================== -->
 ## Set up a Targeted release
 
 There are two parts to setting up a Targeted release: identifying release preferences and picking the users for the release preference you configure.
@@ -32,19 +32,19 @@ Use the following steps as a guide to set up a Targeted release:
 1. When you finish adding users, select **Save changes**.
 
 For more information, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide).
-
+<!-- ====================================================================== -->
 ## Prerequisites
 
 - You must have Microsoft Edge 115 Beta 1 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
-
+<!-- ====================================================================== -->
 ## Access the preview experience
 
 Use these steps to access the preview experience:
 
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage) and login.
 1. In the main left navigation bar, go to **Settings** > **Microsoft Edge**.  
-
+<!-- ====================================================================== -->
 ## Get started with configuration profiles
 
 A configuration profile contains all the browser policy configurations, including extension settings.
@@ -218,6 +218,26 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
+##### View extension requests
+
+> [!NOTE]
+> This feature is rolling out starting June 12. Please check back again later if you don't see it.
+
+If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to the "Requests" pivot. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. To allow requests, use the [EdgeAdminCenterExtensionsFeedbackEnabled] policy to enable reporting.
+
+To set the installation policy on a requested extension, use these steps:
+
+1. Select an extension.
+1. Select **Manage installation policy** and choose an option from the dropdown list:
+
+   - Allow: Users can install the extension. This is the default setting.
+   - Block: Users can't install the extension. You could remove the extension if users previously installed it. Also, you can write a message that displays when users try to install the extension.
+   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+
+1. Select **Save**.
+
+<!-- ====================================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
 
 After configuring a profile, the next step is to assign the profile.  
@@ -284,7 +304,7 @@ Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Po
 ```
 reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
 ```
-
+<!-- ====================================================================== -->
 ## Feedback and support
 
 This experience is supported by Microsoft Support. You can reach out to Microsoft Support to report issues or give feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
