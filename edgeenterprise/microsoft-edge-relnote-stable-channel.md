@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: collw
 author: dan-wesley
 manager: likuba
-ms.date: 06/01/2023
+ms.date: 06/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 114.0.1774.xx: June 2, 2023
+## Version 114.0.1823.37: June 2, 2023
 
 Fixed various bugs and performance issues.
 
