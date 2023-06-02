@@ -19,6 +19,22 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 115.0.1823.xx: June x, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Enhanced security mode improvements.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting less familiar sites. Enhanced security mode is turned on by default to Balanced mode for x64 Windows, x64 macOS, x64 Linux, and ARM64 systems. **Note:** This feature is a controlled feature rollout in Microsoft Edge Beta 115. If you don't see this feature, check back as we continue our rollout.
+
+  Also, administrators have 2 new policies to manage the Enhanced security mode user experience: [EnhanceSecurityModeIndicatorUIEnabled] and [EnhanceSecurityModeOptOutUXEnabled].  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Microsoft Edge management service.** Microsoft Edge management service is an area in the M365 admin center where admins can manage the Microsoft Edge browser. It is a simple and easy-to-manage experience. Admins will be able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. <!-- For more information, see [link to Dan's doc].--> **Note:** This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+
+### Policy updates
+
+#### New policies
+
 ## Version 114.0.1823.37: June 2, 2023
 
 Fixed various bugs and performance issues.
