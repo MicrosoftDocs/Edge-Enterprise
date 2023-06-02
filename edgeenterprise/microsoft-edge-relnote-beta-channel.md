@@ -29,7 +29,7 @@ Fixed various bugs and performance issues.
 
   Also, administrators have 2 new policies to manage the Enhanced security mode user experience: [EnhanceSecurityModeIndicatorUIEnabled] and [EnhanceSecurityModeOptOutUXEnabled].  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
-- **Microsoft Edge management service.** Microsoft Edge management service is an area in the M365 admin center where admins can manage the Microsoft Edge browser. It is a simple and easy-to-manage experience. Admins will be able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. <!-- For more information, see [link to Dan's doc].--> **Note:** This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+- **Microsoft Edge management service.** Microsoft Edge management service is an area in the M365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins will be able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. <!-- For more information, see [link to Dan's doc].--> **Note:** This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
 
 ### Policy updates
 
