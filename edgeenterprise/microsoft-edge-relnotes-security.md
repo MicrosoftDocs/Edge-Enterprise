@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,12 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## June 5, 2023
+
+Microsoft is aware of the recent exploits existing in the wild. We are actively working on releasing a security patch.
+
+While we get the security fix rolled out, it is worth highlighting that [Microsoft Edge's enhanced security mode feature](/DeployEdge/microsoft-edge-security-browse-safer) helps mitigate this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit. After the security fix is released, make sure you still update your browser.
 
 ## June 2, 2023
 
