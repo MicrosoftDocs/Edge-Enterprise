@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/18/2023
+ms.date: 06/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,36 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 114.0.1823.37: June 2, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-2-2023).
+
+### Feature update
+
+- **Microsoft Edge Workspaces.** Edge Workspaces provides a way for customers to organize their browsing tasks into dedicated windows. Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page. Each Edge Workspace contains its own set of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. For more information, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces).
+
+### Policy updates
+
+#### New policies
+
+- [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) - Standalone Sidebar Enabled
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+
+#### Obsoleted policy
+
+- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+
+#### Additional policy changes
+
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - BasicMode is deprecated
+- [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - If the policy isn't configured users are able to access the Microsoft Edge Workspaces feature
+
+## Version 113.0.1774.57: May 25, 2023
+
+Fixed various bugs and performance issues.
+
 ## Version 112.0.1722.84: May 18, 2023
 
 Fixed various bugs and performance issues for Extended Stable release.
@@ -37,6 +67,10 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
+
+### Feature update
+
+- **Microsoft recommended browser settings.** This new prompt in Microsoft Edge lets users benefit from the Microsoft recommended settings. This feature gives users the option to set Microsoft Edge as the default browser and/or set Microsoft Bing as the default search engine, if they aren't already selected. If a user accepts the prompt, their default browser is updated to Microsoft Edge, and their default search engine will be updated to Microsoft Bing. Administrators can control the availability of the default browser settings campaign using the [DefaultBrowserSettingsCampaignEnabled](/deployedge/microsoft-edge-policies#defaultbrowsersettingscampaignenabled) policy.
 
 ## Version 113.0.1774.42: May 11, 2023
 
@@ -183,75 +217,7 @@ Fixed various bugs and performance issues.
 ## Version 111.0.1661.43: March 15, 2023
 
 Fixed various bugs and performance issues.
-
-## Version 111.0.1661.41: March 13, 2023
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-13-2023).
-
-### Feature update
-
-- **A New Microsoft Edge Sidebar.** In this release, the Sidebar introduces several new features and improvements aimed at enhancing productivity, convenience, and the user experience. Here are some of the highlights:<br><br>
-
-  - **The New Discover:** Edge Copilot is a powerful tool that helps users boost their productivity and efficiency. It provides intelligent suggestions and insights based on the context of the web page and the user's goals. As the new Bing icon in the Toolbar, Edge Copilot helps users compose better emails, search the web faster, learn new skills, all done more conveniently.  
-  - **Enhanced Sidebar Visibility:** With the new Auto-Hide functionality, a user can maximize the productivity and convenience of the sidebar without sacrificing valuable screen space. The Edge Sidebar can be hidden when a user isn't using it and it only reappears when a user needs it.  
-  - **Evolved Sidebar Interaction:** The new Hover functionality lets users open the Sidebar by hovering on the Bing icon in the Toolbar. This enhances user productivity and convenience by providing a seamless and intuitive way to access their most used tools.  
-
-  Admins retain the ability to control and customize the Sidebar and its experiences, as needed by using the following settings:<br><br>
-
-  - If admins enable the Sidebar, users will have access to the Sidebar and Edge Copilot experience. The Sidebar will show at all times in the browser frame. Clicking on the Bing icon in the Toolbar will invoke the new Discover experience.
-  - If admins choose the 'not configured' setting, users will have access to the Sidebar and Edge Copilot experience. Unlike when the Sidebar is 'enabled', their users will have the ability to always-show or auto-hide the Sidebar.
-  - If admins disable the Sidebar, Discover and the Sidebar will be inaccessible for their users. **Note:** In this release, Admins do not have the ability to disable Discover and keep the Sidebar.
-
-  Additional customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.
-
-  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) and [Microsoft Privacy Statement (Search, Microsoft Edge, and artificial intelligence)](https://privacy.microsoft.com/privacystatement).
-
-- **Microsoft Feed on Microsoft 365 Edge New Tab Page.** We're rolling out a new experience to the Microsoft 365 tab of the Edge Enterprise New Tab Page. This experience will feature a new layout that centers on a larger version of the Microsoft Feed, featuring more productivity content, and moves the productivity cards including Important Emails, Recent SharePoint sites, Upcoming events, and To Do to the right-hand side of the Microsoft 365 tab.
-
-- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for macOS x64 and Linux x64. More cross-platform (ARM64) support is expected in the future. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **New policy to clear IE mode data on browser exit.** The [InternetExplorerModeClearDataOnExitEnabled](/deployedge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) policy controls whether browsing history is deleted from Internet Explorer and Internet Explorer mode every time Microsoft Edge is closed. Users can also configure this setting in the 'Clear browsing data for Internet Explorer' option in the Privacy, search, and services menu of Settings (*edge://settings/privacy*).
-
-### Policy updates
-
-#### New policies
-
-- [InternetExplorerModeClearDataOnExitEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled) - Clear history for IE and IE mode every time you exit
-- [MouseGestureEnabled](/DeployEdge/microsoft-edge-policies#mousegestureenabled) - Mouse Gesture Enabled
-- [PrintPreviewStickySettings](/DeployEdge/microsoft-edge-policies#printpreviewstickysettings) - Configure the sticky print preview settings
-
-## Version 110.0.1587.69: March 9, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-13-2023).
-
-## Version 110.0.1587.63: March 3, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.57: February 25, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-25-2023).
-
-## Version 110.0.1587.56: February 23, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.50: February 17, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 110.0.1587.49: February 16, 2023
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-## Version 110.0.1587.46: February 14, 2023
-
-Fixed various bugs and performance issues.
-
+<!-- from Version 111.0.1661.41: March 13, 2023 to Version 110.0.1587.46: February 14, 2023 -->
 <!-- from Version Version 110.0.1587.41: February 9, 2023 to Version 108.0.1462.83: January 12, 2023 -->
 <!-- from Version 109.0.1518.49: January 12, 2023 to Version 108.0.1462.46: December 8, 2022 -->
 <!-- from Version 108.0.1462.42: December 5, 2022 to Version 106.0.1370.59: October 27, 2022 -->
