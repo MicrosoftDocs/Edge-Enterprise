@@ -20,7 +20,7 @@ After setting up ClickOnce or DirectInvoke, the ClickOnce or DirectInvoke prompt
 
 For more information about these features, see:
 
-- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [DirectInvoke](https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
