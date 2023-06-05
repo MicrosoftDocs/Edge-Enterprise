@@ -1,6 +1,6 @@
 ---
 title: "Configure Microsoft Edge enterprise sync"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: silvanam
 ms.date: 05/31/2022

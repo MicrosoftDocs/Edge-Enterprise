@@ -1,6 +1,6 @@
 ---
 title: "Progressive rollouts for Microsoft Edge Stable channel updates"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 06/29/2021

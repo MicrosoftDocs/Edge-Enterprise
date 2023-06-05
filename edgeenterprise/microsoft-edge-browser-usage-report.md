@@ -1,6 +1,6 @@
 ---
 title: "Microsoft browser usage report"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 04/13/2023

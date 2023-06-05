@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge Supported Operating Systems"
-ms.author: srugh
+ms.author: archandr
 author: srugh
 manager: seanlynd
 ms.date: 01/17/2023

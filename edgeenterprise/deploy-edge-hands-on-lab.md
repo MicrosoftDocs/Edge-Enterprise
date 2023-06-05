@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge hands-on deployment lab"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 06/03/2022

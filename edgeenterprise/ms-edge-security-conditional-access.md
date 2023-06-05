@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge and Conditional Access"
-ms.author: srugh
+ms.author: archandr
 author: srugh
 manager: seanlyn
 ms.date: 05/25/2022
