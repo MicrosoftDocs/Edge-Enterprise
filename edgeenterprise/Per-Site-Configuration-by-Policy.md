@@ -1,6 +1,6 @@
 ---
 title: "Per-site configuration by policy"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: laurawi
 ms.date: 05/02/2023

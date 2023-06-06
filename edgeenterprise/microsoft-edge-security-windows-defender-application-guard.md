@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge and Microsoft Defender Application Guard"
-ms.author: srugh
+ms.author: archandr
 author: AndreaLBarr
 manager: seanlyn
 ms.date: 03/07/2022
