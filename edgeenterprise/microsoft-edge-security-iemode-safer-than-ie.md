@@ -1,6 +1,6 @@
 ---
 title: "Modern security protection for vulnerable legacy apps"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: kawong
 ms.date: 01/03/2023

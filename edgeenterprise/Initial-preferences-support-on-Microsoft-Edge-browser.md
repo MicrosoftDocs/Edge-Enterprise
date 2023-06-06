@@ -1,6 +1,6 @@
 ---
 title: "Learn how to configure initial preferences on Microsoft Edge."
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 06/21/2022

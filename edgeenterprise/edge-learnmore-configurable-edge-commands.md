@@ -1,6 +1,6 @@
 ---
 title: "Configurable Microsoft Edge commands"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 03/16/2022

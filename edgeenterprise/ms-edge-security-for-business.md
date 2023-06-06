@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge security for your business"
-ms.author: collw
+ms.author: archandr
 author: seanongit
 manager: chuckf
 ms.date: 10/19/2022
