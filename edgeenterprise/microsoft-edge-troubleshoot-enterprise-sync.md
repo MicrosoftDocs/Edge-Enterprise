@@ -1,6 +1,6 @@
 ---
 title: "Diagnose and fix Microsoft Edge sync issues"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: silvanam
 ms.date: 07/07/2022

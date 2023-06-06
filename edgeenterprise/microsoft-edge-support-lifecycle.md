@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge Lifecycle"
-ms.author: srugh
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 02/02/2021

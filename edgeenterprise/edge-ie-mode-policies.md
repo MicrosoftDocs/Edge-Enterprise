@@ -1,6 +1,6 @@
 ---
 title: "Configure IE mode Policies"
-ms.author: collw
+ms.author: archandr
 author: AndreaLBarr
 manager: srugh
 ms.date: 02/14/2023

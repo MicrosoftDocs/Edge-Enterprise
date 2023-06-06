@@ -1,6 +1,6 @@
 ---
 title: "Platform support for Microsoft Edge features"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 07/08/2022

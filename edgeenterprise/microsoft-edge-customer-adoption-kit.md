@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge customer adoption materials"
-ms.author: collw
+ms.author: archandr
 author: AndreaLBarr
 manager: seanlynd
 ms.date: 02/24/2022
