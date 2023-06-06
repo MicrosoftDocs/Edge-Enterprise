@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: collw
-ms.date: 06/05/2023
+ms.date: 06/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -34,6 +34,11 @@ Fixed various bugs and performance issues.
 ### Policy updates
 
 #### New policies
+
+
+## Version 114.0.1823.41: June 6, 2023
+
+Fixed various bugs and performance issues.
 
 ## Version 114.0.1823.37: June 2, 2023
 
