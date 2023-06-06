@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge: State of the browser 2020"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 06/29/2021

@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge enterprise sync FAQ"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: silvanam
 ms.date: 12/05/2022

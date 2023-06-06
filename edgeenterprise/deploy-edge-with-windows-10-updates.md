@@ -1,6 +1,6 @@
 ---
 title: "Deploy Microsoft Edge with Windows 10 updates"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: tinad
 ms.date: 05/26/2022

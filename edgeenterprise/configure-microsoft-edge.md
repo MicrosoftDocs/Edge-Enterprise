@@ -1,6 +1,6 @@
 ---
 title: "Configure Microsoft Edge for Windows with policy settings"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: collw
 ms.date: 05/19/2022

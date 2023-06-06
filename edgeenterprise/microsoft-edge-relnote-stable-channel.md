@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge release notes for Stable Channel"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: likuba
 ms.date: 06/02/2023

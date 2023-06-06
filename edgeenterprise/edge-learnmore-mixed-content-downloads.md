@@ -1,6 +1,6 @@
 ---
 title: "Learn how Microsoft Edge handles mixed content downloads"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 11/24/2021

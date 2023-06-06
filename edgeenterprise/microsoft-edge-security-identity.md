@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge identity support and configuration"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 08/10/2022

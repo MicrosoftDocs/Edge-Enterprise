@@ -1,6 +1,6 @@
 ---
 title: "Configure Microsoft Edge kiosk mode"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 05/04/2023
