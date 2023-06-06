@@ -1,6 +1,6 @@
 ---
 title: "Plan your kiosk mode transition"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 05/26/2022

@@ -1,6 +1,6 @@
 ---
 title: "Plan your deployment of Microsoft Edge"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: srugh
 ms.date: 12/08/2021
