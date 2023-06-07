@@ -2,7 +2,7 @@
 title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
-manager: srugh
+manager: archandr
 ms.date: 06/07/2023
 audience: ITPro
 ms.topic: conceptual
