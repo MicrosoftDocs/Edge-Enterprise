@@ -35,6 +35,11 @@ Fixed various bugs and performance issues.
 
 #### New policies
 
+- WalletDonationEnabled - Wallet Donation Enabled
+- EnhanceSecurityModeIndicatorUIEnabled - Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
+- EnhanceSecurityModeOptOutUXEnabled - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+- ComposeInlineEnabled - Compose is enabled for writing on the web
+- SearchForImageEnabled - Search for image enabled
 
 ## Version 114.0.1823.41: June 6, 2023
 
