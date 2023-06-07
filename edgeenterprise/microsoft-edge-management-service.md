@@ -243,7 +243,7 @@ To set the installation policy on a requested extension, use these steps:
 After configuring a profile, the next step is to assign the profile.  
 
 > [!NOTE]
-> Any policies you apply with Edge Admin Center (EAC) will be overridden if they conflict with an existing Group Policy Object (GPO) or Mobile Device Management (MDM) policy that's set on the device.
+> Any policies you apply with Microsoft Edge Management Service will be overridden if they conflict with an existing Group Policy Object (GPO) or Mobile Device Management (MDM) policy that's set on the device.
 
 ### Enable the Microsoft Edge Management Service
 
