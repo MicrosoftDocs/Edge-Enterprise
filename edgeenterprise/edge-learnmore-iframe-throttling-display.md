@@ -14,7 +14,7 @@ description: "A description of iframe throttling and the benefits of standardiza
 
 # Standardize iframe throttling for display
 
-This article describes iframe throttling and the benefits of standardizing throttling.
+This article describes iframe throttling and the benefits of standardizing throttling for display:none and non-visible.
 
 >[!NOTE]
 >This article applies to Microsoft Edge version ?? or later.
