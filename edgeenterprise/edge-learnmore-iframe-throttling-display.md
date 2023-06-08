@@ -1,5 +1,5 @@
 ---
-title: "Throttling for all cross-origin iframes that are display:none and non-visible."
+title: "Throttling for all cross-origin iframes that are display: none and non-visible."
 ms.author: sajos
 author: dan-wesley
 manager: alias
@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: "A description of iframe throttling and the benefits of standardization."
 ---
 
-# Throttling for all cross-origin iframes that are display:none and non-visible.
+# Throttling for all cross-origin iframes that are `display: none` and non-visible.
 
 This article describes iframe throttling and the benefits of standardizing throttling for `display: none` and non-visible.
 
@@ -30,7 +30,7 @@ Throttled iframes lose access to `requestAnimationFrame` and `ResizeObserver`, s
 
 ## Objective
 
-Iframe throttling is a Blink mechanism that tries to reduce layout and rendering overhead. Frames that are throttled only undergo partial layout, and `requestAnimationFrame` and `ResizeObserver` don't operate when a frame is throttled. Cross-origin iframes that are placed in a different process than their parent, and that are either `display: none` or non-visible are throttled. Currently a cross-origin frame that's rendered in the same-process as its parent aren't throttled, leading to different behavior based on a process model. When enabled, this policy throttles all cross-origin, `display: none` or non-visible frames, which gives consistent behavior between the same-process and cross-process cases.
+Iframe throttling is a Blink mechanism that tries to reduce layout and rendering overhead. Frames that are throttled only undergo partial layout, and `requestAnimationFrame` and `ResizeObserver` don't operate when a frame is throttled. Cross-origin iframes that are placed in a different process than their parent, and that are either `display: none` or non-visible are throttled. Currently a cross-origin frame that's rendered in the same-process as its parent isn'tthrottled, leading to different behavior based on a process model. When enabled, this policy throttles all cross-origin, `display: none` or non-visible frames, which gives consistent behavior between the same-process and cross-process cases.
 
 ## Content license
 
