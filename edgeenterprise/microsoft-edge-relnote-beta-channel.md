@@ -41,6 +41,10 @@ Fixed various bugs and performance issues.
 - [ComposeInlineEnabled](/DeployEdge/microsoft-edge-policies#composeinlineenabled) - Compose is enabled for writing on the web
 - [SearchForImageEnabled](/DeployEdge/microsoft-edge-policies#searchforimageenabled) - Search for image enabled
 
+## Version 114.0.1823.43: June 8, 2023
+
+Fixed various bugs and performance issues.
+
 ## Version 114.0.1823.41: June 6, 2023
 
 Fixed various bugs and performance issues.
