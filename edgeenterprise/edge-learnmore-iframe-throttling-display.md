@@ -21,14 +21,16 @@ This article describes iframe throttling and the benefits of standardizing throt
 
 ## Summary
 
-The display:none and non-visible cross-origin iframes are throttled when rendered cross-process, but they aren't throttled if they're rendered same-process. This leads to unpredictable behavior for developers, who may not know the underlying process model being used to render the page. This iframe scenario could also be used by malicious actors to probe and see whether a browsing session has site/origin isolation enabled. Throttled iframes lose access to `requestAnimationFrame` and `ResizeObserver`, so the different throttling approaches will affect web developers. This policy will standardize throttling, so it applies to all cross-origin iframes, regardless of whether they are same-process or cross-process.
+The display:none and non-visible cross-origin iframes are throttled when rendered cross-process, but they aren't throttled if they're rendered same-process. This scenario leads to unpredictable behavior for developers, who may not know the underlying process model used to render the page. Also, with this iframe scenario malicious actors can probe and see whether a browsing session has site/origin isolation enabled.
+
+Throttled iframes lose access to `requestAnimationFrame` and `ResizeObserver`, so the different throttling approaches affect web developers. This feature standardizes throttling, so it applies to all cross-origin iframes, regardless of whether they are same-process or cross-process.
 
 > [!NOTE]
 > "non-visible" means a non-zero area frame that's outside the viewport.
 
 ## Objective
 
-Iframe throttling is a Blink mechanism that tries to reduce layout and rendering overhead. Frames that are throttled only undergo partial layout, and `requestAnimationFrame` and `ResizeObserver` don't operate when a frame is throttled. For technical reasons, cross-origin iframes that are placed in a different process than their parent, and that are either display:none or non-visible (that is, not in the viewport, but have non-zero size), are throttled. Currently a cross-origin frame that's rendered in the same-process as its parent aren't throttled, leading to different behavior based on a process model. When enabled, this policy will throttle all cross-origin, display:none or non-visible frames, which gives  consistent behavior between the same-process and cross-process cases.
+Iframe throttling is a Blink mechanism that tries to reduce layout and rendering overhead. Frames that are throttled only undergo partial layout, and `requestAnimationFrame` and `ResizeObserver` don't operate when a frame is throttled. For technical reasons, cross-origin iframes that are placed in a different process than their parent, and that are either display:none or non-visible are throttled. Currently a cross-origin frame that's rendered in the same-process as its parent aren't throttled, leading to different behavior based on a process model. When enabled, this policy throttles all cross-origin, display:none or non-visible frames, which gives  consistent behavior between the same-process and cross-process cases.
 
 ## Content license
 
