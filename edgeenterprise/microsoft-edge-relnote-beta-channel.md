@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,7 +29,7 @@ Fixed various bugs and performance issues.
 
   Also, administrators have two new policies to manage the Enhanced security mode user experience: **EnhanceSecurityModeIndicatorUIEnabled** and **EnhanceSecurityModeOptOutUXEnabled**. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
 
-- **Microsoft Edge management service.** Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins are able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). **Note:** This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+- **Microsoft Edge management service.** Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins are able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). **Note:** This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You need to set up a Targeted release to opt in and view this experience in the M365 admin center.
 
 ### Policy updates
 
