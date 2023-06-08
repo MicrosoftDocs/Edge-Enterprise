@@ -23,7 +23,7 @@ This article describes iframe throttling and the benefits of standardizing throt
 
 Cross-origin iframes that are `display: none` and non-visible are throttled when rendered cross-process, but not when they're rendered same-process. The absence of throttling in same-process scenarios could lead to unpredictable behavior for developers, who might not know the underlying process model used to render the page. Also, with this iframe scenario, a malicious actor can probe to see whether a browsing session has site/origin isolation enabled.
 
-Throttled iframes lose access to `requestAnimationFrame` and `ResizeObserver`, so the different throttling approaches affect web developers. This feature standardizes throttling, so it applies to all cross-origin iframes, regardless of whether they are same-process or cross-process.
+Throttled iframes lose access to `requestAnimationFrame` and `ResizeObserver`, so the different throttling approaches affect web developers. This feature standardizes throttling, so it applies to all cross-origin iframes, regardless of whether they're same-process or cross-process.
 
 > [!NOTE]
 > "non-visible" means a non-zero area frame that's outside the viewport.
