@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 The Microsoft Edge management service is an area in the M365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
 > [!NOTE]
-> This experience is in public preview. We'll start rolling out this experience on June 5 and expect to finish the rollout by the end of that week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+> This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
 <!-- ====================================================================== -->
 ## Set up a Targeted release
 
