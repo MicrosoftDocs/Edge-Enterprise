@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 06/08/2023
+ms.date: 06/09/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,10 +14,10 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 
 # Microsoft Edge management service
 
-The Microsoft Edge management service is an area in the M365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
+The Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
 > [!NOTE]
-> This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You'll need to set up a Targeted release to opt in and view this experience in the M365 admin center.
+> This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You'll need to set up a Targeted release to opt in and view this experience in the Microsoft 365 admin center.
 <!-- ====================================================================== -->
 ## Set up a Targeted release
 
@@ -35,7 +35,7 @@ For more information, see [Set up the Standard or Targeted release options](/mic
 <!-- ====================================================================== -->
 ## Prerequisites
 
-- You must have Microsoft Edge 115 Beta 1 or greater installed.
+- You must have Microsoft Edge 114.0.1823.37 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
 <!-- ====================================================================== -->
 ## Access the preview experience
