@@ -263,6 +263,8 @@
         href: edge-learnmore-regex.md
       - name: Reset Microsoft Edge data in the cloud
         href: edge-learnmore-reset-data-in-cloud.md
+      - name: Throttling for all cross-origin iframes that are display:none and non-visible
+        href: edge-learnmore-iframe-throttling-display.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises
