@@ -3,13 +3,13 @@ title: "Throttling for all cross-origin iframes that are display: none and non-v
 ms.author: sajos
 author: dan-wesley
 manager: alias
-ms.date: 06/08/2023
+ms.date: 06/09/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "A description of iframe throttling and the benefits of standardization."
+description: "A description of iframe throttling and the need for standardization."
 ---
 
 # Throttling for all cross-origin iframes that are `display: none` and non-visible.
