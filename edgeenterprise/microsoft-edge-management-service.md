@@ -221,7 +221,7 @@ After selecting a sidebar app, you can configure its installation policy to Allo
 ### View extension requests
 
 > [!NOTE]
-> This feature is rolling out starting June 12. Please check back again later if you don't see it.
+> This feature is rolling out starting late June. Please check back again later if you don't see it.
 
 If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to the "Requests" pivot. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. To allow requests, use the [EdgeAdminCenterExtensionsFeedbackEnabled] policy to enable reporting.
 
