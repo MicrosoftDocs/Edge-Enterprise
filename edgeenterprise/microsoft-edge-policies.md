@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/12/2023
+ms.date: 06/11/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,11 +26,16 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[DefaultBrowserSettingsCampaignEnabled](#defaultbrowsersettingscampaignenabled)|Enables default browser settings campaigns|
+| [ComposeInlineEnabled](#composeinlineenabled) |Compose is enabled for writing on the web |
+| [EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) |Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated) |
+| [EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled) |Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge |
+| [EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled) |Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge |
+| [SearchForImageEnabled](#searchforimageenabled) |Search for image enabled |
+| [WalletDonationEnabled](#walletdonationenabled) |Wallet Donation Enabled |
 
 ## Available policies
 
@@ -453,6 +458,8 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
+|[EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled)|Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge|
+|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
@@ -653,6 +660,7 @@ These tables list all of the browser-related group policies available in this re
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
 |[VisualSearchEnabled](#visualsearchenabled)|Visual search enabled|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
+|[WalletDonationEnabled](#walletdonationenabled)|Wallet Donation Enabled|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
 |[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
@@ -21259,6 +21267,138 @@ SOFTWARE\Policies\Microsoft\Edge\EnhanceSecurityModeEnforceListDomains\2 = "myun
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EnhanceSecurityModeIndicatorUIEnabled
+
+  #### Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you manage whether the indicator User Interface (UI) for enhanced security mode is shown or not when ESM is turned on.
+
+If you enable or don't configure this policy, the indicator UI is on.
+
+If you disable this policy, the indicator UI is off.
+
+Note: If this policy is used, only the indicator User Interface experience is supressed - ESM is still turned on. For more information, see the [EnhanceSecurityMode](#enhancesecuritymode) policy.
+
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeIndicatorUIEnabled
+  - GP name: Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityModeIndicatorUIEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnhanceSecurityModeIndicatorUIEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnhanceSecurityModeOptOutUXEnabled
+
+  #### Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you manage whether the opt-out user experience for enhanced security mode is presented when ESM is turned on for Microsoft Edge.
+
+If you enable or don't configure this policy, the UI for the opt-out user experience is on.
+
+If you disable this policy, the UI for the opt-out user experience is off.
+
+Note: If this policy is used, only the User Interface for the opt-out experience is supressed - ESM is still turned on. For more information, see the [EnhanceSecurityMode](#enhancesecuritymode) policy.
+
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeOptOutUXEnabled
+  - GP name: Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityModeOptOutUXEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnhanceSecurityModeOptOutUXEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnterpriseHardwarePlatformAPIEnabled
 
   #### Allow managed extensions to use the Enterprise Hardware Platform API
@@ -34403,6 +34543,68 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   #### Mac information and settings
 
   - Preference Key Name: WPADQuickCheckEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WalletDonationEnabled
+
+  #### Wallet Donation Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  The Wallet Donation feature in Microsoft Edge allows users to view their donation summary, explore Nonprofit organizations (NPOs), donate to an NPO, manage their monthly donations, and view their donation history.
+
+If you enable or don't configure this policy, users can use the Wallet Donation feature.
+
+If you disable this policy, users can't use the Wallet Donation feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WalletDonationEnabled
+  - GP name: Wallet Donation Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: WalletDonationEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WalletDonationEnabled
   - Example value:
 ``` xml
 <true/>
