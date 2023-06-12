@@ -24,6 +24,19 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+| [ComposeInlineEnabled](#composeinlineenabled) |Compose is enabled for writing on the web |
+| [EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) |Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated) |
+| [EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled) |Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge |
+| [EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled) |Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge |
+| [SearchForImageEnabled](#searchforimageenabled) |Search for image enabled |
+| [WalletDonationEnabled](#walletdonationenabled) |Wallet Donation Enabled |
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
