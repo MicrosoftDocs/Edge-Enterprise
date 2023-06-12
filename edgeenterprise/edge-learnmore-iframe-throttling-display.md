@@ -3,7 +3,7 @@ title: "Throttling for all cross-origin iframes that are display: none and non-v
 ms.author: sajos
 author: dan-wesley
 manager: alias
-ms.date: 06/09/2023
+ms.date: 06/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "A description of iframe throttling and the need for standardizatio
 This article describes iframe throttling and the benefits of standardizing throttling for `display: none` and non-visible.
 
 >[!NOTE]
->This article applies to Microsoft Edge version ?? or later.
+>This article applies to Microsoft Edge version 116 or later.
 
 ## Summary
 
