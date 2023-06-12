@@ -1,6 +1,6 @@
 ---
 title: "Block access to consumer accounts"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: collw
 ms.date: 03/30/2023

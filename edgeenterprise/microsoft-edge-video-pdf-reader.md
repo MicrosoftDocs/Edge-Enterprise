@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge enterprise grade PDF reader"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 06/29/2021

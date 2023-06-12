@@ -1,6 +1,6 @@
 ---
 title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 02/14/2023

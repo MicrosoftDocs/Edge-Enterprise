@@ -1,4 +1,4 @@
-# last revised 05/22/2023
+# last revised 06/12/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -104,6 +104,8 @@
   items:
    - name: Microsoft Edge for Business
      href: microsoft-edge-for-business.md
+   - name: Microsoft Edge management service
+     href: microsoft-edge-management-service.md
    - name: Microsoft Edge Workspaces
      href: microsoft-edge-workspaces.md
    - name: Microsoft Edge for Virtual desktop infrastructure 
@@ -261,6 +263,8 @@
         href: edge-learnmore-regex.md
       - name: Reset Microsoft Edge data in the cloud
         href: edge-learnmore-reset-data-in-cloud.md
+      - name: Throttling for all cross-origin iframes that are display:none and non-visible
+        href: edge-learnmore-iframe-throttling-display.md
       - name: User data directory variables
         href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises

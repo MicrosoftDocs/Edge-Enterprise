@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge version rollback"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: seanlynd
 ms.date: 06/29/2021
