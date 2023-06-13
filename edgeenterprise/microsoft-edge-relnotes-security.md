@@ -18,6 +18,11 @@ These release notes provide information about security fixes that are included i
 
 ## June 13, 2023
 
+Microsoft has a fix for [CVE-2023-3079](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-3079) to **Microsoft Edge Stable Channel (Version 109.0.1518.115)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.
+
+<!-- ============== delete following when fix done ======================== -->
+## June 13, 2023
+
 Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
 
 ## June 6, 2023
