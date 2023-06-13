@@ -30,11 +30,8 @@ The following table lists the new and deprecated policies that are in this artic
 
 | Policy Name | Caption |
 |:-----|:-----|
-| [ComposeInlineEnabled](#composeinlineenabled) |Compose is enabled for writing on the web |
-| [EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled) |Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated) |
 | [EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled) |Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge |
 | [EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled) |Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge |
-| [SearchForImageEnabled](#searchforimageenabled) |Search for image enabled |
 | [WalletDonationEnabled](#walletdonationenabled) |Wallet Donation Enabled |
 
 ## Available policies
