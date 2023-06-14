@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 06/09/2023
+ms.date: 06/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,8 +35,9 @@ For more information, see [Set up the Standard or Targeted release options](/mic
 <!-- ====================================================================== -->
 ## Prerequisites
 
-- You must have Microsoft Edge 114.0.1823.37 or greater installed.
+- You must have Microsoft Edge 115.0.1901.7 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
+- You must be using one of the following supported operating systems: Windows 10+ or Windows Server 2016+. See [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems) for specifics.
 <!-- ====================================================================== -->
 ## Access the preview experience
 
