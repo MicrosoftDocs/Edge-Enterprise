@@ -27,7 +27,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues for Android.
 
-## Policy update
+### Policy update
 
 - **iOS Website data store access.** Currently, the persistent data store is only statically used by personal accounts. Because work or school accounts can't use this data store, browsing data rather than cookies are lost when their sessions end. This new policy lets organizations access the data store dynamically, which persists browsing data for work or school accounts, giving users a better browsing experience.
 
