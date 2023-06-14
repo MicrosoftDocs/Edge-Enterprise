@@ -1,6 +1,6 @@
 ---
 title: "Regular Expression 2 syntax"
-ms.author: seanlyn
+ms.author: comanea
 author: dan-wesley
 manager: seanlyn
 ms.date: 06/14/2022
