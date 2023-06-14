@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 06/06/2023
+ms.date: 06/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,15 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## June 13, 2023
+
+Microsoft has a fix for [CVE-2023-3079](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-3079) to **Microsoft Edge Stable Channel (Version 109.0.1518.115)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). This backport was done to our M109 Windows down-level extended support.
+
+<!-- ============== delete following when fix done ======================== -->
+## June 13th, 2023
+
+Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
 
 ## June 6, 2023
 
