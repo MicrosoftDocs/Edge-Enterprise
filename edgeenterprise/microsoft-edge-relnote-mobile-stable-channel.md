@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 05/22/2023
+ms.date: 06/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,14 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 114.0.1823.37: June 2, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Policy update
+
+- **iOS Website data store access.** Currently, the persistent data store is only statically used by personal accounts. Because work or school accounts can't use this data store, browsing data rather than cookies are lost when their sessions end. This new policy lets organizations access the data store dynamically, which persists browsing data for work or school accounts, giving users a better browsing experience.
 
 ## Version 113.0.1774.50: May 18, 2023
 
