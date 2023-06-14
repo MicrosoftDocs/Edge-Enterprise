@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge and split tunnel VPN support for WebRTC"
-ms.author: juso
+ms.author: harneets
 author: dan-wesley
 manager: harneets
 ms.date: 01/24/2022
