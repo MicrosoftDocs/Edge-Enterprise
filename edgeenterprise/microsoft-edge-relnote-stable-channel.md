@@ -30,6 +30,8 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-15-2023).
+
 ## Version 109.0.1518.115: June 13, 2023
 
 > [!NOTE]
