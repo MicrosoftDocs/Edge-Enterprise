@@ -765,17 +765,17 @@ You can specify Google's search URL as: '{google:baseURL}search?q={searchTerms}&
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSearchURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://search.my.company/search?q={searchTerms}
@@ -808,17 +808,17 @@ Leaving DefaultSearchProviderSearchURLPostParams unset means search requests are
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSearchURLPostParams
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 q={searchTerms},ie=utf-8,oe=utf-8
