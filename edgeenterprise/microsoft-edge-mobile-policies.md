@@ -681,17 +681,17 @@ If you set the policy, users can't change it in Microsoft Edge. If not set, the 
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderEnabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -723,17 +723,17 @@ Leaving DefaultSearchProviderName unset means the hostname specified by the sear
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderName
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 My Intranet Search
