@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 114.0.1823.37: June 2, 2023
 
-Fixed various bugs and performance issues for Android.
+Fixed various bugs and performance issues.
 
 ### Policy update
 
