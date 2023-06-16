@@ -1,9 +1,9 @@
 ---
 title: "Allow list for Microsoft Edge endpoints"
-ms.author: kvice
+ms.author: leahtu
 author: dan-wesley
-manager: srugh
-ms.date: 12/02/2022
+manager: archandr
+ms.date: 06/15/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -103,6 +103,13 @@ These endpoints manage the reading and writing of synced data, rights management
 The service that Microsoft Edge uses to download the cloud-hosted site list for Internet Explorer (IE) mode. For more information, see [Cloud Site List Management](https://aka.ms/CloudSiteList)
 
 - `https://edge.microsoft.com/`
+
+### Microsoft Edge management service
+
+The service that Microsoft Edge uses to download the configuration profiles. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service).
+
+- `https://edge.microsoft.com/`
+- `https://clients.config.office.net`
 
 ## Microsoft Defender SmartScreen services
 
