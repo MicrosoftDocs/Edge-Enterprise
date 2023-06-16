@@ -855,13 +855,15 @@ List of strings
 
 Android:string
 
-#### Android restriction name:
+iOS:String
+
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderAlternateURLs
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 [
@@ -901,13 +903,15 @@ List of strings
 
 Android:string
 
-#### Android restriction name:
+iOS:string
+
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderEncodings
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 [
