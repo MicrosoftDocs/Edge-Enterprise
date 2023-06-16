@@ -317,17 +317,17 @@ Leaving the policy unset turns off HTTP Negotiate authentication on Android.
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 AuthAndroidNegotiateAccountType
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 com.example.spnego
@@ -444,17 +444,17 @@ Leaving it unset means BlockPopups applies, but users can change this setting.
 
 #### Data Type:
 
-Integer
+Android:Integer
 
-Android:choice
+iOS:Integer
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultPopupsSetting
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 1
