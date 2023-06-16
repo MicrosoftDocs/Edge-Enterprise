@@ -924,7 +924,7 @@ DefaultSearchProviderEncodings
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-
+<!---   pause here until data type: query answered --->
 ### DefaultSearchProviderImageURL
 
 #### Parameter providing search-by-image feature for the default search provider
