@@ -23,6 +23,14 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Feature update
+
+- **Microsoft Edge for Business.** With the rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business is designed to help meet the evolving security landscape while empowering users to work effectively.
+
+  Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.
+
+  Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login. For more information, see [Microsoft Edge for Business (Early Preview)](/deployedge/microsoft-edge-for-business).
+
 ## Version 115.0.1901.9: June 15, 2023
 
 Fixed various bugs and performance issues.
