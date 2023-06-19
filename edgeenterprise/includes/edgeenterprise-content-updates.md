@@ -2,6 +2,18 @@
 
 
 
+## Week of June 12, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/13/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 6/13/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 6/14/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 6/16/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 6/16/2023 | [Allow list for Microsoft Edge endpoints](/DeployEdge/microsoft-edge-security-endpoints) | modified |
+
+
 ## Week of June 05, 2023
 
 
@@ -40,18 +52,3 @@
 |------|------------|--------|
 | 5/18/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
 | 5/18/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of May 08, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/8/2023 | [Microsoft Edge Workspaces](/DeployEdge/microsoft-edge-workspaces) | modified |
-| 5/8/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-| 5/8/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 5/9/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 5/10/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 5/10/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 5/10/2023 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
-| 5/12/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
