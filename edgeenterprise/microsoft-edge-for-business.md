@@ -119,7 +119,7 @@ The private preview provides switching for the following sites:
 
 Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
-### How can users control which browser window a website will open in?
+### How can users control which browser window a website opens in?
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
