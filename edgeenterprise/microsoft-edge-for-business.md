@@ -31,12 +31,11 @@ This preview encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-|  Separation of work and personal browser windows  |  Easily distinguish between work and personal browser windows through visual elements and feature availability.    |  Private preview <br> (See following instructions)   |
+| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview<br>(See following instructions) |
+| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview<br>(See following onboarding instructions)  |
 |  Automatic switching between work and personal browser windows |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview <br> (See following instructions)     |
-| Enterprise personal browser | A lightweight browser that lets you access your favorite non-work sites and services without compromising safety for the enterprise. | Private Preview<br>(See following onboarding instructions)  |
 |  Company branding within the work browser window  |  Increase familiarity and trust with company branding.  |  Coming soon     |
-|  Enterprise controls on managed devices   | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available<br>(Same as non-preview)     |
-|  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
+|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
 
 ## Enable Microsoft Edge for Business
 
@@ -55,7 +54,7 @@ Microsoft Edge for Business is available in private preview on managed devices o
 
 The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
 
-### Lightly managed enterprise personal browser
+### Enterprise personal browser
 
 The lightly managed personal browser (MSA profile) lets you access your favorite non-work sites and services without compromising safety for the enterprise. The lightly managed personal browser has the same security, compliance, and update policies applied as the Microsoft Edge for Business. Other work specific policies will only apply to Microsoft Edge for business (Azure AD profile).
 
@@ -89,7 +88,9 @@ Participation requirements:
 
 ## Provide feedback
 
-Your feedback while using Microsoft Edge for Business is valuable and it helps us improve the product! Please provide feedback at [http://microsoftedgeinsider.com/](http://microsoftedgeinsider.com/).
+Your feedback while using Microsoft Edge for Business is valuable and it helps us improve the product!
+
+For feedback about enterprise personal browser policy or any of the other Microsoft Edge for Business features, you can press alt + shift + I in the browser to open the **Send feedback** dialog where you can share your thoughts. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
 ## Frequently Asked Questions
 
