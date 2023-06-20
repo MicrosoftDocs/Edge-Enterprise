@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/24/2023
+ms.date: 06/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 description: "Information about Microsoft Edge for Business Preview"
 ---
 
-# Microsoft Edge for Business (Early Preview)
+# Microsoft Edge for Business (Private Preview)
 
 This article describes the benefits that Microsoft Edge for Business will bring to your users and explains how to enable this experience and use Microsoft Edge for Business in your organization.
 
 > [!NOTE]
-> Edge for Business is available in early preview. Preview features and experiences are in development and are available so you can get early access and send us feedback.
+> Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback.
 
 ## Introduction
 
@@ -31,26 +31,32 @@ This preview encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-|  Separation of work and personal browser windows  |  Easily distinguish between work and personal browser windows through visual elements and feature availability.    |  Early preview <br> (See following instructions)   |
-|  Automatic switching between work and personal browser windows |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Early preview <br> (See following instructions)     |
+|  Separation of work and personal browser windows  |  Easily distinguish between work and personal browser windows through visual elements and feature availability.    |  Private preview <br> (See following instructions)   |
+|  Automatic switching between work and personal browser windows |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview <br> (See following instructions)     |
 |  Company branding within the work browser window  |  Increase familiarity and trust with company branding.  |  Coming soon     |
 |  Enterprise controls on managed devices   | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available<br>(Same as non-preview)     |
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
 
-Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the early preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
+## Enable Microsoft Edge for Business
 
-## About this early preview
+Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the private preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
 
-The early preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
+### Enable the preview on a device
 
-The lightly managed personal browser window will have the same security and compliance posture as Microsoft Edge for Business, with the same security, compliance and update policy. All the other work specific policies will only apply to Microsoft Edge for Business (Azure AD profile).
-
-Edge for Business is available in early preview on managed devices on Microsoft Edge version 112 or later. To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
+Microsoft Edge for Business is available in private preview on managed devices on Microsoft Edge version 115 or later. To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
 
 - *edge://flags/#edge-project-kodiak*
 - *edge://flags/#edge-project-kodiak-look-and-feel*
 - *edge://flags/#edge-project-kodiak-policy-filter*
 - *edge://flags/#edge-automatic-profile-switching*
+
+## About this private preview
+
+The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
+
+### Lightly managed enterprise personal browser
+
+The lightly managed personal browser (MSA profile) lets you access your favorite non-work sites and services without compromising safety for the enterprise. The lightly managed personal browser has the same security, compliance, and update policies applied as the Microsoft Edge for Business. Other work specific policies will only apply to Microsoft Edge for business (Azure AD profile).
 
 > [!NOTE]
 >
@@ -58,6 +64,11 @@ Edge for Business is available in early preview on managed devices on Microsoft 
 > - Edge for Business visual treatment and branding is not currently available on mobile as part of the preview.
 > - IT admin management capabilities will be available soon.
 
+#### Personal browser policies
+
+The following table summarizes some of the policies that apply to the personal browser.
+
+ 
 ### Unmanaged BYOPC preview
 
 > [!NOTE]
@@ -102,7 +113,7 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
-The early preview will provide switching for the following sites:
+The private preview will provide switching for the following sites:
 
 - Amazon
 - BestBuy
