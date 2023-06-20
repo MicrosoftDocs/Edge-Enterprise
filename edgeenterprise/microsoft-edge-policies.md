@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/09/2023
+ms.date: 06/16/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -435,6 +435,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
@@ -628,6 +629,7 @@ These tables list all of the browser-related group policies available in this re
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
@@ -20648,6 +20650,61 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeWalletCheckoutEnabled
+
+  #### Enable Wallet Checkout feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 114 or later
+
+  #### Description
+
+  Enables Wallet Checkout feature in Microsoft Edge.
+
+If you enable or don't configure this policy, users can choose whether to use wallet checkout while shopping on Microsoft Edge.
+
+If you disable this policy, users can't use wallet checkout while shopping on Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeWalletCheckoutEnabled
+  - GP name: Enable Wallet Checkout feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeWalletCheckoutEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EditFavoritesEnabled
 
   #### Allows users to edit favorites
@@ -33354,6 +33411,70 @@ If you disable this policy, text predictions will not be provided in eligible te
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ThrottleNonVisibleCrossOriginIframesAllowed
+
+  #### Allows enabling throttling of non-visible, cross-origin iframes
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 116 or later
+
+  #### Description
+
+  Throttling of cross-origin frames that are display:none and non-visible is a feature designed to make cross-process and same-process cross-origin iframes consistent in their rendering behavior. For more details on cross-process vs. same-process throttling, refer to [https://go.microsoft.com/fwlink/?linkid=2239564](https://go.microsoft.com/fwlink/?linkid=2239564).
+
+This enterprise policy exists to allow administrators to control whether their users are able to turn the additional throttling on or not.
+
+If you enable or don't configure this policy, users can opt-in to throttling.
+
+If you disable this policy, users can't enable throttling.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - GP name: Allows enabling throttling of non-visible, cross-origin iframes
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Example value:
+``` xml
+<true/>
 ```
   
 
