@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/15/2023
+ms.date: 06/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,26 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 115.0.1901.14: June 19, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Edge for Business.**  In addition to rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business offers new refreshed look and feel, automatic switching to keep your work and personal browsing separate, lightly managed Enterprise Personal Browser (MSA profile), support for Unmanaged BYOPC, and Company Branding (coming soon).  
+
+  To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
+
+  - `edge://flags/#edge-project-kodiak`
+
+  - `edge://flags/#edge-project-kodiak-look-and-feel`
+
+  - `edge://flags/#edge-project-kodiak-policy-filter`
+
+  - `edge://flags/#edge-automatic-profile-switching`
+
+  For more information, see [Microsoft Edge for Business (Early Preview)](/deployedge/microsoft-edge-for-business).
 
 ## Version 115.0.1901.9: June 15, 2023
 
