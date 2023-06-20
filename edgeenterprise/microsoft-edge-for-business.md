@@ -33,6 +33,7 @@ This preview encompasses the experiences summarized in the following table.
 |:-----|:-----|:------|
 |  Separation of work and personal browser windows  |  Easily distinguish between work and personal browser windows through visual elements and feature availability.    |  Private preview <br> (See following instructions)   |
 |  Automatic switching between work and personal browser windows |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview <br> (See following instructions)     |
+| Enterprise personal browser | A lightweight browser that lets you access your favorite non-work sites and services without compromising safety for the enterprise. | Private Preview<br>(See following onboarding instructions)  |
 |  Company branding within the work browser window  |  Increase familiarity and trust with company branding.  |  Coming soon     |
 |  Enterprise controls on managed devices   | Natively built-in rich enterprise controls for secure data access and leak prevention.    |  Available<br>(Same as non-preview)     |
 |  Unmanaged BYOPC    |  Secure and compliant access to work resources on personal computers.    |  Private Preview<br>(See following onboarding instructions) |
