@@ -14,7 +14,7 @@ description: "Information about Microsoft Edge for Business Preview"
 
 # Microsoft Edge for Business (Private Preview)
 
-This article describes the benefits that Microsoft Edge for Business will bring to your users and explains how to enable this experience and use Microsoft Edge for Business in your organization.
+This article describes the benefits that Microsoft Edge for Business brings to your users and explains how to enable this experience and use Microsoft Edge for Business in your organization.
 
 > [!NOTE]
 > Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback.
