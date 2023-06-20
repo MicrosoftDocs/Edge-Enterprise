@@ -60,13 +60,15 @@ The lightly managed personal browser (MSA profile) lets you access your favorite
 
 > [!NOTE]
 >
-> - Users must have a new or existing personal profile to use the personal browser window capability.
+> - Users must have a personal profile (new or existing) to use the personal browser window capability.
 > - Edge for Business visual treatment and branding is not currently available on mobile as part of the preview.
 > - IT admin management capabilities will be available soon.
 
 #### Personal browser policies
 
 The following table summarizes some of the policies that apply to the personal browser.
+
+
 
  
 ### Unmanaged BYOPC preview
