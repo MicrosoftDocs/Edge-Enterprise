@@ -39,16 +39,16 @@ This preview encompasses the experiences summarized in the following table.
 
 ## Enable Microsoft Edge for Business
 
-Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the private preview using the *edge://flags/#edge-project-kodiak*. The next section has more information about flags you can use to enable different aspects of this experience.
+Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the private preview using the `edge://flags/#edge-project-kodiak`. The next section has more information about flags you can use to enable different aspects of this experience.
 
 ### Enable the preview on a device
 
 Microsoft Edge for Business is available in private preview on managed devices on Microsoft Edge version 115 or later. To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
 
-- *edge://flags/#edge-project-kodiak*
-- *edge://flags/#edge-project-kodiak-look-and-feel*
-- *edge://flags/#edge-project-kodiak-policy-filter*
-- *edge://flags/#edge-automatic-profile-switching*
+- `edge://flags/#edge-project-kodiak`
+- `edge://flags/#edge-project-kodiak-look-and-feel`
+- `edge://flags/#edge-project-kodiak-policy-filter`
+- `edge://flags/#edge-automatic-profile-switching`
 
 ## About this private preview
 
