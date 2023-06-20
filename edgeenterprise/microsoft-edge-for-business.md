@@ -21,9 +21,9 @@ This article describes the benefits that Microsoft Edge for Business brings to y
 
 ## Introduction
 
-Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
+Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. [Learn more](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-ai-productivity-management-sidebar-apps/) about Microsoft Edge for Business.  
+Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations. This separation ensures that information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. [Learn more](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-ai-productivity-management-sidebar-apps/) about Microsoft Edge for Business.  
 
 Microsoft Edge for Business is in preview today on managed devices, and available in private preview for unmanaged BYOPC devices.  
 
@@ -56,7 +56,7 @@ The private preview includes some visual treatments for the work browser window,
 
 ### Enterprise personal browser
 
-The lightly managed personal browser (MSA profile) lets you access your favorite non-work sites and services without compromising safety for the enterprise. The lightly managed personal browser has the same security, compliance, and update policies applied as the Microsoft Edge for Business. Other work specific policies will only apply to Microsoft Edge for business (Azure AD profile).
+The lightly managed personal browser (MSA profile) lets you access your favorite non-work sites and services without compromising safety for the enterprise. The lightly managed personal browser has the same security, compliance, and update policies applied as the Microsoft Edge for Business. Other work specific policies only apply to Microsoft Edge for business (Azure AD profile).
 
 > [!NOTE]
 >
@@ -98,11 +98,11 @@ For feedback about enterprise personal browser policy or any of the other Micros
 
 There are two ways to change which browser window is used to open a website:  
 
-- Use the following Omnibar Switching icon to switch back to the preferred browser window. This action will make the browser remember your choice for that URL.
+- Use the following Omnibar Switching icon to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
   ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon.png)
 
-- Go to *edge://settings/profiles/multiProfileSettings* and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
+- Go to `edge://settings/profiles/multiProfileSettings` and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
 ### Does the browser window switching preference sync across other Microsoft Edge channels?
 
@@ -110,14 +110,14 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
-The private preview will provide switching for the following sites:
+The private preview provides switching for the following sites:
 
 - Amazon
 - BestBuy
 - Target
 - Walmart
 
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that will automatically open in the personal browser window as the experience continues to expand.
+Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
 ### How can users control which browser window a website will open in?
 
