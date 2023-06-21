@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge Enterprise new tab page"
-ms.author: trnohra
+ms.author: mamayeka
 author: dan-wesley
 manager: collw
 ms.date: 03/14/2023
