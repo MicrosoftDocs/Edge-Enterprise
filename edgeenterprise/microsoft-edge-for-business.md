@@ -43,7 +43,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
 
-![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-3.png)
+![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-250.png)
 <!-- Insert Image <Logo> <pill and flyout> -->
 
 Inside the browser you see the new profile pill design, the updated profile flyout visual treatment, and the company color accenting the browser frame.
