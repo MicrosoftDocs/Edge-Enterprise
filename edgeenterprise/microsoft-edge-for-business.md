@@ -35,7 +35,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 |:-----|:-----|:------|
 | Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview |
 | Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview    |
+|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in private preview    |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 |  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
 
@@ -43,7 +43,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
 
-![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-250.png)
+![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-125.png)
 
 Inside the browser you see the new profile pill design, the updated profile flyout visual treatment, and the company color accenting the browser frame.
 
@@ -64,7 +64,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 
 We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
 
-![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition.png)
+![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition-600.png)
 
 ## Company Branding
 
