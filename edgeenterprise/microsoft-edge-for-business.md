@@ -64,7 +64,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
 - Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
 
-We will share the full list of policies that apply to the personal browser profile, stay tuned for that update.
+We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition.png)
 
@@ -143,7 +143,7 @@ The private preview provides switching for the following sites:
 - Target
 - Walmart
 
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
+Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
 ### How can users control which browser window a website opens in?
 
