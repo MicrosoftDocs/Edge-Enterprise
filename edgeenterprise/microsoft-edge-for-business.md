@@ -14,7 +14,7 @@ description: "Information about Microsoft Edge for Business Preview"
 
 # Microsoft Edge for Business (Private Preview)
 
-This article describes the benefits that Microsoft Edge for Business brings to your users and explains how to enable this experience and use Microsoft Edge for Business in your organization.
+This article describes the benefits Microsoft Edge for Business brings to your users and how to enable this experience for your organization.
 
 > [!NOTE]
 > Microsoft Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
@@ -25,7 +25,7 @@ This article describes the benefits that Microsoft Edge for Business brings to y
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, which makes it prone to accidentally share sensitive information with unintended audiences or cause cognitive overload for the end user. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, **preventing cognitive overload or end users from** accidentally **sharing** sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 
 Microsoft Edge for Business is available in private preview on managed PCs, and unmanaged BYOPC.
 
@@ -41,11 +41,11 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 ## Work Browser (Visual Refresh)
 
-When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+When Microsoft Edge for Business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
 
-Inside the browser you see the new profile pill design, the updated profile flyout visual treatment, and the company color accenting the browser frame.
+Inside the browser you see the new profile pill label, profile flyout visual treatment, and flyout band annotation.
 
 ![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout-center.png)
 
@@ -125,7 +125,7 @@ There are two ways to change which browser window is used to open a website: 
 
 - Use the following Omnibar Switching icon to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
-  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
+  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon.png)
 
 - Go to `edge://settings/profiles/multiProfileSettings` and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
