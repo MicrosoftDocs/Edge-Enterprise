@@ -49,7 +49,7 @@ When Microsoft Edge for business is available, the existing Azure AD profile on 
 
 Inside the browser you see the new profile pill design, the updated profile flyout visual treatment, and the company color accenting the browser frame.
 
-![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout.png)
+![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout-center.png)
 
 ## Automatic switching with the Enterprise personal browser
 
