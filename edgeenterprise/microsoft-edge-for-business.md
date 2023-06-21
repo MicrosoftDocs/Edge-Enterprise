@@ -70,7 +70,8 @@ We'll share the full list of policies that apply to the personal browser profile
 
 Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
 
-<!-- Insert Image <Contoso Branding>-->
+![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
+
 As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
 
 ## Enable Microsoft Edge for Business preview
