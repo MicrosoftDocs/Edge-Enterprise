@@ -61,7 +61,7 @@ The private preview includes some visual treatments for the work browser window,
 
 The Enterprise personal browser is designed to keep work and personal browsing separate for the end users via the new Automatic Switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We will continue to update our automatic switching logic to support more sites.
 
-Also, the personal browser profile will be lightly managed, it will automatically inherit security, compliance (Data Leak Prevention, Insider Risk Management) & Edge update policies from the Azure AD profile. The Azure AD profile (work browser) will continue to apply all the management policies.
+Also, the personal browser profile will be lightly managed, it will automatically inherit security, compliance (Data Leak Prevention, Insider Risk Management) and Microsoft Edge update policies from the Azure AD profile. The Azure AD profile (work browser) will continue to apply all the management policies.
 
 ## Unmanaged BYOPC preview
 
