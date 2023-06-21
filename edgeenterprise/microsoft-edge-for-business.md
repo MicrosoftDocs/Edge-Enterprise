@@ -33,15 +33,22 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview<br>(See following instructions) |
-| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview<br>(See following onboarding instructions)  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview <br> (See following instructions)     |
+| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview |
+| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview  |
+|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview    |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 |  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
 
 ## Work Browser (Visual Refresh)
 
-When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon will be replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts. Inside the browser you will see the new profile pill design, and the updated profile flyout visual treatment.
+When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon will be replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+
+![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-3.png)
+<!-- Insert Image <Logo> <pill and flyout> -->
+
+Inside the browser you will see the new profile pill design, and the updated profile flyout visual treatment.
+
+![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout.png)
 <!-- Insert Image <Logo> <pill and flyout> -->
 
 ## Automatic switching with the Enterprise personal browser
@@ -57,7 +64,9 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
 - Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
 
-We will share the full list of policies that apply to the personal browser profile, please stay tuned for that.
+We will share the full list of policies that apply to the personal browser profile, stay tuned for that update.
+
+![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition.png)
 
 ## Company Branding
 
