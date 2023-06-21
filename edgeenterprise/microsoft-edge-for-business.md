@@ -43,7 +43,7 @@ This preview encompasses the experiences summarized in the following table.
 
 Microsoft Edge for Business is available in private preview on managed devices on Microsoft Edge version 115 or later.
 
-Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window. Users can enable the private preview using the `edge://flags/#edge-project-kodiak`.
+Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
 
 To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
 
