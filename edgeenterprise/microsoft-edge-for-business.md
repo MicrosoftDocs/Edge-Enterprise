@@ -66,7 +66,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 
 We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
 
-![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition-600.png)
+![Smart switching from work to personal browser](media/microsoft-edge-for-business/mefb-smart-switch-transition-center.png)
 
 ## Company Branding
 
