@@ -46,7 +46,7 @@ When Microsoft Edge for business is available, the existing Azure AD profile on 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-3.png)
 <!-- Insert Image <Logo> <pill and flyout> -->
 
-Inside the browser you will see the new profile pill design, and the updated profile flyout visual treatment.
+Inside the browser you will see the new profile pill design, and the updated profile flyout visual treatment, and the company color accenting the browser frame.
 
 ![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout.png)
 <!-- Insert Image <Logo> <pill and flyout> -->
