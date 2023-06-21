@@ -25,7 +25,7 @@ This article describes the benefits that Microsoft Edge for Business brings to y
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, which makes it prone to accidentally share sensitive information with unintended audiences or cause cognitive overload for the end user. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our //build announcement.
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, which makes it prone to accidentally share sensitive information with unintended audiences or cause cognitive overload for the end user. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 
 Microsoft Edge for Business is available in private preview on managed PCs, and unmanaged BYOPC.
 
@@ -44,12 +44,10 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 When Microsoft Edge for business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-for-business-logo-250.png)
-<!-- Insert Image <Logo> <pill and flyout> -->
 
 Inside the browser you see the new profile pill design, the updated profile flyout visual treatment, and the company color accenting the browser frame.
 
 ![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout.png)
-<!-- Insert Image <Logo> <pill and flyout> -->
 
 ## Automatic switching with the Enterprise personal browser
 
