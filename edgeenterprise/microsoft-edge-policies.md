@@ -3,14 +3,14 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/11/2023
+ms.date: 06/16/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
-description: Windows and Mac documentation for policies supported by Microsoft Edge.
+description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
 # Microsoft Edge - Policies
@@ -24,15 +24,20 @@ You can download the [Microsoft Security Compliance Toolkit](https://www.microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+
 ## New policies
 
-The following table lists the new and deprecated policies that are in this article update.
+The following table lists the new, deprecated, and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-| [EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled) |Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge |
-| [EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled) |Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge |
-| [WalletDonationEnabled](#walletdonationenabled) |Wallet Donation Enabled |
+|[ComposeInlineEnabled](#composeinlineenabled)|Compose is enabled for writing on the web|
+|[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)|
 
 ## Available policies
 
@@ -401,6 +406,7 @@ These tables list all of the browser-related group policies available in this re
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
+|[ComposeInlineEnabled](#composeinlineenabled)|Compose is enabled for writing on the web|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
@@ -444,13 +450,14 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
-|EnforceLocalAnchorConstraintsEnabled|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
@@ -459,7 +466,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsolete)|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
@@ -598,6 +605,7 @@ These tables list all of the browser-related group policies available in this re
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
 |[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
@@ -636,6 +644,7 @@ These tables list all of the browser-related group policies available in this re
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
@@ -670,7 +679,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
-|[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -11880,8 +11889,8 @@ The Microsoft Defender SmartScreen download protection service won't check downl
 If you enable this policy, Microsoft Defender SmartScreen trusts these domains.
 If you disable or don't set this policy, default Microsoft Defender SmartScreen protection is applied to all resources.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-Also note that this policy does not apply if your organization has enabled Microsoft Defender Advanced Threat Protection. You must configure your allow and block lists in Microsoft Defender Security Center instead.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10/11 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+Also note that this policy does not apply if your organization has enabled Microsoft Defender for Endpoint. You must configure your allow and block lists in Microsoft 365 Defender portal using Indicators (Settings > Endpoints > Indicators).
 
   #### Supported features:
 
@@ -17610,6 +17619,68 @@ Please note that disabling this policy can potentially prevent the Microsoft Edg
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ComposeInlineEnabled
+
+  #### Compose is enabled for writing on the web
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure Compose in Microsoft Edge. Compose provides help for writing with AI-generated text, which lets the user get ideas for writing. This includes elaborating on text, re-writing, changing tone, formatting the text, and more.
+
+If you enable or don't configure this policy, Compose can provide text generation for eligible fields, which are text editable and don't have an autocomplete attribute.
+
+If you disable this policy, Compose will not be able to provide text generation for eligible fields. Compose will still be available for prompt-based text generation through the sidebar and must be managed with either [EdgeDiscoverEnabled](#edgediscoverenabled) policy or [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ComposeInlineEnabled
+  - GP name: Compose is enabled for writing on the web
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ComposeInlineEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ComposeInlineEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ConfigureDoNotTrack
 
   #### Configure Do Not Track
@@ -20594,6 +20665,61 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeWalletCheckoutEnabled
+
+  #### Enable Wallet Checkout feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 114 or later
+
+  #### Description
+
+  Enables Wallet Checkout feature in Microsoft Edge.
+
+If you enable or don't configure this policy, users can choose whether to use wallet checkout while shopping on Microsoft Edge.
+
+If you disable this policy, users can't use wallet checkout while shopping on Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeWalletCheckoutEnabled
+  - GP name: Enable Wallet Checkout feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeWalletCheckoutEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EditFavoritesEnabled
 
   #### Allows users to edit favorites
@@ -20990,6 +21116,76 @@ As such, this policy is a temporary measure to control the initial experimental 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnforceLocalAnchorConstraintsEnabled
+
+  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  X.509 certificates may encode constraints, such as Name Constraints, in extensions in the certificate. RFC 5280 specifies that enforcing such constraints on trust anchor certificates is optional.
+
+Starting in Microsoft Edge 112, such constraints in certificates loaded from the platform certificate store will now be enforced.
+
+This policy exists as a temporary opt-out in case an enterprise encounters issues with the constraints encoded in their private roots. In that case this policy may be used to temporarily disable enforcement of the constraints while correcting the certificate issues.
+
+If you enable this policy or don't configure it, Microsoft Edge will enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+If you disable this policy, Microsoft Edge will not enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
+
+This policy is planned to be removed in Microsoft Edge version 118.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnforceLocalAnchorConstraintsEnabled
+  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnforceLocalAnchorConstraintsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnforceLocalAnchorConstraintsEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -21513,10 +21709,10 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   ### EventPathEnabled
 
-  #### Re-enable the Event.path API until Microsoft Edge version 115
+  #### Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 115.
   #### Supported versions:
 
   - On Windows and macOS since 107, until 115
@@ -21548,7 +21744,7 @@ This policy will be made obsolete after Microsoft Edge version 115.
   ##### Group Policy (ADMX) info
 
   - GP unique name: EventPathEnabled
-  - GP name: Re-enable the Event.path API until Microsoft Edge version 115
+  - GP name: Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -30714,6 +30910,68 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
 
   [Back to top](#microsoft-edge---policies)
 
+  ### SearchForImageEnabled
+
+  #### Search for image enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure the Image Search feature in the right-click context menu.
+
+If you enable or don't configure this policy, then the "Search the web for image" option will be visible in the context menu.
+
+If you disable this policy, then the "Search the web for image" will not be visible in the context menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchForImageEnabled
+  - GP name: Search for image enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchForImageEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SearchForImageEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SearchInSidebarEnabled
 
   #### Search in Sidebar enabled
@@ -33173,6 +33431,70 @@ If you disable this policy, text predictions will not be provided in eligible te
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ThrottleNonVisibleCrossOriginIframesAllowed
+
+  #### Allows enabling throttling of non-visible, cross-origin iframes
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 116 or later
+
+  #### Description
+
+  Throttling of cross-origin frames that are display:none and non-visible is a feature designed to make cross-process and same-process cross-origin iframes consistent in their rendering behavior. For more details on cross-process vs. same-process throttling, refer to [https://go.microsoft.com/fwlink/?linkid=2239564](https://go.microsoft.com/fwlink/?linkid=2239564).
+
+This enterprise policy exists to allow administrators to control whether their users are able to turn the additional throttling on or not.
+
+If you enable or don't configure this policy, users can opt-in to throttling.
+
+If you disable this policy, users can't enable throttling.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - GP name: Allows enabling throttling of non-visible, cross-origin iframes
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### TotalMemoryLimitMb
 
   #### Set limit on megabytes of memory a single Microsoft Edge instance can use
@@ -34436,6 +34758,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   #### Supported versions:
 
   - On Windows since 95 or later
+  - On macOS since 114 or later
 
   #### Description
 
@@ -34480,6 +34803,13 @@ Note: Visual Search in Web Capture is still managed by [WebCaptureEnabled](#webc
 0x00000000
 ```
 
+  #### Mac information and settings
+
+  - Preference Key Name: VisualSearchEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -34800,11 +35130,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   #### Description
 
-  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools.
-Starting with Microsoft Edge version 107, users can also perform visual image search on the captured content.
+  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools. Users can also do a visual image search with the captured content.
 
-If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
+If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S and CTRL+SHIFT+X.
 If you disable this policy, users can't access the web capture feature in Microsoft Edge.
+
+Please note that CTRL+SHIFT+X will not work if Web Select is disabled by [WebSelectEnabled](#webselectenabled).
+
+Starting with Microsoft Edge version 114, Web Capture includes Web Select, which lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table. Users can access Web Select directly using keyboard shortcut, CTRL+SHIFT+X.
 
   #### Supported features:
 
@@ -35499,9 +35832,9 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 
   ### WebSelectEnabled
 
-  #### Web Select Enabled
+  #### Web Select Enabled (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -35509,11 +35842,13 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 
   #### Description
 
-  Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
+  This policy is deprecated because Web Select is part of Web Capture and can be controlled by [WebCaptureEnabled](#webcaptureenabled). This policy won't work in Microsoft Edge version 117. If Web Capture is disabled by [WebCaptureEnabled](#webcaptureenabled), Web select will not be available in Web Capture.
 
-If you enable or don't configure this policy, Web select is available through the right click context menu and the CTRL+SHIFT+X keyboard shortcut.
+Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
 
-If you disable this policy, Web select won't be available.
+If you enable or don't configure this policy, Web select is available in Web Capture and can be accessed directly using the CTRL+SHIFT+X keyboard shortcut.
+
+If you disable this policy, Web select will not be available in Web Capture and the CTRL+SHIFT+X keyboard shortcut will also not work.
 
   #### Supported features:
 
@@ -35530,7 +35865,7 @@ If you disable this policy, Web select won't be available.
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSelectEnabled
-  - GP name: Web Select Enabled
+  - GP name: Web Select Enabled (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
