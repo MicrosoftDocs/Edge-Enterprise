@@ -70,10 +70,10 @@ We'll share the full list of policies that apply to the personal browser profile
 
 ## Company Branding
 
-Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will  automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
+Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
 
 <!-- Insert Image <Contoso Branding>-->
-As we continue to develop this, we plan to enable additional admin customization where new assets can be provided for Microsoft Edge for Business.
+As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
 
 ## Enable Microsoft Edge for Business preview
 
@@ -151,7 +151,7 @@ The option to manage how sites open appears in the browsing window that opens fo
 
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
-No – browser favorites, history, and passwords won't be shared between the browser windows.
+No – browser favorites, history, and passwords aren't shared between the browser windows.
 
 ## See also
 
