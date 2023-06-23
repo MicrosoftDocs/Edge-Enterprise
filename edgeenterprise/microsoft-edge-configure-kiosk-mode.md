@@ -145,8 +145,8 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 |[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
 |[SmartScreen settings](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
 |[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
-|[ConfigureKeyboardShortcuts](./microsoft-edge-policies.md#configurekeyboardshortcuts) |  |  |
-|[DownloadDirectory](./microsoft-edge-policies.md#downloaddirectory) |  |  |
+|[ConfigureKeyboardShortcuts](./microsoft-edge-policies.md#configurekeyboardshortcuts) |Y  |Y  |
+|[DownloadDirectory](./microsoft-edge-policies.md#downloaddirectory) |Y  |Y  |
 
 > [!IMPORTANT]
 > Common open/save dialogs aren't automatically locked down in Kiosk Mode.
