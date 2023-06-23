@@ -2,8 +2,8 @@
 title: "Configure Microsoft Edge kiosk mode"
 ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 05/04/2023
+manager: likuba
+ms.date: 06/23/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -145,6 +145,12 @@ Use any of the Microsoft Edge policies listed in the following table to enhance 
 |[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
 |[SmartScreen settings](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
 |[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
+|[ConfigureKeyboardShortcuts](./microsoft-edge-policies.md#configurekeyboardshortcuts) |Y  |Y  |
+|[DownloadDirectory](./microsoft-edge-policies.md#downloaddirectory) |Y  |Y  |
+
+> [!IMPORTANT]
+> Common open/save dialogs aren't automatically locked down in Kiosk Mode.
+> To lock down access to these dialogs, use the [ConfigureKeyboardShortcuts](./microsoft-edge-policies.md#configurekeyboardshortcuts) policy to disable the corresponding shortcuts.
 
 ## Microsoft Edge with assigned access
 
