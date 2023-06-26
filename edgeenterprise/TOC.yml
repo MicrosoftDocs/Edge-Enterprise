@@ -1,4 +1,4 @@
-# last revised 06/12/2023
+# last revised 06/26/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -283,6 +283,8 @@
      href: microsoft-edge-video-security-dlp.md
    - name: Video - Identity in Microsoft Edge
      href: microsoft-edge-video-identity.md
+   - name: Video - Microsoft Edge for Business
+     href: microsoft-edge-video-msedge-for-business.md
    - name: Video - Microsoft Edge version rollback
      href: microsoft-edge-video-version-rollback.md
    - name: Video - PDF reader in Microsoft Edge
