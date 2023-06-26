@@ -154,6 +154,7 @@ The option to manage how sites open appears in the browsing window that opens fo
 
 No – browser favorites, history, and passwords aren't shared between the browser windows.
 
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
