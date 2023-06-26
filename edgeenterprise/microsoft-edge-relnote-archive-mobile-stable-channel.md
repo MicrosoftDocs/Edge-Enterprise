@@ -87,7 +87,7 @@ Fixed various bugs.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-17-2022).
 
-## Version 104.0.1293.58: August 16
+## Version 104.0.1293.58: August 16, 2022
 
 Fixed various bugs.
 
@@ -96,15 +96,15 @@ Fixed various bugs.
 - **Support for disabling of inPrivate browsing and Password feature (iOS and Android).**  Before Microsoft Edge 104, Edge for iOS and Android disabled InPrivate browsing and Password (prompts to save passwords for the user) by default when only allow Work or School Accounts is configured.<br><br>
 Starting with Microsoft Edge 104, you have more flexibility because InPrivate and Password won't be disabled by default when only allow Work or School Accounts is configured. Instead, you can decide whether to disable InPrivate browsing or Password by configuring the **com.microsoft.intune.mam.managedbrowser.disabledFeatures** key. For more information, see [Disable specific features](/mem/intune/apps/manage-microsoft-edge#disable-specific-features).
 
-## Version 103.1264.53: July 1
+## Version 103.1264.53: July 1, 2022
 
 Fixed various bugs.
 
-## Version 103.0.1264.38: June 30
+## Version 103.0.1264.38: June 30, 2022
 
 Fixed various bugs.
 
-## Version 102.0.1245.30: May 31
+## Version 102.0.1245.30: May 31, 2022
 
 Fixed various bugs.
 
@@ -118,11 +118,11 @@ Fixed various bugs.
 
 - [NetworkStackPref](/mem/intune/apps/manage-microsoft-edge#switch-network-stack-between-chromium-and-ios) - Choose the network preference for Microsoft Edge for iOS
 
-## Version 101.0.1210.43: May 9
+## Version 101.0.1210.43: May 9, 2022
 
 Fixed various bugs.
 
-## Version 101.0.1210.32: April 29
+## Version 101.0.1210.32: April 29, 2022
 
 Fixed various bugs.
 

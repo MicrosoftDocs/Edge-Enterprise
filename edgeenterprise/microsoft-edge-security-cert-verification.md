@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 05/02/2023
+ms.date: 06/22/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -45,6 +45,15 @@ Microsoft recommends that enterprises that have break-and-inspect proxies or oth
 In Microsoft Edge 115, support for the **MicrosoftRootStoreEnabled** policy will be removed.
 
 ## Known locally-trusted certificate behavior differences on Windows
+### Stricter RFC 5280 compliance
+The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements than the old, platform-based verifier.
+
+Examples of stricter RFC 5280 compliance include:
+1. Algorithm parameters for ECDSA algorithms must be absent. The old verifier would ignore the parameters while the new one will reject the certificate. See [Chromium issue 1453441](https://crbug.com/1453441) for more details.
+2. Name constraints specifying an IP address must contain eight octets for IPv4 addresses and 32 octets for IPv6 addresses. If your certificate specifies an empty IP address, you should reissue the certificate and omit the IP address name constraint entirely.
+3. Name constraints with an empty "excluded" list is invalid. The Windows certificate viewer shows this as `Excluded=None` within the `Name Constraints` details. See [Chromium issue 1457348](https://crbug.com/1457348) for more details. Instead of specifying an empty list, omit it entirely.
+
+### Application Policies extension
 Prior to Microsoft Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Microsoft Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
 
 This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection fails with `ERR_CERT_INVALID`.
@@ -57,7 +66,7 @@ There are a few ways to check if this applies to your certificate:
 If your certificate currently uses this extension, please test that it now works in Microsoft Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
 
 ## Known revocation checking behavior differences on Windows
-The new, built-in certificate verifier is more stringent in enforcing [RFC 5280](https://datatracker.ietf.org/doc/rfc5280/) requirements for certificate revocation lists (CRLs) than the old, platform-based verifier. Additionally, the new verifier _does not_ support LDAP-based CRL URIs.
+In addition to the more stringent RFC 5280 requirements, the new verifier _does not_ support LDAP-based certificate revocation list (CRL) URIs.
 
 If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors)** policy and the CRLs are not valid per RFC 5280, your environment may start to see `ERR_CERT_NO_REVOCATION_MECHANISM` and/or `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors.
 
