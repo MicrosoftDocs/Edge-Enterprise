@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/21/2023
+ms.date: 06/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,8 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 > - IT admin management capabilities will be available soon.
 
 ## Introduction
+
+[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/0.png)](http://www.youtube.com/watch?v=lueFoh9rF7E "Microsoft Edge for Business: Controls, Security, and Productivity")
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
@@ -151,6 +153,7 @@ The option to manage how sites open appears in the browsing window that opens fo
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
 No – browser favorites, history, and passwords aren't shared between the browser windows.
+
 
 ## See also
 
