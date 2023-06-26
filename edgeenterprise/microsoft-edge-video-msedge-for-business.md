@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Edge for Business"
+title: "Video: Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge for Business"
+description: "Microsoft Edge for Business: Controls, Security, and Productivity"
 ---
 
 # Video: Microsoft Edge for Business
@@ -18,7 +18,7 @@ This video gives an overview of the key features of Microsoft Edge for Business.
 
 Click the next screenshot to watch the video by Lindsay Kubasik, Principal Group Product Manager.
 
-[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/0.png)](http://www.youtube.com/watch?v=lueFoh9rF7E "Microsoft Edge for Business: Controls, Security, and Productivity")
+[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-video-msedge-for-business/0.png)](http://www.youtube.com/watch?v=lueFoh9rF7E "Microsoft Edge for Business: Controls, Security, and Productivity")
 
 ## About the video
 
