@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/23/2023
+ms.date: 06/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,10 @@ These release notes provide information about new features and non-security upda
 ## Version 115.0.1901.151: June 23, 2023
 
 Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Autofill Autocomplete.** This feature helps you fill form fields faster on the web. When you start typing in a form field, Microsoft Edge suggests possible in-line completions when there's an exact match with your saved data in the browser. For example, if you type the first few characters of your address, autocomplete will suggest the rest of address - you can choose the autocomplete suggestion or continue typing as usual. Autofill options can be found in Settings (`edge://settings/personalinfo`).  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ## Version 115.0.1901.14: June 19, 2023
 
