@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/20/2023
+ms.date: 06/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Information about Microsoft Edge for Business Preview"
 
 # Microsoft Edge for Business (Private Preview)
 
-This article describes the benefits that Microsoft Edge for Business brings to your users and explains how to enable this experience and use Microsoft Edge for Business in your organization.
+This article describes the benefits Microsoft Edge for Business brings to your users and how to enable this experience for your organization.
 
 > [!NOTE]
 > Microsoft Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
@@ -23,21 +23,58 @@ This article describes the benefits that Microsoft Edge for Business brings to y
 
 ## Introduction
 
+[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/0.png)](http://www.youtube.com/watch?v=lueFoh9rF7E "Microsoft Edge for Business: Controls, Security, and Productivity")
+
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business honors the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations. This separation ensures that information stays separate. Microsoft Edge for Business is planned to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. [Learn more](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-ai-productivity-management-sidebar-apps/) about Microsoft Edge for Business.  
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 
-Microsoft Edge for Business is in preview today on managed devices, and available in private preview for unmanaged BYOPC devices.  
+Microsoft Edge for Business is available in private preview on managed PCs, and unmanaged BYOPC.
 
-This preview encompasses the experiences summarized in the following table.
+Microsoft Edge for Business encompasses the experiences summarized in the following table. You can enable and try the preview by following the instructions in [Enable Microsoft Edge for Business preview](#enable-microsoft-edge-for-business-preview).
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview<br>(See following instructions) |
-| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview<br>(See following onboarding instructions)  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  |  Private preview <br> (See following instructions)     |
+| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview |
+| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview  |
+|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in private preview    |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 |  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
+
+## Work Browser (Visual Refresh)
+
+When Microsoft Edge for Business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+
+![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
+
+Inside the browser you see the new profile pill label, profile flyout visual treatment, and flyout band annotation.
+
+![Updated visual treatment for browser](media/microsoft-edge-for-business/image-pill-with-flyout-center.png)
+
+## Automatic switching with the Enterprise personal browser
+
+> [!NOTE]
+> Applies when device has at least one Azure AD profile and one MSA profile (existing or new).
+
+The Enterprise personal browser is designed to keep work and personal browsing separate for the end users via the new Automatic Switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
+
+Another thing to note, when Microsoft Edge for Business is available, the personal browser profile is lightly managed, without requiring additional configuration. The personal browser profile will automatically inherit only the following policy categories:
+
+- Security Policies (e.g., Application Guard, Enhanced Security Mode, and others)
+- Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
+- Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
+
+We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
+
+![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
+
+## Company Branding
+
+Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
+
+![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
+
+As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
 
 ## Enable Microsoft Edge for Business preview
 
@@ -53,15 +90,6 @@ To enable preview on a device, enter the following URLs in the Microsoft Edge ad
 - `edge://flags/#edge-automatic-profile-switching`
 
 The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
-
-## Automatic switching with the Enterprise personal browser
-
-> [!NOTE]
-> Applies when device has an existing or new MSA profile.
-
-The Enterprise personal browser is designed to keep work and personal browsing separate for the end users via the new Automatic Switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We will continue to update our automatic switching logic to support more sites.
-
-Also, the personal browser profile will be lightly managed, it will automatically inherit security, compliance (Data Leak Prevention, Insider Risk Management) and Microsoft Edge update policies from the Azure AD profile. The Azure AD profile (work browser) will continue to apply all the management policies.
 
 ## Unmanaged BYOPC preview
 
@@ -99,7 +127,7 @@ There are two ways to change which browser window is used to open a website: 
 
 - Use the following Omnibar Switching icon to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
-  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon.png)
+  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
 
 - Go to `edge://settings/profiles/multiProfileSettings` and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
@@ -116,7 +144,7 @@ The private preview provides switching for the following sites:
 - Target
 - Walmart
 
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You will see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
+Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
 ### How can users control which browser window a website opens in?
 
@@ -124,7 +152,8 @@ The option to manage how sites open appears in the browsing window that opens fo
 
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
-No – browser favorites, history, and passwords won't be shared between the browser windows.
+No – browser favorites, history, and passwords aren't shared between the browser windows.
+
 
 ## See also
 

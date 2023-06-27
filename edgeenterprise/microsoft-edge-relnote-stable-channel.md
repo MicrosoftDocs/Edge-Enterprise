@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/19/2023
+ms.date: 06/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,10 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 114.0.1823.58: June 22, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
 ## Version 114.0.1823.55: June 19, 2023
 
 Fixed various bugs and performance issues.
@@ -35,6 +39,17 @@ Fixed various bugs and performance issues.
 Fixed various bugs and performance issues for Stable and Extended Stable release.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-15-2023).
+
+### Feature update
+
+- Web Select is now a part of Web Capture. Users can access Web Select through Web Capture feature or press **Ctrl** + **Shift** + **X** shortcut directly for quick access.
+
+### Policy updates
+
+#### Additional policy changes
+
+- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - This policy is deprecated. It is currently supported but will become obsolete in version 117.
+- [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) - Since Web Select is now a part of Web Capture, this policy will enable/ disable both Web Select and Web Capture.
 
 ## Version 109.0.1518.115: June 13, 2023
 
