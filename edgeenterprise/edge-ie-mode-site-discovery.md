@@ -1,6 +1,6 @@
 ---
 title: "Enterprise Site Discovery Step by Step Guide"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
 manager: collw
 ms.date: 02/14/2023
