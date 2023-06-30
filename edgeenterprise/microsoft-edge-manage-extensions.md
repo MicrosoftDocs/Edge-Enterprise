@@ -19,7 +19,10 @@ This article provides best practice guidance for admins who are managing Microso
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 ## Introduction
 
 Organizations want to protect corporate and user data and evaluate browser extensions to ensure that they're safe and relevant to their enterprise. Admins want to:
