@@ -15,7 +15,10 @@ description: "Learn how to package and self-host Microsoft Edge extensions in th
 # Self-host Microsoft Edge extensions
 
 This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 
 ## Prerequisites
 
