@@ -19,7 +19,10 @@ This article provides an FAQ for Microsoft Edge extensions.
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 ## What is the update URL for the Microsoft Edge Add-ons store?
 
 The update URL for extensions hosted on Microsoft Edge Add-ons is: [https://edge.microsoft.com/extensionwebstorebase/v1/crx](https://edge.microsoft.com/extensionwebstorebase/v1/crx).
