@@ -19,7 +19,10 @@ Microsoft Edge offers multiple ways to manage extensions. A common way is to set
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 ## Before you begin
 
 Decide if you want to set all extension management settings in the ExtensionSettings policy or set these controls through other policies.
