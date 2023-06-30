@@ -14,14 +14,17 @@ description: "Use group policies to manage Microsoft Edge extensions in the ente
 
 # Use group policies to manage Microsoft Edge extensions
 
-This article describes the options and steps for managing extensions by using group policies. These options  assume that you already have Microsoft Edge managed for your users. If you have not already set up Microsoft Edge to be managed for your users please follow the below link to do so now.
+This article describes the options and steps for managing extensions by using group policies. These options assume that you already have Microsoft Edge managed for your users. If you haven't already set up Microsoft Edge to be managed for your users please follow the below link to do so now.
 
 - [Manage Microsoft Edge extensions in the enterprise](/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 ## Block extensions based on their permissions
 
 You can control what extensions your users can install based on permissions using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy. If an installed extension needs a permission that's blocked, it just won't run. The extension isn't removed, just disabled.
