@@ -14,7 +14,7 @@ description: "Use group policies to manage Microsoft Edge extensions in the ente
 
 # Use group policies to manage Microsoft Edge extensions
 
-This article describes the options and steps for managing extensions by using group policies. These options assume that you already have Microsoft Edge managed for your users. If you haven't already set up Microsoft Edge to be managed for your users please follow the below link to do so now.
+This article describes the options and steps for managing extensions by using group policies. These options assume that you already have Microsoft Edge managed for your users. If you haven't already set up Microsoft Edge to be managed for your users follow the link below to do so now.
 
 - [Manage Microsoft Edge extensions in the enterprise](/deployedge/microsoft-edge-manage-extensions)
 
@@ -138,8 +138,8 @@ You can use the [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge-policies#
 1. Open the group policy management editor and go to **Administrative Templates > Microsoft Edge > Extensions >** and then select **Control which extensions cannot be installed**.
 2. Select **Enabled**.
 3. Click **Show**.
-4. Enter the app ID of the extensions that you want to block. When adding multiple app ID's use a separate row for each ID.
-5. To block all extensions, type **\*** into the policy to prevent any extensions from being installed. You can use this in conjunction with the "Allow specific extensions to be installed" policy to only allow certain extensions to be installed. The next screenshot shows an extension that will be blocked based on the app ID that's provided.
+4. Enter the app ID of the extensions that you want to block. When adding multiple app IDs, use a separate row for each ID.
+5. To block all extensions, type **\*** into the policy to prevent any extensions from being installed. You can use this command with the "Allow specific extensions to be installed" policy to only allow certain extensions to be installed. The next screenshot shows an extension that will be blocked based on the app ID that's provided.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Use app ID to block an extension.":::
 
@@ -158,7 +158,7 @@ Use the [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensio
 3. Click **Show**.
 4. Enter the app ID or IDs of the extension or extensions you want to force-install.  
 
-The extension will be installed silently with no need for user interaction. The user also won't be able to uninstall or disable the extension. This setting will overwrite over any blocklist policy that's enabled.
+The extension is installed silently without user interaction. Also, the user won't be able to uninstall or disable the extension. This setting overwrites over any blocklist policy that's enabled.
 
 > [!NOTE]
 > For extensions hosted in the Chrome web store use a string such as: `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
