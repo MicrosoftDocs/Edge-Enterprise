@@ -19,7 +19,10 @@ Use this article as guide to configure Microsoft Edge policy settings on Windows
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= -->
+<!-- ======= Microsoft Edge management service GA July 20 ========= 
+> [!NOTE]
+> Information the user should notice even if skimming
+-->
 ## Introduction to policy settings on Windows
 
 You can use *group policy objects (GPO)* to configure policy settings for Microsoft Edge and managed Microsoft Edge updates on all versions of Windows. You can also configure policies via the registry for:
