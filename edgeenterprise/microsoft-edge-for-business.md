@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/26/2023
+ms.date: 07/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,8 +88,15 @@ To enable preview on a device, enter the following URLs in the Microsoft Edge ad
 - `edge://flags/#edge-project-kodiak-look-and-feel`
 - `edge://flags/#edge-project-kodiak-policy-filter`
 - `edge://flags/#edge-automatic-profile-switching`
+- `edge://flags/#edge-automatic-guided-switch`
 
 The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
+
+### How to enable using experimental policy
+
+1. Download the [Microsoft Edge for Business Personal Browser Policy File](https://download.microsoft.com/download/7/2/b/72b5fe45-5cd0-4ae1-9367-fc96ff293385/Microsoft Edge for Business Personal Browser Policy File.zip). This file is EXPERIMENTAL and will be deprecated with Microsoft Edge version 116.
+2. Install the policies using one of these methods: [Add the administrative template to an individual computer](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-an-individual-computer) or [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
+3. Restart Microsoft Edge: `edge://restart`.
 
 ## Unmanaged BYOPC preview
 
@@ -153,7 +160,6 @@ The option to manage how sites open appears in the browsing window that opens fo
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
 No – browser favorites, history, and passwords aren't shared between the browser windows.
-
 
 ## See also
 
