@@ -38,7 +38,7 @@ The profile's encryption key is protected using Chromium's OSCrypt and use
 
 - On Linux, the storage area is Gnome Keyring or KWallet
 
-- On Android, the storage area is Gnome Keyring or KWallet
+- On Android, there isn't a system level key storage area for the AES128 encrypted password
 
 All these storage areas encrypt the AES key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture.
 
