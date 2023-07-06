@@ -2,8 +2,8 @@
 title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
-manager: collw
-ms.date: 06/28/2023
+manager: likuba
+ms.date: 07/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,10 +19,9 @@ Use this article as guide to configure Microsoft Edge policy settings on Windows
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-<!-- ======= Microsoft Edge management service GA July 20 ========= 
 > [!NOTE]
-> Information the user should notice even if skimming
--->
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
+
 ## Introduction to policy settings on Windows
 
 You can use *group policy objects (GPO)* to configure policy settings for Microsoft Edge and managed Microsoft Edge updates on all versions of Windows. You can also configure policies via the registry for:
