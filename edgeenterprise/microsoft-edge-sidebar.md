@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: kylemiller
 author: dan-wesley
 manager: hariragu
-ms.date: 06/28/2023
+ms.date: 07/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,10 +15,10 @@ description: "Learn how to manage the sidebar in Microsoft Edge."
 # Manage the sidebar in Microsoft Edge
 
 This article describes the sidebar in Microsoft Edge and provides information about the  procedures that admins can use to manage this feature  in their organization.
-<!-- ======= Microsoft Edge management service GA July 20 ========= 
+
 > [!NOTE]
-> Information the user should notice even if skimming
--->
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
+
 ## Introduction to the sidebar
 
 For a growing number of people, the browser has become the place where work happens. As the transition from juggling apps to switching tabs entrenches web-based tools in our workflows, the risks to productivity mount. With the sidebar in Microsoft Edge, Enterprise users can access the productivity tools they need while staying in their workflow.
