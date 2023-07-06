@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/29/2023
+ms.date: 07/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,10 +15,9 @@ description: "Learn how to package and self-host Microsoft Edge extensions in th
 # Self-host Microsoft Edge extensions
 
 This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
-<!-- ======= Microsoft Edge management service GA July 20 ========= 
+
 > [!NOTE]
-> Information the user should notice even if skimming
--->
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Prerequisites
 
