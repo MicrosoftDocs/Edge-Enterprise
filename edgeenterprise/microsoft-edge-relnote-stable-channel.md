@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/29/2023
+ms.date: 07/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,6 +35,8 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 ## Version 114.0.1823.58: June 22, 2023
 
 Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+- **Google Docs Offline extension for Microsoft Edge.**  Google Docs Offline is an extension provided by Google to allow users to work on Google Docs, Sheets, Slides and Drive without internet access. This extension also provides advanced cut, copy, and paste functionalities across Google Editors.  The Google Docs Offline extension will be pre-installed and will be disabled by default for Microsoft Edge users. When a user navigates to Google Docs, the extension will be auto-enabled. Administrators can use the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) and [ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policies to block the auto-installation of the Google Docs Offline extension.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ## Version 114.0.1823.55: June 19, 2023
 
