@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/14/2023
+ms.date: 07/07/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -300,7 +300,7 @@ If there's a conflict with policy that User and Device are both trying to set, D
 > [!IMPORTANT]
 > This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
 
-1. You can do this via the registry by setting the value of "CloudUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
+1. You can set precedence via the registry by setting the value of "CloudUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
 2. Add the reg key using the following command line example as a guide. (Remember to use your profile ID.)
 
    ```
