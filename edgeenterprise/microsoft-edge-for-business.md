@@ -94,7 +94,7 @@ The private preview includes some visual treatments for the work browser window,
 
 ### How to enable using experimental policy
 
-1. Download the [Microsoft Edge for Business EXPERIMENTAL Policy File](https://download.microsoft.com/download/7/2/b/72b5fe45-5cd0-4ae1-9367-fc96ff293385/Microsoft%20Edge%20for%20Business%20EXPERIMENTAL%20Policy%20File%20Expires%20Version%20116.zip). This file will be deprecated with Microsoft Edge version 116.
+1. Download the [Microsoft Edge for Business EXPERIMENTAL Policy File](https://download.microsoft.com/download/7/2/b/72b5fe45-5cd0-4ae1-9367-fc96ff293385/Microsoft-Edge-for-Business-EXPERIMENTAL-Policy-File-Expires-Version-116.zip). This file will be deprecated with Microsoft Edge version 116.
 2. Install the policies using one of these methods: [Add the administrative template to an individual computer](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-an-individual-computer) or [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
 3. Restart Microsoft Edge: `edge://restart`.
 
