@@ -2,8 +2,8 @@
 title: "Platform support for Microsoft Edge features"
 ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 07/08/2022
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Summary of platform support for Microsoft Edge features"
 ---
 
 # Platform support for Microsoft Edge features
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article summarizes platform support for Microsoft Edge features.
 
@@ -24,7 +27,7 @@ This article summarizes platform support for Microsoft Edge features.
 The following tables summarize feature support for the Windows and macOS platforms.
 
 > [!NOTE]
-> Android and iOS are currently not represented in the support tables however we’re continuing to work on this information and will update accordingly.
+> Android and iOS are currently not represented in the support tables however we're continuing to work on this information and will update accordingly.
 
 | Security features |Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
