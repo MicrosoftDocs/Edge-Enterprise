@@ -2,8 +2,8 @@
 title: "Plan your deployment of Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 12/08/2021
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Plan your deployment of Microsoft Edge"
 ---
 
 # Plan your deployment of Microsoft Edge
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the recommended practices for deploying Microsoft Edge in an enterprise environment.
 
