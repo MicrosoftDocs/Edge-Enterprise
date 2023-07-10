@@ -36,7 +36,7 @@ Use the following steps to see the list of supported languages and then add a la
 
 You can reorder your language preferences, get Microsoft Edge to offer translations, and see Microsoft Edge in a specific language.
 To change a language setting, click the ellipsis (**...**) next to the language to open for "More actions".
-Depending on the language, you will see one or more of the following options:
+Depending on the language, you'll see one or more of the following options:
 
 - Display Microsoft Edge in this language.
   - On Windows, select this box and then click **Restart**.
