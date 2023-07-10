@@ -21,7 +21,7 @@ When establishing connections to an HTTPS server, Microsoft Edge verifies that t
 
 In past versions of Microsoft Edge, both the default certificate trust list and the certificate verifier logic were provided by underlying operating system (OS) platform.
 
-For managed devices, starting in Microsoft Edge 112 on Windows and macOS, both the default certificate trust list and the certificate verifier are provided by and shipped with the browser. This decouples the list and verifier from the host operating system's root store for the default verification behavior. See the [rollout timeline and testing guidance](#rollout-timeline-and-testing-guidance) for more detail about the timing of the change.
+For managed devices, starting in Microsoft Edge 112 on Windows and macOS, both the default certificate trust list and the certificate verifier are provided by and shipped with the browser. This approach decouples the list and verifier from the host operating system's root store for the default verification behavior. See the [rollout timeline and testing guidance](#rollout-timeline-and-testing-guidance) for more detail about the timing of the change.
 
 Even after the change, in addition to trusting the built-in roots that ship with Microsoft Edge, the browser queries the underlying platform for—and trusts—locally installed roots that users and/or enterprises installed. As a result, scenarios where a user or enterprise installed more roots to the host operating system's root store should continue to work.
 
@@ -31,7 +31,7 @@ This change means that certificate verification logic works consistently in Micr
 
 The root store that ships with Microsoft Edge on Windows and macOS comes from the Certificate Trust List (CTL) defined by the [Microsoft Trusted Root Certificate Program](/security/trusted-root/program-requirements). This is the same root certificate program that defines the list that ships with Microsoft Windows. As a result, customers should expect to see no user-visible changes.
 
-On macOS, if a certificate was issued by a root certificate trusted by the platform but not by Microsoft's Trusted Root Certificate Program, the certificate will no longer be trusted. This lack of trust isn't expected to be a common situation, since most servers already ensure the TLS certificates that they use are trusted by Microsoft Windows.
+On macOS, if a certificate issued by a root certificate that's trusted by the platform but not by Microsoft's Trusted Root Certificate Program, the certificate is no longer trusted. This lack of trust isn't expected to be a common situation, since most servers already ensure the TLS certificates that they use are trusted by Microsoft Windows.
 
 Updates are released on the cadence documented in the [release notes](/security/trusted-root/release-notes) for the Microsoft Trusted Root Program.
 
@@ -57,16 +57,17 @@ Examples of stricter RFC 5280 compliance include:
 3. Name constraints with an empty "excluded" list is invalid. The Windows certificate viewer shows this as `Excluded=None` within the `Name Constraints` details. See [Chromium issue 1457348](https://crbug.com/1457348) for more details. Instead of specifying an empty list, omit it entirely.
 
 ### Application Policies extension
-Prior to Microsoft Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field which is described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Microsoft Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
+
+Prior to Microsoft Edge 115, the new verifier doesn't support the Windows-only "application policies" extension field that's described in the [CertGetEnhancedKeyUsage function documentation](/windows/win32/api/wincrypt/nf-wincrypt-certgetenhancedkeyusage#remarks). In Microsoft Edge 115, an update was made to ignore the extension. See [Chromium issue 1439638](https://crbug.com/1439638) for more details.
 
 This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection fails with `ERR_CERT_INVALID`.
 
 There are a few ways to check if this applies to your certificate:
-1. A network log captured via `about:net-export` will include the string `ERROR: Unconsumed critical extension` in the `CERT_VERIFIER_TASK` with an OID value of `2B060104018237150A`.
+1. A network log captured via `about:net-export` includes the string `ERROR: Unconsumed critical extension` in the `CERT_VERIFIER_TASK` with an OID value of `2B060104018237150A`.
 2. Open the certificate with the Windows certificate viewer, select "Critical Extensions Only" in the "Show" filter, and check if a "Application Policies" field in present.
 3. Run `certutil.exe` with the `-dump` switch and review the output to check for a critical Application Policies extension field.
 
-If your certificate currently uses this extension, please test that it now works in Microsoft Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
+If your certificate currently uses this extension, make sure that it now works in Microsoft Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
 
 ## Known revocation checking behavior differences on Windows
 In addition to the more stringent RFC 5280 requirements, the new verifier _doesn't_ support LDAP-based certificate revocation list (CRL) URIs.
