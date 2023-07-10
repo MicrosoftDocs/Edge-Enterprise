@@ -1,9 +1,9 @@
 ---
 title: "Ready for Microsoft Edge"
-ms.author: bshiers
+ms.author: archandr
 author: dan-wesley
-manager: chstaab
-ms.date: 02/09/2022
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,11 +14,14 @@ description: "Ready for Microsoft Edge"
 
 # Ready for Microsoft Edge
 
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
 The article provides information for the IT Administrator who's planning a Microsoft Edge deployment and needs information about application compatibility and support.
 
 ## Web application compatibility and support
 
-To help you plan your deployment of Microsoft Edge, we've compiled a list of web applications that may be in use within your organization. This list lets you determine if the web application is ready for Microsoft Edge, as documented by the web application provider’s public support statement.
+To help you plan your deployment of Microsoft Edge, we've compiled a list of web applications that may be in use within your organization. This list lets you determine if the web application is ready for Microsoft Edge, as documented by the web application provider's public support statement.
 
 ### Add to the application list
 
@@ -33,7 +36,7 @@ If you are a web app provider and would like your support statement included for
 
 ### Application list
 
-Microsoft doesn't test or certify these applications in Microsoft Edge. The list was compiled based on publicly available resources. Always refer to the provider’s current support statement. Some applications may require the use of IE Mode as indicated by the support statement.
+Microsoft doesn't test or certify these applications in Microsoft Edge. The list was compiled based on publicly available resources. Always refer to the provider's current support statement. Some applications may require the use of IE Mode as indicated by the support statement.
 
 The following table lists provider support statements for Microsoft Edge.
 
