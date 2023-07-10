@@ -29,7 +29,7 @@ This change means that certificate verification logic works consistently in Micr
 
 ## Default certificate trust list source
 
-The root store that ships with Microsoft Edge on Windows and macOS comes from the Certificate Trust List (CTL) defined by the [Microsoft Trusted Root Certificate Program](/security/trusted-root/program-requirements). This is the same root certificate program that defines the list that ships with Microsoft Windows. As a result, customers should expect to see no user-visible changes.
+The root store that ships with Microsoft Edge on Windows and macOS comes from the Certificate Trust List (CTL) defined by the [Microsoft Trusted Root Certificate Program](/security/trusted-root/program-requirements). This root certificate program defines the list that ships with Microsoft Windows. As a result, customers should expect to see no user-visible changes.
 
 On macOS, if a certificate issued by a root certificate that's trusted by the platform but not by Microsoft's Trusted Root Certificate Program, the certificate is no longer trusted. This lack of trust isn't expected to be a common situation, since most servers already ensure the TLS certificates that they use are trusted by Microsoft Windows.
 
@@ -62,9 +62,10 @@ Prior to Microsoft Edge 115, the new verifier doesn't support the Windows-only "
 
 This extension uses the object identifier (OID) `1.3.6.1.4.1.311.21.10`. If the certificate includes this extension and marks it as critical, the connection fails with `ERR_CERT_INVALID`.
 
-There are a few ways to check if this applies to your certificate:
+You can use one of the following ways to check if this scenario applies to your certificate:
+
 1. A network log captured via `about:net-export` includes the string `ERROR: Unconsumed critical extension` in the `CERT_VERIFIER_TASK` with an OID value of `2B060104018237150A`.
-2. Open the certificate with the Windows certificate viewer, select "Critical Extensions Only" in the "Show" filter, and check if a "Application Policies" field in present.
+2. Open the certificate with the Windows certificate viewer. In the "Show" filter select "Critical Extensions Only". Check to see if a "Application Policies" field in present.
 3. Run `certutil.exe` with the `-dump` switch and review the output to check for a critical Application Policies extension field.
 
 If your certificate currently uses this extension, make sure that it now works in Microsoft Edge 115. Alternatively, reissue the certificate and instead rely solely on the enhanced key usage field (OID `2.5.29.37`) to specify allowed usages.
@@ -76,7 +77,7 @@ If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](
 
 Before Microsoft Edge 114, the new Chromium-based verifier enforces "Baseline Requirement" max ages for CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") doesn't exceed those maximums. In Microsoft Edge 114, these requirements are no longer enforced for non-publicly trusted certificates. See [Chromium issue 971714](https://crbug.com/971714) for more details.
 
-Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this, you're encouraged to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
+Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This upgradw can create an incompatibility with the requirement that the CRL information be hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If your environment is negatively impacted by this scenario, we encourage you to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
 
 If you encounter `ERR_CERT_NO_REVOCATION_MECHANISM`, you should confirm that the CRL at the URI specified by the certificate returns a **DER encoded** (not PEM encoded) response.
 
