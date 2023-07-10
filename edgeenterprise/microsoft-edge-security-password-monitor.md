@@ -1,9 +1,9 @@
 ---
 title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
-author: AndreaLBarr
+author: dan-wesley
 manager: tulasim
-ms.date: 07/12/2021
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Password Monitor auto-enabled for users"
 ---
 
 # Password Monitor auto-enabled for users
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how Password Monitor in Microsoft Edge will be turned on for select users and gives admins the steps to control how monitoring is enabled.
 
@@ -41,7 +44,7 @@ After the password monitor policy is enabled, there are different ways this feat
 
   :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Password Monitor enabled notice":::
 
--  Getting explicit consent. Users that don’t have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
+-  Getting explicit consent. Users that don't have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
    - When a user is saving a new password.
  
      :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-save-pw-prompt.png" alt-text="Prompt to save password":::
