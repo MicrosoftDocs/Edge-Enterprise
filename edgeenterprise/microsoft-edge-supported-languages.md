@@ -2,8 +2,8 @@
 title: "Microsoft Edge language support"
 ms.author: kvice
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: laurawi
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge display language support for Windows and macOS."
 ---
 
 # Microsoft Edge language support
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article shows how you can use Microsoft Edge settings to add a supported language to the browser. Microsoft Edge supports 84 display languages on Windows and 81 display languages on macOS.
 
