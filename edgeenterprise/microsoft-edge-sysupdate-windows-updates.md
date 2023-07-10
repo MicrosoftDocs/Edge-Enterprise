@@ -1,9 +1,9 @@
 ---
 title: "Windows updates to support Microsoft Edge"
-ms.author: jtkim
+ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 11/17/2021
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Windows updates to support Microsoft Edge."
 ---
 
 # Windows updates to support the next version of Microsoft Edge
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how Windows will be updated to support the next version of Microsoft Edge
 
@@ -28,7 +31,7 @@ The next version of Microsoft Edge features more frequent and more flexible upda
 
 ## Updates and the user experience
 
-Updates won’t change the user experience until the Stable channel of the next version of Microsoft Edge is installed. Installing Microsoft Edge Beta, Dev, or Canary won’t trigger any changes in Windows. These browser releases will be installed alongside existing browsers.
+Updates won't change the user experience until the Stable channel of the next version of Microsoft Edge is installed. Installing Microsoft Edge Beta, Dev, or Canary won't trigger any changes in Windows. These browser releases will be installed alongside existing browsers.
 
 When all the updates are applied AND the Stable channel of the next version of Microsoft Edge is installed at the system-level, the following changes will take effect on the system:
 
@@ -41,7 +44,7 @@ When all the updates are applied AND the Stable channel of the next version of M
 - All attempts to launch the current version of Microsoft Edge will redirect to the next version of Microsoft Edge.
 
   > [!NOTE]
-  > User-level installs won’t trigger the preceding behaviors.
+  > User-level installs won't trigger the preceding behaviors.
 
 Along with the previous changes, there are changes that will happen regardless of whether the Stable channel of the next version of Microsoft Edge is installed.
 
