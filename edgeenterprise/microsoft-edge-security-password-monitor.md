@@ -17,7 +17,7 @@ description: "Password Monitor auto-enabled for users"
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
-This article describes how Password Monitor in Microsoft Edge will be turned on for select users and gives admins the steps to control how monitoring is enabled.
+This article describes how admins can turn on Password Monitor in Microsoft Edge for select users. The article also gives the steps to control how monitoring is enabled.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 88 or later.
@@ -44,7 +44,7 @@ After the password monitor policy is enabled, there are different ways this feat
 
   :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Password Monitor enabled notice":::
 
--  Getting explicit consent. Users that don't have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
+-  Getting explicit consent. Users that don't have Password Sync turned on are asked for permission to turn on Password Monitor. They are prompted when the following actions happen:
    - When a user is saving a new password.
  
      :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-save-pw-prompt.png" alt-text="Prompt to save password":::
@@ -57,13 +57,13 @@ After the password monitor policy is enabled, there are different ways this feat
 
 ## User scenarios with Password Monitor auto-enabled
 
-The following table shows scenarios where Password Monitor is auto-enabled and how it will work on user devices.
+The following table shows scenarios where Password Monitor is auto-enabled and how it works on user devices.
 
 | Scenario | Base conditions | Impact |
 |--|--|--|
-| 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync will no longer affect the feature.   |
+| 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync no longer affects the feature.   |
 | 2 with Sync on | Sync ON<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice.  Notice bubble isn't shown and there's no affect of sync change on feature value.|
-| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync will be off and the feature will stay disabled<br>- At any point after that if user turns the sync on without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync will no longer affect Password Monitor.  |  
+| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync is off and the feature will stay disabled<br>- At any point after that if user turns the sync on without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync no longer affects Password Monitor.  |  
 | 4 with Sync off | Sync OFF<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice, notice bubble isn't shown, and there's no effect of sync change on the feature value.  |
 
 In addition, if a user is signed-in using a work account that is restricted via policies for any of the following, the feature will NOT be auto-enabled for them:
