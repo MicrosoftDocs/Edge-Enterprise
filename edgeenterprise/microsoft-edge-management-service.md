@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/07/2023
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -218,25 +218,7 @@ Use the following steps to manage sidebar apps:
 1. Select **Select**.
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
-
-### View extension requests
-
-> [!NOTE]
-> This feature is rolling out starting late June. Please check back again later if you don't see it.
-
-If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to the "Requests" pivot. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. To allow requests, use the [EdgeAdminCenterExtensionsFeedbackEnabled] policy to enable reporting.
-
-To set the installation policy on a requested extension, use these steps:
-
-1. Select an extension.
-1. Select **Manage installation policy** and choose an option from the dropdown list:
-
-   - Allow: Users can install the extension. This is the default setting.
-   - Block: Users can't install the extension. You could remove the extension if users previously installed it. Also, you can write a message that displays when users try to install the extension.
-   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
-   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
-
-1. Select **Save**.
+<!-- delete ### View extension requests -->
 
 <!-- ====================================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
