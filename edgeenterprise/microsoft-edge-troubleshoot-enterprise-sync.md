@@ -2,8 +2,8 @@
 title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: archandr
 author: dan-wesley
-manager: silvanam
-ms.date: 07/07/2022
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 ---
 
 # Diagnose and fix Microsoft Edge sync issues
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
@@ -102,7 +105,7 @@ If this error is encountered for an Azure Active Directory account, or if DISABL
 
 6. If the issue isn't fixed, contact [Microsoft Edge support](https://www.microsoftedgeinsider.com/support).
 
-### Issue: Stuck at "Setting up sync..." or "Couldn’t connect to the sync server. Retrying..."
+### Issue: Stuck at "Setting up sync..." or "Couldn't connect to the sync server. Retrying..."
 
 1. Try to sign out and then sign in.
 2. Go to *edge://sync-internals*. If the following error appears under the **Type info** section, skip to the [Cryptographer error encountered](#issue-cryptographer-error-encountered) issue.
