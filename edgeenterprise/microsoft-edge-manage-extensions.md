@@ -3,7 +3,7 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 07/06/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ This article provides best practice guidance for admins who are managing Microso
 > This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
-> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available in Edge stable version 115. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Introduction
 
