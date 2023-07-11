@@ -2,8 +2,8 @@
 title: "Understand Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
-manager: seanlynd
-ms.date: 09/06/2022
+manager: slikuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Understand Data Loss Prevention (DLP) in Microsoft Edge"
 ---
 
 # Understand Data Loss Prevention (DLP) in Microsoft Edge
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how Microsoft Edge supports data loss prevention (DLP) with Endpoint DLP and Windows Information Protection (WIP).
 

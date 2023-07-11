@@ -2,8 +2,8 @@
 title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: archandr
 author: dan-wesley
-manager: collw
-ms.date: 02/14/2023
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,10 @@ description: "Guide to using Enterprise Site Discovery to prepare for IE mode."
 
 # Enterprise Site Discovery Step-by-Step Guide
 
->[!Note]
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+>[!NOTE]
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article provides a step-by-step guide to using Enterprise Site Discovery with Microsoft Endpoint Configuration Manager.
@@ -84,7 +87,7 @@ To confirm that data collection's working, visit a couple of websites and run th
 
 ```powershell
 
-Get-WmiObject -Namespace “root/cimv2/IETelemetry” -Class IEURLInfo | Select-Object URL, NumberOfVisits, CrashCount, DocMode | Sort-Object
+Get-WmiObject -Namespace "root/cimv2/IETelemetry" -Class IEURLInfo | Select-Object URL, NumberOfVisits, CrashCount, DocMode | Sort-Object
 
 ```
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 05/31/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn about Microsoft Edge Workspaces and how they can benefit use
 ---
 
 # Microsoft Edge Workspaces
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
 
