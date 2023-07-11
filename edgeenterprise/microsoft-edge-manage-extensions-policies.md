@@ -3,7 +3,7 @@ title: "Use group policies to manage Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 07/06/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,7 +22,7 @@ This article describes the options and steps for managing extensions by using gr
 > This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
-> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available in Edge stable version 115. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Block extensions based on their permissions
 
