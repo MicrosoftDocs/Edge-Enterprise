@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/06/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ Use this article as guide to configure Microsoft Edge policy settings on Windows
 > This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
-> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available. [Learn more](/deployedge/microsoft-edge-management-service).
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available in Edge stable version 115. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Introduction to policy settings on Windows
 
