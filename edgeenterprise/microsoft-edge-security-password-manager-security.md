@@ -2,8 +2,8 @@
 title: "Microsoft Edge password manager security"
 ms.author: archandr
 author: dan-wesley
-manager: collw
-ms.date: 07/05/2023
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,6 +12,9 @@ ms.collection: M365-modern-desktop
 description: "Microsoft Edge password manager security"
 ---
 # Microsoft Edge password manager security
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 The frequently asked questions in this article describe how Microsoft Edge's built-in password manager provides security for user passwords.
 

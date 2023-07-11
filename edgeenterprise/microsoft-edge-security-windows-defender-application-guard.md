@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
-author: AndreaLBarr
-manager: seanlyn
-ms.date: 03/07/2022
+author: dan-wesley
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 ---
 
 # Microsoft Edge support for Microsoft Defender Application Guard
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how Microsoft Edge supports Microsoft Defender Application Guard (Application Guard).
 
@@ -73,7 +76,7 @@ Several customers are using WDAG in a specific configuration where they want to 
 - To restrict access to only a handful of untrusted sites
 - To allow internet access from the container only
 
-Starting with Microsoft Edge version 91, there’s built in support to tag network traffic originating from Application Guard containers, allowing enterprises to use proxy to filter out traffic and apply specific policies. You can use the header to identify which traffic is through the container or the host using [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
+Starting with Microsoft Edge version 91, there's built in support to tag network traffic originating from Application Guard containers, allowing enterprises to use proxy to filter out traffic and apply specific policies. You can use the header to identify which traffic is through the container or the host using [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### Extension support inside the container
 
@@ -153,17 +156,17 @@ Depending on your organization's settings, employees can copy and paste images (
 
 ### Why don't employees see their favorites in the Application Guard Edge session?
 
-Depending on your organization’s settings, it might be that Favorites Sync is turned off. To manage the policy, see: Microsoft Edge and Microsoft Defender Application Guard | Microsoft Docs.
+Depending on your organization's settings, it might be that Favorites Sync is turned off. To manage the policy, see: Microsoft Edge and Microsoft Defender Application Guard | Microsoft Docs.
 
-### Why aren’t employees able to see their extensions in the Application Guard Edge session?
+### Why aren't employees able to see their extensions in the Application Guard Edge session?
 
 Make sure to enable the extensions policy on your Application Guard configuration.
 
-### My extension doesn’t seem to work in Edge Application Guard?
+### My extension doesn't seem to work in Edge Application Guard?
 
 If the extensions policy is enabled for MDAG in configuration, check if your extension requires Native Message Handling components, those extensions are not supported in the Application Guard container.
 
-### I’m trying to watch playback video with HDR, why is the HDR option missing?
+### I'm trying to watch playback video with HDR, why is the HDR option missing?
 
 In order for HDR video playback to work in the container, vGPU Hardware Acceleration needs to be enabled in Application Guard.
 

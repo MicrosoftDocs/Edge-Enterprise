@@ -1,9 +1,9 @@
 ---
 title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
-author: AndreaLBarr
+author: dan-wesley
 manager: tulasim
-ms.date: 07/12/2021
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,10 @@ description: "Password Monitor auto-enabled for users"
 
 # Password Monitor auto-enabled for users
 
-This article describes how Password Monitor in Microsoft Edge will be turned on for select users and gives admins the steps to control how monitoring is enabled.
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+This article describes how admins can turn on Password Monitor in Microsoft Edge for select users. The article also gives the steps to control how monitoring is enabled.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 88 or later.
@@ -37,11 +40,11 @@ After the policy is enabled, users still need to provide consent to turn on the 
 
 After the password monitor policy is enabled, there are different ways this feature is made available to users.
 
-- Auto-enablement. Users that are signed-in using their work account (Active Directory or Azure Active Directory) and syncing their passwords will be auto-enabled for this feature. They will  see the notification in the next screenshot informing them that the feature's turned on.
+- Auto-enablement. Users that are signed-in using their work account (Active Directory or Azure Active Directory) and syncing their passwords will be auto-enabled for this feature. They'll see the notification in the next screenshot informing them that the feature's turned on.
 
   :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Password Monitor enabled notice":::
 
--  Getting explicit consent. Users that don’t have Password Sync turned on will be asked for permission to turn on Password Monitor. They will be prompted when the following actions happen:
+-  Getting explicit consent. Users that don't have Password Sync turned on are asked for permission to turn on Password Monitor. They are prompted when the following actions happen:
    - When a user is saving a new password.
  
      :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-save-pw-prompt.png" alt-text="Prompt to save password":::
@@ -54,16 +57,16 @@ After the password monitor policy is enabled, there are different ways this feat
 
 ## User scenarios with Password Monitor auto-enabled
 
-The following table shows scenarios where Password Monitor is auto-enabled and how it will work on user devices.
+The following table shows scenarios where Password Monitor is auto-enabled and how it works on user devices.
 
 | Scenario | Base conditions | Impact |
 |--|--|--|
-| 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync will no longer affect the feature.   |
+| 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync no longer affects the feature.   |
 | 2 with Sync on | Sync ON<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice.  Notice bubble isn't shown and there's no affect of sync change on feature value.|
-| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync will be off and the feature will stay disabled<br>- At any point after that if user turns the sync on without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync will no longer affect Password Monitor.  |  
+| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync is off and the feature stays disabled<br>- At any point after that if user turns the sync on without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync no longer affects Password Monitor.  |  
 | 4 with Sync off | Sync OFF<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice, notice bubble isn't shown, and there's no effect of sync change on the feature value.  |
 
-In addition, if a user is signed-in using a work account that is restricted via policies for any of the following, the feature will NOT be auto-enabled for them:
+In addition, if a user is signed-in using a work account that's restricted via policies for any of the following, the feature is NOT auto-enabled for them:
 
 - Password Monitor is disabled  
 - Password Sync is disabled
@@ -74,7 +77,7 @@ In addition, if a user is signed-in using a work account that is restricted via 
 ### How can Password Monitor be disabled for my organization?
 
 You can disable Password Monitor for your organization by:
-- Using the PasswordMonitorAllowed group policy.
+- Using the [PasswordMonitorAllowed](/deployedge/microsoft-edge-policies#passwordmonitorallowed) group policy.
 - Stopping data from being synchronized and sent to Microsoft servers.
 
   > [!NOTE]
@@ -82,7 +85,7 @@ You can disable Password Monitor for your organization by:
 
 ### What happens if a user for whom the feature has been auto-enabled, turns Password Monitor off via Settings?
 
-The user setting is honored and the feature will remain disabled for that user. However, they might be shown a consent dialog again in case they've never previously responded to the consent prompt.
+The user setting is honored and the feature remains disabled for that user. However, they might be shown a consent dialog again in case they've never previously responded to the consent prompt.
 
 ## See also
 
