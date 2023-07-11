@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
-ms.author: anlake
+ms.author: archandr
 author: dan-wesley
-manager: collw
-ms.date: 11/12/2021
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge for Virtual desktop infrastructure (VDI)."
 ---
 
 # Microsoft Edge for Virtual desktop infrastructure (VDI)
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the requirements and limitations for using Microsoft Edge in a virtual environment.
 
