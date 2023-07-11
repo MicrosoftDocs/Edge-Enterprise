@@ -2,8 +2,8 @@
 title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
-manager: srugh
-ms.date: 02/14/2023
+manager: archandr
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,10 @@ description: "Learn how to enable local site lists and configure easy access to 
 
 # Configure local site list for Internet Explorer (IE) mode
 
->[!Note]
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+> [!NOTE]
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article explains how to configure easy access to Internet Explorer mode (IE mode) and allow the use of local site lists in your organization.
@@ -42,7 +45,7 @@ This article explains how to configure easy access to Internet Explorer mode (IE
 
 IE mode is powered by the configuration of the Enterprise Mode Site List. While you're identifying and configuring sites on the site list to use IE mode, your users no longer need to wait or fall back to the standalone IE11 application.
 
-Starting with Microsoft Edge version 92, repeated access to *unconfigured* IE mode sites is easier. Users can reload sites in IE mode. They can add these sites to their local site list to automatically render in IE mode for 30 days, while the organization’s site list gets updated. When [IE11 is disabled](/deployedge/edge-ie-disable-ie11) in your environment, your users are no longer solely dependent on the organization’s site list.
+Starting with Microsoft Edge version 92, repeated access to *unconfigured* IE mode sites is easier. Users can reload sites in IE mode. They can add these sites to their local site list to automatically render in IE mode for 30 days, while the organization's site list gets updated. When [IE11 is disabled](/deployedge/edge-ie-disable-ie11) in your environment, your users are no longer solely dependent on the organization's site list.
 
 You can configure this experience through group policies for your organization.
 
@@ -70,7 +73,7 @@ The **Reload in Internet Explorer mode** icon can be pinned to the toolbar. The 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-icon-screenshot.png" alt-text="Reload in Internet Explorer Mode icon":::
 
 >[!Note]
->If the user is on a site that’s already in the organization’s Enterprise Mode Site List, options to Reload in (or Exit) Internet Explorer mode will be visible but greyed out.
+>If the user is on a site that's already in the organization's Enterprise Mode Site List, options to Reload in (or Exit) Internet Explorer mode will be visible but greyed out.
 
 When the option is selected, the site reloads in IE mode. The IE mode indicator icon is visible to the left of the address bar. The flyout shows an option that users can toggle to **Open the page in Compatibility view** which adds the page to the Internet Explorer Compatibility view settings list and refreshes the page. Also, there's an option that users can toggle to **Open the page in Internet Explorer mode** next time. This adds the specific page the user is on to the local site list and will automatically open in IE mode for the next 30 days.
 
@@ -78,13 +81,13 @@ When the option is selected, the site reloads in IE mode. The IE mode indicator 
 
 After a site has been reloaded in IE mode, "in-page" navigation will stay in IE mode (for example, a link, script, a form on the page, or a server-side redirect from another "in-page" navigation).  
 
-While in IE mode, users will see a banner indicating they are in IE mode, the option to Leave IE mode,, and to pin the IE mode icon to the toolbar (if it isn’t pinned already).
+While in IE mode, users will see a banner indicating they are in IE mode, the option to Leave IE mode,, and to pin the IE mode icon to the toolbar (if it isn't pinned already).
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/ie-mode-banner-screenshot.png" alt-text="IE Mode Banner":::
 
 Users can choose to exit from IE mode using the Leave button on the banner, the pinned IE mode icon or **Settings and more (the ellipses icon ...) > Exit Internet Explorer mode**, otherwise Microsoft Edge will automatically exit from IE mode when a navigation that isn't "in-page" occurs (for example, using the address bar, the back button, or a favorite link).
 
-Entries remain on the local site list for a default period of 30 days. We recommend you configure legacy sites for your organization in the Enterprise Mode Site List. The local site list will ensure that users can continue their workflow without being interrupted while the organization’s site list gets updated. On day 31, when users navigate to the site, they'll see a banner explaining that the site will no longer load in IE mode. Users can add it back to the local site list if they so choose.
+Entries remain on the local site list for a default period of 30 days. We recommend you configure legacy sites for your organization in the Enterprise Mode Site List. The local site list will ensure that users can continue their workflow without being interrupted while the organization's site list gets updated. On day 31, when users navigate to the site, they'll see a banner explaining that the site will no longer load in IE mode. Users can add it back to the local site list if they so choose.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/page-will-no-longer-load-in-ie-mode-screenshot.png" alt-text="Page will no longer load in IE mode":::
 
@@ -94,14 +97,14 @@ Two group policies are available to configure the local site list experience in 
 
 ### Policy: InternetExplorerIntegrationReloadInIEModeAllowed
 
-This policy corresponds to the Microsoft Edge setting “Allow sites to be reloaded in Internet Explorer mode”. You can access this setting by going to the *edge://settings/defaultbrowser* URL.
+This policy corresponds to the Microsoft Edge setting "Allow sites to be reloaded in Internet Explorer mode". You can access this setting by going to the *edge://settings/defaultbrowser* URL.
 
 - If you enable this policy, users can reload a site in IE mode by selecting **Settings and more (the ellipses icon ... > Reload in Internet Explorer mode**. Users can also select **Reload tab in Internet Explorer mode** when they right-click on a tab, or choose **Open link in new Internet Explorer mode tab** when they right click on a link.
 Users can optionally tell Microsoft Edge to use IE mode for the site in the future. This choice will be remembered for a default of 30 days and can be managed using the policy *InternetExplorerIntegrationLocalSiteListExpirationDays*.
 
 - If you disable this policy, users won't be allowed to reload an unconfigured site in IE mode.
 
-- If you don’t configure this policy, we'll show users options to reload unconfigured sites in IE mode depending on recent Internet Explorer 11 usage.
+- If you don't configure this policy, we'll show users options to reload unconfigured sites in IE mode depending on recent Internet Explorer 11 usage.
 
 Note that this policy takes precedence over how you configured the [InternetExplorerIntegrationTestingAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) policy and that policy will be disabled.
 
@@ -109,14 +112,14 @@ Note that this policy takes precedence over how you configured the [InternetExpl
 
 This policy can be used to adjust the number of days that a site remains on the local site list for users.  
 
-- If you disable or don’t configure this policy, a default value of 30 days is used.
+- If you disable or don't configure this policy, a default value of 30 days is used.
 
-- If you enable the policy, you must enter a value between 0-90 days to keep the site on a user’s local site list.
+- If you enable the policy, you must enter a value between 0-90 days to keep the site on a user's local site list.
 
 This policy has no effect if you disabled the *InternetExplorerIntegrationReloadInIEModeAllowed* policy.
 
 > [!NOTE]
-> The local site list currently doesn't sync across devices. This improvement is currently in our backlog and we’ll update this feature when it's available.
+> The local site list currently doesn't sync across devices. This improvement is currently in our backlog and we'll update this feature when it's available.
 
 ## See Also
 
