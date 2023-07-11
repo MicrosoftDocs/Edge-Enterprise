@@ -2,8 +2,8 @@
 title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
-manager: srugh
-ms.date: 11/03/2022
+manager: archandr
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn how to configure and use Cloud Site List Management for IE m
 ---
 
 # Cloud Site List Management for Internet Explorer (IE) mode
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article explains how to configure and use Cloud Site List Management for Internet Explorer (IE) mode through the Microsoft 365 Admin Center.
 
@@ -27,7 +30,7 @@ To learn more, watch the next video.
 
 [![New Cloud Site List Management for IE mode](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "New Cloud Site List Management for IE mode")
 
-This experience lets you store your organization’s site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
+This experience lets you store your organization's site list in a compliant cloud location instead of needing an on-premises infrastructure to host your site list. You can create, import, export site lists, and audit changes to site list entries through the Microsoft 365 Admin Center. You can publish multiple site lists to the cloud and use group policy to assign different groups of devices to use different lists.
 
 ## Prerequisites
 
@@ -85,7 +88,7 @@ Use the following steps as a guide to create a site list, import a site list, an
 
 ### Steps to import a site list
 
-1.	Select the site list you want to populate (The option to import the updated site list will only appear if an existing site list is selected beforehand).
+1.    Select the site list you want to populate (The option to import the updated site list will only appear if an existing site list is selected beforehand).
 2. From the listed options that become available, select **Import list**.
 3. On the right-hand panel, select **Browse**.
 4. Select the file you want to import and then select **Upload** on the bottom of the panel.
@@ -136,7 +139,7 @@ You can add individual sites to any site list. After adding sites to the list, y
 
 Use the following steps to delete a site entry.
 
-1. Pick the site entry that you’d like to delete from the site list. Select **Delete site**.
+1. Pick the site entry that you'd like to delete from the site list. Select **Delete site**.
 2. Select **Delete** in the dialog pop-up.
 3. After you see confirmation that a site entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted sites before publishing by selecting the **Filter** button and filtering for sites in the **Delete pending** state.
 
@@ -176,7 +179,7 @@ You can add individual shared session cookies to any site list. After adding sha
 
 Use the following steps to delete a shared session cookie entry.
 
-1. Pick the entry that you’d like to delete from the site list. Select **Delete shared cookie**.
+1. Pick the entry that you'd like to delete from the site list. Select **Delete shared cookie**.
 2. Select **Delete** in the dialog pop-up.
 3. After you see confirmation that an entry has been deleted, it will stay on the list until the site list is published to the cloud location. You can view the list of deleted shared cookies before publishing by selecting the **Filter** button and filtering for cookies in the **Delete pending** state.
 
@@ -293,9 +296,9 @@ Yes, there's a set of Microsoft Graph APIs for Cloud site list management that a
 
 ### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
-Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that’s shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Azure Active Directory. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can’t create a new list, or if you need urgent assistance, contact Microsoft Support.
+Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that's shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Azure Active Directory. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can't create a new list, or if you need urgent assistance, contact Microsoft Support.
 
-### Can users who haven’t signed in to Microsoft Edge download the site list?
+### Can users who haven't signed in to Microsoft Edge download the site list?
 
 No, users must sign in to the browser to download the cloud hosted site list. You can configure a policy to allow Implicit Sign in to prevent user experience disruption. For more information, see [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled).
 
