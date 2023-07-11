@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Edge password manager security "
+title: "Microsoft Edge password manager security"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
@@ -37,7 +37,11 @@ The profile's encryption key is protected using Chromium's OSCrypt and use
 
 - On Mac, the storage area is the Keychain
 
+- On iOS, the storage area is the iOS Keychain
+
 - On Linux, the storage area is Gnome Keyring or KWallet
+
+- On Android, there isn't a system level key storage area for the AES128 encrypted password
 
 All these storage areas encrypt the AES key using a key accessible to some or all processes running as the user. This attack vector is often featured in blogs as a possible 'exploit' or 'vulnerability', which is an incorrect understanding of the browser threat model and security posture.
 
