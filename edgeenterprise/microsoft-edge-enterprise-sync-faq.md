@@ -2,8 +2,8 @@
 title: "Microsoft Edge enterprise sync FAQ"
 ms.author: archandr
 author: dan-wesley
-manager: silvanam
-ms.date: 06/29/2023
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Frequently asked questions about Microsoft Edge enterprise sync."
 ---
 
 # Microsoft Edge enterprise sync FAQ
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article answers frequently asked questions about enterprise sync for Microsoft Edge version 77 or later.
 

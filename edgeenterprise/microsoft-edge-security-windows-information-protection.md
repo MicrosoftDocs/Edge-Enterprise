@@ -2,8 +2,8 @@
 title: "Microsoft Edge support for Windows Information Protection"
 ms.author: kvice
 author: dan-wesley
-manager: srugh
-ms.date: 09/06/2022
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge support for Windows Information Protection"
 ---
 
 # Microsoft Edge support for Windows Information Protection (WIP)
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how Microsoft Edge supports Windows Information Protection (WIP).
 
