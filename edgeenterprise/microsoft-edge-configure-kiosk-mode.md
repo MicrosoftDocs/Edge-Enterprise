@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/23/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn about kiosk mode features and how to configure Microsoft Edg
 ---
 
 # Configure Microsoft Edge kiosk mode
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes how to configure Microsoft Edge kiosk mode options that you can pilot. There's also a roadmap of features we're targeting.
 
