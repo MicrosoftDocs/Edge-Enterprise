@@ -1,9 +1,9 @@
 ---
 title: "Set Microsoft Edge as the default browser on Windows and macOS"
-ms.author: brianalt
+ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn how to set Microsoft Edge as the default browser"
 ---
 
 # Set Microsoft Edge as the default browser
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article explains how you can set Microsoft Edge as the default browser on Windows and macOS.
 
@@ -86,7 +89,7 @@ Attempting to programmatically set the default browser on macOS causes a prompt 
 
 Because of this limitation, there are two main methods for setting Microsoft Edge as the default browser on a macOS. The first option is to flash the device with an image of macOS where Microsoft Edge has already been set as the default browser. The other option is to use the [Set Microsoft Edge as default browser](./microsoft-edge-policies.md#defaultbrowsersettingenabled) policy, which prompts the user to set Microsoft Edge as the default browser.
 
-When using either of these methods, it is still possible for a user to change the default browser. This is because for security reasons, the default browser preference can’t be blocked programmatically. For this reason, we recommend that you deploy the **Set Microsoft Edge as default browser** policy even if you create an image with Microsoft Edge as the default browser. If the policy is set and a user changes the default browser from Microsoft Edge the next time they open Microsoft Edge, they will be prompted to set it as the default.
+When using either of these methods, it is still possible for a user to change the default browser. This is because for security reasons, the default browser preference can't be blocked programmatically. For this reason, we recommend that you deploy the **Set Microsoft Edge as default browser** policy even if you create an image with Microsoft Edge as the default browser. If the policy is set and a user changes the default browser from Microsoft Edge the next time they open Microsoft Edge, they will be prompted to set it as the default.
 
 ## See also
 
