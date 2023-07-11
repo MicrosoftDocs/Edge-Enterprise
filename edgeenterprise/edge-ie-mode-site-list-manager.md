@@ -2,8 +2,8 @@
 title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
-manager: srugh
-ms.date: 02/14/2023
+manager: archandr
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,10 @@ description: "Learn how to enable and use Enterprise Site List Manager in Micros
 
 # Enterprise Site List Manager in Microsoft Edge
 
->[!Note]
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+>[!NOTE]
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
@@ -24,7 +27,7 @@ This article explains how to enable access to and use the Enterprise Site List M
 
 ## Overview
 
-The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization’s site list. You can access the in-browser Enterprise Site List Manager at *edge://compat/SiteListManager*.
+The Enterprise Site List Manager is an in-browser version of the standalone Enterprise Mode Site List Manager tool that lets you create, edit, and export your organization's site list. You can access the in-browser Enterprise Site List Manager at *edge://compat/SiteListManager*.
 
 Future improvements to the tool for Internet Explorer mode will be available through Enterprise Site List Manager (*edge://compat/SiteListManager*) in Microsoft Edge. The standalone tool will continue to be available in the Download Center but won't get any feature updates.
 
@@ -46,7 +49,7 @@ Use the following steps to add individual sites to your site list.
 > You can only add specific URLs, not Internet or Intranet Zones.
 
 1. In the Enterprise Site List Manager, select **Add a site**.
-2. Enter the URL for the website you’d like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
+2. Enter the URL for the website you'd like to add, for example: \<domain\>.com or \<domain\>.com/\<path\> in the URL box.
 3. Select one of the following options from the **Open in** list:
 
    - **IE11**. Opens the site in the IE11 application.
@@ -64,10 +67,10 @@ Use the following steps to add individual sites to your site list.
 
    The path within a domain can require a different compatibility mode from the domain itself. For example, the domain might look fine in the default IE11 browser, but the path might have problems and require the use of Enterprise Mode. If you added the domain previously, your original compatibility choice is still selected. However, if the domain is new, **IE8 Enterprise Mode** is automatically selected.
 
-   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won’t be affected by this update. These sites will continue to load in Enterprise Mode. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
+   Enterprise Mode takes precedence over document modes, so sites that are already included in the Enterprise Mode site list won't be affected by this update. These sites will continue to load in Enterprise Mode. For more specific information about using document modes, see [Fix web compatibility issues using document modes and the Enterprise Mode site list](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
 
 5. The **Allow Redirect** checkbox applies to the treatment of server-side redirects. If you check this box, server-side redirects will open in the browser specified by the open-in tag. For more information, see `allow-redirect` in [updated schema attributes](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
-6. Type any comments about the website into the **Comment** box. Administrators can only see comments while they’re in this tool and these comments are retained in the site list xml.
+6. Type any comments about the website into the **Comment** box. Administrators can only see comments while they're in this tool and these comments are retained in the site list xml.
 7. Select **Add** to add the site to your site list.
 
 ### Add shared cookies to your site list
@@ -75,7 +78,7 @@ Use the following steps to add individual sites to your site list.
 Use the following steps to add individual shared cookies to your site list. To learn more about cookie sharing, see [Cookie sharing between Microsoft Edge and Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 1. In the Enterprise Site List Manager, select **Add a shared cookie**.
-2. Enter the domain you’d like to add in the **Domain** box. Enter the name of the cookie in the **Cookie Name** box.
+2. Enter the domain you'd like to add in the **Domain** box. Enter the name of the cookie in the **Cookie Name** box.
 3. If the cookie is a host-only cookie, then check **Host Only**.
 4. If needed, enter the path in the **Path** box.
 5. Select one of the following options from the **Source Engine** list:
@@ -147,7 +150,7 @@ You can preview the sites and shared cookies in the editor in XML format before 
 
 ### Search in the Enterprise Site List Manager
 
-You can search to see if a specific site or shared cookie already appears in your site list so you don’t try to add it again.
+You can search to see if a specific site or shared cookie already appears in your site list so you don't try to add it again.
 
 To search, type part of the URL or domain into the search box in the top right-hand corner of the editor.
 

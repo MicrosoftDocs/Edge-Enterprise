@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
-author: srugh
-manager: seanlyn
-ms.date: 05/25/2022
+author: dan-wesley
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge support for Conditional Access"
 ---
 
 # Microsoft Edge and Conditional Access
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
   
 This article describes how Microsoft Edge supports Conditional Access, and how to access resources protected by Conditional Access.
 

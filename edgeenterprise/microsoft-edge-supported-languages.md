@@ -2,8 +2,8 @@
 title: "Microsoft Edge language support"
 ms.author: kvice
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: laurawi
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,6 +14,9 @@ description: "Microsoft Edge display language support for Windows and macOS."
 
 # Microsoft Edge language support
 
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
 This article shows how you can use Microsoft Edge settings to add a supported language to the browser. Microsoft Edge supports 84 display languages on Windows and 81 display languages on macOS.
 
 > [!NOTE]
@@ -23,17 +26,17 @@ This article shows how you can use Microsoft Edge settings to add a supported la
 
 Use the following steps to see the list of supported languages and then add a language to Microsoft Edge.
 
-1. On the browser menu bar, click the **Settings and more** icon (**...**) or type **Alt+F** to open the "Settings and more" menu.
+1. On the browser menu bar, click the **Settings and more** icon (**...**) or type **Alt** + **F** to open the "Settings and more" menu.
 2. Under **Settings**, click **Languages**.
 3. Under **Languages**, click **Add languages** to see the list of languages you can add.
 4. In the **Add languages** list, you can search for a language (**Search languages**) or use the scroll bar to find the language you want to add.
-5. When you find the language, select the checkbox for the language and then click **Add**. The language you added will appear at the bottom of the list of **Preferred languages** that are already set for Microsoft Edge. Websites you visit will appear in the first language in the list that they support.
+5. When you find the language, select the checkbox for the language, and then click **Add**. The language you added appears at the bottom of the list of **Preferred languages** that are already set for Microsoft Edge. Websites you visit appear in the first language in the list that they support.
 
 ### Change preferred languages
 
 You can reorder your language preferences, get Microsoft Edge to offer translations, and see Microsoft Edge in a specific language.
 To change a language setting, click the ellipsis (**...**) next to the language to open for "More actions".
-Depending on the language, you will see one or more of the following options:
+Depending on the language, you'll see one or more of the following options:
 
 - Display Microsoft Edge in this language.
   - On Windows, select this box and then click **Restart**.
@@ -55,7 +58,7 @@ In addition to using a foreign language in the browser, you can use the [Transla
 
 ## Supported display languages
 
-The following table lists the display languages that are supported by Microsoft Edge.
+The following table lists the display languages that Microsoft Edge supports.
 
 > [!NOTE]
 > Languages that aren't supported by Microsoft Edge on macOS are indicated by an asterisk (*) after the country/region.  
