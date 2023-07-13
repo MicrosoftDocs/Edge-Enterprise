@@ -308,13 +308,10 @@ The Click-to-Run service used by Microsoft Edge management service checks with C
 - If there's an error, a check is made when the user opens Microsoft Edge.
 - If Microsoft Edge isn't running when the next check is scheduled, then the check will be made the next time the user opens Microsoft Edge.
 
-**Notes:**
-
-Policies from Cloud Policy are only applied when Microsoft Edge is restarted. The behavior is the same as with Group Policy. For Windows devices, policies are enforced based on the primary user that is signed into Microsoft Edge. If there are multiple accounts signed in, only policies for the primary account are applied. If the primary account is switched, most of the policies assigned to that account will not apply until Microsoft Edge is restarted. Some policies related to [privacy controls](/deployoffice/privacy/overview-privacy-controls) will apply without restarting Microsoft Edge.
-
-If users are located in nested groups and the parent group is targeted for policies, the users in the nested groups will receive the policies. The nested groups and the users in those nested groups must be created in or synchronized to Azure AD.
-
-If the user is a member of multiple Azure AD groups with conflicting policy settings, priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign. You can set the priority by choosing **Reorder priority** on the **Configuration profiles** page.
+> [!NOTE]
+> - Policies from Cloud Policy are only applied when Microsoft Edge is restarted. The behavior is the same as with Group Policy. For Windows devices, policies are enforced based on the primary user that is signed into Microsoft Edge. If there are multiple accounts signed in, only policies for the primary account are applied. If the primary account is switched, most of the policies assigned to that account will not apply until Microsoft Edge is restarted. Some policies related to [privacy controls](/deployoffice/privacy/overview-privacy-controls) will apply without restarting Microsoft Edge.
+> - If users are located in nested groups and the parent group is targeted for policies, the users in the nested groups will receive the policies. The nested groups and the users in those nested groups must be created in or synchronized to Azure AD.
+> - If the user is a member of multiple Azure AD groups with conflicting policy settings, priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign. You can set the priority by choosing **Reorder priority** on the **Configuration profiles** page.
 
 <!-- ====================================================================== -->
 ## Feedback and support
