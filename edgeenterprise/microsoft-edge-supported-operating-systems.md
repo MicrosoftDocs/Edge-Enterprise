@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge Supported Operating Systems"
-ms.author: srugh
+ms.author: archandr
 author: srugh
-manager: seanlynd
-ms.date: 01/17/2023
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge Supported Operating Systems"
 ---
 
 # Microsoft Edge supported Operating Systems
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the supported operating systems that apply to Microsoft Edge.
 

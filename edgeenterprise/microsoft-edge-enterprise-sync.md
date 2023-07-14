@@ -1,9 +1,9 @@
 ---
 title: "Configure Microsoft Edge enterprise sync"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
-manager: silvanam
-ms.date: 05/31/2022
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Admin and user options for configuring Microsoft Edge to sync favo
 ---
 
 # Configure Microsoft Edge enterprise sync
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article explains how admins can configure Microsoft Edge to sync user favorites, passwords, and other browser data across all signed-in devices.
 
@@ -57,7 +60,7 @@ Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available 
 - Azure AD Premium (P1 or P2)
   
   > [!NOTE]
-  > Customers that only have Azure AD P1 or P2 must enable Azure AD Enterprise State Roaming (ESR). Microsoft Edge sync isn’t part of ESR, but ESR is required to provide the AIP functionality that’s needed for the P1 and P2 configurations. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
+  > Customers that only have Azure AD P1 or P2 must enable Azure AD Enterprise State Roaming (ESR). Microsoft Edge sync isn't part of ESR, but ESR is required to provide the AIP functionality that's needed for the P1 and P2 configurations. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 

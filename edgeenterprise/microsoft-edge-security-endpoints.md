@@ -1,9 +1,9 @@
 ---
 title: "Allow list for Microsoft Edge endpoints"
-ms.author: kvice
+ms.author: leahtu
 author: dan-wesley
-manager: srugh
-ms.date: 12/02/2022
+manager: archandr
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Allow list for Microsoft Edge endpoints"
 ---
 
 # Allow list for Microsoft Edge endpoints
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 Microsoft Edge requires connectivity to the Internet to support its features. This article identifies the domain URLs that you need to add to the Allow list to ensure communications through firewalls and other security mechanisms.
 
@@ -103,6 +106,13 @@ These endpoints manage the reading and writing of synced data, rights management
 The service that Microsoft Edge uses to download the cloud-hosted site list for Internet Explorer (IE) mode. For more information, see [Cloud Site List Management](https://aka.ms/CloudSiteList)
 
 - `https://edge.microsoft.com/`
+
+### Microsoft Edge management service
+
+The service that Microsoft Edge uses to download the configuration profiles. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service).
+
+- `https://edge.microsoft.com/`
+- `https://clients.config.office.net`
 
 ## Microsoft Defender SmartScreen services
 

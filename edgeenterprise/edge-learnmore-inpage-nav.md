@@ -2,8 +2,8 @@
 title: "Keep in-page navigation in Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
-manager: srugh
-ms.date: 02/15/2022
+manager: archandr
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Keep in-page navigation in Internet Explorer mode"
 ---
 
 # Keep in-page navigation in Internet Explorer mode
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 You can use this policy as a temporary solution to force all in-page navigation from Internet Explorer mode (IE mode) sites to stay in IE mode.
 

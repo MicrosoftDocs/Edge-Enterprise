@@ -1,9 +1,9 @@
 ---
 title: "Microsoft browser usage report"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 04/13/2023
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,11 +14,14 @@ description: "Learn how to get a browser usage report for your organization."
 
 # Microsoft browser usage report
 
-In the Microsoft 365 Admin Center, activity reports help you to see how users are using different Microsoft 365 services. See [Activity Reports in the Microsoft 365 admin center](/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide).
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+In the Microsoft 365 Admin Center, activity reports help you to see how users are using different Microsoft 365 services. See [Activity Reports in the Microsoft 365 admin center](/microsoft-365/admin/activity-reports/activity-reports).
 
 ## Browser usage report
 
-The Microsoft Browser Usage report in the Microsoft 365 Admin Center lets you see if users access Microsoft 365 online services via the Microsoft Edge browser. To learn how access and use this report, see [Microsoft 365 Reports in the admin center - Microsoft browser usage](/microsoft-365/admin/activity-reports/browser-usage-report?view=o365-worldwide).
+The Microsoft Browser Usage report in the Microsoft 365 Admin Center lets you see if users access Microsoft 365 online services via the Microsoft Edge browser. To learn how access and use this report, see [Microsoft 365 Reports in the admin center - Microsoft browser usage](/microsoft-365/admin/activity-reports/browser-usage-report).
 
 ## See also
 

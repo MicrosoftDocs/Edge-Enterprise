@@ -1,9 +1,9 @@
 ---
 title: "Modern security protection for vulnerable legacy apps"
-ms.author: v-danwesley
+ms.author: archandr
 author: dan-wesley
 manager: kawong
-ms.date: 01/03/2023
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn how Microsoft Edge with IE mode provides modern security pro
 ---
 
 # Modern security protection for vulnerable legacy apps
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 As the Internet evolved over the last 20 years, so have user needs and expectations for the browsers they use. Today, the Internet is foundational to many businesses, and having a modern browser designed to securely meet business needs is paramount. Microsoft Edge is a modern browser built to securely access the modern web. This article shows how Internet Explorer (IE) mode on Microsoft Edge is more secure than Internet Explorer.
 
@@ -45,11 +48,11 @@ The following sections highlight the reasons why it's important to minimize lega
 
 ### Architectural deficiency
 
-Architectural deficiency in IE stems from the fact that its original architecture didn't account for the complexity of the modern web or the modern threat landscape. IE evolved from a single process architecture that resulted in inadequate sandboxing and a comparatively broad attack surface. Modern browsers like Microsoft Edge are designed around a threat model based on the current threat landscape. These browsers include security advances like site isolation and hardware-based security features. For example, Intel’s Control-flow Enforcement Technology (CET), which handles many modern security threats. These security mitigations are NOT available in IE, making it an easy target for even simple attacks.
+Architectural deficiency in IE stems from the fact that its original architecture didn't account for the complexity of the modern web or the modern threat landscape. IE evolved from a single process architecture that resulted in inadequate sandboxing and a comparatively broad attack surface. Modern browsers like Microsoft Edge are designed around a threat model based on the current threat landscape. These browsers include security advances like site isolation and hardware-based security features. For example, Intel's Control-flow Enforcement Technology (CET), which handles many modern security threats. These security mitigations are NOT available in IE, making it an easy target for even simple attacks.
 
 ### Ease of exploitation
 
-IE is easier to exploit than Microsoft Edge because of its architecture and lack of support for modern security features. It's easier to find a single vulnerability in IE that could lead to a Remote Code Execution (RCE) than it is to find a similar weakness in Microsoft Edge, where several vulnerabilities must be chained together to achieve a similar outcome. Additionally, ActiveX and Browser Helper Objects have become vulnerabilities and IE’s support for them makes the browser even easier to exploit.  
+IE is easier to exploit than Microsoft Edge because of its architecture and lack of support for modern security features. It's easier to find a single vulnerability in IE that could lead to a Remote Code Execution (RCE) than it is to find a similar weakness in Microsoft Edge, where several vulnerabilities must be chained together to achieve a similar outcome. Additionally, ActiveX and Browser Helper Objects have become vulnerabilities and IE's support for them makes the browser even easier to exploit.  
 
 ### Speed of security patching
 
@@ -57,11 +60,11 @@ Browsers are one of the most used applications on the desktop, used to routinely
 
 ### Security researcher ecosystem
 
-Improving real world browser security relies heavily on a broad ecosystem of external security researchers who are incentivized by bounty programs to find novel vulnerabilities and exploits. Internet Explorer doesn't support a bounty program, which limits the scope of its security improvements. In comparison, Microsoft Edge has a full-fledged bounty program and an internal vulnerability research team to advance state-of-the-art browser security. Because Microsoft Edge is based on Chromium Open Source, it also benefits from Chromium’s browser security ecosystem.
+Improving real world browser security relies heavily on a broad ecosystem of external security researchers who are incentivized by bounty programs to find novel vulnerabilities and exploits. Internet Explorer doesn't support a bounty program, which limits the scope of its security improvements. In comparison, Microsoft Edge has a full-fledged bounty program and an internal vulnerability research team to advance state-of-the-art browser security. Because Microsoft Edge is based on Chromium Open Source, it also benefits from Chromium's browser security ecosystem.
 
 ### Phishing protection using SmartScreen
 
-SmartScreen, Microsoft’s phishing protection technology, blocks more phishing <sup>1</sup> and malware <sup>2</sup> attempts than Google Chrome’s Safe Browsing, according to an independent study by [CyberRatings.org](https://www.cyberratings.org/).
+SmartScreen, Microsoft's phishing protection technology, blocks more phishing <sup>1</sup> and malware <sup>2</sup> attempts than Google Chrome's Safe Browsing, according to an independent study by [CyberRatings.org](https://www.cyberratings.org/).
 
 > [!NOTE]
 > <sup>1</sup> Web Browsers vs. Phishing, Comparative Test Report (July 2021), CyberRatings.org<br>

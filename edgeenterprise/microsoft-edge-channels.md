@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Edge channel overview"
-ms.author: srugh
+ms.author: archandr
 author: RyanHechtMSFT
 manager: seanlynd
 ms.date: 10/14/2022

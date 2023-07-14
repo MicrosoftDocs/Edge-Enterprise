@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge enterprise privacy settings"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Configure Microsoft Edge enterprise privacy settings"
 ---
 
 # Configure Microsoft Edge policies to support enterprise privacy
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 Microsoft is committed to providing enterprises with the information and controls needed to make choices about data collection in Microsoft Edge.
 

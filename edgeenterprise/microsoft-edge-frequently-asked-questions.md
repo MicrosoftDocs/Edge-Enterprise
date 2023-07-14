@@ -1,9 +1,9 @@
 ---
 title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
-ms.author: collw
+ms.author: archandr
 author: dan-wesley
-manager: seanlynd
-ms.date: 02/14/2023
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,6 +14,9 @@ description: "Frequently asked questions (FAQ) about Microsoft Edge in the enter
 
 
 # Microsoft Edge frequently asked questions
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article contains frequently asked questions (FAQ) about Microsoft Edge in the enterprise.
 

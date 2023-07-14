@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/04/2023
+ms.date: 06/19/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Windows and Mac documentation for all policies supported by the Mi
 
 # Microsoft Edge Mobile - Policies
 
-The latest version of Microsoft Edge includes the following policies that you can deploy to configure how Microsoft Edge mobile runs in your organization. You can use the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html) for iOS or [Set up managed configurations](https://developer.android.com/work/managed-configurations) for Android).
+The latest version of Microsoft Edge includes the following policies that you can deploy to configure how Microsoft Edge mobile runs in your organization. You can use the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html) for iOS or [Set up managed configurations](https://developer.android.com/work/managed-configurations) for Android). Users aren't required to sign in to Microsoft Edge to apply the policies.
 
 > [!NOTE]
 > The MDM OS channel in Microsoft Intune is a Managed Devices App Configuration Policy (ACP). For more information, see [Managed Devices ACP](/mem/intune/apps/app-configuration-policies-overview#apps-that-support-app-configuration). If you're not using Microsoft Intune, consult your Unified Endpoint Management (UEM) documentation to learn how to deploy these policies through mobile device management.
@@ -317,17 +317,17 @@ Leaving the policy unset turns off HTTP Negotiate authentication on Android.
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 AuthAndroidNegotiateAccountType
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 com.example.spnego
@@ -444,17 +444,17 @@ Leaving it unset means BlockPopups applies, but users can change this setting.
 
 #### Data Type:
 
-Integer
+Android:Integer
 
-Android:choice
+iOS:Integer
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultPopupsSetting
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 1
@@ -681,17 +681,17 @@ If you set the policy, users can't change it in Microsoft Edge. If not set, the 
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderEnabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -723,17 +723,17 @@ Leaving DefaultSearchProviderName unset means the hostname specified by the sear
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderName
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 My Intranet Search
@@ -765,17 +765,17 @@ You can specify Google's search URL as: '{google:baseURL}search?q={searchTerms}&
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSearchURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://search.my.company/search?q={searchTerms}
@@ -808,17 +808,17 @@ Leaving DefaultSearchProviderSearchURLPostParams unset means search requests are
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSearchURLPostParams
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 q={searchTerms},ie=utf-8,oe=utf-8
@@ -855,13 +855,15 @@ List of strings
 
 Android:string
 
-#### Android restriction name:
+iOS:String
+
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderAlternateURLs
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 [
@@ -901,13 +903,15 @@ List of strings
 
 Android:string
 
-#### Android restriction name:
+iOS:string
+
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderEncodings
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 [
@@ -920,7 +924,7 @@ DefaultSearchProviderEncodings
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-
+<!---   pause here until data type: query answered --->
 ### DefaultSearchProviderImageURL
 
 #### Parameter providing search-by-image feature for the default search provider
@@ -945,24 +949,23 @@ Leaving DefaultSearchProviderImageURL unset means no image search is used.
 
 #### Data Type:
 
-String
+Android: String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderImageURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://search.my.company/searchbyimage/upload
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
-
 
 ### DefaultSearchProviderImageURLPostParams
 
@@ -988,24 +991,23 @@ Leaving DefaultSearchProviderImageURLPostParams unset means image search request
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderImageURLPostParams
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
-
 
 ### DefaultSearchProviderKeyword
 
@@ -1031,17 +1033,17 @@ Leaving DefaultSearchProviderKeyword unset means no keyword activates the search
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderKeyword
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 mis
@@ -1074,24 +1076,23 @@ Leaving DefaultSearchProviderNewTabURL unset means no new tab page is provided.
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderNewTabURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://search.my.company/newtab
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
-
 
 ### DefaultSearchProviderSuggestURL
 
@@ -1119,24 +1120,23 @@ specify Google's search URL as: '{google:baseURL}complete/search?output=chrome&q
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSuggestURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://search.my.company/suggest?q={searchTerms}
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
-
 
 ### DefaultSearchProviderSuggestURLPostParams
 
@@ -1162,17 +1162,17 @@ Leaving DefaultSearchProviderSuggestURLPostParams unset unset means suggest sear
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 DefaultSearchProviderSuggestURLPostParams
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 q={searchTerms},ie=utf-8,oe=utf-8
@@ -1208,17 +1208,17 @@ While this is a supported scenario, Microsoft recommends organizations take adva
 
 #### Data Type:
 
-String
+Android:String
 
-Android:choice
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeNewTabPageCustomURL
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 https://www.bing.com
@@ -1250,17 +1250,17 @@ By default, users have the My Apps bookmark configured within the organization f
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeMyApps
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1293,17 +1293,17 @@ Generally, this is considered a best practice, but can be disabled.
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS: Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeDefaultHTTPS
 ```
 
-##### Example value (Android):
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1335,17 +1335,17 @@ EdgeDisableShareUsageData:
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeDisableShareUsageData
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1378,17 +1378,17 @@ EdgeDisableShareBrowsingHistory:
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeDisableShareUsageData
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1430,24 +1430,23 @@ To disable multiple features, separate values with |. For example, inprivate|pas
 
 #### Data Type:
 
-String
+Android:String
 
-Android:string
+iOS:String
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeDisabledFeatures
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 inprivate | password
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
-
 
 ### EdgeEnableKioskMode
 
@@ -1617,17 +1616,17 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 EdgeSyncDisabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1769,17 +1768,17 @@ If the policy is set, users can't change it in Microsoft Edge. If not set, the u
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 PasswordManagerEnabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -1817,15 +1816,17 @@ Leaving the policy unset allows no exceptions to URLBlocklist.
 
 List of strings
 
-Android:string
+Android:String
 
-#### Android restriction name:
+iOS:String
+
+#### Android and iOS restriction name:
 
 ```
 URLAllowlist
 ```
 
-##### Example value (Android):
+##### Example value (Android and iOS):
 
 ```
 [
@@ -1866,15 +1867,17 @@ Note: Blocking internal edge://* can lead to unexpected errors or may be circumv
 
 List of strings
 
-Android:string
+Android:String
 
-#### Android restriction name:
+iOS:String
+
+#### Android and iOS restriction name:
 
 ```
 URLBlocklist
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 [
@@ -1916,17 +1919,17 @@ Setting the policy to Disabled prevent users from clicking through any warning p
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 SSLErrorOverrideAllowed
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -2054,17 +2057,17 @@ Setting the policy to Disabled or leaving it unset saves browsing history.
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 SavingBrowserHistoryDisabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -2101,17 +2104,17 @@ If you set the policy, users can't change it. If not set, search suggestions are
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 SearchSuggestEnabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true
@@ -2147,17 +2150,17 @@ If you set the policy, users can't change this function. Leaving it unset lets t
 
 #### Data Type:
 
-Boolean
+Android:Boolean
 
-Android:choice
+iOS:Boolean
 
-#### Android restriction name:
+#### Android and iOS restriction name:
 
 ```
 TranslateEnabled
 ```
 
-##### Example value:
+##### Example value (Android and iOS):
 
 ```
 true

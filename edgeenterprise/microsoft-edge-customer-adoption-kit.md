@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge customer adoption materials"
-ms.author: collw
-author: AndreaLBarr
-manager: seanlynd
-ms.date: 02/24/2022
+ms.author: archandr
+author: dan-wesley
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge customer adoption materials"
 ---
 
 # Customer adoption materials for Microsoft Edge
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 To support the deployment and adoption of Microsoft Edge, see the following collected materials and resources. A zip file of these materials and resources is provided for you to download.
 
@@ -58,7 +61,7 @@ Use this guide to educate users about Microsoft Edge. The guide includes overvie
 
 ### Adoption Email Templates
 
-Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We’ve packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshot shows an example of these templates.
+Use email to achieve a smooth transition as you rollout Microsoft Edge to end users. We've packaged a set of emails for you to use as an internal campaign. They provide tips and articulate how Microsoft Edge can save time and simplify their workday. The following screenshot shows an example of these templates.
 
 :::image type="content" source="media/customer-adoption-not-md/ms-edge-3-email-template.png" alt-text="Adoption email templates":::
 
