@@ -244,7 +244,7 @@ Use the following sections as a guide to enable the Microsoft Edge management se
 
 #### For Microsoft Edge version 116.1935 and later
 
-Microsoft Edge management service is enabled by default. Work profiles signed in with Azure AD accounts will check with the Edge Management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
+Microsoft Edge management service is enabled by default. Work profiles signed in with Azure AD accounts will check with the Edge management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
 
 #### For Microsoft Edge version 116.1934 and earlier
 
