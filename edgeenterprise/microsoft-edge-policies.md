@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/11/2023
+ms.date: 07/17/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -21,7 +21,7 @@ For information about an additional set of policies used to control how and when
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
-Starting in Microsoft Edge version 116, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
+Starting in Microsoft Edge version 112, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
@@ -242,6 +242,7 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
 |[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
+|[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -9821,6 +9822,76 @@ Learn more about performance detector: https://aka.ms/EdgePerformanceDetector
   #### Mac information and settings
 
   - Preference Key Name: PerformanceDetectorEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PinBrowserEssentialsToolbarButton
+
+  #### Pin browser essentials toolbar button
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 114 or later
+
+  #### Description
+
+  This policy lets you configure whether to pin the Browser essentials button on the toolbar.
+
+When the button is pinned, it will always appear on the toolbar.
+
+When the button isn't pinned, it will only appear when there's an alert. An example of this kind of alert is the performance detector alert that indicates the browser is using high CPU or memory.
+
+If you enable or don't configure this policy, the Browser essentials button will be pinned on the toolbar.
+
+If you disable this policy, the Browser essentials button won't be pinned on the toolbar.
+
+Learn more about browser essentials: [https://go.microsoft.com/fwlink/?linkid=2240439](https://go.microsoft.com/fwlink/?linkid=2240439)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PinBrowserEssentialsToolbarButton
+  - GP name: Pin browser essentials toolbar button
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PinBrowserEssentialsToolbarButton
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PinBrowserEssentialsToolbarButton
   - Example value:
 ``` xml
 <true/>
