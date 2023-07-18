@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 06/26/2023
+ms.date: 07/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,9 +16,19 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## June 26, 2023
+## July 13, 2023
 
-Microsoft is aware of the recent Chromium security fixes. We are actively working on releasing a security fix.
+Microsoft has released the latest **Microsoft Edge Stable and Extended Stable Channel (Version 114.0.1823.82)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2023-36883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36883)
+- [CVE-2023-36887](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36887)
+- [CVE-2023-36888](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36888)
+
+## June 29, 2023
+
+Microsoft has released the latest **Microsoft Edge Stable Channel (Version 114.0.1823.67)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## June 15, 2023
 
@@ -35,6 +45,9 @@ Microsoft has a fix for [CVE-2023-3079](https://msrc.microsoft.com/update-guide/
 ## June 6, 2023
 
 Microsoft has a fix for [CVE-2023-3079](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-3079) to **Microsoft Edge Stable Channel (Version 114.0.1823.41)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+> [!NOTE]
+> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
 
 ## June 2, 2023
 
@@ -96,7 +109,10 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 112.0
 
 This update contains the following Microsoft Edge-specific update:
 
--[CVE-2023-29334](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29334)
+- [CVE-2023-29334](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29334)
+
+> [!NOTE]
+> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
 
 ## April 6, 2023
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/27/2023
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,16 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EdgeManagementEnabled](#edgemanagementenabled)|Microsoft Edge management enabled|
-|[EdgeManagementEnrollmentToken](#edgemanagementenrollmenttoken)|Microsoft Edge management enrollment token|
-|[EdgeManagementExtensionsFeedbackEnabled](#edgemanagementextensionsfeedbackenabled)|Microsoft Edge management extensions feedback enabled|
 
 ## Available policies
 

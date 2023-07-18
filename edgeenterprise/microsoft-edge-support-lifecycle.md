@@ -2,8 +2,8 @@
 title: "Microsoft Edge Lifecycle"
 ms.author: archandr
 author: dan-wesley
-manager: seanlynd
-ms.date: 02/02/2021
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge Lifecycle"
 ---
 
 # Microsoft Edge Lifecycle Policy
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the lifecycle policy that applies to Microsoft Edge.
 
@@ -34,11 +37,11 @@ We recognize that enterprise customers who manage complex environments need more
 
 |     Release option              |     Major version release supported    |     Major version release serviced    |     Support coverage across releases    |     Servicing coverage    |
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
-|     Daily “Canary”              |     None                               |     None                              |     None                                |     None                  |
-|     Weekly “Dev”                |     None                               |     None                              |     None                                |     None                  |
-|     `4`-week “Beta”               |     Current                            |     Current                           |     `4` weeks                             |    `4` weeks               |
-|     `4`-week “Stable”             |     Current and `2` previous             |     Current                           |     `12` weeks                            |     `4` weeks               |
-|     `8`-week “Extended Stable”    |     Current and `1` previous             |     Current                           |     `16` weeks                            |     `8` weeks               |
+|     Daily "Canary"              |     None                               |     None                              |     None                                |     None                  |
+|     Weekly "Dev"                |     None                               |     None                              |     None                                |     None                  |
+|     `4`-week "Beta"               |     Current                            |     Current                           |     `4` weeks                             |    `4` weeks               |
+|     `4`-week "Stable"             |     Current and `2` previous             |     Current                           |     `12` weeks                            |     `4` weeks               |
+|     `8`-week "Extended Stable"    |     Current and `1` previous             |     Current                           |     `16` weeks                            |     `8` weeks               |
 
 ## See also
 

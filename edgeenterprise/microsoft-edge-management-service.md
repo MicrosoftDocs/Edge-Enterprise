@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 06/14/2023
+ms.date: 07/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 ---
 
 # Microsoft Edge management service
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 The Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
@@ -218,25 +221,7 @@ Use the following steps to manage sidebar apps:
 1. Select **Select**.
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
-
-### View extension requests
-
-> [!NOTE]
-> This feature is rolling out starting late June. Please check back again later if you don't see it.
-
-If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to the "Requests" pivot. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. To allow requests, use the [EdgeAdminCenterExtensionsFeedbackEnabled] policy to enable reporting.
-
-To set the installation policy on a requested extension, use these steps:
-
-1. Select an extension.
-1. Select **Manage installation policy** and choose an option from the dropdown list:
-
-   - Allow: Users can install the extension. This is the default setting.
-   - Block: Users can't install the extension. You could remove the extension if users previously installed it. Also, you can write a message that displays when users try to install the extension.
-   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
-   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
-
-1. Select **Save**.
+<!-- delete ### View extension requests -->
 
 <!-- ====================================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
@@ -268,19 +253,19 @@ If you don't want to assign the profile using group assignment in the Microsoft 
 Use these steps as a guide for setting an enrollment token:
 
 1. Repeat the previous steps to enable Microsoft Edge Management Service.
-1. Log in to the Microsoft 365 Admin Center. Go to **Settings** > **Microsoft Edge**. Under the **Configuration profiles** pivot, go to the profile you want to assign.
-1. Copy the token ID.
-1. Set the [EdgeAdminCenterEnrollmentToken] policy value to the token ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your token ID):
+2. Log in to the Microsoft 365 Admin Center. Go to **Settings** > **Microsoft Edge**. Under the **Configuration profiles** pivot, go to the profile you want to assign.
+3. Copy the token ID.
+4. Set the [EdgeAdminCenterEnrollmentToken] policy value to the token ID. You can configure these settings in the registry under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If these keys aren't there you can create them. Use the following command line as a guide (use your token ID):
 
     ```
     reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeAdminCenterEnrollmentToken /t REG_SZ /d 1bba4530-7d23-4512-acda-89248f8e3d47 
     ```
 
-1. If Microsoft Edge is open, restart it.
+5. If Microsoft Edge is open, restart it.
 
 #### Control policy source precedence
 
-As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge Managment Service. If you want the Microsoft Edge Management Service policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
+As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge Management Service. If you want the Microsoft Edge Management Service policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
 
 > [!IMPORTANT]
 > This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
@@ -300,11 +285,34 @@ If there's a conflict with policy that User and Device are both trying to set, D
 > [!IMPORTANT]
 > This policy is highly experimental and will probably change in both name and functionality at any time before General Availability. Don't take any dependencies on it and only use it for testing.
 
-Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
+1. You can set precedence via the registry by setting the value of "CloudUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
+2. Add the reg key using the following command line example as a guide. (Remember to use your profile ID.)
 
-```
-reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
-```
+   ```
+   reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
+   ```
+
+3. If Microsoft Edge is open, restart it.
+<!-- ====================================================================== -->
+#### How the configuration profile is applied
+
+The Click-to-Run service used by Microsoft Edge management service checks with Cloud Policy regularly to see if there are any configuration profiles that pertain to the user. If there are, then the appropriate policy settings are applied and take effect the next time the user opens Microsoft Edge.
+
+**Here's a summary of what happens:**
+
+- When a user signs into Microsoft Edge on a device for the first time, a check is immediately made to see if there's a configuration profile that pertains to the user.
+- If the user isn't a member of an Azure AD group that's assigned a configuration profile, then another check is made again in 24 hours.
+- If the user is a member of an Azure AD group that's assigned a configuration profile, then the appropriate policy settings are applied. A check is made again in 90 minutes.
+- If there are any changes to the configuration profile since the last check, then the appropriate policy settings are applied and another check is made again in 90 minutes.
+- If there aren't any changes to the configuration profile since the last check, another check is made again in 24 hours.
+- If there's an error, a check is made when the user opens Microsoft Edge.
+- If Microsoft Edge isn't running when the next check is scheduled, then the check will be made the next time the user opens Microsoft Edge.
+
+> [!NOTE]
+> - Policies from Cloud Policy are only applied when Microsoft Edge is restarted. The behavior is the same as with Group Policy. For Windows devices, policies are enforced based on the primary user that is signed into Microsoft Edge. If there are multiple accounts signed in, only policies for the primary account are applied. If the primary account is switched, most of the policies assigned to that account will not apply until Microsoft Edge is restarted. Some policies related to [privacy controls](/deployoffice/privacy/overview-privacy-controls) will apply without restarting Microsoft Edge.
+> - If users are located in nested groups and the parent group is targeted for policies, the users in the nested groups will receive the policies. The nested groups and the users in those nested groups must be created in or synchronized to Azure AD.
+> - If the user is a member of multiple Azure AD groups with conflicting policy settings, priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign. You can set the priority by choosing **Reorder priority** on the **Configuration profiles** page.
+
 <!-- ====================================================================== -->
 ## Feedback and support
 

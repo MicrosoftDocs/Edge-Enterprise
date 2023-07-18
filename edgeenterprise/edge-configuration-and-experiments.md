@@ -2,8 +2,8 @@
 title: "Microsoft Edge configurations and experimentation"
 ms.author: kvice
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: laurawi
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge configurations and experimentation"
 ---
 
 # Microsoft Edge configurations and experimentation
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article describes the interaction between Microsoft Edge and the Experimentation and Configuration Service (ECS). Microsoft Edge communicates with this service to request and receive different kinds of payloads. These payloads include configurations, feature rollouts, and experiments.
 
@@ -28,7 +31,7 @@ Configurations are the payload meant to ensure product health, security, and pri
 
 ## Controlled Feature Rollout
 
-Controlled Feature Rollout (CFR) is a procedure for slowly increasing the size of the user group that receives a feature. By distributing a new feature to a randomly selected subset of the user population, it’s possible to compare user feedback to an equally sized control group without the feature to measure the impact of the feature.
+Controlled Feature Rollout (CFR) is a procedure for slowly increasing the size of the user group that receives a feature. By distributing a new feature to a randomly selected subset of the user population, it's possible to compare user feedback to an equally sized control group without the feature to measure the impact of the feature.
 
 ## Experiments
 
@@ -45,7 +48,7 @@ Microsoft Edge's interaction with this service is controlled by settings in the 
 - Disable communication with the service
 
   > [!CAUTION]
-  > If you disable communications with the service, this will affect Microsoft’s ability to respond to a severe bug in a timely manner.
+  > If you disable communications with the service, this will affect Microsoft's ability to respond to a severe bug in a timely manner.
 
 ## See also
 
