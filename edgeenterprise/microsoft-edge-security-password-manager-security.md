@@ -3,7 +3,7 @@ title: "Microsoft Edge password manager security"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 07/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -99,11 +99,9 @@ Data syncing and Microsoft Edge:
 
 - Data security in transit and at rest in the cloud: All synced data is encrypted in transit over HTTPS when transferred between the browser and Microsoft servers. The synced data is also stored in an encrypted state on Microsoft servers. Sensitive data types such as addresses, and passwords are further encrypted on the device before being synced. If you're using a work or school account, all data types are further encrypted before being synced using Microsoft Purview Information Protection.
 
-## Why do Microsoft security baselines recommend disabling the password manager?
+## What recommendation does the Microsoft Security baseline make for the password manager?
 
-The Microsoft security team has currently rated the impact of a worm that compromises a network of Enterprise PCS (resulting in loss of all credentials in all devices' password managers) as more severe than the (more likely but lower impact) risk of targeted phishing attacks that compromise a single user-entered credential.
-
-This assessment is under discussion and subject to change with the addition of new security-enhancing features in Microsoft Edge.
+The Microsoft security team has removed the recommendation to disable the built-in password manager (*Enable saving passwords to the password manager*) in Microsoft Edge version 114. The team moved the setting to **Not Configured** based on the availability of several new features that alter the security tradeoffs introduced by Microsoft Edge's improved Password Manager. Each enterprise should evaluate their own risk profile when deciding whether to configure the password manager. For more information, see [Security baseline for Microsoft Edge version 114](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-microsoft-edge-version-114/ba-p/3839728).
 
 ## Can malicious extensions gain access to passwords?
 
