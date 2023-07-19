@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 07/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
