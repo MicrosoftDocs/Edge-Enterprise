@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 06/13/2023
+ms.date: 07/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -64,6 +64,11 @@ The following table lists the planned and actual release dates for major release
 | 116 | Target release | Week of 18-Jul-2023 | Week of 10-Aug-2023 | Week of 10-Aug-2023 |
 | 117 | Target release | Week of 21-Aug-2023 | Week of 14-Sep-2023 | Not applicable |
 | 118 | Target release | Week of 18-Sep-2023 | Week of 12-Oct-2023 | Week of 12-Oct-2023 |
+| 119 | Target release | Week of 16-Oct-2023 | Week of 09-Nov-2023 | Not applicable |
+| 120 | Target release | Week of 13-Nov-2023 | Week of 04-Jan-2024 | Week of 04-Jan-2024 |
+| 121 | Target release | Week of 08-Jan-2024 | Week of 01-Feb-2024 | Not applicable |
+| 122 | Target release | Week of 05-Feb-2024 | Week of 29-Feb-2024 | Week of 29-Feb-2024 |
+| 123 | Target release | Week of 04-Mar-2024 | Week of 28-Mar-2024 | Not applicable |
 
 ## Release process
 
