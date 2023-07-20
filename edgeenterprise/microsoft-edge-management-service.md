@@ -350,7 +350,7 @@ The Click-to-Run service used by Microsoft Edge management service checks with C
 ## Feedback and support
 
 This experience is supported by Microsoft Support. You can reach out to Microsoft Support to report issues or give feedback. You can also leave feedback in our [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
-
+<!-- ====================================================================== -->
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
