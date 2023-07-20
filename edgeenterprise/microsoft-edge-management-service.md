@@ -242,11 +242,11 @@ After configuring a profile, the next step is to assign the profile.
 
 Use the following sections as a guide to enable the Microsoft Edge management service.
 
-#### For Microsoft Edge version 116.1935 and later
+#### For Microsoft Edge version 115.1935 and later
 
 Microsoft Edge management service is enabled by default. Work profiles signed in with Azure AD accounts will check with the Edge management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
 
-#### For Microsoft Edge version 116.1934 and earlier
+#### For Microsoft Edge version 115.1934 and earlier
 
 Use the following steps as a guide to enable the service:
 
@@ -265,7 +265,7 @@ If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge
 
 Use the following sections as a guide to setting an enrollment token.
 
-#### For Microsoft Edge version 116.1935 and later
+#### For Microsoft Edge version 115.1935 and later
 
 If you don't want to assign the profile using group assignment in the Microsoft 365 Admin Center, then you can assign it through group policy. Each profile has a unique profile ID which is the value you can use for the [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) policy to assign the profile. After assignment, the users will receive the profile and the settings will be applied when they're signed into the Edge browser. These policies will be applied in addition to any from group assignment in the Microsoft 365 Admin Center.
 
@@ -279,7 +279,7 @@ Use these steps as a guide for setting an enrollment token:
     ```
 3. If Microsoft Edge is open, restart it.
 
-#### For Microsoft Edge version 116.1934 and earlier
+#### For Microsoft Edge version 115.1934 and earlier
 
 If you don't want to assign the profile using group assignment in the Microsoft 365 Admin Center, then you can assign it through group policy. Each profile has a unique profile ID which is the value you can use for the [EdgeAdminCenterEnrollmentToken] policy to assign the profile. After assignment, the users will receive the profile and the settings will be applied when they're signed into the Microsoft Edge browser. These policies will be applied in addition to any from group assignment in the Microsoft 365 Admin Center.
 
