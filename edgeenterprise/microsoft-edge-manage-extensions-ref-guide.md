@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 07/11/2022
+ms.date: 07/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,9 @@ Microsoft Edge offers multiple ways to manage extensions. A common way is to set
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+> [!NOTE]
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Before you begin
 
@@ -39,13 +42,13 @@ This policy can control settings such as Update URL, where the extension will be
 |:----|:----|
 | **allowed_types** | Can only be used to configure the default configuration, *. Specifies what types of app or extension users are allowed to install on Microsoft Edge. The value is a list of strings, each of which should be one of the following types: "extension", "theme", "user_script", and "hosted_app".   |
 | **blocked_install_message**| If you block users from installing certain extensions, you can specify a custom message to display in the browser if users try to install them.<br>Append text to the generic error message that is displayed on the Microsoft Edge Add-ons website. For example, you can tell users how to contact their IT department or why a particular extension is unavailable. The message can be up to 1,000 characters long.  |
-|**blocked_permissions**  | Prevents users from installing and running extensions that request certain API permissions that your organization doesn’t allow. For example, you can block extensions that access cookies. If an extension requires a permission that you blocked, the users can’t install it. If users previously installed the extension, it will no longer load. If an extension contains a blocked permission as an optional requirement, it installs as usual. Then, while the extension is running, blocked permissions are automatically declined.<br>For a list of available permissions, see [declare permissions](/microsoft-edge/extensions-chromium/enterprise/declare-permissions).   |
-| **installation_mode**| Controls if and how extensions that you specify are added to Microsoft Edge. You can set the installation mode to one of the following options:<br>- `allowed`: Users can install the extension. If no installation mode is defined, this setting is the default.<br>- `blocked`: Users can’t install the extension.<br>- `force_installed`: Automatically install the extension without user interaction. Users can’t remove it. You also need to define the extension download location using "update_url". **Note**: You can’t use this setting with * because Microsoft Edge wouldn't know which extension to automatically install.<br>- `normal_installed`: Automatically install the extension without user interaction. Users can disable it. You also need to define the extension download location using "update_url". **Note**: You can’t use this setting with * because Microsoft Edge wouldn't know which extension to automatically install.<br>- `removed`: Users can’t install the extension. If users previously installed the extension, Microsoft Edge removes it. |
+|**blocked_permissions**  | Prevents users from installing and running extensions that request certain API permissions that your organization doesn't allow. For example, you can block extensions that access cookies. If an extension requires a permission that you blocked, the users can't install it. If users previously installed the extension, it will no longer load. If an extension contains a blocked permission as an optional requirement, it installs as usual. Then, while the extension is running, blocked permissions are automatically declined.<br>For a list of available permissions, see [declare permissions](/microsoft-edge/extensions-chromium/enterprise/declare-permissions).   |
+| **installation_mode**| Controls if and how extensions that you specify are added to Microsoft Edge. You can set the installation mode to one of the following options:<br>- `allowed`: Users can install the extension. If no installation mode is defined, this setting is the default.<br>- `blocked`: Users can't install the extension.<br>- `force_installed`: Automatically install the extension without user interaction. Users can't remove it. You also need to define the extension download location using "update_url". **Note**: You can't use this setting with * because Microsoft Edge wouldn't know which extension to automatically install.<br>- `normal_installed`: Automatically install the extension without user interaction. Users can disable it. You also need to define the extension download location using "update_url". **Note**: You can't use this setting with * because Microsoft Edge wouldn't know which extension to automatically install.<br>- `removed`: Users can't install the extension. If users previously installed the extension, Microsoft Edge removes it. |
 | **install_sources** | Can be used only to configure the default configuration, *. Specifies which URLs are allowed to install extensions. Both the location of the *.crx file and the page where the download is started from (the referrer) must be allowed by these patterns. For URL pattern examples, see the [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns).  |
 | **minimum_version_required** |Microsoft Edge disables extensions, including force-installed extensions, with a version older than the specified minimum version.<br>The format of the version string is the same as the one used in the extension manifest.     |
 | **update_url** | Only applies to `force_installed` and `normal_installed`. Specifies where Microsoft Edge should download an extension from. If the extension is hosted in the Microsoft Edge Add-ons website, use this location: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge uses the URL that you specify for the initial extension installation. For subsequent extension updates, Microsoft Edge uses the URL in the extension's manifest.   |
-| **runtime_allowed_hosts**| Allows extensions to interact with specified websites, even if they’re also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
-| **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns ex'cept you can’t define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
+| **runtime_allowed_hosts**| Allows extensions to interact with specified websites, even if they're also defined in runtime_blocked_hosts. You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/enterprise/match-patterns) except you can't define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported     |
+| **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns ex'cept you can't define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
 | **override_update_url**| Available from Microsoft Edge 93<br>If this field is set to `true`, Microsoft Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this field isn't set or is set to `false`, Microsoft Edge uses the URL specified in the extension's manifest for updates.|
 | **toolbar_state**| Available from Microsoft Edge 103<br>This policy setting lets you force show an installed extension to the toolbar. The default state is `default_hidden` for all extensions. The following values are possible for this setting:<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users won't be able to hide the specified extension icon from the toolbar.<br>-`default_hidden`: This is the default setting for all the installed extensions on the browser.<br>-`default_shown`: In this state, extensions are shown on the toolbar on installation. Users can hide them from the toolbar, if needed. |
 
@@ -97,7 +100,7 @@ The default scope is identified by the asterisk (*). The next example defines a 
 } 
 ```
 
-An extension will only get its settings from one scope. If there’s an individual extension scope for that extension, those will be the settings that apply to that extension. If no individual extension scope exists, then the extension will use the default scope.  
+An extension will only get its settings from one scope. If there's an individual extension scope for that extension, those will be the settings that apply to that extension. If no individual extension scope exists, then the extension will use the default scope.  
 
 The next JSON example blocks any extension from running on `.example.com` and blocks any extension that requires the permission "USB".
 
@@ -123,7 +126,7 @@ The next JSON example blocks any extension from running on `.example.com` and bl
 - User can install all extensions -  the default setting
 
   `{ "*": {"installation_mode": "allowed" }}`
-- User can’t install any extensions.  
+- User can't install any extensions.  
 
   `{ "*": {"installation_mode": "blocked" }}`
 
@@ -133,17 +136,17 @@ The next JSON example blocks any extension from running on `.example.com` and bl
 
 #### Using installation_mode property to force install extensions
 
-When using installation_mode as "force_installed", the extension is automatically installed without user interaction. A user can’t disable or remove the extension. If an extension is "normal" or "force" installed, the **update_url** field must also be defined. This field points to the location where the extension can be installed from. Use the following locations for the **update_url** field:
+When using installation_mode as "force_installed", the extension is automatically installed without user interaction. A user can't disable or remove the extension. If an extension is "normal" or "force" installed, the **update_url** field must also be defined. This field points to the location where the extension can be installed from. Use the following locations for the **update_url** field:
 
-- If the extension you’re downloading is hosted on the Microsoft Edge Add-ons store, use the location in the following JSON example:
+- If the extension you're downloading is hosted on the Microsoft Edge Add-ons store, use the location in the following JSON example:
 
    `{"nckgahadaanghapdoaajjgafhacjaoii": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
 
-- If the extension you’re downloading is hosted on the Chrome Web Store, use the location in the following JSON example:
+- If the extension you're downloading is hosted on the Chrome Web Store, use the location in the following JSON example:
 
    `{"nckgiihapdoaajjgafhacjgahadaanao": {"installation_mode": "force_installed","update_url": "https://clients2.google.com/service/update2/crx"}}`
 
-- If you’re hosting the extension on your own server, use the URL where Microsoft Edge can download the packed extension (.crx file). JSON example:
+- If you're hosting the extension on your own server, use the URL where Microsoft Edge can download the packed extension (.crx file). JSON example:
 
    `{"nckgahadagoaajjgafhacjanaoiihapd": {"installation_mode": "force_installed","update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"}}`
   
@@ -159,7 +162,7 @@ The ExtensionSettings policy should be written to the registry under this key:
 `HKLM\Software\Policies\Microsoft\Edge\`
 
 > [!NOTE]
-> It’s possible to use HKCU instead of HKLM. The equivalent path can be configured with Group Policy Object (GPO).  
+> It's possible to use HKCU instead of HKLM. The equivalent path can be configured with Group Policy Object (GPO).  
 
 For Microsoft Edge, all settings will start under this key:
 
