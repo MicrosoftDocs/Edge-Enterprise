@@ -17,7 +17,7 @@ description: "Learn how to package and self-host Microsoft Edge extensions in th
 This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
 
 > [!NOTE]
-> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available in Edge stable version 115. [Learn more](/deployedge/microsoft-edge-management-service).
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Prerequisites
 

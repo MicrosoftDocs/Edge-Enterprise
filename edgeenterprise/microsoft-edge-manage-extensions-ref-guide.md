@@ -20,7 +20,7 @@ Microsoft Edge offers multiple ways to manage extensions. A common way is to set
 > This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
-> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is now available in Edge stable version 115. [Learn more](/deployedge/microsoft-edge-management-service).
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Before you begin
 
