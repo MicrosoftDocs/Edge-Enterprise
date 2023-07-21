@@ -2,8 +2,8 @@
 title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
-manager: collw
-ms.date: 05/19/2022
+manager: likuba
+ms.date: 07/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,10 +14,13 @@ description: "Learn how to configure Microsoft Edge policy settings on Windows d
 
 # Configure Microsoft Edge policy settings on Windows devices
 
-Use this article as guide to configure Microsoft Edge policy settings on Windows devices. If you haven’t set up Microsoft Edge, see the [Microsoft Edge setup guide](https://go.microsoft.com/fwlink/?linkid=2187484).
+Use this article as guide to configure Microsoft Edge policy settings on Windows devices. If you haven't set up Microsoft Edge, see the [Microsoft Edge setup guide](https://go.microsoft.com/fwlink/?linkid=2187484).
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+> [!NOTE]
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## Introduction to policy settings on Windows
 
@@ -55,7 +58,7 @@ Go to the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise
 1. On a domain controller or workstation with RSAT, go to the **PolicyDefinition** folder (also known as the *Central Store*) on any domain controller for your domain. For older versions of Windows Server, you might need to create the **PolicyDefinition** folder. For more information, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
 2. Open *MicrosoftEdgePolicyTemplates* and go to **windows** > **admx**.
 3. Copy the *msedge.admx* file to the PolicyDefinition folder. (Example: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-4. In the *admx* folder, open the appropriate language folder. For example, if you’re in the U.S., open the **en-US** folder.
+4. In the *admx* folder, open the appropriate language folder. For example, if you're in the U.S., open the **en-US** folder.
 5. Copy the *msedge.adml* file to the matching language folder in the PolicyDefinition folder. Create the folder if it doesn't already exist. (Example: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
 6. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval.
 7. To confirm the files loaded correctly, open the **Group Policy Management Editor** from Windows Administrative Tools and expand **Computer Configuration** > **Policies** > **Administrative Templates** > **Microsoft Edge**. You should see one or more Microsoft Edge nodes as shown below.
@@ -66,9 +69,9 @@ Go to the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise
 
 1. On the target computer, open *MicrosoftEdgePolicyTemplates* and go to **windows** > **admx**.
 2. Copy the *msedge.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *admx* folder, open the appropriate language folder. For example, if you’re in the U.S., open the **en-US** folder.
+3. In the *admx* folder, open the appropriate language folder. For example, if you're in the U.S., open the **en-US** folder.
 4. Copy the *msedge.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\en-US)
-5. To confirm the files loaded correctly, open Local Group Policy Editor directly (Windows key + R and enter gpedit.msc) or open MMC and load the Local Group Policy Editor snap-in. If an error occurs, it’s usually because the files are in an incorrect location.
+5. To confirm the files loaded correctly, open Local Group Policy Editor directly (Windows key + R and enter gpedit.msc) or open MMC and load the Local Group Policy Editor snap-in. If an error occurs, it's usually because the files are in an incorrect location.
 
 ## 2. Set mandatory or recommended policies
 
