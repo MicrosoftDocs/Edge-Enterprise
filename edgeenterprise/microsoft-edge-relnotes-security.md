@@ -24,6 +24,7 @@ This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2023-38187](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38187)
 - [CVE-2023-38173](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38173)
+- [CVE-2023-35392](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35392)
 
 ## July 13, 2023
 
