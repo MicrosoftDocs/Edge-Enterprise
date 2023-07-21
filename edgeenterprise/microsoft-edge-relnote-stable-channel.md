@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 114.0.1823.90: July 21, 2023
 
-Fixed various bugs and performance issues for Stable release.
+Fixed various bugs and performance issues for Extended Stable release.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-21-2023).
 
