@@ -135,6 +135,37 @@ The following policies aren't applied to the personal browser profile.
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
+|  NewBaseUrlInheritanceBehaviorAllowed  |    |
+|  NewPDFReaderWebView2List  |    |
+|[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
+|[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
+|[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
+| PPAPISharedImagesSwapChainAllowed   |    |
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
+|[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
+|[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
+|[PrintHeaderFooter](#printheaderfooter)|Print headers and footers|
+|  ProfilePickerOnStartupAvailability  |    |
+|[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
+|[ProxySettings](#proxysettings)|Proxy settings|
+|[QuicAllowed](#quicallowed)|Allow QUIC protocol|
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
 |    |    |
 |    |    |
 |    |    |
@@ -163,3 +194,4 @@ The following policies aren't applied to the personal browser profile.
 ## See also
 
 - [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business)
+
