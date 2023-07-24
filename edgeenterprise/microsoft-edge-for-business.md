@@ -149,11 +149,7 @@ No – browser favorites, history, and passwords aren't shared between the brows
 
 ### What policies aren't applied in the personal browser profile?
 
-The following table lists the policies that aren't applied to a personal browser profile.
-
-| Policy Name | Caption |
-|:-|:-|
-
+This [document] lists the policies that aren't applied to a personal browser profile.
 
 ## See also
 
