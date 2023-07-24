@@ -135,7 +135,7 @@ The following policies aren't applied to the personal browser profile.
 |[NativeWindowOcclusionEnabled](/deployedge/microsoft-edge-policies#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NetworkServiceSandboxEnabled](/deployedge/microsoft-edge-policies#networkservicesandboxenabled)|Enable the network service sandbox|
 |  NewBaseUrlInheritanceBehaviorAllowed  |    |
-|  [NewPDFReaderWebView2List](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list)  | Enable built-in PDF reader powered by Adobe Acrobat for WebView2   |
+|  [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list)  | Enable built-in PDF reader powered by Adobe Acrobat for WebView2   |
 |[NonRemovableProfileEnabled](/deployedge/microsoft-edge-policies#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OneAuthAuthenticationEnforced](/deployedge/microsoft-edge-policies#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](/deployedge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
@@ -155,7 +155,7 @@ The following policies aren't applied to the personal browser profile.
 |[RelaunchNotification](/deployedge/microsoft-edge-policies#relaunchnotification)|Notify a user that a browser restart is recommended or required for pending updates|
 |[RelaunchNotificationPeriod](/deployedge/microsoft-edge-policies#relaunchnotificationperiod)|Set the time period for update notifications|
 |[RelaunchWindow](/deployedge/microsoft-edge-policies#relaunchwindow)|Set the time interval for relaunch|
-|  [ReleaseChannelPreference](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-webview-policies#releasechannelpreference)  |  Set the release channel search order preference  |
+|  [ReleaseChannelPreference](/deployedge/microsoft-edge-webview-policies#releasechannelpreference)  |  Set the release channel search order preference  |
 |[RemoteDebuggingAllowed](/deployedge/microsoft-edge-policies#remotedebuggingallowed)|Allow remote debugging|
 |[RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled)|Enable renderer in app container|
 |[RendererCodeIntegrityEnabled](/deployedge/microsoft-edge-policies#renderercodeintegrityenabled)|Enable renderer code integrity|
