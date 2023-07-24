@@ -31,7 +31,7 @@ Microsoft Edge for Business aims to address the needs of both end users and IT P
 
 Microsoft Edge for Business is available in public preview on managed PCs, and unmanaged BYOPC.
 
-Microsoft Edge for Business encompasses the experiences summarized in the following table. You can enable and try the preview by following the instructions in [Enable Microsoft Edge for Business preview](#enable-microsoft-edge-for-business-preview).
+Microsoft Edge for Business encompasses the experiences summarized in the following table. 
 
 | Name | Description | Status |
 |:-----|:-----|:------|
@@ -132,10 +132,26 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 The public preview provides switching for the following sites:
 
+- 1688
+- Alibaba
+- AliExpress
 - Amazon
-- BestBuy
+- Apple
+- Best Buy
+- Costco
+- eBay
+- Etsy
+- Flip Kart
+- Home Depot
+- Kroger
+- Lowes
+- Publix
+- Safeway
+- Taobao
 - Target
+- TMall
 - Walmart
+- Williams Sonoma
 
 Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
