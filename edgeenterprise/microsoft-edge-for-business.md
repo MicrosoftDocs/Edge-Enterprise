@@ -38,8 +38,8 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Public preview |
 | Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Public Preview  |
 |  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in public preview    |
-|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 |  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
+|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 
 ## Work Browser (Visual Refresh)
 
@@ -64,7 +64,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
 - Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
 
-Smart switching from the work to personal browser:
+For more information about the Enterprise personal browser and the policies that aren't applied, see [policies].
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
@@ -76,7 +76,7 @@ Another Microsoft Edge for Business feature that will be coming soon is support 
 
 As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
 
-## Enable Microsoft Edge for Business preview
+## Use the Microsoft Edge for Business preview
 
 Microsoft Edge for Business is available in public preview on managed devices on Microsoft Edge version 116 or later.
 
