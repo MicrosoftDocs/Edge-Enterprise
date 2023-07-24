@@ -150,8 +150,23 @@ The following policies aren't applied to the personal browser profile.
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[ProxySettings](#proxysettings)|Proxy settings|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
-|    |    |
-|    |    |
+| RSAKeyUsageForLocalAnchorsEnabled   |    |
+|[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
+|[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
+|[RelaunchNotification](#relaunchnotification)|Notify a user that a browser restart is recommended or required for pending updates|
+|[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Set the time period for update notifications|
+|[RelaunchWindow](#relaunchwindow)|Set the time interval for relaunch|
+|  ReleaseChannelPreference  |    |
+|[RemoteDebuggingAllowed](#remotedebuggingallowed)|Allow remote debugging|
+|[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
+|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
+|[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
+|[RestrictSigninToPattern](#restrictsignintopattern)|Restrict which accounts can be used to sign in to Microsoft Edge|
+|[RoamingProfileLocation](#roamingprofilelocation)|Set the roaming profile directory|
+|[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Enable using roaming copies for Microsoft Edge profile data|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
+|[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
+|[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |    |    |
 |    |    |
 |    |    |
