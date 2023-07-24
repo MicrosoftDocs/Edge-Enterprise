@@ -64,7 +64,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
 - Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
 
-For more information about the Enterprise personal browser and the policies that aren't applied, see [policies].
+For more information about the Enterprise personal browser and the policies that aren't applied, see [policies](/DeployEdge/microsoft-edge-personal-browser-excluded-policies).
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
@@ -149,7 +149,7 @@ No – browser favorites, history, and passwords aren't shared between the brows
 
 ### What policies aren't applied in the personal browser profile?
 
-This [document] lists the policies that aren't applied to a personal browser profile.
+This [document](/DeployEdge/microsoft-edge-personal-browser-excluded-policies) lists the policies that aren't applied to a personal browser profile.
 
 ## See also
 
