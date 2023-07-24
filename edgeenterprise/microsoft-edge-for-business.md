@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/07/2023
+ms.date: 07/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 description: "Information about Microsoft Edge for Business Preview"
 ---
 
-# Microsoft Edge for Business (Private Preview)
+# Microsoft Edge for Business (Public Preview)
 
 This article describes the benefits Microsoft Edge for Business brings to your users and how to enable this experience for your organization.
 
 > [!NOTE]
-> Microsoft Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
+> Microsoft Edge for Business is available in public preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
 > - The Microsoft Edge for Business visual treatment and branding is not currently available on mobile as part of the preview.
 > - IT admin management capabilities will be available soon.
 
@@ -64,7 +64,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
 - Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
 
-We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
+Smart switching from the work to personal browser:
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
@@ -78,25 +78,11 @@ As we continue to develop this, we plan to enable more admin customization where
 
 ## Enable Microsoft Edge for Business preview
 
-Microsoft Edge for Business is available in private preview on managed devices on Microsoft Edge version 115 or later.
+Microsoft Edge for Business is available in public preview on managed devices on Microsoft Edge version 116 or later.
 
 Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
 
-To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
-
-- `edge://flags/#edge-project-kodiak`
-- `edge://flags/#edge-project-kodiak-look-and-feel`
-- `edge://flags/#edge-project-kodiak-policy-filter`
-- `edge://flags/#edge-automatic-profile-switching`
-- `edge://flags/#edge-automatic-guided-switch`
-
-The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
-
-### How to enable using experimental policy
-
-1. Download the [Microsoft Edge for Business EXPERIMENTAL Policy File](https://download.microsoft.com/download/7/2/b/72b5fe45-5cd0-4ae1-9367-fc96ff293385/Microsoft-Edge-for-Business-EXPERIMENTAL-Policy-File-Expires-Version-116.zip). This file will be deprecated with Microsoft Edge version 116.
-2. Install the policies using one of these methods: [Add the administrative template to an individual computer](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-an-individual-computer) or [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
-3. Restart Microsoft Edge: `edge://restart`.
+The public preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
 
 ## Unmanaged BYOPC preview
 
