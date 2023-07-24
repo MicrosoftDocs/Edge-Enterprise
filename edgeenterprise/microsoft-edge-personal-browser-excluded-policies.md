@@ -119,10 +119,22 @@ The following policies aren't applied to the personal browser profile.
 |  HttpAllowlist  |    |
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
 |[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
-|    |    |
-|    |    |
-|    |    |
-|    |    |
+|  IncognitoModeAvailability  |    |
+| InsecureHashesInTLSHandshakesEnabled   |    |
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to more-private network endpoints|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from in an insecure manner|
+|[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Control the IntensiveWakeUpThrottling feature|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Specify the number of days that a site remains on the local IE mode site list|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
+|[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
+|  KodiakProjectPolicy  |    |
+|[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
+| [MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Allow single sign-on for Microsoft personal sites using this profile|  
+|[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
+|[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
+|[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
+|[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |    |    |
 |    |    |
 |    |    |
