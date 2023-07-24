@@ -35,7 +35,7 @@ Fixed various bugs and performance issues.
 
 #### New policies
 
-[ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed] - Allows enabling throttling of non-visible, cross-origin iframes
+[ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
 
 ## Version 115.0.1901.183: July 21, 2023
 
