@@ -42,7 +42,7 @@ The following policies aren't applied to the personal browser profile.
 |   BrowserAddPersonEnabled  |    |
 |[BrowserCodeIntegritySetting](#browsercodeintegritysetting)|Configure browser process code integrity guard setting|
 |  BrowserContextAwareAccessSignalsAllowlist  |    |
-| BrowserExecutableFolder |     |
+| [BrowserExecutableFolder](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-webview-policies#browserexecutablefolder) | Configure the location of the browser executable folder    |
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Enable guest mode|
 | BrowserGuestModeEnforced  |    |
 |[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Enable browser legacy extension point blocking|
@@ -86,6 +86,49 @@ The following policies aren't applied to the personal browser profile.
 | EdgeAdminCenterUseOCPSEndpoint   |    |
 |  EdgeAdminCenterUseTestEndpoint  |    |
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
+|[EfficiencyMode](#efficiencymode)|Configure when efficiency mode should become active|
+|[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
+|[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
+|[EnableAuthNegotiatePort](#enableauthnegotiateport)|Include non-standard port in Kerberos SPN|
+|[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
+|[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
+|[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
+|[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
+|[EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled)|Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge|
+|[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge|
+|  EnterpriseProfileCreationKeepBrowsingData  |    |
+|[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
+|[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Explicitly allowed network ports|
+|[ExtensionInstallSources](#extensioninstallsources)|Configure extension and user script install sources|
+|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety and Kids Mode|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|Configure users ability to override feature flags|
+|[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
+| ForceEnablePepperVideoDecoderDevAPI   |    |
+| [HSTSPolicyBypassList](#hstspolicybypasslist)|Configure the list of names that will bypass the HSTS policy check   |    |
+|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Use hardware acceleration when available|
+| HeadlessMode |  |
+|[HeadlessModeEnabled](#headlessmodeenabled)|Control use of the Headless Mode|
+|[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
+|[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Hide the one-time redirection dialog and the banner on Microsoft Edge|
+|[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
+|  HighEfficiencyModeEnabled  |    |
+|  HttpAllowlist  |    |
+|[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
+|[InAppSupportEnabled](#inappsupportenabled)|In-app support Enabled|
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
 |    |    |
 |    |    |
 |    |    |
