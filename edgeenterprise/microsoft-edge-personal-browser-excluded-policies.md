@@ -49,15 +49,43 @@ The following policies aren't applied to the personal browser profile.
 |[BrowserSignin](#browsersignin)|Browser sign-in settings|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
+|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS|
+|[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
+|[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
+|[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Disable Certificate Transparency enforcement for specific URLs|
+| ChromeAppsWebViewPermissiveBehaviorAllowed   |    |
+|[ClearBrowsingDataOnExit](#clearbrowsingdataonexit)|Clear browsing data when Microsoft Edge closes|
+|[ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit)|Clear cached images and files when Microsoft Edge closes|
+|[ClickOnceEnabled](#clickonceenabled)|Allow users to open files using the ClickOnce protocol|
+|  CloudAPAuthEnabled |    |
+|  CloudManagementEnrollmentMandatory  |    |
+|  CloudPolicyOverridesPlatformPolicy  |    |
+|[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
+|[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
+|[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
+|[CookiesAllowedForUrls](#cookiesallowedforurls)|Allow cookies on specific sites|
+|[CookiesBlockedForUrls](#cookiesblockedforurls)|Block cookies on specific sites|
+|[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limit cookies from specific websites to the current session|
+|[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS interception checks enabled|
+|[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Set Microsoft Edge as default browser|
+|[DefaultBrowserSettingsCampaignEnabled](#defaultbrowsersettingscampaignenabled)|Enables default browser settings campaigns|
+|[DefaultCookiesSetting](#defaultcookiessetting)|Configure cookies|
+|[DeleteDataOnMigration](#deletedataonmigration)|Delete old browser data on migration|
+|[DiagnosticData](#diagnosticdata)|Send required and optional diagnostic data about browser usage|
+|[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
+|[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Disable CNAME lookup when negotiating Kerberos authentication|
+|[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
+|[DiskCacheDir](#diskcachedir)|Set disk cache directory|
+|[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
+|[DnsOverHttpsMode](#dnsoverhttpsmode)|Control the mode of DNS-over-HTTPS|
+|[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Specify URI template of desired DNS-over-HTTPS resolver|
+|  DomainReliabilityAllowed  |    |
+|  EdgeAdminCenterEnabled |    |
+|  EdgeAdminCenterEnrollmentToken  |    |
+| EdgeAdminCenterUseOCPSEndpoint   |    |
+|  EdgeAdminCenterUseTestEndpoint  |    |
+|[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
 |    |    |
 |    |    |
 |    |    |
