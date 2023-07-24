@@ -29,17 +29,17 @@ Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built 
 
 Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 
-Microsoft Edge for Business is available in private preview on managed PCs, and unmanaged BYOPC.
+Microsoft Edge for Business is available in public preview on managed PCs, and unmanaged BYOPC.
 
 Microsoft Edge for Business encompasses the experiences summarized in the following table. You can enable and try the preview by following the instructions in [Enable Microsoft Edge for Business preview](#enable-microsoft-edge-for-business-preview).
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview |
-| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in private preview    |
+| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Public preview |
+| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Public Preview  |
+|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in public preview    |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
-|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
+|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
 
 ## Work Browser (Visual Refresh)
 
@@ -104,7 +104,7 @@ Participation requirements:
 - Engage with the Microsoft product group during the preview.
 
 > [!IMPORTANT]
-> Production use of the private preview is not supported. Migration of private preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
+> Production use of the public preview is not supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
 
 ## Provide feedback
 
@@ -130,7 +130,7 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
-The private preview provides switching for the following sites:
+The public preview provides switching for the following sites:
 
 - Amazon
 - BestBuy
