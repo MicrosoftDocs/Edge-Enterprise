@@ -154,6 +154,7 @@ The following table lists the policies that aren't applied to a personal browser
 | Policy Name | Caption |
 |:-|:-|
 
+
 ## See also
 
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
