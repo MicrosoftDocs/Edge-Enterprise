@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/21/2023
+ms.date: 07/22/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -21,7 +21,7 @@ For information about an additional set of policies used to control how and when
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
-Starting in Microsoft Edge version 116, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
+Starting in Microsoft Edge version 112, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
@@ -14367,7 +14367,7 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14435,7 +14435,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18421,7 +18421,7 @@ If you don't configure this policy, users can choose whether to send these reque
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34770,7 +34770,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
