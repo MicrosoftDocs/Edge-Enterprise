@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/19/2023
+ms.date: 07/27/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,28 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 116.0.1938.29: July 27, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Edge for Business.** In addition to rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business offers new refreshed look and feel, automatic switching to keep your work and personal browsing separate including fixes from private preview feedback, lightly managed Enterprise Personal Browser (MSA profile), and support for Unmanaged BYOPC. Microsoft Edge for Business is now turned on by default.  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Locked Tabs in Edge Workspaces.** This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab. For more information, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces). **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **New Microsoft Edge PDF experience policy for WebView2.** The [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy configures WebView2 applications to launch the new version of the PDF reader that's powered by Adobe Acrobat's PDF rendering engine.  The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF file handling, and greater accessibility. Administrators can use the [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy or WebView2 developers can explicitly enable the **msPdfSharedLibrary** experimental flag in code to use WebView2 with PDF powered by Adobe PDF Engine. For more information about the Adobe and Microsoft collaboration, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).
+
+### Policy updates
+
+#### New policies
+
+[ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
+
+## Version 115.0.1901.183: July 21, 2023
+
+Fixed various bugs and performance issues.
 
 ## Version 115.0.1901.181: July 19, 2023
 
