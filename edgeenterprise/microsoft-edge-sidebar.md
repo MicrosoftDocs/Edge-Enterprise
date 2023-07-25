@@ -39,7 +39,7 @@ Admins have several policy options for deploying and managing the sidebar in the
 
 ## Allow or block the sidebar in group policy
 
-You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy to control whether the sidebar is allowed or blocked in your organization. Blocking the sidebar will automatically block all sidebar apps from being enabled.
+You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) policy to control whether the sidebar is allowed or blocked in your organization. Blocking the sidebar will automatically block all sidebar apps from being enabled. On Microsoft Edge 116 or later, this policy allows or blocks the sidebar in [Progressive Web Apps (PWAs)](/microsoft-edge/progressive-web-apps-chromium/).
 
 1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Show Hubs Sidebar**.
 2. To block the sidebar and all sidebar apps, select **Disabled**.
