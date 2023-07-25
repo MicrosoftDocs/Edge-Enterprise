@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/27/2023
+ms.date: 07/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 116.0.1938.29: July 27, 2023
+## Version 116.0.1938.29: July 24, 2023
 
 Fixed various bugs and performance issues.
 
@@ -96,60 +96,7 @@ Fixed various bugs and performance issues.
 ## Version 115.0.1901.9: June 15, 2023
 
 Fixed various bugs and performance issues.
-
-## Version 115.0.1901.7: June 13, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Enhanced security mode improvements.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting less familiar sites. Enhanced security mode is turned on by default to Balanced mode for x64 Windows, x64 macOS, x64 Linux, and ARM64 systems. **Note:** This feature is a controlled feature rollout in Microsoft Edge Beta 115. If you don't see this feature, check back as we continue our rollout.
-
-  Also, administrators have two new policies to manage the Enhanced security mode user experience: **EnhanceSecurityModeIndicatorUIEnabled** and **EnhanceSecurityModeOptOutUXEnabled**. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **Microsoft Edge management service.** Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins are able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). **Note:** This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You need to set up a Targeted release to opt in and view this experience in the M365 admin center.
-
-### Policy updates
-
-#### New policies
-
-- [WalletDonationEnabled](/DeployEdge/microsoft-edge-policies#walletdonationenabled) - Wallet Donation Enabled
-- [EnhanceSecurityModeIndicatorUIEnabled](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeindicatoruienabled) - Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
-- [EnhanceSecurityModeOptOutUXEnabled](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeoptoutuxenabled) - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
-- [ComposeInlineEnabled](/DeployEdge/microsoft-edge-policies#composeinlineenabled) - Compose is enabled for writing on the web
-- [SearchForImageEnabled](/DeployEdge/microsoft-edge-policies#searchforimageenabled) - Search for image enabled
-
-## Version 114.0.1823.43: June 8, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.41: June 6, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.37: June 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.35: May 31, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the *edge://favorites* page. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 114.0.1823.30: May 26, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.24: May 22, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.18: May 15, 2023
-
-Fixed various bugs and performance issues.
+<!-- from Version 115.0.1901.7: June 13, 2023 to Version 114.0.1823.18: May 15, 2023 -->
 <!-- Version 114.0.1823.11: May 9, 2023 to Version 113.0.1774.15: April 18, 2023 -->
 <!-- Version 113.0.1774.9: April 12, 2023 to Version 112.0.1722.15: March 21, 2023 -->
 <!-- from Version 112.0.1722.11: March 17, 2023 to Version 111.0.1661.22: February 24, 2023 -->
