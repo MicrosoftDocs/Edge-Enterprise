@@ -130,28 +130,12 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
-The public preview provides switching for the following sites:
+The browser will automatically switch on sites that require Azure AD or MSA identities to match the right profile for the best SSO experience.
 
-- 1688
-- Alibaba
-- AliExpress
-- Amazon
-- Apple
-- Best Buy
-- Costco
-- eBay
-- Etsy
-- Flip Kart
-- Home Depot
-- Kroger
-- Lowes
-- Publix
-- Safeway
-- Taobao
-- Target
-- TMall
-- Walmart
-- Williams Sonoma
+> [!NOTE]
+> If there's a password saved in the profile for certain URLs, switching doesn't happen.
+
+We're rolling out a small list of global shopping sites that don't require Azure AD or MSA identities. We'll keep expanding this list as we get more information about these sites.
 
 Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
 
