@@ -137,7 +137,8 @@ The browser will automatically switch on sites that require Azure AD or MSA iden
 
 We're rolling out a small list of global shopping sites that don't require Azure AD or MSA identities. We'll keep expanding this list as we get more information about these sites.
 
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
+<!--
+Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand. -->
 
 ### How can users control which browser window a website opens in?
 
