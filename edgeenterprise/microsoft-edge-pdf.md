@@ -1,9 +1,9 @@
 ---
 title: "PDF reader in Microsoft Edge"
 ms.author: adigan
-author: AndreaLBarr
+author: dan-wesley
 manager: balajek
-ms.date: 07/08/2021
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Learn about PDF reader in Microsoft Edge."
 ---
 
 # PDF reader in Microsoft Edge
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 PDF files make up a large part of our day-to-day lives. They come in the form of contracts and agreements, newsletters, forms, research articles, resumes, and so on. These files highlight the need for a reliable, secure, and powerful PDF reader that can be adopted by Enterprises.
 
@@ -127,7 +130,7 @@ If the profile that the user is logged into Microsoft Edge with has at least vie
 
 In this digital world, it becomes important to establish the authenticity and ownership of the content in the document. Certificate-based digital signatures are commonly used in PDF documents to ensure that the content in the document is the same as what the author intended it to be, and has not been changed. With Microsoft Edge, you can view and validate certificate digital signatures in PDFs.
 
-We’re actively working on improving the support to address more scenarios, and are looking forward for feedback about the same.
+We're actively working on improving the support to address more scenarios, and are looking forward for feedback about the same.
 
 ## Accessibility
 

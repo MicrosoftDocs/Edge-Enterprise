@@ -2,8 +2,8 @@
 title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
-manager: srugh
-ms.date: 02/14/2023
+manager: archandr
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,10 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 
 # Internet Explorer (IE) mode troubleshooting and FAQ
 
->[!Note]
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
+>[!NOTE]
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
@@ -24,7 +27,7 @@ This article provides troubleshooting tips and FAQ for Microsoft Edge version 77
 
 ## What if I need help with setting up Microsoft Edge or Internet Explorer mode?
 
-We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There’s also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), available at no extra charge to customers with 150 or more paid seats of Windows 10.
+We offer various support options. If you have Microsoft Unified Support, you can reach out to that support service for help with the transition. There's also [FastTrack](https://www.microsoft.com/en-us/fasttrack/microsoft-365/microsoft-edge?rtc=1), available at no extra charge to customers with 150 or more paid seats of Windows 10.
 
 We also recommend our Microsoft Edge + Internet Explorer mode [Getting Started guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWEHMs) and our [IE mode blog series](https://techcommunity.microsoft.com/t5/windows-10/internet-explorer-to-microsoft-edge-with-ie-mode-blog-series/m-p/2617124).
 
@@ -52,7 +55,7 @@ This section describes the symptoms and gives steps to diagnose and fix this iss
 Users will experience the following symptoms:
   
 - Sizing and positioning of page elements might be off or they might be missing 
-- Some functionality might be lost or not work as expected. For example, buttons that worked with Internet Explorer don’t do anything or return an error.
+- Some functionality might be lost or not work as expected. For example, buttons that worked with Internet Explorer don't do anything or return an error.
 
 #### How to troubleshoot and fix
 
@@ -60,7 +63,7 @@ The general strategy is to duplicate the same settings that worked with Internet
 
 ![Emulation tab on DevTools view](./media/edge-ie-mode-faq/edge-ie-mode-emulation-tab.png)
 
-The Emulation tab shows two pieces of information to focus on: the Document mode (1), and the text below the dropdown list (2). This information can help explain why we are in the 11 (Default) mode for the page or site we’re looking at.
+The Emulation tab shows two pieces of information to focus on: the Document mode (1), and the text below the dropdown list (2). This information can help explain why we are in the 11 (Default) mode for the page or site we're looking at.
 
 There are different messages that can be displayed for the Document mode, and in our example they are:
   
@@ -75,7 +78,7 @@ We want to honor the document mode in nearly all cases. To do that, we need to s
 - IE8 Enterprise
 - IE7 Enterprise
 
-These options respect the webpage or web server directives. Remember that we need to select an option that includes the specified document mode. In the screenshot example, because the specified document mode is 11, we’d select "Default"  because IE8 Enterprise and IE7 Enterprise don't support IE 11 document mode.  
+These options respect the webpage or web server directives. Remember that we need to select an option that includes the specified document mode. In the screenshot example, because the specified document mode is 11, we'd select "Default"  because IE8 Enterprise and IE7 Enterprise don't support IE 11 document mode.  
 
 If the Document mode indicates that one of the following compatibility views is needed for the site, the configuration setting is straightforward.
 
@@ -87,7 +90,7 @@ Because all the Compatibility View settings result in "IE7 Enterprise" behavior,
 
 For more information about the logic that Internet Explorer or IE mode uses to land in one doc mode over another, see the [Deprecated document modes and Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes) article.
 
-The general rule is to use the most current logic-based mode that allows a given site to work as expected. We’d start with the Default mode, move to IE8 Enterprise mode, and then to IE7 Enterprise mode if needed. This selection gives child pages the flexibility to use different Document modes as necessary via the built-in logic for their specific needs. As a result, all the website pages aren’t locked in to one specific Document mode.  
+The general rule is to use the most current logic-based mode that allows a given site to work as expected. We'd start with the Default mode, move to IE8 Enterprise mode, and then to IE7 Enterprise mode if needed. This selection gives child pages the flexibility to use different Document modes as necessary via the built-in logic for their specific needs. As a result, all the website pages aren't locked in to one specific Document mode.  
 
 The following table lists the available document modes for these settings.
 
@@ -96,7 +99,7 @@ The following table lists the available document modes for these settings.
 | Available Document modes | IE11 Doc mode<br> IE10 Doc mode<br>IE9 Doc mode<br> IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode | IE8 Doc mode<br>IE7 Doc mode<br>IE5 Quirks mode   | IE7 Doc mode<br>IE5 Quirks mode  |
 
 > [!NOTE]
-> In some cases, a particular site or page requires a specific document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren’t effective.
+> In some cases, a particular site or page requires a specific document mode to function as designed. We recommend that explicit Document mode options should only be used when the logic-based options aren't effective.
 
 ### Incomplete neutral site configurations
 
@@ -114,10 +117,10 @@ Before we start analyzing a  failing workflow in Microsoft Edge, look at the add
 
 If, during the SSO authentication process, we see the "e", but it disappears after a redirect, this behavior points to a missing neutral site. After Microsoft Edge drops into IE mode, we need to stay there to maintain session and cookie information. If the URL shows up in the address bar long enough to identify it, add it to the IE mode site list as a neutral site using the steps described in [Configure neutral sites](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites).
 
-Often, the redirect cycle happens so quickly that it’s difficult to identify the missing neutral sites. To help with this analysis, we use a tool that’s built into the Chromium engine: **net-export**.
+Often, the redirect cycle happens so quickly that it's difficult to identify the missing neutral sites. To help with this analysis, we use a tool that's built into the Chromium engine: **net-export**.
 
 > [!TIP]
-> Network traces are inherently noisy. To minimize the noise, close all other browser instances and tabs that aren’t needed for the specific workflow that you’re investigating.
+> Network traces are inherently noisy. To minimize the noise, close all other browser instances and tabs that aren't needed for the specific workflow that you're investigating.
 
 The following steps describe how to troubleshoot a neutral site configuration.
   
@@ -129,12 +132,12 @@ The following steps describe how to troubleshoot a neutral site configuration.
 6. On the resulting page, select **Choose File**, and then pick the .json file you created in step 2.
 7. After the log file is loaded, select **Events** from the left side menu.
 8. Scroll through the network log and identify the starting URL. (You can also use the search function to find your starting point.)
-9. From the starting point, scroll downward and look for URLs in the workflow that don’t have an entry in your IE mode site list. Pay special attention to URLs with indicators for SSO, AUTH, LOGIN, and so on.
+9. From the starting point, scroll downward and look for URLs in the workflow that don't have an entry in your IE mode site list. Pay special attention to URLs with indicators for SSO, AUTH, LOGIN, and so on.
 10. After you identify a candidate URL, add it to the IE mode site list as a neutral site by selecting **None** in the Open-in dropdown. Test the workflow again.
 
 In some cases, multiple neutral site entries are needed, depending on the specific site architecture in place. If the workflow still fails after adding a new neutral site, repeat the process to capture a new net-export log and perform another pass.
 
-In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you're aware of a specific cookie that’s  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
+In some rare instances, it may be necessary to configure specific shared cookies to ensure that required information gets to your IE mode sites. If you're aware of a specific cookie that's  needed, you can configure cookie sharing using the steps described in [Cookie sharing from Microsoft Edge to Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ### What if these steps don't fix the issue?
 
@@ -179,11 +182,11 @@ You might see this error if you're remote debugging and navigate to a web page c
 
 You might see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) policy, HTTP authentication also isn't allowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) policy to ensure that site list downloads are successful.
 
-### Error message: “The connection for this site is not secure”
+### Error message: "The connection for this site is not secure"
 
 This error may happen if you're trying to open a legacy website in IE mode and the site's configured to run in TLS 1.0 or TLS 1.1. These protocols are disabled by default in Microsoft Edge. For more information, see [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/)
 
-### Error message: “This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath”
+### Error message: "This form cannot be opened in a web browser. To open this form, use Microsoft InfoPath"
 
 Certain applications may require you to load the web page in IE mode. You can use the IE mode feature in  Microsoft Edge.
 
@@ -214,10 +217,10 @@ The recommended alternatives for the no-merge functionality in Microsoft Edge ar
 
 If neither of the previous options work for your scenario, starting in Microsoft Edge version 93, IE mode on Microsoft Edge will support no-merge. For an end user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the no-merge behavior in IE11.
 
-For each Microsoft Edge window, the first time an IE mode tab is visited within that window, if it’s a designated "no-merge" site, that window is locked into a different "no-merge" IE session.  This window stays locked from all other Microsoft Edge windows until the last IE mode tab is closed in the locked window. This follows previous behavior where users could launch IE with no-merge and launch Microsoft Edge without no-merge using other mechanisms. All sites opening in a new window (through window.open) will respect the merge nature of the parent process.
+For each Microsoft Edge window, the first time an IE mode tab is visited within that window, if it's a designated "no-merge" site, that window is locked into a different "no-merge" IE session.  This window stays locked from all other Microsoft Edge windows until the last IE mode tab is closed in the locked window. This follows previous behavior where users could launch IE with no-merge and launch Microsoft Edge without no-merge using other mechanisms. All sites opening in a new window (through window.open) will respect the merge nature of the parent process.
 
 > [!NOTE]
-> Session switching isn’t supported. Navigations within the same IE mode tab will use the same session.
+> Session switching isn't supported. Navigations within the same IE mode tab will use the same session.
 
 > [!NOTE]
 > [Sharing cookies](/deployedge/edge-ie-mode-add-guidance-cookieshare) from IE mode to Microsoft Edge mode is not supported in no-merge IE mode sessions.
@@ -225,7 +228,7 @@ For each Microsoft Edge window, the first time an IE mode tab is visited within 
 You can validate the no-merge behavior in Microsoft Edge version 93 or later by following these steps:
 
 1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later.
-2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to “no-merge”. This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. (**Note:** The integrated site list manager tool available at *edge://compat/sitelistmanager* includes a **No merge** checkbox when you Add or Edit a site.)
+2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to "no-merge". This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. (**Note:** The integrated site list manager tool available at *edge://compat/sitelistmanager* includes a **No merge** checkbox when you Add or Edit a site.)
 
    ```
    <site url="contoso.com">
@@ -335,7 +338,7 @@ For security reasons, Microsoft Edge doesn't allow access to file:// URLs from p
 If you want this functionality, the following two workarounds are available:
 
 - You can use the [IntranetFileLinksEnabled](microsoft-edge-policies.md#intranetfilelinksenabled) group policy to permit links from HTTPS pages to open Intranet Zone file shares in Windows Explorer.
-- Pages loaded from the Intranet Zone into Microsoft Edge’s IE mode feature are permitted to navigate directly to URLs using the **file://** protocol.
+- Pages loaded from the Intranet Zone into Microsoft Edge's IE mode feature are permitted to navigate directly to URLs using the **file://** protocol.
 
 ## See also
   

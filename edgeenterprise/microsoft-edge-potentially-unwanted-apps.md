@@ -2,8 +2,8 @@
 title: "Use Microsoft Edge to protect against potentially unwanted applications"
 ms.author: kvice
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: likuba
+ms.date: 07/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Use Microsoft Edge to protect against potentially unwanted applica
 ---
 
 # Protect against potentially unwanted applications (PUAs)
+
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
 This article explains how you can protect against potentially unwanted applications (PUAs) using Microsoft Edge or by using Windows Defender Antivirus.
 

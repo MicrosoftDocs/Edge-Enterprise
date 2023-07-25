@@ -2,8 +2,8 @@
 title: "Microsoft Edge enterprise sync FAQ"
 ms.author: archandr
 author: dan-wesley
-manager: silvanam
-ms.date: 12/05/2022
+manager: likuba
+ms.date: 07/11/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,13 +14,16 @@ description: "Frequently asked questions about Microsoft Edge enterprise sync."
 
 # Microsoft Edge enterprise sync FAQ
 
+> [!NOTE]
+> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+
 This article answers frequently asked questions about enterprise sync for Microsoft Edge version 77 or later.
 
 ## Security and Server/Data compliance
 
 ### Is the synced data encrypted?
 
-Yes, the data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except the data used for open tab and history sync are additionally encrypted before leaving the user’s device with keys managed via the [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern) policy.
+Yes, the data is encrypted in transport using TLS 1.2 or greater. All data types are additionally encrypted at rest in Microsoft's service using AES128. All data types except the data used for open tab and history sync are additionally encrypted before leaving the user's device with keys managed via the [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern) policy.
 
 ### Why isn't there more client-side encryption on open tab and history data?
 
@@ -42,9 +45,9 @@ No.
 
 Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Azure AD subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
 
-### Does Microsoft Edge support Government Community Cloud (GCC) High compliance?
+### Does Microsoft Edge support Government Community Cloud (GCC) High and Azure Government Department of Defense (DoD) Cloud compliance?
 
-Not today. For customers in the GCC High cloud, Microsoft Edge sync is disabled.
+Not today. For customers in the GCC High cloud and Azure Government DoD cloud, Microsoft Edge sync is disabled.
 
 ### Does Microsoft Edge sync support Microsoft Azure operated by 21Vianet?
 
@@ -52,7 +55,7 @@ Not today. For customers in Microsoft Azure operated by 21Vianet, Microsoft Edge
 
 ## Applying Sync
 
-### Why isn’t Microsoft Edge sync supported in all Microsoft 365 subscriptions?
+### Why isn't Microsoft Edge sync supported in all Microsoft 365 subscriptions?
 
 Enterprise sync depends on [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which isn't available for all Microsoft 365 subscriptions.
 

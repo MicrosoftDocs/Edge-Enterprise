@@ -3,14 +3,14 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/11/2023
+ms.date: 07/21/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
-description: Windows and Mac documentation for policies supported by Microsoft Edge.
+description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
 # Microsoft Edge - Policies
@@ -21,18 +21,10 @@ For information about an additional set of policies used to control how and when
 
 You can download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) for the recommended security configuration baseline settings for Microsoft Edge. For more information see the [Microsoft Security Baselines Blog](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+Starting in Microsoft Edge version 116, certain policies will not be applied to a profile that is signed in with a Microsoft account. For more information, please check an individual policy for details on whether it applies to a profile that is signed in with a Microsoft account.
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-| [EnhanceSecurityModeIndicatorUIEnabled](#enhancesecuritymodeindicatoruienabled) |Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge |
-| [EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled) |Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge |
-| [WalletDonationEnabled](#walletdonationenabled) |Wallet Donation Enabled |
 
 ## Available policies
 
@@ -217,6 +209,9 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[EdgeManagementEnabled](#edgemanagementenabled)|Microsoft Edge management enabled|
+|[EdgeManagementEnrollmentToken](#edgemanagementenrollmenttoken)|Microsoft Edge management enrollment token|
+|[EdgeManagementExtensionsFeedbackEnabled](#edgemanagementextensionsfeedbackenabled)|Microsoft Edge management extensions feedback enabled|
 |[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
 ### [*Native Messaging*](#native-messaging-policies)
 
@@ -247,6 +242,7 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyModeEnabled](#efficiencymodeenabled)|Efficiency mode enabled|
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
 |[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
+|[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -401,6 +397,7 @@ These tables list all of the browser-related group policies available in this re
 |[CollectionsServicesAndExportsBlockList](#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[CommandLineFlagSecurityWarningsEnabled](#commandlineflagsecuritywarningsenabled)|Enable security warnings for command-line flags|
 |[ComponentUpdatesEnabled](#componentupdatesenabled)|Enable component updates in Microsoft Edge|
+|[ComposeInlineEnabled](#composeinlineenabled)|Compose is enabled for writing on the web|
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
@@ -444,13 +441,14 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Enable online OCSP/CRL checks|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)|
 |[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
-|EnforceLocalAnchorConstraintsEnabled|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
+|[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
@@ -459,7 +457,7 @@ These tables list all of the browser-related group policies available in this re
 |[EnhanceSecurityModeOptOutUXEnabled](#enhancesecuritymodeoptoutuxenabled)|Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
-|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115|
+|[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains (obsolete)|
 |[ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings)|Disable download file type extension-based warnings for specified file types on domains|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
@@ -598,6 +596,7 @@ These tables list all of the browser-related group policies available in this re
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
 |[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
@@ -636,6 +635,7 @@ These tables list all of the browser-related group policies available in this re
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
@@ -670,7 +670,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
-|[WebSelectEnabled](#webselectenabled)|Web Select Enabled|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -723,6 +723,8 @@ For more information about identifying Application Guard traffic via dual proxy,
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -791,6 +793,8 @@ If you disable or don't configure this policy, favorites on the host will not be
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -841,12 +845,13 @@ If you enable this policy, all navigations from Edge, including navigations to u
 
 If you disable or don't configure this policy, Edge does not ignore the Application Guard site list. If users try to navigate to an untrusted site in the host, the site will open in the container.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -900,6 +905,8 @@ If you disable this policy, the extra header is not added to the traffic.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -950,12 +957,13 @@ If you enable this policy, users will not be able to upload files in Application
 
 If you disable or don't configure this policy, users will be able to upload files while in Application Guard.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1015,6 +1023,8 @@ By default, Google Cast is enabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1077,6 +1087,8 @@ If you've also set the [EnableMediaRouter](#enablemediarouter) policy to false, 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1153,6 +1165,8 @@ If you leave the policy unset, there's no autoselection for any site.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1216,6 +1230,8 @@ For more detailed information about valid URL patterns, see [https://go.microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1281,6 +1297,8 @@ For more detailed information about valid URL patterns, see [https://go.microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1362,6 +1380,8 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1443,6 +1463,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1522,6 +1544,8 @@ If you set the [RestoreOnStartup](#restoreonstartup) policy to restore URLs from
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1594,6 +1618,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1666,6 +1692,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1734,6 +1762,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1802,6 +1832,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1872,6 +1904,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -1940,6 +1974,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2010,6 +2046,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2082,6 +2120,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2150,6 +2190,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2220,6 +2262,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2292,6 +2336,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2360,6 +2406,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2428,6 +2476,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2498,6 +2548,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2568,6 +2620,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2632,6 +2686,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2701,6 +2757,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2770,6 +2828,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2839,6 +2899,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2906,6 +2968,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -2973,6 +3037,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3040,6 +3106,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3107,6 +3175,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3178,6 +3248,8 @@ Users may opt out of prompts on a per-protocol/per-site basis unless the [Extern
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3233,6 +3305,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3300,6 +3374,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3371,6 +3447,8 @@ If you don't configure this policy for a site then the policy from [DefaultJavaS
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3442,6 +3520,8 @@ If you don't configure this policy for a site then the policy from [DefaultJavaS
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3517,6 +3597,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3585,6 +3667,8 @@ Note that patterns you list in this policy are treated as domains, not URLs, so 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3650,6 +3734,8 @@ If you don't set this policy, the global default value will be used for all site
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3715,6 +3801,8 @@ If you don't set this policy, the global default value will be used for all site
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3784,6 +3872,8 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3853,6 +3943,8 @@ For detailed information on valid url patterns, see [https://go.microsoft.com/fw
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3918,6 +4010,8 @@ If you don't configure this policy, the global default value from the [DefaultPo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -3983,6 +4077,8 @@ If you don't configure this policy, the global default value from the [DefaultPo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4053,6 +4149,8 @@ Users can't remove a protocol handler registered by this policy. However, they c
   - Can be mandatory: No
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4138,6 +4236,8 @@ This policy overrides [DefaultSerialGuardSetting](#defaultserialguardsetting), [
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4207,6 +4307,8 @@ This policy only affects access to USB devices through the Web Serial API. To gr
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4328,6 +4430,8 @@ If you disable this setting, employees will not receive any notifications from M
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4390,6 +4494,8 @@ If you disable this setting, spotlight experiences and recommendations are turne
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4447,6 +4553,8 @@ This policy overrides [DefaultWebHidGuardSetting](#defaultwebhidguardsetting), [
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4524,6 +4632,8 @@ URLs in this policy shouldn't conflict with those configured through [WebHidBloc
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4634,6 +4744,8 @@ URLs in this policy shouldn't conflict with those configured through [WebHidBloc
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4744,6 +4856,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4821,6 +4935,8 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4890,6 +5006,8 @@ URL patterns in this policy should not clash with the ones configured via [WebUs
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -4990,6 +5108,8 @@ The URL patterns defined in this policy can't conflict with those configured in 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5057,6 +5177,8 @@ URL patterns in this policy can't conflict with those configured in the [WebUsbA
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5138,6 +5260,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5202,6 +5326,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5282,6 +5408,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5350,6 +5478,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5414,6 +5544,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5480,6 +5612,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5548,6 +5682,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5618,6 +5754,8 @@ Starting in Microsoft Edge 84, you can set this policy as a recommended policy. 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5695,6 +5833,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5762,6 +5902,8 @@ To learn more about the feature, see [https://go.microsoft.com/fwlink/?linkid=22
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5828,6 +5970,8 @@ Note, format url_patterns according to [https://go.microsoft.com/fwlink/?linkid=
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -5990,6 +6134,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -6053,12 +6199,13 @@ If you disable this setting or leave it unset, external extensions are allowed t
 
 External extensions and their installation are documented at [Alternate extension distribution methods](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6122,12 +6269,13 @@ user settings and the setting will remain as it is.
 
 When disabled or not configured, the user can manage the Allow extensions from other store setting.
 
-
   #### Supported features:
 
   - Can be mandatory: No
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6218,6 +6366,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6283,6 +6433,8 @@ By default, all extensions are allowed. However, if you prohibited extensions by
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6350,6 +6502,8 @@ If this policy isn't set, the user can install any extension in Microsoft Edge.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6427,6 +6581,8 @@ Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6496,6 +6652,8 @@ The [ExtensionInstallBlocklist](#extensioninstallblocklist) policy takes precede
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -6562,12 +6720,13 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 Note: For Windows instances not joined to a Microsoft Active Directory domain and macOS instances not managed via MDM or joined to a domain via MCX, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -6802,6 +6961,8 @@ Wildcards are allowed for the whole origin or parts of the origin. Parts include
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -6865,6 +7026,8 @@ Typically, this is disabled as a phishing defense. If you don't configure this p
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -6927,6 +7090,8 @@ If you don't configure this policy Microsoft Edge won't delegate user credential
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -6991,6 +7156,8 @@ If you don't configure this policy, all four schemes are used.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7053,6 +7220,8 @@ If you don't configure this policy, Microsoft Edge tries to detect if a server i
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7115,6 +7284,8 @@ This policy setting is ignored (and Basic is always forbidden) if the [AuthSchem
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7177,6 +7348,8 @@ If you disable this policy or don't configure it, the canonical name of the serv
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7239,6 +7412,8 @@ If you don't configure or disable this policy, the generated Kerberos SPN won't 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7301,6 +7476,8 @@ If you don't configure this policy, NTLMv2 is enabled by default.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7340,6 +7517,8 @@ If you disable this policy, a basic username and password prompt will be used to
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7405,6 +7584,8 @@ If you enable this policy, but don't configure or disable it, the policy will be
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7457,12 +7638,13 @@ If you disable this policy, you won't be prompted to switch to another account w
 
 If this policy isn't configured, guided switch is turned on by default. A user can override this value in the browser settings.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7527,6 +7709,8 @@ If you disable this setting, implicit sign-in will be disabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7582,6 +7766,8 @@ If you disable this policy, linked accounts will be turned off and no extra info
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -7646,6 +7832,8 @@ This policy will only take effect on Windows 10 RS3 and above. On Windows 10 bel
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7703,6 +7891,8 @@ This policy will only take effect when policy [ConfigureOnPremisesAccountAutoSig
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7758,6 +7948,8 @@ If you disable this policy, sign in click to action dialog isn't shown on the Ne
   - Can be mandatory: No
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7824,6 +8016,8 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -7883,6 +8077,8 @@ If you disable this policy, users can't access the Grammar Tools feature within 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -7945,6 +8141,8 @@ If you disable this policy, users can't access the Picture Dictionary feature wi
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8013,6 +8211,8 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8070,6 +8270,8 @@ For detailed information on configuring kiosk Mode, see [https://go.microsoft.co
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8127,6 +8329,8 @@ For detailed information on configuring kiosk mode, see [https://go.microsoft.co
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8163,6 +8367,186 @@ For detailed information on configuring kiosk mode, see [https://go.microsoft.co
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeManagementEnabled
+
+  #### Microsoft Edge management enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 115 or later
+
+  #### Description
+
+  Microsoft Edge management service in Microsoft 365 Admin Center lets you set policy and manage users through a Microsoft Edge focused cloud-based management experience. This policy lets you control whether Microsoft Edge management is enabled.
+
+If you enable or don't configure this policy, Microsoft Edge will attempt to connect to the Microsoft Edge management service to download and apply policy assigned to the Azure AD account of the user.
+
+If you disable this policy, Microsoft Edge will not attempt to connect to the Microsoft Edge management service.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeManagementEnabled
+  - GP name: Microsoft Edge management enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeManagementEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeManagementEnrollmentToken
+
+  #### Microsoft Edge management enrollment token
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 115 or later
+
+  #### Description
+
+  Microsoft Edge management service in Microsoft 365 Admin Center lets you set policy and manage users through a Microsoft Edge focused cloud-based management experience. This policy lets you specify an enrollment token that's used to register with Microsoft Edge management service and deploy the associated policies. The user must be signed into Microsoft Edge with a valid work or school account otherwise Microsoft Edge will not download the policy.
+
+If you enable this policy, Microsoft Edge will attempt to use the specified enrollment token to register with the Microsoft Edge management service and download the published policy.
+
+If you disable or don't configure this policy, Microsoft Edge will not attempt to connect to the Microsoft Edge management service.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeManagementEnrollmentToken
+  - GP name: Microsoft Edge management enrollment token
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeManagementEnrollmentToken
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"RgAAAACBbzoQDmUrRfq3WeKUoFeEBwBOqK2QPYsBT5V3lQFoKND-AAAAAAEVAAAOqK2QPYvBT5V4lQFoKMD-AAADTXvzAAAA0"
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeManagementExtensionsFeedbackEnabled
+
+  #### Microsoft Edge management extensions feedback enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This setting controls whether Microsoft Edge sends data about blocked extensions to the Microsoft Edge management service.
+
+The 'EdgeManagementEnabled' policy must also be enabled for this setting to take effect.
+
+If you enable this policy, Microsoft Edge will send data to the Microsoft Edge service when a user tries to install a blocked extension.
+
+If you disable or don't configure this policy, Microsoft Edge won't send any data to the Microsoft Edge service about blocked extensions.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeManagementExtensionsFeedbackEnabled
+  - GP name: Microsoft Edge management extensions feedback enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeManagementExtensionsFeedbackEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeManagementExtensionsFeedbackEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### MAMEnabled
 
   #### Mobile App Management Enabled
@@ -8186,6 +8570,8 @@ If you disable this policy, Microsoft Edge will not communicate with Intune to r
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8250,6 +8636,8 @@ All native messaging hosts are allowed by default. However, if a native messagin
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8315,6 +8703,8 @@ If you leave this policy unset , Microsoft Edge loads all installed native messa
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8380,6 +8770,8 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8446,6 +8838,8 @@ If you disable this policy, users will no longer see strong password suggestions
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8510,6 +8904,8 @@ If you configure this policy, that is, add domains for which password manager is
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8577,6 +8973,8 @@ If you disable this policy, users can't save and add new passwords, but they can
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8639,6 +9037,8 @@ If you disable or don't configure this policy, Microsoft Edge will let the user 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8718,6 +9118,8 @@ Mandatory and Recommended disabled: Both these states will work the normal way, 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8784,6 +9186,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8848,6 +9252,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8929,6 +9335,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8995,6 +9403,8 @@ This policy only affects the browser password reveal button, it doesn't affect w
   - Can be mandatory: No
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9075,6 +9485,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9173,6 +9585,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -9239,6 +9653,8 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -9305,6 +9721,8 @@ Learn more about efficiency mode: [https://go.microsoft.com/fwlink/?linkid=21739
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -9371,6 +9789,8 @@ Learn more about performance detector: https://aka.ms/EdgePerformanceDetector
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9410,6 +9830,76 @@ Learn more about performance detector: https://aka.ms/EdgePerformanceDetector
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PinBrowserEssentialsToolbarButton
+
+  #### Pin browser essentials toolbar button
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 114 or later
+
+  #### Description
+
+  This policy lets you configure whether to pin the Browser essentials button on the toolbar.
+
+When the button is pinned, it will always appear on the toolbar.
+
+When the button isn't pinned, it will only appear when there's an alert. An example of this kind of alert is the performance detector alert that indicates the browser is using high CPU or memory.
+
+If you enable or don't configure this policy, the Browser essentials button will be pinned on the toolbar.
+
+If you disable this policy, the Browser essentials button won't be pinned on the toolbar.
+
+Learn more about browser essentials: [https://go.microsoft.com/fwlink/?linkid=2240439](https://go.microsoft.com/fwlink/?linkid=2240439)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PinBrowserEssentialsToolbarButton
+  - GP name: Pin browser essentials toolbar button
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Performance
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PinBrowserEssentialsToolbarButton
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PinBrowserEssentialsToolbarButton
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### StartupBoostEnabled
 
   #### Enable startup boost
@@ -9439,6 +9929,8 @@ Learn more about startup boost: [https://go.microsoft.com/fwlink/?linkid=2147018
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -9500,6 +9992,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9571,6 +10065,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9642,6 +10138,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9713,6 +10211,8 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9788,6 +10288,8 @@ Omitting a field means all values match; for example, if you don't specify conne
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9852,6 +10354,8 @@ If you enable this policy, users always print headers and footers.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -9914,6 +10418,8 @@ If you disable or don't configure this policy, Microsoft Edge will not default t
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -9988,6 +10494,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10053,6 +10561,8 @@ If you disable or don't configure this policy, print preview settings will not b
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10137,6 +10647,8 @@ If you enable this policy, Print Preview uses the OS system default printer as t
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10209,6 +10721,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10266,6 +10780,8 @@ If you set this policy to zero or don't configure it, the system default resolut
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10346,6 +10862,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10429,6 +10947,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10502,6 +11022,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10570,6 +11092,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10632,6 +11156,8 @@ If you disable this policy, users can't print from Microsoft Edge. Printing is d
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10694,6 +11220,8 @@ If the page size is unavailable on the printer chosen by the user this policy is
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10788,6 +11316,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10850,6 +11380,8 @@ If you don't configure or disable this policy, print commands trigger the Micros
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10925,6 +11457,8 @@ When this policy enabled, websites are allowed to make requests to any network e
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -10989,6 +11523,8 @@ For detailed information on valid URL patterns, see [Filter format for URL list-
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11066,6 +11602,8 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11153,6 +11691,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11221,6 +11761,8 @@ For detailed examples, see [https://go.microsoft.com/fwlink/?linkid=2094936](htt
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11289,6 +11831,8 @@ For more options and detailed examples, see [https://go.microsoft.com/fwlink/?li
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11374,6 +11918,8 @@ For more detailed examples go to [https://go.microsoft.com/fwlink/?linkid=209493
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11465,6 +12011,8 @@ If you don't configure this policy, all sites will be eligible to be put to slee
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11536,6 +12084,8 @@ If you don't configure this setting, users can choose whether to use sleeping ta
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11620,6 +12170,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -11693,6 +12245,8 @@ This also includes macOS instances that are that are managed via MDM or joined t
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11757,6 +12311,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11822,6 +12378,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11880,14 +12438,16 @@ The Microsoft Defender SmartScreen download protection service won't check downl
 If you enable this policy, Microsoft Defender SmartScreen trusts these domains.
 If you disable or don't set this policy, default Microsoft Defender SmartScreen protection is applied to all resources.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-Also note that this policy does not apply if your organization has enabled Microsoft Defender Advanced Threat Protection. You must configure your allow and block lists in Microsoft Defender Security Center instead.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10/11 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+Also note that this policy does not apply if your organization has enabled Microsoft Defender for Endpoint. You must configure your allow and block lists in Microsoft 365 Defender portal using Indicators (Settings > Endpoints > Indicators).
 
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -11957,6 +12517,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -12023,6 +12585,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -12089,6 +12653,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -12148,6 +12714,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -12218,6 +12786,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12286,6 +12856,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12356,6 +12928,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12418,6 +12992,8 @@ If you disable this policy, App Launcher doesn't appear and users won't be able 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12490,6 +13066,8 @@ For help with determining the SHA-256 hash, see [Get-FileHash](/powershell/modul
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12586,6 +13164,8 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12648,6 +13228,8 @@ If you set this policy to false or don't configure it, the default top site tile
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12720,6 +13302,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12788,6 +13372,8 @@ If the policy is set as recommended, pinned tiles will remain in the list but th
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12879,6 +13465,8 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -12943,6 +13531,8 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13025,6 +13615,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13103,6 +13695,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13165,6 +13759,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13232,6 +13828,8 @@ If you disable or don't configure this policy, there is no change to how the [Re
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13294,6 +13892,8 @@ If you don't configure the policy, users can choose whether to show the home but
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13362,6 +13962,8 @@ If you don't configure this policy, Edge TyposquattingChecker is turned on but u
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -13428,6 +14030,8 @@ If you don't configure this policy, users can control whether to use SSO using o
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -13494,6 +14098,8 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13559,12 +14165,13 @@ Note: This policy doesn't prevent the browser from navigating to any URL. Users 
 
 - [URLBlocklist](#urlblocklist) and [URLAllowlist](#urlallowlist) to scope the pages that browser can navigate to.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13625,6 +14232,8 @@ Starting with Microsoft Edge version 89, Microsoft Search in Bing suggestions wi
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13691,6 +14300,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -13755,6 +14366,8 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -13821,6 +14434,8 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -13883,6 +14498,8 @@ If you disable this policy, whenever the user performs an action that triggers a
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -13945,6 +14562,8 @@ If you disable this policy, users won't be able to access the games menu.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14009,6 +14628,8 @@ This policy was removed in Microsoft Edge 88 and is ignored if set.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14069,6 +14690,8 @@ If you enable or don't configure this policy, users can play the surf game.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14133,6 +14756,8 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14199,6 +14824,8 @@ Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14257,6 +14884,8 @@ If you don't configure this policy, the global default value from the "Block tra
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14326,6 +14955,8 @@ Note: This policy causes the X-GoogApps-Allowed-Domains header to be appended to
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14391,6 +15022,8 @@ Specifically, there's a **Suggest similar pages when a webpage can't be found** 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14455,6 +15088,8 @@ If you don't configure this policy or disable it, Microsoft Edge will open PDF f
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14539,6 +15174,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14601,6 +15238,8 @@ If you set this policy to false, or don't set it, AppCache will follow Microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14663,6 +15302,8 @@ If you disable or don't configure this setting, Microsoft Edge uses either the u
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14718,6 +15359,8 @@ If you disable or don't configure this policy, a browser window with multiple ta
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14782,6 +15425,8 @@ This policy affects all types of audio inputs, not only the built-in microphone.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14840,6 +15485,8 @@ This policy affects all types of audio inputs, not only the built-in microphone.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14909,6 +15556,8 @@ This policy will be removed in the future.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14969,6 +15618,8 @@ This policy is intended to give enterprises flexibility to disable the audio san
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15082,6 +15733,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15144,6 +15797,8 @@ If you disable this policy, the AutoLaunch Protocols component is disabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15218,6 +15873,8 @@ This policy does not work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15340,6 +15997,8 @@ This policy does not work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15419,6 +16078,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15488,6 +16149,8 @@ Note that if you disable this policy you also stop all activity for all web form
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15550,6 +16213,8 @@ If you disable this policy, AutoFill never suggests, fills, or recommends new pa
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15614,6 +16279,8 @@ If you disable this policy, users can't have their membership info automatically
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15686,6 +16353,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15747,12 +16416,13 @@ Setting to "Disabled" sets media autoplay to "Limit".  This limits websites that
 
 A tab will need to be closed and re-opened for this policy to take effect.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15817,6 +16487,8 @@ Note: * is not an accepted value for this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -15886,6 +16558,8 @@ If you don't configure this policy, background mode is initially turned off, and
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15943,6 +16617,8 @@ If you disable this setting the list of available templates will be downloaded o
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -16015,6 +16691,8 @@ Please refer to [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.mic
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16079,6 +16757,8 @@ If you don't configure this policy, third-party cookies are enabled but users ca
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16140,6 +16820,8 @@ If you disable this policy, users cannot add new profiles from the Identity flyo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16218,6 +16900,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16273,6 +16957,8 @@ If you disable this policy, Microsoft Edge doesn't let users browse in guest pro
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16335,6 +17021,8 @@ If you disable this policy, the ProcessExtensionPointDisablePolicy is not applie
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16390,6 +17078,8 @@ If you enable this policy or don't configure it, Microsoft Edge will occasionall
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -16466,6 +17156,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16522,12 +17214,13 @@ This policy controls the lifetime of selected browsing data. This policy has no 
 The available data types are the 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' and 'hosted_app_data'.
 Microsoft Edge will regularly remove data of selected types that is older than 'time_to_live_in_hours'. The deletion of expired data will happen 15 seconds after the browser starts then every hour while the browser is running.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16634,6 +17327,8 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16689,12 +17384,13 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
 The policy doesn't work in Microsoft Edge version 107.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16736,6 +17432,8 @@ This policy is a temporary measure and will be removed in future versions of Mic
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16802,6 +17500,8 @@ This policy is a temporary workaround for the new CORS non-wildcard request head
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -16871,6 +17571,8 @@ If you disable this policy or don't configure it, any certificate that's require
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16942,6 +17644,8 @@ If you don't configure this policy, any certificate that's required to be disclo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17013,6 +17717,8 @@ This policy does not work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17084,6 +17790,8 @@ To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit]
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17150,6 +17858,8 @@ If you disable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbro
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17218,6 +17928,8 @@ For more information about ClickOnce, see [https://go.microsoft.com/fwlink/?link
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17275,6 +17987,8 @@ For more information about valid url patterns, see [https://go.microsoft.com/fwl
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17344,6 +18058,8 @@ For more information about valid url patterns, see [https://go.microsoft.com/fwl
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17429,6 +18145,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17504,6 +18222,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17565,12 +18285,13 @@ Examples of such components include the certificate revocation lists and securit
 
 Please note that disabling this policy can potentially prevent the Microsoft Edge developers from providing critical security fixes in a timely manner and is thus not recommended.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17610,6 +18331,70 @@ Please note that disabling this policy can potentially prevent the Microsoft Edg
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ComposeInlineEnabled
+
+  #### Compose is enabled for writing on the web
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure Compose in Microsoft Edge. Compose provides help for writing with AI-generated text, which lets the user get ideas for writing. This includes elaborating on text, re-writing, changing tone, formatting the text, and more.
+
+If you enable or don't configure this policy, Compose can provide text generation for eligible fields, which are text editable and don't have an autocomplete attribute.
+
+If you disable this policy, Compose will not be able to provide text generation for eligible fields. Compose will still be available for prompt-based text generation through the sidebar and must be managed with either [EdgeDiscoverEnabled](#edgediscoverenabled) policy or [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ComposeInlineEnabled
+  - GP name: Compose is enabled for writing on the web
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ComposeInlineEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ComposeInlineEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ConfigureDoNotTrack
 
   #### Configure Do Not Track
@@ -17635,6 +18420,8 @@ If you don't configure this policy, users can choose whether to send these reque
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17720,6 +18507,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17786,6 +18575,8 @@ Note: Disabling a command will only remove its shortcut mapping. Commands in the
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17871,6 +18662,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17930,6 +18723,8 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -17999,6 +18794,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18071,6 +18868,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18150,6 +18949,8 @@ WebAssembly modules to windows and workers in the same origin.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18212,6 +19013,8 @@ If you disable this policy, users can't use CryptoWallet feature.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18269,6 +19072,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18333,6 +19138,8 @@ If you disable this policy, DNS interception checks aren't performed.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18397,6 +19204,8 @@ Note for Windows administrators: This policy only works for PCs running Windows 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18454,12 +19263,13 @@ If you enable or don't configure this policy, users will be prompted to set Micr
 
 If you disable this policy, users will not be prompted to set Microsoft Edge as the default browser, or to set Microsoft Bing as the default search engine.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18527,6 +19337,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18591,6 +19403,8 @@ The policy value is only applied when the [DefaultSearchProviderEnabled](#defaul
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18663,6 +19477,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18735,6 +19551,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18802,7 +19620,6 @@ Example 2: In this example the OS Regional format is set to "es-MX" and the brow
 
 For more information about this setting, see [https://go.microsoft.com/fwlink/?linkid=2222282](https://go.microsoft.com/fwlink/?linkid=2222282)
 
-
 Policy options mapping:
 
 * Limited (0) = Limited
@@ -18818,6 +19635,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18882,6 +19701,8 @@ For detailed information on valid language variants, see [https://go.microsoft.c
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18961,6 +19782,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -19016,6 +19839,8 @@ If you set this policy to "Disabled", or the policy is not configured, user brow
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19083,6 +19908,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -19169,6 +19996,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19235,6 +20064,8 @@ For more information about DirectInvoke, see [https://go.microsoft.com/fwlink/?l
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19290,6 +20121,8 @@ If [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) policy is
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -19354,6 +20187,8 @@ Note: Even if you disable screenshots using this policy, users might still be ab
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19416,6 +20251,8 @@ If you disable this policy, Discover will not be able to access page contents.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -19480,6 +20317,8 @@ If you don't configure this policy, the default cache directory is used, and use
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19546,6 +20385,8 @@ Note: The value specified in this policy is used as a hint to various cache subs
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19620,6 +20461,8 @@ Note that other restrictions may still apply.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19696,6 +20539,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19762,6 +20607,8 @@ Incorrectly formatted templates will be ignored.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19836,6 +20683,8 @@ This policy doesn't work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -19956,6 +20805,8 @@ If you disable this policy, you can't use the double click feature in Microsoft 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20022,6 +20873,8 @@ If the folder specified by the path doesn't exist, the download will trigger a p
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20110,6 +20963,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20173,6 +21028,8 @@ If you disable this policy, features won't be able to download assets needed for
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20235,6 +21092,8 @@ If you disable this policy, users can't access and use Collections in Microsoft 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20301,6 +21160,8 @@ If you disable this policy, you can't use the Discover feature in Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20365,6 +21226,8 @@ If you disable this policy, you can't use the Drop feature in Microsoft Edge.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20427,6 +21290,8 @@ If you disable this policy, Microsoft Edge will not enhance images.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20491,6 +21356,8 @@ If you disable this policy, Microsoft Edge will not communicate with Follow serv
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20555,6 +21422,8 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20594,6 +21463,63 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeWalletCheckoutEnabled
+
+  #### Enable Wallet Checkout feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 114 or later
+
+  #### Description
+
+  Enables Wallet Checkout feature in Microsoft Edge.
+
+If you enable or don't configure this policy, users can choose whether to use wallet checkout while shopping on Microsoft Edge.
+
+If you disable this policy, users can't use wallet checkout while shopping on Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeWalletCheckoutEnabled
+  - GP name: Enable Wallet Checkout feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeWalletCheckoutEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EditFavoritesEnabled
 
   #### Allows users to edit favorites
@@ -20615,6 +21541,8 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -20689,6 +21617,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -20762,6 +21692,8 @@ If you don't configure this policy, the list of Domain Actions will continue to 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -20824,6 +21756,8 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -20888,6 +21822,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -20956,6 +21892,8 @@ As such, this policy is a temporary measure to control the initial experimental 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -20990,6 +21928,78 @@ As such, this policy is a temporary measure to control the initial experimental 
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EnforceLocalAnchorConstraintsEnabled
+
+  #### Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 113 or later
+
+  #### Description
+
+  X.509 certificates may encode constraints, such as Name Constraints, in extensions in the certificate. RFC 5280 specifies that enforcing such constraints on trust anchor certificates is optional.
+
+Starting in Microsoft Edge 112, such constraints in certificates loaded from the platform certificate store will now be enforced.
+
+This policy exists as a temporary opt-out in case an enterprise encounters issues with the constraints encoded in their private roots. In that case this policy may be used to temporarily disable enforcement of the constraints while correcting the certificate issues.
+
+If you enable this policy or don't configure it, Microsoft Edge will enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+If you disable this policy, Microsoft Edge will not enforce constraints encoded into trust anchors loaded from the platform trust store.
+
+This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
+
+This policy is planned to be removed in Microsoft Edge version 118.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnforceLocalAnchorConstraintsEnabled
+  - GP name: Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnforceLocalAnchorConstraintsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnforceLocalAnchorConstraintsEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -21040,6 +22050,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21104,6 +22116,8 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21156,6 +22170,8 @@ enhance security mode will not be enforced when loading the sites in trusted dom
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21220,6 +22236,8 @@ enhance security mode will always be enforced when loading the sites in untruste
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21291,6 +22309,8 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21357,6 +22377,8 @@ For detailed information about Enhanced Security Mode, see [https://go.microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21417,6 +22439,8 @@ This policy also applies to component extensions.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -21479,6 +22503,8 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -21513,10 +22539,10 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   ### EventPathEnabled
 
-  #### Re-enable the Event.path API until Microsoft Edge version 115
+  #### Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 115.
   #### Supported versions:
 
   - On Windows and macOS since 107, until 115
@@ -21538,6 +22564,8 @@ This policy will be made obsolete after Microsoft Edge version 115.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -21548,7 +22576,7 @@ This policy will be made obsolete after Microsoft Edge version 115.
   ##### Group Policy (ADMX) info
 
   - GP unique name: EventPathEnabled
-  - GP name: Re-enable the Event.path API until Microsoft Edge version 115
+  - GP name: Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21619,6 +22647,8 @@ Note that while the preceding example shows the suppression of file type extensi
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21644,8 +22674,8 @@ Note that while the preceding example shows the suppression of file type extensi
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -21655,8 +22685,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - Example value:
 ``` xml
 <array>
-  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
-  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+  <string>{'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}</string>
+  <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
 </array>
 ```
   
@@ -21703,6 +22733,8 @@ Note that while the preceding example shows the suppression of file type extensi
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21827,6 +22859,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21909,6 +22943,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -21980,6 +23016,8 @@ As of Microsoft Edge 84, if you don't configure this policy, when an external pr
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22042,6 +23080,8 @@ If you disable this policy, the family page will not be shown, and Kids Mode wil
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -22106,6 +23146,8 @@ If this policy is not configured, then the user can decide to use the favorites 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22168,6 +23210,8 @@ If you disable or don't configure this policy, the default value of 0 seconds is
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22244,6 +23288,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22308,6 +23354,8 @@ If you set this policy to False or don't configure it, Microsoft Edge will autom
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -22372,6 +23420,8 @@ In ephemeral mode, profile data is saved on disk only for the length of the user
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22434,6 +23484,8 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22498,6 +23550,8 @@ This enterprise policy is disabled by default.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -22587,6 +23641,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22649,6 +23705,8 @@ This policy is disabled by default. If enabled, users are open to security issue
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -22710,6 +23768,8 @@ For this policy to work as intended,
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22772,6 +23832,8 @@ Users will not be able to override the enabled data types.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22849,6 +23911,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22913,6 +23977,8 @@ Opening Microsoft Edge in kiosk mode using the command line is unavailable when 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -22972,6 +24038,8 @@ This policy is intended to give enterprises depending on the legacy behavior a c
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23040,6 +24108,8 @@ Popular, single-word search terms will require manual selection of search sugges
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23102,6 +24172,8 @@ Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23165,6 +24237,8 @@ If you disable this policy, hardware acceleration is disabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23227,6 +24301,8 @@ If you disable this policy, Microsoft Edge denies use of the headless mode.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23311,6 +24387,8 @@ Note: The specific configuration options shown to the user in the First Run Expe
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23369,12 +24447,13 @@ Users will continue to be redirected to Microsoft Edge when they encounter an in
 
 - If you disable or don't set this policy, the redirection dialog will be shown on the first redirection and the persistent redirection banner will be shown to users on sessions that begin with a redirection. Users' browsing data will be imported every time user encounters such redirection (ONLY IF user consents to it on the one-time dialog).
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23432,6 +24511,8 @@ If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingd
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23493,6 +24574,8 @@ If you disable this policy, the Sidebar will never be shown.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23561,6 +24644,8 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23629,6 +24714,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23695,6 +24782,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23763,6 +24852,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23831,6 +24922,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23899,6 +24992,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -23967,6 +25062,8 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24031,6 +25128,8 @@ Note: A similar policy named [AutoImportAtFirstRun](#autoimportatfirstrun) exist
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24092,6 +25191,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24160,6 +25261,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24228,6 +25331,8 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24296,6 +25401,8 @@ You can set this policy as a recommendation. This means that Microsoft Edge impo
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24362,6 +25469,8 @@ You can also set this policy as a recommendation. This means that Microsoft Edge
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24430,6 +25539,8 @@ You can set this policy as a recommendation. This means that Microsoft Edge will
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24485,6 +25596,8 @@ If you disable this policy, users can't invoke in-app support.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -24559,6 +25672,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -24619,6 +25734,8 @@ If you disable this policy, warnings will not be shown for insecure forms, and a
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24680,12 +25797,13 @@ If you don't configure this policy, the feature will be controlled by its own in
 
 Note that the policy is applied per renderer process, with the most recent value of the policy setting in force when a renderer process starts. A full restart is required to ensure that all the loaded tabs receive a consistent policy setting. It is harmless for processes to be running with different values of this policy.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -24754,6 +25872,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24811,6 +25931,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24872,6 +25994,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24931,6 +26055,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -24992,6 +26118,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25061,6 +26189,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25133,6 +26263,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25194,6 +26326,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25254,6 +26388,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25314,6 +26450,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25379,6 +26517,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25443,6 +26583,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25504,6 +26646,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -25569,6 +26713,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25620,6 +26766,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25677,6 +26825,8 @@ If you disable or don't configure this policy, Microsoft Edge will use a default
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25757,6 +26907,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25821,6 +26973,8 @@ If you disable or don't configure this policy, users can't see the options 'Open
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25876,6 +27030,8 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25931,6 +27087,8 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -25988,6 +27146,8 @@ If you disable or do not configure this policy, Internet Explorer browsing histo
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26048,6 +27208,8 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26105,6 +27267,8 @@ If you disable or don't configure this policy, users can't see the option 'Open 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26160,6 +27324,8 @@ If you disable or don't configure this policy, the Reload in Internet Explorer m
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26217,6 +27383,8 @@ If you disable or don't configure this policy, zoom values will be displayed wit
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26286,6 +27454,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26350,6 +27520,8 @@ If you disable or don't configure this policy, pages will be isolated on a per-S
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26416,6 +27588,8 @@ If users choose to turn on Live captions, speech recognition files (approximatel
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26473,6 +27647,8 @@ Note that if you disable this policy, Microsoft Edge will remove the data shared
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26534,6 +27710,8 @@ This policy requires a browser restart to finish applying.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26591,12 +27769,13 @@ If you enable this policy, Microsoft Edge will only be updated by Microsoft Auto
 
 If you disable or don't configure this policy, Microsoft Edge will be updated by Microsoft Edge Update.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26638,6 +27817,8 @@ If you enable this policy or don't configure it, users will be able to use the S
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26691,14 +27872,15 @@ If you enable this policy or don't configure it, users will be able to use the S
 
   Setting this policy defines the return value of Managed Configuration API for given origin.
 
- Managed Configuration API is a key-value configuration that can be accessed via navigator.device.getManagedConfiguration() javascript call. This API is only available to origins which correspond to force-installed web applications via [WebAppInstallForceList](#webappinstallforcelist).
-
+Managed Configuration API is a key-value configuration that can be accessed via navigator.device.getManagedConfiguration() javascript call. This API is only available to origins which correspond to force-installed web applications via [WebAppInstallForceList](#webappinstallforcelist).
 
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26799,6 +27981,8 @@ Managed favorites are not synced to the user account and can't be modified by ex
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -26936,6 +28120,8 @@ If the [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) policy 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27093,6 +28279,8 @@ Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27159,6 +28347,8 @@ If you don't configure this policy, the default value (32) is used.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27223,6 +28413,8 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27293,6 +28485,8 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27355,6 +28549,8 @@ If you disable this policy, the Microsoft Edge Insider promotion content will no
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27414,12 +28610,13 @@ If you disable this policy, spell check can only be provided by local engines th
 
 If the [SpellcheckEnabled](#spellcheckenabled) policy is set to disabled, or the user disables spell checking in the settings page, this policy will have no effect.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27479,12 +28676,13 @@ If you disable or don't configure this policy, Microsoft Editor spell checker wi
 
 If the [SpellcheckEnabled](#spellcheckenabled) policy or the [MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled) policy are set to disabled, or the user disables spell checking or chooses not to use Microsoft Editor spell checker in the settings page, this policy will have no effect.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27549,6 +28747,8 @@ If you disable this policy, users won't be able to access the Microsoft Office m
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27608,12 +28808,13 @@ When this policy is set to disabled, Microsoft Edge will use the system certific
 
 When this policy is not set, the Microsoft Root Store or system provided roots may be used.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27678,6 +28879,8 @@ If you disable this policy, you can't use the Mouse Gesture feature in Microsoft
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27737,6 +28940,8 @@ If this policy is left not set, occlusion detection will be enabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27801,6 +29006,8 @@ If you don't configure this policy, the default timeout of 2 seconds is used. Th
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27866,6 +29073,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -27928,6 +29137,8 @@ This policy is intended to give enterprises flexibility to disable the network s
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27983,6 +29194,8 @@ If you disable or don't configure this policy, Microsoft Edge will use the exist
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28053,6 +29266,8 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28110,6 +29325,8 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28173,6 +29390,8 @@ If you disable this policy, users can't access the Outlook menu.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28237,6 +29456,8 @@ For more information on secure contexts, see https://www.w3.org/TR/secure-contex
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28304,6 +29525,8 @@ If you disable or don't configure this policy, the capability to view and verify
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28366,6 +29589,8 @@ If you disable or don't configure this policy, Microsoft Edge will not enable XF
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28428,6 +29653,8 @@ If you enable this policy or don't set this policy, websites can check if the us
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28490,6 +29717,8 @@ If you disable this policy, users can't change or override the setting. If this 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28554,6 +29783,8 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28613,6 +29844,8 @@ If you don't configure this policy, Proactive Authentication is turned on.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28675,6 +29908,8 @@ If you disable (set to false) this policy, Microsoft Edge can't show full-tab co
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28737,6 +29972,8 @@ If you don't configure this policy, the user will be able to change this setting
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28797,6 +30034,8 @@ If this policy is set to False or not set, the user may only be prompted when no
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28861,6 +30100,8 @@ QUIC is a transport layer network protocol that can improve performance of web a
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -28923,6 +30164,8 @@ If you disable this policy, the Microsoft Edge mini menu will not be shown when 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -28985,6 +30228,8 @@ If you disable this policy, these files will be downloaded to be viewed.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -29047,6 +30292,8 @@ If you disable this policy, users can't access the Read Aloud feature from the a
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -29113,6 +30360,8 @@ For more information about this policy see [https://go.microsoft.com/fwlink/?lin
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29185,6 +30434,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29240,6 +30491,8 @@ If you disable this policy, users can receive related matches in Find on Page on
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -29314,6 +30567,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29376,6 +30631,8 @@ If not set, the default period of 604800000 milliseconds (one week) is used.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29441,6 +30698,8 @@ Warning: Setting this policy may delay application of software updates.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29536,6 +30795,8 @@ If you disable this policy, users are not allowed to use remote debugging.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29607,6 +30868,8 @@ This policy is only supported on Windows 10 devices.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29659,6 +30922,8 @@ Setting the policy to Disabled has a detrimental effect on Microsoft Edge's secu
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29714,6 +30979,8 @@ If you don't configure or disable this policy, then Microsoft Edge uses the exis
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29774,6 +31041,8 @@ Specifically, there's a **Use a web service to help resolve navigation errors** 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -29836,6 +31105,8 @@ If you disable this policy Microsoft Edge will recover the last state of PDF vie
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -29900,6 +31171,8 @@ Note that signed-in profiles with a username that doesn't match this pattern wil
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -29964,6 +31237,8 @@ If you don't configure this policy, the default roaming profile path is used.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30021,6 +31296,8 @@ See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/f
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30078,6 +31355,8 @@ If you disable this policy or don't configure it, Adobe Flash content from other
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30140,6 +31419,8 @@ If you disable this policy, users are blocked from clicking through any warning 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30206,6 +31487,8 @@ For detailed information about valid origin patterns, see [https://go.microsoft.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30285,6 +31568,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30345,12 +31630,13 @@ If you disable this policy, Microsoft Edge will not block those navigations.
 
 This can be used by administrators who need more time to update their internal website affected by this new restriction. This Enterprise policy is temporary; it's intended to be removed after Microsoft Edge version 117.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30420,6 +31706,8 @@ If you disable or don't configure this policy, the user's personal configuration
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30487,6 +31775,8 @@ If you disable this policy or don't configure it, browsing history is saved.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -30551,6 +31841,8 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30613,6 +31905,8 @@ If you disable this policy, web page scrolling to specific text fragments via a 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30675,6 +31969,8 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30706,6 +32002,70 @@ If you disable this policy, the autosuggestion dropdown won't display the ribbon
   #### Mac information and settings
 
   - Preference Key Name: SearchFiltersEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SearchForImageEnabled
+
+  #### Search for image enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  This policy lets you configure the Image Search feature in the right-click context menu.
+
+If you enable or don't configure this policy, then the "Search the web for image" option will be visible in the context menu.
+
+If you disable this policy, then the "Search the web for image" will not be visible in the context menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchForImageEnabled
+  - GP name: Search for image enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchForImageEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SearchForImageEnabled
   - Example value:
 ``` xml
 <true/>
@@ -30749,6 +32109,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30813,6 +32175,8 @@ If this policy is left not set, search suggestions are enabled but the user can 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30873,6 +32237,8 @@ Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (li
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30934,6 +32300,8 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -30995,6 +32363,8 @@ To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -31061,6 +32431,8 @@ For detailed information about valid URL patterns, please see [https://go.micros
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31132,6 +32504,8 @@ For detailed information about valid URL patterns, please see [https://go.micros
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31203,6 +32577,8 @@ For detailed information about valid url patterns, please see [https://go.micros
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31274,6 +32650,8 @@ For detailed information about valid URL patterns, see [https://go.microsoft.com
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31342,12 +32720,13 @@ This policy was only provided temporarily to allow Enterprises to adapt to the n
 
    For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31426,6 +32805,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -31483,6 +32864,8 @@ Microsoft Edge will require cross-origin isolation when using SharedArrayBuffers
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -31547,6 +32930,8 @@ This policy only applies for Microsoft Edge local user profiles and profiles sig
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -31609,6 +32994,8 @@ If you disable this policy, the button won't be visible on the native PDF viewer
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31671,6 +33058,8 @@ If you disable or don't configure the policy, the Downloads button isn't shown o
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31740,6 +33129,8 @@ If you don't configure this policy:
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31802,6 +33193,8 @@ Specifies whether to include a shortcut to Office.com in the favorites bar. For 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31860,12 +33253,13 @@ Disabling this policy will stop this message from appearing again even if the us
 If you enable or don't configure this setting, users will receive recommendations or notifications from Microsoft Edge.
       If you disable this setting, users will not receive any recommendations or notifications from Microsoft Edge
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31928,6 +33322,8 @@ If this policy is set to disabled, Signed HTTP Exchanges can't be loaded.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -31985,12 +33381,13 @@ If you enable this policy, users can't opt out of the default behavior where eac
 
 If you disable or don't configure this policy, a user can opt out of site isolation.  (For example, by using "Disable site isolation" entry in edge://flags.)  Disabling the policy or not configuring the policy doesn't turn off Site Isolation.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32053,6 +33450,8 @@ If you disable this policy, the top site info will not be shown.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32127,6 +33526,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32196,6 +33597,8 @@ Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32256,6 +33659,8 @@ If you disable this policy, the user can't use spellcheck and the [SpellcheckLan
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32322,6 +33727,8 @@ If a language is included in both the 'SpellcheckLanguage' and the [SpellcheckLa
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32383,6 +33790,8 @@ If a language is included in both the [SpellcheckLanguage](#spellchecklanguage) 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32439,6 +33848,8 @@ If you disable this policy, options to activate Standalone Sidebar will be hidde
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32498,6 +33909,8 @@ This policy does not affect other types of mixed content other than audio, video
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32558,6 +33971,8 @@ If this policy is false or unset, the warnings will appear on such unsupported c
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32620,6 +34035,8 @@ If you don't set this policy or apply it as recommended, users will be able to t
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -32682,6 +34099,8 @@ Users will not be able to override the disabled data types.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32751,6 +34170,8 @@ This policy can be used to test for any affected proxies and upgrade them. Affec
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32819,6 +34240,8 @@ This policy does not affect QUIC-based connections. QUIC can be turned off via t
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32892,6 +34315,8 @@ If you disable this policy, no tabs will be frozen.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32954,6 +34379,8 @@ If you disable this policy, then no tab information will be sent to the service.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33014,6 +34441,8 @@ If you disable this policy, popups that target _blank are permitted to access (v
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33072,6 +34501,8 @@ If you disable this policy, popups that target _blank are permitted to access (v
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33134,6 +34565,8 @@ If you disable this policy, text predictions will not be provided in eligible te
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33173,6 +34606,72 @@ If you disable this policy, text predictions will not be provided in eligible te
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ThrottleNonVisibleCrossOriginIframesAllowed
+
+  #### Allows enabling throttling of non-visible, cross-origin iframes
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 116 or later
+
+  #### Description
+
+  Throttling of cross-origin frames that are display:none and non-visible is a feature designed to make cross-process and same-process cross-origin iframes consistent in their rendering behavior. For more details on cross-process vs. same-process throttling, refer to [https://go.microsoft.com/fwlink/?linkid=2239564](https://go.microsoft.com/fwlink/?linkid=2239564).
+
+This enterprise policy exists to allow administrators to control whether their users are able to turn the additional throttling on or not.
+
+If you enable or don't configure this policy, users can opt-in to throttling.
+
+If you disable this policy, users can't enable throttling.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - GP name: Allows enabling throttling of non-visible, cross-origin iframes
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### TotalMemoryLimitMb
 
   #### Set limit on megabytes of memory a single Microsoft Edge instance can use
@@ -33196,6 +34695,8 @@ If you don't set this policy, the browser will only attempt to save memory when 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33268,6 +34769,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33332,6 +34835,8 @@ If you don't configure the policy, users can choose whether to use the translati
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33397,6 +34902,8 @@ If you disable this setting, travel assistance will be disabled and  users will 
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33457,6 +34964,8 @@ If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33519,6 +35028,8 @@ If you disable this policy or don't configure it, the U2F Security Key API is di
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33591,6 +35102,8 @@ This policy does not work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33672,6 +35185,8 @@ This policy does not work as expected with file://* wildcards.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33750,6 +35265,8 @@ It also may affect sites with a lot of usage of a timeout of 0ms for setTimeout.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -33811,7 +35328,6 @@ If you select manual updates, make sure you periodically check for updates by us
 
 If you don't enable and configure this policy, Microsoft Edge Update automatically checks for updates.
 
-
 Policy options mapping:
 
 * automatic-silent-only (automatic-silent-only) = Updates are applied only when they're found by the periodic update check.
@@ -33825,6 +35341,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33868,6 +35386,8 @@ If you enable or don't configure this policy, the User-Agent Client Hints featur
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33932,6 +35452,8 @@ This policy is a temporary measure and will be removed in a future release.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -33995,7 +35517,6 @@ To learn more about the User-Agent string, read here:
 
 [https://go.microsoft.com/fwlink/?linkid=2186267](https://go.microsoft.com/fwlink/?linkid=2186267)
 
-
 Policy options mapping:
 
 * Default (0) = User-Agent reduction will be controllable via Experimentation
@@ -34011,6 +35532,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34077,6 +35600,8 @@ See [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -34139,6 +35664,8 @@ If you set this policy, old snapshots are deleted as needed to respect the limit
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -34196,6 +35723,8 @@ If you disable this policy, users can't invoke Edge Feedback.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -34255,12 +35784,13 @@ If you disable this policy, then the vertical tab layout will not be available a
 
 If you enable or don't configure this policy, the tab layout will still be at the top, but a user has the option to turn on vertical tabs on the side.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34325,6 +35855,8 @@ This policy affects all types of video inputs, not only the built-in camera.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34383,6 +35915,8 @@ This policy affects all types of video inputs, not only the built-in camera.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34436,6 +35970,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   #### Supported versions:
 
   - On Windows since 95 or later
+  - On macOS since 114 or later
 
   #### Description
 
@@ -34452,6 +35987,8 @@ Note: Visual Search in Web Capture is still managed by [WebCaptureEnabled](#webc
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34480,6 +36017,13 @@ Note: Visual Search in Web Capture is still managed by [WebCaptureEnabled](#webc
 0x00000000
 ```
 
+  #### Mac information and settings
+
+  - Preference Key Name: VisualSearchEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -34509,6 +36053,8 @@ Independent of whether or how this policy is enabled, the WPAD optimization sett
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -34571,6 +36117,8 @@ If you disable this policy, users can't use the Wallet Donation feature.
   - Can be mandatory: Yes
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34669,6 +36217,8 @@ Not currently supported in Microsoft Edge.)
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34800,17 +36350,22 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   #### Description
 
-  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools.
-Starting with Microsoft Edge version 107, users can also perform visual image search on the captured content.
+  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools. Users can also do a visual image search with the captured content.
 
-If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
+If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S and CTRL+SHIFT+X.
 If you disable this policy, users can't access the web capture feature in Microsoft Edge.
+
+Please note that CTRL+SHIFT+X will not work if Web Select is disabled by [WebSelectEnabled](#webselectenabled).
+
+Starting with Microsoft Edge version 114, Web Capture includes Web Select, which lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table. Users can access Web Select directly using keyboard shortcut, CTRL+SHIFT+X.
 
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -34873,6 +36428,8 @@ If you set this policy to False or don't set this policy, the Web Components v0 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34941,6 +36498,8 @@ to override incompatible policies.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35005,6 +36564,8 @@ of Microsoft Edge.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35071,6 +36632,8 @@ Please note that this policy weakens the protection of local IP addresses that m
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35154,6 +36717,8 @@ Use the preceding information when configuring this policy.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35213,12 +36778,13 @@ If you enable this policy, WebRTC will prefer to make peer to peer connections u
 
 This policy is only available on Windows.
 
-
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35274,6 +36840,8 @@ If you don't configure this policy, or if you set it to an empty string or inval
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35334,6 +36902,8 @@ If you disable or don't configure this policy, WebSQL can be disabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35398,6 +36968,8 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35458,6 +37030,8 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35499,9 +37073,9 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 
   ### WebSelectEnabled
 
-  #### Web Select Enabled
+  #### Web Select Enabled (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -35509,17 +37083,21 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 
   #### Description
 
-  Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
+  This policy is deprecated because Web Select is part of Web Capture and can be controlled by [WebCaptureEnabled](#webcaptureenabled). This policy won't work in Microsoft Edge version 117. If Web Capture is disabled by [WebCaptureEnabled](#webcaptureenabled), Web select will not be available in Web Capture.
 
-If you enable or don't configure this policy, Web select is available through the right click context menu and the CTRL+SHIFT+X keyboard shortcut.
+Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
 
-If you disable this policy, Web select won't be available.
+If you enable or don't configure this policy, Web select is available in Web Capture and can be accessed directly using the CTRL+SHIFT+X keyboard shortcut.
+
+If you disable this policy, Web select will not be available in Web Capture and the CTRL+SHIFT+X keyboard shortcut will also not work.
 
   #### Supported features:
 
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35530,7 +37108,7 @@ If you disable this policy, Web select won't be available.
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSelectEnabled
-  - GP name: Web Select Enabled
+  - GP name: Web Select Enabled (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -35592,6 +37170,8 @@ The option to launch the search bar from Microsoft Edge jump list menu will be d
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35655,6 +37235,8 @@ If you don't configure the policy:
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35714,6 +37296,8 @@ If you disable or don't configure this policy, the Microsoft Edge proxy resolver
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -35771,6 +37355,8 @@ If this policy is left not set, window hiding detection will be enabled.
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/08/2023
+ms.date: 07/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,86 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 114.0.1823.90: July 21, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-21-2023).
+
+## Version 115.0.1901.183: July 21, 2023
+
+Fixed various bugs and performance issues for Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-21-2023).
+
+### Feature update
+
+- **Microsoft Edge management service.** Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins are able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). **Note:** We'll start rolling out this experience on July 20 and expect to finish the rollout by next week.
+
+### Policy updates
+
+#### New policies
+
+- [ComposeInlineEnabled](/deployedge/microsoft-edge-policies#composeinlineenabled) - Compose is enabled for writing on the web
+- [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) - Microsoft Edge management enabled
+- [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) - Microsoft Edge management enrollment token
+- [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) - Microsoft Edge management extensions feedback enabled
+- [EnhanceSecurityModeIndicatorUIEnabled](/deployedge/microsoft-edge-policies#enhancesecuritymodeindicatoruienabled) - Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
+- [EnhanceSecurityModeOptOutUXEnabled](/deployedge/microsoft-edge-policies#enhancesecuritymodeoptoutuxenabled) - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
+- [SearchForImageEnabled](/deployedge/microsoft-edge-policies#searchforimageenabled) - Search for image enabled
+- [WalletDonationEnabled](/deployedge/microsoft-edge-policies#walletdonationenabled) - Wallet Donation Enabled
+
+#### Additional policy changes
+
+- [EnforceLocalAnchorConstraintsEnabled](/deployedge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) - Policy obsoletion delayed from 115 to 118
+
+## Version 114.0.1823.86: July 17, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 114.0.1823.82: July 13, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#july-13-2023).
+
+## Version 114.0.1823.79, July 10, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 114.0.1823.67: June 29, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-29-2023).
+
+## Version 114.0.1823.58: June 22, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+- **Google Docs Offline extension for Microsoft Edge.**  Google Docs Offline is an extension provided by Google to allow users to work on Google Docs, Sheets, Slides and Drive without internet access. This extension also provides advanced cut, copy, and paste functionalities across Google Editors.  The Google Docs Offline extension will be pre-installed and will be disabled by default for Microsoft Edge users. When a user navigates to Google Docs, the extension will be auto-enabled. Administrators can use the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) and [ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policies to block the auto-installation of the Google Docs Offline extension.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+## Version 114.0.1823.55: June 19, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 114.0.1823.51: June 15, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-15-2023).
+
+### Feature update
+
+- Web Select is now a part of Web Capture. Users can access Web Select through Web Capture feature or press **Ctrl** + **Shift** + **X** shortcut directly for quick access.
+
+### Policy updates
+
+#### Additional policy changes
+
+- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - This policy is deprecated. It is currently supported but will become obsolete in version 117.
+- [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) - Since Web Select is now a part of Web Capture, this policy will enable/ disable both Web Select and Web Capture.
 
 ## Version 109.0.1518.115: June 13, 2023
 

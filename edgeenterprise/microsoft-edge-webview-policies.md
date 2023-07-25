@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/11/2023
+ms.date: 07/21/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -42,6 +42,7 @@ These tables list all of the group policies available in this release of Microso
 |Policy Name|Caption|
 |-|-|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
+|[NewPDFReaderWebView2List](#newpdfreaderwebview2list)|Enable built-in PDF reader powered by Adobe Acrobat for WebView2|
 
 
 
@@ -235,6 +236,68 @@ Use the preceding information when configuring this policy.
 
 ```
 0x00000002
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### NewPDFReaderWebView2List
+
+  #### Enable built-in PDF reader powered by Adobe Acrobat for WebView2
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 116 or later
+
+  #### Description
+
+  This policy configures WebView2 applications to launch the new version of the PDF reader that's powered by Adobe Acrobat's PDF reader. The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF file handling, and greater accessibility.
+
+If this policy is specified for an application, it is possible that it may impact other related applications as well. The policy is applied to all WebView2s sharing the same WebView2 user data folder. These WebView2s could potentially belong to multiple applications if those applications, which are likely from the same product family, are designed to share the same user data folder.
+
+Use a name-value pair to enable the new PDF reader for the application. Set the name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications. Set the Value to true to enable the new reader or set it to false to use the existing one.
+
+If you enable this policy for the specified WebView2 applications, they will use the new Adobe Acrobat powered PDF reader to open all PDF files.
+
+If you disable the policy for the specified WebView2 applications or don't configure it, they will use the existing PDF reader to open all PDF files.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewPDFReaderWebView2List
+  - GP name: Enable built-in PDF reader powered by Adobe Acrobat for WebView2
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List
+  - Path (Recommended): N/A
+  - Value Name: list of REG_SZ
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "app1.exe", "value": true}
+SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "app_id_for_app2", "value": true}
+SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "*", "value": false}
+
 ```
 
   
