@@ -153,27 +153,176 @@ The following policies aren't applied to the personal browser profile.
 |[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
 |[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
 |[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-|    |    |
-
-
-
-
-
+|[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Allow insecure content on specified sites|
+|[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Block insecure content on specified sites|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Enable warnings for insecure forms|
+|[InternetExplorerIntegrationAlwaysUseOSCapture](#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
+|[InternetExplorerIntegrationAlwaysWaitForUnload](#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
+|[InternetExplorerIntegrationCloudNeutralSitesReporting](#internetexplorerintegrationcloudneutralsitesreporting)|Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
+|[InternetExplorerIntegrationCloudUserSitesReporting](#internetexplorerintegrationcloudusersitesreporting)|Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app|
+|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
+|[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
+|[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Open local files in Internet Explorer mode file extension allow list|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a file:// link in Internet Explorer mode|
+|[InternetExplorerIntegrationLocalMhtFileAllowed](#internetexplorerintegrationlocalmhtfileallowed)|Allow local MHTML files to open automatically in Internet Explorer mode|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
+|[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
+|[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
+|[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerModeClearDataOnExitEnabled](#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
+|[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
+|[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
+|[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
+|[IntranetFileLinksEnabled](#intranetfilelinksenabled)|Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer|
+|[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Allow JavaScript on specific sites|
+|[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Block JavaScript on specific sites|
+|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
+|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Block JavaScript from using JIT on these sites|
+|[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revert to legacy SameSite behavior for cookies on specified sites|
+|[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
+|[LiveCaptionsAllowed](#livecaptionsallowed)|Live captions allowed|
+|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Enable Windows to search local Microsoft Edge browsing data|
+|[LocalProvidersEnabled](#localprovidersenabled)|Allow suggestions from local providers|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
+|[ManagedFavorites](#managedfavorites)|Configure favorites|
+|[ManagedSearchEngines](#managedsearchengines)|Manage Search Engines|
+|[MicrosoftEdgeInsiderPromotionEnabled](#microsoftedgeinsiderpromotionenabled)|Microsoft Edge Insider Promotion Enabled|
+|[MicrosoftEditorProofingEnabled](#microsofteditorproofingenabled)|Spell checking provided by Microsoft Editor|
+|[MicrosoftEditorSynonymsEnabled](#microsofteditorsynonymsenabled)|Synonyms are provided when using Microsoft Editor spell checker|
+|[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
+|[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
+|[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
+|[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
+|[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
+|[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
+|[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
+|[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
+|[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
+|[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
+|[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
+|[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
+|[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
+|[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
+|[NotificationsAllowedForUrls](#notificationsallowedforurls)|Allow notifications on specific sites|
+|[NotificationsBlockedForUrls](#notificationsblockedforurls)|Block notifications on specific sites|
+|[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
+|[PDFSecureMode](#pdfsecuremode)|Secure mode and Certificate-based Digital Signature validation in native PDF reader|
+|[PDFXFAEnabled](#pdfxfaenabled)|XFA support in native PDF reader enabled|
+|[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
+|[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
+|[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
+|[PasswordManagerRestrictLengthEnabled](#passwordmanagerrestrictlengthenabled)|Restrict the length of passwords that can be saved in the Password Manager|
+|[PasswordMonitorAllowed](#passwordmonitorallowed)|Allow users to be alerted if their passwords are found to be unsafe|
+|[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configure the change password URL|
+|[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configure the list of enterprise login URLs where the password protection service should capture salted hashes of a password|
+|[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
+|[PasswordRevealEnabled](#passwordrevealenabled)|Enable Password reveal button|
+|[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
+|[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
+|[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
+|[PopupsAllowedForUrls](#popupsallowedforurls)|Allow pop-up windows on specific sites|
+|[PopupsBlockedForUrls](#popupsblockedforurls)|Block pop-up windows on specific sites|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|Configures a setting that asks users to enter their device password while using password autofill|
+|[PrintPdfAsImageDefault](#printpdfasimagedefault)|Print PDF as Image Default|
+|[PrintPostScriptMode](#printpostscriptmode)|Print PostScript Mode|
+|[PrintPreviewStickySettings](#printpreviewstickysettings)|Configure the sticky print preview settings|
+|[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Set the system default printer as the default printer|
+|[PrintRasterizationMode](#printrasterizationmode)|Print Rasterization Mode|
+|[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Print Rasterize PDF DPI|
+|[PrintStickySettings](#printstickysettings)|Print preview sticky settings|
+|[PrinterTypeDenyList](#printertypedenylist)|Disable printer types on the deny list|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restrict background graphics printing mode|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Default background graphics printing mode|
+|[PrintingEnabled](#printingenabled)|Enable printing|
+|[PrintingPaperSizeDefault](#printingpapersizedefault)|Default printing page size|
+|[PrintingWebpageLayout](#printingwebpagelayout)|Sets layout for printing|
+|[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
+|[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match|
+|[ProxyBypassList](#proxybypasslist)|Configure proxy bypass rules (deprecated)|
+|[ProxyMode](#proxymode)|Configure proxy server settings (deprecated)|
+|[ProxyPacUrl](#proxypacurl)|Set the proxy .pac file URL (deprecated)|
+|[ProxyServer](#proxyserver)|Configure address or URL of proxy server (deprecated)|
+|[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
+|[ReadAloudEnabled](#readaloudenabled)|Enable Read Aloud feature in Microsoft Edge|
+|[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Register protocol handlers|
+|[RelatedMatchesCloudServiceEnabled](#relatedmatchescloudserviceenabled)|Configure Related Matches in Find on Page|
+|[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
+|[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
+|[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
+|[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured|
+|[RestorePdfView](#restorepdfview)|Restore PDF view|
+|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
+|[SameOriginTabCaptureAllowedByOrigins](#sameorigintabcaptureallowedbyorigins)|Allow Same Origin Tab capture by these origins|
+|[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
+|[ScreenCaptureAllowedByOrigins](#screencaptureallowedbyorigins)|Allow Desktop, Window, and Tab capture by these origins|
+|[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
+|[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
+|[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
+|[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
+|[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
+|[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
+|[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
+|[SerialAskForUrls](#serialaskforurls)|Allow the Serial API on specific sites|
+|[SerialBlockedForUrls](#serialblockedforurls)|Block the Serial API on specific sites|
+|[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
+|[ShowCastIconInToolbar](#showcasticonintoolbar)|Show the cast icon in the toolbar|
+|[ShowDownloadsToolbarButton](#showdownloadstoolbarbutton)|Show Downloads button on the toolbar|
+|[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
+|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Allow notifications to set Microsoft Edge as default PDF reader|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
+|[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Enable Signed HTTP Exchange (SXG) support|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Block sleeping tabs on specific sites|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configure sleeping tabs|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Set the background tab inactivity timeout for sleeping tabs|
+|[SmartActionsBlockList](#smartactionsblocklist)|Block smart actions for a list of services|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
+|[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
+|[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
+|[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
+|[SyncDisabled](#syncdisabled)|Disable synchronization of data using Microsoft sync services|
+|[TabCaptureAllowedByOrigins](#tabcaptureallowedbyorigins)|Allow Tab capture by these origins|
+|[TabServicesEnabled](#tabservicesenabled)|Tab Services enabled|
+|[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
+|[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
+|[TranslateEnabled](#translateenabled)|Enable Translate|
+|[URLAllowlist](#urlallowlist)|Define a list of allowed URLs|
+|[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
+|[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
+|[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
+|[VerticalTabsAllowed](#verticaltabsallowed)|Configures availability of a vertical layout for tabs on the side of the browser|
+|[VideoCaptureAllowed](#videocaptureallowed)|Allow or block video capture|
+|[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Sites that can access video capture devices without requesting permission|
+|[VisualSearchEnabled](#visualsearchenabled)|Visual search enabled|
+|[WalletDonationEnabled](#walletdonationenabled)|Wallet Donation Enabled|
+|[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
+|[WebHidAskForUrls](#webhidaskforurls)|Allow the WebHID API on these sites|
+|[WebHidBlockedForUrls](#webhidblockedforurls)|Block the WebHID API on these sites|
+|[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
+|[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
+|[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
+|[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
+|[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
+|[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
+|[WindowCaptureAllowedByOrigins](#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
+|[WorkspacesNavigationSettings](#workspacesnavigationsettings)|Configure navigation settings per groups of URLs in Microsoft Edge Workspaces|
 
 ## See also
 
 - [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business)
-
