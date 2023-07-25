@@ -107,16 +107,29 @@ The following policies aren't applied to the personal browser profile.
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EdgeWorkspacesEnabled](#edgeworkspacesenabled)|Enable Workspaces|
-| EditBookmarksEnabled  |    |
+|[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableMediaRouter](#enablemediarouter)|Enable Google Cast|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Allow managed extensions to use the Enterprise Hardware Platform API|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Allow access to the Enterprise Mode Site List Manager tool|
 |[EventPathEnabled](#eventpathenabled)|Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configure allowed extension types|
-| ExtensionInstallWhitelist  |    |
-| ExtensionInstallBlacklist  |    |
-|[ExtensionInstallForcelist](#extensioninstallforcelist)|Control which extensions are installed silently|
+|[ExtensionInstallAllowlist](#extensioninstallallowlist)|Allow specific extensions to be installed|
+|[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
 |[ExtensionSettings](#extensionsettings)|Configure extension management settings|
+|[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
+|[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
+|[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Allow read access via the File System API on these sites|
+|[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
+|[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Allow write access to files and directories on these sites|
+|[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Block write access to files and directories on these sites|
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
 |    |    |
 |    |    |
 |    |    |
