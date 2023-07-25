@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/21/2023
+ms.date: 07/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,24 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 116.0.1938.29: July 24, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Edge for Business.** In addition to rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business offers new refreshed look and feel, automatic switching to keep your work and personal browsing separate including fixes from private preview feedback, lightly managed Enterprise Personal Browser (MSA profile), and support for Unmanaged BYOPC. Microsoft Edge for Business is now turned on by default.  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Locked Tabs in Edge Workspaces.** This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab. For more information, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces). **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **New Microsoft Edge PDF experience policy for WebView2.** The [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy configures WebView2 applications to launch the new version of the PDF reader that's powered by Adobe Acrobat's PDF rendering engine.  The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF file handling, and greater accessibility. Administrators can use the [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy or WebView2 developers can explicitly enable the **msPdfSharedLibrary** experimental flag in code to use WebView2 with PDF powered by Adobe PDF Engine. For more information about the Adobe and Microsoft collaboration, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).
+
+### Policy updates
+
+#### New policies
+
+[ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
 
 ## Version 115.0.1901.183: July 21, 2023
 
@@ -78,60 +96,7 @@ Fixed various bugs and performance issues.
 ## Version 115.0.1901.9: June 15, 2023
 
 Fixed various bugs and performance issues.
-
-## Version 115.0.1901.7: June 13, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Enhanced security mode improvements.** Enhanced security mode provides an extra layer of protection when browsing the web and visiting less familiar sites. Enhanced security mode is turned on by default to Balanced mode for x64 Windows, x64 macOS, x64 Linux, and ARM64 systems. **Note:** This feature is a controlled feature rollout in Microsoft Edge Beta 115. If you don't see this feature, check back as we continue our rollout.
-
-  Also, administrators have two new policies to manage the Enhanced security mode user experience: **EnhanceSecurityModeIndicatorUIEnabled** and **EnhanceSecurityModeOptOutUXEnabled**. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **Microsoft Edge management service.** Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can manage the Microsoft Edge browser. It's a simple and easy-to-manage experience. Admins are able to configure all Microsoft Edge browser policies for their organization in a configuration profile and set-up the browser to use these settings. For more information, see [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). **Note:** This experience is in public preview. We'll start rolling out this experience on June 9 and expect to finish the rollout by next week. You need to set up a Targeted release to opt in and view this experience in the M365 admin center.
-
-### Policy updates
-
-#### New policies
-
-- [WalletDonationEnabled](/DeployEdge/microsoft-edge-policies#walletdonationenabled) - Wallet Donation Enabled
-- [EnhanceSecurityModeIndicatorUIEnabled](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeindicatoruienabled) - Manage the indicator UI of the Enhanced Security Mode (ESM) feature in Microsoft Edge
-- [EnhanceSecurityModeOptOutUXEnabled](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeoptoutuxenabled) - Manage opt-out user experience for Enhanced Security Mode (ESM) in Microsoft Edge
-- [ComposeInlineEnabled](/DeployEdge/microsoft-edge-policies#composeinlineenabled) - Compose is enabled for writing on the web
-- [SearchForImageEnabled](/DeployEdge/microsoft-edge-policies#searchforimageenabled) - Search for image enabled
-
-## Version 114.0.1823.43: June 8, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.41: June 6, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.37: June 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.35: May 31, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the *edge://favorites* page. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 114.0.1823.30: May 26, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.24: May 22, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 114.0.1823.18: May 15, 2023
-
-Fixed various bugs and performance issues.
+<!-- from Version 115.0.1901.7: June 13, 2023 to Version 114.0.1823.18: May 15, 2023 -->
 <!-- Version 114.0.1823.11: May 9, 2023 to Version 113.0.1774.15: April 18, 2023 -->
 <!-- Version 113.0.1774.9: April 12, 2023 to Version 112.0.1722.15: March 21, 2023 -->
 <!-- from Version 112.0.1722.11: March 17, 2023 to Version 111.0.1661.22: February 24, 2023 -->
