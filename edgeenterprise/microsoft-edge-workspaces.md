@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 07/11/2023
+ms.date: 07/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -134,9 +134,9 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 
 ![Unable to load error message for workspaces](media/microsoft-edge-workspaces/error-unable-to-load.png)
 
-### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close or open tabs?
+### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close, open, or move tabs?
 
-No. Right now, anyone whom the Edge Workspace is shared with can open or close any tab. If someone closes a tab you want to keep, you can always reopen it as a new tab.
+Yes. You can use Locked Tabs. This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab.
 
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
 
