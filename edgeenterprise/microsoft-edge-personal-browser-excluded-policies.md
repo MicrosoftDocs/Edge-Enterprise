@@ -123,6 +123,36 @@ The following policies aren't applied to the personal browser profile.
 |[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
 |[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Allow write access to files and directories on these sites|
 |[FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)|Block write access to files and directories on these sites|
+|[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
+|[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
+|[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
+|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
+|[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
+|[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
+|[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
+|[FullscreenAllowed](#fullscreenallowed)|Allow full screen mode|
+|[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Enable globally scoped HTTP auth cache|
+|[HomepageIsNewTabPage](#homepageisnewtabpage)|Set the new tab page as the home page|
+|[HomepageLocation](#homepagelocation)|Configure the home page URL|
+|[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
+|[ImagesAllowedForUrls](#imagesallowedforurls)|Allow images on these sites|
+|[ImagesBlockedForUrls](#imagesblockedforurls)|Block images on specific sites|
+|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge|
+|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge|
+|[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
+|[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
+|[ImportCookies](#importcookies)|Allow importing of Cookies|
+|[ImportExtensions](#importextensions)|Allow importing of extensions|
+|[ImportFavorites](#importfavorites)|Allow importing of favorites|
+|[ImportHistory](#importhistory)|Allow importing of browsing history|
+|[ImportHomepage](#importhomepage)|Allow importing of home page settings|
+|[ImportOnEachLaunch](#importoneachlaunch)|Allow import of data from other browsers on each Microsoft Edge launch|
+|[ImportOpenTabs](#importopentabs)|Allow importing of open tabs|
+|[ImportPaymentInfo](#importpaymentinfo)|Allow importing of payment info|
+|[ImportSavedPasswords](#importsavedpasswords)|Allow importing of saved passwords|
+|[ImportSearchEngine](#importsearchengine)|Allow importing of search engine settings|
+|[ImportShortcuts](#importshortcuts)|Allow importing of shortcuts|
+|[ImportStartupPageSettings](#importstartuppagesettings)|Allow importing of startup page settings|
 |    |    |
 |    |    |
 |    |    |
