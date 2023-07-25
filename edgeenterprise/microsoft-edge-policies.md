@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/21/2023
+ms.date: 07/22/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -14367,7 +14367,7 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14435,7 +14435,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18421,7 +18421,7 @@ If you don't configure this policy, users can choose whether to send these reque
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -34770,7 +34770,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
