@@ -14,7 +14,7 @@ description: "Policies that aren't applied to the Enterprise personal browser pr
 
 # Policies not applied to Enterprise personal browser profile
 
-The following policies aren't applied to the personal browser profile.
+The following policies aren't applied to the Enterprise personal browser profile.
 
 ## Policy table
 
