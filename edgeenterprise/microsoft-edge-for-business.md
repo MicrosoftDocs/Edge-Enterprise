@@ -62,7 +62,7 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 
 - Security Policies (e.g., Application Guard, Enhanced Security Mode, and others)
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
-- Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
+- Microsoft Edge Update Policies (e.g., Enforcing Microsoft Edge Update Rules)
 
 For more information about the Enterprise personal browser and the policies that only apply to the work browser profile, see [policies](/DeployEdge/edge-learnmore-personal-browser-policies).
 
