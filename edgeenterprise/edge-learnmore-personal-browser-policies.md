@@ -1,22 +1,26 @@
 ---
-title: "Policies not applied to Enterprise personal browser profile"
+title: "Policy filters for the Enterprise personal browser"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/25/2023
+ms.date: 07/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Policies that aren't applied to the Enterprise personal browser profile"
+description: "Policies that only apply to the work browser profile."
 ---
 
-# Policies not applied to Enterprise personal browser profile
+# Policy filters for the Enterprise personal browser
 
-The following policies aren't applied to the Enterprise personal browser profile.
+The Enterprise personal browser (MSA) profile is lightly managed, and it automatically inherits policies from the following categories: Security, Data Compliance, and Microsoft Edge Update.
 
-## Policy table
+The policies identified in the following section are for the Microsoft Edge work browser and aren't used with the personal browser profile.
+
+## Work browser poliices
+
+The following policies only apply to the Microsoft Edge work browser profile.
 
 | Policy Name | Caption |
 |:-|:-|
