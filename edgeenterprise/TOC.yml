@@ -253,8 +253,8 @@
 #        href: edge-learnmore-inpage-nav.md
       - name: Mixed content downloads
         href: edge-learnmore-mixed-content-downloads.md
-      - name: Policies not applied to Enterprise personal browser profile
-        href: microsoft-edge-personal-browser-excluded-policies.md
+      - name: Policy filters for the Enterprise personal browser
+        href: edge-learnmore-personal-browser-policies.md
       - name: Progressive rollouts for Stable channel updates
         href: microsoft-edge-update-progressive-rollout.md
       - name: Provision favorites for Microsoft Edge
