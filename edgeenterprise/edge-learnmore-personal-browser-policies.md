@@ -16,7 +16,7 @@ description: "Policies that only apply to the work browser profile."
 
 The Enterprise personal browser (MSA) profile is lightly managed, and it automatically inherits policies from the following categories: Security, Data Compliance, and Microsoft Edge Update.
 
-The policies identified in the following section are for the Microsoft Edge work browser and aren't used with the personal browser profile.
+The work browser policies in the next section aren't used with the personal browser profile.
 
 ## Work browser poliices
 
