@@ -18,7 +18,7 @@ The Enterprise personal browser (MSA) profile is lightly managed, and it automat
 
 The work browser policies in the section below are not available for Enterprise personal browser profile using MSA.
 
-## Work browser poliices
+## Work browser policies
 
 The following policies only apply to the Microsoft Edge work browser profile.
 
