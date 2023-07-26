@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/19/2023
+ms.date: 07/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -60,8 +60,8 @@ The following table lists the planned and actual release dates for major release
 | 112 | Released<br>Version | 17-Mar-2023<br>[112.0.1722.11](/deployedge/microsoft-edge-relnote-archive-beta-channel?branch=pr-en-us-2604) | 06-Apr-2023<br>[112.0.1722.34](/deployedge/microsoft-edge-relnote-stable-channel#version-1120172234-april-6-2023)| 06-Apr-2023<br>[112.0.1722.34](/deployedge/microsoft-edge-relnote-stable-channel#version-1120172234-april-6-2023) |
 | 113 | Released<br>Version | 12-Apr-2023<br>[113.0.1774.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-113017749-april-12-2023) | 05-May-2023<br>[113.0.1774.3](/deployedge/microsoft-edge-relnote-stable-channel#1130177435-may-5-2023) | Not applicable |
 | 114 | Released<br>Version | 09-May-2023<br>[114.0.1823.11](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1140182311-may-9-2023) | 02-Jun-2023<br>[114.0.1823.37](/deployedge/microsoft-edge-relnote-stable-channel#version-1140182337-june-2-2023) | 02-Jun-2023<br>[114.0.1823.37](/deployedge/microsoft-edge-relnote-stable-channel#version-1140182337-june-2-2023) |
-| 115 | Released<br>Version | 13-Jun-2023<br>[115.0.1901.7](/deployedge/microsoft-edge-relnote-beta-channel#version-115019017-june-13-2023) | Week of 20-Jul-2023 | Not applicable |
-| 116 | Target release | Week of 18-Jul-2023 | Week of 10-Aug-2023 | Week of 10-Aug-2023 |
+| 115 | Released<br>Version | 13-Jun-2023<br>[115.0.1901.7](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-115019017-june-13-2023) | Week of 20-Jul-2023 | Not applicable |
+| 116 | Released<br>Version  | 24-Jul-2023<br>[116.0.1938.29](/deployedge/microsoft-edge-relnote-beta-channel#version-1160193829-july-24-2023) | Week of 10-Aug-2023 | Week of 10-Aug-2023 |
 | 117 | Target release | Week of 21-Aug-2023 | Week of 14-Sep-2023 | Not applicable |
 | 118 | Target release | Week of 18-Sep-2023 | Week of 12-Oct-2023 | Week of 12-Oct-2023 |
 | 119 | Target release | Week of 16-Oct-2023 | Week of 09-Nov-2023 | Not applicable |
