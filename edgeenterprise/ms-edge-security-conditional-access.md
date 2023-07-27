@@ -19,13 +19,13 @@ description: "Microsoft Edge support for Conditional Access"
   
 This article describes how Microsoft Edge supports Conditional Access, and how to access resources protected by Conditional Access.
 
-A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Azure Active Directory (Azure AD) Conditional Access helps you master the balance between security and productivity.
+A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access helps you master the balance between security and productivity.
 
 ## Accessing Conditional Access protected resources in Microsoft Edge
 
-Microsoft Edge natively supports Azure AD Conditional Access. There's no need to install a separate extension. When you're signed into a Microsoft Edge profile with enterprise Azure AD credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using Conditional Access.
+Microsoft Edge natively supports Microsoft Entra Conditional Access. There's no need to install a separate extension. When you're signed into a Microsoft Edge profile with enterprise Microsoft Entra ID credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using Conditional Access.
 
-The respective Azure AD account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). There are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why). Note that with Microsoft Edge for iOS and Android version 108 or later, a device registered in Azure AD can provide a Device ID without signing into Microsoft Edge.
+The respective Microsoft Entra ID account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). There are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why). Note that with Microsoft Edge for iOS and Android version 108 or later, a device registered in Microsoft Entra ID can provide a Device ID without signing into Microsoft Edge.
 
 On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't, you'll see a message like the one in the following screenshot. In this example, `testadmin@evostsoneboxtest.com` is the sign-in account needed to access the resource.
 
@@ -48,9 +48,9 @@ This support is available across all platforms, including all supported versions
 > [!NOTE]
 > Conditional Access isn't supported in InPrivate mode because there's no concept of a signed in profile for this mode.
 
-### How to deploy Conditional Access in Azure Active Directory
+### How to deploy Conditional Access in Microsoft Entra ID
 
-[Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help plan and deploy Conditional Access in Azure Active Directory.
+[Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access) provides a detailed guide to help plan and deploy Conditional Access in Microsoft Entra ID.
 
 ## Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
 
