@@ -54,7 +54,7 @@ This support is available across all platforms, including all supported versions
 
 ## Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
 
-MAM for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.  For more specific information on MAM, see Microsoft Intune app management.
+MAM for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.  For more specific information on MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management).
 
 Conditional access might be blocked for the following reasons.
 
