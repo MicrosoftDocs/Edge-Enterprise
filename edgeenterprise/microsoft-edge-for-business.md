@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/24/2023
+ms.date: 07/26/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -62,9 +62,9 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 
 - Security Policies (e.g., Application Guard, Enhanced Security Mode, and others)
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
-- Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
+- Microsoft Edge Update Policies (e.g., Enforcing Microsoft Edge Update Rules)
 
-For more information about the Enterprise personal browser and the policies that aren't applied, see [policies](/DeployEdge/microsoft-edge-personal-browser-excluded-policies).
+For more information about the Enterprise personal browser and the policies that only apply to the work browser profile, see [policies](/DeployEdge/edge-learnmore-personal-browser-policies).
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
@@ -137,9 +137,6 @@ The browser will automatically switch on sites that require Azure AD or MSA iden
 
 We're rolling out a small list of global shopping sites that don't require Azure AD or MSA identities. We'll keep expanding this list as we get more information about these sites.
 
-<!--
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand. -->
-
 ### How can users control which browser window a website opens in?
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
@@ -150,7 +147,7 @@ No – browser favorites, history, and passwords aren't shared between the brows
 
 ### What policies aren't applied in the personal browser profile?
 
-This [document](/DeployEdge/microsoft-edge-personal-browser-excluded-policies) lists the policies that aren't applied to a personal browser profile.
+This [document](/DeployEdge/edge-learnmore-personal-browser-policies) lists the policies that only apply to the Microsoft Edge work browser profile.
 
 ## See also
 
