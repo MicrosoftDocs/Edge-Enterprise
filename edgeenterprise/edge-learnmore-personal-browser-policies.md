@@ -3,7 +3,7 @@ title: "Policy filters for the Enterprise personal browser"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/26/2023
+ms.date: 07/27/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,8 +27,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 
 | Policy Name | Caption |
 |:-|:-|
-|[AccessibilityImageLabelsEnabled](/deployedge/microsoft-edge-policies#accessibilityimagelabelsenabled)|Let screen reader users get image descriptions from Microsoft|
-|[AddressBarEditingEnabled](/deployedge/microsoft-edge-policies#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](/deployedge/microsoft-edge-policies#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AdsTransparencyEnabled](/deployedge/microsoft-edge-policies#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
@@ -39,27 +37,15 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[AllowedDomainsForApps](/deployedge/microsoft-edge-policies#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
 |[AlternateErrorPagesEnabled](/deployedge/microsoft-edge-policies#alternateerrorpagesenabled)|Suggest similar pages when a webpage can't be found|
 |[AlwaysOpenPdfExternally](/deployedge/microsoft-edge-policies#alwaysopenpdfexternally)|Always open PDF files externally|
-|[AskBeforeCloseEnabled](/deployedge/microsoft-edge-policies#askbeforecloseenabled)|Get user confirmation before closing a browser window with multiple tabs|
-|[AudioCaptureAllowedUrls](/deployedge/microsoft-edge-policies#audiocaptureallowedurls)|Sites that can access audio capture devices without requesting permission|
-|[AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled)|AutoLaunch Protocols Component Enabled|
-|[AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins)|Define a list of protocols that can launch an external application from listed origins without prompting the user|
-|[AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls)|URLs where AutoOpenFileTypes can apply|
-|[AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes)|List of file types that should be automatically opened on download|
-|[AutoSelectCertificateForUrls](/deployedge/microsoft-edge-policies#autoselectcertificateforurls)|Automatically select client certificates for these sites|
 |[AutofillAddressEnabled](/deployedge/microsoft-edge-policies#autofilladdressenabled)|Enable AutoFill for addresses|
 |[AutofillCreditCardEnabled](/deployedge/microsoft-edge-policies#autofillcreditcardenabled)|Enable AutoFill for payment instruments|
 |[AutofillMembershipsEnabled](/deployedge/microsoft-edge-policies#autofillmembershipsenabled)|Save and fill memberships|
 |[AutomaticDownloadsAllowedForUrls](/deployedge/microsoft-edge-policies#automaticdownloadsallowedforurls)|Allow multiple automatic downloads in quick succession on specific sites|
-|[AutomaticDownloadsBlockedForUrls](/deployedge/microsoft-edge-policies#automaticdownloadsblockedforurls)|Block multiple automatic downloads in quick succession on specific sites|
-|[AutomaticHttpsDefault](/deployedge/microsoft-edge-policies#automatichttpsdefault)|Configure Automatic HTTPS|
 |[AutoplayAllowed](/deployedge/microsoft-edge-policies#autoplayallowed)|Allow media autoplay for websites|
 |[AutoplayAllowlist](/deployedge/microsoft-edge-policies#autoplayallowlist)|Allow media autoplay on specific sites|
-|[BackgroundTemplateListUpdatesEnabled](/deployedge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
 |[BlockExternalExtensions](/deployedge/microsoft-edge-policies#blockexternalextensions)|Blocks external extensions from being installed|
 |[BrowserNetworkTimeQueriesEnabled](/deployedge/microsoft-edge-policies#browsernetworktimequeriesenabled)|Allow queries to a Browser Network Time service|
-|[CORSNonWildcardRequestHeadersSupport](/deployedge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled|
 |[ClipboardAllowedForUrls](/deployedge/microsoft-edge-policies#clipboardallowedforurls)|Allow clipboard use on specific sites|
-|[ClipboardBlockedForUrls](/deployedge/microsoft-edge-policies#clipboardblockedforurls)|Block clipboard use on specific sites|
 |[CollectionsServicesAndExportsBlockList](/deployedge/microsoft-edge-policies#collectionsservicesandexportsblocklist)|Block access to a specified list of services and export targets in Collections|
 |[ComposeInlineEnabled](/deployedge/microsoft-edge-policies#composeinlineenabled)|Compose is enabled for writing on the web|
 |[ConfigureDoNotTrack](/deployedge/microsoft-edge-policies#configuredonottrack)|Configure Do Not Track|
@@ -71,10 +57,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[CryptoWalletEnabled](/deployedge/microsoft-edge-policies#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](/deployedge/microsoft-edge-policies#customhelplink)|Specify custom help link|
 |[DefaultAutomaticDownloadsSetting](/deployedge/microsoft-edge-policies#defaultautomaticdownloadssetting)|Default automatic downloads setting|
-|[DefaultClipboardSetting](/deployedge/microsoft-edge-policies#defaultclipboardsetting)|Default clipboard site permission|
-|[DefaultFileSystemReadGuardSetting](/deployedge/microsoft-edge-policies#defaultfilesystemreadguardsetting)|Control use of the File System API for reading|
-|[DefaultFileSystemWriteGuardSetting](/deployedge/microsoft-edge-policies#defaultfilesystemwriteguardsetting)|Control use of the File System API for writing|
-|[DefaultGeolocationSetting](/deployedge/microsoft-edge-policies#defaultgeolocationsetting)|Default geolocation setting|
 |[DefaultImagesSetting](/deployedge/microsoft-edge-policies#defaultimagessetting)|Default images setting|
 |[DefaultInsecureContentSetting](/deployedge/microsoft-edge-policies#defaultinsecurecontentsetting)|Control use of insecure content exceptions|
 |[DefaultJavaScriptJitSetting](/deployedge/microsoft-edge-policies#defaultjavascriptjitsetting)|Control use of JavaScript JIT|
@@ -91,12 +73,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[DefaultSearchProviderName](/deployedge/microsoft-edge-policies#defaultsearchprovidername)|Default search provider name|
 |[DefaultSearchProviderSearchURL](/deployedge/microsoft-edge-policies#defaultsearchprovidersearchurl)|Default search provider search URL|
 |[DefaultSearchProviderSuggestURL](/deployedge/microsoft-edge-policies#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
-|[DefaultSensorsSetting](/deployedge/microsoft-edge-policies#defaultsensorssetting)|Default sensors setting|
-|[DefaultSerialGuardSetting](/deployedge/microsoft-edge-policies#defaultserialguardsetting)|Control use of the Serial API|
-|[DefaultShareAdditionalOSRegionSetting](/deployedge/microsoft-edge-policies#defaultshareadditionalosregionsetting)|Set the default "share additional operating system region" setting|
-|[DefaultWebBluetoothGuardSetting](/deployedge/microsoft-edge-policies#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
-|[DefaultWebHidGuardSetting](/deployedge/microsoft-edge-policies#defaultwebhidguardsetting)|Control use of the WebHID API|
-|[DefaultWebUsbGuardSetting](/deployedge/microsoft-edge-policies#defaultwebusbguardsetting)|Control use of the WebUSB API|
 |[DefinePreferredLanguages](/deployedge/microsoft-edge-policies#definepreferredlanguages)|Define an ordered list of preferred languages that websites should display in if the site supports the language|
 |[DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
 |[DeveloperToolsAvailability](/deployedge/microsoft-edge-policies#developertoolsavailability)|Control where developer tools can be used|
@@ -126,13 +102,7 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](/deployedge/microsoft-edge-policies#externalprotocoldialogshowalwaysopencheckbox)|Show an "Always open" checkbox in external protocol dialog|
 |[FavoritesBarEnabled](/deployedge/microsoft-edge-policies#favoritesbarenabled)|Enable favorites bar|
 |[FetchKeepaliveDurationSecondsOnShutdown](/deployedge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
-|[FileSystemReadAskForUrls](/deployedge/microsoft-edge-policies#filesystemreadaskforurls)|Allow read access via the File System API on these sites|
-|[FileSystemReadBlockedForUrls](/deployedge/microsoft-edge-policies#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
-|[FileSystemWriteAskForUrls](/deployedge/microsoft-edge-policies#filesystemwriteaskforurls)|Allow write access to files and directories on these sites|
-|[FileSystemWriteBlockedForUrls](/deployedge/microsoft-edge-policies#filesystemwriteblockedforurls)|Block write access to files and directories on these sites|
-|[ForceBingSafeSearch](/deployedge/microsoft-edge-policies#forcebingsafesearch)|Enforce Bing SafeSearch|
 |[ForceEphemeralProfiles](/deployedge/microsoft-edge-policies#forceephemeralprofiles)|Enable use of ephemeral profiles|
-|[ForceGoogleSafeSearch](/deployedge/microsoft-edge-policies#forcegooglesafesearch)|Enforce Google SafeSearch|
 |[ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
 |[ForceSync](/deployedge/microsoft-edge-policies#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
 |[ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes)|Configure the list of types that are included for synchronization|
@@ -186,7 +156,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](/deployedge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
 |[InternetExplorerZoomDisplay](/deployedge/microsoft-edge-policies#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
-|[IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled)|Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer|
 |[JavaScriptAllowedForUrls](/deployedge/microsoft-edge-policies#javascriptallowedforurls)|Allow JavaScript on specific sites|
 |[JavaScriptBlockedForUrls](/deployedge/microsoft-edge-policies#javascriptblockedforurls)|Block JavaScript on specific sites|
 |[JavaScriptJitAllowedForSites](/deployedge/microsoft-edge-policies#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
@@ -324,10 +293,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[WebRtcUdpPortRange](/deployedge/microsoft-edge-policies#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
 |[WebSQLAccess](/deployedge/microsoft-edge-policies#websqlaccess)|Force WebSQL to be enabled|
 |[WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled)|Web Select Enabled (deprecated)|
-|[WebUsbAllowDevicesForUrls](/deployedge/microsoft-edge-policies#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
-|[WebUsbAskForUrls](/deployedge/microsoft-edge-policies#webusbaskforurls)|Allow WebUSB on specific sites|
-|[WebUsbBlockedForUrls](/deployedge/microsoft-edge-policies#webusbblockedforurls)|Block WebUSB on specific sites|
-|[WindowCaptureAllowedByOrigins](/deployedge/microsoft-edge-policies#windowcaptureallowedbyorigins)|Allow Window and Tab capture by these origins|
 |[WorkspacesNavigationSettings](/deployedge/microsoft-edge-policies#workspacesnavigationsettings)|Configure navigation settings per groups of URLs in Microsoft Edge Workspaces|
 
 ## See also
