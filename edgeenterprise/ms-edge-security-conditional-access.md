@@ -58,11 +58,11 @@ MAM for unenrolled devices is commonly used for personal or bring your own devic
 
 Conditional access might be blocked for the following reasons.
 
-##### The user isn't signed into Microsoft Edge
+#### The user isn't signed into Microsoft Edge
 
 Your admin might require users to be signed into Microsoft Edge to get access to MAM protected resources. Select **Switch Edge profile** and Microsoft Edge will guide you through the sign in process. For more information, see [Require an app protection policy on Windows devices (preview)](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
 
-##### There's an account issue
+#### There's an account issue
 
 If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering using the **Heads Up** page, then the account isn't properly enrolled in MAM. This configuration blocks the user from being properly enrolled in MAM. To fix this, sign in by entering the email address using different upper/lower case combinations. For example, if `RenataHall@fourthcoffee.com` was previously used to sign in, use `renatahall@fourthcoffee.com` to sign in. The user is shown a prompt. Clear the **Allow my organization to manage my device box** and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
 
