@@ -18124,8 +18124,6 @@ If you don't configure this policy, no restrictions on the acceptable services a
 
 Policy options mapping:
 
-* pinterest_suggestions (pinterest_suggestions) = Pinterest suggestions
-
 * collections_share (collections_share) = Sharing of Collections
 
 * local_pdf (local_pdf) = Save local PDFs in Collections to OneDrive
@@ -18135,8 +18133,6 @@ Policy options mapping:
 * send_excel (send_excel) = Send collection to Microsoft Excel
 
 * send_onenote (send_onenote) = Send collection to Microsoft OneNote
-
-* send_pinterest (send_pinterest) = Send collection to Pinterest
 
 Use the preceding information when configuring this policy.
 
