@@ -99,7 +99,7 @@ The next screenshot shows the form for the **Basics** tab and the menu bar shows
 
 19. The newly created policy (Microsoft Edge Policy) is shown in the following screenshot.
 
-    ![Select groups to include](./media/configure-edge-with-intune/create-profile-new-policy-finished.png)
+    ![Select Microsoft Edge Policy groups to include](./media/configure-edge-with-intune/create-profile-new-policy-finished.png)
 
 For more information about Windows 10 profiles, see [Use Windows 10 templates to configure group policy settings in Microsoft Intune](/intune/administrative-templates-windows).
 
