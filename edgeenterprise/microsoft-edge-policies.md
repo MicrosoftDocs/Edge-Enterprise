@@ -9,7 +9,7 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,6 +25,19 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
+|[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
+|[ShowHistoryThumbnails](#showhistorythumbnails)|Show thumbnail images for browsing history|
+|[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from phone in Microsoft Edge desktop|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
 
 ## Available policies
 
