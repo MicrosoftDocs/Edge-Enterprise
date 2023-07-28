@@ -3,7 +3,7 @@ title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 07/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -79,11 +79,11 @@ For more information about disabling automatic updates, see the following polici
 
 On non-persisted setups, it's important to consider that VMs may not maintain user state between sessions or users may be assigned a VM they've never used before. In this scenario, the VM doesn't have any of the user's data.
 
-Microsoft Edge supports several methods for syncing user data so it's available regardless of how they are accessing Microsoft Edge. Two methods are Azure Active Directory (Azure AD) sync and on-premises sync for AD users.
+Microsoft Edge supports several methods for syncing user data so it's available regardless of how they are accessing Microsoft Edge. Two methods are Microsoft Entra ID sync and on-premises sync for Active Directory (AD) users.
 
-### Azure AD Sync
+### Microsoft Entra ID Sync
 
-If your Azure AD plan supports it, Enterprise sync is the fastest and easiest method to ensure that Microsoft Edge user data is synced to all user devices. For more information, see [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync)
+If your Microsoft Entra ID plan supports it, Enterprise sync is the fastest and easiest method to ensure that Microsoft Edge user data is synced to all user devices. For more information, see [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync)
 
 ### On-premise Sync for Active Directory Users
 

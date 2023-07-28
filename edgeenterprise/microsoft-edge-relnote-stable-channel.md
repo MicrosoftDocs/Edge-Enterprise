@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/21/2023
+ms.date: 07/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,10 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 115.0.1901.188: July 27, 2023
+
+Fixed various bugs and performance issues.
 
 ## Version 114.0.1823.90: July 21, 2023
 
@@ -248,75 +252,8 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues.
 
-## Version 112.0.1722.34: April 6, 2023
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-6-2023).
-
-### Feature update
-
-- **Enhanced security mode improvements.** Enhanced security mode now supports WebAssembly for ARM64. Cross-platform support is now available for x64 Windows, x64 macOS, x64 Linux and ARM64 systems. For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **Added features for web app policy.** The [WebAppInstallForceList](/deployedge/microsoft-edge-policies#webappinstallforcelist) policy lets administrators configure a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off. This policy now supports custom_name, which permanently overrides the app name of installed apps and custom_icon, which permanently overrides the app icon of installed apps.
-
-- **In-browser JSON viewer.**  Improvements to how JSON files are displayed in the browser, which includes a color-coded tree view with line numbers and the ability to collapse and expand the data.  This functionality will trigger automatically when the browser navigates to a JSON file on the web or the user opens a local one.  Additional features and enhancements will roll out as available.  For more information, see [View formatted JSON - Microsoft Edge Development](/microsoft-edge/devtools-guide-chromium/json-viewer/json-viewer).  Note: This is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout or you can navigate to `edge://flags` and search for JSON Viewer to manually enable.  
-
-- **Updated new tab page policy.** The [NewTabPageHideDefaultTopSites](/deployedge/microsoft-edge-policies#newtabpagehidedefaulttopsites) policy hides the default top sites from the new tab page in Microsoft Edge. Starting on March 20th, when the policy is enabled it will also remove sponsored quick links from the new tab page.
-
-- **Edit and save web images in Microsoft Edge.** You can right click on the desired web image and without leaving your browser window, crop, adjust lighting and color, and add filters. From there, you can save the edited image for later use. You can also start editing simply by hovering over an image and selecting edit image from the menu.
-
-### Policy updates
-
-#### New policies
-
-- [CryptoWalletEnabled](/DeployEdge/microsoft-edge-policies#cryptowalletenabled) - Enable CryptoWallet feature
-
-## Version 111.0.1661.62: March 30, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 111.0.1661.54: March 24, 2023
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-24-2023).
-
-### Feature update
-
-- **New Microsoft Edge PDF experience policy.**  As part of the Adobe and Microsoft collaboration to re-envision the future workplace and your digital experiences, we are natively embedding the Adobe Acrobat PDF engine into the Microsoft Edge built-in PDF reader, with a release scheduled in March 2023. Administrators can start testing the new Microsoft Edge PDF reader which is powered by the Adobe Acrobat PDF engine by enabling the [NewPDFReaderEnabled](/deployedge/microsoft-edge-policies#newpdfreaderenabled) policy.  For more information, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).  
-
-- **Microsoft Edge Sidebar Improvements.** The Microsoft Edge sidebar lets users access productivity tools side-by-side with their browsing window. In this release, the sidebar has been enhanced to increase productivity and improve user experience. As communicated in our last release ([Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel#version-1110166141-march-13-2023)), the sidebar now includes a toolbar button by default to access the experience. If admins enable the Discover app, hovering and clicking the toolbar button will invoke both the sidebar tower, and the new discover experience.
-
-   With this release, admins now have the ability to disable the Discover app and still keep the Sidebar. In this situation, the Sidebar tower will always be shown. If an Admin chooses to enable the Sidebar but disable the Discover experience, the Sidebar can only be always shown or completely hidden. This default visibility can be changed in the Sidebar settings (*edge://settings/sidebar*).
- 
-   When an admin enables the Sidebar and the Discover experience, enterprise users can choose to 'always show' or 'auto hide'. More customization options for the sidebar toolbar button are planned in future versions of Microsoft Edge.  For more information, see [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar).
-
-## Version 109.0.1518.95: March 23, 2023
-
-> [!NOTE]
-> This update was done for our M109 Windows down-level extended support.  We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-23-2023).
-
-## Version 110.0.1587.78: March 23, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-23-2023).
-
-## Version 111.0.1661.51: March 21, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 111.0.1661.44: March 16, 2023
-
-### Policy updates
-
-#### New policies
-
-- [ShowAcrobatSubscriptionButton](/deployedge/microsoft-edge-policies#showacrobatsubscriptionbutton) - Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription
-- [NewPDFReaderEnabled](/DeployEdge/microsoft-edge-policies#newpdfreaderenabled) - Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
-
-## Version 111.0.1661.43: March 15, 2023
-
-Fixed various bugs and performance issues.
+<!-- from Version 112.0.1722.34: April 6, 2023 to Version 111.0.1661.43: March 15, 2023 -->
 <!-- from Version 111.0.1661.41: March 13, 2023 to Version 110.0.1587.46: February 14, 2023 -->
 <!-- from Version Version 110.0.1587.41: February 9, 2023 to Version 108.0.1462.83: January 12, 2023 -->
 <!-- from Version 109.0.1518.49: January 12, 2023 to Version 108.0.1462.46: December 8, 2022 -->
