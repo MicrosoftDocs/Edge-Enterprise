@@ -43,7 +43,7 @@ No. Microsoft Edge will continue to support most of the abilities provided in th
 
 ### Unified experience across devices and new device configuration time
 
-When a user is signed into their windows device with an Microsoft Entra ID account, Microsoft Edge will implicitly inherit that Identity on first launch of the new browser.
+When a user is signed into their windows device with an Microsoft Entra account, Microsoft Edge will implicitly inherit that Identity on first launch of the new browser.
 
 After a user has explicitly consented to turn on sync in Microsoft Edge, the browser will sync all the browser data, such as favorites, passwords, and history. Sync ensures a unified experience across devices and reduces the time needed to personalize the browser.
 
