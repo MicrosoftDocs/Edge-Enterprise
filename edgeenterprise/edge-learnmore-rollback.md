@@ -2,8 +2,8 @@
 title: "Microsoft Edge rollback for enterprises"
 ms.author: archandr
 author: dan-wesley
-manager: srugh
-ms.date: 06/29/2021
+manager: likuba
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -96,7 +96,7 @@ The following group policies and settings are highly recommended for using rollb
 
 #### Sync Group Policies
 
-- ForceSync. Set ForceSync to enabled. This policy will force enable Sync on all Azure Active Directory (Azure AD) users. This policy is only effective for Microsoft Edge versions 86 and later.
+- ForceSync. Set ForceSync to enabled. This policy will force enable Sync on all Microsoft Entra ID users. This policy is only effective for Microsoft Edge versions 86 and later.
 - The *Configure the list of the types that are excluded from synchronization policy* allows admins to control what data can be synced by users.
 
 #### Browser restart Group Policies
