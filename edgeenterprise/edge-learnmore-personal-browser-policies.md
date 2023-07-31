@@ -3,7 +3,7 @@ title: "Policy filters for the Enterprise personal browser"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/27/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,7 +14,7 @@ description: "Policies that only apply to the work browser profile."
 
 # Policy filters for the Enterprise personal browser
 
-The Enterprise personal browser (MSA profile) is a lightly managed profile on managed devices that will automatically inherit admin policies from the Work browser (Azure AD profile) for the following categories:
+The Enterprise personal browser (MSA profile) is a lightly managed profile on managed devices that will automatically inherit admin policies from the Work browser (Microsoft Entra ID profile) for the following categories:
 - Security
 - Data Compliance
 - Microsoft Edge Update

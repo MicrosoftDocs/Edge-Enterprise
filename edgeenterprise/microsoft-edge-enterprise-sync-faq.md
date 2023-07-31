@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise sync FAQ"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,7 +35,7 @@ Yes, through [Azure Information Protection](https://azure.microsoft.com/servic
 
 ### Where is Microsoft Edge sync data stored?
 
-Synced data for Azure AD accounts is stored on secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
+Synced data for Microsoft Entra ID accounts is stored on secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
 
 ### Does the data ever leave Microsoft's cloud, aside from syncing to Microsoft Edge?
 
@@ -43,7 +43,7 @@ No.
 
 ### What terms of service does enterprise sync fall under?
 
-Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Azure AD subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
+Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Microsoft Entra ID subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
 
 ### Does Microsoft Edge support Government Community Cloud (GCC) High and Azure Government Department of Defense (DoD) Cloud compliance?
 
@@ -79,7 +79,7 @@ Not directly, but you can determine which profiles can sign on to Microsoft Edge
 
 ### Is it possible to prevent sign-in and sync with an enterprise account on an unmanaged/non-compliant device?
 
-Currently it's not possible to prevent Azure AD sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, enterprise sync can be blocked on such devices by adding the "Microsoft Azure Information Protection" app to the CA policy.
+Currently it's not possible to prevent Microsoft Entra ID sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, enterprise sync can be blocked on such devices by adding the "Microsoft Azure Information Protection" app to the CA policy.
 
 ## See also
 
