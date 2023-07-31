@@ -3,7 +3,7 @@ title: "Microsoft Edge and Enterprise State Roaming"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 07/11/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ This article explains how Microsoft Edge participation in the Enterprise State R
 
 ## Introduction
 
-With Windows 10, [Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) users gained the ability to securely synchronize their user settings and application settings data to the cloud. [Enterprise State Roaming (ESR)](/azure/active-directory/devices/enterprise-state-roaming-overview) provides users with a unified experience across their Windows devices and reduces the time needed for configuring a new device.
+With Windows 10, [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis) users gained the ability to securely synchronize their user settings and application settings data to the cloud. [Enterprise State Roaming (ESR)](/azure/active-directory/devices/enterprise-state-roaming-overview) provides users with a unified experience across their Windows devices and reduces the time needed for configuring a new device.
 
 As a result of Microsoft Edge adopting the Chromium platform, its sync solution is now disconnected from Windows sync framework. This disconnect affects the relationship of Microsoft Edge to the ESR offering.
 
@@ -43,7 +43,7 @@ No. Microsoft Edge will continue to support most of the abilities provided in th
 
 ### Unified experience across devices and new device configuration time
 
-When a user is signed into their windows device with an Azure Active Directory (Azure AD account), Microsoft Edge will implicitly inherit that Identity on first launch of the new browser.
+When a user is signed into their windows device with an Microsoft Entra account, Microsoft Edge will implicitly inherit that Identity on first launch of the new browser.
 
 After a user has explicitly consented to turn on sync in Microsoft Edge, the browser will sync all the browser data, such as favorites, passwords, and history. Sync ensures a unified experience across devices and reduces the time needed to personalize the browser.
 
@@ -57,7 +57,7 @@ Data is automatically encrypted before leaving the user's Windows 10 device by u
 
 ### Monitoring
 
-We'll provide control and visibility over who syncs settings in your organization and on which devices through integration with the Azure AD portal. This capability will be enabled in a future release.
+We'll provide control and visibility over who syncs settings in your organization and on which devices through integration with the Microsoft Entra ID portal. This capability will be enabled in a future release.
 
 ### Management
 
