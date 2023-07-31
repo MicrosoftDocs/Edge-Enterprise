@@ -44,8 +44,8 @@ Microsoft Edge uses the OS default account to auto sign into the browser. Depend
 - **The device is hybrid/AAD-J:** Available on Win10, down-level Windows, and corresponding server versions.
 The user gets automatically signed in with their Microsoft Entra account.
 - **The device is domain joined:** Available on Win10, down-level Windows, and corresponding server versions.
-By default, the user won't get automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra ID accounts, consider hybrid joining your devices.
-- **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge will sign in automatically with the MSA account.
+By default, the user isn't automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra ID accounts, consider hybrid joining your devices.
+- **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge signs in automatically with the MSA account.
 
 ### Manual sign-in
 
@@ -65,13 +65,13 @@ On some platforms, you can configure Microsoft Edge to automatically sign into w
 
 ### SSO with Primary Refresh Token (PRT)
 
-Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
 A Primary Refresh Token (PRT) is an Microsoft Entra ID key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### Seamless SSO
 
-Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
 Seamless Single Sign-On automatically signs users in when they're on corporate devices connected to a corporate network. When enabled, users don't need to type in their passwords to sign in to Microsoft Entra ID. Typically they don't even have to type in their usernames. For more information, see [Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
