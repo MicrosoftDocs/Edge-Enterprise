@@ -55,17 +55,17 @@ The following prerequisites apply to Microsoft Edge enterprise sync:
 
 ## Supported environments
 
-Microsoft Edge sync for Azure Active Directory (Azure AD) accounts is available for any of the following subscriptions:
+Microsoft Edge sync for Microsoft Entra ID accounts is available for any of the following subscriptions:
 
-- Azure AD Premium (P1 or P2)
+- Microsoft Entra ID (P1 or P2)
   
   > [!NOTE]
-  > Customers that only have Azure AD P1 or P2 must enable Azure AD Enterprise State Roaming (ESR). Microsoft Edge sync isn't part of ESR, but ESR is required to provide the AIP functionality that's needed for the P1 and P2 configurations. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
+  > Customers that only have Microsoft Entra ID P1 or P2 must enable Microsoft Entra Enterprise State Roaming (ESR). Microsoft Edge sync isn't part of ESR, but ESR is required to provide the AIP functionality that's needed for the P1 and P2 configurations. To learn more, see the [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable) article.
 
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 
   > [!NOTE]
-  > Business Basic or Business Standard is supported, but existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant. Business Premium includes Azure Active Directory Premium Plan 1 and Edge Enterprise Sync Services are available, see [Microsoft 365 Small and Medium-sized Businesses](https://aka.ms/M365BusinessPlans).
+  > Business Basic or Business Standard is supported, but existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant. Business Premium includes Microsoft Entra ID  Plan 1 and Edge Enterprise Sync Services are available, see [Microsoft 365 Small and Medium-sized Businesses](https://aka.ms/M365BusinessPlans).
 
 - Office 365 E1 and above
 - All EDU subscriptions, including:
@@ -99,7 +99,7 @@ You can use the [Set-AipServiceOnboardingControlPolicy](/powershell/module/aipse
 
 ## Microsoft Edge and Enterprise State Roaming (ESR)
 
-Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Azure AD Enterprise State Roaming. However, Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
+Microsoft Edge is a cross-platform application with an expanded scope for syncing user data across all their devices and is no longer a part of Microsoft Entra Enterprise State Roaming. However, Microsoft Edge will fulfill the data protection promises of ESR, such as the ability to bring your own key. For more information, see [Microsoft Edge and Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md).
 
 ## See also
 
