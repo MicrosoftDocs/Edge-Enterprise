@@ -65,9 +65,9 @@ The example in the next screenshot shows an associations file named *appassoc.xm
    > [!NOTE]
    > If this setting is enabled and the user's device is domain-joined, the associations configuration file is processed the next time the user signs on.
 
-## Set Microsoft Edge as the default browser on Microsoft Entra ID joined devices
+## Set Microsoft Edge as the default browser on Microsoft Entra joined devices
 
-To set Microsoft Edge as the default browser on Microsoft Entra ID joined devices follow the steps in the [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) Mobile Device Management setting using the following application association file as an example.
+To set Microsoft Edge as the default browser on Microsoft Entra joined devices follow the steps in the [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) Mobile Device Management setting using the following application association file as an example.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
