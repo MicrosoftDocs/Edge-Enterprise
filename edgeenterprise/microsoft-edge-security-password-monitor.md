@@ -3,7 +3,7 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 07/10/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -40,7 +40,7 @@ After the policy is enabled, users still need to provide consent to turn on the 
 
 After the password monitor policy is enabled, there are different ways this feature is made available to users.
 
-- Auto-enablement. Users that are signed-in using their work account (Active Directory or Azure Active Directory) and syncing their passwords will be auto-enabled for this feature. They'll see the notification in the next screenshot informing them that the feature's turned on.
+- Auto-enablement. Users that are signed-in using their work account (Active Directory or Microsoft Entra ID) and syncing their passwords will be auto-enabled for this feature. They'll see the notification in the next screenshot informing them that the feature's turned on.
 
   :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enabled-notice.png" alt-text="Password Monitor enabled notice":::
 
