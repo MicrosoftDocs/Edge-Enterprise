@@ -14,7 +14,7 @@ description: "Policies that only apply to the work browser profile."
 
 # Policy filters for the Enterprise personal browser
 
-The Enterprise personal browser (MSA profile) is a lightly managed profile on managed devices that will automatically inherit admin policies from the Work browser (Microsoft Entra ID profile) for the following categories:
+The Enterprise personal browser (MSA profile) is a lightly managed profile on managed devices that will automatically inherit admin policies from the Work browser (Microsoft Entra profile) for the following categories:
 - Security
 - Data Compliance
 - Microsoft Edge Update
