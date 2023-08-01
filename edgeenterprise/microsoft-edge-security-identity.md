@@ -17,7 +17,7 @@ description: "Microsoft Edge identity support and configuration"
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
-This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Microsoft Entra ID, and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Microsoft Entra ID accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
+This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Microsoft Entra ID, and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Microsoft Entra accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
 
 > [!NOTE]
 > This applies  to Microsoft Edge version 77 or later.
@@ -44,7 +44,7 @@ Microsoft Edge uses the OS default account to auto sign into the browser. Depend
 - **The device is hybrid/AAD-J:** Available on Win10, down-level Windows, and corresponding server versions.
 The user gets automatically signed in with their Microsoft Entra account.
 - **The device is domain joined:** Available on Win10, down-level Windows, and corresponding server versions.
-By default, the user isn't automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra ID accounts, consider hybrid joining your devices.
+By default, the user isn't automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra accounts, consider hybrid joining your devices.
 - **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge signs in automatically with the MSA account.
 
 ### Manual sign-in

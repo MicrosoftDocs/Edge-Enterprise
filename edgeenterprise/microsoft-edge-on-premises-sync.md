@@ -57,7 +57,7 @@ When on-premises sync is enabled, users won't be asked to enable sync. In additi
 
 ### Running cloud sync and on-premises sync on the same computer
 
-On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multiple Microsoft Account or Microsoft Entra ID profiles that sync to the cloud, these profiles will continue to sync while on-premises sync is enabled.
+On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multiple Microsoft Account or Microsoft Entra profiles that sync to the cloud, these profiles will continue to sync while on-premises sync is enabled.
 
 ### Running Microsoft Edge on more than one computer at a time isn't recommended
 

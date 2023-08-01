@@ -35,7 +35,7 @@ Yes, through [Azure Information Protection](https://azure.microsoft.com/servic
 
 ### Where is Microsoft Edge sync data stored?
 
-Synced data for Microsoft Entra ID accounts is stored on secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
+Synced data for Microsoft Entra accounts is stored on secure servers according to the tenant ID. For example, the data for a tenant that is registered in the United States is stored in servers geo-located for that region and uses the same storage solution as Office applications.
 
 ### Does the data ever leave Microsoft's cloud, aside from syncing to Microsoft Edge?
 
@@ -79,7 +79,7 @@ Not directly, but you can determine which profiles can sign on to Microsoft Edge
 
 ### Is it possible to prevent sign-in and sync with an enterprise account on an unmanaged/non-compliant device?
 
-Currently it's not possible to prevent Microsoft Entra ID sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, enterprise sync can be blocked on such devices by adding the "Microsoft Azure Information Protection" app to the CA policy.
+Currently it's not possible to prevent Microsoft Entra sign-in to Microsoft Edge on unmanaged devices without disrupting your other Conditional Access (CA) protected applications. However, enterprise sync can be blocked on such devices by adding the "Microsoft Azure Information Protection" app to the CA policy.
 
 ## See also
 
