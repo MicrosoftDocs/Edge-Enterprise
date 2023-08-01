@@ -3,7 +3,7 @@ title: "Microsoft Edge security for your business"
 ms.author: archandr
 author: seanongit
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -40,12 +40,12 @@ For Chrome, an extension is available to use Windows hardware isolation—the MD
 
 ### Native support for Microsoft 365 security without additional software
 
-Aside from protecting against external threats, IT admins also must protect against internal risk. Protecting sensitive corporate data—robustly and at scale—is a top priority for IT administrators, particularly as workforces have decentralized. Microsoft Edge has native support for Azure AD Conditional Access, Windows Information Protection, and the new Microsoft Endpoint Data Loss Prevention (DLP) without additional software required.
+Aside from protecting against external threats, IT admins also must protect against internal risk. Protecting sensitive corporate data—robustly and at scale—is a top priority for IT administrators, particularly as workforces have decentralized. Microsoft Edge has native support for Microsoft Entra Conditional Access, Windows Information Protection, and the new Microsoft Endpoint Data Loss Prevention (DLP) without additional software required.
 
-**Microsoft Edge natively supports Conditional Access**. [Microsoft Edge's support for conditional access](ms-edge-security-conditional-access.md) makes it easy for organizations to utilize identity signals as part of their access control decisions. [Conditional Access](/azure/active-directory/conditional-access/overview) is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. To get Conditional Access support on Chrome, an additional plug-in is required.
+**Microsoft Edge natively supports Conditional Access**. [Microsoft Edge's support for conditional access](ms-edge-security-conditional-access.md) makes it easy for organizations to utilize identity signals as part of their access control decisions. [Conditional Access](/azure/active-directory/conditional-access/overview) is the tool used by Microsoft Entra ID to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. To get Conditional Access support on Chrome, an additional plug-in is required.
 
 > [!NOTE]
-> Azure AD Conditional Access requires a Microsoft 365 E3 (or higher) or a Microsoft 365 Business Premium subscription.
+> Microsoft Entra Conditional Access requires a Microsoft 365 E3 (or higher) or a Microsoft 365 Business Premium subscription.
 
 **Microsoft Edge natively supports Windows Information Protection (WIP)**, which provides protection to corporate data to help prevent accidental leaks by users on Windows devices. [Microsoft Edge support for WIP](./microsoft-edge-security-windows-information-protection.md) can be configured to only allow IT mandated apps to access corporate data. It also provides leak controls—such as clipboard protection, encrypting files on download, and preventing file uploads to unauthorized network shares or cloud location — with a seamless user experience. WIP works on a perimeter-based configuration, where IT admins define the corporate boundary and all data inside that boundary is considered corporate.
 
