@@ -49,7 +49,7 @@ If the switch to the Office.com isn't possible, reach out and send us feedback. 
 
 ## Enterprise users will now get Microsoft news content via My Feed
 
-The Enterprise New tab page will offer industry relevant information in **My Feed** and Office 365 content in a single view for users signed in with their Microsoft Entra ID account. For users signed in with Microsoft Entra ID who selected the Microsoft News option in the settings flyout, their new tab page view will be replaced with **My Feed** content. When they open a new tab page in the browser it will look like the example in the next screenshot.
+The Enterprise New tab page will offer industry relevant information in **My Feed** and Office 365 content in a single view for users signed in with their Microsoft Entra account. For users signed in with Microsoft Entra ID who selected the Microsoft News option in the settings flyout, their new tab page view will be replaced with **My Feed** content. When they open a new tab page in the browser it will look like the example in the next screenshot.
 
 ![New tab page showing content from My Feed.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-myfeed-view.png)
 
@@ -62,7 +62,7 @@ With the changes to the New tab page, the Page layout no longer has to control t
 
 ![Page layout view for New tab page.](media/microsoft-edge-ntp-backward-compatibility/microsoft-edge-ntp-page-layout.png)
 
-If you want to keep accessing Microsoft News content that isn't tied to your organization, you must use a different browser profile. Go to  *edge://settings/profiles* and sign out of your Microsoft Entra ID profile. This action will bring up the  standard view for the Enterprise new tab page.
+If you want to keep accessing Microsoft News content that isn't tied to your organization, you must use a different browser profile. Go to  *edge://settings/profiles* and sign out of your Microsoft Entra profile. This action will bring up the  standard view for the Enterprise new tab page.
 
 ## See also
 
