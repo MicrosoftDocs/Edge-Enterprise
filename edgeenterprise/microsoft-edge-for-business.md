@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/26/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,7 +31,7 @@ Microsoft Edge for Business aims to address the needs of both end users and IT P
 
 Microsoft Edge for Business is available in public preview on managed PCs, and unmanaged BYOPC.
 
-Microsoft Edge for Business encompasses the experiences summarized in the following table. 
+Microsoft Edge for Business encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
@@ -43,7 +43,12 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 ## Work Browser (Visual Refresh)
 
-When Microsoft Edge for Business is available, the existing Microsoft Entra ID profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+When Microsoft Edge for Business is available, the existing Microsoft Entra profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
+
+> [!NOTE]
+> All existing Microsoft Entra profile settings stay the same, including favorites, history, and saved passwords.
+
+The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
 
@@ -54,7 +59,7 @@ Inside the browser you see the new profile pill label, profile flyout visual tre
 ## Automatic switching with the Enterprise personal browser
 
 > [!NOTE]
-> Applies when device has at least one Microsoft Entra ID profile and one MSA profile (existing or new).
+> Applies when device has at least one Microsoft Entra profile and one MSA profile (existing or new).
 
 The Enterprise personal browser is designed to keep work and personal browsing separate for the end users via the new Automatic Switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
 
@@ -140,6 +145,10 @@ We're rolling out a small list of global shopping sites that don't require Micro
 ### How can users control which browser window a website opens in?
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
+
+### Will Microsoft Edge for Business add new icons to my taskbar?
+
+No - icons will stay the same as they are.
 
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
