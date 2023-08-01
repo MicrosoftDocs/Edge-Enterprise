@@ -259,7 +259,7 @@ Use the following steps as a guide to enable the service:
 
 2. If Microsoft Edge is open, restart it.
 
-If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Microsoft Entra group](#assign-a-configuration-profile-to-an-microsoft-entra-id-group).
+If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Microsoft Entra group](#assign-a-configuration-profile-to-an-microsoft-entra-group).
 
 ### Set an enrollment token
 
