@@ -57,7 +57,7 @@ Data is automatically encrypted before leaving the user's Windows 10 device by u
 
 ### Monitoring
 
-We'll provide control and visibility over who syncs settings in your organization and on which devices through integration with the Microsoft Entra ID portal. This capability will be enabled in a future release.
+We'll provide control and visibility over who syncs settings in your organization and on which devices through integration with the Microsoft Entra portal. This capability will be enabled in a future release.
 
 ### Management
 

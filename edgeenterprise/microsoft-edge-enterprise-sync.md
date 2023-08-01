@@ -55,7 +55,7 @@ The following prerequisites apply to Microsoft Edge enterprise sync:
 
 ## Supported environments
 
-Microsoft Edge sync for Microsoft Entra ID accounts is available for any of the following subscriptions:
+Microsoft Edge sync for Microsoft Entra accounts is available for any of the following subscriptions:
 
 - Microsoft Entra ID (P1 or P2)
   
