@@ -3,7 +3,7 @@ title: "Microsoft Edge support for Windows Information Protection"
 ms.author: kvice
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -67,7 +67,7 @@ Starting with Microsoft Edge version 81, the following features are supported:
 - Silent/Block/Override enforcement for work file uploads to non-work locations.  
 - Silent/Block/Override enforcement for file Drag & Drop actions.
 - Silent/Block/Override enforcement for Clipboard actions.
-- Browsing to work locations from non-work profiles automatically redirects to the Work Profile (associated with the Azure AD Identity.)
+- Browsing to work locations from non-work profiles automatically redirects to the Work Profile (associated with the Microsoft Entra Identity.)
 - IE Mode supports full WIP functionality.
 
 ## Working with WIP in Microsoft Edge
@@ -86,14 +86,14 @@ Using WIP with Microsoft Edge requires the presence of a work profile.
 
 ### Ensure the presence of a work profile
 
-On hybrid joined machines, Microsoft Edge is automatically signed in with the Azure Active Directory (Azure AD) account. To make sure that users don't remove this profile, which is needed for WIP, configure the following policy:
+On hybrid joined machines, Microsoft Edge is automatically signed in with the Microsoft Entra account. To make sure that users don't remove this profile, which is needed for WIP, configure the following policy:
 
 - [NonRemovableProfileEnabled](./microsoft-edge-policies.md#nonremovableprofileenabled)
 
 > [!NOTE]
-> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Microsoft Entra ID join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-If hybrid joining isn't an option, you can use on-prem Active Directory accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Azure AD's features, such as cloud sync, Office NTP, and so on.)
+If hybrid joining isn't an option, you can use on-prem Active Directory accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Azure AD's features, such as cloud sync, Office NTP, and so on.
 
 #### Active Directory (AD) accounts
 

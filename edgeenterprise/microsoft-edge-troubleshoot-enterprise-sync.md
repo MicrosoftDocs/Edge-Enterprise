@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,7 +17,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
-This article provides troubleshooting guidance for the most common sync issues in an Azure Active Directory (Azure AD) environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
+This article provides troubleshooting guidance for the most common sync issues in an Microsoft Entra ID environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
  If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Sync** > **Reset sync**. If the sync reset doesn't work, an admin or support staff member can use the guidance in this article to fix a sync issue.
 
@@ -69,11 +69,11 @@ Do you have a previous Microsoft 365 or Azure Information Protection (AIP) subsc
 If this error is encountered for an Azure Active Directory account, or if DISABLED_BY_ADMIN appears in *edge://sync-internals*, follow the steps in the next procedure sequentially until the problem is fixed.
 
 > [!NOTE]
-> Because the source of this error usually needs a configuration change in an Azure Active Directory tenant, these troubleshooting steps can only performed by a tenant admin.
+> Because the source of this error usually needs a configuration change in an Microsoft Entra tenant, these troubleshooting steps can only performed by a tenant admin.
 
 1. Verify that the enterprise tenant has one of the supported subscriptions in [Configure Microsoft Edge enterprise sync](/deployedge/microsoft-edge-enterprise-sync). To find out which subscription you have, see [What subscription do I have?](/microsoft-365/admin/admin-overview/what-subscription-do-i-have). If the tenant doesn't have a supported subscription, they can either purchase Azure Information Protection separately, or upgrade to one of the supported subscriptions.
 2. If a supported subscription is available, verify that the tenant has Azure Information Protection (AIP). If you need to check AIP status and, if necessary, activate  AIP, see these instructions: [Activating the protection service from Azure Information Protection](/azure/information-protection/activate-service).
-3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). If you need to enable ESR, see these instructions: [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
+3. If step 2 shows that AIP is active but sync still doesn't work, turn on Enterprise State Roaming (ESR). If you need to enable ESR, see these instructions: [Enable Enterprise State Roaming in Microsoft Entra ID](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
    > [!NOTE]
    > ESR doesn't need to stay on. You can turn off ESR if this step fixes the issue.
@@ -139,7 +139,7 @@ Use the following steps to fix this issue:
 
 1. Restart Microsoft Edge and go to *edge://sync-internals*. Look at the **AAD Account Key Status** section to see if any of the following messages are present:
    - Last MIP Result = "Success": This error means server data might be encrypted with a lost key. A data reset is needed to resume sync.
-   - Last MIP Result = "No permissions": It's possibly caused by an Azure AD change or tenant subscription changes. A data reset is needed to resume sync.
+   - Last MIP Result = "No permissions": It's possibly caused by an Microsoft Entra ID change or tenant subscription changes. A data reset is needed to resume sync.
    - Other errors may mean there's a server configuration issue.
 2. If a data reset is needed, see [Reset Microsoft Edge data in the cloud](edge-learnmore-reset-data-in-cloud.md).
 
