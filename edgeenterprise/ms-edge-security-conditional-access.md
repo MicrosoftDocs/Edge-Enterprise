@@ -51,7 +51,12 @@ MAM for unenrolled devices is commonly used for personal or bring your own devic
 
 Conditional access might also be blocked because there's an account issue. For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting)
 
-If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM. This configuration blocks the user from being properly enrolled in MAM. To fix this, sign in by entering the email address using different upper/lower case combinations. For example, if `RenataHall@contoso.com` was previously used to sign in, use `renatahall@contoso.com` to sign in. The user is shown a prompt. Clear the **Allow my organization to manage my device box** and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
+If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM. This configuration blocks the user from being properly enrolled in MAM.
+
+Follow these steps for a temporary workaround:
+
+1. Sign in by entering the email address using different upper/lower case combinations. For example, if `RenataHall@contoso.com` was previously used to sign in, use `renatahall@contoso.com` to sign in. The user is shown the next prompt.
+2. Clear the **Allow my organization to manage my device box** and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
 
 ## How to deploy Conditional Access in Microsoft Entra ID
 
