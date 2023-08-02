@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/01/2023
+ms.date: 08/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -48,7 +48,7 @@ When Microsoft Edge for Business is available, the existing Microsoft Entra prof
 > [!NOTE]
 > All existing Microsoft Entra profile settings stay the same, including favorites, history, and saved passwords.
 
-The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business icon in the taskbar and other shortcuts:
 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
 
@@ -148,7 +148,7 @@ The option to manage how sites open appears in the browsing window that opens fo
 
 ### Will Microsoft Edge for Business add new icons to my taskbar?
 
-No - icons will stay the same as they are.
+No - The existing Microsoft Edge icon will be replaced by the Microsoft Edge for Business icon in the taskbar and other shortcuts. No new icons will be added to the taskbar.
 
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
