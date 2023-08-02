@@ -3,7 +3,7 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/31/2023
+ms.date: 08/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
