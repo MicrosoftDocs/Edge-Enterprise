@@ -20,7 +20,7 @@ description: "Microsoft Edge support for Conditional Access"
 This article describes how Microsoft Edge supports Conditional Access (CA) for managed and unmanaged devices, and how you can access resources protected by CA.
 
 > [!NOTE]
-> If a device isn't MDM enrolled and the user doesn't want the device to be enrolled, see [Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](#mobile-application-management-mam-for-unenrolled-devices-in-microsoft-intune) in this article.
+> If a device isn't managed by being MDM enrolled and the user doesn't want the device to be enrolled, see [Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](#mobile-application-management-mam-for-unenrolled-devices-in-microsoft-intune) in this article.
 
 A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a hybrid computing world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access (*formerly Azure Active Directory (Azure AD) Conditional Access*) helps you master the balance between security and productivity.
 
@@ -45,7 +45,7 @@ You can also work with profile settings by selecting the account picture in the 
 
 This support is available across all platforms, including all supported versions of Windows and macOS.
 
-### Microsoft Intune Mobile Application Management (MAM) for bring your own devices
+## Microsoft Intune Mobile Application Management for bring your own devices
 
 MAM for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.  For more specific information on MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management).
 
