@@ -17,9 +17,9 @@ description: "Microsoft Edge support for Conditional Access"
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
   
-This article describes how Microsoft Edge supports Conditional Access, and how to access resources protected by Conditional Access.
+This article describes how Microsoft Edge supports Conditional Access, and how you can access resources protected by Conditional Access.
 
-A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access helps you master the balance between security and productivity.
+A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access (*formerly Azure Active Directory (Azure AD) Conditional Access*) helps you master the balance between security and productivity.
 
 ## Accessing Conditional Access protected resources in Microsoft Edge
 
