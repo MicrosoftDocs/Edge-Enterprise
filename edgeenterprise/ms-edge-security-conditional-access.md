@@ -54,7 +54,7 @@ If there's a pre-existing, unregistered account, like `user@contoso.com` in 
 Follow these steps for a temporary workaround:
 
 1. Sign in by entering the email address using different upper/lower case combinations. For example, if `RenataHall@contoso.com` was previously used to sign in, use `renatahall@contoso.com` to sign in. The user is shown the next prompt.
-2. Clear the **Allow my organization to manage my device box** and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
+2. Clear the **Allow my organization to manage my device** box and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
 
 Conditional access might also be blocked because there's an account issue. For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
 
