@@ -17,20 +17,20 @@ description: "Microsoft Edge support for Conditional Access"
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
   
-This article describes how Microsoft Edge supports Conditional Access, and how you can access resources protected by Conditional Access.
-
-A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a mobile-first, cloud-first world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access (*formerly Azure Active Directory (Azure AD) Conditional Access*) helps you master the balance between security and productivity.
-
-## Accessing Conditional Access protected resources in Microsoft Edge
-
-Microsoft Edge natively supports Microsoft Entra Conditional Access. There's no need to install a separate extension. When you're signed into a Microsoft Edge profile with enterprise Microsoft Entra ID credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using Conditional Access.
-
-The respective Microsoft Entra account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). There are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why). Note that with Microsoft Edge for iOS and Android version 108 or later, a device registered in Microsoft Entra ID can provide a Device ID without signing into Microsoft Edge.
-
-Your admin might require users to be signed into Microsoft Edge to get access to protected resources. This is needed for resources that are protected by Mobile Application Management (MAM) or Mobile Device Management (MDM). The identity accessing the resource should match the identity on the profile. If it doesn't, you'll see a message like the one in the following screenshot. In this example, `balas@contosa.com` is the sign-in account needed to access the resource.
+This article describes how Microsoft Edge supports Conditional Access (CA) for managed and unmanaged devices, and how you can access resources protected by CA.
 
 > [!NOTE]
 > If a device isn't MDM enrolled and the user doesn't want the device to be enrolled, see [Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](#mobile-application-management-mam-for-unenrolled-devices-in-microsoft-intune) in this article.
+
+A key aspect of cloud security is identity and access when it comes to managing your cloud resources. In a hybrid computing world, users can access your organization's resources using various devices and apps from anywhere. As a result of this, just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed. Microsoft Entra Conditional Access (*formerly Azure Active Directory (Azure AD) Conditional Access*) helps you master the balance between security and productivity.
+
+## Accessing Conditional Access protected resources with Edge on managed devices
+
+Microsoft Edge natively supports Microsoft Entra *(Azure AD)* Conditional Access. With this high quality and stable native support there's no need to install a separate extension. When you're signed into an Edge profile with enterprise Microsoft Entra ID (*Azure AD*) credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using CA.
+
+The respective Microsoft Entra (*Azure AD*) account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). There are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why).
+
+Your admin might require users to be signed into Microsoft Edge to get access to protected resources. The identity accessing the resource should match the identity on the profile. If it doesn't, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contosa.com` is the sign-in account needed to access the resource.
 
 ![Conditional access message in browser](./media/edge-security/microsoft-edge-security-conditional-access.png)
 
@@ -45,7 +45,7 @@ You can also work with profile settings by selecting the account picture in the 
 
 This support is available across all platforms, including all supported versions of Windows and macOS.
 
-### Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
+### Microsoft Intune Mobile Application Management (MAM) for bring your own devices
 
 MAM for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.  For more specific information on MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management).
 
