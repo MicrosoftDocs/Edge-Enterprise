@@ -30,7 +30,7 @@ Microsoft Edge natively supports Microsoft Entra (*Azure AD*) Conditional Access
 
 The respective Microsoft Entra (*Azure AD*) account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). Note that there are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why).
 
-On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contosa.com` is the sign-in account needed to access the resource.
+On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contos.com` is the sign-in account needed to access the resource.
 
 ![Conditional access message in browser](./media/edge-security/microsoft-edge-security-conditional-access.png)
 
@@ -49,7 +49,7 @@ Mobile Application Management (MAM) for unenrolled devices is commonly used for 
 
 ### Access issues
 
-If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM. This configuration blocks the user from being properly enrolled in MAM.
+If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM.
 
 Follow these steps for a temporary workaround:
 
