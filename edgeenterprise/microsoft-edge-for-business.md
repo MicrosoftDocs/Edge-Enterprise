@@ -50,7 +50,7 @@ Microsoft Edge for Business is available now, and the existing Microsoft Entra (
 
 The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business icon in the taskbar and other shortcuts:
 
-![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
+![Microsoft Edge for Business logo](media/microsoft-edge-for-business/efb-logo-on-bar.png)
 
 Inside the browser you see the new profile pill label, profile flyout visual treatment, and flyout band annotation.
 
