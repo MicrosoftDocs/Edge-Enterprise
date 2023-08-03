@@ -24,9 +24,9 @@ ZSDCH is an experimental feature in Microsoft Edge that lets the browser use a s
 
 ZSDCH works by having the browser send a new value, "zsdch", in the "Accept-Encoding" request header to indicate to the server that the browser supports ZSDCH compression.
 
-If the server wants to use ZSDCH for future responses, it will provide the typical response with a non-ZSDCH Content-Encoding but with an additional "get-dictionary" response header. This header provides a pointer to a location for the browser to fetch a ZSDCH dictionary for future use.
+If the server wants to use ZSDCH for future responses, it provides the typical response with a non-ZSDCH Content-Encoding but with an extra "get-dictionary" response header. This header provides a pointer to a location for the browser to fetch a ZSDCH dictionary for future use.
 
-After the browser has fetched and cached the dictionary, future requests to the server will include a list of available dictionaries in a "avail-dictionary" header. If the server can serve a response compressed using one of the available dictionaries, it will provide a response using the dictionary and specify a "Content-Encoding" of "zsdch".
+After the browser has fetched and cached the dictionary, future requests to the server will include a list of available dictionaries in a "avail-dictionary" header. If the server can serve a response compressed using one of the available dictionaries, provides a response using the dictionary and specifies a "Content-Encoding" of "zsdch".
 
 ## What sites are this feature being tested with?
 
@@ -44,7 +44,7 @@ To minimize the risk to enterprise environments that don't follow the preceding 
 
 A proxy or middlebox can only interfere with ZSDCH compression on a TLS connection if it's decrypting TLS traffic using a private interception certificate. A future change to Edge will safely enable the feature for managed devices by detecting this case and disabling ZSDCH in these scenarios.
 
-Since a break-and-inspect middlebox can ensure appropriate Content-Encoding header values are sent, a future change in Edge might remove the heuristic to disable ZSDCH in those settings. If undesirable interactions are found, enterprises will be required to ask their vendors to update their products to properly handle new, unfamiliar content encodings.
+Since a break-and-inspect middlebox can ensure appropriate Content-Encoding header values are sent, a future change in Edge might remove the heuristic to disable ZSDCH in those settings. If undesirable interactions are found, enterprises are required to ask their vendors to update their products to properly handle new, unfamiliar content encodings.
 
 ## Verifying that ZSDCH is causing an issue in your environment
 
