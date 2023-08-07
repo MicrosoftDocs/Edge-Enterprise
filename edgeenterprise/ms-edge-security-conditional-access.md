@@ -22,11 +22,11 @@ This article describes how Microsoft Edge supports Conditional Access (CA) and h
 > [!NOTE]
 > If a device isn't managed by enrolled with Intune mobile device management (MDM) and the user doesn't want the device to be enrolled, see [Microsoft Intune MAM for bring your own devices](#microsoft-intune-mam-for-bring-your-own-devices) -->
 
-When it comes to managing and protecting your cloud resources, identity and access are both important. In a hybrid computing world, users can access your organization's resources using various devices and apps from anywhere at anytime. Just focusing on who can access a resource isn't sufficient. You also need to factor in how a resource is accessed.
+When it comes to managing and protecting your cloud resources, identity and access are both important. In a hybrid computing world, users can access your organization's resources using various devices and apps from anywhere at anytime. Just focusing on who can access a resource isn't good enough. You also need to factor in how a resource is accessed.
 
 Conditional Access (CA) helps you master the balance between security and productivity. For more information, see [Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access), a detailed guide to help plan and deploy Conditional Access (CA) in Microsoft Entra ID, formerly known as Azure Active Directory. (For more information, see [New name for Azure Active Directory](/azure/active-directory/fundamentals/new-name).)
 
-Another way to access protected resources is to use Intune mobile device management (MDM) and mobile application management. If a device isn't enrolled in MDM and the user doesn't want the device to be enrolled, see [Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam).
+Another way to access protected resources is to use Intune mobile device management (MDM) and mobile application management (MAM). If a device isn't enrolled in MDM and the user doesn't want the device to be enrolled, see [Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam).
 
 ## Accessing CA protected URLs with Microsoft Edge on managed devices
 
@@ -36,11 +36,11 @@ The respective Microsoft Entra (*Azure AD*) account needs to be connected to Win
 
 ## Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM
 
-Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information on MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management).
+Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information about MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and the [MAM FAQ](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
 
 ## Access issues
 
-On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contos.com` is the sign-in account needed to access the resource.
+On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't or the device is unmanaged, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contos.com` is the sign-in account needed to access the resource.
 
 ![Conditional access message in browser](./media/edge-security/microsoft-edge-security-conditional-access.png)
 
@@ -57,14 +57,16 @@ You can also work with profile settings by selecting the account picture in the 
 
 ### Fixing access issues with unenrolled devices using Intune MAM
 
-If there's a pre-existing, unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM.
+Common issues, such as an expired enrollment, and their resolution are [here](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#common-issues).
+
+If there's a [existing](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#existing-account) unregistered account, like `user@contoso.com` in Microsoft Edge, or if a user signs in without registering the account, then the account isn't properly enrolled in MAM.
 
 Follow these steps for a temporary workaround:
 
 1. Sign in by entering the email address using different upper/lower case combinations. For example, if `RenataHall@contoso.com` was previously used to sign in, use `renatahall@contoso.com` to sign in. The user is shown the next prompt.
 2. Clear the **Allow my organization to manage my device** box and then select **OK**. This action registers the device with your account and you'll be able to access your resources.
 
-Access might also be blocked because there's an account issue. For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
+ For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
 
 ## See also
 
