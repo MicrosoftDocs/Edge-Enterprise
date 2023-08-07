@@ -1,4 +1,4 @@
-# last revised 08/03/2023
+# last revised 08/07/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -206,7 +206,7 @@
      href: microsoft-edge-security-password-manager-security.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
-   - name: Support for Microsoft Entra Conditional Access
+   - name: Support for Microsoft Entra (formerly Azure AD) Conditional Access
      href: ms-edge-security-conditional-access.md
    - name: Support for Application Guard
      href: microsoft-edge-security-windows-defender-application-guard.md

@@ -3,7 +3,7 @@ title: "Considerations for zstd-based Shared Dictionary Compression for HTTP"
 ms.author: erikan
 author: dan-wesley
 manager: megp
-ms.date: 08/03/2022
+ms.date: 08/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
