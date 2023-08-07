@@ -26,6 +26,16 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 114.0.1823.106: August 7, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-7-2023).
+
+### Feature update
+
+- **New policy for Browser essentials.** Browser essentials help you gain additional insights about the health of your browser. It lets you stay informed about your browser's performance and security with a single, intuitive view that provides helpful suggestions for performance optimization and browser protection. The [PinBrowserEssentialsToolbarButton](/deployedge/microsoft-edge-policies#pinbrowseressentialstoolbarbutton) policy lets Admins configure whether to pin the Browser essentials button on the toolbar.
+
 ## Version 115.0.1901.200: August 7, 2023
 
 Fixed various bugs and performance issues for Stable release.
