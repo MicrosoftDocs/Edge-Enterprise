@@ -2,6 +2,23 @@
 
 
 
+## Week of July 31, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/31/2023 | [Configure Microsoft Edge enterprise sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 7/31/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+| 7/31/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 7/31/2023 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
+| 7/31/2023 | [Microsoft Edge identity support and configuration](/DeployEdge/microsoft-edge-security-identity) | modified |
+| 8/1/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 8/1/2023 | [Microsoft Edge support for Windows Information Protection](/DeployEdge/microsoft-edge-security-windows-information-protection) | modified |
+| 8/1/2023 | [Diagnose and fix Microsoft Edge sync issues](/DeployEdge/microsoft-edge-troubleshoot-enterprise-sync) | modified |
+| 8/1/2023 | [Microsoft Edge Workspaces](/DeployEdge/microsoft-edge-workspaces) | modified |
+| 8/2/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+
+
 ## Week of July 24, 2023
 
 
@@ -80,16 +97,3 @@
 |------|------------|--------|
 | 7/7/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
 | 7/7/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-
-
-## Week of June 26, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/26/2023 | [Video: Microsoft Edge for Business](/DeployEdge/microsoft-edge-video-msedge-for-business) | added |
-| 6/26/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 6/27/2023 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 6/27/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 6/29/2023 | [Microsoft Edge enterprise sync FAQ](/DeployEdge/microsoft-edge-enterprise-sync-faq) | modified |
-| 6/30/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
