@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 07/11/2023
+ms.date: 08/01/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,7 +24,7 @@ This article describes the productivity benefits Edge Workspaces will bring to y
 
 ## Overview
 
-Edge Workspaces provides an incredible way for customers to organize their browsing tasks into dedicated windows. Each Edge Workspace contains its own sets of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. Workspaces are accessible anywhere customers use Microsoft Edge with their Azure Active Directory (Azure AD) accounts.
+Edge Workspaces provides an incredible way for customers to organize their browsing tasks into dedicated windows. Each Edge Workspace contains its own sets of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. Workspaces are accessible anywhere customers use Microsoft Edge with their Microsoft Entra accounts.
 
 <iframe width="100%" height="500" src=https://www.youtube.com/embed/bNRY9Zm1QY8 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!--
@@ -39,7 +39,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Prerequisites
 
-- Users must have an Azure Active Directory (Azure AD) tenant and Microsoft Edge version 114 or greater installed.
+- Users must have an Microsoft Entra tenant and Microsoft Edge version 114 or greater installed.
 - To manage via group policy, Admins must have Microsoft Edge version 114 or greater installed and version 114 of the policy files.
 - Users must have access to a OneDrive for Business license to create an Edge Workspace.  
 
@@ -48,7 +48,7 @@ The following are key scenarios for using Edge Workspaces in your organization.
 
 ## Manage workspaces for users
 
-Edge Workspaces is enabled for users signed in with an Azure AD account on Edge version 114 or later. You can manage Edge Workspaces for your users by using the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy.
+Edge Workspaces is enabled for users signed in with an Microsoft Entra account on Edge version 114 or later. You can manage Edge Workspaces for your users by using the [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) policy.
 
 ## The Edge Workspaces user experience
 
@@ -134,9 +134,9 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 
 ![Unable to load error message for workspaces](media/microsoft-edge-workspaces/error-unable-to-load.png)
 
-### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close or open tabs?
+### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close, open, or move tabs?
 
-No. Right now, anyone whom the Edge Workspace is shared with can open or close any tab. If someone closes a tab you want to keep, you can always reopen it as a new tab.
+Yes. You can use Locked Tabs. This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab.
 
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
 
@@ -148,11 +148,11 @@ Workspace data is stored in your personal OneDrive for business and carries the 
 
 ### Can you share an Edge Workspace with people outside of your organization?
 
-No, Edge Workspaces can only be shared within the same Azure AD tenant.
+No, Edge Workspaces can only be shared within the same Microsoft Entra tenant.
 
 ### Are there limitations to where and how I can use Edge Workspaces?
 
-Edge Workspaces created within an Azure AD tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Azure AD account.
+Edge Workspaces created within an Microsoft Entra tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Microsoft Entra account.
 
 ## See also
 

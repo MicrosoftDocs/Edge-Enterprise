@@ -3,7 +3,7 @@ title: "Self-host Microsoft Edge extensions"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/29/2021
+ms.date: 07/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,27 +16,30 @@ description: "Learn how to package and self-host Microsoft Edge extensions in th
 
 This article provides basic guidance for packaging an extension to host on your own webstore. It also includes instructions on how to deploy extensions to devices and users in your organization.
 
+> [!NOTE]
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
+
 ## Prerequisites
 
-To self-host your own extensions, you will need to provide your own web hosting services for the extensions and their manifest files.
+To self-host your own extensions, you need to provide your own web hosting services for the extensions and their manifest files.
 
- The following steps assume that you’ve already created your extension, have some experience with XML files, have a working knowledge of configuring group policy, and know how to use the Windows registry.
+The following steps assume that you've already created your extension, have some experience with XML files, have a working knowledge of configuring group policy, and know how to use the Windows registry.
 
 ## Publish an extension
 
-Before you publish an extension it needs to be packed into a CRX (Chrome extension) file. Use the following steps as a guide to packing an extension as a CRX file.
+Before you publish an extension, it needs to be packed into a CRX (Chrome extension) file. Use the following steps as a guide to packing an extension as a CRX file.
 
-1. In the Microsoft Edge address bar, go to *edge://extensions* and turn on **Developer mode** if it’s not already enabled.
+1. In the Microsoft Edge address bar, go to `edge://extensions` and turn on **Developer mode** if it's not already enabled.
 2. Under **Installed extensions**, click **Pack Extension** to create the CRX file.
-3. Use the **Pack extension** dialog to find the directory that has the source for the extension. Select the directory and then click **Pack extension**.  This will create your CRX file, along with a PEM file. Save the PEM file because it’s needed for making version updates to the extension. The next screenshot shows the **Pack extension** dialog for locating the root directory of the extension.
+3. Use the **Pack extension** dialog to find the directory that has the source for the extension. Select the directory and then click **Pack extension**.  This creates your CRX file, along with a PEM file. Save the PEM file because it's needed for making version updates to the extension. The next screenshot shows the **Pack extension** dialog for locating the root directory of the extension.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-pack-dialog.png" alt-text="Pack extension dialog for finding an extension's source code.":::
 
    > [!IMPORTANT]
-   > Store the PEM file in a safe location because it’s the key for the extension and it’s needed for future updates.
+   > Store the PEM file in a safe location because it's the key for the extension and it's needed for future updates.
 
 4. Drag the CRX file into your extensions window and make sure that it loads.
-5. Test the extension and take note of the ID field (this is the CRX ID) and version number. You’ll need this information later. The next screenshot shows a test extension with its CRX ID.
+5. Test the extension and take note of the ID field (this is the CRX ID) and version number. You'll need this information later. The next screenshot shows a test extension with its CRX ID.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-webstore/manage-extensions-test-extension.png" alt-text="Extension example showing CRX ID":::
 
@@ -60,10 +63,10 @@ Before you publish an extension it needs to be packed into a CRX (Chrome extensi
 
    For more information, see [Auto-update extensions in Microsoft Edge - Microsoft Edge Development](/microsoft-edge/extensions-chromium/enterprise/auto-update).
 
-8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL will be needed when you install the extension using a group policy. See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
+8. Upload the completed XML file to a location where it can be downloaded from, noting the URL. This URL is needed when you install the extension using a group policy. See [Distribute a privately hosted extension](#distribute-a-privately-hosted-extension).
 
    > [!IMPORTANT]
-   > The hosting location for the extension doesn’t need authentication. It needs to be accessible by user devices wherever they might be used.
+   > The hosting location for the extension doesn't need authentication. It needs to be accessible by user devices wherever they might be used.
 
 ## Publish updates to an extension
 
@@ -71,13 +74,13 @@ After you change and test the updated extension you can publish it. Use the foll
 
 1. Change the version number in your extension's manifest.JSON file to a higher number using the following syntax: `"version":"versionString"`. If the "version":"1.0", then you can update to "version":"1.1" or any number higher than "1.0".
 2. Update the "version" of `<updatecheck>` in the XML file to match the number that you put in the manifest file in the previous step. For example:<br>`<updatecheck codebase='https://app.somecompany.com/extensionfolder/helloworld.crx' version='1.1' />`
-3. Create a CRX file that includes the new changes. Go to *edge://extensions* and enable **Developer mode**.
+3. Create a CRX file that includes the new changes. Go to `edge://extensions` and enable **Developer mode**.
 4. Click **Pack extension** and go to the directory for the extension source.
 
    > [!IMPORTANT]
-   > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file the app ID of the extension will change and the update will be treated as a new extension.
+   > Use the same PEM file that was generated and saved the first time the CRX file was created. If you don't use the same PEM file, the app ID of the extension changes and the update will be treated as a new extension.
 
-5. Drag and drop the CRX file into the extensions window and verify that it loads. The extension will be disabled after this operation. To enable it add the CRX ID of the extension to the ExtensionInstallAllowList policy. 
+5. Drag and drop the CRX file into the extensions window and verify that it loads. The extension is disabled after this operation. To enable it add the CRX ID of the extension to the [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy.
 6. Test the updated extension.
 7. Replace the old CRX file and XML file with the new files for the updated extension.
 
@@ -85,11 +88,11 @@ The extension's changes will be picked up during the next policy sync cycle. For
 
 ## Distribute a privately hosted extension
 
-You can share the link of the location where the CRX file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the edge://extensions page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy and add the URL of the location where the CRX file is hosted to the [ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources) policy.
+You can share the link of the location where the CRX file is hosted, and as soon as users enter the URL in their browser the extension will be downloaded and installed. Users can enable the extension from the `edge://extensions` page. To allow users to install self-hosted extensions, you need to add the extension CRX IDs to the [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy and add the URL of the location where the CRX file is hosted to the [ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources) policy.
 
-Alternatively, you can use group policy [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) to Force-install an extension on your users’ devices.
+Alternatively, you can use group policy [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) to Force-install an extension on your users' devices.
 
-You can apply these policies to your selected users, devices, or both. Remember though that policy updates are not instantaneous, and it will take time for the policy settings to take effect.
+You can apply these policies to your selected users, devices, or both. Remember though, that policy updates aren't instantaneous, and it takes time for the policy settings to take effect.
 
 ## See also
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/17/2023
+ms.date: 07/27/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -28,11 +28,17 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policy that's in this article update.
+The following table lists the new and deprecated policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)| Pin browser essentials toolbar button|
+|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
+|[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
+|[ShowHistoryThumbnails](#showhistorythumbnails)|Show thumbnail images for browsing history|
+|[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from phone in Microsoft Edge desktop|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -231,6 +237,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
 |[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
 |[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
@@ -449,6 +456,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
+|[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Enable Domain Actions Download from Microsoft (obsolete)|
@@ -619,6 +627,7 @@ These tables list all of the browser-related group policies available in this re
 |[SharedLinksEnabled](#sharedlinksenabled)|Show links shared from Microsoft 365 apps in History|
 |[ShowAcrobatSubscriptionButton](#showacrobatsubscriptionbutton)|Shows button on native PDF viewer in Microsoft Edge that allows users to sign up for Adobe Acrobat subscription|
 |[ShowDownloadsToolbarButton](#showdownloadstoolbarbutton)|Show Downloads button on the toolbar|
+|[ShowHistoryThumbnails](#showhistorythumbnails)|Show thumbnail images for browsing history|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Show Microsoft Rewards experiences|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Show Microsoft Office shortcut in favorites bar (deprecated)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Allow feature recommendations and browser assistance notifications from Microsoft Edge|
@@ -653,6 +662,7 @@ These tables list all of the browser-related group policies available in this re
 |[URLBlocklist](#urlblocklist)|Block access to a list of URLs|
 |[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
+|[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from phone in Microsoft Edge desktop|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
 |[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 |[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
@@ -678,8 +688,8 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup|
+|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|Enable Window Occlusion|
 
@@ -6589,7 +6599,7 @@ Note: This policy doesn't apply to InPrivate mode. Read about hosting extensions
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8819,6 +8829,74 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
   [Back to top](#microsoft-edge---policies)
 
   ## Password manager and protection policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PasswordDeleteOnBrowserCloseEnabled
+
+  #### Save passwords when Microsoft Edge closes
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when.
+
+The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or.
+
+The policy ClearBrowsingDataOnExit is enabled or.
+
+If you enable this policy, passwords won't be cleared when the browser closes.
+
+If you disable or don't configure this policy, the user's personal configuration is used.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PasswordDeleteOnBrowserCloseEnabled
+  - GP name: Save passwords when Microsoft Edge closes
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: PasswordDeleteOnBrowserCloseEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PasswordDeleteOnBrowserCloseEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -14374,7 +14452,7 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -14442,7 +14520,7 @@ If you enable this policy, don't enable the [ClearBrowsingDataOnExit](#clearbrow
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -18428,7 +18506,7 @@ If you don't configure this policy, users can choose whether to send these reque
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -21527,6 +21605,70 @@ If you disable this policy, users can't use wallet checkout while shopping on Mi
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeWalletEtreeEnabled
+
+  #### Edge Wallet E-Tree Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 117 or later
+
+  #### Description
+
+  The Edge Wallet E-Tree feature in Microsoft Edge allows users to plant a E-Tree for their own.
+
+If you enable or don't configure this policy, users can use the Edge Wallet E-Tree feature.
+
+If you disable this policy, users can't use the Edge Wallet E-Tree feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeWalletEtreeEnabled
+  - GP name: Edge Wallet E-Tree Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeWalletEtreeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeWalletEtreeEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EditFavoritesEnabled
 
   #### Allows users to edit favorites
@@ -23830,7 +23972,7 @@ For this policy to work as intended,
 
   If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", "edgeWallet", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the enabled data types.
 
@@ -33106,6 +33248,69 @@ If you disable or don't configure the policy, the Downloads button isn't shown o
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ShowHistoryThumbnails
+
+  #### Show thumbnail images for browsing history
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 116 or later
+
+  #### Description
+
+  This policy lets you configure whether the history thumbnail feature collects and saves images for the sites you visit.  When enabled, this feature makes it easier to identify sites when you hover over your history results.
+If you enable this policy, the thumbnail feature is turned on after a user visits the history hub twice in the same week.
+If you disable or don't configure this policy, the history thumbnail doesn't collect and save images for visited sites. This is the default behavior for managed devices.
+When the feature is disabled, existing images are deleted on a per user basis, and the feature no longer collects or saves images when a site is visited.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShowHistoryThumbnails
+  - GP name: Show thumbnail images for browsing history
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShowHistoryThumbnails
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ShowHistoryThumbnails
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ShowMicrosoftRewards
 
   #### Show Microsoft Rewards experiences
@@ -34097,7 +34302,7 @@ If you don't set this policy or apply it as recommended, users will be able to t
 
   If you enable this policy all the specified data types will be excluded from synchronization. This policy can be used to limit the type of data uploaded to the Microsoft Edge synchronization service.
 
-You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
+You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", "edgeWallet", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
 Users will not be able to override the disabled data types.
 
@@ -34777,7 +34982,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -35363,6 +35568,72 @@ Use the preceding information when configuring this policy.
   - Example value:
 ``` xml
 <string>automatic-silent-only</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UploadFromPhoneEnabled
+
+  #### Enable upload files from phone in Microsoft Edge desktop
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 117 or later
+
+  #### Description
+
+  This policy lets you configure the "Upload from phone" feature in Microsoft Edge.
+
+Upload from phone lets users select file from mobile devices to desktop when user upload file in a webpage in Microsoft Edge.
+
+If you enable or don't configure this policy, you can use the Upload from phone feature in Microsoft Edge.
+
+If you disable this policy, you can't use the Upload from phone feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UploadFromPhoneEnabled
+  - GP name: Enable upload files from phone in Microsoft Edge desktop
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UploadFromPhoneEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: UploadFromPhoneEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -37146,9 +37417,9 @@ If you disable this policy, Web select will not be available in Web Capture and 
 
   ### WebWidgetAllowed
 
-  #### Enable the Search bar
+  #### Enable the Search bar (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -37172,6 +37443,8 @@ The search bar will be disabled for all profiles.
 The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
 The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
 
+This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
+
   #### Supported features:
 
   - Can be mandatory: Yes
@@ -37189,7 +37462,7 @@ The option to launch the search bar from Microsoft Edge jump list menu will be d
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetAllowed
-  - GP name: Enable the Search bar
+  - GP name: Enable the Search bar (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -37213,9 +37486,9 @@ The option to launch the search bar from Microsoft Edge jump list menu will be d
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Allow the Search bar at Windows startup
+  #### Allow the Search bar at Windows startup (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -37225,17 +37498,19 @@ The option to launch the search bar from Microsoft Edge jump list menu will be d
 
   Allows the Search bar to start running at Windows startup.
 
-If you enable:
-  The Search bar will start running at Windows startup by default.
-  If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
+       If you enable:
+         The Search bar will start running at Windows startup by default.
+         If the Search bar is disabled via [WebWidgetAllowed](#webwidgetallowed) policy, this policy will not start the Search bar on Windows startup.
 
-If you disable this policy:
-  The Search bar will not start at Windows startup for all profiles.
-  The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
+       If you disable this policy:
+         The Search bar will not start at Windows startup for all profiles.
+         The option to start the Edge bar at Windows startup will be disabled and toggled off in Microsoft Edge settings.
 
-If you don't configure the policy:
-  The Search bar will not start at Windows startup for all profiles.
-  The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
+       If you don't configure the policy:
+         The Search bar will not start at Windows startup for all profiles.
+         The option to start the Edge bar at Windows startup will be toggled off in Microsoft Edge settings.
+
+This policy is deprecated due to the deprecation of the Web widget's vertical layout. This policy will be made obsolete in 119 release.
 
   #### Supported features:
 
@@ -37254,7 +37529,7 @@ If you don't configure the policy:
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebWidgetIsEnabledOnStartup
-  - GP name: Allow the Search bar at Windows startup
+  - GP name: Allow the Search bar at Windows startup (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx

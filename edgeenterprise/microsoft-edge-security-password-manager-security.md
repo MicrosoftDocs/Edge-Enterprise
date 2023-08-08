@@ -3,7 +3,7 @@ title: "Microsoft Edge password manager security"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/17/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -67,7 +67,7 @@ However, using a password manager that's keyed to the user's operating system lo
 The decision of whether to use a password manager comes down to assessing the many benefits we've described against the possibility of the entire device getting compromised. For most threat models, using the Microsoft Edge password manager is the recommended option.
 
 > [!Note]
->If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Azure Active Directory, or a third party. Other solutions include 2FA (such as [MS Authenticator](/azure/active-directory/user-help/user-help-auth-app-download-install)) or [WebAuthN](https://webauthn.guide/).
+>If an enterprise is concerned about theft of a specific password or a site getting compromised because of a stolen password, additional precautions should be taken. Some effective solutions that help mitigate this kind of incident is Single Sign On (SSO) via Active Directory, Microsoft Entra ID, or a third party. Other solutions include 2FA (such as [MS Authenticator](/azure/active-directory/user-help/user-help-auth-app-download-install)) or [WebAuthN](https://webauthn.guide/).
 
 ## Should a password manager be enabled by an organization?
 

@@ -2,6 +2,56 @@
 
 
 
+## Week of July 31, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/31/2023 | [Configure Microsoft Edge enterprise sync](/DeployEdge/microsoft-edge-enterprise-sync) | modified |
+| 7/31/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+| 7/31/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 7/31/2023 | [On-premises sync for Active Directory (AD) users](/DeployEdge/microsoft-edge-on-premises-sync) | modified |
+| 7/31/2023 | [Microsoft Edge identity support and configuration](/DeployEdge/microsoft-edge-security-identity) | modified |
+| 8/1/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 8/1/2023 | [Microsoft Edge support for Windows Information Protection](/DeployEdge/microsoft-edge-security-windows-information-protection) | modified |
+| 8/1/2023 | [Diagnose and fix Microsoft Edge sync issues](/DeployEdge/microsoft-edge-troubleshoot-enterprise-sync) | modified |
+| 8/1/2023 | [Microsoft Edge Workspaces](/DeployEdge/microsoft-edge-workspaces) | modified |
+| 8/2/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+
+
+## Week of July 24, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/24/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 7/25/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 7/25/2023 | [Policies not applied to Enterprise personal browser profile](/DeployEdge/microsoft-edge-personal-browser-excluded-policies) | added |
+| 7/25/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 7/25/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+| 7/26/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+| 7/26/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 7/26/2023 | [Policy filters for the Enterprise personal browser](/DeployEdge/edge-learnmore-personal-browser-policies) | renamed |
+| 7/26/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+| 7/27/2023 | [Policy filters for the Enterprise personal browser](/DeployEdge/edge-learnmore-personal-browser-policies) | modified |
+
+
+## Week of July 17, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/20/2023 | [Configure Microsoft Edge for Windows with policy settings](/DeployEdge/configure-microsoft-edge) | modified |
+| 7/20/2023 | [Use group policies to manage Microsoft Edge extensions](/DeployEdge/microsoft-edge-manage-extensions-policies) | modified |
+| 7/20/2023 | [Detailed guide to the ExtensionSettings policy](/DeployEdge/microsoft-edge-manage-extensions-ref-guide) | modified |
+| 7/20/2023 | [Self-host Microsoft Edge extensions](/DeployEdge/microsoft-edge-manage-extensions-webstore) | modified |
+| 7/20/2023 | [Manage Microsoft Edge extensions in the enterprise](/DeployEdge/microsoft-edge-manage-extensions) | modified |
+| 7/20/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 7/20/2023 | [Manage the sidebar in Microsoft Edge](/DeployEdge/microsoft-edge-sidebar) | modified |
+| 7/21/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 7/21/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
 ## Week of July 10, 2023
 
 
@@ -47,43 +97,3 @@
 |------|------------|--------|
 | 7/7/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
 | 7/7/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-
-
-## Week of June 26, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/26/2023 | [Video: Microsoft Edge for Business](/DeployEdge/microsoft-edge-video-msedge-for-business) | added |
-| 6/26/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 6/27/2023 | [Microsoft Edge security for your business](/DeployEdge/ms-edge-security-for-business) | modified |
-| 6/27/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 6/29/2023 | [Microsoft Edge enterprise sync FAQ](/DeployEdge/microsoft-edge-enterprise-sync-faq) | modified |
-| 6/30/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-
-
-## Week of June 19, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/19/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 6/20/2023 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
-| 6/20/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 6/21/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
-| 6/21/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 6/23/2023 | [Configure Microsoft Edge kiosk mode](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modified |
-| 6/23/2023 | [Archived - release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-mobile-stable-channel) | modified |
-| 6/23/2023 | [Changes to Microsoft Edge browser TLS server certificate verification](/DeployEdge/microsoft-edge-security-cert-verification) | modified |
-
-
-## Week of June 12, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/13/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 6/13/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 6/14/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 6/16/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 6/16/2023 | [Allow list for Microsoft Edge endpoints](/DeployEdge/microsoft-edge-security-endpoints) | modified |

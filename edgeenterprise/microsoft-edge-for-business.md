@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/07/2023
+ms.date: 08/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 description: "Information about Microsoft Edge for Business Preview"
 ---
 
-# Microsoft Edge for Business (Private Preview)
+# Microsoft Edge for Business (Public Preview)
 
 This article describes the benefits Microsoft Edge for Business brings to your users and how to enable this experience for your organization.
 
 > [!NOTE]
-> Microsoft Edge for Business is available in private preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
+> Microsoft Edge for Business is available in public preview. Preview features and experiences are in development and are available so you can get early access and send us feedback. Note that for this preview:
 > - The Microsoft Edge for Business visual treatment and branding is not currently available on mobile as part of the preview.
 > - IT admin management capabilities will be available soon.
 
@@ -27,23 +27,28 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Azure Active Directory (Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by an Microsoft Entra ID login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 
-Microsoft Edge for Business is available in private preview on managed PCs, and unmanaged BYOPC.
+Microsoft Edge for Business is available in public preview on managed PCs, and unmanaged BYOPC.
 
-Microsoft Edge for Business encompasses the experiences summarized in the following table. You can enable and try the preview by following the instructions in [Enable Microsoft Edge for Business preview](#enable-microsoft-edge-for-business-preview).
+Microsoft Edge for Business encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Azure AD with refreshed visual treatment. | Private preview |
-| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Private Preview  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in private preview    |
+| Visually distinct work browser  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID with refreshed visual treatment. | Public preview |
+| Enterprise personal browser | A lightly managed personal browser (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Public Preview  |
+|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Limited functionality in public preview    |
+|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
-|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Private Preview<br>(See following onboarding instructions) |
 
 ## Work Browser (Visual Refresh)
 
-When Microsoft Edge for Business is available, the existing Azure AD profile on Enterprise PCs will automatically apply the new refreshed visual treatment. The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business logo in the taskbar and other shortcuts:
+When Microsoft Edge for Business is available, the existing Microsoft Entra profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
+
+> [!NOTE]
+> All existing Microsoft Entra profile settings stay the same, including favorites, history, and saved passwords.
+
+The existing Microsoft Edge icon is replaced by the Microsoft Edge for Business icon in the taskbar and other shortcuts:
 
 ![Microsoft Edge for Business logo](media/microsoft-edge-for-business/edge-center-logo.png)
 
@@ -54,7 +59,7 @@ Inside the browser you see the new profile pill label, profile flyout visual tre
 ## Automatic switching with the Enterprise personal browser
 
 > [!NOTE]
-> Applies when device has at least one Azure AD profile and one MSA profile (existing or new).
+> Applies when device has at least one Microsoft Entra profile and one MSA profile (existing or new).
 
 The Enterprise personal browser is designed to keep work and personal browsing separate for the end users via the new Automatic Switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
 
@@ -62,9 +67,9 @@ Another thing to note, when Microsoft Edge for Business is available, the person
 
 - Security Policies (e.g., Application Guard, Enhanced Security Mode, and others)
 - Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
-- Microsoft Edge Update Policies (e.g., Enforcing Edge Update Rules)
+- Microsoft Edge Update Policies (e.g., Enforcing Microsoft Edge Update Rules)
 
-We'll share the full list of policies that apply to the personal browser profile, stay tuned for that update.
+For more information about the Enterprise personal browser and the policies that only apply to the work browser profile, see [policies](/DeployEdge/edge-learnmore-personal-browser-policies).
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
@@ -76,27 +81,13 @@ Another Microsoft Edge for Business feature that will be coming soon is support 
 
 As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
 
-## Enable Microsoft Edge for Business preview
+## Use the Microsoft Edge for Business preview
 
-Microsoft Edge for Business is available in private preview on managed devices on Microsoft Edge version 115 or later.
+Microsoft Edge for Business is available in public preview on managed devices on Microsoft Edge version 116 or later.
 
-Microsoft Edge for Business is enabled by logging into the browser using your Azure Active Directory (Azure AD) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
+Microsoft Edge for Business is enabled by logging into the browser using your Microsoft Entra account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
 
-To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
-
-- `edge://flags/#edge-project-kodiak`
-- `edge://flags/#edge-project-kodiak-look-and-feel`
-- `edge://flags/#edge-project-kodiak-policy-filter`
-- `edge://flags/#edge-automatic-profile-switching`
-- `edge://flags/#edge-automatic-guided-switch`
-
-The private preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
-
-### How to enable using experimental policy
-
-1. Download the [Microsoft Edge for Business EXPERIMENTAL Policy File](https://download.microsoft.com/download/7/2/b/72b5fe45-5cd0-4ae1-9367-fc96ff293385/Microsoft-Edge-for-Business-EXPERIMENTAL-Policy-File-Expires-Version-116.zip). This file will be deprecated with Microsoft Edge version 116.
-2. Install the policies using one of these methods: [Add the administrative template to an individual computer](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-an-individual-computer) or [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
-3. Restart Microsoft Edge: `edge://restart`.
+The public preview includes some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between work and personal browser windows for a growing number of websites.
 
 ## Unmanaged BYOPC preview
 
@@ -108,7 +99,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
 - Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure Active Directory (Azure AD).
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID.
 
 Participation requirements:
 
@@ -118,7 +109,7 @@ Participation requirements:
 - Engage with the Microsoft product group during the preview.
 
 > [!IMPORTANT]
-> Production use of the private preview is not supported. Migration of private preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
+> Production use of the public preview is not supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
 
 ## Provide feedback
 
@@ -144,22 +135,28 @@ No, currently it doesn't. You have to make switching preferences on each channel
 
 ### What sites does the browser window switch on?
 
-The private preview provides switching for the following sites:
+The browser will automatically switch on sites that require Microsoft Entra ID or MSA identities to match the right profile for the best SSO experience.
 
-- Amazon
-- BestBuy
-- Target
-- Walmart
+> [!NOTE]
+> If there's a password saved in the profile for certain URLs, switching doesn't happen.
 
-Over time, work-related sites such as Microsoft 365 apps and services requiring work login will automatically open in the work browser window. You'll see a growing set of popular sites that automatically open in the personal browser window as the experience continues to expand.
+We're rolling out a small list of global shopping sites that don't require Microsoft Entra ID or MSA identities. We'll keep expanding this list as we get more information about these sites.
 
 ### How can users control which browser window a website opens in?
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
+### Will Microsoft Edge for Business add new icons to my taskbar?
+
+No - The existing Microsoft Edge icon will be replaced by the Microsoft Edge for Business icon in the taskbar and other shortcuts. No new icons will be added to the taskbar.
+
 ### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
 
 No – browser favorites, history, and passwords aren't shared between the browser windows.
+
+### What policies aren't applied in the personal browser profile?
+
+This [document](/DeployEdge/edge-learnmore-personal-browser-policies) lists the policies that only apply to the Microsoft Edge work browser profile.
 
 ## See also
 

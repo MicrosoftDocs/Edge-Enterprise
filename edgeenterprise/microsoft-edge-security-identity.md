@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -17,16 +17,16 @@ description: "Microsoft Edge identity support and configuration"
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
-This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD), and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Azure Active Directory (Azure AD) accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
+This article describes how Microsoft Edge uses identity to support features such as sync and single sign-on (SSO). Microsoft Edge supports signing in with Active Directory Domain Services (AD DS), Microsoft Entra ID, and Microsoft accounts (MSA). Currently, Microsoft Edge only supports Microsoft Entra accounts belonging to the global cloud or the GCC sovereign cloud. We're working on adding support for other sovereign clouds.
 
 > [!NOTE]
 > This applies  to Microsoft Edge version 77 or later.
 
 ## Browser sign-in and authenticated features
 
-Microsoft Edge supports signing into a browser profile with an Azure AD, MSA, or a domain account. The type of account used for sign-in determines which authenticated features are available for the user in Microsoft Edge. The following table summarizes the feature support for each type of account.
+Microsoft Edge supports signing into a browser profile with an Microsoft Entra ID, MSA, or a domain account. The type of account used for sign-in determines which authenticated features are available for the user in Microsoft Edge. The following table summarizes the feature support for each type of account.
 
-| Feature   | Azure AD Premium | Azure AD Free | On-premises AD DS | MSA     |
+| Feature   | Microsoft Entra ID | Microsoft Entra ID Free | On-premises AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
 | Sync | Yes | No | No | Yes |
 | SSO with Primary Refresh Token | Yes | Yes | No | Yes |
@@ -42,10 +42,10 @@ Microsoft Edge supports signing into a browser profile with an Azure AD, MSA, or
 Microsoft Edge uses the OS default account to auto sign into the browser. Depending on how a device is configured, users can get auto signed into Microsoft Edge using one of the following approaches.
 
 - **The device is hybrid/AAD-J:** Available on Win10, down-level Windows, and corresponding server versions.
-The user gets automatically signed in with their Azure AD account.
+The user gets automatically signed in with their Microsoft Entra account.
 - **The device is domain joined:** Available on Win10, down-level Windows, and corresponding server versions.
-By default, the user won't get automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Azure AD accounts, consider hybrid joining your devices.
-- **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge will sign in automatically with the MSA account.
+By default, the user isn't automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra accounts, consider hybrid joining your devices.
+- **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge signs in automatically with the MSA account.
 
 ### Manual sign-in
 
@@ -65,15 +65,15 @@ On some platforms, you can configure Microsoft Edge to automatically sign into w
 
 ### SSO with Primary Refresh Token (PRT)
 
-Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
-A Primary Refresh Token (PRT) is an Azure AD key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
+A Primary Refresh Token (PRT) is an Microsoft Entra ID key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### Seamless SSO
 
-Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they'll get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
-Seamless Single Sign-On automatically signs users in when they're on corporate devices connected to a corporate network. When enabled, users don't need to type in their passwords to sign in to Azure AD. Typically they don't even have to type in their usernames. For more information, see [Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
+Seamless Single Sign-On automatically signs users in when they're on corporate devices connected to a corporate network. When enabled, users don't need to type in their passwords to sign in to Microsoft Entra ID. Typically they don't even have to type in their usernames. For more information, see [Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
 ### Windows Integrated Authentication (WIA)
 
@@ -108,4 +108,4 @@ If a user saves passwords in Microsoft Edge, they can enable a feature that auto
 - [Video: Microsoft Edge and Identity](microsoft-edge-video-identity.md)
 - [Identity and access management](https://www.microsoft.com/security/technology/identity-access-management)
 - [Identity platform](https://developer.microsoft.com/identity)
-- [Four steps to a strong identity foundation with Azure Active Directory](/azure/active-directory/hybrid/four-steps)
+- [Four steps to a strong identity foundation with Microsoft Entra ID](/azure/active-directory/hybrid/four-steps)

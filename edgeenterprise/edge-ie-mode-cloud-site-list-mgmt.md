@@ -3,7 +3,7 @@ title: Cloud Site List Management for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 07/11/2023
+ms.date: 07/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -36,7 +36,7 @@ This experience lets you store your organization's site list in a compliant clou
 
 The following prerequisites apply to this feature.
 
-1. Customers must have an Azure AD tenant.
+1. Customers must have an Microsoft Entra tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
 3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
 
@@ -296,7 +296,7 @@ Yes, there's a set of Microsoft Graph APIs for Cloud site list management that a
 
 ### When I select "Microsoft Edge site lists" and try to create a new list, I get this error - "Request failed with status code 500". Why is that?
 
-Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that's shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Azure Active Directory. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can't create a new list, or if you need urgent assistance, contact Microsoft Support.
+Microsoft Edge Site Lists stores its data and configuration in a service infrastructure that's shared with enterprise cloud services such as Exchange Online, SharePoint Online, Teams, and Microsoft Entra ID. In rare cases, when Microsoft Edge site lists is the first feature to use this infrastructure, provisioning might take some time. In these cases, the initial request from the Microsoft 365 Admin Center will fail. When the request fails, an alert is sent to the provisioning system to address the problem. Typically provisioning completes in three days. Therefore, if you get this error, try again in a few days and create a new list. If you still can't create a new list, or if you need urgent assistance, contact Microsoft Support.
 
 ### Can users who haven't signed in to Microsoft Edge download the site list?
 
@@ -308,7 +308,7 @@ The site list is refreshed in Microsoft Edge every two hours. You can change thi
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Azure Active Directory (Azure AD) account. Microsoft Edge won't try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user isn't signed in to Microsoft Edge):
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Microsoft Entra account. Microsoft Edge won't try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user isn't signed in to Microsoft Edge):
 
 - 60 seconds after you restart the browser.
 - Every two hours when Microsoft Edge is running. The 120-minute refresh interval can be changed by using the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy. The minimum refresh interval is 30 minutes.
@@ -316,7 +316,6 @@ Access to the site list requires explicit browser sign in for the first download
 ### Where is the cloud site list hosted?
 
 The data is stored in Substrate Data Store which ensures that the data is stored in a compliant location and confers to local data handling rules. Substrate decides what region the data is stored based on the geo location you have chosen for your tenant.
-
 
 ## Support and Feedback
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge extensions FAQ"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 06/29/2021
+ms.date: 07/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,6 +18,9 @@ This article provides an FAQ for Microsoft Edge extensions.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+> [!NOTE]
+> The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
 
 ## What is the update URL for the Microsoft Edge Add-ons store?
 
