@@ -122,7 +122,7 @@ For feedback about enterprise personal browser policy or any of the other Micros
 
 There are two ways to change which browser window is used to open a website:  
 
-- Click the switching icon, pictured below, to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
+- Select the switching icon, pictured below, to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
   ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
 
