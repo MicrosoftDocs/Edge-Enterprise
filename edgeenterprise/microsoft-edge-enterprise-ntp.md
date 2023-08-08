@@ -23,7 +23,7 @@ The Enterprise new tab page is a direct response to a new challenge that workers
 
 As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Work feed** tab.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Microsoft 365":::
+![Image of the work feed page.](media/microsoft-edge-enterprise-ntp/workfeed2.png)
 
 The dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we'll highlight some of the top features that can help keep your employees productive.
 
