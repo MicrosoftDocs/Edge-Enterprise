@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/07/2023
+ms.date: 08/08/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -35,8 +35,8 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Name | Description | Status |
 |:-----|:-----|:------|
 | Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID (*Azure AD*) with refreshed visual treatment. | Available |
-| Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise.  | Available  |
-|  Automatic switching  |  Automatically separates work and personal browsing into dedicated browser windows with their own separate caches and storage locations, so information stays separate.  | Available with limited functionality    |
+| Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches work-related navigations automatically into the work browser. | Available  |
+|  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 
@@ -118,11 +118,11 @@ For feedback about enterprise personal browser policy or any of the other Micros
 
 ## Frequently Asked Questions
 
-### How can I correct a wrong browser window decision made by the browser?
+### How do I adjust which browser window a site is opened in?
 
 There are two ways to change which browser window is used to open a website:  
 
-- Use the following Omnibar switch icon to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
+- Click the switching icon, pictured below, to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
   ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
 
@@ -130,33 +130,45 @@ There are two ways to change which browser window is used to open a website: 
 
 ### Does the browser window switching preference sync across other Microsoft Edge channels?
 
-No, currently it doesn't. You have to make switching preferences on each channel separately.  
+No, currently it doesn't. You have to make switching preferences on each channel separately.
 
-### What sites does the browser window switch on?
+### How do I switch between the Microsoft Edge for Business browser window and the Microsoft Edge browser window?  
 
-The browser will automatically switch on sites that require Microsoft Entra ID (*Azure AD*) or MSA identities to match the right profile for the best SSO experience.
+With the Edge stable version 116 release, URLs entered into the personal browser window that are for work-related sites, such as Microsoft 365 apps and services, and sites requiring work login, will automatically open in the work browser window.
 
-> [!NOTE]
-> If there's a password saved in the profile for certain URLs, switching doesn't happen.
+### Do I need to enable automatic switching?
 
-We're rolling out a small list of global shopping sites that don't require Microsoft Entra ID (*Azure AD*) or MSA identities. We'll keep expanding this list as we get more information about these sites.
+With this release, switching from the personal browser window to the work browser window will be on by default with the option for the user to turn it off. Switching from the work browser window to the personal browser window will be off by default, with the option to it turn on by the user. This switching will be enabled by default in a future release. To turn automatic switching on/off, go to [Edge settings](edge://settings/profiles/) and toggle **Automatic profile switching** on/off.
 
 ### How can users control which browser window a website opens in?
 
 The option to manage how sites open appears in the browsing window that opens following the selection to open the URL in a different browser window. Additionally, users can manage and customize their Microsoft Edge for Business and personal URL lists by navigating to **Choose how external links open** in Microsoft Edge settings.
 
-### Will Microsoft Edge for Business add new icons or change existing icons on my taskbar?
+### Will users see both the Edge and Edge for Business icons on the taskbar?
 
-Yes - The existing Microsoft Edge icon will be replaced by the Microsoft Edge for Business icon in the taskbar for Microsoft Entra ID (*Azure AD*) users. No new icons will be added to the taskbar.
+Users that are only signed in with Entra ID will see the Edge for Business icon and not the Edge icon.
 
-### Will favorites, history, and passwords be shared between the Microsoft Edge for Business and personal browser windows?
+### What happens to favorites, passwords, and other data?  
 
-No – browser favorites, history, and passwords aren't shared between the browser windows.
+Passwords, favorites, and data currently associated with the user's work profile will be maintained in Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window.
 
-### What policies aren't applied in the personal browser profile?
+### Are the work and personal browser window connected?
 
-This [document](/DeployEdge/edge-learnmore-personal-browser-policies) lists the policies that only apply to the Microsoft Edge work browser profile.
+The work browser window (Microsoft Edge for Business) and personal browser window (Microsoft Edge) have their own separate caches and storage locations, so information stays separate. This feature doesn't create any link between the user's Microsoft Entra ID account and their MSA account, and the organization settings related to linking work and personal accounts are unaffected. There are no functional changes to the Entra ID profile.
+
+### What policies will be enabled in the personal browser window?
+
+The Microsoft Edge personal browser window is lightly managed, with all the security, compliance, and Edge update policies applied, without the additional overhead of managing another browser. To learn more, [visit this site](/DeployEdge/edge-learnmore-personal-browser-policies).
+
+### How does my organization turn off the personal browser window?
+
+To turn off the personal browser window, use the settings described in [Restrict which accounts can be used to sign in to Microsoft Edge](/DeployEdge/microsoft-edge-policies#restrict-which-accounts-can-be-used-to-sign-in-to-microsoft-edge) the steps listed in this document.
+
+### Does Edge for Business support unmanaged devices?
+
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. [Use these steps](/deployedge/microsoft-edge-for-business#unmanaged-byopc-preview) to access this preview.  
 
 ## See also
 
+- [Additional detailed Microsoft Edge for Business FAQs available in our Tech Community](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
