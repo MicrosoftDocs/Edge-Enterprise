@@ -166,7 +166,7 @@ To turn off the personal browser window, use the settings described in [Restrict
 
 ### Does Edge for Business support unmanaged devices?
 
-Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. [Use these steps](/deployedge/microsoft-edge-for-business#unmanaged-byopc-preview) to access this preview.  
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [Unmanaged BYOPC preview](/deployedge/microsoft-edge-for-business#unmanaged-byopc-preview) to access this preview.  
 
 ## See also
 
