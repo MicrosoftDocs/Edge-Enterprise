@@ -206,7 +206,7 @@
      href: microsoft-edge-security-password-manager-security.md
    - name: Protect against potentially unwanted applications
      href: microsoft-edge-potentially-unwanted-apps.md
-   - name: Support for Microsoft Entra Conditional Access
+   - name: Microsoft Edge and Conditional Access
      href: ms-edge-security-conditional-access.md
    - name: Support for Application Guard
      href: microsoft-edge-security-windows-defender-application-guard.md
