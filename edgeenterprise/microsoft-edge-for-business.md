@@ -62,11 +62,11 @@ Inside the browser you see the new profile pill label, profile flyout visual tre
 
 Enterprise personal browsing is designed to keep work and personal browsing separate for the end users via the new automatic switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
 
-Microsoft Edge for Business is available now, and the personal browser profile is lightly managed, without requiring additional configuration. The personal browser profile will automatically inherit only the following policy categories:
+Microsoft Edge for Business is available now, and the personal browser profile is lightly managed, without requiring more configuration. The personal browser profile will automatically inherit only the following policy categories:
 
-- Security Policies (e.g., Application Guard, Enhanced Security Mode, and others)
-- Data Compliance Policies (e.g., Microsoft Purview DLP, Microsoft Insider Risk Management)
-- Microsoft Edge Update Policies (e.g., Enforcing Microsoft Edge Update Rules)
+- Security Policies (for example, Application Guard, Enhanced Security Mode, and others)
+- Data Compliance Policies (for example, Microsoft Purview DLP, Microsoft Insider Risk Management)
+- Microsoft Edge Update Policies (for example, Enforcing Microsoft Edge Update Rules)
 
 For more information about the Enterprise personal browser and the policies that only apply to the work browser profile, see [policies](/DeployEdge/edge-learnmore-personal-browser-policies).
 
@@ -158,7 +158,7 @@ The work browser window (Microsoft Edge for Business) and personal browser windo
 
 ### What policies will be enabled in the personal browser window?
 
-The Microsoft Edge personal browser window is lightly managed, with all the security, compliance, and Edge update policies applied, without the additional overhead of managing another browser. To learn more, [visit this site](/DeployEdge/edge-learnmore-personal-browser-policies).
+The Microsoft Edge personal browser window is lightly managed, with all the security, compliance, and Edge update policies applied, without the added overhead of managing another browser. To learn more, [visit this site](/DeployEdge/edge-learnmore-personal-browser-policies).
 
 ### How does my organization turn off the personal browser window?
 
