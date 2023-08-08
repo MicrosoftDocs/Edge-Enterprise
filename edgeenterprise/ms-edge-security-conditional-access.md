@@ -54,6 +54,8 @@ You can also work with profile settings by selecting the account picture in the 
 - Create a personal profile - Select **Set up a new personal profile**.
 - Create a new work profile - Select **Other profiles** and then select **Set up a new work profile**. The "Other profiles" option also lets you **Browse as guest** or **Browse in Kids Mode**.
 
+[Troubleshoot Conditional Access policies](/azure/active-directory/conditional-access/plan-conditional-access#troubleshoot-conditional-access-policies) provides more information about fixing a CA issue.
+
 ### Fixing access issues with unenrolled devices using Intune MAM
 
 Common issues, such as an expired enrollment, and their resolution are [here](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#common-issues).
