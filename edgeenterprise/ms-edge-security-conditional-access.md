@@ -72,6 +72,7 @@ Follow these steps for a temporary workaround:
 ## See also
 
 - [What is Conditional Access?](/azure/active-directory/conditional-access/overview)
+- [What is Microsoft Intune app management?](/mem/intune/apps/app-management)
 - [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows)
 - [Video: Security, compatibility, and manageability](/deployedge/microsoft-edge-video-security-compatibility-manageability)
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
