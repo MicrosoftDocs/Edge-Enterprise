@@ -71,5 +71,7 @@ Follow these steps for a temporary workaround:
 
 ## See also
 
-- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+- [What is Conditional Access?](/azure/active-directory/conditional-access/overview)
+- [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows)
 - [Video: Security, compatibility, and manageability](/deployedge/microsoft-edge-video-security-compatibility-manageability)
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
