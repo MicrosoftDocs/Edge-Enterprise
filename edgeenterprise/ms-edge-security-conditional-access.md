@@ -3,7 +3,7 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/07/2023
+ms.date: 08/09/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ When it comes to managing and protecting your cloud resources, identity and acce
 
 Conditional Access (CA) gives you a balance between security and productivity. For more information, see [Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access), a detailed guide to help plan and deploy Conditional Access (CA) in Microsoft Entra ID (formerly known as Azure Active Directory). (For more information about this name change, see [New name for Azure Active Directory](/azure/active-directory/fundamentals/new-name).)
 
-Another way to access protected resources is to use Intune mobile device management (MDM) and mobile application management (MAM). If a device isn't enrolled in MDM and the user doesn't want the device to be enrolled, see [Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam).
+Microsoft Edge natively supports access to CA protected resources on both managed ([Accessing CA protected URLs with Microsoft Edge on managed devices](#accessing-ca-protected-urls-with-microsoft-edge-on-managed-devices)) and unmanaged ([Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam)) devices.
 
 ## Accessing CA protected URLs with Microsoft Edge on managed devices
 
