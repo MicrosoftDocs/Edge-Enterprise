@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 07/27/2023
+ms.date: 08/09/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,19 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
-|[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
-|[ShowHistoryThumbnails](#showhistorythumbnails)|Show thumbnail images for browsing history|
-|[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from phone in Microsoft Edge desktop|
-|[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
 
 ## Available policies
 
@@ -106,6 +93,7 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Default notification setting|
 |[DefaultPluginsSetting](#defaultpluginssetting)|Default Adobe Flash setting (obsolete)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|Default pop-up window setting|
+|[DefaultThirdPartyStoragePartitioningSetting](#defaultthirdpartystoragepartitioningsetting)|Default setting for third-party storage partitioning|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
 |[DefaultWebHidGuardSetting](#defaultwebhidguardsetting)|Control use of the WebHID API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
@@ -135,6 +123,7 @@ These tables list all of the browser-related group policies available in this re
 |[SerialAllowUsbDevicesForUrls](#serialallowusbdevicesforurls)|Automatically grant sites permission to connect to USB serial devices|
 |[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Allow notifications to set Microsoft Edge as default PDF reader|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Choose whether users can receive customized background images and text, suggestions, notifications, and tips for Microsoft services|
+|[ThirdPartyStoragePartitioningBlockedForOrigins](#thirdpartystoragepartitioningblockedfororigins)|Block third-party storage partitioning for these origins|
 |[WebHidAllowAllDevicesForUrls](#webhidallowalldevicesforurls)|Allow listed sites to connect to any HID device|
 |[WebHidAllowDevicesForUrls](#webhidallowdevicesforurls)|Allow listed sites connect to specific HID devices|
 |[WebHidAllowDevicesWithHidUsagesForUrls](#webhidallowdeviceswithhidusagesforurls)|Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage|
@@ -361,6 +350,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Allows a page to show popups during its unloading (obsolete)|
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
+|[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
 |[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
@@ -614,6 +604,8 @@ These tables list all of the browser-related group policies available in this re
 |[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
 |[SearchInSidebarEnabled](#searchinsidebarenabled)|Search in Sidebar enabled|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Enable search suggestions|
+|[SearchbarAllowed](#searchbarallowed)|Enable the Search bar|
+|[SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup)|Allow the Search bar at Windows startup|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (obsolete)|
@@ -687,7 +679,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
-|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (deprecated)|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (obsolete)|
 |[WebWidgetAllowed](#webwidgetallowed)|Enable the Search bar (deprecated)|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Allow the Search bar at Windows startup (deprecated)|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Use Windows proxy resolver|
@@ -1183,7 +1175,7 @@ If you leave the policy unset, there's no autoselection for any site.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1315,7 +1307,7 @@ For more detailed information about valid URL patterns, see [https://go.microsof
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1780,7 +1772,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1850,7 +1842,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -1922,7 +1914,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2464,6 +2456,78 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### DefaultThirdPartyStoragePartitioningSetting
+
+  #### Default setting for third-party storage partitioning
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  Third-party storage partitioning is on by default for some users starting with Microsoft Edge version 115, but it can be disabled with edge://flags.
+
+If this policy is configured to "AllowPartitioning" or not configured, third-party storage partitioning can be enabled.
+
+If this policy is set to "BlockPartitioning", third-party storage partitioning can't be enabled.
+
+Policy options mapping:
+
+* AllowPartitioning (1) = Let third-party storage partitioning to be enabled.
+
+* BlockPartitioning (2) = Block third-party storage partitioning from being enabled.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultThirdPartyStoragePartitioningSetting
+  - GP name: Default setting for third-party storage partitioning
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultThirdPartyStoragePartitioningSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DefaultThirdPartyStoragePartitioningSetting
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### DefaultWebBluetoothGuardSetting
 
   #### Control use of the Web Bluetooth API
@@ -2494,7 +2558,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2566,7 +2630,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2638,7 +2702,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2704,7 +2768,7 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2775,7 +2839,7 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2846,7 +2910,7 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -2917,7 +2981,7 @@ For detailed information about valid url patterns, see [https://go.microsoft.com
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -3266,7 +3330,7 @@ Users may opt out of prompts on a per-protocol/per-site basis unless the [Extern
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -4545,6 +4609,75 @@ If you disable this setting, spotlight experiences and recommendations are turne
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ThirdPartyStoragePartitioningBlockedForOrigins
+
+  #### Block third-party storage partitioning for these origins
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 115 or later
+
+  #### Description
+
+  Lets you set a list of url patterns that specify top-level origins (the url in the tab's address bar) that block third-party (cross-origin iframe) storage partitioning.
+
+If this policy isn't set or a top-level origin doesn't match, then the value from [DefaultThirdPartyStoragePartitioningSetting](#defaultthirdpartystoragepartitioningsetting) will be used.
+
+Note that the patterns you list are treated as origins, not URLs, so you shouldn't specify a path.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ThirdPartyStoragePartitioningBlockedForOrigins
+  - GP name: Block third-party storage partitioning for these origins
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ThirdPartyStoragePartitioningBlockedForOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ThirdPartyStoragePartitioningBlockedForOrigins\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ThirdPartyStoragePartitioningBlockedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ThirdPartyStoragePartitioningBlockedForOrigins
+  - Example value:
+``` xml
+<array>
+  <string>www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### WebHidAllowAllDevicesForUrls
 
   #### Allow listed sites to connect to any HID device
@@ -5024,7 +5157,7 @@ URL patterns in this policy should not clash with the ones configured via [WebUs
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -5126,7 +5259,7 @@ The URL patterns defined in this policy can't conflict with those configured in 
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -5195,7 +5328,7 @@ URL patterns in this policy can't conflict with those configured in the [WebUsbA
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -8523,8 +8656,8 @@ If you disable or don't configure this policy, Microsoft Edge won't send any dat
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
-  - Per Profile: No
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -10297,7 +10430,7 @@ For detailed information on valid url patterns, please see [https://go.microsoft
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14184,7 +14317,7 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14256,7 +14389,7 @@ Note: This policy doesn't prevent the browser from navigating to any URL. Users 
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -14882,6 +15015,63 @@ If you disable this policy or don't configure this policy, pages aren't allowed 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AllowSystemNotifications
+
+  #### Allows system notifications
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 117 or later
+
+  #### Description
+
+  Lets you use system notifications instead of Microsoft Edge's embedded Message Center on Windows and Linux.
+
+If set to True or not set, Microsoft Edge is allowed to use system notifications.
+
+If set to False, Microsoft Edge will not use system notifications. Microsoft Edge's embedded Message Center will be used as a fallback.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowSystemNotifications
+  - GP name: Allows system notifications
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowSystemNotifications
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AllowTokenBindingForUrls
 
   #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
@@ -15445,7 +15635,7 @@ If you disable or don't configure this policy, a browser window with multiple ta
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15571,7 +15761,7 @@ This policy affects all types of audio inputs, not only the built-in microphone.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15883,7 +16073,7 @@ If you disable this policy, the AutoLaunch Protocols component is disabled.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15959,7 +16149,7 @@ This policy does not work as expected with file://* wildcards.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16083,7 +16273,7 @@ This policy does not work as expected with file://* wildcards.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16164,7 +16354,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16439,7 +16629,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -16703,7 +16893,7 @@ If you disable this setting the list of available templates will be downloaded o
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -17586,7 +17776,7 @@ This policy is a temporary workaround for the new CORS non-wildcard request head
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -18144,7 +18334,7 @@ For more information about valid url patterns, see [https://go.microsoft.com/fwl
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19423,7 +19613,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19563,7 +19753,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19637,7 +19827,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -19721,7 +19911,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23438,7 +23628,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -23634,7 +23824,7 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32365,6 +32555,138 @@ If this policy is left not set, search suggestions are enabled but the user can 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### SearchbarAllowed
+
+  #### Enable the Search bar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 117 or later
+
+  #### Description
+
+  Enables the search bar. When enabled, users can use the search bar to search the web from their desktop or from an application. The search bar provides a search box, powered by Edge default search engine, that shows web suggestions and opens all web searches in Microsoft Edge. The search bar can be launched from the "More tools" menu or jump list in Microsoft Edge.
+
+If you enable or don't configure this policy:
+The search bar will be automatically enabled for all profiles.
+The option to enable the search bar at startup will be toggled on if the [SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup) policy is enabled.
+If the [SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup) is disabled or not configured, the option to enable the search bar at startup will be toggled off.
+Users will see the menu item to launch the search bar from the Microsoft Edge "More tools" menu. Users can launch the search bar from "More tools".
+Users will see the menu item to launch the search bar from the Microsoft Edge jump list menu. Users can launch the search bar from the Microsoft Edge jump list menu.
+The search bar can be turned off by the "Quit" option in the System tray or by closing the search bar from the 3 dot menu. The search bar will be restarted on system reboot if auto-start is enabled.
+
+
+If you disable this policy:
+The search bar will be disabled for all profiles.
+The option to launch the search bar from Microsoft Edge "More tools" menu will be disabled.
+The option to launch the search bar from Microsoft Edge jump list menu will be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchbarAllowed
+  - GP name: Enable the Search bar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchbarAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SearchbarIsEnabledOnStartup
+
+  #### Allow the Search bar at Windows startup
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 117 or later
+
+  #### Description
+
+  Allows the Search bar to start running at Windows startup.
+
+If you enable:
+  The Search bar will start running at Windows startup by default.
+  If the Search bar is disabled via [SearchbarAllowed](#searchbarallowed) policy, this policy will not start the Search bar on Windows startup.
+
+If you disable this policy:
+  The Search bar will not start at Windows startup for all profiles.
+  The option to start the search bar at Windows startup will be disabled and toggled off in search bar settings.
+
+If you don't configure the policy:
+  The Search bar will not start at Windows startup for all profiles.
+  The option to start the search bar at Windows startup will be toggled off in search bar settings.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SearchbarIsEnabledOnStartup
+  - GP name: Allow the Search bar at Windows startup
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SearchbarIsEnabledOnStartup
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SecurityKeyPermitAttestation
 
   #### Websites or domains that don't need permission to use direct Security Key attestation
@@ -33261,8 +33583,9 @@ If you disable or don't configure the policy, the Downloads button isn't shown o
   #### Description
 
   This policy lets you configure whether the history thumbnail feature collects and saves images for the sites you visit.  When enabled, this feature makes it easier to identify sites when you hover over your history results.
-If you enable this policy, the thumbnail feature is turned on after a user visits the history hub twice in the same week.
-If you disable or don't configure this policy, the history thumbnail doesn't collect and save images for visited sites. This is the default behavior for managed devices.
+If you don't configure this policy, the thumbnail feature is turned on after a user visits the history hub twice in the past 7 days.
+If you enable this policy, the history thumbnail collects and saves images for visited sites.
+If you disable this policy, the history thumbnail doesn't collect and save images for visited sites.
 When the feature is disabled, existing images are deleted on a per user basis, and the feature no longer collects or saves images when a site is visited.
 
   #### Supported features:
@@ -36633,8 +36956,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S and CTRL+SHIFT+X.
 If you disable this policy, users can't access the web capture feature in Microsoft Edge.
 
-Please note that CTRL+SHIFT+X will not work if Web Select is disabled by [WebSelectEnabled](#webselectenabled).
-
 Starting with Microsoft Edge version 114, Web Capture includes Web Select, which lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table. Users can access Web Select directly using keyboard shortcut, CTRL+SHIFT+X.
 
   #### Supported features:
@@ -37351,17 +37672,17 @@ If you disable or don't configure this policy, WebSQL in non-secure contexts wil
 
   ### WebSelectEnabled
 
-  #### Web Select Enabled (deprecated)
+  #### Web Select Enabled (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 116.
   #### Supported versions:
 
-  - On Windows and macOS since 107 or later
+  - On Windows and macOS since 107, until 116
 
   #### Description
 
-  This policy is deprecated because Web Select is part of Web Capture and can be controlled by [WebCaptureEnabled](#webcaptureenabled). This policy won't work in Microsoft Edge version 117. If Web Capture is disabled by [WebCaptureEnabled](#webcaptureenabled), Web select will not be available in Web Capture.
+  This policy is obsoleted because Web Select is part of Web Capture and can be controlled by [WebCaptureEnabled](#webcaptureenabled). This policy won't work in Microsoft Edge version 117. If Web Capture is disabled by [WebCaptureEnabled](#webcaptureenabled), Web select will not be available in Web Capture.
 
 Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
 
@@ -37386,7 +37707,7 @@ If you disable this policy, Web select will not be available in Web Capture and 
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSelectEnabled
-  - GP name: Web Select Enabled (deprecated)
+  - GP name: Web Select Enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
