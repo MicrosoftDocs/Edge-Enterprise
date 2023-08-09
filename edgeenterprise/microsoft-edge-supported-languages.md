@@ -142,7 +142,7 @@ The following table lists the display languages that Microsoft Edge supports.
 |                       Tatar                        |                 Russia                  |     tt         |
 |                Telugu                              |                  India                  |     te         |
 |                  Thai                              |                Thailand                 |     th         |
-|                  Turkish                           |                 Turkey                  |     tr         |
+|                  Turkish                           |                 Türkiye                 |     tr         |
 |                Ukrainian                           |                 Ukraine                 |     uk         |
 |             Urdu                                   |       Islamic Republic of Pakistan      |     ur         |
 |              Uyghur                                |                   PRC                   |     ug         |
