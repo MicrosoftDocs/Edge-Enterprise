@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,7 +31,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 
 | Security features |Win 10|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
-|Azure Active Directory (Azure AD) Conditional Access|Yes|Yes|Yes|Yes|Yes|[Azure AD Conditional Access](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
+|Microsoft Entra Conditional Access|Yes|Yes|Yes|Yes|Yes|[Microsoft Entra Conditional Access](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
 |Microsoft Defender Application Guard|Yes (1890+)|No|No|No|No|[Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard) |
 |Microsoft Defender SmartScreen|Yes|Yes|Yes|Yes|Yes|[Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen) |
 |Microsoft Endpoint DLP|Yes|No|No|No|No|[Microsoft Endpoint DLP](/deployedge/microsoft-edge-security-dlp#microsoft-endpoint-data-loss-prevention-endpoint-dlp)|

@@ -89,7 +89,7 @@ The next screenshot shows the form for the **Basics** tab and the menu bar shows
 
 15. On the **Scope tags** tab, add a Scope tag if wanted, otherwise click the **Next** button.
 
-16. On the **Assignments** tab, click **+ Select groups to include** to assign this policy to the Microsoft Entra ID group that contains the devices or the users that you want to receive this policy setting. See [Assign user and device profiles in Microsoft Intune](/intune/device-profile-assign) for information about how to assign the profile to your Azure AD user or device groups.
+16. On the **Assignments** tab, click **+ Select groups to include** to assign this policy to the Microsoft Entra group that contains the devices or the users that you want to receive this policy setting. See [Assign user and device profiles in Microsoft Intune](/intune/device-profile-assign) for information about how to assign the profile to your Azure AD user or device groups.
 
     ![Select groups to include](./media/configure-edge-with-intune/create-profile-assignments-tab.png)
 

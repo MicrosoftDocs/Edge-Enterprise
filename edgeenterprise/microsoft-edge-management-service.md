@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/20/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -40,7 +40,7 @@ Use these steps to access the experience:
 
 A configuration profile contains all the browser policy configurations, including extension settings.
 
-Each configuration profile can only be assigned to one Azure Active Directory (Azure AD) group, and each group can only be assigned one configuration profile. However, the group that you select can contain other (nested) groups. If a user is a member of multiple Azure AD groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
+Each configuration profile can only be assigned to one Microsoft Entra group, and each group can only be assigned one configuration profile. However, the group that you select can contain other (nested) groups. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
 
 #### Create a configuration profile
 
@@ -98,12 +98,12 @@ Follow these steps to configure a policy for a configuration profile:
 1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
 
-#### Assign a configuration profile to an Azure AD group
+#### Assign a configuration profile to an Microsoft Entra group
 
 > [!NOTE]
 > You can only assign one group to a profile. If you want to assign a different group, then you need to remove the existing group and then assign a new group to the profile.
 
-Follow these steps to assign a configuration profile to an Azure AD group:
+Follow these steps to assign a configuration profile to an Microsoft Entra group:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to assign.
 1. Under the **Group assignment** pivot, select **Select group**.
@@ -244,7 +244,7 @@ Use the following sections as a guide to enable the Microsoft Edge management se
 
 #### For Microsoft Edge version 115.1935 and later
 
-Microsoft Edge management service is enabled by default. Work profiles signed in with Azure AD accounts will check with the Edge management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
+Microsoft Edge management service is enabled by default. Work profiles signed in with Microsoft Entra accounts will check with the Edge management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
 
 #### For Microsoft Edge version 115.1934 and earlier
 
@@ -259,7 +259,7 @@ Use the following steps as a guide to enable the service:
 
 2. If Microsoft Edge is open, restart it.
 
-If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Azure AD group](#assign-a-configuration-profile-to-an-azure-ad-group).
+If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Microsoft Entra group](#assign-a-configuration-profile-to-an-microsoft-entra-group).
 
 ### Set an enrollment token
 
@@ -333,8 +333,8 @@ The Click-to-Run service used by Microsoft Edge management service checks with C
 **Here's a summary of what happens:**
 
 - When a user signs into Microsoft Edge on a device for the first time, a check is immediately made to see if there's a configuration profile that pertains to the user.
-- If the user isn't a member of an Azure AD group that's assigned a configuration profile, then another check is made again in 24 hours.
-- If the user is a member of an Azure AD group that's assigned a configuration profile, then the appropriate policy settings are applied. A check is made again in 90 minutes.
+- If the user isn't a member of an Microsoft Entra group that's assigned a configuration profile, then another check is made again in 24 hours.
+- If the user is a member of an Microsoft Entra group that's assigned a configuration profile, then the appropriate policy settings are applied. A check is made again in 90 minutes.
 - If there are any changes to the configuration profile since the last check, then the appropriate policy settings are applied and another check is made again in 90 minutes.
 - If there aren't any changes to the configuration profile since the last check, another check is made again in 24 hours.
 - If there's an error, a check is made when the user opens Microsoft Edge.
@@ -343,8 +343,8 @@ The Click-to-Run service used by Microsoft Edge management service checks with C
 > [!NOTE]
 >
 > - Policies from Cloud Policy are only applied when Microsoft Edge is restarted. The behavior is the same as with Group Policy. For Windows devices, policies are enforced based on the primary user that is signed into Microsoft Edge. If there are multiple accounts signed in, only policies for the primary account are applied. If the primary account is switched, most of the policies assigned to that account will not apply until Microsoft Edge is restarted. Some policies related to [privacy controls](/deployoffice/privacy/overview-privacy-controls) will apply without restarting Microsoft Edge.
-> - If users are located in nested groups and the parent group is targeted for policies, the users in the nested groups will receive the policies. The nested groups and the users in those nested groups must be created in or synchronized to Azure AD.
-> - If the user is a member of multiple Azure AD groups with conflicting policy settings, priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign. You can set the priority by choosing **Reorder priority** on the **Configuration profiles** page.
+> - If users are located in nested groups and the parent group is targeted for policies, the users in the nested groups will receive the policies. The nested groups and the users in those nested groups must be created in or synchronized to Microsoft Entra ID.
+> - If the user is a member of multiple Microsoft Entra groups with conflicting policy settings, priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign. You can set the priority by choosing **Reorder priority** on the **Configuration profiles** page.
 
 <!-- ====================================================================== -->
 ## Feedback and support

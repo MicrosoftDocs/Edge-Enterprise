@@ -3,7 +3,7 @@ title: "On-premises sync for Active Directory (AD) users"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 07/31/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,23 +12,23 @@ ms.collection: M365-modern-desktop
 description: "On-premises sync for Active Directory (AD) users"
 ---
 
-# On-premises sync for Active Directory (AD) users
+# On-premises sync for Microsoft Entra ID users
 
 > [!NOTE]
 > Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
 
-This article explains how Active Directory (AD) users can roam Microsoft Edge favorites and settings between computers without connecting to Microsoft cloud services.
+This article explains how Microsoft Entra ID users can roam Microsoft Edge favorites and settings between computers without connecting to Microsoft cloud services.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 85 or later.
 
 ## Introduction
 
-Syncing user data in Microsoft Edge normally requires either a Microsoft Account or an Azure Active Directory (Azure AD) account, and a connection to Microsoft cloud services. With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can be moved between different computers. On-premises sync doesn't interfere with cloud syncing for those profiles that allow it.
+Syncing user data in Microsoft Edge normally requires either a Microsoft Account or an Microsoft Entra account, and a connection to Microsoft cloud services. With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can be moved between different computers. On-premises sync doesn't interfere with cloud syncing for those profiles that allow it.
 
 ## How it works
 
-Microsoft Edge allows profiles to be associated with Active Directory (AD) accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APPDATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer. Microsoft Edge only reads and writes from this file; it's the admin's responsibility to ensure that the file is moved as needed.
+Microsoft Edge allows profiles to be associated with Microsoft Entra accounts, which can't be used with cloud sync. When on-premises sync is enabled, the data from the AD profile is saved to a file named profile.pb. By default, this file is stored in *%APPDATA%/Microsoft/Edge*. After this file is written, it can be moved between different computers, and user data will be read and written on each computer. Microsoft Edge only reads and writes from this file; it's the admin's responsibility to ensure that the file is moved as needed.
 
 > [!IMPORTANT]
 > For on-premises sync, the only supported scenario is syncing using profile.pb. Roaming files and folders other than profile.pb is unsupported because they might result in unexpected behavior.
@@ -57,7 +57,7 @@ When on-premises sync is enabled, users won't be asked to enable sync. In additi
 
 ### Running cloud sync and on-premises sync on the same computer
 
-On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multiple Microsoft Account or Azure Active Directory profiles that sync to the cloud, these profiles will continue to sync while on-premises sync is enabled.
+On-premises sync doesn't interfere with cloud sync. If Microsoft Edge has multiple Microsoft Account or Microsoft Entra profiles that sync to the cloud, these profiles will continue to sync while on-premises sync is enabled.
 
 ### Running Microsoft Edge on more than one computer at a time isn't recommended
 

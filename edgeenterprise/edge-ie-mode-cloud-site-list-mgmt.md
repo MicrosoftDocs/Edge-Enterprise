@@ -36,7 +36,7 @@ This experience lets you store your organization's site list in a compliant clou
 
 The following prerequisites apply to this feature.
 
-1. Customers must have an Microsoft Entra ID tenant.
+1. Customers must have an Microsoft Entra tenant.
 2. Admins must have Microsoft Edge version 93 or greater installed and the latest version of the [policy files](https://aka.ms/edgeenterprise).
 3. Admins need to be an [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) on the tenant to access the Microsoft Edge site lists experience.
 
@@ -308,7 +308,7 @@ The site list is refreshed in Microsoft Edge every two hours. You can change thi
 
 ### What happens if users log out of Microsoft Edge?
 
-Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Microsoft Entra ID account. Microsoft Edge won't try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user isn't signed in to Microsoft Edge):
+Access to the site list requires explicit browser sign in for the first download. In a scenario where the user logs out after being logged in, the site list is cached in Microsoft Edge. The list will stay cached even if the user logs out of Microsoft Edge from their Microsoft Entra account. Microsoft Edge won't try to fall back to the non-cloud download location while the Cloud site list policy is configured. Microsoft Edge attempts to update the cached site list at the following times (note that all attempts will fail if the user isn't signed in to Microsoft Edge):
 
 - 60 seconds after you restart the browser.
 - Every two hours when Microsoft Edge is running. The 120-minute refresh interval can be changed by using the [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) policy. The minimum refresh interval is 30 minutes.
