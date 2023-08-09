@@ -124,7 +124,7 @@ There are two ways to change which browser window is used to open a website: 
 
 - Select the switching icon, pictured below, to switch back to the preferred browser window. This action makes the browser remember your choice for that URL.
 
-  ![Use Omnibar switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
+  ![Use switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
 
 - Go to `edge://settings/profiles/multiProfileSettings` and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
 
