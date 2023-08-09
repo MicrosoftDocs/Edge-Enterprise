@@ -26,6 +26,19 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
+## New policies
+
+The following table lists the new and obsoleted policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[DefaultThirdPartyStoragePartitioningSetting](#defaultthirdpartystoragepartitioningsetting)|Default setting for third-party storage partitioning|
+|[ThirdPartyStoragePartitioningBlockedForOrigins](#thirdpartystoragepartitioningblockedfororigins)|Block third-party storage partitioning for these origins|
+|[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
+|[SearchbarAllowed](#searchbarallowed)|Enable the Search bar|
+|[SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup)|Allow the Search bar at Windows startup|
+|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (obsolete)|
+
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
