@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/22/2023
+ms.date: 08/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,35 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 111.0.1661.43: March 18, 2023 to Version 109.0.1518.70: January 26, 2023 -->
+## Version 111.0.1661.43: March 18, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Support saving files to OneDrive for Business.** Save files securely with the Intune App Protection Policy. For more information, see [App protection policies overview](/mem/intune/apps/app-protection-policy).
+
+- **Edge-specific policies are supported in the MDM channel.** These policies are now supported in version 111. For more information, see [Edge Specific](/deployedge/microsoft-edge-mobile-policies#edge-specific).
+
+## Version 110.0.1587.61: March 1, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 110.0.1587.54: February 21, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge for iOS supports Microsoft Tunnel for MAM solution.** For more information, see [Learn about using Microsoft Tunnel with Mobile Application Management](/mem/intune/protect/microsoft-tunnel-mam).
+
+## Version 109.0.1518.70: January 26, 2023
+
+Fixed various bugs and performance issues.
+
+This release contains several security fixes for iOS and Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 <!-- Version 109.0.1518.58: January 18, 2023 to Version 108.0.1462.45: December 8, 2022  -->
 ## Version 109.0.1518.58: January 18, 2023
