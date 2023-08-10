@@ -26,7 +26,7 @@ ZSDCH works by having the browser send a new value, "zsdch", in the "Accept-Enco
 
 If the server wants to use ZSDCH for future responses, it provides the typical response with a non-ZSDCH Content-Encoding but with an extra "get-dictionary" response header. This header provides a pointer to a location for the browser to fetch a ZSDCH dictionary for future use.
 
-After the browser has fetched and cached the dictionary, future requests to the server will include a list of available dictionaries in a "avail-dictionary" header. If the server can serve a response compressed using one of the available dictionaries, provides a response using the dictionary and specifies a "Content-Encoding" of "zsdch".
+After the browser has fetched and cached the dictionary, future requests to the server will include a list of available dictionaries in a "avail-dictionary" header. If the server can serve a response compressed using one of the available dictionaries, it provides a response using the dictionary and specifies a "Content-Encoding" of "zsdch".
 
 ## What sites are this feature being tested with?
 
@@ -36,7 +36,7 @@ To validate performance gains and compatibility with various network topologies,
 
 Some enterprises use network middleboxes that offer caching and/or network traffic inspection capabilities. Sometimes these products have a requirement that they can parse the response; otherwise, they may modify or block the response in a way that breaks the page.
 
-Middleboxes that require that the Content-Encoding be an encoding that it understands must ensure they modify requests' Content-Encoding header value to remove unsupported encodings. Otherwise, the web server may choose to offer a response that the middlebox will not be able to decode.
+Middleboxes that require that the Content-Encoding be an encoding that it understands must ensure they modify requests' Accept-Encoding header value to remove unsupported encodings. Otherwise, the web server may choose to offer a response that the middlebox will not be able to decode.
 
 For caching layers that don't need to inspect the response, they must also correctly support the "Vary" header to ensure that a server that responds with "Vary: Accept-Encoding, avail-dictionary" is handled correctly and compressed responses aren't returned to clients that don't have the appropriate dictionary.
 
