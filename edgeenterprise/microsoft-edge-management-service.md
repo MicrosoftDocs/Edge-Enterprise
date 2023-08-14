@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/31/2023
+ms.date: 08/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -216,6 +216,28 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
    - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
 
 1. Select **Save**.
+
+### View extension requests
+
+If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to **Requests** in the **Extensions** pivot. You can then change the installation policy for these extensions to let users install it. To allow requests, use the [EdgeManagementExtensionsFeedbackEnabled] policy to enable reporting.
+
+To enable reporting, use these steps:
+
+1. Select a configuration profile you want to enable it for.
+2. Under the policies pivot, select **Select policy**.
+3. Under **Configure a policy**, search for [EdgeManagementExtensionsFeedbackEnabled] and set its value to Enabled.
+4. Select **Save**.
+
+To set the installation policy on a requested extension, use these steps:
+
+1. Select an extension.
+2. Select **Manage installation policy** and choose one of the following options from the dropdown list:
+   - Allow: Users can install the extension. This is the default setting.
+   - Block: Users can't install the extension. You can remove the extension if a user previously installed it. Also, you can write a message that displays when users try to install the extension.
+   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+
+3. Select **Save**.
 
 #### Manage sidebar apps
 
