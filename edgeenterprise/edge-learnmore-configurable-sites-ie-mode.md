@@ -3,7 +3,7 @@ title: "Microsoft Edge and Configurable sites in IE mode"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 07/11/2022
+ms.date: 08/17/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Microsoft Edge and Configurable sites in IE mode"
 # Learn about Configurable sites in IE mode
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article explains the Configurable sites feature of the Enterprise Mode Site List when using IE mode in Microsoft Edge.
 
