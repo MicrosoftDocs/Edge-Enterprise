@@ -84,13 +84,13 @@ The new tab page will remember the last tab the user selected, so simply selecti
 For tenant admins, if you’d like to have your organization automatically set Work feed as the default tab, follow these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
-2. Go to **Org settings > News**.
-3. Under **News**, select **Microsoft Edge new tab page**.
-4. *Clear* the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
-5. To re-enable the feature, check the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
-6. To make it a default feed, **Set Users default to Work feed**.
+2. In the Search bar type **News** and press **Enter**.
+3. Under **Settings**, select **News > Microsoft Edge new tab page**.
+5. *Clear* the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
+6. To re-enable the feature, check the box that says **Show My Feed content on the Microsoft Edge new tab page**.
+7. To make it a default feed, **Set Users default to Work feed**.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Work feed as default tab":::
+![screenshot of news feed settings.](media/microsoft-edge-enterprise-ntp/newsfeed1.png)
 
 ## How to disable My Feed or Work feed tabs
 
