@@ -216,13 +216,13 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
 
 ### View extension requests
 
-If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to **Requests** in the **Extensions** pivot. You can then change the installation policy for these extensions to let users install it. To allow requests, use the [EdgeManagementExtensionsFeedbackEnabled] policy to enable reporting.
+If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to **Requests** in the **Extensions** pivot. You can then change the installation policy for these extensions to let users install it. To allow requests, use the [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) policy to enable reporting.
 
 To enable reporting, use these steps:
 
 1. Select a configuration profile you want to enable it for.
 2. Under the policies pivot, select **Select policy**.
-3. Under **Configure a policy**, search for [EdgeManagementExtensionsFeedbackEnabled] and set its value to Enabled.
+3. Under **Configure a policy**, search for [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) and set its value to Enabled.
 4. Select **Save**.
 
 To set the installation policy on a requested extension, use these steps:
