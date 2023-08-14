@@ -3,7 +3,7 @@ title: "Identify and interrupt downloads of potentially dangerous files"
 ms.author: kvice
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 08/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Understand how Microsoft Edge identifies and interrupts downloads 
 # Identify and interrupt downloads of potentially dangerous files
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 Microsoft Edge's File Type Policies component classifies files by their level of "dangerousness" to manage file downloads. A harmless file (for example, a `.txt` file) can be downloaded freely, while a potentially dangerous file like a `.dll` is subjected to a higher degree of vetting. This scrutiny provides a more security-conscious user experience.
 
