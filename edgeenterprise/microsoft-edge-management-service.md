@@ -40,7 +40,7 @@ Use these steps to access the experience:
 
 A configuration profile contains all the browser policy configurations, including extension settings.
 
-Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings will merge if there a no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
+Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings will merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
 
 #### Create a configuration profile
 
