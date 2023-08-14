@@ -19,9 +19,6 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 
 The Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
-> [!NOTE]
-> We'll start rolling out this experience on July 20 and expect to finish the rollout by next week.
-
 <!-- ====================================================================== -->
 ## Prerequisites
 
