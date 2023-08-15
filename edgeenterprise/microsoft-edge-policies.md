@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/09/2023
+ms.date: 08/11/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -28,16 +28,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
-| Policy Name | Caption |
-|:-----|:-----|
-|[DefaultThirdPartyStoragePartitioningSetting](#defaultthirdpartystoragepartitioningsetting)|Default setting for third-party storage partitioning|
-|[ThirdPartyStoragePartitioningBlockedForOrigins](#thirdpartystoragepartitioningblockedfororigins)|Block third-party storage partitioning for these origins|
-|[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
-|[SearchbarAllowed](#searchbarallowed)|Enable the Search bar|
-|[SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup)|Allow the Search bar at Windows startup|
-|[WebSelectEnabled](#webselectenabled)|Web Select Enabled (obsolete)|
+|Policy Name|Caption|
+|-|-|
+|[GamerModeEnabled](#gamermodeenabled)|Enable Gamer Mode|
 
 ## Available policies
 
@@ -50,6 +45,7 @@ These tables list all of the browser-related group policies available in this re
 - [Edge Workspaces settings](#edge-workspaces-settings)
 - [Experimentation](#experimentation)
 - [Extensions](#extensions)
+- [Games settings](#games-settings)
 - [HTTP authentication](#http-authentication)
 - [Identity and sign-in](#identity-and-sign-in)
 - [Immersive Reader settings](#immersive-reader-settings)
@@ -181,6 +177,11 @@ These tables list all of the browser-related group policies available in this re
 |[ExtensionInstallForcelist](#extensioninstallforcelist)|Control which extensions are installed silently|
 |[ExtensionInstallSources](#extensioninstallsources)|Configure extension and user script install sources|
 |[ExtensionSettings](#extensionsettings)|Configure extension management settings|
+### [*Games settings*](#games-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[GamerModeEnabled](#gamermodeenabled)|Enable Gamer Mode|
 ### [*HTTP authentication*](#http-authentication-policies)
 
 |Policy Name|Caption|
@@ -7094,6 +7095,66 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   </dict>
 </dict>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Games settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### GamerModeEnabled
+
+  #### Enable Gamer Mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 117 or later
+
+  #### Description
+
+  Microsoft Edge Gamer Mode allows gamers to personalize their browser with gaming themes and gives them the option of enabling Efficiency Mode for PC gaming, the Gaming feed on new tabs, sidebar apps for gamers, and more.
+
+If you enable or don't configure this policy, users can opt into Gamer Mode.
+If you disable this policy, Gamer Mode will be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: GamerModeEnabled
+  - GP name: Enable Gamer Mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Games settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Games settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: GamerModeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
