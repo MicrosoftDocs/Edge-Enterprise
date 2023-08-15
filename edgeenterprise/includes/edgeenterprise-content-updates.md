@@ -2,6 +2,18 @@
 
 
 
+## Week of August 07, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/7/2023 | [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) | added |
+| 8/7/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 8/9/2023 | [Microsoft Edge and Conditional Access](/DeployEdge/ms-edge-security-conditional-access) | modified |
+| 8/10/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 8/10/2023 | [Archived - release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-mobile-stable-channel) | modified |
+
+
 ## Week of July 31, 2023
 
 
@@ -88,12 +100,3 @@
 | 7/13/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
 | 7/13/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
 | 7/14/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-
-
-## Week of July 03, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/7/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 7/7/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
