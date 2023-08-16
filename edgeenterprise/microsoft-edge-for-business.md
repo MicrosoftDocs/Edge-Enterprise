@@ -21,6 +21,7 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 > - The Microsoft Edge for Business company branding will not be available in this release.
 > - IT admin management capabilities will be available soon.
 
+
 ## Introduction
 
 [![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/00.png)](https://www.youtube.com/watch?v=O8mgcE7edoY "Microsoft Edge for Business: Controls, Security, and Productivity")
