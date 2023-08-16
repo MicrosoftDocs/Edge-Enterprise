@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/10/2023
+ms.date: 08/16/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,29 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 116.0.xxxx.XX: August 17, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-17-2023).
+
+### Feature update
+
+- **Microsoft Edge for Business.** With native enterprise grade security, productivity, manageability, and AI built in, Edge for Business enables organizations to maximize productivity and security, and offers the ability to create separation between work and personal browsing with automatic switching between the lightly managed personal browser window (MSA profile) and the work browser window (Microsoft Entra ID). All users signing in with their Entra ID (formerly Azure Active Directory) will automatically receive Edge for Business and see an updated Edge icon with a briefcase to designate they're in the work browser window. For more information, [read our FAQ](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837).
+
+- **Option to attach the Edge sidebar to the Windows desktop.** Users of the Microsoft Edge sidebar will be able to access their apps and sites directly from their Windows 10 desktop. As an opt-in experience in Windows 10, users can attach the sidebar to their Windows desktop by clicking a "popout" icon near the base of the sidebar in the browser. This enables a side-by-side experience that works with any Windows app — including Microsoft Edge itself. Users enjoy streamlined access to the same set of powerful AI tools and web-based services, including Bing Chat, without launching a browser window, enhancing productivity regardless of where they are in Windows. Additional features and options are planned in future versions of Microsoft Edge. Administrators can control the availability of this feature using the [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) policy.
+
+### Policy updates
+
+#### New policies
+
+- [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
+- [ThrottleNonVisibleCrossOriginIframesAllowed ](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
+
+#### Obsoleted policy
+
+- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
 
 ## Version 115.0.1901.203: August 10, 2023
 
