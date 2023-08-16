@@ -126,7 +126,7 @@ There are two ways to change which browser window is used to open a website: 
 
   ![Use switch icon to change profile.](media/microsoft-edge-for-business/omnibar-switch-icon-centered.png)
 
-- Go to `edge://settings/profiles/multiProfileSettings` and select **Choose preferred browser for sites** to turn off or select a preferred profile for the applicable site.
+- Go to `edge://settings/profiles/multiProfileSettings` and select **Profile preferences for sites** to add/edit/delete automatic profile switching websites, or select a preferred profile for the applicable site.
 
 ### Does the browser window switching preference sync across other Microsoft Edge channels?
 
