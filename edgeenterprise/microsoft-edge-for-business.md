@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/09/2023
+ms.date: 08/16/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,7 +23,7 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 
 ## Introduction
 
-[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/0.png)](http://www.youtube.com/watch?v=lueFoh9rF7E "Microsoft Edge for Business: Controls, Security, and Productivity")
+[![Microsoft Edge for Business: Controls, Security, and Productivity](media/microsoft-edge-for-business/00.png)](https://www.youtube.com/watch?v=O8mgcE7edoY "Microsoft Edge for Business: Controls, Security, and Productivity")
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
