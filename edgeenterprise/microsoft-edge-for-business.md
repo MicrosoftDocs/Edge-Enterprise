@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/16/2023
+ms.date: 08/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,6 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 > Microsoft Edge for Business will start rolling out this new enterprise browsing experience in Edge stable release version 116.  
 > - The Microsoft Edge for Business company branding will not be available in this release.
 > - IT admin management capabilities will be available soon.
-
 
 ## Introduction
 
