@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 07/26/2023
+ms.date: 08/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,75 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- from Version 113.0.1774.35: May 5, 2023 to Version 112.0.1722.39: April 10, 2023 -->
+## Version 113.0.1774.35: May 5, 2023
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-5-2023).
+
+### Feature update
+
+- **Improvements to downloads security.** Microsoft Edge now has the capability to scan archives (.zip, .rar, .7z) for any malwares using Microsoft Defender SmartScreen. This functionality is currently available on Windows only and provides extra protection where known malwares were being distributed within these archives.
+
+- **Improvements to enhanced security mode.**  Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  In this release updates include consolidating the security level settings to Balanced and Strict mode.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
+
+- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS**. Microsoft Edge for macOS will start using a new updater named EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft Autoupdate to prevent browser updates, you will need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates. For more information, see [Microsoft Edge for macOS switches from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
+
+- **New policy for PDF View Settings.** The [RestorePdfView](/deployedge/microsoft-edge-policies#restorepdfview) policy lets Admins control PDF View Recovery in Microsoft Edge.  When enabled or if the policy isn't configured, Microsoft Edge will recover the last state of PDF view and land users on the section where they ended reading in the last session.
+
+- **Updated Microsoft Root Store policy.** The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy will now be supported in Microsoft Edge version 113 and 114.  It will be removed in Microsoft Edge version 115.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).
+
+### Policy updates
+
+#### New policies
+
+- [DiscoverPageContextEnabled](/DeployEdge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles
+- [DefaultBrowserSettingsCampaignEnabled](/DeployEdge/microsoft-edge-policies#DefaultBrowserSettingsCampaignEnabled) - Enables default browser settings campaigns
+- [EnforceLocalAnchorConstraintsEnabled](/DeployEdge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) - Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store
+- [RestorePdfView](/DeployEdge/microsoft-edge-policies#restorepdfview) - Restore PDF view
+- [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
+- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
+- [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
+
+## Version 112.0.1722.71: May 4, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+## Version 112.0.1722.68: May 1, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 112.0.1722.64: April 27, 2023
+
+Fixed various bugs and performance issues for Stable and Extended Stable release.
+
+## Version 109.0.1518.100: April 24, 2023
+
+> [!NOTE]
+> This update was done for our M109 Windows down-level extended support. We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-24-2023).
+
+## Version 112.0.1722.58: April 21, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-21-2023).
+
+## Version 112.0.1722.48: April 14, 2023
+
+> [!IMPORTANT]
+> This update to Extended Stable contains a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-14-2023).
+
+## Version 112.0.1722.46: April 13, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 112.0.1722.39: April 10, 2023
+
+Fixed various bugs and performance issues.
 
 <!-- from Version 112.0.1722.34: April 6, 2023 to Version 111.0.1661.43: March 15, 2023 -->
 ## Version 112.0.1722.34: April 6, 2023
