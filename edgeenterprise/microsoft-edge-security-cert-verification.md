@@ -3,7 +3,7 @@ title: "Changes to Microsoft Edge browser TLS server certificate verification"
 ms.author: erikan
 author: dan-wesley
 manager: arvindm
-ms.date: 08/17/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
