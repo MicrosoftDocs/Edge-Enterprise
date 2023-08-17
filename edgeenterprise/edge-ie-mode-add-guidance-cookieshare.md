@@ -39,10 +39,7 @@ To share session cookies from Microsoft Edge to Internet Explorer:
   - Windows 10 version 1803 – KB4577032 or higher
   - Windows 10 Enterprise 2016 LTSC and Windows Server 2016 - KB4580346 or higher
   - Windows 10 Enterprise 2015 LTSB - KB4580327 or higher
-  - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher
-  - Windows 10 Enterprise 2016 LTSC and Windows Server 2016 - KB4580346 or higher
-  - Windows 10 Enterprise 2015 LTSB - KB4580327 or higher
-  - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher
+  - Windows 8.1 and Windows Server 2012 R2 - KB4586768 or higher  
 - Microsoft Edge version 87 or later
 - [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
@@ -55,6 +52,7 @@ To share session cookies between Microsoft Edge and Internet Explorer:
   - Windows 10 version 20H2 - KB5010415 or higher
   - Windows 10 version 21H1 - KB5010415 or higher
   - Windows 10 version 21H2-  KB5010415 or higher
+  - Windows 10 version 1809, Windows Server version 1809, and Windows Server 2019 - KB5028168 or higher
 - Microsoft Edge version 99 or later
 - [IE mode](./edge-ie-mode.md) configured with Enterprise Mode Site List
 
