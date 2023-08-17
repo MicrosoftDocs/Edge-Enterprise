@@ -42,12 +42,11 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 #### New policies
 
-- [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
 - [ThrottleNonVisibleCrossOriginIframesAllowed ](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
 
 #### Obsoleted policy
 
-- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
+- [EventPathEnabled](/deployedge/microsoft-edge-policies#eventpathenabled) - Re-enable the Event.path API
 
 ## Version 115.0.1901.203: August 10, 2023
 
