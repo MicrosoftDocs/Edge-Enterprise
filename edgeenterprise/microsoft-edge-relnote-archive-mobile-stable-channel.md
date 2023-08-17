@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/10/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,38 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 113.1774.36: May 8, 2023 to Version 112.0.1722.36: April 7, 2023 -->
+## Version 113.1774.36: May 8, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Open in Microsoft Edge option (iOS only).** This option is available for saving files to OneDrive.
+
+- **Net-export supports open-in (iOS only).** This option now supports open-in instead of using the native mail app.
+
+- **Shared Device Mode (SDM) for Edge mobile.** Generally available for Android.
+
+## Version 112.0.1722.54: April 19, 2023
+
+Fixed various bugs and performance issues.
+
+This release contains several security fixes for Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+## Version 112.0.1722.44: April 12, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 112.0.1722.36: April 7, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Feature updates
+
+- **Translator, Read Aloud, Drop and developer tools (Android only).** These tools can be managed by Mobile Application Management (MAM) [disabledFeatures](/mem/intune/apps/manage-microsoft-edge#disable-specific-features) and the Mobile Device Management (MDM) policy, [EdgeDisabledFeatures](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures).
+
 
 <!-- Version 111.0.1661.43: March 18, 2023 to Version 109.0.1518.70: January 26, 2023 -->
 ## Version 111.0.1661.43: March 18, 2023
