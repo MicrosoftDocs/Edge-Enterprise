@@ -31,7 +31,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- Bing Chat Enterprise is available via Intune MAM policy `com.microsoft.intune.mam.managedbrowser.Chat=true`. It will be turned on by default in September.
+- Bing Chat Enterprise is available on Edge mobile by default, and can be managed by Intune MAM policy, `com.microsoft.intune.mam.managedbrowser.Chat=true/false`.
 
 - The **Open in Microsoft Edge** option is available for saving files to OneDrive (Android).
 
