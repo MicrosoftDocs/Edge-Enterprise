@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/11/2023
+ms.date: 08/18/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,14 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-|Policy Name|Caption|
-|-|-|
-|[GamerModeEnabled](#gamermodeenabled)|Enable Gamer Mode|
 
 ## Available policies
 
@@ -653,7 +645,7 @@ These tables list all of the browser-related group policies available in this re
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Enable a TLS 1.3 security feature for local trust anchors (obsolete)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Specify the TLS cipher suites to disable|
 |[TabFreezingEnabled](#tabfreezingenabled)|Allow freezing of background tabs (obsolete)|
-|[TabServicesEnabled](#tabservicesenabled)|Tab Services enabled|
+|[TabServicesEnabled](#tabservicesenabled)|Enable tab organization suggestions|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
@@ -33652,7 +33644,7 @@ If you disable or don't configure the policy, the Downloads button isn't shown o
   
   #### Supported versions:
 
-  - On Windows and macOS since 116 or later
+  - On Windows and macOS since 117 or later
 
   #### Description
 
@@ -34967,7 +34959,7 @@ If you disable this policy, no tabs will be frozen.
 
   ### TabServicesEnabled
 
-  #### Tab Services enabled
+  #### Enable tab organization suggestions
 
   
   
@@ -34977,11 +34969,11 @@ If you disable this policy, no tabs will be frozen.
 
   #### Description
 
-  Allows the Microsoft Edge browser to suggest tab and tab group functionality based on the current tab content.
+  This policy controls whether Microsoft Edge can use its tab organization service to help name or suggest tab groups to increase productivity.
 
-If you enable or don't configure this policy, tab information will be sent to the service to gather suggestions to help with tab organization.
+If you enable or don't configure this policy, when a user creates a tab group or activates certain "Group Similar Tabs" features Microsoft Edge sends tab data to its tab organization service. This data includes URLs, page titles, and existing group information. The service uses this data to return suggestions for better groupings and group names.
 
-If you disable this policy, then no tab information will be sent to the service.
+If you disable this policy, no data will be sent to the tab organization service. Microsoft Edge won't suggest group names when a group is created and certain "Group Similar Tabs" features that rely on the service won't be available.
 
   #### Supported features:
 
@@ -35000,7 +34992,7 @@ If you disable this policy, then no tab information will be sent to the service.
   ##### Group Policy (ADMX) info
 
   - GP unique name: TabServicesEnabled
-  - GP name: Tab Services enabled
+  - GP name: Enable tab organization suggestions
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
