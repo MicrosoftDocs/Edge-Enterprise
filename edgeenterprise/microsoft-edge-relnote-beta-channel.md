@@ -23,6 +23,36 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Feature updates
+
+- **Microsoft Edge for Business update.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  The Automatic Switching mechanism is designed to keep work and personal browsing separate for the end users. This mechanism currently switches users from personal to work browsing on applicable logins. The new update will additionally start automatically switching users from work to personal browsing on applicable logins. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Smart Find.** Searching for a word or phrase on a webpage has become easier with AI. Even if you misspell a word in your search query, we'll suggest related matches and words making it effortless to find what you're looking for. When you search, simply select the suggested link to quickly locate the desired word or phrase. Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.  For more information, see [Smart Find](/edge/features/smart-find?form=MT00D8).
+
+- **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet.  Once it's grown, a real mangrove will be planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edge-wallet-e-tree-enabled) policy. Note: This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+### Policy updates
+
+#### New policies
+
+- [AllowSystemNotifications](/deployedge/microsoft-edge-policies#allowsystemnotifications) - Allows system notifications
+
+- [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) - Edge Wallet E-Tree Enabled
+
+- [GamerModeEnabled](/deployedge/microsoft-edge-policies#gamermodeenabled) - Enable Gamer Mode
+
+- [SearchbarAllowed](/deployedge/microsoft-edge-policies#searchbarallowed) - Enable the Search bar
+
+- [SearchbarIsEnabledOnStartup](/deployedge/microsoft-edge-policies#searchbarisenabledonstartup) -Allow the Search bar at Windows startup
+
+- [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
+
+- [UploadFromPhoneEnabled](/deployedge/microsoft-edge-policies#uploadfromphoneenabled) - Enable upload files from phone in Microsoft Edge desktop
+
+#### Obsoleted policy
+
+- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
+
 ## Version 116.0.1938.54: August 18, 2023
 
 Fixed various bugs and performance issues.
