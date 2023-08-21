@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/10/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,28 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 116.0.1938.54: August 21, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-21-2023).
+
+### Feature update
+
+- **Microsoft Edge for Business.** With native enterprise grade security, productivity, manageability, and AI built in, Edge for Business enables organizations to maximize productivity and security, and offers the ability to create separation between work and personal browsing with automatic switching between the lightly managed personal browser window (MSA profile) and the work browser window (Microsoft Entra ID). All users signing in with their Entra ID (formerly Azure Active Directory) will automatically receive Edge for Business and see an updated Edge icon with a briefcase to designate they're in the work browser window. For more information, [read our FAQ](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837).
+
+- **Option to attach the Edge sidebar to the Windows desktop.** Users of the Microsoft Edge sidebar will be able to access their apps and sites directly from their Windows 10 desktop. As an opt-in experience in Windows 10, users can attach the sidebar to their Windows desktop by clicking a "popout" icon near the base of the sidebar in the browser. This enables a side-by-side experience that works with any Windows app — including Microsoft Edge itself. Users enjoy streamlined access to the same set of powerful AI tools and web-based services, including Bing Chat, without launching a browser window, enhancing productivity regardless of where they are in Windows. Additional features and options are planned in future versions of Microsoft Edge. Administrators can control the availability of this feature using the [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) policy.
+
+### Policy updates
+
+#### New policies
+
+- [ThrottleNonVisibleCrossOriginIframesAllowed ](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
+
+#### Obsoleted policy
+
+- [EventPathEnabled](/deployedge/microsoft-edge-policies#eventpathenabled) - Re-enable the Event.path API
 
 ## Version 115.0.1901.203: August 10, 2023
 
@@ -204,75 +226,7 @@ Fixed various bugs and performance issues.
 
 Fixed various bugs and performance issues for Extended Stable release.
 
-## Version 113.0.1774.35: May 5, 2023
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-5-2023).
-
-### Feature update
-
-- **Improvements to downloads security.** Microsoft Edge now has the capability to scan archives (.zip, .rar, .7z) for any malwares using Microsoft Defender SmartScreen. This functionality is currently available on Windows only and provides extra protection where known malwares were being distributed within these archives.
-
-- **Improvements to enhanced security mode.**  Enhanced security mode provides an extra layer of protection when browsing the web and visiting unfamiliar sites.  In this release updates include consolidating the security level settings to Balanced and Strict mode.  For more information, see [Browse more safely with Microsoft Edge](/deployedge/microsoft-edge-security-browse-safer).
-
-- **Switch from Microsoft Autoupdate to EdgeUpdater for macOS**. Microsoft Edge for macOS will start using a new updater named EdgeUpdater. This change only affects Microsoft Edge on macOS. If you use update preferences for Microsoft Autoupdate to prevent browser updates, you will need to transition to the new EdgeUpdater UpdateDefault policy before Microsoft Edge 113 to prevent future automatic updates. For more information, see [Microsoft Edge for macOS switches from Microsoft AutoUpdate to EdgeUpdater](/deployedge/edge-learnmore-edgeupdater-for-macos).
-
-- **New policy for PDF View Settings.** The [RestorePdfView](/deployedge/microsoft-edge-policies#restorepdfview) policy lets Admins control PDF View Recovery in Microsoft Edge.  When enabled or if the policy isn't configured, Microsoft Edge will recover the last state of PDF view and land users on the section where they ended reading in the last session.
-
-- **Updated Microsoft Root Store policy.** The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy will now be supported in Microsoft Edge version 113 and 114.  It will be removed in Microsoft Edge version 115.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).
-
-### Policy updates
-
-#### New policies
-
-- [DiscoverPageContextEnabled](/DeployEdge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles
-- [DefaultBrowserSettingsCampaignEnabled](/DeployEdge/microsoft-edge-policies#DefaultBrowserSettingsCampaignEnabled) - Enables default browser settings campaigns
-- [EnforceLocalAnchorConstraintsEnabled](/DeployEdge/microsoft-edge-policies#enforcelocalanchorconstraintsenabled) - Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store
-- [RestorePdfView](/DeployEdge/microsoft-edge-policies#restorepdfview) - Restore PDF view
-- [ReadAloudEnabled](/DeployEdge/microsoft-edge-policies#readaloudenabled) - Enable Read Aloud feature in Microsoft Edge
-- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
-- [TabServicesEnabled](/DeployEdge/microsoft-edge-policies#tabservicesenabled) - Tab Services enabled
-
-## Version 112.0.1722.71: May 4, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 112.0.1722.68: May 1, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.64: April 27, 2023
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-## Version 109.0.1518.100: April 24, 2023
-
-> [!NOTE]
-> This update was done for our M109 Windows down-level extended support. We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-24-2023).
-
-## Version 112.0.1722.58: April 21, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-21-2023).
-
-## Version 112.0.1722.48: April 14, 2023
-
-> [!IMPORTANT]
-> This update to Extended Stable contains a fix for [CVE-2023-2033](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-2033), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-14-2023).
-
-## Version 112.0.1722.46: April 13, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.39: April 10, 2023
-
-Fixed various bugs and performance issues.
-
-
+<!-- from Version 113.0.1774.35: May 5, 2023 to Version 112.0.1722.39: April 10, 2023 -->
 <!-- from Version 112.0.1722.34: April 6, 2023 to Version 111.0.1661.43: March 15, 2023 -->
 <!-- from Version 111.0.1661.41: March 13, 2023 to Version 110.0.1587.46: February 14, 2023 -->
 <!-- from Version Version 110.0.1587.41: February 9, 2023 to Version 108.0.1462.83: January 12, 2023 -->
