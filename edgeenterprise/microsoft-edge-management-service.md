@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 07/31/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,12 +15,9 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 # Microsoft Edge management service
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 The Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
-
-> [!NOTE]
-> We'll start rolling out this experience on July 20 and expect to finish the rollout by next week.
 
 <!-- ====================================================================== -->
 ## Prerequisites
@@ -40,7 +37,7 @@ Use these steps to access the experience:
 
 A configuration profile contains all the browser policy configurations, including extension settings.
 
-Each configuration profile can only be assigned to one Microsoft Entra group, and each group can only be assigned one configuration profile. However, the group that you select can contain other (nested) groups. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
+Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings will merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
 
 #### Create a configuration profile
 
@@ -99,9 +96,6 @@ Follow these steps to configure a policy for a configuration profile:
 1. Select **Save**.  
 
 #### Assign a configuration profile to an Microsoft Entra group
-
-> [!NOTE]
-> You can only assign one group to a profile. If you want to assign a different group, then you need to remove the existing group and then assign a new group to the profile.
 
 Follow these steps to assign a configuration profile to an Microsoft Entra group:
 
@@ -216,6 +210,31 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
    - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
 
 1. Select **Save**.
+
+### View extension requests
+
+> [!NOTE]
+> The Extension Feedback feature is available in Edge Stable 116 and later. This will start rolling out after Microsoft Edge Stable 116 is available, which means you'll see the feature on 08/30/2023.
+
+If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to **Requests** in the **Extensions** pivot. You can then change the installation policy for these extensions to let users install it. To allow requests, use the [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) policy to enable reporting.
+
+To enable reporting, use these steps:
+
+1. Select a configuration profile you want to enable it for.
+2. Under the policies pivot, select **Select policy**.
+3. Under **Configure a policy**, search for [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) and set its value to Enabled.
+4. Select **Save**.
+
+To set the installation policy on a requested extension, use these steps:
+
+1. Select an extension.
+2. Select **Manage installation policy** and choose one of the following options from the dropdown list:
+   - Allow: Users can install the extension. This is the default setting.
+   - Block: Users can't install the extension. You can remove the extension if a user previously installed it. Also, you can write a message that displays when users try to install the extension.
+   - Force: The extension is automatically installed. Users can't remove it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+   - Normal: The extension is automatically installed. Users can disable it. You can optionally specify an update URL for the initial extension installation and use it for subsequent updates.
+
+3. Select **Save**.
 
 #### Manage sidebar apps
 
