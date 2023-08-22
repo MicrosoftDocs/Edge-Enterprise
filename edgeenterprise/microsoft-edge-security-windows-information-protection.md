@@ -3,7 +3,7 @@ title: "Microsoft Edge support for Windows Information Protection"
 ms.author: kvice
 author: dan-wesley
 manager: likuba
-ms.date: 08/01/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Microsoft Edge support for Windows Information Protection"
 # Microsoft Edge support for Windows Information Protection (WIP)
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes how Microsoft Edge supports Windows Information Protection (WIP).
 
@@ -93,11 +93,11 @@ On hybrid joined machines, Microsoft Edge is automatically signed in with the Mi
 > [!NOTE]
 > If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Microsoft Entra ID join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-If hybrid joining isn't an option, you can use on-prem Active Directory accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Azure AD's features, such as cloud sync, Office NTP, and so on.
+If hybrid joining isn't an option, you can use on-prem Microsoft Entra accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Microsoft Entra ID's features, such as cloud sync, Office NTP, and so on.
 
-#### Active Directory (AD) accounts
+#### Microsoft Entra accounts
 
-For AD accounts, you must configure the following policy to have the Microsoft Edge auto create a special work profile.
+For Microsoft Entra accounts, you must configure the following policy to have the Microsoft Edge auto create a special work profile.
 
 - [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin)
 
