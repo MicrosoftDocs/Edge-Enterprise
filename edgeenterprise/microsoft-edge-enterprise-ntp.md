@@ -3,7 +3,7 @@ title: "Microsoft Edge Enterprise new tab page"
 ms.author: mamayeka
 author: dan-wesley
 manager: likuba
-ms.date: 07/11/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,15 +15,15 @@ description: "Learn how the Enterprise new tab page supports context switching a
 # Microsoft Edge Enterprise new tab page
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 The Enterprise new tab page is a direct response to a new challenge that workers face daily: frequent context switching. Our research shows that in addition to managing schedules, workers juggle roughly three projects a day—and on average, switch between them two to three times a day. Combine that switching with a torrent of emails, pings, and calls (which, when combined, can easily number in the triple digits) and they're constantly switching contexts throughout their day. Finally, add on the challenge of hybrid workplaces and it's no wonder they want to work smarter not harder.
 
 ## The role of the browser
 
-As the browser role grows to become central for workers to finish everyday tasks, it's more important now than ever that information workers can cut through the noise and find what they need. That's why we've created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Microsoft 365** tab.
+As the browser role grows to become central for workers to finish everyday tasks, it’s more important now than ever that information workers can cut through the noise and find what they need. That’s why we’ve created a personalized productivity dashboard right in the Microsoft Edge Enterprise new tab page. Any enterprise user of Microsoft Edge can use this by opening a new tab and then selecting the **Work feed** tab.
 
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-dashboard-without-mail.png" alt-text="New tab page dashboard from Microsoft 365":::
+![Image of the work feed page.](media/microsoft-edge-enterprise-ntp/workfeed2.png)
 
 The dashboard is a focal point for quickly finding the information you need and stay up to date on the things that matter most, all while cutting out the noise. Now, we'll highlight some of the top features that can help keep your employees productive.
 
@@ -77,27 +77,29 @@ One of the most effective ways for many users to stay productive when they're ge
 
 Trying to find something for work, but can't quite figure out where to start? Just search for it! The Microsoft Edge address bar (location bar or URL bar) supports finding work content through Microsoft Search for Bing (MSB). Type your query and search or select one of the auto-suggested work results in Microsoft Suggests. You can also select "my organization" in the Microsoft search banner for work information only.
 
-## How to make Microsoft 365 the default tab
+## How to make Work feed the default tab
 
-The new tab page will remember the last tab the user selected, so simply selecting the Microsoft 365 tab will set it as default.
+The new tab page will remember the last tab the user selected, so simply selecting the Work feed tab will set it as default.
 
-For tenant admins, if you'd like to have your organization automatically set Microsoft 365 as the default tab, follow these steps:
+For tenant admins, if you’d like to have your organization automatically set Work feed as the default tab, follow these steps:
+
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
+2. In the Search bar type **News** and press **Enter**.
+3. Under **Settings**, select **News > Microsoft Edge new tab page**.
+5. *Clear* the box that says **Show Microsoft 365 content on the Microsoft Edge new tab page**.
+6. To re-enable the feature, check the box that says **Show My Feed content on the Microsoft Edge new tab page**.
+7. To make it a default feed, **Set Users default to Work feed**.
+
+![screenshot of news feed settings.](media/microsoft-edge-enterprise-ntp/newsfeed1.png)
+
+## How to disable My Feed or Work feed tabs
+
+Tenant admins can disable the My Feed or Work feed tabs using the Microsoft 365 admin center by following these steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
 2. Go to **Org settings** > **News**.
 3. Under **News**, **select Microsoft Edge new tab page**.
-4. Select "Users default to Microsoft 365".
-
-:::image type="content" source="media/microsoft-edge-enterprise-ntp/new-tab-set-default.png" alt-text="Admin steps to set Microsoft 365 as default tab":::
-
-## How to disable My Feed or Microsoft 365 tabs
-
-Tenant admins can disable the My Feed or Microsoft 365 tabs using the Microsoft 365 admin center by following these steps:
-
-1. Sign in to the [Microsoft 365 admin center](https://portal.office.com/Adminportal/Home).
-2. Go to **Org settings** > **News**.
-3. Under **News**, **select Microsoft Edge new tab page**.
-4. Uncheck "Show Microsoft 365 content…" or "Show My Feed content…".
+4. Uncheck "Show Work feed content…" or "Show My Feed content…".
 
 ## See also
 
