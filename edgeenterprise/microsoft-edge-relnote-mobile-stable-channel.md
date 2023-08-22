@@ -23,11 +23,9 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
-## Version 116.0.xxxx.xx: August 22, 2023
+## Version 1116.0.1938.56: August 21, 2023
 
-Fixed various bugs and performance issues.
-<!-- NEED TO VERIFY THE FOLLOWING
-?? This release contains several security fixes for Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide). -->
+Fixed various bugs and performance issues for iOS.
 
 ### Feature updates
 
@@ -38,6 +36,10 @@ Fixed various bugs and performance issues.
 - Brand info (logo) of New Tab Page (NTP) is now pulled from MS Graph. If you only configure brand logo in the Intune portal, you must also configure it in the Azure portal. For more information, see [Add company branding - Basics](/azure/active-directory/fundamentals/how-to-customize-branding#basics).
 
 - InPrivate mode can be managed by Mobile Device Management (MDM) Policy setting for [InPrivateModeAvailability](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability).
+
+## Version 1116.0.1938.53: August 21, 2023
+
+Fixed various bugs and performance issues for Android.
 
 ## Version 115.0.1901.187: July 27, 2023
 
