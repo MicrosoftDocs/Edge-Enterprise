@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 06/19/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -111,6 +111,7 @@ These tables list all of the browser-related policies available in this release 
 | [SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)   | Disable saving browser history    |
 | [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
+| [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
 
 ## HTTP authentication
 
@@ -2167,6 +2168,47 @@ true
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
+
+### InPrivateModeAvailability
+
+#### InPrivate mode availability
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 116
+
+- Microsoft Edge (iOS and iPadOS) since version 116
+
+#### Description
+
+Specifies whether the user may open pages in InPrivate mode in Microsoft Edge.
+
+If 'Enabled' is selected or the policy is left unset, pages may be opened in InPrivate mode.
+
+If 'Disabled' is selected, pages will not be opened in InPrivate mode.
+
+If 'Forced' is selected, pages will be opened ONLY in InPrivate mode.
+
+Note: On iOS, if the policy is changed during a session, it will only take effect on relaunch.
+
+0 = InPrivate mode available
+1 = InPrivate mode disabled
+2 = InPrivate mode forced
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+
+- Per Profile : Yes
+
+#### Data Type:
+
+Android:Integer
+
+iOS:Integer
+
+[Back to top](#microsoft-edge-mobile---policies)
+ 
 
 ## See also
 
