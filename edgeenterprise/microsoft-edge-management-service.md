@@ -344,7 +344,7 @@ If there's a conflict with policy that User and Device are both trying to set, D
    ```
 
 3. If Microsoft Edge is open, restart it.
-<!-- ====================================================================== -->
+
 #### How the configuration profile is applied
 
 The Click-to-Run service used by Microsoft Edge management service checks with Cloud Policy regularly to see if there are any configuration profiles that pertain to the user. If there are, then the appropriate policy settings are applied and take effect the next time the user opens Microsoft Edge.
