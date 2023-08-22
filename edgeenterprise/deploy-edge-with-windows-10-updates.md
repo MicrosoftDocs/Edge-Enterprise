@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge with Windows 10 updates"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/10/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Deploy Microsoft Edge with Windows 10 updates"
 # Deploy Microsoft Edge with Windows 10 updates
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 The article provides information for users who are deploying Microsoft Edge by using Windows 10 updates.
 
