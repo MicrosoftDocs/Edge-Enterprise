@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 08/01/2023
+ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,7 +15,7 @@ description: "Learn about Microsoft Edge Workspaces and how they can benefit use
 # Microsoft Edge Workspaces
 
 > [!NOTE]
-> Microsoft Edge for Business, the new, dedicated work experience for Microsoft Edge, is in preview today! [Try Microsoft Edge for Business](/deployedge/microsoft-edge-for-business), including the switching between work and personal browsing, and let us know what you think.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
 
@@ -137,6 +137,9 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 ### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close, open, or move tabs?
 
 Yes. You can use Locked Tabs. This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab.
+
+> [!NOTE]
+> The Locked Tabs feature is available starting with Edge stable version 116.
 
 ### If I close a tab in a workspace, does that close it for everyone in the workspace?
 
