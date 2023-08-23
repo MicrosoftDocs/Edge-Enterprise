@@ -88,7 +88,7 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
-## Mobile Application Management (MAM) for Windows
+## MAM for Windows preview
 
 > [!NOTE]
 > This preview requires tenant onboarding.
@@ -166,7 +166,7 @@ To turn off the personal browser window, use the settings described in [Restrict
 
 ### Does Edge for Business support unmanaged devices?
 
-Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [Mobile Application Management (MAM) for Windows](#mobile-application-management-mam-for-windows) to access this preview.  
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows preview](#mam-for-windows-preview) to access this preview.  
 
 ## See also
 
