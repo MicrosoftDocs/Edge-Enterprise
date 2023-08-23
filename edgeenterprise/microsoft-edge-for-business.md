@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 08/23/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,7 +88,7 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
-## Unmanaged BYOPC preview
+## MAM for Windows
 
 > [!NOTE]
 > This preview requires tenant onboarding.
@@ -97,7 +97,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
-- Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
+- Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Azure AD*).
 
 Participation requirements:
