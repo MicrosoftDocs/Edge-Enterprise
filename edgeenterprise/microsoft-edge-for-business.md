@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 08/23/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,7 +28,7 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
 Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by a Microsoft Entra ID (formerly known as Azure Active Directory or Azure AD) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
-Microsoft Edge for Business will be generally available on managed PCs starting in Stable release version 116, and available in public preview on unmanaged BYOPCs.
+Microsoft Edge for Business will be generally available on managed PCs starting in Stable release version 116, and available in public preview on unmanaged devices.
 
 Microsoft Edge for Business encompasses the experiences summarized in the following table.
 
@@ -37,7 +37,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID (*Azure AD*) with refreshed visual treatment. | Available |
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically swirtches work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
-|  Unmanaged BYOPC  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
+|  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
 
 ## Work Browser (Visual Refresh)
@@ -88,7 +88,7 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
-## Unmanaged BYOPC preview
+## MAM for Windows preview
 
 > [!NOTE]
 > This preview requires tenant onboarding.
@@ -97,7 +97,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
-- Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
+- Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Azure AD*).
 
 Participation requirements:
@@ -108,7 +108,7 @@ Participation requirements:
 - Engage with the Microsoft product group during the preview.
 
 > [!IMPORTANT]
-> Production use of the public preview on BYOPCs isn't supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
+> Production use of the public preview on personal devices isn't supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
 
 ## Provide feedback
 
@@ -166,7 +166,7 @@ To turn off the personal browser window, use the settings described in [Restrict
 
 ### Does Edge for Business support unmanaged devices?
 
-Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [Unmanaged BYOPC preview](#unmanaged-byopc-preview) to access this preview.  
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows preview](#mam-for-windows-preview) to access this preview.  
 
 ## See also
 
