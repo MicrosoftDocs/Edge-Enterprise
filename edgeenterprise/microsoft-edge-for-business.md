@@ -35,7 +35,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Name | Description | Status |
 |:-----|:-----|:------|
 | Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID (*Azure AD*) with refreshed visual treatment. | Available |
-| Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically swirtches work-related navigation into the work browser. | Available  |
+| Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Public Preview<br>(See following onboarding instructions) |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
