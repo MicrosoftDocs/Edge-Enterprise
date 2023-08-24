@@ -248,8 +248,6 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
-
-<!-- ====================================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
 
 After configuring a profile, the next step is to assign the profile.  
