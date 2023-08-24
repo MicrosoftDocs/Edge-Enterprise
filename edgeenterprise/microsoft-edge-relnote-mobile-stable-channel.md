@@ -23,7 +23,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
-## Version 1116.0.1938.56: August 21, 2023
+## Version 116.0.1938.56: August 21, 2023
 
 Fixed various bugs and performance issues for iOS.
 
@@ -37,7 +37,7 @@ Fixed various bugs and performance issues for iOS.
 
 - InPrivate mode can be managed by Mobile Device Management (MDM) Policy setting for [InPrivateModeAvailability](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability).
 
-## Version 1116.0.1938.53: August 21, 2023
+## Version 116.0.1938.53: August 21, 2023
 
 Fixed various bugs and performance issues for Android.
 
