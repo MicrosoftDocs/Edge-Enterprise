@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 08/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -264,7 +264,7 @@ Use the following sections as a guide to enable the Microsoft Edge management se
 #### For Microsoft Edge version 115.1935 and later
 
 Microsoft Edge management service is enabled by default. Work profiles signed in with Microsoft Entra accounts will check with the Edge management service for any policies assigned to them. If an enrollment token is configured through device management, that token will be used. To disable the checking in with the Edge management service you can set the [EdgeManagementEnabled](/deployedge/microsoft-edge-policies#edgemanagementenabled) policy to 0 or disabled.
-
+<!---
 #### For Microsoft Edge version 115.1934 and earlier
 
 Use the following steps as a guide to enable the service:
@@ -279,7 +279,7 @@ Use the following steps as a guide to enable the service:
 2. If Microsoft Edge is open, restart it.
 
 If Microsoft Edge is logged in as a user with an assigned policy, Microsoft Edge will download and apply the policy. For more information, see [Assign a configuration profile to an Microsoft Entra group](#assign-a-configuration-profile-to-an-microsoft-entra-group).
-
+-->
 ### Set an enrollment token
 
 Use the following sections as a guide to setting an enrollment token.
@@ -297,7 +297,7 @@ Use these steps as a guide for setting an enrollment token:
     reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementEnrollmentToken /t REG_SZ /d 1bba4530-7d23-4512-acda-89248f8e3d47 
     ```
 3. If Microsoft Edge is open, restart it.
-
+<!--
 #### For Microsoft Edge version 115.1934 and earlier
 
 If you don't want to assign the profile using group assignment in the Microsoft 365 Admin Center, then you can assign it through group policy. Each profile has a unique profile ID which is the value you can use for the [EdgeAdminCenterEnrollmentToken] policy to assign the profile. After assignment, the users will receive the profile and the settings will be applied when they're signed into the Microsoft Edge browser. These policies will be applied in addition to any from group assignment in the Microsoft 365 Admin Center.
@@ -313,7 +313,7 @@ Use these steps as a guide for setting an enrollment token:
     ```
 
 4. If Microsoft Edge is open, restart it.
-
+-->
 #### Control policy source precedence
 
 As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
