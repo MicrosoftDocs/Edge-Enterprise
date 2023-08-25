@@ -3,7 +3,7 @@ title: "Policy filters for the Enterprise personal browser"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/31/2023
+ms.date: 08/25/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -133,29 +133,6 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls)|Allow insecure content on specified sites|
 |[InsecureContentBlockedForUrls](/deployedge/microsoft-edge-policies#insecurecontentblockedforurls)|Block insecure content on specified sites|
 |[InsecureFormsWarningsEnabled](/deployedge/microsoft-edge-policies#insecureformswarningsenabled)|Enable warnings for insecure forms|
-|[InternetExplorerIntegrationAlwaysUseOSCapture](/deployedge/microsoft-edge-policies#internetexplorerintegrationalwaysuseoscapture)|Always use the OS capture engine to avoid issues with capturing Internet Explorer mode tabs|
-|[InternetExplorerIntegrationAlwaysWaitForUnload](/deployedge/microsoft-edge-policies#internetexplorerintegrationalwayswaitforunload)|Wait for Internet Explorer mode tabs to completely unload before ending the browser session|
-|[InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting)|Configure reporting of potentially misconfigured neutral site URLs to the M365 Admin Center Site Lists app|
-|[InternetExplorerIntegrationCloudSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist)|Configure the Enterprise Mode Cloud Site List|
-|[InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting)|Configure reporting of IE Mode user list entries to the M365 Admin Center Site Lists app|
-|[InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes)|Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode|
-|[InternetExplorerIntegrationEnhancedHangDetection](/deployedge/microsoft-edge-policies#internetexplorerintegrationenhancedhangdetection)|Configure enhanced hang detection for Internet Explorer mode|
-|[InternetExplorerIntegrationLevel](/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)|Configure Internet Explorer integration|
-|[InternetExplorerIntegrationLocalFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileallowed)|Allow launching of local files in Internet Explorer mode|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist)|Open local files in Internet Explorer mode file extension allow list|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileshowcontextmenu)|Show context menu to open a file:// link in Internet Explorer mode|
-|[InternetExplorerIntegrationLocalMhtFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalmhtfileallowed)|Allow local MHTML files to open automatically in Internet Explorer mode|
-|[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)|Allow unconfigured sites to be reloaded in Internet Explorer mode|
-|[InternetExplorerIntegrationSiteList](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelist)|Configure the Enterprise Mode Site List|
-|[InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval)|Configure how frequently the Enterprise Mode Site List is refreshed|
-|[InternetExplorerIntegrationSiteRedirect](/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect)|Specify how "in-page" navigations to unconfigured sites behave when started from Internet Explorer mode pages|
-|[InternetExplorerIntegrationWindowOpenHeightAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
-|[InternetExplorerIntegrationWindowOpenWidthAdjustment](/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
-|[InternetExplorerModeClearDataOnExitEnabled](/deployedge/microsoft-edge-policies#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
-|[InternetExplorerModeEnableSavePageAs](/deployedge/microsoft-edge-policies#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
-|[InternetExplorerModeTabInEdgeModeAllowed](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
-|[InternetExplorerModeToolbarButtonEnabled](/deployedge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
-|[InternetExplorerZoomDisplay](/deployedge/microsoft-edge-policies#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[JavaScriptAllowedForUrls](/deployedge/microsoft-edge-policies#javascriptallowedforurls)|Allow JavaScript on specific sites|
 |[JavaScriptBlockedForUrls](/deployedge/microsoft-edge-policies#javascriptblockedforurls)|Block JavaScript on specific sites|
 |[JavaScriptJitAllowedForSites](/deployedge/microsoft-edge-policies#javascriptjitallowedforsites)|Allow JavaScript to use JIT on these sites|
