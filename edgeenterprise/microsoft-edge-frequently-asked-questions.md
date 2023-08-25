@@ -62,6 +62,10 @@ Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.up
 
 Yes. For more information, see [Configure Microsoft Edge using Initial Preferences settings for the first run](./initial-preferences-support-on-microsoft-edge-browser.md)
 
+## Does Microsoft Edge still use Windows SChannel for it's secure protocol configuration?
+
+No. With all chromium based browsers, it leverages [BoringSSL](https://github.com/google/boringssl). This means specific secure protocol configurations must be done via Edge or Edge specific configuration in Intune or Group Policy. The former Edge Product Manager discusses this more on his blog [Can I.. in the new Edge?](https://textslashplain.com/2020/02/26/can-i-in-the-new-edge/#can-i-disable-certain-https-ciphers)
+
 ## See also
 
 - [Microsoft Edge documentation landing page](./index.yml)
