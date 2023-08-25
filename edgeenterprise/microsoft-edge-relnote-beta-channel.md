@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/18/2023
+ms.date: 08/25/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -19,6 +19,35 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 117.0.2045.9: August 25, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge for Business update.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  The Automatic Switching mechanism is designed to keep work and personal browsing separate for the end users. This mechanism currently switches users from personal to work browsing on applicable logins. The new update will start automatically switching users from work to personal browsing on applicable logins. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Smart Find.** Searching for a word or phrase on a webpage has become easier with AI. Even if you misspell a word in your search query, related matches and words are suggested, making it effortless to find what you're looking for. When you search, select the suggested link to quickly locate the desired word or phrase. Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.  For more information, see [Smart Find](/edge/features/smart-find?form=MT00D8).
+
+- **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet.  Once it's grown, a real mangrove is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edge-wallet-e-tree-enabled) policy. Note: This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Deprecation of features.** To improve end user experience and simplify the More tools menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
+
+### Policy updates
+
+#### New policies
+
+- [AllowSystemNotifications](/deployedge/microsoft-edge-policies#allowsystemnotifications) - Allows system notifications
+- [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) - Edge Wallet E-Tree Enabled
+- [GamerModeEnabled](/deployedge/microsoft-edge-policies#gamermodeenabled) - Enable Gamer Mode
+- [SearchbarAllowed](/deployedge/microsoft-edge-policies#searchbarallowed) - Enable the Search bar
+- [SearchbarIsEnabledOnStartup](/deployedge/microsoft-edge-policies#searchbarisenabledonstartup) -Allow the Search bar at Windows startup
+- [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
+- [UploadFromPhoneEnabled](/deployedge/microsoft-edge-policies#uploadfromphoneenabled) - Enable upload files from phone in Microsoft Edge desktop
+
+#### Obsoleted policy
+
+- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
 
 ## Version 116.0.1938.54: August 18, 2023
 
@@ -35,84 +64,7 @@ Fixed various bugs and performance issues.
 ## Version 116.0.1938.36: July 31, 2023
 
 Fixed various bugs and performance issues.
-
-## Version 116.0.1938.29: July 24, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Microsoft Edge for Business.** In addition to rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business offers new refreshed look and feel, automatic switching to keep your work and personal browsing separate including fixes from private preview feedback, lightly managed Enterprise Personal Browser (MSA profile), and support for Unmanaged BYOPC. Microsoft Edge for Business is now turned on by default.  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
-
-- **Locked Tabs in Edge Workspaces.** This feature lets you keep tabs where you put them in an Edge workspace. A locked tab can't be closed, dragged or otherwise moved out of a workspace window. To lock a tab, right-click the tab and choose "Lock Tab" from the context menu.  Click the lock icon on a tab to unlock it. Only the workspace creator and the user who locked the tab are permitted to unlock the tab. For more information, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces). **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-- **New Microsoft Edge PDF experience policy for WebView2.** The [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy configures WebView2 applications to launch the new version of the PDF reader that's powered by Adobe Acrobat's PDF rendering engine.  The new PDF reader ensures that there's no loss of functionality and delivers an enhanced PDF experience. This experience includes richer rendering, improved performance, strong security for PDF file handling, and greater accessibility. Administrators can use the [NewPDFReaderWebView2List](/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list) policy or WebView2 developers can explicitly enable the **msPdfSharedLibrary** experimental flag in code to use WebView2 with PDF powered by Adobe PDF Engine. For more information about the Adobe and Microsoft collaboration, see [Microsoft Edge and Adobe partner to improve the PDF experience](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/ba-p/3733481).
-
-### Policy updates
-
-#### New policies
-
-[ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes
-
-## Version 115.0.1901.183: July 21, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.181: July 19, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.178: July 17, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.175: July 14, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.170: July 11, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.165: July 6, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.157: June 28, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 115.0.1901.151: June 23, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Autofill Autocomplete.** This feature helps you fill form fields faster on the web. When you start typing in a form field, Microsoft Edge suggests possible in-line completions when there's an exact match with your saved data in the browser. For example, if you type the first few characters of your address, autocomplete will suggest the rest of address - you can choose the autocomplete suggestion or continue typing as usual. Autofill options can be found in Settings (`edge://settings/personalinfo`).  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 115.0.1901.14: June 19, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Microsoft Edge for Business.**  In addition to rich set of enterprise controls, security, and productivity features that you're already familiar with, Microsoft Edge for Business offers new refreshed look and feel, automatic switching to keep your work and personal browsing separate, lightly managed Enterprise Personal Browser (MSA profile), support for Unmanaged BYOPC, and Company Branding (coming soon).  
-
-  To enable preview on a device, enter the following URLs in the Microsoft Edge address bar and set each flag to "Enabled".
-
-  - `edge://flags/#edge-project-kodiak`
-
-  - `edge://flags/#edge-project-kodiak-look-and-feel`
-
-  - `edge://flags/#edge-project-kodiak-policy-filter`
-
-  - `edge://flags/#edge-automatic-profile-switching`
-
-  For more information, see [Microsoft Edge for Business (Early Preview)](/deployedge/microsoft-edge-for-business).
-
-## Version 115.0.1901.9: June 15, 2023
-
-Fixed various bugs and performance issues.
+<!-- Version 116.0.1938.29: July 24, 2023 to Version 115.0.1901.9: June 15, 2023 -->
 <!-- from Version 115.0.1901.7: June 13, 2023 to Version 114.0.1823.18: May 15, 2023 -->
 <!-- Version 114.0.1823.11: May 9, 2023 to Version 113.0.1774.15: April 18, 2023 -->
 <!-- Version 113.0.1774.9: April 12, 2023 to Version 112.0.1722.15: March 21, 2023 -->
