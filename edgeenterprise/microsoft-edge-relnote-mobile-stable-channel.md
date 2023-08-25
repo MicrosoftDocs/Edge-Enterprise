@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 08/21/2023
+ms.date: 08/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,13 +23,13 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
-## Version 1116.0.1938.56: August 21, 2023
+## Version 116.0.1938.56: August 21, 2023
 
 Fixed various bugs and performance issues for iOS.
 
 ### Feature updates
 
-- Bing Chat Enterprise is available on Edge mobile by default, and can be managed by Intune MAM policy `com.microsoft.intune.mam.managedbrowser.Chat=true/false`.
+- Bing Chat Enterprise (BCE) is available on Edge mobile. By default, Bing Chat Enterprise is turned off. It can be turned on via Intune MAM policy `com.microsoft.intune.mam.managedbrowser.Chat=true`.
 
 - The **Open in Microsoft Edge** option is available for saving files to OneDrive (Android).
 
@@ -37,7 +37,7 @@ Fixed various bugs and performance issues for iOS.
 
 - InPrivate mode can be managed by Mobile Device Management (MDM) Policy setting for [InPrivateModeAvailability](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability).
 
-## Version 1116.0.1938.53: August 21, 2023
+## Version 116.0.1938.53: August 21, 2023
 
 Fixed various bugs and performance issues for Android.
 
