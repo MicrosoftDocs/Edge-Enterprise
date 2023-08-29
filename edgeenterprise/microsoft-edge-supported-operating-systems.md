@@ -80,7 +80,7 @@ Microsoft Edge native support as of Stable version 88 for Apple Silicon Macs.
 
 ### Linux
 
-Microsoft Edge is supported on Linux. For any issues related to Microsoft Edge on Linux, either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider.
+Microsoft Edge is supported on Linux.
 
 ### Chromebooks
 
