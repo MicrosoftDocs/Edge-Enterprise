@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 08/29f/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -80,7 +80,7 @@ Microsoft Edge native support as of Stable version 88 for Apple Silicon Macs.
 
 ### Linux
 
-Preview builds are available for Linux. For any issues related to Microsoft Edge on Linux, either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. Enterprise support for Microsoft Edge on Linux is coming at a later time.
+Preview builds are available for Linux. For any issues related to Microsoft Edge on Linux, either as a Developer or as an Enterprise, please file feedback directly through the browser or by utilizing our TechCommunity forums https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. Enterprise support for Microsoft Edge on Linux has been available since 2021.
 
 ### Chromebooks
 
