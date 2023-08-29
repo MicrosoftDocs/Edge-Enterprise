@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/25/2023
+ms.date: 08/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -31,6 +31,10 @@ These release notes provide information about new features and non-security upda
 Fixed various bugs and performance issues for Stable release.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-25-2023).
+
+### Feature update
+
+- **Tab organization.**  Microsoft Edge offers helpful suggestions on how to organize tabs to save you time and keep you focused on the web content you care about. These suggestions augment the Tab Grouping feature built into Microsoft Edge. When two or more tabs are grouped together, Microsoft Edge can automatically generate a relevant name for the Tab Group. Furthermore, Microsoft Edge can suggest grouping for all of your tabs by using the "Group Similar Tabs" feature in the Tab Action menu. Administrators can control the availability of this feature using the [TabServicesEnabled](/deployedge/microsoft-edge-policies#tabservicesenabled) policy.
 
 ## Version 116.0.1938.54: August 21, 2023
 
