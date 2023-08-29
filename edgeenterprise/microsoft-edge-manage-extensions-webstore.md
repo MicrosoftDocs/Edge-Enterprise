@@ -23,6 +23,8 @@ This article provides basic guidance for packaging an extension to host on your 
 
 To self-host your own extensions, you need to provide your own web hosting services for the extensions and their manifest files.
 
+To install a self-hosted extension that's not listed in the Microsoft Edge Add-ons website, Windows instances must be joined to a Microsoft Active Directory domain. Self-hosted extensions won't work for Microsoft Entra ID joined devices unless they're Microsoft Entra hybrid joined.
+
 The following steps assume that you've already created your extension, have some experience with XML files, have a working knowledge of configuring group policy, and know how to use the Windows registry.
 
 ## Publish an extension
