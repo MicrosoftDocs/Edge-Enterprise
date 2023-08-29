@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 08/29f/2023
+ms.date: 08/29/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
