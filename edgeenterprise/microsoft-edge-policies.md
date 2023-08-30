@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/25/2023
+ms.date: 08/29/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -535,6 +535,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Allow Internet Explorer mode testing (obsolete)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Configure the pixel adjustment between window.open heights sourced from IE mode pages vs. Edge mode pages|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Configure the pixel adjustment between window.open widths sourced from IE mode pages vs. Edge mode pages|
+|[InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](#internetexplorerintegrationzoneidentifiermhtfileallowed)|Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode|
 |[InternetExplorerModeClearDataOnExitEnabled](#internetexplorermodecleardataonexitenabled)|Clear history for IE and IE mode every time you exit|
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
@@ -26278,7 +26279,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26337,7 +26338,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26400,7 +26401,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26461,7 +26462,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26524,7 +26525,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26595,7 +26596,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26669,7 +26670,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26732,7 +26733,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26794,7 +26795,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26856,7 +26857,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26923,7 +26924,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -26989,7 +26990,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27119,7 +27120,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: Yes
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27172,7 +27173,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27231,7 +27232,7 @@ If you disable or don't configure this policy, Microsoft Edge will use a default
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27313,7 +27314,7 @@ Use the preceding information when configuring this policy.
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27379,7 +27380,7 @@ If you disable or don't configure this policy, users can't see the options 'Open
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27436,7 +27437,7 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27493,7 +27494,7 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27526,6 +27527,65 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
 
   [Back to top](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationZoneIdentifierMhtFileAllowed
+
+  #### Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 118 or later
+
+  #### Description
+
+  This policy controls whether MHT or MHTML files that are downloaded from the web are automatically opened in Internet Explorer mode.
+
+If you enable this policy, the MHT or MHTML files that are downloaded from the web can be opened in both Microsoft Edge and Internet Explorer mode to provide the best user experience.
+
+If you disable or don't configure this policy, MHT or MHTML files that are downloaded from the web won't automatically open in Internet Explorer mode.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationZoneIdentifierMhtFileAllowed
+  - GP name: Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationZoneIdentifierMhtFileAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### InternetExplorerModeClearDataOnExitEnabled
 
   #### Clear history for IE and IE mode every time you exit
@@ -27552,7 +27612,7 @@ If you disable or do not configure this policy, Internet Explorer browsing histo
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27614,7 +27674,7 @@ To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27673,7 +27733,7 @@ If you disable or don't configure this policy, users can't see the option 'Open 
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27730,7 +27790,7 @@ If you disable or don't configure this policy, the Reload in Internet Explorer m
   - Can be recommended: Yes
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -27789,7 +27849,7 @@ If you disable or don't configure this policy, zoom values will be displayed wit
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
