@@ -1,4 +1,4 @@
-# last revised 07/245/2023
+# last revised 08/30/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -225,6 +225,8 @@
   items:
    - name: Browser policy reference
      href: microsoft-edge-policies.md
+   - name: EdgeUpdater policy reference
+     href: microsoft-edge-edgeupdater-policies-mac.md
    - name: Update policy reference
      href: microsoft-edge-update-policies.md
    - name: Mobile policy reference
