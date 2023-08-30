@@ -21,7 +21,7 @@ For information about other policies available in Microsoft Edge, check out [Mic
 
 For information about Update policies available in Microsoft Edge for Windows, check out [Microsoft Edge Update policy reference](/deployedge/microsoft-edge-update-policies).
 
-For an example of how to use a plist to deploy the policies in this document, check out [Update configuration example](https://protect-de.mimecast.com/s/7rlHCJ84k8HK5gO1EiGbPIZ?domain=review.learn.microsoft.com).
+For an example of how to use a plist to deploy the policies in this document, check out [Update configuration example](/deployedge/edge-learnmore-edgeupdater-for-macos#update-configuration-example)
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 113 or later.
