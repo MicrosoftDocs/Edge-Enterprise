@@ -29,7 +29,7 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- Bing Chat Enterprise (BCE) is available on Edge mobile for iOS and Android. By default, Bing Chat Enterprise is turned on. For detailed information about how to manage BCE, see [Bing Chat Enterprise](/mem/intune/apps/manage-microsoft-edge#bing-chat-enterprise).
+- **Bing Chat Enterprise (BCE)** is available on Edge mobile for iOS and Android. By default, Bing Chat Enterprise is turned on. For detailed information about how to manage BCE, see [Bing Chat Enterprise](/mem/intune/apps/manage-microsoft-edge#bing-chat-enterprise).
 
 ## Version 116.0.1938.56: August 21, 2023
 
