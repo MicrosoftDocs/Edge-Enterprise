@@ -19,6 +19,10 @@ The latest version of Microsoft Edge includes the following policies that you ca
 
 For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)
 
+For information about Update policies available in Microsoft Edge for Windows, check out [Microsoft Edge Update policy reference](/deployedge/microsoft-edge-update-policies).
+
+For an example of how to use a plist to deploy the policies in this document, check out [Update configuration example](https://protect-de.mimecast.com/s/7rlHCJ84k8HK5gO1EiGbPIZ?domain=review.learn.microsoft.com).
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 113 or later.
 
@@ -50,7 +54,7 @@ These tables list all of the update-related group policies available in this rel
 
 #### Update policy override default
 
->EdgeUpdater 109.0.1518.107and later
+>EdgeUpdater 109.0.1518.107 and later
 
 #### Description
 
@@ -69,10 +73,12 @@ If you don't enable and configure this policy, EdgeUpdater handles available upd
 
 ##### Supported values:
 
-0 // Always allow updates<br>
-1 // Automatic silent updates only<br>
-2 // Manual updates only<br>
-3 // Updates disabled<br>
+```
+0 // Always allow updates
+1 // Automatic silent updates only
+2 // Manual updates only
+3 // Updates disabled
+```
 
 [Back to top](#microsoft-edge---edgeupdater-policies-for-macos)
 <!-- ====================TEMP END ======================== -->
@@ -91,19 +97,21 @@ If you enable this policy, EdgeUpdater handles Microsoft Edge updates according 
 
 * Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.
 * Automatic silent updates only: Updates are applied only when they're found by the periodic update check.
-* Manual updates only: Updates are applied only when the user runs a manual update check. (Not all apps provide an interface for this option.)
+* Manual updates only: Updates are applied only when the user runs a manual update check.
 * Updates disabled: Updates are never applied.
 
 If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available. If you disable updates, periodically check for updates, and distribute them to users.
 
-If you don't enable and configure this policy, EdgeUpdater handles available updates as specified by the '[Update policy override default]' (link to the UpdateDefault section of this page) policy.
+If you don't enable and configure this policy, EdgeUpdater handles available updates as specified by the '[Update policy override](#update)' policy.
 
 ##### Supported values:
 
-0 // Always allow updates<br>
-1 // Automatic silent updates only<br>
-2 // Manual updates only<br>
-3 // Updates disabled<br>
+```
+0 // Always allow updates
+1 // Automatic silent updates only
+2 // Manual updates only
+3 // Updates disabled
+```
 
 [Back to top](#microsoft-edge---edgeupdater-policies-for-macos)
 <!-- ==================================================== -->
@@ -127,10 +135,11 @@ The 'Update policy override default' and per-application 'Update policy override
 
 ##### Supported values:
 
-0 // Always allow updates
+```
+0   // Always allow updates
+```
 
 [Back to top](#microsoft-edge---edgeupdater-policies-for-macos)
-
 
 ### UpdatesSuppressed
 
@@ -146,12 +155,13 @@ If you disable or don't configure this policy, update checks aren't suppressed d
 
 ##### Example value:
 
-duration   : 60 //60 minutes<br>
-start hour : 1<br> 
-start min  : 2 //1:02 am<br>
+```
+duration   : 60 //60 minutes
+start hour : 1
+start min  : 2 //1:02 am
+```
 
 [Back to top](#microsoft-edge---edgeupdater-policies-for-macos)
-
 
 <!-- ==================================================== -->
 ## See also
