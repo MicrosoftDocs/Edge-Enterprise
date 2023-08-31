@@ -19,6 +19,8 @@ The latest version of Microsoft Edge includes the following policies that you ca
 
 For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)
 
+For information about EdgeUpdater policies available in Microsoft Edge for macOS, check out [Microsoft Edge - EdgeUpdater policies for macOS](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-edgeupdater-policies-mac).
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
@@ -99,9 +101,10 @@ This policy is available only on Windows instances that are joined to a Microsof
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: InstallDefault
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -134,9 +137,12 @@ Lets you specify the default behavior for all channels concerning the way Micros
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: UpdateDefault
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000003
+0 // updates disabled
+1 // always allow updates
+2 // manual updates only
+3 // automatic silent updates only
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -179,9 +185,13 @@ This policy is available only on Windows instances that are joined to a Microsof
   - (Canary): Install{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): Install{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
+4 // always allow machine-wide installs
+5 // force installs (machine-wide)
+6 // force installs (per-user)
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -224,9 +234,12 @@ This policy is available only on Windows instances that are joined to a Microsof
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): Update{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // updates disabled
+1 // always allow updates
+2 // manual updates only
+3 // automatic silent updates only
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -257,9 +270,10 @@ Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: Allowsxs
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -285,9 +299,10 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: CreateDesktopShortcutDefault
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -321,9 +336,10 @@ If you enable this policy a desktop shortcut is created when Microsoft Edge is i
   - (Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -370,9 +386,10 @@ This policy is available only on Windows instances that are joined to a Microsof
   - (Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -411,9 +428,9 @@ This policy is available only on Windows instances that are joined to a Microsof
   - (Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_SZ
-##### Example value:
+##### Supported values:
 ```
-83.0.499.12
+83.0.499.12 // specific Microsoft Edge version
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -447,9 +464,12 @@ This policy is available only on Windows instances that are joined to a Microsof
 - Value Name: 
   - (Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
 - Value Type: REG_SZ
-##### Example value:
+##### Supported values:
 ```
-dev
+stable // stable channel
+beta // beta channel
+dev // dev channel
+extended // extended stable channel
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -474,9 +494,11 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: RemoveDesktopShortcutDefault
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // force delete system-level desktop shortcuts
+2 // force delete system-level and user-level desktop shortcuts
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -509,9 +531,11 @@ If you set this policy to "Force delete system-level Desktop Shortcuts", any exi
   - (Canary): RemoveDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): RemoveDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // force delete system-level desktop shortcuts
+2 // force delete system-level and user-level desktop shortcuts
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -546,9 +570,10 @@ Lets you specify whether users in the Windows Insider Program are enrolled in Ed
   - (Canary): EdgePreview{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): EdgePreview{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -576,9 +601,10 @@ The 'Update policy override default' and per-application 'Update policy override
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: AutoUpdateCheckPeriodMinutes
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000578
+0 // minValue 
+43200 // maxValue
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -605,11 +631,16 @@ If you enable this policy, update checks are suppressed each day starting at Hou
   - UpdatesSuppressedStartHour
   - UpdatesSuppressedStartMin
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-duration   : 0x0000003c
-start hour : 0x00000001
-start min  : 0x00000002
+UpdatesSuppressedStartHour:  0 // minValue
+                            23 // maxValue
+
+UpdatesSuppressedStartMin:   0 // minValue
+                            59 // maxValue
+
+UpdatesSuppressedDurationMin:  1 // minValue
+                              960 // maxValue
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -643,9 +674,13 @@ Allows you to specify the proxy server settings that are used by Microsoft Edge 
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: ProxyMode
 - Value Type: REG_SZ
-##### Example value:
+##### Supported values:
 ```
-fixed_servers
+direct // proxy disabled
+auto_detect // auto-detect proxy server
+pac_script // .pac proxy script
+fixed_servers // fixed server proxy mode
+system // system proxy setting
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -672,7 +707,7 @@ Allows you to specify a URL for a proxy auto-config (PAC) file.
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: ProxyPacUrl
 - Value Type: REG_SZ
-##### Example value:
+##### Supported values:
 ```
 https://www.microsoft.com
 ```
@@ -701,7 +736,7 @@ Allows you to specify the URL of the proxy server for Microsoft Edge Update to u
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: ProxyServer
 - Value Type: REG_SZ
-##### Example value:
+##### Supported values:
 ```
 https://www.microsoft.com
 ```
@@ -737,9 +772,10 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Value Name: UpdaterExperimentationAndConfigurationServiceControl
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // enabled
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -774,9 +810,12 @@ Lets you specify whether the WebView2 Runtime can be installed using Microsoft E
 - Value Name: 
   - Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // installs disabled
+1 // installs enabled
+4 // always allow machine-wide installs
+5 // force installs (machine-wide)
 ```
 [Back to top](#microsoft-edge---update-policies)
 
@@ -805,9 +844,10 @@ Lets you specify whether or not automatic updates are enabled for the WebView2 R
 - Value Name: 
   - Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
 - Value Type: REG_DWORD
-##### Example value:
+##### Supported values:
 ```
-0x00000001
+0 // disabled
+1 // always allow updates
 ```
 [Back to top](#microsoft-edge---update-policies)
 
