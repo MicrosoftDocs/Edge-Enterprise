@@ -19,7 +19,7 @@ The latest version of Microsoft Edge includes the following policies that you ca
 
 For information about other policies available in Microsoft Edge, check out [Microsoft Edge browser policy reference](microsoft-edge-policies.md)
 
-For information about EdgeUpdater policies available in Microsoft Edge for macOS, check out [Microsoft Edge - EdgeUpdater policies for macOS](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-edgeupdater-policies-mac).
+For information about EdgeUpdater policies available in Microsoft Edge for macOS, check out [Microsoft Edge - EdgeUpdater policies for macOS](microsoft-edge-edgeupdater-policies-mac.md).
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
