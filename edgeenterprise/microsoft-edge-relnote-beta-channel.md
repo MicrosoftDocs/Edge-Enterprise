@@ -25,11 +25,11 @@ Fixed various bugs and performance issues.
 
 ### Announcement: Deprecating the unload event
 
-The Google Chrome team plans to deprecate the unload event starting in Chrome version 117. The deprecation will occur by gradually changing the default so that unload handlers stop firing on pages unless a page explicitly opts in to re-enable them. For more infomation, see [Deprecating the unload event - Chrome Developers](https://developer.chrome.com/blog/deprecating-unload/), and [Google Groups - Conversations](https://groups.google.com/a/chromium.org/g/blink-dev/c/dvusqw9-IhI/m/SBkm_u1RAQAJ).
+The Google Chrome team plans to deprecate the unload event starting in Chrome version 117. The deprecation will occur by gradually changing the default so unload handlers stop firing on pages unless a page explicitly opts in to re-enable them. For more information, see [Deprecating the unload event - Chrome Developers](https://developer.chrome.com/blog/deprecating-unload/), and [Google Groups - Conversations](https://groups.google.com/a/chromium.org/g/blink-dev/c/dvusqw9-IhI/m/SBkm_u1RAQAJ).
 
 While we haven't yet finalized the deprecation schedule, we anticipate that Microsoft Edge will follow Chrome's schedule with a possible delay of a release or two. If you're interested in testing with Microsoft Edge starting in version 118, the **ForcePermissionPolicyUnloadDefaultEnabled** policy will be available or you can use the instructions documented at [Disable unload handlers by default and add Permissions-Policy to opt-in to enabling them](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#disable-unload-handlers-by-default-and-add-permissions-policy-to-opt-in-to-enabling-them).
 
-WebView2 will support both the permissions policy and the enterprise policy but will not be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
+WebView2 will support both the permissions policy and the enterprise policy but won't be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
 
 ## Version 117.0.2045.9: August 25, 2023
 
@@ -37,7 +37,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Microsoft Edge for Business update.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  The Automatic Switching mechanism is designed to keep work and personal browsing separate for the end users. This mechanism currently switches users from personal to work browsing on applicable logins. The new update will start automatically switching users from work to personal browsing on applicable logins. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+- **Microsoft Edge for Business update.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices.  The Automatic Switching mechanism is designed to keep work and personal browsing separate for the end users. This mechanism currently switches users from personal to work browsing on applicable logins. The new update automatically starts switching users from work to personal browsing on applicable logins. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
 
 - **Smart Find.** Searching for a word or phrase on a webpage has become easier with AI. Even if you misspell a word in your search query, related matches and words are suggested, making it effortless to find what you're looking for. When you search, select the suggested link to quickly locate the desired word or phrase. Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.  For more information, see [Smart Find](/edge/features/smart-find?form=MT00D8).
 
