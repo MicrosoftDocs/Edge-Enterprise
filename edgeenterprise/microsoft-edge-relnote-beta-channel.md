@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/07/2023
+ms.date: 09/08/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -46,6 +46,8 @@ Fixed various bugs and performance issues.
 - **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet.  Once it's grown, a real mangrove is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edge-wallet-e-tree-enabled) policy. Note: This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 - **Deprecation of features.** To improve end user experience and simplify the More tools menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
+
+- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be in the right-click context menu or the "Settings and more" drop down.
 
 ### Policy updates
 
