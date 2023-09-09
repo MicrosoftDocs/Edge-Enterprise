@@ -48,7 +48,7 @@ Fixed various bugs and performance issues.
 
 - **Deprecation of features.** To improve end user experience and simplify the More tools menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
 
-- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be  an option under Web Capture or via keyboard shortcut. 
+- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be in the right-click context menu or the "Settings and more" drop down.
 
 ### Policy updates
 
