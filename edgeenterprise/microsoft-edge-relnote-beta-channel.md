@@ -19,7 +19,6 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-
 ## Version 117.0.2045.21: September 6, 2023
 
 Fixed various bugs and performance issues.
@@ -48,7 +47,7 @@ Fixed various bugs and performance issues.
 
 - **Deprecation of features.** To improve end user experience and simplify the More tools menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
 
-- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be  an option under Web Capture or via keyboard shortcut. 
+- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
 
 ### Policy updates
 
