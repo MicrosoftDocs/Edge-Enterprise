@@ -240,7 +240,6 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
 |[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
 |[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
@@ -251,6 +250,7 @@ These tables list all of the browser-related group policies available in this re
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configure password protection warning trigger|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Enable Password reveal button|
 |[PrimaryPasswordSetting](#primarypasswordsetting)|Configures a setting that asks users to enter their device password while using password autofill|
+|[SavePasswordsOnExit](#savepasswordsonexit)|Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes|
 ### [*Performance*](#performance-policies)
 
 |Policy Name|Caption|
@@ -9040,9 +9040,9 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 
   [Back to top](#microsoft-edge---policies)
 
-  ### PasswordDeleteOnBrowserCloseEnabled
+  ### SavePasswordsOnExit
 
-  #### Save passwords when Microsoft Edge closes
+  #### Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes
 
   
   
@@ -9052,11 +9052,10 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 
   #### Description
 
-  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when.
+  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when:
 
-The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or.
-
-The policy ClearBrowsingDataOnExit is enabled or.
+  - The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
+  - The policy ClearBrowsingDataOnExit is enabled
 
 If you enable this policy, passwords won't be cleared when the browser closes.
 
@@ -9078,8 +9077,8 @@ If you disable or don't configure this policy, the user's personal configuration
 
   ##### Group Policy (ADMX) info
 
-  - GP unique name: PasswordDeleteOnBrowserCloseEnabled
-  - GP name: Save passwords when Microsoft Edge closes
+  - GP unique name: SavePasswordsOnExit
+  - GP name: Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
   - GP ADMX file name: MSEdge.admx
@@ -9088,7 +9087,7 @@ If you disable or don't configure this policy, the user's personal configuration
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: PasswordDeleteOnBrowserCloseEnabled
+  - Value Name: SavePasswordsOnExit
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -9099,7 +9098,7 @@ If you disable or don't configure this policy, the user's personal configuration
 
   #### Mac information and settings
 
-  - Preference Key Name: PasswordDeleteOnBrowserCloseEnabled
+  - Preference Key Name: SavePasswordsOnExit
   - Example value:
 ``` xml
 <true/>
@@ -18134,6 +18133,7 @@ If you disable or don't configure this policy, users can configure the Clear bro
 If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Microsoft Edge closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
+To exclude passwords from being deleted on exit, configure the [SavePasswordsOnExit](#savepasswordsonexit) policy.
 
   #### Supported features:
 
