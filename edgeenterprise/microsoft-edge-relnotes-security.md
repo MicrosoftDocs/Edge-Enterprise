@@ -20,9 +20,6 @@ These release notes provide information about security fixes that are included i
 
 Microsoft has a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863) to **Microsoft Edge Stable and Extended Stable Channel (Version 116.0.1938.81)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-> [!NOTE]
-> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
-
 ## September 7, 2023
 
 Microsoft has released the latest **Microsoft Edge Stable Channel (Version 116.0.1938.76)** which incorporates the latest Security Updates of the Chromium project. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
