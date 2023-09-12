@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/29/2023
+ms.date: 09/12/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,14 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-[InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](#internetexplorerintegrationzoneidentifiermhtfileallowed)|Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode|
 
 ## Available policies
 
@@ -52,6 +44,7 @@ These tables list all of the browser-related group policies available in this re
 - [Kiosk Mode settings](#kiosk-mode-settings)
 - [Manageability](#manageability)
 - [Native Messaging](#native-messaging)
+- [Network settings](#network-settings)
 - [Password manager and protection](#password-manager-and-protection)
 - [Performance](#performance)
 - [Permit or deny screen capture](#permit-or-deny-screen-capture)
@@ -90,6 +83,7 @@ These tables list all of the browser-related group policies available in this re
 |[CookiesAllowedForUrls](#cookiesallowedforurls)|Allow cookies on specific sites|
 |[CookiesBlockedForUrls](#cookiesblockedforurls)|Block cookies on specific sites|
 |[CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)|Limit cookies from specific websites to the current session|
+|[DataUrlInSvgUseEnabled](#dataurlinsvguseenabled)|Data URL support for SVGUseElement|
 |[DefaultAutomaticDownloadsSetting](#defaultautomaticdownloadssetting)|Default automatic downloads setting|
 |[DefaultCookiesSetting](#defaultcookiessetting)|Configure cookies|
 |[DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)|Control use of the File System API for reading|
@@ -236,6 +230,11 @@ These tables list all of the browser-related group policies available in this re
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Control which native messaging hosts users can use|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|Configure native messaging block list|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Allow user-level native messaging hosts (installed without admin permissions)|
+### [*Network settings*](#network-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[CompressionDictionaryTransportEnabled](#compressiondictionarytransportenabled)|Enable compression dictionary transport support|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
 
 |Policy Name|Caption|
@@ -315,6 +314,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[ExemptSmartScreenDownloadWarnings](#exemptsmartscreendownloadwarnings)|Disable SmartScreen AppRep based warnings for specified file types on specified domains|
 |[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|Enable new SmartScreen library (obsolete)|
 |[PreventSmartScreenPromptOverride](#preventsmartscreenpromptoverride)|Prevent bypassing Microsoft Defender SmartScreen prompts for sites|
 |[PreventSmartScreenPromptOverrideForFiles](#preventsmartscreenpromptoverrideforfiles)|Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads|
@@ -391,6 +391,7 @@ These tables list all of the browser-related group policies available in this re
 |[AutoplayAllowlist](#autoplayallowlist)|Allow media autoplay on specific sites|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Continue running background apps after Microsoft Edge closes|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Enables background updates to the list of available templates for Collections and other features that use templates (deprecated)|
+|[BeforeunloadEventCancelByPreventDefaultEnabled](#beforeunloadeventcancelbypreventdefaultenabled)|Control the behavior for the cancel dialog produced by the beforeunload event|
 |[BingAdsSuppression](#bingadssuppression)|Block all ads on Bing search results|
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Block third party cookies|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Enable profile creation from the Identity flyout menu or the Settings page|
@@ -492,6 +493,7 @@ These tables list all of the browser-related group policies available in this re
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
 |[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
+|[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
 |[ForceSyncTypes](#forcesynctypes)|Configure the list of types that are included for synchronization|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Force minimum YouTube Restricted Mode|
@@ -582,6 +584,7 @@ These tables list all of the browser-related group policies available in this re
 |[PDFXFAEnabled](#pdfxfaenabled)|XFA support in native PDF reader enabled|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Allow websites to query for available payment methods|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
+|[PictureInPictureOverlayEnabled](#pictureinpictureoverlayenabled)|Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
@@ -623,6 +626,7 @@ These tables list all of the browser-related group policies available in this re
 |[SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup)|Allow the Search bar at Windows startup|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
+|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (obsolete)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
@@ -1609,6 +1613,69 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DataUrlInSvgUseEnabled
+
+  #### Data URL support for SVGUseElement
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  This policy enables Data URL support for SVGUseElement, which will be disabled
+by default starting in Edge stable version 119.
+If this policy is Enabled, Data URLs will keep working in SVGUseElement.
+If this policy is Disabled or left not set, Data URLs won't work in SVGUseElement.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DataUrlInSvgUseEnabled
+  - GP name: Data URL support for SVGUseElement
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DataUrlInSvgUseEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DataUrlInSvgUseEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -9036,6 +9103,74 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Network settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CompressionDictionaryTransportEnabled
+
+  #### Enable compression dictionary transport support
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  This feature enables the use of dictionary-specific content encodings in the Accept-Encoding request header ("sbr" and "zst-d") when dictionaries are available for use.
+
+If you enable this policy or don't configure it, Microsoft Edge will accept web contents using the compression dictionary transport feature.
+
+If you disable this policy, Microsoft Edge will turn off the compression dictionary transport feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CompressionDictionaryTransportEnabled
+  - GP name: Enable compression dictionary transport support
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CompressionDictionaryTransportEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CompressionDictionaryTransportEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Password manager and protection policies
 
   [Back to top](#microsoft-edge---policies)
@@ -12505,6 +12640,101 @@ Use the preceding information when configuring this policy.
   [Back to top](#microsoft-edge---policies)
 
   ## SmartScreen settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExemptSmartScreenDownloadWarnings
+
+  #### Disable SmartScreen AppRep based warnings for specified file types on specified domains
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 118 or later
+
+  #### Description
+
+  You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from SmartScreen AppRep warnings. For example, if  the "vbe" extension is associated with "website1.com", users would not see a SmartScreen AppRep warning when downloading "vbe" files from "website1.com", but may see a download warning when downloading "vbe" files from "website2.com".
+
+Files with file type extensions specified for domains identified by this policy will still be subject to file type extension-based security warnings and mixed-content download warnings.
+
+If you disable this policy or don't configure it, files that trigger SmartScreen AppRep download warnings will show warnings to the user.
+
+If you enable this policy:
+
+* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* The file type extension entered must be in lower-cased ASCII. The leading separator should not be included when listing the file type extension, so "vbe" should be used instead of ".vbe".
+
+Example:
+
+The following example value would prevent SmartScreen AppRep warnings on msi, exe, and vbe extensions for *.contoso.com domains. It may show the user a SmartScreen AppRep warning on any other domain for exe and msi files, but not for vbe files.
+
+[
+  { "file_extension": "msi", "domains": ["contoso.com"] },
+  { "file_extension": "exe", "domains": ["contoso.com"] },
+  { "file_extension": "vbe", "domains": ["*"] }
+]
+
+Note that while the preceding example shows the suppression of SmartScreen AppRep download warnings for "vbe" files for all domains, applying suppression of such warnings for all domains is not recommended due to security concerns. It is shown in the example merely to demonstrate the ability to do so.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExemptSmartScreenDownloadWarnings
+  - GP name: Disable SmartScreen AppRep based warnings for specified file types on specified domains
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ExemptSmartScreenDownloadWarnings
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExemptSmartScreenDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "msi"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "vbe"
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptSmartScreenDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "msi"}, {"domains": ["*"], "file_extension": "vbe"}]
+  ```
+  
+
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -17000,6 +17230,75 @@ If you disable this setting the list of available templates will be downloaded o
   #### Mac information and settings
 
   - Preference Key Name: BackgroundTemplateListUpdatesEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### BeforeunloadEventCancelByPreventDefaultEnabled
+
+  #### Control the behavior for the cancel dialog produced by the beforeunload event
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 117, until 127
+
+  #### Description
+
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
+
+When this policy is Enabled, the new (correct) behavior will be used.
+When this policy is Disabled, the old (legacy) behavior will be used.
+When this policy is left not set, the default behavior will be used.
+Note: This policy is a temporary workaround and will be removed in a future release.
+
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
+
+ld and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BeforeunloadEventCancelByPreventDefaultEnabled
+  - GP name: Control the behavior for the cancel dialog produced by the beforeunload event
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BeforeunloadEventCancelByPreventDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: BeforeunloadEventCancelByPreventDefaultEnabled
   - Example value:
 ``` xml
 <true/>
@@ -24153,6 +24452,76 @@ This policy is disabled by default. If enabled, users are open to security issue
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ForcePermissionPolicyUnloadDefaultEnabled
+
+  #### Controls whether unload event handlers can be disabled.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy.
+Currently, they are allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
+This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to stay enabled.
+
+Pages might depend on unload event handlers to save data or signal the end of a user session to the server.
+This is not recommended because it's unreliable and impacts performance by blocking use of BackForwardCache.
+Recommended alternatives exist, but the unload event has been used for a long time. Some applications might still rely on them.
+
+If you disable this policy or don't configure it, unload event handlers will gradually be deprecated in-line with the deprecation rollout and sites which don't set Permissions-Policy header will stop firing `unload` events.
+
+If you enable this policy then unload event handlers will continue to work by default.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForcePermissionPolicyUnloadDefaultEnabled
+  - GP name: Controls whether unload event handlers can be disabled.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForcePermissionPolicyUnloadDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ForcePermissionPolicyUnloadDefaultEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ForceSync
 
   #### Force synchronization of browser data and do not show the sync consent prompt
@@ -30231,6 +30600,72 @@ If you disable this policy, users can't change or override the setting. If this 
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PictureInPictureOverlayEnabled
+
+  #### Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  This policy lets you configure the Picture in Picture floating overlay button in Microsoft Edge.
+
+The Picture in Picture floating overlay button lets user to  watch videos in a floating window on top of other windows.
+
+If you enable or don't configure this policy, you can use the Picture in Picture floating overlay button in Microsoft Edge.
+
+If you disable this policy, you can't use the Picture in Picture floating overlay button in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PictureInPictureOverlayEnabled
+  - GP name: Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PictureInPictureOverlayEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PictureInPictureOverlayEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### PinningWizardAllowed
 
   #### Allow Pin to taskbar wizard
@@ -32906,7 +33341,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   - Can be recommended: No
   - Dynamic Policy Refresh: No - Requires browser restart
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -32935,6 +33370,76 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SendMouseEventsDisabledFormControlsEnabled
+
+  #### Control the new behavior for event dispatching on disabled form controls
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 109, until 120
+
+  #### Description
+
+  Event dispatching on disabled form controls is being changed in Edge to improve compatibility with other browsers and to improve the developer experience.
+
+With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
+
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
+
+Note: This new behavior might break some websites.
+
+If this policy is enabled or left not set, the new behavior will be used.
+
+If this policy is disabled, the old behavior will be used.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SendMouseEventsDisabledFormControlsEnabled
+  - GP name: Control the new behavior for event dispatching on disabled form controls
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SendMouseEventsDisabledFormControlsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SendMouseEventsDisabledFormControlsEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -36038,7 +36543,8 @@ Use the preceding information when configuring this policy.
   
   #### Supported versions:
 
-  - On Windows and macOS since 117 or later
+  - On Windows since 117 or later
+  - On macOS since 118 or later
 
   #### Description
 
