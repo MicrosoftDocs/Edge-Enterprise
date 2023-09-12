@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 08/24/2023
+ms.date: 08/30/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -214,7 +214,7 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
 ### View extension requests
 
 > [!NOTE]
-> The Extension Feedback feature is available in Edge Stable 116 and later. This will start rolling out after Microsoft Edge Stable 116 is available, which means you'll see the feature on 08/30/2023.
+> The Extension Feedback feature is available in Edge Stable 116 and later. This will start rolling out after Microsoft Edge Stable 116 is available, which means you'll see the feature on 09/07/2023.
 
 If you blocked all extensions for your organization, you can see the extensions that your users are attempting to install. To view these extensions, go to a configuration profile and go to **Requests** in the **Extensions** pivot. You can then change the installation policy for these extensions to let users install it. To allow requests, use the [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) policy to enable reporting.
 
