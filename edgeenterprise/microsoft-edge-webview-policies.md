@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/29/2023
+ms.date: 09/12/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -19,9 +19,16 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following table lists the new policy that's in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 
 ## Available policies
 
@@ -42,6 +49,7 @@ These tables list all of the group policies available in this release of Microso
 |Policy Name|Caption|
 |-|-|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
+|[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 |[NewPDFReaderWebView2List](#newpdfreaderwebview2list)|Enable built-in PDF reader powered by Adobe Acrobat for WebView2|
 
 
@@ -236,6 +244,67 @@ Use the preceding information when configuring this policy.
 
 ```
 0x00000002
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### ForcePermissionPolicyUnloadDefaultEnabled
+
+  #### Controls whether unload event handlers can be disabled.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 118 or later
+
+  #### Description
+
+  unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy.
+Currently, they are allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers.
+This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to stay enabled.
+
+Pages might depend on unload event handlers to save data or signal the end of a user session to the server.
+This is not recommended because it's unreliable and impacts performance by blocking use of BackForwardCache.
+Recommended alternatives exist, but the unload event has been used for a long time. Some applications might still rely on them.
+
+If you disable this policy or don't configure it, unload event handlers will gradually be deprecated in-line with the deprecation rollout and sites which don't set Permissions-Policy header will stop firing `unload` events.
+
+If you enable this policy then unload event handlers will continue to work by default.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForcePermissionPolicyUnloadDefaultEnabled
+  - GP name: Controls whether unload event handlers can be disabled.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: ForcePermissionPolicyUnloadDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
