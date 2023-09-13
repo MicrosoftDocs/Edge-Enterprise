@@ -58,7 +58,7 @@ The final result bundle of [getAuthToken](https://developer.android.com/referenc
 The following recommendations should be considered when implementing a SPNEGO authenticator.
 
 - Each account provided by an SPNEGO Account Authenticator should correspond to a single user principal (account) provided by a single key distribution center.
-- The account authenticator should not store any passwords. Instead, it should store TGTs for the user principals and require the users to re-enter their passwords (or other authentication data) when their TGT expires.
+- The account authenticator shouldn't store any passwords. Instead, it should store TGTs for the user principals and require the users to re-enter their passwords (or other authentication data) when their TGT expires.
 - The account authenticator should keep a list of authorized applications (or application signatures) for each account and refuse to provide service tokens to other applications. The list of authorized applications can be:
 
   - Built into the account authenticator.
@@ -67,7 +67,7 @@ The following recommendations should be considered when implementing a SPNEGO au
 
   The authenticator can get the uid of the calling app using the KEY_CALLER_UID field of the options bundle, and then identify the requesting application using `context.getPackageManager().getNameForUid()` or similar call.
 
-  This is required to ensure that malicious apps run by the user cannot use the user's credentials to access services in unintended ways. This is particularly important since using the custom tokens option (as described above) disables Android's own signature check when getting auth tokens.
+  This is required to ensure that malicious apps run by the user can't use the user's credentials to access services in unintended ways. This is particularly important since using the custom tokens option (as described above) disables Android's own signature check when getting auth tokens.
 
 - Unless it's built into the account authenticator, the system administrator or user will need to be able to configure the location of the key distribution center.
 
@@ -75,7 +75,7 @@ The following recommendations should be considered when implementing a SPNEGO au
 
 In addition to the error codes that can be forwarded from the authenticator app, the following errors can be displayed when trying to authenticate a request:
 
-- ERR_MISSING_AUTH_CREDENTIALS: The account information is not usable. It can be raised for example if the user did not log in to the authenticator app and no eligible account is found, if the account information can't be obtained because the current app does not have the required permissions, or if there is more than one eligible account and we can't obtain a selection from the user.
+- ERR_MISSING_AUTH_CREDENTIALS: The account information is not usable. It can be raised for example if the user did not log in to the authenticator app and no eligible account is found, if the account information can't be obtained because the current app does not have the required permissions, or if there's more than one eligible account and we can't obtain a selection from the user.
 - ERR_UNEXPECTED: An unexpected error happened, and the request has been terminated.
 - ERR_MISCONFIGURED_AUTH_ENVIRONMENT: The authentication can't be completed because of some issues in the configuration of the app. Some permissions may be missing.
 
