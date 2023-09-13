@@ -1,5 +1,5 @@
 ---
-title: "Write SPNEGO Authenticator for Android"
+title: "Write SPNEGO Authenticator for Microsoft Edge on Android"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "This article describes how to write a SPNEGO authenticator on Edge for Android"
+description: "This article describes how to write a SPNEGO authenticator for Edge on Android"
 ---
 
-#  Write a SPNEGO Authenticator on Microsoft Edge for Android
+#  Write a SPNEGO Authenticator for Microsoft Edge on Android
 
 Third parties can enable SPNEGO authentication in Microsoft Edge for Android. To do this, they must provide a SPNEGO Authenticator. This article describes the interface between Edge and the SPNEGO Authenticator.
 
