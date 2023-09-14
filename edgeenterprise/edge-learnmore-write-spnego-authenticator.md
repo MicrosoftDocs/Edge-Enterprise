@@ -28,7 +28,7 @@ The SPNEGO Authenticator must define a new account type. The account type name s
 
 Edge finds the SPNEGO authenticator through the Android account type it provides. The account type that's defined by the authenticator is passed to Edge through the **AuthAndroidNegotiateAccountType** policy.
 
-The interface to Edge is through the Android account management framework, through [AbstractAccountManager.getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator.html#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) in particular. Edge, in [org.chromium.net.HttpNegotiateConstants](https://source.chromium.org/chromium/chromium/src/+/main:net/android/java/src/org/chromium/net/HttpNegotiateConstants.java), defines some more keys and values that are used in the arguments to `getAuthToken`, and in the returned result bundle.
+The interface to Edge is through the Android account management framework, through [AbstractAccountManager.getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator.html#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) in particular. Edge, in [org.chromium.net.HttpNegotiateConstants](https://source.chromium.org/chromium/chromium/src/+/main:net/android/java/src/org/chromium/net/HttpNegotiateConstants.java) defines some more keys and values that are used in the arguments to `getAuthToken`, and in the returned result bundle.
 
 ### getAuthToken arguments
 
@@ -69,13 +69,16 @@ The following recommendations should be considered when implementing a SPNEGO au
 
   This is required to ensure that malicious apps run by the user can't use the user's credentials to access services in unintended ways. This is important because using the custom tokens option (as described previously) disables Android's own signature check when getting auth tokens.
 
-- Unless it's built into the account authenticator, the system administrator or user will need to be able to configure the location of the key distribution center.
+- Unless it's built into the account authenticator, the system administrator or user need to be able to configure the location of the key distribution center.
 
 ## Error codes displayed in Microsoft Edge
 
 In addition to the error codes that can be forwarded from the authenticator app, the following errors can be displayed when trying to authenticate a request:
 
-- ERR_MISSING_AUTH_CREDENTIALS: The account information is not usable. It can be raised for example if the user did not log in to the authenticator app and no eligible account is found, if the account information can't be obtained because the current app does not have the required permissions, or if there's more than one eligible account and we can't obtain a selection from the user.
+- ERR_MISSING_AUTH_CREDENTIALS: The account information is not usable. It can be raised for any of the following reasons.
+  - The user didn't log in to the authenticator app and no eligible account is found.
+  - The account information can't be obtained because the current app doesn't have the required permissions.
+  - There's more than one eligible account and we can't obtain a selection from the user.
 - ERR_UNEXPECTED: An unexpected error happened, and the request has been terminated.
 - ERR_MISCONFIGURED_AUTH_ENVIRONMENT: The authentication can't be completed because of some issues in the configuration of the app. Some permissions may be missing.
 
