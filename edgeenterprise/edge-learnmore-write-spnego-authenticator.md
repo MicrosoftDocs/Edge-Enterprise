@@ -14,11 +14,11 @@ description: "This article describes how to write a SPNEGO authenticator for Edg
 
 #  Write a SPNEGO Authenticator for Microsoft Edge on Android
 
-Third parties can enable SPNEGO authentication in Microsoft Edge for Android. To do this, they must provide a SPNEGO Authenticator. This article describes the interface between Edge and the SPNEGO Authenticator.
+Third parties can enable SPNEGO authentication in Microsoft Edge for Android. To provide this authentication, they must provide a SPNEGO Authenticator. This article describes the interface between Edge and the SPNEGO Authenticator.
 
 ## Introduction
 
-The SPNEGO Authenticator is provided by an Android Service. This must be incorporated in an app, provided by the third party, that's installed on the user's device. The app is responsible for managing any accounts used for SPNEGO authentication, and for all communication with the SPNEGO server.
+The SPNEGO Authenticator is provided by an Android Service. The authenticator must be incorporated in an app, provided by the third party, that's installed on the user's device. The app is responsible for managing any accounts used for SPNEGO authentication, and for all communication with the SPNEGO server.
 
 The SPNEGO Authenticator is an Android AccountAuthenticator. As such it must follow the pattern described in [AbstractAccountAuthenticator](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)). It must implement an authenticator class derived from `AbstractAccountAuthenticator`.
 
@@ -26,13 +26,13 @@ The SPNEGO Authenticator must define a new account type. The account type name s
 
 ## Interface to Microsoft Edge
 
-Edge finds the SPNEGO authenticator through the Android account type it provides. This is defined by the authenticator and passed to Edge through the **AuthAndroidNegotiateAccountType** policy.
+Edge finds the SPNEGO authenticator through the Android account type it provides. The account type that's defined by the authenticator is passed to Edge through the **AuthAndroidNegotiateAccountType** policy.
 
-The interface to Edge is through the Android account management framework, through [AbstractAccountManager.getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator.html#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) in particular. Edge, in [org.chromium.net.HttpNegotiateConstants](https://source.chromium.org/chromium/chromium/src/+/main:net/android/java/src/org/chromium/net/HttpNegotiateConstants.java), defines some additional keys and values that are used in the arguments to `getAuthToken`, and in the returned result bundle.
+The interface to Edge is through the Android account management framework, through [AbstractAccountManager.getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator.html#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) in particular. Edge, in [org.chromium.net.HttpNegotiateConstants](https://source.chromium.org/chromium/chromium/src/+/main:net/android/java/src/org/chromium/net/HttpNegotiateConstants.java), defines some more keys and values that are used in the arguments to `getAuthToken`, and in the returned result bundle.
 
 ### getAuthToken arguments
 
-When [getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) is called the `authTokenType` will be "SPNEGO:HOSTBASED:\<spn\>" where \<spn\> is the principal for the request. This will always be a host-based principal in the current implementation. Future versions may allow other types of principals, but if they do so they'll use a different prefix. SPNEGO Authenticators should check the prefix.
+When [getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) is called, the `authTokenType` is "SPNEGO:HOSTBASED:\<spn\>" where \<spn\> is the principal for the request. This will always be a host-based principal in the current implementation. Future versions may allow other types of principals, but if they do so they'll use a different prefix. SPNEGO Authenticators should check the prefix.
 
 The `options` bundle will contain these keys:
 
