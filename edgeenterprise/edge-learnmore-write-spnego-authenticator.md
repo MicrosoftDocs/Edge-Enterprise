@@ -3,7 +3,7 @@ title: "Write SPNEGO Authenticator for Microsoft Edge on Android"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/13/2023
+ms.date: 09/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
