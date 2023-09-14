@@ -34,16 +34,16 @@ The interface to Edge is through the Android account management framework, throu
 
 When [getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) is called, the `authTokenType` is "SPNEGO:HOSTBASED:\<spn\>" where \<spn\> is the principal for the request. This will always be a host-based principal in the current implementation. Future versions may allow other types of principals, but if they do so they'll use a different prefix. SPNEGO Authenticators should check the prefix.
 
-The `options` bundle will contain these keys:
+The `options` bundle contains these keys:
 
 - [KEY_CALLER_PID](http://developer.android.com/reference/android/accounts/AccountManager.html#KEY_CALLER_PID)
 - [KEY_CALLER_UID](http://developer.android.com/reference/android/accounts/AccountManager.html#KEY_CALLER_UID)
 - `HttpNegotiateConstants.KEY_CAN_DELEGATE` - True if delegation is allowed, false if not allowed.
 
-If this is the second or later round of a multi-round authentication sequence it will also contain the following keys.
+If this is the second or later round of a multi-round authentication sequence, it will also contain the following keys.
 
 - `HttpNegotiateConstants.KEY_INCOMING_AUTH_TOKEN` - The incoming token from the WWW-Authenticate header, Base64 encoded.
-- `HttpNegotiateConstants.KEY_SPNEGO_CONTEXT` - The SPNEGO context provided by the authenticator on the previous round. This is a bundle that Edge treats this as an opaque object and simply preserves it between rounds.
+- `HttpNegotiateConstants.KEY_SPNEGO_CONTEXT` - The SPNEGO context provided by the authenticator on the previous round. Microsoft Edge treats this bundle as an opaque object and simply preserves it between rounds.
 
 ### getAuthToken result bundle
 
@@ -63,11 +63,11 @@ The following recommendations should be considered when implementing a SPNEGO au
 
   - Built into the account authenticator.
   - Configurable by the system administrator.
-  - Configurable by the user. In this case the account authenticator might choose to allow the user to authorize new applications dynamically when they first request access.
+  - Configurable by the user. In this case, the account authenticator might choose to allow the user to authorize new applications dynamically when they first request access.
 
   The authenticator can get the uid of the calling app using the KEY_CALLER_UID field of the options bundle, and then identify the requesting application using `context.getPackageManager().getNameForUid()` or similar call.
 
-  This is required to ensure that malicious apps run by the user can't use the user's credentials to access services in unintended ways. This is particularly important since using the custom tokens option (as described above) disables Android's own signature check when getting auth tokens.
+  This is required to ensure that malicious apps run by the user can't use the user's credentials to access services in unintended ways. This is important because using the custom tokens option (as described previously) disables Android's own signature check when getting auth tokens.
 
 - Unless it's built into the account authenticator, the system administrator or user will need to be able to configure the location of the key distribution center.
 
