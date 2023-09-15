@@ -32,6 +32,10 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-xx-2023).
 
+### Announcement: Microsoft Edge for Business supports unmanaged Bring Your Own PC (BYOPC).
+
+**Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows. This support is available for Windows 11, build 10.0.22621 (22H2) or later.** This includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
+
 ### Announcement: Deprecating the unload event
 
 The Google Chrome team plans to deprecate the unload event starting in Chrome version 118. The deprecation will occur by gradually changing the default so unload handlers stop firing on pages unless a page explicitly opts in to re-enable them. For more information, see [Deprecating the unload event - Chrome Developers](https://developer.chrome.com/blog/deprecating-unload/), and [Google Groups - Conversations](https://groups.google.com/a/chromium.org/g/blink-dev/c/dvusqw9-IhI/m/SBkm_u1RAQAJ).
@@ -41,8 +45,6 @@ While we haven't yet finalized the deprecation schedule, we anticipate that Micr
 WebView2 will support both the permissions policy and the enterprise policy but won't be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
 
 ### Feature updates
-
-- **Microsoft Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.** This includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
 
 - **Notes and known issues for Application Protection Policies (APP).**
 
