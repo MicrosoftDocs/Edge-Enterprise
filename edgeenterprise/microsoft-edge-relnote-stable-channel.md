@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/12/2023
+ms.date: 09/15/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
