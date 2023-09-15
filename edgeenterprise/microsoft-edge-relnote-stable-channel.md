@@ -34,7 +34,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Announcement: Microsoft Edge for Business supports unmanaged Bring Your Own PC (BYOPC)
 
-**Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows.** This release includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
+**Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows.** This release includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
 
 **Note:**
 
