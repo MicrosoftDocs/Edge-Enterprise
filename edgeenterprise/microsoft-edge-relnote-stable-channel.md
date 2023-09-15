@@ -44,15 +44,15 @@ While we haven't yet finalized the deprecation schedule, we anticipate that Micr
 
 WebView2 will support both the permissions policy and the enterprise policy but won't be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
 
-### Feature updates
-
-- **Notes and known issues for Application Protection Policies (APP).**
+### Notes and known issues for Application Protection Policies (APP)
 
   - If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
 
     - If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting.  Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
 
   - In some cases, an end user might successfully enroll for MAM but won't pass App Protection CA requirements. This is because the compliance state is still propagating through Microsoft services.  Until the compliance state updates, your users will keep receiving a blocking message when trying to access CA protected resources in Microsoft Edge.
+
+### Feature updates
 
 - **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
 
