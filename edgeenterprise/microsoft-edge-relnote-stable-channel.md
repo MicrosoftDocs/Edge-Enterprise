@@ -36,6 +36,14 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 **Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows. This support is available for Windows 11, build 10.0.22621 (22H2) or later.** This release includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
 
+- **Notes and known issues for Application Protection Policies (APP)**
+
+  - If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
+
+    - If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting.  Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
+
+  - In some cases, an end user might successfully enroll for MAM but won't pass App Protection CA requirements. This is because the compliance state is still propagating through Microsoft services.  Until the compliance state updates, your users will keep receiving a blocking message when trying to access CA protected resources in Microsoft Edge.
+
 ### Announcement: Deprecating the unload event
 
 The Google Chrome team plans to deprecate the unload event starting in Chrome version 118. The deprecation will occur by gradually changing the default so unload handlers stop firing on pages unless a page explicitly opts in to re-enable them. For more information, see [Deprecating the unload event - Chrome Developers](https://developer.chrome.com/blog/deprecating-unload/), and [Google Groups - Conversations](https://groups.google.com/a/chromium.org/g/blink-dev/c/dvusqw9-IhI/m/SBkm_u1RAQAJ).
@@ -43,14 +51,6 @@ The Google Chrome team plans to deprecate the unload event starting in Chrome ve
 While we haven't yet finalized the deprecation schedule, we anticipate that Microsoft Edge will follow Chrome's schedule with a possible delay of a release or two. If you're interested in testing with Microsoft Edge starting in version 118, the **ForcePermissionPolicyUnloadDefaultEnabled** policy will be available or you can use the instructions documented at [Disable unload handlers by default and add Permissions-Policy to opt-in to enabling them](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#disable-unload-handlers-by-default-and-add-permissions-policy-to-opt-in-to-enabling-them).
 
 WebView2 will support both the permissions policy and the enterprise policy but won't be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
-
-### Notes and known issues for Application Protection Policies (APP)
-
-  - If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
-
-    - If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting.  Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
-
-  - In some cases, an end user might successfully enroll for MAM but won't pass App Protection CA requirements. This is because the compliance state is still propagating through Microsoft services.  Until the compliance state updates, your users will keep receiving a blocking message when trying to access CA protected resources in Microsoft Edge.
 
 ### Feature updates
 
