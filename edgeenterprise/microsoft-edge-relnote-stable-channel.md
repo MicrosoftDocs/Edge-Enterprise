@@ -58,7 +58,7 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 
 ### Feature updates
 
-- **Microsoft Edge for Business Banner.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
+- **Microsoft Edge for Business Banner.**  Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
 
 - **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the `edge://favorites` page. For more information, see [Recover lost or deleted favorites in Microsoft Edge - Microsoft Support](/topic/recover-lost-or-deleted-favorites-in-microsoft-edge-ac06270e-ba57-4266-8389-8bfd1df1aa5e)
 
@@ -67,6 +67,7 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 - **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
 
 - **Deprecation of features.** To improve end user experience and simplify the **More tools** menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
+
 ### Policy updates
 
 #### New policies
