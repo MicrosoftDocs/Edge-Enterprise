@@ -26,7 +26,14 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version: 117.0.2045.31, September 15
+## Version 109.0.1518.140: September 15, 2023
+
+> [!NOTE]
+> This update was done for our M109 Windows down-level extended support. We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
+
+## Version: 117.0.2045.31: September 15, 2023
 
 Fixed various bugs and performance issues.
 
@@ -267,60 +274,7 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-6-2023).
 
-## Version 114.0.1823.37: June 2, 2023
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-2-2023).
-
-### Feature update
-
-- **Microsoft Edge Workspaces.** Edge Workspaces provides a way for customers to organize their browsing tasks into dedicated windows. Edge Workspaces lets users share a set of browser tabs so working groups can view the same websites and latest working files in one place and stay on the same page. Each Edge Workspace contains its own set of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. For more information, see [Microsoft Edge Workspaces](/deployedge/microsoft-edge-workspaces).
-
-### Policy updates
-
-#### New policies
-
-- [StandaloneHubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#standalonehubssidebarenabled) - Standalone Sidebar Enabled
-- [ShowDownloadsToolbarButton](/DeployEdge/microsoft-edge-policies#showdownloadstoolbarbutton) - Show Downloads button on the toolbar
-
-#### Obsoleted policy
-
-- [MicrosoftRootStoreEnabled](/DeployEdge/microsoft-edge-policies#microsoftrootstoreenabled) - Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
-
-#### Additional policy changes
-
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - BasicMode is deprecated
-- [EdgeWorkspacesEnabled](/DeployEdge/microsoft-edge-policies#edgeworkspacesenabled) - If the policy isn't configured users are able to access the Microsoft Edge Workspaces feature
-
-## Version 113.0.1774.57: May 25, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.84: May 18, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
-
-## Version 113.0.1774.50: May 18, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-18-2023).
-
-### Feature update
-
-- **Microsoft recommended browser settings.** This new prompt in Microsoft Edge lets users benefit from the Microsoft recommended settings. This feature gives users the option to set Microsoft Edge as the default browser and/or set Microsoft Bing as the default search engine, if they aren't already selected. If a user accepts the prompt, their default browser is updated to Microsoft Edge, and their default search engine will be updated to Microsoft Bing. Administrators can control the availability of the default browser settings campaign using the [DefaultBrowserSettingsCampaignEnabled](/deployedge/microsoft-edge-policies#defaultbrowsersettingscampaignenabled) policy.
-
-## Version 113.0.1774.42: May 11, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 112.0.1722.77: May 9, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
+<!-- from Version 114.0.1823.37: June 2, 2023 to Version 112.0.1722.77: May 9, 2023 -->
 <!-- from Version 113.0.1774.35: May 5, 2023 to Version 112.0.1722.39: April 10, 2023 -->
 <!-- from Version 112.0.1722.34: April 6, 2023 to Version 111.0.1661.43: March 15, 2023 -->
 <!-- from Version 111.0.1661.41: March 13, 2023 to Version 110.0.1587.46: February 14, 2023 -->
