@@ -32,7 +32,7 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-xx-2023).
 
-### Announcement: Microsoft Edge for Business supports unmanaged Bring Your Own PC (BYOPC)
+### Announcement: Microsoft Edge for Business is available for unmanaged BYOPC
 
 Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows (BYOPC) using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge.
 
