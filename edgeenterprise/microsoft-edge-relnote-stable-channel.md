@@ -34,15 +34,19 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Announcement: Microsoft Edge for Business supports unmanaged Bring Your Own PC (BYOPC)
 
-**Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows. This support is available for Windows 11, build 10.0.22621 (22H2) or later.** This release includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
+**Microsoft Edge for Business on unmanaged BYOPC devices now supports Microsoft Intune Mobile Application Management (MAM) for Windows.** This release includes the supporting changes for Microsoft Intune, Microsoft Edge and Windows Security Center. App Protection Conditional Access is in Public Preview. Note: These updates will start rolling out in conjunction with the Microsoft Intune 2309 release.
 
-- **Notes and known issues for Application Protection Policies (APP)**
+**Note:**
 
-  - If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
+- Requires Windows 11, build 10.0.22621 (22H2) or later.
 
-    - If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting.  Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
+- Requires Microsoft Intune 2309 or higher
 
-  - In some cases, an end user might successfully enroll for MAM but won't pass App Protection CA requirements. This is because the compliance state is still propagating through Microsoft services.  Until the compliance state updates, your users will keep receiving a blocking message when trying to access CA protected resources in Microsoft Edge.
+- App Protection Conditional Access is in Public Preview.
+
+- If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
+
+- If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting. Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
 
 ### Announcement: Deprecating the unload event
 
@@ -54,16 +58,15 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 
 ### Feature updates
 
-- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
-
-- **Deprecation of features.** To improve end user experience and simplify the **More tools** menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
+- **Microsoft Edge for Business Banner.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
 
 - **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the `edge://favorites` page. For more information, see [Recover lost or deleted favorites in Microsoft Edge - Microsoft Support](/topic/recover-lost-or-deleted-favorites-in-microsoft-edge-ac06270e-ba57-4266-8389-8bfd1df1aa5e)
 
-- **Microsoft Edge for Business Banner.** Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
-
 - **Autofill Autocomplete.** This feature helps you fill form fields faster on the web. When you start typing in a form field, Microsoft Edge suggests possible in-line completions when there's an exact match with your saved data in the browser. For example, if you type the first few characters of your address, autocomplete will suggest the rest of address - you can choose the autocomplete suggestion or continue typing as usual. Autofill options can be found in Settings (`edge://settings/personalinfo`).
 
+- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
+
+- **Deprecation of features.** To improve end user experience and simplify the **More tools** menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
 ### Policy updates
 
 #### New policies
