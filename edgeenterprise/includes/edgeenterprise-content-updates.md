@@ -2,6 +2,17 @@
 
 
 
+## Week of September 11, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/12/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 9/12/2023 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
+| 9/15/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 9/15/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
+
+
 ## Week of September 04, 2023
 
 
@@ -51,15 +62,3 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-
-
-## Week of August 07, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/7/2023 | [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) | added |
-| 8/7/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 8/9/2023 | [Microsoft Edge and Conditional Access](/DeployEdge/ms-edge-security-conditional-access) | modified |
-| 8/10/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 8/10/2023 | [Archived - release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-mobile-stable-channel) | modified |
