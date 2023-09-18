@@ -37,6 +37,9 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
 
 ### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
