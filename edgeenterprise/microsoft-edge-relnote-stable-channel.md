@@ -44,7 +44,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
 
-Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows devices using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge. When the required Intune release is released, more information will be available on how to test and deploy this feature with your users.
+Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows devices using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge. When the required Intune update is released, more information will be available on how to test and deploy this feature with your users.
 
 **Note:**
 
