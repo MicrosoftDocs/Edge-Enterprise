@@ -41,7 +41,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
 
-Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows (BYOPC) using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge.
+Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows devices using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge. Enterprise Admins need to watch for the required Intune release.
 
 **Note:**
 
@@ -67,7 +67,7 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 
 - **Microsoft Edge for Business Banner.**  Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
 
-- **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the `edge://favorites` page. For more information, see [Recover lost or deleted favorites in Microsoft Edge - Microsoft Support](/topic/recover-lost-or-deleted-favorites-in-microsoft-edge-ac06270e-ba57-4266-8389-8bfd1df1aa5e)
+- **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the `edge://favorites` page. For more information, see [Recover lost or deleted favorites in Microsoft Edge - Microsoft Support](https://support.microsoft.com/topic/recover-lost-or-deleted-favorites-in-microsoft-edge-ac06270e-ba57-4266-8389-8bfd1df1aa5e)
 
 - **Autofill Autocomplete.** This feature helps you fill form fields faster on the web. When you start typing in a form field, Microsoft Edge suggests possible in-line completions when there's an exact match with your saved data in the browser. For example, if you type the first few characters of your address, autocomplete will suggest the rest of address - you can choose the autocomplete suggestion or continue typing as usual. Autofill options can be found in Settings (`edge://settings/personalinfo`).
 
