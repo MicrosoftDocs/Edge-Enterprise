@@ -37,7 +37,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-xx-2023).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
 
 ### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
 
