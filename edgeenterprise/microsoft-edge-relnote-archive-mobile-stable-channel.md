@@ -1,5 +1,5 @@
 ---
-title: "Archived - release notes for Microsoft Edge Stable Channel"
+title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
