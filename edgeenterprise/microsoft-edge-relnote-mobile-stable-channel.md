@@ -40,7 +40,7 @@ Fixed various bugs and performance issues.
   - MAM: `com.microsoft.intune.mam.managedbrowser.disableImportPasswords`
   - MDM: `EdgeImportPasswordsDisabled`
 
-- **Improvements to Bing Chat Enterprise.** For example, Bing Image Creator and Visual Search.
+- **Improvements to Bing Chat Enterprise for iOS and Android** For example, Bing Image Creator and Bing Visual Search.
 
 ## Version 116.0.1938.72: September 5, 2023
 
