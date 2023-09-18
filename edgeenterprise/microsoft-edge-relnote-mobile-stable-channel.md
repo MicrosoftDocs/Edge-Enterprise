@@ -29,18 +29,18 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- Microsoft Edge for iOS supports iOS 17.
+- **Support for iOS 17.** Microsoft Edge for iOS supports iOS 17.
 
-- The Shared Links feature. Released in Edge for Android as a public preview. By default, the shared links feature is turned off. It can be turned on by enabling the shared links flag in `Edge://flags`.
+- **Shared Links feature.** This feature is released in Edge for Android as a public preview. By default, the shared links feature is turned off. It can be turned on by enabling the shared links flag in `Edge://flags`.
 
-- Microsoft Edge shopping/coupons can be managed by MAM policy. For example, to enable coupons: `com.microsoft.intune.mam.managedbrowser.disabledFeatures=coupons`.
+- **Edge shopping/coupons can be managed by MAM policy.** For example, to enable coupons: `com.microsoft.intune.mam.managedbrowser.disabledFeatures=coupons`.
 
-- Introduced MAM/MDM policy to manage the "import password" feature.
+- **New policy to manage the "import password" feature in MAM and MDM.** The following settings are available to manage this feature:
 
   - MAM: `com.microsoft.intune.mam.managedbrowser.disableImportPasswords`
   - MDM: `EdgeImportPasswordsDisabled`
 
-- Improvements to Bing Chat Enterprise. For example, Bing Image Creator and Visual Search.
+- **Improvements to Bing Chat Enterprise.** For example, Bing Image Creator and Visual Search.
 
 ## Version 116.0.1938.72: September 5, 2023
 
