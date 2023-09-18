@@ -34,7 +34,7 @@ Fixed various bugs and performance issues.
 
 - **New SmartScreen policy.**  The [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) policy lets administrators create a dictionary of file type extensions with a corresponding list of domains that will be exempted from SmartScreen AppRep warnings.  Files with file type extensions specified for domains identified by this policy will still be subject to file type extension-based security warnings and mixed-content download warnings.
 
-- **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allows administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps.  When a policy is configured to Allow, updates will occur on a metered connection, such as cellular connections or others where data usage is controlled.
+- **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allows administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps. When a policy is configured to Allow, updates occur on a metered connection, such as cellular connections or others where data usage is controlled.
 
 ### Policy updates
 
