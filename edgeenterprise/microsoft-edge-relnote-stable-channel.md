@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/15/2023
+ms.date: 09/18/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,9 +37,9 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-xx-2023).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
 
-### Announcement: Microsoft Edge for Business is available for unmanaged BYOPC
+### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
 
 Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows (BYOPC) using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge.
 
