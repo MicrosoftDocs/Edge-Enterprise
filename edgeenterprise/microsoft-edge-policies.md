@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/12/2023
+ms.date: 09/18/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,20 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[DataUrlInSvgUseEnabled](#dataurlinsvguseenabled)|Data URL support for SVGUseElement|
-|[CompressionDictionaryTransportEnabled](#compressiondictionarytransportenabled)|Enable compression dictionary transport support|
-|[ExemptSmartScreenDownloadWarnings](#exemptsmartscreendownloadwarnings)|Disable SmartScreen AppRep based warnings for specified file types on specified domains|
-|[BeforeunloadEventCancelByPreventDefaultEnabled](#beforeunloadeventcancelbypreventdefaultenabled)|Control the behavior for the cancel dialog produced by the beforeunload event|
-|[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
-|[PictureInPictureOverlayEnabled](#pictureinpictureoverlayenabled)|Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge|
-|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls|
 
 ## Available policies
 
