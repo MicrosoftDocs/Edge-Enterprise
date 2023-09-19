@@ -3,7 +3,7 @@ title: "Write SPNEGO Authenticator for Microsoft Edge on Android"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/14/2023
+ms.date: 09/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -84,7 +84,7 @@ In addition to the error codes that can be forwarded from the authenticator app,
 
 Use [Logcat](https://developer.android.com/tools/logcat#SnippetTab) to search for the **cr_net_auth** tag in the system log to get more information about the cause of these errors.
 
-## Use and test the authenticator with Microsoft Edge
+## Use the authenticator with Microsoft Edge
 
 Edge uses several [policies for controlling the use of SPNEGO authentication](/deployedge/microsoft-edge-mobile-policies#http-authentication). To enable SPNEGO authentication the [AuthServerAllowList](/deployedge/microsoft-edge-mobile-policies#authserverallowlist) must be configured and the [AuthAndroidNegotiateAccountType](/deployedge/microsoft-edge-mobile-policies#authandroidnegotiateaccounttype) must match the account type provided by the SPNEGO authenticator.
 
