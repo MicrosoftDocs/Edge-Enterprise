@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/18/2023
+ms.date: 09/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -90,6 +90,7 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 - [SearchbarIsEnabledOnStartup](/deployedge/microsoft-edge-policies#searchbarisenabledonstartup) - Allow the Search bar at Windows startup
 - [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
 - [UploadFromPhoneEnabled](/deployedge/microsoft-edge-policies#uploadfromphoneenabled) - Enable upload files from phone in Microsoft Edge desktop
+- [InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationzoneidentifiermhtfileallowed) - Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
 
 #### Deprecated policies
 
