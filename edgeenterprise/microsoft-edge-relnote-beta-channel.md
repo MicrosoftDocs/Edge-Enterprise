@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/15/2023
+ms.date: 09/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -44,7 +44,6 @@ Fixed various bugs and performance issues.
 - [DataUrlInSvgUseEnabled](/deployedge/microsoft-edge-policies#dataurlinsvguseenabled) - Data URL support for SVGUseElement
 - [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) - Disable SmartScreen AppRep based warnings for specified file types on specified domains
 - [ForcePermissionPolicyUnloadDefaultEnabled](/deployedge/microsoft-edge-policies#forcepermissionpolicyunloaddefaultenabled) - Controls whether unload event handlers can be disabled
-- [InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationzoneidentifiermhtfileallowed) - Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
 - [PictureInPictureOverlayEnabled](/deployedge/microsoft-edge-policies#pictureinpictureoverlayenabled) - Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge
 
 ## Version 117.0.2045.31: September 15, 2023
