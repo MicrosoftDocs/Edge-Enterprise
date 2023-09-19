@@ -1,4 +1,4 @@
-# last revised 08/30/2023
+# last revised 09/19/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -273,6 +273,8 @@
         href: edge-learnmore-create-user-directory-vars.md
       - name: Using Microsoft Edge rollback for enterprises
         href: edge-learnmore-rollback.md
+      - name: Write a SPNEGO Authenticator for Microsoft Edge on Android
+        href: edge-learnmore-write-spnego-authenticator.md
 - name: Microsoft Edge Videos
   items:
    - name: Microsoft Edge video collection
