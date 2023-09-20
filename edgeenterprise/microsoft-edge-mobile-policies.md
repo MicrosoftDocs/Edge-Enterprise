@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 08/21/2023
+ms.date: 09/20/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -47,6 +47,7 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeShowBottomBarInKioskMode](#edgeshowbottombarinkioskmode)   |   Kiosk mode bottom bar experiences on Android devices   |
 | [EdgeSyncDisabled](#edgesyncdisabled)  |   Manage account synchronization  |
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
+| [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
 
 ### [*Proxy server*](#proxy-server)
 
@@ -1635,6 +1636,53 @@ true
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+<!-- ========= new policy =========== -->
+
+### EdgeImportPasswordsDisabled
+
+#### Disable the import of passwords
+
+#### Supported on:
+
+* Microsoft Edge (iOS and iPadOS) since version 111 **???**
+
+#### Description
+
+Edge for iOS and Android allows users to import passwords from Password Manager. Admins can disable import  passwords with the following settings:
+
+EdgeImportPasswordsDisabled
+
+- true = Disable the import of passwords
+- false (default) =  Allow the import of passwords
+
+Note:
+
+In the Password Manager of Edge for iOS, there is an **Add** button. When the import passwords feature is disabled, the **Add** button will also be disabled.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes **???**
+- Per Profile : No **???**
+
+#### Data Type:
+
+Android:Boolean
+
+iOS:Boolean
+
+#### #### Android and iOS restriction name:
+
+```
+EdgeImportPasswordsDisabled
+```
+
+##### Example value (Android and iOS):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ### EdgeNetworkStackPref
 
