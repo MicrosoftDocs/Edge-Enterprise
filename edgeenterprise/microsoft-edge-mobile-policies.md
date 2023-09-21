@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/20/2023
+ms.date: 09/21/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -1644,7 +1644,7 @@ true
 
 #### Supported on:
 
-* Microsoft Edge (iOS and iPadOS) since version 111 **???**
+* Microsoft Edge (iOS and iPadOS) since version 117
 
 #### Description
 
@@ -1661,8 +1661,8 @@ In the Password Manager of Edge for iOS, there is an **Add** button. When the im
 
 #### Supported features:
 
-- Dynamic Policy Refresh : Yes **???**
-- Per Profile : No **???**
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
 
 #### Data Type:
 
