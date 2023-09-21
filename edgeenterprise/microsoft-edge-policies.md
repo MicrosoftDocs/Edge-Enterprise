@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/18/2023
+ms.date: 09/21/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,6 +25,15 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[NewTabPageBingChatEnabled](#newtabpagebingchatenabled)|Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page|
+|[SplitScreenEnabled](#splitscreenenabled)|Enable split screen feature in Microsoft Edge|
 
 ## Available policies
 
@@ -331,6 +340,7 @@ These tables list all of the browser-related group policies available in this re
 |[HomepageLocation](#homepagelocation)|Configure the home page URL|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Configure the background types allowed for the new tab page layout|
 |[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
+|[NewTabPageBingChatEnabled](#newtabpagebingchatenabled)|Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
 |[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
@@ -650,6 +660,7 @@ These tables list all of the browser-related group policies available in this re
 |[SpellcheckEnabled](#spellcheckenabled)|Enable spellcheck|
 |[SpellcheckLanguage](#spellchecklanguage)|Enable specific spellcheck languages|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Force disable spellcheck languages|
+|[SplitScreenEnabled](#splitscreenenabled)|Enable split screen feature in Microsoft Edge|
 |[StandaloneHubsSidebarEnabled](#standalonehubssidebarenabled)|Standalone Sidebar Enabled|
 |[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (obsolete)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suppress the unsupported OS warning|
@@ -13548,6 +13559,70 @@ If you disable this policy, App Launcher doesn't appear and users won't be able 
   #### Mac information and settings
 
   - Preference Key Name: NewTabPageAppLauncherEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NewTabPageBingChatEnabled
+
+  #### Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  By default, there are two Bing chat entry-points on new tab page. One is inside the new tab page search box, and one is in the Bing Autosuggest drawer on-click.
+
+If you enable or don't configure this policy, there is no change on the Microsoft Edge Enterprise new tab page and the Bing chat entry-points are there for users.
+
+If you disable this policy, Bing chat entry-points don't appear on the new tab page.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageBingChatEnabled
+  - GP name: Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageBingChatEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewTabPageBingChatEnabled
   - Example value:
 ``` xml
 <false/>
@@ -34996,6 +35071,70 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SplitScreenEnabled
+
+  #### Enable split screen feature in Microsoft Edge
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  This policy lets you configure the split screen feature in Microsoft Edge. This feature lets a user open two web pages in one tab.
+
+If you enable or don't configure this policy, users can use the split screen feature in Microsoft Edge.
+
+If you disable this policy, users can't use the split screen feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SplitScreenEnabled
+  - GP name: Enable split screen feature in Microsoft Edge
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SplitScreenEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SplitScreenEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
