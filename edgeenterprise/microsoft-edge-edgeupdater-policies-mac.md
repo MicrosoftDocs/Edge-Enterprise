@@ -74,10 +74,10 @@ If you don't enable and configure this policy, EdgeUpdater handles available upd
 ##### Supported values:
 
 ```
-0 // Always allow updates
-1 // Automatic silent updates only
+1 // Always allow updates
 2 // Manual updates only
-3 // Updates disabled
+3 // Automatic silent updates only
+0 // Updates disabled
 ```
 
 [Back to top](#microsoft-edge---edgeupdater-policies-for-macos)
