@@ -99,7 +99,6 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 #### New policies
 
 - [AllowSystemNotifications](/deployedge/microsoft-edge-policies#allowsystemnotifications) - Allows system notifications
-- [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) - Control the behavior for the cancel dialog produced by the beforeunload event
 - [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) - Edge Wallet E-Tree Enabled
 - [GamerModeEnabled](/deployedge/microsoft-edge-policies#gamermodeenabled) - Enable Gamer Mode
 - [SearchbarAllowed](/deployedge/microsoft-edge-policies#searchbarallowed) - Enable the Search bar
@@ -107,6 +106,8 @@ WebView2 will support both the permissions policy and the enterprise policy but 
 - [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
 - [UploadFromPhoneEnabled](/deployedge/microsoft-edge-policies#uploadfromphoneenabled) - Enable upload files from phone in Microsoft Edge desktop
 - [InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationzoneidentifiermhtfileallowed) - Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
+- [PasswordDeleteOnBrowserCloseEnabled](/deployedge/microsoft-edge-policies#passworddeleteonbrowsercloseenabled) - Save passwords when Microsoft Edge closes
+- [SplitScreenEnabled](/deployedge/microsoft-edge-policies#splitscreenenabled) - Enable split screen feature in Microsoft Edge
 
 #### Deprecated policies
 
