@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/21/2023
+ms.date: 09/22/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -32,8 +32,8 @@ The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[NewTabPageBingChatEnabled](#newtabpagebingchatenabled)|Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page|
-|[SplitScreenEnabled](#splitscreenenabled)|Enable split screen feature in Microsoft Edge|
+|[NewTabPageCompanyLogoEnabled](#newtabpagecompanylogoenabled)|Hide the company logo on the Microsoft Edge new tab page|
+|[ForceBuiltInPushMessagingClient](#forcebuiltinpushmessagingclient)|Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.|
 
 ## Available policies
 
@@ -342,6 +342,7 @@ These tables list all of the browser-related group policies available in this re
 |[NewTabPageAppLauncherEnabled](#newtabpageapplauncherenabled)|Hide App Launcher on Microsoft Edge new tab page|
 |[NewTabPageBingChatEnabled](#newtabpagebingchatenabled)|Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
+|[NewTabPageCompanyLogoEnabled](#newtabpagecompanylogoenabled)|Hide the company logo on the Microsoft Edge new tab page|
 |[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
@@ -497,6 +498,7 @@ These tables list all of the browser-related group policies available in this re
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
 |[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
+|[ForceBuiltInPushMessagingClient](#forcebuiltinpushmessagingclient)|Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
@@ -13737,6 +13739,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewTabPageCompanyLogoEnabled
+
+  #### Hide the company logo on the Microsoft Edge new tab page
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 118 or later
+
+  #### Description
+
+  By default, the company logo is shown on the new tab page if the company logo is configured in Admin Portal.
+
+If you enable or don't configure this policy, there is no change on the Microsoft Edge new tab page and the company logo is there for users.
+
+If you disable this policy, the company logo doesn't appear on Microsoft Edge new tab page.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageCompanyLogoEnabled
+  - GP name: Hide the company logo on the Microsoft Edge new tab page
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageCompanyLogoEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewTabPageCompanyLogoEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NewTabPageContentEnabled
 
   #### Allow Microsoft News content on the new tab page
@@ -24113,6 +24179,63 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>0</integer>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ForceBuiltInPushMessagingClient
+
+  #### Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 118 or later
+
+  #### Description
+
+  In some environments, the Windows OS client can't connect to the Windows Push Notification Service (WNS). For these environments, you can use the Microsoft Edge built-in WNS push client, which may be able to connect successfully.
+
+If enabled, Microsoft Edge will use its built-in WNS push client to connect to WNS.
+
+If disabled or not configured, Microsoft Edge will use the Windows OS client to connect to the Windows Push Notification Service. This is the default setting.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceBuiltInPushMessagingClient
+  - GP name: Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceBuiltInPushMessagingClient
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -35083,7 +35206,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   
   #### Supported versions:
 
-  - On Windows and macOS since 119 or later
+  - On Windows and macOS since 117 or later
 
   #### Description
 
