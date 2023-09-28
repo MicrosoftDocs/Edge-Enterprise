@@ -3,7 +3,7 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 07/20/2023
+ms.date: 09/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -51,6 +51,7 @@ This policy can control settings such as Update URL, where the extension will be
 | **runtime_blocked_hosts**| Prevent extensions from interacting with or modifying websites that you specify. Modifications include blocking JavaScript injection, cookie access, and web-request modifications.<br>You can specify up to 100 entries. Extra entries are discarded.<br>The host pattern format is similar to match patterns ex'cept you can't define the path. For example:<br>- *://*.example.com<br>- *://example.*—eTLD wildcards are supported   |
 | **override_update_url**| Available from Microsoft Edge 93<br>If this field is set to `true`, Microsoft Edge uses the update URL specified in the ExtensionSettings policy or in the ExtensionInstallForcelist policy, for subsequent extension updates.<br>If this field isn't set or is set to `false`, Microsoft Edge uses the URL specified in the extension's manifest for updates.|
 | **toolbar_state**| Available from Microsoft Edge 103<br>This policy setting lets you force show an installed extension to the toolbar. The default state is `default_hidden` for all extensions. The following values are possible for this setting:<br>-`force_shown`: You can choose to force show an installed extension on the toolbar. Users won't be able to hide the specified extension icon from the toolbar.<br>-`default_hidden`: This is the default setting for all the installed extensions on the browser.<br>-`default_shown`: In this state, extensions are shown on the toolbar on installation. Users can hide them from the toolbar, if needed. |
+| **sidebar_auto_open_blocked**   |  If this field is set to `true`, any sidebar app with the specified extension ID will be prevented from automatically opening.   |
 
 The following keys are allowed at the global scope (*):
 
@@ -73,6 +74,7 @@ The following keys are allowed at an individual extension scope:
 - override_update_url
 - runtime_blocked_hosts
 - toolbar_state
+- sidebar_auto_open_blocked
 
 The following keys are allowed at an update URL scope:
 
