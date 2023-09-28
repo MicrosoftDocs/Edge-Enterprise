@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 08/21/2023
+ms.date: 09/28/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,7 +26,7 @@ This article describes the productivity benefits Edge Workspaces will bring to y
 
 Edge Workspaces provides an incredible way for customers to organize their browsing tasks into dedicated windows. Each Edge Workspace contains its own sets of tabs and favorites, all created and curated by the user and their collaborators. Edge Workspaces are automatically saved and kept up to date. Workspaces are accessible anywhere customers use Microsoft Edge with their Microsoft Entra accounts.
 
-> [!VIDEO https://www.youtube.com/embed/bNRY9Zm1QY8 ]
+> [!VIDEO https://www.youtube.com/embed/bNRY9Zm1QY8]
 <!--
 [!VIDEO https://www.youtube.com/embed/bNRY9Zm1QY8] -->
 
@@ -133,6 +133,14 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 The Edge Workspaces software was updated and you need to update Microsoft Edge to keep using your workspaces.
 
 ![Unable to load error message for workspaces](media/microsoft-edge-workspaces/error-unable-to-load.png)
+
+### My user got the "Error: Unable to load workspaces" message. What should they do?
+
+Try to sign out and sign back into Microsoft Edge. Go to `edge://settings/profiles` and click  **Sign out**, then click **Sign in to sync data**.
+
+![Unable to load error message, prompt to Retry](media/microsoft-edge-workspaces/error-unable-to-load-retry.png)
+
+If this issue continues even after signing out and signing back in, you can submit feedback to the Edge team by clicking the **Like** or **Dislike** button at the bottom of the Edge Workspace menu. These buttons are next to the question "Are you satisfied with Workspaces?".
 
 ### Can I lock down an Edge workspace after I share it (Read-only) so that I'm the only one who can close, open, or move tabs?
 
