@@ -136,7 +136,7 @@ The Edge Workspaces software was updated and you need to update Microsoft Edge t
 
 ### My user got the "Error: Unable to load workspaces" message. What should they do?
 
-Try to sign out and sign back into Microsoft Edge. Go to `edge://settings/profiles` and click  **Sign out** then click **Sign in to sync data**.
+Try to sign out and sign back into Microsoft Edge. Go to `edge://settings/profiles` and click  **Sign out**, then click **Sign in to sync data**.
 
 ![Unable to load error message, prompt to Retry](media/microsoft-edge-workspaces/error-unable-to-load-retry.png)
 
