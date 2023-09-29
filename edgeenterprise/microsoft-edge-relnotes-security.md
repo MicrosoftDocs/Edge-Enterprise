@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## September 29, 2023
 
-Microsoft has a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863) to **Microsoft Edge Stable (Version 117.0.2045.XX) and Extended Stable Channel (Version 116.0.1938.XX)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863) to **Microsoft Edge Stable (Version 117.0.2045.47) and Extended Stable Channel (Version 116.0.1938.98)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## September 15, 2023
 
