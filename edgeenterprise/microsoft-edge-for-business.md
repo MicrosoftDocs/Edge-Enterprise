@@ -88,10 +88,10 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
-## MAM for Windows
+## MAM for Windows preview
 
 > [!NOTE]
-> MAM for Windows requires tenant onboarding.
+> This preview requires tenant onboarding.
 
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
@@ -99,6 +99,16 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Azure AD*).
+
+Participation requirements:
+
+- Access to a test enterprise tenant for validation.
+- Provide ongoing feedback about your experience with preview features via our Teams channel.
+- Complete Validation scenarios and provide your feedback.
+- Engage with the Microsoft product group during the preview.
+
+> [!IMPORTANT]
+> Production use of the public preview on personal devices isn't supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
 
 ## Provide feedback
 
