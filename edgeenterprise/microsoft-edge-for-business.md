@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/23/2023
+ms.date: 10/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -91,7 +91,8 @@ Included in this release are some visual treatments for the work browser window,
 ## MAM for Windows
 
 > [!NOTE]
-> MAM for Windows requires tenant onboarding.
+>  MAM for Windows requires tenant onboarding.
+
 
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
@@ -99,6 +100,14 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Azure AD*).
+
+### Prerequisites
+
+- Windows 11, build 10.0.22621 (22H2) or later.
+- Microsoft Intune 2309 or higher.
+- Microsoft Edge 117.0.2045.31 or higher.
+
+For more information, see [Mobile Application Management for Microsoft Edge on unmanaged Windows devices](https://learn.microsoft.com/en-us/mem/intune/apps/protect-edge-mam-windows)
 
 ## Provide feedback
 
