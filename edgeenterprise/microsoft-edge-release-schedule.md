@@ -3,7 +3,7 @@ title: "Microsoft Edge release schedule"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 09/20/2023
+ms.date: 10/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -64,11 +64,11 @@ The following table lists the planned and actual release dates for major release
 | 116 | Released<br>Version  | 24-Jul-2023<br>[116.0.1938.29](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-1160193829-july-24-2023) | 21-Aug-2023<br>[116.0.1938.54](/deployedge/microsoft-edge-relnote-stable-channel#version-1160193854-august-21-2023)| 21-Aug-2023<br>[116.0.1938.54](/deployedge/microsoft-edge-relnote-stable-channel#version-1160193854-august-21-2023) |
 | 117 | Released<br>Version | 25-Aug-2023<br>[117.0.2045.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-117020459-august-24-2023) | 15-Sep-2023<br>[117.0.2045.31](/deployedge/microsoft-edge-relnote-stable-channel#version-1170204531-september-15) | Not applicable |
 | 118 |Released<br>Version | 20-Sep-2023<br>[118.0.2088.11](/deployedge/microsoft-edge-relnote-beta-channel#version-1180208811-september-20-2023) | Week of 12-Oct-2023 | Week of 12-Oct-2023 |
-| 119 | Target release | Week of 16-Oct-2023 | Week of 09-Nov-2023 | Not applicable |
-| 120 | Target release | Week of 13-Nov-2023 | Week of 04-Jan-2024 | Week of 04-Jan-2024 |
-| 121 | Target release | Week of 08-Jan-2024 | Week of 01-Feb-2024 | Not applicable |
-| 122 | Target release | Week of 05-Feb-2024 | Week of 29-Feb-2024 | Week of 29-Feb-2024 |
-| 123 | Target release | Week of 04-Mar-2024 | Week of 28-Mar-2024 | Not applicable |
+| 119 | Target release | Week of 12-Oct-2023 | Week of 02-Nov-2023 | Not applicable |
+| 120 | Target release | Week of 09-Nov-2023 | Week of 07-Dec-2023 | Week of 07-Dec-2023 |
+| 121 | Target release | Week of 14-Dec-2023 | Week of 25-Jan-2024 | Not applicable |
+| 122 | Target release | Week of 01-Feb-2024 | Week of 22-Feb-2024 | Week of 22-Feb-2024 |
+| 123 | Target release | Week of 29-Feb-2024 | Week of 21-Mar-2024 | Not applicable |
 
 ## Release process
 
