@@ -70,7 +70,6 @@ The following table lists the planned and actual release dates for major release
 | 122 | Target release | Week of 01-Feb-2024 | Week of 22-Feb-2024 | Week of 22-Feb-2024 |
 | 123 | Target release | Week of 29-Feb-2024 | Week of 21-Mar-2024 | Not applicable |
 
-VERSION    DATE            BETA                STABLE                EXSTENDED
 ## Release process
 
 The trigger for Beta and Stable major releases is an equivalent Chromium release.
