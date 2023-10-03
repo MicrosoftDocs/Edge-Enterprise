@@ -93,6 +93,7 @@ Included in this release are some visual treatments for the work browser window,
 > [!NOTE]
 >  MAM for Windows requires tenant onboarding.
 
+
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
@@ -106,7 +107,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Microsoft Intune 2309 or higher.
 - Microsoft Edge 117.0.2045.31 or higher.
 
-For more information, see [Mobile Application Management for Microsoft Edge on unmanaged Windows devices](https://learn.microsoft.com/en-us/mem/intune/apps/protect-edge-mam-windows)
+For more information, see [Mobile Application Management for Microsoft Edge on unmanaged Windows devices](/mem/intune/apps/protect-edge-mam-windows)
 
 ## Provide feedback
 
@@ -164,7 +165,7 @@ To turn off the personal browser window, use the settings described in [Restrict
 
 ### Does Edge for Business support unmanaged devices?
 
-Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows preview](#mam-for-windows-preview) to access this preview.  
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows](#mam-for-windows).  
 
 ## See also
 
