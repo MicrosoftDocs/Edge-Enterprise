@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 09/29/2023
+ms.date: 10/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,6 +27,12 @@ Microsoft has a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/
 ## September 15th, 2023
 
 Microsoft has a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863) to **Microsoft Edge Stable Channel (Version 117.0.2045.31)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+This update contains the following Microsoft Edge-specific updates:
+
+- [CVE-2023-36562](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36562)
+- [CVE-2023-36735](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36735)
+- [CVE-2023-36727](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36727)
 
 ## September 12, 2023
 
