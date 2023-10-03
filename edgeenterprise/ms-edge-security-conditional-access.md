@@ -35,7 +35,7 @@ The respective Microsoft Entra (*Azure AD*) account needs to be connected to Win
 
 ## Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM
 
-Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information about MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and the [MAM FAQ](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
+Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information about MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and the [MAM FAQ](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). For more information about conditional access on Windows devices, see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
 
 ## Access issues
 
