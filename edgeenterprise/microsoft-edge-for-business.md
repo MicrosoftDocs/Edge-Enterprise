@@ -93,6 +93,7 @@ Included in this release are some visual treatments for the work browser window,
 > [!NOTE]
 >  MAM for Windows requires tenant onboarding.
 
+
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
