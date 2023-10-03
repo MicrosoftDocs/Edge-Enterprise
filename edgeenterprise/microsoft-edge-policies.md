@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/22/2023
+ms.date: 09/30/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,15 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[NewTabPageCompanyLogoEnabled](#newtabpagecompanylogoenabled)|Hide the company logo on the Microsoft Edge new tab page|
-|[ForceBuiltInPushMessagingClient](#forcebuiltinpushmessagingclient)|Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.|
 
 ## Available policies
 
@@ -248,7 +239,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Save passwords when Microsoft Edge closes|
+|[PasswordDeleteOnBrowserCloseEnabled](#passworddeleteonbrowsercloseenabled)|Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes|
 |[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Allow users to get a strong password suggestion whenever they are creating an account online|
 |[PasswordManagerBlocklist](#passwordmanagerblocklist)|Configure the list of domains for which the password manager UI (Save and Fill) will be disabled|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Enable saving passwords to the password manager|
@@ -614,7 +605,7 @@ These tables list all of the browser-related group policies available in this re
 |[RelaunchWindow](#relaunchwindow)|Set the time interval for relaunch|
 |[RemoteDebuggingAllowed](#remotedebuggingallowed)|Allow remote debugging|
 |[RendererAppContainerEnabled](#rendererappcontainerenabled)|Enable renderer in app container|
-|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity|
+|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity (deprecated)|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Specify if online OCSP/CRL checks are required for local trust anchors|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Enable resolution of navigation errors using a web service|
 |[RestorePdfView](#restorepdfview)|Restore PDF view|
@@ -9190,24 +9181,21 @@ If you disable this policy, Microsoft Edge will turn off the compression diction
 
   ### PasswordDeleteOnBrowserCloseEnabled
 
-  #### Save passwords when Microsoft Edge closes
+  #### Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes
 
   
   
   #### Supported versions:
 
-  - On Windows and macOS since 115 or later
+  - On Windows and macOS since 117 or later
 
   #### Description
 
-  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when.
-
-The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or.
-
-The policy ClearBrowsingDataOnExit is enabled or.
+  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when:
+- The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
+- The policy ClearBrowsingDataOnExit is enabled
 
 If you enable this policy, passwords won't be cleared when the browser closes.
-
 If you disable or don't configure this policy, the user's personal configuration is used.
 
   #### Supported features:
@@ -9227,7 +9215,7 @@ If you disable or don't configure this policy, the user's personal configuration
   ##### Group Policy (ADMX) info
 
   - GP unique name: PasswordDeleteOnBrowserCloseEnabled
-  - GP name: Save passwords when Microsoft Edge closes
+  - GP name: Prevent passwords from being deleted if any Edge settings is enabled to delete browsing data when Microsoft Edge closes
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Password manager and protection
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Password manager and protection
   - GP ADMX file name: MSEdge.admx
@@ -13577,7 +13565,7 @@ If you disable this policy, App Launcher doesn't appear and users won't be able 
   
   #### Supported versions:
 
-  - On Windows and macOS since 118 or later
+  - On Windows and macOS since 117 or later
 
   #### Description
 
@@ -13747,7 +13735,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   
   #### Supported versions:
 
-  - On Windows and macOS since 118 or later
+  - On Windows and macOS since 117 or later
 
   #### Description
 
@@ -17391,16 +17379,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-ld and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+ld and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -18574,6 +18562,7 @@ If you disable or don't configure this policy, users can configure the Clear bro
 If you enable this policy, don't configure the [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or the [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) policy, because they all deal with deleting browsing data. If you configure the preceding policies and this policy, all browsing data is deleted when Microsoft Edge closes, regardless of how you configured [AllowDeletingBrowserHistory](#allowdeletingbrowserhistory) or [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
 To exclude cookies from being deleted on exit, configure the [SaveCookiesOnExit](#savecookiesonexit) policy.
+To exclude passwords from being deleted on exit, configure the "SavePasswordsOnExit" policy.
 
   #### Supported features:
 
@@ -29840,13 +29829,16 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 
   #### Description
 
-  This policy doesn't work because support for using the platform-supplied certificate verifier and roots was removed.
-
-When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+  When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
 
 When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
 
 When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+
+This policy is planned to be removed in Microsoft Edge version
+121 for Android devices when support for using the platform supplied roots is planned to be removed.
+
+This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -32010,9 +32002,9 @@ This policy is only supported on Windows 10 devices.
 
   ### RendererCodeIntegrityEnabled
 
-  #### Enable renderer code integrity
+  #### Enable renderer code integrity (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -32022,6 +32014,8 @@ This policy is only supported on Windows 10 devices.
 
   Setting the policy to Enabled or leaving it unset turns Renderer Code Integrity on.
 Setting the policy to Disabled has a detrimental effect on Microsoft Edge's security and stability as unknown and potentially hostile code can load inside Microsoft Edge's renderer processes. Only turn off the policy if there are compatibility issues with third-party software that must run inside Microsoft Edge's renderer processes.
+
+This policy will be removed in Edge 119 and will be ignored if set.
 
   #### Supported features:
 
@@ -32040,7 +32034,7 @@ Setting the policy to Disabled has a detrimental effect on Microsoft Edge's secu
   ##### Group Policy (ADMX) info
 
   - GP unique name: RendererCodeIntegrityEnabled
-  - GP name: Enable renderer code integrity
+  - GP name: Enable renderer code integrity (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -33588,7 +33582,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
