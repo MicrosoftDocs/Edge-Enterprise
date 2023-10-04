@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/23/2023
+ms.date: 10/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -88,10 +88,11 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
-## MAM for Windows preview
+## MAM for Windows
 
 > [!NOTE]
-> This preview requires tenant onboarding.
+>  MAM for Windows requires tenant onboarding.
+
 
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
@@ -100,15 +101,13 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Azure AD*).
 
-Participation requirements:
+### Prerequisites
 
-- Access to a test enterprise tenant for validation.
-- Provide ongoing feedback about your experience with preview features via our Teams channel.
-- Complete Validation scenarios and provide your feedback.
-- Engage with the Microsoft product group during the preview.
+- Windows 11, build 10.0.22621 (22H2) or later.
+- Microsoft Intune 2309 or higher.
+- Microsoft Edge 117.0.2045.31 or higher.
 
-> [!IMPORTANT]
-> Production use of the public preview on personal devices isn't supported. Migration of public preview data to later releases is not supported. If you'd like to participate in the preview, register at [https://forms.office.com/r/UmKN68a7yN](https://forms.office.com/r/UmKN68a7yN)
+For more information, see [Mobile Application Management for Microsoft Edge on unmanaged Windows devices](/mem/intune/apps/protect-edge-mam-windows)
 
 ## Provide feedback
 
@@ -166,7 +165,7 @@ To turn off the personal browser window, use the settings described in [Restrict
 
 ### Does Edge for Business support unmanaged devices?
 
-Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows preview](#mam-for-windows-preview) to access this preview.  
+Yes, Edge for Business includes support for unmanaged devices, which is currently available in preview. Follow the steps in [MAM for Windows](#mam-for-windows).  
 
 ## See also
 
