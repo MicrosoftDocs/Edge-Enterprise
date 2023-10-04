@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/03/2023
+ms.date: 10/04/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -89,10 +89,6 @@ Microsoft Edge for Business is enabled by logging into the browser using your Mi
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
 ## MAM for Windows
-
-> [!NOTE]
->  MAM for Windows requires tenant onboarding.
-
 
 To enable protected remote or home access to org data from Microsoft Edge for Business on personal Windows devices using:
 
