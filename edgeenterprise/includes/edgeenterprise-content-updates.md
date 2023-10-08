@@ -2,6 +2,17 @@
 
 
 
+## Week of October 02, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/2/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 10/3/2023 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 10/3/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 10/3/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+
+
 ## Week of September 25, 2023
 
 
@@ -43,13 +54,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/6/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-
-
-## Week of August 28, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/30/2023 | [Microsoft Edge - EdgeUpdater Policy Documentation](/DeployEdge/microsoft-edge-edgeupdater-policies-mac) | added |
-| 8/31/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 9/1/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
