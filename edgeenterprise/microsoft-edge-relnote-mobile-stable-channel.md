@@ -23,6 +23,10 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
+## Version 117.0.2045.65: October 11, 2023
+
+Fixed various bugs and performance issues for iOS.
+
 ## Version 117.0.2045.65: October 10, 2023
 
 Fixed various bugs and performance issues for Android.
