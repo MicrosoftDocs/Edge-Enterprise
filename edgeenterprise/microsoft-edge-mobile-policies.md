@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/21/2023
+ms.date: 10/12/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -48,6 +48,8 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeSyncDisabled](#edgesyncdisabled)  |   Manage account synchronization  |
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
 | [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
+| [OverlayPermissionDetectionEnabled]() | Enable Overlay Permission Detection  |
+| [AuthAndroidNegotiateAccountType]()   | Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication  |
 
 ### [*Proxy server*](#proxy-server)
 
@@ -113,6 +115,7 @@ These tables list all of the browser-related policies available in this release 
 | [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
 | [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
+| [SmartScreenEnabled]() | Configure Microsoft Defender SmartScreen |
 
 ## HTTP authentication
 
