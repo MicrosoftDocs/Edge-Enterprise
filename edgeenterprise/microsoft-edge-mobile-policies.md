@@ -49,7 +49,8 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
 | [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
 | [OverlayPermissionDetectionEnabled](#overlaypermissiondetectionenabled) | Enable Overlay Permission Detection  |
-| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication  |
+<!--
+| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication  | -->
 
 ### [*Proxy server*](#proxy-server)
 
@@ -1736,14 +1737,14 @@ EdgeNetworkStackPref
 
 
 [Back to top](#microsoft-edge-mobile---policies)
-
+<!--
 ### AuthAndroidNegotiateAccountType
 
 #### Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication
 
 
 [Back to top](#microsoft-edge-mobile---policies)
-
+-->
 
 ## Proxy server policies
 
