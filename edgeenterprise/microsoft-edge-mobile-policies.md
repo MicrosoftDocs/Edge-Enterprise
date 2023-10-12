@@ -1769,7 +1769,6 @@ type: boolean
 - Microsoft Edge (Android) since version 119
 
 #### tags: 
-
 []
 
 #### type: 
