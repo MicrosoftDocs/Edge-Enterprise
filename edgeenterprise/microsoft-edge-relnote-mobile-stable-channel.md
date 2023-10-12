@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 10/10/2023
+ms.date: 10/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,11 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 117.0.2045.65: October 11, 2023
 
-Fixed various bugs and performance issues for iOS.
-
-## Version 117.0.2045.65: October 10, 2023
-
-Fixed various bugs and performance issues for Android.
+Fixed various bugs and performance issues.
 
 ## Version 117.0.2045.53: October 6, 2023
 
