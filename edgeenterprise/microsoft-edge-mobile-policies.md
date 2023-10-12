@@ -1735,7 +1735,7 @@ EdgeNetworkStackPref
 
 #### Enable Overlay Permission Detection
 
-#### Descripition
+#### Description
 
 This policy allows administrators to enable or disable the detection of overlay permissions in <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph>. If any app on the device has overlay drawing permissions, then <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph> will display an error message stating, "This site can't ask for your permission. Close any bubbles or overlays from other apps, then try again" when the browser requests any device permissions.
 
@@ -1745,33 +1745,34 @@ If you disable this policy, <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></p
 
 Please note that disabling overlay permission detection may increase the risk of malicious overlays or pop-ups gaining access to sensitive information without user consent. Therefore, it's recommended to use this policy with caution and only in trusted environments or when there's a specific need to bypass overlay detection.
 
-#### example_value: true
+#### Example value: 
+true
 
-#### features:
+#### Features:
 
 - dynamic_refresh: true
 - per_profile: true
 
-#### msowners:
+#### MSowners:
 
 - area_path:\Edge\Mobile\Enterprise
 
-#### owners:
+#### Owners:
 
 - file://components/edge_mobile_business/MSOWNERS
 
-#### schema:
+#### Schema:
 
 type: boolean
 
-#### supported_on:
+#### Supported on:
 
 - Microsoft Edge (Android) since version 119
 
-#### tags: 
+#### Tags: 
 []
 
-#### type: 
+#### Type: 
 
 main
 
