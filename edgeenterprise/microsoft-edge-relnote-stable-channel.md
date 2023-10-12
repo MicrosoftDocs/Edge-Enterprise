@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/06/2023
+ms.date: 10/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -29,6 +29,10 @@ These release notes provide information about new features and non-security upda
 ## Version 118.0.xxxx.xx: October x, 2023
 
 Fixed various bugs and performance issues.
+
+### Announcement: Icon change in Edge sidebar
+
+In an upcoming update to Microsoft Edge, the Bing icon entry point in the Microsoft Edge sidebar will change to the new Copilot icon. No other changes in the experience are expected.
 
 ### Feature updates
 
