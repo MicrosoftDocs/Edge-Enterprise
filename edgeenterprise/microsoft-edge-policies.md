@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/30/2023
+ms.date: 10/11/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,13 +26,16 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## Deprecated policies
+## New policies
 
-The following table lists the deprecated policy that's in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Enable renderer code integrity (deprecated)|
+|[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
+|[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
+|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
+|[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 
 ## Available policies
 
@@ -209,6 +212,8 @@ These tables list all of the browser-related group policies available in this re
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
 |[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
+|[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
+|[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
 ### [*Immersive Reader settings*](#immersive-reader-settings-policies)
 
@@ -588,6 +593,8 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
+|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
+|[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
@@ -7947,8 +7954,8 @@ If this policy isn't configured, guided switch is turned on by default. A user c
   - Can be mandatory: Yes
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
-  - Per Profile: No
-  - Applies to a profile that is signed in with a Microsoft account: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
 
   #### Data Type:
 
@@ -8289,6 +8296,127 @@ If you disable this policy, sign in click to action dialog isn't shown on the Ne
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SwitchIntranetSitesToWorkProfile
+
+  #### Switch intranet sites to a work profile
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  Allows Microsoft Edge to switch to the appropriate profile when Microsoft Edge detects that a URL is the intranet.
+
+If you enable or don't configure this policy, navigations to intranet URLs will switch to the most recently used work profile if one exists.
+
+If you disable this policy, navigations to intranet URLs will remain in the current browser profile.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SwitchIntranetSitesToWorkProfile
+  - GP name: Switch intranet sites to a work profile
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SwitchIntranetSitesToWorkProfile
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SwitchIntranetSitesToWorkProfile
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SwitchSitesOnIEModeSiteListToWorkProfile
+
+  #### Switch sites on the IE mode site list to a work profile
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 119 or later
+
+  #### Description
+
+  Allows Microsoft Edge to switch to the appropriate profile when navigating to a site that matches an entry on the IE mode site list. Only sites that specify IE mode or Edge mode will be switched to the work profile.
+
+If you enable or don't configure this policy, navigations to URLs matching a site on the IE mode site list will switch to the most recently used work profile if one exists.
+
+If you disable this policy, navigations to URLs matching a site on the IE mode site list will remain in the current browser profile.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SwitchSitesOnIEModeSiteListToWorkProfile
+  - GP name: Switch sites on the IE mode site list to a work profile
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SwitchSitesOnIEModeSiteListToWorkProfile
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -17383,7 +17511,7 @@ If you disable this setting the list of available templates will be downloaded o
   
   #### Supported versions:
 
-  - On Windows and macOS since 117, until 127
+  - On Windows and macOS since 118 or later
 
   #### Description
 
@@ -17396,7 +17524,7 @@ Note: This policy is a temporary workaround and will be removed in a future rele
 
 New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
 
-ld and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -30340,6 +30468,134 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   [Back to top](#microsoft-edge---policies)
 
+  ### OrganizationLogoOverlayOnAppIconEnabled
+
+  #### Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  Allow your organization's logo from M365, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
+
+If you enable this policy, your organization's logo from M365 will be used.
+
+If you disable or don't configure this policy, your organization's logo from M365 won't be used.
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OrganizationLogoOverlayOnAppIconEnabled
+  - GP name: Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: OrganizationLogoOverlayOnAppIconEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: OrganizationLogoOverlayOnAppIconEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### OrganizationalBrandingOnWorkProfileUIEnabled
+
+  #### Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  Allow the use of your organization's branding assets from M365, if any, on the profile-related UI of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
+
+If you enable this policy, your organization's branding assets from M365 will be used.
+
+If you disable or don't configure this policy, your organization's branding assets from M365 won't be used.
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OrganizationalBrandingOnWorkProfileUIEnabled
+  - GP name: Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: OrganizationalBrandingOnWorkProfileUIEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: OrganizationalBrandingOnWorkProfileUIEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### OriginAgentClusterDefaultEnabled
 
   #### Origin-keyed agent clustering enabled by default
@@ -37857,10 +38113,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools. Users can also do a visual image search with the captured content.
 
-If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S and CTRL+SHIFT+X.
+If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
 If you disable this policy, users can't access the web capture feature in Microsoft Edge.
-
-Starting with Microsoft Edge version 114, Web Capture includes Web Select, which lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table. Users can access Web Select directly using keyboard shortcut, CTRL+SHIFT+X.
 
   #### Supported features:
 
