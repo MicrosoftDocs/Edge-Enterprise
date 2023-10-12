@@ -115,7 +115,7 @@ These tables list all of the browser-related policies available in this release 
 | [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
 | [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
-| [SmartScreenEnabled]() | Configure Microsoft Defender SmartScreen |
+| [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
 
 ## HTTP authentication
 
@@ -2259,7 +2259,29 @@ Android:Integer
 iOS:Integer
 
 [Back to top](#microsoft-edge-mobile---policies)
+
+
+### SmartScreenEnabled
+
+#### Configure Microsoft Defender SmartScreen
+
+#### Supported on:
+
+- Microsoft Edge (Android and iOS) since version 118
+
+#### Description
+
+This policy setting lets you configure whether to turn on Microsoft Defender SmartScreen. Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
+
+If you enable this setting, Microsoft Defender SmartScreen is turned on.
+
+If you disable this setting, Microsoft Defender SmartScreen is turned off.
+
+If you don't configure this setting, users can choose whether to use Microsoft Defender SmartScreen
+
  
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ## See also
 
