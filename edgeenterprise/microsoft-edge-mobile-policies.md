@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/12/2023
+ms.date: 10/13/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -117,6 +117,7 @@ These tables list all of the browser-related policies available in this release 
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
 | [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
 | [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
+| [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 
 ## HTTP authentication
 
@@ -2322,6 +2323,44 @@ If you don't configure this setting, users can choose whether to use Microsoft D
 
 Android:Boolean
 iOS: Boolean
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### MicrosoftRootStoreEnabled
+
+#### Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+
+#### Supported on:
+
+Microsoft Edge (Android) since version 118
+
+#### Description:
+
+When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+
+When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
+
+When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : No
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+#### Android restriction name:
+
+MicrosoftRootStoreEnabled
+
+##### Example value :
+
+```
+true
+
+```
 
 [Back to top](#microsoft-edge-mobile---policies)
 
