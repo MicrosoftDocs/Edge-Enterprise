@@ -1735,7 +1735,9 @@ EdgeNetworkStackPref
 
 #### Description
 
-This policy allows administrators to enable or disable the detection of overlay permissions in <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph>. If any app on the device has overlay drawing permissions, then <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph> will display an error message stating, "This site can't ask for your permission. Close any bubbles or overlays from other apps, then try again" when the browser requests any device permissions.
+This policy allows administrators to enable or disable the detection of overlay permissions in <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph>. 
+
+If any app on the device has overlay drawing permissions, then <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph> will display an error message stating, "This site can't ask for your permission. Close any bubbles or overlays from other apps, then try again" when the browser requests any device permissions.
 
 If enabled or left unset, <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></ph> will turn on this detection feature to remind users of potential risks.
 
@@ -1743,47 +1745,26 @@ If you disable this policy, <ph name="PRODUCT_NAME">$1<ex>Microsoft Edge</ex></p
 
 Please note that disabling overlay permission detection may increase the risk of malicious overlays or pop-ups gaining access to sensitive information without user consent. Therefore, it's recommended to use this policy with caution and only in trusted environments or when there's a specific need to bypass overlay detection.
 
-#### Example value: 
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+Android: boolean
+
+#### Android restriction name:
+
+OverlayPermissionDetectionEnabled
+
+##### Example value:
+
+```
 true
 
-#### Features:
-
-- dynamic_refresh: true
-- per_profile: true
-
-#### MSowners:
-
-- area_path:\Edge\Mobile\Enterprise
-
-#### Owners:
-
-- file://components/edge_mobile_business/MSOWNERS
-
-#### Schema:
-
-type: boolean
-
-#### Supported on:
-
-- Microsoft Edge (Android) since version 119
-
-#### Tags: 
-[]
-
-#### Type: 
-
-main
-
+```
 
 [Back to top](#microsoft-edge-mobile---policies)
-<!--
-### AuthAndroidNegotiateAccountType
-
-#### Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication
-
-
-[Back to top](#microsoft-edge-mobile---policies)
--->
 
 ## Proxy server policies
 
