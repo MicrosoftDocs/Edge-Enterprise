@@ -311,7 +311,7 @@ AuthServerAllowlist
 
 #### Description
 
-S Specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For more details see, [Write a SPNEGO Authenticator for Microsoft Edge on Android](https://learn.microsoft.com/en-us/DeployEdge/edge-learnmore-write-spnego-authenticator).
+Specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For more details see, [Write a SPNEGO Authenticator for Microsoft Edge on Android](https://learn.microsoft.com/en-us/DeployEdge/edge-learnmore-write-spnego-authenticator).
 
 If you disable or don't configure this policy, HTTP Negotiate authentication on Android is turned off.
 
