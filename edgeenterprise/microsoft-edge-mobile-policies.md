@@ -50,7 +50,7 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
 | [OverlayPermissionDetectionEnabled](#overlaypermissiondetectionenabled) | Enable Overlay Permission Detection  |
 <!--
-| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for <ph name="HTTP_NEGOTIATE">HTTP Negotiate</ph> authentication  | -->
+| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for HTTP Negotiate</ph> authentication  | -->
 
 ### [*Proxy server*](#proxy-server)
 
@@ -306,15 +306,15 @@ AuthServerAllowlist
 
 #### Supported on:
 
-- Microsoft Edge (Android) since version 109
-
-- Android System WebView since version 109
+- Microsoft Edge (Android) since version 118
 
 #### Description
 
-Setting the policy specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For details, see The Chromium Projects ( https://goo.gl/hajyfN )
+S Specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For more details see, [Write a SPNEGO Authenticator for Microsoft Edge on Android](https://learn.microsoft.com/en-us/DeployEdge/edge-learnmore-write-spnego-authenticator).
 
-Leaving the policy unset turns off HTTP Negotiate authentication on Android.
+If you disable or don't configure this policy, HTTP Negotiate authentication on Android is turned off.
+
+If you enable the policy, Microsoft Edge will use the value to specify the Android authentication app
 
 #### Supported features:
 
@@ -325,15 +325,13 @@ Leaving the policy unset turns off HTTP Negotiate authentication on Android.
 
 Android:String
 
-iOS:String
-
-#### Android and iOS restriction name:
+#### Android restriction name:
 
 ```
 AuthAndroidNegotiateAccountType
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 com.example.spnego
