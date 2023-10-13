@@ -2334,7 +2334,15 @@ If you disable this setting, Microsoft Defender SmartScreen is turned off.
 
 If you don't configure this setting, users can choose whether to use Microsoft Defender SmartScreen
 
- 
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+iOS: Boolean
 
 [Back to top](#microsoft-edge-mobile---policies)
 
