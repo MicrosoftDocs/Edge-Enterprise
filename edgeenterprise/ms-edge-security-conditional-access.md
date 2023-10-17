@@ -61,9 +61,7 @@ You can also work with profile settings by selecting the account picture in the 
 
 ### Fixing access issues with unenrolled devices using Intune MAM
 
-Common issues, such as an expired enrollment, and their resolution are [here](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#common-issues).
-
-For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
+Access issues, such as an expired enrollment, and their resolution are in [Troubleshooting](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
 
 ## See also
 
