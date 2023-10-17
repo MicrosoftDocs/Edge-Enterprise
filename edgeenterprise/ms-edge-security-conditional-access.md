@@ -3,7 +3,7 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/24/2023
+ms.date: 10/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,6 +37,9 @@ The respective Microsoft Entra (*Azure AD*) account needs to be connected to Win
 
 Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information about MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and the [MAM FAQ](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). For more information about conditional access on Windows devices, see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
 
+> [!NOTE]
+> Conditional Access policies that target All Cloud Apps include Edge Auth in their scope, however Edge Auth itself doesn't control any app access. Since Edge Auth is a prerequisite for MAM registration and profile creation in Microsoft Edge, we've exempted Edge Auth from device-based controls enforcement, so there's no requirement for manual exclusion of Edge Auth while setting up Conditional Access.
+
 ## Access issues
 
 On a compliant device, the identity accessing the resource should match the identity on the profile. If it doesn't or the device is unmanaged, access is blocked and you'll see a message like the one in the following screenshot. In this example, `balas@contos.com` is the sign-in account needed to access the resource.
@@ -58,9 +61,7 @@ You can also work with profile settings by selecting the account picture in the 
 
 ### Fixing access issues with unenrolled devices using Intune MAM
 
-Common issues, such as an expired enrollment, and their resolution are [here](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#common-issues).
-
-For more information, see [Troubleshooting common issues](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
+Access issues, such as an expired enrollment, and their resolution are in [Troubleshooting](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows#troubleshooting).
 
 ## See also
 
