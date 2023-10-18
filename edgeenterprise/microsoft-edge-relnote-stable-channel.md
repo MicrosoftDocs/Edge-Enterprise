@@ -30,6 +30,10 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Feature updates
+
+- **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
+
 ## Version 118.0.2088.46: October 13, 2023
 
 Fixed various bugs and performance issues.
