@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 09/21/2023
+ms.date: 10/17/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -48,6 +48,9 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeSyncDisabled](#edgesyncdisabled)  |   Manage account synchronization  |
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
 | [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
+| [OverlayPermissionDetectionEnabled](#overlaypermissiondetectionenabled) | Enable Overlay Permission Detection  |
+<!--
+| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for HTTP Negotiate</ph> authentication  | -->
 
 ### [*Proxy server*](#proxy-server)
 
@@ -113,6 +116,8 @@ These tables list all of the browser-related policies available in this release 
 | [SearchSuggestEnabled](#searchsuggestenabled)   |  Enable search suggestions   |
 | [TranslateEnabled](#translateenabled)   | Enable Translate    |
 | [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
+| [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
+| [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 
 ## HTTP authentication
 
@@ -302,15 +307,15 @@ AuthServerAllowlist
 
 #### Supported on:
 
-- Microsoft Edge (Android) since version 109
-
-- Android System WebView since version 109
+- Microsoft Edge (Android) since version 118
 
 #### Description
 
-Setting the policy specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For details, see The Chromium Projects ( https://goo.gl/hajyfN )
+Specifies the type of accounts provided by the Android authentication app that supports HTTP Negotiate authentication (such as Kerberos authentication). This information should be available from the supplier of the authentication app. For more details see, [Write a SPNEGO Authenticator for Microsoft Edge on Android](/DeployEdge/edge-learnmore-write-spnego-authenticator).
 
-Leaving the policy unset turns off HTTP Negotiate authentication on Android.
+If you disable or don't configure this policy, HTTP Negotiate authentication on Android is turned off.
+
+If you enable the policy, Microsoft Edge will use the value to specify the Android authentication app
 
 #### Supported features:
 
@@ -321,15 +326,13 @@ Leaving the policy unset turns off HTTP Negotiate authentication on Android.
 
 Android:String
 
-iOS:String
-
-#### Android and iOS restriction name:
+#### Android restriction name:
 
 ```
 AuthAndroidNegotiateAccountType
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 com.example.spnego
@@ -1727,6 +1730,41 @@ EdgeNetworkStackPref
 0
 ```
 
+### OverlayPermissionDetectionEnabled
+
+#### Enable Overlay Permission Detection
+
+#### Description
+
+This policy allows administrators to enable or disable the detection of overlay permissions in Microsoft Edge. 
+
+If any app on the device has overlay drawing permissions, then Microsoft Edge will display an error message stating, "This site can't ask for your permission. Close any bubbles or overlays from other apps, then try again" when the browser requests any device permissions.
+
+If enabled or left unset, Microsoft Edge will turn on this detection feature to remind users of potential risks.
+
+If you disable this policy, Microsoft Edge will turn off this detection feature.
+
+Please note that disabling overlay permission detection may increase the risk of malicious overlays or pop-ups gaining access to sensitive information without user consent. Therefore, it's recommended to use this policy with caution and only in trusted environments or when there's a specific need to bypass overlay detection.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+Android: boolean
+
+#### Android restriction name:
+
+OverlayPermissionDetectionEnabled
+
+##### Example value:
+
+```
+true
+
+```
+
 [Back to top](#microsoft-edge-mobile---policies)
 
 ## Proxy server policies
@@ -2256,7 +2294,75 @@ Android:Integer
 iOS:Integer
 
 [Back to top](#microsoft-edge-mobile---policies)
- 
+
+
+### SmartScreenEnabled
+
+#### Configure Microsoft Defender SmartScreen
+
+#### Supported on:
+
+- Microsoft Edge (Android and iOS) since version 118
+
+#### Description
+
+This policy setting lets you configure whether to turn on Microsoft Defender SmartScreen. Microsoft Defender SmartScreen provides warning messages to help protect your users from potential phishing scams and malicious software. By default, Microsoft Defender SmartScreen is turned on.
+
+If you enable this setting, Microsoft Defender SmartScreen is turned on.
+
+If you disable this setting, Microsoft Defender SmartScreen is turned off.
+
+If you don't configure this setting, users can choose whether to use Microsoft Defender SmartScreen
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+iOS: Boolean
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### MicrosoftRootStoreEnabled
+
+#### Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates
+
+#### Supported on:
+
+Microsoft Edge (Android) since version 118
+
+#### Description:
+
+When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+
+When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
+
+When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : No
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+#### Android restriction name:
+
+MicrosoftRootStoreEnabled
+
+##### Example value :
+
+```
+true
+
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ## See also
 
