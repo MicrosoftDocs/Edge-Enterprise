@@ -71,34 +71,7 @@ Fixed various bugs and performance issues.
 
 - **Bing Chat Enterprise (BCE)** is available on Edge mobile for iOS and Android. By default, Bing Chat Enterprise is turned on. For detailed information about how to manage BCE, see [Bing Chat Enterprise](/mem/intune/apps/manage-microsoft-edge#bing-chat-enterprise).
 
-## Version 116.0.1938.56: August 21, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-### Feature updates
-
-- Bing Chat Enterprise (BCE) is available on Edge mobile. By default, Bing Chat Enterprise is turned off. It can be turned on via Intune MAM policy `com.microsoft.intune.mam.managedbrowser.Chat=true`.
-
-- The **Open in Microsoft Edge** option is available for saving files to OneDrive (Android).
-
-- Brand info (logo) of New Tab Page (NTP) is now pulled from MS Graph. If you only configure brand logo in the Intune portal, you must also configure it in the Azure portal. For more information, see [Add company branding - Basics](/azure/active-directory/fundamentals/how-to-customize-branding#basics).
-
-- InPrivate mode can be managed by Mobile Device Management (MDM) Policy setting for [InPrivateModeAvailability](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability).
-
-## Version 116.0.1938.53: August 21, 2023
-
-Fixed various bugs and performance issues for Android.
-
-## Version 115.0.1901.187: July 27, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 115.0.1901.183: July 22, 2023
-
-Fixed various bugs and performance issues for Android.
-
-This release contains several security fixes for Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
+<!-- Version 116.0.1938.56: August 21, 2023, to Version 115.0.1901.183: July 22, 2023 -->
 <!-- Version 114.0.1823.37: June 2, 2023 to Version 113.0.1774.50: May 18, 2023 -->
 <!-- Version 113.1774.36: May 8, 2023 to Version 112.0.1722.36: April 7, 2023 -->
 <!-- Version 111.0.1661.43: March 18, 2023 to Version 109.0.1518.70: January 26, 2023 -->
