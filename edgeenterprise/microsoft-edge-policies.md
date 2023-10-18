@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/11/2023
+ms.date: 10/18/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,17 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
-|[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
-|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
-|[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 
 ## Available policies
 
@@ -6969,6 +6958,8 @@ To block extensions from a particular third party store, you only need to block 
 
 Note that you can still use [ExtensionInstallForcelist](#extensioninstallforcelist) and [ExtensionInstallAllowlist](#extensioninstallallowlist) to allow / force install specific extensions even if the store is blocked using the JSON in the previous example.
 
+If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
+
 Note: For Windows instances not joined to a Microsoft Active Directory domain and macOS instances not managed via MDM or joined to a domain via MCX, forced installation is limited to apps and extensions listed in the Microsoft Edge Add-ons website.
 
   #### Supported features:
@@ -7043,6 +7034,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ],
+    "sidebar_auto_open_blocked": true,
     "toolbar_state": "force_shown",
     "update_url": "https://contoso.com/update_url"
   },
@@ -7073,7 +7065,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "sidebar_auto_open_blocked": true, "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -7141,6 +7133,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>*://*.contoso.com</string>
     </array>
+    <key>sidebar_auto_open_blocked</key>
+    <true/>
     <key>toolbar_state</key>
     <string>force_shown</string>
     <key>update_url</key>
