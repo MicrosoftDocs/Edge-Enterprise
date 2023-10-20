@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 10/18/2023
+ms.date: 10/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,27 @@ All the Stable channel security updates are listed in [Release notes for Microso
 ## Version 118.0.2088.52: October 18, 2023
 
 Fixed various bugs and performance issues.
+
+### Feature update
+
+-    Microsoft Tunnel for MAM strict mode. ??
+
+-    Overflow menu enablement for locked view mode. ??
+
+-    Support saving logs to local devices. ??
+
+### Policy support
+
+Allow proceeding from the SSL warning page:
+-    MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
+-    MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
+
+Configure whether to turn on Microsoft Defender SmartScreen:
+-    MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+-    MDM: [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+Control the behavior of opening external apps:
+-    MAM: [com.microsoft.intune.mam.managedbrowser.OpeningExternalApps](/mem/intune/apps/manage-microsoft-edge#block-opening-external-apps)
 
 ## Version 117.0.2045.65: October 11, 2023
 
