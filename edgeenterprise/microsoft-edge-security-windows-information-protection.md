@@ -67,7 +67,7 @@ Starting with Microsoft Edge version 81, the following features are supported:
 - Silent/Block/Override enforcement for work file uploads to non-work locations.  
 - Silent/Block/Override enforcement for file Drag & Drop actions.
 - Silent/Block/Override enforcement for Clipboard actions.
-- Browsing to work locations from non-work profiles automatically redirects to the Work Profile (associated with the Microsoft Entra Identity.)
+- Browsing to work locations from non-work profiles automatically redirects to the Work Profile (associated with the Microsoft Entra identity.)
 - IE Mode supports full WIP functionality.
 
 ## Working with WIP in Microsoft Edge
@@ -91,9 +91,9 @@ On hybrid joined machines, Microsoft Edge is automatically signed in with the Mi
 - [NonRemovableProfileEnabled](./microsoft-edge-policies.md#nonremovableprofileenabled)
 
 > [!NOTE]
-> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your hybrid Microsoft Entra ID join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+> If your environment isn't hybrid joined, you can hybrid join using these instructions: [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-If hybrid joining isn't an option, you can use on-prem Microsoft Entra accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Microsoft Entra ID's features, such as cloud sync, Office NTP, and so on.
+If hybrid joining isn't an option, you can use on-prem Microsoft Entra accounts to allow Microsoft Edge to auto create a special work profile with the users' domain accounts. Note that on-premises accounts may not receive all of Microsoft Entra features, such as cloud sync, Office NTP, and so on.
 
 #### Microsoft Entra accounts
 

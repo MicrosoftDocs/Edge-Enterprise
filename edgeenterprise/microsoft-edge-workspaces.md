@@ -164,7 +164,7 @@ No, Edge Workspaces can only be shared within the same Microsoft Entra tenant.
 
 ### Are there limitations to where and how I can use Edge Workspaces?
 
-Edge Workspaces created within an Microsoft Entra tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Microsoft Entra account.
+Edge Workspaces created within a Microsoft Entra tenant are only available to users in that same tenant when they're logged into Microsoft Edge with their matching Microsoft Entra account.
 
 ## See also
 
