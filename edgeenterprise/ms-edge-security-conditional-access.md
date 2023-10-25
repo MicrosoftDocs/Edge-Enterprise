@@ -3,7 +3,7 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/20/2023
+ms.date: 10/25/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,7 +28,7 @@ Conditional Access (CA) gives you a balance between security and productivity. F
 Microsoft Edge natively supports access to CA protected resources on both [managed](#accessing-ca-protected-urls-with-microsoft-edge-on-managed-devices) and [unmanaged](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam) devices.
 
 > [!NOTE]
-> Because we've exempted Edge Auth from device-based controls enforcement, there isn't a requirement for manual exclusion while setting up Conditional Access. Edge Auth authentication during sign-in is a prerequisite for profile creation in Microsoft Edge.
+> We have exempted Edge Auth from device-based controls enforcement. It is no longer necessary to create a manual exclusion for this scope while setting up Conditional Access. Edge Auth is a prerequisite for connected profile creation in Microsoft Edge.
 
 ## Accessing CA protected URLs with Microsoft Edge on managed devices
 
