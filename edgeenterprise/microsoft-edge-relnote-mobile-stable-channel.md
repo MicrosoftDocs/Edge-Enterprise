@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 10/12/2023
+ms.date: 10/24/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,42 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 118.0.2088.66: October 24, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 118.0.2088.60: October 21, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.52: October 18, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Tunnel for MAM strict mode.** When strict mode is turned on by MAM policy `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`, the network will be blocked until the tunnel is connected.
+
+- **Overflow menu enablement for locked view mode.** Originally, overflow menu is disabled when Edge locked view mode is turned on by MDM policy `EdgeLockedViewMode=true`. Now, the overflow menu is enabled when Edge locked view mode is turned on.
+
+- **Support for saving logs to local devices.** For more information, see [Diagnostic logs](/mem/intune/apps/manage-microsoft-edge#diagnostic-logs)
+
+### Policy support
+
+Allow proceeding from the SSL warning page:
+
+- MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
+- MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
+
+Configure whether to turn on Microsoft Defender SmartScreen:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+- MDM: [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+Control the behavior of opening external apps:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.OpeningExternalApps](/mem/intune/apps/manage-microsoft-edge#block-opening-external-apps)
 
 ## Version 117.0.2045.65: October 11, 2023
 
@@ -67,34 +103,7 @@ Fixed various bugs and performance issues.
 
 - **Bing Chat Enterprise (BCE)** is available on Edge mobile for iOS and Android. By default, Bing Chat Enterprise is turned on. For detailed information about how to manage BCE, see [Bing Chat Enterprise](/mem/intune/apps/manage-microsoft-edge#bing-chat-enterprise).
 
-## Version 116.0.1938.56: August 21, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-### Feature updates
-
-- Bing Chat Enterprise (BCE) is available on Edge mobile. By default, Bing Chat Enterprise is turned off. It can be turned on via Intune MAM policy `com.microsoft.intune.mam.managedbrowser.Chat=true`.
-
-- The **Open in Microsoft Edge** option is available for saving files to OneDrive (Android).
-
-- Brand info (logo) of New Tab Page (NTP) is now pulled from MS Graph. If you only configure brand logo in the Intune portal, you must also configure it in the Azure portal. For more information, see [Add company branding - Basics](/azure/active-directory/fundamentals/how-to-customize-branding#basics).
-
-- InPrivate mode can be managed by Mobile Device Management (MDM) Policy setting for [InPrivateModeAvailability](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability).
-
-## Version 116.0.1938.53: August 21, 2023
-
-Fixed various bugs and performance issues for Android.
-
-## Version 115.0.1901.187: July 27, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 115.0.1901.183: July 22, 2023
-
-Fixed various bugs and performance issues for Android.
-
-This release contains several security fixes for Android. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
+<!-- Version 116.0.1938.56: August 21, 2023, to Version 115.0.1901.183: July 22, 2023 -->
 <!-- Version 114.0.1823.37: June 2, 2023 to Version 113.0.1774.50: May 18, 2023 -->
 <!-- Version 113.1774.36: May 8, 2023 to Version 112.0.1722.36: April 7, 2023 -->
 <!-- Version 111.0.1661.43: March 18, 2023 to Version 109.0.1518.70: January 26, 2023 -->
