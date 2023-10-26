@@ -43,7 +43,7 @@ No.
 
 ### What terms of service does enterprise sync fall under?
 
-Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Microsoft Entra ID subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
+Terms of service for Microsoft Edge sync fall under the Microsoft software license viewable in Microsoft Edge at *edge://terms*. Your Microsoft Entra subscription and terms of service ultimately fall under Microsoft's [Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products).
 
 ### Does Microsoft Edge support Government Community Cloud (GCC) High and Azure Government Department of Defense (DoD) Cloud compliance?
 
