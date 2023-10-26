@@ -77,7 +77,7 @@ The following policies only apply to the Microsoft Edge work browser profile.
 |[DelayNavigationsForInitialSiteListDownload](/deployedge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload)|Require that the Enterprise Mode Site List is available before tab navigation|
 |[DeveloperToolsAvailability](/deployedge/microsoft-edge-policies#developertoolsavailability)|Control where developer tools can be used|
 |[Disable3DAPIs](/deployedge/microsoft-edge-policies#disable3dapis)|Disable support for 3D graphics APIs|
-|[DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
+|[DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled)|Enable Discover access to page contents for Microsoft Entra profiles|
 |[DoNotSilentlyBlockProtocolsFromOrigins](/deployedge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins)|Define a list of protocols that can not be silently blocked by anti-flood protection|
 |[DoubleClickCloseTabEnabled](/deployedge/microsoft-edge-policies#doubleclickclosetabenabled)|Double Click feature in Microsoft Edge enabled (only available in China)|
 |[DownloadDirectory](/deployedge/microsoft-edge-policies#downloaddirectory)|Set download directory|
