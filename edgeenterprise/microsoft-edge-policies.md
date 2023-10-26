@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/18/2023
+ms.date: 10/25/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -32217,7 +32217,7 @@ If you disable this policy, Microsoft Edge will not launch the renderer process 
 Only turn off the policy if there are compatibility issues with
 third-party software that must run inside Microsoft Edge's renderer processes.
 
-This policy is only supported on Windows 10 devices.
+This policy will only take effect on Windows 10 RS5 and above.
 
   #### Supported features:
 
