@@ -24,7 +24,7 @@ This article describes how Microsoft Edge uses identity to support features such
 
 ## Browser sign-in and authenticated features
 
-Microsoft Edge supports signing into a browser profile with an Microsoft Entra ID, MSA, or a domain account. The type of account used for sign-in determines which authenticated features are available for the user in Microsoft Edge. The following table summarizes the feature support for each type of account.
+Microsoft Edge supports signing into a browser profile with a Microsoft Entra ID, MSA, or a domain account. The type of account used for sign-in determines which authenticated features are available for the user in Microsoft Edge. The following table summarizes the feature support for each type of account.
 
 | Feature   | Microsoft Entra ID | Microsoft Entra ID Free | On-premises AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
@@ -67,7 +67,7 @@ On some platforms, you can configure Microsoft Edge to automatically sign into w
 
 Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
-A Primary Refresh Token (PRT) is an Microsoft Entra ID key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
+A Primary Refresh Token (PRT) is a Microsoft Entra ID key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### Seamless SSO
 

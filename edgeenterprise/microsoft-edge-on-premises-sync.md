@@ -12,19 +12,19 @@ ms.collection: M365-modern-desktop
 description: "On-premises sync for Active Directory (AD) users"
 ---
 
-# On-premises sync for Microsoft Entra ID users
+# On-premises sync for Microsoft Entra users
 
 > [!NOTE]
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
-This article explains how Microsoft Entra ID users can roam Microsoft Edge favorites and settings between computers without connecting to Microsoft cloud services.
+This article explains how Microsoft Entra users can roam Microsoft Edge favorites and settings between computers without connecting to Microsoft cloud services.
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 85 or later.
 
 ## Introduction
 
-Syncing user data in Microsoft Edge normally requires either a Microsoft Account or an Microsoft Entra account, and a connection to Microsoft cloud services. With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can be moved between different computers. On-premises sync doesn't interfere with cloud syncing for those profiles that allow it.
+Syncing user data in Microsoft Edge normally requires either a Microsoft Account or a Microsoft Entra account, and a connection to Microsoft cloud services. With on-premises sync, Microsoft Edge saves an Active Directory user's favorites and settings to a file that can be moved between different computers. On-premises sync doesn't interfere with cloud syncing for those profiles that allow it.
 
 ## How it works
 

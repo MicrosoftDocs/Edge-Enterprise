@@ -378,7 +378,7 @@ Fixed various bugs and performance issues.
 
 - **New Immersive Reader policies.**  Immersive Reader in Microsoft Edge simplifies web page layouts, removes clutter, and helps you customize your reading experience.  Administrators can use these new policies ([ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#enable-grammar-tools-feature-within-immersive-reader-in-microsoft-edge) and [ImmersiveReaderPictureDictionaryEnabled](/deployedge/microsoft-edge-policies#enable-picture-dictionary-feature-within-immersive-reader-in-microsoft-edge)), to control the availability of Grammar Tools and Picture Dictionary features within Immersive Reader.
 
-- **Enabling sync for Azure Active Directory signed in customers.**  Microsoft Edge sync roams data across all signed in instances of Microsoft Edge. This data includes favorites, passwords, browsing history, open tabs, settings, apps, collections, and extensions.  For Azure Active Directory users who have sync turned off, after the browser is launched they'll see a notification prompt and have sync turned on for all signed in instances of Microsoft Edge. This sync enablement includes other devices where they're signed in.  Additionally, if a user's other devices don't have history and open tabs sync on, those two toggles are turned on.  Organizations using the [SyncDisabled](/deployedge/microsoft-edge-policies#syncdisabled) policy aren't affected by this change.
+- **Enabling sync for Microsoft Entra ID signed in customers.**  Microsoft Edge sync roams data across all signed in instances of Microsoft Edge. This data includes favorites, passwords, browsing history, open tabs, settings, apps, collections, and extensions.  For Microsoft Entra users who have sync turned off, after the browser is launched they'll see a notification prompt and have sync turned on for all signed in instances of Microsoft Edge. This sync enablement includes other devices where they're signed in.  Additionally, if a user's other devices don't have history and open tabs sync on, those two toggles are turned on.  Organizations using the [SyncDisabled](/deployedge/microsoft-edge-policies#syncdisabled) policy aren't affected by this change.
 
 - **In-browser JSON viewer.**  Improvements to how JSON files are displayed in the browser include a color-coded tree view with line numbers and the ability to collapse and expand the data.  This functionality triggers automatically when the browser navigates to a JSON file on the web or the user opens a local file.  Additional features and enhancements will roll out when they're available.  For more information and to provide feedback, visit [DevTools: In-browser JSON viewer](https://microsoftedge.github.io/DevTools/explainers/JSONViewer/explainer).
 
@@ -429,7 +429,7 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- **MSA-AAD Account Linking.** Microsoft is enabling users who have a personal Microsoft account (an MSA) and a Microsoft user account through their work or school (an Azure Active Directory account) to "link" the two types of accounts together. "Linked accounts" means that users are able to see some of the content from their personal account alongside the tailored content from their work or school account. They're also able to earn Microsoft Rewards points in their personal account from their activities while using their work or school account. More blended experiences may be made available.  For more information, see the [Account Linking FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-faq-c66effb9-02e6-49c0-89e1-ae4d8644e6f7) and the [Account Linking IT Admins FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-it-admins-faq-72f0dc4e-b632-439e-b90c-347043a7b75a). Tenant admins can learn how to control this feature in the Message Center section of the Microsoft 365 Admin Center. Also, this feature can be controlled by using the [LinkedAccountEnabled](/deployedge/microsoft-edge-policies#linkedaccountenabled) policy.
+- **MSA-AAD Account Linking.** Microsoft is enabling users who have a personal Microsoft account (an MSA) and a Microsoft user account through their work or school (a Microsoft Entra account) to "link" the two types of accounts together. "Linked accounts" means that users are able to see some of the content from their personal account alongside the tailored content from their work or school account. They're also able to earn Microsoft Rewards points in their personal account from their activities while using their work or school account. More blended experiences may be made available.  For more information, see the [Account Linking FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-faq-c66effb9-02e6-49c0-89e1-ae4d8644e6f7) and the [Account Linking IT Admins FAQ](https://support.microsoft.com/en-us/account-billing/account-linking-it-admins-faq-72f0dc4e-b632-439e-b90c-347043a7b75a). Tenant admins can learn how to control this feature in the Message Center section of the Microsoft 365 Admin Center. Also, this feature can be controlled by using the [LinkedAccountEnabled](/deployedge/microsoft-edge-policies#linkedaccountenabled) policy.
 
 - **TLS server certificate verification changes.**  In Microsoft Edge version 110, the certificate trust list and the certificate verifier is decoupled from the host operating system's root store.  Instead, the default certificate trust list and the certificate verifier is provided by and shipped with the browser.  The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy is now available for testing to control when the built-in root store and certificate verifier are used.  Support for the policy is planned for removal in Microsoft Edge version 111.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification](/deployedge/microsoft-edge-security-cert-verification).  **Note:** This feature is a controlled feature rollout in Microsoft Edge version 109.  If you don't see this feature, check back as we continue our rollout.  
 
@@ -1136,7 +1136,7 @@ Fixed various bugs and performance issues.
 
 - **Block mixed content downloads.** Secure pages will only download files hosted on other secure pages, and downloads hosted on non-secure (non-HTTPS) pages will be blocked if initiated from a secure page. This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, navigate to the [Google security blog entry](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
 
-- **Enable implicit sign-in for on-premises accounts.**   By enabling the OnlyOnPremisesImplicitSigninEnabled policy, only on-premises accounts will be enabled for implicit sign-in.  Microsoft Edge won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
+- **Enable implicit sign-in for on-premises accounts.**   By enabling the OnlyOnPremisesImplicitSigninEnabled policy, only on-premises accounts will be enabled for implicit sign-in.  Microsoft Edge won't attempt to implicitly sign in to MSA or Microsoft Entra accounts. Upgrade from on-premises accounts to Microsoft Entra accounts will be stopped as well.
 
 - **Free form text boxes added to PDF documents.**  We now support adding free form text boxes to PDF documents that you can use to fill in forms and add visible notes.
 
@@ -1400,7 +1400,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Single Sign On (SSO) is now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS**. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (for example, bing.com, office.com, msn.com, and outlook.com).
+- **Single Sign On (SSO) is now available for Microsoft Entra accounts and Microsoft Account (MSA) on macOS**. A user signed in on Microsoft Edge on macOS will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (for example, bing.com, office.com, msn.com, and outlook.com).
 
 - **Kiosk mode.** Starting with Microsoft Edge version 90, we have locked down the UI print settings to only allow the configured printers and "Print to PDF" options. We have also done improvements within the assigned access single app kiosk mode to restrict the launch of other applications from the browser. For more information about the kiosk mode features please go [here](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features).
 
@@ -1543,7 +1543,7 @@ Fixed various bugs and performance issues.
 
 - **Authentication:**
 
-  - Single Sign On (SSO) now available for Azure Active Directory (Azure AD) accounts and Microsoft Account (MSA) on macOS and down-level Windows. A user signed in on Microsoft Edge on either macOS or down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
+  - Single Sign On (SSO) now available for Microsoft Entra accounts and Microsoft Account (MSA) on macOS and down-level Windows. A user signed in on Microsoft Edge on either macOS or down-level Microsoft Windows (7, 8.1) will now get automatically signed into websites that are configured to allow single sign on with Work and Microsoft accounts (e.g., bing.com, office.com, msn.com, outlook.com).<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
   - Automatically switch users on macOS to their work profile for sites that authenticate with their work account. Starting with Microsoft Edge version 88, we provide the ability to switch sites that authenticate with a user's work profile on macOS.<br>Note: A user may have to sign out and then sign back in if they'd signed into Microsoft Edge in a version prior to Microsoft Edge 88 to leverage this feature.
 
 - **Kiosk mode option to end session**. The "End session" button is now available in a kiosk mode public browsing experience. This feature ensures that browser data and settings are deleted when Microsoft Edge is closed. Learn more about kiosk mode features and roadmap, [Configure Microsoft Edge kiosk mode](./microsoft-edge-configure-kiosk-mode.md).
@@ -1732,7 +1732,7 @@ Fixed various bugs and performance issues.
 * **Roll back to previous Microsoft Edge version.** The rollback feature lets administrators revert to a known good version of Microsoft Edge if there's an issue in the latest version of Microsoft Edge.
 [Learn more](edge-learnmore-rollback.md).
 
-* **Enforce enabling Sync by default across the enterprise.**  Administrators can enable synchronization for Azure Active Directory (Azure AD) accounts by default with the [ForceSync](./microsoft-edge-policies.md#forcesync) policy.
+* **Enforce enabling Sync by default across the enterprise.**  Administrators can enable synchronization for Microsoft Entra accounts by default with the [ForceSync](./microsoft-edge-policies.md#forcesync) policy.
 
 - **PDF updates:**
 
@@ -1908,7 +1908,7 @@ Fixed various bugs and performance issues.
 
 - **The Storage Access API is available**. The Storage Access API allows access to first-party storage in a third-party context when a user has provided a direct intent to allow storage that would otherwise be blocked by the browser's current configuration. For more information, see [Storage Access API](https://www.chromestatus.com/feature/5612590694662144).
 
-- **Send to OneNote is available for Microsoft Edge Collections**. Everyone's excited to be able to send the information they've gathered in Collections to OneNote, where they can append it to a larger project and collaborate with others! And even more importantly, in Microsoft Edge 85, you'll be able send content to *Office for Mac* products (Word, Excel, and OneNote) for both Microsoft account and Azure Active Directory.
+- **Send to OneNote is available for Microsoft Edge Collections**. Everyone's excited to be able to send the information they've gathered in Collections to OneNote, where they can append it to a larger project and collaborate with others! And even more importantly, in Microsoft Edge 85, you'll be able send content to *Office for Mac* products (Word, Excel, and OneNote) for both Microsoft account and Microsoft Entra ID.
 
 - **DevTools updates**. For details about the following updates, see [What's New In DevTools (Microsoft Edge 85)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools).
 
@@ -2154,7 +2154,7 @@ Fixed various bugs and performance issues.
 
 - Allow the removal (Hide from toolbar) of the Collections button from the Microsoft Edge toolbar for consistency.
 
-- On-prem Active Directory account auto sign in will only be targeted to organizations that turn it on. If users were already signed in with an on-prem AD account, they will now be able to sign out of it. Now, users will only be automatically signed in with the primary account on their operating system if it is a Microsoft account or an Azure Active Directory  account. Admins can enable auto sign in with an on-prem AD account using the ConfigureOnPremisesAccountAutoSignIn policy.
+- On-prem Active Directory account auto sign in will only be targeted to organizations that turn it on. If users were already signed in with an on-prem AD account, they will now be able to sign out of it. Now, users will only be automatically signed in with the primary account on their operating system if it is a Microsoft account or a Microsoft Entra account. Admins can enable auto sign in with an on-prem AD account using the ConfigureOnPremisesAccountAutoSignIn policy.
 
 - Application Guard. Extensions support now available in the container.
 
@@ -2205,7 +2205,7 @@ Fixed various bugs and performance issues.
 - [OmniboxMSBProviderEnabled](./microsoft-edge-policies.md) - Enable Microsoft Search for Business provider in omnibox.
 - [StricterMixedContentTreatmentEnabled](./microsoft-edge-policies.md#strictermixedcontenttreatmentenabled) - Enable stricter treatment for mixed content.
 - [TLS13HardeningForLocalAnchorsEnabled](./microsoft-edge-policies.md#tls13hardeningforlocalanchorsenabled) - Enable a TLS 1.3 security feature for local trust anchors.
-- [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) - Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account.
+- [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) - Configure automatic sign in with an Active Directory domain account when there is no Microsoft Entra domain account.
 
 #### Deprecated policies
 
