@@ -3,7 +3,7 @@ title: "Microsoft Edge and Conditional Access"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/17/2023
+ms.date: 10/25/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,22 +23,22 @@ This article describes how Microsoft Edge supports Conditional Access (CA) for m
 
 When it comes to managing and protecting your cloud resources, identity and access are both important. In a hybrid computing world, users can access your organization's resources using various devices and apps from anywhere at anytime. Just focusing on who can access a resource isn't good enough. You also need to factor in how a resource is accessed.
 
-Conditional Access (CA) gives you a balance between security and productivity. For more information, see [Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access), a detailed guide to help plan and deploy Conditional Access (CA) in Microsoft Entra ID (formerly known as Azure Active Directory). (For more information about this name change, see [New name for Azure Active Directory](/azure/active-directory/fundamentals/new-name).)
+Conditional Access (CA) gives you a balance between security and productivity. For more information, see [Plan a Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access), a detailed guide to help plan and deploy Conditional Access (CA) in Microsoft Entra ID (formerly known as Azure Active Directory). (For more information about this name change, see [New name for Microsoft Entra ID](/azure/active-directory/fundamentals/new-name).)
 
 Microsoft Edge natively supports access to CA protected resources on both [managed](#accessing-ca-protected-urls-with-microsoft-edge-on-managed-devices) and [unmanaged](#accessing-ca-protected-urls-with-microsoft-edge-on-byod-using-intune-mam) devices.
 
+> [!NOTE]
+> We have exempted Edge Auth from device-based controls enforcement. It is no longer necessary to create a manual exclusion for this scope while setting up Conditional Access. Edge Auth is a prerequisite for connected profile creation in Microsoft Edge.
+
 ## Accessing CA protected URLs with Microsoft Edge on managed devices
 
-Microsoft Edge natively supports Microsoft Entra (*Azure AD*) Conditional Access. There's no need to install a separate extension, Edge's native support provides stable and high quality access. When you're signed into an Edge profile with enterprise Microsoft Entra ID (*Azure AD*) credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using CA. This support is available across all platforms, including all supported versions of Windows and macOS.
+Microsoft Edge natively supports Microsoft Entra (*Microsoft Entra ID*) Conditional Access. There's no need to install a separate extension, Edge's native support provides stable and high quality access. When you're signed into an Edge profile with enterprise Microsoft Entra ID (*Microsoft Entra ID*) credentials, Microsoft Edge allows seamless access to enterprise cloud resources protected using CA. This support is available across all platforms, including all supported versions of Windows and macOS.
 
-The respective Microsoft Entra (*Azure AD*) account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). Note that there are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why).
+The respective Microsoft Entra (*Microsoft Entra ID*) account needs to be connected to Windows, so a [Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token) is sent along with the request for evaluation in the Conditional Access policy. To add a work or school account to Windows, follow these steps to [Add or remove accounts on your PC](https://support.microsoft.com/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32#WindowsVersion=Windows_10). Note that there are limits to the number of work or school accounts connected to Windows, which is documented in this [device management FAQ](/azure/active-directory/devices/faq#i-can-t-add-more-than-3-azure-ad-user-accounts-under-the-same-user-session-on-a-windows-10-11-device--why).
 
 ## Accessing CA protected URLs with Microsoft Edge on BYOD using Intune MAM
 
 Mobile Application Management (MAM) for unenrolled devices is commonly used for personal or bring your own devices (BYOD). MAM is an option for users who don't enroll their personal devices, but still need access to their organization's email, Teams meetings, and more. For more specific information about MAM, see [What is Microsoft Intune app management?](/mem/intune/apps/app-management) and the [MAM FAQ](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). For more information about conditional access on Windows devices, see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
-
-> [!NOTE]
-> Conditional Access policies that target All Cloud Apps include Edge Auth in their scope, however Edge Auth itself doesn't control any app access. Since Edge Auth is a prerequisite for MAM registration and profile creation in Microsoft Edge, we've exempted Edge Auth from device-based controls enforcement, so there's no requirement for manual exclusion of Edge Auth while setting up Conditional Access.
 
 ## Access issues
 

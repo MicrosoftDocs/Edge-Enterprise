@@ -95,9 +95,11 @@ Follow these steps to configure a policy for a configuration profile:
 1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
 1. Select **Save**.  
 
-#### Assign a configuration profile to an Microsoft Entra group
+<a name='assign-a-configuration-profile-to-an-microsoft-entra-group'></a>
 
-Follow these steps to assign a configuration profile to an Microsoft Entra group:
+#### Assign a configuration profile to a Microsoft Entra group
+
+Follow these steps to assign a configuration profile to a Microsoft Entra group:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to assign.
 1. Under the **Group assignment** pivot, select **Select group**.
@@ -315,8 +317,8 @@ The Click-to-Run service used by Microsoft Edge management service checks with C
 **Here's a summary of what happens:**
 
 - When a user signs into Microsoft Edge on a device for the first time, a check is immediately made to see if there's a configuration profile that pertains to the user.
-- If the user isn't a member of an Microsoft Entra group that's assigned a configuration profile, then another check is made again in 24 hours.
-- If the user is a member of an Microsoft Entra group that's assigned a configuration profile, then the appropriate policy settings are applied. A check is made again in 90 minutes.
+- If the user isn't a member of a Microsoft Entra group that's assigned a configuration profile, then another check is made again in 24 hours.
+- If the user is a member of a Microsoft Entra group that's assigned a configuration profile, then the appropriate policy settings are applied. A check is made again in 90 minutes.
 - If there are any changes to the configuration profile since the last check, then the appropriate policy settings are applied and another check is made again in 90 minutes.
 - If there aren't any changes to the configuration profile since the last check, another check is made again in 24 hours.
 - If there's an error, a check is made when the user opens Microsoft Edge.

@@ -424,7 +424,7 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureDoNotTrack](#configuredonottrack)|Configure Do Not Track|
 |[ConfigureFriendlyURLFormat](#configurefriendlyurlformat)|Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users|
 |[ConfigureKeyboardShortcuts](#configurekeyboardshortcuts)|Configure the list of commands for which to disable keyboard shortcuts|
-|[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account|
+|[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configure automatic sign in with an Active Directory domain account when there is no Microsoft Entra domain account|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
@@ -447,7 +447,7 @@ These tables list all of the browser-related group policies available in this re
 |[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
 |[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for Microsoft Entra profiles|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
@@ -8060,9 +8060,9 @@ If you disable this setting, implicit sign-in will be disabled.
 
   #### Description
 
-  Microsoft Edge guides a user to the account management page where they can link a Microsoft Account (MSA) to an Azure Active Directory (Azure AD) account.
+  Microsoft Edge guides a user to the account management page where they can link a Microsoft Account (MSA) to a Microsoft Entra account.
 
-If you enable or don't configure this policy, linked account information will be shown on a flyout. When the Azure AD profile doesn't have a linked account it will show "Add account".
+If you enable or don't configure this policy, linked account information will be shown on a flyout. When the Microsoft Entra profile doesn't have a linked account it will show "Add account".
 
 If you disable this policy, linked accounts will be turned off and no extra information will be shown.
 
@@ -8185,7 +8185,7 @@ This policy will only take effect on Windows 10 RS3 and above. On Windows 10 bel
 
   Configure this policy to decide whether only on-premises accounts are enabled for implicit sign-in.
 
-If you enable this policy, only on-premises accounts will be enabled for implicit sign-in. Microsoft Edge won't attempt to implicitly sign in to MSA or AAD accounts. Upgrade from on-premises accounts to AAD accounts will be stopped as well.
+If you enable this policy, only on-premises accounts will be enabled for implicit sign-in. Microsoft Edge won't attempt to implicitly sign in to MSA or Microsoft Entra accounts. Upgrade from on-premises accounts to Microsoft Entra accounts will be stopped as well.
 
 If you disable or don't configure this policy, all accounts will be enabled for implicit sign-in.
 
@@ -8807,7 +8807,7 @@ For detailed information on configuring kiosk mode, see [https://go.microsoft.co
 
   Microsoft Edge management service in Microsoft 365 Admin Center lets you set policy and manage users through a Microsoft Edge focused cloud-based management experience. This policy lets you control whether Microsoft Edge management is enabled.
 
-If you enable or don't configure this policy, Microsoft Edge will attempt to connect to the Microsoft Edge management service to download and apply policy assigned to the Azure AD account of the user.
+If you enable or don't configure this policy, Microsoft Edge will attempt to connect to the Microsoft Edge management service to download and apply policy assigned to the Microsoft Entra account of the user.
 
 If you disable this policy, Microsoft Edge will not attempt to connect to the Microsoft Edge management service.
 
@@ -13937,7 +13937,7 @@ If you disable this policy, the company logo doesn't appear on Microsoft Edge ne
 
 If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off'.
 
-This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Microsoft Entra ID, use the M365 admin portal.
 
 Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
 
@@ -14304,7 +14304,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
 If you disable this policy, Microsoft Edge hides quick links on the new tab page and disables the quick links control in the NTP settings flyout.
 
-This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Microsoft Entra ID, use the M365 admin portal.
 
 Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
 
@@ -14372,13 +14372,13 @@ Lets you choose either the Microsoft News or Office 365 feed experience for the 
 
 When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
 
-When you set this policy to 'Office', users with an Azure Active Directory browser sign-in will see the Office 365 feed experience on the new tab page.
+When you set this policy to 'Office', users with a Microsoft Entra browser sign-in will see the Office 365 feed experience on the new tab page.
 
 If you disable or don't configure this policy:
 
-- Users with an Azure Active Directory browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.
+- Users with a Microsoft Entra browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.
 
-- Users without an Azure Active Directory browser sign-in will see the standard new tab page experience.
+- Users without a Microsoft Entra browser sign-in will see the standard new tab page experience.
 
 If you configure this policy *and* the [NewTabPageLocation](#newtabpagelocation) policy, [NewTabPageLocation](#newtabpagelocation) has precedence.
 
@@ -14801,9 +14801,9 @@ If you don't configure this policy, Edge TyposquattingChecker is turned on but u
 
   #### Description
 
-  'Allow single sign-on for work or school sites using this profile' option allows non-AAD profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-AAD profiles only.
+  'Allow single sign-on for work or school sites using this profile' option allows non-Microsoft Entra profiles to be able to use single sign-on for work or school sites using work or school credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-Microsoft Entra profiles only.
 
-If you enable or disable this policy, 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory (Azure AD) accounts for users with a single non-Azure AD Microsoft Edge profile' will be turned off.
+If you enable or disable this policy, 'Intelligent enablement of Single sign-on (SSO) for all Windows Azure Active Directory accounts for users with a single non-Microsoft Entra ID Microsoft Edge profile' will be turned off.
 
 If you don't configure this policy, users can control whether to use SSO using other credentials present on the machine in edge://settings/profiles/multiProfileSettings.
 
@@ -15005,7 +15005,7 @@ Note: This policy doesn't prevent the browser from navigating to any URL. Users 
 
   #### Description
 
-  Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Azure AD account for that organization.
+  Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. If you enable or don't configure this policy, users can see internal results powered by Microsoft Search in Bing in the Microsoft Edge address bar suggestion list. To see the Microsoft Search in Bing results, the user must be signed into Microsoft Edge with their Microsoft Entra account for that organization.
 If you disable this policy, users can't see internal results in the Microsoft Edge address bar suggestion list.
 Starting with Microsoft Edge version 89, Microsoft Search in Bing suggestions will be available even if Bing isn't the user's default search provider.
 
@@ -19532,7 +19532,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {
 
   ### ConfigureOnPremisesAccountAutoSignIn
 
-  #### Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
+  #### Configure automatic sign in with an Active Directory domain account when there is no Microsoft Entra domain account
 
   
   
@@ -19542,7 +19542,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureKeyboardShortcuts = {
 
   #### Description
 
-  Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Azure Active Directory accounts instead, please Azure AD join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
+  Enable the use of Active Directory accounts for automatic sign in if your users' machines are Domain Joined and your environment is not hybrid joined. If you want users automatically signed in with their Microsoft Entra accounts instead, please Microsoft Entra join (See [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) for more information) or hybrid join (See [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) for more information) your environment.
 
 On every launch, Microsoft Edge will try to sign-in using this policy, as long as the first profile being launched isn't signed-in or an auto sign-in hasn't happened before.
 
@@ -19552,11 +19552,11 @@ If you enable this policy and set it to 'SignInAndMakeDomainAccountNonRemovable'
 
 If you set this policy to 'Disabled' or don't set it, Microsoft Edge will not automatically sign in users that are on domain joined machines with Active Directory accounts.
 
-From Microsoft Edge 89 onwards, if there is an existing on-premises profile with [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy disabled and machine is now hybrid joined i.e it has an Azure AD account, it will auto-upgrade the on-premises profile to Azure AD profile to get full Azure AD sync facilities.
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) policy disabled and machine is now hybrid joined i.e it has a Microsoft Entra account, it will auto-upgrade the on-premises profile to Microsoft Entra profile to get full Azure AD sync facilities.
 
 From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
 
-From Microsoft Edge 94 onwards, if policy [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) is enabled, and this policy is set to 'SignInAndMakeDomainAccountNonRemovable', it will take effect even on hybrid joined environment. Microsoft Edge will automatically sign in users using their Active Directory domain account even if there are MSA or AAD accounts.
+From Microsoft Edge 94 onwards, if policy [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled) is enabled, and this policy is set to 'SignInAndMakeDomainAccountNonRemovable', it will take effect even on hybrid joined environment. Microsoft Edge will automatically sign in users using their Active Directory domain account even if there are MSA or Microsoft Entra accounts.
 
 Policy options mapping:
 
@@ -19583,7 +19583,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ConfigureOnPremisesAccountAutoSignIn
-  - GP name: Configure automatic sign in with an Active Directory domain account when there is no Azure AD domain account
+  - GP name: Configure automatic sign in with an Active Directory domain account when there is no Microsoft Entra domain account
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21139,7 +21139,7 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   ### DiscoverPageContextEnabled
 
-  #### Enable Discover access to page contents for AAD profiles
+  #### Enable Discover access to page contents for Microsoft Entra profiles
 
   
   
@@ -21149,7 +21149,7 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   #### Description
 
-  This policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
+  This policy controls Discover access to page contents for Microsoft Entra profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
 
 If you enable or don't configure this policy, Discover will have access to page contents.
 
@@ -21172,7 +21172,7 @@ If you disable this policy, Discover will not be able to access page contents.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DiscoverPageContextEnabled
-  - GP name: Enable Discover access to page contents for AAD profiles
+  - GP name: Enable Discover access to page contents for Microsoft Entra profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -24861,7 +24861,7 @@ For this policy to work as intended,
 [SyncDisabled](#syncdisabled) must not be configured or must be set to False. If this is set to True, [ForceSync](#forcesync) will not take affect. If you wish to ensure specific datatypes sync or do not sync, use the [ForceSyncTypes](#forcesynctypes) policy and [SyncTypesListDisabled](#synctypeslistdisabled) policy.
 
 0 = Do not automatically start sync and show the sync consent (default)
-1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt
+1 = Force sync to be turned on for Microsoft Entra / Microsoft Entra-Degraded user profile and do not show the sync consent prompt
 
   #### Supported features:
 
@@ -24921,7 +24921,7 @@ For this policy to work as intended,
 
   #### Description
 
-  If you enable this policy all the specified data types will be included for synchronization for Azure AD/Azure AD-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
+  If you enable this policy all the specified data types will be included for synchronization for Microsoft Entra / Microsoft Entra-Degraded user profiles. This policy can be used to ensure the type of data uploaded to the Microsoft Edge synchronization service.
 
 You can provide one of the following data types for this policy: "favorites", "settings", "passwords", "addressesAndMore", "extensions", "history", "openTabs", "edgeWallet", and "collections". The "apps" data type will be supported starting in Microsoft Edge version 100. Note that these data type names are case sensitive.
 
@@ -25460,7 +25460,7 @@ For the configuration options shown in the First Run Experience, the browser wil
 
 -On the New Tab Page, the feed type will be set to MSN News and the layout to Inspirational.
 
--The user will still be automatically signed into Microsoft Edge if the Windows account is of Azure AD or MSA type.
+-The user will still be automatically signed into Microsoft Edge if the Windows account is of Microsoft Entra or MSA type.
 
 -Sync will not be enabled by default and users will be prompted to choose whether they'd like to sync on browser startup. You can use the [ForceSync](#forcesync) or the [SyncDisabled](#syncdisabled) policy to configure sync and the sync consent prompt.
 
@@ -30411,7 +30411,7 @@ If you disable or don't configure this policy, Microsoft Edge will use the exist
 
   This policy determines if a user can remove the Microsoft Edge profile automatically signed in with a user's work or school account.
 
-If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed. The profile will be non-removable only if profile is signed-in with either on-premises account or Azure AD account that matches OS sign-in account.
+If you enable this policy, a non-removable profile will be created with the user's work or school account on Windows. This profile can't be signed out or removed. The profile will be non-removable only if profile is signed-in with either on-premises account or Microsoft Entra account that matches OS sign-in account.
 
 If you disable or don't configure this policy, the profile automatically signed in with a user's work or school account on Windows can be signed out or removed by the user.
 
@@ -30419,7 +30419,7 @@ If you want to configure browser sign in, use the [BrowserSignin](#browsersignin
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
 
-From Microsoft Edge 89 onwards, if there is an existing on-premises profile with sync disabled and machine is hybrid joined, it will auto-upgrade the on-premises profile to Azure AD profile and make it non-removable instead of creating a new non-removable Azure AD profile.
+From Microsoft Edge 89 onwards, if there is an existing on-premises profile with sync disabled and machine is hybrid joined, it will auto-upgrade the on-premises profile to Microsoft Entra profile and make it non-removable instead of creating a new non-removable Microsoft Entra profile.
 
 From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigninenabled) is disabled, this policy will not take any effect.
 
@@ -30474,7 +30474,7 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   #### Description
 
-  Allow your organization's logo from M365, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
+  Allow your organization's logo from M365, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with a Microsoft Entra (formerly Azure Active Directory) account. This will require a browser restart to take effect.
 
 If you enable this policy, your organization's logo from M365 will be used.
 
@@ -30538,7 +30538,7 @@ If you disable or don't configure this policy, your organization's logo from M36
 
   #### Description
 
-  Allow the use of your organization's branding assets from M365, if any, on the profile-related UI of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
+  Allow the use of your organization's branding assets from M365, if any, on the profile-related UI of a profile that's signed in with a Microsoft Entra (formerly Azure Active Directory) account. This will require a browser restart to take effect.
 
 If you enable this policy, your organization's branding assets from M365 will be used.
 
@@ -34483,7 +34483,7 @@ If you enable or don't configure this policy, Microsoft Edge displays links rece
 
 If you disable this policy, Microsoft Edge does not display links recently shared by or shared with the user from Microsoft 365 apps in History. The control in Microsoft Edge settings is disabled and set to off.
 
-This policy only applies for Microsoft Edge local user profiles and profiles signed in using Azure Active Directory.
+This policy only applies for Microsoft Edge local user profiles and profiles signed in using Microsoft Entra ID.
 
   #### Supported features:
 
@@ -34737,15 +34737,15 @@ When the feature is disabled, existing images are deleted on a per user basis, a
 
   Show Microsoft Rewards experience and notifications.
 If you enable this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Microsoft Entra accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
 
 If you disable this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will not see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Microsoft Entra accounts) in search, new tab page, and earn markets will not see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be disabled and toggled off.
 
 If you don't configure this policy:
-   - Microsoft account users (excludes Azure AD accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
+   - Microsoft account users (excludes Microsoft Entra accounts) in search, new tab page, and earn markets will see the Microsoft Rewards experience in their Microsoft Edge user profile.
    - The setting to enable Microsoft Rewards in Microsoft Edge settings will be enabled and toggled on.
 
   #### Supported features:

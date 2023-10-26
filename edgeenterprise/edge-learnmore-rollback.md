@@ -96,7 +96,7 @@ The following group policies and settings are highly recommended for using rollb
 
 #### Sync Group Policies
 
-- ForceSync. Set ForceSync to enabled. This policy will force enable Sync on all Microsoft Entra ID users. This policy is only effective for Microsoft Edge versions 86 and later.
+- ForceSync. Set ForceSync to enabled. This policy will force enable Sync on all Microsoft Entra users. This policy is only effective for Microsoft Edge versions 86 and later.
 - The *Configure the list of the types that are excluded from synchronization policy* allows admins to control what data can be synced by users.
 
 #### Browser restart Group Policies
