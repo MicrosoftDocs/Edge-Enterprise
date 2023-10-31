@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/25/2023
+ms.date: 10/31/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -582,7 +582,6 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
 |[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
@@ -30458,70 +30457,6 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 0x00000001
 ```
 
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### OrganizationLogoOverlayOnAppIconEnabled
-
-  #### Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 119 or later
-
-  #### Description
-
-  Allow your organization's logo from M365, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with a Microsoft Entra (formerly Azure Active Directory) account. This will require a browser restart to take effect.
-
-If you enable this policy, your organization's logo from M365 will be used.
-
-If you disable or don't configure this policy, your organization's logo from M365 won't be used.
-
-  #### Supported features:
-
-  - Can be mandatory: No
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
-  - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: OrganizationLogoOverlayOnAppIconEnabled
-  - GP name: Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
-  - GP path (Mandatory): N/A
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): N/A
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: OrganizationLogoOverlayOnAppIconEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  #### Mac information and settings
-
-  - Preference Key Name: OrganizationLogoOverlayOnAppIconEnabled
-  - Example value:
-``` xml
-<true/>
-```
   
 
   [Back to top](#microsoft-edge---policies)
