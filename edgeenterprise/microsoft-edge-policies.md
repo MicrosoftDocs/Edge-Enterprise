@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/25/2023
+ms.date: 10/31/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -582,7 +582,7 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
+<!--|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile| -->
 |[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
@@ -30461,7 +30461,7 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
   
 
   [Back to top](#microsoft-edge---policies)
-
+<!-- 
   ### OrganizationLogoOverlayOnAppIconEnabled
 
   #### Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
@@ -30525,7 +30525,7 @@ If you disable or don't configure this policy, your organization's logo from M36
   
 
   [Back to top](#microsoft-edge---policies)
-
+-->
   ### OrganizationalBrandingOnWorkProfileUIEnabled
 
   #### Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
