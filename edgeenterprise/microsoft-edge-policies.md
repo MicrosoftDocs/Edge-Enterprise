@@ -582,7 +582,6 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile|
 |[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
