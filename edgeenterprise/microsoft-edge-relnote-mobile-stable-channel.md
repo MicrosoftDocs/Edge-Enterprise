@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 11/01/2023
+ms.date: 11/02/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -57,11 +57,6 @@ Allow proceeding from the SSL warning page:
 
 - MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
 - MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
-
-Configure whether to turn on Microsoft Defender SmartScreen:
-
-- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
-- MDM: [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
 
 Control the behavior of opening external apps:
 
