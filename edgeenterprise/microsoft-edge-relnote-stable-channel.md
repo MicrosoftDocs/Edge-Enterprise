@@ -52,10 +52,6 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
 - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
 
-**MAYBE?**
-- [EdgeManagementPolicyOverridesPlatformPolicy]() - Microsoft Edge management service policy overrides platform policy.
-- [EdgeManagementUserPolicyOverridesCloudMachinePolicy]() - Allow Microsoft Edge management service user policies to override policies set through an enrollment token.
-
 ## Version 118.0.2088.88: November 2, 2023
 
 Fixed various bugs and performance issues for Extended Stable release.
