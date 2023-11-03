@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/02/2023
+ms.date: 11/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -142,6 +142,13 @@ Fixed various bugs and performance issues.
 > This update to Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
+
+### Policy updates
+
+#### New policies
+
+- [NewTabPageBingChatEnabled](/deployedge/microsoft-edge-policies#newtabpagebingchatenabled) - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
+- [NewTabPageCompanyLogoEnabled](/deployedge/microsoft-edge-policies#newtabpagecompanylogoenabled) - Hide the company logo on the Microsoft Edge new tab page
 
 ## Version 116.0.1938.98: September 29, 2023
 
