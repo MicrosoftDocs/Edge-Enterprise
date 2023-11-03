@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 11/02/2023
+ms.date: 11/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,7 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 119.0
 This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2023-36022](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36022)
+- [CVE-2023-36029](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36029)
 - [CVE-2023-36034](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36034)
 
 ## October 27, 2023
