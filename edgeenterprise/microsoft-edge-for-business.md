@@ -103,7 +103,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Microsoft Intune 2309 or higher.
 - Microsoft Edge 117.0.2045.31 or higher.
 
-For more information, see [Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe).
+For more information, see [Data protection for Windows MAM](/mem/intune/apps/protect-mam-windows).
 
 ## Provide feedback
 
