@@ -252,11 +252,11 @@ After selecting a sidebar app, you can configure its installation policy to Allo
 
 #### Manage enterprise secure AI settings
 
-To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select **Customization settings**. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot Pro, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
+To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot Pro, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
 
 ##### Manage settings for Copilot Pro
 
-The page will detect whether your organization has access to Copilot Pro and the Microsoft Edge sidebar. Based on this information, one of the following states might exist:
+The page will detect whether your organization has access to Copilot Pro and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:
 
 - If Copilot Pro and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
 
@@ -264,7 +264,7 @@ The page will detect whether your organization has access to Copilot Pro and the
 
 - If Copilot Pro is disabled, all policy settings in this section won't be available to configure.
 
-- If Edge can't identify if Copilot Pro is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
+- If it can't be identified that Copilot Pro is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
 
 ##### Manage settings for other AI features
 
