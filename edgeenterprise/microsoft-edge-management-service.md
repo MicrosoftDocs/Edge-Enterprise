@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 08/30/2023
+ms.date: 11/07/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -250,6 +250,30 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
+#### Manage enterprise secure AI settings
+
+To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select **Customization settings**. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot Pro, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
+
+##### Manage settings for Copilot Pro
+
+The page will detect whether your organization has access to Copilot Pro and the Microsoft Edge sidebar. Based on this information, one of the following states might exist:
+
+- If Copilot Pro and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
+
+- If Copilot Pro is enabled and the Microsoft Edge sidebar is disabled, the unapplicable settings will be disabled. However, the option to enable the sidebar will appear, and if enabled, will unlock the ability to configure the now applicable setting.
+
+- If Copilot Pro is disabled, all policy settings in this section won't be available to configure.
+
+- If Edge can't identify if Copilot Pro is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
+
+##### Manage settings for other AI features
+
+The settings in this section correspond to a Microsoft Edge browser policy that incorporates the use of AI. When a setting is configured for the first time, the updated value will appear in the **Policies** pivot for that configuration profile. To configure a setting:
+
+1. Check/uncheck the box corresponding to the setting that you want to enable/disable respectively.
+1. Select **Save changes**.
+
+<!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
 
 After configuring a profile, the next step is to assign the profile.  
