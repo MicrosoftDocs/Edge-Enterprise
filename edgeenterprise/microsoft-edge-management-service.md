@@ -37,7 +37,7 @@ Use these steps to access the experience:
 
 A configuration profile contains all the browser policy configurations, including extension settings.
 
-Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings will merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
+Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
 
 #### Create a configuration profile
 
@@ -46,7 +46,7 @@ Follow these steps to create a configuration profile:
 1. Under the **Configuration profiles** pivot, select **Add a profile**.  
 1. Under **Add a configuration profile**, enter a profile name and description and then select **Add**.  
 
-After confirmation, you'll be able to go to the profile and configure the policies and extensions you want to use.
+After confirmation, you'll be able to go to the profile and configure the policies, and extensions you want to use.
 
 #### Import a configuration profile
 
@@ -108,7 +108,7 @@ Follow these steps to assign a configuration profile to a Microsoft Entra group:
 
 ### Manage extensions
 
-To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
+To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings override the profile settings.
 
 #### Import existing extension settings to an existing configuration profile
 
@@ -127,7 +127,7 @@ Follow these steps to export extension settings:
 1. Select the profile you want to export extension settings from and go to the **Extensions** pivot.
 1. Select **Export JSON** and the export will start downloading.
 
-After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
+After the download is finished, you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
 
 #### Manage settings for all extensions
 
@@ -160,7 +160,7 @@ Follow these steps to add an extension:
 
 #### Manage an extension
 
-After selecting an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
+After selecting an extension, you can configure settings for a specific extension. These settings only apply to the extension that you select and will override any profile settings.
 
 ##### Manage extension policy
 
