@@ -27,6 +27,17 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues for Android.
 
+### Policy support (Android and iOS)
+
+SmartScreen:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+- MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+ManagedFavorites:
+
+- MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
+
 ## Version 118.0.2088.81: November 1, 2023
 
 Fixed various bugs and performance issues for iOS.
