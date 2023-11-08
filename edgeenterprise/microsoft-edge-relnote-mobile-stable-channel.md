@@ -29,12 +29,12 @@ Fixed various bugs and performance issues for Android.
 
 ### Policy support (Android and iOS)
 
-SmartScreen:
+Configure to turn on Microsoft Defender SmartScreen:
 
 - MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
 - MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
 
-ManagedFavorites:
+Configure to turn on ManagedFavorites (bookmarks):
 
 - MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
 
