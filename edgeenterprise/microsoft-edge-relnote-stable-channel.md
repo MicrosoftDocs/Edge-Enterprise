@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/27/2023
+ms.date: 11/03/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,36 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 119.0.2151.44: November 2, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-2-2023).
+
+### Feature updates
+
+- **Compression Dictionary Transport support.** A version of the [Compression Dictionary Transport](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/) feature is available for sites to use by participating in the associated origin trial. If your network uses a middlebox that inspects network traffic and/or you previously encountered issues with the ZSDCH feature, review the [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) page which contains updated guidance.
+
+- **Behavioral changes to the beforeunload event.** The behavior of the beforeunload event has changed such that calling preventDefault in a beforeunload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a beforeunload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
+
+- **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored. 
+
+- **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
+
+- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
+
+### Policy updates
+
+#### New policies
+
+- [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
+- [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
+- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+
+## Version 118.0.2088.88: November 2, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 118.0.2088.76: October 27, 2023
 
@@ -113,6 +143,13 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
 
+### Policy updates
+
+#### New policies
+
+- [NewTabPageBingChatEnabled](/deployedge/microsoft-edge-policies#newtabpagebingchatenabled) - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
+- [NewTabPageCompanyLogoEnabled](/deployedge/microsoft-edge-policies#newtabpagecompanylogoenabled) - Hide the company logo on the Microsoft Edge new tab page
+
 ## Version 116.0.1938.98: September 29, 2023
 
 Fixed various bugs and performance issues.
@@ -149,107 +186,7 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
 
-## Version: 117.0.2045.31: September 15, 2023
-
-Fixed various bugs and performance issues.
-
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
-
-### Announcement: Microsoft Edge for Business is available for unmanaged Windows devices
-
-Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser. This dedicated work experience is now available for unmanaged Windows devices using Microsoft Intune Mobile Application Management (MAM). This release includes the supporting changes for Microsoft Edge. When the required Intune update is released, more information will be available on how to test and deploy this feature with your users.
-
-**Note:**
-
-- Support is available for Windows 11, build 10.0.22621 (22H2) or later.
-
-- Requires Microsoft Intune 2309 or higher
-
-- App Protection Conditional Access is in Public Preview.
-
-- If you have a Conditional Access (CA) policy on your tenant that targets "All cloud apps" that covers "Mobile apps and desktop clients" and requires a compliant device, app protection policies or has a "Block" grant control, your end users will not be able to MAM enroll. A change to support this is targeted for Microsoft Edge v118.
-
-- If you want to continue testing/evaluating APP CA, you can choose to exclude the "Edge Auth" application from your cloud app targeting. Some Microsoft Edge features might not function properly until CA is satisfied, but MAM enrollment will be able to complete.
-
-### Announcement: Deprecating the unload event
-
-The Google Chrome team plans to deprecate the unload event starting in Chrome version 118. The deprecation will occur by gradually changing the default so unload handlers stop firing on pages unless a page explicitly opts in to re-enable them. For more information, see [Deprecating the unload event - Chrome Developers](https://developer.chrome.com/blog/deprecating-unload/), and [Google Groups - Conversations](https://groups.google.com/a/chromium.org/g/blink-dev/c/dvusqw9-IhI/m/SBkm_u1RAQAJ).
-
-While we haven't yet finalized the deprecation schedule, we anticipate that Microsoft Edge will follow Chrome's schedule with a possible delay of a release or two. If you're interested in testing with Microsoft Edge starting in version 118, the **ForcePermissionPolicyUnloadDefaultEnabled** policy will be available or you can use the instructions documented at [Disable unload handlers by default and add Permissions-Policy to opt-in to enabling them](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#disable-unload-handlers-by-default-and-add-permissions-policy-to-opt-in-to-enabling-them).
-
-WebView2 will support both the permissions policy and the enterprise policy but won't be impacted by the gradual rollout in Microsoft Edge. We expect WebView2 will switch defaults when the roll out reaches 100% of page loads.
-
-### Feature updates
-
-- **Microsoft Edge for Business Banner.**  Administrators can control the availability of the in-product Microsoft Edge for Business banner using the [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#promotionaltabsenabled) policy.
-
-- **Microsoft Edge Sync Favorites Recovery.** The Microsoft Edge Sync Favorites Recovery feature lets sync users restore any favorites that they lost or deleted within the last 14 days. Users can access this feature from either the Microsoft Edge favorites hub or the `edge://favorites` page. For more information, see [Recover lost or deleted favorites in Microsoft Edge - Microsoft Support](https://support.microsoft.com/topic/recover-lost-or-deleted-favorites-in-microsoft-edge-ac06270e-ba57-4266-8389-8bfd1df1aa5e)
-
-- **Autofill Autocomplete.** This feature helps you fill form fields faster on the web. When you start typing in a form field, Microsoft Edge suggests possible in-line completions when there's an exact match with your saved data in the browser. For example, if you type the first few characters of your address, autocomplete will suggest the rest of address - you can choose the autocomplete suggestion or continue typing as usual. Autofill options can be found in Settings (`edge://settings/personalinfo`).
-
-- **Deprecation of Web Select.** To improve end user experience, this feature is being deprecated and will no longer be an option under Web Capture or via keyboard shortcut.
-
-- **Deprecation of features.** To improve end user experience and simplify the **More tools** menu, the following features are being deprecated: Math Solver, Picture Dictionary, Citations, Grammar Tools, and Kids Mode.
-
-### Policy updates
-
-#### New policies
-
-- [AllowSystemNotifications](/deployedge/microsoft-edge-policies#allowsystemnotifications) - Allows system notifications
-- [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) - Edge Wallet E-Tree Enabled
-- [GamerModeEnabled](/deployedge/microsoft-edge-policies#gamermodeenabled) - Enable Gamer Mode
-- [SearchbarAllowed](/deployedge/microsoft-edge-policies#searchbarallowed) - Enable the Search bar
-- [SearchbarIsEnabledOnStartup](/deployedge/microsoft-edge-policies#searchbarisenabledonstartup) - Allow the Search bar at Windows startup
-- [ShowHistoryThumbnails](/deployedge/microsoft-edge-policies#showhistorythumbnails) - Show thumbnail images for browsing history
-- [UploadFromPhoneEnabled](/deployedge/microsoft-edge-policies#uploadfromphoneenabled) - Enable upload files from phone in Microsoft Edge desktop
-- [InternetExplorerIntegrationZoneIdentifierMhtFileAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationzoneidentifiermhtfileallowed) - Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode
-- [PasswordDeleteOnBrowserCloseEnabled](/deployedge/microsoft-edge-policies#passworddeleteonbrowsercloseenabled) - Save passwords when Microsoft Edge closes
-- [SplitScreenEnabled](/deployedge/microsoft-edge-policies#splitscreenenabled) - Enable split screen feature in Microsoft Edge
-
-#### Deprecated policies
-
-- [WebWidgetAllowed](/deployedge/microsoft-edge-policies#webwidgetallowed) - Enable the Search bar
-- [WebWidgetIsEnabledOnStartup](/deployedge/microsoft-edge-policies#webwidgetisenabledonstartup) - Allow the Search bar at Windows startup
-
-#### Obsoleted policy
-
-- [WebSelectEnabled](/deployedge/microsoft-edge-policies#webselectenabled) - Web Select Enabled
-
-## Version 116.0.1938.81: September 12, 2023
-
-Fixed various bugs and performance issues for Stable and Extended Stable release.
-
-> [!IMPORTANT]
-> This update to Stable and Extended Stable contains a fix for [CVE-2023-4863](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-12-2023).
-
-## Version 116.0.1938.76: September 7, 2023
-
-Fixed various bugs and performance issues for Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-7-2023).
-
-## Version 116.0.1938.69: August 31, 2023
-
-Fixed various bugs and performance issues for Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-31-2023).
-
-## Version 116.0.1938.62: August 25, 2023
-
-Fixed various bugs and performance issues for Stable release.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#august-25-2023).
-
-### Feature update
-
-- **Tab organization.**  Microsoft Edge offers helpful suggestions on how to organize tabs to save you time and keep you focused on the web content you care about. These suggestions augment the Tab Grouping feature built into Microsoft Edge. When two or more tabs are grouped together, Microsoft Edge can automatically generate a relevant name for the Tab Group. Furthermore, Microsoft Edge can suggest grouping for all of your tabs by using the "Group Similar Tabs" feature in the Tab Action menu. Administrators can control the availability of this feature using the [TabServicesEnabled](/deployedge/microsoft-edge-policies#tabservicesenabled) policy.
-
-
+<!-- from Version 117.0.2045.31: September 15, 2023 to Version 116.0.1938.62: August 25, 2023 -->
 <!-- from Version 116.0.1938.54: August 21, 2023 to Version 114.0.1823.41: June 6, 2023 -->
 <!-- from Version 114.0.1823.37: June 2, 2023 to Version 112.0.1722.77: May 9, 2023 -->
 <!-- from Version 113.0.1774.35: May 5, 2023 to Version 112.0.1722.39: April 10, 2023 -->

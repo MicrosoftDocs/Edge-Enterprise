@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/04/2023
+ms.date: 11/07/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -103,7 +103,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Microsoft Intune 2309 or higher.
 - Microsoft Edge 117.0.2045.31 or higher.
 
-For more information, see [Mobile Application Management for Microsoft Edge on unmanaged Windows devices](/mem/intune/apps/protect-edge-mam-windows)
+For more information, see [Data protection for Windows MAM](/mem/intune/apps/protect-mam-windows).
 
 ## Provide feedback
 

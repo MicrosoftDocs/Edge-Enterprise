@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/17/2023
+ms.date: 11/08/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -118,6 +118,7 @@ These tables list all of the browser-related policies available in this release 
 | [InPrivateModeAvailability](#inprivatemodeavailability) | InPrivate mode availability |
 | [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
 | [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
+| [ManagedFavorites](#managedfavorites)  |  Configure Favorites (bookmarks) |
 
 ## HTTP authentication
 
@@ -2302,7 +2303,7 @@ iOS:Integer
 
 #### Supported on:
 
-- Microsoft Edge (Android and iOS) since version 118
+- Microsoft Edge (Android and iOS) since version 119
 
 #### Description
 
@@ -2359,6 +2360,76 @@ MicrosoftRootStoreEnabled
 
 ```
 true
+
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### ManagedFavorites
+
+#### Configure Favorites (bookmarks)
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 119
+- Microsoft Edge (iOS and iPadOS) since version 119
+
+#### Description:
+
+Setting the policy sets up a list of bookmarks where each one is a dictionary with the keys "name" and "url".
+
+These keys hold the bookmark's name and target. Admins can set up a subfolder by defining a bookmark without a "url" key, but with an additional "children" key. This key also has a list of bookmarks, some of which can also be folders. Microsoft Edge amends incomplete URLs as if they were submitted through the address bar. For example, "microsoft.com" becomes `https://microsoft.com/`.
+
+Users can't change the folders the bookmarks are placed in (though they can hide it from the bookmark bar). The default folder name for managed bookmarks is "Managed bookmarks" but it can be changed by adding a new sub-dictionary to the policy with a single key named "toplevel_name" with the desired folder name as its value. Managed bookmarks are not synced to the user account and extensions can't modify them.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+
+- Per Profile : Yes
+
+#### Data Type:
+
+Dictionary
+
+#### Android and iOS restriction name:
+
+```
+
+ManagedFavorites
+
+```
+
+##### Example value (Android and iOS):
+
+```
+
+ManagedFavorites = [
+  {
+    "toplevel_name": "My managed favorites folder"
+  },
+  {
+    "name": "Microsoft",
+    "url": "microsoft.com"
+  },
+  {
+    "name": "Bing",
+    "url": "bing.com"
+  },
+  {
+    "children": [
+      {
+        "name": "Microsoft Edge Insiders",
+        "url": www.microsoftedgeinsider.com
+      },
+      {
+        "name": "Microsoft Edge",
+        "url": www.microsoft.com/windows/microsoft-edge
+      }
+    ],
+    "name": "Microsoft Edge links"
+  }
+]
 
 ```
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 11/01/2023
+ms.date: 11/09/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,25 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 119.0.2151.56: November 9, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.46: November 7, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Policy support (Android and iOS)
+
+Configure to turn on Microsoft Defender SmartScreen:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+- MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+Configure to turn on ManagedFavorites (bookmarks):
+
+- MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
 
 ## Version 118.0.2088.81: November 1, 2023
 
@@ -57,11 +76,6 @@ Allow proceeding from the SSL warning page:
 
 - MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
 - MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
-
-Configure whether to turn on Microsoft Defender SmartScreen:
-
-- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
-- MDM: [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
 
 Control the behavior of opening external apps:
 
