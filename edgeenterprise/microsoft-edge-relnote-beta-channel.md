@@ -31,7 +31,7 @@ Fixed various bugs and performance issues.
 
 - **Updated SmartActionsBlockList Policy.**  The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings.  Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
 
-- **Edge Workspaces improvements for offline functionality.**  Any workspace opened on a device previously are cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Edge Workspaces improvements for offline functionality.**  Any workspace opened on a device previously is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
