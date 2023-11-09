@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 10/31/2023
+ms.date: 11/09/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -194,6 +194,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[AutomaticProfileSwitchingSiteList](#automaticprofileswitchingsitelist)|Configure the automatic profile switching site list|
 |[EdgeDefaultProfileEnabled](#edgedefaultprofileenabled)|Default Profile Setting Enabled|
 |[GuidedSwitchEnabled](#guidedswitchenabled)|Guided Switch Enabled|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|Enable implicit sign-in|
@@ -224,6 +225,8 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeManagementEnabled](#edgemanagementenabled)|Microsoft Edge management enabled|
 |[EdgeManagementEnrollmentToken](#edgemanagementenrollmenttoken)|Microsoft Edge management enrollment token|
 |[EdgeManagementExtensionsFeedbackEnabled](#edgemanagementextensionsfeedbackenabled)|Microsoft Edge management extensions feedback enabled|
+|[EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy)|Microsoft Edge management service policy overrides platform policy.|
+|[EdgeManagementUserPolicyOverridesCloudMachinePolicy](#edgemanagementuserpolicyoverridescloudmachinepolicy)|Allow Microsoft Edge management service user policies to override policies set through an enrollment token.|
 |[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
 ### [*Native Messaging*](#native-messaging-policies)
 
@@ -309,6 +312,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[AutoDiscardSleepingTabsEnabled](#autodiscardsleepingtabsenabled)|Configure auto discard sleeping tabs|
 |[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Block sleeping tabs on specific sites|
 |[SleepingTabsEnabled](#sleepingtabsenabled)|Configure sleeping tabs|
 |[SleepingTabsTimeout](#sleepingtabstimeout)|Set the background tab inactivity timeout for sleeping tabs|
@@ -457,6 +461,7 @@ These tables list all of the browser-related group policies available in this re
 |[DoubleClickCloseTabEnabled](#doubleclickclosetabenabled)|Double Click feature in Microsoft Edge enabled (only available in China)|
 |[DownloadDirectory](#downloaddirectory)|Set download directory|
 |[DownloadRestrictions](#downloadrestrictions)|Allow download restrictions|
+|[Edge3PSerpTelemetryEnabled](#edge3pserptelemetryenabled)|Edge 3P SERP Telemetry Enabled|
 |[EdgeAssetDeliveryServiceEnabled](#edgeassetdeliveryserviceenabled)|Allow features to download assets from the Asset Delivery Service|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
@@ -694,6 +699,7 @@ These tables list all of the browser-related group policies available in this re
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Set WPAD optimization|
 |[WalletDonationEnabled](#walletdonationenabled)|Wallet Donation Enabled|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
+|[WebAppSettings](#webappsettings)|Web App management settings|
 |[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
@@ -6959,7 +6965,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -7858,6 +7864,126 @@ If you disable this policy, a basic username and password prompt will be used to
   [Back to top](#microsoft-edge---policies)
 
   ## Identity and sign-in policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AutomaticProfileSwitchingSiteList
+
+  #### Configure the automatic profile switching site list
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 120 or later
+
+  #### Description
+
+  Set this policy to control which profiles Microsoft Edge will use to open sites in. Switching configurations for sites listed in this policy take precedence over other heuristics Microsoft Edge uses for switching sites but note that sites not listed on this policy are still subject to switching by those heuristics. If this policy is not configured, Microsoft Edge will continue using its heuristics to automatically switch sites.
+
+This policy maps a URL hostname to a profile that it should be opened in.
+
+The 'site' field should take the form of a URL hostname.
+
+The 'profile' field can take one of the following values:
+- 'Work': The most recently used Microsoft Entra signed-in profile will be used to open 'site'.
+- 'Personal': The most recently used MSA signed-in profile will be used to open 'site'.
+- 'No preference': The currently used profile will be used to open 'site'.
+- Wildcard email address: This takes the form of '*@contoso.com'. A profile whose username ends with the contents following the '\*' will be used to open 'site'.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutomaticProfileSwitchingSiteList
+  - GP name: Configure the automatic profile switching site list
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Identity and sign-in
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: AutomaticProfileSwitchingSiteList
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AutomaticProfileSwitchingSiteList = [
+  {
+    "profile": "Work",
+    "site": "work.com"
+  },
+  {
+    "profile": "Personal",
+    "site": "personal.com"
+  },
+  {
+    "profile": "No preference",
+    "site": "nopreference.com"
+  },
+  {
+    "profile": "*@contoso.com",
+    "site": "contoso.com"
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\AutomaticProfileSwitchingSiteList = [{"profile": "Work", "site": "work.com"}, {"profile": "Personal", "site": "personal.com"}, {"profile": "No preference", "site": "nopreference.com"}, {"profile": "*@contoso.com", "site": "contoso.com"}]
+  ```
+  
+
+  #### Mac information and settings
+
+  - Preference Key Name: AutomaticProfileSwitchingSiteList
+  - Example value:
+``` xml
+<key>AutomaticProfileSwitchingSiteList</key>
+<array>
+  <dict>
+    <key>profile</key>
+    <string>Work</string>
+    <key>site</key>
+    <string>work.com</string>
+  </dict>
+  <dict>
+    <key>profile</key>
+    <string>Personal</string>
+    <key>site</key>
+    <string>personal.com</string>
+  </dict>
+  <dict>
+    <key>profile</key>
+    <string>No preference</string>
+    <key>site</key>
+    <string>nopreference.com</string>
+  </dict>
+  <dict>
+    <key>profile</key>
+    <string>*@contoso.com</string>
+    <key>site</key>
+    <string>contoso.com</string>
+  </dict>
+</array>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -8969,6 +9095,134 @@ If you disable or don't configure this policy, Microsoft Edge won't send any dat
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeManagementPolicyOverridesPlatformPolicy
+
+  #### Microsoft Edge management service policy overrides platform policy.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  If you enable this policy, the Microsoft Edge management service policy takes precedence if it conflicts with platform policy.
+
+If you disable or don't configure this policy, platform policy takes precedence if it conflicts with the Microsoft Edge management service policy.
+
+This mandatory policy affects machine scope Microsoft Edge management service policies.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeManagementPolicyOverridesPlatformPolicy
+  - GP name: Microsoft Edge management service policy overrides platform policy.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeManagementPolicyOverridesPlatformPolicy
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeManagementPolicyOverridesPlatformPolicy
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeManagementUserPolicyOverridesCloudMachinePolicy
+
+  #### Allow Microsoft Edge management service user policies to override policies set through an enrollment token.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  If you enable this policy, Microsoft Edge management service user policies will override policies set through an enrollment token.
+
+If you disable or don't configure this policy, Microsoft Edge management service user policies will have the default priority.
+
+The policy can be combined with [EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy). If both policies are enabled, Microsoft Edge management service user policies will also take precedence over conflicting platform policies.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeManagementUserPolicyOverridesCloudMachinePolicy
+  - GP name: Allow Microsoft Edge management service user policies to override policies set through an enrollment token.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeManagementUserPolicyOverridesCloudMachinePolicy
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeManagementUserPolicyOverridesCloudMachinePolicy
+  - Example value:
+``` xml
+<false/>
 ```
   
 
@@ -12548,6 +12802,74 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AutoDiscardSleepingTabsEnabled
+
+  #### Configure auto discard sleeping tabs
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 120 or later
+
+  #### Description
+
+  Setting this policy enables inactive (sleeping) tabs to be automatically discarded after 1.5 days of inactivity. This is done to save memory. When the user switches back to a discarded tab, the tab will need to be reloaded.
+
+If the [SleepingTabsEnabled](#sleepingtabsenabled) policy is enabled, then this feature will be enabled by default.
+
+If the [SleepingTabsEnabled](#sleepingtabsenabled) is disabled, then this feature will be disabled by default and cannot be enabled.
+
+If enabled, idle background tabs will be discarded after 1.5 days.
+
+If disabled, idle background tab will not be discarded after 1.5 days. Tabs can still be discarded for other reasons if this policy is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AutoDiscardSleepingTabsEnabled
+  - GP name: Configure auto discard sleeping tabs
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Sleeping tabs settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Sleeping tabs settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: AutoDiscardSleepingTabsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AutoDiscardSleepingTabsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SleepingTabsBlockedForUrls
 
   #### Block sleeping tabs on specific sites
@@ -13936,7 +14258,7 @@ If you disable this policy, the company logo doesn't appear on Microsoft Edge ne
 
   If you enable or don't configure this policy, Microsoft Edge displays Microsoft News content on the new tab page. The user can choose different display options for the content, including but not limited to Content off, Content visible on scroll, Headings only, and Content visible. Enabling this policy doesn't force content to be visible - the user can continue to set their own preferred content position.
 
-If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off'.
+If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off', and the Layout control in the NTP settings flyout is disabled and set to 'Custom'.
 
 This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
 
@@ -17510,16 +17832,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -21910,6 +22232,63 @@ Use the preceding information when configuring this policy.
 ``` xml
 <integer>2</integer>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### Edge3PSerpTelemetryEnabled
+
+  #### Edge 3P SERP Telemetry Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 120 or later
+
+  #### Description
+
+  Edge3P Telemetry in Microsoft Edge captures the searches user does on third party search providers without identifying the person or the device and captures only if the user has consented to this collection of data. User can turn off the collection at any time in the browser settings.
+
+If you enable or don't configure this policy, Edge 3P SERP Telemetry feature will be enabled.
+
+If you disable this policy, Edge 3P SERP Telemetry feature will be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: Edge3PSerpTelemetryEnabled
+  - GP name: Edge 3P SERP Telemetry Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: Edge3PSerpTelemetryEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -28230,7 +28609,7 @@ If you disable or don't configure this policy, Microsoft Edge will treat IE mode
   
   #### Supported versions:
 
-  - On Windows since 118 or later
+  - On Windows since 117 or later
 
   #### Description
 
@@ -29969,7 +30348,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -30459,70 +30838,6 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 0x00000001
 ```
 
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### OrganizationLogoOverlayOnAppIconEnabled
-
-  #### Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 119 or later
-
-  #### Description
-
-  Allow your organization's logo from M365, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
-
-If you enable this policy, your organization's logo from M365 will be used.
-
-If you disable or don't configure this policy, your organization's logo from M365 won't be used.
-
-  #### Supported features:
-
-  - Can be mandatory: No
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: No - Requires browser restart
-  - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: OrganizationLogoOverlayOnAppIconEnabled
-  - GP name: Allow your organization's logo from M365 to be overlaid on the Microsoft Edge app icon of a work profile
-  - GP path (Mandatory): N/A
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): N/A
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: OrganizationLogoOverlayOnAppIconEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  #### Mac information and settings
-
-  - Preference Key Name: OrganizationLogoOverlayOnAppIconEnabled
-  - Example value:
-``` xml
-<true/>
-```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -33841,7 +34156,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
@@ -38095,6 +38410,134 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     </dict>
     <key>url</key>
     <string>https://weather.example.com</string>
+  </dict>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WebAppSettings
+
+  #### Web App management settings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 120 or later
+
+  #### Description
+
+  This policy allows an admin to specify settings for installed web apps. This policy maps a Web App ID to its specific setting. A default configuration can be set using the special ID *, which applies to all web apps without a custom configuration in this policy.
+
+The manifest_id field is the Manifest ID for the Web App. See https://developer.chrome.com/blog/pwa-manifest-id/ for instructions on how to determine the Manifest ID for an installed web app.
+The run_on_os_login field specifies if a web app can be run during OS login. If this field is set to blocked, the web app will not run during OS login and the user will not be able to enable this later. If this field is set to run_windowed, the web app will run during OS login and the user will not be able to disable this later. If this field is set to allowed, the user will be able to configure the web app to run at OS login. The default configuration only allows the allowed and blocked values.
+(Since version 120) The prevent_close_after_run_on_os_login field specifies if a web app can be prevented from closing in any way. For example, by the user, by task manager, or by web APIs. This behavior can only be enabled if run_on_os_login is set to run_windowed. If the app is already running, this setting will only take effect after the app is restarted. If this field isn't defined, users can can close the app.
+(Since version 118) The force_unregister_os_integration field specifies if all OS integration for a web app, i.e. shortcuts, file handlers, protocol handlers etc will be removed or not. If an app is already running, this property will come into effect after the app has restarted. This should be used with caution, since this can override any OS integration that is set automatically during the startup of the web applications system. Currently only works on Windows, Mac and Linux platforms.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebAppSettings
+  - GP name: Web App management settings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebAppSettings
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebAppSettings = [
+  {
+    "manifest_id": "https://foo.example/index.html",
+    "run_on_os_login": "allowed"
+  },
+  {
+    "manifest_id": "https://bar.example/index.html",
+    "run_on_os_login": "allowed"
+  },
+  {
+    "manifest_id": "https://foobar.example/index.html",
+    "prevent_close_after_run_on_os_login": true,
+    "run_on_os_login": "run_windowed"
+  },
+  {
+    "manifest_id": "*",
+    "run_on_os_login": "blocked"
+  },
+  {
+    "force_unregister_os_integration": true,
+    "manifest_id": "https://foo.example/index.html"
+  }
+]
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\WebAppSettings = [{"manifest_id": "https://foo.example/index.html", "run_on_os_login": "allowed"}, {"manifest_id": "https://bar.example/index.html", "run_on_os_login": "allowed"}, {"manifest_id": "https://foobar.example/index.html", "prevent_close_after_run_on_os_login": true, "run_on_os_login": "run_windowed"}, {"manifest_id": "*", "run_on_os_login": "blocked"}, {"force_unregister_os_integration": true, "manifest_id": "https://foo.example/index.html"}]
+  ```
+  
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebAppSettings
+  - Example value:
+``` xml
+<key>WebAppSettings</key>
+<array>
+  <dict>
+    <key>manifest_id</key>
+    <string>https://foo.example/index.html</string>
+    <key>run_on_os_login</key>
+    <string>allowed</string>
+  </dict>
+  <dict>
+    <key>manifest_id</key>
+    <string>https://bar.example/index.html</string>
+    <key>run_on_os_login</key>
+    <string>allowed</string>
+  </dict>
+  <dict>
+    <key>manifest_id</key>
+    <string>https://foobar.example/index.html</string>
+    <key>prevent_close_after_run_on_os_login</key>
+    <true/>
+    <key>run_on_os_login</key>
+    <string>run_windowed</string>
+  </dict>
+  <dict>
+    <key>manifest_id</key>
+    <string>*</string>
+    <key>run_on_os_login</key>
+    <string>blocked</string>
+  </dict>
+  <dict>
+    <key>force_unregister_os_integration</key>
+    <true/>
+    <key>manifest_id</key>
+    <string>https://foo.example/index.html</string>
   </dict>
 </array>
 ```
