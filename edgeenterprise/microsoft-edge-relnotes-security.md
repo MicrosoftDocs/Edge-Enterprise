@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 11/09/2023
+ms.date: 11/10/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -24,6 +24,7 @@ This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2023-36014](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36014)
 - [CVE-2023-36024](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36024)
+- [CVE-2023-36027](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36027)
 
 ## November 2, 2023
 
