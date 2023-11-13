@@ -15,7 +15,7 @@ description: "Plan your deployment of Microsoft Edge"
 # Plan your deployment of Microsoft Edge
 
 > [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise-grade security, productivity, manageability, and AI built in.
 
 This article describes the recommended practices for deploying Microsoft Edge in an enterprise environment.
 
@@ -75,7 +75,7 @@ You should also understand the **prerequisites** for features you're interested 
 - [Internet Explorer mode](./edge-ie-mode.md)
 - [Authentication and sync](./microsoft-edge-security-identity.md)
 
-With these answers in mind, you're ready to planning your Microsoft Edge deployment.
+With these answers in mind, you're ready to plan your Microsoft Edge deployment.
 <!--bookmark -->
 
 ## Make sure your Windows 10 devices are ready
@@ -92,15 +92,15 @@ If app compatibility is your main concern, and you don't have a firm grasp on wh
 
 ### Deploy to end users by site
 
-If bandwidth is your primary concern, you might want to consider doing application compatibility testing up front. After you finish testing, deploy to end users by site so you can leverage caching other software delivery optimizations.
+If bandwidth is your primary concern, you might want to consider doing application compatibility testing upfront. After you finish testing, deploy to end users by site so you can leverage caching other software delivery optimizations.
 
 ## Do site discovery
 
-If you have a dependency on legacy web applications, and plan to use Internet Explorer mode (which most customers do), then you probably need to do some additional site discovery.
+If you have a dependency on legacy web applications and plan to use Internet Explorer mode (which most customers do), then you probably need to do some additional site discovery.
 
 ### If you've already deployed and configured the legacy version of Microsoft Edge
 
-If you've already configured your Enterprise Site List to work for the legacy version of Microsoft Edge, then your work is almost done! The one thing you may need to add are neutral sites.
+If you've already configured your Enterprise Site List to work for the legacy version of Microsoft Edge, then your work is almost done! The one thing you may need to add is neutral sites.
 
 Neutral sites are typically sites that provide Single Sign-On (SSO). If you navigate to a neutral site from Microsoft Edge, then you want to stay in Microsoft Edge to authenticate. If navigate to a neutral site in Internet Explorer mode, then you want to stay in Internet Explorer mode to authenticate.
 
@@ -119,8 +119,8 @@ After you've collected site data, we recommend the following 4-step process to a
 
 1. Sort the data by domain, and then by URL.
 2. Define the boundaries of an "app" to configure for Internet Explorer mode. You want to include all the sites and web controls that define the app. But you don't want to include any extra sites and controls by defining the app too broadly. Some sites may be as simple as "http://contoso.com/app1" while others may require you to define multiple sites and pages.
-3. Test the app to verify that it doesn't work natively. Many sites will offer modern content when they detect a modern browser, and only offer legacy content when they detect Internet Explorer.
-4. Add the app to your Enterprise Site list if it fails testing.
+3. Test the app to verify that it doesn't work natively. Many sites will offer modern content when they detect a modern browser and only offer legacy content when they detect Internet Explorer.
+4. Add the app to your Enterprise Site list if it fails to test.
 
    > [!NOTE]
    > As a best practice, group all of the sites that comprise an app. If the sites all need to be used to accomplish one task, and if they tend to be updated together, that is a good indication that they should be grouped. This way, when you upgrade an app, it's easier to remove the entire site from Internet Explorer mode and start using a modern browser for that app.
@@ -160,11 +160,11 @@ For other policies, we recommend reviewing the policy configurations for [Micros
 You also want to determine how you want to do updates after you deploy Microsoft Edge:
 
 - **Allow Microsoft Edge to update itself** (default). If you choose to allow automatic updates of Microsoft Edge, then Microsoft Edge will automatically update itself at the pace determined by the channel(s) you deployed.
-- **Update Microsoft Edge at your own pace**. If you prefer to have explicit control over when updates are deployed, you can disable automatic updates and deploy it yourself (see the [Update Policy reference](./microsoft-edge-update-policies.md).) After you disable automatic updates you can deploy updates for each channel using one of the following tools:
+- **Update Microsoft Edge at your own pace**. If you prefer to have explicit control over when updates are deployed, you can disable automatic updates and deploy them yourself (see the [Update Policy reference](./microsoft-edge-update-policies.md).) After you disable automatic updates you can deploy updates for each channel using one of the following tools:
 
 - [Intune](/intune/apps/apps-windows-edge?bc=%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=%2fDeployEdge%2ftoc.json)
 - [Configuration Manager](./deploy-edge-with-configuration-manager.md)
-- the deployment tool of your choice.
+- The deployment tool of your choice.
 
 Regardless of your update strategy, we recommend leveraging a ringed deployment strategy. With automatic updates, this means having a representative sample of users running the Beta Channel, to identify issues with what will become the Stable Channel. With manual updates, this might also include additional validation of a pilot group after a new Stable Channel build is released. This is followed by broad deployment.
 
@@ -214,7 +214,7 @@ After you deploy your pilot, you want to capture all the feedback you get from y
 
 ## Broad deployment of Microsoft Edge
 
-After a finishing the pilot and updating your deployment plan with lessons learned from the pilot, you're ready to do a full deployment of Microsoft Edge to all your users.  Congratulations!
+After finishing the pilot and updating your deployment plan with lessons learned from the pilot, you're ready to do a full deployment of Microsoft Edge to all your users.  Congratulations!
 
 ## See also
 
