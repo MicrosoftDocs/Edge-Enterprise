@@ -25,11 +25,11 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. **Note:** If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software vendor directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
+- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. **Note:** If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software publisher directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
 
 - **Updated SmartActionsBlockList Policy.**  The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings.  Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
 
-- **Edge Workspaces improvements for offline functionality.**  Any workspace opened on a device previously is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Microsoft Edge Workspaces improvements for offline functionality.**  Any workspace opened on a device previously is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
@@ -70,7 +70,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Behavioral changes to the beforeunload event.** The behavior of the beforeunload event has changed. Calling preventDefault in a beforeunload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a beforeunload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
+- **Behavioral changes to the beforeunload event.** The behavior of the `beforeunload` event has changed. Calling `preventDefault` in a `beforeunload` event handler triggers a confirmation dialog. Setting `returnValue` to an empty string in a `beforeunload` event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
 
 - **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored.
 
