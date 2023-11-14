@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 118.0.2088.102: November 9, 2023
 
-Fixed various bugs and performance issues for Extended Stable release.
+Fixed various bugs and performance issues for the Extended Stable release.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-9-2023).
 
@@ -53,13 +53,13 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **Compression Dictionary Transport support.** A version of the [Compression Dictionary Transport](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/) feature is available for sites to use by participating in the associated origin trial. If your network uses a middlebox that inspects network traffic and/or you previously encountered issues with the ZSDCH feature, review the [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) page which contains updated guidance.
 
-- **Behavioral changes to the beforeunload event.** The behavior of the beforeunload event has changed such that calling preventDefault in a beforeunload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a beforeunload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
+- **Behavioral changes to the before-unload event.** The behavior of the before-unload event has changed such that calling preventDefault in a before-unload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a before-unload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
 
 - **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored. 
 
 - **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
 
-- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
+- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) policies are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
 
 ### Policy updates
 
@@ -71,7 +71,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ## Version 118.0.2088.88: November 2, 2023
 
-Fixed various bugs and performance issues for Extended Stable release.
+Fixed various bugs and performance issues for the Extended Stable release.
 
 ## Version 118.0.2088.76: October 27, 2023
 
@@ -87,9 +87,9 @@ Fixed various bugs and performance issues.
 
 - **Designer (Preview) in the Microsoft Edge sidebar.**  All Microsoft Edge users with Manifest version 4.8.5 or higher (users can see their version using `edge://sidebar-internals`), including those that are working on managed devices, can now add the Designer (Preview) app to the Edge sidebar by clicking on the "**+**" and setting the Designer (Preview) toggle to on. Designer (Preview) allows you to experience the generative AI capabilities offered by Microsoft Designer [https://designer.microsoft.com](https://designer.microsoft.com) from inside the Edge browser.
 
-  Designer is a new AI system from Microsoft that generates visual, customizable designs based on your text description and images. This release will be available in English for the following country/regions: Australia, India, New Zealand, South Africa, and the United States.
+  Designer is a new AI system from Microsoft that generates visual, customizable designs based on your text description and images. This release will be available in English for the following countries/regions: Australia, India, New Zealand, South Africa, and the United States.
 
-  Administrators can manage sidebar apps including Designer (Preview) icon by using the policies described in [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar). The ID for Designer (Preview) app is 2cb2db96-3bd0-403e-abe2-9269b3761041.
+  Administrators can manage sidebar apps including the Designer (Preview) icon by using the policies described in [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar). The ID for the Designer (Preview) app is 2cb2db96-3bd0-403e-abe2-9269b3761041.
 
 ## Version 118.0.2088.61: October 20, 2023
 
@@ -117,21 +117,21 @@ In an upcoming update to Microsoft Edge, the Bing icon entry point in the Micros
 
 - **Microsoft Edge for Business Banner.**  Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. The in-product Microsoft Edge for Business banner is being deprecated and will no longer be visible.
 
-- **Find on page.** Searching for a word or phrase on a webpage has become easier with the new smart find update to Find on page. For more information, see
-[Find on page](https://www.microsoft.com/edge/features/find-on-page?form=MT00D8). Now when you search with Find on page, we suggest related matches and synonyms making it effortless to find what you're looking for, even if you misspell a word in your search query. When you search, simply select the suggested word to quickly locate the desired word or phrase on the page. Data is sent to Microsoft for processing.  For more information, see [Microsoft Edge's Privacy Whitepaper](/microsoft-edge/privacy-whitepaper/). Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.
+- **Find on page.** Searching for a word or phrase on a webpage has become easier with the new smart find update to the Find on page. For more information, see
+[Find on page](https://www.microsoft.com/edge/features/find-on-page?form=MT00D8). Now when you search with Find on the page, we suggest related matches and synonyms making it effortless to find what you're looking for, even if you misspell a word in your search query. When you search, simply select the suggested word to quickly locate the desired word or phrase on the page. Data is sent to Microsoft for processing.  For more information, see [Microsoft Edge's Privacy Whitepaper](/microsoft-edge/privacy-whitepaper/). Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.
 
-- **New SmartScreen policy.**  The [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) policy lets administrators create a dictionary of file type extensions with a corresponding list of domains that are exempted from SmartScreen AppRep warnings.  Files with file type extensions specified for domains identified by this policy are still subject to file type extension-based security warnings and mixed-content download warnings.
+- **New SmartScreen policy.**  The [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) policy lets administrators create a dictionary of file type extensions with a corresponding list of domains that are exempted from SmartScreen AppRep warnings.  Files with file-type extensions specified for domains identified by this policy are still subject to file-type extension-based security warnings and mixed-content download warnings.
 
-- **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allows administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps. When a policy is configured to Allow, updates occur on a metered connection, such as cellular connections or others where data usage is controlled.
+- **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allow administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps. When a policy is configured to Allow, updates occur on a metered connection, such as cellular connections or others where data usage is controlled.
 
 ### Policy updates
 
 #### New policies
 
-- [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) - Control the behavior for the cancel dialog produced by the beforeunload event
+- [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) - Control the behavior for the cancel dialog produced by the before-unload event
 - [CompressionDictionaryTransportEnabled](/deployedge/microsoft-edge-policies#compressiondictionarytransportenabled) - Enable compression dictionary transport support
 - [DataUrlInSvgUseEnabled](/deployedge/microsoft-edge-policies#dataurlinsvguseenabled) - Data URL support for SVGUseElement
-- [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) - Disable SmartScreen AppRep based warnings for specified file types on specified domains
+- [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) - Disable SmartScreen AppRep-based warnings for specified file types on specified domains
 - [ForceBuiltInPushMessagingClient](/deployedge/microsoft-edge-policies#forcebuiltinpushmessagingclient) - Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service
 - [ForcePermissionPolicyUnloadDefaultEnabled](/deployedge/microsoft-edge-policies#forcepermissionpolicyunloaddefaultenabled) - Controls whether unload event handlers can be disabled
 - [PictureInPictureOverlayEnabled](/deployedge/microsoft-edge-policies#pictureinpictureoverlayenabled) - Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge
@@ -156,7 +156,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 Fixed various bugs and performance issues.
 
 > [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update to the Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
 
@@ -164,7 +164,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 #### New policies
 
-- [NewTabPageBingChatEnabled](/deployedge/microsoft-edge-policies#newtabpagebingchatenabled) - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
+- [NewTabPageBingChatEnabled](/deployedge/microsoft-edge-policies#newtabpagebingchatenabled) - Disable Bing chat entry points on Microsoft Edge Enterprise new tab page
 - [NewTabPageCompanyLogoEnabled](/deployedge/microsoft-edge-policies#newtabpagecompanylogoenabled) - Hide the company logo on the Microsoft Edge new tab page
 
 ## Version 116.0.1938.98: September 29, 2023
@@ -172,7 +172,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 Fixed various bugs and performance issues.
 
 > [!IMPORTANT]
-> This update to Extended Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update to the Extended Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
 
