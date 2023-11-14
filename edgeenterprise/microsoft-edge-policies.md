@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/09/2023
+ms.date: 11/13/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,18 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|[AutomaticProfileSwitchingSiteList](#automaticprofileswitchingsitelist)|Configure the automatic profile switching site list|
-|[EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy)|Microsoft Edge management service policy overrides platform policy.|
-|[EdgeManagementUserPolicyOverridesCloudMachinePolicy](#edgemanagementuserpolicyoverridescloudmachinepolicy)|Allow Microsoft Edge management service user policies to override policies set through an enrollment token.|
-|[AutoDiscardSleepingTabsEnabled](#autodiscardsleepingtabsenabled)|Configure auto discard sleeping tabs|
-|[Edge3PSerpTelemetryEnabled](#edge3pserptelemetryenabled)|Edge 3P SERP Telemetry Enabled|
-|[WebAppSettings](#webappsettings)|Web App management settings|
 
 ## Available policies
 
