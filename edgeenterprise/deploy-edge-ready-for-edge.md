@@ -15,7 +15,7 @@ description: "Ready for Microsoft Edge"
 # Ready for Microsoft Edge
 
 > [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise-grade security, productivity, manageability, and AI built in.
 
 The article provides information for the IT Administrator who's planning a Microsoft Edge deployment and needs information about application compatibility and support.
 
@@ -107,7 +107,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Monday.com  | Monday  | https://support.monday.com/hc/en-us/articles/360002145219-Supported-Web-Browsers  |
 | NetSuite (Oracle)  | Oracle NetSuite   | https://nlcorp.app.netsuite.com/core/media/media.nl?id=94209463&c=NLCORP&h=3735c785dc0db0151a4e&_xt=.pdf   |
 | New Relic  | New Relic UI  | https://docs.newrelic.com/docs/using-new-relic/user-interface-functions/view-your-data/supported-browsers-new-relics-ui  |
-| onepointProject | One Point Projects | http://ftp.onepoint-projects.com/documentation/latest/onepoint-server-installation.pdf   |
+| OnepointProject | One Point Projects | http://ftp.onepoint-projects.com/documentation/latest/onepoint-server-installation.pdf   |
 | Pega | Pega CRM   | https://community.pega.com/knowledgebase/articles/pega-platform-client-operating-system-and-browser-support  |
 | PeopleFluent | PeopleFluent Talent Management  | https://tmhelp.peoplefluent.com/11.12.0.2.65509/en_US/End%20User/welcome.htm#t=common%2Fhw_sw_reqs%2Fweb_browser_support_policy.htm |
 | Planview  | PPM Pro  | https://success.planview.com/Planview_PPM_Pro/150_PPM_Pro_Administrator_Documentation/015_System_Settings/004_System_Requirements  |
@@ -117,7 +117,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Sansan  | Eight (JP)  | https://eight.zendesk.com/hc/ja/articles/360000571836 |
 | SAS  | SAS   | https://support.sas.com/en/documentation/third-party-software-reference/9-4/support-for-9-4-web-browsers.html   |
 | Shopify  | Shopify  | https://help.shopify.com/en/manual/intro-to-shopify/shopify-admin/supported-browsers  |
-| Sitecore | Sirecore XP  | https://kb.sitecore.net/articles/087164 |
+| Sitecore | Sitecore XP  | https://kb.sitecore.net/articles/087164 |
 | Smartsheet   | Smartsheet   | https://help.smartsheet.com/articles/506775-system-requirements-for-using-smartsheet   |
 | Stack Overflow | Stack Overflow  | https://stackoverflow.com/help/browser-support  |
 | SugarCRM  | Shopify | https://support.sugarcrm.com/Resources/Supported_Platforms/  |
