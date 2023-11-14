@@ -15,7 +15,7 @@ description: "Microsoft Edge in your environment"
 # Microsoft Edge in your environment
 
 > [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
+> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise-grade security, productivity, manageability, and AI built in.
 
 This article describes how to prepare to deploy Microsoft Edge when Microsoft Edge Legacy reaches its end of service.
 
@@ -29,7 +29,7 @@ After you plan your deployment, use one of the following approaches to prepare t
 
 - **Install group policies to customize your Microsoft Edge update approach**. For more information, see [Configure Microsoft Edge policy settings on Windows](configure-microsoft-edge.md), and pay special attention to the [Update Policy reference](microsoft-edge-update-policies.md) material. If you install group policies to manage your updates before installing April's Update Tuesday release, Microsoft Edge will immediately start respecting your policy. If there isn't any installed group policy, Microsoft Edge will automatically update itself.
 
-- **Remove the Microsoft Edge Legacy desktop application before its end of service date of March 9, 2021 and deploy Microsoft Edge**. For Windows 10 RS4 through 20H1, you can do this by using Windows Updates. For more information, see [Deploy Microsoft Edge with Windows 10 updates](deploy-edge-with-windows-10-updates.md).
+- **Remove the Microsoft Edge Legacy desktop application before its end of service date of March 9, 2021, and deploy Microsoft Edge**. For Windows 10 RS4 through 20H1, you can do this by using Windows Updates. For more information, see [Deploy Microsoft Edge with Windows 10 updates](deploy-edge-with-windows-10-updates.md).
 
 ## See also
 
