@@ -2420,39 +2420,6 @@ ManagedFavorites
     "children": [
       {
         "name": "Microsoft Edge Insiders",
-        "url": www.microsoftedgeinsider.com
-      },
-      {
-        "name": "Microsoft Edge",
-        "url": www.microsoft.com/windows/microsoft-edge
-      }
-    ],
-    "name": "Microsoft Edge links"
-  }
-]
-
-```
-
-##### Example value (iOS):
-
-```
-
-SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
-  {
-    "toplevel_name": "My managed favorites folder"
-  },
-  {
-    "name": "Microsoft",
-    "url": "microsoft.com"
-  },
-  {
-    "name": "Bing",
-    "url": "bing.com"
-  },
-  {
-    "children": [
-      {
-        "name": "Microsoft Edge Insiders",
         "url": "www.microsoftedgeinsider.com"
       },
       {
@@ -2466,7 +2433,49 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 
 ```
 
+##### Example value (iOS):
+```xml
 
+<key>ManagedFavorites</key>
+<array>
+  <dict>
+    <key>toplevel_name</key>
+    <string>My managed favorites folder</string>
+  </dict>
+  <dict>
+    <key>name</key>
+    <string>Microsoft</string>
+    <key>url</key>
+    <string>microsoft.com</string>
+  </dict>
+  <dict>
+    <key>name</key>
+    <string>Bing</string>
+    <key>url</key>
+    <string>bing.com</string>
+  </dict>
+  <dict>
+    <key>children</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Microsoft Edge Insiders</string>
+        <key>url</key>
+        <string>www.microsoftedgeinsider.com</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Microsoft Edge</string>
+        <key>url</key>
+        <string>www.microsoft.com/windows/microsoft-edge</string>
+      </dict>
+    </array>
+    <key>name</key>
+    <string>Microsoft Edge links</string>
+  </dict>
+</array>
+
+```
 
 [Back to top](#microsoft-edge-mobile---policies)
 
