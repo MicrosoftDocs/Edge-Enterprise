@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 11/07/2023
+ms.date: 11/17/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -252,19 +252,19 @@ After selecting a sidebar app, you can configure its installation policy to Allo
 
 #### Manage enterprise secure AI settings
 
-To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot Pro, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
+To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
 
-##### Manage settings for Copilot Pro
+##### Manage settings for Copilot
 
-The page will detect whether your organization has access to Copilot Pro and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:
+The page will detect whether your organization has access to Copilot and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:
 
-- If Copilot Pro and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
+- If Copilot and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
 
-- If Copilot Pro is enabled and the Microsoft Edge sidebar is disabled, the unapplicable settings will be disabled. However, the option to enable the sidebar will appear, and if enabled, will unlock the ability to configure the now applicable setting.
+- If Copilot is enabled and the Microsoft Edge sidebar is disabled, the unapplicable settings will be disabled. However, the option to enable the sidebar will appear, and if enabled, will unlock the ability to configure the now applicable setting.
 
-- If Copilot Pro is disabled, all policy settings in this section won't be available to configure.
+- If Copilot is disabled, all policy settings in this section won't be available to configure.
 
-- If it can't be identified that Copilot Pro is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
+- If it can't be identified that Copilot is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
 
 ##### Manage settings for other AI features
 
@@ -305,31 +305,25 @@ Use these steps as a guide for setting an enrollment token:
 
 #### Control policy source precedence
 
-As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  **CloudPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
+As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) policy. This is a private policy and must be set via the registry.
 
-> [!IMPORTANT]
-> This policy is highly experimental and will probably change in both name and functionality at any time. Don't take any dependencies on it and only use it for testing.
-
-Set the value of [CloudPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
+Set the value of [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
 
 ```
-reg add HKLM\Software\Policies\Microsoft\Edge /v CloudPolicyOverridesPlatformPolicy /t REG_ DWORD /d 1 
+reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementPolicyOverridesPlatformPolicy /t REG_ DWORD /d 1 
 ```
 
 #### Control user/device policy precedence
 
-Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge management service, the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeManagementEnrollmentToken] is applied as Device Policy.
+Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge management service, the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) is applied as Device Policy.
 
-If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [CloudUserPolicyOverridesCloudMachinePolicy] policy.
+If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) policy.
 
-> [!IMPORTANT]
-> This policy is highly experimental and will probably change in both name and functionality at any time. Don't take any dependencies on it and only use it for testing.
-
-1. You can set precedence via the registry by setting the value of "CloudUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
+1. You can set precedence via the registry by setting the value of "EdgeManagementUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
 2. Add the reg key using the following command line example as a guide. (Remember to use your profile ID.)
 
    ```
-   reg add HKLM\Software\Policies\Microsoft\Edge /v CloudUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
+   reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementUserPolicyOverridesCloudMachinePolicy /t REG_ DWORD /d 1 
    ```
 
 3. If Microsoft Edge is open, restart it.
