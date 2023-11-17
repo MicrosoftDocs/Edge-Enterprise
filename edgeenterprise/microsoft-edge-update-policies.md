@@ -2,8 +2,8 @@
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
-manager: venkatk
-ms.date: 03/23/2023
+manager: archandr
+ms.date: 10/19/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ For information about other policies available in Microsoft Edge, check out [Mic
 ## Available policies
 These tables lists all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-|&nbsp;|&nbsp;|
+|||
 |-|-|
 |[Applications](#applications)|[Preferences](#preferences)|
 |[Proxy Server](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
@@ -39,14 +39,16 @@ These tables lists all of the update-related group policies available in this re
 |[Install](#install)|Allow installation (per channel)|
 |[Update](#update)|Update policy override (per channel)|
 |[Allowsxs](#allowsxs)|Allow Microsoft Edge Side by Side browser experience|
-|[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Prevent Desktop Shortcut creation upon install default|
-|[CreateDesktopShortcut](#createdesktopshortcut)|Prevent Desktop Shortcut creation upon install (per channel)|
+|[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Create Desktop Shortcut upon install default|
+|[CreateDesktopShortcut](#createdesktopshortcut)|Create Desktop Shortcut upon install (per channel)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Rollback to Target version (per channel)|
 |[TargetVersionPrefix](#targetversionprefix)|Target version override (per channel)|
 |[TargetChannel](#targetchannel)|Target Channel override (per channel)|
 |[RemoveDesktopShortcutDefault](#removedesktopshortcutdefault)|Remove Desktop Shortcuts upon update default|
 |[RemoveDesktopShortcut](#removedesktopshortcut)|Remove Desktop Shortcuts upon update (per channel)|
 |[EdgePreview](#edgepreview)|Allow users in the Windows Insider Program to be enrolled in Edge Preview (per channel)|
+|[MeteredUpdatesDefault](#meteredupdatesdefault)|Let users update all apps on metered connections|
+|[MeteredUpdates](#meteredupdates)|Let users update on metered connections (per channel)|
 
 ### [Preferences](#preferences-policies)
 |Policy Name|Caption|
@@ -77,18 +79,19 @@ These tables lists all of the update-related group policies available in this re
 [Back to top](#microsoft-edge---update-policies)
 ### InstallDefault
 #### Allow installation default
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
 You can specify the default behavior of all channels to allow or block Microsoft Edge on domain-joined devices.
 
-You can override this policy for individual channels by enabling the '[Allow installation](#install-webview)' policy for specific channels.
+You can override this policy for individual channels by enabling the '[Allow installation](#install)' policy for specific channels.
 
-If you disable this policy, the installation of Microsoft Edge is blocked. This only affects the installation of Microsoft Edge software when the '[Allow installation](#install-webview)' policy is set to Not Configured.
+If you disable this policy, the installation of Microsoft Edge is blocked. This only affects the installation of Microsoft Edge software when the '[Allow installation](#install)' policy is set to Not Configured.
 
 This policy doesn't prevent Microsoft Edge Update from running or prevent users from installing Microsoft Edge software using other methods.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: InstallDefault
@@ -108,10 +111,11 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### UpdateDefault
 #### Update policy override default
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
-Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge. Can be overridden for individual channels by specifying the '[Update policy override](#update)' policy for those specific channels.
+Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge. Can be overridden for individual channels by specifying the '[Update policy override](#update-webview)' policy for those specific channels.
 
   If you enable this policy, Microsoft Edge Update handles Microsoft Edge updates according to how you configure the following options:
    - Always allow updates: Updates are always applied when found, either by periodic update check or by a manual update check.
@@ -121,9 +125,9 @@ Lets you specify the default behavior for all channels concerning the way Micros
 
   If you select manual updates, make sure you periodically check for updates by using the app's manual update mechanism, if available. If you disable updates, periodically check for updates, and distribute them to users.
 
-  If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update)' policy.
+  If you don't enable and configure this policy, Microsoft Edge Update handles available updates as specified by the '[Update policy override](#update-webview)' policy.
 
-  This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+  This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: UpdateDefault
@@ -143,6 +147,7 @@ Lets you specify the default behavior for all channels concerning the way Micros
 
 ### Install
 #### Allow installation
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -160,7 +165,7 @@ If you set this policy to Force Installs (Machine-Wide), 'Microsoft Edge' may on
 
 If you set this policy to Force Installs (Per-User), 'Microsoft Edge' may only be deployed on a Per-User basis to all machines if Microsoft Edge Update is pre-installed Per-User. Requires Microsoft Edge Update 1.3.155.43 or higher.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: Install
@@ -188,6 +193,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### Update
 #### Update policy override
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -205,7 +211,7 @@ If you don't enable and configure this policy, Microsoft Edge Update handles ava
 
 See [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) for more information.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: Update
@@ -233,16 +239,17 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### Allowsxs
 #### Allow Microsoft Edge Side by Side browser experience
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
-This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side.
+This policy lets a user run Microsoft Edge (Edge HTML) and Microsoft Edge (Chromium-based) side-by-side
 
-If this policy is set to “Not configured”, Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Disabled” setting.
+If this policy is set to "Not configured", Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the "Disabled" setting.
 
-The “Disabled” setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the “Not Configured” setting.
+The "Disabled" setting blocks a side-by-side experience and Microsoft Edge (Chromium-based) will replace Microsoft Edge (Edge HTML) after the Microsoft Edge (Chromium-based) stable channel and the November 2019 security updates are installed.  This is the same behavior as the "Not Configured" setting.
 
-When this policy is “Enabled”, Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
+When this policy is "Enabled", Microsoft Edge (Chromium-based) and Microsoft Edge (Edge HTML) can run side-by-side after Microsoft Edge (Chromium-based) is installed.
 
 For this group policy to take affect, it must be configured before the automatic install of Microsoft Edge (Chromium-based) by Windows Update. Note: ​A user can block the automatic update of Microsoft Edge (Chromium-based) by using the Microsoft Edge (Chromium-based) Blocker Toolkit.
 
@@ -265,7 +272,8 @@ Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side
 
 
 ### CreateDesktopShortcutDefault
-#### Prevent Desktop Shortcut creation upon install default
+#### Create Desktop Shortcut upon install default
+
 >Microsoft Edge Update 1.3.128.0 and later
 
 #### Description
@@ -273,12 +281,12 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 
   If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.
   If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.
-  If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
+  If you don't configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
   If Microsoft Edge is already installed, this policy will have no effect.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: CreateDesktopShortcutDefault
-- GP name: Prevent Desktop Shortcut creation upon install default
+- GP name: Create Desktop Shortcut upon install default
 - GP path: Administrative Templates/Microsoft Edge Update/Applications
 - GP ADMX file name: msedgeupdate.admx
 ##### Windows Registry Settings
@@ -293,20 +301,21 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 
 
 ### CreateDesktopShortcut
-#### Prevent Desktop Shortcut creation upon install
+#### Create Desktop Shortcut upon install
+
 >Microsoft Edge Update 1.3.128.0 and later
 
 #### Description
 If you enable this policy a desktop shortcut is created when Microsoft Edge is installed.
   If you disable this policy, no desktop shortcut will be created when Microsoft Edge is installed.
-  If you don’t configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
+  If you don't configure this policy a desktop shortcut to Microsoft Edge will be created during installation.
   If Microsoft Edge is already installed, this policy will have no effect.
 
-  If you don't configure this policy for a channel, the '[Prevent Desktop Shortcut creation upon install default](#createdesktopshortcutdefault)' policy configuration determines shortcut creation when Microsoft Edge is installed.
+  If you don't configure this policy for a channel, the '[Create Desktop Shortcut upon install default](#createdesktopshortcutdefault)' policy configuration determines shortcut creation when Microsoft Edge is installed.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: CreateDesktopShortcut
-- GP name: Prevent Desktop Shortcut creation upon install
+- GP name: Create Desktop Shortcut upon install
 - GP path: 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
@@ -330,12 +339,13 @@ If you enable this policy a desktop shortcut is created when Microsoft Edge is i
 
 ### RollbackToTargetVersion
 #### Rollback to Target version
+
 >Microsoft Edge Update 1.3.133.3 and later
 
 #### Description
 Specifies that Microsoft Edge Update should rollback installations of Microsoft Edge to the version indicated in '[Target version override](#targetversionprefix)'.
 
-This policy has no effect unless '[Target version override](#targetversionprefix)' is set and '[Update policy override](#update)' is set to one of the ON states (Always allow updates, Automatic silent updates only, Manual updates only).
+This policy has no effect unless '[Target version override](#targetversionprefix)' is set and '[Update policy override](#update-webview)' is set to one of the ON states (Always allow updates, Automatic silent updates only, Manual updates only).
 
 If you disable this policy or don't configure it, installs that have a version higher than that specified by '[Target version override](#targetversionprefix)' will be left as-is.
 
@@ -351,7 +361,7 @@ This policy applies to Microsoft Edge version 86 or later.
 
 See [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) for more information.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: RollbackToTargetVersion
@@ -379,6 +389,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### TargetVersionPrefix
 #### Target version override
+
 >Microsoft Edge Update 1.3.119.43 and later
 
 #### Description
@@ -392,7 +403,7 @@ If the specified version does not exist, or is improperly formatted, then Micros
 
 See [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) for more information.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: TargetVersionPrefix
@@ -420,6 +431,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### TargetChannel
 #### Target Channel override
+
 >Microsoft Edge Update 1.3.147.1 and later
 
 #### Description
@@ -434,7 +446,7 @@ If you enable this poicy, the Microsoft Edge will be updated to the Channel acco
 
 If you do not configure this policy, Microsoft Edge will be updated to the latest version available for the default Channel.
 
-This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.
+This policy is available only on Windows instances that are joined to a Microsoft&reg; Active Directory&reg; domain.
 #### Windows information and settings
 ##### Group Policy (ADMX) info
 - GP unique name: TargetChannel
@@ -456,6 +468,7 @@ dev
 
 ### RemoveDesktopShortcutDefault
 #### Remove Desktop Shortcuts upon update default
+
 >Microsoft Edge Update 1.3.155.1 and later
 
 #### Description
@@ -483,6 +496,7 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 
 ### RemoveDesktopShortcut
 #### Remove Desktop Shortcuts upon update
+
 >Microsoft Edge Update 1.3.155.1 and later
 
 #### Description
@@ -518,10 +532,11 @@ If you set this policy to "Force delete system-level Desktop Shortcuts", any exi
 
 ### EdgePreview
 #### Allow users in the Windows Insider Program to be enrolled in Edge Preview
+
 >Microsoft Edge Update 1.3.168.21 and later
 
 #### Description
-Lets you specify whether users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update. A device will not be enrolled in Edge Preview if TargetVersionPrefix is enabled or TargetChannel is configured.
+Lets you specify whether users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
 
   - If you enable this policy, users in the Windows Insider Program are enrolled in Edge Preview via Microsoft Edge Update.
 
@@ -553,11 +568,80 @@ Lets you specify whether users in the Windows Insider Program are enrolled in Ed
 [Back to top](#microsoft-edge---update-policies)
 
 
+### MeteredUpdatesDefault
+#### Let users update all apps on metered connections
+
+>Microsoft Edge Update 1.3.179.5 and later
+
+#### Description
+Specifies whether Microsoft Edge Update will update on connections marked as metered, such as cellular connections or others where data usage is controlled for all apps. 
+
+If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
+
+Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
+
+Updates disabled: Updates are not downloaded when using a metered connection.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: MeteredUpdatesDefault
+- GP name: Let users update all apps on metered connections
+- GP path: Administrative Templates/Microsoft Edge Update/Applications
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: MeteredUpdatesDefault
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
+
+
+### MeteredUpdates
+#### Let users update on metered connections
+
+>Microsoft Edge Update 1.3.179.5 and later
+
+#### Description
+Specifies whether Microsoft Edge Update will update on connections marked as metered, such as cellular connections or others where data usage is controlled for the Microsoft Edge browser. 
+
+If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
+
+Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
+
+Disable updates: Updates are not downloaded when using a metered connection.
+#### Windows information and settings
+##### Group Policy (ADMX) info
+- GP unique name: MeteredUpdates
+- GP name: Let users update on metered connections
+- GP path: 
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
+- GP ADMX file name: msedgeupdate.admx
+##### Windows Registry Settings
+- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Value Name: 
+  - (Stable): MeteredUpdates{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Beta): MeteredUpdates{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Canary): MeteredUpdates{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Dev): MeteredUpdates{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
+- Value Type: REG_DWORD
+##### Example value:
+```
+0x00000001
+```
+[Back to top](#microsoft-edge---update-policies)
+
+
 ## Preferences policies
 
 [Back to top](#microsoft-edge---update-policies)
 ### AutoUpdateCheckPeriodMinutes
 #### Auto-update check period override
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -585,6 +669,7 @@ The 'Update policy override default' and per-application 'Update policy override
 
 ### UpdatesSuppressed
 #### Time period in each day to suppress auto-update check
+
 >Microsoft Edge Update 1.3.33.5 and later
 
 #### Description
@@ -619,6 +704,7 @@ start min  : 0x00000002
 [Back to top](#microsoft-edge---update-policies)
 ### ProxyMode
 #### Choose how to specify a proxy server settings
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -652,6 +738,7 @@ fixed_servers
 
 ### ProxyPacUrl
 #### URL to proxy .pac file
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -681,6 +768,7 @@ https://www.microsoft.com
 
 ### ProxyServer
 #### Address or URL of a proxy server
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -713,6 +801,7 @@ https://www.microsoft.com
 [Back to top](#microsoft-edge---update-policies)
 ### UpdaterExperimentationAndConfigurationServiceControl
 #### Control updater's communication with the Experimentation and Configuration Service
+
 >Microsoft Edge Update 1.3.145.1 and later
 
 #### Description
@@ -749,6 +838,7 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 [Back to top](#microsoft-edge---update-policies)
 ### Install (WebView)
 #### Allow installation
+
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
@@ -783,6 +873,7 @@ Lets you specify whether the WebView2 Runtime can be installed using Microsoft E
 
 ### Update (WebView)
 #### Update policy override
+
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
