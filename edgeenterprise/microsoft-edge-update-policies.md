@@ -1,15 +1,15 @@
 ---
 title: "Microsoft Edge Update Policy Documentation"
 ms.author: stmoody
-author: brianalt-msft
-manager: tahills
+author: dan-wesley
+manager: archandr
 ms.date: 10/19/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom:
+ms.custom: generated
 description: "Documentation for all policies supported by the Microsoft Edge Updater"
 ---
 
@@ -79,6 +79,7 @@ These tables lists all of the update-related group policies available in this re
 [Back to top](#microsoft-edge---update-policies)
 ### InstallDefault
 #### Allow installation default
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -110,6 +111,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### UpdateDefault
 #### Update policy override default
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -145,6 +147,7 @@ Lets you specify the default behavior for all channels concerning the way Micros
 
 ### Install
 #### Allow installation
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -190,6 +193,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### Update
 #### Update policy override
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -235,6 +239,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### Allowsxs
 #### Allow Microsoft Edge Side by Side browser experience
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -268,6 +273,7 @@ Starting with Windows 10 version 20H2 Microsoft Edge Legacy and the side-by-side
 
 ### CreateDesktopShortcutDefault
 #### Create Desktop Shortcut upon install default
+
 >Microsoft Edge Update 1.3.128.0 and later
 
 #### Description
@@ -296,6 +302,7 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 
 ### CreateDesktopShortcut
 #### Create Desktop Shortcut upon install
+
 >Microsoft Edge Update 1.3.128.0 and later
 
 #### Description
@@ -332,6 +339,7 @@ If you enable this policy a desktop shortcut is created when Microsoft Edge is i
 
 ### RollbackToTargetVersion
 #### Rollback to Target version
+
 >Microsoft Edge Update 1.3.133.3 and later
 
 #### Description
@@ -381,6 +389,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### TargetVersionPrefix
 #### Target version override
+
 >Microsoft Edge Update 1.3.119.43 and later
 
 #### Description
@@ -422,6 +431,7 @@ This policy is available only on Windows instances that are joined to a Microsof
 
 ### TargetChannel
 #### Target Channel override
+
 >Microsoft Edge Update 1.3.147.1 and later
 
 #### Description
@@ -458,6 +468,7 @@ dev
 
 ### RemoveDesktopShortcutDefault
 #### Remove Desktop Shortcuts upon update default
+
 >Microsoft Edge Update 1.3.155.1 and later
 
 #### Description
@@ -485,6 +496,7 @@ Lets you specify the default behavior for all channels for creating a desktop sh
 
 ### RemoveDesktopShortcut
 #### Remove Desktop Shortcuts upon update
+
 >Microsoft Edge Update 1.3.155.1 and later
 
 #### Description
@@ -520,6 +532,7 @@ If you set this policy to "Force delete system-level Desktop Shortcuts", any exi
 
 ### EdgePreview
 #### Allow users in the Windows Insider Program to be enrolled in Edge Preview
+
 >Microsoft Edge Update 1.3.168.21 and later
 
 #### Description
@@ -557,6 +570,7 @@ Lets you specify whether users in the Windows Insider Program are enrolled in Ed
 
 ### MeteredUpdatesDefault
 #### Let users update all apps on metered connections
+
 >Microsoft Edge Update 1.3.179.5 and later
 
 #### Description
@@ -586,6 +600,7 @@ Updates disabled: Updates are not downloaded when using a metered connection.
 
 ### MeteredUpdates
 #### Let users update on metered connections
+
 >Microsoft Edge Update 1.3.179.5 and later
 
 #### Description
@@ -626,6 +641,7 @@ Disable updates: Updates are not downloaded when using a metered connection.
 [Back to top](#microsoft-edge---update-policies)
 ### AutoUpdateCheckPeriodMinutes
 #### Auto-update check period override
+
 >Microsoft Edge Update 1.2.145.5 and later
 
 #### Description
@@ -653,6 +669,7 @@ The 'Update policy override default' and per-application 'Update policy override
 
 ### UpdatesSuppressed
 #### Time period in each day to suppress auto-update check
+
 >Microsoft Edge Update 1.3.33.5 and later
 
 #### Description
@@ -687,6 +704,7 @@ start min  : 0x00000002
 [Back to top](#microsoft-edge---update-policies)
 ### ProxyMode
 #### Choose how to specify a proxy server settings
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -720,6 +738,7 @@ fixed_servers
 
 ### ProxyPacUrl
 #### URL to proxy .pac file
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -749,6 +768,7 @@ https://www.microsoft.com
 
 ### ProxyServer
 #### Address or URL of a proxy server
+
 >Microsoft Edge Update 1.3.21.81 and later
 
 #### Description
@@ -781,6 +801,7 @@ https://www.microsoft.com
 [Back to top](#microsoft-edge---update-policies)
 ### UpdaterExperimentationAndConfigurationServiceControl
 #### Control updater's communication with the Experimentation and Configuration Service
+
 >Microsoft Edge Update 1.3.145.1 and later
 
 #### Description
@@ -817,6 +838,7 @@ If you don't configure this policy, on an unmanaged device the behavior is same 
 [Back to top](#microsoft-edge---update-policies)
 ### Install (WebView)
 #### Allow installation
+
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
@@ -851,6 +873,7 @@ Lets you specify whether the WebView2 Runtime can be installed using Microsoft E
 
 ### Update (WebView)
 #### Update policy override
+
 >Microsoft Edge Update 1.3.127.1 and later
 
 #### Description
