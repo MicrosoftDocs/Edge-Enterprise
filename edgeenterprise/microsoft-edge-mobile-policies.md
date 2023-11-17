@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/08/2023
+ms.date: 11/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -2400,11 +2400,11 @@ ManagedFavorites
 
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 
-ManagedFavorites = [
+  [
   {
     "toplevel_name": "My managed favorites folder"
   },
@@ -2420,16 +2420,60 @@ ManagedFavorites = [
     "children": [
       {
         "name": "Microsoft Edge Insiders",
-        "url": www.microsoftedgeinsider.com
+        "url": "www.microsoftedgeinsider.com"
       },
       {
         "name": "Microsoft Edge",
-        "url": www.microsoft.com/windows/microsoft-edge
+        "url": "www.microsoft.com/windows/microsoft-edge"
       }
     ],
     "name": "Microsoft Edge links"
   }
 ]
+
+```
+
+##### Example value (iOS):
+```xml
+
+<key>ManagedFavorites</key>
+<array>
+  <dict>
+    <key>toplevel_name</key>
+    <string>My managed favorites folder</string>
+  </dict>
+  <dict>
+    <key>name</key>
+    <string>Microsoft</string>
+    <key>url</key>
+    <string>microsoft.com</string>
+  </dict>
+  <dict>
+    <key>name</key>
+    <string>Bing</string>
+    <key>url</key>
+    <string>bing.com</string>
+  </dict>
+  <dict>
+    <key>children</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Microsoft Edge Insiders</string>
+        <key>url</key>
+        <string>www.microsoftedgeinsider.com</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Microsoft Edge</string>
+        <key>url</key>
+        <string>www.microsoft.com/windows/microsoft-edge</string>
+      </dict>
+    </array>
+    <key>name</key>
+    <string>Microsoft Edge links</string>
+  </dict>
+</array>
 
 ```
 
