@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 11/15/2023
+ms.date: 11/16/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -283,10 +283,7 @@ Use these steps as a guide for setting an enrollment token:
 
 As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  **EdgeManagementPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
 
-> [!IMPORTANT]
-> This policy is highly experimental and will probably change in both name and functionality at any time. Don't take any dependencies on it and only use it for testing.
-
-Set the value of [EdgeManagementPolicyOverridesPlatformPolicy] under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
+Set the value of [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
 
 ```
 reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementPolicyOverridesPlatformPolicy /t REG_ DWORD /d 1 
@@ -294,12 +291,9 @@ reg add HKLM\Software\Policies\Microsoft\Edge /v EdgeManagementPolicyOverridesPl
 
 #### Control user/device policy precedence
 
-Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge management service, the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeManagementEnrollmentToken] is applied as Device Policy.
+Microsoft Edge policy has the concept of the audience that the policy is meant to apply to, this can be either "User" or "Device". In Microsoft Edge management service, the policy applied via Group Assignment is applied as User Policy, while policy pulled down via [EdgeManagementEnrollmentToken](/deployedge/microsoft-edge-policies#edgemanagementenrollmenttoken) is applied as Device Policy.
 
-If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [EdgeManagementUserPolicyOverridesCloudMachinePolicy] policy.
-
-> [!IMPORTANT]
-> This policy is highly experimental and will probably change in both name and functionality at any time. Don't take any dependencies on it and only use it for testing.
+If there's a conflict with policy that User and Device are both trying to set, Device Policy takes precedence over User Policy. If you want to give User Policy precendence you can change precedence in [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) policy.
 
 1. You can set precedence via the registry by setting the value of "EdgeManagementUserPolicyOverridesCloudMachinePolicy" under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there, create it.
 2. Add the reg key using the following command line example as a guide. (Remember to use your profile ID.)
