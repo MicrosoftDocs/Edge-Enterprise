@@ -34,7 +34,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID (*Microsoft Entra ID*) with refreshed visual treatment. | Available |
+| Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra (formerly *Azure Active Directory*) with refreshed visual treatment. | Available |
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
@@ -42,7 +42,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 ## Work Browser (Visual Refresh)
 
-Microsoft Edge for Business is available now, and the existing Microsoft Entra (*Microsoft Entra ID*) profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
+Microsoft Edge for Business is available now, and the existing Microsoft Entra (formerly *Azure Active Directory*) profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
 
 > [!NOTE]
 > All existing Microsoft Entra profile settings stay the same, including favorites, history, and saved passwords.
