@@ -253,7 +253,7 @@ After selecting a sidebar app, you can configure its installation policy to Allo
 #### Manage enterprise secure AI settings
 
 > [!NOTE]
-> This feature is currently only available in preview.
+> This feature is currently rolling out for preview.
 
 To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
 
