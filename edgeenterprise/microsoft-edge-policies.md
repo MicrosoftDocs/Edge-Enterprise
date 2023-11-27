@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/13/2023
+ms.date: 11/17/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -25,6 +25,16 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+
+## New policies
+
+The following table lists the new and obsoleted policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[PostQuantumKeyAgreementEnabled](#postquantumkeyagreementenabled)|Enable post-quantum key agreement for TLS|
+|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls (obsolete)|
 
 ## Available policies
 
@@ -597,6 +607,7 @@ These tables list all of the browser-related group policies available in this re
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Allow personalization of ads, Microsoft Edge, search, news and other Microsoft services by sending browsing history, favorites and collections, usage and other browsing data to Microsoft|
 |[PictureInPictureOverlayEnabled](#pictureinpictureoverlayenabled)|Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge|
 |[PinningWizardAllowed](#pinningwizardallowed)|Allow Pin to taskbar wizard|
+|[PostQuantumKeyAgreementEnabled](#postquantumkeyagreementenabled)|Enable post-quantum key agreement for TLS|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Enable Proactive Authentication (obsolete)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
@@ -637,7 +648,7 @@ These tables list all of the browser-related group policies available in this re
 |[SearchbarIsEnabledOnStartup](#searchbarisenabledonstartup)|Allow the Search bar at Windows startup|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Websites or domains that don't need permission to use direct Security Key attestation|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Send all intranet sites to Internet Explorer|
-|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls|
+|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls (obsolete)|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Send site information to improve Microsoft services (obsolete)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Allow access to sensors on specific sites|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Block access to sensors on specific sites|
@@ -31489,6 +31500,78 @@ User settings to enable or disable the Pin to taskbar wizard aren't available.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### PostQuantumKeyAgreementEnabled
+
+  #### Enable post-quantum key agreement for TLS
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 120 or later
+
+  #### Description
+
+  This policy configures whether Microsoft Edge will offer Kyber, a post-quantum key agreement algorithm, in TLS. This lets supporting servers protect user traffic from being decrypted by quantum computers.
+
+If you enable this policy, Microsoft Edge will offer Kyber in TLS connections. TLS connections will be protected with Kyber key agreement when communicating with compatible servers that select Kyber during the TLS handshake.
+
+If this disable this policy, Microsoft Edge will not offer Kyber in TLS connections. User traffic will be unprotected from decryption by quantum computers.
+
+If you don't configure this policy, Microsoft Edge will follow the default rollout process for offering Kyber.
+
+Offering Kyber is backwards-compatible. Existing TLS servers and networking middleware are expected to ignore the new option and continue selecting previous options.
+
+However, devices that don't implement TLS correctly may malfunction when offered the new option. For example, they might disconnect in response to unrecognized options or the resulting larger messages. These devices are not post-quantum-ready and will interfere with an enterprise's post-quantum transition. If this issue is encountered, administrators should contact the vendor for a fix.
+
+This policy is a temporary measure and will be removed in future versions of Microsoft Edge. You can enable it to test for issues and you can disable it while you resolve issues.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PostQuantumKeyAgreementEnabled
+  - GP name: Enable post-quantum key agreement for TLS
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PostQuantumKeyAgreementEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PostQuantumKeyAgreementEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ProactiveAuthEnabled
 
   #### Enable Proactive Authentication (obsolete)
@@ -34142,10 +34225,10 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendMouseEventsDisabledFormControlsEnabled
 
-  #### Control the new behavior for event dispatching on disabled form controls
+  #### Control the new behavior for event dispatching on disabled form controls (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 120.
   #### Supported versions:
 
   - On Windows and macOS since 109, until 120
@@ -34181,7 +34264,7 @@ If this policy is disabled, the old behavior will be used.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SendMouseEventsDisabledFormControlsEnabled
-  - GP name: Control the new behavior for event dispatching on disabled form controls
+  - GP name: Control the new behavior for event dispatching on disabled form controls (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
