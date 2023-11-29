@@ -18,7 +18,7 @@ The following chart explains the current behavior of Copilot webpage summarizati
 
 ## PDF page summary tests
 
-| Document type|  | Copilot with Commercial Data Protection |
+| Document type| Copilot | Copilot with Commercial Data Protection |
 |:-----|:-----|:-----|
 | Image-based PDF | Summarization isn't supported. | Summarization isn't supported. |
 | Text-based PDF, downloaded and saved locally | Summarization is supported. | Summarization is supported. |
