@@ -58,7 +58,7 @@ Inside the browser, you see the new profile pill label, profile flyout visual tr
 ## Automatic switching with the Enterprise personal browsing experience
 
 > [!NOTE]
-> Applies when device has at least one Microsoft Entra (*Microsoft Entra ID*) profile and one MSA profile (existing or new).
+> Applies when device has at least one Microsoft Entra (formerly *Azure Active Directory*) profile and one MSA profile (existing or new).
 
 Enterprise personal browsing is designed to keep work and personal browsing separate for the end users via the new automatic switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
 
@@ -84,7 +84,7 @@ As we continue to develop this, we plan to enable more admin customization where
 
 Microsoft Edge for Business is generally available now on managed devices on Microsoft Edge version 116 or later.
 
-Microsoft Edge for Business is enabled by logging into the browser using your Microsoft Entra (*Microsoft Entra ID*) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
+Microsoft Edge for Business is enabled by logging into the browser using your Microsoft Entra ID (formerly *Azure Active Directory*) account. This login ensures that all your Microsoft 365 services are accessible in your work browser window.
 
 Included in this release are some visual treatments for the work browser window, a lightly managed personal browser window, and automatic switching between personal and work browser windows for a growing number of websites.
 
@@ -95,7 +95,7 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business.
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business.  
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (*Microsoft Entra ID*).
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID (formerly *Azure Active Directory*).
 
 ### Prerequisites
 
