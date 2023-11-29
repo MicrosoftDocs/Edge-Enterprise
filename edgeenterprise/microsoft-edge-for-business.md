@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/27/2023
+ms.date: 11/29/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
