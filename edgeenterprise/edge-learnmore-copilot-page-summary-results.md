@@ -16,8 +16,6 @@ description: "This article shows the results of Copilot page summary tests."
 
 The following chart explains the current behavior of Copilot webpage summarization on PDF and Word documents. This information will be updated when support for summarization increases. This chart covers the behavior in both Copilot and Copilot with Commercial Data Protection
 
-## PDF page summary tests
-
 | Document type| Copilot | Copilot with Commercial Data Protection |
 |:-----|:-----|:-----|
 | Image-based PDF | Summarization isn't supported. | Summarization isn't supported. |
