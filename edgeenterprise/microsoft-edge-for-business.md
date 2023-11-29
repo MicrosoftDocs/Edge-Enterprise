@@ -27,14 +27,14 @@ This article describes the benefits Microsoft Edge for Business brings to your u
 
 Microsoft Edge for Business is a new, dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. It has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by a Microsoft Entra (formerly Azure Active Directory) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros as the browser that automatically separates work and personal browsing into dedicated browser windows with their own favorites, separate caches and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing, preventing cognitive overload or end users from accidentally sharing sensitive information with unintended audiences. Microsoft Edge for Business is going to be the standard browser experience for organizations, activated by a Microsoft Entra ID (formerly *Azure Active Directory*) login, upon general availability. Check out our [build announcement](https://blogs.windows.com/msedgedev/2023/05/23/microsoft-edge-build-2023-innovations-in-AI-productivity-management-sidebar-apps/#business).
 Microsoft Edge for Business will be generally available on managed PCs starting in Stable release version 116, and Intune MAM is now generally available on unmanaged devices.
 
 Microsoft Edge for Business encompasses the experiences summarized in the following table.
 
 | Name | Description | Status |
 |:-----|:-----|:------|
-| Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra (formerly *Azure Active Directory*) with refreshed visual treatment. | Available |
+| Visually distinct work browsing experience  | Natively built-in rich enterprise controls for secure data access and leak prevention powered by Microsoft Entra ID (formerly *Azure Active Directory*) with refreshed visual treatment. | Available |
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
@@ -42,10 +42,10 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 
 ## Work Browser (Visual Refresh)
 
-Microsoft Edge for Business is available now, and the existing Microsoft Entra (formerly *Azure Active Directory*) profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
+Microsoft Edge for Business is available now, and the existing Microsoft Entra ID (formerly *Azure Active Directory*) profile on Enterprise PCs will automatically apply the new refreshed visual treatment.
 
 > [!NOTE]
-> All existing Microsoft Entra profile settings stay the same, including favorites, history, and saved passwords.
+> All existing Microsoft Entra ID profile settings stay the same, including favorites, history, and saved passwords.
 
 The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts:
 
@@ -58,7 +58,7 @@ Inside the browser, you see the new profile pill label, profile flyout visual tr
 ## Automatic switching with the Enterprise personal browsing experience
 
 > [!NOTE]
-> Applies when device has at least one Microsoft Entra (formerly *Azure Active Directory*) profile and one MSA profile (existing or new).
+> Applies when device has at least one Microsoft Entra ID (formerly *Azure Active Directory*) profile and one MSA profile (existing or new).
 
 Enterprise personal browsing is designed to keep work and personal browsing separate for the end users via the new automatic switching mechanism. When the device has an existing MSA profile or creates a new one, it enables automatic switching to enforce the browsing context separation. We continue to update our automatic switching logic to support more sites.
 
@@ -149,7 +149,7 @@ Passwords, favorites, and data currently associated with the user's work profile
 
 ### Are the work and personal browser window connected?
 
-The work browser window (Microsoft Edge for Business) and personal browser window (Microsoft Edge) have their own separate caches and storage locations, so information stays separate. This feature doesn't create any link between the user's Microsoft Entra account and their MSA account, and the organization settings related to linking work and personal accounts are unaffected. There are no functional changes to the Microsoft Entra profile.
+The work browser window (Microsoft Edge for Business) and personal browser window (Microsoft Edge) have their own separate caches and storage locations, so information stays separate. This feature doesn't create any link between the user's Microsoft Entra ID account and their MSA account, and the organization settings related to linking work and personal accounts are unaffected. There are no functional changes to the Microsoft Entra ID profile.
 
 ### What policies will be enabled in the personal browser window?
 
