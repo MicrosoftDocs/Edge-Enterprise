@@ -14,23 +14,16 @@ description: "This article shows the results of Copilot page summary tests."
 
 # Copilot webpage summarization behavior for PDF and Word documents
 
-This article explains the current behavior of Copilot webpage summarization on PDF and Word documents. This information will be updated when support for summarization increases. This article covers the behavior in both the Consumer and Enterprise versions of Copilot.
+The following chart explains the current behavior of Copilot webpage summarization on PDF and Word documents. This information will be updated when support for summarization increases. This chart covers the behavior in both Copilot and Copilot with Commercial Data Protection
 
 ## PDF page summary tests
 
-| PDF format | Behaviour in BCC (Consumer Copilot) | Behaviour in BCE (Enterprise Copilot) |
+| Document type|  | Copilot with Commercial Data Protection |
 |:-----|:-----|:-----|
 | Image-based PDF | Summarization isn't supported. | Summarization isn't supported. |
 | Text-based PDF, downloaded and saved locally | Summarization is supported. | Summarization is supported. |
 | Text-based PDF, not downloaded and saved locally | Summarization is supported. |   |
-
-## Word page summary tests
-
-| Document type | Behaviour in BCC (Consumer Copilot) | Behaviour in BCE (Enterprise Copilot) |
-|:-----|:-----|:-----|
 | Office Word | Summarization isn't supported. | Summarization isn't supported. |
-| Google Docs | Summarization is supported. | Summarization is supported. |
-
 
 ## See also
 
