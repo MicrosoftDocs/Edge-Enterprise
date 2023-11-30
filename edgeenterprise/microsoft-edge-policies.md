@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/17/2023
+ms.date: 11/28/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -26,15 +26,16 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[PostQuantumKeyAgreementEnabled](#postquantumkeyagreementenabled)|Enable post-quantum key agreement for TLS|
-|[SendMouseEventsDisabledFormControlsEnabled](#sendmouseeventsdisabledformcontrolsenabled)|Control the new behavior for event dispatching on disabled form controls (obsolete)|
+|[EdgeDisableDialProtocolForCastDiscovery](#edgedisabledialprotocolforcastdiscovery)|Disable DIAL protocol for cast device discovery|
+|[RelatedWebsiteSetsEnabled](#relatedwebsitesetsenabled)|Enable Related Website Sets|
+|[RelatedWebsiteSetsOverrides](#relatedwebsitesetsoverrides)|Override Related Website Sets|
+|[NativeHostsExecutablesLaunchDirectly](#nativehostsexecutableslaunchdirectly)|Force Windows executable Native Messaging hosts to launch directly|
 
 ## Available policies
 
@@ -61,6 +62,7 @@ These tables list all of the browser-related group policies available in this re
 - [Printing](#printing)
 - [Private Network Request Settings](#private-network-request-settings)
 - [Proxy server](#proxy-server)
+- [Related Website Sets Settings](#related-website-sets-settings)
 - [Sleeping tabs settings](#sleeping-tabs-settings)
 - [SmartScreen settings](#smartscreen-settings)
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
@@ -81,6 +83,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[EdgeDisableDialProtocolForCastDiscovery](#edgedisabledialprotocolforcastdiscovery)|Disable DIAL protocol for cast device discovery|
 |[EnableMediaRouter](#enablemediarouter)|Enable Google Cast|
 |[ShowCastIconInToolbar](#showcasticonintoolbar)|Show the cast icon in the toolbar|
 ### [*Content settings*](#content-settings-policies)
@@ -318,6 +321,12 @@ These tables list all of the browser-related group policies available in this re
 |[ProxyPacUrl](#proxypacurl)|Set the proxy .pac file URL (deprecated)|
 |[ProxyServer](#proxyserver)|Configure address or URL of proxy server (deprecated)|
 |[ProxySettings](#proxysettings)|Proxy settings|
+### [*Related Website Sets Settings*](#related-website-sets-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[RelatedWebsiteSetsEnabled](#relatedwebsitesetsenabled)|Enable Related Website Sets|
+|[RelatedWebsiteSetsOverrides](#relatedwebsitesetsoverrides)|Override Related Website Sets.|
 ### [*Sleeping tabs settings*](#sleeping-tabs-settings-policies)
 
 |Policy Name|Caption|
@@ -591,6 +600,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
+|[NativeHostsExecutablesLaunchDirectly](#nativehostsexecutableslaunchdirectly)|Force Windows executable Native Messaging hosts to launch directly|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
@@ -1049,6 +1059,70 @@ If you disable or don't configure this policy, users will be able to upload file
   [Back to top](#microsoft-edge---policies)
 
   ## Cast policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeDisableDialProtocolForCastDiscovery
+
+  #### Disable DIAL protocol for cast device discovery
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 121 or later
+
+  #### Description
+
+  Enable this policy to disable the DIAL (Discovery And Launch) protocol for cast device discovery. (If EnableMediaRouter is disabled, this policy will have no effect).
+
+Enable this policy to disable DIAL protocol.
+
+By default, Cast device discovery will use DIAL protocol.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeDisableDialProtocolForCastDiscovery
+  - GP name: Disable DIAL protocol for cast device discovery
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Cast
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeDisableDialProtocolForCastDiscovery
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeDisableDialProtocolForCastDiscovery
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -12803,6 +12877,239 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
   <string>123.123.123.123:8080</string>
+</dict>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Related Website Sets Settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RelatedWebsiteSetsEnabled
+
+  #### Enable Related Website Sets
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 121 or later
+
+  #### Description
+
+  This policy lets you control the enablement of the Related Website Sets feature. Related Website Sets (RWS) is a way for an organisation to declare relationships among sites, so that Microsoft Edge allows limited third-party cookie access for specific purposes across those sites.
+
+If this policy set to True or unset, the Related Website Sets feature is enabled.
+
+If this policy is set to False, the Related Website Sets feature is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RelatedWebsiteSetsEnabled
+  - GP name: Enable Related Website Sets
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Related Website Sets Settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RelatedWebsiteSetsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: RelatedWebsiteSetsEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RelatedWebsiteSetsOverrides
+
+  #### Override Related Website Sets.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 121 or later
+
+  #### Description
+
+  This policy provides a way to override the list of sets Microsoft Edge uses for Related Website Sets
+
+Each set in the browser's list of Related Website Sets must meet the requirements of a Related Website Set. A Related Website Set must contain a primary site and one or more member sites.
+A set can also contain a list of service sites that it owns, as well as a map from a site to all its ccTLD variants. See https://github.com/WICG/first-party-sets for more information on how Microsoft Edge uses Related Website Sets.
+
+
+All sites in a Related Website Set must be a registrable domain served over HTTPS. Each site in a Related Website Set must also be unique, which means a site can't be listed more than once in a Related Website Set.
+
+When this policy is given an empty dictionary, Microsoft Edge uses the public list of Related Website Sets.
+
+For all sites in a Related Website Set from the replacements list, if a site is also present on a Related Website Set in the browser's list, then that site will be removed from the browser's Related Website Set. After this, the policy's Related Website Set will be added to the Microsoft Edge's list of Related Website Sets.
+
+For all sites in a Related Website Set from the additions list, if a site is also present on a Related Website Set in Microsoft Edge's list, then the browser's Related Website Set will be updated so that the new Related Website Set can be added to the browser's list. After the browser's list has been updated, the policy's Related Website Set will be added to the browser's list of Related Website Sets.
+
+The browser's list of Related Website Sets requires that for all sites in its list, no site is in
+more than one set. This is also required for both the replacements list
+and the additions list. Similarly, a site can't be in both the
+replacements list and the additions list.
+
+Wildcards (*) aren't supported as a policy value, or as a value within any Related Website Set in these lists.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RelatedWebsiteSetsOverrides
+  - GP name: Override Related Website Sets.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Related Website Sets Settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RelatedWebsiteSetsOverrides
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\RelatedWebsiteSetsOverrides = {
+  "additions": [
+    {
+      "associatedSites": [
+        "https://associate2.test"
+      ],
+      "ccTLDs": {
+        "https://associate2.test": [
+          "https://associate2.com"
+        ]
+      },
+      "primary": "https://primary2.test",
+      "serviceSites": [
+        "https://associate2-content.test"
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "associatedSites": [
+        "https://associate1.test"
+      ],
+      "ccTLDs": {
+        "https://associate1.test": [
+          "https://associate1.co.uk"
+        ]
+      },
+      "primary": "https://primary1.test",
+      "serviceSites": [
+        "https://associate1-content.test"
+      ]
+    }
+  ]
+}
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\RelatedWebsiteSetsOverrides = {"additions": [{"associatedSites": ["https://associate2.test"], "ccTLDs": {"https://associate2.test": ["https://associate2.com"]}, "primary": "https://primary2.test", "serviceSites": ["https://associate2-content.test"]}], "replacements": [{"associatedSites": ["https://associate1.test"], "ccTLDs": {"https://associate1.test": ["https://associate1.co.uk"]}, "primary": "https://primary1.test", "serviceSites": ["https://associate1-content.test"]}]}
+  ```
+  
+
+  #### Mac information and settings
+
+  - Preference Key Name: RelatedWebsiteSetsOverrides
+  - Example value:
+``` xml
+<key>RelatedWebsiteSetsOverrides</key>
+<dict>
+  <key>additions</key>
+  <array>
+    <dict>
+      <key>associatedSites</key>
+      <array>
+        <string>https://associate2.test</string>
+      </array>
+      <key>ccTLDs</key>
+      <dict>
+        <key>https://associate2.test</key>
+        <array>
+          <string>https://associate2.com</string>
+        </array>
+      </dict>
+      <key>primary</key>
+      <string>https://primary2.test</string>
+      <key>serviceSites</key>
+      <array>
+        <string>https://associate2-content.test</string>
+      </array>
+    </dict>
+  </array>
+  <key>replacements</key>
+  <array>
+    <dict>
+      <key>associatedSites</key>
+      <array>
+        <string>https://associate1.test</string>
+      </array>
+      <key>ccTLDs</key>
+      <dict>
+        <key>https://associate1.test</key>
+        <array>
+          <string>https://associate1.co.uk</string>
+        </array>
+      </dict>
+      <key>primary</key>
+      <string>https://primary1.test</string>
+      <key>serviceSites</key>
+      <array>
+        <string>https://associate1-content.test</string>
+      </array>
+    </dict>
+  </array>
 </dict>
 ```
   
@@ -30460,6 +30767,65 @@ If you disable this policy, you can't use the Mouse Gesture feature in Microsoft
 
 ```
 0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### NativeHostsExecutablesLaunchDirectly
+
+  #### Force Windows executable Native Messaging hosts to launch directly
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 121 or later
+
+  #### Description
+
+  This policy controls whether native host executables launch directly on Windows.
+
+If you enable this policy, Microsoft Edge is forced to launch native messaging hosts implemented as executables directly.
+
+If you disable this policy, Microsoft Edge will launch hosts using cmd.exe as an intermediary process.
+
+If you don't configure this policy, Microsoft Edge will decide which approach to use based on a progressive rollout from the legacy behavior to the Launch Directly behavior, guided by ecosystem compatibility.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NativeHostsExecutablesLaunchDirectly
+  - GP name: Force Windows executable Native Messaging hosts to launch directly
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NativeHostsExecutablesLaunchDirectly
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
 ```
 
   
