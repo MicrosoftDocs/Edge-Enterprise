@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 11/27/2023
+ms.date: 11/30/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -33,6 +33,10 @@ Use these steps to access the experience:
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage) and login.
 1. In the main left navigation bar, go to **Settings** > **Microsoft Edge**.  
 <!-- ====================================================================== -->
+
+> [!NOTE]
+> Preview for an updated user interface is currently rolling out. Some strings and pages may differ slightly from the following information.
+
 ## Get started with configuration profiles
 
 A configuration profile contains all the browser policy configurations, including extension settings.
