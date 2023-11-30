@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Edge management service"
-ms.author: leahtu
+ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 11/16/2023
+ms.date: 11/27/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -37,7 +37,7 @@ Use these steps to access the experience:
 
 A configuration profile contains all the browser policy configurations, including extension settings.
 
-Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings will merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
+Each configuration profile can be assigned to multiple Microsoft Entra groups, and a group can be assigned to multiple configuration profiles. When a group is assigned to multiple configuration profiles, the settings merge if there are no conflicting settings. If a user is a member of multiple Microsoft Entra groups with conflicting policy settings, then the profile priority is used to determine which policy setting is applied. The highest priority is applied, with "0" being the highest priority that you can assign.
 
 #### Create a configuration profile
 
@@ -46,7 +46,7 @@ Follow these steps to create a configuration profile:
 1. Under the **Configuration profiles** pivot, select **Add a profile**.  
 1. Under **Add a configuration profile**, enter a profile name and description and then select **Add**.  
 
-After confirmation, you'll be able to go to the profile and configure the policies and extensions you want to use.
+After confirmation, you'll be able to go to the profile and configure the policies, and extensions you want to use.
 
 #### Import a configuration profile
 
@@ -108,7 +108,7 @@ Follow these steps to assign a configuration profile to a Microsoft Entra group:
 
 ### Manage extensions
 
-To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
+To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings override the profile settings.
 
 #### Import existing extension settings to an existing configuration profile
 
@@ -127,7 +127,7 @@ Follow these steps to export extension settings:
 1. Select the profile you want to export extension settings from and go to the **Extensions** pivot.
 1. Select **Export JSON** and the export will start downloading.
 
-After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
+After the download is finished, you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
 
 #### Manage settings for all extensions
 
@@ -160,7 +160,7 @@ Follow these steps to add an extension:
 
 #### Manage an extension
 
-After selecting an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
+After selecting an extension, you can configure settings for a specific extension. These settings only apply to the extension that you select and will override any profile settings.
 
 ##### Manage extension policy
 
@@ -250,6 +250,33 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
+#### Manage enterprise secure AI settings
+
+> [!NOTE]
+> This feature is currently rolling out for preview.
+
+To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
+
+##### Manage settings for Copilot
+
+The page will detect whether your organization has access to Copilot and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:
+
+- If Copilot and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
+
+- If Copilot is enabled and the Microsoft Edge sidebar is disabled, the unapplicable settings will be disabled. However, the option to enable the sidebar will appear, and if enabled, will unlock the ability to configure the now applicable setting.
+
+- If Copilot is disabled, all policy settings in this section won't be available to configure.
+
+- If it can't be identified that Copilot is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
+
+##### Manage settings for other AI features
+
+The settings in this section correspond to a Microsoft Edge browser policy that incorporates the use of AI. When a setting is configured for the first time, the updated value will appear in the **Policies** pivot for that configuration profile. To configure a setting:
+
+1. Check/uncheck the box corresponding to the setting that you want to enable/disable respectively.
+1. Select **Save changes**.
+
+<!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
 
 After configuring a profile, the next step is to assign the profile.  
@@ -281,7 +308,7 @@ Use these steps as a guide for setting an enrollment token:
 
 #### Control policy source precedence
 
-As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  **EdgeManagementPolicyOverridesPlatformPolicy** policy. This is a private policy and must be set via the registry.
+As stated previously, if policy is set in MDM or GPM, that value will override any value provided by Microsoft Edge management service. If you want the Microsoft Edge management service policy to override MDM/GPM policy you can set the override in the  [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) policy. This is a private policy and must be set via the registry.
 
 Set the value of [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) under the key `SOFTWARE\Policies\Microsoft\Edge` in either `HKLM` or `HKCU`. If the key isn't there you can create it. In the following command line example, remember to use your token ID and restart Microsoft Edge if it's open.
 

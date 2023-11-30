@@ -2,6 +2,13 @@
 
 
 
+## Week of November 20, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of November 13, 2023
 
 

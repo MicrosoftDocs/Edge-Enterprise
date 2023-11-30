@@ -1,4 +1,4 @@
-# last revised 10/31/2023
+# last revised 11/28/2023
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -247,6 +247,8 @@
         href: edge-learnmore-configurable-edge-commands.md
       - name: Considerations for zstd-based Shared Dictionary Compression for HTTP
         href: learnmore-zsdch-compression.md
+      - name: Copilot webpage summarization behavior for PDF and Word documents
+        href: edge-learnmore-copilot-page-summary-results.md
       - name: Filter format for URL list-based policies
         href: edge-learnmmore-url-list-filter format.md
       - name: Microsoft Edge for macOS switches from Microsoft AutoUpdate to EdgeUpdater
