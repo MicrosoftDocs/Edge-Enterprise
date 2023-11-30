@@ -35,7 +35,7 @@ Use these steps to access the experience:
 <!-- ====================================================================== -->
 
 > [!NOTE]
-> A preview for an updated user interface is currently rolling out. Some strings and pages may differ slightly from the following information.
+> Preview for an updated user interface is currently rolling out. Some strings and pages may differ slightly from the following information.
 
 ## Get started with configuration profiles
 
