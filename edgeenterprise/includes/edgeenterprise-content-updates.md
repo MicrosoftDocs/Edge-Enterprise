@@ -2,6 +2,17 @@
 
 
 
+## Week of November 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/27/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 11/29/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
+| 11/29/2023 | [Copilot webpage summarization behavior for PDF and Word documents](/DeployEdge/edge-learnmore-copilot-page-summary-results) | added |
+| 11/29/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
 ## Week of November 20, 2023
 
 
