@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 11/30/2023
+ms.date: 12/06/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,10 @@ The Microsoft Edge management service is an area in the Microsoft 365 admin cent
 - You must have Microsoft Edge 115.0.1901.7 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
 - You must be using one of the following supported operating systems: Windows 10+ or Windows Server 2016+. See [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems) for specifics.
+
+> [!IMPORTANT]
+> The Microsoft Edge management service uses the Cloud Policy service, which currently isn't available to customers who have the following plans: Office 365 operated by 21Vianet, Office 365 GCC, or Office 365 GCC High and DoD. [Learn more about the Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy#requirements-for-using-cloud-policy).
+
 <!-- ====================================================================== -->
 ## Access the experience
 
