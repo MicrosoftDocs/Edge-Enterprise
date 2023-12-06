@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/28/2023
+ms.date: 12/05/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -26,17 +26,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
 
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EdgeDisableDialProtocolForCastDiscovery](#edgedisabledialprotocolforcastdiscovery)|Disable DIAL protocol for cast device discovery|
-|[RelatedWebsiteSetsEnabled](#relatedwebsitesetsenabled)|Enable Related Website Sets|
-|[RelatedWebsiteSetsOverrides](#relatedwebsitesetsoverrides)|Override Related Website Sets|
-|[NativeHostsExecutablesLaunchDirectly](#nativehostsexecutableslaunchdirectly)|Force Windows executable Native Messaging hosts to launch directly|
-
 ## Available policies
 
 These tables list all of the browser-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
@@ -45,6 +34,7 @@ These tables list all of the browser-related group policies available in this re
 - [Cast](#cast)
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
+- [Edge Website Typo Protection settings](#edge-website-typo-protection-settings)
 - [Edge Workspaces settings](#edge-workspaces-settings)
 - [Experimentation](#experimentation)
 - [Extensions](#extensions)
@@ -66,7 +56,6 @@ These tables list all of the browser-related group policies available in this re
 - [Sleeping tabs settings](#sleeping-tabs-settings)
 - [SmartScreen settings](#smartscreen-settings)
 - [Startup, home page and new tab page](#startup-home-page-and-new-tab-page)
-- [TyposquattingChecker settings](#typosquattingchecker-settings)
 - [Additional](#additional)
 
 
@@ -161,6 +150,13 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|Default search provider search URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|Default search provider URL for suggestions|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configure the new tab page search box experience|
+### [*Edge Website Typo Protection settings*](#edge-website-typo-protection-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[PreventTyposquattingPromptOverride](#preventtyposquattingpromptoverride)|Prevent bypassing Edge Website Typo Protection prompts for sites|
+|[TyposquattingAllowListDomains](#typosquattingallowlistdomains)|Configure the list of domains for which Edge Website Typo Protection won't trigger warnings|
+|[TyposquattingCheckerEnabled](#typosquattingcheckerenabled)|Configure Edge Website Typo Protection|
 ### [*Edge Workspaces settings*](#edge-workspaces-settings-policies)
 
 |Policy Name|Caption|
@@ -370,11 +366,6 @@ These tables list all of the browser-related group policies available in this re
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
-### [*TyposquattingChecker settings*](#typosquattingchecker-settings-policies)
-
-|Policy Name|Caption|
-|-|-|
-|[TyposquattingCheckerEnabled](#typosquattingcheckerenabled)|Configure Edge TyposquattingChecker|
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
@@ -6204,6 +6195,218 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ## Edge Website Typo Protection settings policies
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### PreventTyposquattingPromptOverride
+
+  #### Prevent bypassing Edge Website Typo Protection prompts for sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  This policy setting lets you decide whether users can override the Edge Website Typo Protection warnings about potential typosquatting websites.
+
+If you enable this setting, users can't ignore Edge Website Typo Protection warnings and they are blocked from continuing to the site.
+
+If you disable or don't configure this setting, users can ignore Edge Website Typo Protection warnings and continue to the site.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PreventTyposquattingPromptOverride
+  - GP name: Prevent bypassing Edge Website Typo Protection prompts for sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Edge Website Typo Protection settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: PreventTyposquattingPromptOverride
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PreventTyposquattingPromptOverride
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TyposquattingAllowListDomains
+
+  #### Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 119 or later
+
+  #### Description
+
+  Configure the list of Edge Website Typo Protection trusted domains. This means:
+Edge Website Typo Protection won't check for potentially malicious typosquatting websites.
+
+If you enable this policy, Edge Website Typo Protection trusts these domains.
+If you disable or don't set this policy, default Edge Website Typo Protection protection is applied to all resources.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10/11 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+Also note that this policy does not apply if your organization has enabled Microsoft Defender for Endpoint. You must configure your allow and block lists in Microsoft 365 Defender portal using Indicators (Settings > Endpoints > Indicators).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TyposquattingAllowListDomains
+  - GP name: Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Edge Website Typo Protection settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\TyposquattingAllowListDomains
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\TyposquattingAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\TyposquattingAllowListDomains\2 = "myuniversity.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TyposquattingAllowListDomains
+  - Example value:
+``` xml
+<array>
+  <string>mydomain.com</string>
+  <string>myuniversity.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### TyposquattingCheckerEnabled
+
+  #### Configure Edge Website Typo Protection
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 96 or later
+
+  #### Description
+
+  This policy setting lets you configure whether to turn on Edge Website Typo Protection. Edge Website Typo Protection provides warning messages to help protect your users from potential typosquatting sites. By default, Edge Website Typo Protection is turned on.
+
+If you enable this policy, Edge Website Typo Protection is turned on.
+
+If you disable this policy, Edge Website Typo Protection is turned off.
+
+If you don't configure this policy, Edge Website Typo Protection is turned on but users can choose whether to use Edge Website Typo Protection.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TyposquattingCheckerEnabled
+  - GP name: Configure Edge Website Typo Protection
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Edge Website Typo Protection settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Edge Website Typo Protection settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: TyposquattingCheckerEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TyposquattingCheckerEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Edge Workspaces settings policies
 
   [Back to top](#microsoft-edge---policies)
@@ -7050,7 +7253,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -15356,76 +15559,6 @@ If you don't configure the policy, users can choose whether to show the home but
 
   [Back to top](#microsoft-edge---policies)
 
-  ## TyposquattingChecker settings policies
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### TyposquattingCheckerEnabled
-
-  #### Configure Edge TyposquattingChecker
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 96 or later
-
-  #### Description
-
-  This policy setting lets you configure whether to turn on Edge TyposquattingChecker. Edge TyposquattingChecker provides warning messages to help protect your users from potential typosquatting sites. By default, Edge TyposquattingChecker is turned on.
-
-If you enable this policy, Edge TyposquattingChecker is turned on.
-
-If you disable this policy, Edge TyposquattingChecker is turned off.
-
-If you don't configure this policy, Edge TyposquattingChecker is turned on but users can choose whether to use Edge TyposquattingChecker.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: Yes
-  - Dynamic Policy Refresh: Yes
-  - Per Profile: No
-  - Applies to a profile that is signed in with a Microsoft account: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: TyposquattingCheckerEnabled
-  - GP name: Configure Edge TyposquattingChecker
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/TyposquattingChecker settings
-  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/TyposquattingChecker settings
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
-  - Value Name: TyposquattingCheckerEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  #### Mac information and settings
-
-  - Preference Key Name: TyposquattingCheckerEnabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
   ## Additional policies
 
   [Back to top](#microsoft-edge---policies)
@@ -18150,16 +18283,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -30666,7 +30799,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -34605,7 +34738,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
