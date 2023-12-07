@@ -19,7 +19,7 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 120.0.2210.60: December 7, 2023
+## Version 120.0.2210.61: December 7, 2023
 
 Fixed various bugs and performance issues.
 
