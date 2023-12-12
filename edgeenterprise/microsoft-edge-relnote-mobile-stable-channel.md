@@ -30,8 +30,8 @@ Fixed various bugs and performance issues for Android.
 ### Policy update
 #### New policies
 
-- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo)- Configure Brand logo in New Tab Page
-- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor)- Configure Brand color in New Tab Page
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) - Configure Brand color in New Tab Page
 - [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
 - [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
 - [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
@@ -43,12 +43,11 @@ Fixed various bugs and performance issues for iOS.
 ### Policy update
 #### New policies
 
-- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo)- Configure Brand logo in New Tab Page
-- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor)- Configure Brand color in New Tab Page
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) - Configure Brand color in New Tab Page
 - [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
 - [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
 - [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
-
 
 ## Version 119.0.2151.107: December 6, 2023
 
