@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 12/06/2023
+ms.date: 12/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -22,6 +22,33 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 120.0.2210.64: December 12, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Policy update
+#### New policies
+
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo)- Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor)- Configure Brand color in New Tab Page
+- [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
+- [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
+- [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
+
+## Version 120.0.2210.59: December 12, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+### Policy update
+#### New policies
+
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo)- Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor)- Configure Brand color in New Tab Page
+- [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
+- [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
+- [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
+
 
 ## Version 119.0.2151.107: December 6, 2023
 
