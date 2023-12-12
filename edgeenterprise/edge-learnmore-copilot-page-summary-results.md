@@ -29,7 +29,7 @@ The following chart explains the current behavior of Copilot webpage summarizati
 | Purview DLP Policies **           | Summarization isn't supported |
 | MAM/MDA Policies ++               | Summarization isn't supported |
 
-** Purview DLP Policies need to be set to either "block" or "warn" and then the admin must also flag "no page context extraction/summarization" to prevent these documents from being reviewed by Edge.
+** Purview DLP Policies need to be set to either "block" or "warn" and the admin must also flag "no page context extraction/summarization" to prevent these documents from being reviewed by Edge.
 
 ++ MAM "Block" policy will disable contextual grounding/summarization. MDA "Block" and "Audit" must both be active to disable contextual grounding/summarization.
 
