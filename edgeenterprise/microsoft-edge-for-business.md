@@ -81,7 +81,7 @@ Admins need to enable their organization's branding through the following polici
 - OrganizationalBrandingOnWorkProfileUIEnabled
 - OrganizationLogoOverlayOnAppIconEnabled
 
-Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for the organizational branding assets to show in this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for the organization's branding assets to show in this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
