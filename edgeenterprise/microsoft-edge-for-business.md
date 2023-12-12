@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/29/2023
+ms.date: 12/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,7 +38,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
-|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
+|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Company Branding](#company-branding).    |
 
 ## Work Browser (Visual Refresh)
 
@@ -74,7 +74,14 @@ For more information about the Enterprise personal browser and the policies that
 
 ## Company Branding
 
-Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
+Want to customize the look of Edge for Business? Now you can enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily visually differentiate between multiple profiles and browser windows.
+
+Admins need to enable their organization's branding through the following policies:
+
+- OrganizationalBrandingOnWorkProfileUIEnabled
+- OrganizationLogoOverlayOnAppIconEnabled
+
+Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for the organizational branding assets to show in this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
