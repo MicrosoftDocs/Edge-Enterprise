@@ -38,7 +38,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
-| MAM for Mobile | Avaible, see [MAM for Mobile](#mam-for-mobile)    |
+| MAM for Mobile |  Secure and compliant access to work resources on mobile devices. | Available, see [MAM for Mobile](#mam-for-mobile)    |
 |  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Company Branding](#company-branding).    |
 
 ## Work Browser (Visual Refresh)
