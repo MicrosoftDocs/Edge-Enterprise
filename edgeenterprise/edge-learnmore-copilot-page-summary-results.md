@@ -1,9 +1,9 @@
 ---
-title: "Copilot webpage summarization behavior for PDF and Word documents"
+title: "Copilot webpage summarization behavior"
 ms.author: prithviokade
 author: dan-wesley
 manager: likuba
-ms.date: 11/28/2023
+ms.date: 12/12/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,16 +12,26 @@ ms.collection: M365-modern-desktop
 description: "This article shows the results of Copilot page summary tests."
 ---
 
-# Copilot webpage summarization behavior for PDF and Word documents
+# Copilot webpage summarization behavior
 
-The following chart explains the current behavior of Copilot webpage summarization on PDF and Word documents. This information will be updated when support for summarization increases. This chart covers the behavior in both Copilot and Copilot with Commercial Data Protection
+The following chart explains the current behavior of Copilot webpage summarization on various document types. This information will be updated when support for summarization increases. This chart covers the behavior in both Copilot and Copilot with Commercial Data Protection. Support for these document types only applies to Edge Copilot.
 
-| Document type| Copilot | Copilot with Commercial Data Protection |
-|:-----|:-----|:-----|
-| Image-based PDF | Summarization isn't supported. | Summarization isn't supported. |
-| Text-based PDF, downloaded and saved locally | Summarization is supported. | Summarization is supported. |
-| Text-based PDF, not downloaded and saved locally | Summarization is supported. | Summarization of PDFs stored in SharePoint isn't supported. <br> Summarization of other PDFs is supported.   |
-| Office Word | Summarization isn't supported. | Summarization isn't supported. |
+> [!NOTE]
+> **Contextual grounding in Edge Copilot:** This is the ability to ground a chat conversation in the current web page context. It applies to queries such as "Summarize this document" or "What does this page say about…" in reference to the main Edge window. Contextual grounding only applies to Sidebar instances of chat, because desktop/full-screen instances do not allow for simultaneous web context.
+
+| Document type | Copilot and Copilot with Commercial Data Protection |
+|:-----|:-----|
+| Intranet Sites such as SharePoint | Summarization is supported<br>\* Embedded Office docs in SharePoint aren't supported |
+| Public Sites such as Wikipedia    | Summarization is supported |
+| Outlook Web App                   | Summarization is supported |
+| PDF                               | Summarization is supported |
+| Office Documents                  | Summarization isn't supported |
+| Purview DLP Policies **           | Summarization isn't supported |
+| MAM/MDA Policies ++               | Summarization isn't supported |
+
+** Purview DLP Policies need to be set to either "block" or "warn" and then the admin must also flag "no page context extraction/summarization" to prevent these documents from being reviewed by Edge.
+
+++ MAM "Block" policy will disable contextual grounding/summarization. MDA "Block" and "Audit" must both be active to disable contextual grounding/summarization.
 
 ## See also
 
