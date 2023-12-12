@@ -119,6 +119,8 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business for mobile.
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business for mobile.
 
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
+
 ## Provide feedback
 
 Your feedback while using Microsoft Edge for Business is valuable and it helps us improve the product!
