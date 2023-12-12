@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 11/15/2023
+ms.date: 12/11/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -40,7 +40,6 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeMyApps](#edgemyapps) | My Apps bookmark  |
 | [EdgeDefaultHTTPS](#edgedefaulthttps) |  Default protocol handler |
 | [EdgeDisableShareUsageData](#edgedisableshareusagedata) |  Disable data sharing usage data for personalization   |
-| [EdgeDisableShareBrowsingHistory](#edgedisablesharebrowsinghistory)  |   Disable data sharing browsing history for personalization   |
 | [EdgeDisabledFeatures](#edgedisabledfeatures)  |   Disable specific features  |
 | [EdgeEnableKioskMode](#edgeenablekioskmode)  |  Kiosk mode experiences on Android devices   |
 | [EdgeShowAddressBarInKioskMode](#edgeshowaddressbarinkioskmode)   |   Kiosk mode address bar experiences on Android devices  |
@@ -49,8 +48,9 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeNetworkStackPref](#edgenetworkstackpref)   |   Switch network stack between Chromium and iOS  |
 | [EdgeImportPasswordsDisabled](#edgeimportpasswordsdisabled) |  Disable the import of passwords  |
 | [OverlayPermissionDetectionEnabled](#overlaypermissiondetectionenabled) | Enable Overlay Permission Detection  |
-<!--
-| [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype)   | Account type for HTTP Negotiate</ph> authentication  | -->
+| [EdgeBrandLogo](#edgebrandlogo)   | Configure Brand logo in New Tab Page  |
+| [EdgeBrandColor](#edgebrandcolor)  | Configure Brand color in New Tab Page  |
+| [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
 
 ### [*Proxy server*](#proxy-server)
 
@@ -75,6 +75,8 @@ These tables list all of the browser-related policies available in this release 
 |Policy Name|Caption|
 |:-|-|
 | [DefaultPopupsSetting](#defaultpopupssetting)   |  Default pop-ups setting   |
+| [PopupsAllowedForUrls](#popupsallowedforurls) | Allow pop-up windows on specific sites   |
+| [PopupsBlockedForUrls](#popupsblockedforurls) | Block pop-up windows on specific sites   |
 | [DefaultCookiesSetting](#defaultcookiessetting)   |   Default cookies setting   |
 | [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
 | [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
@@ -468,7 +470,111 @@ DefaultPopupsSetting
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+### PopupsAllowedForUrls
 
+#### Allow pop-up windows on specific sites
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 120
+- Microsoft Edge (iOS and iPadOS) since version 120
+
+#### Description
+
+Define a list of sites, based on URL patterns, that can open pop-up windows. * is not an accepted value for this policy.
+
+If you don't configure this policy, the global default value from the [DefaultPopupsSetting](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+#### Android and iOS restriction name:
+
+```
+PopupsAllowedForUrls
+```
+
+##### Example value (Android):
+
+```
+[
+"https://www.contoso.com",
+"[*.] contoso.edu"
+]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+
+  <string>https://www.contoso.com</string>
+
+  <string>[*.]contoso.edu</string>
+
+</array>
+```
+
+[Back to top](#microsoft-edge-mobile---policies)  
+
+### PopupsBlockedForUrls
+
+#### Block pop-up windows on specific sites
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 120
+- Microsoft Edge (iOS and iPadOS) since version 120
+
+#### Description
+
+Define a list of sites, based on URL patterns, that are blocked from opening pop-up windows. * is not an accepted value for this policy.
+
+If you don't configure this policy, the global default value from the [DefaultPopupsSetting](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+#### Android and iOS restriction name:
+
+```
+PopupsBlockedForUrls
+```
+
+##### Example value (Android):
+
+```
+[
+https://www.contoso.com,
+"[*.] contoso.edu"
+]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+
+  <string>https://www.contoso.com</string>
+
+  <string>[*.]contoso.edu</string>
+
+</array>
+```
+
+[Back to top](#microsoft-edge-mobile---policies) 
 ### DefaultCookiesSetting
 
 #### Default cookies setting
@@ -1359,49 +1465,6 @@ true
 
 [Back to top](#microsoft-edge-mobile---policies)
 
-### EdgeDisableShareBrowsingHistory
-
-#### Disable data sharing browsing history for personalization
-
-#### Supported on:
-
-* Microsoft Edge (Android) since version 111
-
-* Microsoft Edge (iOS and iPadOS) since version 111
-
-#### Description
-
-By default, Edge for iOS and Android prompts users for sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing
-
-EdgeDisableShareBrowsingHistory:
-- true = Disables this prompt from displaying to end users
-- false (Default) =  Users are prompted to share browsing history data
-
-#### Supported features:
-
-- Dynamic Policy Refresh : Yes
-- Per Profile : Yes
-
-#### Data Type:
-
-Android:Boolean
-
-iOS:Boolean
-
-#### Android and iOS restriction name:
-
-```
-EdgeDisableShareUsageData
-```
-
-##### Example value (Android and iOS):
-
-```
-true
-```
-
-[Back to top](#microsoft-edge-mobile---policies)
-
 ### EdgeDisabledFeatures
 
 #### Disable specific features
@@ -1767,6 +1830,120 @@ true
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeBrandLogo
+
+#### Configure Brand logo in New Tab Page
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 120
+- Microsoft Edge (iOS and iPadOS) since version 120
+
+#### Description
+
+Pull your organization's brand logo into Edge for iOS and Android.  You need to maintain your organization logo and brand color via [steps](/entra/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and Page background color will be used as brand color. To apply brand logo, users need to sign in to Edge with work account.
+
+- true = Show organization's brand logo
+- false (Default) = Do not show organization's brand logo
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Android:Boolean
+iOS:Boolean
+
+#### Android and iOS restriction name:
+
+```
+EdgeBrandLogo
+```
+##### Example value (Android and iOS):
+
+```
+true
+```
+[Back to top](#microsoft-edge-mobile---policies) 
+
+### EdgeBrandColor
+
+#### Configure Brand color in New Tab Page
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 120
+- Microsoft Edge (iOS and iPadOS) since version 120
+
+#### Description
+
+Pull your organization's brand color into Edge for iOS and Android. You need to maintain your organization brand color via [steps](/entra/fundamentals/how-to-customize-branding). **Page background color** will be used as brand color. To apply brand color, users need to sign in to Edge with work account.
+
+- true = Show organization's brand color
+- false (Default) = Do not show organization's brand color
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Android:Boolean
+iOS:Boolean
+
+#### Android and iOS restriction name:
+
+```
+EdgeBrandColor
+```
+
+#####  Example value (Android and iOS):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies) 
+
+### EdgeProxyPacUrl
+
+#### Specify a URL to a proxy auto-config (PAC) file
+
+#### Supported on:
+
+- Microsoft Edge (iOS and iPadOS) since version 120
+
+#### Description
+
+Specify a URL to a proxy auto-config (PAC) file
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+String
+
+#### iOS restriction name:
+
+```
+EdgeProxyPacUrl
+```
+
+##### Example value (iOS):
+
+```
+https://internal.contoso.com/example.pac
+```
+
+[Back to top](#microsoft-edge-mobile---policies) 
+
 
 ## Proxy server policies
 
