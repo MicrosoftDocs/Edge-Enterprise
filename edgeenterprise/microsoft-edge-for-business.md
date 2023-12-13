@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/12/2023
+ms.date: 12/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -84,7 +84,7 @@ Default organizational branding can be enabled by admins through the following p
 - OrganizationalBrandingOnWorkProfileUIEnabled
 - OrganizationLogoOverlayOnAppIconEnabled
 
-Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more details on configuring in Entra, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
