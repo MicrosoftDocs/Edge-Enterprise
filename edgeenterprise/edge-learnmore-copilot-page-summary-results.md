@@ -1,9 +1,9 @@
 ---
-title: "Copilot webpage summarization behavior"
+title: "Copilot in Edge webpage summarization behavior"
 ms.author: prithviokade
 author: dan-wesley
 manager: likuba
-ms.date: 12/12/2023
+ms.date: 12/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 description: "This article shows the results of Copilot page summary tests."
 ---
 
-# Copilot webpage summarization behavior
+# Copilot in Edge webpage summarization behavior
 
-The following chart explains the current behavior of Copilot webpage summarization on various document types. This information will be updated when support for summarization increases. This chart covers the behavior in both Copilot and Copilot with Commercial Data Protection. Support for these document types only applies to Edge Copilot.
+The following chart explains the current behavior of Copilot in Edge webpage summarization on various document types. This information will be updated when support for summarization increases. This chart covers the behavior in Copilot both when commercial data protection is applied and when it is not. Support for these document types only applies to Copilot in Edge.
 
 > [!NOTE]
-> **Contextual grounding in Edge Copilot:** This is the ability to ground a chat conversation in the current web page context. It applies to queries such as "Summarize this document" or "What does this page say about…" in reference to the main Edge window. Contextual grounding only applies to Sidebar instances of chat, because desktop/full-screen instances do not allow for simultaneous web context.
+> **Contextual grounding in Copilot in Edge:** This is the ability to ground a chat conversation in the current web page context. It applies to queries such as "Summarize this document" or "What does this page say about…" in reference to the tab currently being viewed by the user in the main Edge window. Contextual grounding only applies to instances of chat when using Copilot in the Edge sidebar, because desktop/full-screen instances do not allow for simultaneous web context.
 
 | Document type | Copilot and Copilot with Commercial Data Protection |
 |:-----|:-----|
