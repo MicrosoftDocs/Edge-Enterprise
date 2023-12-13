@@ -42,6 +42,7 @@ MAM Policy to configure pop-up behavior:
 - `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
 
 ### Policy update
+
 #### New policies
 
 - [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
@@ -69,6 +70,7 @@ MAM Policy to configure pop-up behavior:
 - `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
 
 ### Policy update
+
 #### New policies
 
 - [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
