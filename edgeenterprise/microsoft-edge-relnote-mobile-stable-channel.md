@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 12/12/2023
+ms.date: 12/13/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -27,6 +27,20 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues for Android.
 
+### Policy support
+
+MAM Policy to configure search engine:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL`
+
+MAM Policy to configure pop-up behavior:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting`
+- `com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls`
+- `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
+
 ### Policy update
 #### New policies
 
@@ -39,6 +53,20 @@ Fixed various bugs and performance issues for Android.
 ## Version 120.0.2210.59: December 12, 2023
 
 Fixed various bugs and performance issues for iOS.
+
+### Policy support
+
+MAM Policy to configure search engine:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL`
+
+MAM Policy to configure pop-up behavior:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting`
+- `com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls`
+- `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
 
 ### Policy update
 #### New policies
