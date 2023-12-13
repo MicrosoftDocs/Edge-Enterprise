@@ -75,14 +75,16 @@ For more information about the Enterprise personal browser and the policies that
 
 ## Company Branding
 
-Want to customize the look of Edge for Business? Now you can enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily visually differentiate between multiple profiles and browser windows.
+Want to customize the look of Edge for Business? Now you can enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon.
 
-Admins need to enable their organization's branding through the following policies:
+This branding can help users more easily differentiate between multiple profiles and browser windows. This visual option allows enterprises to foster employee trust through the specifically customized branding, while growing affinity by serving an effective brand reinforcement strategy.
+
+Default organizational branding can be enabled by admins through the following policies:
 
 - OrganizationalBrandingOnWorkProfileUIEnabled
 - OrganizationLogoOverlayOnAppIconEnabled
 
-Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for the organization's branding assets to show in this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more information, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
