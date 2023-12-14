@@ -24,14 +24,17 @@ The following chart explains the current behavior of Copilot in Edge webpage sum
 | Intranet Sites such as SharePoint | Summarization is supported<br>\* Embedded Office docs in SharePoint aren't supported |
 | Public Sites such as Wikipedia    | Summarization is supported |
 | Outlook Web App                   | Summarization is supported |
-| PDF                               | Summarization is supported |
+| PDFs                               | Summarization is supported |
 | Office Documents                  | Summarization isn't supported |
-| Purview DLP Policies **           | Summarization isn't supported |
-| MAM/MDA Policies ++               | Summarization isn't supported |
+| Sites protected by Purview DLP Policies ** | Summarization isn't supported |
+| Sites protected by MAM Policies ++   |  Summarization isn't supported |
+| Sites protected by MDA Policies ^^ | Summarization isn't supported |
 
-** Purview DLP Policies need to be set to either "block" or "warn" and the admin must also flag "no page context extraction/summarization" to prevent these documents from being reviewed by Edge.
+** Sites protected by Purview DLP Policies will disallow summarization if any policy, except for "paste", is set to "block" or "override".
 
-++ MAM "Block" policy will disable contextual grounding/summarization. MDA "Block" and "Audit" must both be active to disable contextual grounding/summarization.
+++ Sites protected by MDA Policies will disallow summarization if any policy is set to "audit" or "block".
+
+^^ Sites protected by MAM Policies will disallow summarization if any policy is set to "block".
 
 ## See also
 
