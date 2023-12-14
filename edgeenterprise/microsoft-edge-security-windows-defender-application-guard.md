@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -13,6 +13,9 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 ---
 
 # Microsoft Edge support for Microsoft Defender Application Guard
+
+> [!NOTE]
+> Microsoft Defender Application Guard, including the Windows Isolated App Launcher APIs, is being deprecated for Microsoft Edge for Business and is no longer being updated. Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more Edge for Business security capabilities.
 
 > [!NOTE]
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
