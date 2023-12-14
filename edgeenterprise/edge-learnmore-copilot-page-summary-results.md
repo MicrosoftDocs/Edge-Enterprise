@@ -30,11 +30,11 @@ The following chart explains the current behavior of Copilot in Edge webpage sum
 | Sites protected by MAM Policies ++   |  Summarization isn't supported |
 | Sites protected by MDA Policies ^^ | Summarization isn't supported |
 
-** Sites protected by Purview DLP Policies will disallow summarization if any policy, except for "paste", is set to "block" or "override".
+** Sites protected by Purview DLP Policies disallow summarization if any policy except for "paste", is set to "block" or "override".
 
-++ Sites protected by MDA Policies will disallow summarization if any policy is set to "audit" or "block".
+++ Sites protected by MDA Policies disallow summarization if any policy is set to "audit" or "block".
 
-^^ Sites protected by MAM Policies will disallow summarization if any policy is set to "block".
+^^ Sites protected by MAM Policies disallow summarization if any policy is set to "block".
 
 ## See also
 
