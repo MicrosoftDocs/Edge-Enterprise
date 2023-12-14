@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -28,6 +28,8 @@ All the Stable channel security updates are listed in [Release notes for Microso
 Fixed various bugs and performance issues for Android.
 
 ### Policy support
+
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
 
 MAM Policy to configure search engine:
 
@@ -56,6 +58,8 @@ MAM Policy to configure pop-up behavior:
 Fixed various bugs and performance issues for iOS.
 
 ### Policy support
+
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
 
 MAM Policy to configure search engine:
 
