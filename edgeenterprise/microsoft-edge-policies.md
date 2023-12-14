@@ -3,13 +3,13 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/05/2023
+ms.date: 12/12/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: generated
+ms.custom:
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -25,16 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-# New policies
-
-The following table lists the new policies that are in this article update.
-
-|Policy Name|Caption|
-|:---|:---|
-|[PreventTyposquattingPromptOverride](#preventtyposquattingpromptoverride)|Prevent bypassing Edge Website Typo Protection prompts for sites|
-|[TyposquattingAllowListDomains](#typosquattingallowlistdomains)|Configure the list of domains for which Edge Website Typo Protection won't trigger warnings|
-|[TyposquattingCheckerEnabled](#typosquattingcheckerenabled)|Configure Edge Website Typo Protection|
 
 ## Available policies
 
@@ -608,7 +598,8 @@ These tables list all of the browser-related group policies available in this re
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
-|[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile|
+|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile|
+|[OrganizationalBrandingOnWorkProfileUIEnabled](#organizationalbrandingonworkprofileuienabled)|Allow the use of your organization's branding assets from Microsoft Entra on the profile-related UI of a work profile|
 |[OriginAgentClusterDefaultEnabled](#originagentclusterdefaultenabled)|Origin-keyed agent clustering enabled by default|
 |[OutlookHubMenuEnabled](#outlookhubmenuenabled)|Allow users to access the Outlook menu (obsolete)|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Control where security restrictions on insecure origins apply|
@@ -7263,7 +7254,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -7324,6 +7315,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "blocked_permissions": [
       "history"
     ],
+    "file_url_navigation_allowed": true,
     "installation_mode": "allowed",
     "minimum_version_required": "1.0.1"
   },
@@ -7370,7 +7362,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### Compact example value:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "sidebar_auto_open_blocked": true, "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "file_url_navigation_allowed": true, "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "sidebar_auto_open_blocked": true, "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -7415,6 +7407,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>history</string>
     </array>
+    <key>file_url_navigation_allowed</key>
+    <true/>
     <key>installation_mode</key>
     <string>allowed</string>
     <key>minimum_version_required</key>
@@ -18293,16 +18287,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -30809,7 +30803,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -31362,9 +31356,75 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   [Back to top](#microsoft-edge---policies)
 
+  ### OrganizationLogoOverlayOnAppIconEnabled
+
+  #### Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 120 or later
+
+  #### Description
+
+  Allow your organization's logo from Entra, if any, to be overlaid on the Microsoft Edge app icon of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This requires a browser restart to take effect.
+
+If you enable this policy, your organization's logo from Entra will be used.
+
+If you disable or don't configure this policy, your organization's logo from Entra won't be used.
+
+For more information about configuring your organization's logo on Entra, please visit [https://go.microsoft.com/fwlink/?linkid=2254514](https://go.microsoft.com/fwlink/?linkid=2254514).
+
+  #### Supported features:
+
+  - Can be mandatory: No
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OrganizationLogoOverlayOnAppIconEnabled
+  - GP name: Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
+  - GP path (Mandatory): N/A
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): N/A
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: OrganizationLogoOverlayOnAppIconEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: OrganizationLogoOverlayOnAppIconEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### OrganizationalBrandingOnWorkProfileUIEnabled
 
-  #### Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+  #### Allow the use of your organization's branding assets from Microsoft Entra on the profile-related UI of a work profile
 
   
   
@@ -31374,11 +31434,13 @@ From Microsoft Edge 93 onwards, if policy [ImplicitSignInEnabled](#implicitsigni
 
   #### Description
 
-  Allow the use of your organization's branding assets from M365, if any, on the profile-related UI of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This will require a browser restart to take effect.
+  Allow the use of your organization's branding assets from Entra, if any, on the profile-related UI of a profile that's signed in with an Entra ID (formerly known as Azure Active Directory) account. This requires a browser restart to take effect.
 
-If you enable this policy, your organization's branding assets from M365 will be used.
+If you enable this policy, your organization's branding assets from Entra will be used.
 
-If you disable or don't configure this policy, your organization's branding assets from M365 won't be used.
+If you disable or don't configure this policy, your organization's branding assets from Entra won't be used.
+
+For more information about configuring your organization's branding assets on Entra, please visit [https://go.microsoft.com/fwlink/?linkid=2254514](https://go.microsoft.com/fwlink/?linkid=2254514).
 
   #### Supported features:
 
@@ -31397,7 +31459,7 @@ If you disable or don't configure this policy, your organization's branding asse
   ##### Group Policy (ADMX) info
 
   - GP unique name: OrganizationalBrandingOnWorkProfileUIEnabled
-  - GP name: Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+  - GP name: Allow the use of your organization's branding assets from Microsoft Entra on the profile-related UI of a work profile
   - GP path (Mandatory): N/A
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
   - GP ADMX file name: MSEdge.admx
@@ -34748,7 +34810,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
