@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -65,7 +65,7 @@ Microsoft Edge sync for Microsoft Entra accounts is available for any of the fol
 - Microsoft 365 Business Premium, Business Standard, or Business Basic
 
   > [!NOTE]
-  > Business Basic or Business Standard is supported, but existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers can file a support request if they need to backfill a tenant. Business Premium includes Microsoft Entra ID  Plan 1 and Edge Enterprise Sync Services are available, see [Microsoft 365 Small and Medium-sized Businesses](https://aka.ms/M365BusinessPlans).
+  > Business Basic or Business Standard is supported, but existing tenants need to be backfilled with the RMS_S_BASIC service plan needed by AIP. Customers that are having a sync issue should review [Diagnose and fix Microsoft Edge sync issues](/deployedge/microsoft-edge-troubleshoot-enterprise-sync) and [Reset Microsoft Edge data in the cloud](/deployedge/edge-learnmore-reset-data-in-cloud) before filing a support request. Business Premium includes Microsoft Entra ID  Plan 1 and Edge Enterprise Sync Services are available, see [Microsoft 365 Small and Medium-sized Businesses](https://aka.ms/M365BusinessPlans).
 
 - Office 365 E1 and above
 - All EDU subscriptions, including:
