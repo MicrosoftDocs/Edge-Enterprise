@@ -15,7 +15,7 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 # Microsoft Edge support for Microsoft Defender Application Guard
 
 > [!NOTE]
-> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), is being deprecated for Microsoft Edge for Business and will no longer be updated. Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more Edge for Business security capabilities. To undestand the difference between *deprecation* and *removal*, see [Windows client features lifecycle](https://learn.microsoft.com/en-us/windows/whats-new/feature-lifecycle).
+> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle). Please download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more Edge for Business security capabilities.
 
 > [!NOTE]
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
