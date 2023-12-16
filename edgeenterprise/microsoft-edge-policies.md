@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/12/2023
+ms.date: 12/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -17688,7 +17688,7 @@ File types that a user has already specified to automatically be opened will con
 
 If you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory` or instances that enrolled for device management.
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory or instances that enrolled for device management.
 
   #### Supported features:
 
