@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/29/2023
+ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,34 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 120.0.2210.77: December 14, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2023).
+
+## Version 120.0.2210.61: December 7, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-7-2023).
+
+### Feature updates
+
+- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. Note: If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software publisher directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
+
+- **Updated SmartActionsBlockList policy.** The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings. Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
+
+### Policy updates
+
+#### New policies
+
+- [AutoDiscardSleepingTabsEnabled](/deployedge/microsoft-edge-policies#autodiscardsleepingtabsenabled) - Configure auto discard sleeping tabs
+- [AutomaticProfileSwitchingSiteList](/deployedge/microsoft-edge-policies#automaticprofileswitchingsitelist) - Configure the automatic profile switching site list
+- [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
+- [PostQuantumKeyAgreementEnabled](/deployedge/microsoft-edge-policies#postquantumkeyagreementenabled) - Enable post-quantum key agreement for TLS
+- [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
 
 ## Version 118.0.2088.122: November 29, 2023
 
@@ -137,106 +165,7 @@ Fixed various bugs and performance issues.
 
 - **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
 
-## Version 118.0.2088.46: October 13, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-13-2023).
-
-### Announcement: Icon change in Edge sidebar
-
-In an upcoming update to Microsoft Edge, the Bing icon entry point in the Microsoft Edge sidebar will change to the new Copilot icon. No other changes in the experience are expected.
-
-### Feature updates
-
-- **Microsoft Edge for Business Banner.**  Microsoft Edge for Business is a dedicated Microsoft Edge experience built for work that enables admins in organizations to give their users a productive and secure work browser across managed and unmanaged devices. The in-product Microsoft Edge for Business banner is being deprecated and will no longer be visible.
-
-- **Find on page.** Searching for a word or phrase on a webpage has become easier with the new smart find update to Find on page. For more information, see
-[Find on page](https://www.microsoft.com/edge/features/find-on-page?form=MT00D8). Now when you search with Find on page, we suggest related matches and synonyms making it effortless to find what you're looking for, even if you misspell a word in your search query. When you search, simply select the suggested word to quickly locate the desired word or phrase on the page. Data is sent to Microsoft for processing.  For more information, see [Microsoft Edge's Privacy Whitepaper](/microsoft-edge/privacy-whitepaper/). Administrators can control the availability using the [RelatedMatchesCloudServiceEnabled](/deployedge/microsoft-edge-policies#relatedmatchescloudserviceenabled) policy.
-
-- **New SmartScreen policy.**  The [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) policy lets administrators create a dictionary of file type extensions with a corresponding list of domains that are exempted from SmartScreen AppRep warnings.  Files with file type extensions specified for domains identified by this policy are still subject to file type extension-based security warnings and mixed-content download warnings.
-
-- **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allows administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps. When a policy is configured to Allow, updates occur on a metered connection, such as cellular connections or others where data usage is controlled.
-
-### Policy updates
-
-#### New policies
-
-- [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) - Control the behavior for the cancel dialog produced by the beforeunload event
-- [CompressionDictionaryTransportEnabled](/deployedge/microsoft-edge-policies#compressiondictionarytransportenabled) - Enable compression dictionary transport support
-- [DataUrlInSvgUseEnabled](/deployedge/microsoft-edge-policies#dataurlinsvguseenabled) - Data URL support for SVGUseElement
-- [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) - Disable SmartScreen AppRep based warnings for specified file types on specified domains
-- [ForceBuiltInPushMessagingClient](/deployedge/microsoft-edge-policies#forcebuiltinpushmessagingclient) - Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service
-- [ForcePermissionPolicyUnloadDefaultEnabled](/deployedge/microsoft-edge-policies#forcepermissionpolicyunloaddefaultenabled) - Controls whether unload event handlers can be disabled
-- [PictureInPictureOverlayEnabled](/deployedge/microsoft-edge-policies#pictureinpictureoverlayenabled) - Enable Picture in Picture overlay feature on supported webpages in Microsoft Edge
-- [SendMouseEventsDisabledFormControlsEnabled](/deployedge/microsoft-edge-policies#sendmouseeventsdisabledformcontrolsenabled) - Control the new behavior for event dispatching on disabled form controls
-
-#### Deprecated policies
-
-- [RendererCodeIntegrityEnabled](/deployedge/microsoft-edge-policies#renderercodeintegrityenabled) - Enable renderer code integrity
-
-## Version 117.0.2045.60: October 6, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.55: October 4, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-4-2023).
-
-## Version 117.0.2045.47: September 29, 2023
-
-Fixed various bugs and performance issues.
-
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
-
-### Policy updates
-
-#### New policies
-
-- [NewTabPageBingChatEnabled](/deployedge/microsoft-edge-policies#newtabpagebingchatenabled) - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page
-- [NewTabPageCompanyLogoEnabled](/deployedge/microsoft-edge-policies#newtabpagecompanylogoenabled) - Hide the company logo on the Microsoft Edge new tab page
-
-## Version 116.0.1938.98: September 29, 2023
-
-Fixed various bugs and performance issues.
-
-> [!IMPORTANT]
-> This update to Extended Stable channel contains a fix for [CVE-2023-5217](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-29-2023).
-
-## Version 117.0.2045.43: September 25, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.41: September 23, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.40: September 22, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.36: September 19, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.35: September 19, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 109.0.1518.140: September 15, 2023
-
-> [!NOTE]
-> This update was done for our M109 Windows down-level extended support. We're shipping 109 to Win 7, 8, and 8.1 (including Server 2012 R2 which is based on Win 8.1).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#september-15-2023).
-
+<!-- from Version 118.0.2088.46: October 13, 2023 to Version 109.0.1518.140: September 15, 2023 -->
 <!-- from Version 117.0.2045.31: September 15, 2023 to Version 116.0.1938.62: August 25, 2023 -->
 <!-- from Version 116.0.1938.54: August 21, 2023 to Version 114.0.1823.41: June 6, 2023 -->
 <!-- from Version 114.0.1823.37: June 2, 2023 to Version 112.0.1722.77: May 9, 2023 -->
