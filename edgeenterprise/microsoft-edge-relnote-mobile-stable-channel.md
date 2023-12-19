@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 12/14/2023
+ms.date: 12/19/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -23,6 +23,10 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
+## Version 120.0.2210.84: December 19, 2023
+
+Fixed various bugs and performance issues for Android.
+
 ## Version 120.0.2210.64: December 12, 2023
 
 Fixed various bugs and performance issues for Android.
@@ -30,6 +34,8 @@ Fixed various bugs and performance issues for Android.
 ### Policy support
 
 For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
+
+MAM Policy to configure web data store.  **Note:** The Default key value for `com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore` is changed to "2".
 
 MAM Policy to configure search engine:
 
