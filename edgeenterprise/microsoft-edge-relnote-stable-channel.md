@@ -53,7 +53,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
 - [PostQuantumKeyAgreementEnabled](/deployedge/microsoft-edge-policies#postquantumkeyagreementenabled) - Enable post-quantum key agreement for TLS
 - [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
-- [organizationlogooverlayonappiconenabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled) - Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
+- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled) - Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
 
 ## Version 118.0.2088.122: November 29, 2023
 
