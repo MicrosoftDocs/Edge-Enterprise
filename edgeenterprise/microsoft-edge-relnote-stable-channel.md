@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/07/2023
+ms.date: 12/18/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -26,6 +26,12 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 120.0.2210.77: December 14, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2023).
+
 ## Version 120.0.2210.61: December 7, 2023
 
 Fixed various bugs and performance issues.
@@ -47,6 +53,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
 - [PostQuantumKeyAgreementEnabled](/deployedge/microsoft-edge-policies#postquantumkeyagreementenabled) - Enable post-quantum key agreement for TLS
 - [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
+- [organizationlogooverlayonappiconenabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled) - Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
 
 ## Version 118.0.2088.122: November 29, 2023
 

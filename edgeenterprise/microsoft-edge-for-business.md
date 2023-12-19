@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/29/2023
+ms.date: 12/18/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,7 +38,8 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 | Enterprise personal browsing experience | A lightly managed personal browsing experience (MSA Profile) that lets you access your favorite non-work sites and services without compromising safety for the enterprise. Also switches automatically from work-related navigation into the work browser. | Available  |
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
-|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Coming soon     |
+| MAM for Mobile |  Secure and compliant access to work resources on mobile devices. | Available, see [MAM for Mobile](#mam-for-mobile)    |
+|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Company Branding](#company-branding).    |
 
 ## Work Browser (Visual Refresh)
 
@@ -74,7 +75,16 @@ For more information about the Enterprise personal browser and the policies that
 
 ## Company Branding
 
-Another Microsoft Edge for Business feature that will be coming soon is support for Company Branding. The first version of this feature will automatically apply branding assets available in the company's tenant, for example, Name, Logo and Color.
+Want to customize the look of Edge for Business? Now you can enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon.
+
+This branding can help users more easily differentiate between multiple profiles and browser windows. This visual option allows enterprises to foster employee trust through the specifically customized branding, while growing affinity by serving an effective brand reinforcement strategy.
+
+Default organizational branding can be enabled by admins through the following policies:
+
+- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled)
+- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
+
+Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more details on configuring in Entra, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
@@ -104,6 +114,15 @@ To enable protected remote or home access to org data from Microsoft Edge for Bu
 - Microsoft Edge 117.0.2045.31 or higher.
 
 For more information, see [Data protection for Windows MAM](/mem/intune/apps/protect-mam-windows).
+
+## MAM for Mobile
+
+To enable protected remote or home access to org data from Microsoft Edge for Business on personal mobile devices using:
+
+- Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge for Business for mobile.
+- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge for Business for mobile.
+
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
 
 ## Provide feedback
 

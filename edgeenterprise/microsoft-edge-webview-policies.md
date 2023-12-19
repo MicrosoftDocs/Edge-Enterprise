@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/05/2023
+ms.date: 12/15/2023
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -19,9 +19,18 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following table lists the new and deprecated policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ChannelSearchKind](#channelsearchkind)|Configure the WebView2 release channel search kind|
+|[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference (deprecated)|
+|[ReleaseChannels](#releasechannels)|Configure the WebView2 release channels|
 
 ## Available policies
 
@@ -36,7 +45,9 @@ These tables list all of the group policies available in this release of Microso
 |Policy Name|Caption|
 |-|-|
 |[BrowserExecutableFolder](#browserexecutablefolder)|Configure the location of the browser executable folder|
-|[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference|
+|[ChannelSearchKind](#channelsearchkind)|Configure the WebView2 release channel search kind|
+|[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference (deprecated)|
+|[ReleaseChannels](#releasechannels)|Configure the WebView2 release channels|
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
@@ -106,11 +117,67 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [Back to top](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### ChannelSearchKind
 
-  #### Set the release channel search order preference
+  #### Configure the WebView2 release channel search kind
 
   
+  
+  #### Supported versions:
+
+  - On Windows since 121 or later
+
+  #### Description
+
+  This policy configures the channel search kind for WebView2 applications. By default the channel search kind is 0, which is equivalent to the "Most Stable" search kind in the corresponding WebView2 API; This indicates that WebView2 environment creation should search for a release channel from the most to least stable: WebView2 Runtime, Beta, Dev, and Canary.
+
+To reverse the default search order and use the "Least Stable" search kind, set this policy to 1.
+
+To set the value for the channel search kind, provide a Value name and Value pair. Set value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ChannelSearchKind
+  - GP name: Configure the WebView2 release channel search kind
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\ChannelSearchKind
+  - Path (Recommended): N/A
+  - Value Name: list of REG_SZ
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ChannelSearchKind = "Name: WebView2APISample.exe, Value: 1"
+
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### ReleaseChannelPreference
+
+  #### Set the release channel search order preference (deprecated)
+
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -118,7 +185,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   #### Description
 
-  The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.
+  This policy is deprecated in favor of ChannelSearchKind, which has the same functionality, and will become obsolete in 124 release. The default channel search order is WebView2 Runtime, Beta, Dev, and Canary.
 
 To reverse the default search order, set this policy to 1.
 
@@ -139,7 +206,7 @@ To set the value for the release channel preference, provide a Value name and Va
   ##### Group Policy (ADMX) info
 
   - GP unique name: ReleaseChannelPreference
-  - GP name: Set the release channel search order preference
+  - GP name: Set the release channel search order preference (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdgeWebView2.admx
@@ -155,6 +222,60 @@ To set the value for the release channel preference, provide a Value name and Va
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
+
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### ReleaseChannels
+
+  #### Configure the WebView2 release channels
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 121 or later
+
+  #### Description
+
+  This policy configures the release channel options for WebView2 applications. To configure these options, set the value to a comma-separated string of integers, which map to the `COREWEBVIEW2_RELEASE_CHANNELS` values from the corresponding WebView2 API. These values are: WebView2 Runtime (0), Beta (1), Dev (2), and Canary (3). By default, environment creation searches for channels from most to least stable, using the first channel found on the device. When `ReleaseChannels` is provided, environment creation will only search for the channels specified in the set. For example, the values "0,2" and "2,0" indicate that environment creation should only search for Dev channel and the WebView2 Runtime, using the order indicated by `ChannelSearchKind`. Environment creation attempts to interpret each integer and treats any invalid entry as the Stable channel. Set `ChannelSearchKind` to reverse the search order so environment creation searches for least stable build first. If both `BrowserExecutableFolder` and `ReleaseChannels` are provided, the `BrowserExecutableFolder` takes precedence, regardless of whether the channel of `BrowserExecutableFolder` is included in the `ReleaseChannels`.
+
+To set the value for release channels, provide a Value name and Value pair. Set the value name to the Application User Model ID or the executable file name. You can use the "*" wildcard as value name to apply to all applications.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ReleaseChannels
+  - GP name: Configure the WebView2 release channels
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannels
+  - Path (Recommended): N/A
+  - Value Name: list of REG_SZ
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannels = "Name: WebView2APISample.exe, Value: 0,1,2"
 
 ```
 
