@@ -3,7 +3,7 @@ title: "Microsoft Edge Workspaces"
 ms.author: danielfi
 author: dan-wesley
 manager: kjellarsen
-ms.date: 09/28/2023
+ms.date: 12/20/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -20,7 +20,7 @@ description: "Learn about Microsoft Edge Workspaces and how they can benefit use
 This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
 
 > [!NOTE]
-> Edge Workspaces for personal use is currently in preview. To learn more about how to join, see [Edge Workspaces preview for consumer accounts now available](https://techcommunity.microsoft.com/t5/articles/edge-workspaces-preview-for-consumer-accounts-now-available/m-p/3776815).
+> Edge Workspaces for personal use is now available in Edge stable version 120. To learn more, visit [Workspaces Features & Tips](https://www.microsoft.com/en-us/edge/features/workspaces?form=MA13FJ).
 
 ## Overview
 
