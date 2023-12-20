@@ -35,8 +35,6 @@ Fixed various bugs and performance issues for Android.
 
 For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
 
-MAM Policy to configure web data store.  **Note:** The Default key value for `com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore` is changed to "2".
-
 MAM Policy to configure search engine:
 
 - `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled`
@@ -67,7 +65,7 @@ Fixed various bugs and performance issues for iOS.
 
 For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
 
-MAM Policy to configure web data store.  **Note:** The Default key value for `com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore` is changed to "2".
+ **Note:** The default key value for [iOS Website data store](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is changed to "2".
 
 MAM Policy to configure search engine:
 
