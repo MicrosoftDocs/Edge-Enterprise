@@ -20,7 +20,7 @@ description: "Learn about Microsoft Edge Workspaces and how they can benefit use
 This article describes the productivity benefits Edge Workspaces will bring to your users and how you can enable this feature and its functions in your organization.
 
 > [!NOTE]
-> Edge Workspaces for personal use is now available in Edge stable version 120. To learn more, visit [Workspaces Features & Tips](/edge/features/workspaces?form=MA13FJ).
+> Edge Workspaces for personal use is now available in Edge stable version 120. To learn more, visit [Workspaces Features & Tips](https://www.microsoft.com/en-us/edge/features/workspaces?form=MA13FJ).
 
 ## Overview
 
