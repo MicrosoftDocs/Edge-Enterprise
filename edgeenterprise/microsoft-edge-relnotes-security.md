@@ -3,7 +3,7 @@ title: "Release notes for Microsoft Edge Security Updates"
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 12/14/2023
+ms.date: 12/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,10 @@ description: "Release notes for Microsoft Edge Security Updates"
 # Release notes for Microsoft Edge Security Updates
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
+
+## December 21, 2023
+
+Microsoft has a fix for [CVE-2023-7024](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-7024) to **Microsoft Edge Stable Channel (Version 120.0.2210.91)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## December 14, 2023
 
