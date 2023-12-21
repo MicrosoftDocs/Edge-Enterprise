@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 12/19/2023
+ms.date: 12/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,6 +30,8 @@ Fixed various bugs and performance issues for Android.
 ## Version 120.0.2210.78: December 15, 2023
 
 Fixed various bugs and performance issues for iOS.
+
+ **Note:** The default key value for [iOS Website data store](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is changed to "2".
 
 ## Version 120.0.2210.64: December 12, 2023
 
@@ -68,8 +70,6 @@ Fixed various bugs and performance issues for iOS.
 ### Policy support
 
 For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
-
- **Note:** The default key value for [iOS Website data store](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is changed to "2".
 
 MAM Policy to configure search engine:
 
