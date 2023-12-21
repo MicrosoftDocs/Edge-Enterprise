@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/20/2023
+ms.date: 12/21/2023
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,6 +25,15 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 120.0.2210.91: December 21, 2023
+
+Fixed various bugs and performance issues for Stable release.
+
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2023-7024](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-7024), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-21-2023).
 
 ## Version 120.0.2210.89: December 20, 2023
 
@@ -68,7 +77,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 Fixed various bugs and performance issues for Extended Stable release.
 
 > [!IMPORTANT]
-> This update to Extended Stable channel contains a fix for [CVE-2023-6345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-CVE-2023-6345), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+> This update to Extended Stable channel contains a fix for [CVE-2023-6345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-6345), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-29-2023).
 
