@@ -2158,7 +2158,6 @@ URLBlocklist
 
 ```
 [
-
  "example.com",
  https://ssl.server.com,
  "hosting.com/bad_path",
