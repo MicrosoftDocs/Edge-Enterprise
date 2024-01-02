@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/02/2023
+ms.date: 01/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
