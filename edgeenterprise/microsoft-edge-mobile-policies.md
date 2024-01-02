@@ -2159,19 +2159,44 @@ iOS:String
 URLBlocklist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android)
 
 ```
 [
+
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/bad_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com",
- "file://*",
+[ file://*]file://*,
  "custom_scheme:*",
  "*"
 ]
+```
+
+##### Example value (iOS)
+
+```
+<array>
+
+  <string>example.com</string>
+
+  <string>[https://ssl.server.com%3c/string]https://ssl.server.com</string>
+
+  <string>hosting.com/bad_path</string>
+
+  <string>https://server:8080/path</string>
+
+  <string>.exact.hostname.com</string>
+
+  <string>[file://*%3c/string]file://*</string>
+
+  <string>custom_scheme:*</string>
+
+  <string>*</string>
+
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
