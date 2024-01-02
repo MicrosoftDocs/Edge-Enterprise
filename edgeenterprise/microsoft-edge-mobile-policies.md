@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/11/2023
+ms.date: 01/02/2024
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
