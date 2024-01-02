@@ -2108,15 +2108,10 @@ URLAllowlist
 ```
 <array>
   <string>example.com</string>
-  
   <string>[https://ssl.server.com%3c/string]https://ssl.server.com</string>
-  
   <string>hosting.com/good_path</string>
-  
   <string>https://server:8080/path</string>
-  
   <string>.exact.hostname.com</string>
-  
 </array>
 ```
 
@@ -2179,23 +2174,14 @@ URLBlocklist
 
 ```
 <array>
-
   <string>example.com</string>
-
   <string>[https://ssl.server.com%3c/string]https://ssl.server.com</string>
-
   <string>hosting.com/bad_path</string>
-
   <string>https://server:8080/path</string>
-
   <string>.exact.hostname.com</string>
-
   <string>[file://*%3c/string]file://*</string>
-
   <string>custom_scheme:*</string>
-
   <string>*</string>
-
 </array>
 ```
 
