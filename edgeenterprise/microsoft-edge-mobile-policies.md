@@ -2091,16 +2091,33 @@ iOS:String
 URLAllowlist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 [
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/good_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com"
 ]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+  <string>example.com</string>
+  
+  <string>[https://ssl.server.com%3c/string]https://ssl.server.com</string>
+  
+  <string>hosting.com/good_path</string>
+  
+  <string>https://server:8080/path</string>
+  
+  <string>.exact.hostname.com</string>
+  
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
