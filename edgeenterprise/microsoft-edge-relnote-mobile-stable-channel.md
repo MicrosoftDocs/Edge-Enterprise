@@ -35,7 +35,7 @@ Fixed various bugs and performance issues for iOS.
 
 Fixed various bugs and performance issues.
 
-**Note:** The app jump blocker feature is removed from ANdroid and iOS.
+**Note:** The app jump blocker feature is removed from Android and iOS.
 
 ## Version 120.0.2210.86: December 19, 2023
 
