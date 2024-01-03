@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/02/2024
+ms.date: 01/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -30,6 +30,8 @@ Fixed various bugs and performance issues for iOS.
 ## Version 120.0.2210.99: December 27, 2023
 
 Fixed various bugs and performance issues.
+
+**Note:** The app jump blocker feature is removed from ANdroid and iOS.
 
 ## Version 120.0.2210.86: December 19, 2023
 
