@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/18/2023
+ms.date: 01/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -39,7 +39,7 @@ Fixed various bugs and performance issues.
 
 - **Microsoft Edge migrates the updates experience into Browser Essentials.** Getting alerts on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **New typosquatting checker policies.** The built-in typosquatting checker warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure website typo protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
+- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
 
 ### Policy updates
 
