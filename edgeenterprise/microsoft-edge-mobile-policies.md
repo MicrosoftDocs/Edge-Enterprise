@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/02/2024
+ms.date: 01/04/2024
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -51,6 +51,7 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeBrandLogo](#edgebrandlogo)   | Configure Brand logo in New Tab Page  |
 | [EdgeBrandColor](#edgebrandcolor)  | Configure Brand color in New Tab Page  |
 | [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
+| [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
 
 ### [*Proxy server*](#proxy-server)
 
@@ -121,6 +122,7 @@ These tables list all of the browser-related policies available in this release 
 | [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
 | [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 | [ManagedFavorites](#managedfavorites)  |  Configure Favorites (bookmarks) |
+| [ExperimentationAndConfigurationServiceControl](#ExperimentationAndConfigurationServiceControl) |  Control communication with the Experimentation and Configuration Service   |
 
 ## HTTP authentication
 
@@ -1944,6 +1946,44 @@ https://internal.contoso.com/example.pac
 
 [Back to top](#microsoft-edge-mobile---policies) 
 
+### EdgeBlockSignInEnabled
+
+#### Block users from signing in to Edge
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+- Microsoft Edge (iOS and iPadOS) since version 121
+
+#### Description
+
+By default, users are allowed to sign in to Edge with their personal accounts or work accounts. You can enable this policy to block users from signing in to Edge.
+
+#### Supported features:
+- Dynamic Policy Refresh: Yes
+
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+iOS:Boolean
+
+#### Android and iOS restriction name:
+
+```
+EdgeBlockSignInEnabled
+```
+
+#### Example value (Android and iOS):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 ## Proxy server policies
 
@@ -2679,6 +2719,72 @@ ManagedFavorites
   </dict>
 </array>
 
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### ExperimentationAndConfigurationServiceControl
+
+#### Control communication with the Experimentation and Configuration Service
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+- Microsoft Edge (iOS and iPadOS) since version 121
+
+#### Description
+
+The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.
+
+Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
+
+Configuration payload consists of a list of recommended settings that Microsoft wants to deploy to optimize the user experience.
+
+Configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+
+If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.
+
+If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.
+
+If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.
+
+If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.
+
+If you don't configure this policy on an unmanaged device, the behavior is the same as the 'FullMode'.
+
+#### Policy options mapping:
+
+- FullMode (2) = Retrieve configurations and experiments
+
+- ConfigurationsOnlyMode (1) = Retrieve configurations only
+
+- RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
+
+Use the preceding information when configuring this policy.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+
+- Per Profile : No
+
+#### Data Type:
+
+Android:Integer
+
+iOS:Integer
+
+#### Android and iOS restriction name:
+
+```
+ExperimentationAndConfigurationServiceControl
+```
+
+##### Example value (Android and iOS):
+
+```
+1
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
