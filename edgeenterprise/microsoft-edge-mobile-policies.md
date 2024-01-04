@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/11/2023
+ms.date: 01/02/2024
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -2091,16 +2091,28 @@ iOS:String
 URLAllowlist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 [
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/good_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com"
 ]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+  <string>example.com</string>
+  <string>https://ssl.server.com</string>
+  <string>hosting.com/good_path</string>
+  <string>https://server:8080/path</string>
+  <string>.exact.hostname.com</string>
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -2142,19 +2154,34 @@ iOS:String
 URLBlocklist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android)
 
 ```
 [
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/bad_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com",
- "file://*",
+[ file://*]file://*,
  "custom_scheme:*",
  "*"
 ]
+```
+
+##### Example value (iOS)
+
+```
+<array>
+  <string>example.com</string>
+  <string>https://ssl.server.com</string>
+  <string>hosting.com/bad_path</string>
+  <string>https://server:8080/path</string>
+  <string>.exact.hostname.com</string>
+  <string>file://*</string>
+  <string>custom_scheme:*</string>
+  <string>*</string>
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
