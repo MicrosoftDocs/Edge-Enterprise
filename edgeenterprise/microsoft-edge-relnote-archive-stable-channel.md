@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: leahtu
 author: leahmsft
 manager: srugh
-ms.date: 12/07/2023
+ms.date: 01/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -38,6 +38,11 @@ In an upcoming update to Microsoft Edge, the Bing icon entry point in the Micros
 - **New SmartScreen policy.**  The [ExemptSmartScreenDownloadWarnings](/deployedge/microsoft-edge-policies#exemptsmartscreendownloadwarnings) policy lets administrators create a dictionary of file type extensions with a corresponding list of domains that are exempted from SmartScreen AppRep warnings.  Files with file type extensions specified for domains identified by this policy are still subject to file type extension-based security warnings and mixed-content download warnings.
 
 - **New Microsoft Edge Update policies.** The **MeteredUpdatesDefault** and **MeteredUpdates** policies allows administrators to control the "Download Updates over metered connections" setting (`edge://settings/help`). The **MeteredUpdatesDefault** applies to all apps and **MeteredUpdates** applies to targeted apps. When a policy is configured to Allow, updates occur on a metered connection, such as cellular connections or others where data usage is controlled.
+
+- **Support for WindowsTabManager API.** Microsoft Edge version 118 uses the new public Windows WindowTabManager API (for more information, see [WindowTabManager Class (Windows.UI.Shell) - Windows UWP applications](/uwp/api/windows.ui.shell.windowtabmanager?view=winrt-22621&viewFallbackFrom=winrt-22000)) to support features such as showing browser tabs in Alt+Tab, tab tearout, and taskbar pin glomming. These features will only work on newer Windows versions that support this API:
+
+  - Windows 11: [May 24, 2023—KB5026446 (OS Build 22621.1778) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/may-24-2023-kb5026446-os-build-22621-1778-preview-3c547100-7a73-4ae6-bb7d-ebd02e87dc04)
+  - Windows 10: [May 23, 2023—KB5026435 (OS Build 19045.3031) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/may-23-2023-kb5026435-os-build-19045-3031-preview-2751b693-5544-4110-bc0c-feb8dd7336b3)
 
 ### Policy updates
 
