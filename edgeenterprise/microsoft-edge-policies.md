@@ -6216,7 +6216,7 @@ Use the preceding information when configuring this policy.
   
   #### Supported versions:
 
-  - On Windows and macOS since 119 or later
+  - On Windows and macOS since 121 or later
 
   #### Description
 
@@ -6284,7 +6284,7 @@ This policy is available only on Windows instances that are joined to a Microsof
   
   #### Supported versions:
 
-  - On Windows and macOS since 119 or later
+  - On Windows and macOS since 121 or later
 
   #### Description
 
