@@ -2,6 +2,15 @@
 
 
 
+## Week of January 01, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/4/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 1/4/2024 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
+
+
 ## Week of December 18, 2023
 
 
@@ -36,21 +45,3 @@
 | 12/7/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
 | 12/8/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
 | 12/8/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of November 27, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/27/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-| 11/29/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 11/29/2023 | [Copilot webpage summarization behavior for PDF and Word documents](/DeployEdge/edge-learnmore-copilot-page-summary-results) | added |
-| 11/29/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of November 20, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
