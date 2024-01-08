@@ -19,6 +19,14 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 121.0.2277.X: January 8, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
+
 ## Version 121.0.2277.4: December 15, 2023
 
 Fixed various bugs and performance issues.
