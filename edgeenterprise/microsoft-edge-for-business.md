@@ -89,7 +89,7 @@ Default organizational branding can be enabled by admins through the following p
 Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more details on configuring in Entra, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 > [!TIP]
-> Square or rectangular logos will provide the optimal visual branding experience.
+> Square and horizontal logos will provide the optimal visual branding experience.
 
 ![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
 
