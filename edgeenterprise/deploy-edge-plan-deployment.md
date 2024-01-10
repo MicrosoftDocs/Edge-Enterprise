@@ -3,7 +3,7 @@ title: "Plan your deployment of Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 01/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -14,13 +14,7 @@ description: "Plan your deployment of Microsoft Edge"
 
 # Plan your deployment of Microsoft Edge
 
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise-grade security, productivity, manageability, and AI built in.
-
 This article describes the recommended practices for deploying Microsoft Edge in an enterprise environment.
-
->[!NOTE]
->This article applies to Microsoft Edge version 77 or later.
 
 ## Article content
 
