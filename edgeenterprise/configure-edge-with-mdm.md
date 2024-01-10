@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge using Mobile Device Management"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 11/17/2021
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -18,9 +18,6 @@ This article explains how to configure Microsoft Edge on Windows 10 using [Mobil
 
 - How to [create Open Mobile Alliance Uniform Resource Identifier (OMA-URI) for Microsoft Edge policies](#create-an-oma-uri-for-microsoft-edge-policies).
 - How to [configure Microsoft Edge in Intune using ADMX ingestion and custom OMA-URI](#configure-microsoft-edge-in-intune-using-admx-ingestion).
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 ## Prerequisites
 
@@ -70,7 +67,7 @@ Use the following formula as a guide for creating the OMA-URI paths. <br/><br/>
 
 #### URI path example:
 
-For this example, assume the `<ADMXIngestName>` node was named “Edge" and you're setting a mandatory policy. The URI path would be:<br/><br/>
+For this example, assume the `<ADMXIngestName>` node was named "Edge" and you're setting a mandatory policy. The URI path would be:<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
 
 If the policy isn't in a group (for example, DiskCacheSize) remove "`~<ADMXCategory>`". Replace `<PolicyName>` with the name of the policy, DiskCacheSize. The URI path would be:<br/><br/>
@@ -164,7 +161,7 @@ Use the URI path formula (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~
 2. If the policy you want to configure isn't in a group, skip to step 4 and remove `~<ADMXCategory>` from the path.
 3. If the policy you want to configure is in a group:
 
-   - To look up the `<ADMXCategory>`, search for the policy you want to set. When searching append "_recommended" to the policy name. For example, a search for "RegisteredProtocolHandlers_recommended” has the following result:
+   - To look up the `<ADMXCategory>`, search for the policy you want to set. When searching append "_recommended" to the policy name. For example, a search for "RegisteredProtocolHandlers_recommended" has the following result:
 
         ```xml
          <policy class="Both" displayName="$(string.RegisteredProtocolHandlers)" explainText="$(string.RegisteredProtocolHandlers_Explain)" key="Software\Policies\Microsoft\Edge\Recommended" name="RegisteredProtocolHandlers_recommended" presentation="$(presentation.RegisteredProtocolHandlers)">
@@ -298,7 +295,7 @@ This section describes how to:
 2. [Set a policy using custom OMA-URI in Intune](#set-a-policy-using-custom-oma-uri-in-intune)
 
 > [!IMPORTANT]
-> As a best practice, don’t use a custom OMA-URI profile and an Administration templates profile to configure the same Microsoft Edge setting in Intune. If you deploy the same policy using both a custom OMA-URI  and an Administrative template profile, but with different values, users will get unpredictable results. We strongly recommend removing your OMA-URI profile before using an Administration templates profile.
+> As a best practice, don't use a custom OMA-URI profile and an Administration templates profile to configure the same Microsoft Edge setting in Intune. If you deploy the same policy using both a custom OMA-URI  and an Administrative template profile, but with different values, users will get unpredictable results. We strongly recommend removing your OMA-URI profile before using an Administration templates profile.
 
 ### Ingest the Microsoft Edge ADMX file into Intune
 
@@ -393,12 +390,12 @@ Use the following steps to confirm that the Microsoft Edge policy is using the p
 
 #### Troubleshoot a policy setting
 
-If a Microsoft Edge policy isn’t taking effect, try the following steps:
+If a Microsoft Edge policy isn't taking effect, try the following steps:
 
-Open the *edge://policy* page on the target device (a device you assigned the profile to in Microsoft Intune) and search for the policy. If the policy isn’t on the *edge://policy* page, try the following:
+Open the *edge://policy* page on the target device (a device you assigned the profile to in Microsoft Intune) and search for the policy. If the policy isn't on the *edge://policy* page, try the following:
 
-- Check that the policy is in the registry and is correct. On the target device open the Windows 10 Registry Editor (**Windows key + r**, enter “*regedit*” and then press **Enter**.) Check that the policy is correctly defined in the *\Software\Policies\ Microsoft\Edge* path. If you don’t find the policy in the expected path, then the policy wasn’t pushed to the device correctly.
-- Check that the OMA-URI path is correct, and the value is a valid XML string. If either of these are incorrect the policy won’t be pushed to the target device.
+- Check that the policy is in the registry and is correct. On the target device open the Windows 10 Registry Editor (**Windows key + r**, enter "*regedit*" and then press **Enter**.) Check that the policy is correctly defined in the *\Software\Policies\ Microsoft\Edge* path. If you don't find the policy in the expected path, then the policy wasn't pushed to the device correctly.
+- Check that the OMA-URI path is correct, and the value is a valid XML string. If either of these are incorrect the policy won't be pushed to the target device.
 
 For more trouble shooting tips, see [Set up Microsoft Intune](/intune/fundamentals/setup-steps) and [Sync devices](/intune/remote-actions/device-sync).
 
