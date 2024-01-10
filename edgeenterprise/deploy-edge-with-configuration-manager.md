@@ -3,7 +3,7 @@ title: "Deploy Microsoft Edge using System Center Configuration Manager"
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/24/2022
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,9 +15,6 @@ description: "Learn how to deploy Microsoft Edge with System Center Configuratio
 # Deploy Microsoft Edge using System Center Configuration Manager
 
 This article shows you how to automate a Microsoft Edge deployment by using System Center Configuration Manager (SCCM).
-
->[!NOTE]
->This article applies to Microsoft Edge version 77 or later.
 
 ## Before you begin
 
