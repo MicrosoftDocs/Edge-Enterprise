@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/09/2024
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 120.0.2210.126: January 9, 2024
 
-Fixed various bugs and performance issues for iOS.
+Fixed various bugs and performance issues for Android and iOS.
 
 ## Version 120.0.2210.115: January 5, 2024
 
