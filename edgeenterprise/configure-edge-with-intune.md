@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge policy settings for Windows using Microsoft Int
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 07/28/2023
+ms.date: 01/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,9 +15,6 @@ description: "Configure Microsoft Edge policy settings for Windows using Microso
 # Configure Microsoft Edge policy settings with Microsoft Intune
 
 This article explains how to configure Microsoft Edge policy settings for Windows 10 using Microsoft Intune.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 You can configure Microsoft Edge policies and settings by adding a device configuration profile to Microsoft Intune. Using Intune to manage and enforce policies is equivalent to using Active Directory Group Policy or configuring local Group Policy Object (GPO) settings on user devices.
 
