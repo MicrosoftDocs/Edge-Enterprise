@@ -29,7 +29,7 @@ The fields in the filter format are:
 | Field | Description |
 | --- | --- |
 | **scheme** (*optional*) | It can be http://, https://, ftp://, edge://, etc. |
-| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (".") before **host**. A single IP Address Literal hostname may be specified, but wildcarding is not supported for an IP Address Literal hostname. |
+| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (.) before **host**. A single IP Address Literal hostname may be specified, but wildcarding is not supported for an IP Address Literal hostname. |
 | **port** (*optional*) | Valid values range from 1 to 65535. |
 | **path** (*optional*) | You can use any string in the path. |
 | **query** (*optional*) | The **query** is either key-value or key-only tokens separated by an ampersand ("&"). Separate key-value tokens with an equal sign ("="). To indicate a prefix match, you can use an asterisk ("\*") at the end of the **query**. |
@@ -40,8 +40,8 @@ The filter format resembles the URL format, except for the following differences
 
 - If you include "user:pass", it's ignored. For example, http://user:pass@ftp.contoso.com/pub/example.iso.
 - If you include a fragment identifier ("#"), it and everything that follows the identifier is ignored.
-- You can use a wildcard ("*") as the **host** and you can prefix it with a dot (".").
-- You can use a forward slash ("/") or a dot (".") as a suffix for the **host**. In this case, the suffix is ignored.
+- You can use a wildcard ("*") as the **host** and you can prefix it with a dot (.).
+- You can use a forward slash ("/") or a dot (.) as a suffix for the **host**. In this case, the suffix is ignored.
 
 ## Filter selection criteria
 
@@ -61,7 +61,7 @@ The filter selected for a URL is the most specific match found after processing 
 
 In this example, when searching for a match to "https://sub.contoso.com/docs" the filter selection will:
 
-1. Search for a filter for "sub.contoso.com". If it finds a filter, the search moves to step 2. If a filter isn't found, then it tries again with "contoso.com", "com", and finally "".
+1. Search for a filter for "sub.contoso.com". If it finds a filter, the search moves to step 2. If a filter isn't found, then it tries again with "contoso.com", "com", and finally " ".
 2. From the selected filters, any that don't have "http" in the **scheme** are removed.
 3. From the remaining filters, any that have an exact port number that isn't "80" are removed.
 4. From the remaining filters, any that don't have "/docs" as a prefix of the **path** are removed.
@@ -80,7 +80,7 @@ You can use either a standard or custom **schema**. Supported standard schemas i
 
 Any other **schema** is treated as a custom **schema**, but only the _schema:*_ and _schema://*_ patterns are allowed. For example:
 
-- "custom:\*" or "custom://\*" will match "custom:app"
+- "custom:\*" or "custom://\*" match "custom:app"
 - "custom:app" or "custom://app" are invalid
 
 **schema** and **host** aren't case-sensitive. For example:
