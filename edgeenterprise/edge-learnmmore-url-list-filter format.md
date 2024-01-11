@@ -14,7 +14,7 @@ description: "Learn about the filter format used for Microsoft Edge URLBlocklist
 
 # Filter format for URL list-based policies
 
-This article describes the filter format used for the Microsoft Edge URL list-based policies (For example, [URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist), and [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls) policies.
+This article describes the filter format used for the Microsoft Edge URL list-based policies For example, ([URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist), and [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls)) policies.
 
 ## The filter format
 
@@ -38,7 +38,7 @@ The fields in the filter format are:
 
 The filter format resembles the URL format, except for the following differences:
 
-- If you include "user:pass", it will be ignored. For example, http://user:pass@ftp.contoso.com/pub/example.iso.
+- If you include "user:pass", it's ignored. For example, http://user:pass@ftp.contoso.com/pub/example.iso.
 - If you include a fragment identifier ("#"), it and everything that follows the identifier is ignored.
 - You can use a wildcard ("*") as the **host** and you can prefix it with a dot (".").
 - You can use a forward slash ("/") or a dot (".") as a suffix for the **host**. In this case, the suffix is ignored.
@@ -71,8 +71,8 @@ In this example, when searching for a match to "https://sub.contoso.com/docs" th
 
 If a filter has a dot (".") prefixing the **host** then only exact **host** matches are filtered. For example:
 
-- "contoso.com" (no dot) will match "contoso.com", "www.contoso.com", and "sub.www.contoso.com"
-- ".www.contoso.com" (with a dot prefix) will only match "www.contoso.com"
+- "contoso.com" (no dot) matches "contoso.com", "www.contoso.com", and "sub.www.contoso.com"
+- ".www.contoso.com" (with a dot prefix) only matches "www.contoso.com"
 
 You can use either a standard or custom **schema**. Supported standard schemas include:
 
