@@ -24,7 +24,7 @@ This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2024-21337](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21337)
 - [CVE-2024-20709](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20709)
-- [CVE-2023-48631](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-48631)
+- [CVE-2024-20721](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20721)
 - [CVE-2024-20675](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20675)
 
 ## January 5, 2024
