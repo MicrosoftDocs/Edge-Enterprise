@@ -72,7 +72,7 @@ In this example, when searching for a match to "https://sub.contoso.com/docs" th
 If a filter has a dot (".") prefixing the **host** then only exact **host** matches are filtered. For example:
 
 - `contoso.com` (no dot) matches `contoso.com`, `www.contoso.com`, and `sub.www.contoso.com`
-- ``.www.contoso.com` (with a dot prefix) only matches `www.contoso.com`
+- `.www.contoso.com` (with a dot prefix) only matches `www.contoso.com`
 
 You can use either a standard or custom **schema**. Supported standard schemas include:
 
