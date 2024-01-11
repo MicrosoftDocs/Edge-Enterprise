@@ -14,7 +14,7 @@ description: "Learn about the filter format used for Microsoft Edge URLBlocklist
 
 # Filter format for URL list-based policies
 
-This article describes the filter format used for the Microsoft Edge URL list-based policies For example, ([URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist), and [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls)) policies.
+This article describes the filter format used for the Microsoft Edge URL list-based policies For example, [URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist), and [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls) policies.
 
 ## The filter format
 
@@ -29,7 +29,7 @@ The fields in the filter format are:
 | Field | Description |
 | --- | --- |
 | **scheme** (*optional*) | It can be http://, https://, ftp://, edge://, etc. |
-| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (.) before **host**. A single IP Address Literal hostname may be specified, but wildcarding is not supported for an IP Address Literal hostname. |
+| **host** (*required*) | It must be a valid host name and you can use a wildcard ("\*"). To disable subdomain matching, include an optional dot (.) before **host**. A single IP Address Literal hostname may be specified, but wildcarding isn't supported for an IP Address Literal hostname. |
 | **port** (*optional*) | Valid values range from 1 to 65535. |
 | **path** (*optional*) | You can use any string in the path. |
 | **query** (*optional*) | The **query** is either key-value or key-only tokens separated by an ampersand ("&"). Separate key-value tokens with an equal sign ("="). To indicate a prefix match, you can use an asterisk ("\*") at the end of the **query**. |
@@ -50,7 +50,7 @@ The filter selected for a URL is the most specific match found after processing 
 1. Filters with the longest **host** match are selected first.
 2. From the selected filters, any filter with a non-matching scheme or port is discarded.
 3. From the remaining filters, the filter with the longest matching **path** is selected.
-4. From the remaining filters, the filter with the longest set of query tokens is selected. At this step, the allow list filter takes precedence over the block list filter if both filters have the same **path** length and number of **query** tokens.
+4. From the remaining filters, the filter with the longest set of query tokens is selected. At this step, the allowlist filter takes precedence over the blocklist filter if both filters have the same **path** length and number of **query** tokens.
 5. If there's no valid filter remaining, then the left-most subdomain is removed from **host** and the selection process starts over at step 1. The special asterisk ("*") **host** is the last searched and it matches all hosts.
 6. If a filter's available, it blocks or allows the URL request.
 
