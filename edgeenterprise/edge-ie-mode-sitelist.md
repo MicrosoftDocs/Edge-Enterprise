@@ -3,10 +3,10 @@ title: "Enterprise site configuration strategy"
 ms.author: shisub
 author: shisub
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "A step-by-step guide to configuring the Enterprise Mode Site list for Internet Explorer mode."
@@ -23,9 +23,6 @@ description: "A step-by-step guide to configuring the Enterprise Mode Site list 
 This article describes changes to the Enterprise Mode Site List to support Internet Explorer mode for Microsoft Edge version 77 and later.
 
 For more information on the schema for the Enterprise Mode Site List XML file, see [Enterprise Mode schema v.2 guidance](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 
 ## Configuration strategy

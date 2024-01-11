@@ -3,10 +3,10 @@ title: "Learn how Microsoft Edge handles mixed content downloads"
 ms.author: archandr
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2021
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn about mixed content downloads and how Microsoft Edge handles them."
@@ -15,9 +15,6 @@ description: "Learn about mixed content downloads and how Microsoft Edge handles
 # Learn how Microsoft Edge handles mixed content downloads
 
 This article defines mixed content downloads and explains how Microsoft Edge handles them.
-
->[!NOTE]
->This article applies to Microsoft Edge version 85 or later.
 
 ## What are mixed content downloads?
 
