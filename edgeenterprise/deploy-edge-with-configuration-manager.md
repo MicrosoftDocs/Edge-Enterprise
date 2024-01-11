@@ -39,13 +39,13 @@ Use the Configuration Manager wizard to create the application.
 
     ![Create application](./media/edge-ent-deployment-sccm/edge-ent-create-app-1.png)
 
-3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Provide the following information:  
+3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information extracted from the installation .msi file. Provide the following information:  
 
    - **Type**: Choose **Windows Installer (\*.msi file)**.  
 
-   - **Location**: Type the location (or click **Browse** to select the location) of the installation file **MicrosoftEdgeDevEnterpriseX64.msi** or **MicrosoftEdgeDevEnterpriseX86.msi**. Note that the location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
+   - **Location**: Type the location (or click **Browse** to select the location) of the installation file **MicrosoftEdgeDevEnterpriseX64.msi** or **MicrosoftEdgeDevEnterpriseX86.msi**. **Note:** The location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
 
-   Your **Specify settings for this application** page will look like the following example:  
+   Your **Specify settings for this application** page looks like the following example:  
 
     ![Specify settings for this application](./media/edge-ent-deployment-sccm/edge-ent-create-app-2.png)
 
