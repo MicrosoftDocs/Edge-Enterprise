@@ -61,7 +61,7 @@ The filter selected for a URL is the most specific match found after processing 
 
 In this example, when searching for a match to "https://sub.contoso.com/docs" the filter selection will:
 
-1. Search for a filter for "sub.contoso.com". If it finds a filter, the search moves to step 2. If a filter isn't found, then it tries again with "contoso.com", "com", and finally " ".
+1. Search for a filter for `sub.contoso.com`. If it finds a filter, the search moves to step 2. If a filter isn't found, then it tries again with `contoso.com`, `com`, and finally " ".
 2. From the selected filters, any that don't have "http" in the **scheme** are removed.
 3. From the remaining filters, any that have an exact port number that isn't "80" are removed.
 4. From the remaining filters, any that don't have "/docs" as a prefix of the **path** are removed.
@@ -71,8 +71,8 @@ In this example, when searching for a match to "https://sub.contoso.com/docs" th
 
 If a filter has a dot (".") prefixing the **host** then only exact **host** matches are filtered. For example:
 
-- "contoso.com" (no dot) matches "contoso.com", "www.contoso.com", and "sub.www.contoso.com"
-- ".www.contoso.com" (with a dot prefix) only matches "www.contoso.com"
+- `contoso.com` (no dot) matches `contoso.com`, `www.contoso.com`, and `sub.www.contoso.com`
+- ``.www.contoso.com` (with a dot prefix) only matches `www.contoso.com`
 
 You can use either a standard or custom **schema**. Supported standard schemas include:
 
@@ -85,11 +85,11 @@ Any other **schema** is treated as a custom **schema**, but only the _schema:*_ 
 
 **schema** and **host** aren't case-sensitive. For example:
 
-- "http://contoso.com" filter matches "HTTP://contoso.com", "http://contoso.COM", and "http://contoso.com"
+- `http://contoso.com` filter matches `HTTP://contoso.com`, `http://contoso.COM`, and `http://contoso.com`
 
 **path** and **query** are case-sensitive. For example:
 
-- "http://contoso.com/path?query=A" filter doesn't match "http://contoso.com/Path?query=A" or "http://contoso.com/path?Query=A". It does match "http://contoso.COM/path?query=A".
+- `http://contoso.com/path?query=A` filter doesn't match `http://contoso.com/Path?query=A` or `http://contoso.com/path?Query=A`. It does match `http://contoso.COM/path?query=A`.
 
 ## Content license
 
