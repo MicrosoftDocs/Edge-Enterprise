@@ -3,10 +3,10 @@ title: "Filter format for Microsoft Edge URL policies"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 12/02/2021
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about the filter format used for Microsoft Edge URLBlocklist and URLAllowlist policies."
@@ -15,9 +15,6 @@ description: "Learn about the filter format used for Microsoft Edge URLBlocklist
 # Filter format for URL list-based policies
 
 This article describes the filter format used for the Microsoft Edge URL list-based policies (For example, [URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist), and [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls) policies.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 ## The filter format
 

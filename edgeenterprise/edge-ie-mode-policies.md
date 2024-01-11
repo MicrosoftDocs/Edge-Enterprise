@@ -3,10 +3,10 @@ title: "Configure IE mode Policies"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Configure IE mode policies"
@@ -23,7 +23,7 @@ description: "Configure IE mode policies"
 This article explains how to configure IE mode policies.
 
 > [!NOTE]
-> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
+> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels.
 
 Configuring IE mode requires three steps:
 

@@ -3,7 +3,7 @@ title: "Create Microsoft Edge user data directory variables"
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/08/2021
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -16,8 +16,6 @@ description: "Learn how to create Microsoft Edge user data directory variables"
 
 This article explains how you can use data directory variables instead of using hard-coded paths when modifying Microsoft Edge.
 
->[!NOTE]
->This article applies to Microsoft Edge version 77 or later.
 ## Path variables
 
 Policies for modifying data directory paths (For example, configuring the [UserDataDir](microsoft-edge-policies.md#userdatadir) or [DownloadDirectory](microsoft-edge-policies.md#downloaddirectory) support variables). When configuring these policies, you can use variables instead of hard-coded paths. For example, to store your profile data under user local application data on Windows instead of the default location. Set the [UserDataDir](microsoft-edge-policies.md#userdatadir) policy to **${local_app_data}\Edge\Profile**. On most Windows 10 installations, this path resolves to *C:\Users\\&lt;Current-user&gt;\AppData\Local\Microsoft\Edge\Profile*.
