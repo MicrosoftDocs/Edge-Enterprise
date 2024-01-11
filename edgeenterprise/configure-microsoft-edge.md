@@ -6,7 +6,7 @@ manager: likuba
 ms.date: 01/04/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn how to configure Microsoft Edge policy settings on Windows devices"

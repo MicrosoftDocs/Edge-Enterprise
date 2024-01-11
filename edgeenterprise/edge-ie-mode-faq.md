@@ -3,10 +3,10 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 01/02/2024
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer mode"

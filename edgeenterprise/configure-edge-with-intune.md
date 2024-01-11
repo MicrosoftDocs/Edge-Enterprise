@@ -3,10 +3,10 @@ title: "Configure Microsoft Edge policy settings for Windows using Microsoft Int
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 01/02/2024
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Configure Microsoft Edge policy settings for Windows using Microsoft Intune."

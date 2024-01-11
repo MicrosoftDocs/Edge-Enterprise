@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to deploy Microsoft Edge with System Center Configuration Manager (SCCM)."
