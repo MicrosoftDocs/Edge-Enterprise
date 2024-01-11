@@ -3,10 +3,10 @@ title: "Configure Microsoft Edge for Windows with policy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 07/20/2023
+ms.date: 01/04/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn how to configure Microsoft Edge policy settings on Windows devices"
@@ -15,9 +15,6 @@ description: "Learn how to configure Microsoft Edge policy settings on Windows d
 # Configure Microsoft Edge policy settings on Windows devices
 
 Use this article as guide to configure Microsoft Edge policy settings on Windows devices. If you haven't set up Microsoft Edge, see the [Microsoft Edge setup guide](https://go.microsoft.com/fwlink/?linkid=2187484).
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
 > The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
