@@ -38,7 +38,7 @@ The fields in the filter format are:
 
 The filter format resembles the URL format, except for the following differences:
 
-- If you include "user:pass", it's ignored. For example, http://user:pass@ftp.contoso.com/pub/example.iso.
+- If you include "user:pass" in the format, it's ignored. For example, http://user:pass@ftp.contoso.com/pub/example.iso.
 - If you include a fragment identifier ("#"), it and everything that follows the identifier is ignored.
 - You can use a wildcard ("*") as the **host** and you can prefix it with a dot (.).
 - You can use a forward slash ("/") or a dot (.) as a suffix for the **host**. In this case, the suffix is ignored.
@@ -48,7 +48,7 @@ The filter format resembles the URL format, except for the following differences
 The filter selected for a URL is the most specific match found after processing the following filter selection rules:
 
 1. Filters with the longest **host** match are selected first.
-2. From the selected filters, any filter with a non-matching scheme or port is discarded.
+2. From the selected filters, any filter with a scheme or port that doesn't match is discarded.
 3. From the remaining filters, the filter with the longest matching **path** is selected.
 4. From the remaining filters, the filter with the longest set of query tokens is selected. At this step, the allowlist filter takes precedence over the blocklist filter if both filters have the same **path** length and number of **query** tokens.
 5. If there's no valid filter remaining, then the left-most subdomain is removed from **host** and the selection process starts over at step 1. The special asterisk ("*") **host** is the last searched and it matches all hosts.
@@ -67,7 +67,7 @@ In this example, when searching for a match to "https://sub.contoso.com/docs" th
 4. From the remaining filters, any that don't have "/docs" as a prefix of the **path** are removed.
 5. From the remaining filters, the filter with the longest path prefix is selected and applied. If a filter isn't found, the selection process starts over again at step 1. The process is repeated with the next subdomain.
 
-### Additional filter information
+### More filter information
 
 If a filter has a dot (".") prefixing the **host** then only exact **host** matches are filtered. For example:
 
