@@ -18,7 +18,7 @@ This article shows you how to automate a Microsoft Edge deployment by using Syst
 
 ## Before you begin
 
-Review the information in [Introduction to application management in Configuration Manager](/sccm/apps/understand/introduction-to-application-management). This application management article will help you understand the terminology used in this article and is a guide to preparing your site to install applications.
+Review the information in [Introduction to application management in Configuration Manager](/sccm/apps/understand/introduction-to-application-management). This application management article helps you understand the terminology used in this article and is a guide to preparing your site to install applications.
 
 Download the Microsoft Edge Enterprise installation files (**MicrosoftEdgeDevEnterpriseX64.msi** and/or **MicrosoftEdgeDevEnterpriseX86.msi**) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise).
 
@@ -29,7 +29,7 @@ Make sure you store the Microsoft Edge installation files in an accessible netwo
 
 ## Create the application
 
-You'll create the application using a Configuration Manager wizard.
+Use the Configuration Manager wizard to create the application.
 
 ### Start the Create Application Wizard and create the application  
 
@@ -39,7 +39,7 @@ You'll create the application using a Configuration Manager wizard.
 
     ![Create application](./media/edge-ent-deployment-sccm/edge-ent-create-app-1.png)
 
-3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Provide the following information:  
+3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Provide the following information:  
 
    - **Type**: Choose **Windows Installer (\*.msi file)**.  
 
