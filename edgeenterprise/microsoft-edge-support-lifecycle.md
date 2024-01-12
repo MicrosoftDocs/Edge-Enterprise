@@ -3,10 +3,10 @@ title: "Microsoft Edge Lifecycle"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge Lifecycle"
@@ -18,9 +18,6 @@ description: "Microsoft Edge Lifecycle"
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article describes the lifecycle policy that applies to Microsoft Edge.
-
-> [!NOTE]
-> This article applies to Microsoft Edge versions 77 and higher.
 
 > [!NOTE]
 > Starting with Stable channel version 94, Microsoft Edge moved to a 4-week major release cycle cadence. However, we recognize that enterprise customers who manage complex environments need more time to plan and test Microsoft Edge updates. To help our enterprise customers who need an extended timeline to manage updates, Microsoft Edge offers an **Extended Stable option aligned to a longer, 8-week major release cycle.** This release option is only available for customers with managed environments. [Refer to our announcement blog post](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)

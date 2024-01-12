@@ -3,10 +3,10 @@ title: "On-premises sync for Active Directory (AD) users"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 11/03/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "On-premises sync for Active Directory (AD) users"
@@ -18,9 +18,6 @@ description: "On-premises sync for Active Directory (AD) users"
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article explains how Active Directory (AD) users can roam Microsoft Edge favorites and settings between computers without connecting to Microsoft cloud services.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 85 or later.
 
 ## Introduction
 
