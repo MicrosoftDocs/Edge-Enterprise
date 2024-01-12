@@ -3,10 +3,10 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/04/2024
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: 
@@ -122,7 +122,7 @@ These tables list all of the browser-related policies available in this release 
 | [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
 | [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 | [ManagedFavorites](#managedfavorites)  |  Configure Favorites (bookmarks) |
-| [ExperimentationAndConfigurationServiceControl](#ExperimentationAndConfigurationServiceControl) |  Control communication with the Experimentation and Configuration Service   |
+| [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) |  Control communication with the Experimentation and Configuration Service   |
 
 ## HTTP authentication
 
