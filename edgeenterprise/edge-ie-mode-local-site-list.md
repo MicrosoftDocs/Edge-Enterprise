@@ -3,10 +3,10 @@ title: "Local site list for Internet Explorer (IE) mode"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to enable local site lists and configure easy access to IE mode"
@@ -21,9 +21,6 @@ description: "Learn how to enable local site lists and configure easy access to 
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article explains how to configure easy access to Internet Explorer mode (IE mode) and allow the use of local site lists in your organization.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 92 or later.
 
 ## Prerequisites
 

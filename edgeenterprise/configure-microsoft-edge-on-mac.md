@@ -3,10 +3,10 @@ title: "Configure Microsoft Edge for macOS using a property list."
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/21/2023
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to configure Microsoft Edge policy settings on macOS using a property list that you can deploy to Microsoft Intune."
@@ -17,9 +17,6 @@ description: "Learn how to configure Microsoft Edge policy settings on macOS usi
 This article describes how to configure Microsoft Edge on macOS using a property list (\.plist) file. You'll learn how to create this file and then deploy it to Microsoft Intune.
 
 For more information, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 ## Configure Microsoft Edge policies on macOS
 
