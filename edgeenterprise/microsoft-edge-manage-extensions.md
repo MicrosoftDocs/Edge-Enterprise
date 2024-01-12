@@ -3,10 +3,10 @@ title: "Manage Microsoft Edge extensions in the enterprise"
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 07/20/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Manage Microsoft Edge extensions in the enterprise"
@@ -15,9 +15,6 @@ description: "Manage Microsoft Edge extensions in the enterprise"
 # Manage Microsoft Edge extensions in the enterprise
 
 This article provides best practice guidance for admins who are managing Microsoft Edge extensions in their organizations. You can use the information in this article to develop a strategy for managing extensions in your organization.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
 > The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).
