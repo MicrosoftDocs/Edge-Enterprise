@@ -3,10 +3,10 @@ title: "Learn how to configure initial preferences on Microsoft Edge."
 ms.author: archandr
 author: dan-wesley
 manager: srugh
-ms.date: 06/21/2022
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to configure initial preferences on Microsoft Edge."
@@ -16,17 +16,14 @@ description: "Learn how to configure initial preferences on Microsoft Edge."
 
 Use the information in this article to configure Microsoft Edge Initial Preferences settings on your Windows devices.
 
-> [!Note]
-> This article applies to Microsoft Edge version 93 or later.
-
 ## Configure policy settings on Windows
 
-Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences, formerly named “Master Preferences”, to help admins configure browsers for the first run. For more information, see the supported settings in the following [Preference settings](#preference-settings) table.
+Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences, formerly named "Master Preferences", to help admins configure browsers for the first run. For more information, see the supported settings in the following [Preference settings](#preference-settings) table.
 
 When deployed, Initial Preferences act as the default browser settings on managed devices. These preferences are the settings preferred by admins to be used as default browser settings for the first run.
 
 > [!NOTE]
-> Initial preferences can be changed by users and aren't available for some devices because they aren't joined to an Active Directory® domain.
+> Initial preferences can be changed by users and aren't available for some devices because they aren't joined to an Active Directory&reg; domain.
 
 Some examples of initial preferences settings include initial configuration of a default homepage or tabs with specific URLs.
 
@@ -81,8 +78,8 @@ Deploy the *initial_preferences* file to users' devices at the same time as Micr
 | Channel | Location |
 | - | - |
 | Stable | `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
-| Beta | `“~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |
-| Canary | `“~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences"` |
+| Beta | `"~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |
+| Canary | `"~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences"` |
 | Dev | `"~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences"` |
 
 ## Important notes: MSI / Pkg Deployment and *initial_preferences* interaction

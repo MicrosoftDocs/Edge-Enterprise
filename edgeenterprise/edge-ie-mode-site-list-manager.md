@@ -3,10 +3,10 @@ title: "Enterprise Site List Manager in Microsoft Edge "
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to enable and use Enterprise Site List Manager in Microsoft Edge"
@@ -23,7 +23,7 @@ description: "Learn how to enable and use Enterprise Site List Manager in Micros
 This article explains how to enable access to and use the Enterprise Site List Manager in Microsoft Edge to create, edit and export your Enterprise Mode Site List for Internet Explorer (IE) mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge version 89 or later. The shared cookies capability is available on Microsoft Edge version 101 or later.
+> The shared cookies capability is available on Microsoft Edge version 101 or later.
 
 ## Overview
 
