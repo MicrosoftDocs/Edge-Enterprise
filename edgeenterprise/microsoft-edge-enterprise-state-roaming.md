@@ -3,10 +3,10 @@ title: "Microsoft Edge and Enterprise State Roaming"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 08/21/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge and Enterprise State Roaming"
@@ -18,9 +18,6 @@ description: "Microsoft Edge and Enterprise State Roaming"
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
 This article explains how Microsoft Edge participation in the Enterprise State Roaming (ESR) offering is changing to better support sync across platforms and devices.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later unless otherwise noted.
 
 ## Introduction
 
