@@ -18,7 +18,7 @@ Use the information in this article to configure Microsoft Edge Initial Preferen
 
 ## Configure policy settings on Windows
 
-Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences, formerly named "Master Preferences", to help admins configure browsers for the first run. For more information, see the supported settings in the following [Preference settings](#preference-settings) table.
+Starting Microsoft Edge release 93, Microsoft supports a limited number of Initial Preferences (formerly named "Master Preferences") to help admins configure browsers for the first run. For more information, see the supported settings in the following [Preference settings](#preference-settings) table.
 
 When deployed, Initial Preferences act as the default browser settings on managed devices. These preferences are the settings preferred by admins to be used as default browser settings for the first run.
 
@@ -27,11 +27,11 @@ When deployed, Initial Preferences act as the default browser settings on manage
 
 Some examples of initial preferences settings include initial configuration of a default homepage or tabs with specific URLs.
 
-Preferences are only copied once from the *initial_preferences* file, changes made to this file after configuration won't be respected. If a setting is managed by a [Microsoft Edge policy](/deployedge/microsoft-edge-policies) and configured in the *initial_preferences file*, the policy always takes precedence.
+Preferences are only copied once from the *initial_preferences* file, changes made to this file after configuration aren't respected. If a setting is managed by a [Microsoft Edge policy](/deployedge/microsoft-edge-policies) and configured in the *initial_preferences file*, the policy always takes precedence.
 
 ### Preference settings
 
-The following table shows the settings that are currently supported by Microsoft Edge.
+The following table shows the settings that Microsoft Edge currently supports.
 
 | Preferences Category | Setting |
 | - | - |
@@ -82,7 +82,7 @@ Deploy the *initial_preferences* file to users' devices at the same time as Micr
 | Canary | `"~/Library/Application Support/Microsoft Edge Canary/Microsoft Edge Initial Preferences"` |
 | Dev | `"~/Library/Application Support/Microsoft Edge Dev/Microsoft Edge Initial Preferences"` |
 
-## Important notes: MSI / Pkg Deployment and *initial_preferences* interaction
+## Important notes: MSI/PKG Deployment and *initial_preferences* interaction
 
 Initial preferences will only take effect after the *initial_preferences* file is deployed before the browser's first run by the end users.  
 
