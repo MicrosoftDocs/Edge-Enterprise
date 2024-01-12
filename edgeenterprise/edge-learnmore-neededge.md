@@ -3,19 +3,16 @@ title: "Redirection from Internet Explorer to Microsoft Edge for compatibility w
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 02/14/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites"
 ---
 
 # Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites
-
-> [!NOTE]
-> This article applies to Microsoft Edge Stable version 87 or later.
 
 ## Overview
 

@@ -3,10 +3,10 @@ title: "Microsoft Edge proxy settings"
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Use command-line options to configure proxy settings "
@@ -15,9 +15,6 @@ description: "Use command-line options to configure proxy settings "
 # How to use Microsoft Edge command-line options to configure proxy settings
 
 This article describes how you can use command-line options to override the default system network settings.
-
->[!NOTE]
->This article applies to Microsoft Edge version 77 or later.
 
 ## System network settings
 

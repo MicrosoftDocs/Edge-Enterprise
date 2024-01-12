@@ -3,10 +3,10 @@ title: "Internet Explorer (IE) mode troubleshooting and FAQ"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer mode"
@@ -21,9 +21,6 @@ description: "Troubleshooting guide and FAQ for Microsoft Edge Internet Explorer
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 
 This article provides troubleshooting tips and FAQ for Microsoft Edge version 77 or later.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 ## What if I need help with setting up Microsoft Edge or Internet Explorer mode?
 
