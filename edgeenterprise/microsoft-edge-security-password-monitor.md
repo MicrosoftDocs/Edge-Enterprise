@@ -3,10 +3,10 @@ title: "Password Monitor auto-enabled for users"
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 08/21/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Password Monitor auto-enabled for users"
@@ -19,16 +19,13 @@ description: "Password Monitor auto-enabled for users"
 
 This article describes how admins can turn on Password Monitor in Microsoft Edge for select users. The article also gives the steps to control how monitoring is enabled.
 
-> [!NOTE]
-> This article applies to Microsoft Edge version 88 or later.
-
 ## Introduction, benefits, and availability
 
-Password Monitor helps Microsoft Edge users protect their online accounts by informing them if any of their passwords have been found in an online leak. Online leaks or data breaches happen when bad actors steal data from third-party apps or websites. To learn more, see the [Password Monitor: Safeguarding passwords in Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)  paper on the Microsoft Research Blog.
+Password Monitor helps Microsoft Edge users protect their online accounts by informing them if any of their passwords are found in an online leak. Online leaks or data breaches happen when bad actors steal data from third-party apps or websites. To learn more, see the [Password Monitor: Safeguarding passwords in Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)  paper on the Microsoft Research Blog.
 
 ### Benefits
 
-Given the frequency and scope of these online attacks having this kind of protection has become necessary for everyone. Microsoft Edge has the built-in ability to securely check a user's saved passwords against passwords that are known to be compromised and alerts them if a match is found.  
+Given the frequency and scope of these online attacks having this kind of protection is necessary for everyone. Microsoft Edge has the built-in ability to securely check a user's saved passwords against passwords that are known to be compromised and alerts them if a match is found.  
 
 ## Configure group policy for Password Monitor
 
@@ -63,10 +60,10 @@ The following table shows scenarios where Password Monitor is auto-enabled and h
 |--|--|--|
 | 1 with Sync on | Sync ON<br>Feature enabled previously: No<br>Response to Consent UI: None | Feature enabled by default and a notice bubble is shown 2 min after browser starts.<br>- If sync is turned off after that, the feature is disabled.<br>-  Feature turned off before altering sync, sync no longer affects the feature.   |
 | 2 with Sync on | Sync ON<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice.  Notice bubble isn't shown and there's no affect of sync change on feature value.|
-| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync is off and the feature stays disabled<br>- At any point after that if user turns on the sync without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync no longer affects Password Monitor.  |  
+| 3 with Sync off | Sync Off<br>Feature enabled previously: No<br>Response to Consent UI: None | Sync is off and the feature stays disabled<br>- At any subsequent point if user turns on the sync without altering the feature: the feature is enabled and auto-enablement notification is shown 2 minutes after Sync is turned on. <br> - If sync is turned off again, the  feature is disabled <br>- If the feature is changed before turning on sync, sync no longer affects Password Monitor.  |  
 | 4 with Sync off | Sync OFF<br>Feature enabled previously: Yes<br>Response to Consent UI: None | Feature stays the same as user choice, notice bubble isn't shown, and there's no effect of sync change on the feature value.  |
 
-In addition, if a user is signed-in using a work account that's restricted via policies for any of the following, the feature is NOT auto-enabled for them:
+In addition, if a user signs in using a work account that's restricted via policies for any of the following, the feature is NOT auto-enabled for them:
 
 - Password Monitor is disabled  
 - Password Sync is disabled
