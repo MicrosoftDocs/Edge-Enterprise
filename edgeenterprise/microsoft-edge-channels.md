@@ -28,7 +28,7 @@ For more information on support for each channel, read: [Microsoft Edge Lifecycl
 |[Dev](#dev-channel)|Planning and developing|Weekly|No|
 |[Canary](#canary-channel)|Bleeding edge content|Daily|No|
 
-The update channel you decide to deploy depends on several factors. For example, the number of line-of-business applications in use will affect your testing requirements every time there's a Microsoft Edge update. To help you make this decision, review the following information about the four update channels that are available for Microsoft Edge.
+The update channel you decide to deploy depends on several factors. For example, the number of line-of-business applications in use affect your testing requirements every time there's a Microsoft Edge update. To help you make this decision, review the following information about the four update channels that are available for Microsoft Edge.
 
 ### Stable Channel
 
@@ -44,13 +44,13 @@ The Dev Channel is intended to help you plan and develop with the latest capabil
 
 ### Canary Channel
 
-The Canary Channel ships daily and is the most bleeding edge of all the channels. If you want access to the newest investments, they'll appear here first. Because of the nature of this cadence, problems will arise over time. You may want another channel installed side by side if you're using the Canary releases.
+The Canary Channel ships daily and is the most bleeding edge of all the channels. If you want access to the newest investments, they appear here first. Because of the nature of this cadence, problems will arise over time. You may want another channel installed side by side if you're using the Canary releases.
 
 ### Extended Stable Channel
 
-Unlike our preview channels (Canary, Dev, and Beta), the Extended Stable Channel isn't available as a separate browser application. This channel is an enterprise release option for the Microsoft Edge Stable application that's aligned to a longer, 8-week major release cycle. This option is opposed to the 4-week major release cycle for the Stable channel. While we recommend updating Stable on its 4-week release cycle, Extended Stable exists to more effectively serve organizations that may require a longer timeline to test and validate new browser versions.
+Unlike our preview channels (Canary, Dev, and Beta), the Extended Stable Channel isn't available as a separate browser application. This channel is an enterprise release option for the Microsoft Edge Stable application aligned to a longer, 8-week major release cycle. This option is opposed to the 4-week major release cycle for the Stable channel. While we recommend updating Stable on its 4-week release cycle, Extended Stable exists to more effectively serve organizations that may require a longer timeline to test and validate new browser versions.
 
-The 8-week "Extended Stable" release option for Microsoft Edge Stable delivers cumulative feature updates that align with _even-numbered_ releases beginning with Microsoft Edge 94. Feature updates from odd-numbered releases will be packaged and delivered as part of the subsequent even-numbered release. For example, if an organization selects the 8-week "Extended Stable" release cycle with Microsoft Edge 94, they'll get subsequent feature updates with Microsoft Edge 96, Microsoft Edge 98, and so on. While feature updates are packaged and delivered with new version releases based on the selected release cycle, important security patches and fixes will be delivered as needed. These security updates are independent of the selected release option to help maintain browser security. Customers can opt into the Extended Stable release option at any time, and it will take effect with the next Extended Stable release.
+The 8-week "Extended Stable" release option for Microsoft Edge Stable delivers cumulative feature updates that align with _even-numbered_ releases beginning with Microsoft Edge 94. Feature updates from odd-numbered releases are packaged and delivered as part of the subsequent even-numbered release. For example, if an organization selects the 8-week "Extended Stable" release cycle with Microsoft Edge 94, they get subsequent feature updates with Microsoft Edge 96, Microsoft Edge 98, and so on. While feature updates are packaged and delivered with new version releases based on the selected release cycle, important security patches and fixes are delivered as needed. These security updates are independent of the selected release option to help maintain browser security. Customers can opt into the Extended Stable release option at any time, and it will take effect with the next Extended Stable release.
 
 ![Example comparing Microsoft Edge Stable and Extended Stable release cycle options.](./media/microsoft-edge-channels/extended-stable-explainer.png)
 
@@ -67,7 +67,7 @@ If you automatically update Microsoft Edge, you can use group policy objects to 
 When the next update to the Extended Stable channel is released that has a version number higher than what your device currently has installed, Microsoft Edge will automatically update onto the Extended Stable channel. The version string on `edge://settings/help` will indicate that you're running a different channel.
 
 > [!NOTE]
-> Opting-in to Extended Stable will take effect when there is a new update on the Extended Stable channel with a larger version number (major or minor) than what is currently installed on your device. If you are running the latest version of Microsoft Edge Stable and opt-in to Extended Stable, it will take effect with the next patch or update of Microsoft Edge.
+> Opting-in to Extended Stable takes effect when there is a new update on the Extended Stable channel with a larger version number (major or minor) than what is currently installed on your device. If you are running the latest version of Microsoft Edge Stable and opt-in to Extended Stable, it takes effect with the next patch or update of Microsoft Edge.
 >
 > By default, Microsoft Edge will not downgrade itself. If you are currently running an odd-numbered version of Microsoft Edge Stable, opting-in to Extended Stable will mean that you will receive NO updates until the next even-numbered Microsoft Edge release.
 >
