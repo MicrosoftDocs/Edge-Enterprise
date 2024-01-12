@@ -3,10 +3,10 @@ title: "Plan your kiosk mode transition"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Plan your kiosk mode transition"
@@ -20,7 +20,7 @@ description: "Plan your kiosk mode transition"
 This article provides guidance on how to transition your kiosk from Microsoft Edge Legacy to Microsoft Edge.  
 
 > [!NOTE]
-> This article applies to Microsoft Edge Stable, Beta and Dev Channels, version 87 or later.
+> This article applies to Microsoft Edge Stable, Beta and Dev Channels.
 
 > [!IMPORTANT]
 > When support ends for Microsoft Edge Legacy on March 9, 2021, it will be removed and replaced with Microsoft Edge on Chromium as part of the Windows Update in April. For details, go to [this blog post](https://aka.ms/EdgeLegacyEOS). To continue to use your browser-based kiosk scenarios, you need to install Microsoft Edge on Chromium and set up kiosk mode prior to April's Windows Update release to your device.
