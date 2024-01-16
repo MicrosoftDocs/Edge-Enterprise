@@ -20,7 +20,8 @@ These release notes provide information about security fixes that are included i
 
 Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
 
-Turn on enhanced security mode to help prevent this exploit that exists in the wild. Learn more about [enhanced security](/DeployEdge/microsoft-edge-security-browse-safer).
+> [!NOTE]
+> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
 
 ## January 11, 2024
 
