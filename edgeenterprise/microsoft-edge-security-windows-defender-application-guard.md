@@ -160,6 +160,10 @@ The following articles provide the information you need to install, configure, a
 
 ## Frequently Asked Questions
 
+### Is Application Guard deprecated?
+
+Yes, Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and will no longer be updated.
+
 ### Does Application Guard work in IE mode?
 
 IE mode supports Application Guard functionality, but we don't anticipate much use of this feature in IE Mode. IE mode is recommended to be deployed for a list of trusted internal sites, and Application Guard is for untrusted sites only. Make sure all the IE mode sites or IP addresses are also added to the Network Isolation policy to be considered as trusted resource by Application Guard.
