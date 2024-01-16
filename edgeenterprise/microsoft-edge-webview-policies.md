@@ -6,7 +6,7 @@ manager: venkatk
 ms.date: 01/06/2024
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated

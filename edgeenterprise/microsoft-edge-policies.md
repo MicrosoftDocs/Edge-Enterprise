@@ -3,10 +3,10 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/15/2023
+ms.date: 01/06/2024
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
@@ -28,11 +28,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new, deprecated, and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
 
 ## Available policies
 
@@ -484,7 +484,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Enable the Collections feature|
 |[EdgeDiscoverEnabled](#edgediscoverenabled)|Discover feature In Microsoft Edge (obsolete)|
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
-|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
@@ -17475,7 +17475,7 @@ If you disable this policy, the AutoLaunch Protocols component is disabled.
 
   #### Description
 
-  Allows you to set a list of protocols, and for each protocol an associated list of allowed origin patterns, that can launch an external application without prompting the user. The trailing separator should not be included when listing the protocol. For example, list "skype" instead of "skype:" or "skype://".
+  Allows you to set a list of protocols, and for each protocol an associated list of allowed origin patterns, that can launch an external application without prompting the user. The trailing separator should not be included when listing the protocol and the protocol should be all lower case. For example, list "skype" instead of "skype:", "skype://" or "Skype".
 
 If you configure this policy, a protocol will only be permitted to launch an external application without prompting by policy if:
 
@@ -23021,17 +23021,17 @@ If you disable this policy, you can't use the Drop feature in Microsoft Edge.
 
   ### EdgeEnhanceImagesEnabled
 
-  #### Enhance images enabled
+  #### Enhance images enabled (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 121.
   #### Supported versions:
 
-  - On Windows and macOS since 97 or later
+  - On Windows and macOS since 97, until 121
 
   #### Description
 
-  Set whether Microsoft Edge can automatically enhance images to show you sharper images with better color, lighting, and contrast.
+  The enhance images feature is deprecated and starting in 122 this policy will be removed. Set whether Microsoft Edge can automatically enhance images to show you sharper images with better color, lighting, and contrast.
 
 If you enable this policy or don't configure the policy, Microsoft Edge will automatically enhance images on specific web applications.
 
@@ -23054,7 +23054,7 @@ If you disable this policy, Microsoft Edge will not enhance images.
   ##### Group Policy (ADMX) info
 
   - GP unique name: EdgeEnhanceImagesEnabled
-  - GP name: Enhance images enabled
+  - GP name: Enhance images enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -39412,7 +39412,7 @@ to override incompatible policies.
   
   #### Supported versions:
 
-  - On Windows and macOS since 88 or later
+  - On Windows and macOS since 88, until 120
 
   #### Description
 
@@ -39421,8 +39421,8 @@ versions of the TLS/DTLS (DTLS 1.0, TLS 1.0 and TLS 1.1) protocols.
 If you disable or don't set this policy, these TLS/DTLS versions are
 disabled.
 
-This policy is temporary and will be removed in a future version
-of Microsoft Edge.
+This policy was removed in version M121 of
+Microsoft Edge.
 
   #### Supported features:
 
