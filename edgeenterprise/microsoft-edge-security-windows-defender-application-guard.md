@@ -14,16 +14,37 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 
 # Microsoft Edge support for Microsoft Defender Application Guard
 
-> [!NOTE]
-> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle). Please download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about Edge for Business security capabilities.
-
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
+> [!IMPORTANT]
+> Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle).
 
 This article describes how Microsoft Edge supports Microsoft Defender Application Guard (Application Guard).
 
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
+## Existing installations of Application Guard
+
+This deprecation does not impact the existing installations of MDAG. Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.
+
+### Deprecation considerations
+
+- If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
+
+- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.
+
+  This affects the following browsers:
+
+  - [Application Guard Extension - Chrome](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj)
+  - [Application Guard Extension - Firefox](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/)
+
+We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
+
+### Edge for Business security
+
+Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
+
+The additional security features in Edge make it very secure without needing Application Guard. The growing list of security features includes:
+*    Defender SmartScreen for the anti-phishing and malware support and URL scanning and blocking.
+*    Enhanced security mode for protecting against memory-related vulnerabilities by disabling just-in-time JavaScript compilation (and other protections).
+*    Website typo protection for misspelled websites.
+*    Data Loss Prevention to identify, monitor, and automatically protect sensitive items.
 
 ## Overview
 
