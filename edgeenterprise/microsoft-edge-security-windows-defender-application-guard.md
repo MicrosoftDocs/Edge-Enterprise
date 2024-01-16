@@ -34,7 +34,7 @@ This deprecation does not impact the existing installations of MDAG. Organizatio
   - [Application Guard Extension - Chrome](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj)
   - [Application Guard Extension - Firefox](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/)
 
-We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
+  We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
 
 ### Edge for Business security
 
