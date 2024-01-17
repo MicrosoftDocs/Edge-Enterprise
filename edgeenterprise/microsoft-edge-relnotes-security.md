@@ -16,12 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## January 16, 2024
+## January XX, 2024
 
-Microsoft is aware of the recent exploit existing in the wild. We are actively working on releasing a security patch as reported by the Chromium team.
-
-> [!NOTE]
-> It's worth highlighting that [Microsoft Edge's enhanced security mode](/DeployEdge/microsoft-edge-security-browse-safer) feature mitigates this vulnerability. You can opt-in into this security feature and have peace of mind that Microsoft Edge is protecting you against this exploit.
+Microsoft has a fix for [CVE-2024-0519](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0519) to **Microsoft Edge Stable Channel (Version 120.0.2210.XX)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## January 11, 2024
 
