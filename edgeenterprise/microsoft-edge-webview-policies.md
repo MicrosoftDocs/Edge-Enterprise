@@ -3,10 +3,10 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/15/2023
+ms.date: 01/06/2024
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: generated
@@ -19,18 +19,9 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
-
-## New policies
-
-The following table lists the new and deprecated policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[ChannelSearchKind](#channelsearchkind)|Configure the WebView2 release channel search kind|
-|[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference (deprecated)|
-|[ReleaseChannels](#releasechannels)|Configure the WebView2 release channels|
 
 ## Available policies
 
