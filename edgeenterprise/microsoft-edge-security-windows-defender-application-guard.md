@@ -17,8 +17,6 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 > [!IMPORTANT]
 > Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle).
 
-This article describes how Microsoft Edge supports Microsoft Defender Application Guard (Application Guard).
-
 ## Existing installations of Application Guard
 
 This deprecation does not impact the existing installations of MDAG. Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.
@@ -47,6 +45,8 @@ The additional security features in Edge make it very secure without needing App
 *    Data Loss Prevention to identify, monitor, and automatically protect sensitive items.
 
 ## Overview
+
+This article describes how Microsoft Edge supports Microsoft Defender Application Guard (Application Guard).
 
 Security architects in the enterprise must deal with the tension that exists between productivity and security. It's relatively easy to lock down a browser and only allow a handful of trusted sites to load. This approach will improve the overall security posture but is arguably less productive. If you make it less restrictive to improve productivity, you increase the risk profile. It's a hard balance to strike!
 
@@ -160,7 +160,7 @@ The following articles provide the information you need to install, configure, a
 
 ## Frequently Asked Questions
 
-### Is Application Guard deprecated?
+### Is Application Guard being deprecated?
 
 Yes, Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and will no longer be updated.
 
