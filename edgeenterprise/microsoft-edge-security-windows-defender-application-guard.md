@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/16/2024
+ms.date: 01/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -19,9 +19,11 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 
 ## Existing installations of Application Guard
 
-This deprecation does not impact the existing installations of MDAG. Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.
+This deprecation does not impact the existing installations of Microsoft Defender Application Guard (MDAG). Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.
 
 ### Deprecation considerations
+
+Deprecation includes the following elements of Application Guard.
 
 - If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
 
@@ -39,6 +41,7 @@ This deprecation does not impact the existing installations of MDAG. Organizatio
 Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
 
 The additional security features in Edge make it very secure without needing Application Guard. The growing list of security features includes:
+
 *    Defender SmartScreen for the anti-phishing and malware support and URL scanning and blocking.
 *    Enhanced security mode for protecting against memory-related vulnerabilities by disabling just-in-time JavaScript compilation (and other protections).
 *    Website typo protection for misspelled websites.
