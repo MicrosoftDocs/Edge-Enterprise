@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/02/2024
+ms.date: 01/08/2024
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -1912,6 +1912,8 @@ true
 ### EdgeProxyPacUrl
 
 #### Specify a URL to a proxy auto-config (PAC) file
+
+**Note:** This policy is in public preview and might be removed.
 
 #### Supported on:
 
