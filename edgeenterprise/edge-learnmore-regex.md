@@ -1,8 +1,8 @@
 ---
 title: "Regular Expression 2 syntax"
-ms.author: seanongit
+ms.author: sean.lyndersay
 author: dan-wesley
-manager: seanongit
+manager:  sean.lyndersay
 ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
