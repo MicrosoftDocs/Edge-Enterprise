@@ -25,8 +25,8 @@ For information about other policies available in Microsoft Edge, check out [Mic
 ## Available policies
 These tables lists all of the update-related group policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
 
-|||
-|-|-|
+|&nbsp;|&nbsp;|
+| - | - |
 |[Applications](#applications)|[Preferences](#preferences)|
 |[Proxy Server](#proxy-server)|[Microsoft Edge Update](#microsoft-edge-update)|
 |[Microsoft Edge WebView2 Runtime](#microsoft-edge-webview2-runtime)||
@@ -576,7 +576,7 @@ Lets you specify whether users in the Windows Insider Program are enrolled in Ed
 #### Description
 Specifies whether Microsoft Edge Update will update on connections marked as metered, such as cellular connections or others where data usage is controlled for all apps. 
 
-If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
+If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
 
 Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
 
@@ -606,7 +606,7 @@ Updates disabled: Updates are not downloaded when using a metered connection.
 #### Description
 Specifies whether Microsoft Edge Update will update on connections marked as metered, such as cellular connections or others where data usage is controlled for the Microsoft Edge browser. 
 
-If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
+If you don't enable and configure this policy, updates occur based the 'Download Updates over metered connections' toggle in the About Page of the Microsoft Edge browser. If a user doesn't make a choice, the Windows setting is used. You can find out more about the Windows setting here: [/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#allowautowindowsupdatedownloadovermeterednetwork)
 
 Always allow updates: Updates are always downloaded when found, either by automatic update check or by a manual update check.
 
