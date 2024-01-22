@@ -42,6 +42,18 @@ Deprecation includes the following elements of Application Guard.
 
   We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
 
+
+> [!TIP]
+> Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
+>
+>The additional security features in Edge make it very secure without needing Application Guard. The growing list of security features includes:
+>
+>*    Defender SmartScreen for the anti-phishing and malware support and URL scanning and blocking.
+>*    Enhanced security mode for protecting against memory-related vulnerabilities by disabling just-in-time JavaScript compilation (and other protections).
+>*    Website typo protection for misspelled websites.
+>*    Data Loss Prevention to identify, monitor, and automatically protect sensitive items.
+
+
 ### Edge for Business security
 
 Download the [Microsoft Edge for Business Security Whitepaper](https://edgestatic.azureedge.net/shared/cms/pdfs/Microsoft_Edge_Security_Whitepaper_v2.pdf) to learn more about the capabilities that make Edge for Business a secure enterprise browser.
