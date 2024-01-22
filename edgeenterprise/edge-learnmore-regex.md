@@ -1,12 +1,12 @@
 ---
 title: "Regular Expression 2 syntax"
-ms.author: comanea
+ms.author: seanlynd
 author: dan-wesley
-manager: seanlyn
+manager:  sean.lyndersay
 ms.date: 06/14/2022
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Regular Expression 2 syntax"
