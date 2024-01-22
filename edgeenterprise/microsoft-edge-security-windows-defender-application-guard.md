@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/19/2024
+ms.date: 01/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -16,11 +16,23 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 
 > [!IMPORTANT]
 > Microsoft Defender Application Guard, including the [Windows Isolated App Launcher APIs](/windows/win32/api/isolatedapplauncher), will be deprecated for Microsoft Edge for Business and [will no longer be updated](/windows/whats-new/feature-lifecycle).
+>
+>**Existing installations of Application Guard**
+>
+>This deprecation does not impact the existing installations of Microsoft Defender Application Guard (MDAG). Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.
+>
+>**Deprecation considerations**
+>
+>Deprecation includes the following elements of Application Guard.
+>- If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
+>- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.
+>This affects the following browsers: [*Application Guard Extension - Chrome*](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj) and [*Application Guard Extension - Firefox*](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/). We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
 
+<!----
 | Existing installations of Application Guard |
 |:-----|
 | This deprecation does not impact the existing installations of Microsoft Defender Application Guard (MDAG). Organizations can continue to use Application Guard on current versions of Windows, but we recommend that security admins evaluate their security requirements going forward. This feature might be removed in a future Windows release, but it will continue to be maintained for existing installations on Windows.<br>**Deprecation considerations**<br>Deprecation includes the following elements of Application Guard.<br>- If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).<br>- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.<br>This affects the following browsers:<br>- [Application Guard Extension - Chrome](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj)<br>- [Application Guard Extension - Firefox](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/)<br>We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox. |
-|     |
+|     | ---->
 
 <!----
 ### Existing installations of Application Guard
