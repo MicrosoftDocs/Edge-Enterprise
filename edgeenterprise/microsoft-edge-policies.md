@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/06/2024
+ms.date: 01/17/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -32,7 +32,8 @@ The following table lists the new, deprecated, and obsoleted policies that are i
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
+|[EnhanceSecurityModeAllowUserBypass](#enhancesecuritymodeallowuserbypass)|Allow users to bypass Enhanced Security Mode (new)|
+|[SuperDragDropEnabled](#superdragdropenabled)|Super Drag Drop Enabled (new)|
 
 ## Available policies
 
@@ -49,6 +50,7 @@ These tables list all of the browser-related group policies available in this re
 - [Games settings](#games-settings)
 - [HTTP authentication](#http-authentication)
 - [Identity and sign-in](#identity-and-sign-in)
+- [Idle Browser Actions](#idle-browser-actions)
 - [Immersive Reader settings](#immersive-reader-settings)
 - [Kiosk Mode settings](#kiosk-mode-settings)
 - [Manageability](#manageability)
@@ -222,6 +224,10 @@ These tables list all of the browser-related group policies available in this re
 |[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
 |[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
 |[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|WAM for authentication below Windows 10 RS3 enabled|
+### [*Idle Browser Actions*](#idle-browser-actions-policies)
+
+|Policy Name|Caption|
+|-|-|
 ### [*Immersive Reader settings*](#immersive-reader-settings-policies)
 
 |Policy Name|Caption|
@@ -497,6 +503,7 @@ These tables list all of the browser-related group policies available in this re
 |[EncryptedClientHelloEnabled](#encryptedclienthelloenabled)|TLS Encrypted ClientHello Enabled|
 |[EnforceLocalAnchorConstraintsEnabled](#enforcelocalanchorconstraintsenabled)|Determines whether the built-in certificate verifier will enforce constraints encoded into trust anchors loaded from the platform trust store (deprecated)|
 |[EnhanceSecurityMode](#enhancesecuritymode)|Enhance the security state in Microsoft Edge|
+|[EnhanceSecurityModeAllowUserBypass](#enhancesecuritymodeallowuserbypass)|Allow users to bypass Enhanced Security Mode|
 |[EnhanceSecurityModeBypassIntranet](#enhancesecuritymodebypassintranet)|Enhanced Security Mode configuration for Intranet zone sites|
 |[EnhanceSecurityModeBypassListDomains](#enhancesecuritymodebypasslistdomains)|Configure the list of domains for which enhance security mode will not be enforced|
 |[EnhanceSecurityModeEnforceListDomains](#enhancesecuritymodeenforcelistdomains)|Configure the list of domains for which enhance security mode will always be enforced|
@@ -685,6 +692,7 @@ These tables list all of the browser-related group policies available in this re
 |[SplitScreenEnabled](#splitscreenenabled)|Enable split screen feature in Microsoft Edge|
 |[StandaloneHubsSidebarEnabled](#standalonehubssidebarenabled)|Standalone Sidebar Enabled|
 |[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Enable stricter treatment for mixed content (obsolete)|
+|[SuperDragDropEnabled](#superdragdropenabled)|Super Drag Drop Enabled|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suppress the unsupported OS warning|
 |[SyncDisabled](#syncdisabled)|Disable synchronization of data using Microsoft sync services|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configure the list of types that are excluded from synchronization|
@@ -8900,6 +8908,10 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
 ```
 
   
+
+  [Back to top](#microsoft-edge---policies)
+
+  ## Idle Browser Actions policies
 
   [Back to top](#microsoft-edge---policies)
 
@@ -23907,6 +23919,65 @@ Use the preceding information when configuring this policy.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EnhanceSecurityModeAllowUserBypass
+
+  #### Allow users to bypass Enhanced Security Mode
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 122 or later
+
+  #### Description
+
+  Microsoft Edge will let users bypass Enhanced Security Mode on a site via Settings page or PageInfo flyout. This policy lets you configure whether users can bypass Enhanced Security Mode.
+
+If you disable this policy, Microsoft Edge won't allow users to bypass Enhanced Security Mode.
+
+If you enable or don't configure this policy, Microsoft Edge will allow users to bypass Enhanced Security Mode.
+
+For detailed information about Enhanced Security Mode, see [https://go.microsoft.com/fwlink/?linkid=2185895](https://go.microsoft.com/fwlink/?linkid=2185895)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnhanceSecurityModeAllowUserBypass
+  - GP name: Allow users to bypass Enhanced Security Mode
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnhanceSecurityModeAllowUserBypass
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EnhanceSecurityModeBypassIntranet
 
   #### Enhanced Security Mode configuration for Intranet zone sites
@@ -36620,6 +36691,65 @@ This policy does not affect other types of mixed content other than audio, video
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### SuperDragDropEnabled
+
+  #### Super Drag Drop Enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 122 or later
+
+  #### Description
+
+  This policy lets you configure the Super Drag Drop feature in Microsoft Edge.
+
+In this feature, users can drag a link, or text on a webpage. And drop it on the same page, then make the url opened in a new tab or search the text by default search engine.
+
+If you enable or don't configure this policy, you can use the Super Drag Drop feature on Microsoft Edge.
+
+If you disable this policy, you can't use the Super Drag Drop feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SuperDragDropEnabled
+  - GP name: Super Drag Drop Enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SuperDragDropEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
