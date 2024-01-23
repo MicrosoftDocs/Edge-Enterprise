@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 11/14/2023
+ms.date: 01/23/2024
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
@@ -15,6 +15,57 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 # Archived release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 119.0.2151.12: October 17, 2023 to Version 118.0.2088.17: September 25, 2023 -->
+## Version 119.0.2151.12: October 17, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Behavioral changes to the beforeunload event.** The behavior of the `beforeunload` event has changed. Calling `preventDefault` in a `beforeunload` event handler triggers a confirmation dialog. Setting `returnValue` to an empty string in a `beforeunload` event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
+
+- **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored.
+
+- **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
+
+- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
+
+### Policy updates
+
+#### New policies
+
+- [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
+- [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
+- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
+
+## Version 118.0.2088.46: October 13, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.44: October 12, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.41: October 10, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.33: October 6, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.27: October 3, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.24: October 2, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 118.0.2088.17: September 25, 2023
+
+Fixed various bugs and performance issues.
 
 <!-- Version 118.0.2088.11: September 20, 2023 to Version 117.0.2045.12: August 29, 2023 -->
 ## Version 118.0.2088.11: September 20, 2023
