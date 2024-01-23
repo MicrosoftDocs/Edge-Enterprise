@@ -69,6 +69,10 @@ The following table lists the planned and actual release dates for major release
 | 121 | Release<br>Version| 15-Dec-2023<br>[121.0.2277.4](/deployedge/microsoft-edge-relnote-beta-channel#version-121022774-december-15-2023) | Week of 25-Jan-2024 | Not applicable |
 | 122 | Target release | Week of 01-Feb-2024 | Week of 22-Feb-2024 | Week of 22-Feb-2024 |
 | 123 | Target release | Week of 29-Feb-2024 | Week of 21-Mar-2024 | Not applicable |
+| 124 | Target release | Week of 28-Mar-2024 | Week of 18-Apr-2024 | Week of 18-Apr-2024 |
+| 125 | Target release | Week of 24-Apr-2024 | Week of 16-May-2024 | Not applicable |
+| 126 | Target release | Week of 23-May-2024 | Week of 13-Jun-2024 | Week of 13-Jun-2024 |
+| 127 | Target release | Week of 20-Jun-2024 | Week of 25-Jul-2024 | Not applicable |
 
 ## Release process
 
