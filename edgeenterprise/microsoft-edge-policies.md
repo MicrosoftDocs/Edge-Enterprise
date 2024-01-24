@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/17/2024
+ms.date: 01/20/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,15 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new, deprecated, and obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[EnhanceSecurityModeAllowUserBypass](#enhancesecuritymodeallowuserbypass)|Allow users to bypass Enhanced Security Mode (new)|
-|[SuperDragDropEnabled](#superdragdropenabled)|Super Drag Drop Enabled (new)|
 
 ## Available policies
 
