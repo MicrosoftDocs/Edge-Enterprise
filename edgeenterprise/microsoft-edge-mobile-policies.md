@@ -1915,6 +1915,8 @@ true
 
 #### Specify a URL to a proxy auto-config (PAC) file
 
+**Note:** This policy is in public preview and might be removed.
+
 #### Supported on:
 
 - Microsoft Edge (iOS and iPadOS) since version 120
