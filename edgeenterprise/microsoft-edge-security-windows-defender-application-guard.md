@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/22/2024
+ms.date: 01/24/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
