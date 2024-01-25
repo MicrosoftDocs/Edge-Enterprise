@@ -26,11 +26,11 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 121.0.xxxx.xx: January x, 2024
+## Version 121.0.2277.83: January 25, 2024
 
 Fixed various bugs and performance issues. For more information, see [Improved reliability](#improved-reliability) and [Dev Channel updates](#dev-channel-updates).
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#fjanuary-x-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
 
 ### Improved reliability
 
@@ -86,7 +86,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 Fixed various bugs and performance issues for Extended Stable.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-xx-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
 <!-- ================== last note ===================== -->
 ## Version 120.0.2210.144: January 17, 2024
 
