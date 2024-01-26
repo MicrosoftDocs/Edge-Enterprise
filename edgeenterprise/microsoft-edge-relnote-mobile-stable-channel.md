@@ -27,8 +27,20 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 Fixed various bugs and performance issues for Android and iOS.
 
-### Bug fixes and updates
+### Fixes, upgrades, features
 
+- [iOS][Bug Fix] Fix "Open in Microsoft Edge" option not working due to Intune SDK issue
+- [iOS] Upgrade Microsoft Tunnel MAM SDK to version 1.0.11
+- [iOS] Upgrade Microsoft Tunnel MAM SDK to version 1.0.11
+- [iOS] Fix background crash related to policy manager
+- [iOS] Upgrade Intune MAM SDK for iOS to 19.0.0
+- [Android] Fix bookmarks related bugs
+- [Android] Upgrade Intune MAM SDK to 10.1.0.
+- Add new policy,  [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) (value is true/false) to block sign in
+- Added a new policy to allow customer to opt-in experiments to get early access to Microsoft Edge experimenting features: [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol)
+- User taps 'Chat' in m.bing.com will now open native Bing Chat experience when it's enabled by default in v121 stable 2
+- Shared links UX enhancement is scheduled to be enabled by default in v121 stable 2
+AAD news feed is scheduled to be enabled by default in v121 stable 1 or 2
 
 ## Version 120.0.2210.150: January 21, 2024
 
