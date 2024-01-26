@@ -1,8 +1,8 @@
 ---
 title: "Archived release notes for Microsoft Edge Stable Channel"
-ms.author: leahtu
-author: leahmsft
-manager: srugh
+ms.author: archandr
+author: dan-wesley
+manager: likuba
 ms.date: 01/26/2024
 audience: ITPro
 ms.topic: conceptual
