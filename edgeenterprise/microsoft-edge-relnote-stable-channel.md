@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/17/2024
+ms.date: 01/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,6 +26,68 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 121.0.2277.83: January 25, 2024
+
+Fixed various bugs and performance issues. For more information, see [Improved reliability](#improved-reliability) and [Dev Channel updates](#dev-channel-updates).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
+
+### Improved reliability
+
+- Fixed a browser crash in on-premise sync
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The followng  Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 121.0.2274.0 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2274-0-is-live/m-p/4010747)
+- [Dev Channel update to 121.0.2256.2 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2256-2-is-live/m-p/4004721)
+- [Dev Channel update to 121.0.2248.1 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2248-1-is-live/m-p/3998824)
+- [Dev Channel update to 121.0.2220.3 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2220-3-is-live/m-p/3986444)
+
+### Feature updates
+
+- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
+
+  Default organizational branding can be enabled by admins through the following policies:
+
+  - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled
+)
+  - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
+
+  Admins will need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
+
+  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+
+- **Microsoft Edge migrates the updates experience into Browser Essentials.** Getting alerts on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
+
+- **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet. Once it's grown, a real tree is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) policy.
+
+- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeDisableDialProtocolForCastDiscovery](/deployedge/microsoft-edge-policies#edgedisabledialprotocolforcastdiscovery) - Disable DIAL protocol for cast device discovery
+- [NativeHostsExecutablesLaunchDirectly](/deployedge/microsoft-edge-policies#nativehostsexecutableslaunchdirectly) - Force Windows executable Native Messaging hosts to launch directly
+- [RelatedWebsiteSetsEnabled](/deployedge/microsoft-edge-policies#relatedwebsitesetsenabled) - Enable Related Website Sets
+- [RelatedWebsiteSetsOverrides](/deployedge/microsoft-edge-policies#relatedwebsitesetsoverrides) - Override Related Website Sets
+- [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) - Prevent bypassing Edge Website Typo Protection prompts for sites
+- [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) - Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+
+#### Obsoleted policies
+
+- [SendMouseEventsDisabledFormControlsEnabled](/deployedge/microsoft-edge-policies#sendmouseeventsdisabledformcontrolsenabled) - Control the new behavior for event dispatching on disabled form controls
+
+## Version 120.0.2210.160: January 25, 2024
+
+Fixed various bugs and performance issues for Extended Stable.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
+<!-- ================== last note ===================== -->
 ## Version 120.0.2210.144: January 17, 2024
 
 Fixed various bugs and performance issues.
