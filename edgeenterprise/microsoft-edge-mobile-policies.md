@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/26/2024
+ms.date: 01/29/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -52,6 +52,7 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeBrandColor](#edgebrandcolor)  | Configure Brand color in New Tab Page  |
 | [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
 | [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
+| [EdgeOneAuthProxy](#edgeoneauthproxy) | Specify a dedicated proxy to sign in to Edge in Android   |
 
 ### [*Proxy server*](#proxy-server)
 
@@ -1987,6 +1988,42 @@ true
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+### EdgeOneAuthProxy
+#### Specify a dedicated proxy to sign in to Edge in Android
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+#### Description
+
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android.
+
+You can specify dedicated proxy for users to sign in to Edge in Android.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android: String
+
+#### Android restriction name:
+
+```
+EdgeOneAuthProxy
+```
+
+##### Example value (Android):
+
+```
+http://MyProxy.com:8080
+```
+
+[Back to top](#microsoft-edge-mobile---policies) 
+
+<!-- =================================================== -->
 ## Proxy server policies
 
 [Back to top](#microsoft-edge-mobile---policies)
