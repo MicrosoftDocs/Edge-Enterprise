@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/25/2024
+ms.date: 01/29/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -23,25 +23,49 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
-## Version 121.0.XXXX.XX: January X, 2024
+## Version 121.0.2277.84: January 29, 2024
 
-Fixed various bugs and performance issues for Android and iOS.
+Fixed various bugs and added new policy support and enhanced users experience
 
-### Fixes, upgrades, features
+ 
 
-- [iOS][Bug Fix] Fix "Open in Microsoft Edge" option not working due to Intune SDK issue
-- [iOS] Upgrade Microsoft Tunnel MAM SDK to version 1.0.11
-- [iOS] Upgrade Microsoft Tunnel MAM SDK to version 1.0.11
-- [iOS] Fix background crash related to policy manager
-- [iOS] Upgrade Intune MAM SDK for iOS to 19.0.0
-- [Android] Fix bookmarks related bugs
-- [Android] Upgrade Intune MAM SDK to 10.1.0.
-- Add new policy,  [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) (value is true/false) to block sign in
-- Added a new policy to allow customer to opt-in experiments to get early access to Microsoft Edge experimenting features: [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol)
-- User taps 'Chat' in m.bing.com will now open native Bing Chat experience when it's enabled by default in v121 stable 2
-- Shared links UX enhancement is scheduled to be enabled by default in v121 stable 2
-AAD news feed is scheduled to be enabled by default in v121 stable 1 or 2
+iOS:
 
+Resolved the issue with "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
+Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
+Fixed a background crash related to the policy manager.
+Upgraded Intune MAM SDK for iOS to version 19.0.0.
+ 
+
+Android:
+
+Fixed bugs related to bookmarks.
+Upgraded Intune MAM SDK to version 10.1.0.
+ 
+
+New Policy:
+
+- EdgeBlockSignInEnabled to block Edge sign-in
+- ExperimentationAndConfigurationServiceControl, allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+- EdgeOneAuthProxy to specify a dedicated proxy to sign in to Edge in Android
+ 
+
+Enhancements
+
+News feeds is enabled for work or school accounts.
+
+ 
+
+(I removed some of the content I sent to GS as it was not valid. For the new policy EdgeOneAuthProxy I just added. I sent it in another mail thread. Please add the hyperlink as well)
+
+ 
+
+Regards,
+
+Charlie Lin
+
+
+<!-- =================================================== -->
 ## Version 120.0.2210.150: January 21, 2024
 
 Fixed various bugs and performance issues for Android and iOS.
