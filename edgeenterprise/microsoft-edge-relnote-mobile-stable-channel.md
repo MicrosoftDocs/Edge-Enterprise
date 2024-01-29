@@ -25,45 +25,33 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 121.0.2277.84: January 29, 2024
 
-Fixed various bugs and added new policy support and enhanced users experience
+Fixed various bugs, added new policy support, and enhanced users' experience.
 
+### Fixes
+
+**iOS:**
+
+- Resolved the issue with "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
+- Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
+- Fixed a background crash related to the policy manager.
+- Upgraded Intune MAM SDK for iOS to version 19.0.0.
+
+**Android:**
+
+- Fixed bugs related to bookmarks.
+- Upgraded Intune MAM SDK to version 10.1.0.
  
+### Policy updates
 
-iOS:
+#### New policies
 
-Resolved the issue with "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
-Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
-Fixed a background crash related to the policy manager.
-Upgraded Intune MAM SDK for iOS to version 19.0.0.
- 
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+- [EdgeOneAuthProxy](/deployedge/microsoft-edge-mobile-policies#edgeoneauthproxy) to specify a dedicated proxy to sign in to Edge in Android
 
-Android:
+### Enhancements
 
-Fixed bugs related to bookmarks.
-Upgraded Intune MAM SDK to version 10.1.0.
- 
-
-New Policy:
-
-- EdgeBlockSignInEnabled to block Edge sign-in
-- ExperimentationAndConfigurationServiceControl, allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
-- EdgeOneAuthProxy to specify a dedicated proxy to sign in to Edge in Android
- 
-
-Enhancements
-
-News feeds is enabled for work or school accounts.
-
- 
-
-(I removed some of the content I sent to GS as it was not valid. For the new policy EdgeOneAuthProxy I just added. I sent it in another mail thread. Please add the hyperlink as well)
-
- 
-
-Regards,
-
-Charlie Lin
-
+- News feeds is enabled for work or school accounts.
 
 <!-- =================================================== -->
 ## Version 120.0.2210.150: January 21, 2024
