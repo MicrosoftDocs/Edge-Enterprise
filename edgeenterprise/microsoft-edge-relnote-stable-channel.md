@@ -30,7 +30,7 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues for Extended Stable.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-31-2024).<!-- refresh link when stable releases --->
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-31-2024).
 
 ## Version 121.0.2277.83: January 25, 2024
 
