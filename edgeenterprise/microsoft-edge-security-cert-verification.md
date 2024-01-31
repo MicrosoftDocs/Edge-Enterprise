@@ -6,7 +6,7 @@ manager: arvindm
 ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "An overview of the changes to Microsoft Edge browser TLS server certificate verification"
