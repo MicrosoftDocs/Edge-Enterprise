@@ -19,6 +19,39 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 122.0.xxxx.xx: February x, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
+
+### Dev Channel updates
+
+- [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
+- [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
+- [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
+- [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
+
+### Feature updates
+
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin would like to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
+
+- **Deprecation of the image enhancement feature.**To improve end user experience the image enhancement feature has been deprecated.  
+
+### Policy updates
+
+#### New policies
+
+- [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#aigenthemesenabled) Enables DALL-E themes generation
+- [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) Allow users to bypass Enhanced Security Mode
+- [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) Super Drag Drop Enabled
+
+#### Obsoleted policies
+
+- [EdgeEnhanceImagesEnabled](/deployedge/microsoft-edge-policies#edgeenhanceimagesenabled) Enhance images enabled  
+
 ## Version 121.0.2277.83: January 25, 2024
 
 Fixed various bugs and performance issues.
