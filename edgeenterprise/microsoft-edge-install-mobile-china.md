@@ -6,7 +6,7 @@ manager: srugh
 ms.date: 12/09/2022
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Information about installing Microsoft Edge mobile in China"
