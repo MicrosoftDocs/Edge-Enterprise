@@ -3,10 +3,10 @@ title: "Per-site configuration by policy"
 ms.author: archandr
 author: dan-wesley
 manager: laurawi
-ms.date: 05/02/2023
+ms.date: 01/31/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Per-site configuration by policy"
@@ -26,7 +26,7 @@ In most cases, browser decisions are governed by the following inputs:
 
 In the Internet Explorer web platform, each of these decisions was called a URLAction. For more information, see [URL Action Flags](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178%28v%3dvs.85%29). The URLAction, Enterprise Group Policy, and user settings in the Internet Control Panel controlled how the browser would handle each decision.  
 
-In Microsoft Edge, most per-site permissions are controlled by settings and policies expressed using a simple syntax with limited wild-card support. Windows Security Zones are still used for a few configuration decisions.
+In Microsoft Edge, most per-site permissions are controlled using settngs and policies expressed using a simple syntax with limited wild-card support. Windows Security Zones are still used for a few configuration decisions.
 
 ## Windows Security Zones
 
@@ -45,7 +45,7 @@ EdgeHTML, used in WebView1 controls and Microsoft Edge Legacy, inherited the Zon
 
 Microsoft Edge makes limited use of Windows Security Zones. Instead, most permissions and features that offer administrators per-site configuration via [policy](/deployedge/microsoft-edge-policies) rely on lists of rules in the [URL Filter Format](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
-When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they'll find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar. You can also use the various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
+When end users open a settings page like `edge://settings/content/siteDetails?site=https://example.com`, they find a long list of configuration switches and lists for various permissions. Users rarely use the Settings page directly, instead they make choices while browsing and using various widgets and toggles in the **page info** dropdown. This list appears when you select the lock icon in the address bar. You can also use the various prompts or buttons at the right-edge of the address bar. The next screenshot shows an example of page information.
 
 ![Page information and settings for the current page in the browser.](media/per-site-configuration-by-policy/edge-page-info.png)
 
@@ -59,7 +59,7 @@ Many of the settings are obscure (WebSerial, WebMIDI) and there's often no reaso
 
 While Microsoft Edge relies mostly on individual policies using the URL Filter format, it continues to use Windows' Security Zones by default in a few cases. This approach simplifies deployment in Enterprises that have historically relied upon Zones configuration.
 
-The following behaviors are controlled by Zone policy:
+Zone policy controls the following behaviors:
 
 - Deciding whether to release Windows Integrated Authentication (Kerberos or NTLM) credentials automatically.
 - Deciding how to handle file downloads.
@@ -67,13 +67,13 @@ The following behaviors are controlled by Zone policy:
 
 ## Credential release
 
-By default, Microsoft Edge evaluates `URLACTION_CREDENTIALS_USE` to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) will prevent Zone Policy from being consulted.
+By default, Microsoft Edge evaluates `URLACTION_CREDENTIALS_USE` to decide whether Windows Integrated Authentication is used automatically, or if the user will see a manual authentication prompt. Configuring the [AuthServerAllowlist site list policy](/deployedge/microsoft-edge-policies#authserverallowlist) prevents Zone Policy from being consulted.
 
 ## File downloads
 
 Evidence about the origins of a file download (also known as "[Mark of the Web](https://textslashplain.com/2016/04/04/downloads-and-the-mark-of-the-web/)" is recorded for files downloaded from the Internet Zone. Other applications, such as the Windows Shell, and Microsoft Office may take this origin evidence into account when deciding how to handle a file.
 
-If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, Microsoft Edge's download manager will block file downloads from sites in that Zone. A user will see this note: "Couldn't download – Blocked".  
+If the Windows Security Zone policy is configured to disable the setting for launching applications and download unsafe files, Microsoft Edge's download manager blocks file downloads from sites in that Zone. A user will see this note: "Couldn't download – Blocked".  
 
 ## IE mode
 

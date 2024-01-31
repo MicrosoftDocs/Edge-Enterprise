@@ -3,10 +3,10 @@ title: "Write SPNEGO Authenticator for Microsoft Edge on Android"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 09/19/2023
+ms.date: 01/31/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "This article describes how to write a SPNEGO authenticator for Edge on Android"
@@ -18,7 +18,7 @@ Third parties can enable SPNEGO authentication in Microsoft Edge for Android. To
 
 ## Introduction
 
-The SPNEGO Authenticator is provided by an Android Service. The authenticator must be incorporated in an app, provided by the third party, that's installed on the user's device. The app is responsible for managing any accounts used for SPNEGO authentication, and for all communication with the SPNEGO server.
+The SPNEGO Authenticator is provided by an Android Service. The authenticator must be incorporated in an app, provided by the third party, installed on the user's device. The app is responsible for managing any accounts used for SPNEGO authentication, and for all communication with the SPNEGO server.
 
 The SPNEGO Authenticator is an Android AccountAuthenticator. As such it must follow the pattern described in [AbstractAccountAuthenticator](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)). It must implement an authenticator class derived from `AbstractAccountAuthenticator`.
 
@@ -26,13 +26,13 @@ The SPNEGO Authenticator must define a new account type. The account type name s
 
 ## Interface to Microsoft Edge
 
-Edge finds the SPNEGO authenticator through the Android account type it provides. The account type that's defined by the authenticator is passed to Edge through the **AuthAndroidNegotiateAccountType** policy.
+Edge finds the SPNEGO authenticator through the Android account type it provides. The account type defined by the authenticator is passed to Edge through the **AuthAndroidNegotiateAccountType** policy.
 
 The interface to Edge is through the Android account management framework, through [AbstractAccountManager.getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator.html#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) in particular. Edge, in [org.chromium.net.HttpNegotiateConstants](https://source.chromium.org/chromium/chromium/src/+/main:net/android/java/src/org/chromium/net/HttpNegotiateConstants.java) defines some more keys and values that are used in the arguments to `getAuthToken`, and in the returned result bundle.
 
 ### getAuthToken arguments
 
-When [getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) is called, the `authTokenType` is "SPNEGO:HOSTBASED:\<spn\>" where \<spn\> is the principal for the request. This will always be a host-based principal in the current implementation. Future versions may allow other types of principals, but if they do so they'll use a different prefix. SPNEGO Authenticators should check the prefix.
+When [getAuthToken](https://developer.android.com/reference/android/accounts/AbstractAccountAuthenticator#getAuthToken(android.accounts.AccountAuthenticatorResponse,%20android.accounts.Account,%20java.lang.String,%20android.os.Bundle)) is called, the `authTokenType` is "SPNEGO:HOSTBASED:\<spn\>" where \<spn\> is the principal for the request. This will always be a host-based principal in the current implementation. Future versions may allow other types of principals, but if they do so they use a different prefix. SPNEGO Authenticators should check the prefix.
 
 The `options` bundle contains these keys:
 
@@ -40,7 +40,7 @@ The `options` bundle contains these keys:
 - [KEY_CALLER_UID](http://developer.android.com/reference/android/accounts/AccountManager.html#KEY_CALLER_UID)
 - `HttpNegotiateConstants.KEY_CAN_DELEGATE` - True if delegation is allowed, false if not allowed.
 
-If this is the second or later round of a multi-round authentication sequence, it will also contain the following keys.
+If this is the second or later round of a multi-round authentication sequence, it also contains the following keys.
 
 - `HttpNegotiateConstants.KEY_INCOMING_AUTH_TOKEN` - The incoming token from the WWW-Authenticate header, Base64 encoded.
 - `HttpNegotiateConstants.KEY_SPNEGO_CONTEXT` - The SPNEGO context provided by the authenticator on the previous round. Microsoft Edge treats this bundle as an opaque object and simply preserves it between rounds.
