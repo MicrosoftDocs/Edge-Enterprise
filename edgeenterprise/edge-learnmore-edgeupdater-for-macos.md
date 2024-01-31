@@ -6,7 +6,7 @@ manager: edmaurer
 ms.date: 03/17/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Starting with version 113, Microsoft Edge for macOS will switch from Microsoft AutoUpdate to EdgeUpdater"
