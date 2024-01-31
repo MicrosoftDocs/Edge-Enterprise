@@ -6,7 +6,7 @@ manager: erikan
 ms.date: 11/6/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge will disable modifying 'document.domain'"

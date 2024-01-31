@@ -6,7 +6,7 @@ manager: megp
 ms.date: 08/07/2022
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Enterprise considerations for zstd-based Shared Dictionary Compression for HTTP (ZSDCH) feature"

@@ -6,7 +6,7 @@ manager: kjellarsen
 ms.date: 12/20/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn about Microsoft Edge Workspaces and how they can benefit users in your organization."
