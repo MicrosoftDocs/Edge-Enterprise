@@ -6,7 +6,7 @@ manager: archandr
 ms.date: 12/06/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Provides steps for configuring the Microsoft Edge management service."
