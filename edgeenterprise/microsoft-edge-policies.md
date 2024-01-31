@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/20/2024
+ms.date: 01/29/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,6 +25,14 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[AIGenThemesEnabled](#aigenthemesenabled)|Enables DALL-E themes generation|
 
 ## Available policies
 
@@ -376,6 +384,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
+|[AIGenThemesEnabled](#aigenthemesenabled)|Enables DALL-E themes generation|
 |[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let screen reader users get image descriptions from Microsoft|
 |[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
@@ -10579,9 +10588,9 @@ This group policy configures the radio button selector that enables this feature
 
 If you set this policy to 'Automatically', disable this policy, or don't configure this policy, autofill will not have any authentication flow.
 
-If you set this policy to 'WithDevicePassword', users will have to enter their device password (or preferred mode of authentication under Windows) to prove their identity before their password is auto filled. Authentication modes include Windows Hello, PIN, face recognition, or fingerprint. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+If you set this policy to 'WithDevicePassword', users will have to enter their device password (or preferred mode of authentication under Windows) to prove their identity before their password is auto filled. Authentication modes include Windows Hello, PIN, face recognition, or fingerprint. The frequency for authentication prompt will be set to 'Ask permission once per browsing session' by default. However, users can change it to the other option, which is 'Always ask permission'.
 
-If you set this policy to 'WithCustomPrimaryPassword', users will be asked to create their custom password and then to be redirected to Settings. After the custom password is set, users can authenticate themselves using the custom password and their passwords will get auto-filled after successful authentication. The frequency for authentication prompt will be set to 'Always' by default. However, users can change it to the other option, which is 'Once every browsing session'.
+If you set this policy to 'WithCustomPrimaryPassword', users will be asked to create their custom password and then to be redirected to Settings. After the custom password is set, users can authenticate themselves using the custom password and their passwords will get auto-filled after successful authentication. The frequency for authentication prompt will be set to 'Ask permission once per browsing session' by default. However, users can change it to the other option, which is 'Always ask permission'.
 
 If you set this policy to 'AutofillOff', saved passwords will no longer be suggested for autofill.
 
@@ -15637,6 +15646,70 @@ If you don't configure this policy, users can control whether to use SSO using o
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AIGenThemesEnabled
+
+  #### Enables DALL-E themes generation
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 122 or later
+
+  #### Description
+
+  This policy lets you generate browser themes using DALL-E and apply them to Microsoft Edge.
+
+If you enable or don't configure this policy, the AI generated themes will be enabled.
+
+If you disable this policy, the AI generated themes will be disabled for your organization.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AIGenThemesEnabled
+  - GP name: Enables DALL-E themes generation
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AIGenThemesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AIGenThemesEnabled
+  - Example value:
+``` xml
+<true/>
 ```
   
 
