@@ -6,7 +6,7 @@ manager: likuba
 ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "This article shows the results of Copilot page summary tests."
