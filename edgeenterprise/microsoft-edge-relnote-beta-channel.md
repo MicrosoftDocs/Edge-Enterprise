@@ -29,6 +29,8 @@ Fixed various bugs and performance issues.
 
 ### Dev Channel updates
 
+The following Dev channel updates preceded this Beta channel release. The following Dev notes provide detailed information about the changes in each release.
+
 - [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
 - [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
 - [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
@@ -38,7 +40,7 @@ Fixed various bugs and performance issues.
 
 - **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin would like to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
 
-- **Deprecation of the image enhancement feature.**To improve end user experience the image enhancement feature has been deprecated.  
+- **Deprecation of the image enhancement feature.** To improve end user experience the image enhancement feature has been deprecated.  
 
 ### Policy updates
 
