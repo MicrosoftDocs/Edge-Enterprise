@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/22/2024
+ms.date: 01/30/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,7 +22,31 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+<!-- =================================================== -->
+## Version 121.0.2277.84 (Android): January 29, 2024
 
+Fixed various bugs, added new policy support, and enhanced users' experience.
+
+### Fixes
+
+**Android:**
+
+- Fixed bugs related to bookmarks.
+- Upgraded Intune MAM SDK to version 10.1.0.
+ 
+### Policy updates
+
+#### New policies
+
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+- [EdgeOneAuthProxy](/deployedge/microsoft-edge-mobile-policies#edgeoneauthproxy) to specify a dedicated proxy to sign in to Edge in Android
+
+### Enhancements
+
+- News feeds is enabled for work or school accounts.
+
+<!-- =================================================== -->
 ## Version 120.0.2210.150: January 21, 2024
 
 Fixed various bugs and performance issues for Android and iOS.
