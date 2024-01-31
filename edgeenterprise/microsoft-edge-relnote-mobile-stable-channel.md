@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/29/2024
+ms.date: 01/30/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,19 +22,12 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
-
-## Version 121.0.2277.84: January 29, 2024
+<!-- =================================================== -->
+## Version 121.0.2277.84 (Android): January 29, 2024
 
 Fixed various bugs, added new policy support, and enhanced users' experience.
 
 ### Fixes
-
-**iOS:**
-
-- Resolved the issue with "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
-- Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
-- Fixed a background crash related to the policy manager.
-- Upgraded Intune MAM SDK for iOS to version 19.0.0.
 
 **Android:**
 
