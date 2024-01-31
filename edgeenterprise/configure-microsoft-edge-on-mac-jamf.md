@@ -6,7 +6,7 @@ manager: laurawi
 ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Configure Microsoft Edge policy settings on Mac devices with Jamf"
