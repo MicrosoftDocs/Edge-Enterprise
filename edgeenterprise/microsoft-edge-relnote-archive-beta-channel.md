@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 01/23/2024
+ms.date: 02/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,32 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 # Archived release notes for Microsoft Edge Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+
+<!-- Version 119.0.2151.44: November 2, 2023, 2023 to Version 119.0.2151.24: October 23, 2023 -->
+## Version 119.0.2151.44: November 2, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 119.0.2151.42: November 1, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 119.0.2151.38: October 30, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 119.0.2151.32: October 27, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 119.0.2151.30: October 26, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 119.0.2151.24: October 23, 2023
+
+Fixed various bugs and performance issues.
 
 <!-- Version 119.0.2151.12: October 17, 2023 to Version 118.0.2088.17: September 25, 2023 -->
 ## Version 119.0.2151.12: October 17, 2023
