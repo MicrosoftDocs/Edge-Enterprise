@@ -35,12 +35,14 @@ The following Dev channel updates preceded this Beta channel release. The follow
 - [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
 - [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
 - [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
-
+    
 ### Feature updates
 
-- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin would like to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
 
 - **Deprecation of the image enhancement feature.** To improve end user experience the image enhancement feature has been deprecated.  
+
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service will provide controls to configure recommended policies. This gives users permission to override the configured policy.
 
 ### Policy updates
 
