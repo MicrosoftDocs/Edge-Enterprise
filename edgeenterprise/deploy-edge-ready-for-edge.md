@@ -84,7 +84,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Grammarly  | Grammarly | https://support.grammarly.com/hc/en-us/articles/115000090811-What-do-I-need-in-order-to-use-Grammarly-  |
 | Greenhouse  | Greenhouse Recruiting  | https://support.greenhouse.io/hc/en-us/articles/360037604731-Greenhouse-Recruiting-Browser-Support  |
 | HCL  | BigFix | https://help.hcltechsw.com/bigfix/9.5/platform/Platform/Installation/c_spcr_platform.html  |
-| Host Analytics | Host Analytics | https://help.hostanalytics.com/Release_Notes/2020_Release_Notes.htm?Highlight=release%20notes  |
+| Planful (Host Analytics) | Host Analytics | https://planful.com/resources/ |
 | Host Analytics  | CRM, CMS Hub, Marketing Hub, Sales Hub, Service Hub  | https://knowledge.hubspot.com/resources/which-browsers-are-supported-by-hubspot  |
 | Hyland  | ShareBase, OnBase  | https://sharebase.onbase.com/en/faqs  |
 | Insightly | Insightly  | https://support.insight.ly/hc/en-us/articles/204892624-Recommended-Browsers  |
@@ -107,7 +107,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Monday.com  | Monday  | https://support.monday.com/hc/en-us/articles/360002145219-Supported-Web-Browsers  |
 | NetSuite (Oracle)  | Oracle NetSuite   | https://nlcorp.app.netsuite.com/core/media/media.nl?id=94209463&c=NLCORP&h=3735c785dc0db0151a4e&_xt=.pdf   |
 | New Relic  | New Relic UI  | https://docs.newrelic.com/docs/using-new-relic/user-interface-functions/view-your-data/supported-browsers-new-relics-ui  |
-| onepointProject | One Point Projects | http://ftp.onepoint-projects.com/documentation/latest/onepoint-server-installation.pdf   |
+| Onepoint| Planforge | https://www.planforge.io/en/resources/faq   |
 | Pega | Pega CRM   | https://community.pega.com/knowledgebase/articles/pega-platform-client-operating-system-and-browser-support  |
 | PeopleFluent | PeopleFluent Talent Management  | https://tmhelp.peoplefluent.com/11.12.0.2.65509/en_US/End%20User/welcome.htm#t=common%2Fhw_sw_reqs%2Fweb_browser_support_policy.htm |
 | Planview  | PPM Pro  | https://success.planview.com/Planview_PPM_Pro/150_PPM_Pro_Administrator_Documentation/015_System_Settings/004_System_Requirements  |
