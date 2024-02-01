@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 121.0.2277.98: February 1, 2024
 
-Fixed various bugs and performance issuesStable.
+Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-1-2024).
 
