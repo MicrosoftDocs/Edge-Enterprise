@@ -48,7 +48,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
 | Airtable   | Airtable   | https://support.airtable.com/hc/en-us/articles/217990018-What-are-the-technical-requirements-for-using-Airtable- |
 | Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/content-services/5.2/support/  |
-| Alteryx  | Alteryx Analytics Platform  | https://help.alteryx.com/current/product-activation-and-licensing/version-support-policy  |
+| Alteryx  | Alteryx AI Platform  | https://help.alteryx.com/current/en/license-and-activate.html  |
 | Aprimo  | Aprimo Cloud Marketing Studio | https://help.aprimo.com/Content/Marketing_Operations_Help/aprimo_basics/browsers_configuring_concept.html |
 | Asana  | Asana | https://asana.com/guide/help/faq/connectivity#gl-browsers |
 | Atlassian  | Bitbucket   | https://confluence.atlassian.com/bitbucketserver/supported-platforms-776640981.html   |
@@ -64,7 +64,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Cisco   | WebEx  | https://help.webex.com/en-us/nki3xrq/Webex-Meetings-Suite-System-Requirements#concept_6C8ED62012334D2D91D139BAD77C833F   |
 | Clarizen   | Success   | https://success.clarizen.com/hc/en-us/articles/205712188-Supported-Browsers?search=edge   |
 | Coda  | Coda   | https://help.coda.io/en/articles/1638088-which-browsers-does-coda-support  |
-| Cybozu  | Kintone  | https://jp.cybozu.help/general/en/user/list_start/webbrowser.html  |
+| Cybozu  | Kintone  | https://www.kintone.com/en-us/intro/  |
 | Deltek  | Vantagepoint Cloud   | https://help.deltek.com/PRODUCT/Vantagepoint/2.0/CLOUDADMINGUIDE/Browser%20Interface.html    |
 | DocuSign    | Docusign CLM   | https://support.docusign.com/en/guides/SpringCM-Operating-System-and-Browser-Support  |
 | Doodle  | Doodle  | https://help.doodle.com/hc/en-us/articles/360012149773-What-are-the-system-requirements-for-using-Doodle-                  |
