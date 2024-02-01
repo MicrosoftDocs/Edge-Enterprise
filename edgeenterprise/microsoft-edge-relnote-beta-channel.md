@@ -156,30 +156,7 @@ Fixed various bugs and performance issues.
 - [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
 - [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
 
-## Version 119.0.2151.44: November 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.42: November 1, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.38: October 30, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.32: October 27, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.30: October 26, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.24: October 23, 2023
-
-Fixed various bugs and performance issues.
-
+<!-- Version 119.0.2151.44: November 2, 2023, 2023 to Version 119.0.2151.24: October 23, 2023 -->
 <!-- Version 119.0.2151.12: October 17, 2023 to Version 118.0.2088.17: September 25, 2023 -->
 <!-- Version 118.0.2088.11: September 20, 2023 to Version 117.0.2045.12: August 29, 2023 -->
 <!-- Version 117.0.2045.9: August 25, 2023 to Version 116.0.1938.36: July 31, 2023 -->
