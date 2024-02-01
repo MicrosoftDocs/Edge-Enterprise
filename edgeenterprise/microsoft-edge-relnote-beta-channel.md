@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/25/2024
+ms.date: 02/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,41 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 122.0.2365.8: February 1, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Beta channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
+- [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
+- [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
+- [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
+
+### Feature updates
+
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin would like to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
+
+- **Deprecation of the image enhancement feature.** To improve end user experience the image enhancement feature has been deprecated.  
+
+### Policy updates
+
+#### New policies
+
+- [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#aigenthemesenabled) Enables DALL-E themes generation
+- [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) Allow users to bypass Enhanced Security Mode
+- [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) Super Drag Drop Enabled
+
+#### Obsoleted policies
+
+- [EdgeEnhanceImagesEnabled](/deployedge/microsoft-edge-policies#edgeenhanceimagesenabled) Enhance images enabled  
 
 ## Version 121.0.2277.83: January 25, 2024
 
@@ -121,30 +156,7 @@ Fixed various bugs and performance issues.
 - [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
 - [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
 
-## Version 119.0.2151.44: November 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.42: November 1, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.38: October 30, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.32: October 27, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.30: October 26, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.24: October 23, 2023
-
-Fixed various bugs and performance issues.
-
+<!-- Version 119.0.2151.44: November 2, 2023, 2023 to Version 119.0.2151.24: October 23, 2023 -->
 <!-- Version 119.0.2151.12: October 17, 2023 to Version 118.0.2088.17: September 25, 2023 -->
 <!-- Version 118.0.2088.11: September 20, 2023 to Version 117.0.2045.12: August 29, 2023 -->
 <!-- Version 117.0.2045.9: August 25, 2023 to Version 116.0.1938.36: July 31, 2023 -->
