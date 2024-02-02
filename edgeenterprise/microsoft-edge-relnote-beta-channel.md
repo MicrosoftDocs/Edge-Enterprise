@@ -42,7 +42,7 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 - **Deprecation of the image enhancement feature.** To improve end user experience the image enhancement feature has been deprecated.  
 
-- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service will provide controls to configure recommended policies. This gives users permission to override the configured policy.
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with controls to configure recommended policies. This gives end users permission to override the configured policy.
 
 ### Policy updates
 
