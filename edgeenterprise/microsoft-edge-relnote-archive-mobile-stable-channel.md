@@ -3,10 +3,10 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/22/2023
+ms.date: 02/02/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
@@ -15,6 +15,54 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 118.0.2088.81: November 1, 2023 to Version 117.0.2045.53: October 6, 2023  -->
+## Version 118.0.2088.81: November 1, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.68: October 25, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.66: October 24, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 118.0.2088.60: October 21, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.52: October 18, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Tunnel for MAM strict mode.** When strict mode is turned on by MAM policy `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`, the network will be blocked until the tunnel is connected.
+
+- **Overflow menu enablement for locked view mode.** Originally, overflow menu is disabled when Edge locked view mode is turned on by MDM policy `EdgeLockedViewMode=true`. Now, the overflow menu is enabled when Edge locked view mode is turned on.
+
+- **Support for saving logs to local devices.** For more information, see [Diagnostic logs](/mem/intune/apps/manage-microsoft-edge#diagnostic-logs)
+
+### Policy support
+
+Allow proceeding from the SSL warning page:
+
+- MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
+- MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
+
+Control the behavior of opening external apps:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.OpeningExternalApps](/mem/intune/apps/manage-microsoft-edge#block-opening-external-apps)
+
+## Version 117.0.2045.65: October 11, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 117.0.2045.53: October 6, 2023
+
+Fixed various bugs and performance issues for Android.
 
 <!-- Version 117.0.2045.33: September 15, 2023 to Version 116.0.1938.64: August 30, 2023  -->
 ## Version 117.0.2045.33: September 15, 2023
