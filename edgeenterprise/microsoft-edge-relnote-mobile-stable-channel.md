@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 121.0.2277.86: February 1, 2024
 
-Fixed various bugs and performance issues for iOS.
+Fixed various bugs and added new policy support for iOS.
 
 ### Fixes
 
@@ -35,6 +35,13 @@ Fixed various bugs and performance issues for iOS.
 - Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
 - Fixed a background crash related to the policy manager.
 - Upgraded Intune MAM SDK for iOS to version 19.0.0.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
 
 <!-- =================================================== -->
 ## Version 121.0.2277.84 (Android): January 29, 2024
