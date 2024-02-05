@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 01/30/2024
+ms.date: 02/05/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,31 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 121.0.2277.86 (iOS): February 1, 2024
+
+Fixed various bugs, added new policy support, and enhanced users' experience.
+
+### Fixes
+
+**iOS:**
+
+- Resolved the issue with the "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
+- Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
+- Fixed a background crash related to the policy manager.
+- Upgraded Intune MAM SDK for iOS to version 19.0.0.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+
+### Enhancements
+
+- News feeds is enabled for work or school accounts.
+
 <!-- =================================================== -->
 ## Version 121.0.2277.84 (Android): January 29, 2024
 
@@ -194,54 +219,7 @@ Configure to turn on ManagedFavorites (bookmarks):
 
 - MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
 
-## Version 118.0.2088.81: November 1, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 118.0.2088.68: October 25, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 118.0.2088.66: October 24, 2023
-
-Fixed various bugs and performance issues for Android.
-
-## Version 118.0.2088.60: October 21, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 118.0.2088.52: October 18, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature update
-
-- **Microsoft Tunnel for MAM strict mode.** When strict mode is turned on by MAM policy `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`, the network will be blocked until the tunnel is connected.
-
-- **Overflow menu enablement for locked view mode.** Originally, overflow menu is disabled when Edge locked view mode is turned on by MDM policy `EdgeLockedViewMode=true`. Now, the overflow menu is enabled when Edge locked view mode is turned on.
-
-- **Support for saving logs to local devices.** For more information, see [Diagnostic logs](/mem/intune/apps/manage-microsoft-edge#diagnostic-logs)
-
-### Policy support
-
-Allow proceeding from the SSL warning page:
-
-- MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
-- MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
-
-Control the behavior of opening external apps:
-
-- MAM: [com.microsoft.intune.mam.managedbrowser.OpeningExternalApps](/mem/intune/apps/manage-microsoft-edge#block-opening-external-apps)
-
-## Version 117.0.2045.65: October 11, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 117.0.2045.53: October 6, 2023
-
-Fixed various bugs and performance issues for Android.
-
-
+<!-- Version 118.0.2088.81: November 1, 2023 to Version 117.0.2045.53: October 6, 2023  -->
 <!-- Version 117.0.2045.33: September 15, 2023 to Version 116.0.1938.64: August 30, 2023  -->
 <!-- Version 116.0.1938.56: August 21, 2023, to Version 115.0.1901.183: July 22, 2023 -->
 <!-- Version 114.0.1823.37: June 2, 2023 to Version 113.0.1774.50: May 18, 2023 -->
