@@ -26,6 +26,14 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 121.0.2277.106: February 5, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy did not work as expected while opening `file://` links.
+
 ## Version 121.0.2277.98: February 1, 2024
 
 Fixed various bugs and performance issues.
