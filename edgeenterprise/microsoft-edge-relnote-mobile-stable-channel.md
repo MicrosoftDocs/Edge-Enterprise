@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 02/01/2024
+ms.date: 02/05/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,7 +25,7 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 121.0.2277.86 (iOS): February 1, 2024
 
-Fixed various bugs and performance issues, added new policy support.
+Fixed various bugs, added new policy support, and enhanced users' experience.
 
 ### Fixes
 
@@ -42,6 +42,11 @@ Fixed various bugs and performance issues, added new policy support.
 
 - [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
 - [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+- [EdgeOneAuthProxy](/deployedge/microsoft-edge-mobile-policies#edgeoneauthproxy) to specify a dedicated proxy to sign in to Edge in Android
+
+### Enhancements
+
+- News feeds is enabled for work or school accounts.
 
 <!-- =================================================== -->
 ## Version 121.0.2277.84 (Android): January 29, 2024
