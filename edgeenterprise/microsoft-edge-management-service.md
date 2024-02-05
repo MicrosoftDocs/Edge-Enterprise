@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 12/06/2023
+ms.date: 02/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -99,9 +99,9 @@ Follow these steps to reorder the priority of a configuration profile:
 Follow these steps to configure a policy for a configuration profile:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for.  
-1. Under the **Policies** pivot, select **Select policy**.
-1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
-1. Select **Save**.  
+2. Under the **Policies** pivot, select **Select policy**.
+3. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select. If the policy is able to be set as either mandatory or recommended, optionally choose to "Allow users to override" the policy.
+4. Select **Save**.  
 
 <a name='assign-a-configuration-profile-to-an-microsoft-entra-group'></a>
 
