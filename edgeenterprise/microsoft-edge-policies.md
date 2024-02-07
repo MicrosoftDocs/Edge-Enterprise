@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/29/2024
+ms.date: 02/06/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -28,11 +28,13 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[AIGenThemesEnabled](#aigenthemesenabled)|Enables DALL-E themes generation|
+|[ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist)|Blocklist for extension install types|
+|[ExtensionManifestV2Availability](#extensionmanifestv2availability)|Control Manifest v2 extension availability|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)|
 
 ## Available policies
 
@@ -188,6 +190,8 @@ These tables list all of the browser-related group policies available in this re
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Control which extensions cannot be installed|
 |[ExtensionInstallForcelist](#extensioninstallforcelist)|Control which extensions are installed silently|
 |[ExtensionInstallSources](#extensioninstallsources)|Configure extension and user script install sources|
+|[ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist)|Blocklist for extension install types|
+|[ExtensionManifestV2Availability](#extensionmanifestv2availability)|Control Manifest v2 extension availability|
 |[ExtensionSettings](#extensionsettings)|Configure extension management settings|
 ### [*Games settings*](#games-settings-policies)
 
@@ -729,10 +733,10 @@ These tables list all of the browser-related group policies available in this re
 |[WalletDonationEnabled](#walletdonationenabled)|Wallet Donation Enabled|
 |[WebAppInstallForceList](#webappinstallforcelist)|Configure list of force-installed Web Apps|
 |[WebAppSettings](#webappsettings)|Web App management settings|
-|[WebCaptureEnabled](#webcaptureenabled)|Enable web capture feature in Microsoft Edge|
+|[WebCaptureEnabled](#webcaptureenabled)|Enable the Screenshot (previously named Web Capture) feature in Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Re-enable Web Components v0 API until M84 (obsolete)|
 |[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Allow WebDriver to Override Incompatible Policies (obsolete)|
-|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (deprecated)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Manage exposure of local IP addressess by WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
@@ -7241,6 +7245,161 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 <array>
   <string>https://corp.contoso.com/*</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExtensionInstallTypeBlocklist
+
+  #### Blocklist for extension install types
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  The blocklist controls which extension install types are disallowed.
+
+Setting the "command_line" will block an extension from being loaded from command line.
+
+Policy options mapping:
+
+* command_line (command_line) = Blocks extensions from being loaded from command line
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExtensionInstallTypeBlocklist
+  - GP name: Blocklist for extension install types
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallTypeBlocklist
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallTypeBlocklist\1 = "command_line"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExtensionInstallTypeBlocklist
+  - Example value:
+``` xml
+<array>
+  <string>command_line</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ExtensionManifestV2Availability
+
+  #### Control Manifest v2 extension availability
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  Control if Manifest v2 extensions can be used by browser.
+
+Manifest v2 extensions support will be deprecated and all extensions need to be migrated to v3 in the future. More information about, and the timeline of the migration has not been established.
+
+If the policy is set to Default or not set, v2 extension loading is decided by browser. This will follow the preceding timeline when it's established.
+
+If the policy is set to Disable, v2 extensions installation are blocked, and existing ones are disabled. This option is going to be treated the same as if the policy is unset after v2 support is turned off by default.
+
+If the policy is set to Enable, v2 extensions are allowed. The option is going to be treated the same as if the policy isn't set before v2 support is turned off by default.
+
+If the policy is set to EnableForForcedExtensions, force installed v2 extensions are allowed. This includes extensions that are listed by [ExtensionInstallForcelist](#extensioninstallforcelist) or [ExtensionSettings](#extensionsettings) with installation_mode "force_installed" or "normal_installed". All other v2 extensions are disabled. The option is always available regardless of the manifest migration state.
+
+Extensions availabilities are still controlled by other policies.
+
+Policy options mapping:
+
+* Default (0) = Default browser behavior
+
+* Disable (1) = Manifest v2 is disabled
+
+* Enable (2) = Manifest v2 is enabled
+
+* EnableForForcedExtensions (3) = Manifest v2 is enabled for forced extensions only
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExtensionManifestV2Availability
+  - GP name: Control Manifest v2 extension availability
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Extensions
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ExtensionManifestV2Availability
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExtensionManifestV2Availability
+  - Example value:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -21728,7 +21887,8 @@ Use the preceding information when configuring this policy.
   
   #### Supported versions:
 
-  - On Windows 7 and macOS since 86 or later
+  - On Windows since 122 or later
+  - On macOS since 86 or later
 
   #### Description
 
@@ -21738,7 +21898,9 @@ Required diagnostic data is collected keep Microsoft Edge secure, up to date and
 
 Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.
 
-This policy is not supported on Windows 10 devices. To control this data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Up to version 121, this policy is not supported on Windows 10 devices. To control this data collection on Windows 10 for 121 and previous, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+
+For version 122 and later, this policy is supported on Windows 10 devices to allow controlling Microsoft Edge data collection separately from Windows 10 diagnostics data collection.
 
 Use one of the following settings to configure this policy:
 
@@ -39105,15 +39267,14 @@ If you disable this policy, users can't use the Wallet Donation feature.
 
   #### Description
 
-  Configure this policy to specify a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off.
+  Setting the policy specifies a list of web apps that install silently, without user interaction, and which users can't uninstall or turn off.
 
 Each list item of the policy is an object with a mandatory member:
 url (the URL of the web app to install)
 
-and 5 optional members:
+and 6 optional members:
 - default_launch_container
-(specifies the window mode that the web app opens with-a new tab is the
-default.)
+(for how the web app opens—a new tab is the default)
 
 - create_desktop_shortcut
 (True if you want to create Linux and
@@ -39130,13 +39291,14 @@ fallback_app_name are provided,
 the latter will be ignored.)
 
 - custom_name
-(Starting with Microsoft Edge version 112,
-allows you to override the app name of installed apps.)
+(Starting with Microsoft Edge version 112
+on all desktop platforms, allows you to permanently override the app name for all
+web apps and PWAs.)
 
 - custom_icon
-(Starting with Microsoft Edge version 112,
-allows you to override the app icon of installed apps. The icons have to
-be square, have a maximum file size of 1 MB, and in one of the following formats:
+(Starting with Microsoft Edge version 112
+on all desktop platforms, allows you to override the app icon of installed apps.
+The icons have to be square, maximal 1 MB in size, and in one of the following formats:
 jpeg, png, gif, webp, ico. The hash value has to be the SHA256 hash of the icon file.)
 
 - install_as_shortcut
@@ -39145,7 +39307,7 @@ version 107). If enabled the given url will be installed as a shortcut,
 as if done via the "Create Shortcut..." option in the desktop browser GUI.
 Note that when installed as a shortcut it won't be updated if the manifest in url changes.
 If disabled or unset, the web app at the given url will be installed normally.
-Not currently supported in Microsoft Edge.)
+(Not currently supported in Microsoft Edge.)
 
   #### Supported features:
 
@@ -39403,7 +39565,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppSettings = [
 
   ### WebCaptureEnabled
 
-  #### Enable web capture feature in Microsoft Edge
+  #### Enable the Screenshot (previously named Web Capture) feature in Microsoft Edge
 
   
   
@@ -39413,10 +39575,13 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppSettings = [
 
   #### Description
 
-  Enables the web capture feature in Microsoft Edge that allows users to capture web and PDF content, and annotate the capture using inking tools. Users can also do a visual image search with the captured content.
+  Note: The web capture feature is rebranded to "Screenshot".
 
-If you enable this policy or don't configure it, the Web capture option shows up in the context menu, Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
-If you disable this policy, users can't access the web capture feature in Microsoft Edge.
+Enables the Screenshot feature in Microsoft Edge. This feature lets users capture web and PDF content, and annotate captures using inking tools. Users can also do a visual image search based on the captured content.
+
+If you enable or don't configure this policy, the Screenshot option appears in the context menu, the Settings and more menu, and by using the keyboard shortcut, CTRL+SHIFT+S.
+
+If you disable this policy, users can't access this feature in Microsoft Edge.
 
   #### Supported features:
 
@@ -39435,7 +39600,7 @@ If you disable this policy, users can't access the web capture feature in Micros
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebCaptureEnabled
-  - GP name: Enable web capture feature in Microsoft Edge
+  - GP name: Enable the Screenshot (previously named Web Capture) feature in Microsoft Edge
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -39600,10 +39765,10 @@ to override incompatible policies.
 
   ### WebRtcAllowLegacyTLSProtocols
 
-  #### Allow legacy TLS/DTLS downgrade in WebRTC (deprecated)
+  #### Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 120.
   #### Supported versions:
 
   - On Windows and macOS since 88, until 120
@@ -39635,7 +39800,7 @@ Microsoft Edge.
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebRtcAllowLegacyTLSProtocols
-  - GP name: Allow legacy TLS/DTLS downgrade in WebRTC (deprecated)
+  - GP name: Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
