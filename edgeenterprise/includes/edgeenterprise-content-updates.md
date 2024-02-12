@@ -2,6 +2,16 @@
 
 
 
+## Week of February 05, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/5/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 2/6/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 2/8/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
 ## Week of January 29, 2024
 
 
@@ -44,12 +54,3 @@
 |------|------------|--------|
 | 1/16/2024 | [Microsoft Edge WebView2 Policy Documentation](/DeployEdge/microsoft-edge-webview-policies) | modified |
 | 1/17/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of January 01, 2024
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/4/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 1/4/2024 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
