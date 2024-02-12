@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/01/2024
+ms.date: 02/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,10 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 122.0.2365.30: February 12, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 122.0.2365.16: February 5, 2024
 
@@ -42,11 +46,11 @@ The following Dev channel updates preceded this Beta channel release. The follow
     
 ### Feature updates
 
-- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, has been moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, is moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
 
-- **Deprecation of the image enhancement feature.** To improve end user experience the image enhancement feature has been deprecated.  
+- **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.  
 
-- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with controls to configure recommended policies. This gives end users permission to override the configured policy.
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with controls to configure recommended policies. This gives end users permission to override the configured policy.
 
 ### Policy updates
 
@@ -82,7 +86,7 @@ Fixed various bugs and performance issues.
 
 ### Feature update
 
-- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
+- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats, which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
 
 ## Version 121.0.2277.4: December 15, 2023
 
@@ -98,7 +102,7 @@ Fixed various bugs and performance issues.
 )
   - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
 
-  Admins will need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
+  Admins need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
 
   For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
