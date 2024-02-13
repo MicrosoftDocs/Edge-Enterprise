@@ -26,11 +26,9 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 121.0.xxxx.xx: January x, 2024
+## Version 121.0.xxxx.xx: February x, 2024
 
-Fixed various bugs and performance issues. For more information, see [Fixes](#fixes) and [Dev Channel updates](#dev-channel-updates).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-8-2024).
+Fixed various bugs and performance issues.
 
 ### Fixes
 
@@ -87,7 +85,6 @@ The following Dev channel updates preceded this Stable channel release. The foll
 #### Additional policy changes
 
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - For Microsoft Edge version 121.0.2277 and later, this policy will control all device policies.
-
 - [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy)  - For Microsoft Edge version 121.0.2277 and later, this policy will control all user profile policies.
 
 <!-- =================================================== -->
