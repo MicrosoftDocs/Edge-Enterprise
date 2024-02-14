@@ -52,7 +52,7 @@ Fixed various bugs and performance issues.
 <!-- =================================================== -->
 ## Version 120.0.2210.175: February 8, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Extended Stable channel.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-8-2024).
 
