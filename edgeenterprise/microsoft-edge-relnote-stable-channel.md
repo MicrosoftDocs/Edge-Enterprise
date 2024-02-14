@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/13/2024
+ms.date: 02/14/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -39,7 +39,7 @@ Fixed various bugs and performance issues.
 #### Additional policy changes
 
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - For Microsoft Edge version 121.0.2277 and later, this policy will control all device policies.
-- [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy)  - For Microsoft Edge version 121.0.2277 and later, this policy will control all user profile policies.
+- [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy)  - For Microsoft Edge version 121.0.2277 and later, this policy will control all per user profile policies.
 
 <!-- =================================================== -->
 ## Version 120.0.2210.175: February 8, 2024
