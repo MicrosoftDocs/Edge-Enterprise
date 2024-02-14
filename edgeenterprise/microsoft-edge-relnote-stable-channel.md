@@ -36,14 +36,6 @@ Fixed various bugs and performance issues.
 
 ### Policy updates
 
-#### New policies
-
-- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol) - Control communication with the Experimentation and Configuration Service
-
-#### Obsoleted policies
-
-- [WebRtcAllowLegacyTLSProtocols](/deployedge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)
-
 #### Additional policy changes
 
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - For Microsoft Edge version 121.0.2277 and later, this policy will control all device policies.
