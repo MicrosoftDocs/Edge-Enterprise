@@ -32,7 +32,7 @@ Fixed various bugs and performance issues.
 
 ### Fixes
 
-- Edge has a feature that provides the option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices when a user signed in with a Microsoft account. This is fixed.
+- Edge has a feature that provides the option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices when a user signed in with a Microsoft account. This feature is fixed.
 
 ### Policy updates
 
@@ -64,7 +64,7 @@ Fixed various bugs and performance issues.
 
 ### Fixes
 
-- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy did not work as expected while opening `file://` links.
+- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy didn't work as expected while opening `file://` links.
 
 ## Version 121.0.2277.98: February 1, 2024
 
@@ -90,7 +90,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Dev Channel updates
 
-The following Dev channel updates preceded this Stable channel release. The followng  Dev notes provide detailed information about the changes in each release.
+The following Dev channel updates preceded this Stable channel release. The following  Dev notes provide detailed information about the changes in each release.
 
 - [Dev Channel update to 121.0.2274.0 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2274-0-is-live/m-p/4010747)
 - [Dev Channel update to 121.0.2256.2 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2256-2-is-live/m-p/4004721)
