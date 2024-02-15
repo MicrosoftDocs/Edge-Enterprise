@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/08/2024
+ms.date: 02/15/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,9 +26,25 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 120.0.2210.175: February 8, 2024
+## Version 121.0.2277.128: February 15, 2024
 
 Fixed various bugs and performance issues.
+
+### Fixes
+
+- Edge has a feature that provides an option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices. This is fixed.
+
+### Policy updates
+
+#### Additional policy changes
+
+- [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - For Microsoft Edge version 121.0.2277 and later, this policy will control all device policies.
+- [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy)  - For Microsoft Edge version 121.0.2277 and later, this policy will control all per user profile policies.
+
+<!-- =================================================== -->
+## Version 120.0.2210.175: February 8, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-8-2024).
 
@@ -48,7 +64,7 @@ Fixed various bugs and performance issues.
 
 ### Fixes
 
-- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy did not work as expected while opening `file://` links.
+- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy didn't work as expected while opening `file://` links.
 
 ## Version 121.0.2277.98: February 1, 2024
 
@@ -74,7 +90,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Dev Channel updates
 
-The following Dev channel updates preceded this Stable channel release. The followng  Dev notes provide detailed information about the changes in each release.
+The following Dev channel updates preceded this Stable channel release. The following  Dev notes provide detailed information about the changes in each release.
 
 - [Dev Channel update to 121.0.2274.0 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2274-0-is-live/m-p/4010747)
 - [Dev Channel update to 121.0.2256.2 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2256-2-is-live/m-p/4004721)
