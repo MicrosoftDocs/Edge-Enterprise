@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/14/2024
+ms.date: 02/15/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -32,7 +32,7 @@ Fixed various bugs and performance issues.
 
 ### Fixes
 
-- Edge has a feature that provides the option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices when a user signed in with a Microsoft account. This feature is fixed.
+- Edge has a feature that provides an option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices. This is fixed.
 
 ### Policy updates
 
