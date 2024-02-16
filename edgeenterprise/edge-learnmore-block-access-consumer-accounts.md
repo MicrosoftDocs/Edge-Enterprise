@@ -7,7 +7,7 @@ ms.date: 03/30/2023
 audience: ITPro
 ms.topic: conceptual
 ms.custom: generated
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Block access to consumer accounts"
