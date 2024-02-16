@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/12/2024
+ms.date: 02/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,14 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 122.0.2365.38: February 16, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge has rebranded Web Capture to "Screenshot".**  Microsoft Edge changed the branding for Web Capture with an icon change and renamed the feature to "Screenshot". Users can easily use content from the web by taking a screenshot of a full page or a selected area. They can mark up the screenshot they took with a pen or touch later.  Administrators can control availability using the [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) policy.  For more information, see [Screenshot (microsoft.com)](https://www.microsoft.com/en-us/edge/features/screenshot?form=MA13FJ). 
 
 ## Version 122.0.2365.30: February 12, 2024
 
@@ -46,7 +54,7 @@ The following Dev channel updates preceded this Beta channel release. The follow
     
 ### Feature updates
 
-- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, is moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon.
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, is moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can select to open the lock icon in the address bar to look for the briefcase icon.
 
 - **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.  
 
@@ -94,9 +102,9 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
+- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
 
-  Default organizational branding can be enabled by admins through the following policies:
+  Default organizational branding is enabled by admins through the following policies:
 
   - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled
 )
@@ -108,7 +116,7 @@ Fixed various bugs and performance issues.
 
 - **Microsoft Edge migrates the updates experience into Browser Essentials.** Getting alerts on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
+- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there's a mistyped popular domain name that could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
 
 ### Policy updates
 
