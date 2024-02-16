@@ -6,7 +6,7 @@ manager: likuba
 ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about kiosk mode features and how to configure Microsoft Edge kiosk mode options."
