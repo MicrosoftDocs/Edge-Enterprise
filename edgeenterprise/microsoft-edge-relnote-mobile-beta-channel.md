@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/12/2024
+ms.date: 02/20/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -21,9 +21,28 @@ Archived versions of these release notes are available at [Archived release note
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 122.0.XXXX.XX: February XX, 2024
+## Version 122.0.2365.18: February 7, 2024
 
-Some placeholder text.
+### General Updates
+
+- Updated the Intune MAM SDK to version 19.1.0
+- With the release of iOS 17, multiple persistent stores are now supported. Work and personal account will have its own designated persistent store. The MAM policy [com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore](https://learn.microsoft.com/en-us/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
+
+### Bug fixes
+
+- Addressed accessibility and UI issues related to implicit sign-in
+- Resolved several policy-related crashes and performance issues
+- [iOS]Fixed a bug preventing deep links from opening via window.open()
+- [iOS] Resolved an issue that "Open in Microsoft Edge" was unexpectedly blocked by the Intune SDK
+- [iOS] Resolved an issue with closing tabs in InPrivate mode
+
+### Policy updates
+
+- [iOS] MDM policy IdleTimeoutActions to specify actions to run when the timeout from the IdleTimeout policy is reached. Only `close_tabs` is supported.
+- [iOS] MDM policy IdleTimeout to specify the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+- MAM policy to allow or block file uploads to specified domains:
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls`
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls`
 
 ## See also
 
