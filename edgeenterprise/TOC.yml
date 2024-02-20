@@ -38,7 +38,7 @@
    - name: Mobile Stable Channel archived release notes
      href: microsoft-edge-relnote-archive-mobile-stable-channel.md
    - name: Mobile Beta Channel Release Notes
-     name: microsoft-edge-relnote-mobile-beta-channel.md
+     href: microsoft-edge-relnote-mobile-beta-channel.md
    - name: Stable Channel Release Notes
      href: microsoft-edge-relnote-stable-channel.md
    - name: Stable Channel archived release notes
