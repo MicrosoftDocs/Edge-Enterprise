@@ -26,7 +26,7 @@ Archived versions of these release notes are available at [Archived release note
 ### General Updates
 
 - Updated the Intune MAM SDK to version 19.1.0
-- With the release of iOS 17, multiple persistent stores are now supported. Work and personal account will have its own designated persistent store. The MAM policy [com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore](https://learn.microsoft.com/en-us/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
+- With the release of iOS 17, multiple persistent stores are now supported. Work and personal account will have its own designated persistent store. The MAM policy [com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
 
 ### Bug fixes
 
