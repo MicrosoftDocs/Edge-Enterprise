@@ -2,6 +2,17 @@
 
 
 
+## Week of February 12, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/12/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/15/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/16/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/16/2024 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+
+
 ## Week of February 05, 2024
 
 

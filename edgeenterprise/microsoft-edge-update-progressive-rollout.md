@@ -6,7 +6,7 @@ manager: srugh
 ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Progressive rollouts for Microsoft Edge Stable channel updates"

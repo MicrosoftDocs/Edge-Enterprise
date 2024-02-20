@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/06/2024
+ms.date: 02/13/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -28,13 +28,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new and obsoleted policies that are in this article update.
+The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist)|Blocklist for extension install types|
-|[ExtensionManifestV2Availability](#extensionmanifestv2availability)|Control Manifest v2 extension availability|
-|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)|
+|[UrlDiagnosticDataEnabled](#urldiagnosticdataenabled)|URL reporting in Edge diagnostic data enabled|
 
 ## Available policies
 
@@ -372,7 +370,7 @@ These tables list all of the browser-related group policies available in this re
 |[NewTabPageBingChatEnabled](#newtabpagebingchatenabled)|Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Set new tab page company logo (obsolete)|
 |[NewTabPageCompanyLogoEnabled](#newtabpagecompanylogoenabled)|Hide the company logo on the Microsoft Edge new tab page|
-|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft News content on the new tab page|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Allow Microsoft content on the new tab page|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Hide the default top sites from the new tab page|
 |[NewTabPageLocation](#newtabpagelocation)|Configure the new tab page URL|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Set new tab page quick links|
@@ -719,6 +717,7 @@ These tables list all of the browser-related group policies available in this re
 |[UnthrottledNestedTimeoutEnabled](#unthrottlednestedtimeoutenabled)|JavaScript setTimeout will not be clamped until a higher nesting threshold is set (deprecated)|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Specifies how Microsoft Edge Update handles available updates from Microsoft Edge|
 |[UploadFromPhoneEnabled](#uploadfromphoneenabled)|Enable upload files from mobile in Microsoft Edge desktop|
+|[UrlDiagnosticDataEnabled](#urldiagnosticdataenabled)|URL reporting in Edge diagnostic data enabled|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Enable the User-Agent Client Hints feature (obsolete)|
 |[UserAgentClientHintsGREASEUpdateEnabled](#useragentclienthintsgreaseupdateenabled)|Control the User-Agent Client Hints GREASE Update feature|
 |[UserAgentReduction](#useragentreduction)|Enable or disable the User-Agent Reduction|
@@ -7429,7 +7428,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -14950,7 +14949,7 @@ If you disable this policy, the company logo doesn't appear on Microsoft Edge ne
 
   ### NewTabPageContentEnabled
 
-  #### Allow Microsoft News content on the new tab page
+  #### Allow Microsoft content on the new tab page
 
   
   
@@ -14960,11 +14959,11 @@ If you disable this policy, the company logo doesn't appear on Microsoft Edge ne
 
   #### Description
 
-  If you enable or don't configure this policy, Microsoft Edge displays Microsoft News content on the new tab page. The user can choose different display options for the content, including but not limited to Content off, Content visible on scroll, Headings only, and Content visible. Enabling this policy doesn't force content to be visible - the user can continue to set their own preferred content position.
+  This policy applies for Microsoft Edge to all profile types, namely unsigned local user profiles, profiles signed in using a Microsoft Account, profiles signed in using Active Directory and profiles signed in using Microsoft Entra ID. The Enterprise new tab page for profiles signed in using Microsoft Entra ID can be configured in the M365 admin portal, but this policy setting takes precedence, so any M365 admin portal configurations will be ignored.
 
-If you disable this policy, Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off', and the Layout control in the NTP settings flyout is disabled and set to 'Custom'.
+If you enable or don't configure this policy, Microsoft Edge displays Microsoft content on the new tab page. The user can choose different display options for the content. These options include, but aren't limited to: Content off, Content visible on scroll, Headings only, and Content visible. Enabling this policy doesn't force content to be visible - the user can keep setting their own preferred content position.
 
-This policy only applies for Microsoft Edge local user profiles, profiles signed in using a Microsoft Account, and profiles signed in using Active Directory. To configure the Enterprise new tab page for profiles signed in using Azure Active Directory, use the M365 admin portal.
+If you disable this policy, Microsoft Edge doesn't display Microsoft content on the new tab page, the Content control in the NTP settings flyout is disabled and set to "Content off", and the Layout control in the NTP settings flyout is disabled and set to "Custom".
 
 Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
 
@@ -14985,7 +14984,7 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
   ##### Group Policy (ADMX) info
 
   - GP unique name: NewTabPageContentEnabled
-  - GP name: Allow Microsoft News content on the new tab page
+  - GP name: Allow Microsoft content on the new tab page
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -18530,16 +18529,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -21894,7 +21893,7 @@ Use the preceding information when configuring this policy.
 
   This policy controls sending required and optional diagnostic data about browser usage to Microsoft.
 
-Required diagnostic data is collected keep Microsoft Edge secure, up to date and performing as expected.
+Required diagnostic data is collected to keep Microsoft Edge secure, up to date and performing as expected.
 
 Optional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.
 
@@ -27560,7 +27559,7 @@ If you enable this policy, the option to manually import saved passwords is auto
 
 If you disable this policy, saved passwords aren't imported on first run, and users can't import them manually.
 
-If you don't configure this policy, passwords are imported at first run, and users can choose whether to import them manually during later browsing sessions.
+If you don't configure this policy, no passwords are imported at first run, and users can choose whether to import them manually during later browsing sessions.
 
 You can set this policy as a recommendation. This means that Microsoft Edge imports passwords on first run, but users can select or clear the **passwords** option during manual import.
 
@@ -31108,7 +31107,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -35115,7 +35114,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
@@ -38450,6 +38449,72 @@ If you disable this policy, you can't use the Upload from mobile feature in Micr
   #### Mac information and settings
 
   - Preference Key Name: UploadFromPhoneEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### UrlDiagnosticDataEnabled
+
+  #### URL reporting in Edge diagnostic data enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 122 or later
+
+  #### Description
+
+  Controls sending URLs of pages visited and per-page usage in the Microsoft Edge optional diagnostics data to Microsoft to help make browsing and search better. This also includes identifiers and usage diagnostics of other browser components that can modify or provide content, such as extensions.
+
+This policy is applicable only if the [DiagnosticData](#diagnosticdata) setting is set to 'OptionalData'. See the description of [DiagnosticData](#diagnosticdata) for more information on how Microsoft Edge diagnostic data levels are set.
+
+If you enable or don't configure this setting, URLs are provided in optional diagnostic data.
+
+If you disable this setting, URLs are not reported in optional diagnostic data.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UrlDiagnosticDataEnabled
+  - GP name: URL reporting in Edge diagnostic data enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UrlDiagnosticDataEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: UrlDiagnosticDataEnabled
   - Example value:
 ``` xml
 <true/>
