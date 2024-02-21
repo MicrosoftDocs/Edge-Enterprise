@@ -30,10 +30,30 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Fixes
+
+- Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
+- Resolved an issue where printing certain PDF files in landscape mode with the 'fit to printable area' option resulted in incorrect printing.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
+- [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
+- [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
+- [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
+
 ### Feature updates
 
 - **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed, was moved into the lock icon in the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon. For more information, see [Microsoft Edge support for Windows Information Protection](/deployedge/microsoft-edge-security-windows-information-protection).
 
+- **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.
+
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service now provides admins with the ability to set recommended policies. This gives end users permission to override their admin's policy configuration.
+
+- **Microsoft Edge has rebranded Web Capture to "Screenshot".**  Microsoft Edge changed the branding for Web Capture with an icon change and renamed the feature to "Screenshot". Users can easily use content from the web by taking a screenshot of a full page or a selected area. They can mark up the screenshot they took with a pen or touch later.  Administrators can control availability using the [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) policy. For more information, see [Screenshot (microsoft.com)](https://www.microsoft.com/en-us/edge/features/screenshot?form=MA13FJ).
+ 
 ### Policy updates
 
 #### New policies
@@ -42,7 +62,7 @@ Fixed various bugs and performance issues.
 - [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) - Allow users to bypass Enhanced Security Mode
 - [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) - Super Drag Drop enabled
 - [UrlDiagnosticDataEnabled](/deployedge/microsoft-edge-policies#urldiagnosticdataenabled) - URL reporting in Edge diagnostic data enabled
-- EdgeOpenInSidebarEnabled
+- EdgeOpenInSidebarEnabled - Enable open in Sidebar
 - EdgeSidebarCustomizeEnabled
 
 #### Obsolete policies
