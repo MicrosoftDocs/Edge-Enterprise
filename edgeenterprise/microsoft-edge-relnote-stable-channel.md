@@ -62,8 +62,8 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) - Allow users to bypass Enhanced Security Mode
 - [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) - Super Drag Drop enabled
 - [UrlDiagnosticDataEnabled](/deployedge/microsoft-edge-policies#urldiagnosticdataenabled) - URL reporting in Edge diagnostic data enabled
-- EdgeOpenInSidebarEnabled - Enable open in Sidebar
-- EdgeSidebarCustomizeEnabled
+- [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) - Enable open in Sidebar
+- [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled)
 
 #### Obsolete policies
 
