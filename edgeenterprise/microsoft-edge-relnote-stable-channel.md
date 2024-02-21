@@ -63,7 +63,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) - Super Drag Drop enabled
 - [UrlDiagnosticDataEnabled](/deployedge/microsoft-edge-policies#urldiagnosticdataenabled) - URL reporting in Edge diagnostic data enabled
 - [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) - Enable open in Sidebar
-- [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled)
+- [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) - Enable sidebar customize
 
 #### Obsolete policies
 
