@@ -27,6 +27,10 @@ Remote work has increased the emphasis on using DLP. With the growing use of per
 
 This blending of user activities has also spread to devices, where data is moved between personal and corporate devices over various public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
 
+The next screenshot shows the briefcase icon in the lock icon within the address bar, indicating that work-related information is accessed via the browser.
+
+ ![Indicator for sites marked as "work"](./media/microsoft-edge-security-dlp/microsoft-edge-wip-notify.png)
+
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
 ## Microsoft Endpoint data loss prevention (Endpoint DLP)
