@@ -46,7 +46,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 ### Feature updates
 
-- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed, was moved into the lock icon in the address bar. If an admin wants to see whether there are protections for a given page, they can click to open the lock icon in the address bar to look for the briefcase icon. For more information, see [Microsoft Edge support for Windows Information Protection](/deployedge/microsoft-edge-security-windows-information-protection).
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed via admin policies, has been moved into the lock icon within the address bar. The end users can view details about the protections for a given page, by clicking the lock icon in the address bar and then clicking the briefcase icon. For more information, see [Microsoft Edge support for Windows Information Protection](/deployedge/microsoft-edge-security-windows-information-protection).
 
 - **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.
 
