@@ -290,14 +290,15 @@ The settings in this section let you configure Microsoft Edge settings that invo
 
 <!-- =================================================== -->
 
-### Manage automatic profile switching settings
+#### Manage automatic profile switching settings
+
 To manage profile switching behaviors for a profile, navigate to the **automatic profile switching** tab. You can choose which profile you want specific hostnames to open in for your users. 
 
-#### Manage default switching settings
+##### Manage default switching settings
 
 The toggles on this page control a category of hostnames. When the toggle is turned on, the hostnames that apply to that category will automatically open in a user's work profile. When the toggle is turned off, no profile switching will occur, independent of the profile it is open in. To override an individual site that falls into one of the hostname categories, add it to the **Switch list**.
 
-#### Manage custom switch list
+##### Manage custom switch list
 
 You can specify individual hostnames and the profile you would like them to open in on the **Switch list** tab of this page. To add a hostname to this list:
 
