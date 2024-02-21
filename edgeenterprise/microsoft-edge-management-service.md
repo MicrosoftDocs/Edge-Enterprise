@@ -258,6 +258,10 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
+### Add customization settings
+
+To configure groups of settings that create specific customizations for a profile, select the profile you want to work with and navigate to the **Customization settings** tab. Then, select the page that contains settings for the experiences you would like to create.
+ 
 #### Manage enterprise secure AI settings
 
 > [!NOTE]
@@ -283,6 +287,25 @@ The settings in this section let you configure Microsoft Edge settings that invo
 
 1. Check/uncheck the box corresponding to the setting that you want to enable/disable respectively.
 2. Select **Save changes.** The settings in this section allow you to configure Microsoft Edge settings that involve the use of AI.
+
+<!-- =================================================== -->
+
+### Manage automatic profile switching settings
+To manage profile switching behaviors for a profile, navigate to the **automatic profile switching** tab. You can choose which profile you want specific hostnames to open in for your users. 
+
+#### Manage default switching settings
+
+The toggles on this page control a category of hostnames. When the toggle is turned on, the hostnames that apply to that category will automatically open in a user's work profile. When the toggle is turned off, no profile switching will occur, independent of the profile it is open in. To override an individual site that falls into one of the hostname categories, add it to the **Switch list**.
+
+#### Manage custom switch list
+
+You can specify individual hostnames and the profile you would like them to open in on the **Switch list** tab of this page. To add a hostname to this list:
+
+1. Select **add entry**.
+2. Enter the hostname.
+3. Choose the profile you would like the hostname to open in. If you would like the profile to not switch on the hostname, select **Allow user preference**.
+4. (Optional) If the profile selected is work, you can optionally choose to specify the domain that the hostname opens in. This may be necessary for users with multiple work profiles. The domain entered should match the format *\*username@company.com* (note: the \* is required).
+5. Select **Add**.
 
 <!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
