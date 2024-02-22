@@ -29,7 +29,7 @@ This blending of user activities has also spread to devices, where data is moved
 
 The next screenshot shows the briefcase icon in the lock icon within the address bar, indicating that work-related information is accessed via the browser.
 
- ![Indicator for sites marked as "work"](./media/microsoft-edge-security-dlp/microsoft-edge-wip-notify.png)
+ ![Indicator for sites marked as "work"](./media/microsoft-edge-security-dlp/microsoft-edge-dlp-notify.png)
 
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
