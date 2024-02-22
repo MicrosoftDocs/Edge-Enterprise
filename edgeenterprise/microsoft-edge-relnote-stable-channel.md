@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/21/2024
+ms.date: 02/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -46,7 +46,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 ### Feature updates
 
-- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed via admin policies, has been moved into the lock icon within the address bar. The end users can view details about the protections for a given page, by clicking the lock icon in the address bar and then clicking the briefcase icon. For more information, see [Microsoft Edge support for Windows Information Protection](/deployedge/microsoft-edge-security-windows-information-protection).
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed via admin policies, has been moved into the lock icon within the address bar. The end users can view details about the protections for a given page, by clicking the lock icon in the address bar and then clicking the briefcase icon. For more information, see [Understand Data loss Prevention in Microsoft Edge](/deployedge/microsoft-edge-security-dlp).
 
 - **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.
 
