@@ -23,6 +23,10 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Fixes
+
+- Resolved an issue where printing certain PDF files in landscape mode with the "fit to printable area" option, resulted in incorrect printing.
+
 ## Version 122.0.2365.38: February 16, 2024
 
 Fixed various bugs and performance issues.
