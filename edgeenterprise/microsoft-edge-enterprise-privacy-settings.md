@@ -30,7 +30,7 @@ When Microsoft Edge is deployed on non-Windows platforms, diagnostic data is col
 
 The preceding deprecated policies are replaced by [Allow Telemetry](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) on Windows 10, and [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy for all other platforms.  
 
-As of March 6, 2024: Edge diagnostic data is collected separately from Windows diagnostic data on Windows 10 (version 22H2 and newer) and Windows 11 (version 23H2 and newer) devices in the European Economic Area. The collection of Edge diagnostic data is subject to its own settings. For more information related to this change, see [Microsoft Edge, browsing data, and privacy - Microsoft Support](https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd).
+As of March 6, 2024: Microsoft Edge diagnostic data is collected separately from Windows diagnostic data on Windows 10 (version 22H2 and newer) and Windows 11 (version 23H2 and newer) devices in the European Economic Area. The collection of Edge diagnostic data is subject to its own settings. For more information related to this change, see [Microsoft Edge, browsing data, and privacy - Microsoft Support](https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd).
 
 ## Configure policy settings
 
