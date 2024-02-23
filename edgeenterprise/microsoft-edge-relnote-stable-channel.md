@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/20/2024
+ms.date: 02/23/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,6 +26,53 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 122.0.2365.52: February 23, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
+- Resolved an issue where printing certain PDF files in landscape mode with the 'fit to printable area' option resulted in incorrect printing.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
+- [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
+- [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
+- [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
+
+### Feature updates
+
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.** The briefcase icon which signals that a page is managed via admin policies, has been moved into the lock icon in the address bar. End users can view details about the protections for a given page by clicking the lock icon in the address bar and then clicking the briefcase icon. For more information, see [Understand Data loss Prevention in Microsoft Edge](/deployedge/microsoft-edge-security-dlp).
+
+- **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.
+
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service now provides admins with the ability to set recommended policies. This gives end users permission to override their admin's policy configuration.
+
+- **Microsoft Edge has rebranded Web Capture to "Screenshot".**  Microsoft Edge changed the branding for Web Capture with an icon change and renamed the feature to "Screenshot". Users can easily use content from the web by taking a screenshot of a full page or a selected area. They can mark up the screenshot they took with a pen or touch later.  Administrators can control availability using the [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) policy. For more information, see [Screenshot (microsoft.com)](https://www.microsoft.com/en-us/edge/features/screenshot?form=MA13FJ).
+ 
+### Policy updates
+
+#### New policies
+
+- [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#aigenthemesenabled) - Enables DALL-E themes generation
+- [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) - Allow users to bypass Enhanced Security Mode
+- [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) - Super Drag Drop enabled
+- [UrlDiagnosticDataEnabled](/deployedge/microsoft-edge-policies#urldiagnosticdataenabled) - URL reporting in Edge diagnostic data enabled
+- [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) - Enable open in Sidebar
+- [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) - Enable sidebar customize
+
+#### Obsolete policies
+
+- [EdgeEnhanceImagesEnabled](/deployedge/microsoft-edge-policies#edgeenhanceimagesenabled) - Enhance images enabled (obsolete)
+
+#### Additional policy changes
+
+- [DiagnosticData](/deployedge/microsoft-edge-policies#diagnosticdata) - Send required and optional diagnostic data about browser usage. Supported on Windows since Stable 122 or later.
+
 ## Version 120.0.2210.181: February 20, 2024
 
 Fixed various bugs and performance issues for Extended Stable channel.
@@ -36,7 +83,7 @@ Fixed various bugs and performance issues.
 
 ### Fixes
 
-- Edge has a feature that provides an option to import browser data on each launch from other browsers with user consent. This feature’s state might not have been syncing and displaying correctly across multiple devices. This is fixed.
+- Edge has a feature that provides an option to import browser data on each launch from other browsers with user consent. This feature's state might not have been syncing and displaying correctly across multiple devices. This is fixed.
 
 ### Policy updates
 
