@@ -30,6 +30,8 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-23-2024).
+
 ### Fixes
 
 - Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
