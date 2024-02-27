@@ -19,6 +19,23 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 123.0.XXXX.XX: February X, 2024
+
+Fixed various bugs and performance issues.
+
+### Policy updates
+
+#### New policies
+
+- [ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [WindowManagementAllowedForUrls](#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+- [RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+ 
+
 ## Version 122.0.2365.59: February 27, 2024
 
 Fixed various bugs and performance issues.
