@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/13/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -19,8 +19,17 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
+
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
 
 ## Available policies
 
@@ -45,6 +54,7 @@ These tables list all of the group policies available in this release of Microso
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 |[NewPDFReaderWebView2List](#newpdfreaderwebview2list)|Enable built-in PDF reader powered by Adobe Acrobat for WebView2|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
 
 
 
@@ -471,6 +481,85 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "a
 SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "app_id_for_app2", "value": true}
 SOFTWARE\Policies\Microsoft\Edge\WebView2\NewPDFReaderWebView2List = {"name": "*", "value": false}
 
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### RSAKeyUsageForLocalAnchorsEnabled
+
+  #### Check RSA key usage for server certificates issued by local trust anchors
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 123 or later
+
+  #### Description
+
+  The X.509 key usage extension declares how the key in a certificate can be
+used. These instructions ensure certificates aren't used in an unintended
+context, which protects against a class of cross-protocol attacks on HTTPS and
+other protocols. HTTPS clients must verify that server certificates match the
+connection's TLS parameters.
+
+If this policy is enabled,
+Microsoft Edge will perform this key
+check. This helps prevent attacks where an attacker manipulates the browser into
+interpreting a key in ways that the certificate owner did not intend.
+
+If this policy is set to disabled or not configured,
+Microsoft Edge will skip this key check in
+HTTPS connections that negotiate TLS 1.2 and use an RSA certificate that
+chains to a local trust anchor. Examples of local trust anchors include
+policy-provided or user-installed root certificates. In all other cases, the
+check is performed independent of this policy's setting.
+
+This policy is available for administrators to preview the behavior of a
+future release, which will enable this check by default. At that point, this
+policy will remain temporarily available for administrators that need more
+time to update their certificates to meet the new RSA key usage requirements.
+
+Connections that fail this check will fail with the error
+ERR_SSL_KEY_USAGE_INCOMPATIBLE. Sites that fail with this error likely have a
+misconfigured certificate. Modern ECDHE_RSA cipher suites use the
+"digitalSignature" key usage option, while legacy RSA decryption cipher suites
+use the "keyEncipherment" key usage option. If uncertain, administrators should
+include both in RSA certificates meant for HTTPS.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RSAKeyUsageForLocalAnchorsEnabled
+  - GP name: Check RSA key usage for server certificates issued by local trust anchors
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: RSAKeyUsageForLocalAnchorsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
