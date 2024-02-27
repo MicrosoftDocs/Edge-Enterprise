@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 02/21/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,33 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 122.0.2365.56 (Android and iOS): February 26, 2024
+
+Made general updates, fixed various bugs, and added new policy support.
+
+### General updates
+
+- Updated the Intune Mobile Application Management (MAM) SDK to version 19.1.0.
+- With the release of iOS 17, multiple persistent stores are now supported. Work and personal accounts have their own designated persistent store. The MAM policy [`com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore`](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
+
+### Bug fixes
+
+- Fixed crash with Microsoft MAM Tunnel
+- Fixed bug for MDM policy EdgeBlockSignInEnabled
+- Addressed accessibility and UI issues related to implicit sign-in.
+- Resolved several policy-related crashes and performance issues.
+- [iOS] Fixed a bug preventing deep links from opening via `window.open()`.
+- [iOS] Resolved an issue where the Intune SDK unexpectedly blocked "Open in Microsoft Edge".
+- [iOS] Resolved an issue with closing tabs in InPrivate mode.
+
+### Policy updates
+
+- [iOS] Mobile Application Management (MDM) policy IdleTimeoutActions to specify actions to run when the timeout from the IdleTimeout policy is reached. Only close_tabs is supported.
+- [iOS] MDM policy IdleTimeout to specify the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+- MAM policy to allow or block file uploads to specified domains.
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls`
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls`
 
 ## Version 121.0.2277.133: February 20, 2024
 
