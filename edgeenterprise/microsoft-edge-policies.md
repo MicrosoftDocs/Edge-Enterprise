@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/13/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -32,7 +32,14 @@ The following table lists the new policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[UrlDiagnosticDataEnabled](#urldiagnosticdataenabled)|URL reporting in Edge diagnostic data enabled|
+|[DefaultWindowManagementSetting](#defaultwindowmanagementsetting)|Default Window Management permission setting|
+|[WindowManagementAllowedForUrls](#windowmanagementallowedforurls)|Allow Window Management permission on specified sites|
+|[WindowManagementBlockedForUrls](#windowmanagementblockedforurls)|Block Window Management permission on specified sites|
+|[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
+|[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
+|[ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins)|Allow screen capture without prior user gesture|
+
 
 ## Available policies
 
@@ -111,6 +118,7 @@ These tables list all of the browser-related group policies available in this re
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|Control use of the Web Bluetooth API|
 |[DefaultWebHidGuardSetting](#defaultwebhidguardsetting)|Control use of the WebHID API|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|Control use of the WebUSB API|
+|[DefaultWindowManagementSetting](#defaultwindowmanagementsetting)|Default Window Management permission setting|
 |[FileSystemReadAskForUrls](#filesystemreadaskforurls)|Allow read access via the File System API on these sites|
 |[FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)|Block read access via the File System API on these sites|
 |[FileSystemWriteAskForUrls](#filesystemwriteaskforurls)|Allow write access to files and directories on these sites|
@@ -146,6 +154,8 @@ These tables list all of the browser-related group policies available in this re
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Grant access to specific sites to connect to specific USB devices|
 |[WebUsbAskForUrls](#webusbaskforurls)|Allow WebUSB on specific sites|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Block WebUSB on specific sites|
+|[WindowManagementAllowedForUrls](#windowmanagementallowedforurls)|Allow Window Management permission on specified sites|
+|[WindowManagementBlockedForUrls](#windowmanagementblockedforurls)|Block Window Management permission on specified sites|
 ### [*Default search provider*](#default-search-provider-policies)
 
 |Policy Name|Caption|
@@ -494,7 +504,9 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeEDropEnabled](#edgeedropenabled)|Enable Drop feature in Microsoft Edge|
 |[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|Enhance images enabled (obsolete)|
 |[EdgeFollowEnabled](#edgefollowenabled)|Enable Follow service in Microsoft Edge|
+|[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Shopping in Microsoft Edge Enabled|
+|[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
 |[EdgeWalletCheckoutEnabled](#edgewalletcheckoutenabled)|Enable Wallet Checkout feature|
 |[EdgeWalletEtreeEnabled](#edgewalletetreeenabled)|Edge Wallet E-Tree Enabled|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Allows users to edit favorites|
@@ -634,6 +646,7 @@ These tables list all of the browser-related group policies available in this re
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
 |[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
+|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
 |[ReadAloudEnabled](#readaloudenabled)|Enable Read Aloud feature in Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirect incompatible sites from Internet Explorer to Microsoft Edge|
@@ -658,6 +671,7 @@ These tables list all of the browser-related group policies available in this re
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Allow or deny screen capture|
+|[ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins)|Allow screen capture without prior user gesture|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|Enable scrolling to text specified in URL fragments|
 |[SearchFiltersEnabled](#searchfiltersenabled)|Search Filters Enabled|
 |[SearchForImageEnabled](#searchforimageenabled)|Search for image enabled|
@@ -2925,6 +2939,78 @@ Use the preceding information when configuring this policy.
   #### Mac information and settings
 
   - Preference Key Name: DefaultWebUsbGuardSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### DefaultWindowManagementSetting
+
+  #### Default Window Management permission setting
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  Setting the policy to "BlockWindowManagement" (value 2) automatically denies the window management permission to sites by default. This limits the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.
+
+Setting the policy to "AskWindowManagement" (value 3) by default prompts the user when the window management permission is requested. If users allow the permission, it extends the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.
+
+Not configuring the policy means the "AskWindowManagement" policy applies, but users can change this setting.
+
+Policy options mapping:
+
+* BlockWindowManagement (2) = Denies the Window Management permission on all sites by default
+
+* AskWindowManagement (3) = Ask every time a site wants obtain the Window Management permission
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultWindowManagementSetting
+  - GP name: Default Window Management permission setting
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultWindowManagementSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DefaultWindowManagementSetting
   - Example value:
 ``` xml
 <integer>2</integer>
@@ -5338,6 +5424,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebHidBlockedForUrls\2 = "https://chromium.org"
 
 The USB permission model uses the URL of the requesting site ("requesting URL") and the URL of the top-level frame site ("embedding URL") to grant permission to the requesting URL to access the USB device. The requesting URL may be different than the embedding URL when the requesting site is loaded in an iframe. Therefore, the "urls" field can contain up to two URL strings delimited by a comma to specify the requesting and embedding URL respectively. If only one URL is specified, then access to the corresponding USB devices will be granted when the requesting site's URL matches this URL regardless of embedding status. The URLs in "urls" must be valid URLs, otherwise the policy will be ignored.
 
+This is deprecated and only supported for backwards compatibility in the following manner. If both a requesting and embedding URL is specified, then the embedding URL will be granted the permission as top-level origin and the requesting URL will be ignored entirely.
+
 If this policy is left not set, the global default value will be used for all sites either from the [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) policy if it is set, or the user's personal configuration otherwise.
 
 URL patterns in this policy should not clash with the ones configured via [WebUsbBlockedForUrls](#webusbblockedforurls). If there is a clash, this policy will take precedence over [WebUsbBlockedForUrls](#webusbblockedforurls) and [WebUsbAskForUrls](#webusbaskforurls).
@@ -5558,6 +5646,144 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 <array>
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WindowManagementAllowedForUrls
+
+  #### Allow Window Management permission on specified sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  Lets you configure a list of site url patterns that specify sites which will automatically grant the window management permission. This extends the ability of sites to see information about the device's screens.  This information can be used to open and place windows or request fullscreen on specific screens.
+
+For detailed information on valid site url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards, *, are allowed. This policy only matches based on site origin, so any path in the URL pattern is ignored.
+
+If this policy isn't configured for a site, then the policy from [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) applies to the site, if configured. Otherwise the permission will follow the browser's defaults and let users choose this permission per site.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WindowManagementAllowedForUrls
+  - GP name: Allow Window Management permission on specified sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WindowManagementAllowedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WindowManagementAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WindowManagementAllowedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WindowManagementAllowedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### WindowManagementBlockedForUrls
+
+  #### Block Window Management permission on specified sites
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  Lets you configure a list of site url patterns that specify sites which will automatically deny the window management permission. This limits the ability of sites to see information about the device's screens. This information can be used to open and place windows or request fullscreen on specific screens.
+
+For detailed information on valid site url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards, *, are allowed. This policy only matches based on site origin, so any path in the URL pattern is ignored.
+
+If this policy isn't configured for a site, then the policy from [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) applies to the site, if configured. Otherwise the permission will follow the browser's defaults and let users choose this permission per site.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WindowManagementBlockedForUrls
+  - GP name: Block Window Management permission on specified sites
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WindowManagementBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WindowManagementBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WindowManagementBlockedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WindowManagementBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
 </array>
 ```
   
@@ -7428,7 +7654,7 @@ Note that you can still use [ExtensionInstallForcelist](#extensioninstallforceli
 
 If the 'sidebar_auto_open_blocked' flag is set to true in an extension's configuration, the hub-app (sidebar app) corresponding to the specified extension will be prevented from automatically opening.
 
-On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory®`.
+On Windows instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be forced installed if the instance is joined to a Microsoft Active Directory domain or joined to Microsoft Azure Active Directory&reg;`.
 
 On macOS instances, apps and extensions from outside the Microsoft Edge Add-ons website can only be force installed if the instance is managed via MDM, joined to a domain via MCX.
 
@@ -18529,16 +18755,16 @@ If you disable this setting the list of available templates will be downloaded o
 
   #### Description
 
-  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that’s shown by the beforeunload event.
+  This policy provides a temporary opt-out for two related fixes to the behavior of the confirmation dialog that's shown by the beforeunload event.
 
 When this policy is Enabled, the new (correct) behavior will be used.
 When this policy is Disabled, the old (legacy) behavior will be used.
 When this policy is left not set, the default behavior will be used.
 Note: This policy is a temporary workaround and will be removed in a future release.
 
-New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won’t trigger the confirmation dialog.
+New and correct behavior: In `beforeunload`, calling `event.preventDefault()` will trigger the confirmation dialog. Setting `event.returnValue` to the empty string won't trigger the confirmation dialog.
 
-Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won’t trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
+Old and legacy behavior: In `beforeunload`, calling `event.preventDefault()` won't trigger the confirmation dialog. Setting `event.returnValue` to the empty string will trigger the confirmation dialog.
 
   #### Supported features:
 
@@ -21387,7 +21613,7 @@ The policy value is only applied when the [DefaultSearchProviderEnabled](#defaul
 
   Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.
 
-Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.
+Setting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies access to sensors.
 
 You can override this policy for specific URL patterns by using the [SensorsAllowedForUrls](#sensorsallowedforurls) and [SensorsBlockedForUrls](#sensorsblockedforurls) policies.
 
@@ -23386,6 +23612,69 @@ If you disable this policy, Microsoft Edge will not communicate with Follow serv
 
   [Back to top](#microsoft-edge---policies)
 
+  ### EdgeOpenInSidebarEnabled
+
+  #### Enable open in sidebar
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 122 or later
+
+  #### Description
+
+  Allow/Disallow user open a website or an app to the sidebar.
+
+If you enable or don't configure this policy, users will be able to access the feature.
+If you disable this policy, users will not be able to access the feature.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeOpenInSidebarEnabled
+  - GP name: Enable open in sidebar
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeOpenInSidebarEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeOpenInSidebarEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### EdgeShoppingAssistantEnabled
 
   #### Shopping in Microsoft Edge Enabled
@@ -23444,6 +23733,69 @@ Starting in version 90.0.818.56, the behavior of the messaging letting users kno
   #### Mac information and settings
 
   - Preference Key Name: EdgeShoppingAssistantEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### EdgeSidebarCustomizeEnabled
+
+  #### Enable sidebar customize
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 122 or later
+
+  #### Description
+
+  Allow/Disallow to use sidebar customize.
+
+If you enable or don't configure this policy, users will be able to access sidebar customize.
+If you disable this policy, users will not be able to access the sidebar customize.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeSidebarCustomizeEnabled
+  - GP name: Enable sidebar customize
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeSidebarCustomizeEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeSidebarCustomizeEnabled
   - Example value:
 ``` xml
 <true/>
@@ -31107,7 +31459,7 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft® Windows® and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -32899,6 +33251,94 @@ If you disable this policy, these files will be downloaded to be viewed.
 
   [Back to top](#microsoft-edge---policies)
 
+  ### RSAKeyUsageForLocalAnchorsEnabled
+
+  #### Check RSA key usage for server certificates issued by local trust anchors
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  The X.509 key usage extension declares how the key in a certificate can be
+used. These instructions ensure certificates aren't used in an unintended
+context, which protects against a class of cross-protocol attacks on HTTPS and
+other protocols. HTTPS clients must verify that server certificates match the
+connection's TLS parameters.
+
+If this policy is enabled,
+Microsoft Edge will perform this key
+check. This helps prevent attacks where an attacker manipulates the browser into
+interpreting a key in ways that the certificate owner did not intend.
+
+If this policy is set to disabled or not configured,
+Microsoft Edge will skip this key check in
+HTTPS connections that negotiate TLS 1.2 and use an RSA certificate that
+chains to a local trust anchor. Examples of local trust anchors include
+policy-provided or user-installed root certificates. In all other cases, the
+check is performed independent of this policy's setting.
+
+This policy is available for administrators to preview the behavior of a
+future release, which will enable this check by default. At that point, this
+policy will remain temporarily available for administrators that need more
+time to update their certificates to meet the new RSA key usage requirements.
+
+Connections that fail this check will fail with the error
+ERR_SSL_KEY_USAGE_INCOMPATIBLE. Sites that fail with this error likely have a
+misconfigured certificate. Modern ECDHE_RSA cipher suites use the
+"digitalSignature" key usage option, while legacy RSA decryption cipher suites
+use the "keyEncipherment" key usage option. If uncertain, administrators should
+include both in RSA certificates meant for HTTPS.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RSAKeyUsageForLocalAnchorsEnabled
+  - GP name: Check RSA key usage for server certificates issued by local trust anchors
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RSAKeyUsageForLocalAnchorsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: RSAKeyUsageForLocalAnchorsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ReadAloudEnabled
 
   #### Enable Read Aloud feature in Microsoft Edge
@@ -34514,6 +34954,84 @@ If you disable this policy, calls to screen-share APIs will fail. For example, i
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ScreenCaptureWithoutGestureAllowedForOrigins
+
+  #### Allow screen capture without prior user gesture
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  For security reasons, the
+getDisplayMedia() web API requires
+a prior user gesture ("transient activation") to be called or the API will
+fail.
+
+When this policy is configured, admins can specify origins on which this API
+can be called without prior user gesture.
+
+For detailed information on valid url patterns, see
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Note: * is not an accepted
+value for this policy.
+
+If this policy is not configured, all origins require a prior user gesture to
+call this API.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ScreenCaptureWithoutGestureAllowedForOrigins
+  - GP name: Allow screen capture without prior user gesture
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureWithoutGestureAllowedForOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureWithoutGestureAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\ScreenCaptureWithoutGestureAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ScreenCaptureWithoutGestureAllowedForOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ScrollToTextFragmentEnabled
 
   #### Enable scrolling to text specified in URL fragments
@@ -34992,9 +35510,7 @@ If you don't configure the policy:
 
   #### Description
 
-  Specifies websites and domains that don't need explicit user permission when attestation certificates from security keys are requested. Additionally, a signal is sent to the security key indicating that it can use individual attestation. Without this, users are prompted each time a site requests attestation of security keys.
-
-Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (like contoso.com) only match as webauthn RP IDs. To cover both U2F and webauthn APIs for a given site, you need to list both the appID URL and domain.
+  Specifies the WebAuthn RP IDs that don't need explicit user permission when attestation certificates from security keys are requested. Additionally, a signal is sent to the security key indicating that it can use enterprise attestation. Without this policy, users are prompted each time a site requests attestation of security keys.
 
   #### Supported features:
 
@@ -35028,7 +35544,7 @@ Sites (like https://contoso.com/some/path) only match as U2F appIDs. Domains (li
   ##### Example value:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "contoso.com"
 
 ```
 
@@ -35038,7 +35554,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   - Example value:
 ``` xml
 <array>
-  <string>https://contoso.com</string>
+  <string>contoso.com</string>
 </array>
 ```
   
@@ -35114,7 +35630,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
 
-This change also truncates the event path of click, mouseup, and mousedown when they’re dispatched on children of disabled form controls. These events aren’t dispatched on the disabled form control or any of its ancestors.
+This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
 
 Note: This new behavior might break some websites.
 
@@ -37853,11 +38369,13 @@ Use the preceding information when configuring this policy.
 
   Enables the integrated Microsoft translation service on Microsoft Edge.
 
-If you enable this policy, Microsoft Edge offers translation functionality to the user by showing an integrated translate flyout when appropriate, and a translate option on the right-click context menu.
+If you enable this policy, Microsoft Edge offers to translate a webpage by showing an integrated translate flyout when the language detected on a webpage isn't listed under preferred languages. A translate option is available on the right-click context menu.
 
-Disable this policy to disable all built-in translate features.
+Users can also translate selected text on a webpage via the right-click context menu, or on a PDF via the PDF toolbar and the right-click context menu.
 
-If you don't configure the policy, users can choose whether to use the translation functionality or not.
+If you don't configure this policy, the policy is enabled by default. Users can choose whether to use the translation functionality or not.
+
+You can disable this policy to disable all built-in translate features.
 
   #### Supported features:
 
