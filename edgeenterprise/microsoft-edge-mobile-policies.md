@@ -3,13 +3,13 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 01/29/2024
+ms.date: 02/26/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: 
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -30,8 +30,9 @@ These tables list all of the browser-related policies available in this release 
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
 - [Password manager and protection](#password-manager-and-protection)
+- [Idle browser actions](#idle-browser-actions)
 - [Additional](#additional)
-
+<!-- ====================================== -->
 ### [*Edge specific*](#edge-specific)
 
 |Policy Name|Caption|
@@ -53,13 +54,13 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
 | [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
 | [EdgeOneAuthProxy](#edgeoneauthproxy) | Specify a dedicated proxy to sign in to Edge in Android   |
-
+<!-- ====================================== -->
 ### [*Proxy server*](#proxy-server)
 
 |Policy Name|Caption|
 |:-|-|
 | [ProxySettings](#proxysettings) | Proxy settings   |
-
+<!-- ====================================== -->
 ### [*HTTP authentication*](#http-authentication)
 
 |Policy Name|Caption|
@@ -71,7 +72,7 @@ These tables list all of the browser-related policies available in this release 
 | [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype) |  Account type for HTTP Negotiate authentication   |
 | [AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)  |  Kerberos delegation server allowlist   |
 | [AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins) | List of origins allowing all HTTP authentication  |
-
+<!-- ====================================== -->
 ### [*Content settings*](#content-settings)
 
 |Policy Name|Caption|
@@ -83,7 +84,7 @@ These tables list all of the browser-related policies available in this release 
 | [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
 | [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
 | [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)   |  Limit cookies from matching URLs to the current session  |
-
+<!-- ====================================== -->
 ### [*Default search provider*](#default-search-provider)
 
 |Policy Name|Caption|
@@ -100,13 +101,21 @@ These tables list all of the browser-related policies available in this release 
 | [DefaultSearchProviderNewTabURL](#defaultsearchprovidernewtaburl)   |  Default search provider new tab page URL   |
 | [DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)   |  Default search provider suggest URL  |
 | [DefaultSearchProviderSuggestURLPostParams](#defaultsearchprovidersuggesturlpostparams)   |   Parameters for suggest URL which uses POST  |
-
+<!-- ====================================== -->
 ### [*Password manager and protection*](#password-manager-and-protection)
 
 |Policy Name|Caption|
 |:-|-|
 | [PasswordManagerEnabled](#passwordmanagerenabled) | Enable saving passwords to the password manager |
 
+<!-- ====================================== -->
+### [*Idle browser actions*](#idle-browser-actions)
+
+|Policy Name|Caption|
+|:-|-|
+| [IdleTimeout](#idletimeout) | Delay before running idle actions |
+| [IdleTimeoutActions](#idletimeoutactions) | Actions to run when the computer is idle |
+<!-- ====================================== -->
 ### [*Additional*](#additional)
 
 |Policy Name|Caption|
@@ -2127,9 +2136,117 @@ PasswordManagerEnabled
 ```
 true
 ```
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
+## Idle browser actions
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+### IdleTimeout
+
+#### Delay before running idle actions
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 122
+- Microsoft Edge (iOS and iPadOS) since version 122
+
+#### Description
+
+Triggers an action when the computer is idle.
+
+If this policy is set, it specifies the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+
+If this policy is not set, no action will be ran.
+
+The minimum threshold is 1 minute.
+
+"User input" is defined by Operating System APIs, and includes things like moving the mouse or typing on the keyboard.
+
+#### Supported features
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data type
+
+Android:Integer
+
+iOS:Integer
+
+#### Android and iOS restriction name:
+
+```
+IdleTimeout
+```
+##### Example value (Android and iOS):
+
+```
+1
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
+###  IdleTimeoutActions
+
+#### Actions to run when the computer is idle
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 122
+- Microsoft Edge (iOS and iPadOS) since version 122
+
+#### Description
+
+List of actions to run when the timeout from the IdleTimeout policy is reached.
+
+If the IdleTimeout policy is unset, this policy has no effect.
+
+When the timeout from the IdleTimeout policy is reached, the browser runs the actions configured in this policy.
+
+If this policy is empty or left unset, the IdleTimeout policy has no effect.
+
+Supported actions is 'close_tabs': close all open tabs and create a NTP (New Tab Page).
+
+#### Supported features
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data type
+
+Android: List of strings
+
+iOS: List of strings
+
+#### Android and iOS restriction name:
+
+```
+IdleTimeoutActions
+
+```
+##### Example value (Android):
+
+```
+[
+
+"close_tabs"
+
+]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+
+  <string>close_tabs</string>
+
+</array>
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
 ## Additional policies
 
 [Back to top](#microsoft-edge-mobile---policies)
