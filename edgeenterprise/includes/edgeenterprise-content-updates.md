@@ -2,59 +2,70 @@
 
 
 
-## Week of December 11, 2023
+## Week of February 19, 2024
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/12/2023 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
-| 12/14/2023 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
-| 12/14/2023 | [Copilot in Edge webpage summarization behavior](/DeployEdge/edge-learnmore-copilot-page-summary-results) | modified |
-| 12/14/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 12/15/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 12/15/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/21/2024 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
+| 2/21/2024 | [Microsoft Edge release notes for Mobile Beta Channel](/DeployEdge/microsoft-edge-relnote-mobile-beta-channel) | added |
+| 2/22/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/23/2024 | [Microsoft Edge release notes for Mobile Beta Channel](/DeployEdge/microsoft-edge-relnote-mobile-beta-channel) | modified |
+| 2/23/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/23/2024 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
 
 
-## Week of December 04, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/7/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 12/7/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 12/8/2023 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |
-| 12/8/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-
-
-## Week of November 27, 2023
+## Week of February 12, 2024
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 11/27/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-| 11/29/2023 | [Microsoft Edge for Business](/DeployEdge/microsoft-edge-for-business) | modified |
-| 11/29/2023 | [Copilot webpage summarization behavior for PDF and Word documents](/DeployEdge/edge-learnmore-copilot-page-summary-results) | added |
-| 11/29/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/12/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/15/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 2/16/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/16/2024 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
 
 
-## Week of November 20, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-
-
-## Week of November 13, 2023
+## Week of February 05, 2024
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 11/13/2023 | [Plan your deployment of Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | modified |
-| 11/14/2023 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
-| 11/14/2023 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
-| 11/15/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-| 11/16/2023 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
-| 11/16/2023 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
-| 11/17/2023 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
-| 11/17/2023 | [Microsoft Edge management service](/DeployEdge/microsoft-edge-management-service) | modified |
-| 11/17/2023 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 2/5/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 2/6/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 2/8/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+
+
+## Week of January 29, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/30/2024 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
+| 1/30/2024 | [Microsoft Edge release notes for Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-mobile-stable-channel) | modified |
+| 1/31/2024 | [Per-site configuration by policy](/DeployEdge/per-site-configuration-by-policy) | modified |
+| 1/31/2024 | [Write SPNEGO Authenticator for Microsoft Edge on Android](/DeployEdge/edge-learnmore-write-spnego-authenticator) | modified |
+| 2/1/2024 | [Ready for Microsoft Edge](/DeployEdge/deploy-edge-ready-for-edge) | modified |
+| 2/1/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 2/1/2024 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 2/1/2024 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 2/1/2024 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 2/2/2024 | [Archived - release notes for Microsoft Edge Mobile Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-mobile-stable-channel) | modified |
+
+
+## Week of January 22, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/22/2024 | [Microsoft Edge Update Policy Documentation](/DeployEdge/microsoft-edge-update-policies) | modified |
+| 1/23/2024 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 1/23/2024 | [Archived release notes for Microsoft Edge Beta Channel](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | modified |
+| 1/23/2024 | [Microsoft Edge release notes for Beta Channel](/DeployEdge/microsoft-edge-relnote-beta-channel) | modified |
+| 1/24/2024 | [Microsoft Edge and Microsoft Defender Application Guard](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modified |
+| 1/25/2024 | [Microsoft Edge release notes for Stable Channel](/DeployEdge/microsoft-edge-relnote-stable-channel) | modified |
+| 1/25/2024 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/26/2024 | [Microsoft Edge Mobile Policy Documentation](/DeployEdge/microsoft-edge-mobile-policies) | modified |
+| 1/26/2024 | [Release notes for Microsoft Edge Security Updates](/DeployEdge/microsoft-edge-relnotes-security) | modified |
+| 1/26/2024 | [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule) | modified |
+| 1/26/2024 | [Archived release notes for Microsoft Edge Stable Channel](/DeployEdge/microsoft-edge-relnote-archive-stable-channel) | modified |

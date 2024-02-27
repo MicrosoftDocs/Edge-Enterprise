@@ -6,7 +6,7 @@ manager: srugh
 ms.date: 10/10/2022
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn about the ClickOnce and DirectInvoke features in Microsoft Edge."

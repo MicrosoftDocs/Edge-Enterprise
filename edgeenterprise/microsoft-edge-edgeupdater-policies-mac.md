@@ -6,7 +6,7 @@ manager: azeigler
 ms.date: 08/30/2023
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: 

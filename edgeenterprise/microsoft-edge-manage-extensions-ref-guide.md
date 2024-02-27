@@ -3,10 +3,10 @@ title: "Detailed guide to the ExtensionSettings policy"
 ms.author: aspoddar
 author: dan-wesley
 manager: balajek
-ms.date: 10/11/2023
+ms.date: 01/12/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "A detailed reference guide for configuring Microsoft Edge extensions using the ExtensionSettings policy."
@@ -15,9 +15,6 @@ description: "A detailed reference guide for configuring Microsoft Edge extensio
 # A detailed guide to configuring extensions using the ExtensionSettings policy
 
 Microsoft Edge offers multiple ways to manage extensions. A common way is to set multiple policies in one place with a JSON string in the Windows Group Policy Editor or in the Windows Registry using the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 > [!NOTE]
 > The Microsoft Edge management service, a dedicated and simplified management tool in the Microsoft 365 admin center, is rolling out now. [Learn more](/deployedge/microsoft-edge-management-service).

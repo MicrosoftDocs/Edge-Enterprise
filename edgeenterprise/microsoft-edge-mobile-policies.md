@@ -3,13 +3,13 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 12/11/2023
+ms.date: 02/26/2024
 audience: ITPro
 ms.topic: reference
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-ms.custom: 
+ms.custom: generated
 description: "Windows and Mac documentation for all policies supported by the Microsoft Edge Browser"
 ---
 
@@ -30,8 +30,9 @@ These tables list all of the browser-related policies available in this release 
 - [Content settings](#content-settings)
 - [Default search provider](#default-search-provider)
 - [Password manager and protection](#password-manager-and-protection)
+- [Idle browser actions](#idle-browser-actions)
 - [Additional](#additional)
-
+<!-- ====================================== -->
 ### [*Edge specific*](#edge-specific)
 
 |Policy Name|Caption|
@@ -51,13 +52,15 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeBrandLogo](#edgebrandlogo)   | Configure Brand logo in New Tab Page  |
 | [EdgeBrandColor](#edgebrandcolor)  | Configure Brand color in New Tab Page  |
 | [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
-
+| [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
+| [EdgeOneAuthProxy](#edgeoneauthproxy) | Specify a dedicated proxy to sign in to Edge in Android   |
+<!-- ====================================== -->
 ### [*Proxy server*](#proxy-server)
 
 |Policy Name|Caption|
 |:-|-|
 | [ProxySettings](#proxysettings) | Proxy settings   |
-
+<!-- ====================================== -->
 ### [*HTTP authentication*](#http-authentication)
 
 |Policy Name|Caption|
@@ -69,7 +72,7 @@ These tables list all of the browser-related policies available in this release 
 | [AuthAndroidNegotiateAccountType](#authandroidnegotiateaccounttype) |  Account type for HTTP Negotiate authentication   |
 | [AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)  |  Kerberos delegation server allowlist   |
 | [AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins) | List of origins allowing all HTTP authentication  |
-
+<!-- ====================================== -->
 ### [*Content settings*](#content-settings)
 
 |Policy Name|Caption|
@@ -81,7 +84,7 @@ These tables list all of the browser-related policies available in this release 
 | [CookiesAllowedForUrls](#cookiesallowedforurls)   |   Allow cookies on these sites  |
 | [CookiesBlockedForUrls](#cookiesblockedforurls)   |   Block cookies on these sites  |
 | [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)   |  Limit cookies from matching URLs to the current session  |
-
+<!-- ====================================== -->
 ### [*Default search provider*](#default-search-provider)
 
 |Policy Name|Caption|
@@ -98,13 +101,21 @@ These tables list all of the browser-related policies available in this release 
 | [DefaultSearchProviderNewTabURL](#defaultsearchprovidernewtaburl)   |  Default search provider new tab page URL   |
 | [DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)   |  Default search provider suggest URL  |
 | [DefaultSearchProviderSuggestURLPostParams](#defaultsearchprovidersuggesturlpostparams)   |   Parameters for suggest URL which uses POST  |
-
+<!-- ====================================== -->
 ### [*Password manager and protection*](#password-manager-and-protection)
 
 |Policy Name|Caption|
 |:-|-|
 | [PasswordManagerEnabled](#passwordmanagerenabled) | Enable saving passwords to the password manager |
 
+<!-- ====================================== -->
+### [*Idle browser actions*](#idle-browser-actions)
+
+|Policy Name|Caption|
+|:-|-|
+| [IdleTimeout](#idletimeout) | Delay before running idle actions |
+| [IdleTimeoutActions](#idletimeoutactions) | Actions to run when the computer is idle |
+<!-- ====================================== -->
 ### [*Additional*](#additional)
 
 |Policy Name|Caption|
@@ -121,6 +132,7 @@ These tables list all of the browser-related policies available in this release 
 | [SmartScreenEnabled](#smartscreenenabled) | Configure Microsoft Defender SmartScreen |
 | [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 | [ManagedFavorites](#managedfavorites)  |  Configure Favorites (bookmarks) |
+| [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) |  Control communication with the Experimentation and Configuration Service   |
 
 ## HTTP authentication
 
@@ -1913,6 +1925,8 @@ true
 
 #### Specify a URL to a proxy auto-config (PAC) file
 
+**Note:** This policy is in public preview and might be removed.
+
 #### Supported on:
 
 - Microsoft Edge (iOS and iPadOS) since version 120
@@ -1944,7 +1958,81 @@ https://internal.contoso.com/example.pac
 
 [Back to top](#microsoft-edge-mobile---policies) 
 
+### EdgeBlockSignInEnabled
 
+#### Block users from signing in to Edge
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+- Microsoft Edge (iOS and iPadOS) since version 121
+
+#### Description
+
+By default, users are allowed to sign in to Edge with their personal accounts or work accounts. You can enable this policy to block users from signing in to Edge.
+
+#### Supported features:
+- Dynamic Policy Refresh: Yes
+
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+iOS:Boolean
+
+#### Android and iOS restriction name:
+
+```
+EdgeBlockSignInEnabled
+```
+
+#### Example value (Android and iOS):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeOneAuthProxy
+#### Specify a dedicated proxy to sign in to Edge in Android
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+#### Description
+
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android.
+
+You can specify dedicated proxy for users to sign in to Edge in Android.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android: String
+
+#### Android restriction name:
+
+```
+EdgeOneAuthProxy
+```
+
+##### Example value (Android):
+
+```
+http://MyProxy.com:8080
+```
+
+[Back to top](#microsoft-edge-mobile---policies) 
+
+<!-- =================================================== -->
 ## Proxy server policies
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -2048,9 +2136,117 @@ PasswordManagerEnabled
 ```
 true
 ```
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
+## Idle browser actions
 
 [Back to top](#microsoft-edge-mobile---policies)
 
+### IdleTimeout
+
+#### Delay before running idle actions
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 122
+- Microsoft Edge (iOS and iPadOS) since version 122
+
+#### Description
+
+Triggers an action when the computer is idle.
+
+If this policy is set, it specifies the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+
+If this policy is not set, no action will be ran.
+
+The minimum threshold is 1 minute.
+
+"User input" is defined by Operating System APIs, and includes things like moving the mouse or typing on the keyboard.
+
+#### Supported features
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data type
+
+Android:Integer
+
+iOS:Integer
+
+#### Android and iOS restriction name:
+
+```
+IdleTimeout
+```
+##### Example value (Android and iOS):
+
+```
+1
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
+###  IdleTimeoutActions
+
+#### Actions to run when the computer is idle
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 122
+- Microsoft Edge (iOS and iPadOS) since version 122
+
+#### Description
+
+List of actions to run when the timeout from the IdleTimeout policy is reached.
+
+If the IdleTimeout policy is unset, this policy has no effect.
+
+When the timeout from the IdleTimeout policy is reached, the browser runs the actions configured in this policy.
+
+If this policy is empty or left unset, the IdleTimeout policy has no effect.
+
+Supported actions is 'close_tabs': close all open tabs and create a NTP (New Tab Page).
+
+#### Supported features
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data type
+
+Android: List of strings
+
+iOS: List of strings
+
+#### Android and iOS restriction name:
+
+```
+IdleTimeoutActions
+
+```
+##### Example value (Android):
+
+```
+[
+
+"close_tabs"
+
+]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+
+  <string>close_tabs</string>
+
+</array>
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+<!-- ====================================== -->
 ## Additional policies
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -2091,16 +2287,28 @@ iOS:String
 URLAllowlist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android):
 
 ```
 [
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/good_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com"
 ]
+```
+
+##### Example value (iOS):
+
+```
+<array>
+  <string>example.com</string>
+  <string>https://ssl.server.com</string>
+  <string>hosting.com/good_path</string>
+  <string>https://server:8080/path</string>
+  <string>.exact.hostname.com</string>
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -2142,19 +2350,34 @@ iOS:String
 URLBlocklist
 ```
 
-##### Example value (Android and iOS):
+##### Example value (Android)
 
 ```
 [
  "example.com",
- "https://ssl.server.com",
+ https://ssl.server.com,
  "hosting.com/bad_path",
- "https://server:8080/path",
+ https://server:8080/path,
  ".exact.hostname.com",
- "file://*",
+[ file://*]file://*,
  "custom_scheme:*",
  "*"
 ]
+```
+
+##### Example value (iOS)
+
+```
+<array>
+  <string>example.com</string>
+  <string>https://ssl.server.com</string>
+  <string>hosting.com/bad_path</string>
+  <string>https://server:8080/path</string>
+  <string>.exact.hostname.com</string>
+  <string>file://*</string>
+  <string>custom_scheme:*</string>
+  <string>*</string>
+</array>
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
@@ -2652,6 +2875,72 @@ ManagedFavorites
   </dict>
 </array>
 
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### ExperimentationAndConfigurationServiceControl
+
+#### Control communication with the Experimentation and Configuration Service
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 121
+
+- Microsoft Edge (iOS and iPadOS) since version 121
+
+#### Description
+
+The Experimentation and Configuration Service is used to deploy Experimentation and Configuration payloads to the client.
+
+Experimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.
+
+Configuration payload consists of a list of recommended settings that Microsoft wants to deploy to optimize the user experience.
+
+Configuration payload may also contain a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+
+If you set this policy to 'FullMode', the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.
+
+If you set this policy to 'ConfigurationsOnlyMode', only the configuration payload is downloaded.
+
+If you set this policy to 'RestrictedMode', the communication with the Experimentation and Configuration Service is stopped completely. Microsoft does not recommend this setting.
+
+If you don't configure this policy on a managed device, the behavior on Beta and Stable channels is the same as the 'ConfigurationsOnlyMode'. On Canary and Dev channels the behavior is the same as 'FullMode'.
+
+If you don't configure this policy on an unmanaged device, the behavior is the same as the 'FullMode'.
+
+#### Policy options mapping:
+
+- FullMode (2) = Retrieve configurations and experiments
+
+- ConfigurationsOnlyMode (1) = Retrieve configurations only
+
+- RestrictedMode (0) = Disable communication with the Experimentation and Configuration Service
+
+Use the preceding information when configuring this policy.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+
+- Per Profile : No
+
+#### Data Type:
+
+Android:Integer
+
+iOS:Integer
+
+#### Android and iOS restriction name:
+
+```
+ExperimentationAndConfigurationServiceControl
+```
+
+##### Example value (Android and iOS):
+
+```
+1
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)

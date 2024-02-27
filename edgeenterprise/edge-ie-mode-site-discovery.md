@@ -3,10 +3,10 @@ title: "Enterprise Site Discovery Step by Step Guide"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Guide to using Enterprise Site Discovery to prepare for IE mode."
@@ -31,7 +31,7 @@ Enterprise Site Discovery can help you configure your Enterprise Mode Site List.
 - Discover which sites are using ActiveX controls. Microsoft Edge doesn't support ActiveX controls. Unless these sites are detecting modern browsers and providing different HTML, they probably need to use IE mode.
 
 > [!NOTE]
-> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels, version 77 or later.
+> This article applies to Microsoft Edge **Stable**, **Beta** and **Dev** Channels.
 
 ## Prerequisites
 

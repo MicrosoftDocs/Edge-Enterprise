@@ -3,10 +3,10 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 10/18/2023
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
@@ -15,6 +15,135 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 119.0.2151.107: December 6, 2023 to Version 119.0.2151.46: November 7, 2023  -->
+## Version 119.0.2151.107: December 6, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 119.0.2151.105: December 5, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.96: November 30, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.92: November 28, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.78: November 21, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.65: November 13, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.56: November 9, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.46: November 7, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Policy support (Android and iOS)
+
+Configure to turn on Microsoft Defender SmartScreen:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+- MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+Configure to turn on ManagedFavorites (bookmarks):
+
+- MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
+
+<!-- Version 118.0.2088.81: November 1, 2023 to Version 117.0.2045.53: October 6, 2023  -->
+## Version 118.0.2088.81: November 1, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.68: October 25, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.66: October 24, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 118.0.2088.60: October 21, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 118.0.2088.52: October 18, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Microsoft Tunnel for MAM strict mode.** When strict mode is turned on by MAM policy `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`, the network will be blocked until the tunnel is connected.
+
+- **Overflow menu enablement for locked view mode.** Originally, overflow menu is disabled when Edge locked view mode is turned on by MDM policy `EdgeLockedViewMode=true`. Now, the overflow menu is enabled when Edge locked view mode is turned on.
+
+- **Support for saving logs to local devices.** For more information, see [Diagnostic logs](/mem/intune/apps/manage-microsoft-edge#diagnostic-logs)
+
+### Policy support
+
+Allow proceeding from the SSL warning page:
+
+- MAM: com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed (Android only)
+- MDM: [SSLErrorOverrideAllowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed)
+
+Control the behavior of opening external apps:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.OpeningExternalApps](/mem/intune/apps/manage-microsoft-edge#block-opening-external-apps)
+
+## Version 117.0.2045.65: October 11, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 117.0.2045.53: October 6, 2023
+
+Fixed various bugs and performance issues for Android.
+
+<!-- Version 117.0.2045.33: September 15, 2023 to Version 116.0.1938.64: August 30, 2023  -->
+## Version 117.0.2045.33: September 15, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+### Feature update
+
+- **Support for iOS 17.** Microsoft Edge for iOS supports iOS 17.
+
+- **Shared Links feature.** This feature is released in Edge for Android as a public preview. By default, the shared links feature is turned off. It can be turned on by enabling the shared links flag in `Edge://flags`.
+
+- **Edge shopping/coupons can be managed by MAM policy.** For example, to enable coupons: `com.microsoft.intune.mam.managedbrowser.disabledFeatures=coupons`.
+
+- **New policy to manage the "import password" feature in MAM and MDM.** The following settings are available to manage this feature:
+
+  - MAM: `com.microsoft.intune.mam.managedbrowser.disableImportPasswords`
+  - MDM: `EdgeImportPasswordsDisabled`
+
+- **Improvements to Bing Chat Enterprise for iOS and Android** For example, Bing Image Creator and Bing Visual Search.
+
+## Version 116.0.1938.72: September 5, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+### Feature update
+
+This iOS version introduces a new MAM policy. This MAM policy controls whether Bing Chat Enterprise (BCE) can access content protected by an Intune App protection policy. When the policy is set to true, users can copy text from a protected web page and paste it into BCE. BCE can also access the page if users ask a question like "Summarize the current web page". The policy and its settings are as follows:<br>
+`com.microsoft.intune.mam.managedbrowser.ChatAllowManagedContent=true (default)/false`.
+
+## Version 116.0.1938.64: August 30, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Bing Chat Enterprise (BCE)** is available on Edge mobile for iOS and Android. By default, Bing Chat Enterprise is turned on. For detailed information about how to manage BCE, see [Bing Chat Enterprise](/mem/intune/apps/manage-microsoft-edge#bing-chat-enterprise).
 
 <!-- Version 116.0.1938.56: August 21, 2023, to Version 115.0.1901.183: July 22, 2023 -->
 ## Version 116.0.1938.56: August 21, 2023

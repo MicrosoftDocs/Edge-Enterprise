@@ -3,10 +3,10 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 12/06/2023
+ms.date: 02/20/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Provides steps for configuring the Microsoft Edge management service."
@@ -17,7 +17,7 @@ description: "Provides steps for configuring the Microsoft Edge management servi
 > [!NOTE]
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
-The Microsoft Edge management service is an area in the Microsoft 365 admin center where admins can configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and you can apply these settings to the browser using group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
+The Microsoft Edge management service is a platform in the Microsoft 365 admin center that enables admins to easily configure Microsoft Edge browser settings for their organization. These configurations are stored in the cloud and the settings can be applied to a user's browser through group assignment or group policy. Users must be logged into Microsoft Edge to retrieve these settings.
 
 <!-- ====================================================================== -->
 ## Prerequisites
@@ -99,9 +99,9 @@ Follow these steps to reorder the priority of a configuration profile:
 Follow these steps to configure a policy for a configuration profile:
 
 1. Under the **Configuration profiles** pivot, select the profile you want to configure a policy for.  
-1. Under the **Policies** pivot, select **Select policy**.
-1. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select.
-1. Select **Save**.  
+2. Under the **Policies** pivot, select **Select policy**.
+3. Under **Configure a policy**, search for the policy you want to configure for this profile. Set the configuration settings/values for the policy you select. If the policy is able to be set as either mandatory or recommended, optionally choose to "Allow users to override" the policy.
+4. Select **Save**.  
 
 <a name='assign-a-configuration-profile-to-an-microsoft-entra-group'></a>
 
@@ -258,31 +258,55 @@ Use the following steps to manage sidebar apps:
 
 After selecting a sidebar app, you can configure its installation policy to Allow, Block, or Force.
 
+### Add customization settings
+
+To configure groups of settings that create specific customizations for a profile, select the profile you want to work with and navigate to the **Customization settings** tab. Then, select the page that contains settings for the experiences you would like to create.
+ 
 #### Manage enterprise secure AI settings
 
 > [!NOTE]
 > This feature is currently rolling out for preview.
 
-To manage enterprise secure AI settings for a profile, select the configuration profile you want to work with and then select the **Customization settings** pivot. You can configure AI related policies on this page. Any policy that's edited on this page will appear in the **Policies** pivot for that profile. You can configure policies for Copilot, as well as other policies that incorporate the use of AI. If you edit a policy on his page that already has a policy value, the new edit will override the existing value.
+To manage AI settings for a profile, navigate to the **enterprise secure AI** tab. You can configure AI related settings on this page. Once any setting is edited on this page, all of the configurations will appear in the **Policies** tab in that profile. If you edit a setting on this page that already has an existing configuration, the new edit will override the existing value.
 
 ##### Manage settings for Copilot
 
 The page will detect whether your organization has access to Copilot and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:
 
-- If Copilot and the Microsoft Edge sidebar are enabled, all policy settings in this section will be available to configure.
+- If Copilot and the Microsoft Edge sidebar are enabled, all settings in this section will be available to configure.
 
 - If Copilot is enabled and the Microsoft Edge sidebar is disabled, the unapplicable settings will be disabled. However, the option to enable the sidebar will appear, and if enabled, will unlock the ability to configure the now applicable setting.
 
-- If Copilot is disabled, all policy settings in this section won't be available to configure.
+- If Copilot is disabled, all settings in this section won't be available to configure.
 
-- If it can't be identified that Copilot is enabled for your organization, the default policy settings for this section will pertain and won't be available to configure.
+- If it can't be identified that Copilot is enabled for your organization, the default settings for this section will apply and won't be available to configure.
 
 ##### Manage settings for other AI features
 
-The settings in this section correspond to a Microsoft Edge browser policy that incorporates the use of AI. When a setting is configured for the first time, the updated value will appear in the **Policies** pivot for that configuration profile. To configure a setting:
+The settings in this section let you configure Microsoft Edge settings that involve the use of AI. To configure a setting:
 
 1. Check/uncheck the box corresponding to the setting that you want to enable/disable respectively.
-1. Select **Save changes**.
+2. Select **Save changes.** The settings in this section allow you to configure Microsoft Edge settings that involve the use of AI.
+
+<!-- =================================================== -->
+
+#### Manage automatic profile switching settings
+
+To manage profile switching behaviors for a profile, navigate to the **automatic profile switching** tab. You can choose which profile you want specific hostnames to open in for your users. 
+
+##### Manage default switching settings
+
+The toggles on this page control a category of hostnames. When the toggle is turned on, the hostnames that apply to that category will automatically open in a user's work profile. When the toggle is turned off, no profile switching will occur, independent of the profile it is open in. To override an individual site that falls into one of the hostname categories, add it to the **Switch list**.
+
+##### Manage custom switch list
+
+You can specify individual hostnames and the profile you would like them to open in on the **Switch list** tab of this page. To add a hostname to this list:
+
+1. Select **add entry**.
+2. Enter the hostname.
+3. Choose the profile you would like the hostname to open in. If you would like the profile to not switch on the hostname, select **Allow user preference**.
+4. (Optional) If the profile selected is work, you can optionally choose to specify the domain that the hostname opens in. This may be necessary for users with multiple work profiles. The domain entered should match the format *\*username@company.com* (note: the \* is required).
+5. Select **Add**.
 
 <!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile

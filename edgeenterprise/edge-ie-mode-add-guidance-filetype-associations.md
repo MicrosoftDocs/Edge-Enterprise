@@ -3,10 +3,10 @@ title: "Associate file extensions with Internet Explorer mode"
 ms.author: shisub
 author: dan-wesley
 manager: archandr
-ms.date: 08/21/2023
+ms.date: 01/04/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Associate file extensions with Internet Explorer mode"
@@ -17,14 +17,11 @@ description: "Associate file extensions with Internet Explorer mode"
 > [!NOTE]
 > Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
 
->[!NOTE]
+> [!NOTE]
 > The retired, out-of-support Internet Explorer 11 desktop application has been permanently disabled through a Microsoft Edge update on certain versions of Windows 10. For more information, see [Internet Explorer 11 desktop app retirement FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
 >
 
 This article explains how to associate Microsoft Edge with Internet Explorer mode with file extensions for desktop applications.
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 86 or later.
 
 ## Guidance for file extension association with Internet Explorer mode
 

@@ -6,7 +6,7 @@ manager: likuba
 ms.date: 12/14/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Admin and user options for configuring Microsoft Edge to sync favorites, passwords, and other browser data."

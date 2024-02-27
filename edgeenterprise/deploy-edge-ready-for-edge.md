@@ -3,10 +3,10 @@ title: "Ready for Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 02/01/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Ready for Microsoft Edge"
@@ -48,7 +48,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
 | Airtable   | Airtable   | https://support.airtable.com/hc/en-us/articles/217990018-What-are-the-technical-requirements-for-using-Airtable- |
 | Alfresco Software     | Alfresco Content Services  | https://docs.alfresco.com/content-services/5.2/support/  |
-| Alteryx  | Alteryx Analytics Platform  | https://help.alteryx.com/current/product-activation-and-licensing/version-support-policy  |
+| Alteryx  | Alteryx AI Platform  | https://help.alteryx.com/current/en/license-and-activate.html  |
 | Aprimo  | Aprimo Cloud Marketing Studio | https://help.aprimo.com/Content/Marketing_Operations_Help/aprimo_basics/browsers_configuring_concept.html |
 | Asana  | Asana | https://asana.com/guide/help/faq/connectivity#gl-browsers |
 | Atlassian  | Bitbucket   | https://confluence.atlassian.com/bitbucketserver/supported-platforms-776640981.html   |
@@ -64,7 +64,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Cisco   | WebEx  | https://help.webex.com/en-us/nki3xrq/Webex-Meetings-Suite-System-Requirements#concept_6C8ED62012334D2D91D139BAD77C833F   |
 | Clarizen   | Success   | https://success.clarizen.com/hc/en-us/articles/205712188-Supported-Browsers?search=edge   |
 | Coda  | Coda   | https://help.coda.io/en/articles/1638088-which-browsers-does-coda-support  |
-| Cybozu  | Kintone  | https://jp.cybozu.help/general/en/user/list_start/webbrowser.html  |
+| Cybozu  | Kintone  | https://www.kintone.com/en-us/intro/  |
 | Deltek  | Vantagepoint Cloud   | https://help.deltek.com/PRODUCT/Vantagepoint/2.0/CLOUDADMINGUIDE/Browser%20Interface.html    |
 | DocuSign    | Docusign CLM   | https://support.docusign.com/en/guides/SpringCM-Operating-System-and-Browser-Support  |
 | Doodle  | Doodle  | https://help.doodle.com/hc/en-us/articles/360012149773-What-are-the-system-requirements-for-using-Doodle-                  |
@@ -84,7 +84,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Grammarly  | Grammarly | https://support.grammarly.com/hc/en-us/articles/115000090811-What-do-I-need-in-order-to-use-Grammarly-  |
 | Greenhouse  | Greenhouse Recruiting  | https://support.greenhouse.io/hc/en-us/articles/360037604731-Greenhouse-Recruiting-Browser-Support  |
 | HCL  | BigFix | https://help.hcltechsw.com/bigfix/9.5/platform/Platform/Installation/c_spcr_platform.html  |
-| Host Analytics | Host Analytics | https://help.hostanalytics.com/Release_Notes/2020_Release_Notes.htm?Highlight=release%20notes  |
+| Planful (Host Analytics) | Host Analytics | https://planful.com/resources/ |
 | Host Analytics  | CRM, CMS Hub, Marketing Hub, Sales Hub, Service Hub  | https://knowledge.hubspot.com/resources/which-browsers-are-supported-by-hubspot  |
 | Hyland  | ShareBase, OnBase  | https://sharebase.onbase.com/en/faqs  |
 | Insightly | Insightly  | https://support.insight.ly/hc/en-us/articles/204892624-Recommended-Browsers  |
@@ -107,7 +107,7 @@ The following table lists provider support statements for Microsoft Edge.
 | Monday.com  | Monday  | https://support.monday.com/hc/en-us/articles/360002145219-Supported-Web-Browsers  |
 | NetSuite (Oracle)  | Oracle NetSuite   | https://nlcorp.app.netsuite.com/core/media/media.nl?id=94209463&c=NLCORP&h=3735c785dc0db0151a4e&_xt=.pdf   |
 | New Relic  | New Relic UI  | https://docs.newrelic.com/docs/using-new-relic/user-interface-functions/view-your-data/supported-browsers-new-relics-ui  |
-| onepointProject | One Point Projects | http://ftp.onepoint-projects.com/documentation/latest/onepoint-server-installation.pdf   |
+| Onepoint| Planforge | https://www.planforge.io/en/resources/faq   |
 | Pega | Pega CRM   | https://community.pega.com/knowledgebase/articles/pega-platform-client-operating-system-and-browser-support  |
 | PeopleFluent | PeopleFluent Talent Management  | https://tmhelp.peoplefluent.com/11.12.0.2.65509/en_US/End%20User/welcome.htm#t=common%2Fhw_sw_reqs%2Fweb_browser_support_policy.htm |
 | Planview  | PPM Pro  | https://success.planview.com/Planview_PPM_Pro/150_PPM_Pro_Administrator_Documentation/015_System_Settings/004_System_Requirements  |
@@ -125,12 +125,12 @@ The following table lists provider support statements for Microsoft Edge.
 | SurveyMonkey  | SurveyMonkey | https://help.surveymonkey.com/articles/en_US/kb/What-browser-versions-do-you-support   |
 | Tableau  | Tableau Server  | https://www.tableau.com/products/techspecs#server |
 | Tableau  | Tableau Online  | https://www.tableau.com/products/techspecs#online  |
-| Teleopti  | Teleopti WFM Cloud  | https://www.teleopti.com/archive/files/66907/service-specification_nov_21_2019-pdf.aspx                          service-specification   |
+| Teleopti  | Teleopti Calabrio WFM | https://help.calabrio.com/doc/Content/user-guides/getting-started/first-time-log-in-twfm.htm   |
 | TIBCO | Tibco Cloud Spotfire  | https://docs.tibco.com/pub/spotfire/general/sr/GUID-12C6E934-C84C-499B-9DAC-DD510854E4E1.html |
 | Verint | Verint Community   | https://community.telligent.com/community/11/w/user-documentation/63073/what-are-the-system-requirements   |
-| Visma  | Visma UX, Nordic Cool 4    | https://ux.visma.com/weblibrary/latest/  |
+| Visma  | Visma UX | https://ux.visma.com/  |
 | Wrike   | Wrike  | https://help.wrike.com/hc/en-us/articles/115003289725-Supported-Browsers  |
-| Yesware  | Yesware for Outlook  | https://help.yesware.com/hc/en-us/articles/360046287974-What-browsers-and-operating-systems-does-Yesware-support-   |
+| Yesware  | Yesware for Outlook  | https://www.yesware.com/platform/outlook  |
 | Younglimwon  | K-System Ace   | https://www.ksystem.co.kr/k-system-ace/   |
 | Zapier  | Zapier  | https://zapier.com/help/troubleshoot/behavior/browsers-supported-by-zapier   |
 | Zendesk  | Zendesk Support  | https://support.zendesk.com/hc/en-us/articles/203661786-Zendesk-Support-system-requirements  |

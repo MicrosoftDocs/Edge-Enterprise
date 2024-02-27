@@ -7,7 +7,7 @@ metadata:
   title: Microsoft Edge # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Microsoft Edge enhances and extends the browser experience. It runs on Windows, macOS, iOS and Android devices. # Required; article description that is displayed in search results. < 160 chars.
   services: service
-  ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-storage
   ms.subservice: subservice
   ms.topic: landing-page # Required
   ms.collection: collection

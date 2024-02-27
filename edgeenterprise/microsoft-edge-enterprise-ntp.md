@@ -6,7 +6,7 @@ manager: likuba
 ms.date: 08/21/2023
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn how the Enterprise new tab page supports context switching and increases worker productivity."

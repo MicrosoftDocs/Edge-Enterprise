@@ -3,10 +3,10 @@ title: "Deploy Microsoft Edge using System Center Configuration Manager"
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/24/2022
+ms.date: 01/10/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Learn how to deploy Microsoft Edge with System Center Configuration Manager (SCCM)."
@@ -16,12 +16,9 @@ description: "Learn how to deploy Microsoft Edge with System Center Configuratio
 
 This article shows you how to automate a Microsoft Edge deployment by using System Center Configuration Manager (SCCM).
 
->[!NOTE]
->This article applies to Microsoft Edge version 77 or later.
-
 ## Before you begin
 
-Review the information in [Introduction to application management in Configuration Manager](/sccm/apps/understand/introduction-to-application-management). This application management article will help you understand the terminology used in this article and is a guide to preparing your site to install applications.
+Review the information in [Introduction to application management in Configuration Manager](/sccm/apps/understand/introduction-to-application-management). This application management article helps you understand the terminology used in this article and is a guide to preparing your site to install applications.
 
 Download the Microsoft Edge Enterprise installation files (**MicrosoftEdgeDevEnterpriseX64.msi** and/or **MicrosoftEdgeDevEnterpriseX86.msi**) from the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise).
 
@@ -32,7 +29,7 @@ Make sure you store the Microsoft Edge installation files in an accessible netwo
 
 ## Create the application
 
-You'll create the application using a Configuration Manager wizard.
+Use the Configuration Manager wizard to create the application.
 
 ### Start the Create Application Wizard and create the application  
 
@@ -42,13 +39,13 @@ You'll create the application using a Configuration Manager wizard.
 
     ![Create application](./media/edge-ent-deployment-sccm/edge-ent-create-app-1.png)
 
-3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This pre-populates some of the information in the wizard with information that's extracted from the installation .msi file. Provide the following information:  
+3. On the **General** page of the **Create Application Wizard**, choose **Automatically detect information about this application from installation files**. This action pre-populates some of the information in the wizard with information extracted from the installation .msi file. Provide the following information:  
 
    - **Type**: Choose **Windows Installer (\*.msi file)**.  
 
-   - **Location**: Type the location (or click **Browse** to select the location) of the installation file **MicrosoftEdgeDevEnterpriseX64.msi** or **MicrosoftEdgeDevEnterpriseX86.msi**. Note that the location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
+   - **Location**: Type the location (or click **Browse** to select the location) of the installation file **MicrosoftEdgeDevEnterpriseX64.msi** or **MicrosoftEdgeDevEnterpriseX86.msi**. **Note:** The location must be specified in the form *\\\Server\Share\File* for Configuration Manager to locate the installation files.  
 
-   Your **Specify settings for this application** page will look like the following example:  
+   Your **Specify settings for this application** page looks like the following example:  
 
     ![Specify settings for this application](./media/edge-ent-deployment-sccm/edge-ent-create-app-2.png)
 

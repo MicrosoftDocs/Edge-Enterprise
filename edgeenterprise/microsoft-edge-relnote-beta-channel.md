@@ -3,10 +3,10 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/15/2023
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Microsoft Edge release notes for Beta Channel"
@@ -19,27 +19,120 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 122.0.2365.59: February 27, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.52: February 23, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.50: February 22, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where printing certain PDF files in landscape mode with the "fit to printable area" option, resulted in incorrect printing.
+
+## Version 122.0.2365.38: February 16, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge has rebranded Web Capture to "Screenshot".**  Microsoft Edge changed the branding for Web Capture with an icon change and renamed the feature to "Screenshot". Users can easily use content from the web by taking a screenshot of a full page or a selected area. They can mark up the screenshot they took with a pen or touch later.  Administrators can control availability using the [WebCaptureEnabled](/deployedge/microsoft-edge-policies#webcaptureenabled) policy.  For more information, see [Screenshot (microsoft.com)](https://www.microsoft.com/en-us/edge/features/screenshot?form=MA13FJ). 
+
+## Version 122.0.2365.30: February 12, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.16: February 5, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.8: February 1, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where PDF text fields and drop downs values were being rendered twice for specific files when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Beta channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 122.0.2325.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2325-0-is-live/m-p/4026405)
+- [Dev Channel update to 122.0.2348.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2348-0-is-live/m-p/4034978)
+- [Dev Channel update to 122.0.2353.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-122-0-2353-0-is-live/m-p/4039264)
+- [Dev Channel update to 122.0.2365.3 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-122-0-2365-3-is-live/m-p/4044002)
+    
+### Feature updates
+
+- **Moving Managed Site Indicator (Briefcase icon) into the lock icon in the address bar omnibox.**  The briefcase icon, which signals that a page is managed, is moved into the lock icon within the address bar. If an admin wants to see whether there are protections for a given page, they can select to open the lock icon in the address bar to look for the briefcase icon.
+
+- **Deprecation of the image enhancement feature.** To improve end user experience, the image enhancement feature is deprecated.  
+
+- **Configure recommended policies in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with controls to configure recommended policies. This gives end users permission to override the configured policy.
+
+### Policy updates
+
+#### New policies
+
+- [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#aigenthemesenabled) Enables DALL-E themes generation
+- [EnhanceSecurityModeAllowUserBypass](/deployedge/microsoft-edge-policies#enhancesecuritymodeallowuserbypass) Allow users to bypass Enhanced Security Mode
+- [SuperDragDropEnabled](/deployedge/microsoft-edge-policies#super-drag-drop-enabled) Super Drag Drop Enabled
+
+#### Obsoleted policies
+
+- [EdgeEnhanceImagesEnabled](/deployedge/microsoft-edge-policies#edgeenhanceimagesenabled) Enhance images enabled  
+
+## Version 121.0.2277.83: January 25, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.81: January 24, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.71: January 19, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.65: January 16, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.49: January 8, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats, which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
+
 ## Version 121.0.2277.4: December 15, 2023
 
 Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
+- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with a Microsoft Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
 
-  Default organizational branding can be enabled by admins through the following policies:
+  Default organizational branding is enabled by admins through the following policies:
 
   - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled
 )
-  - [OrganizationLogoOverlayOnAppIconEnabled]
+  - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
 
-  Admins will need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
+  Admins need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
 
   For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
 
 - **Microsoft Edge migrates the updates experience into Browser Essentials.** Getting alerts on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
-- **New typosquatting checker policies.** The built-in typosquatting checker warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure website typo protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
+- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there's a mistyped popular domain name that could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
 
 ### Policy updates
 
@@ -49,6 +142,8 @@ Fixed various bugs and performance issues.
 - [NativeHostsExecutablesLaunchDirectly](/deployedge/microsoft-edge-policies#nativehostsexecutableslaunchdirectly) - Force Windows executable Native Messaging hosts to launch directly
 - [RelatedWebsiteSetsEnabled](/deployedge/microsoft-edge-policies#relatedwebsitesetsenabled) - Enable Related Website Sets
 - [RelatedWebsiteSetsOverrides](/deployedge/microsoft-edge-policies#relatedwebsitesetsoverrides) - Override Related Website Sets
+- [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) - Prevent bypassing Edge Website Typo Protection prompts for sites
+- [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) - Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
 
 #### Obsoleted policies
 
@@ -95,80 +190,8 @@ Fixed various bugs and performance issues.
 - [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
 - [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
 
-## Version 119.0.2151.44: November 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.42: November 1, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.38: October 30, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.32: October 27, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.30: October 26, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.24: October 23, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 119.0.2151.12: October 17, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Behavioral changes to the beforeunload event.** The behavior of the `beforeunload` event has changed. Calling `preventDefault` in a `beforeunload` event handler triggers a confirmation dialog. Setting `returnValue` to an empty string in a `beforeunload` event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
-
-- **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored.
-
-- **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
-
-- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
-
-### Policy updates
-
-#### New policies
-
-- [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
-- [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
-- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
-
-## Version 118.0.2088.46: October 13, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.44: October 12, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.41: October 10, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.33: October 6, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.27: October 3, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.24: October 2, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.17: September 25, 2023
-
-Fixed various bugs and performance issues.
-
+<!-- Version 119.0.2151.44: November 2, 2023, 2023 to Version 119.0.2151.24: October 23, 2023 -->
+<!-- Version 119.0.2151.12: October 17, 2023 to Version 118.0.2088.17: September 25, 2023 -->
 <!-- Version 118.0.2088.11: September 20, 2023 to Version 117.0.2045.12: August 29, 2023 -->
 <!-- Version 117.0.2045.9: August 25, 2023 to Version 116.0.1938.36: July 31, 2023 -->
 <!-- Version 116.0.1938.29: July 24, 2023 to Version 115.0.1901.9: June 15, 2023 -->

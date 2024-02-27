@@ -3,10 +3,10 @@ title: "What is Internet Explorer mode?"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 08/21/2023
+ms.date: 01/11/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: "Learn how Internet Explorer mode in Microsoft Edge provides access to sites that need Internet Explorer 11 and access to modern sites."
@@ -23,9 +23,6 @@ description: "Learn how Internet Explorer mode in Microsoft Edge provides access
 We created Internet Explorer (IE) mode in Microsoft Edge for organizations that still need Internet Explorer 11 for backward compatibility with existing websites but also need a modern browser. This feature makes it easier for organizations to use one browser, for legacy web/apps or for a modern web/app. This article provides an introduction to using Microsoft Edge with IE mode.
 
 For an advanced configuration guide, see [Configure IE mode for Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188232).
-
-> [!NOTE]
-> This article applies to Microsoft Edge version 77 or later.
 
 ## What is IE mode?
 

@@ -3,10 +3,10 @@ title: "Understand Data Loss Prevention in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: slikuba
-ms.date: 08/21/2023
+ms.date: 02/23/2024
 audience: ITPro
 ms.topic: conceptual
-ms.prod: microsoft-edge
+ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: "Understand Data Loss Prevention (DLP) in Microsoft Edge"
@@ -26,6 +26,10 @@ Data loss prevention (DLP) is a system of technologies that identify and safegua
 Remote work has increased the emphasis on using DLP. With the growing use of personal and work activities on devices, enterprises are seeing an increased risk of unauthorized sharing of corporate data outside the workplace.
 
 This blending of user activities has also spread to devices, where data is moved between personal and corporate devices over various public and private networks. The net result is a dramatically increased risk of exposing sensitive data.
+
+The next screenshot shows the briefcase icon in the lock icon within the address bar, indicating that work-related information is accessed via the browser.
+
+ ![Indicator for sites marked as "work"](./media/microsoft-edge-security-dlp/microsoft-edge-dlp-notify.png)
 
 Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).
 
