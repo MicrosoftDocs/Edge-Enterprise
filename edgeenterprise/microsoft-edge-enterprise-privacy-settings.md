@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise privacy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/23/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
