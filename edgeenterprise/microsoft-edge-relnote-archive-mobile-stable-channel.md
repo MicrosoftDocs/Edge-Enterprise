@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/02/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,50 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 119.0.2151.107: December 6, 2023 to Version 119.0.2151.46: November 7, 2023  -->
+## Version 119.0.2151.107: December 6, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 119.0.2151.105: December 5, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.96: November 30, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.92: November 28, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.78: November 21, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.65: November 13, 2023
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 119.0.2151.56: November 9, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 119.0.2151.46: November 7, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Policy support (Android and iOS)
+
+Configure to turn on Microsoft Defender SmartScreen:
+
+- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
+- MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
+
+Configure to turn on ManagedFavorites (bookmarks):
+
+- MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
 
 <!-- Version 118.0.2088.81: November 1, 2023 to Version 117.0.2045.53: October 6, 2023  -->
 ## Version 118.0.2088.81: November 1, 2023

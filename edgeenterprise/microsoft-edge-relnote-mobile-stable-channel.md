@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 02/07/2024
+ms.date: 02/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,37 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 122.0.2365.56 (Android and iOS): February 26, 2024
+
+Made general updates, fixed various bugs, and added new policy support.
+
+### General updates
+
+- Updated the Intune Mobile Application Management (MAM) SDK to version 19.1.0.
+- With the release of iOS 17, multiple persistent stores are now supported. Work and personal accounts have their own designated persistent store. The MAM policy [`com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore`](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
+
+### Bug fixes
+
+- Fixed crash with Microsoft MAM Tunnel
+- Fixed bug for MDM policy EdgeBlockSignInEnabled
+- Addressed accessibility and UI issues related to implicit sign-in.
+- Resolved several policy-related crashes and performance issues.
+- [iOS] Fixed a bug preventing deep links from opening via `window.open()`.
+- [iOS] Resolved an issue where the Intune SDK unexpectedly blocked "Open in Microsoft Edge".
+- [iOS] Resolved an issue with closing tabs in InPrivate mode.
+
+### Policy updates
+
+- [iOS] Mobile Application Management (MDM) policy IdleTimeoutActions to specify actions to run when the timeout from the IdleTimeout policy is reached. Only close_tabs is supported.
+- [iOS] MDM policy IdleTimeout to specify the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+- MAM policy to allow or block file uploads to specified domains.
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls`
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls`
+
+## Version 121.0.2277.133: February 20, 2024
+
+Fixed various bugs and performance issues for Android and iOS.
 
 ## Version 121.0.2277.107 (iOS): February 7, 2024
 
@@ -188,49 +219,7 @@ MAM Policy to configure pop-up behavior:
 - [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
 - [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
 
-## Version 119.0.2151.107: December 6, 2023
-
-Fixed various bugs and performance issues for Android.
-
-## Version 119.0.2151.105: December 5, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 119.0.2151.96: November 30, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 119.0.2151.92: November 28, 2023
-
-Fixed various bugs and performance issues for Android and iOS.
-
-## Version 119.0.2151.78: November 21, 2023
-
-Fixed various bugs and performance issues for Android and iOS.
-
-## Version 119.0.2151.65: November 13, 2023
-
-Fixed various bugs and performance issues for Android and iOS.
-
-## Version 119.0.2151.56: November 9, 2023
-
-Fixed various bugs and performance issues for iOS.
-
-## Version 119.0.2151.46: November 7, 2023
-
-Fixed various bugs and performance issues for Android.
-
-### Policy support (Android and iOS)
-
-Configure to turn on Microsoft Defender SmartScreen:
-
-- MAM: [com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled](/mem/intune/apps/manage-microsoft-edge#microsoft-defender-smartscreen)
-- MDM: [SmartScreenEnabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled)
-
-Configure to turn on ManagedFavorites (bookmarks):
-
-- MDM: [ManagedFavorites](/deployedge/microsoft-edge-mobile-policies#managedfavorites)
-
+<!-- Version 119.0.2151.107: December 6, 2023 to Version 119.0.2151.46: November 7, 2023  -->
 <!-- Version 118.0.2088.81: November 1, 2023 to Version 117.0.2045.53: October 6, 2023  -->
 <!-- Version 117.0.2045.33: September 15, 2023 to Version 116.0.1938.64: August 30, 2023  -->
 <!-- Version 116.0.1938.56: August 21, 2023, to Version 115.0.1901.183: July 22, 2023 -->
