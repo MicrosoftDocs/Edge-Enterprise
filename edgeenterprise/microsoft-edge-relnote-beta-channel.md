@@ -52,13 +52,13 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 #### New policies
 
-- [ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist) - Blocklist for extension install types
-- [ExtensionManifestV2Availability](#extensionmanifestv2availability) - Control Manifest v2 extension availability
-- [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) - Default Window Management permission setting
-- [WindowManagementAllowedForUrls](#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
-- [WindowManagementBlockedForUrls](#windowmanagementblockedforurls) - Block Window Management permission on specified sites
-- [RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
-- [ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+- [ExtensionInstallTypeBlocklist](/deployedge/microsoft-edge-policies#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](/deployedge/microsoft-edge-policies#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [DefaultWindowManagementSetting](/deployedge/microsoft-edge-policies#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [WindowManagementAllowedForUrls](/deployedge/microsoft-edge-policies#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](/deployedge/microsoft-edge-policies#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+- [RSAKeyUsageForLocalAnchorsEnabled](/deployedge/microsoft-edge-policies#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
  
 ## Version 122.0.2365.59: February 27, 2024
 
