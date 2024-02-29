@@ -73,7 +73,7 @@ For more information about the Enterprise personal browser and the policies that
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
-## Company Branding
+## Organization Branding
 
 Want to customize the look of Edge for Business?
 
