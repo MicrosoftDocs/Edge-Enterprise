@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/10/2023
+ms.date: 02/29/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -73,27 +73,41 @@ For more information about the Enterprise personal browser and the policies that
 
 ![Smart switching from work to personal browser](media/microsoft-edge-for-business/smart-switch-transition-1200.png)
 
-## Company Branding
+## Organization Branding
 
-Want to customize the look of Edge for Business? Now you can enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon.
+Want to customize the look of Edge for Business?
 
-This branding can help users more easily differentiate between multiple profiles and browser windows. This visual option allows enterprises to foster employee trust through the specifically customized branding, while growing affinity by serving an effective brand reinforcement strategy.
+Now you can customize your organization's branding onto Edge for Business. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon. This visual option also allows companies to foster employee trust through specifically customized branding, while growing affinity by serving an effective brand reinforcement strategy.
 
-Default organizational branding can be enabled by admins through the following policies:
+![Company branding for Contoso](media/microsoft-edge-for-business/efb-company-branding-new.png)
 
-- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled)
-- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
+### Customize Branding Assets
 
-### Prerequisites
+Through Microsoft Edge management service, admins can have an enhanced experience to control, preview, and customize how Edge for Business shows the following organization brand assets:
 
-Admins will need to have 'company branding' assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature. For more details on configuring in Entra, see [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+- Name
+- Color
+- Logo
+- Edge for Business Icon Overlay
+
+Today, the feature supports configuring the following UI options:
+
+- Organization name to the profile pill
+- Organization name, logo, and color to the profile flyout
+- Organization icon to overlay the Edge for Business taskbar icon
 
 > [!TIP]
 > Square and horizontal logos will provide the optimal visual branding experience.
 
-![Contoso branding](media/microsoft-edge-for-business/company-branding-center-800.png)
+### Use Defaults from Azure
 
-As we continue to develop this, we plan to enable more admin customization where new assets can be provided for Microsoft Edge for Business.
+Admins can also choose to use and check default organization branding assets already configured in the Microsoft Entra admin center.
+Default branding can be enabled by admins through the following policies:
+
+- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled)
+- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
+
+For more details on defaults and checking what is already configured in Microsoft Entra, [check your existing company branding](/entra/fundamentals/how-to-customize-branding).
 
 ## Microsoft Edge for Business
 
