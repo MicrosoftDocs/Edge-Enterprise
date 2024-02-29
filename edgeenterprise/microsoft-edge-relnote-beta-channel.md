@@ -33,20 +33,20 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 ### Feature updates
 
-- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Microsoft Edge for Business taskbar icon.
 
-  The Microsoft Edge management service will give admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+  The Microsoft Edge management service gives admins an enhanced experience to configure, preview, and customize how Microsoft Edge for Business shows the following organization brand assets:
 
   - Organization name
   - Accent color
   - Organization logo
-  - Edge for Business taskbar icon overlay
+  - Microsoft Edge for Business taskbar icon overlay
 
   For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
 
-- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing. Note: This experience is in public preview.
+- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing. Note: This experience is in public preview.
 
-- **Extending support for viewing MIP Protected PDF Files to different sovereignties (including GCCH).** Sovereign cloud customers (including GCCH) will be able to open MIP protected PDF content in Microsoft Edge.  This change will be available in the Microsoft Edge built-in PDF reader powered by Adobe Acrobat and the legacy Microsoft Edge PDF engine.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **Extending support for viewing MIP Protected PDF Files to different sovereignties (including GCCH).** Sovereign cloud customers (including GCCH) can open MIP protected PDF content in Microsoft Edge.  This change is available in the Microsoft Edge built-in PDF reader powered by Adobe Acrobat and the legacy Microsoft Edge PDF engine.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 ### Policy updates
 
