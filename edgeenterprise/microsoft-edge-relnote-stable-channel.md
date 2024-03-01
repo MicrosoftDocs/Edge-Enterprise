@@ -30,6 +30,10 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Fixes
+
+- Resolved a network issue that prevented sites from loading within a Microsoft Defender Application Guard window.
+
 ## Version 122.0.2365.63: February 29, 2024
 
 Fixed various bugs and performance issues.
