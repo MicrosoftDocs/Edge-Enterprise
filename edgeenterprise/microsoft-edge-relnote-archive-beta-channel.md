@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Beta Channel"
 ms.author: leahtu
 author: dan-wesley
 manager: archandr
-ms.date: 02/01/2024
+ms.date: 03/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -16,6 +16,48 @@ description: "Archived release notes for Microsoft Edge Beta Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Beta Channel. To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](microsoft-edge-channels.md). All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
+<!-- Version 120.0.2210.61: December 7, 2023 to Version 120.0.2210.7: November 13, 2023 -->
+
+## Version 120.0.2210.61: December 7, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 120.0.2210.57: December 6, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 120.0.2210.49: December 1, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 120.0.2210.39: November 27, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 120.0.2210.22: November 21, 2023
+
+Fixed various bugs and performance issues.
+
+## Version 120.0.2210.7: November 13, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. **Note:** If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software publisher directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
+
+- **Updated SmartActionsBlockList Policy.**  The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings.  Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
+
+- **Microsoft Edge Workspaces improvements for offline functionality.**  Any workspace opened on a device previously is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+### Policy updates
+
+#### New policies
+
+- [AutoDiscardSleepingTabsEnabled](/deployedge/microsoft-edge-policies#autodiscardsleepingtabsenabled) - Configure auto discard sleeping tabs
+- [AutomaticProfileSwitchingSiteList](/deployedge/microsoft-edge-policies#automaticprofileswitchingsitelist) - Configure the automatic profile switching site list
+- [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
+- [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
 
 <!-- Version 119.0.2151.44: November 2, 2023, 2023 to Version 119.0.2151.24: October 23, 2023 -->
 ## Version 119.0.2151.44: November 2, 2023
