@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/27/2024
+ms.date: 02/29/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,21 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[DefaultWindowManagementSetting](#defaultwindowmanagementsetting)|Default Window Management permission setting|
-|[WindowManagementAllowedForUrls](#windowmanagementallowedforurls)|Allow Window Management permission on specified sites|
-|[WindowManagementBlockedForUrls](#windowmanagementblockedforurls)|Block Window Management permission on specified sites|
-|[EdgeOpenInSidebarEnabled](#edgeopeninsidebarenabled)|Enable open in sidebar|
-|[EdgeSidebarCustomizeEnabled](#edgesidebarcustomizeenabled)|Enable sidebar customize|
-|[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
-|[ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins)|Allow screen capture without prior user gesture|
-
 
 ## Available policies
 

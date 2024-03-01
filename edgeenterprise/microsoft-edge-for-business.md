@@ -39,7 +39,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
 | MAM for Mobile |  Secure and compliant access to work resources on mobile devices. | Available, see [MAM for Mobile](#mam-for-mobile)    |
-|  Company branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Company Branding](#company-branding).    |
+|  Organization branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Organization Branding](#organization-branding).    |
 
 ## Work Browser (Visual Refresh)
 
