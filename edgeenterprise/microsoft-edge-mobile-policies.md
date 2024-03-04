@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/26/2024
+ms.date: 03/01/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -54,6 +54,8 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeProxyPacUrl](#edgeproxypacurl) | Specify a URL to a proxy auto-config (PAC) file  |
 | [EdgeBlockSignInEnabled](#edgeblocksigninenabled) | Block users from signing in to Edge |
 | [EdgeOneAuthProxy](#edgeoneauthproxy) | Specify a dedicated proxy to sign in to Edge in Android   |
+| [EdgeLockedViewModeEnabled](#edgelockedviewmodeenabled)  | Edge locked view mode    |
+|  [EdgeLockedViewModeAllowedActions](#edgelockedviewmodeallowedactions)  |  Configure allowed actions in Edge locked view mode   |
 <!-- ====================================== -->
 ### [*Proxy server*](#proxy-server)
 
@@ -2031,6 +2033,97 @@ http://MyProxy.com:8080
 ```
 
 [Back to top](#microsoft-edge-mobile---policies) 
+
+### EdgeLockedViewModeEnabled
+
+#### Edge locked view mode
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 117
+
+- Microsoft Edge (iOS and iPadOS) since version 117
+
+#### Description
+
+This policy allows organizations to restrict various browser functionalities, providing a controlled and focused browsing experience.
+
+- The URL address bar becomes read-only, preventing users from making changes to the web address
+- Users are not allowed to create new tabs
+- The contextual search feature on web pages is disabled
+- The following buttons under the overflow menu are disabled
+
+| Buttons | State |
+|:-----|:-----|
+| New InPrivate tab     |  Disabled   |
+| Send to Devices     |  Disabled   |
+| Drop     |  Disabled   |
+| Add to Phone (Android)     |  Disabled   |
+| Download Page (Android)     |  Disabled   |
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+Android: Boolean
+
+iOS: Boolean
+
+#### Android and iOS restriction name:
+
+```
+EdgeLockedViewModeEnabled
+```
+
+##### Example value (Android and iOS):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeLockedViewModeAllowedActions
+
+#### Configure allowed actions in Edge locked view mode
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 122
+
+- Microsoft Edge (iOS and iPadOS) since version 122
+
+#### Description
+
+By default, users are not allowed to create new tabs in locked view mode. To allow tab creation, set policy EdgeLockedViewModeAllowedActions.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+
+- Per Profile : Yes
+
+#### Data Type:
+
+Android: String
+
+iOS: String
+
+#### Android and iOS restriction name:
+
+```
+EdgeLockedViewModeAllowedActions
+```
+##### Example value (Android and iOS):
+
+```
+newtabs
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 <!-- =================================================== -->
 ## Proxy server policies
