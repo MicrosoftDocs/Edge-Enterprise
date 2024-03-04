@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise privacy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 03/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,10 +25,12 @@ When Microsoft Edge is deployed on Windows 10, the default is to send diagnostic
 
 When Microsoft Edge is deployed on non-Windows platforms, diagnostic data is collected according to the settings of the following group policies:
 
-- (DEPRECATED) [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - Enable usage and crash-related data reporting. This policy will be obsolete in Microsoft Edge version 89.
-- (DEPRECATED) [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Send site information to improve Microsoft services. This policy will be obsolete in Microsoft Edge version 89.
+- (DEPRECATED) [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - Enable usage and crash-related data reporting. This policy is obsolete in Microsoft Edge version 89.
+- (DEPRECATED) [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Send site information to improve Microsoft services. This policy is obsolete in Microsoft Edge version 89.
 
 The preceding deprecated policies are replaced by [Allow Telemetry](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) on Windows 10, and [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy for all other platforms.  
+
+As of March 6, 2024: Microsoft Edge diagnostic data is collected separately from Windows diagnostic data on Windows 10 (version 22H2 and newer) and Windows 11 (version 23H2 and newer) devices in the European Economic Area. The collection of Edge diagnostic data is subject to its own settings. For more information related to this change, see [Microsoft Edge, browsing data, and privacy - Microsoft Support](https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd).
 
 ## Configure policy settings
 
@@ -50,7 +52,7 @@ Optional diagnostic data includes data about how you use the browser, websites y
 Use one of the following settings to configure **DiagnosticData**:
 
 - Off (Not recommended) (0) turns off required and optional diagnostic data collection. 
-- Required data (1) sends required diagnostic data but turns off optional diagnostic data collection. Microsoft Edge will send required diagnostic data necessary to keep Microsoft Edge secure, up to date and performing as expected. 
+- Required data (1) sends required diagnostic data but turns off optional diagnostic data collection. Microsoft Edge sends required diagnostic data necessary to keep Microsoft Edge secure, up to date and performing as expected. 
 - Optional data (2) sends optional diagnostic data includes data about browser usage, websites that are visited, crash reports sent to Microsoft to help keep Microsoft Edge secure, up to date, and performing as expected and is used to improve Microsoft Edge and other Microsoft products and services for all users.
 
 On Windows 7, Windows 8/8.1, and macOS, this policy controls sending required and optional data to Microsoft.
@@ -67,7 +69,7 @@ Enable this policy to send reporting of usage and crash-related data to Microsof
 
 When Microsoft Edge is running on Windows 10:
 
-- If this policy isn't configured, Microsoft Edge will default to the Windows diagnostic data setting.
+- If this policy isn't configured, Microsoft Edge defaults to the Windows diagnostic data setting.
 - If this policy is enabled, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to **Enhanced** or **Full**.
   - If this policy is enabled, Microsoft Edge will only send usage data if [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) is also enabled.
 - If this policy is disabled, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. [Learn more about Windows Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
