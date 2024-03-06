@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 02/29/2024
+ms.date: 03/05/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -245,7 +245,7 @@ These tables list all of the browser-related group policies available in this re
 |[EdgeManagementEnrollmentToken](#edgemanagementenrollmenttoken)|Microsoft Edge management enrollment token|
 |[EdgeManagementExtensionsFeedbackEnabled](#edgemanagementextensionsfeedbackenabled)|Microsoft Edge management extensions feedback enabled|
 |[EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy)|Microsoft Edge management service policy overrides platform policy.|
-|[EdgeManagementUserPolicyOverridesCloudMachinePolicy](#edgemanagementuserpolicyoverridescloudmachinepolicy)|Allow Microsoft Edge management service user policies to override policies set through an enrollment token.|
+|[EdgeManagementUserPolicyOverridesCloudMachinePolicy](#edgemanagementuserpolicyoverridescloudmachinepolicy)|Allow cloud-based Microsoft Edge management service user policies to override local user policies.|
 |[MAMEnabled](#mamenabled)|Mobile App Management Enabled|
 ### [*Native Messaging*](#native-messaging-policies)
 
@@ -9793,11 +9793,13 @@ If you disable or don't configure this policy, Microsoft Edge won't send any dat
 
   #### Description
 
-  If you enable this policy, the Microsoft Edge management service policy takes precedence if it conflicts with platform policy.
+  If you enable this policy, the cloud-based Microsoft Edge management service policy takes precedence if it conflicts with platform policy.
 
-If you disable or don't configure this policy, platform policy takes precedence if it conflicts with the Microsoft Edge management service policy.
+If you disable or don't configure this policy, platform policy takes precedence if it conflicts with the cloud-based Microsoft Edge management service policy.
 
-This mandatory policy affects machine scope Microsoft Edge management service policies.
+This mandatory policy affects machine scope cloud-based Microsoft Edge management policies.
+
+Machine policies apply to all edge browser instances regardless of the user who is logged in.
 
   #### Supported features:
 
@@ -9847,7 +9849,7 @@ This mandatory policy affects machine scope Microsoft Edge management service po
 
   ### EdgeManagementUserPolicyOverridesCloudMachinePolicy
 
-  #### Allow Microsoft Edge management service user policies to override policies set through an enrollment token.
+  #### Allow cloud-based Microsoft Edge management service user policies to override local user policies.
 
   
   
@@ -9857,11 +9859,11 @@ This mandatory policy affects machine scope Microsoft Edge management service po
 
   #### Description
 
-  If you enable this policy, Microsoft Edge management service user policies will override policies set through an enrollment token.
+  If you enable this policy, cloud-based Microsoft Edge management service user policies takes precedence if it conflicts with local user policy.
 
-If you disable or don't configure this policy, Microsoft Edge management service user policies will have the default priority.
+If you disable or don't configure this policy, Microsoft Edge management service user policies will take precedence.
 
-The policy can be combined with [EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy). If both policies are enabled, Microsoft Edge management service user policies will also take precedence over conflicting platform policies.
+The policy can be combined with [EdgeManagementPolicyOverridesPlatformPolicy](#edgemanagementpolicyoverridesplatformpolicy). If both policies are enabled, all cloud-based Microsoft Edge management service policies will take precedence over conflicting local service policies.
 
   #### Supported features:
 
@@ -9880,7 +9882,7 @@ The policy can be combined with [EdgeManagementPolicyOverridesPlatformPolicy](#e
   ##### Group Policy (ADMX) info
 
   - GP unique name: EdgeManagementUserPolicyOverridesCloudMachinePolicy
-  - GP name: Allow Microsoft Edge management service user policies to override policies set through an enrollment token.
+  - GP name: Allow cloud-based Microsoft Edge management service user policies to override local user policies.
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Manageability
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -40017,10 +40019,22 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   This policy allows an admin to specify settings for installed web apps. This policy maps a Web App ID to its specific setting. A default configuration can be set using the special ID *, which applies to all web apps without a custom configuration in this policy.
 
-The manifest_id field is the Manifest ID for the Web App. See https://developer.chrome.com/blog/pwa-manifest-id/ for instructions on how to determine the Manifest ID for an installed web app.
-The run_on_os_login field specifies if a web app can be run during OS login. If this field is set to blocked, the web app will not run during OS login and the user will not be able to enable this later. If this field is set to run_windowed, the web app will run during OS login and the user will not be able to disable this later. If this field is set to allowed, the user will be able to configure the web app to run at OS login. The default configuration only allows the allowed and blocked values.
-(Since version 120) The prevent_close_after_run_on_os_login field specifies if a web app can be prevented from closing in any way. For example, by the user, by task manager, or by web APIs. This behavior can only be enabled if run_on_os_login is set to run_windowed. If the app is already running, this setting will only take effect after the app is restarted. If this field isn't defined, users can can close the app.
-(Since version 118) The force_unregister_os_integration field specifies if all OS integration for a web app, i.e. shortcuts, file handlers, protocol handlers etc will be removed or not. If an app is already running, this property will come into effect after the app has restarted. This should be used with caution, since this can override any OS integration that is set automatically during the startup of the web applications system. Currently only works on Windows, Mac and Linux platforms.
+- The manifest_id field is the Manifest ID for the Web App.
+See https://developer.chrome.com/blog/pwa-manifest-id/
+for instructions on how to determine the Manifest ID for an installed web app.
+- The run_on_os_login field specifies if a web app can be run during OS login.
+If this field is set to blocked, the web app will not run during OS login and the user will not be able to enable this later.
+If this field is set to run_windowed, the web app will run during OS login and the user won't be able to disable this later.
+If this field is set to allowed, the user will be able to configure the web app to run at OS login.
+The default policy configuration only allows the allowed and blocked values.
+- (Starting with Microsoft Edge version 120) The prevent_close_after_run_on_os_login field specifies if a web app can be prevented from closing in any way.
+For example, by the user, by task manager, or by web APIs. This behavior can only be enabled if run_on_os_login is set to run_windowed.
+If the app is already running, this setting will only take effect after the app is restarted.
+If this field isn't defined, users can close the app.
+(This is currently not supported in Microsoft Edge.)
+- (Since version 118) The force_unregister_os_integration field specifies if all OS integration for a web app, that is, shortcuts, file handlers, protocol handlers and so on will be removed or not.
+If an app is already running, this property will come into effect after the app restarts.
+This should be used with caution, since it can override any OS integration that is set automatically during the startup of the web applications system. This currently only works on Windows, Mac and Linux platforms.
 
   #### Supported features:
 
