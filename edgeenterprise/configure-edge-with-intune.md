@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge policy settings for Windows using Microsoft Int
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 01/10/2024
+ms.date: 03/08/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -14,7 +14,7 @@ description: "Configure Microsoft Edge policy settings for Windows using Microso
 
 # Configure Microsoft Edge policy settings with Microsoft Intune
 
-This article explains how to configure Microsoft Edge policy settings for Windows 10 using Microsoft Intune.
+This article explains how to configure Microsoft Edge policy settings for Windows 10 or later using Microsoft Intune.
 
 You can configure Microsoft Edge policies and settings by adding a device configuration profile to Microsoft Intune. Using Intune to manage and enforce policies is equivalent to using Active Directory Group Policy or configuring local Group Policy Object (GPO) settings on user devices.
 
@@ -23,13 +23,13 @@ For more information about managing Microsoft Edge policies with Microsoft Intun
 > [!TIP]
 > For information on how to configure Microsoft Edge on macOS using Microsoft Intune, see [Configure for macOS](configure-microsoft-edge-on-mac.md).
 
-## Create a profile to manage settings in Microsoft Edge for Windows 10
+## Create a profile to manage settings in Microsoft Edge for Windows
 
-Using Administrative Templates in Microsoft Intune, you can manage Microsoft Edge group policies on your Windows 10 devices using the cloud. This section will help you create a template to configure Microsoft Edge-specific application settings. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows 10 devices in your organization.
+Using Administrative Templates in Microsoft Intune, you can manage Microsoft Edge group policies on your Windows 10 (or later) devices using the cloud. This section will help you create a template to configure Microsoft Edge-specific application settings. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows devices in your organization.
 
 ### Prerequisites
 
-- Windows 10 with the following minimum system requirements:
+- Windows 10 or later with the following minimum system requirements:
   - Windows 10, version 1909
   - Windows 10, version 1903 with [KB4512941](https://support.microsoft.com/kb/4512941) installed
   - Windows 10, version 1809 with [KB4512534](https://support.microsoft.com/kb/4512534) installed
