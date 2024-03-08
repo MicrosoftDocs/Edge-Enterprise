@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 03/07/2024
+ms.date: 03/08/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,6 +26,14 @@ All the Stable channel security updates are listed in [Release notes for Microso
 ## Version 122.0.2365.76 (Android): March 7, 2024
 
 Fixed various bugs and performance issues.
+
+### Feature update
+
+- Extensions in Edge for Android can be disabled by MAM policy.
+  - `com.microsoft.intune.mam.managedbrowser.disabledFeatures=extensions`
+
+  Note: The Extensions feature is still in flight. It can be turned on by the Android Extension flag from *Edge://flags*.
+
 
 ## Version 122.0.2365.56 (Android and iOS): February 26, 2024
 
