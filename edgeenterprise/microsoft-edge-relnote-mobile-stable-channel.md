@@ -34,6 +34,17 @@ Fixed various bugs and performance issues.
 
   Note: The Extensions feature is still in flight. It can be turned on by the Android Extension flag from *Edge://flags*.
 
+## Version 122.2365.78 (iOS): March 8, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- fixed a crash issue
+
+## Version 122.2365.71 (iOS): March 6, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 122.0.2365.56 (Android and iOS): February 26, 2024
 
