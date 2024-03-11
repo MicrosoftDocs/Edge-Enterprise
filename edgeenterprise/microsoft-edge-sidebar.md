@@ -68,7 +68,7 @@ Use the following steps as a guide to configuring this policy.
 <!-- ====================================================================== -->
 ## Customize sidebar
 
-You can use the [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) policy to let the user customize the sidebar. 
+You can use the [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) policy to let users customize the sidebar by adding or deleting an app.
 
 <!--- screenshot showing icon in sidebar ---->
 ![Select the plus sign in the sidebar to enable customize.](media/microsoft-edge-sidebar/select-customize-sidebar.png)
