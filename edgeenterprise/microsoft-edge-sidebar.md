@@ -54,26 +54,31 @@ Note that blocking the sidebar removes access to the new Discover app that appea
 ## Open website or app in the sidebar
 
  You can use the [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) policy to open a website or app in the sidebar. 
+
 <!--- screenshot showing icon in sidebar ---->
+![Select Open in sidebar in Settings and more.](media/microsoft-edge-sidebar/select-open-in-sidebar.png)
 
 Use the following steps as a guide to configuring this policy.
+
 1. ???
 2. ???
 
 <!--- group policy screenshot  ---->
-
+![Use policy editor to control website or app access.](media/microsoft-edge-sidebar/gpo-open-in-sidebar.png)
 <!-- ====================================================================== -->
 ## Customize sidebar
 
 You can use the [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) policy to let the user customize the sidebar. 
+
 <!--- screenshot showing icon in sidebar ---->
+![Select the plus sign in the sidebar to enable customize.](media/microsoft-edge-sidebar/select-customize-sidebar.png)
 
 Use the following steps as a guide to configuring this policy.
 
 1. ???
 2. ???
 <!--- group policy screenshot  ---->
-
+![Use policy editor to manage access to sidebar customize.](media/microsoft-edge-sidebar/gpo-customize-sidebar.png)
 ## Block specific sidebar apps
 
 You can use the [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) policy to control which sidebar apps are blocked.
