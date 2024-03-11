@@ -23,6 +23,17 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
+## Version 122.0.2365.76 (Android): March 7, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- Extensions in Edge for Android can be disabled by MAM policy.
+  - `com.microsoft.intune.mam.managedbrowser.disabledFeatures=extensions`
+
+  Note: The Extensions feature is still in flight. It can be turned on by the Android Extension flag from *Edge://flags*.
+
 ## Version 122.2365.78 (iOS): March 8, 2024
 
 Fixed various bugs and performance issues.
