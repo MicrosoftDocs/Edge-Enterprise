@@ -60,8 +60,8 @@ Note that blocking the sidebar removes access to the new Discover app that appea
 
 Use the following steps as a guide to configuring this policy.
 
-1. ???
-2. ???
+1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Enable open in sidebar**. 
+2. This policy is disabled by default. Select **Enabled** to let websites and apps open in the sidebar.
 
 <!--- group policy screenshot  ---->
 ![Use policy editor to control website or app access.](media/microsoft-edge-sidebar/gpo-open-in-sidebar.png)
@@ -75,8 +75,8 @@ You can use the [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policie
 
 Use the following steps as a guide to configuring this policy.
 
-1. ???
-2. ???
+1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Enable sidebar customize**. 
+2. This policy is disabled by default. Select **Enabled** to let users customize the sidebar.
 <!--- group policy screenshot  ---->
 ![Use policy editor to manage access to sidebar customize.](media/microsoft-edge-sidebar/gpo-customize-sidebar.png)
 
