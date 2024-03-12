@@ -3,7 +3,7 @@ title: "Manage the sidebar in Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
