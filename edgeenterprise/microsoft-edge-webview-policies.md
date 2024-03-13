@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/05/2024
+ms.date: 03/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -19,15 +19,26 @@ The latest version of Microsoft Edge WebView2 includes the following policies. Y
 
 For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The folllowing new policies are in this article update.
+
+|Policy Name|Caption|
+|-|-|
+|[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
+|[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
+|[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
 
 ## Available policies
 
 These tables list all of the group policies available in this release of Microsoft Edge WebView2. Use the links in the table to get more details about specific policies.
 
 - [Loader Override Settings](#loader-override-settings)
+- [Network settings](#network-settings)
 - [Additional](#additional)
 
 
@@ -39,12 +50,20 @@ These tables list all of the group policies available in this release of Microso
 |[ChannelSearchKind](#channelsearchkind)|Configure the WebView2 release channel search kind|
 |[ReleaseChannelPreference](#releasechannelpreference)|Set the release channel search order preference (deprecated)|
 |[ReleaseChannels](#releasechannels)|Configure the WebView2 release channels|
+### [*Network settings*](#network-settings-policies)
+
+|Policy Name|Caption|
+|-|-|
+|[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
+|[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
 |-|-|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Control communication with the Experimentation and Configuration Service|
 |[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
+|[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
 |[NewPDFReaderWebView2List](#newpdfreaderwebview2list)|Enable built-in PDF reader powered by Adobe Acrobat for WebView2|
 |[RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled)|Check RSA key usage for server certificates issued by local trust anchors|
 
@@ -275,6 +294,129 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannels = "Name: WebView2APISa
 
   [Back to top](#microsoft-edge-webview2---policies)
 
+  ## Network settings policies
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### AccessControlAllowMethodsInCORSPreflightSpecConformant
+
+  #### Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 123 or later
+
+  #### Description
+
+  This policy controls whether request methods are uppercased when matching with Access-Control-Allow-Methods response headers in CORS preflight.
+
+If you disable this policy, request methods are uppercased. This is the behavior on or before Microsoft Edge 108.
+
+If you enable or don't configure this policy, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.
+
+This would reject fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: FOO" response header,
+and would accept fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: Foo" response header.
+
+Note: request methods "post" and "put" are not affected, while "patch" is affected.
+
+This policy is intended to be temporary and will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AccessControlAllowMethodsInCORSPreflightSpecConformant
+  - GP name: Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: AccessControlAllowMethodsInCORSPreflightSpecConformant
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### BlockTruncatedCookies
+
+  #### Block truncated cookies
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 123 or later
+
+  #### Description
+
+  This policy provides a temporary opt-out for changes to how Microsoft Edge handles cookies set via JavaScript that contain certain control characters (NULL, carriage return, and line feed).
+Previously, the presence of any of these characters in a cookie string would cause it to be truncated but still set.
+Now, the presence of these characters will cause the whole cookie string to be ignored.
+
+If you enable or don't configure this policy, the new behavior is enabled.
+
+If you disable this policy, the old behavior is enabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BlockTruncatedCookies
+  - GP name: Block truncated cookies
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: BlockTruncatedCookies
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
   ## Additional policies
 
   [Back to top](#microsoft-edge-webview2---policies)
@@ -405,6 +547,120 @@ If you enable this policy then unload event handlers will continue to work by de
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
   - Path (Recommended): N/A
   - Value Name: ForcePermissionPolicyUnloadDefaultEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### HttpAllowlist
+
+  #### HTTP Allowlist
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 123 or later
+
+  #### Description
+
+  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that will not be upgraded to HTTPS and will not show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that do not support HTTPS, without needing to disable "AutomaticHttpsDefault".
+
+Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase.
+
+Blanket host wildcards (i.e., "*" or "[*]") are not allowed. Instead, HTTPS-First Mode and HTTPS Upgrades should be explicitly disabled via their specific policies.
+
+Note: This policy does not apply to HSTS upgrades.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: HttpAllowlist
+  - GP name: HTTP Allowlist
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2\HttpAllowlist
+  - Path (Recommended): N/A
+  - Value Name: list of REG_SZ
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\WebView2\HttpAllowlist = "testserver.example.com"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\HttpAllowlist = "[*.]example.org"
+
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### NewBaseUrlInheritanceBehaviorAllowed
+
+  #### Allows enabling the feature NewBaseUrlInheritanceBehavior
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 123 or later
+
+  #### Description
+
+  NewBaseUrlInheritanceBehavior is a Microsoft Edge feature that causes about:blank and about:srcdoc frames to consistently inherit their base url values via snapshots of their initiator's base url.
+
+If you disable this policy, it prevents users or Microsoft Edge variations from enabling NewBaseUrlInheritanceBehavior, in case compatibility issues are discovered.
+
+If you enable or don't configure this policy, it allows enabling NewBaseUrlInheritanceBehavior.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewBaseUrlInheritanceBehaviorAllowed
+  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: NewBaseUrlInheritanceBehaviorAllowed
   - Value Type: REG_DWORD
 
   ##### Example value:
