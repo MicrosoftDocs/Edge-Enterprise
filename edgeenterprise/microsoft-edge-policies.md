@@ -19580,7 +19580,7 @@ Policy options mapping:
 
 * Enable (1) = Enable browser sign-in
 
-* Force (2) = Force users to sign-in to use the browser
+* Force (2) = Force users to sign-in to use the browser (all profiles)
 
 Use the preceding information when configuring this policy.
 
