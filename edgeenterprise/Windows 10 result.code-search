@@ -1,0 +1,103 @@
+# Query: VIRTU
+# ContextLines: 1
+
+32 results - 9 files
+
+edgeenterprise\deploy-edge-hands-on-lab.md:
+  16  
+  17: The Microsoft Edge team partnered with the Windows and Office Deployment Lab to create an area for you to test Microsoft Edge in a virtual environment. This lab automates the configuration of a virtual M365 desktop/management environment that lets you provision Microsoft Edge in a Microsoft Endpoint Configuration Manager instance.
+  18 
+
+edgeenterprise\edge-for-virtualized-desktop-infrastructure.md:
+    1  <!---- version not relevant -->---
+    2: title: "Microsoft Edge for Virtual desktop infrastructure (VDI)"
+    3  ms.author: archandr
+
+   11  ms.collection: M365-modern-desktop
+   12: description: "Microsoft Edge for Virtual desktop infrastructure (VDI)."
+   13  ---
+   14  
+   15: # Microsoft Edge for Virtual desktop infrastructure (VDI)
+   16  
+
+   19  
+   20: This article describes the requirements and limitations for using Microsoft Edge in a virtual environment.
+   21  
+
+   23  
+   24: Virtual desktop infrastructure (VDI) is a desktop virtualization technology that hosts an operating system and applications on a centralized server in a data center. This technology enables a fully personalized desktop experience for users on a secure and compliant centralized source.
+   25  
+   26: Microsoft Edge can be used in a virtual environment in much the same way as it's used on a local device. A virtual desktop takes advantage of a secure and controlled server environment. Depending on the VDI solution you choose, it might also be possible to give your users seamless access to intranet applications and sites.
+   27  
+
+   33  
+   34: - Azure Virtual Desktop
+   35: - Citrix Virtual Apps and Desktops (formerly known as XenApp and XenDesktop)
+   36  
+
+   47  
+   48: Large and complex web applications and extensions will need more memory and processing capability, which must be considered when configuring your virtual environment.
+   49  
+
+   51  
+   52: Many VDI solutions allow access to persisted environments, where users are assigned a virtual environment that persists between sessions, and non-persisted environments, where users are assigned to one of several available machines, possibly a different machine each session, user data may or may not sync between sessions.
+   53  
+
+   63  
+   64: 2. Run the following command to install the MSI to the VDI virtual machine (VM):
+   65  
+
+   69  
+   70: For non-persisted machines, the best practice to disable automatic updates and update Microsoft Edge by updating the golden image to ensure that there are no version mismatches among the pool of virtual machines.
+   71  
+
+  131  - Use Microsoft Edge via a Remote Desktop to the Citrix Host instead of a seamless remote application.
+  132: - Use Azure Virtual Desktop remote apps instead, which has mitigations for this issue.
+  133  
+
+  136  - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+  137: - [Azure Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/)
+
+edgeenterprise\edge-ie-mode-faq.md:
+  32  
+  33: Yes, the [Microsoft Virtual Agent](https://go.microsoft.com/fwlink/?linkid=2194137) provides a scenario-based guided walkthrough for troubleshooting IE mode.
+  34  
+
+edgeenterprise\edge-learnmore-regex.md:
+  142  | \\%23c | in column 23 (NOT SUPPORTED) VIM |
+  143: | \\%23v | in virtual column 23 (NOT SUPPORTED) VIM |
+  144  
+
+edgeenterprise\microsoft-edge-policies.md:
+  17115  
+  17116: This policy is only available on Windows 10 devices with Virtual Secure Mode capability.
+  17117  
+
+edgeenterprise\microsoft-edge-relnote-archive-beta-channel.md:
+  200  
+  201: - **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet.  Once it's grown, a real mangrove is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edge-wallet-e-tree-enabled) policy. Note: This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+  202  
+
+edgeenterprise\microsoft-edge-relnote-stable-channel.md:
+  198  
+  199: - **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet. Once it's grown, a real tree is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) policy.
+  200  
+
+edgeenterprise\microsoft-edge-security-windows-defender-application-guard.md:
+  26  >Deprecation includes the following elements of Application Guard.
+  27: >- If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
+  28  >- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.
+
+  33  |:-----|
+  34: ⟪ 529 characters skipped ⟫f your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).<br>- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.<br>This affects the following browsers:<br>- [Application Guard Extension - Chrome](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj)<br>- [Application Guard Extension - Firefox](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/)<br>We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox. |
+  35  |     | ---->
+
+  46  
+  47: - If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
+  48  
+
+edgeenterprise\TOC.yml:
+  113       href: microsoft-edge-workspaces.md
+  114:    - name: Microsoft Edge for Virtual desktop infrastructure 
+  115:      href: edge-for-virtualized-desktop-infrastructure.md
+  116     - name: Configurations and experimentation
