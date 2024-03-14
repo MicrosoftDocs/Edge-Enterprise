@@ -25,12 +25,12 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
-<!----- need version and dates below ------>
-## Version 122.0.2365.8x:  March x, 2024
+
+## Version 122.0.2365.92:  March 14, 2024
 
 Fixed various bugs and performance issues.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-x-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-14-2024).
 
 ## Version 122.0.2365.80:  March 7, 2024
 
