@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/05/2024
+ms.date: 03/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,6 +25,24 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+
+## New policies
+
+The following new and obsoleted policies are in this article update.
+
+|Policy Name|Caption|
+|-|-|
+|[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
+|[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
+|[AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled)|Allow pages with Cache-Control: no-store header to enter back/forward cache|
+|[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
+|[FileOrDirectoryPickerWithoutGestureAllowedForOrigins](#fileordirectorypickerwithoutgestureallowedfororigins)|Allow file or directory picker APIs to be called without prior user gesture|
+|[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
+|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)|
+|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99 (obsolete)|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (obsolete)|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled (obsolete)|
 
 ## Available policies
 
@@ -258,6 +276,8 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
+|[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
+|[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
 |[CompressionDictionaryTransportEnabled](#compressiondictionarytransportenabled)|Enable compression dictionary transport support|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
 
@@ -316,7 +336,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to more-private network endpoints|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.|
 |[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Allow the listed sites to make requests to more-private network endpoints from in an insecure manner|
 ### [*Proxy server*](#proxy-server-policies)
 
@@ -387,6 +407,7 @@ These tables list all of the browser-related group policies available in this re
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
 |[AdsTransparencyEnabled](#adstransparencyenabled)|Configure if the ads transparency feature is enabled|
+|[AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled)|Allow pages with Cache-Control: no-store header to enter back/forward cache|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Enable deleting browser and download history|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Allow file selection dialogs|
 |[AllowGamesMenu](#allowgamesmenu)|Allow users to access the games menu (deprecated)|
@@ -396,6 +417,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
+|[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
 |[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
 |[AlternateErrorPagesEnabled](#alternateerrorpagesenabled)|Suggest similar pages when a webpage can't be found|
 |[AlwaysOpenPdfExternally](#alwaysopenpdfexternally)|Always open PDF files externally|
@@ -432,7 +454,7 @@ These tables list all of the browser-related group policies available in this re
 |[BrowsingDataLifetime](#browsingdatalifetime)|Browsing Data Lifetime Settings|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Use built-in DNS client|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)|
-|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS|
+|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)|
 |[CORSNonWildcardRequestHeadersSupport](#corsnonwildcardrequestheaderssupport)|CORS non-wildcard request header support enabled|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Disable Certificate Transparency enforcement for a list of subjectPublicKeyInfo hashes|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Disable Certificate Transparency enforcement for a list of legacy certificate authorities|
@@ -519,13 +541,14 @@ These tables list all of the browser-related group policies available in this re
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Allow users to configure Family safety and Kids Mode|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Enable favorites bar|
 |[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Fetch keepalive duration on shutdown|
+|[FileOrDirectoryPickerWithoutGestureAllowedForOrigins](#fileordirectorypickerwithoutgestureallowedfororigins)|Allow file or directory picker APIs to be called without prior user gesture|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Enforce Bing SafeSearch|
 |[ForceBuiltInPushMessagingClient](#forcebuiltinpushmessagingclient)|Forces Microsoft Edge to use its built-in WNS push client to connect to the Windows Push Notification Service.|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with "AutoSelectCertificateForUrls" (deprecated)|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Enable use of ephemeral profiles|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Enforce Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Use a default referrer policy of no-referrer-when-downgrade (obsolete)|
-|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99|
+|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99 (obsolete)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Force networking code to run in the browser process (obsolete)|
 |[ForcePermissionPolicyUnloadDefaultEnabled](#forcepermissionpolicyunloaddefaultenabled)|Controls whether unload event handlers can be disabled.|
 |[ForceSync](#forcesync)|Force synchronization of browser data and do not show the sync consent prompt|
@@ -540,6 +563,7 @@ These tables list all of the browser-related group policies available in this re
 |[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
 |[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Hide the one-time redirection dialog and the banner on Microsoft Edge|
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
+|[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
 |[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
@@ -610,6 +634,7 @@ These tables list all of the browser-related group policies available in this re
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Enable network prediction|
 |[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|Enable the network service sandbox|
+|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
 |[NewPDFReaderEnabled](#newpdfreaderenabled)|Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configure whether a user always has a default profile automatically signed in with their work or school account|
 |[OrganizationLogoOverlayOnAppIconEnabled](#organizationlogooverlayonappiconenabled)|Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile|
@@ -651,7 +676,7 @@ These tables list all of the browser-related group policies available in this re
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Extend Adobe Flash content setting to all content (obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Allow users to proceed from the HTTPS warning page|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Allow users to proceed from the HTTPS warning page for specific origins|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled|
+|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (obsolete)|
 |[SandboxExternalProtocolBlocked](#sandboxexternalprotocolblocked)|Allow Microsoft Edge to block navigations to external protocols in a sandboxed iframe|
 |[SaveCookiesOnExit](#savecookiesonexit)|Save cookies when Microsoft Edge closes|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Disable saving browser history|
@@ -739,7 +764,7 @@ These tables list all of the browser-related group policies available in this re
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restrict exposure of local IP address by WebRTC|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|Enable support for Windows OS routing table rules when making peer to peer connections via WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restrict the range of local UDP ports used by WebRTC|
-|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled|
+|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled (obsolete)|
 |[WebSQLInThirdPartyContextEnabled](#websqlinthirdpartycontextenabled)|Force WebSQL in third-party contexts to be re-enabled (obsolete)|
 |[WebSQLNonSecureContextEnabled](#websqlnonsecurecontextenabled)|Force WebSQL in non-secure contexts to be enabled (obsolete)|
 |[WebSelectEnabled](#webselectenabled)|Web Select Enabled (obsolete)|
@@ -10179,6 +10204,143 @@ If you set this policy to Disabled, Microsoft Edge can only use these hosts if t
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AccessControlAllowMethodsInCORSPreflightSpecConformant
+
+  #### Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  This policy controls whether request methods are uppercased when matching with Access-Control-Allow-Methods response headers in CORS preflight.
+
+If you disable this policy, request methods are uppercased. This is the behavior on or before Microsoft Edge 108.
+
+If you enable or don't configure this policy, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.
+
+This would reject fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: FOO" response header,
+and would accept fetch(url, {method: 'Foo'}) + "Access-Control-Allow-Methods: Foo" response header.
+
+Note: request methods "post" and "put" are not affected, while "patch" is affected.
+
+This policy is intended to be temporary and will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AccessControlAllowMethodsInCORSPreflightSpecConformant
+  - GP name: Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AccessControlAllowMethodsInCORSPreflightSpecConformant
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AccessControlAllowMethodsInCORSPreflightSpecConformant
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### BlockTruncatedCookies
+
+  #### Block truncated cookies
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  This policy provides a temporary opt-out for changes to how Microsoft Edge handles cookies set via JavaScript that contain certain control characters (NULL, carriage return, and line feed).
+Previously, the presence of any of these characters in a cookie string would cause it to be truncated but still set.
+Now, the presence of these characters will cause the whole cookie string to be ignored.
+
+If you enable or don't configure this policy, the new behavior is enabled.
+
+If you disable this policy, the old behavior is enabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: BlockTruncatedCookies
+  - GP name: Block truncated cookies
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: BlockTruncatedCookies
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: BlockTruncatedCookies
+  - Example value:
+``` xml
+<false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### CompressionDictionaryTransportEnabled
 
   #### Enable compression dictionary transport support
@@ -12924,7 +13086,7 @@ If you don't configure or disable this policy, print commands trigger the Micros
 
   ### InsecurePrivateNetworkRequestsAllowed
 
-  #### Specifies whether to allow websites to make requests to more-private network endpoints
+  #### Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.
 
   
   
@@ -12966,7 +13128,7 @@ When this policy enabled, websites are allowed to make requests to any network e
   ##### Group Policy (ADMX) info
 
   - GP unique name: InsecurePrivateNetworkRequestsAllowed
-  - GP name: Specifies whether to allow websites to make requests to more-private network endpoints
+  - GP name: Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Private Network Request Settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -16422,6 +16584,70 @@ If you disable this policy, Tracking Prevention will not adjust its behavior eve
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AllowBackForwardCacheForCacheControlNoStorePageEnabled
+
+  #### Allow pages with Cache-Control: no-store header to enter back/forward cache
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  This policy controls if a page with Cache-Control: no-store header can be stored in back/forward cache. The website setting this header may not expect the page to be restored from back/forward cache since some sensitive information could still be displayed after the restoration even if it is no longer accessible.
+
+If you enable or don't configure this policy, the page with Cache-Control: no-store header might be restored from back/forward cache unless the cache eviction is triggered (e.g. when there is HTTP-only cookie change to the site).
+
+If you disable this policy, the page with Cache-Control: no-store header will not be stored in back/forward cache.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowBackForwardCacheForCacheControlNoStorePageEnabled
+  - GP name: Allow pages with Cache-Control: no-store header to enter back/forward cache
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowBackForwardCacheForCacheControlNoStorePageEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AllowBackForwardCacheForCacheControlNoStorePageEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AllowDeletingBrowserHistory
 
   #### Enable deleting browser and download history
@@ -16997,6 +17223,68 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### AllowWebAuthnWithBrokenTlsCerts
+
+  #### Allow Web Authentication requests on sites with broken TLS certificates.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  If you enable this policy, Microsoft Edge will allow Web Authentication requests on websites that have TLS certificates with errors (i.e. websites considered not secure).
+
+If you disable or don't configure this policy, the default behavior of blocking such requests will apply.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowWebAuthnWithBrokenTlsCerts
+  - GP name: Allow Web Authentication requests on sites with broken TLS certificates.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowWebAuthnWithBrokenTlsCerts
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AllowWebAuthnWithBrokenTlsCerts
+  - Example value:
+``` xml
+<true/>
 ```
   
 
@@ -18408,6 +18696,10 @@ If you disable this policy, users can't have their membership info automatically
 
 This feature helps protect against man-in-the-middle attacks by enforcing more secure connections, but users might experience more connection errors.
 
+Microsoft Edge attempts to upgrade some navigations from HTTP to HTTPS, when possible. This policy can be used to disable this behavior. If set to "AlwaysUpgrade" or left unset, this feature will be enabled by default.
+
+The separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.
+
 Starting in Microsoft Edge 111, "UpgradePossibleDomains" is deprecated and is treated the same as "DisableAutomaticHttps". It won't work in Microsoft Edge version 114.
 
 Policy options mapping:
@@ -19552,17 +19844,19 @@ The policy doesn't work in Microsoft Edge version 107.
 
   ### CECPQ2Enabled
 
-  #### CECPQ2 post-quantum key-agreement enabled for TLS
+  #### CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 113.
   #### Supported versions:
 
-  - On Windows and macOS since 93 or later
+  - On Windows and macOS since 93, until 113
 
   #### Description
 
-  If this policy is not configured, or is set to enabled, then Microsoft Edge will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
+  This policy was removed in Microsoft Edge 114 and is ignored if set. It served to disable CECPQ2, but CECPQ2 has been disabled by default. A separate policy will be introduced to control the rollout of the replacement of CECPQ2. That replacement will be a combination of the standard key-agreement X25519 with NIST's chosen post-quantum KEM, called "Kyber".
+
+If this policy is not configured, or is set to enabled, then Microsoft Edge will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
 
 CECPQ2 results in larger TLS messages which, in very rare cases, can trigger bugs in some networking hardware. This policy can be set to False to disable CECPQ2 while networking issues are resolved.
 
@@ -19585,7 +19879,7 @@ This policy is a temporary measure and will be removed in future versions of Mic
   ##### Group Policy (ADMX) info
 
   - GP unique name: CECPQ2Enabled
-  - GP name: CECPQ2 post-quantum key-agreement enabled for TLS
+  - GP name: CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -25702,6 +25996,77 @@ If you disable or don't configure this policy, the default value of 0 seconds is
 
   [Back to top](#microsoft-edge---policies)
 
+  ### FileOrDirectoryPickerWithoutGestureAllowedForOrigins
+
+  #### Allow file or directory picker APIs to be called without prior user gesture
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  For security reasons, the showOpenFilePicker(), showSaveFilePicker() and showDirectoryPicker() web APIs require a prior user gesture ("transient activation") to be called or will otherwise fail.
+
+If you enable this policy, admins can specify origins on which these APIs can be called without prior user gesture.
+
+For detailed information on valid url patterns, please see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+
+If you disable or don't configure this policy, all origins will require a prior user gesture to call these APIs.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: FileOrDirectoryPickerWithoutGestureAllowedForOrigins
+  - GP name: Allow file or directory picker APIs to be called without prior user gesture
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\FileOrDirectoryPickerWithoutGestureAllowedForOrigins
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\FileOrDirectoryPickerWithoutGestureAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\FileOrDirectoryPickerWithoutGestureAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: FileOrDirectoryPickerWithoutGestureAllowedForOrigins
+  - Example value:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### ForceBingSafeSearch
 
   #### Enforce Bing SafeSearch
@@ -26101,17 +26466,19 @@ This enterprise policy is disabled by default.
 
   ### ForceMajorVersionToMinorPositionInUserAgent
 
-  #### Enable or disable freezing the User-Agent string at major version 99
+  #### Enable or disable freezing the User-Agent string at major version 99 (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 117.
   #### Supported versions:
 
-  - On Windows and macOS since 99 or later
+  - On Windows and macOS since 99, until 117
 
   #### Description
 
-  This policy controls whether the User-Agent string major
+  This policy was removed in Microsoft Edge 118 and is ignored if configured.
+
+This policy controls whether the User-Agent string major
 version should be frozen at 99.
 
 The User-Agent request header lets websites identify the application,
@@ -26161,7 +26528,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ForceMajorVersionToMinorPositionInUserAgent
-  - GP name: Enable or disable freezing the User-Agent string at major version 99
+  - GP name: Enable or disable freezing the User-Agent string at major version 99 (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -27125,6 +27492,77 @@ If you set this policy, do not set the [ClearBrowsingDataOnExit](#clearbrowsingd
   - Example value:
 ``` xml
 <false/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### HttpAllowlist
+
+  #### HTTP Allowlist
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  Setting the policy specifies a list of hostnames or hostname patterns (such as '[\*.]example.com') that will not be upgraded to HTTPS and will not show an error interstitial if HTTPS-First Mode is enabled. Organizations can use this policy to maintain access to servers that do not support HTTPS, without needing to disable [AutomaticHttpsDefault](#automatichttpsdefault).
+
+Supplied hostnames must be canonicalized: Any IDNs must be converted to their A-label format, and all ASCII letters must be lowercase.
+
+Blanket host wildcards (i.e., "*" or "[*]") are not allowed. Instead, HTTPS-First Mode and HTTPS Upgrades should be explicitly disabled via their specific policies.
+
+Note: This policy does not apply to HSTS upgrades.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: HttpAllowlist
+  - GP name: HTTP Allowlist
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\HttpAllowlist
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\HttpAllowlist\1 = "testserver.example.com"
+SOFTWARE\Policies\Microsoft\Edge\HttpAllowlist\2 = "[*.]example.org"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: HttpAllowlist
+  - Example value:
+``` xml
+<array>
+  <string>testserver.example.com</string>
+  <string>[*.]example.org</string>
+</array>
 ```
   
 
@@ -31870,6 +32308,70 @@ This policy is intended to give enterprises flexibility to disable the network s
 
   [Back to top](#microsoft-edge---policies)
 
+  ### NewBaseUrlInheritanceBehaviorAllowed
+
+  #### Allows enabling the feature NewBaseUrlInheritanceBehavior
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  NewBaseUrlInheritanceBehavior is a Microsoft Edge feature that causes about:blank and about:srcdoc frames to consistently inherit their base url values via snapshots of their initiator's base url.
+
+If you disable this policy, it prevents users or Microsoft Edge variations from enabling NewBaseUrlInheritanceBehavior, in case compatibility issues are discovered.
+
+If you enable or don't configure this policy, it allows enabling NewBaseUrlInheritanceBehavior.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewBaseUrlInheritanceBehaviorAllowed
+  - GP name: Allows enabling the feature NewBaseUrlInheritanceBehavior
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewBaseUrlInheritanceBehaviorAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewBaseUrlInheritanceBehaviorAllowed
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### NewPDFReaderEnabled
 
   #### Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled
@@ -34023,7 +34525,7 @@ This policy will be removed in Edge 119 and will be ignored if set.
   
   #### Supported versions:
 
-  - On Windows since 77 or later
+  - On Windows since 123 or later
 
   #### Description
 
@@ -34032,6 +34534,8 @@ This policy will be removed in Edge 119 and will be ignored if set.
 If you enable this policy, Microsoft Edge always performs revocation checking for server certificates that successfully validate and are signed by locally-installed CA certificates.
 
 If you don't configure or disable this policy, then Microsoft Edge uses the existing online revocation checking settings.
+
+On macOS, this policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is set to False.
 
   #### Supported features:
 
@@ -34594,17 +35098,18 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### SSLVersionMin
 
-  #### Minimum TLS version enabled
+  #### Minimum TLS version enabled (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
   #### Supported versions:
 
-  - On Windows and macOS since 77 or later
+  - On Windows and macOS since 77, until 97
 
   #### Description
 
-  Sets the minimum supported version of TLS.
+  This policy was removed in Microsoft Edge 98 and is ignored if configured.
+Sets the minimum supported version of TLS.
 
 If you set this policy to 'tls1.2', Microsoft Edge will show an error for TLS 1.0 and TLS 1.1 and the user will not be able to bypass the error.
 
@@ -34639,7 +35144,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: SSLVersionMin
-  - GP name: Minimum TLS version enabled
+  - GP name: Minimum TLS version enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -40362,8 +40867,7 @@ versions of the TLS/DTLS (DTLS 1.0, TLS 1.0 and TLS 1.1) protocols.
 If you disable or don't set this policy, these TLS/DTLS versions are
 disabled.
 
-This policy was removed in version M121 of
-Microsoft Edge.
+This policy was removed in Microsoft Edge 121 and is ignored if set.
 
   #### Supported features:
 
@@ -40689,17 +41193,19 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   ### WebSQLAccess
 
-  #### Force WebSQL to be enabled
+  #### Force WebSQL to be enabled (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 123.
   #### Supported versions:
 
-  - On Windows and macOS since 107 or later
+  - On Windows and macOS since 107, until 123
 
   #### Description
 
-  WebSQL is on by default as of Microsoft Edge version 101, but can be disabled via a Microsoft Edge flag.
+  This policy was removed in Microsoft Edge 124 and is ignored if set.
+
+WebSQL is on by default as of Microsoft Edge version 101, but can be disabled via a Microsoft Edge flag.
 If you enable this policy, WebSQL cannot be disabled.
 If you disable or don't configure this policy, WebSQL can be disabled.
 
@@ -40720,7 +41226,7 @@ If you disable or don't configure this policy, WebSQL can be disabled.
   ##### Group Policy (ADMX) info
 
   - GP unique name: WebSQLAccess
-  - GP name: Force WebSQL to be enabled
+  - GP name: Force WebSQL to be enabled (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -40829,7 +41335,9 @@ If you disable this policy or don't configure it, WebSQL in third-party contexts
 
   This policy doesn't work because WebSQL in non-secure contexts is on by default as of Microsoft Edge 105.
 If you enable this policy, WebSQL in non-secure contexts will be enabled.
-If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the broser.
+If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the browser.
+
+This policy was removed in Microsoft Edge 113 and is ignored if configured.
 
   #### Supported features:
 

@@ -1,9 +1,9 @@
 ---
 title: "Manage the sidebar in Microsoft Edge"
-ms.author: kylemiller
+ms.author: archandr
 author: dan-wesley
-manager: hariragu
-ms.date: 07/20/2023
+manager: likuba
+ms.date: 03/13/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -30,6 +30,8 @@ Admins have several policy options for deploying and managing the sidebar in the
 | Policy Name | Caption |
 |:-----|:-----|
 | [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) | Show Hubs Sidebar |
+| [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) | Enable open in sidebar   |
+| [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) | Enable sidebar customize   |
 | [ExtensionInstallBlockList](/deployedge/microsoft-edge-policies#extensioninstallblocklist) | Control which extensions can't be installed |
 | [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) |  Allow specific extensions to be installed |
 | [ExtensionInstallForceList](/deployedge/microsoft-edge-policies#extensioninstallforcelist) | Control which extensions are installed silently |
@@ -43,11 +45,40 @@ You can use [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebar
 
 1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Show Hubs Sidebar**.
 2. To block the sidebar and all sidebar apps, select **Disabled**.
-3. To allow the sidebar, select **Enabled**.
+3. To allow the sidebar, select **Enabled**. The new setting will take affect after you restart the browser.
 
 Note that blocking the sidebar removes access to the new Discover app that appears in the toolbar (Microsoft Edge 111 or later).
 
 ![Use the group policy editor to enable the sidebar](media/microsoft-edge-sidebar/show-hub-sidebar.png)
+<!-- ====================================================================== -->
+## Open website or app in the sidebar
+
+ You can use the [EdgeOpenInSidebarEnabled](/deployedge/microsoft-edge-policies#edgeopeninsidebarenabled) policy to open a website or app in the sidebar. If this policy is enabled a user can select **Open in sidebar** in **Settings and more**.
+
+<!--- screenshot showing icon in sidebar ---->
+![Select Open in sidebar in Settings and more.](media/microsoft-edge-sidebar/select-open-in-sidebar.png)
+
+Use the following steps as a guide to configuring this policy.
+
+1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Enable open in sidebar**.
+2. This policy is disabled by default. Select **Enabled** to let websites and apps open in the sidebar. The new setting will take affect after you restart the browser.
+
+<!--- group policy screenshot  ---->
+![Use policy editor to control website or app access.](media/microsoft-edge-sidebar/gpo-open-in-sidebar.png)
+<!-- ====================================================================== -->
+## Customize sidebar
+
+You can use the [EdgeSidebarCustomizeEnabled](/deployedge/microsoft-edge-policies#edgesidebarcustomizeenabled) policy to let users customize the sidebar by adding or deleting an app. If this policy is enabled, a user can mouseover the plus (**+**) sign, and then click **Customize**.
+
+<!--- screenshot showing icon in sidebar ---->
+![Select the plus sign in the sidebar to enable customize.](media/microsoft-edge-sidebar/select-customize-sidebar.png)
+
+Use the following steps as a guide to configuring this policy.
+
+1. Open the group policy editor and go to **Administrative Templates** > **Microsoft Edge** and then select **Enable sidebar customize**.
+2. This policy is disabled by default. Select **Enabled** to let users customize the sidebar. The new setting will take affect after you restart the browser.
+<!--- group policy screenshot  ---->
+![Use policy editor to manage access to sidebar customize.](media/microsoft-edge-sidebar/gpo-customize-sidebar.png)
 
 ## Block specific sidebar apps
 
