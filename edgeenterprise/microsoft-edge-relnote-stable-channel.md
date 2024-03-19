@@ -47,6 +47,23 @@ Fixed various bugs and performance issues.
 
 #### New policies
 
+- [AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant) - Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+- [AdditionalSearchBoxEnabled](#additionalsearchboxenabled) - Enable additional search box in browser
+- [AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
+- [AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
+-[BlockTruncatedCookies](#blocktruncatedcookies) - Block truncated cookies
+- [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [FileOrDirectoryPickerWithoutGestureAllowedForOrigins](#fileordirectorypickerwithoutgestureallowedfororigins) - Allow file or directory picker APIs to be called without prior user gesture
+- [HttpAllowlist](#httpallowlist) - HTTP Allowlist
+- [NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed) - Allows enabling the feature NewBaseUrlInheritanceBehavior 
+- [RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors) - Specify if online OCSP/CRL checks are required for local trust anchors
+- [RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+- [WindowManagementAllowedForUrls](#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+
 <!-- ======================================================== -->
 
 ## Version 122.0.2365.92:  March 14, 2024
