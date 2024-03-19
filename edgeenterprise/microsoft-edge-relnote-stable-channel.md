@@ -51,7 +51,7 @@ Fixed various bugs and performance issues.
 - [AdditionalSearchBoxEnabled](#additionalsearchboxenabled) - Enable additional search box in browser
 - [AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
 - [AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
--[BlockTruncatedCookies](#blocktruncatedcookies) - Block truncated cookies
+- [BlockTruncatedCookies](#blocktruncatedcookies) - Block truncated cookies
 - [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) - Default Window Management permission setting
 - [ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist) - Blocklist for extension install types
 - [ExtensionManifestV2Availability](#extensionmanifestv2availability) - Control Manifest v2 extension availability
