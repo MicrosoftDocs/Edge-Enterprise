@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/29/2024
+ms.date: 03/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -81,7 +81,7 @@ Now you can customize your organization's branding onto Edge for Business. This 
 
 ![Company branding for Contoso](media/microsoft-edge-for-business/efb-company-branding-new.png)
 
-### Customize Branding Assets
+### Customize Branding Assets (Public Preview)
 
 Through Microsoft Edge management service, admins can have an enhanced experience to control, preview, and customize how Edge for Business shows the following organization brand assets:
 
@@ -95,6 +95,9 @@ Today, the feature supports configuring the following UI options:
 - Organization name to the profile pill
 - Organization name, logo, and color to the profile flyout
 - Organization icon to overlay the Edge for Business taskbar icon
+
+> [!NOTE]
+> This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
 
 > [!TIP]
 > Square and horizontal logos will provide the optimal visual branding experience.

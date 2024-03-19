@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 02/20/2024
+ms.date: 03/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -289,7 +289,22 @@ The settings in this section let you configure Microsoft Edge settings that invo
 2. Select **Save changes.** The settings in this section allow you to configure Microsoft Edge settings that involve the use of AI.
 
 <!-- =================================================== -->
+#### Customize organization branding
 
+To customize the browser with your organization's branding assets, go to the **Organization branding** tab. You can use the default Edge for Business branding elements, or use custom branding assets. A preview of how the browser elements will look on a user's account is shown on the page.
+
+If you don't have any organization branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID will be imported and displayed in the preview. These changes won't take effect until you choose **Save changes**.
+
+From **Use custom branding**, you can customize each of the following browser elements with the brand assets you choose:
+
+- Organization name: This name will be displayed in the profile pill.
+- Accent color: This color will appear in the profile flyout header.
+- Organization logo: This logo will appear in the profile flyout header. You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150KB.
+- Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. You must upload a SVG file with a maximum size of 150KB (we recommended choosing a square logo).
+
+After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
+
+<!-- =================================================== -->
 #### Manage automatic profile switching settings
 
 To manage profile switching behaviors for a profile, navigate to the **automatic profile switching** tab. You can choose which profile you want specific hostnames to open in for your users. 
