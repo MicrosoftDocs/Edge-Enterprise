@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/11/2024
+ms.date: 03/19/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -28,21 +28,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following new and obsoleted policies are in this article update.
+The following table lists the new policies that are in this article update.
 
-|Policy Name|Caption|
-|-|-|
-|[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
-|[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
-|[AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled)|Allow pages with Cache-Control: no-store header to enter back/forward cache|
-|[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
-|[FileOrDirectoryPickerWithoutGestureAllowedForOrigins](#fileordirectorypickerwithoutgestureallowedfororigins)|Allow file or directory picker APIs to be called without prior user gesture|
-|[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
-|[NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed)|Allows enabling the feature NewBaseUrlInheritanceBehavior|
-|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)|
-|[ForceMajorVersionToMinorPositionInUserAgent](#forcemajorversiontominorpositioninuseragent)|Enable or disable freezing the User-Agent string at major version 99 (obsolete)|
-|[SSLVersionMin](#sslversionmin)|Minimum TLS version enabled (obsolete)|
-|[WebSQLAccess](#websqlaccess)|Force WebSQL to be enabled (obsolete)|
+| Policy Name | Caption |
+|:-----|:-----|
+|[AdditionalSearchBoxEnabled](#additionalsearchboxenabled)|Enable additional search box in browser|
+|[MutationEventsEnabled](#mutationeventsenabled)|Enable deprecated/removed Mutation Events|
 
 ## Available policies
 
@@ -403,6 +394,7 @@ These tables list all of the browser-related group policies available in this re
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Single sign-on for work or school sites using this profile enabled|
 |[AIGenThemesEnabled](#aigenthemesenabled)|Enables DALL-E themes generation|
 |[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Let screen reader users get image descriptions from Microsoft|
+|[AdditionalSearchBoxEnabled](#additionalsearchboxenabled)|Enable additional search box in browser|
 |[AddressBarEditingEnabled](#addressbareditingenabled)|Configure address bar editing|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Enable Microsoft Search in Bing suggestions in the address bar|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Ads setting for sites with intrusive ads|
@@ -629,6 +621,7 @@ These tables list all of the browser-related group policies available in this re
 |[MicrosoftOfficeMenuEnabled](#microsoftofficemenuenabled)|Allow users to access the Microsoft Office menu (deprecated)|
 |[MicrosoftRootStoreEnabled](#microsoftrootstoreenabled)|Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)|
 |[MouseGestureEnabled](#mousegestureenabled)|Mouse Gesture Enabled|
+|[MutationEventsEnabled](#mutationeventsenabled)|Enable deprecated/removed Mutation Events|
 |[NativeHostsExecutablesLaunchDirectly](#nativehostsexecutableslaunchdirectly)|Force Windows executable Native Messaging hosts to launch directly|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Enable Native Window Occlusion (deprecated)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Set a timeout for delay of tab navigation for the Enterprise Mode Site List|
@@ -16316,6 +16309,71 @@ No cookies or other user data is sent to Microsoft, and Microsoft doesn't save o
 
   [Back to top](#microsoft-edge---policies)
 
+  ### AdditionalSearchBoxEnabled
+
+  #### Enable additional search box in browser
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 123 or later
+
+  #### Description
+
+  A search box is an additional text input field located next to the address bar in a web browser. It allows users to perform web searches directly from the browser interface.
+
+If you enable or don't configure this policy, the search box will be visible and available for use.
+Users can toggle the search box in Edge Settings page edge://settings/appearance#SearchBoxInToolbar.
+
+If you disable this policy, search box will not be visible, and users will have to use the address bar or navigate to a search engine to perform web searches.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AdditionalSearchBoxEnabled
+  - GP name: Enable additional search box in browser
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AdditionalSearchBoxEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AdditionalSearchBoxEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### AddressBarEditingEnabled
 
   #### Configure address bar editing
@@ -31884,7 +31942,13 @@ When this policy is not set, the Microsoft Root Store or system provided roots m
 This policy is planned to be removed in Microsoft Edge version
 121 for Android devices when support for using the platform supplied roots is planned to be removed.
 
-This policy was removed in Microsoft Edge version 115 for Microsoft&reg; Windows&reg; and macOS, when support for using the platform supplied certificate verifier and roots was removed.
+This policy was removed in Microsoft Edge version 115 for
+Microsoft Windows and macOS,
+Microsoft Edge version 120 for
+Linux, and
+Microsoft Edge version 121 for
+Android
+when support for using the platform supplied certificate verifier and roots was removed.
 
   #### Supported features:
 
@@ -31987,6 +32051,72 @@ If you disable this policy, you can't use the Mouse Gesture feature in Microsoft
 0x00000001
 ```
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### MutationEventsEnabled
+
+  #### Enable deprecated/removed Mutation Events
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 124 or later
+
+  #### Description
+
+  This policy provides a temporary opt-in back to a deprecated and removed set of platform events named Mutation Events.
+
+If you enable this policy, mutation events will continue to be fired, even if they've been disabled by default for normal web users.
+
+If you disable or don't configure this policy, these events will not be fired.
+
+This policy is a temporary workaround, and enterprises should still work to remove their dependencies on these mutation events.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MutationEventsEnabled
+  - GP name: Enable deprecated/removed Mutation Events
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MutationEventsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: MutationEventsEnabled
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
