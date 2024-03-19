@@ -47,22 +47,22 @@ Fixed various bugs and performance issues.
 
 #### New policies
 
-- [AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant) - Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
-- [AdditionalSearchBoxEnabled](#additionalsearchboxenabled) - Enable additional search box in browser
-- [AllowBackForwardCacheForCacheControlNoStorePageEnabled](#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
-- [AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
-- [BlockTruncatedCookies](#blocktruncatedcookies) - Block truncated cookies
-- [DefaultWindowManagementSetting](#defaultwindowmanagementsetting) - Default Window Management permission setting
-- [ExtensionInstallTypeBlocklist](#extensioninstalltypeblocklist) - Blocklist for extension install types
-- [ExtensionManifestV2Availability](#extensionmanifestv2availability) - Control Manifest v2 extension availability
-- [FileOrDirectoryPickerWithoutGestureAllowedForOrigins](#fileordirectorypickerwithoutgestureallowedfororigins) - Allow file or directory picker APIs to be called without prior user gesture
-- [HttpAllowlist](#httpallowlist) - HTTP Allowlist
-- [NewBaseUrlInheritanceBehaviorAllowed](#newbaseurlinheritancebehaviorallowed) - Allows enabling the feature NewBaseUrlInheritanceBehavior 
-- [RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors) - Specify if online OCSP/CRL checks are required for local trust anchors
-- [RSAKeyUsageForLocalAnchorsEnabled](#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
-- [ScreenCaptureWithoutGestureAllowedForOrigins](#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
-- [WindowManagementAllowedForUrls](#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
-- [WindowManagementBlockedForUrls](#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+- [AccessControlAllowMethodsInCORSPreflightSpecConformant](/deployedge/microsoft-edge-policies#accesscontrolallowmethodsincorspreflightspecconformant) - Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+- [AdditionalSearchBoxEnabled](/deployedge/microsoft-edge-policies#additionalsearchboxenabled) - Enable additional search box in browser
+- [AllowBackForwardCacheForCacheControlNoStorePageEnabled](/deployedge/microsoft-edge-policies#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
+- [AllowWebAuthnWithBrokenTlsCerts](/deployedge/microsoft-edge-policies#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
+- [BlockTruncatedCookies](/deployedge/microsoft-edge-policies#blocktruncatedcookies) - Block truncated cookies
+- [DefaultWindowManagementSetting](/deployedge/microsoft-edge-policies#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [ExtensionInstallTypeBlocklist](/deployedge/microsoft-edge-policies#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](/deployedge/microsoft-edge-policies#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [FileOrDirectoryPickerWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#fileordirectorypickerwithoutgestureallowedfororigins) - Allow file or directory picker APIs to be called without prior user gesture
+- [HttpAllowlist](/deployedge/microsoft-edge-policies#httpallowlist) - HTTP Allowlist
+- [NewBaseUrlInheritanceBehaviorAllowed](/deployedge/microsoft-edge-policies#newbaseurlinheritancebehaviorallowed) - Allows enabling the feature NewBaseUrlInheritanceBehavior 
+- [RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors) - Specify if online OCSP/CRL checks are required for local trust anchors
+- [RSAKeyUsageForLocalAnchorsEnabled](/deployedge/microsoft-edge-policies#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+- [WindowManagementAllowedForUrls](/deployedge/microsoft-edge-policies#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](/deployedge/microsoft-edge-policies#windowmanagementblockedforurls) - Block Window Management permission on specified sites
 
 <!-- ======================================================== -->
 
