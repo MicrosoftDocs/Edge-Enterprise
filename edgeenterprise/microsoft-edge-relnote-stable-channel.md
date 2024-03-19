@@ -43,6 +43,12 @@ Fixed various bugs and performance issues.
 
   **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
 
+### Policy updates
+
+#### New policies
+
+<!-- ======================================================== -->
+
 ## Version 122.0.2365.92:  March 14, 2024
 
 Fixed various bugs and performance issues.
@@ -76,7 +82,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 ## Version 122.0.2365.59: February 27, 2024
 
 Fixed various bugs and performance issues.
-
+<!-- ======================================================== -->
 ## Version 122.0.2365.52: February 23, 2024
 
 Fixed various bugs and performance issues.
