@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 03/07/2024
+ms.date: 03/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
