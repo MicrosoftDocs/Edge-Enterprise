@@ -30,6 +30,14 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 123.0.2380.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2380-1-is-live/m-p/4050755)
+- [Dev Channel update to 123.0.2400.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2400-1-is-live/m-p/4058807)
+- [Dev Channel update to 123.0.2420.6 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2420-6-is-live/m-p/4069388)
+
 ### Feature updates
 
 - **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
@@ -41,7 +49,9 @@ Fixed various bugs and performance issues.
   - Organization logo
   - Edge for Business taskbar icon overlay
 
-  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
 
 ### Policy updates
 
