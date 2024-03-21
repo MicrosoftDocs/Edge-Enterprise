@@ -28,7 +28,7 @@ These release notes provide information about new features and non-security upda
 
 ## Version 122.0.2365.106: March 21, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Extended Stable channel.
 
 ## Version 122.0.2365.92:  March 14, 2024
 
