@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/19/2024
+ms.date: 03/21/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -75,6 +75,10 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [WindowManagementBlockedForUrls](/deployedge/microsoft-edge-policies#windowmanagementblockedforurls) - Block Window Management permission on specified sites
 
 <!-- ======================================================== -->
+## Version 122.0.2365.106: March 21, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
 
 ## Version 122.0.2365.92:  March 14, 2024
 
