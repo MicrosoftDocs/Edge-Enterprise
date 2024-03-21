@@ -30,20 +30,20 @@ Fixed various bugs and performance issues. It also includes new features and pol
 - [iOS] Update MS Tunnel MAM SDK to 1.0.12
 - [iOS] Update MS Intune MAM SDK to 19.1.0
 - [Android] Remove "https" scheme check for managed bookmarks to support URLs such as `edge://…`
-- [iOS] "Save to OneDrive" option in Edge now has upload progress indicator
+- [iOS] "Save to OneDrive" option in Microsoft Edge now has an upload progress indicator
 
 ### Bug fixes
 
-- [iOS] URL Block policy also show "Site blocked" alert for http POST requests
+- [iOS] URL Block policy also shows "Site blocked" alert for http POST requests
 - [Android] Fix a bug that NLTM SSO policy doesn't work in some conditions
 - [Android] Fix issues for brand logo policy
 - [iOS] Fix issues for new File upload block policy and idle timer policy
 
 ### New features
 
-- [After Stable release] The Shared links feature will replace "Collections" in the Edge overflow menu.
+- [After Stable release] The Shared links feature replaces "Collections" in the Microsoft Edge overflow menu
 - [iOS][After Stable release] Shared device mode public preview
-- Edge Copilot toolbar is in the flight. It helps user summarize long web pages
+- Microsoft Edge Copilot toolbar is in the flight. It helps user summarize long web pages
 
 ### Policy updates
 
@@ -57,14 +57,14 @@ Fixed various bugs and performance issues. It also includes new features and pol
 - [iOS][After Stable release] Introduce a policy to control the behavior of opening Intune unmanaged URL in work profile. Current behavior is "stay" and open the unmanaged URL in work profile. This policy allows admin to change behavior to switch to personal context and open the unmanaged URL.
 
   `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch`
-  - 0 (Default) -  The URLs will be opened in normal tabs with work profile
-  - 1 -  Edge will respect Intune's protection policy, the behavior is based on the configuration of Receive data from other apps in Intune protection policy.
+  - 0 (Default) -  The URLs are opened in normal tabs with work profile
+  - 1 -  Edge respects Intune's protection policy, the behavior is based on the configuration of Receive data from other apps in Intune protection policy.
     - All apps  -  fall back to behavior for policy value 0
-    - None or Policy manage apps
-      - If personal profile is signed-in, the URLs will be opened in normal tabs with personal profile
-      - If personal profile is not signed-in, the URLs will be opened in InPrivate
-      - If InPrivate is disabled, the URLs will not be opened
-  - 2 (Android only) - Edge will check **URLAllowlist** or **URLBlocklist**. Edge will open allowed URLs in normal tabs with work profile. As for URLs in block list, they may or may not be opened in InPrivate or normal tabs with personal profile, it depends on how **openInPrivateIfBlocked** is configured.
+    - None or Policy managed apps
+      - If personal profile is signed-in, the URLs are opened in normal tabs with personal profile
+      - If personal profile isn't signed-in, the URLs are opened in InPrivate
+      - If InPrivate is disabled, the URLs won't be opened
+  - 2 (Android only) - Microsoft Edge checks **URLAllowlist** or **URLBlocklist**. Microsoft Edge opens allowed URLs in normal tabs with work profile. As for URLs in blocklist, they might or might not be opened in InPrivate or normal tabs with personal profile, it depends on how **openInPrivateIfBlocked** is configured.
 
 ## Version 123.0.2420.48 (Android and iOS): March 19, 2024
 
