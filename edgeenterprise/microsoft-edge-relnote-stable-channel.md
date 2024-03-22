@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/21/2024
+ms.date: 03/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,9 +26,61 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 123.0.2420.53:  March 22, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-22-2024).
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 123.0.2380.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2380-1-is-live/m-p/4050755)
+- [Dev Channel update to 123.0.2400.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2400-1-is-live/m-p/4058807)
+- [Dev Channel update to 123.0.2420.6 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2420-6-is-live/m-p/4069388)
+
+### Feature updates
+
+- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+
+  This Microsoft Edge management service feature will give admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+
+  - Organization name
+  - Accent color
+  - Organization logo
+  - Edge for Business taskbar icon overlay
+
+  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+
+### Policy updates
+
+#### New policies
+
+- [AccessControlAllowMethodsInCORSPreflightSpecConformant](/deployedge/microsoft-edge-policies#accesscontrolallowmethodsincorspreflightspecconformant) - Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+- [AdditionalSearchBoxEnabled](/deployedge/microsoft-edge-policies#additionalsearchboxenabled) - Enable additional search box in browser
+- [AllowBackForwardCacheForCacheControlNoStorePageEnabled](/deployedge/microsoft-edge-policies#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
+- [AllowWebAuthnWithBrokenTlsCerts](/deployedge/microsoft-edge-policies#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
+- [BlockTruncatedCookies](/deployedge/microsoft-edge-policies#blocktruncatedcookies) - Block truncated cookies
+- [DefaultWindowManagementSetting](/deployedge/microsoft-edge-policies#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [ExtensionInstallTypeBlocklist](/deployedge/microsoft-edge-policies#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](/deployedge/microsoft-edge-policies#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [FileOrDirectoryPickerWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#fileordirectorypickerwithoutgestureallowedfororigins) - Allow file or directory picker APIs to be called without prior user gesture
+- [HttpAllowlist](/deployedge/microsoft-edge-policies#httpallowlist) - HTTP Allowlist
+- [NewBaseUrlInheritanceBehaviorAllowed](/deployedge/microsoft-edge-policies#newbaseurlinheritancebehaviorallowed) - Allows enabling the feature NewBaseUrlInheritanceBehavior 
+- [RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors) - Specify if online OCSP/CRL checks are required for local trust anchors
+- [RSAKeyUsageForLocalAnchorsEnabled](/deployedge/microsoft-edge-policies#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+- [WindowManagementAllowedForUrls](/deployedge/microsoft-edge-policies#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](/deployedge/microsoft-edge-policies#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+
+<!-- ======================================================== -->
 ## Version 122.0.2365.106: March 21, 2024
 
 Fixed various bugs and performance issues for Extended Stable channel.
+
 
 ## Version 122.0.2365.92:  March 14, 2024
 
@@ -63,7 +115,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 ## Version 122.0.2365.59: February 27, 2024
 
 Fixed various bugs and performance issues.
-
+<!-- ======================================================== -->
 ## Version 122.0.2365.52: February 23, 2024
 
 Fixed various bugs and performance issues.
@@ -228,88 +280,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - [SendMouseEventsDisabledFormControlsEnabled](/deployedge/microsoft-edge-policies#sendmouseeventsdisabledformcontrolsenabled) - Control the new behavior for event dispatching on disabled form controls
 - [WebRtcAllowLegacyTLSProtocols](/deployedge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - Allow legacy TLS/DTLS downgrade in WebRTC (obsoleted)
 
-## Version 120.0.2210.160: January 25, 2024
-
-Fixed various bugs and performance issues for Extended Stable.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
-<!-- ================== last note ===================== -->
-## Version 120.0.2210.144: January 17, 2024
-
-Fixed various bugs and performance issues.
-
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2024-0519](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0519), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-17-2024).
-
-## Version 120.0.2210.133: January 11, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-11-2024).
-
-## Version 120.0.2210.121: January 5, 2024
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-5-2024).
-
-## Version 120.0.2210.91: December 21, 2023
-
-Fixed various bugs and performance issues.
-
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2023-7024](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-7024), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-21-2023).
-
-## Version 120.0.2210.89: December 20, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Microsoft Edge Workspaces improvements for offline functionality.** Any workspace previously opened on a device is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
-
-## Version 120.0.2210.77: December 14, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2023).
-
-## Version 120.0.2210.61: December 7, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-7-2023).
-
-### Feature updates
-
-- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. Note: If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software publisher directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
-
-- **Updated SmartActionsBlockList policy.** The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings. Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
-
-### Policy updates
-
-#### New policies
-
-- [AutoDiscardSleepingTabsEnabled](/deployedge/microsoft-edge-policies#autodiscardsleepingtabsenabled) - Configure auto discard sleeping tabs
-- [AutomaticProfileSwitchingSiteList](/deployedge/microsoft-edge-policies#automaticprofileswitchingsitelist) - Configure the automatic profile switching site list
-- [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
-- [PostQuantumKeyAgreementEnabled](/deployedge/microsoft-edge-policies#postquantumkeyagreementenabled) - Enable post-quantum key agreement for TLS
-- [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
-- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled) - Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
-
-## Version 118.0.2088.122: November 29, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-> [!IMPORTANT]
-> This update to Extended Stable channel contains a fix for [CVE-2023-6345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-6345), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-29-2023).
-
+<!-- Version 120.0.2210.160: January 25, 2024 to Version 118.0.2088.122: November 29, 2023 -->
 <!-- Version 119.0.2151.97: November 29, 2023 to Version 118.0.2088.57: October 18, 2023 -->
 <!-- from Version 118.0.2088.46: October 13, 2023 to Version 109.0.1518.140: September 15, 2023 -->
 <!-- from Version 117.0.2045.31: September 15, 2023 to Version 116.0.1938.62: August 25, 2023 -->
