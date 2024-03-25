@@ -16,6 +16,7 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
+
 <!-- Version 120.0.2210.160: January 25, 2024 to Version 118.0.2088.122: November 29, 2023 -->
 ## Version 120.0.2210.160: January 25, 2024
 
