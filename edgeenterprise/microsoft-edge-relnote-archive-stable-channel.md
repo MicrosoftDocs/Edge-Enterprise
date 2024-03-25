@@ -144,6 +144,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - Microsoft Edge management service policy overrides platform policy
 - [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) - Allow Microsoft Edge management service user policies to override policies set through an enrollment token
 
+<!--    START CUT           ->
 ## Version 119.0.2151.44: November 2, 2023
 
 Fixed various bugs and performance issues.
@@ -206,7 +207,7 @@ Fixed various bugs and performance issues.
 - **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
 
 <!-- Version 119.0.2151.44: November 2, 2023 to Version 118.0.2088.57: October 18, 2023 --> 
-
+<!--->
 ## Version 119.0.2151.44: November 2, 2023
 
 Fixed various bugs and performance issues.
@@ -266,7 +267,8 @@ Fixed various bugs and performance issues.
 ### Feature updates
 
 - **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
-
+----->
+<!----END CUT--------->
 <!-- from Version 118.0.2088.46: October 13, 2023 to Version 109.0.1518.140: September 15, 2023 -->
 
 ## Version 118.0.2088.46: October 13, 2023
