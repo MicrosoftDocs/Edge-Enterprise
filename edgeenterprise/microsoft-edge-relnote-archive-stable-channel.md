@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/22/2024
+ms.date: 03/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -142,9 +142,9 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - Microsoft Edge management service policy overrides platform policy
 - [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) - Allow Microsoft Edge management service user policies to override policies set through an enrollment token
-
-## Version 119.0.2151.44: November 2, 2023
-
+<!--
+## Version 119.0.2151.44: November 2, 2023 X
+-->
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-2-2023).
@@ -168,13 +168,13 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
 - [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
 - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
-
-## Version 118.0.2088.88: November 2, 2023
-
+<!--
+## Version 118.0.2088.88: November 2, 2023 X  
+--->
 Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 118.0.2088.76: October 27, 2023
-
+<!--
+## Version 118.0.2088.76: October 27, 2023 X
+-->
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-27-2023).
@@ -190,22 +190,23 @@ Fixed various bugs and performance issues.
   Designer is a new AI system from Microsoft that generates visual, customizable designs based on your text description and images. This release will be available in English for the following country/regions: Australia, India, New Zealand, South Africa, and the United States.
 
   Administrators can manage sidebar apps including Designer (Preview) icon by using the policies described in [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar). The ID for Designer (Preview) app is 2cb2db96-3bd0-403e-abe2-9269b3761041.
-
-## Version 118.0.2088.61: October 20, 2023
-
+<!--
+## Version 118.0.2088.61: October 20, 2023 X
+--->
 Fixed various bugs and performance issues.
-
-## Version 118.0.2088.57: October 18, 2023
-
+<!--
+## Version 118.0.2088.57: October 18, 2023 X
+-->
 Fixed various bugs and performance issues.
 
 ### Feature updates
 
 - **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
 
-<!-- Version 119.0.2151.44: November 2, 2023 to Version 118.0.2088.57: October 18, 2023 -->
-## Version 119.0.2151.44: November 2, 2023
-
+<!-- Version 119.0.2151.44: November 2, 2023 to Version 118.0.2088.57: October 18, 2023 --> 
+<!--
+## Version 119.0.2151.44: November 2, 2023 X
+--->
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-2-2023).
@@ -229,9 +230,9 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 - [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
 - [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
 - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
-
-## Version 118.0.2088.88: November 2, 2023
-
+<!--
+## Version 118.0.2088.88: November 2, 2023 X
+-->
 Fixed various bugs and performance issues for Extended Stable release.
 
 ## Version 118.0.2088.76: October 27, 2023
@@ -239,9 +240,9 @@ Fixed various bugs and performance issues for Extended Stable release.
 Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-27-2023).
-
-## Version 118.0.2088.69: October 24, 2023
-
+<!--
+## Version 118.0.2088.69: October 24, 2023 X
+--->
 Fixed various bugs and performance issues.
 
 ### Feature updates
