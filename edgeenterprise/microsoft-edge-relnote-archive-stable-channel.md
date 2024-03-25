@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/22/2024
+ms.date: 03/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,7 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 # Archived release notes for Microsoft Edge Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
 
 <!-- Version 120.0.2210.160: January 25, 2024 to Version 118.0.2088.122: November 29, 2023 -->
 ## Version 120.0.2210.160: January 25, 2024
@@ -142,127 +143,6 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - Microsoft Edge management service policy overrides platform policy
 - [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy) - Allow Microsoft Edge management service user policies to override policies set through an enrollment token
-
-## Version 119.0.2151.44: November 2, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-2-2023).
-
-### Feature updates
-
-- **Compression Dictionary Transport support.** A version of the [Compression Dictionary Transport](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/) feature is available for sites to use by participating in the associated origin trial. If your network uses a middlebox that inspects network traffic and/or you previously encountered issues with the ZSDCH feature, review the [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) page which contains updated guidance.
-
-- **Behavioral changes to the beforeunload event.** The behavior of the beforeunload event has changed such that calling preventDefault in a beforeunload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a beforeunload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
-
-- **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored. 
-
-- **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
-
-- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
-
-### Policy updates
-
-#### New policies
-
-- [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
-- [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
-- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
-
-## Version 118.0.2088.88: November 2, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 118.0.2088.76: October 27, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-27-2023).
-
-## Version 118.0.2088.69: October 24, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Designer (Preview) in the Microsoft Edge sidebar.**  All Microsoft Edge users with Manifest version 4.8.5 or higher (users can see their version using `edge://sidebar-internals`), including those that are working on managed devices, can now add the Designer (Preview) app to the Edge sidebar by clicking on the "**+**" and setting the Designer (Preview) toggle to on. Designer (Preview) allows you to experience the generative AI capabilities offered by Microsoft Designer [https://designer.microsoft.com](https://designer.microsoft.com) from inside the Edge browser.
-
-  Designer is a new AI system from Microsoft that generates visual, customizable designs based on your text description and images. This release will be available in English for the following country/regions: Australia, India, New Zealand, South Africa, and the United States.
-
-  Administrators can manage sidebar apps including Designer (Preview) icon by using the policies described in [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar). The ID for Designer (Preview) app is 2cb2db96-3bd0-403e-abe2-9269b3761041.
-
-## Version 118.0.2088.61: October 20, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.57: October 18, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
-
-<!-- Version 119.0.2151.44: November 2, 2023 to Version 118.0.2088.57: October 18, 2023 -->
-## Version 119.0.2151.44: November 2, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-2-2023).
-
-### Feature updates
-
-- **Compression Dictionary Transport support.** A version of the [Compression Dictionary Transport](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/) feature is available for sites to use by participating in the associated origin trial. If your network uses a middlebox that inspects network traffic and/or you previously encountered issues with the ZSDCH feature, review the [Considerations for zstd-based Shared Dictionary Compression for HTTP](/DeployEdge/learnmore-zsdch-compression) page which contains updated guidance.
-
-- **Behavioral changes to the beforeunload event.** The behavior of the beforeunload event has changed such that calling preventDefault in a beforeunload event handler triggers a confirmation dialog. Setting returnValue to an empty string in a beforeunload event handler no longer triggers a confirmation dialog. This behavior takes effect starting in Microsoft Edge version 119. Administrators can temporarily opt out of this functionality by disabling the [BeforeunloadEventCancelByPreventDefaultEnabled](/deployedge/microsoft-edge-policies#beforeunloadeventcancelbypreventdefaultenabled) policy.
-
-- **Split screen restore improvements.** Split screen allows you to simultaneously work on multiple tasks across two, side-by-side screens in one browsing tab to boost your productivity and multitask more efficiently. Now after the browser is restarted and the previous session is restored, the split tab will also be restored. 
-
-- **Additional capability to manage sidebar apps.** Administrators can utilize the "sidebar_auto_open_blocked" [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) policy field to control the auto-open behavior of sidebar apps.  For more information, see [Detailed guide to the ExtensionSettings](/deployedge/microsoft-edge-manage-extensions-ref-guide) policy.
-
-- **Updates to Microsoft Edge enterprise sync settings page.** When the [ForceSyncTypes](/deployedge/microsoft-edge-policies#forcesynctypes) and [SyncTypesListDisabled](/deployedge/microsoft-edge-policies#synctypeslistdisabled) polices are used concurrently, the sync settings page (`edge://settings/profiles/sync`) accurately show the status for each data type.
-
-### Policy updates
-
-#### New policies
-
-- [SwitchIntranetSitesToWorkProfile](/deployedge/microsoft-edge-policies#switchintranetsitestoworkprofile) - Switch intranet sites to a work profile
-- [SwitchSitesOnIEModeSiteListToWorkProfile](/deployedge/microsoft-edge-policies#switchsitesoniemodesitelisttoworkprofile) - Switch sites on the IE mode site list to a work profile
-- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled) - Allow the use of your organization's branding assets from M365 on the profile-related UI of a work profile
-
-## Version 118.0.2088.88: November 2, 2023
-
-Fixed various bugs and performance issues for Extended Stable release.
-
-## Version 118.0.2088.76: October 27, 2023
-
-Fixed various bugs and performance issues.
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#october-27-2023).
-
-## Version 118.0.2088.69: October 24, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Designer (Preview) in the Microsoft Edge sidebar.**  All Microsoft Edge users with Manifest version 4.8.5 or higher (users can see their version using `edge://sidebar-internals`), including those that are working on managed devices, can now add the Designer (Preview) app to the Edge sidebar by clicking on the "**+**" and setting the Designer (Preview) toggle to on. Designer (Preview) allows you to experience the generative AI capabilities offered by Microsoft Designer [https://designer.microsoft.com](https://designer.microsoft.com) from inside the Edge browser.
-
-  Designer is a new AI system from Microsoft that generates visual, customizable designs based on your text description and images. This release will be available in English for the following country/regions: Australia, India, New Zealand, South Africa, and the United States.
-
-  Administrators can manage sidebar apps including Designer (Preview) icon by using the policies described in [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar). The ID for Designer (Preview) app is 2cb2db96-3bd0-403e-abe2-9269b3761041.
-
-## Version 118.0.2088.61: October 20, 2023
-
-Fixed various bugs and performance issues.
-
-## Version 118.0.2088.57: October 18, 2023
-
-Fixed various bugs and performance issues.
-
-### Feature updates
-
-- **Icon change in Edge sidebar.**  The Bing icon entry point in the Microsoft Edge sidebar has been changed to the new Copilot icon. No other changes in this experience are expected.
 
 <!-- from Version 118.0.2088.46: October 13, 2023 to Version 109.0.1518.140: September 15, 2023 -->
 
@@ -972,7 +852,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - **TLS server certificate verification changes.** In Microsoft Edge version 111, the certificate trust list and the certificate verifier will be decoupled from the host operating system's root store.  Instead, the default certificate trust list and the certificate verifier will be provided by and shipped with the browser.  The [MicrosoftRootStoreEnabled](/deployedge/microsoft-edge-policies#microsoftrootstoreenabled) policy is now available for testing to control when the built-in root store and certificate verifier are used.  Support for the policy is planned to be removed in Microsoft Edge version 113.  For more information, see [Changes to Microsoft Edge browser TLS server certificate verification | Microsoft Learn](/deployedge/microsoft-edge-security-cert-verification).  **Note:** This is a controlled feature rollout in Microsoft Edge version 109.  If you don't see this feature, check back as we continue our rollout.
 
--  **Text prediction.** To help you write faster and with fewer mistakes, Microsoft Edge provides word and sentence predictions for long-form editable text fields on web pages. For more information, see [Text Prediction](/edge/features/text-prediction?form=MT00D8). When you type on editable text fields on Edge, data is sent to Microsoft for processing. For more information, see [Microsoft Edge Privacy Whitepaper - Microsoft Edge Development](/microsoft-edge/privacy-whitepaper/). Administrators can control the availability of text predictions using the [TextPredictionEnabled](/deployedge/microsoft-edge-policies#textpredictionenabled) policy. Text prediction is currently only available in English within the US, India, and Australia. We will continue to add new languages and regions in future versions of Microsoft Edge.  
+-  **Text prediction.** To help you write faster and with fewer mistakes, Microsoft Edge provides word and sentence predictions for long-form editable text fields on web pages. For more information, see [Text Prediction](https://www.microsoft.com/en-us/edge/features/text-prediction?msockid=2bf3e0ce845a692534f7f4ed857768e4&form=MA13FJ). When you type on editable text fields on Edge, data is sent to Microsoft for processing. For more information, see [Microsoft Edge Privacy Whitepaper - Microsoft Edge Development](/microsoft-edge/privacy-whitepaper/). Administrators can control the availability of text predictions using the [TextPredictionEnabled](/deployedge/microsoft-edge-policies#textpredictionenabled) policy. Text prediction is currently only available in English within the US, India, and Australia. We will continue to add new languages and regions in future versions of Microsoft Edge.  
 
 ### Policy updates
 
