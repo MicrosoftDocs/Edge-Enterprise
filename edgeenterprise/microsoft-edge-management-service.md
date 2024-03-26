@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 03/19/2024
+ms.date: 03/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -213,16 +213,29 @@ Specify the minimum version required for the extension. The extension will be di
 Choose how an extension is displayed in the toolbar. Follow these steps to configure this setting:
 
 1. Select an extension.
-1. Under **Toolbar state**, choose one of the following options:
+2. Under **Toolbar state**, choose one of the following options:
 
    - Hidden: This is the default setting.
    - Shown: Show the extension on installation. Users can hide it from the toolbar.
    - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
 
-1. Select **Save**.
+3. Select **Save**.
 
-### View extension requests
+### Manage extension requests
 
+> [!NOTE]
+> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+
+If you have blocked any extension for your organization, you can allow users to request access to them. To turn on this feature, go to a configuration profile and navigate to the **Requests** tab in the **Extensions** pivot. Select **Manage request settings** and set the value to **Enabled** to allow users to request blocked extensions. Once enabled, you can view all extensions that your users have requested on this page.
+
+You can also choose to receive email notifications when new requests come in. To do this, use these steps:
+
+1. Check the box that says **Notify me about incoming requests by email**.
+2. Specify the email address where you would like to receive the notifications.
+3. Set the frequency at which you would like to receive these notifications (daily, weekly, or monthly).
+4. Select **Save**.
+
+<!-- cut 
 > [!NOTE]
 > The Extension Feedback feature is available in Edge Stable 116 and later. This will start rolling out after Microsoft Edge Stable 116 is available, which means you'll see the feature on 09/07/2023.
 
@@ -234,7 +247,8 @@ To enable reporting, use these steps:
 2. Under the policies pivot, select **Select policy**.
 3. Under **Configure a policy**, search for [EdgeManagementExtensionsFeedbackEnabled](/deployedge/microsoft-edge-policies#edgemanagementextensionsfeedbackenabled) and set its value to Enabled.
 4. Select **Save**.
-
+--->
+<!--- keep the following-->
 To set the installation policy on a requested extension, use these steps:
 
 1. Select an extension.
@@ -261,11 +275,8 @@ After selecting a sidebar app, you can configure its installation policy to Allo
 ### Add customization settings
 
 To configure groups of settings that create specific customizations for a profile, select the profile you want to work with and navigate to the **Customization settings** tab. Then, select the page that contains settings for the experiences you would like to create.
- 
-#### Manage enterprise secure AI settings
 
-> [!NOTE]
-> This feature is currently rolling out for preview.
+#### Manage enterprise secure AI settings
 
 To manage AI settings for a profile, navigate to the **enterprise secure AI** tab. You can configure AI related settings on this page. Once any setting is edited on this page, all of the configurations will appear in the **Policies** tab in that profile. If you edit a setting on this page that already has an existing configuration, the new edit will override the existing value.
 
@@ -290,6 +301,9 @@ The settings in this section let you configure Microsoft Edge settings that invo
 
 <!-- =================================================== -->
 #### Customize organization branding
+
+> [!NOTE]
+> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
 
 To customize the browser with your organization's branding assets, go to the **Organization branding** tab. You can use the default Edge for Business branding elements, or use custom branding assets. A preview of how the browser elements will look on a user's account is shown on the page.
 
