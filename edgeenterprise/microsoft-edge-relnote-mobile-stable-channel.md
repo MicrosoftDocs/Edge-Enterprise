@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 03/12/2024
+ms.date: 03/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,20 +25,44 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 123.0.2420.61 (Android): March 25, 2024
 
+Fixed various bugs and performance issues. This release includes general updates, and new policies.
+
+### General updates
+
+- [Android] Remove "https" scheme check for managed bookmarks to support URLs such as `edge://…`.
+
+### Bug fixes
+
+- [Android] Fix a bug that NLTM SSO policy doesn't work in some conditions.
+- [Android] Fix issues for brand logo policy.
+
+### Policy updates
+
+- Introduce a policy to control the behavior of opening Intune unmanaged URL in work profile. Current behavior is "stay" and open the unmanaged URL in work profile. This policy allows admin to change behavior to switch to personal context and open the unmanaged URL.
+
+  `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch`
+  - 0 (Default) - The URLs are opened in normal tabs with work profile
+  - 1 - Edge respects Intune's protection policy, the behavior is based on the configuration of Receive data from other apps in Intune protection policy.
+    - All apps - fall back to behavior for policy value 0
+    - None or Policy managed apps
+      - If personal profile is signed-in, the URLs are opened in normal tabs with personal profile
+      - If personal profile isn't signed-in, the URLs are opened in InPrivate
+      - If InPrivate is disabled, the URLs won't be opened
+  - 2 (Android only) - Microsoft Edge checks **URLAllowlist** or **URLBlocklist**. Microsoft Edge opens allowed URLs in normal tabs with work profile. As for URLs in blocklist, they might or might not be opened in InPrivate or normal tabs with personal profile, it depends on how **openInPrivateIfBlocked** is configured.
+
+## Version 123.0.2420.56 (iOS): March 25, 2024
+
 Fixed various bugs and performance issues. This release includes general updates, new features, and new policies.
 
 ### General updates
 
 - [iOS] Update MS Tunnel MAM SDK to 1.0.12
 - [iOS] Update MS Intune MAM SDK to 19.1.0
-- [Android] Remove "https" scheme check for managed bookmarks to support URLs such as `edge://…`.
 - [iOS] "Save to OneDrive" option in Edge now has upload progress indicator.
 
 ### Bug fixes
 
 - [iOS] URL Block policy also shows "Site blocked" alert for http POST requests.
-- [Android] Fix a bug that NLTM SSO policy doesn't work in some conditions.
-- [Android] Fix issues for brand logo policy.
 - [iOS] Fix issues for new File upload block policy and idle timer policy.
 
 ### New features
@@ -64,12 +88,7 @@ Fixed various bugs and performance issues. This release includes general updates
       - If personal profile is signed-in, the URLs are opened in normal tabs with personal profile
       - If personal profile isn't signed-in, the URLs are opened in InPrivate
       - If InPrivate is disabled, the URLs won't be opened
-  - 2 (Android only) - Microsoft Edge checks **URLAllowlist** or **URLBlocklist**. Microsoft Edge opens allowed URLs in normal tabs with work profile. As for URLs in blocklist, they might or might not be opened in InPrivate or normal tabs with personal profile, it depends on how **openInPrivateIfBlocked** is configured.
 
-## Version 123.0.2420.56 (iOS): March 25, 2024
-
-Fixed various bugs and performance issues.
- 
 ## Version 122.0.2365.99 (Android and iOS): March 18, 2024
 
 Fixed various bugs and performance issues.
