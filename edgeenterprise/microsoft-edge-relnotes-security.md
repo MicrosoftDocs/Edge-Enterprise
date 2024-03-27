@@ -18,7 +18,7 @@ These release notes provide information about security fixes that are included i
 
 ## March 27, 2024
 
-Microsoft has a fix for [CVE-2024-2883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-2883) to **Microsoft Edge Stable Channel (Version 123.0.2420.65)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Microsoft has a fix for [CVE-2024-2883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-2883) to **Microsoft Edge Stable Channel (Version 123.0.2420.65) and Extended Stable Channel (Version 122.0.2365.113)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 ## March 22, 2024
 
