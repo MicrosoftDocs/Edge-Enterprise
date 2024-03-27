@@ -3,7 +3,7 @@ title: "Microsoft Edge rollback for enterprises"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/12/2024
+ms.date: 03/27/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -60,7 +60,7 @@ Use the following steps to roll back manually with an MSI.
      > For more information about msiexec, see [msiexec](/windows-server/administration/windows-commands/msiexec).
    - Close and reopen Microsoft Edge to verify that the rollback worked. Under **Settings and more** (ALT + F), go to **Settings** and select **About Microsoft Edge**.
 
-To deploy an MSI with Microsoft Endpoint Manager, see the [Create and Deploy an Application with Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application) guide. During the Create Application Wizard step, add the `ALLOW_DOWNGRADE=1` option to the Installation Program, e.g. `msiexec /I FileName.msi /qn ALLOWDOWNGRADE=1`.
+To deploy an MSI with Microsoft Endpoint Manager, see the [Create and Deploy an Application with Configuration Manager](/mem/configmgr/apps/get-started/create-and-deploy-an-application) guide. During the Create Application Wizard step, add the `ALLOWDOWNGRADE=1` option to the Installation Program, e.g. `msiexec /I FileName.msi /qn ALLOWDOWNGRADE=1`.
 
 ## Enable rollback with Microsoft Edge update and Group Policy
 
