@@ -39,6 +39,13 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - Fixed a browser crash that occurred when the **UserDataDir** policy is used to specify a path on a network share. Note that using a network share location for the user data directory is generally unsupported.
 
+## Version 122.0.2365.113 : March 27, 2024
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+> [!IMPORTANT]
+> This update to Extended Stable channel contains a fix for [CVE-2024-2883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-2883), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 ## Version 123.0.2420.53:  March 22, 2024
 
 Fixed various bugs and performance issues.
