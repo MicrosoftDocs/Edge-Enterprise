@@ -23,7 +23,6 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues, updated features, and policies.
 
-
 ### Dev Channel updates
 
 The following Dev channel updates preceded this Beta channel release. The following Dev notes provide detailed information about the changes in each release.
