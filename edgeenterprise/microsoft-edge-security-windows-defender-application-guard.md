@@ -3,7 +3,7 @@ title: "Microsoft Edge and Microsoft Defender Application Guard"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/24/2024
+ms.date: 03/28/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,8 +25,9 @@ description: "Microsoft Edge support for Microsoft Defender Application Guard"
 >
 >Deprecation includes the following elements of Application Guard.
 >- If your organization requires container-based isolation, we recommend [Windows Sandbox](/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) or [Azure Virtual Directory (AVD)](/azure/virtual-desktop/terminology).
->- Because Application Guard is deprecated there won't be a  migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.
->This affects the following browsers: [*Application Guard Extension - Chrome*](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj) and [*Application Guard Extension - Firefox*](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/). We recommend using AppLocker policies to prevent untrusted websites from loading in Chrome and Firefox.
+>- Because Application Guard is deprecated there won't be a migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9N8GNLC8Z9C8?hl=en-us&gl=US) won't be available after May 2024.
+>This affects the following browsers: [*Application Guard Extension - Chrome*](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj) and [*Application Guard Extension - Firefox*](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/). If you want to block unprotected browsers until you quit using MDAG completely, we recommend using AppLocker policies or [Microsoft Edge management service](/deployedge/microsoft-edge-management-service).
+
 
 <!----
 | Existing installations of Application Guard |
