@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 02/27/2024
+ms.date: 03/28/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,111 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 120.0.2210.150: January 21, 2024 to Version 120.0.2210.59: December 12, 2023 -->
+## Version 120.0.2210.150: January 21, 2024
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 120.0.2210.141: January 17, 2024
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 120.0.2210.126: January 9, 2024
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 120.0.2210.115: January 5, 2024
+
+Fixed various bugs and performance issues for Android.
+
+## Version 120.0.2210.116: January 2, 2024
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 120.0.2210.105: December 29, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 120.0.2210.99: December 27, 2023
+
+Fixed various bugs and performance issues.
+
+**Note:** The app jump blocker feature is removed from Android and iOS.
+
+## Version 120.0.2210.86: December 19, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+## Version 120.0.2210.84: December 19, 2023
+
+Fixed various bugs and performance issues for Android.
+
+## Version 120.0.2210.78: December 15, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+ **Note:** The default key value for [iOS Website data store](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is changed to "2".
+
+## Version 120.0.2210.64: December 12, 2023
+
+Fixed various bugs and performance issues for Android.
+
+### Policy support
+
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
+
+MAM Policy to configure search engine:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL`
+
+MAM Policy to configure pop-up behavior:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting`
+- `com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls`
+- `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
+
+### Policy update
+
+#### New policies
+
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) - Configure Brand color in New Tab Page
+- [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
+- [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
+- [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
+
+## Version 120.0.2210.59: December 12, 2023
+
+Fixed various bugs and performance issues for iOS.
+
+### Policy support
+
+For more information, see [Manage Microsoft Edge on iOS and Android with Intune](/mem/intune/apps/manage-microsoft-edge).
+
+MAM Policy to configure search engine:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName`
+- `com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL`
+
+MAM Policy to configure pop-up behavior:
+
+- `com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting`
+- `com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls`
+- `com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls`
+
+### Policy update
+
+#### New policies
+
+- [EdgeBrandLogo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) - Configure Brand logo in New Tab Page
+- [EdgeBrandColor](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) - Configure Brand color in New Tab Page
+- [EdgeProxyPacUrl](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) - Specify a URL to a proxy auto-config (PAC) file
+- [PopupsAllowedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsallowedforurls) - Allow pop-up windows on specific sites
+- [PopupsBlockedForUrls](/deployedge/microsoft-edge-mobile-policies#popupsblockedforurls) - Block pop-up windows on specific sites
 
 <!-- Version 119.0.2151.107: December 6, 2023 to Version 119.0.2151.46: November 7, 2023  -->
 ## Version 119.0.2151.107: December 6, 2023
