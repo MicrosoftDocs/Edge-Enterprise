@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge enterprise sync"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 12/14/2023
+ms.date: 03/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -49,9 +49,11 @@ After sync is configured, sync functionality is enabled via user consent. Users 
 
 The following prerequisites apply to Microsoft Edge enterprise sync:
 
-- Microsoft Edge version that supports the desired sync functions
-- Subscription to a cloud service in a supported environment
-- Azure Information Protection (AIP) (P1 or P2)
+- A Microsoft Edge version that supports the desired sync functions.
+- An active subscription to a cloud service in a supported environment.
+- An Enterprise Mobility + Security service plan, specifically A3, A5, E3, E5, G3, or G5.
+
+Note that Department of Defense (DoD) and Government Community Cloud (GCC) subscriptions aren't supported at this time. For more information, refer to [Microsoft Edge enterprise sync FAQ](/deployedge/microsoft-edge-enterprise-sync-faq#does-microsoft-edge-support-government-community-cloud-gcc-high-and-azure-government-department-of-defense-dod-cloud-compliance).  
 
 ## Supported environments
 
