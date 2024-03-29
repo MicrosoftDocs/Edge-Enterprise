@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/27/2024
+ms.date: 03/29/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -30,10 +30,7 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues, includes security fixes, and improves reliability.
 
-> [!IMPORTANT]
-> This update to Stable channel contains a fix for [CVE-2024-2883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-2883), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-27-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
 
 ### Improved reliability
 
@@ -43,8 +40,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 Fixed various bugs and performance issues for Extended Stable release.
 
-> [!IMPORTANT]
-> This update to Extended Stable channel contains a fix for [CVE-2024-2883](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-2883), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
 
 ## Version 123.0.2420.53:  March 22, 2024
 
