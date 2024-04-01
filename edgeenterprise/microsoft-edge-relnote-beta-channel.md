@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/28/2024
+ms.date: 04/01/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,6 +18,14 @@ These release notes provide information about new features and non-security upda
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 124.0.2478.19: April 1, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who have enabled Edge Sync across devices/browsers. From now on Edge will give you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you've accessed before.
 
 ## Version 124.0.2478.10: March 28, 2024
 
