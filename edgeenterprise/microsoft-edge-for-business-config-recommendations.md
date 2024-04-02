@@ -173,3 +173,7 @@ In the E3 License Tier, Microsoft recommends the following steps to get the most
 > Microsoft Intune MAM is also able to cover BYOD Mobile experiences and set up information can be found [here](/mem/intune/apps/manage-microsoft-edge).
 
 ## See also
+
+- [Additional detailed Microsoft Edge for Business FAQs available in our Tech Community](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837)
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+
