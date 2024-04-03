@@ -22,6 +22,7 @@ Valid pattern specifications are of one of the following forms (without the quot
 
 - "*"
   - This pattern matches any URL, with any scheme, port, and path.
+
 - **"scheme://domains:port/path"**
   - The supported schemes are "http" and "https".
   - The scheme can be left out, along with the scheme separator "://" to match any scheme. Alternatively, a wildcard "*" can be used to the same effect.
@@ -31,11 +32,14 @@ Valid pattern specifications are of one of the following forms (without the quot
   - The port is a number in the range 0-65535. It can be left out along with the port separator ":" or replaced by a wildcard "*" to match any port.
   - Similarly, the path can be left out along with the part separator "/" or replaced by a wildcard "*" to match any path.
   - Wildcards cannot be used for partially matching a scheme, domain, host, port, or path.
-Using multiple wildcards in the same pattern (e.g. *://google.com:*/*) is supported.
+  - Using multiple wildcards in the same pattern (e.g. *://google.com:*/*) is supported.
+
 - **"scheme://a.b.c.d:port/path"**
   - Instead of a domain, an IPv4 address in the form "a.b.c.d" can be used. While the rules for schemes, ports and paths remain the same as for domain URLs, wildcards cannot be used at all for IP addresses.
+
 - **"scheme://[a:b:c:d:e:f:g:h]:port/path"**
   - An IPv6 address can also be used in the form "[a:b:c:d:e:f:g:h]". The brackets are mandatory. Just like with IPv4 addresses, wildcards are not supported. Rules for schemes, ports, and paths remain the same as for domain URLs and IPv4 addresses.
+
 - **"file://path"**
   - If the "file" scheme is used, the path has to start with a "/", therefore "file://dir/myfile.html" is an invalid pattern. "file:///dir/myfile.html" (with three forward slashes after "file:") needs to be used instead. The only valid file URL wildcard format is "file:///*", which matches any valid file URL.
   - The domain part of a file URL needs to be empty, and will match any domain (or localhost). For example, "file:///file.html" will match "file://localhost/file.html" and "file://mysite.com/file.html".
