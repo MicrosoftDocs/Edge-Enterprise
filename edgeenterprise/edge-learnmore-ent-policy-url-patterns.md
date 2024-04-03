@@ -14,9 +14,53 @@ description: "Learn about the URL pattern format used for Microsoft Edge Enterpr
 
 # Enterprise policy URL pattern format
 
+Multiple policies require a URL pattern to specify to which URLs they apply. The specification for these patterns is described by the following rules.
 
+## Valid pattern specifications
 
+Valid pattern specifications are of one of the following forms (without the quotes):
 
+- "*"
+  - This pattern matches any URL, with any scheme, port, and path.
+- **"scheme://domains:port/path"**
+  - The supported schemes are "http" and "https".
+  - The scheme can be left out, along with the scheme separator "://" to match any scheme. Alternatively, a wildcard "*" can be used to the same effect.
+  - The domain is followed by a top-level domain and may be prefixed by one or more subdomains. Alternatively, a host (such as localhost) can be used instead.
+    - A domain can be prefixed by a wildcard "[*.]" to match the domain or any of its subdomains. The domain in question can be a subdomain of any level. Note the fact that the wildcard "[*.]" isn't followed by a dot and should be prefixed directly to the domain/subdomain.
+    - A domain without the wildcard prefix will only match that exact domain and not any subdomains.
+  - The port is a number in the range 0-65535. It can be left out along with the port separator ":" or replaced by a wildcard "*" to match any port.
+  - Similarly, the path can be left out along with the part separator "/" or replaced by a wildcard "*" to match any path.
+  - Wildcards cannot be used for partially matching a scheme, domain, host, port, or path.
+Using multiple wildcards in the same pattern (e.g. *://google.com:*/*) is supported.
+- **"scheme://a.b.c.d:port/path"**
+  - Instead of a domain, an IPv4 address in the form "a.b.c.d" can be used. While the rules for schemes, ports and paths remain the same as for domain URLs, wildcards cannot be used at all for IP addresses.
+- **"scheme://[a:b:c:d:e:f:g:h]:port/path"**
+  - An IPv6 address can also be used in the form "[a:b:c:d:e:f:g:h]". The brackets are mandatory. Just like with IPv4 addresses, wildcards are not supported. Rules for schemes, ports, and paths remain the same as for domain URLs and IPv4 addresses.
+- **"file://path"**
+  - If the "file" scheme is used, the path has to start with a "/", therefore "file://dir/myfile.html" is an invalid pattern. "file:///dir/myfile.html" (with three forward slashes after "file:") needs to be used instead. The only valid file URL wildcard format is "file:///*", which matches any valid file URL.
+  - The domain part of a file URL needs to be empty, and will match any domain (or localhost). For example, "file:///file.html" will match "file://localhost/file.html" and "file://mysite.com/file.html".
+  - Ports cannot be used.
+
+## Invalid patterns
+
+The following patterns are invalid.
+
+- [*.].mysite.com is invalid (notice the dot before "mysite").
+- file://mysite.com/somefile.html is invalid as the domain is non-empty (not allowed in file URLs).
+- file://somefile.html is invalid (only two forward slashes instead of three).
+- As is file://somefile.*. (the only valid file URL that contains a wildcard is file:///*)
+- [*.]127.0.0.1 is invalid (using subdomains or subdomain wildcards with IP addresses is invalid).
+
+## Pattern examples
+
+Some examples of patterns are:
+
+- "*://mysite.com:*/path" will match both http://mysite.com:80/path and https://mysite.com:443/path.
+- [*.]mysite.com will match both mysite.com and subdomain.mysite.com. It will also match any scheme, port, and path.
+- [*.]ontoso.com will not match contoso.com. It will, however, match subdomain.ontoso.com.
+- file:///foo/bar.html will match file://localhost/foo/bar.html and file://mysite.com/foo/bar.html.
+- file:///* is valid and will match any file:// URL.
+- Schemes, ports and paths can be used with IP addresses, for example https://[::1]:8080/myfile.html is valid.
 
 ## Content license
 
