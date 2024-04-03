@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/25/2024
+ms.date: 03/29/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,6 +26,21 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 123.0.2420.65: March 27, 2024
+
+Fixed various bugs and performance issues, includes security fixes, and improves reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
+
+### Improved reliability
+
+- Fixed a browser crash that occurred when the **UserDataDir** policy is used to specify a path on a network share. Note that using a network share location for the user data directory is generally unsupported.
+
+## Version 122.0.2365.113 : March 27, 2024
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
 
 ## Version 123.0.2420.53:  March 22, 2024
 

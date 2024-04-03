@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/19/2024
+ms.date: 03/26/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -28,12 +28,14 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the new, deprecated, and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[AdditionalSearchBoxEnabled](#additionalsearchboxenabled)|Enable additional search box in browser|
-|[MutationEventsEnabled](#mutationeventsenabled)|Enable deprecated/removed Mutation Events|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles|
+|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page contents for Microsoft Entra ID profiles|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (deprecated)|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes (obsolete)|
 
 ## Available policies
 
@@ -467,6 +469,8 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles|
+|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page contents for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
@@ -486,7 +490,7 @@ These tables list all of the browser-related group policies available in this re
 |[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
 |[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (deprecated)|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
@@ -550,7 +554,7 @@ These tables list all of the browser-related group policies available in this re
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Enable globally scoped HTTP auth cache|
 |[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)|Force direct intranet site navigation instead of searching on single word entries in the Address Bar|
 |[HSTSPolicyBypassList](#hstspolicybypasslist)|Configure the list of names that will bypass the HSTS policy check|
-|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Use hardware acceleration when available|
+|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Use graphics acceleration when available|
 |[HeadlessModeEnabled](#headlessmodeenabled)|Control use of the Headless Mode|
 |[HideFirstRunExperience](#hidefirstrunexperience)|Hide the First-run experience and splash screen|
 |[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Hide the one-time redirection dialog and the banner on Microsoft Edge|
@@ -722,7 +726,7 @@ These tables list all of the browser-related group policies available in this re
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Do not set window.opener for links targeting _blank (obsolete)|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Enable ending processes in the Browser task manager|
 |[TextPredictionEnabled](#textpredictionenabled)|Text prediction enabled by default|
-|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes|
+|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes (obsolete)|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Set limit on megabytes of memory a single Microsoft Edge instance can use|
 |[TrackingPrevention](#trackingprevention)|Block tracking of users' web-browsing activity|
 |[TranslateEnabled](#translateenabled)|Enable Translate|
@@ -10414,9 +10418,7 @@ If you disable this policy, Microsoft Edge will turn off the compression diction
 
   #### Description
 
-  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when:
-- The 'Passwords' toggle is configured in Settings/Privacy and services/Clear browsing data on close or
-- The policy ClearBrowsingDataOnExit is enabled
+  When this policy is enabled, the passwords saved with Edge Password Manager are exempted from deletion when the browser closes. This policy is only effective when the [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) policy is enabled.
 
 If you enable this policy, passwords won't be cleared when the browser closes.
 If you disable or don't configure this policy, the user's personal configuration is used.
@@ -20474,7 +20476,7 @@ Setting the policy lets you create a list of URL patterns that specify which sit
 
 Leaving the policy unset means [DefaultClipboardSetting](#defaultclipboardsetting) applies for all sites if it's set. If it isn't set, the user's personal setting applies.
 
-For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards, *, are allowed.
 
   #### Supported features:
 
@@ -20545,7 +20547,7 @@ Setting the policy lets you create a list of URL patterns that specify sites tha
 
 Leaving the policy unset means [DefaultClipboardSetting](#defaultclipboardsetting) applies for all sites if it's set. If it isn't set, the user's personal setting applies.
 
-For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * is not an accepted value for this policy.
+For more information about valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards, *, are allowed.
 
   #### Supported features:
 
@@ -21414,6 +21416,136 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ```
   
 
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CopilotCDPPageContext
+
+  #### Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 124 or later
+
+  #### Description
+
+  This policy controls access to page contents for Copilot with Commerical Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
+If you enable this policy, Copilot with Commerical Data Protection will have access to page contents.
+
+If you don't configure this policy, a user can enable Copilot with Commerical Data Protection access to page contents using the setting toggle in Edge.
+
+If you disable this policy, Copilot with Commerical Data Protection will not be able to access page contents.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CopilotCDPPageContext
+  - GP name: Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CopilotCDPPageContext
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CopilotCDPPageContext
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### CopilotPageContext
+
+  #### Control Copilot access to page contents for Microsoft Entra ID profiles
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 124 or later
+
+  #### Description
+
+  This policy controls access to page contents for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the CopilotCDPPageContext policy.
+If you enable this policy, Copilot will have access to page contents.
+
+If you don't configure this policy, a user can enable Copilot access to page contents using the setting toggle in Edge.
+
+If you disable this policy, Copilot will not be able to access page contents.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CopilotPageContext
+  - GP name: Control Copilot access to page contents for Microsoft Entra ID profiles
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CopilotPageContext
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CopilotPageContext
+  - Example value:
+``` xml
+<true/>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -22727,9 +22859,9 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   ### DiscoverPageContextEnabled
 
-  #### Enable Discover access to page contents for AAD profiles
+  #### Enable Discover access to page contents for AAD profiles (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -22737,7 +22869,9 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   #### Description
 
-  This policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
+  This policy is being deprecated and will be obsoleted in Edge 127. and two new Edge Policies are taking its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commerical Data Protection access to page contents for AAD profiles). The current policy doesn't allow for separate control of Copilot and Copilot with Commercial Data Protection. The new policies allow separate control of these versions of Copilot. The new policies will also allow admins to force-enable Copilot access to Edge page contents by enabling the policy, whereas DiscoverPageContextEnabled only allows force-disabling of Copilot page access.
+
+This policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
 
 If you enable or don't configure this policy, Discover will have access to page contents.
 
@@ -22760,7 +22894,7 @@ If you disable this policy, Discover will not be able to access page contents.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DiscoverPageContextEnabled
-  - GP name: Enable Discover access to page contents for AAD profiles
+  - GP name: Enable Discover access to page contents for AAD profiles (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -27221,7 +27355,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   ### HardwareAccelerationModeEnabled
 
-  #### Use hardware acceleration when available
+  #### Use graphics acceleration when available
 
   
   
@@ -27231,9 +27365,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Description
 
-  Specifies whether to use hardware acceleration if it's available. If you enable this policy or don't configure it, hardware acceleration is enabled unless a GPU feature is explicitly blocked.
-
-If you disable this policy, hardware acceleration is disabled.
+  If you enable this policy, or leave it unconfigured, graphics acceleration will be utilized if it's available.
+If you disable this policy, turns off graphics acceleration.
 
   #### Supported features:
 
@@ -27252,7 +27385,7 @@ If you disable this policy, hardware acceleration is disabled.
   ##### Group Policy (ADMX) info
 
   - GP unique name: HardwareAccelerationModeEnabled
-  - GP name: Use hardware acceleration when available
+  - GP name: Use graphics acceleration when available
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -38072,7 +38205,7 @@ This policy does not affect other types of mixed content other than audio, video
 
   This policy lets you configure the Super Drag Drop feature in Microsoft Edge.
 
-In this feature, users can drag a link, or text on a webpage. And drop it on the same page, then make the url opened in a new tab or search the text by default search engine.
+With this feature, users can drag a link or text from a webpage and drop it onto the same page. They can then either open the URL in a new tab or search the text using the default search engine.
 
 If you enable or don't configure this policy, you can use the Super Drag Drop feature on Microsoft Edge.
 
@@ -38775,13 +38908,13 @@ If you disable this policy, text predictions will not be provided in eligible te
 
   ### ThrottleNonVisibleCrossOriginIframesAllowed
 
-  #### Allows enabling throttling of non-visible, cross-origin iframes
+  #### Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 123.
   #### Supported versions:
 
-  - On Windows and macOS since 116 or later
+  - On Windows and macOS since 116, until 123
 
   #### Description
 
@@ -38810,7 +38943,7 @@ If you disable this policy, users can't enable throttling.
   ##### Group Policy (ADMX) info
 
   - GP unique name: ThrottleNonVisibleCrossOriginIframesAllowed
-  - GP name: Allows enabling throttling of non-visible, cross-origin iframes
+  - GP name: Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
