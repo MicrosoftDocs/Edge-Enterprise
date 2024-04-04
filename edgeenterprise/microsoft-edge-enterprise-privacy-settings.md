@@ -3,7 +3,7 @@ title: "Microsoft Edge enterprise privacy settings"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/04/2024
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -21,7 +21,7 @@ Microsoft is committed to providing enterprises with the information and control
 
 ## Overview
 
-When Microsoft Edge is deployed on Windows 10, the default is to send diagnostic data based on the users' [Windows Diagnostic data setting](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+When Microsoft Edge is deployed on Windows 10/11, the default is to send diagnostic data based on the users' [Windows Diagnostic data setting](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 When Microsoft Edge is deployed on non-Windows platforms, diagnostic data is collected according to the settings of the following group policies:
 
