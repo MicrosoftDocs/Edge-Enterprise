@@ -3,7 +3,7 @@ title: "Create Microsoft Edge user data directory variables"
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 01/11/2024
+ms.date: 03/28/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -31,7 +31,7 @@ Review the following guidance before using variables for paths.
 - To avoid errors caused by applications starting from different locations on different occasions, make sure that paths are absolute.
 - Every variable can occur only once in a path. For most of them, this is the only meaningful way to use variables, because they resolve to absolute paths.
 - Almost all policies will create the path if it doesn't exist (if possible in the existing circumstances).
-- Using network locations for some policies can lead to unexpected results due to differences in how different versions/channels of Microsoft Edge handle the folder structure. Moreover, network instability or directory-locking backup processes in the network location can lead to unexpected reliability issues, in the form of browser hangs or crashes.
+- Unless documentation for a specific policy advises otherwise, using network paths for any Microsoft Edge policy value is unsupported. Attempting to have the browser use files from a network location can lead to stability issues, including hangs, crashes, and profile corruption.
 
 ### Supported path variables
 
