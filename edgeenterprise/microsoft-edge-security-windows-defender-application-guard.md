@@ -135,7 +135,7 @@ Microsoft Edge Legacy updates in the container are part of the Windows OS update
 
 The following  requirements apply to devices using Application Guard with Microsoft Edge:
 
-- Windows 10 1809 (RS5) and above.
+- Windows 10 1809 (Windows 10 October 2018 Update) and above.
 - Only Windows client SKUs
 
   > [!NOTE]
