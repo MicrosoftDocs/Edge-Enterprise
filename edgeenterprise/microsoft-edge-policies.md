@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 03/26/2024
+ms.date: 04/02/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,17 +25,6 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
-
-## New policies
-
-The following table lists the new, deprecated, and obsoleted policies that are in this article update.
-
-| Policy Name | Caption |
-|:-----|:-----|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles|
-|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page contents for Microsoft Entra ID profiles|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (deprecated)|
-|[ThrottleNonVisibleCrossOriginIframesAllowed](#throttlenonvisiblecrossoriginiframesallowed)|Allows enabling throttling of non-visible, cross-origin iframes (obsolete)|
 
 ## Available policies
 
@@ -31528,11 +31517,11 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   
   #### Supported versions:
 
-  - On Windows and macOS since 91 or later
+  - On Windows and macOS since 91, until 125
 
   #### Description
 
-  This policy lets you manage whether users can use the Math Solver tool in Microsoft Edge or not.
+  This policy is obsoleted because Math Solver is deprecated from Edge. This policy won't work in Microsoft Edge version 126. This policy lets you manage whether users can use the Math Solver tool in Microsoft Edge or not.
 
 If you enable or don't configure the policy, then a user can take a snip of the Math problem and get the solution including a step-by-step explanation of the solution in a Microsoft Edge side pane.
 
