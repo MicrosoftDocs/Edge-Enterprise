@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge using Mobile Device Management"
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 01/10/2024
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -14,14 +14,14 @@ description: "Configure Microsoft Edge using Mobile Device Management."
 
 # Configure Microsoft Edge using Mobile Device Management
 
-This article explains how to configure Microsoft Edge on Windows 10 using [Mobile Device Management (MDM)](/windows/client-management/mdm/) with [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). This article also describes:
+This article explains how to configure Microsoft Edge on Windows 10 or later using [Mobile Device Management (MDM)](/windows/client-management/mdm/) with [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). This article also describes:
 
 - How to [create Open Mobile Alliance Uniform Resource Identifier (OMA-URI) for Microsoft Edge policies](#create-an-oma-uri-for-microsoft-edge-policies).
 - How to [configure Microsoft Edge in Intune using ADMX ingestion and custom OMA-URI](#configure-microsoft-edge-in-intune-using-admx-ingestion).
 
 ## Prerequisites
 
-Windows 10, with the following minimum system requirements:
+Windows 10 or later, with the following minimum system requirements:
 
 - Windows 10, version 1903 with [KB4512941](https://support.microsoft.com/help/4512941/) and [KB4517211](https://support.microsoft.com/help/4517211/) installed
 - Windows 10, version 1809 with [KB4512534](https://support.microsoft.com/help/4512534/) and [KB4520062](https://support.microsoft.com/help/4520062/) installed
@@ -30,7 +30,7 @@ Windows 10, with the following minimum system requirements:
 
 ## Overview
 
-You can configure Microsoft Edge on Windows 10 using MDM with your preferred Enterprise Mobility Management (EMM) or MDM provider that supports [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
+You can configure Microsoft Edge on Windows 10/11 using MDM with your preferred Enterprise Mobility Management (EMM) or MDM provider that supports [ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
 
 Configuring Microsoft Edge with MDM is a two part process:
 
