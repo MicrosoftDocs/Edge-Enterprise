@@ -34,11 +34,11 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 ### Fixes
 
-- Resolved an issue when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat caused fillable PDF form fields to not auto resize correctly when entering large text strings. 
+- Resolved an issue when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat caused fillable PDF form fields to not auto resize correctly when entering large text strings.
 
 ## Version 122.0.2365.120: April 4, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues for Extended Stable release.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-4-2024).
 
