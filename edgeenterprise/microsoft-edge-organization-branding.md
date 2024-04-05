@@ -1,5 +1,5 @@
 ---
-title: "Organizational branding"
+title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: "Information customizing organizational branding."
+description: "Information customizing organization branding."
 ---
 
-# Organizational branding
+# Organization branding
 
 This document provides a guide to understanding and using branding for an organization.
 
