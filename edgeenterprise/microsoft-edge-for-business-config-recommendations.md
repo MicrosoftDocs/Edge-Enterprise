@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business Recommended Configuration Settings"
 ms.author: mollymcnutt
 author: dan-wesley
 manager: archandr
-ms.date: 04/01/2024
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -62,7 +62,7 @@ Increased browser usage in the enterprise makes the browser the #1 surface for e
 
 ## Provide secure network access on any device  
 
-Edge provides a broad spectrum of capabilities to enable secure network access to any web resource from BYOD devices. These capabilities include secure network access to both internet (M365, SaaS apps, and the rest of Internet) and private applications (on-premises and cloud) with threat protection and data exfiltration protections enforced on the network to suit different customer needs.
+Edge provides a broad spectrum of capabilities to enable secure network access to any web resource from BYOD devices. These capabilities include secure network access to both internet (Microsoft 365, SaaS apps, and the rest of internet) and private applications (on-premises and cloud) with threat protection and data exfiltration protections enforced on the network to suit different customer needs.
 
 1. [Microsoft Entra's Conditional Access](/entra/identity/conditional-access/overview) systems work seamlessly in Edge to provide productive protection of company assets and prevent unauthorized access.  
 2. Edge uses [Microsoft Intune Mobile Application Management](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe) and Microsoft Defender with Cloud Apps (coming soon) to enforce compliant device usage on unmanaged devices to provide optimal security.  
@@ -168,7 +168,7 @@ In the E3 License Tier, Microsoft recommends the following steps to get the most
    - Phishing protection: [Microsoft Defender SmartScreen overview - Windows Security](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/)
 
 > [!NOTE]
-> Commercial Data Protection (CDP) is always on by default in Copilot when signed in with Microsoft Entra ID except for Government and Education users. Enabling CDP for Government and Education users instructions can be found [here](/copilot/manage).  
+> Commercial Data Protection (CDP) is always on by default in Copilot when signed in with Microsoft Entra ID except for Government and Education users. Enabling Commercial Data Protection (CDP) for Government and Education users instructions can be found [here](/copilot/manage).  
 >
 > Microsoft Intune MAM is also able to cover BYOD Mobile experiences and set up information can be found [here](/mem/intune/apps/manage-microsoft-edge).
 
