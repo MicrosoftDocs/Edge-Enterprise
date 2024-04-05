@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/04/2024
+ms.date: 04/05/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -32,6 +32,16 @@ Fixed various bugs and performance issues.
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-4-2024).
 
+### Fixes
+
+- Resolved an issue when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat caused fillable PDF form fields to not auto resize correctly when entering large text strings. 
+
+## Version 122.0.2365.120: April 4, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-4-2024).
+
 ## Version 123.0.2420.65: March 27, 2024
 
 Fixed various bugs and performance issues, includes security fixes, and improves reliability.
@@ -42,7 +52,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 - Fixed a browser crash that occurred when the **UserDataDir** policy is used to specify a path on a network share. Note that using a network share location for the user data directory is generally unsupported.
 
-## Version 122.0.2365.113 : March 27, 2024
+## Version 122.0.2365.113: March 27, 2024
 
 Fixed various bugs and performance issues for Extended Stable release.
 
