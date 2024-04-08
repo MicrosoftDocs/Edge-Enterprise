@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 04/03/2024
+ms.date: 04/08/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,6 +26,14 @@ All the Stable channel security updates are listed in [Release notes for Microso
 ## Version 123.0.2420.74 (Android and iOS): April 2, 2024
 
 Fixed various bugs and performance issues.
+
+### General updates
+
+- [iOS] Update Citrix mVPN SDK to version 24.2.1
+
+### New features
+
+- Start a flight to show Shared links entry point on the overflow menu
 
 ## Version 123.0.2420.61 (Android): March 25, 2024
 
