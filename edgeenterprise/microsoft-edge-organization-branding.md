@@ -48,7 +48,7 @@ Today, the feature supports configuring the following UI options:
 
 Through the Microsoft Edge management service, admins have an enhanced experience to control, preview, and customize Edge for Business.
 
-To customize the Microsoft browser with your organization's branding assets, sign in to the M365 Admin Center and go to the **Organization branding** tab. A preview of how the browser elements look on a user's account is shown on the page.
+To customize the Microsoft browser with your organization's branding assets, sign in to the M365 Admin Center and go to the **Organization branding** tab in the **Customization Settings** pivot within a configuration profile. A preview of how the browser elements look on a user's account is shown on the page.
 
 If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID will be imported and displayed in the preview. These changes won't take effect until you choose **Save changes**.
 
