@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/09/2024
+ms.date: 04/11/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -60,7 +60,7 @@ From **Use custom branding**, you can customize each of the following browser el
 * Taskbar icon: This logo overlays the Edge for Business icon on the taskbar. You must upload an SVG file with a maximum size of 150 KB (we recommended choosing a square logo).
 
   > [!TIP]
-  > Square and horizontal logos will provide the optimal visual branding experience.
+  > Square and horizontal logos provide the optimal visual branding experience.
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
 
