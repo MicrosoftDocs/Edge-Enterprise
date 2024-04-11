@@ -24,6 +24,15 @@ Now you can customize your organization's branding onto Edge for Business. This 
 
 ![Company branding for Contoso](media/microsoft-edge-organization-branding/efb-company-branding-new.png)
 
+## Branding support
+
+Organization branding is not supported for the following:
+
+* Government - GCC tenants
+* Intune MAM
+* Microsoft Edge for mobile devices
+* Some discrepancy on macOS
+
 ## Organization branding assets
 
 You can use the default Edge for Business branding elements or customize branding for your organization.
