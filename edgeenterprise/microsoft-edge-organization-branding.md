@@ -31,9 +31,9 @@ Organization branding is not supported for the following:
 * Government - GCC tenants
 * Intune MAM
 * Microsoft Edge for mobile devices
-* Some macOS elements
-  - Edge management service organization branding configuration
-  - overlaying the organization logo on the app icon
+* The following aspects of macOS:
+  - Deploying Edge management service organization branding configuration to the macOS.
+  - Overlaying the organization Logo on the Edge for Business taskbar icon.
 
 ## Organization branding assets
 
