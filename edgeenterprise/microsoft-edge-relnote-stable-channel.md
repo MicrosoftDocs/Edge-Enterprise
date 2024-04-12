@@ -26,6 +26,16 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 123.0.2420.97: April 12, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-12-2024).
+
+### Improved reliability
+
+- Fixed a browser crash which was related to Microsoft Edge Sync.
+  
 ## Version 123.0.2420.81: April 4, 2024
 
 Fixed various bugs and performance issues.
