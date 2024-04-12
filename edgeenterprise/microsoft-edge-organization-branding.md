@@ -26,7 +26,7 @@ Now you can customize your organization's branding in Edge for Business. This br
 
 ## Branding support
 
-Organization branding is not supported for the following:
+Organization branding isn't supported for:
 
 * Government - GCC tenants
 * Intune MAM
