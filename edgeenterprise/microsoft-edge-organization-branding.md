@@ -54,6 +54,8 @@ Looking for more advanced customization options? The Edge management service pro
 
 To customize the Microsoft Edge browser with your organization's branding assets, sign in to the Microsoft 365 Admin Center and go to the **Organization branding** tab in the **Customization Settings** pivot within a configuration profile. A preview of how the browser elements look on a user's account is shown on the page.
 
+![Branding example](media/microsoft-edge-organization-branding/branding-config-profile.png)
+
 If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes will not take effect until you choose **Save changes**.
 <!------ add EMX screenshot in this area ---------->
 From **Use custom branding**, you can customize each of the following browser elements with the brand assets you choose:
