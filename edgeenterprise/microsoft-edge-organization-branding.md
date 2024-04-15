@@ -30,7 +30,7 @@ Admins have the options to use the default Edge for Business branding elements o
 Today, the feature supports configuration of the following visual elements:
 
 - Organization name on the profile pill
-- Organization logo, and color on the profile flyout
+- Organization logo and color on the profile flyout
 - Organization icon overlay on the Edge for Business taskbar icon
 
 ## Use default organization branding assets from Entra
