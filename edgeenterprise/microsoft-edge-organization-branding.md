@@ -57,7 +57,7 @@ To customize the Microsoft Edge browser with your organization's branding assets
 ![Branding example](media/microsoft-edge-organization-branding/branding-config-profile.png)
 
 If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes will not take effect until you choose **Save changes**.
-<!------ add EMX screenshot in this area ---------->
+
 From **Use custom branding**, you can customize each of the following browser elements with the brand assets you choose:
 
 - Organization name: This name is displayed in the profile pill.
