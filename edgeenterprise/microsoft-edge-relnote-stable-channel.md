@@ -26,6 +26,62 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 124.0.xxxx.x: April x, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+- [Dev Channel update to 124.0.2438.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2438-2-is-live/m-p/4079136)
+- [Dev Channel update to 124.0.2450.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2450-2-is-live/m-p/4085888)
+- [Dev Channel update to 124.0.2464.2 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2464-2-is-live/m-p/4092459)
+- [Dev Channel update to 124.0.2478.6 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-124-0-2478-6-is-live/m-p/4097816)
+
+### Feature updates
+
+- **Email notifications for extension requests in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with the ability to receive email notifications for extensions that their users have requested. This will help inform them promptly of any new feedback. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+
+- **Enterprise secure AI controls in the Microsoft Edge management service.** The Microsoft Edge management service now provides a new dedicated space for admins to manage all AI-related policies in the Edge browser. This will help enhance security and productivity for managed users and devices.
+
+- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+
+  This Microsoft Edge management service feature will give admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+
+  - Organization name
+  - Accent color
+  - Organization logo
+  - Edge for Business taskbar icon overlay
+
+  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center. For more information, see Microsoft Edge for Business.  ***** IF NEW DOC PUBLISHED UPDATE LINK
+
+- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing.
+
+- **Updated Edge Profile account re-authentication popup when Browser to Web Single-Sign-On (SSO) fails.** Edge provides a browser to Web single sign-on (SSO) capability that lets a user sign in to their Edge Profile with a web account first and then automatically sign them into Microsoft first party websites.
+
+This is done by saving cached credentials. This approach works until there's an authentication challenge to the cached credentials. A typical scenario is when a user changes their password on a different device. The cached credentials on the current device become outdated and SSO fails. Edge detects this failure and shows a re-authentication popup that prompts the user to update their cached credentials on the current device.
+
+- **Removal of Web SQL -  Web SQL support is completely removed.** In prior releases, Web SQL support was disabled by default but could be re-enabled via the [WebSQLAccess](/deployedge/microsoft-edge-policies?branch=pr-en-us-4103#websqlaccess) policy. After this change, there is no longer any mechanism to enable Web SQL support. This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, see [Intent to Deprecate and Remove Web SQL](https://groups.google.com/a/chromium.org/g/blink-dev/c/fWYb6evVA-w/m/pziWcvboAgAJ).
+
+- **Cross-device Search Query History suggestions.**  The existing Search Query suggestions have been enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who have enabled Edge Sync across devices/browsers. From now on Edge will provide you the relevant query history suggestions that you have previously searched before no matter where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
+
+### Policy updates
+
+#### New policies
+
+- [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to page contents for Microsoft Entra ID profiles
+- [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to page contents for Microsoft Entra ID profiles
+- [MutationEventsEnabled](/deployedge/microsoft-edge-policies#mutationeventsenabled) - Enable deprecated/removed Mutation Events
+
+#### Deprecated policies
+
+- [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) - Enable Discover access to page contents for AAD profiles (deprecated)
+
+#### Obsoleted policies
+
+- [ThrottleNonVisibleCrossOriginIframesAllowed](/deployedge/microsoft-edge-policies#throttlenonvisiblecrossoriginiframesallowed) - Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
+- [WebSQLAccess](/deployedge/microsoft-edge-policies#websqlaccess) - Force WebSQL to be enabled (obsolete)
+
 ## Version 123.0.2420.97: April 12, 2024
 
 Fixed various bugs and performance issues, improved reliability.
