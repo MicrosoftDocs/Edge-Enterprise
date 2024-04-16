@@ -266,7 +266,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 ## Version 120.0.2210.181: February 20, 2024
 
 Fixed various bugs and performance issues for Extended Stable channel.
-
+<!---- snip to end -------->
 ## Version 121.0.2277.128: February 15, 2024
 
 Fixed various bugs and performance issues.
@@ -459,7 +459,7 @@ Fixed various bugs and performance issues for Extended Stable release.
 > This update to Extended Stable channel contains a fix for [CVE-2023-6345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-6345), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
 
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-29-2023).
-
+<!-- Version 121.0.2277.128: February 15, 2024 to Version 118.0.2088.122: November 29, 2023 -->
 <!-- Version 119.0.2151.97: November 29, 2023 to Version 118.0.2088.57: October 18, 2023 -->
 <!-- from Version 118.0.2088.46: October 13, 2023 to Version 109.0.1518.140: September 15, 2023 -->
 <!-- from Version 117.0.2045.31: September 15, 2023 to Version 116.0.1938.62: August 25, 2023 -->
