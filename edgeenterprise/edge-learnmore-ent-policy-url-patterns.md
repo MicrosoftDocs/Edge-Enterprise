@@ -3,7 +3,7 @@ title: "URL pattern format for Microsoft Edge Enterprise policies"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/08/2024
+ms.date: 04/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -59,7 +59,6 @@ The following patterns are invalid.
 
 Some examples of patterns are:
 
-- "*://mysite.com:*/path" matches both http://mysite.com:80/path and https://mysite.com:443/path.
 - [*.]mysite.com matches both mysite.com and subdomain.mysite.com. It also matches any scheme, port, and path.
 - [*.]ontoso.com doesn't match contoso.com. However, it does match subdomain.ontoso.com.
 - file:///foo/bar.html matches file://localhost/foo/bar.html and file://mysite.com/foo/bar.html.
