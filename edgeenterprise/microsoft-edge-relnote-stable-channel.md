@@ -53,7 +53,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
   - Organization logo
   - Edge for Business taskbar icon overlay
 
-  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center. For more information, see Microsoft Edge for Business.  ***** IF NEW DOC PUBLISHED UPDATE LINK
+  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Organization branding](/deployedge/microsoft-edge-organization-branding).
 
 - **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service provides admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing.
 
