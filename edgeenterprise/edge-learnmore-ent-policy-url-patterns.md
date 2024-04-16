@@ -27,7 +27,7 @@ Valid pattern specifications are of one of the following forms (without the quot
   - The supported schemes are "http" and "https".
   - The scheme can be left out, along with the scheme separator "://" to match any scheme. Alternatively, a wildcard "*" can be used to the same effect.
   - The domain is followed by a top-level domain, prefixed by one or more subdomains. Alternatively, a host (such as localhost) can be used instead.
-    - A domain is prefixed by a wildcard "[*.]" to match the domain or any of its subdomains. The domain in question can be a subdomain of any level. The wildcard "[*.]" isn't followed by a dot and should be prefixed directly to the domain/subdomain.
+    - A domain is prefixed by a wildcard "[\*.]" to match the domain or any of its subdomains. The domain in question can be a subdomain of any level. The wildcard "[\*.]" isn't followed by a dot and should be prefixed directly to the domain/subdomain.
     - A domain without the wildcard prefix only matches that exact domain and not any subdomains.
   - The port is a number in the range 0-65535. It can be left out along with the port separator ":" or replaced by a wildcard "*" to match any port.
   - Similarly, the path can be left out along with the part separator "/" or replaced by a wildcard "*" to match any path.
