@@ -15,6 +15,13 @@ description: "Microsoft Edge release notes for Mobile Beta Channel"
 # Release notes for Microsoft Edge Mobile Beta Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Mobile Beta Channel.
+
+To understand Microsoft Edge channels, see the [Overview of the Microsoft Edge channels](./microsoft-edge-channels.md).
+
+You can download Beta versions of Edge Mobile from the following locations:
+
+- Edge Android: [Microsoft Edge Beta – Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta)
+- Edge iOS: [https://testflight.apple.com/join/rqvYCYOp](https://testflight.apple.com/join/rqvYCYOp)
 <!---
 Archived versions of these release notes are available at [Archived release notes for Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md). --->
 
