@@ -1,4 +1,4 @@
-# last revised 04/01/2024
+# last revised 04/16/2024
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -51,12 +51,6 @@
      href: microsoft-edge-release-schedule.md
    - name: Security updates
      href: microsoft-edge-relnotes-security.md     
-#   - name: Microsoft Edge policy mapping
-#     items:
-#      - name: Policy mapping overview
-#        href: microsoft-edge-policy-map-overview.md
-#      - name: Google Chrome to Microsoft Edge policy mapping
-#        href: microsoft-edge-policy-map-chrome-to-newedge.md
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -112,6 +106,8 @@
         href: microsoft-edge-for-business.md
       - name: Recommended configuration settings
         href: microsoft-edge-for-business-config-recommendations.md
+      - name: Organization branding
+        href: microsoft-edge-organization-branding.md
    - name: Microsoft Edge management service
      href: microsoft-edge-management-service.md
    - name: Microsoft Edge Workspaces
