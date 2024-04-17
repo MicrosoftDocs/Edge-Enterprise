@@ -76,22 +76,6 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 - **Sidebar Tools App - SpeedTest.**  Adding a SpeedTest answer by default to the Tools app in the Microsoft Edge sidebar.  For more information, see [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar).
 
-- **Updated Edge Profile account re-authentication popup when Browser to Web Single-Sign-On (SSO) fails.** Edge provides a browser to Web single sign-on (SSO) capability that lets a user sign in to their Edge Profile with a web account first and then automatically sign them into Microsoft first party websites.
-
-  This is done by saving cached credentials. This approach works until there's an authentication challenge to the cached credentials. A typical scenario is when a user changes their password on a different device. The cached credentials on the current device become outdated and SSO fails. Edge detects this failure and shows a re-authentication popup that prompts the user to update their cached credentials on the current device.
-
-- **Updated profile management and customization controls.** Enhancing the profile management and customization experience through surfaced profile controls and an expanded range of default avatars. With these updates, users can effortlessly tailor their profiles to their preferences and select from a broader collection of profile avatars.  
-
-- **Desktop Shortcut for New Enterprise Devices.** New Microsoft Enterprise devices, including Windows Enterprise SKUs, Windows Server SKUs and any domain-joined or AAD-joined devices, running through Windows Out of Box Experience (OOBE) for the first time will see a Microsoft Edge desktop shortcut automatically created. This desktop shortcut provides users with an alternative way to access their Microsoft Edge browser without needing to manually pin and configure their set-up.
-
-- **Updated profile options in new profile experience.** Many users unintentionally create empty profiles, cluttering their workspace and impeding their browsing experience. To reduce clutter and the likelihood of profile churn, updated First Run Experience (FRE) string options encourage users to sign-in and meaningfully create profiles for an improved browsing experience, or easily cancel unintentional creation.
-
-- **Updated default profile pill for EDU users in Edge for Business.** To improve the applicability of the current Edge for Business default visuals, users signed in with an EDU account will see the default profile pill label updated to "School".
-
-- **Updated profile management and customization controls.** Enhancing the profile management and customization experience through surfaced profile controls and an expanded range of default avatars. With these updates, users can effortlessly tailor their profiles to their preferences and select from a broader collection of profile avatars.
-
-- **Microsoft Edge migrates the updates experience into Browser Essentials.** Notifications on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience.
-
 ### Policy updates
 
 #### New policies
