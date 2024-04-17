@@ -19,11 +19,11 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 124.0.2478.49 : April 17, 2024
+## Version 124.0.2478.49: April 17, 2024
 
 Fixed various bugs and performance issues.
 
-## Version 124.0.2478.39 : April 12, 2024
+## Version 124.0.2478.39: April 12, 2024
 
 Fixed various bugs and performance issues.
 
@@ -37,7 +37,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who have enabled Edge Sync across devices/browsers. From now on Edge will give you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
+- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who enable Edge Sync across devices/browsers. From now on Edge gives you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
 
 - **Enterprise secure AI controls in the Microsoft Edge management service.** The Microsoft Edge management service now provides a new dedicated space for admins to manage all AI-related policies in the Edge browser. This helps enhance security and productivity for managed users and devices.
 
