@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/05/2024
+ms.date: 04/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -64,6 +64,9 @@ The following Dev channel updates preceded this Stable channel release. The foll
 - **Removal of Web SQL -  Web SQL support is completely removed.** In prior releases, Web SQL support was disabled by default but could be re-enabled via the [WebSQLAccess](/deployedge/microsoft-edge-policies?branch=pr-en-us-4103#websqlaccess) policy. After this change, there is no longer any mechanism to enable Web SQL support. This change is happening in the Chromium project, on which Microsoft Edge is based. For more information, see [Intent to Deprecate and Remove Web SQL](https://groups.google.com/a/chromium.org/g/blink-dev/c/fWYb6evVA-w/m/pziWcvboAgAJ).
 
 - **Cross-device Search Query History suggestions.**  The existing Search Query suggestions have been enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who have enabled Edge Sync across devices/browsers. From now on Edge will provide you with the relevant query history suggestions that you have previously searched before no matter where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
+
+- **Extending support for viewing MIP Protected PDF Files to different sovereignties (including GCCH).** Sovereign cloud customers (including GCCH) will be able to open MIP protected PDF content in Microsoft Edge. This change will be available in the Microsoft Edge built-in PDF reader powered by Adobe Acrobat and the legacy Microsoft Edge PDF engine. **Note:** This feature is an experiment.  Admins can use the feature flag "**msMIPSovereigntyPdfViewSupport**" to test this feature.  
+
 
 ### Policy updates
 
