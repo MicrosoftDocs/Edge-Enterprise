@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/16/2024
+ms.date: 04/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -23,7 +23,30 @@ Archived versions of these release notes are available at [Archived release note
 
 ## Version 124.0.2478.46 (Android and iOS): April 16, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, made general updates, added new features and policies.
+
+### General updates
+
+- [iOS] MS Tunnel updated to 1.0.15, added privacy manifest file to comply with Apple App Store requirements.
+- [iOS] updated Citrix mVPN iOS SDK to 24.2.1
+- [iOS] added `protApp` param to Microsoft Bing Search resource token fetch request, so it will not be blocked by the CA policy, "requiring app protection." This token is needed for Copilot in Edge.
+- [iOS] Intune SDK updated to 19.2.0
+
+### Bug fixes
+
+- [iOS] Fix disableFeatures policy bug for inPrivate mode, and handle corner cases where inPrivate not disabled.
+- [Android] Fixed a bug in Guided switch.
+
+### New features
+
+- [Android] Re-enable Kerberos authentication suppport on Android with an external Negotiate Authenticator app.
+- [Android and iOS] Copilot in Edge mobile now properly supports school scenarios.
+- [iOS] Shared Device Mode support.
+- [Android and iOS] In-flight, the feature "Shared Links" can be opened from Edge overflow menu.
+
+### New policies
+
+- [Android and iOS] Introduced a new MDM policy, "EdgeCopilotEnabled" to globally disable Copilot in Edge mobile, including on the personal context.
 
 ## Version 124.0.2478.36 (Android and iOS): April 11, 2024
 
