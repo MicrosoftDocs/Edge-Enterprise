@@ -1498,9 +1498,6 @@ Edge for iOS and Android allows organizations to disable certain features that a
 - password = Disables prompts that offer to save passwords for the end user
 - inprivate = Disables InPrivate browsing
 - autofill = Disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.
-
-**Note:** The following new policy settings are available starting with Microsoft Edge version 112.
-
 - translator = Disables translator, as of version 112
 - readaloud = Disables Read Aloud, as of version 112
 - drop = Disables Drop, which lets you send documents and messages to different devices directly from your browser, as of version 112
