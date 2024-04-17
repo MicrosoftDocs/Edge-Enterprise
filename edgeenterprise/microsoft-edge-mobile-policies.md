@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/12/2024
+ms.date: 04/17/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -1498,13 +1498,12 @@ Edge for iOS and Android allows organizations to disable certain features that a
 - password = Disables prompts that offer to save passwords for the end user
 - inprivate = Disables InPrivate browsing
 - autofill = Disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.
-
-**Note:** The following new policy settings are available starting with Microsoft Edge version 112.
-
-- translator = Disables translator
-- readaloud = Disables Read Aloud
-- drop = Disables Drop, which lets you send documents and messages to different devices directly from your browser.
-- developertools grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only)
+- translator = Disables translator, as of version 112
+- readaloud = Disables Read Aloud, as of version 112
+- drop = Disables Drop, which lets you send documents and messages to different devices directly from your browser, as of version 112
+- developertools grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only), as of version 112
+- coupons = Disables coupons/shopping feature, as of version 117
+- extensions = Disables extensions (Edge for Android only), as of version 122
 
 To disable multiple features, separate values with |. For example, inprivate|password disables both InPrivate and password storage.
 
