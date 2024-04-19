@@ -266,6 +266,20 @@ To configure groups of settings that create specific customizations for a profil
 
 To manage AI settings for a profile, navigate to the **enterprise secure AI** tab. You can configure AI related settings on this page. Once any setting is edited on this page, all of the configurations will appear in the **Policies** tab in that profile. If you edit a setting on this page that already has an existing configuration, the new edit will override the existing value.
 
+**Blocking Access to Third-Party LLM Chatbots** will add a dynamic set of URLs to the URLBlocklist policy for blocking access to well-known AI chatbots. This dynamic URL-set is managed by Microsoft and may be updated over time. As of the time of writing, the list includes:
+
+- https://bard.google.com
+- https://chat.openai.com
+- https://gemini.google.com
+- https://claude.ai
+- https://perplexity.ai
+- https://jasper.ai
+- https://you.com
+- https://writesonic.com/chat
+- https://cohere.com/coral
+
+Disabling this feature will automatically remove these URLs from the policy, even if they were manually added beforehand. Values not included in this dynamic URL set will remain unaffected.
+
 ##### Manage settings for Copilot
 
 The page will detect whether your organization has access to Copilot and the Microsoft Edge sidebar. Based on this information, one of the following states will exist:

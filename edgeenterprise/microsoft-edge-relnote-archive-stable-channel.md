@@ -3,7 +3,7 @@ title: "Archived release notes for Microsoft Edge Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/25/2024
+ms.date: 04/18/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -16,6 +16,199 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
+<!-- Version 121.0.2277.128: February 15, 2024 to Version 118.0.2088.122: November 29, 2023 -->
+## Version 121.0.2277.128: February 15, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Edge has a feature that provides an option to import browser data on each launch from other browsers with user consent. This feature's state might not have been syncing and displaying correctly across multiple devices. This is fixed.
+
+### Policy updates
+
+#### Additional policy changes
+
+- [EdgeManagementPolicyOverridesPlatformPolicy](/deployedge/microsoft-edge-policies#edgemanagementpolicyoverridesplatformpolicy) - For Microsoft Edge version 121.0.2277 and later, this policy will control all device policies.
+- [EdgeManagementUserPolicyOverridesCloudMachinePolicy](/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy)  - For Microsoft Edge version 121.0.2277 and later, this policy will control all per user profile policies.
+
+<!-- =================================================== -->
+## Version 120.0.2210.175: February 8, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-8-2024).
+
+## Version 121.0.2277.112: February 8, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-8-2024).
+
+## Version 121.0.2277.110: February 7, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.106: February 5, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- Resolved an issue where the [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) policy didn't work as expected while opening `file://` links.
+
+## Version 121.0.2277.98: February 1, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#february-1-2024).
+
+## Version 120.0.2210.167: January 31, 2024
+
+Fixed various bugs and performance issues for Extended Stable.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-31-2024).
+
+## Version 121.0.2277.83: January 25, 2024
+
+Fixed various bugs and performance issues. For more information, see [Improved reliability](#improved-reliability) and [Dev Channel updates](#dev-channel-updates).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
+
+### Improved reliability
+
+- Fixed a browser crash in on-premise sync
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following  Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 121.0.2274.0 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2274-0-is-live/m-p/4010747)
+- [Dev Channel update to 121.0.2256.2 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2256-2-is-live/m-p/4004721)
+- [Dev Channel update to 121.0.2248.1 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2248-1-is-live/m-p/3998824)
+- [Dev Channel update to 121.0.2220.3 is live - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/discussions/dev-channel-update-to-121-0-2220-3-is-live/m-p/3986444)
+
+### Feature updates
+
+- **Enable organizational branding in Edge for Business.**   Enable your organization's branding assets from Entra onto profile-related UI for profiles signed in with an Entra ID (formerly known as Azure Active Directory) account. You can add your organization's details such as name to the profile pill, name and brand color to the profile flyout, and logo to overlay the Edge for Business taskbar icon. This branding can help users more easily differentiate between multiple profiles and browser windows.
+
+  Default organizational branding can be enabled by admins through the following policies:
+
+  - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled
+)
+  - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
+
+  Admins will need to have "company branding" assets configured in the Microsoft Entra admin center for branding assets to be applied to this feature.
+
+  For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Add company branding to your organization's sign-in page](/entra/fundamentals/how-to-customize-branding).
+
+- **Microsoft Edge migrates the updates experience into Browser Essentials.** Getting alerts on available Edge Updates will come from Browser Essentials instead of the Settings page for better visibility and experience. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Added support for AVIF and AV1 file formats.** Microsoft Edge now supports the AVIF and AV1 file formats which offer better compression and higher quality images and videos.  Users can enjoy faster loading times and better quality media on websites.  
+
+- **E-tree in Wallet.** Users signed into Microsoft Edge with a personal Microsoft Account (MSA) can grow a virtual seed into a tree with Wallet. Once it's grown, a real tree is planted.  Administrators can control the availability using the [EdgeWalletEtreeEnabled](/deployedge/microsoft-edge-policies#edgewalletetreeenabled) policy.
+
+- **New Website Typo Protection policies.** The built-in Website Typo Protection warns users if it appears there is a mistyped popular domain name which could land users on a malicious webpage.  Administrators can control the availability and configure Website Typo Protection by using the [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) and [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) policies.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeDisableDialProtocolForCastDiscovery](/deployedge/microsoft-edge-policies#edgedisabledialprotocolforcastdiscovery) - Disable DIAL protocol for cast device discovery
+- [NativeHostsExecutablesLaunchDirectly](/deployedge/microsoft-edge-policies#nativehostsexecutableslaunchdirectly) - Force Windows executable Native Messaging hosts to launch directly
+- [RelatedWebsiteSetsEnabled](/deployedge/microsoft-edge-policies#relatedwebsitesetsenabled) - Enable Related Website Sets
+- [RelatedWebsiteSetsOverrides](/deployedge/microsoft-edge-policies#relatedwebsitesetsoverrides) - Override Related Website Sets
+- [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-policies#preventtyposquattingpromptoverride) - Prevent bypassing Edge Website Typo Protection prompts for sites
+- [TyposquattingAllowListDomains](/deployedge/microsoft-edge-policies#typosquattingallowlistdomains) - Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) - Block users from signing in to Edge
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) - Control communication with the Experimentation and Configuration Service
+
+#### Obsoleted policies
+
+- [SendMouseEventsDisabledFormControlsEnabled](/deployedge/microsoft-edge-policies#sendmouseeventsdisabledformcontrolsenabled) - Control the new behavior for event dispatching on disabled form controls
+- [WebRtcAllowLegacyTLSProtocols](/deployedge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - Allow legacy TLS/DTLS downgrade in WebRTC (obsoleted)
+
+## Version 120.0.2210.160: January 25, 2024
+
+Fixed various bugs and performance issues for Extended Stable.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-25-2024).
+<!-- ================== last note ===================== -->
+## Version 120.0.2210.144: January 17, 2024
+
+Fixed various bugs and performance issues.
+
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2024-0519](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0519), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-17-2024).
+
+## Version 120.0.2210.133: January 11, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-11-2024).
+
+## Version 120.0.2210.121: January 5, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#january-5-2024).
+
+## Version 120.0.2210.91: December 21, 2023
+
+Fixed various bugs and performance issues.
+
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2023-7024](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-7024), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-21-2023).
+
+## Version 120.0.2210.89: December 20, 2023
+
+Fixed various bugs and performance issues.
+
+### Feature updates
+
+- **Microsoft Edge Workspaces improvements for offline functionality.** Any workspace previously opened on a device is cached locally and can be opened on that device from that cache even if it fails to connect. Changes persist on that device and are resolved into the synced version when a connection can finally be made. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+## Version 120.0.2210.77: December 14, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-14-2023).
+
+## Version 120.0.2210.61: December 7, 2023
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#december-7-2023).
+
+### Feature updates
+
+- **RendererAppContainer.** For extra security benefits, the Windows native app container is enabled by default. Note: If Enterprise organizations identify a compatibility issue due to code injection from security software, they should follow up with the software publisher directly. Alternatively, they can use the [RendererAppContainerEnabled](/deployedge/microsoft-edge-policies#rendererappcontainerenabled) policy to trade off the security benefits in Microsoft Edge with their other software.
+
+- **Updated SmartActionsBlockList policy.** The [SmartActionsBlockList](/deployedge/microsoft-edge-policies#smartactionsblocklist) policy is updated with new policy option mappings. Administrators can now configure the policy to control Smart actions like definitions on websites (smart_actions_website) or control Smart actions in pdfs and on websites (smart_actions).
+
+### Policy updates
+
+#### New policies
+
+- [AutoDiscardSleepingTabsEnabled](/deployedge/microsoft-edge-policies#autodiscardsleepingtabsenabled) - Configure auto discard sleeping tabs
+- [AutomaticProfileSwitchingSiteList](/deployedge/microsoft-edge-policies#automaticprofileswitchingsitelist) - Configure the automatic profile switching site list
+- [Edge3PSerpTelemetryEnabled](/deployedge/microsoft-edge-policies#edge3pserptelemetryenabled) - Edge 3P SERP Telemetry Enabled
+- [PostQuantumKeyAgreementEnabled](/deployedge/microsoft-edge-policies#postquantumkeyagreementenabled) - Enable post-quantum key agreement for TLS
+- [WebAppSettings](/deployedge/microsoft-edge-policies#webappsettings) - Web App management settings
+- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled) - Allow your organization's logo from Microsoft Entra to be overlaid on the Microsoft Edge app icon of a work profile
+
+## Version 118.0.2088.122: November 29, 2023
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+> [!IMPORTANT]
+> This update to Extended Stable channel contains a fix for [CVE-2023-6345](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-6345), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#november-29-2023).
 
 <!-- Version 120.0.2210.160: January 25, 2024 to Version 118.0.2088.122: November 29, 2023 -->
 ## Version 120.0.2210.160: January 25, 2024
