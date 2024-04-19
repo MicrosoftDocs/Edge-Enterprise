@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/02/2024
+ms.date: 04/05/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -25,6 +25,16 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 77 or later.
+>
+> For Microsoft Edge Mobile policy reference, see [Microsoft Edge Mobile - Policies](/deployedge/microsoft-edge-mobile-policies)
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
 
 ## Available policies
 
@@ -374,7 +384,7 @@ These tables list all of the browser-related group policies available in this re
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Enable preload of the new tab page for faster rendering|
 |[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Allow quick links on the new tab page|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configure the Microsoft Edge new tab page experience (obsolete)|
-|[RestoreOnStartup](#restoreonstartup)|Action to take on startup|
+|[RestoreOnStartup](#restoreonstartup)|Action to take on Microsoft Edge startup|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sites to open when the browser starts|
 |[RestoreOnStartupUserURLsEnabled](#restoreonstartupuserurlsenabled)|Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured|
 |[ShowHomeButton](#showhomebutton)|Show Home button on toolbar|
@@ -458,8 +468,8 @@ These tables list all of the browser-related group policies available in this re
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configure Online Text To Speech|
 |[ConfigureShare](#configureshare)|Configure the Share experience|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge|
-|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles|
-|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to page contents for Microsoft Entra ID profiles|
+|[CopilotCDPPageContext](#copilotcdppagecontext)|Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles|
+|[CopilotPageContext](#copilotpagecontext)|Control Copilot access to browser context for Microsoft Entra ID profiles|
 |[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Specifies whether WebAssembly modules can be sent cross-origin (obsolete)|
 |[CryptoWalletEnabled](#cryptowalletenabled)|Enable CryptoWallet feature|
 |[CustomHelpLink](#customhelplink)|Specify custom help link|
@@ -550,6 +560,7 @@ These tables list all of the browser-related group policies available in this re
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 |[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
 |[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
+|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
 |[ImportCookies](#importcookies)|Allow importing of Cookies|
@@ -10548,7 +10559,7 @@ If you configure this policy, that is, add domains for which password manager is
   - Can be recommended: No
   - Dynamic Policy Refresh: Yes
   - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
 
   #### Data Type:
 
@@ -15825,7 +15836,7 @@ Use the preceding information when configuring this policy.
 
   ### RestoreOnStartup
 
-  #### Action to take on startup
+  #### Action to take on Microsoft Edge startup
 
   
   
@@ -15843,9 +15854,11 @@ If you want to reopen URLs that were open the last time Microsoft Edge closed, c
 
 If you want to open a specific set of URLs, choose 'RestoreOnStartupIsURLs'.
 
-Disabling this setting is equivalent to leaving it not configured. Users will be able to change it in Microsoft Edge.
+Starting in Microsoft Edge version 125, if you want to reopen URLs that were open the last time Microsoft Edge closed and open a specific set of URLs, choose 'RestoreOnStartupIsLastSessionAndURLs'.
 
-This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory, or instances that enrolled for device management. On macOS, this policy is available only on instances that are managed via MDM or joined to a domain via MCX.
+Disabling this setting is the same as leaving it not configured. Users will be able to change it in Microsoft Edge.
+
+This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory, or instances that enrolled for device management. On macOS, this policy is only available on instances that are managed via MDM or joined to a domain via MCX.
 
 Policy options mapping:
 
@@ -15854,6 +15867,8 @@ Policy options mapping:
 * RestoreOnStartupIsLastSession (1) = Restore the last session
 
 * RestoreOnStartupIsURLs (4) = Open a list of URLs
+
+* RestoreOnStartupIsLastSessionAndURLs (6) = Open a list of URLs and restore the last session
 
 Use the preceding information when configuring this policy.
 
@@ -15874,7 +15889,7 @@ Use the preceding information when configuring this policy.
   ##### Group Policy (ADMX) info
 
   - GP unique name: RestoreOnStartup
-  - GP name: Action to take on startup
+  - GP name: Action to take on Microsoft Edge startup
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
   - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
   - GP ADMX file name: MSEdge.admx
@@ -21411,7 +21426,7 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   ### CopilotCDPPageContext
 
-  #### Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles
+  #### Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles
 
   
   
@@ -21421,12 +21436,13 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
 
   #### Description
 
-  This policy controls access to page contents for Copilot with Commerical Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
-If you enable this policy, Copilot with Commerical Data Protection will have access to page contents.
+  This policy controls access to page contents, browser history, and user preferences for Copilot with Commerical Data Protection in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot without Commercial Data Protection. Access for Copilot without Commercial Data Protection is controlled by the policy CopilotPageContext.
 
-If you don't configure this policy, a user can enable Copilot with Commerical Data Protection access to page contents using the setting toggle in Edge.
+If you enable this policy, Copilot with Commerical Data Protection will have access to browser context.
 
-If you disable this policy, Copilot with Commerical Data Protection will not be able to access page contents.
+If you don't configure this policy, a user can enable access to browser context for Copilot with Commerical Data Protection using the setting toggle in Edge.
+
+If you disable this policy, Copilot with Commerical Data Protection will not be able to access browser context.
 
   #### Supported features:
 
@@ -21445,7 +21461,7 @@ If you disable this policy, Copilot with Commerical Data Protection will not be 
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotCDPPageContext
-  - GP name: Control Copilot with Commerical Data Protection access to page contents for Microsoft Entra ID profiles
+  - GP name: Control Copilot with Commerical Data Protection access to browser context for Microsoft Entra ID profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -21476,7 +21492,7 @@ If you disable this policy, Copilot with Commerical Data Protection will not be 
 
   ### CopilotPageContext
 
-  #### Control Copilot access to page contents for Microsoft Entra ID profiles
+  #### Control Copilot access to browser context for Microsoft Entra ID profiles
 
   
   
@@ -21486,12 +21502,13 @@ If you disable this policy, Copilot with Commerical Data Protection will not be 
 
   #### Description
 
-  This policy controls access to page contents for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the CopilotCDPPageContext policy.
-If you enable this policy, Copilot will have access to page contents.
+  This policy controls access to page contents, browser history, and user preferences for Copilot in the Edge sidebar. This policy applies only to Microsoft Entra ID profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA profiles. This policy doesn't control access for Copilot with Commercial Data Protection. Access for Copilot with Commercial Data Protection is controlled by the policy CopilotCDPPageContext.
 
-If you don't configure this policy, a user can enable Copilot access to page contents using the setting toggle in Edge.
+If you enable this policy, Copilot will have access to browser context.
 
-If you disable this policy, Copilot will not be able to access page contents.
+If you don't configure this policy, a user can enable access to browser context for Copilot using the setting toggle in Edge.
+
+If you disable this policy, Copilot will not be able to access browser context.
 
   #### Supported features:
 
@@ -21510,7 +21527,7 @@ If you disable this policy, Copilot will not be able to access page contents.
   ##### Group Policy (ADMX) info
 
   - GP unique name: CopilotPageContext
-  - GP name: Control Copilot access to page contents for Microsoft Entra ID profiles
+  - GP name: Control Copilot access to browser context for Microsoft Entra ID profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -27803,6 +27820,70 @@ If you disable this policy, the Sidebar will never be shown.
   #### Mac information and settings
 
   - Preference Key Name: HubsSidebarEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### ImageEditorServiceEnabled
+
+  #### Enable the Designer for Image Editor feature
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 125 or later
+
+  #### Description
+
+  Lets users access and use the Designer for Image Editor feature to edit an image they select.
+
+If you enable or don't configure this policy, users can access and use the Designer for Image Editor feature in Microsoft Edge.
+
+If you disable this policy, users can't access and use the Designer for Image Editor feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImageEditorServiceEnabled
+  - GP name: Enable the Designer for Image Editor feature
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImageEditorServiceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ImageEditorServiceEnabled
   - Example value:
 ``` xml
 <true/>
