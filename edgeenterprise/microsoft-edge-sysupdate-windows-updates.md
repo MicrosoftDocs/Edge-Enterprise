@@ -3,7 +3,7 @@ title: "Windows updates to support Microsoft Edge"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -52,12 +52,12 @@ Along with the previous changes, there are changes that will happen regardless o
   
 ## Older versions of Windows
 
-To deploy Microsoft Edge on a device running a Windows version older than Windows 10 RS4, use [Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), [Microsoft Intune](/mem/intune/apps/apps-windows-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), or upgrade to a supported version of Windows 10. The following article lists the currently supported versions of Windows 10 and Windows 11.
+To deploy Microsoft Edge on a device running a Windows version older than Windows 10 April 2018 Update, use [Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), [Microsoft Intune](/mem/intune/apps/apps-windows-edge?bc=%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=%2FDeployEdge%2Ftoc.json), or upgrade to a supported version of Windows 10. The following article lists the currently supported versions of Windows 10 and Windows 11.
 
 - [Supported versions of Windows client](/windows/release-health/supported-versions-windows-client)
 
 > [!NOTE]
-> For Windows 10 RS4-20H1, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge. For more information, see [Windows 10 update history](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
+> For Windows 10 April 2018 Update-Windows 10 April 2020 Update, deploy a Windows LCU from May 2021 or newer to get Microsoft Edge. For more information, see [Windows 10 update history](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
 
 > [!IMPORTANT]
 > If you need updates not listed here, please run Windows Update or contact your administrator.
