@@ -20,6 +20,10 @@ The latest version of Microsoft Edge includes the following policies that you ca
 > [!NOTE]
 > The MDM OS channel in Microsoft Intune is a Managed Devices App Configuration Policy (ACP). For more information, see [Managed Devices ACP](/mem/intune/apps/app-configuration-policies-overview#apps-that-support-app-configuration). If you're not using Microsoft Intune, consult your Unified Endpoint Management (UEM) documentation to learn how to deploy these policies through mobile device management.
 
+
+> [!NOTE]
+> For Microsoft Edge Browser policy reference, see [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies)
+
 ## Available policies
 
 These tables list all of the browser-related policies available in this release of Microsoft Edge. Use the links in the table to get more details about specific policies.
