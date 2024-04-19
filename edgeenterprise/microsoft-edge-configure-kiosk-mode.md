@@ -3,7 +3,7 @@ title: "Configure Microsoft Edge kiosk mode"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 04/11/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -21,6 +21,8 @@ This article describes how to configure Microsoft Edge kiosk mode options that y
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+>
+> Kiosk for Linux is not supported.
 
 > [!IMPORTANT]
 > Invoke Microsoft Edge kiosk mode features on Windows 10 using the command line arguments provided in [Use kiosk mode features](#use-kiosk-mode-features).
@@ -40,31 +42,31 @@ An initial set of kiosk mode features is available to test with Microsoft Edge S
 
 ### Kiosk mode supported features
 
-The following table lists the features supported by kiosk mode in Microsoft Edge and Microsoft Edge Legacy. Use this table as a guide to transitioning to Microsoft Edge by comparing how these features are supported in both versions of Microsoft Edge.
+The following table lists the features supported by kiosk mode in Microsoft Edge.
 
-|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|Available with Microsoft Edge Legacy|
-|-|-|-|-|-|
-|InPrivate Navigation|Y|Y|89|Y|
-|Reset on inactivity|Y|Y|89|Y|
-|[Read only address bar](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (policy) |N|Y |89|N|
-|[Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (policy)  | Y|Y |89|N|
-|F11 blocked (enter/exit full-screen) | Y | Y |89|Y|
-|F12 blocked (launch Developer Tools) | Y | Y |89|Y|
-| Multi tab support | N| Y|89|Y|
-|[Allow URL support](./microsoft-edge-policies.md#urlallowlist) (policy)|Y|Y|89|N|
-|[Block URL support](./microsoft-edge-policies.md#urlblocklist) (policy)|Y|Y|89|N|
-|[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|Y|
-|[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|Y|
-|[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|Y|
-|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|Y|
-|End session button * | N| Y|89|Y|
-|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|Y|
-| CTRL+N blocked (open a new window) * | Y | Y |89|Y|
-| CTRL+T blocked (open new tab) |Y | N |89|Y|
-|Settings and more (...) will display only the required options  |Y |Y |89|Y|
-|Restrict the launch of other applications from the browser|Y|Y|90|Y|
-|UI print settings lockdown|Y|Y|90|Y|
-|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|Y|
+|Feature|Digital\Interactive Signage|Public browsing|Available with Microsoft Edge version (and higher)|
+|-|-|-|-|
+|InPrivate Navigation|Y|Y|89|
+|Reset on inactivity|Y|Y|89|
+|[Read only address bar](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (policy) |N|Y |89|
+|[Delete downloads on exit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (policy)  | Y|Y |89|
+|F11 blocked (enter/exit full-screen) | Y | Y |89|
+|F12 blocked (launch Developer Tools) | Y | Y |89|
+| Multi tab support | N| Y|89|
+|[Allow URL support](./microsoft-edge-policies.md#urlallowlist) (policy)|Y|Y|89|
+|[Block URL support](./microsoft-edge-policies.md#urlblocklist) (policy)|Y|Y|89|
+|[Show home button](./microsoft-edge-policies.md#showhomebutton) (policy)|N|Y|89|
+|[Manage favorites](./microsoft-edge-policies.md#managedfavorites) (policy)|N|Y|89|
+|[Enable printer](./microsoft-edge-policies.md#printingenabled) (policy)|Y|Y|89|
+|[Configure the new tab page URL](./microsoft-edge-policies.md#newtabpagelocation) (policy)|N|Y|89|
+|End session button * | N| Y|89|
+|All internal Microsoft Edge URLs are blocked, except for *edge://downloads* and *edge://print* |N|Y|89|
+| CTRL+N blocked (open a new window) * | Y | Y |89|
+| CTRL+T blocked (open new tab) |Y | N |89|
+|Settings and more (...) will display only the required options  |Y |Y |89|
+|Restrict the launch of other applications from the browser|Y|Y|90|
+|UI print settings lockdown|Y|Y|90|
+|[Set the new tab page as the home page](./microsoft-edge-policies.md#homepageisnewtabpage) (policy)|N|Y|90|
 
 > [!NOTE]
 > Features followed by "*" are only enabled in an assigned access single app scenario.
@@ -171,7 +173,7 @@ You can manage Microsoft Edge kiosk mode assigned access single app via [Windows
 
 ### Multi-app kiosk
 
-Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10, which is the equivalent of Microsoft Edge Legacy "Normal browsing" kiosk mode type. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**).
+Microsoft Edge can be run with [multi-app assigned access](/windows/configuration/lock-down-windows-10-to-specific-apps) on Windows 10. To configure Microsoft Edge with multi-app assigned access, follow the instructions on how to [Set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps). (The AUMID for the Microsoft Edge Stable channel is **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE**).
 
 When using Microsoft Edge with multi-app assigned access, you can configure Microsoft Edge kiosk to use the [Microsoft Edge browser policies](./microsoft-edge-policies.md) to configure the browsing experience to meet your unique requirements.
 
@@ -255,4 +257,3 @@ We currently don't support the following features, they don't work with kiosk mo
 - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
 - [Plan your deployment of Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Configure kiosks and digital signs on Windows desktop editions](/windows/configuration/kiosk-methods)
-- [Plan your kiosk mode transition](microsoft-edge-kiosk-mode-transition-plan.md)
