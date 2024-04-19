@@ -99,11 +99,11 @@ When Microsoft Edge is running on Windows 7, 8, and macOS:
 
 ## Implementation details
 
-For non-Windows 10 devices: 
+For non-Windows 10/11 devices:
 - If [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy is configured, it takes precedence over [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) and [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices). 
 - If [DiagnosticData](./microsoft-edge-policies.md#diagnosticdata) policy isn't configured, Microsoft Edge listens to [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) and [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices).  
 
-For Windows 10 to understand our implementation with the dependency on the Windows Diagnostic data setting, the following table identifies whether **Required** and **Optional** diagnostic data is sent to Microsoft.
+For Windows 10/11: To understand our implementation with the dependency on the Windows Diagnostic data setting, the following table identifies whether **Required** and **Optional** diagnostic data is sent to Microsoft.
 
 | Windows Diagnostic data setting | Required diagnostic data  | Optional diagnostic data |
 |---------------------------------|-----------------------------------------------|-----------------------------------------------------|
