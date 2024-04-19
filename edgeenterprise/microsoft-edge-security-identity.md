@@ -3,7 +3,7 @@ title: "Microsoft Edge identity support and configuration"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -45,7 +45,7 @@ Microsoft Edge uses the OS default account to auto sign into the browser. Depend
 The user gets automatically signed in with their Microsoft Entra account.
 - **The device is domain joined:** Available on Win10, down-level Windows, and corresponding server versions.
 By default, the user isn't automatically signed in. If you want to automatically sign in users with domain accounts, use the [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin) policy. If you want to automatically sign in users with their Microsoft Entra accounts, consider hybrid joining your devices.
-- **OS default account is MSA:** Win10 RS3 (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge signs in automatically with the MSA account.
+- **OS default account is MSA:** Windows 10 Fall Creators Update (Version 1709/Build 10.0.16299) and above. This scenario is unlikely on enterprise devices. But, if the OS default account is MSA, Microsoft Edge signs in automatically with the MSA account.
 
 ### Manual sign-in
 
@@ -65,19 +65,19 @@ On some platforms, you can configure Microsoft Edge to automatically sign into w
 
 ### SSO with Primary Refresh Token (PRT)
 
-Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Microsoft Edge has native support for PRT-based SSO, and you don't need an extension. On Windows 10 Fall Creators Update and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
-A Primary Refresh Token (PRT) is a Microsoft Entra ID key that's used for authentication on Windows 10, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
+A Primary Refresh Token (PRT) is a Microsoft Entra ID key that's used for authentication on Windows 10/11, iOS, and Android devices. It enables single sign-on (SSO) across the applications used on those devices. For more information, see [What is a Primary Refresh Token?](/azure/active-directory/devices/concept-primary-refresh-token).
 
 ### Seamless SSO
 
-Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 RS3 and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
+Just like PRT SSO, Microsoft Edge has native Seamless SSO support without needing an extension. On Windows 10 Fall Creators Update and above, if a user is signed into their browser profile, they get SSO with the PRT mechanism to websites that support PRT-based SSO.
 
 Seamless Single Sign-On automatically signs users in when they're on corporate devices connected to a corporate network. When enabled, users don't need to type in their passwords to sign in to Microsoft Entra ID. Typically they don't even have to type in their usernames. For more information, see [Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 
 ### Windows Integrated Authentication (WIA)
 
-Microsoft Edge also supports Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allowlist for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
+Microsoft Edge also supports Windows Integrated Authentication for authentication requests within an organization's internal network for any application that uses a browser for its authentication. This is supported on all versions of Windows 10/11 and down-level Windows. By default, Microsoft Edge uses the intranet zone as an allowlist for WIA. Alternatively, you can customize the list of servers that are enabled for Integrated Authentication by using the [AuthServerAllowlist](./microsoft-edge-policies.md#authserverallowlist) policy. On macOS, this policy is required to enable Integrated Authentication.
 
 To support WIA-based SSO on Microsoft Edge (version 77 and later), you might also have to do some server-side configuration. You'll probably have to configure the Active Directory Federation Services (AD FS) property **WiaSupportedUserAgents** to add support for the new Microsoft Edge user agent string. For instructions on how to do this, see [View WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) settings and [Change WIASupportedUserAgent](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings) settings. An example of the Microsoft Edge user agent string on Windows 10 is shown below, and you can learn more about the [Microsoft Edge UA string here](/microsoft-edge/web-platform/user-agent-string). 
 
@@ -96,7 +96,7 @@ Proactive authentication is an optimization over browser to website SSO that fro
 
 ### Windows Hello CredUI for NTLM Authentication
 
-When a website tries to sign users in using the NTLM or Negotiate mechanisms and SSO isn't available, we offer users an experience where they can share their OS credentials with the website to satisfy the authentication challenge using Windows Hello Cred UI. This sign-in flow will only appear for users on Windows 10 who don't get single-sign-on during an NTLM or Negotiate challenge.
+When a website tries to sign users in using the NTLM or Negotiate mechanisms and SSO isn't available, we offer users an experience where they can share their OS credentials with the website to satisfy the authentication challenge using Windows Hello Cred UI. This sign-in flow will only appear for users on Windows 10/11 who don't get single-sign-on during an NTLM or Negotiate challenge.
 
 ### Sign in automatically using saved passwords
 
