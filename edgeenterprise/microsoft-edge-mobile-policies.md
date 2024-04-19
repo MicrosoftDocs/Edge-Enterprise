@@ -22,6 +22,8 @@ The latest version of Microsoft Edge includes the following policies that you ca
 
 
 > [!NOTE]
+> This article applies to Microsoft Edge version 77 or later.
+>
 > For Microsoft Edge Browser policy reference, see [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies)
 
 ## Available policies
