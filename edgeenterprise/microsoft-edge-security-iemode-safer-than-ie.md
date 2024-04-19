@@ -3,7 +3,7 @@ title: "Modern security protection for vulnerable legacy apps"
 ms.author: archandr
 author: dan-wesley
 manager: kawong
-ms.date: 08/21/2023
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -72,7 +72,7 @@ SmartScreen, Microsoft's phishing protection technology, blocks more phishing <s
 
 Microsoft Edge provides full native support for SmartScreen, but IE is only partially supported because of its outdated architecture.
 
-In addition to providing security advances that map to modern security practices, Microsoft Edge is more secure than Chrome for businesses on Windows 10. Microsoft Edge is also designed to take advantage of the security features, functionality, and tools available in the Microsoft 365 suite and Windows 10. This product ecosystem reduces security and privacy complexity for the IT team. For example, investments and decisions made for identity in Microsoft 365 can be easily applied to Microsoft Edge.
+In addition to providing security advances that map to modern security practices, Microsoft Edge is more secure than Chrome for businesses on Windows 10/11. Microsoft Edge is also designed to take advantage of the security features, functionality, and tools available in the Microsoft 365 suite and Windows 10/11. This product ecosystem reduces security and privacy complexity for the IT team. For example, investments and decisions made for identity in Microsoft 365 can be easily applied to Microsoft Edge.
 
 IE mode on Microsoft Edge is a unique solution that ensures users can access mission-critical IE legacy sites, while at the same time staying protected from modern threats.
 
