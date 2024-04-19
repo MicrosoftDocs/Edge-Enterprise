@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 03/26/2024
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -24,7 +24,7 @@ The Microsoft Edge management service is a platform in the Microsoft 365 admin c
 
 - You must have Microsoft Edge 115.0.1901.7 or greater installed.
 - You must be a [Microsoft Edge Administrator](/azure/active-directory/roles/permissions-reference#edge-administrator) or a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) to access the experience in Microsoft 365 Admin Center.
-- You must be using one of the following supported operating systems: Windows 10+ or Windows Server 2016+. See [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems) for specifics.
+- You must be using one of the following supported operating systems: Windows 10/11 or Windows Server 2016 or later. See [Microsoft Edge Supported Operating Systems](/deployedge/microsoft-edge-supported-operating-systems) for specifics.
 
 > [!IMPORTANT]
 > The Microsoft Edge management service uses the Cloud Policy service, which currently isn't available to customers who have the following plans: Office 365 operated by 21Vianet, Office 365 GCC, or Office 365 GCC High and DoD. [Learn more about the Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy#requirements-for-using-cloud-policy).
@@ -265,6 +265,20 @@ To configure groups of settings that create specific customizations for a profil
 #### Manage enterprise secure AI settings
 
 To manage AI settings for a profile, navigate to the **enterprise secure AI** tab. You can configure AI related settings on this page. Once any setting is edited on this page, all of the configurations will appear in the **Policies** tab in that profile. If you edit a setting on this page that already has an existing configuration, the new edit will override the existing value.
+
+**Blocking Access to Third-Party LLM Chatbots** will add a dynamic set of URLs to the URLBlocklist policy for blocking access to well-known AI chatbots. This dynamic URL-set is managed by Microsoft and may be updated over time. As of the time of writing, the list includes:
+
+- https://bard.google.com
+- https://chat.openai.com
+- https://gemini.google.com
+- https://claude.ai
+- https://perplexity.ai
+- https://jasper.ai
+- https://you.com
+- https://writesonic.com/chat
+- https://cohere.com/coral
+
+Disabling this feature will automatically remove these URLs from the policy, even if they were manually added beforehand. Values not included in this dynamic URL set will remain unaffected.
 
 ##### Manage settings for Copilot
 
