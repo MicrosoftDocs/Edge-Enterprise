@@ -3,7 +3,7 @@ title: "Frequently asked questions (FAQ) about Microsoft Edge in the enterprise"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/12/2024
+ms.date: 04/04/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -31,9 +31,9 @@ Select the ellipses icon (**...**) in the upper-right corner of Microsoft Edge, 
 
 ## Does Microsoft Edge support ActiveX controls or Browser Helper Objects like Silverlight or Java?
 
-No. Microsoft Edge doesn't support ActiveX controls or Browser Help Objects (BHOs) like Silverlight or Java. However, if you're running web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer 11, you can configure them to run in IE mode on  Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](./edge-ie-mode.md).
+No. Microsoft Edge doesn't support ActiveX controls or Browser Help Objects (BHOs) like Silverlight or Java. If you run web apps that use ActiveX controls, BHOs, or legacy document modes on Internet Explorer (IE) 11, you can configure them to run in IE mode on  Microsoft Edge. For more information, see [Configure IE mode on Microsoft Edge](./edge-ie-mode.md).
 
-## Will favorites be ported over from the current version of Microsoft Edge or will I have to re-add them?
+## Will favorites be ported over from the current version of Microsoft Edge or do I have to add them back?
 
 Microsoft Edge supports import from existing installs of Microsoft Edge, Chrome, Internet Explorer, and Firefox (on Win10). The following settings are supported for importing: Bookmarks, History, Passwords, and Autofill (payments, addresses, and generic forms). You can choose to import either from the First-run Experience or from browser settings.
 
@@ -47,7 +47,7 @@ Microsoft Edge supports extensions from [Microsoft Edge Insider Addons](https://
 
 ## Do you support Mobile Device Management (MDM) and Microsoft Intune?
 
-Yes. Configuring Microsoft Edge on Windows 10 using Microsoft Intune and Mobile Device Management (MDM) is now supported. For more information, see [Configure Microsoft Edge using Microsoft Intune](./configure-edge-with-intune.md) and [Configure Microsoft Edge using Mobile Device Management](./configure-edge-with-mdm.md).
+Yes. Configuring Microsoft Edge on Windows 10/11 using Microsoft Intune and Mobile Device Management (MDM) is now supported. For more information, see [Configure Microsoft Edge using Microsoft Intune](./configure-edge-with-intune.md) and [Configure Microsoft Edge using Mobile Device Management](./configure-edge-with-mdm.md).
 
 ## Does Windows Server Update Services (WSUS) support the initial deployment of Microsoft Edge?
 
@@ -57,7 +57,7 @@ Yes. There are packages in the [Microsoft Update Catalog](https://www.catalog.up
 
 ## Are Initial Preferences supported?
 
-Yes. For more information, see [Configure Microsoft Edge using Initial Preferences settings for the first run](./initial-preferences-support-on-microsoft-edge-browser.md)
+Yes. For more information, see [Configure Microsoft Edge using Initial Preferences settings for the first run.](./initial-preferences-support-on-microsoft-edge-browser.md)
 
 ## See also
 
