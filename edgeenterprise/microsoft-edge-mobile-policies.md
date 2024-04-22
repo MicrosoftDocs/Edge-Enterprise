@@ -3103,6 +3103,7 @@ If you disable or don't configure this policy, the First-run experience will be 
 #### Data Type:
 
 Android:Boolean
+
 iOS:Boolean
 
 ####  Android and iOS restriction name:
@@ -3139,6 +3140,7 @@ If you don't set this policy, Microsoft Edge lets users control whether it's the
 #### Data Type:
 
 Android:Boolean
+
 iOS:Boolean
 
 #### Android and iOS restriction name:
