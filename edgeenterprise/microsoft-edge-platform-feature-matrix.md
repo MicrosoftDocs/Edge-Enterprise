@@ -3,7 +3,7 @@ title: "Platform support for Microsoft Edge features"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 01/12/2024
+ms.date: 04/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -26,7 +26,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 > [!NOTE]
 > Android and iOS are currently not represented in the support tables however we're continuing to work on this information and will update accordingly.
 
-| Security features |Win 10|Win 8.1|Win 7|macOS|Linux|URL|
+| Security features |Win 10+|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
 |Microsoft Entra Conditional Access|Yes|Yes|Yes|Yes|Yes|[Microsoft Entra Conditional Access](/deployedge/ms-edge-security-conditional-access#accessing-conditional-access-protected-resources-in-microsoft-edge)|
 |Microsoft Defender Application Guard|Yes (1890+)|No|No|No|No|[Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard) |
@@ -36,7 +36,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |Password Generator|Yes|Yes|Yes|Yes|Yes|[Password Generator](https://blogs.windows.com/msedgedev/2021/01/21/edge-88-privacy/)|
 |Windows Information Protection (WIP)|Yes (1607+)|No|No|No|No|[WIP](/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)|
 
-|Identity features| Win 10 | Win 8.1 | Win 7 | macOS | Linux | URL |
+|Identity features| Win 10+ | Win 8.1 | Win 7 | macOS | Linux | URL |
 |-----------------|--------|---------|-------|-------|-------|-----|
 |Automatic Sign In (hybrid/AAD-J)|Yes|Yes|Yes|No|Yes|[hybrid/AAD-J](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
 |Automatic Sign In (domain joined)|Yes|Yes|Yes|No|No|[domain joined](/deployedge/microsoft-edge-security-identity#automatic-sign-in)|
@@ -49,7 +49,7 @@ The following tables summarize feature support for the Windows and macOS platfor
 |SSO with Primary Refresh Token (PRT)|Yes (1709+)|Yes|Yes|No|No|[SSO with PRT](/deployedge/microsoft-edge-security-identity#sso-with-primary-refresh-token-prt)|
 |Windows Integrated Authentication (WIA)|Yes|Yes|Yes|Yes* (Policy Required)|No|[WIA](/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia)|
 
-|Additional features|Win 10|Win 8.1|Win 7|macOS|Linux|URL|
+|Additional features|Win 10+|Win 8.1|Win 7|macOS|Linux|URL|
 |-------------------|------|-------|-----|-----|-----|---|
 |Collections|Yes|Yes|Yes|Yes|Yes|[Collections](https://blogs.windows.com/msedgedev/2019/12/09/improvements-collections-sync-microsoft-edge/) |
 |Enterprise New Tab Page|Yes|Yes|Yes|Yes|Yes|[New Tab Page](https://blogs.windows.com/msedgedev/2020/10/29/enterprise-new-tab-page-my-feed/) |

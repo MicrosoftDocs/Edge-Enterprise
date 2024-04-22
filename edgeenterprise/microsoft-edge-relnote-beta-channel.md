@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/08/2024
+ms.date: 04/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -19,6 +19,18 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 124.0.2478.51: April 18, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.49: April 17, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 124.0.2478.39: April 12, 2024
+
+Fixed various bugs and performance issues.
+
 ## Version 124.0.2478.27: April 8, 2024
 
 Fixed various bugs and performance issues.
@@ -29,7 +41,7 @@ Fixed various bugs and performance issues.
 
 ### Feature updates
 
-- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who have enabled Edge Sync across devices/browsers. From now on Edge will give you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
+- **Cross-device Search Query History suggestions.** The existing Search Query suggestions are enhanced with cross-device query history in both Recent Searches and browser searches for enterprise users who enable Edge Sync across devices/browsers. From now on Edge gives you the relevant query history suggestions that you used for previous searches, regardless of where you did it. You can always trust Edge to help you quickly re-find the information that you accessed before.
 
 - **Enterprise secure AI controls in the Microsoft Edge management service.** The Microsoft Edge management service now provides a new dedicated space for admins to manage all AI-related policies in the Edge browser. This helps enhance security and productivity for managed users and devices.
 
@@ -57,9 +69,8 @@ The following Dev channel updates preceded this Beta channel release. The follow
 - **Updated profile options in new profile experience.** Many users unintentionally create empty profiles, cluttering their workspace and impeding their browsing experience. To reduce clutter and the likelihood of profile churn, updated First Run Experience (FRE) string options encourage users to sign-in and meaningfully create profiles for an improved browsing experience, or easily cancel unintentional creation. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 - **Copilot Page Context Policies.** To summarize and answer questions based on page context in Microsoft Edge, Copilot needs to be able to access the page content. We're providing two new policies to offer more flexibility for admins to customize Edge page context access across Copilot chats in Edge sidebar.
-   - [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to page contents for Microsoft Entra ID profiles
-   - [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to page contents for Microsoft Entra ID profiles
-
+   - [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to browser context for Microsoft Entra ID profiles
+   - [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
    - The [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) policy is deprecated in Edge version 124 and will be obsoleted in Edge version 127.
 
 - **Updates to Settings pages on privacy, security, search, & services.**  To improve ease of use, we're updating Edge settings page into two sections: "Privacy and Security" and "Search and Services." This streamlined approach should enable users to find the settings they're interested in more easily. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
@@ -68,16 +79,20 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 - **Sidebar Tools App - SpeedTest.**  Adding a SpeedTest answer by default to the Tools app in the Microsoft Edge sidebar.  For more information, see [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar).
 
-- **Updated reauthentication flyout when Web Single Sign-On (SSO) fails.**  Users who encounter Web single sign-on (SSO) failures for User Interaction Required (UIR) accounts will experience a flyout with a call to action to sign in and verify their account.
+- **Updated Edge Profile account re-authentication popup when Browser to Web Single-Sign-On (SSO) fails.** Edge provides a browser to Web single sign-on (SSO) capability that lets a user sign in to their Edge Profile with a web account first and then automatically sign them into Microsoft first party websites.
 
-- **Updated profile management and customization controls.** Enhancing the profile management and customization experience through surfaced profile controls and an expanded range of default avatars. With these updates, users can effortlessly tailor their profiles to their preferences and select from a broader collection of profile avatars.  
+  This is done by saving cached credentials. This approach works until there's an authentication challenge to the cached credentials. A typical scenario is when a user changes their password on a different device. The cached credentials on the current device become outdated and SSO fails. Edge detects this failure and shows a re-authentication popup that prompts the user to update their cached credentials on the current device.
+
+- **Updated profile management and customization controls.** Enhancing the profile management and customization experience through surfaced profile controls and an expanded range of default avatars. With these updates, users can effortlessly tailor their profiles to their preferences and select from a broader collection of profile avatars.
+
+- **Updated UX for Microsoft Defender for Endpoint blocks.** Microsoft Edge now provides a different blocking experience for Microsoft Defender for Endpoint based blocks (Web Content Filtering and Custom Indicators). For more information, see [Web protection](/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide).
 
 ### Policy updates
 
 #### New policies
 
-- [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to page contents for Microsoft Entra ID profiles
-- [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to page contents for Microsoft Entra ID profiles
+- [CopilotCDPPageContext](/deployedge/microsoft-edge-policies#copilotcdppagecontext) - Control Copilot with Commercial Data Protection access to browser context for Microsoft Entra ID profiles
+- [CopilotPageContext](/deployedge/microsoft-edge-policies#copilotpagecontext) - Control Copilot access to browser context for Microsoft Entra ID profiles
 - [MutationEventsEnabled](/deployedge/microsoft-edge-policies#mutationeventsenabled) - Enable deprecated/removed Mutation Events
 
 #### Deprecated policies
