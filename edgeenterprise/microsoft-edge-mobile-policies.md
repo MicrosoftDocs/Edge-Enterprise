@@ -3114,7 +3114,7 @@ HideFirstRunExperience
 true
 ```
 
-  [Back to top](#microsoft-edge---policies)
+  [Back to top](#microsoft-edge-mobile---policies)
   
 ### DefaultBrowserSettingEnabled
  
@@ -3150,7 +3150,7 @@ DefaultBrowserSettingEnabled
 true
 ```
 
-  [Back to top](#microsoft-edge---policies)
+  [Back to top](#microsoft-edge-mobile---policies)
   
 
 
