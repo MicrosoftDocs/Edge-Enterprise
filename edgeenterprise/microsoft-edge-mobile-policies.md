@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/22/2024
+ms.date: 04/23/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -35,6 +35,7 @@ These tables list all of the browser-related policies available in this release 
 - [Password manager and protection](#password-manager-and-protection)
 - [Idle browser actions](#idle-browser-actions)
 - [Additional](#additional)
+- [Edge website typo protection](#edge-website-typo-protection)
 <!-- ====================================== -->
 ### [*Edge specific*](#edge-specific)
 
@@ -142,6 +143,13 @@ These tables list all of the browser-related policies available in this release 
 | [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) |  Control communication with the Experimentation and Configuration Service   |
 |  [HideFirstRunExperience](#hidefirstrunexperience)  |  Hide the First-run experience  |
 |  [DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)  |  Set Microsoft Edge as default browser  |
+<!-- ====================================== -->
+### [Edge website typo protection](#edge-website-typo-protection)
+
+|Policy Name|Caption|
+|:-|-|
+| [PreventTyposquattingPromptOverride](#preventtyposquattingpromptoverride) | Prevent bypassing Edge Website Typo Protection prompts for sites |
+| [TyposquattingAllowListDomains](#typosquattingallowlistdomains) | Configure the list of domains for which Edge Website Typo Protection won't trigger warnings |
 
 ## HTTP authentication
 
@@ -3154,6 +3162,98 @@ true
 
   [Back to top](#microsoft-edge-mobile---policies)
   
+## Edge website typo protection
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### PreventTyposquattingPromptOverride
+
+#### Prevent bypassing Edge Website Typo Protection prompts for sites
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+
+#### Description
+
+This policy setting lets you decide whether users can override the Edge Website Typo Protection warnings about potential typosquatting websites.
+
+If you enable this setting, users can't ignore Edge Website Typo Protection warnings and they are blocked from continuing to the site.
+
+If you disable or don't configure this setting, users can ignore Edge Website Typo Protection warnings and continue to the site.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+#### Android restriction name:
+
+```
+PreventTyposquattingPromptOverride 
+```
+
+##### Example value (Android):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### TyposquattingAllowListDomains
+
+#### Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+- Microsoft Edge (iOS and iPadOS) since version 124
+
+#### Description
+
+Configure the list of Edge Website Typo Protection trusted domains. This means: Edge Website Typo Protection won't check for potentially malicious typosquatting websites.
+
+If you enable this policy, Edge Website Typo Protection trusts these domains. 
+If you disable or don't set this policy, default Edge Website Typo Protection protection is applied to all resources.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+#### Android and iOS restriction name:
+```
+TyposquattingAllowListDomains 
+```
+
+##### Example value (Android):
+```
+[
+https://www.contoso.com,
+"[*.] contoso.edu"
+]
+Example value (iOS):
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+
+
+[Back to top](#microsoft-edge-mobile---policies)
 
 
 ## See also
