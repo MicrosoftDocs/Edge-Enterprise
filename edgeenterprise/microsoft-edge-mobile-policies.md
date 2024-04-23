@@ -35,7 +35,7 @@ These tables list all of the browser-related policies available in this release 
 - [Password manager and protection](#password-manager-and-protection)
 - [Idle browser actions](#idle-browser-actions)
 - [Additional](#additional)
-- [Edge website typo protection](#edge-website-typo-protection)
+- [Edge website typo protection settings](#edge-website-typo-protection-settings)
 <!-- ====================================== -->
 ### [*Edge specific*](#edge-specific)
 
@@ -144,7 +144,7 @@ These tables list all of the browser-related policies available in this release 
 |  [HideFirstRunExperience](#hidefirstrunexperience)  |  Hide the First-run experience  |
 |  [DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)  |  Set Microsoft Edge as default browser  |
 <!-- ====================================== -->
-### [Edge website typo protection](#edge-website-typo-protection)
+### [Edge website typo protection settings](#edge-website-typo-protection)
 
 |Policy Name|Caption|
 |:-|-|
