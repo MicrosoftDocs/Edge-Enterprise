@@ -3,7 +3,7 @@ title: "Diagnose and fix Microsoft Edge sync issues"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 08/21/2023
+ms.date: 04/24/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -19,7 +19,7 @@ description: "Guidance and tools a Microsoft Edge admin can use to troubleshoot 
 
 This article provides troubleshooting guidance for the most common sync issues in a Microsoft Entra environment. It also includes troubleshooting steps and the recommended tools for gathering the logs needed for troubleshooting a sync issue.
 
- If a user is experiencing an issue syncing browser data across their devices, they can reset sync in **Settings** > **Profiles** > **Sync** > **Reset sync**. If the sync reset doesn't work, an admin or support staff member can use the guidance in this article to fix a sync issue.
+If a user is experiencing an issue syncing browser data across their devices, they can perform a resync in **Settings** > **Profiles** > **Sync** > **Re-sync data to this device**.  Should the sync problem continue, click on "**Still having sync problems? Try another option**" for additional solutions, then choose "**Reset sync**". If the sync reset doesn't work, an admin or support staff member can use the guidance in this article to fix a sync issue. For more information, see [Perform a reset to fix a synchronization problem](/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
 
 > [!NOTE]
 > Applies to Microsoft Edge on Chromium, version 77 or later unless otherwise noted.
@@ -42,9 +42,9 @@ Use the following steps as a guide for troubleshooting a sync issue.
 
 1. Sign in your Office 365 or Microsoft 365 admin portal and verify that your license is valid.
 2. Sign in your Azure portal and verify that your Azure license is valid.
-3. Sign out your account on all Microsoft Edge browsers on all the computers and/or mobile devices - not just the one you're using.
+3. Sign out your account on the Microsoft Edge browser.
 4. Make sure you're on the latest version of Microsoft Edge that supports all the sync features (at least 98.0.1108.43 (Official build) (64-bit)).
-5. Sign back into your profile on Microsoft Edge. We recommend that you do a sync reset. For more information, see [Perform a reset to fix a synchronization problem](/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
+5. Perform a resync in **Settings** > **Profiles** > **Sync** > **Re-sync data to this device**.  For more information, see [Perform a reset to fix a synchronization problem](/deployedge/edge-learnmore-reset-data-in-cloud#perform-a-reset-to-fix-a-synchronization-problem).
 6. Verify that your account is enabled for syncing. On a new tab, go to: *edge://sync-internals/*. The Summary section, shown in the next screenshot shows that sync is enabled.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/summary-confirm-sync-working.png" alt-text="Summary from  sync-internals":::
@@ -119,8 +119,8 @@ If this error is encountered for a Microsoft Entra account, or if DISABLED_BY_AD
 4. If the server endpoint is empty, or if server can't be pinged because there's a firewall in the environment, confirm that the necessary service endpoints are available to the client device.
 
    - Microsoft Edge sync service endpoints:
-     - `https://edge-enterprise.activity.windows.com`
-     - `https://edge.activity.windows.com`
+     -  `https://edge.microsoft.com`
+
     - Azure Information Protection endpoints:
       - `https://api.aadrm.com` (for most tenants)
       - `https://api.aadrm.de` (for tenants in Germany)
