@@ -98,34 +98,43 @@ The next screenshot shows the settings page for security exceptions.
 Enterprise Admins can configure this security feature using Group Policy settings, including creating "Allow" and "Deny" lists to explicitly enhance security for their users when visiting certain sites, or disable the mode for others. For a complete list of policies, see the [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies).
 
 > [!NOTE]
-> Setting the [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode) policy to 'StrictMode' or setting the [DefaultJavaScriptJitSetting](/deployedge/microsoft-edge-policies#defaultjavascriptjitsetting) policy to BlockJavaScriptJit will have the same effect as changing the **Enhance your security on the web** setting in *edge://settings/privacy* to 'Strict'.
+> Setting the [EnhanceSecurityMode](/deployedge/> > microsoft-edge-policies#enhancesecuritymode) policy to 'StrictMode' or setting the [DefaultJavaScriptJitSetting](/deployedge/microsoft-edge-policies#defaultjavascriptjitsetting) policy to BlockJavaScriptJit will have the same effect as changing the **Enhance your security on the web** setting in *edge://settings/privacy* to 'Strict'.
 
 ## User experience with enhanced security mode
 
-After a user turns on enhanced security mode, they'll see a banner with the words "Added security" in their URL navigation bar when Microsoft Edge is applying enhanced security mode for a particular site.
+An easy way to check if Enhanced Security Mode is enabled on your site is to open the Site Trust flyout. Select the lock icon to open the next flyout.
 
+![The Site Trust flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-1.png)
+
+Select **Enhanced security is active for this site** to open the next flyout that shows the security settings for the current site. It gives you the option to turn security on or off using the **Use enhanced security for this site** toggle. If you turn the toggle off, Microsoft Edge adds this site to the exception site list.
+
+> [!NOTE]
+> You can always remove this site from the exception list by updating the list in **Settings** > **Privacy, search, and services** > **Enhanced security exceptions**.
+
+![Enhanced security for site flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-2.png)
+
+
+<!---
 ![Banner showing that added security is turned on.](media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png)
-<!--
-:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png" alt-text="Banner showing that added security is turned on.":::-->
 
-When you select the banner, you'll see the next flyout. You can select "Enhance security for this site" to redirect you to a second flyout that shows the security settings for the current site and gives the user the option to toggle security on or off.
+When you select the banner, you'll see the next flyout. You can select "Enhance security for this site" to redirect you to a second flyout that shows the security settings for the current site and gives the user the option to toggle security on or off. 
 
 > [!NOTE]
 > "Enhance security for this site" only appears when enhanced security mode is enabled in Microsoft Edge Settings.
 
 
-![Shows the option to enhance security for current site.](media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-option.png)
+![Shows the option to enhance security for current site.](media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-option.png) --->
 
 <!--:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-option.png" alt-text="Shows the option to enhance security for current site.":::-->
-
-In the flyout shown in the next screenshot, you can manually enable or disable enhanced security mode for a particular site. If you change the "Use enhanced security for this site" toggle, Microsoft Edge will proactively add that site to the exception site list.
-
+<!---
+In the flyout shown in the next screenshot, you can manually enable or disable enhanced security mode for a particular site. If you change the "Use enhanced security for this site" toggle, Microsoft Edge will proactively add that site to the exception site list. --->
+<!---
 > [!NOTE]
 > You can always remove this site by updating the exception site list in **Settings** > **Privacy, search, and services** > **Enhanced security exceptions**.
-
+-->
+<!--
 ![Shows security settings for site with toggle to turn security on or off.](media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-toggle.png)
-
-<!--:::image type="content" source="media/microsoft-edge-security-browse-safer/browse-safer-enhance-security-for-site-toggle.png" alt-text="Shows security settings for site with toggle to turn security on or off.":::-->
+---->
 
 ## Send us feedback
 
