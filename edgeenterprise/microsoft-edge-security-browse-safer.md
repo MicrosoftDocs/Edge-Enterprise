@@ -104,27 +104,27 @@ Enterprise Admins can configure this security feature using Group Policy setting
 
 An easy way to check if Enhanced Security Mode is enabled on your site is to open the Site Trust flyout. Select the lock icon to open the next flyout.
 
-![The Site Trust flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-1.png)
+![The Site Trust flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-1b.png)
 
 Select **Enhanced security is active for this site** to open the next flyout that shows the security settings for the current site. It gives you the option to turn security on or off using the **Use enhanced security for this site** toggle. If you turn the toggle off, Microsoft Edge adds this site to the exception site list.
 
 > [!NOTE]
 > You can always remove this site from the exception list by updating the list in **Settings** > **Privacy, search, and services** > **Enhanced security exceptions**.
 
-![Enhanced security for site flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-2.png)
+![Enhanced security for site flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-2b.png)
 
 ### Site with enhanced security turned off
 
 When enhanced security is turned off for a site, the following message is displayed.
 
-![Security mode turned off message](media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off-for-site.png)
+![Security mode turned off message](media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off-for-site-b.png)
 
 > [!NOTE]
 > The preceding message only shows if the site is explicitly configured without enhanced security. In addition, if site security is under "Strict" mode, this message will not show up on all sites.
 
 When you select **Enhanced security is not active for this site**, the next screen opens and there's the option to toggle enhanced security on.
 
-![Enhanced security detail with option to toggle on](media/microsoft-edge-security-browse-safer/browse-safer-esm-off-and-toggle-is-off.png)
+![Enhanced security detail with option to toggle on](media/microsoft-edge-security-browse-safer/browse-safer-esm-off-and-toggle-is-off-b.png)
 
 <!---
 ![Banner showing that added security is turned on.](media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png)
