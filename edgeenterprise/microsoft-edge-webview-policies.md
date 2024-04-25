@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/05/2024
+ms.date: 04/25/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -21,6 +21,14 @@ For information about an additional set of policies used to control how and when
 
 > [!NOTE]
 > This article applies to Microsoft Edge version 87 or later.
+
+## New policies
+
+The following table lists the new policies that are in this article update.
+
+| Policy Name | Caption |
+|:-----|:-----|
+|[ZstdContentEncodingEnabled](#zstdcontentencodingenabled)|Enable zstd content encoding support|
 
 ## Available policies
 
@@ -45,6 +53,7 @@ These tables list all of the group policies available in this release of Microso
 |-|-|
 |[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
 |[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
+|[ZstdContentEncodingEnabled](#zstdcontentencodingenabled)|Enable zstd content encoding support|
 ### [*Additional*](#additional-policies)
 
 |Policy Name|Caption|
@@ -400,6 +409,63 @@ If you disable this policy, the old behavior is enabled.
 
 ```
 0x00000000
+```
+
+  
+
+  [Back to top](#microsoft-edge-webview2---policies)
+
+  ### ZstdContentEncodingEnabled
+
+  #### Enable zstd content encoding support
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 125 or later
+
+  #### Description
+
+  This feature enables advertising "zstd" support in the Accept-Encoding request header and support for decompressing zstd web content.
+
+If you enable or don't configure this policy, Microsoft Edge will accept server responses compressed with zstd.
+
+If you disable this policy, the zstd content encoding feature will not be advertised or supported when processing server responses.
+
+This policy is temporary and will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ZstdContentEncodingEnabled
+  - GP name: Enable zstd content encoding support
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge WebView2/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdgeWebView2.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Path (Recommended): N/A
+  - Value Name: ZstdContentEncodingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
 ```
 
   
