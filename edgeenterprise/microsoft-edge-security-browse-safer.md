@@ -113,6 +113,18 @@ Select **Enhanced security is active for this site** to open the next flyout tha
 
 ![Enhanced security for site flyout](media/microsoft-edge-security-browse-safer/browse-safer-check-state-2.png)
 
+### Site with enhanced security turned off
+
+When enhanced security is turned off for a site, the following message is displayed.
+
+![Security mode turned off message](media/microsoft-edge-security-browse-safer/browse-safer-enhanced-security-off-for-site.png)
+
+> [!NOTE]
+> The preceding message only shows if the site is explicitly configured without enhanced security. In addition, if site security is under "Strict" mode, this message will not show up on all sites.
+
+When you select **Enhanced security is not active for this site**, the next screen opens and there's the option to toggle enhanced security on.
+
+![Enhanced security detail with option to toggle on](media/microsoft-edge-security-browse-safer/browse-safer-esm-off-and-toggle-is-off.png)
 
 <!---
 ![Banner showing that added security is turned on.](media/microsoft-edge-security-browse-safer/browse-safer-added-security-banner.png)
