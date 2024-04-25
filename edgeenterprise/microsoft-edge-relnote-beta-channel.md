@@ -48,8 +48,8 @@ The following Dev channel updates preceded this Beta channel release. The follow
 #### New policies
 
 - [ImageEditorServiceEnabled](/deployedge/microsoft-edge-policies#imageeditorserviceenabled) - Enable the Designer for Image Editor feature
-- [ZstdContentEncodingEnabled](/deployedge/microsoft-edge-policies#zstdcontentencodingenabled - Enable zstd content encoding support
-- RAMResourceControlsEnabled](/deployedge/microsoft-edge-policies#ramresourcecontrolsenabled) - RAM (memory) resource controls enabled
+- [ZstdContentEncodingEnabled](/deployedge/microsoft-edge-policies#zstdcontentencodingenabled) - Enable zstd content encoding support
+- [RAMResourceControlsEnabled](/deployedge/microsoft-edge-policies#ramresourcecontrolsenabled) - RAM (memory) resource controls enabled
 - [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generator
 
 ## Version 124.0.2478.51: April 18, 2024
