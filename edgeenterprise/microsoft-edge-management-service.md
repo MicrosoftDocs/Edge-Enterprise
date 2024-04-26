@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 04/04/2024
+ms.date: 04/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -313,8 +313,13 @@ From **Use custom branding**, you can customize each of the following browser el
 
 - Organization name: This name will be displayed in the profile pill.
 - Accent color: This color will appear in the profile flyout header.
-- Organization logo: This logo will appear in the profile flyout header. You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150KB.
-- Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. You must upload a SVG file with a maximum size of 150KB (we recommended choosing a square logo).
+- Organization logo: This logo will appear in the profile flyout header. To ensure that your logo displays properly:
+  - You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
+  - The uploaded file should have dimensions with width >= height. We recommend choosing a rectangular logo.
+  - For non-square logos, file dimensions must be included at the SVG level ("<svg width="500 pixels" height="200 pixels"...)
+- Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. To ensure that your logo displays properly:
+  - You must upload a SVG file with a maximum size of 150 KB.
+  - The uploaded file should be a square logo that has dimensions with a 1:1 ratio. The file resolution should be no greater than 480 pixels x 480 pixels.
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
 
