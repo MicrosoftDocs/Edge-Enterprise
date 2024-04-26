@@ -314,7 +314,7 @@ From **Use custom branding**, you can customize each of the following browser el
 - Organization name: This name will be displayed in the profile pill.
 - Accent color: This color will appear in the profile flyout header.
 - Organization logo: This logo will appear in the profile flyout header. To ensure that your logo displays properly:
-- You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
+  - You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
   - The uploaded file should have dimensions with width >= height. We recommend choosing a rectangular logo.
   - For non-square logos, file dimensions must be included at the SVG level ("<svg width="500 pixels" height="200 pixels"...)
 - Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. To ensure that your logo displays properly:
