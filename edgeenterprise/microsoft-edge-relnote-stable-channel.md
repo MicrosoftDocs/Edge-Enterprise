@@ -30,6 +30,8 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-26-2024).
+
 **Announcement: Insecure downloads over HTTP**
 
 Users that download potentially dangerous content on HTTP sites will receive a UI warning, (for example, "sample.exe can't be downloaded securely"). The user can still choose to proceed by selecting "Keep" on the downloaded item's "..." menu. Admins can also use the [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) policy to specify HTTP sites where the warning will be suppressed. The warning's enablement in Edge 124 was accidental. We have reverted the warning in this Stable Release. Admins can use the `InsecureDownloadWarnings` feature flag to test the impact of this upcoming feature.
