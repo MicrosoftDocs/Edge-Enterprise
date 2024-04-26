@@ -52,6 +52,10 @@ The following Dev channel updates preceded this Beta channel release. The follow
 - [RAMResourceControlsEnabled](/deployedge/microsoft-edge-policies#ramresourcecontrolsenabled) - RAM (memory) resource controls enabled
 - [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generator
 
+## Version 124.0.2478.67: April 26, 2024
+
+Fixed various bugs and performance issues.
+
 ## Version 124.0.2478.51: April 18, 2024
 
 Fixed various bugs and performance issues.
