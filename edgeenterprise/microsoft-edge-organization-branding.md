@@ -20,7 +20,7 @@ This document provides a guide to understanding and using organization branding 
 
 Want to customize the look of Edge for Business?
 
-Now you can with support for organization branding! This branding can help users signed in with a Microsoft Entra ID more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon. Organization branding  also allows companies to foster employee trust through customized branding, while growing affinity by serving an effective brand reinforcement strategy.
+Now you can with support for organization branding! This branding can help users signed in with a Microsoft Entra ID more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon. Organization branding  also allows companies to foster staff trust through customized branding, while growing affinity by serving an effective brand reinforcement strategy.
 
 ![Company branding for Contoso](media/microsoft-edge-organization-branding/efb-company-branding-new.png)
 
@@ -35,15 +35,15 @@ Today, the feature supports configuration of the following visual elements:
 
 ## Use default organization branding assets from Entra
 
-Admins can choose to use default organization branding assets that have already been configured in the Microsoft Entra admin center. Default branding customizations can be enabled by admins by deploying the following policies:
+Admins can choose to use default organization branding assets that are already configured in the Microsoft Entra admin center. Default branding customizations can be enabled by admins by deploying the following policies:
 - [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled)
 - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
 
-When these policies are enabled, any applicable assets in your existing Microsoft Entra admin center will be used for organization branding in Microsoft Edge for Business.
+When these policies are enabled, any applicable assets in your existing Microsoft Entra admin center are used for organization branding in Microsoft Edge for Business.
 
 For more details on defaults and checking what is already configured in Microsoft Entra, check your existing company branding.
 
-*The Edge for Business taskbar icon overlay is not supported for MacOS.*
+*The Edge for Business taskbar icon overlay isn't supported for macOS.*
 
 ## Customize organization branding through the Microsoft Edge management service
 
@@ -57,20 +57,17 @@ To customize the Microsoft Edge browser with your organization's branding assets
 ![Branding example](media/microsoft-edge-organization-branding/branding-config-profile-edited.png)
 
 If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes will not take effect until you choose **Save changes**.
-<!--
-  > [!TIP]
-  > Square and horizontal logos provide the optimal visual branding experience.
---->
-From here, you can customize each of the following browser elements with your the brand assets you choose.
 
-- Organization name: This name will be displayed in the profile pill.
-- Accent color: This color will appear in the profile flyout header.
-- Organization logo: This logo will appear in the profile flyout header. To ensure that your logo displays properly:
-- You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
+From here, you can customize each of the following browser elements with the brand assets you choose.
+
+- Organization name: This name is displayed in the profile pill.
+- Accent color: This color appears in the profile flyout header.
+- Organization logo: This logo appears in the profile flyout header. To ensure that your logo displays properly:
+- You must upload an SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
   - The uploaded file should have dimensions with width >= height. We recommend choosing a rectangular logo.
   - For non-square logos, file dimensions must be included at the SVG level ("<svg width="500 pixels" height="200 pixels".)
 - Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. To ensure that your logo displays properly:
-  - You must upload a SVG file with a maximum size of 150 KB.
+  - You must upload an SVG file with a maximum size of 150 KB.
   - The uploaded file should be a square logo that has dimensions with a 1:1 ratio. The file resolution should be no greater than 480 pixels x 480 pixels.
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
@@ -78,7 +75,7 @@ After you finish customizing the browser elements with your organization brandin
 *Note: Organization branding via Edge management service is currently not supported for:*
 
 - *Microsoft Edge Mobile*
-- *Microsoft Edge for Business on unmanaged PCs and MacOS*
+- *Microsoft Edge for Business on unmanaged PCs and macOS*
 - *Customers with an Office 365 GCC or Office 365 GCC High and DoD plan*
 
 ## See also
