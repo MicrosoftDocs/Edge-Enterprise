@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/16/2024
+ms.date: 04/26/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -57,16 +57,21 @@ To customize the Microsoft Edge browser with your organization's branding assets
 ![Branding example](media/microsoft-edge-organization-branding/branding-config-profile-edited.png)
 
 If you don't have any branding policies enabled, the default Edge for Business branding will be displayed. When you choose **Use custom branding**, any existing branding assets associated with your Microsoft Entra ID are imported and displayed in the preview. These changes will not take effect until you choose **Save changes**.
-
-From **Use custom branding**, you can customize each of the following browser elements with the brand assets you choose:
-
-- Organization name: This name is displayed in the profile pill.
-- Accent color: This color appears in the profile flyout header.
-- Organization logo: This logo appears in the profile flyout header. You must upload an SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
-- Taskbar icon: This logo overlays the Edge for Business icon on the taskbar. You must upload an SVG file with a maximum size of 150 KB (we recommend choosing a square logo).
-
+<!--
   > [!TIP]
   > Square and horizontal logos provide the optimal visual branding experience.
+--->
+From here, you can customize each of the following browser elements with your the brand assets you choose.
+
+- Organization name: This name will be displayed in the profile pill.
+- Accent color: This color will appear in the profile flyout header.
+- Organization logo: This logo will appear in the profile flyout header. To ensure that your logo displays properly:
+- You must upload a SVG (Scalable Vector Graphics) file with a maximum size of 150 KB.
+  - The uploaded file should have dimensions with width >= height. We recommend choosing a rectangular logo.
+  - For non-square logos, file dimensions must be included at the SVG level ("<svg width="500 pixels" height="200 pixels".)
+- Taskbar icon: This logo will overlay the Edge for Business icon on the taskbar. To ensure that your logo displays properly:
+  - You must upload a SVG file with a maximum size of 150 KB.
+  - The uploaded file should be a square logo that has dimensions with a 1:1 ratio. The file resolution should be no greater than 480 pixels x 480 pixels.
 
 After you finish customizing the browser elements with your organization branding assets, confirm that the preview displays the correct visual appearance and then select **Save changes**.
 
