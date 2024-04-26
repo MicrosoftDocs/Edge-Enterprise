@@ -34,9 +34,7 @@ Stable channel security updates are listed [here](/deployedge/microsoft-edge-rel
 
 **Announcement: Insecure downloads over HTTP**
 
-Users that download potentially dangerous content on HTTP sites will receive a UI warning, (for example, "sample.exe can't be downloaded securely"). The user can still choose to proceed by selecting "Keep" on the downloaded item's "..." menu. Admins can also use the [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) policy to specify HTTP sites where the warning will be suppressed. The warning's enablement in Edge 124 was accidental. We have reverted the warning in this Stable Release. Admins can use the `InsecureDownloadWarnings` feature flag to test the impact of this upcoming feature.
-
-The warning is planned to be turned on in a future release, please monitor [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Edge) for updates.
+Users that download potentially dangerous content on HTTP sites will receive a UI warning, (for example, "sample.exe can't be downloaded securely"). The user can still choose to proceed by selecting "Keep" on the downloaded item's "..." menu. Admins can also use the [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) policy to specify HTTP sites where the warning will be suppressed. The warning's enablement in Edge 124 was accidental. We have reverted the warning in this Stable Release. Admins can use the `InsecureDownloadWarnings` feature flag to test the impact of this upcoming feature. **Note:** The warning is planned to be turned on in Microsoft Edge version 127.
 
 ### Fixes
 
