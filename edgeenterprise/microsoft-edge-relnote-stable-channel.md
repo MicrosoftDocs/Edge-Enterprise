@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/19/2024
+ms.date: 04/25/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,24 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 124.0.2478.67: April 26, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-26-2024).
+
+**Announcement: Insecure downloads over HTTP**
+
+Users that download potentially dangerous content on HTTP sites will receive a UI warning, (for example, "sample.exe can't be downloaded securely"). The user can still choose to proceed by selecting "Keep" on the downloaded item's "..." menu. Admins can also use the [InsecureContentAllowedForUrls](/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) policy to specify HTTP sites where the warning will be suppressed. The warning's enablement in Edge 124 was accidental. We have reverted the warning in this Stable Release. Admins can use the `InsecureDownloadWarnings` feature flag to test the impact of this upcoming feature. **Note:** The warning is planned to be turned on in Microsoft Edge version 127.
+
+### Fixes
+
+- Removes "Microsoft chat provider for Copilot in Windows" from Windows Server devices. The component was incorrectly installed on some devices in a previous Microsoft Edge update.
+
+### Feature updates
+
+- **Email notifications for extension requests in the Microsoft Edge management service.** The Microsoft Edge management service now provides admins with the ability to receive email notifications for extensions that their users have requested. Once enabled, this will help inform them promptly of any new pending requests that they may have.
 
 ## Version 124.0.2478.51: April 18, 2024
 
