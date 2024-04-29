@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.service: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: "Microsoft Edge known issues, workarounds and fixes"
+description: "Microsoft Edge known issues, workarounds, and fixes"
 ---
 
 # Microsoft Edge known issues
@@ -18,9 +18,9 @@ This article tracks the high priority known issues, workarounds, and fixes for M
 
 ## High impact issues
 
-These issues are ...... , identified by CSS. Check this article often as the Microsoft Edge team provides workarounds and fixes.
+These issues are high impact, identified by CSS. Check this article often as the Microsoft Edge team provides workarounds and fixes.
 
-The following tables list the issues that the Microsoft Edge team is tracking closely or have resolved..
+The following tables list the issues that the Microsoft Edge team is tracking closely or have resolved.
 
 ##### [Latest versions](#tab/latest)
 
