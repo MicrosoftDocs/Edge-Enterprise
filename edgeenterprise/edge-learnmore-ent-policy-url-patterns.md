@@ -3,7 +3,7 @@ title: "URL pattern format for Microsoft Edge Enterprise policies"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/16/2024
+ms.date: 04/29/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -69,7 +69,7 @@ Some examples of patterns are:
 
 > [!NOTE]
 > Portions of this page are modifications based on work created and shared by Chromium.org and used according to terms 
-  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original [Chromium page can be found here](https://www.chromium.org/administrators/url-blocklist-filter-format).
+  described in the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). The original [Chromium page can be found here](https://chromeenterprise.google/policies/url-patterns/).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
