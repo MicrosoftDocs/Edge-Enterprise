@@ -3,7 +3,7 @@ title: "Microsoft Edge known issues"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/29/2024
+ms.date: 04/30/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -18,9 +18,9 @@ This article tracks the high priority known issues, workarounds, and fixes for M
 
 ## High impact issues
 
-These issues are high impact, identified by CSS. Check this article often as the Microsoft Edge team provides workarounds and fixes.
+These issues are high impact as identified by CSS. Check this article often as the Microsoft Edge team provides workarounds and fixes.
 
-The following tables list the issues that the Microsoft Edge team is tracking closely or have resolved.
+The following table lists the issues that the Microsoft Edge team is tracking closely, working on, or have resolved.
 
 ##### [Latest versions](#tab/latest)
 
