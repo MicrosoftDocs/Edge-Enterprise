@@ -45,7 +45,7 @@
       - name: Windows updates to support Microsoft Edge
         href: microsoft-edge-sysupdate-windows-updates.md
 # KNOWN ISSUES
-- name: Schedule, Release notes, Known issues
+- name: Schedule, Known issues, Release notes
   items:
    - name: Release schedule
      href: microsoft-edge-release-schedule.md
