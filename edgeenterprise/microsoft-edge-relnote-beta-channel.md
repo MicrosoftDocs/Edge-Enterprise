@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/29/2024
+ms.date: 04/30/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -47,7 +47,6 @@ The following Dev channel updates preceded this Beta channel release. The follow
 
 - [ImageEditorServiceEnabled](/deployedge/microsoft-edge-policies#imageeditorserviceenabled) - Enable the Designer for Image Editor feature
 - [ZstdContentEncodingEnabled](/deployedge/microsoft-edge-policies#zstdcontentencodingenabled) - Enable zstd content encoding support
-- [RAMResourceControlsEnabled](/deployedge/microsoft-edge-policies#ramresourcecontrolsenabled) - RAM (memory) resource controls enabled
 - [QRCodeGeneratorEnabled](/deployedge/microsoft-edge-policies#qrcodegeneratorenabled) - Enable QR Code Generator
 
 ## Version 124.0.2478.67: April 26, 2024
