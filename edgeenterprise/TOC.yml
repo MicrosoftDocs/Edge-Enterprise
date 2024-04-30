@@ -33,8 +33,7 @@
      href: deploy-edge-ready-for-edge.md
    - name: Install Microsoft Edge for mobile platforms in China
      href: microsoft-edge-install-mobile-china.md
-   - name: Release schedule
-     href: microsoft-edge-release-schedule.md
+
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -46,8 +45,10 @@
       - name: Windows updates to support Microsoft Edge
         href: microsoft-edge-sysupdate-windows-updates.md
 # KNOWN ISSUES
-- name: Known Issues and Release Notes
+- name: Schedule, Release notes, Known issues
   items:
+   - name: Release schedule
+     href: microsoft-edge-release-schedule.md
    - name: Microsoft Edge known issues
      href: microsoft-edge-known-issues.md
    - name: Beta Channel Release Notes
