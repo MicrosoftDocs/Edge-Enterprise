@@ -14,7 +14,7 @@ description: "Microsoft Edge known issues, workarounds, and fixes"
 
 # Microsoft Edge known issues
 
-This article tracks the high priority known issues, workarounds, and fixes for Microsoft Edge.
+This article tracks the known issues, workarounds, and fixes for Microsoft Edge.
 
 ## High impact issues
 
