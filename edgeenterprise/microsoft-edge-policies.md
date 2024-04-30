@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/25/2024
+ms.date: 04/27/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,13 +30,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the deprecated and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ZstdContentEncodingEnabled](#zstdcontentencodingenabled)|Enable zstd content encoding support|
-|[RAMResourceControlsEnabled](#ramresourcecontrolsenabled)|RAM (memory) resource controls enabled|
-|[QRCodeGeneratorEnabled](#qrcodegeneratorenabled)|Enable QR Code Generator|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
+|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)|
 
 ## Available policies
 
@@ -412,7 +411,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
 |[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
 |[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
 |[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
@@ -619,7 +618,7 @@ These tables list all of the browser-related group policies available in this re
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
 |[ManagedFavorites](#managedfavorites)|Configure favorites|
 |[ManagedSearchEngines](#managedsearchengines)|Manage Search Engines|
-|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge|
+|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
@@ -17291,9 +17290,9 @@ If set to False, Microsoft Edge will not use system notifications. Microsoft Edg
 
   ### AllowTokenBindingForUrls
 
-  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -17301,7 +17300,9 @@ If set to False, Microsoft Edge will not use system notifications. Microsoft Edg
 
   #### Description
 
-  Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
+  This policy is deprecated because Token Binding will no longer be supported, starting in Microsoft Edge 127.
+
+Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
 For the domains on this list, the browser will send the Token Binding ClientHello in the TLS handshake (See https://tools.ietf.org/html/rfc8472).
 If the server responds with a valid ServerHello response, the browser will create and send Token Binding messages on subsequent https requests. See https://tools.ietf.org/html/rfc8471 for more info.
 
@@ -17328,7 +17329,7 @@ Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowTokenBindingForUrls
-  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -31722,10 +31723,10 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   ### MathSolverEnabled
 
-  #### Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+  #### Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 125.
   #### Supported versions:
 
   - On Windows and macOS since 91, until 125
@@ -31757,7 +31758,7 @@ Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to 
   ##### Group Policy (ADMX) info
 
   - GP unique name: MathSolverEnabled
-  - GP name: Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+  - GP name: Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
