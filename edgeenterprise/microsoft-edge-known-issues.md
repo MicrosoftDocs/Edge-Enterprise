@@ -24,13 +24,13 @@ The following table lists the issues that the Microsoft Edge team is tracking cl
 
 ##### [New](#tab/latest)
 
-|  Version  | Symptom | Workaround | Status |
+|  Version  | Symptom | Workaround | Comment |
 | --- | --- | --- | --- |
 
 
 ##### [Open](#tab/earlier)
 
-| Version | Symptom | Workaround | Status |
+| Version | Symptom | Workaround | Comment |
 | --- | --- | --- | --- |
 
 
