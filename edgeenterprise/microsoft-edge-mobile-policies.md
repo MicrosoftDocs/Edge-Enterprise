@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/17/2024
+ms.date: 04/23/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -20,7 +20,6 @@ The latest version of Microsoft Edge includes the following policies that you ca
 > [!NOTE]
 > The MDM OS channel in Microsoft Intune is a Managed Devices App Configuration Policy (ACP). For more information, see [Managed Devices ACP](/mem/intune/apps/app-configuration-policies-overview#apps-that-support-app-configuration). If you're not using Microsoft Intune, consult your Unified Endpoint Management (UEM) documentation to learn how to deploy these policies through mobile device management.
 
-
 > [!NOTE]
 > For Microsoft Edge Browser policy reference, see [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies)
 
@@ -36,6 +35,7 @@ These tables list all of the browser-related policies available in this release 
 - [Password manager and protection](#password-manager-and-protection)
 - [Idle browser actions](#idle-browser-actions)
 - [Additional](#additional)
+- [Edge website typo protection settings](#edge-website-typo-protection-settings)
 <!-- ====================================== -->
 ### [*Edge specific*](#edge-specific)
 
@@ -141,6 +141,15 @@ These tables list all of the browser-related policies available in this release 
 | [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) | Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates |
 | [ManagedFavorites](#managedfavorites)  |  Configure Favorites (bookmarks) |
 | [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) |  Control communication with the Experimentation and Configuration Service   |
+|  [HideFirstRunExperience](#hidefirstrunexperience)  |  Hide the First-run experience  |
+|  [DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)  |  Set Microsoft Edge as default browser  |
+<!-- ====================================== -->
+### [Edge website typo protection settings](#edge-website-typo-protection)
+
+|Policy Name|Caption|
+|:-|-|
+| [PreventTyposquattingPromptOverride](#preventtyposquattingpromptoverride) | Prevent bypassing Edge Website Typo Protection prompts for sites |
+| [TyposquattingAllowListDomains](#typosquattingallowlistdomains) | Configure the list of domains for which Edge Website Typo Protection won't trigger warnings |
 
 ## HTTP authentication
 
@@ -3078,6 +3087,174 @@ ExperimentationAndConfigurationServiceControl
 ```
 
 [Back to top](#microsoft-edge-mobile---policies)
+
+
+### HideFirstRunExperience 
+
+#### Hide the First-run experience
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+- Microsoft Edge (iOS and iPadOS) since version 124
+
+#### Description
+
+If you enable this policy, the First-run experience will not be shown to users when they run Microsoft Edge for the first time.
+If you disable or don't configure this policy, the First-run experience will be shown.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+iOS:Boolean
+
+####  Android and iOS restriction name:
+
+HideFirstRunExperience 
+
+##### Example value (Android and iOS):
+```
+true
+```
+
+  [Back to top](#microsoft-edge-mobile---policies)
+  
+### DefaultBrowserSettingEnabled
+ 
+#### Set Microsoft Edge as default browser
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+- Microsoft Edge (iOS and iPadOS) since version 124
+
+#### Description
+
+If you set this policy to True, Microsoft Edge always checks whether it's the default browser on startup and, if possible, automatically registers itself.
+If you set this policy to False, Microsoft Edge is stopped from ever checking if it's the default and turns user controls off for this option.
+If you don't set this policy, Microsoft Edge lets users control whether it's the default and, if not, whether user notifications should appear.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+iOS:Boolean
+
+#### Android and iOS restriction name:
+
+DefaultBrowserSettingEnabled 
+
+##### Example value (Android and iOS):
+```
+true
+```
+
+  [Back to top](#microsoft-edge-mobile---policies)
+  
+## Edge website typo protection
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### PreventTyposquattingPromptOverride
+
+#### Prevent bypassing Edge Website Typo Protection prompts for sites
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+
+#### Description
+
+This policy setting lets you decide whether users can override the Edge Website Typo Protection warnings about potential typosquatting websites.
+
+If you enable this setting, users can't ignore Edge Website Typo Protection warnings and they are blocked from continuing to the site.
+
+If you disable or don't configure this setting, users can ignore Edge Website Typo Protection warnings and continue to the site.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android:Boolean
+
+#### Android restriction name:
+
+```
+PreventTyposquattingPromptOverride 
+```
+
+##### Example value (Android):
+
+```
+true
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### TyposquattingAllowListDomains
+
+#### Configure the list of domains for which Edge Website Typo Protection won't trigger warnings
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124
+- Microsoft Edge (iOS and iPadOS) since version 124
+
+#### Description
+
+Configure the list of Edge Website Typo Protection trusted domains. This means: Edge Website Typo Protection won't check for potentially malicious typosquatting websites.
+
+If you enable this policy, Edge Website Typo Protection trusts these domains. 
+If you disable or don't set this policy, default Edge Website Typo Protection protection is applied to all resources.
+
+This will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : Yes
+
+#### Data Type:
+
+List of strings
+
+#### Android and iOS restriction name:
+```
+TyposquattingAllowListDomains 
+```
+
+##### Example value (Android):
+```
+[
+https://www.contoso.com,
+"[*.] contoso.edu"
+]
+Example value (iOS):
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+
+
+[Back to top](#microsoft-edge-mobile---policies)
+
 
 ## See also
 

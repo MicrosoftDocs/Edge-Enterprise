@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/05/2024
+ms.date: 04/27/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,11 +30,12 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the new policies that are in this article update.
+The following table lists the deprecated and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
+|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)|
 
 ## Available policies
 
@@ -271,6 +272,7 @@ These tables list all of the browser-related group policies available in this re
 |[AccessControlAllowMethodsInCORSPreflightSpecConformant](#accesscontrolallowmethodsincorspreflightspecconformant)|Make Access-Control-Allow-Methods matching in CORS preflight spec conformant|
 |[BlockTruncatedCookies](#blocktruncatedcookies)|Block truncated cookies|
 |[CompressionDictionaryTransportEnabled](#compressiondictionarytransportenabled)|Enable compression dictionary transport support|
+|[ZstdContentEncodingEnabled](#zstdcontentencodingenabled)|Enable zstd content encoding support|
 ### [*Password manager and protection*](#password-manager-and-protection-policies)
 
 |Policy Name|Caption|
@@ -295,6 +297,7 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
 |[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
 |[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
+|[RAMResourceControlsEnabled](#ramresourcecontrolsenabled)|RAM (memory) resource controls enabled|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -408,7 +411,7 @@ These tables list all of the browser-related group policies available in this re
 |[AllowSurfGame](#allowsurfgame)|Allow surf game|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Allow pages to send synchronous XHR requests during page dismissal (obsolete)|
 |[AllowSystemNotifications](#allowsystemnotifications)|Allows system notifications|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with|
+|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
 |[AllowTrackingForUrls](#allowtrackingforurls)|Configure tracking prevention exceptions for specific sites|
 |[AllowWebAuthnWithBrokenTlsCerts](#allowwebauthnwithbrokentlscerts)|Allow Web Authentication requests on sites with broken TLS certificates.|
 |[AllowedDomainsForApps](#alloweddomainsforapps)|Define domains allowed to access Google Workspace|
@@ -615,7 +618,7 @@ These tables list all of the browser-related group policies available in this re
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Sets managed configuration values for websites to specific origins|
 |[ManagedFavorites](#managedfavorites)|Configure favorites|
 |[ManagedSearchEngines](#managedsearchengines)|Manage Search Engines|
-|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge|
+|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Maximum number of concurrent connections to the proxy server|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Allow Google Cast to connect to Cast devices on all IP addresses|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Enable usage and crash-related data reporting (obsolete)|
@@ -650,6 +653,7 @@ These tables list all of the browser-related group policies available in this re
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Enable full-tab promotional content|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Ask where to save downloaded files|
 |[PromptOnMultipleMatchingCertificates](#promptonmultiplematchingcertificates)|Prompt the user to select a certificate when multiple certificates match|
+|[QRCodeGeneratorEnabled](#qrcodegeneratorenabled)|Enable QR Code Generator|
 |[QuicAllowed](#quicallowed)|Allow QUIC protocol|
 |[QuickSearchShowMiniMenu](#quicksearchshowminimenu)|Enables Microsoft Edge mini menu|
 |[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Manage QuickView Office files capability in Microsoft Edge|
@@ -10402,6 +10406,72 @@ If you disable this policy, Microsoft Edge will turn off the compression diction
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ZstdContentEncodingEnabled
+
+  #### Enable zstd content encoding support
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 125 or later
+
+  #### Description
+
+  This feature enables advertising "zstd" support in the Accept-Encoding request header and support for decompressing zstd web content.
+
+If you enable or don't configure this policy, Microsoft Edge will accept server responses compressed with zstd.
+
+If you disable this policy, the zstd content encoding feature will not be advertised or supported when processing server responses.
+
+This policy is temporary and will be removed in the future.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ZstdContentEncodingEnabled
+  - GP name: Enable zstd content encoding support
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Network settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ZstdContentEncodingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ZstdContentEncodingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ## Password manager and protection policies
 
   [Back to top](#microsoft-edge---policies)
@@ -11550,6 +11620,65 @@ Learn more about browser essentials: [https://go.microsoft.com/fwlink/?linkid=22
 ``` xml
 <true/>
 ```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### RAMResourceControlsEnabled
+
+  #### RAM (memory) resource controls enabled
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 125 or later
+
+  #### Description
+
+  This policy controls if users can access the RAM (memory) resource control feature. This feature is targeted towards consumers who would like to set an individual limit on how much RAM (memory) Microsoft Edge can use.
+
+To control the amount of memory that an Microsoft Edge instance can use, refer to the [TotalMemoryLimitMb](#totalmemorylimitmb) policy.
+
+If you enable or don't configure this policy, users have access to and can enable the resource control feature. When the control is active, a user can set the amount of RAM that Microsoft Edge can use. Note that browser performance is affected by low limits.
+
+If you disable this policy, users can't use resource control.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RAMResourceControlsEnabled
+  - GP name: RAM (memory) resource controls enabled
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RAMResourceControlsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
   
 
   [Back to top](#microsoft-edge---policies)
@@ -14489,7 +14618,7 @@ If you enable this policy, Microsoft Defender SmartScreen trusts these domains.
 If you disable or don't set this policy, default Microsoft Defender SmartScreen protection is applied to all resources.
 
 This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10/11 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
-Also note that this policy does not apply if your organization has enabled Microsoft Defender for Endpoint. You must configure your allow and block lists in Microsoft 365 Defender portal using Indicators (Settings > Endpoints > Indicators).
+Note: If your organization has enabled Microsoft Defender for Endpoint, this policy and any allow list created with it will be ignored. You must configure your allow and block lists in Microsoft 365 Defender portal using Indicators (Settings > Endpoints > Indicators).
 
   #### Supported features:
 
@@ -17161,9 +17290,9 @@ If set to False, Microsoft Edge will not use system notifications. Microsoft Edg
 
   ### AllowTokenBindingForUrls
 
-  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+  #### Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
 
-  
+  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
   #### Supported versions:
 
@@ -17171,7 +17300,9 @@ If set to False, Microsoft Edge will not use system notifications. Microsoft Edg
 
   #### Description
 
-  Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
+  This policy is deprecated because Token Binding will no longer be supported, starting in Microsoft Edge 127.
+
+Configure the list of URL patterns for sites that the browser will attempt to perform the Token Binding protocol with.
 For the domains on this list, the browser will send the Token Binding ClientHello in the TLS handshake (See https://tools.ietf.org/html/rfc8472).
 If the server responds with a valid ServerHello response, the browser will create and send Token Binding messages on subsequent https requests. See https://tools.ietf.org/html/rfc8471 for more info.
 
@@ -17198,7 +17329,7 @@ Starting in Microsoft Edge 86, this policy no longer supports dynamic refresh.
   ##### Group Policy (ADMX) info
 
   - GP unique name: AllowTokenBindingForUrls
-  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with
+  - GP name: Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -31592,10 +31723,10 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   ### MathSolverEnabled
 
-  #### Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+  #### Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 125.
   #### Supported versions:
 
   - On Windows and macOS since 91, until 125
@@ -31627,7 +31758,7 @@ Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to 
   ##### Group Policy (ADMX) info
 
   - GP unique name: MathSolverEnabled
-  - GP name: Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge
+  - GP name: Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -33874,6 +34005,70 @@ If this policy is set to False or not set, the user may only be prompted when no
   - Example value:
 ``` xml
 <true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### QRCodeGeneratorEnabled
+
+  #### Enable QR Code Generator
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 125 or later
+
+  #### Description
+
+  This policy enables the QR Code generator feature in Microsoft Edge.
+
+If you enable this policy or don't configure it, the QR Code Generator feature is enabled.
+
+If you disable this policy, the QR Code Generator feature is disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: QRCodeGeneratorEnabled
+  - GP name: Enable QR Code Generator
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: QRCodeGeneratorEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: QRCodeGeneratorEnabled
+  - Example value:
+``` xml
+<false/>
 ```
   
 
