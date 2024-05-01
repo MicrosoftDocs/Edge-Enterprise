@@ -22,13 +22,13 @@ These issues are high impact as identified by CSS. Check this article often as t
 
 The following table lists the issues that the Microsoft Edge team is tracking closely, working on, or have resolved.
 
-##### [Open](#tab/latest)
+##### [New](#tab/latest)
 
 |  Version  | Symptom | Workaround | Status |
 | --- | --- | --- | --- |
 
 
-##### [Closed](#tab/earlier)
+##### [Open](#tab/earlier)
 
 | Version | Symptom | Workaround | Status |
 | --- | --- | --- | --- |
