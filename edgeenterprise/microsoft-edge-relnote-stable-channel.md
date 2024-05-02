@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/25/2024
+ms.date: 05/02/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,16 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 124.0.2478.80: May 2, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-2-2024).
+
+### Feature updates
+
+- **Sidebar Tools App - SpeedTest.** Adding a SpeedTest answer by default to the Tools app in the Microsoft Edge sidebar. For more information, see [Manage the sidebar in Microsoft Edge](/deployedge/microsoft-edge-sidebar).
 
 ## Version 124.0.2478.67: April 26, 2024
 
