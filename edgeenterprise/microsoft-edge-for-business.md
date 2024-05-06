@@ -39,7 +39,7 @@ Microsoft Edge for Business encompasses the experiences summarized in the follow
 |  Automatic switching  |  Helps with enforcing context separation between work and personal browsing.   | Optionally available with limited functionality    |
 |  MAM for Windows  |  Secure and compliant access to work resources on personal computers with DLP controls.   |  Available<br>(See following onboarding instructions in [MAM for Windows](#mam-for-windows)) |
 | MAM for Mobile |  Secure and compliant access to work resources on mobile devices. | Available, see [MAM for Mobile](#mam-for-mobile)    |
-|  Organization branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Organization Branding](#organization-branding).    |
+|  Organization branding |  Increase familiarity and trust with company branding in the work browser window.  |  Available, see [Organization Branding](/deployedge/microsoft-edge-organization-branding).    |
 
 ## Work Browser (Visual Refresh)
 
@@ -83,38 +83,6 @@ Now you can customize your organization's branding onto Edge for Business. This 
 
 For more information on customizing brand assets, see [Organization branding](/deployedge/microsoft-edge-organization-branding).
 
-<!---
-### Customize Branding Assets (Public Preview)
-
-Through Microsoft Edge management service, admins can have an enhanced experience to control, preview, and customize how Edge for Business shows the following organization brand assets:
-
-- Name
-- Color
-- Logo
-- Edge for Business Icon Overlay
-
-Today, the feature supports configuring the following UI options:
-
-- Organization name to the profile pill
-- Organization name, logo, and color to the profile flyout
-- Organization icon to overlay the Edge for Business taskbar icon
-
-> [!NOTE]
-> This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
-
-> [!TIP]
-> Square and horizontal logos will provide the optimal visual branding experience.
-
-### Use Defaults from Azure
-
-Admins can also choose to use and check default organization branding assets already configured in the Microsoft Entra admin center.
-Default branding can be enabled by admins through the following policies:
-
-- [OrganizationalBrandingOnWorkProfileUIEnabled](/deployedge/microsoft-edge-policies#organizationalbrandingonworkprofileuienabled)
-- [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
-
-For more details on defaults and checking what is already configured in Microsoft Entra, [check your existing company branding](/entra/fundamentals/how-to-customize-branding).
---->
 ## Microsoft Edge for Business
 
 Microsoft Edge for Business is generally available now on managed devices on Microsoft Edge version 116 or later.
