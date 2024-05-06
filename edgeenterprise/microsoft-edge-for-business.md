@@ -3,7 +3,7 @@ title: "Microsoft Edge for Business"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/19/2024
+ms.date: 05/06/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -81,6 +81,9 @@ Now you can customize your organization's branding onto Edge for Business. This 
 
 ![Company branding for Contoso](media/microsoft-edge-for-business/efb-company-branding-new.png)
 
+For more information on customizing brand assets, see [Organization branding](/deployedge/microsoft-edge-organization-branding).
+
+<!---
 ### Customize Branding Assets (Public Preview)
 
 Through Microsoft Edge management service, admins can have an enhanced experience to control, preview, and customize how Edge for Business shows the following organization brand assets:
@@ -111,7 +114,7 @@ Default branding can be enabled by admins through the following policies:
 - [OrganizationLogoOverlayOnAppIconEnabled](/deployedge/microsoft-edge-policies#organizationlogooverlayonappiconenabled)
 
 For more details on defaults and checking what is already configured in Microsoft Entra, [check your existing company branding](/entra/fundamentals/how-to-customize-branding).
-
+--->
 ## Microsoft Edge for Business
 
 Microsoft Edge for Business is generally available now on managed devices on Microsoft Edge version 116 or later.
