@@ -3,7 +3,7 @@ title: "Microsoft Edge Mobile Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/23/2024
+ms.date: 05/07/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -61,6 +61,9 @@ These tables list all of the browser-related policies available in this release 
 | [EdgeLockedViewModeEnabled](#edgelockedviewmodeenabled)  | Edge locked view mode    |
 |  [EdgeLockedViewModeAllowedActions](#edgelockedviewmodeallowedactions)  |  Configure allowed actions in Edge locked view mode   |
 |  [EdgeCopilotEnabled](#edgecopilotenabled)  |  Enable Copilot in Edge  |
+|  [EdgeNewTabPageLayout](#edgenewtabpagelayout)  |  Manage New Tab Page layout settings  |
+|  [EdgeNewTabPageLayoutCustom](#edgenewtabpagelayoutcustom)  | Manage New Tab Page custom setting   |
+|  [EdgeNewTabPageLayoutUserSelectable](#edgenewtabpagelayoutuserselectable)  |  Manage whether the New Tab Page layout is selectable by users  |
 
 <!-- ====================================== -->
 ### [*Proxy server*](#proxy-server)
@@ -2168,6 +2171,132 @@ EdgeCopilotEnabled
 ```
 
 ##### Example value (Android and iOS):
+
+```
+false
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+
+### EdgeNewTabPageLayout
+ 
+#### Manage New Tab Page layout settings
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124.0.2478.71
+
+#### Description
+
+The **Custom** layout is the default one for the new tab page. It shows top site shortcuts and news feed with wallpaper. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
+
+focused = Focused is selected<br>
+inspirational = Inspirational is selected<br>
+informational = Informational is selected<br>
+custom (Default) = Custom is selected, top site shortcuts toggle is on, wallpaper toggle is on, and news feed toggle is on
+
+Note that EdgeNewTabPageLayout policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, EdgeNewTabPageLayout policy only takes effect if users do not change layout settings. You can enforce EdgeNewTabPageLayout policy by configuring EdgeNewTabPageLayoutUserSelectable=false.
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+Android: String
+
+#### Android restriction name:
+
+```
+EdgeNewTabPageLayout
+```
+ 
+##### Example value (Android):
+
+```
+focused 
+```
+
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeNewTabPageLayoutCustom
+
+#### Manage New Tab Page custom setting
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124.0.2478.71
+
+#### Description
+
+By default, topsites, wallpaper and newsfeed are turned on in the custom setting. Organization can manage the custom setting.
+This policy only takes affect when EdgeNewTabPageLayout is configured as custom.
+
+topsites = Turn on top site shortcuts<br>
+wallpaper = Turn on wallpaper<br>
+newsfeed = Turn on news feed<br>
+
+To configure multiple features, separate values with |. 
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+```
+Android:String
+```
+
+#### Android restriction name:
+
+```
+EdgeNewTabPageLayoutCustom
+```
+
+##### Example value (Android):
+
+```
+topsites | newsfeed
+```
+[Back to top](#microsoft-edge-mobile---policies)
+
+### EdgeNewTabPageLayoutUserSelectable
+
+#### Manage whether the New Tab Page layout is selectable by users
+
+#### Supported on:
+
+- Microsoft Edge (Android) since version 124.0.2478.71
+
+#### Description
+
+By default, users can change their settings on their own. Organization can manage whether the New Tab Page layout can be changed by users.
+
+- true (default) = Users can change the page layout settings
+- false = Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used
+
+#### Supported features:
+
+- Dynamic Policy Refresh : Yes
+- Per Profile : No
+
+#### Data Type:
+
+```
+Android: Boolean
+```
+
+#### Android restriction name:
+
+```
+EdgeNewTabPageLayoutUserSelectable
+```
+
+##### Example value (Android):
 
 ```
 false
