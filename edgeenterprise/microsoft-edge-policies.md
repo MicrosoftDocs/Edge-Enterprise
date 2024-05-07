@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 04/27/2024
+ms.date: 05/07/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,12 +30,11 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the deprecated and obsoleted policies that are in this article update.
+The following table lists the obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)|
-|[MathSolverEnabled](#mathsolverenabled)|Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)|
+|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)|
 
 ## Available policies
 
@@ -239,7 +238,7 @@ These tables list all of the browser-related group policies available in this re
 
 |Policy Name|Caption|
 |-|-|
-|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge|
+|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)|
 |[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
@@ -297,7 +296,6 @@ These tables list all of the browser-related group policies available in this re
 |[EfficiencyModeOnPowerEnabled](#efficiencymodeonpowerenabled)|Enable efficiency mode when the device is connected to a power source|
 |[PerformanceDetectorEnabled](#performancedetectorenabled)|Performance Detector Enabled|
 |[PinBrowserEssentialsToolbarButton](#pinbrowseressentialstoolbarbutton)|Pin browser essentials toolbar button|
-|[RAMResourceControlsEnabled](#ramresourcecontrolsenabled)|RAM (memory) resource controls enabled|
 |[StartupBoostEnabled](#startupboostenabled)|Enable startup boost|
 ### [*Permit or deny screen capture*](#permit-or-deny-screen-capture-policies)
 
@@ -9316,17 +9314,17 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
 
   ### ImmersiveReaderGrammarToolsEnabled
 
-  #### Enable Grammar Tools feature within Immersive Reader in Microsoft Edge
+  #### Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 125.
   #### Supported versions:
 
-  - On Windows and macOS since 110 or later
+  - On Windows and macOS since 110, until 125
 
   #### Description
 
-  Enables the Grammar Tools feature within Immersive Reader in Microsoft Edge.
+  This policy is obsoleted because Grammar Tools is deprecated from Edge. This policy won't work in Microsoft Edge version 126. Enables the Grammar Tools feature within Immersive Reader in Microsoft Edge.
 This helps improve reading comprehension by splitting words into syllables and highlighting nouns, verbs, adverbs, and adjectives.
 
 If you enable this policy or don't configure it, the Grammar Tools option shows up within Immersive Reader.
@@ -9349,7 +9347,7 @@ If you disable this policy, users can't access the Grammar Tools feature within 
   ##### Group Policy (ADMX) info
 
   - GP unique name: ImmersiveReaderGrammarToolsEnabled
-  - GP name: Enable Grammar Tools feature within Immersive Reader in Microsoft Edge
+  - GP name: Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Immersive Reader settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -11620,65 +11618,6 @@ Learn more about browser essentials: [https://go.microsoft.com/fwlink/?linkid=22
 ``` xml
 <true/>
 ```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### RAMResourceControlsEnabled
-
-  #### RAM (memory) resource controls enabled
-
-  
-  
-  #### Supported versions:
-
-  - On Windows since 125 or later
-
-  #### Description
-
-  This policy controls if users can access the RAM (memory) resource control feature. This feature is targeted towards consumers who would like to set an individual limit on how much RAM (memory) Microsoft Edge can use.
-
-To control the amount of memory that an Microsoft Edge instance can use, refer to the [TotalMemoryLimitMb](#totalmemorylimitmb) policy.
-
-If you enable or don't configure this policy, users have access to and can enable the resource control feature. When the control is active, a user can set the amount of RAM that Microsoft Edge can use. Note that browser performance is affected by low limits.
-
-If you disable this policy, users can't use resource control.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: Yes
-  - Per Profile: No
-  - Applies to a profile that is signed in with a Microsoft account: Yes
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: RAMResourceControlsEnabled
-  - GP name: RAM (memory) resource controls enabled
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Performance
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: RAMResourceControlsEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
   
 
   [Back to top](#microsoft-edge---policies)
