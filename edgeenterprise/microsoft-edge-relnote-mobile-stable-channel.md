@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 04/30/2024
+ms.date: 05/07/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -23,11 +23,21 @@ All the Stable channel security updates are listed in [Release notes for Microso
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
 
+## Version 124.0.2478.87 (Android): May 7, 2024
+
+Fixed various bugs and performance issues.
+
 ## Version 124.0.2478.71 (iOS): April 30, 2024
 
 Fixed various bugs and performance issues.
 
 ## Version 124.0.2478.71 (Android): April 29, 2024
+
+### Policy updates
+
+- MDM policy  [edgenewtabpagelayout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) to manage New Tab Page layout settings.
+- MDM policy [edgenewtabpagelayoutcustom](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayoutcustom) to manage New Tab Page custom setting.
+- MDM policy [edgenewtabpagelayoutuserselectable](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayoutuserselectable) to manage whether the New Tab Page layout is selectable by users.
 
 Fixed various bugs and performance issues.
 
@@ -65,11 +75,11 @@ Made general updates, fixed various bugs and performance issues, added new featu
 
 ### Policy updates
 
-- [Android and iOS] Introduce MDM policy **EdgeCopilotEnabled** to globally disable Copilot in Edge mobile, including the personal context.
-- [Android and iOS] MDM policy **HideFirstRunExperience**, to hide first run experience.
-- [Android and iOS] MDM policy **DefaultBrowserSettingEnabled**, to disable default browser settings pop-up.
-- [Android] MDM policy **PreventTyposquattingPromptOverride**, to prevent bypassing Edge Website Typo Protection prompts for sites.
-- [Android] MDM policy **TyposquattingAllowListDomains**, to configure the list of domains for which Edge Website Typo Protection won't trigger warnings.
+- [Android and iOS] Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
+- [Android and iOS] MDM policy [HideFirstRunExperience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience), to hide first run experience.
+- [Android and iOS] MDM policy [DefaultBrowserSettingEnabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled), to disable default browser settings pop-up.
+- [Android] MDM policy [PreventTyposquattingPromptOverride](/deployedge/microsoft-edge-mobile-policies#preventtyposquattingpromptoverride), to prevent bypassing Edge Website Typo Protection prompts for sites.
+- [Android] MDM policy [TyposquattingAllowListDomains](/deployedge/microsoft-edge-mobile-policies#typosquattingallowlistdomains), to configure the list of domains for which Edge Website Typo Protection won't trigger warnings.
 
 ## Version 123.0.2420.108 (iOS): April 19, 2024
 
