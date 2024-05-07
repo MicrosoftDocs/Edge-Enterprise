@@ -3,7 +3,7 @@ title: "Organization branding"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 04/26/2024
+ms.date: 05/07/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
