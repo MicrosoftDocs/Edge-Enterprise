@@ -16,13 +16,9 @@ description: "Release notes for Microsoft Edge Security Updates"
 
 These release notes provide information about security fixes that are included in updates to Microsoft Edge Stable channel.
 
-## May X, 2024
+## May 9, 2024
 
-Microsoft has a fix for [CVE-2024-XXXX](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-XXXX) to **Microsoft Edge Stable Channel (Version 124.0.2478.xx)**, which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
-
-This update also contains the following Microsoft Edge-specific update:
-
-- [CVE-2024-30055](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30055)
+Microsoft is aware of the recent exploits existing in the wild. We are actively working on releasing a security fix.
 
 ## May 2, 2024
 
