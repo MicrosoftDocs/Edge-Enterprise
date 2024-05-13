@@ -14,17 +14,12 @@ description: "Microsoft Edge Supported Operating Systems"
 
 # Microsoft Edge supported Operating Systems
 
-> [!NOTE]
-> Microsoft Edge for Business is now available in Edge stable version 116! [Learn more](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/microsoft-edge-for-business-faq/ba-p/3891837) about the new, dedicated work experience with native enterprise grade security, productivity, manageability, and AI built in.
-
-This article describes the supported operating systems that apply to Microsoft Edge.
+This article describes the supported operating systems that apply to Microsoft Edge. Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
 ## Supported Operating Systems for Microsoft Edge
 
 > [!NOTE]
 > Product functionality and feature availability may vary on older operating systems. To ensure that Microsoft Edge installs correctly, use the latest version of any operating system specified below. This guidance includes the latest cumulative update, as applicable.
-
-Microsoft Edge follows the Modern Lifecycle Policy and is supported on the following operating systems.
 
 ### Windows Client
 
