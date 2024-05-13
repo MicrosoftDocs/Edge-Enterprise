@@ -3,7 +3,7 @@ title: "Microsoft Edge known issues"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/01/2024
+ms.date: 05/13/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
