@@ -3,7 +3,7 @@ title: "Microsoft Edge management service"
 ms.author: katherinegan
 author: dan-wesley
 manager: archandr
-ms.date: 04/26/2024
+ms.date: 05/13/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -341,6 +341,29 @@ You can specify individual hostnames and the profile you would like them to open
 3. Choose the profile you would like the hostname to open in. If you would like the profile to not switch on the hostname, select **Allow user preference**.
 4. (Optional) If the profile selected is work, you can optionally choose to specify the domain that the hostname opens in. This may be necessary for users with multiple work profiles. The domain entered should match the format *\*username@company.com* (note: the \* is required).
 5. Select **Add**.
+<!-- ================ NEW ============================= -->
+
+#### Configure security protection settings
+
+> [!NOTE]
+> This feature is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+
+To add settings that help protect against security threats, navigate to the security protections tab. Here you can choose to configure settings that help protect your users against security vulnerabilities.
+
+##### Enable enhanced security mode
+
+[Enhanced security mode](/deployedge/microsoft-edge-security-browse-safer) helps reduce the risk of an attack caused by memory-related vulnerabilities by automatically applying stricter security settings on unfamiliar sites. To enable this mode:
+
+1. Turn on the **Enhanced security mode toggle**.
+2. Specify the **Balanced** or **Strict** mode depending on the level of security you would like.
+3. Select **Save changes**.
+
+##### Block third-party browser use
+
+> [!NOTE]
+> This setting is only available for customers with a Microsoft Intune license.
+
+Users with configured security protection settings may still be at risk on other browsers. To mitigate this risk, you can choose to block third-party browser use. When this setting is enabled, a new configuration policy will be created in Intune. Any modifications you make to this new policy in Intune or in a configuration profile with identical groups in the Microsoft Edge management service may lead to unexpected behaviors.
 
 <!-- =================================================== -->
 ## Configure Microsoft Edge to use a configuration profile
