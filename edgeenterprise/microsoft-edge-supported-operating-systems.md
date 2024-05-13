@@ -39,7 +39,7 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 - Windows 11
 
 > [!NOTE]
-> Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126.
+> Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126. Versions of Microsoft Edge on unsupported hardware might stop receiving Edge updates.
 
 ### Windows Server
 
