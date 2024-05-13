@@ -28,27 +28,21 @@ Microsoft Edge follows the Modern Lifecycle Policy and is supported on the follo
 
 ### Windows Client
 
-- Windows 7
-  - With [Windows 7 Extended Security Update (ESU)](/lifecycle/products/windows-7) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
-- Windows 8.1
-  - With [Windows 8/8.1](/lifecycle/products/windows-81) end of support on January 10th, 2023, Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
-
 - Windows 10 SAC 1709 and later **
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
-- Windows 10 Enterprise 2021 LTSC 
+- Windows 10 Enterprise 2021 LTSC
 - Windows 10 Enterprise multi-session
 - Windows 10 IoT Enterprise SAC ****
 - Windows 10 IoT Enterprise 2019 LTSC ****
 - Windows 11
 
+> [!NOTE]
+> Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126.
+
 ### Windows Server
 
-- Windows Server 2008 R2
-  - Microsoft Edge version 109 will be the last browser version to support this operating system. Microsoft Edge version 109 is scheduled for release the week of January 12th, 2023 (to learn more, [see our release schedule](/deployedge/microsoft-edge-release-schedule)).
-- Windows Server 2012 and Windows Server 2012 R2
-  - Microsoft Edge version 109 will be the last version supported on Windows Server 2012 and Windows 2012 R2. Microsoft Edge version 109 will receive critical security fixes and fixes for known exploit bugs until October 10, 2023, on these platforms.
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
 - Windows Server 2022 (LTSC)
@@ -85,9 +79,11 @@ Microsoft Edge does not support Chromebooks.
 
 ## Recent changes
 
-- **12/17/2020** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended to January 15, 2022.
-- **01/28/2021** - Microsoft Edge support for Apple Silicon Macs.
+- **05/13/2024** Microsoft Edge support for Windows 7/8/8.1 and server 2008 r2/2012/2012 r2 ended in Edge version 109.
+- **05/13/2024** Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126.
 - **11/05/2021** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended through January 15, 2023 for critical security and stability updates.
+- **01/28/2021** - Microsoft Edge support for Apple Silicon Macs.
+- **12/17/2020** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended to January 15, 2022.
 
 ## See also
 
