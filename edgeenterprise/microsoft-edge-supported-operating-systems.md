@@ -79,8 +79,8 @@ Microsoft Edge does not support Chromebooks.
 
 ## Recent changes
 
-- **05/13/2024** Microsoft Edge support for Windows 7/8/8.1 and server 2008 r2/2012/2012 r2 ended in Edge version 109.
 - **05/13/2024** Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126.
+- **01/12/2023** Microsoft Edge support for Windows 7, Windows 8, Windows 8.1, Windows Server 2008 r2, Windows Server 2012, and Windows Server 2012 r2 ended in Edge version 109.
 - **11/05/2021** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended through January 15, 2023 for critical security and stability updates.
 - **01/28/2021** - Microsoft Edge support for Apple Silicon Macs.
 - **12/17/2020** - Microsoft Edge support on Windows 7 and Windows Server 2008 R2 extended to January 15, 2022.
