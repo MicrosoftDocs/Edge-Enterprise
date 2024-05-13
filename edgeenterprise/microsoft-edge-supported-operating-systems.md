@@ -14,7 +14,7 @@ description: "Microsoft Edge Supported Operating Systems"
 
 # Microsoft Edge supported Operating Systems
 
-This article describes the supported operating systems that apply to Microsoft Edge. Microsoft Edge follows the Modern Lifecycle Policy and is supported on these operating systems.
+This article describes the supported operating systems that apply to Microsoft Edge. Microsoft Edge follows the [Modern Lifecycle Policy](/lifecycle/policies/modern) and is supported on these operating systems.
 
 ## Supported Operating Systems for Microsoft Edge
 
