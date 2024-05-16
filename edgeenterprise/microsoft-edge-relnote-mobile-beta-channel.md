@@ -28,7 +28,7 @@ Archived versions of these release notes are available at [Archived release note
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## Version 125.0.2535.44 (Android): May 14, 2024
+## Version v125.0.2535.48 (Android and iOS): May 16, 2024
 
 Fixed various bugs and performance issues, includes general updates, new features, and new policies.
 
@@ -50,6 +50,10 @@ Fixed various bugs and performance issues, includes general updates, new feature
 
 - [iOS] `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork` to resolve the conflict between Intune auto identity switch and Edge allow/block URL policies.
 - [iOS and Android] Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
+
+## Version 125.0.2535.44 (Android): May 14, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 125.0.2535.34 (Android and iOS): May 9, 2024
 
