@@ -62,6 +62,13 @@ Microsoft Defender Application Guard extension deprecation. Because Application 
 
 - [AllowTokenBindingForUrls](/deployedge/microsoft-edge-policies#allowtokenbindingforurls) - Configure the list of sites for which Microsoft Edge will attempt to establish a Token Binding with (deprecated)
 
+## Version 124.0.2478.109: May 16, 2024
+
+> [!IMPORTANT]
+> This update to Stable channel (and Extended Stable channel) contains a fix for [CVE-2024-4947](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-4947), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-16-2024).
+
 ## Version 124.0.2478.105: May 14, 2024
 
 > [!IMPORTANT]
