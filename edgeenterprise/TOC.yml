@@ -1,4 +1,4 @@
-# last revised 04/16/2024
+# last revised 05/13/2024
 - name: Microsoft Edge Enterprise documentation 
   href: index.yml
 # GET STARTED
@@ -33,24 +33,7 @@
      href: deploy-edge-ready-for-edge.md
    - name: Install Microsoft Edge for mobile platforms in China
      href: microsoft-edge-install-mobile-china.md
-   - name: Mobile Stable Channel Release Notes
-     href: microsoft-edge-relnote-mobile-stable-channel.md
-   - name: Mobile Stable Channel archived release notes
-     href: microsoft-edge-relnote-archive-mobile-stable-channel.md
-   - name: Mobile Beta Channel Release Notes
-     href: microsoft-edge-relnote-mobile-beta-channel.md
-   - name: Stable Channel Release Notes
-     href: microsoft-edge-relnote-stable-channel.md
-   - name: Stable Channel archived release notes
-     href: microsoft-edge-relnote-archive-stable-channel.md
-   - name: Beta Channel Release Notes
-     href: microsoft-edge-relnote-beta-channel.md
-   - name: Beta Channel archived release notes
-     href: microsoft-edge-relnote-archive-beta-channel.md
-   - name: Release schedule
-     href: microsoft-edge-release-schedule.md
-   - name: Security updates
-     href: microsoft-edge-relnotes-security.md     
+
    - name: Supported Operating Systems
      href: microsoft-edge-supported-operating-systems.md
    - name: Lifecycle Policy
@@ -61,6 +44,29 @@
      items:
       - name: Windows updates to support Microsoft Edge
         href: microsoft-edge-sysupdate-windows-updates.md
+# KNOWN ISSUES
+- name: Schedule, Known issues, Release notes
+  items:
+   - name: Release schedule
+     href: microsoft-edge-release-schedule.md
+   - name: Microsoft Edge known issues
+     href: microsoft-edge-known-issues.md
+   - name: Beta Channel Release Notes
+     href: microsoft-edge-relnote-beta-channel.md
+   - name: Beta Channel archived release notes
+     href: microsoft-edge-relnote-archive-beta-channel.md
+   - name: Stable Channel Release Notes
+     href: microsoft-edge-relnote-stable-channel.md
+   - name: Stable Channel archived release notes
+     href: microsoft-edge-relnote-archive-stable-channel.md
+   - name: Mobile Beta Channel Release Notes
+     href: microsoft-edge-relnote-mobile-beta-channel.md
+   - name: Mobile Stable Channel Release Notes
+     href: microsoft-edge-relnote-mobile-stable-channel.md
+   - name: Mobile Stable Channel archived release notes
+     href: microsoft-edge-relnote-archive-mobile-stable-channel.md
+   - name: Security updates
+     href: microsoft-edge-relnotes-security.md  
 # DEPLOY
 - name: Deploy Microsoft Edge
   items:
