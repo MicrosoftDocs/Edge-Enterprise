@@ -3,7 +3,7 @@ title: "Microsoft Edge known issues"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/16/2024
+ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -36,6 +36,9 @@ The following table lists the issues that the Microsoft Edge team is tracking cl
 
 | Channel |  Version  | Symptom | Workaround | Comment |
 | --- | --- | --- | --- | --- |
+
 ---->
 
 ## See also
+
+- [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
