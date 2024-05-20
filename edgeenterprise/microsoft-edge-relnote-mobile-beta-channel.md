@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/09/2024
+ms.date: 05/16/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -27,6 +27,33 @@ Archived versions of these release notes are available at [Archived release note
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 125.0.2535.48 (Android and iOS): May 16, 2024
+
+Fixed various bugs and performance issues, includes general updates, new features, and new policies.
+
+### General updates
+
+- [iOS] MS Tunnel Tunnel SDK updated to 1.0.17
+- [iOS] Upgrade Intune iOS SDK to 19.3.1, with working time support
+- [Android] Upgrade Intune Android SDK to 10.3.0, with working time support
+
+### New features
+
+- [Android] Edge Android now supports kerberos/negotiate authentication on Android via an [external SPNEGO authenticator app](https://github.com/google/android-kerberos-authenticator) integrated with Android account management framework
+- [iOS & Android] Shared links feature will appear in overflow menu in work account
+- [iOS] PAC policy now supports fail-close
+- [iOS] Support certificate pinning via Intune, currently only supports limited number of Microsoft domains. Pending on Intune's improvements to support customizable cert-domain pair
+- [iOS] Support of new iOS 17 relay proxy via policy `com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl`
+
+### New Policies
+
+- [iOS] `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork` to resolve the conflict between Intune auto identity switch and Edge allow/block URL policies.
+- [iOS and Android] Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
+
+## Version 125.0.2535.44 (Android): May 14, 2024
+
+Fixed various bugs and performance issues.
 
 ## Version 125.0.2535.34 (Android and iOS): May 9, 2024
 

@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 01/12/2024
+ms.date: 05/20/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -34,7 +34,7 @@ This article describes the supported operating systems that apply to Microsoft E
 - Windows 11
 
 > [!NOTE]
-> Microsoft Edge support on CPUs without SSE3 will be out of support in Edge version 126. Versions of Microsoft Edge on unsupported hardware might stop receiving Edge updates.
+> After version 126, Microsoft Edge will stop supporting CPUs that lack SSE3. Devices with these CPUs will not receive any more updates.
 
 ### Windows Server
 
@@ -58,7 +58,7 @@ Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 14.0 or later. Microso
 
 ### Android
 
-Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android KitKat 4.4 or later with an ARM-based processor.
+Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android 8.0 or later with an ARM-based processor.
 
 ### Apple Silicon Macs
 
