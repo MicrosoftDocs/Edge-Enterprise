@@ -3,7 +3,7 @@ title: "Microsoft Edge Supported Operating Systems"
 ms.author: archandr
 author: srugh
 manager: likuba
-ms.date: 05/14/2024
+ms.date: 05/20/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -58,7 +58,7 @@ Microsoft Edge for iPad&reg; and iPhone&reg; requires iOS 14.0 or later. Microso
 
 ### Android
 
-Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android KitKat 4.4 or later with an ARM-based processor.
+Microsoft Edge for Android can be installed on tablets and phones that meet the following criteria: devices running Android 8.0 or later with an ARM-based processor.
 
 ### Apple Silicon Macs
 
