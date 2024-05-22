@@ -25,7 +25,21 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 ## Version 125.0.2535.51 (Android): May 21, 2024
 
-Fixed various bugs and performance issues.
+Fixed various bugs and performance issues, provide a general update, add new features and policies.
+
+### General updates
+
+- Upgrade the Intune Android SDK to 10.3.0, with working time support.
+
+### New features
+
+- Edge Android now supports kerberos/negotiate authentication on Android via an [external SPNEGO authenticator app](https://github.com/google/android-kerberos-authenticator) integrated with Android account management framework.
+- Shared links feature will appear in overflow menu in work account.
+
+### New Policies
+
+- Introduce the MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
+
 
 ## Version 124.0.2478.105 (iOS): May 17, 2024
 
