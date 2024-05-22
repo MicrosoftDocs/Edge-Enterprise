@@ -3,7 +3,7 @@ title: "Archived - release notes for Microsoft Edge Mobile Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 03/28/2024
+ms.date: 05/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -15,6 +15,130 @@ description: "Archived release notes for Microsoft Edge Mobile Stable Channel"
 # Archived - release notes for Microsoft Edge Mobile Stable Channel
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Mobile Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
+
+<!-- Version 122.0.2365.99 (Android and iOS): March 18, to 2024 Version 121.0.2277.84 (Android): January 29, 2024 -->
+
+## Version 122.0.2365.99 (Android and iOS): March 18, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.86 (Android and iOS): March 12, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.2365.78 (iOS): March 8, 2024
+
+Fixed various bugs and performance issues.
+
+### Fixes
+
+- fixed a crash issue
+
+## Version 122.0.2365.76 (Android): March 7, 2024
+
+Fixed various bugs and performance issues.
+
+### Feature update
+
+- Extensions in Edge for Android can be disabled by MAM policy.
+  - `com.microsoft.intune.mam.managedbrowser.disabledFeatures=extensions`
+
+  Note: The Extensions feature is still in flight. It can be turned on by the Android Extension flag from *Edge://flags*.
+
+## Version 122.2365.71 (iOS): March 6, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 122.0.2365.56 (Android and iOS): February 26, 2024
+
+Made general updates, fixed various bugs, and added new policy support.
+
+### General updates
+
+- Updated the Intune Mobile Application Management (MAM) SDK to version 19.1.0.
+- With the release of iOS 17, multiple persistent stores are now supported. Work and personal accounts have their own designated persistent store. The MAM policy [`com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore`](/mem/intune/apps/manage-microsoft-edge#ios-website-data-store) is no longer applicable.
+
+### Bug fixes
+
+- Fixed crash with Microsoft MAM Tunnel
+- Fixed bug for MDM policy EdgeBlockSignInEnabled
+- Addressed accessibility and UI issues related to implicit sign-in.
+- Resolved several policy-related crashes and performance issues.
+- [iOS] Fixed a bug preventing deep links from opening via `window.open()`.
+- [iOS] Resolved an issue where the Intune SDK unexpectedly blocked "Open in Microsoft Edge".
+- [iOS] Resolved an issue with closing tabs in InPrivate mode.
+
+### Policy updates
+
+- [iOS] Mobile Application Management (MDM) policy IdleTimeoutActions to specify actions to run when the timeout from the IdleTimeout policy is reached. Only close_tabs is supported.
+- [iOS] MDM policy IdleTimeout to specify the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.
+- MAM policy to allow or block file uploads to specified domains.
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls`
+  - `com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls`
+
+## Version 121.0.2277.133: February 20, 2024
+
+Fixed various bugs and performance issues for Android and iOS.
+
+## Version 121.0.2277.107 (iOS): February 7, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.99 (iOS): February 6, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.105 (Android): February 5, 2024
+
+Fixed various bugs and performance issues.
+
+## Version 121.0.2277.86 (iOS): February 1, 2024
+
+Fixed various bugs, added new policy support, and enhanced users' experience.
+
+### Fixes
+
+**iOS:**
+
+- Resolved the issue with the "Open in Microsoft Edge" option not functioning due to Intune SDK problem.
+- Upgraded Microsoft Tunnel MAM SDK to version 1.0.11.
+- Fixed a background crash related to the policy manager.
+- Upgraded Intune MAM SDK for iOS to version 19.0.0.
+
+### Policy updates
+
+#### New policies
+
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+
+### Enhancements
+
+- News feeds is enabled for work or school accounts.
+
+<!-- =================================================== -->
+## Version 121.0.2277.84 (Android): January 29, 2024
+
+Fixed various bugs, added new policy support, and enhanced users' experience.
+
+### Fixes
+
+**Android:**
+
+- Fixed bugs related to bookmarks.
+- Upgraded Intune MAM SDK to version 10.1.0.
+ 
+### Policy updates
+
+#### New policies
+
+- [EdgeBlockSignInEnabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) to block Edge sign-in
+- [ExperimentationAndConfigurationServiceControl](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol), allowing customers to opt-in for experiments and gain early access to Microsoft Edge experimenting features.
+- [EdgeOneAuthProxy](/deployedge/microsoft-edge-mobile-policies#edgeoneauthproxy) to specify a dedicated proxy to sign in to Edge in Android
+
+### Enhancements
+
+- News feeds is enabled for work or school accounts.
 
 <!-- Version 120.0.2210.150: January 21, 2024 to Version 120.0.2210.59: December 12, 2023 -->
 ## Version 120.0.2210.150: January 21, 2024
