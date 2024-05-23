@@ -25,7 +25,7 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
-
+ 
 ## Version 125.0.2535.XX: May XX, 2024
 
 Fixed various bugs and performance issues.
@@ -42,6 +42,12 @@ Microsoft Defender Application Guard extension deprecation. Because Application 
 ### Improved reliability
 
 - Fixed a browser crash/hang which occurred when trying to select from a drop-down list with a large number of options.
+
+## Version 124.0.XXXX.XX: May XX, 2024
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-XX-2024).
 
 ## Version 125.0.2535.51: May 17, 2024
 
