@@ -30,6 +30,7 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-XX-2024).
 
 **Announcement**
 
