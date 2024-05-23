@@ -30,6 +30,9 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues.
 
+> [!IMPORTANT]
+> This update to Stable channel contains a fix for [CVE-2024-XXXX](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-XXXX), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
 Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-XX-2024).
 
 **Announcement**
