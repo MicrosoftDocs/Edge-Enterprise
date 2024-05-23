@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/20/2024
+ms.date: 05/23/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -19,6 +19,33 @@ These release notes provide information about new features and non-security upda
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 126.0.2592.13: May 23, 2024
+
+Fixed various bugs and performance issues, Dev channel updates, feature updates, and policy updates.
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Beta channel release. These notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 126.0.2552.0 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-126-0-2552-0-is-live/m-p/4131066)
+- [Dev Channel update to 126.0.2566.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-126-0-2566-1-is-live/m-p/4133928)
+- [Dev Channel update to 126.0.2578.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-126-0-2578-1-is-live/m-p/4144544)
+
+### Feature updates
+
+- **AI theme generator.** Microsoft Edge will include an AI theme generator, that allows users to input a text prompt and generate a series of images to preview as browser themes. Applying the theme includes setting the generated image on the Edge new tab page and applying the image's dominant color to the browser frame. Admins can control availability to this feature using the [AIGenThemesEnabled](/deployedge/microsoft-edge-policies#enables-dall-e-themes-generation) policy.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+- **Security protection controls in the Microsoft Edge management service.**  The Microsoft Edge management service will provide admins with a dedicated experience to manage specific settings that help improve the security posture of their managed browser instances. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center.
+
+- **Copilot summarization notification.**  The feature displays an Omnibox notification when users enter into a reading mode eligible page in Edge and offers them the option to open Copilot in the sidebar to generate a summary of the content.  **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+
+### Policy updates
+ 
+#### Obsoleted policies
+
+-    [MathSolverEnabled](/deployedge/microsoft-edge-policies#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
+-    [ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#immersivereadergrammartoolsenabled) - Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
+ 
 ## Version 125.0.2535.51: May 17, 2024
 
 Fixed various bugs and performance issues.
