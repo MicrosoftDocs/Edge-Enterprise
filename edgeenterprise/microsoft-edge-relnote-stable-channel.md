@@ -43,11 +43,11 @@ Microsoft Defender Application Guard extension deprecation. Because Application 
 
 - Fixed a browser crash/hang which occurred when trying to select from a drop-down list with a large number of options.
 
-## Version 124.0.XXXX.XX: May XX, 2024
+## Version 124.0.2478.121: May 24, 2024
 
 Fixed various bugs and performance issues for Extended Stable release.
 
-Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-XX-2024).
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-24-2024).
 
 ## Version 125.0.2535.51: May 17, 2024
 
