@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Stable Channel"
 ms.author: charlielin
 author: dan-wesley
 manager: alexyuan
-ms.date: 05/21/2024
+ms.date: 05/23/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -22,6 +22,27 @@ All the Stable channel security updates are listed in [Release notes for Microso
 
 > [!NOTE]
 > For the Stable Channel, updates roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md). There might be a delay before the new release is populated to the App Store (iOS) and Google Play (Android).
+
+## Version 125.0.2535.60 (iOS): May 23, 2024
+
+Fixed various bugs and performance issues, provide general updates, add new features and policies.
+
+### General updates
+
+- MS Tunnel Tunnel SDK updated to 1.0.17.
+- Upgrade Intune iOS SDK to 19.3.1, with working time support.
+
+### New features
+
+- Shared links feature will appear in overflow menu in work account. 
+- PAC policy now supports fail-close.
+- Support certificate pinning via Intune, currently only supports limited number of Microsoft domains. Pending on Intune's improvements to support customizable cert-domain pair.
+- Support of new iOS 17 relay proxy via policy `com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl`.
+
+### New Policies
+
+- `com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitchToWork` to resolve the conflict between Intune auto identity switch and Edge allow/block URL policies.
+- Introduce MDM policy [EdgeCopilotEnabled](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled), to globally disable Copilot in Edge mobile, including the personal context.
 
 ## Version 125.0.2535.51 (Android): May 21, 2024
 
