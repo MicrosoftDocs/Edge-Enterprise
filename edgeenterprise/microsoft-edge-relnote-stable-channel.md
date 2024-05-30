@@ -26,6 +26,10 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 124.0.2478.127: May 30, 2024
+
+Fixed various bugs and performance issues for Extended Stable channel.
+
 <!--------------------------------------------------------------->
 ## Version 125.0.2535.79: May 30, 2024
 
