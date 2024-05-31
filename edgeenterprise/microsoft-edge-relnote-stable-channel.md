@@ -30,6 +30,11 @@ These release notes provide information about new features and non-security upda
 
 Fixed various bugs and performance issues for Extended Stable channel.
 
+> [!IMPORTANT]
+> This update to Extended Stable channel contains a fix for [CVE-2024-5274](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-5274), which has been reported by the Chromium team as having an exploit in the wild. For more information, see the [Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#may-24-2024).
+
 <!--------------------------------------------------------------->
 ## Version 125.0.2535.79: May 30, 2024
 
