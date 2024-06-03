@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 05/30/2024
+ms.date: 06/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -25,6 +25,17 @@ These release notes provide information about new features and non-security upda
 > For the Stable Channel, updates will roll out progressively over one or more days. To learn more, see [Progressive rollouts for Microsoft Edge updates](./microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 125.0.2535.85: June 3, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#june-3-2024).
+
+**Announcement**
+
+Microsoft Defender Application Guard extension deprecation. Because Application Guard is deprecated, there won't be a migration to Edge Manifest V3. The corresponding extensions and associated [Windows Store app](https://apps.microsoft.com/detail/9n8gnlc8z9c8?hl=en-us&gl=US) will not be available after May 2024. This affects the following browsers: [Application Guard Extension - Chrome](https://chromewebstore.google.com/detail/application-guard-extensi/mfjnknhkkiafjajicegabkbimfhplplj) and [Application Guard Extension - Firefox](https://addons.mozilla.org/en-US/firefox/addon/application-guard-extension/). If you want to block unprotected browsers until you're ready to retire MDAG usage in your enterprise, we recommend using AppLocker policies or [Microsoft Edge management service](/deployedge/microsoft-edge-management-service). For more information, see [Microsoft Edge and Microsoft Defender Application Guard](/deployedge/microsoft-edge-security-windows-defender-application-guard), [Deprecated features in the Windows client - What's new in Windows](/windows/whats-new/deprecated-features), and [Microsoft Defender Application Guard - Windows Security](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/md-app-guard-overview).
+
 
 ## Version 124.0.2478.127: May 30, 2024
 
@@ -230,7 +241,7 @@ Enhancing the profile management and customization experience through surfaced p
 
 - **Updated default profile pill for EDU users in Edge for Business.** To improve the applicability of the current Edge for Business default visuals, users signed in with an EDU account will see the default profile pill label updated to "School".
 
-- **Updated UX for Microsoft Defender for Endpoint blocks.** Microsoft Edge now provides a different blocking experience for Microsoft Defender for Endpoint based blocks (Web Content Filtering and Custom Indicators). For more information, see [Web protection](/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide).
+- **Updated UX for Microsoft Defender for Endpoint blocks.** Microsoft Edge now provides a different blocking experience for Microsoft Defender for Endpoint based blocks (Web Content Filtering and Custom Indicators). For more information, see [Web protection](/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide&preserve-view=true).
 
 ### Policy updates
 
