@@ -34,7 +34,7 @@ This article describes the supported operating systems that apply to Microsoft E
 - Windows 11
 
 > [!NOTE]
-> After version 128, Microsoft Edge will stop supporting CPUs that lack SSE3. Devices with these CPUs will not receive any more updates.
+> In version 128, Microsoft Edge will stop supporting CPUs that lack SSE3. Devices with these CPUs will not receive any more updates.
 
 ### Windows Server
 
