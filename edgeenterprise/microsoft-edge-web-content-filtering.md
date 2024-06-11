@@ -49,7 +49,8 @@ This section describes and illustrates the 6 basic steps for setting up WCF:
 
 ### Create a security group to enable WCF
 
-Tip- If you have pre-existing groups on Intune, they will automatically get imported to Edge management service. You can reuse them here without any additional work.
+> [!TIP]
+> If you have pre-existing groups on Intune, they will automatically get imported to Edge management service. You can reuse them here without any additional work.
 
 To create a group on Edge management service, open the Microsoft 365 admin center.
 
