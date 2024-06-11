@@ -26,6 +26,22 @@ These release notes provide information about new features and non-security upda
 >
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## Version 126.0.xxxx.xx: June x, 2024
+
+Fixed various bugs and performance issues.
+
+### Policy updates
+
+#### New policies
+
+- [ProactiveAuthWorkflowEnabled]
+- [InternetExplorerSetForegroundWhenActive]
+
+#### Obsoleted policies
+
+- [MathSolverEnabled](/deployedge/microsoft-edge-policies#mathsolverenabled) - Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
+- [ImmersiveReaderGrammarToolsEnabled](/deployedge/microsoft-edge-policies#immersivereadergrammartoolsenabled) - Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
+
 ## Version 125.0.2535.92: June 6, 2024
 
 Fixed various bugs and performance issues.
