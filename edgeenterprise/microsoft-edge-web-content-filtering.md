@@ -3,7 +3,7 @@ title: "Configure Web Content Filtering on Edge using Edge management service "
 ms.author: ssatti
 author: dan-wesley
 manager: vesesha
-ms.date: 06/11/2024
+ms.date: 06/12/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -56,37 +56,37 @@ To create a group on Edge management service, open the Microsoft 365 admin cente
 
 1. Go to **Active teams & groups** > **Security groups**, and then select **Add a security group**.
 
-<- insert screenshot ->
+
 <!----screen 1 Active teams & groups 
-![Add a security group under Active teams & groups.](media/microsoft-edge-web-content-filtering/filename)
+![Add a security group under Active teams & groups.](media/microsoft-edge-web-content-filtering/edge-wcf1-teams-and-groups.png)
 -->
 
 2. Under **Set up the basics**, enter a name and description for the group and then select **Next** to create the group.
 
-<- insert screenshot ->
+
 <!----screen 2 Setup the basics 
-![Provide name and description in Setup the basics.](media/microsoft-edge-web-content-filtering/filename)
+![Provide name and description in Setup the basics.](media/microsoft-edge-web-content-filtering/edge-wcf2-basics-name-description.png)
 -->
 
 3. Under **Active teams and groups**, select the  group you created and then go the **Members** section. Select **View all and manage members** to add **Owners** and **Members** to the group.
 
-<- insert screenshot ->
+
 <!----screen 3 Active teams and groups 
-![Under Active teams & groups select the group you created.](media/microsoft-edge-web-content-filtering/filename)
+![Under Active teams & groups select the group you created.](media/microsoft-edge-web-content-filtering/edge-wcf3-view-manage-members.png)
 -->
 
 4. On the **Members** panel, select **Add members**. 
 
-<- insert screenshot ->
+
 <!----screen 4 Members 
-![Select Add members on Members panel.](media/microsoft-edge-web-content-filtering/filename)
+![Select Add members on Members panel.](media/microsoft-edge-web-content-filtering/edge-wcf4-add-members.png)
 -->
 
 5. On the **Add members** panel, under **Display name**, check the members you want to add.
 
-<- insert screenshot ->
+
 <!----screen 5 Add Members list 
-![Pick members on the Add members list.](media/microsoft-edge-web-content-filtering/filename)
+![Pick members on the Add members list.](media/microsoft-edge-web-content-filtering/edge-wcf5-pick-members.png)
 -->
 
 > [!NOTE]
@@ -99,17 +99,17 @@ To enable WCF for a security group:
 1. Go to **Settings** > **Microsoft Edge** > **Configuration policies** and then select **Create policy**.
 2. Provide a **Name** and **Description**, and then select **Create**.
 
-<- insert screenshot ->
+
 <!----screen 6 create a config policy  
-![Add name and description for configuration policy.](media/microsoft-edge-web-content-filtering/filename)
+![Add name and description for configuration policy.](media/microsoft-edge-web-content-filtering/edge-wcf6-create-cfg-policy.png)
 -->
 
 3. In policy settings, go to **Customization Settings** > **Web content filtering**.
 4. Under **Web content filtering** there's a list of categories that you can block. Under **Blocked categories**, check all the categories that you want to block and then select **Save Changes**.
 
-<- insert screenshot ->
+
 <!----screen 7 create a customization settings  
-![Pick blocked categories for Web content filtering.](media/microsoft-edge-web-content-filtering/filename)
+![Pick blocked categories for Web content filtering.](media/microsoft-edge-web-content-filtering/edge-wcf7-filter-blocked-categories.png)
 -->
 
 > [!IMPORTANT]
@@ -125,9 +125,9 @@ If you want to allow a particular URL that is part of a blocked category, then y
 2. Type in the URL of the site you want to allow and then select "**+**"
 3. Select **Save Changes**.
 
-<- insert screenshot ->
+
 <!----screen 8 filtering allowed sites  
-![Enter URL for allowed sites in Web content filtering.](media/microsoft-edge-web-content-filtering/filename)
+![Enter URL for allowed sites in Web content filtering.](media/microsoft-edge-web-content-filtering/edge-wcf8-allowed-urls.png)
 -->
 
 > [!TIP]
@@ -135,9 +135,9 @@ If you want to allow a particular URL that is part of a blocked category, then y
 
 Similarly, if you want to block a particular URL or list of URLs, you can repeat the previous steps in the **Blocked sites** section.
 
-<- insert screenshot ->
+
 <!----screen 9 filtering blocked sites  
-![Enter URL for blocked sites in Web content filtering.](media/microsoft-edge-web-content-filtering/filename)
+![Enter URL for blocked sites in Web content filtering.](media/microsoft-edge-web-content-filtering/edge-wcf9-blocked-urls.png)
 -->
 
 > [!NOTE]
@@ -153,17 +153,17 @@ Web Content Filtering (WCF) on Microsoft Edge is in preview and our aim is to ma
 1. To enable **Diagnostic data** open the policy configuration page and go to **Settings**.
 2. Select **Add setting**.
 
-<- insert screenshot ->
+
 <!----screen 10 policy/settings/search  
-![Open policy configuration page to add a setting.](media/microsoft-edge-web-content-filtering/filename)
+![Open policy configuration page to add a setting.](media/microsoft-edge-web-content-filtering/edge-wcf10-policy-add-setting.png)
 -->
 
 3. Search for "DiagnosticData" and on the **Configure a setting** panel, under **Required data**, set the value to **Optional data**.
 4. Select **Save**.
 
-<- insert screenshot ->
+
 <!----screen 11 optional data  
-![Search for DiagnosticData and configure Optional data as Required.](media/microsoft-edge-web-content-filtering/filename)
+![Search for DiagnosticData and configure Optional data as Required.](media/microsoft-edge-web-content-filtering/edge-wcf11-required-optional-data.png)
 -->
 
 ### Assign the WCF policy to a group
@@ -173,32 +173,32 @@ Now that the policy has WCF, Allowlist & Blocklist, and Diagnostic data settings
 1. On the policy page, select **Assignment**.
 2. Click **Select Group**.
 
-<- insert screenshot ->
+
 <!----screen 12 assignment  
-![Pick Assignment on policy page to select a group.](media/microsoft-edge-web-content-filtering/filename)
+![Pick Assignment on policy page to select a group.](media/microsoft-edge-web-content-filtering/edge-wcf12-assignment-select-group.png)
 -->
 
 3. On the **Select a security group** panel, add the groups you want to assign the policy to and then click **Select**.
 
-<- insert screenshot ->
+
 <!----screen 13 select group  
-![Enter group name for groups to add.](media/microsoft-edge-web-content-filtering/filename)
+![Enter group name for groups to add.](media/microsoft-edge-web-content-filtering/edge-wcf13-security-add-group-name.png)
 -->
 
 ### Verify that the WCF policy got applied
 
 You can check whether the policy got applied on the respective user's Edge browser by opening Microsoft Edge **Settings**. Under **Privacy, search, and services** and see that **Web content filtering** is enabled as shown in the next screenshot.
 
-<- insert screenshot ->
+
 <!----screen 14 settings/web content filtering  
-![Check Web content filtering in Edge Settings.](media/microsoft-edge-web-content-filtering/filename)
+![Check Web content filtering in Edge Settings.](media/microsoft-edge-web-content-filtering/edge-wcf14-edge-settings-verify-wcf.png)
 -->
 
 When you try to access a site that WCF blocks, you should see a screen like the one in the next screenshot.
 
-<- insert screenshot ->
+
 <!----screen 15 error response  
-![Prompt to get permission to access blocked site.](media/microsoft-edge-web-content-filtering/filename)
+![Prompt to get permission to access blocked site.](media/microsoft-edge-web-content-filtering/edge-wcf15-site-perm-prompt.png)
 -->
 
 > [!NOTE]
