@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/06/2024
+ms.date: 06/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -41,7 +41,7 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 ### Feature updates
 
-- **AI theme generator.** Microsoft Edge includes an AI theme generator that allows users to input a text prompt and generate a series of images to preview as browser themes. Applying the theme includes setting the generated image on the Edge new tab page and applying the image's dominant color to the browser frame. Admins can control availability to this feature using the AIGenThemesEnabled policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
+- **AI theme generator.** Microsoft Edge includes an AI theme generator that allows users to input a text prompt and generate a series of images to preview as browser themes. Applying the theme includes setting the generated image on the Edge new tab page and applying the image's dominant color to the browser frame. Admins can control availability to this feature using the [AIGenThemesEnabled]/deployedge/microsoft-edge-policies#aigenthemesenabled) policy. **Note:** This feature is a controlled feature rollout. If you don't see this feature, check back as we continue our rollout.
 
 - **Security setting controls in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with a dedicated experience to manage specific settings that help improve the security posture of their managed browser instances. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the Microsoft 365 admin center.
 
