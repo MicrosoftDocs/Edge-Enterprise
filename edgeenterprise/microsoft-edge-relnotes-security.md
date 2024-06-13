@@ -23,8 +23,8 @@ Microsoft has released the latest **Microsoft Edge Stable Channel (Version 126.0
 This update contains the following Microsoft Edge-specific updates:
 
 - [CVE-2024-30057](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30057)
-- - [CVE-2024-30058](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30058)
-- - [CVE-2024-38083](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38083)
+- [CVE-2024-30058](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30058)
+- [CVE-2024-38083](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38083)
 
 ## June 3, 2024
 
