@@ -53,8 +53,8 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 #### New policies
 
-- [ProactiveAuthWorkflowEnabled]
-- [InternetExplorerSetForegroundWhenActive]
+- **ProactiveAuthWorkflowEnabled** - Enable proactive authentication
+- **InternetExplorerSetForegroundWhenActive** - Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.
 
 #### Obsoleted policies
 
