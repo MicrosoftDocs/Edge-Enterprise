@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Mobile Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/06/2024
+ms.date: 06/12/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -27,6 +27,29 @@ Archived versions of these release notes are available at [Archived release note
 
 > [!NOTE]
 > Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## Version 126.0.2592.50 (Android and iOS): June 11, 2024
+
+Fixed various bugs and performance issues, general updates, new policies, and enhancements.
+
+### General updates
+
+- [iOS] Upgrade MS Tunnel SDK version 1.1.0
+- [Android and iOS] Update OneAuth SDK to 2.3.1
+
+### Bug fixes
+
+- [Android] Scrolling screenshot will be disabled if Intune APP (App Protection Policy) is configured to block screenshot
+
+### New policies
+
+- [Android and iOS] Manage contextual search via policy `com.microsoft.intune.mam.managedbrowser.disabledFeatures=contextualsearch`
+- [iOS] Introduce MDM policy **EdgeSharedDeviceSupportEnabled** to disable shared device mode
+
+### Enhancements
+
+- [Android and iOS] Remove [Copilot](https://copilot.microsoft.com/) from default allow list so that you can manage access to [Copilot](https://copilot.microsoft.com/) via URLs block list.
+- [iOS] Support Passkey on iOS. This feature is disabled by default. It can be enabled by turning on the flag `edge-iOS-enable-passkey-signin` from *Edge://flags*.
 
 ## Version 126.0.2592.42 (Android and iOS): June 6, 2024
 
