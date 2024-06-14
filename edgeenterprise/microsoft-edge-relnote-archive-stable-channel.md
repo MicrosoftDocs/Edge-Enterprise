@@ -16,6 +16,99 @@ description: "Archived release notes for Microsoft Edge Stable Channel"
 
 These release notes provide information about new features and non-security updates that are included in the Microsoft Edge Stable Channel. All the security updates are listed [here](microsoft-edge-relnotes-security.md).
 
+<!-- Version 123.0.2420.97: April 12, 2024 to Version 123.0.2420.53: March 22, 2024 -->
+## Version 123.0.2420.97: April 12, 2024
+
+Fixed various bugs and performance issues, improved reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-12-2024).
+
+### Improved reliability
+
+- Fixed a browser crash that was related to Microsoft Edge Sync.
+  
+## Version 123.0.2420.81: April 4, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-4-2024).
+
+### Fixes
+
+- Resolved an issue when using the Microsoft Edge built-in PDF reader powered by Adobe Acrobat caused fillable PDF form fields to not auto resize correctly when entering large text strings.
+
+## Version 122.0.2365.120: April 4, 2024
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#april-4-2024).
+
+## Version 123.0.2420.65: March 27, 2024
+
+Fixed various bugs and performance issues, includes security fixes, and improves reliability.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
+
+### Improved reliability
+
+- Fixed a browser crash that occurred when the **UserDataDir** policy is used to specify a path on a network share. Note that using a network share location for the user data directory is generally unsupported.
+
+## Version 122.0.2365.113: March 27, 2024
+
+Fixed various bugs and performance issues for Extended Stable release.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-29-2024).
+
+## Version 123.0.2420.53:  March 22, 2024
+
+Fixed various bugs and performance issues.
+
+Stable channel security updates are listed [here](/deployedge/microsoft-edge-relnotes-security#march-22-2024).
+
+### Dev Channel updates
+
+The following Dev channel updates preceded this Stable channel release. The following Dev notes provide detailed information about the changes in each release.
+
+- [Dev Channel update to 123.0.2380.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2380-1-is-live/m-p/4050755)
+- [Dev Channel update to 123.0.2400.1 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2400-1-is-live/m-p/4058807)
+- [Dev Channel update to 123.0.2420.6 is live. - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/articles/dev-channel-update-to-123-0-2420-6-is-live/m-p/4069388)
+
+### Feature updates
+
+- **Customize organizational branding using the Microsoft Edge management service.** Admins can customize their organization's branding assets onto Edge for Business through the Microsoft Edge management service. This branding can help users signed in with an Entra ID (formerly known as Azure Active Directory) more easily differentiate between multiple profiles and browser windows through visual cues on the profile pill, profile flyout, and Edge for Business taskbar icon.
+
+  This Microsoft Edge management service feature will give admins an enhanced experience to configure, preview, and customize how Edge for Business shows the following organization brand assets:
+
+  - Organization name
+  - Accent color
+  - Organization logo
+  - Edge for Business taskbar icon overlay
+
+  **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center. For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business).
+
+- **Automatic profile switching controls for Microsoft Edge for Business in the Microsoft Edge management service.** The Microsoft Edge management service will provide admins with the ability to configure settings for automatic profile switching in the Microsoft Edge browser. This can help enforce context separation between their end users' work and personal browsing. **Note:** This experience is in public preview and can be accessed by opting in to targeted release in the M365 admin center.
+
+### Policy updates
+
+#### New policies
+
+- [AccessControlAllowMethodsInCORSPreflightSpecConformant](/deployedge/microsoft-edge-policies#accesscontrolallowmethodsincorspreflightspecconformant) - Make Access-Control-Allow-Methods matching in CORS preflight spec conformant
+- [AdditionalSearchBoxEnabled](/deployedge/microsoft-edge-policies#additionalsearchboxenabled) - Enable additional search box in browser
+- [AllowBackForwardCacheForCacheControlNoStorePageEnabled](/deployedge/microsoft-edge-policies#allowbackforwardcacheforcachecontrolnostorepageenabled) - Allow pages with Cache-Control: no-store header to enter back/forward cache
+- [AllowWebAuthnWithBrokenTlsCerts](/deployedge/microsoft-edge-policies#allowwebauthnwithbrokentlscerts) - Allow Web Authentication requests on sites with broken TLS certificates.
+- [BlockTruncatedCookies](/deployedge/microsoft-edge-policies#blocktruncatedcookies) - Block truncated cookies
+- [DefaultWindowManagementSetting](/deployedge/microsoft-edge-policies#defaultwindowmanagementsetting) - Default Window Management permission setting
+- [ExtensionInstallTypeBlocklist](/deployedge/microsoft-edge-policies#extensioninstalltypeblocklist) - Blocklist for extension install types
+- [ExtensionManifestV2Availability](/deployedge/microsoft-edge-policies#extensionmanifestv2availability) - Control Manifest v2 extension availability
+- [FileOrDirectoryPickerWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#fileordirectorypickerwithoutgestureallowedfororigins) - Allow file or directory picker APIs to be called without prior user gesture
+- [HttpAllowlist](/deployedge/microsoft-edge-policies#httpallowlist) - HTTP Allowlist
+- [NewBaseUrlInheritanceBehaviorAllowed](/deployedge/microsoft-edge-policies#newbaseurlinheritancebehaviorallowed) - Allows enabling the feature NewBaseUrlInheritanceBehavior 
+- [RequireOnlineRevocationChecksForLocalAnchors](/deployedge/microsoft-edge-policies#requireonlinerevocationchecksforlocalanchors) - Specify if online OCSP/CRL checks are required for local trust anchors
+- [RSAKeyUsageForLocalAnchorsEnabled](/deployedge/microsoft-edge-policies#rsakeyusageforlocalanchorsenabled) - Check RSA key usage for server certificates issued by local trust anchors
+- [ScreenCaptureWithoutGestureAllowedForOrigins](/deployedge/microsoft-edge-policies#screencapturewithoutgestureallowedfororigins) - Allow screen capture without prior user gesture
+- [WindowManagementAllowedForUrls](/deployedge/microsoft-edge-policies#windowmanagementallowedforurls) - Allow Window Management permission on specified sites
+- [WindowManagementBlockedForUrls](/deployedge/microsoft-edge-policies#windowmanagementblockedforurls) - Block Window Management permission on specified sites
+
 <!-- Version 122.0.2365.106: March 21, 2024 to Version 120.0.2210.181: February 20, 2024 -->
 
 ## Version 122.0.2365.106: March 21, 2024
