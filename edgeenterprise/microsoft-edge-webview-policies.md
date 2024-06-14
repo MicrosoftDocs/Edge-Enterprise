@@ -3,7 +3,7 @@ title: "Microsoft Edge WebView2 Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/07/2024
+ms.date: 06/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
