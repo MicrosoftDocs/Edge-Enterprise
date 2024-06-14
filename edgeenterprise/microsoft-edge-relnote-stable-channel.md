@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Stable Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/13/2024
+ms.date: 06/14/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
@@ -53,8 +53,8 @@ The following Dev channel updates preceded this Stable channel release. The foll
 
 #### New policies
 
-- **ProactiveAuthWorkflowEnabled** - Enable proactive authentication
-- **InternetExplorerSetForegroundWhenActive** - Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.
+- [ProactiveAuthWorkflowEnabled](/deployedge/microsoft-edge-policies#proactiveauthworkflowenabled) - Enable proactive authentication
+- [InternetExplorerSetForegroundWhenActive](/deployedge/microsoft-edge-policies#internetexplorersetforegroundwhenactive) - Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.
 
 #### Obsoleted policies
 
