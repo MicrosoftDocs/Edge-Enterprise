@@ -37,7 +37,6 @@ The following table lists the new and obsoleted policies that are in this articl
 |[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
 |[InternetExplorerSetForegroundWhenActive](#internetexplorersetforegroundwhenactive)|Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.|
 |[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)|
-|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature (REMOVED)|
 
 ## Available policies
 
