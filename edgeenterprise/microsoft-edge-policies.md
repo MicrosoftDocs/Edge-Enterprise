@@ -3,7 +3,7 @@ title: "Microsoft Edge Browser Policy Documentation"
 ms.author: stmoody
 author: dan-wesley
 manager: venkatk
-ms.date: 05/14/2024
+ms.date: 06/11/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -30,11 +30,14 @@ Starting in Microsoft Edge version 116, certain policies will not be applied to 
 
 ## New policies
 
-The following table lists the obsoleted policies that are in this article update.
+The following table lists the new and obsoleted policies that are in this article update.
 
 | Policy Name | Caption |
 |:-----|:-----|
-|[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)|
+|[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
+|[InternetExplorerSetForegroundWhenActive](#internetexplorersetforegroundwhenactive)|Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.|
+|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)|
+|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature (REMOVED)|
 
 ## Available policies
 
@@ -226,6 +229,7 @@ These tables list all of the browser-related group policies available in this re
 |[LinkedAccountEnabled](#linkedaccountenabled)|Enable the linked account feature|
 |[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Enforced for signin|
 |[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|Only on-premises account enabled for implicit sign-in|
+|[ProactiveAuthWorkflowEnabled](#proactiveauthworkflowenabled)|Enable proactive authentication|
 |[SignInCtaOnNtpEnabled](#signinctaonntpenabled)|Enable sign in click to action dialog|
 |[SwitchIntranetSitesToWorkProfile](#switchintranetsitestoworkprofile)|Switch intranet sites to a work profile|
 |[SwitchSitesOnIEModeSiteListToWorkProfile](#switchsitesoniemodesitelisttoworkprofile)|Switch sites on the IE mode site list to a work profile|
@@ -239,7 +243,7 @@ These tables list all of the browser-related group policies available in this re
 |Policy Name|Caption|
 |-|-|
 |[ImmersiveReaderGrammarToolsEnabled](#immersivereadergrammartoolsenabled)|Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)|
-|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge|
+|[ImmersiveReaderPictureDictionaryEnabled](#immersivereaderpicturedictionaryenabled)|Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)|
 ### [*Kiosk Mode settings*](#kiosk-mode-settings-policies)
 
 |Policy Name|Caption|
@@ -490,7 +494,7 @@ These tables list all of the browser-related group policies available in this re
 |[DirectInvokeEnabled](#directinvokeenabled)|Allow users to open files using the DirectInvoke protocol|
 |[Disable3DAPIs](#disable3dapis)|Disable support for 3D graphics APIs|
 |[DisableScreenshots](#disablescreenshots)|Disable taking screenshots|
-|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles (deprecated)|
+|[DiscoverPageContextEnabled](#discoverpagecontextenabled)|Enable Discover access to page contents for AAD profiles|
 |[DiskCacheDir](#diskcachedir)|Set disk cache directory|
 |[DiskCacheSize](#diskcachesize)|Set disk cache size, in bytes|
 |[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)|
@@ -561,7 +565,6 @@ These tables list all of the browser-related group policies available in this re
 |[HideRestoreDialogEnabled](#hiderestoredialogenabled)|Hide restore pages dialog after browser crash|
 |[HttpAllowlist](#httpallowlist)|HTTP Allowlist|
 |[HubsSidebarEnabled](#hubssidebarenabled)|Show Hubs Sidebar|
-|[ImageEditorServiceEnabled](#imageeditorserviceenabled)|Enable the Designer for Image Editor feature|
 |[ImportAutofillFormData](#importautofillformdata)|Allow importing of autofill form data|
 |[ImportBrowserSettings](#importbrowsersettings)|Allow importing of browser settings|
 |[ImportCookies](#importcookies)|Allow importing of Cookies|
@@ -605,6 +608,7 @@ These tables list all of the browser-related group policies available in this re
 |[InternetExplorerModeEnableSavePageAs](#internetexplorermodeenablesavepageas)|Allow Save page as in Internet Explorer mode|
 |[InternetExplorerModeTabInEdgeModeAllowed](#internetexplorermodetabinedgemodeallowed)|Allow sites configured for Internet Explorer mode to open in Microsoft Edge|
 |[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|Show the Reload in Internet Explorer mode button in the toolbar|
+|[InternetExplorerSetForegroundWhenActive](#internetexplorersetforegroundwhenactive)|Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.|
 |[InternetExplorerZoomDisplay](#internetexplorerzoomdisplay)|Display zoom in IE Mode tabs with DPI Scale included like it is in Internet Explorer|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Intranet Redirection Behavior|
 |[IsolateOrigins](#isolateorigins)|Enable site isolation for specific origins|
@@ -2529,9 +2533,75 @@ Use the preceding information when configuring this policy.
   ### DefaultPluginsSetting
 
   #### Default Adobe Flash setting (obsolete)
- 
+
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
- 
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 87
+
+  #### Description
+
+  This policy doesn't work because Flash is no longer supported by Microsoft Edge.
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) and [PluginsBlockedForUrls](#pluginsblockedforurls) are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.
+
+If you don't configure this policy, the user can change this setting manually.
+
+Note: Automatic playback is only for domains explicitly listed in the [PluginsAllowedForUrls](#pluginsallowedforurls) policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.
+
+Policy options mapping:
+
+* BlockPlugins (2) = Block the Adobe Flash plugin
+
+* ClickToPlay (3) = Click to play
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DefaultPluginsSetting
+  - GP name: Default Adobe Flash setting (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DefaultPluginsSetting
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000002
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DefaultPluginsSetting
+  - Example value:
+``` xml
+<integer>2</integer>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### DefaultPopupsSetting
@@ -3868,9 +3938,74 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
   ### LegacySameSiteCookieBehaviorEnabled
 
   #### Enable default legacy SameSite cookie behavior setting (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
+  #### Supported versions:
 
+  - On Windows and macOS since 80, until 94
+
+  #### Description
+
+  This policy doesn't work because it was only intended to serve only as a short-term mechanism to give enterprises more time to update their environments if they were found to be incompatible with the SameSite behavior change.
+
+If you still require legacy cookie behavior, please use [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) to configure behavior on a per-domain basis.
+
+Lets you revert all cookies to legacy SameSite behavior. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+
+If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+
+Policy options mapping:
+
+* DefaultToLegacySameSiteCookieBehavior (1) = Revert to legacy SameSite behavior for cookies on all sites
+
+* DefaultToSameSiteByDefaultCookieBehavior (2) = Use SameSite-by-default behavior for cookies on all sites
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: LegacySameSiteCookieBehaviorEnabled
+  - GP name: Enable default legacy SameSite cookie behavior setting (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: LegacySameSiteCookieBehaviorEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: LegacySameSiteCookieBehaviorEnabled
+  - Example value:
+``` xml
+<integer>1</integer>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -4087,15 +4222,141 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   #### Allow the Adobe Flash plug-in on specific sites (obsolete)
 
-    >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 87
+
+  #### Description
+
+  This policy doesn't work because Flash is no longer supported by Microsoft Edge.
+
+Define a list of sites, based on URL patterns, that can run the Adobe Flash plug-in.
+
+If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PluginsAllowedForUrls
+  - GP name: Allow the Adobe Flash plug-in on specific sites (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PluginsAllowedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>http://contoso.edu:8080</string>
+</array>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### PluginsBlockedForUrls
 
   #### Block the Adobe Flash plug-in on specific sites (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 87
+
+  #### Description
+
+  This policy doesn't work because Flash is no longer supported by Microsoft Edge.
+
+Define a list of sites, based on URL patterns, that are blocked from running Adobe Flash.
+
+If you don't configure this policy, the global default value from the [DefaultPluginsSetting](#defaultpluginssetting) policy (if set) or the user's personal configuration is used for all sites.
+
+For detailed information on valid url patterns, see [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). However, starting in M85, patterns with '\*' and '[\*.]' wildcards in the host are no longer supported for this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: PluginsBlockedForUrls
+  - GP name: Block the Adobe Flash plug-in on specific sites (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Content settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: PluginsBlockedForUrls
+  - Example value:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>http://contoso.edu:8080</string>
+</array>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -8801,6 +9062,70 @@ This policy will only take effect when policy [ConfigureOnPremisesAccountAutoSig
 
   [Back to top](#microsoft-edge---policies)
 
+  ### ProactiveAuthWorkflowEnabled
+
+  #### Enable proactive authentication
+
+  
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 126 or later
+
+  #### Description
+
+  This policy controls the proactive authentication in Microsoft Edge, that connects the signed-in user identity with Microsoft Bing, MSN and Copilot services for a smooth and consistent sign-in experience.
+
+If you enable or don't configure this policy, Microsoft Edge authentication requests are automatically sent to the services using the account that is signed-in to the browser.
+
+If you disable this policy, Microsoft Edge does not send authentications requests to these services and users will need to manually sign-in.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ProactiveAuthWorkflowEnabled
+  - GP name: Enable proactive authentication
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Identity and sign-in
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ProactiveAuthWorkflowEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ProactiveAuthWorkflowEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
+
   ### SignInCtaOnNtpEnabled
 
   #### Enable sign in click to action dialog
@@ -9058,24 +9383,80 @@ This policy will only take effect on Windows 10 RS1 and RS2. On Windows 10 RS3 a
   ### ImmersiveReaderGrammarToolsEnabled
 
   #### Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 125.
+  #### Supported versions:
+
+  - On Windows and macOS since 110, until 125
+
+  #### Description
+
+  This policy is obsoleted because Grammar Tools is deprecated from Edge. This policy won't work in Microsoft Edge version 126. Enables the Grammar Tools feature within Immersive Reader in Microsoft Edge.
+This helps improve reading comprehension by splitting words into syllables and highlighting nouns, verbs, adverbs, and adjectives.
+
+If you enable this policy or don't configure it, the Grammar Tools option shows up within Immersive Reader.
+If you disable this policy, users can't access the Grammar Tools feature within Immersive Reader.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ImmersiveReaderGrammarToolsEnabled
+  - GP name: Enable Grammar Tools feature within Immersive Reader in Microsoft Edge (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Immersive Reader settings
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ImmersiveReaderGrammarToolsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ImmersiveReaderGrammarToolsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### ImmersiveReaderPictureDictionaryEnabled
 
-  #### Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge
+  #### Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
 
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 126.
   #### Supported versions:
 
-  - On Windows and macOS since 110 or later
+  - On Windows and macOS since 110, until 126
 
   #### Description
 
-  Enables the Picture Dictionary feature within Immersive Reader in Microsoft Edge.
+  This Policy is obsoleted because Picture Dictionary is deprecated from Edge as of Sept, 2023. This policy won't work in Microsoft Edge Version 127. Enables the Picture Dictionary feature within Immersive Reader in Microsoft Edge.
 This feature helps in reading comprehension by letting a user to click on any single word and see an illustration related to the meaning.
 
 If you enable this policy or don't configure it, the Picture Dictionary option shows up within Immersive Reader.
@@ -9098,7 +9479,7 @@ If you disable this policy, users can't access the Picture Dictionary feature wi
   ##### Group Policy (ADMX) info
 
   - GP unique name: ImmersiveReaderPictureDictionaryEnabled
-  - GP name: Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge
+  - GP name: Enable Picture Dictionary feature within Immersive Reader in Microsoft Edge (obsolete)
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/Immersive Reader settings
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -10502,11 +10883,11 @@ If you disable or don't configure this policy, Microsoft Edge will let the user 
 
   Allow Microsoft Edge to monitor user passwords.
 
-If you enable this policy and a user consents to enabling the policy, the user will get alerted if any of their passwords stored in Microsoft Edge are found to be unsafe. Microsoft Edge will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
+If you enable this policy, the user will get alerted if any of their passwords stored in Microsoft Edge are found to be unsafe. Microsoft Edge will show an alert and this information will also be available in Settings > Passwords > Password Monitor.
 
 If you disable this policy, users will not be asked for permission to enable this feature. Their passwords will not be scanned and they will not be alerted either.
 
-If you enable or don't configure the policy, users can turn this feature on or off.
+If you don't configure the policy, users can turn this feature on or off.
 
 To learn more about how Microsoft Edge finds unsafe passwords see [https://go.microsoft.com/fwlink/?linkid=2133833](https://go.microsoft.com/fwlink/?linkid=2133833)
 
@@ -10514,9 +10895,7 @@ Additional guidance:
 
 This policy can be set as both Recommended as well as Mandatory, however with an important callout.
 
-Mandatory enabled: Given that individual user consent is a pre-condition to enabling this feature for a given user, this policy does not have a Mandatory enabled setting. If the policy is set to Mandatory enabled, the UI in Settings will not change and the following error message will be displayed in edge://policy
-
-Example Error state message: "This policy value is ignored because Password Monitor requires the consent of the individual user for it to be turned on. You can ask users in your Organization to go to Settings > Profile > Password and turn on the feature."
+Mandatory enabled: If the policy is set to Mandatory enabled, the UI in Settings will be disabled but remain in 'On' state, and a briefcase icon will be made visible next to it with this description displayed on hover - "This setting is managed by your organization."
 
 Recommended enabled: If the policy is set to Recommended enabled, the UI in Settings will remain in 'Off' state, but a briefcase icon will be made visible next to it with this description displayed on hover - "Your organization recommends a specific value for this setting and you have chosen a different value"
 
@@ -14024,7 +14403,70 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptSmartScreenDownloadWarnings = [
 
   #### Enable new SmartScreen library (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 107.
+  #### Supported versions:
+
+  - On Windows and macOS since 95, until 107
+
+  #### Description
+
+  This policy doesn't work because it was only intended to be a short-term mechanism to support the update to a new SmartScreen client.
+
+Allows the Microsoft Edge browser to load the new SmartScreen library (libSmartScreenN) for any SmartScreen checks on site URLs or application downloads.
+
+If you enable or don't configure this policy, Microsoft Edge will use the new SmartScreen library (libSmartScreenN).
+
+If you disable this policy, Microsoft Edge will use the old SmartScreen library (libSmartScreen).
+
+Before Microsoft Edge version 103, if you don't configure this policy, Microsoft Edge will use the old SmartScreen library (libSmartScreen).
+
+This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.
+This also includes macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewSmartScreenLibraryEnabled
+  - GP name: Enable new SmartScreen library (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/SmartScreen settings
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/SmartScreen settings
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: NewSmartScreenLibraryEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewSmartScreenLibraryEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -14843,7 +15285,105 @@ If you disable this policy, Bing chat entry-points don't appear on the new tab p
 
   #### Set new tab page company logo (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
+  #### Supported versions:
+
+  - On Windows and macOS since 79, until 85
+
+  #### Description
+
+  This policy didn't work as expected due to changes in operational requirements. Therefore it's obsolete and should not be used.
+
+Specifies the company logo to use on the new tab page in Microsoft Edge.
+
+The policy should be configured as a string that expresses the logo(s) in JSON format. For example: { "default_logo": { "url": "https://www.contoso.com/logo.png", "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29" }, "light_logo": { "url": "https://www.contoso.com/light_logo.png", "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737" } }
+
+You configure this policy by specifying the URL from which Microsoft Edge can download the logo and its cryptographic hash (SHA-256), which is used to verify the integrity of the download. The logo must be in PNG or SVG format, and its file size must not exceed 16 MB. The logo is downloaded and cached, and it will be redownloaded whenever the URL or the hash changes. The URL must be accessible without any authentication.
+
+The 'default_logo' is required and will be used when there's no background image. If 'light_logo' is provided, it will be used when the user's new tab page has a background image. We recommend a horizontal logo with a transparent background that is left-aligned and vertically centered. The logo should have a minimum height of 32 pixels and an aspect ratio from 1:1 to 4:1. The 'default_logo' should have proper contrast against a white/black background while the 'light_logo' should have proper contrast against a background image.
+
+If you enable this policy, Microsoft Edge downloads and shows the specified logo(s) on the new tab page. Users can't override or hide the logo(s).
+
+If you disable or don't configure this policy, Microsoft Edge will show no company logo or a Microsoft logo on the new tab page.
+
+For help with determining the SHA-256 hash, see [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash).
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Dictionary
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageCompanyLogo
+  - GP name: Set new tab page company logo (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: NewTabPageCompanyLogo
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
+  "default_logo": {
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
+    "url": "https://www.contoso.com/logo.png"
+  },
+  "light_logo": {
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737",
+    "url": "https://www.contoso.com/light_logo.png"
+  }
+}
+```
+
+  ##### Compact example value:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {"default_logo": {"hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", "url": "https://www.contoso.com/logo.png"}, "light_logo": {"hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", "url": "https://www.contoso.com/light_logo.png"}}
+  ```
+  
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewTabPageCompanyLogo
+  - Example value:
+``` xml
+<key>NewTabPageCompanyLogo</key>
+<dict>
+  <key>default_logo</key>
+  <dict>
+    <key>hash</key>
+    <string>cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29</string>
+    <key>url</key>
+    <string>https://www.contoso.com/logo.png</string>
+  </dict>
+  <key>light_logo</key>
+  <dict>
+    <key>hash</key>
+    <string>517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737</string>
+    <key>url</key>
+    <string>https://www.contoso.com/light_logo.png</string>
+  </dict>
+</dict>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -15348,7 +15888,83 @@ Related policies: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroun
 
   #### Configure the Microsoft Edge new tab page experience (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 92.
+  #### Supported versions:
+
+  - On Windows and macOS since 79, until 92
+
+  #### Description
+
+  This policy is obsolete because the new version of the enterprise new tab page no longer requires choosing between different content types. Instead, the content that is presented to the user can be controlled via the Microsoft 365 admin center. To get to the Microsoft 365 admin center, sign in at https://admin.microsoft.com with your admin account.
+
+Lets you choose either the Microsoft News or Office 365 feed experience for the new tab page.
+
+When you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.
+
+When you set this policy to 'Office', users with an Azure Active Directory browser sign-in will see the Office 365 feed experience on the new tab page.
+
+If you disable or don't configure this policy:
+
+- Users with an Azure Active Directory browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.
+
+- Users without an Azure Active Directory browser sign-in will see the standard new tab page experience.
+
+If you configure this policy *and* the [NewTabPageLocation](#newtabpagelocation) policy, [NewTabPageLocation](#newtabpagelocation) has precedence.
+
+Default setting:  Disabled or not configured.
+
+Policy options mapping:
+
+* News (0) = Microsoft News feed experience
+
+* Office (1) = Office 365 feed experience
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: NewTabPageSetFeedType
+  - GP name: Configure the Microsoft Edge new tab page experience (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/Startup, home page and new tab page
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/Startup, home page and new tab page
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: NewTabPageSetFeedType
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: NewTabPageSetFeedType
+  - Example value:
+``` xml
+<integer>0</integer>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -16432,7 +17048,64 @@ If you disable this policy, users won't be able to access the games menu.
 
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 87.
+  #### Supported versions:
+
+  - On Windows and macOS since 78, until 87
+
+  #### Description
+
+  This policy allows an admin to specify that a page can show popups during its unloading.
+
+When the policy is set to enabled, pages are allowed to show popups while they're being unloaded.
+
+When the policy is set to disabled or unset, pages aren't allowed to show popups while they're being unloaded. This is as per the spec: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
+
+This policy was removed in Microsoft Edge 88 and is ignored if set.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowPopupsDuringPageUnload
+  - GP name: Allows a page to show popups during its unloading (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowPopupsDuringPageUnload
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AllowPopupsDuringPageUnload
+  - Example value:
+``` xml
+<false/>
+```
   
+
   [Back to top](#microsoft-edge---policies)
 
   ### AllowSurfGame
@@ -16500,8 +17173,66 @@ If you enable or don't configure this policy, users can play the surf game.
   ### AllowSyncXHRInPageDismissal
 
   #### Allow pages to send synchronous XHR requests during page dismissal (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 99.
+  #### Supported versions:
+
+  - On Windows and macOS since 79, until 99
+
+  #### Description
+
+  This policy is obsolete because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if and when it was found to be incompatible with the change to disallow synchronous XHR requests during page dismissal. It doesn't work in Microsoft Edge after version 99.
+
+This policy lets you specify that a page can send synchronous XHR requests during page dismissal.
+
+If you enable this policy, pages can send synchronous XHR requests during page dismissal.
+
+If you disable this policy or don't configure this policy, pages aren't allowed to send synchronous XHR requests during page dismissal.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AllowSyncXHRInPageDismissal
+  - GP name: Allow pages to send synchronous XHR requests during page dismissal (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AllowSyncXHRInPageDismissal
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AllowSyncXHRInPageDismissal
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -17047,9 +17778,65 @@ Use the preceding information when configuring this policy.
   ### AppCacheForceEnabled
 
   #### Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 96.
+  #### Supported versions:
+
+  - On Windows and macOS since 84, until 96
+
+  #### Description
+
+  Support for AppCache and this policy was removed from Microsoft Edge starting in version 97.
+
+If you set this policy to true, the AppCache is enabled, even when AppCache in Microsoft Edge is not available by default.
+
+If you set this policy to false, or don't set it, AppCache will follow Microsoft Edge's defaults.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: AppCacheForceEnabled
+  - GP name: Allows the AppCache feature to be re-enabled, even if it's turned off by default (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: AppCacheForceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: AppCacheForceEnabled
+  - Example value:
+``` xml
+<false/>
+```
   
+
   [Back to top](#microsoft-edge---policies)
 
   ### ApplicationLocaleValue
@@ -19162,11 +19949,9 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
 This policy controls which software stack is used to communicate with the DNS server: the operating system DNS client, or Microsoft Edge's built-in DNS client. This policy does not affect which DNS servers are used: if, for example, the operating system is configured to use an enterprise DNS server, that same server would be used by the built-in DNS client. It also does not control if DNS-over-HTTPS is used; Microsoft Edge always uses the built-in resolver for DNS-over-HTTPS requests. Please see the [DnsOverHttpsMode](#dnsoverhttpsmode) policy for information on controlling DNS-over-HTTPS.
 
-If you enable this policy, the built-in DNS client is used, if it's available.
+If you enable this policy or you don't configure this policy, the built-in DNS client is used.
 
 If you disable this policy, the built-in DNS client is only used when DNS-over-HTTPS is in use.
-
-If you don't configure this policy, the built-in DNS client is enabled by default on Windows, macOS and Android (when neither Private DNS nor VPN are enabled).
 
   #### Supported features:
 
@@ -19217,8 +20002,41 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
   ### BuiltinCertificateVerifierEnabled
 
   #### Determines whether the built-in certificate verifier will be used to verify server certificates (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 106.
+  #### Supported versions:
+
+  - On macOS since 83, until 106
+
+  #### Description
+
+  This policy is obsolete because it was a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with the built-in certificate verifier.
+
+The policy doesn't work in Microsoft Edge version 107.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  
+
+  #### Mac information and settings
+
+  - Preference Key Name: BuiltinCertificateVerifierEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -19226,7 +20044,65 @@ If you don't configure this policy, the built-in DNS client is enabled by defaul
 
   #### CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)
 
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 113.  This policy was removed in Microsoft Edge 114 and is ignored if set. It served to disable CECPQ2, but CECPQ2 has been disabled by default. A separate policy will be introduced to control the rollout of the replacement of CECPQ2. That replacement will be a combination of the standard key-agreement X25519 with NIST's chosen post-quantum KEM, called "Kyber".
+  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 113.
+  #### Supported versions:
+
+  - On Windows and macOS since 93, until 113
+
+  #### Description
+
+  This policy was removed in Microsoft Edge 114 and is ignored if set. It served to disable CECPQ2, but CECPQ2 has been disabled by default. A separate policy will be introduced to control the rollout of the replacement of CECPQ2. That replacement will be a combination of the standard key-agreement X25519 with NIST's chosen post-quantum KEM, called "Kyber".
+
+If this policy is not configured, or is set to enabled, then Microsoft Edge will follow the default rollout process for CECPQ2, a post-quantum key-agreement algorithm in TLS.
+
+CECPQ2 results in larger TLS messages which, in very rare cases, can trigger bugs in some networking hardware. This policy can be set to False to disable CECPQ2 while networking issues are resolved.
+
+This policy is a temporary measure and will be removed in future versions of Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CECPQ2Enabled
+  - GP name: CECPQ2 post-quantum key-agreement enabled for TLS (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CECPQ2Enabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CECPQ2Enabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -20817,9 +21693,67 @@ If you disable this policy, Copilot will not be able to access browser context.
   ### CrossOriginWebAssemblyModuleSharingEnabled
 
   #### Specifies whether WebAssembly modules can be sent cross-origin (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 98.
- 
+  #### Supported versions:
+
+  - On Windows and macOS since 95, until 98
+
+  #### Description
+
+  Specifies whether WebAssembly modules can be sent to another window or worker cross-origin. Cross-origin WebAssembly module sharing was deprecated as part of the efforts to deprecate document.domain, see https://github.com/mikewest/deprecating-document-domain. This policy allowed re-enabling of cross-origin WebAssembly module sharing. This policy is obsolete because it was intended to offer a longer transition period in the deprecation process.
+
+If you enable this policy, sites can send WebAssembly modules cross-origin
+without restrictions.
+
+If you disable or don't configure this policy, sites can only send
+WebAssembly modules to windows and workers in the same origin.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: CrossOriginWebAssemblyModuleSharingEnabled
+  - GP name: Specifies whether WebAssembly modules can be sent cross-origin (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: CrossOriginWebAssemblyModuleSharingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### CryptoWalletEnabled
@@ -22065,17 +22999,19 @@ Note: Even if you disable screenshots using this policy, users might still be ab
 
   ### DiscoverPageContextEnabled
 
-  #### Enable Discover access to page contents for AAD profiles (deprecated)
+  #### Enable Discover access to page contents for AAD profiles
 
-  >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
+  
   
   #### Supported versions:
 
-  - On Windows and macOS since 113 or later
+  - On Windows and macOS since 113, until 127
 
   #### Description
 
-  This policy is being deprecated and will be obsoleted in Edge 127. and two new Edge Policies are taking its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commerical Data Protection access to page contents for AAD profiles). The current policy doesn't allow for separate control of Copilot and Copilot with Commercial Data Protection. The new policies allow separate control of these versions of Copilot. The new policies will also allow admins to force-enable Copilot access to Edge page contents by enabling the policy, whereas DiscoverPageContextEnabled only allows force-disabling of Copilot page access.
+  This policy has been obsoleted as of Edge 127. Two new Edge Policies have taken its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commerical Data Protection access to page contents for AAD profiles).
+
+This policy did not allow for separate control of Copilot and Copilot with Commercial Data Protection. The new policies allow separate control of these versions of Copilot. The new policies also allow admins to force-enable Copilot access to Edge page contents by enabling the policy, whereas DiscoverPageContextEnabled only allowed force-disabling of Copilot page access.
 
 This policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.
 
@@ -22100,7 +23036,7 @@ If you disable this policy, Discover will not be able to access page contents.
   ##### Group Policy (ADMX) info
 
   - GP unique name: DiscoverPageContextEnabled
-  - GP name: Enable Discover access to page contents for AAD profiles (deprecated)
+  - GP name: Enable Discover access to page contents for AAD profiles
   - GP path (Mandatory): Administrative Templates/Microsoft Edge/
   - GP path (Recommended): N/A
   - GP ADMX file name: MSEdge.admx
@@ -22266,8 +23202,76 @@ Note: The value specified in this policy is used as a hint to various cache subs
   ### DisplayCapturePermissionsPolicyEnabled
 
   #### Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
+  #### Supported versions:
+
+  - On Windows and macOS since 95, until 109
+
+  #### Description
+
+  This policy is obsolete. The policy was a temporary workaround for non-spec-compliant enterprise applications.
+
+This policy stopped working in Microsoft Edge 107 and was obsoleted in Microsoft Edge 110.
+
+The display-capture permissions-policy gates access to getDisplayMedia(),
+as per this spec:
+https://www.w3.org/TR/screen-capture/#feature-policy-integration
+However, if this policy is Disabled, this requirement is not enforced,
+and getDisplayMedia() is allowed from contexts that would otherwise be
+forbidden.
+
+If you enable or don't configure this policy, sites can only call getDisplayMedia() from
+contexts which are allowlisted by the display-capture permissions-policy.
+
+If you disable this policy, sites can call getDisplayMedia() even from contexts
+which are not allowlisted by the display-capture permissions policy.
+Note that other restrictions may still apply.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: DisplayCapturePermissionsPolicyEnabled
+  - GP name: Specifies whether the display-capture permissions-policy is checked or skipped (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: DisplayCapturePermissionsPolicyEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: DisplayCapturePermissionsPolicyEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -22962,8 +23966,68 @@ If you disable this policy, users can't access and use Collections in Microsoft 
   ### EdgeDiscoverEnabled
 
   #### Discover feature In Microsoft Edge (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
+  #### Supported versions:
+
+  - On Windows and macOS since 97, until 105
+
+  #### Description
+
+  This policy doesn't work because Discover is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+This policy lets you configure the Discover feature in Microsoft Edge.
+
+Working in the background when enabled, this feature sends URLs to Microsoft Bing to search for related recommendations.
+
+If you enable or don't configure this policy, you can use the Discover button on Microsoft Edge to start using this feature.
+
+If you disable this policy, you can't use the Discover feature in Microsoft Edge.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeDiscoverEnabled
+  - GP name: Discover feature In Microsoft Edge (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: EdgeDiscoverEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeDiscoverEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -23036,8 +24100,64 @@ If you disable this policy, you can't use the Drop feature in Microsoft Edge.
   ### EdgeEnhanceImagesEnabled
 
   #### Enhance images enabled (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 121.
+  #### Supported versions:
+
+  - On Windows and macOS since 97, until 121
+
+  #### Description
+
+  The enhance images feature is deprecated and starting in 122 this policy will be removed. Set whether Microsoft Edge can automatically enhance images to show you sharper images with better color, lighting, and contrast.
+
+If you enable this policy or don't configure the policy, Microsoft Edge will automatically enhance images on specific web applications.
+
+If you disable this policy, Microsoft Edge will not enhance images.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EdgeEnhanceImagesEnabled
+  - GP name: Enhance images enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EdgeEnhanceImagesEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EdgeEnhanceImagesEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -23485,16 +24605,151 @@ Disable this policy to stop users from adding, removing, or modifying favorites.
   ### EnableDeprecatedWebPlatformFeatures
 
   #### Re-enable deprecated web platform features for a limited time (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 86
+
+  #### Description
+
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Specify a list of deprecated web platform features to temporarily re-enable.
+
+This policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.
+
+If you don't configure this policy, if the list is empty, or if a feature doesn't match one of the supported string tags, all deprecated web platform features remain disabled.
+
+While the policy itself is supported on the above platforms, the feature it's enabling might not be available on all of those platforms. Not all deprecated Web Platform features can be re-enabled. Only those explicitly listed below can be re-enabled, and only for a limited period of time, which differs per feature. You can review the intent behind the Web Platform feature changes at https://bit.ly/blinkintents.
+
+The general format of the string tag is [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+
+Policy options mapping:
+
+* ExampleDeprecatedFeature (ExampleDeprecatedFeature_EffectiveUntil20080902) = Enable ExampleDeprecatedFeature API through 2008/09/02
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnableDeprecatedWebPlatformFeatures
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnableDeprecatedWebPlatformFeatures
+  - Example value:
+``` xml
+<array>
+  <string>ExampleDeprecatedFeature_EffectiveUntil20080902</string>
+</array>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
   ### EnableDomainActionsDownload
 
   #### Enable Domain Actions Download from Microsoft (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 84
+
+  #### Description
+
+  This policy doesn't work because conflicting states should be avoided. This policy was used to enable/disable download of the domain actions list, but it didn't always achieve the desired state. The Experimentation and Configuration Service, which handles the download, has its own policy to configure what is downloaded from the service. Use the [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) policy instead.
+
+In Microsoft Edge, Domain Actions represent a series of compatibility features that help the browser work correctly on the web.
+
+Microsoft keeps a list of actions to take on certain domains for compatibility reasons. For example, the browser may override the User Agent string on a website if that website is broken due to the new User Agent string on Microsoft Edge. Each of these actions is intended to be temporary while Microsoft tries to resolve the issue with the site owner.
+
+When the browser starts up and then periodically afterwards, the browser will contact the Experimentation and Configuration Service that contains the most up to date list of compatibility actions to perform. This list is saved locally after it is first retrieved so that subsequent requests will only update the list if the server's copy has changed.
+
+If you enable this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
+
+If you disable this policy, the list of Domain Actions will no longer be downloaded from the Experimentation and Configuration Service.
+
+If you don't configure this policy, the list of Domain Actions will continue to be downloaded from the Experimentation and Configuration Service.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnableDomainActionsDownload
+  - GP name: Enable Domain Actions Download from Microsoft (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnableDomainActionsDownload
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnableDomainActionsDownload
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -23565,8 +24820,66 @@ If you disable the policy or don't configure it, Microsoft Edge won't perform on
   ### EnableSha1ForLocalAnchors
 
   #### Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
- 
+
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 91.
+  #### Supported versions:
+
+  - On Windows and macOS since 85, until 91
+
+  #### Description
+
+  When this setting is enabled, Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.
+
+Note that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Microsoft Edge 92 releasing in mid 2021.
+
+If you don't set this policy or set it to false, or the SHA-1 certificate chains to a publicly trusted certificate root, then Microsoft Edge won't allow certificates signed by SHA-1.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EnableSha1ForLocalAnchors
+  - GP name: Allow certificates signed using SHA-1 when issued by local trust anchors (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EnableSha1ForLocalAnchors
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EnableSha1ForLocalAnchors
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -24307,15 +25620,155 @@ If you disable or don't configure this policy, users won't see the Enterprise Mo
 
   #### Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
 
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 115.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 115.
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 115
+
+  #### Description
+
+  Starting in Microsoft Edge version 109, the non-standard API Event.path will be removed to improve web compatibility. This policy re-enables the API until version 115.
+
+If you enable this policy, the Event.path API will be available.
+
+If you disable this policy, the Event.path API will be unavailable.
+
+If this policy is not set, the Event.path API will be in the following default states: available before version 109, and unavailable in version 109 to version 114.
+
+This policy will be made obsolete after Microsoft Edge version 115.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: EventPathEnabled
+  - GP name: Re-enable the Event.path API until Microsoft Edge version 115 (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: EventPathEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: EventPathEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
   #### Disable download file type extension-based warnings for specified file types on domains (obsolete)
 
-   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
+  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
+  #### Supported versions:
+
+  - On Windows and macOS since 85, until 109
+
+  #### Description
+
+  This policy has been obsoleted in favor of [ExemptFileTypeDownloadWarnings](#exemptfiletypedownloadwarnings) because of a type mismatch that caused errors in Mac.
+
+You can enable this policy to create a dictionary of file type extensions with a corresponding list of domains that will be exempted from file type extension-based download warnings. This lets enterprise administrators block file type extension-based download warnings for files that are associated with a listed domain. For example, if  the "jnlp" extension is associated with "website1.com", users would not see a warning when downloading "jnlp" files from "website1.com", but see a download warning when downloading "jnlp" files from "website2.com".
+
+Files with file type extensions specified for domains identified by this policy will still be subject to non-file type extension-based security warnings such as mixed-content download warnings and Microsoft Defender SmartScreen warnings.
+
+If you disable this policy or don't configure it, file types that trigger extension-based download warnings will show warnings to the user.
+
+If you enable this policy:
+
+* The URL pattern should be formatted according to [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+* The file type extension entered must be in lower-cased ASCII. The leading separator should not be included when listing the file type extension, so list "jnlp" should be used instead of ".jnlp".
+
+Example:
+
+The following example value would prevent file type extension-based download warnings on swf, exe, and jnlp extensions for *.contoso.com domains. It will show the user a file type extension-based download warning on any other domain for exe and jnlp files, but not for swf files.
+
+[
+  { "file_extension": "jnlp", "domains": ["contoso.com"] },
+  { "file_extension": "exe", "domains": ["contoso.com"] },
+  { "file_extension": "swf", "domains": ["*"] }
+]
+
+Note that while the preceding example shows the suppression of file type extension-based download warnings for "swf" files for all domains, applying suppression of such warnings for all domains for any dangerous file type extension is not recommended due to security concerns. It is shown in the example merely to demonstrate the ability to do so.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - List of strings
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - GP name: Disable download file type extension-based warnings for specified file types on domains (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Path (Recommended): N/A
+  - Value Name: 1, 2, 3, ...
+  - Value Type: list of REG_SZ
+
+  ##### Example value:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
+
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - Example value:
+``` xml
+<array>
+  <string>{'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}</string>
+  <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
+</array>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -25282,8 +26735,66 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
   ### ForceLegacyDefaultReferrerPolicy
 
   #### Use a default referrer policy of no-referrer-when-downgrade (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
+  #### Supported versions:
+
+  - On Windows and macOS since 81, until 88
+
+  #### Description
+
+  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if it was found to be incompatible with the new default referrer policy.
+
+Microsoft Edge's default referrer policy was strengthened from the value of no-referrer-when-downgrade to the more secure strict-origin-when-cross-origin.
+
+When this enterprise policy is enabled, Microsoft Edge's default referrer policy will be set to its old value of no-referrer-when-downgrade.
+
+This enterprise policy is disabled by default.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceLegacyDefaultReferrerPolicy
+  - GP name: Use a default referrer policy of no-referrer-when-downgrade (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceLegacyDefaultReferrerPolicy
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ForceLegacyDefaultReferrerPolicy
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -25291,7 +26802,91 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 
   #### Enable or disable freezing the User-Agent string at major version 99 (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 117.
+  #### Supported versions:
+
+  - On Windows and macOS since 99, until 117
+
+  #### Description
+
+  This policy was removed in Microsoft Edge 118 and is ignored if configured.
+
+This policy controls whether the User-Agent string major
+version should be frozen at 99.
+
+The User-Agent request header lets websites identify the application,
+operating system, vendor, and/or version of the requesting user agent.
+Some websites make assumptions about how this header is formatted and may
+encounter issues with version strings that include three digits in the
+major position (for example, 100.0.0.0).
+
+Setting the policy to 'Default' or leaving it unset will default to
+browser settings for the User-Agent string major version.
+If set to 'ForceEnabled', the User-Agent string will always report the
+major version as 99 and include the browser's major version in the minor
+position. For example, browser version 101.0.0.0 would send a User-Agent
+request header that reports version 99.101.0.0.
+If set to 'ForceDisabled', the User-Agent string will not freeze the
+major version.
+
+This policy is temporary and will be deprecated in the future. Note that
+if this policy and
+User-Agent Reduction are
+both enabled, the User-Agent version string will always be 99.0.0.0.
+
+Policy options mapping:
+
+* Default (0) = Default to browser settings for User-Agent string version.
+
+* ForceDisabled (1) = The User-Agent string will not freeze the major version.
+
+* ForceEnabled (2) = The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceMajorVersionToMinorPositionInUserAgent
+  - GP name: Enable or disable freezing the User-Agent string at major version 99 (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceMajorVersionToMinorPositionInUserAgent
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ForceMajorVersionToMinorPositionInUserAgent
+  - Example value:
+``` xml
+<integer>0</integer>
+```
   
 
   [Back to top](#microsoft-edge---policies)
@@ -25300,7 +26895,56 @@ If you disable this policy or don't configure it, SafeSearch in Google Search is
 
   #### Force networking code to run in the browser process (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 83.
+  #### Supported versions:
+
+  - On Windows since 78, until 83
+
+  #### Description
+
+  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to migrate to 3rd party software that doesn't depend on hooking networking APIs. Proxy servers are recommended over LSPs and Win32 API patching.
+
+This policy forces networking code to run in the browser process.
+
+This policy is disabled by default. If enabled, users are open to security issues when the networking process is sandboxed.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ForceNetworkInProcess
+  - GP name: Force networking code to run in the browser process (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ForceNetworkInProcess
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -26312,70 +27956,6 @@ If you disable this policy, the Sidebar will never be shown.
   #### Mac information and settings
 
   - Preference Key Name: HubsSidebarEnabled
-  - Example value:
-``` xml
-<true/>
-```
-  
-
-  [Back to top](#microsoft-edge---policies)
-
-  ### ImageEditorServiceEnabled
-
-  #### Enable the Designer for Image Editor feature
-
-  
-  
-  #### Supported versions:
-
-  - On Windows and macOS since 125 or later
-
-  #### Description
-
-  Lets users access and use the Designer for Image Editor feature to edit an image they select.
-
-If you enable or don't configure this policy, users can access and use the Designer for Image Editor feature in Microsoft Edge.
-
-If you disable this policy, users can't access and use the Designer for Image Editor feature in Microsoft Edge.
-
-  #### Supported features:
-
-  - Can be mandatory: Yes
-  - Can be recommended: No
-  - Dynamic Policy Refresh: No - Requires browser restart
-  - Per Profile: Yes
-  - Applies to a profile that is signed in with a Microsoft account: No
-
-  #### Data Type:
-
-  - Boolean
-
-  #### Windows information and settings
-
-  ##### Group Policy (ADMX) info
-
-  - GP unique name: ImageEditorServiceEnabled
-  - GP name: Enable the Designer for Image Editor feature
-  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
-  - GP path (Recommended): N/A
-  - GP ADMX file name: MSEdge.admx
-
-  ##### Windows Registry Settings
-
-  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
-  - Path (Recommended): N/A
-  - Value Name: ImageEditorServiceEnabled
-  - Value Type: REG_DWORD
-
-  ##### Example value:
-
-```
-0x00000001
-```
-
-  #### Mac information and settings
-
-  - Preference Key Name: ImageEditorServiceEnabled
   - Example value:
 ``` xml
 <true/>
@@ -28714,7 +30294,65 @@ Use the preceding information when configuring this policy.
 
   #### Allow Internet Explorer mode testing (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 94.
+  #### Supported versions:
+
+  - On Windows since 86, until 94
+
+  #### Description
+
+  This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy instead. Alternatively, users can still use the --ie-mode-test flag.
+
+This policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.
+
+Users can do so from within the "More tools" menu by selecting 'Open sites in Internet Explorer mode'.
+
+Additionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.
+
+This setting works in conjunction with:
+[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) is set to 'IEMode'.
+
+If you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under "More tools". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under "More tools" to help testing sites in a modern browser without removing them from the site list. Note that if the [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) policy is enabled, it takes precedence and these options will not be visible under "More tools".
+
+If you disable or don't configure this policy, users can't see the options 'Open in Internet Explorer mode' and 'Open in Edge mode' under "More tools" menu. However, users can configure these options with the --ie-mode-test flag.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerIntegrationTestingAllowed
+  - GP name: Allow Internet Explorer mode testing (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerIntegrationTestingAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -29116,6 +30754,65 @@ If you disable or don't configure this policy, the Reload in Internet Explorer m
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
   - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - Value Name: InternetExplorerModeToolbarButtonEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  
+
+  [Back to top](#microsoft-edge---policies)
+
+  ### InternetExplorerSetForegroundWhenActive
+
+  #### Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.
+
+  
+  
+  #### Supported versions:
+
+  - On Windows since 126 or later
+
+  #### Description
+
+  This policy controls whether to always keep the active Microsoft Edge window with an Internet Explorer mode tab in the foreground.
+
+If you enable this policy, the active Microsoft Edge window with an Internet Explorer mode tab will always be in the foreground.
+
+If you disable or don't configure this policy, the active Microsoft Edge window with an Internet Explorer mode tab will not be kept in the foreground.
+
+To learn more about Internet Explorer mode, see [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: InternetExplorerSetForegroundWhenActive
+  - GP name: Keep the active Microsoft Edge window with an Internet Explorer mode tab always in the foreground.
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: InternetExplorerSetForegroundWhenActive
   - Value Type: REG_DWORD
 
   ##### Example value:
@@ -30028,7 +31725,65 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 125.
+  #### Supported versions:
+
+  - On Windows and macOS since 91, until 125
+
+  #### Description
+
+  This policy is obsoleted because Math Solver is deprecated from Edge. This policy won't work in Microsoft Edge version 126. This policy lets you manage whether users can use the Math Solver tool in Microsoft Edge or not.
+
+If you enable or don't configure the policy, then a user can take a snip of the Math problem and get the solution including a step-by-step explanation of the solution in a Microsoft Edge side pane.
+
+If you disable the policy, then the Math Solver tool will be disabled and users will not be able to use it.
+
+Note: Setting the [ComponentUpdatesEnabled](#componentupdatesenabled) policy to disabled will also disable the Math Solver component.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MathSolverEnabled
+  - GP name: Let users snip a Math problem and get the solution with a step-by-step explanation in Microsoft Edge (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MathSolverEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: MathSolverEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -30170,7 +31925,71 @@ If the [EnableMediaRouter](#enablemediarouter) policy is disabled, then this pol
 
   #### Enable usage and crash-related data reporting (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 88
+
+  #### Description
+
+  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+
+This policy enables reporting of usage and crash-related data about Microsoft Edge to Microsoft.
+
+Enable this policy to send reporting of usage and crash-related data to Microsoft. Disable this policy to not send the data to Microsoft. In both cases, users can't change or override the setting.
+
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If you enable this policy, Microsoft Edge will only send usage data if the Windows Diagnostic data setting is set to Enhanced or Full. If you disable this policy, Microsoft Edge will not send usage data. Crash-related data is sent based on the Windows Diagnostic data setting. Learn more about Windows Diagnostic data settings at [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+
+On Windows 7, Windows 8, and macOS, this policy controls sending usage and crash-related data. If you don't configure this policy, Microsoft Edge will default to the user's preference.
+
+To enable this policy,[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) must be set to Enabled. If [MetricsReportingEnabled](#metricsreportingenabled) or [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) is Not Configured or Disabled, this data will not be sent to Microsoft.
+
+This policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MetricsReportingEnabled
+  - GP name: Enable usage and crash-related data reporting (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MetricsReportingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: MetricsReportingEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -30442,7 +32261,73 @@ If you disable this policy, users won't be able to access the Microsoft Office m
 
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
   
- 
+  #### Supported versions:
+
+  - On Windows and macOS since 109, until 114
+
+  #### Description
+
+  When this policy is set to enabled, Microsoft Edge will perform verification of server certificates using the built-in certificate verifier with the Microsoft Root Store as the source of public trust.
+
+When this policy is set to disabled, Microsoft Edge will use the system certificate verifier and system root certificates.
+
+When this policy is not set, the Microsoft Root Store or system provided roots may be used.
+
+This policy is planned to be removed in Microsoft Edge version
+121 for Android devices when support for using the platform supplied roots is planned to be removed.
+
+This policy was removed in Microsoft Edge version 115 for
+Microsoft Windows and macOS,
+Microsoft Edge version 120 for
+Linux, and
+Microsoft Edge version 121 for
+Android
+when support for using the platform supplied certificate verifier and roots was removed.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: MicrosoftRootStoreEnabled
+  - GP name: Determines whether the Microsoft Root Store and built-in certificate verifier will be used to verify server certificates (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: MicrosoftRootStoreEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: MicrosoftRootStoreEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### MouseGestureEnabled
@@ -31281,8 +33166,65 @@ See [https://go.microsoft.com/fwlink/?linkid=2191896](https://go.microsoft.com/f
   ### OutlookHubMenuEnabled
 
   #### Allow users to access the Outlook menu (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
+  #### Supported versions:
+
+  - On Windows and macOS since 102, until 105
+
+  #### Description
+
+  This policy doesn't work because the Outlook menu is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy.
+
+This policy is used to manage access to the Outlook menu from Microsoft Edge.
+
+If you enable or don't configure this policy, users can access the Outlook menu.
+If you disable this policy, users can't access the Outlook menu.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: OutlookHubMenuEnabled
+  - GP name: Allow users to access the Outlook menu (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: OutlookHubMenuEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: OutlookHubMenuEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -31814,8 +33756,68 @@ This policy is a temporary measure and will be removed in future versions of Mic
 
   #### Enable Proactive Authentication (obsolete)
 
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 90.
   
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 90.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 90
+
+  #### Description
+
+  This policy is obsolete because it does not work independently of browser sign in. It does not work in Microsoft Edge after version 90. If you want to configure browser sign in, use the [BrowserSignin](#browsersignin) policy.
+
+Lets you configure whether to turn on Proactive Authentication in Microsoft Edge.
+
+If you enable this policy, Microsoft Edge tries to seamlessly authenticate to websites and services using the account which is signed-in to the browser.
+
+If you disable this policy, Microsoft Edge does not try to authenticate with websites or services using single sign-on (SSO). Authenticated experiences like the Enterprise New Tab Page will not work (e.g. recent and recommended Office documents will not be available).
+
+If you don't configure this policy, Proactive Authentication is turned on.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ProactiveAuthEnabled
+  - GP name: Enable Proactive Authentication (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ProactiveAuthEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ProactiveAuthEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### PromotionalTabsEnabled
@@ -33423,7 +35425,65 @@ See [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/f
 
   #### Extend Adobe Flash content setting to all content (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 88
+
+  #### Description
+
+  This policy doesn't work because Flash is no longer supported by Microsoft Edge.
+
+If you enable this policy, all Adobe Flash content embedded in websites that are set to allow Adobe Flash in the content settings -- either by the user or by enterprise policy -- will run. This includes content from other origins and/or small content.
+
+To control which websites are allowed to run Adobe Flash, see the specifications in the [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls), and [PluginsBlockedForUrls](#pluginsblockedforurls) policies.
+
+If you disable this policy or don't configure it, Adobe Flash content from other origins (from sites that aren't specified in the three policies mentioned immediately above) or small content might be blocked.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: RunAllFlashInAllowMode
+  - GP name: Extend Adobe Flash content setting to all content (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: RunAllFlashInAllowMode
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: RunAllFlashInAllowMode
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -33567,10 +35627,79 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   ### SSLVersionMin
 
   #### Minimum TLS version enabled (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 97.
+  #### Supported versions:
 
- [Back to top](#microsoft-edge---policies)
+  - On Windows and macOS since 77, until 97
+
+  #### Description
+
+  This policy was removed in Microsoft Edge 98 and is ignored if configured.
+Sets the minimum supported version of TLS.
+
+If you set this policy to 'tls1.2', Microsoft Edge will show an error for TLS 1.0 and TLS 1.1 and the user will not be able to bypass the error.
+
+If you don't configure this policy, Microsoft Edge will still show an error for TLS 1.0 and TLS 1.1 but the user will be able to bypass it.
+
+Support for suppressing the TLS 1.0/1.1 warning was removed from Microsoft Edge starting in version 91. The 'tls1' and 'tls1.1' values are no longer supported.
+
+Policy options mapping:
+
+* TLSv1 (tls1) = TLS 1.0
+
+* TLSv1.1 (tls1.1) = TLS 1.1
+
+* TLSv1.2 (tls1.2) = TLS 1.2
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - String
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SSLVersionMin
+  - GP name: Minimum TLS version enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SSLVersionMin
+  - Value Type: REG_SZ
+
+  ##### Example value:
+
+```
+"tls1"
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SSLVersionMin
+  - Example value:
+``` xml
+<string>tls1</string>
+```
+  
+
+  [Back to top](#microsoft-edge---policies)
 
   ### SandboxExternalProtocolBlocked
 
@@ -34508,8 +36637,70 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "contoso.com"
   ### SendMouseEventsDisabledFormControlsEnabled
 
   #### Control the new behavior for event dispatching on disabled form controls (obsolete)
+
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 120.
+  #### Supported versions:
+
+  - On Windows and macOS since 109, until 120
+
+  #### Description
+
+  Event dispatching on disabled form controls is being changed in Edge to improve compatibility with other browsers and to improve the developer experience.
+
+With this change, MouseEvents get dispatched on disabled form control elements. Exceptions for this behavior are click, mouseup, and mousedown. Some examples of the new events are mousemove, mouseenter, and mouseleave.
+
+This change also truncates the event path of click, mouseup, and mousedown when they're dispatched on children of disabled form controls. These events aren't dispatched on the disabled form control or any of its ancestors.
+
+Note: This new behavior might break some websites.
+
+If this policy is enabled or left not set, the new behavior will be used.
+
+If this policy is disabled, the old behavior will be used.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SendMouseEventsDisabledFormControlsEnabled
+  - GP name: Control the new behavior for event dispatching on disabled form controls (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SendMouseEventsDisabledFormControlsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SendMouseEventsDisabledFormControlsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -34517,7 +36708,69 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "contoso.com"
 
   #### Send site information to improve Microsoft services (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 88.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 88
+
+  #### Description
+
+  This policy is no longer supported. It is replaced by [DiagnosticData](#diagnosticdata) (for Windows 7, Windows 8, and macOS) and Allow Telemetry on Win 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+
+This policy enables sending info about websites visited in Microsoft Edge to Microsoft to improve services like search.
+
+Enable this policy to send info about websites visited in Microsoft Edge to Microsoft. Disable this policy to not send info about websites visited in Microsoft Edge to Microsoft. In both cases, users can't change or override the setting.
+
+On Windows 10, if you don't configure this policy, Microsoft Edge will default to the Windows diagnostic data setting. If this policy is enabled Microsoft Edge will only send info about websites visited in Microsoft Edge if the Windows Diagnostic data setting is set to Full. If this policy is disabled Microsoft Edge will not send info about websites visited. Learn more about Windows Diagnostic data settings: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+
+On Windows 7, windows 8, and macOS this policy controls sending info about websites visited. If you don't configure this policy, Microsoft Edge will default to the user's preference.
+
+To enable this policy, [MetricsReportingEnabled](#metricsreportingenabled) must be set to Enabled. If [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) or [MetricsReportingEnabled](#metricsreportingenabled) is Not Configured or Disabled, this data will not be sent to Microsoft.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SendSiteInfoToImproveServices
+  - GP name: Send site information to improve Microsoft services (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SendSiteInfoToImproveServices
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SendSiteInfoToImproveServices
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -34818,14 +37071,141 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   #### Control Javascript setTimeout() function minimum timeout (deprecated)
 
   >DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.
- 
+  
+  #### Supported versions:
+
+  - On Windows and macOS since 101, until 109
+
+  #### Description
+
+  This policy is obsolete and doesn't work in Microsoft Edge after version 109.
+This policy was only provided temporarily to allow Enterprises to adapt to the new clamping behavior.
+
+   When the policy is set to Enabled, the Javascript setTimeout() with a timeout of 0ms will no longer be fixed to 1ms to schedule timer-based callbacks.
+   When the policy is set to Disabled, the Javascript setTimeout() with a timeout of 0ms will be fixed to 1ms to schedule timer-based callbacks.
+   When the policy is unset, use the browser's default behavior for setTimeout() function.
+
+   This is a web standards compliancy feature, but it may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.
+   It also may affect sites with a lot of setTimeout()s with a timeout of 0ms usage. For example, increasing CPU load.
+
+   For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: SetTimeoutWithout1MsClampEnabled
+  - GP name: Control Javascript setTimeout() function minimum timeout (deprecated)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: SetTimeoutWithout1MsClampEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: SetTimeoutWithout1MsClampEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
+
   [Back to top](#microsoft-edge---policies)
 
   ### ShadowStackCrashRollbackBehavior
 
   #### Configure ShadowStack crash rollback behavior (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 109.
+  #### Supported versions:
+
+  - On Windows since 95, until 109
+
+  #### Description
+
+  This policy is deprecated because it's intended to serve only as a short-term mechanism to give enterprises more time to update their environments and report issues if they are found to be incompatible with Hardware-enforced Stack Protection. It won't work in Microsoft Edge as soon as version 109.
+
+Microsoft Edge includes a Hardware-enforced Stack Protection security feature. This feature may result in the browser crashing unexpectedly in cases that do not represent an attempt to compromise the browser's security.
+
+Using this policy, you may control the behavior of the Hardware-enforced Stack Protection feature after a crash triggered by this feature is encountered.
+
+Set this policy to 'Disable' to disable the feature.
+
+Set this policy to 'DisableUntilUpdate' to disable the feature until Microsoft Edge updates next time.
+
+Set this policy to 'Enable' to keep the feature enabled.
+
+Policy options mapping:
+
+* Disable (0) = Disable Hardware-enforced Stack Protection
+
+* DisableUntilUpdate (1) = Disable Hardware-enforced Stack Protection until the next Microsoft Edge update
+
+* Enable (2) = Enable Hardware-enforced Stack Protection
+
+Use the preceding information when configuring this policy.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Integer
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ShadowStackCrashRollbackBehavior
+  - GP name: Configure ShadowStack crash rollback behavior (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ShadowStackCrashRollbackBehavior
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36012,8 +38392,67 @@ If you disable this policy, options to activate Standalone Sidebar will be hidde
 
   #### Enable stricter treatment for mixed content (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+  #### Supported versions:
 
+  - On Windows and macOS since 81, until 84
+
+  #### Description
+
+  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to update their web content if it was found to be incompatible with stricter mixed content treatment.
+
+This policy controls the treatment for mixed content (HTTP content in HTTPS sites) in the browser.
+
+If you set this policy to true or not set, audio and video mixed content will be automatically upgraded to HTTPS (that is, the URL will be rewritten as HTTPS, without a fallback if the resource isn't available over HTTPS) and a 'Not Secure' warning will be shown in the URL bar for image mixed content.
+
+If you set the policy to false, auto upgrades will be disabled for audio and video, and no warning will be shown for images.
+
+This policy does not affect other types of mixed content other than audio, video, and images.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: StricterMixedContentTreatmentEnabled
+  - GP name: Enable stricter treatment for mixed content (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: StricterMixedContentTreatmentEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: StricterMixedContentTreatmentEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36273,7 +38712,67 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   #### Enable a TLS 1.3 security feature for local trust anchors (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 85.
+  #### Supported versions:
+
+  - On Windows and macOS since 81, until 85
+
+  #### Description
+
+  This policy doesn't work because it was only intended to be a short-term mechanism to give enterprises more time to upgrade affected proxies.
+
+This policy controls a security feature in TLS 1.3 that protects connections against downgrade attacks. It is backwards-compatible and will not affect connections to compliant TLS 1.2 servers or proxies. However, older versions of some TLS-intercepting proxies have an implementation flaw which causes them to be incompatible.
+
+If you enable this policy or don't set it, Microsoft Edge will enable these security protections for all connections.
+
+If you disable this policy, Microsoft Edge will disable these security protections for connections authenticated with locally-installed CA certificates. These protections are always enabled for connections authenticated with publicly-trusted CA certificates.
+
+This policy can be used to test for any affected proxies and upgrade them. Affected proxies are expected to fail connections with an error code of ERR_TLS13_DOWNGRADE_DETECTED.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TLS13HardeningForLocalAnchorsEnabled
+  - GP name: Enable a TLS 1.3 security feature for local trust anchors (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: TLS13HardeningForLocalAnchorsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TLS13HardeningForLocalAnchorsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36358,7 +38857,67 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   #### Allow freezing of background tabs (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  #### Supported versions:
+
+  - On Windows and macOS since 79, until 86
+
+  #### Description
+
+  This policy doesn't work, use [SleepingTabsEnabled](#sleepingtabsenabled) instead.
+
+Controls whether Microsoft Edge can freeze tabs that are in the background for at least 5 minutes.
+
+Tab freezing reduces CPU, battery, and memory usage. Microsoft Edge uses heuristics to avoid freezing tabs that do useful work in the background, such as display notifications, play sound, and stream video.
+
+If you enable or don't configure this policy, tabs that have been in the background for at least 5 minutes might be frozen.
+
+If you disable this policy, no tabs will be frozen.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TabFreezingEnabled
+  - GP name: Allow freezing of background tabs (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: TabFreezingEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TabFreezingEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36430,7 +38989,61 @@ If you disable this policy, no data will be sent to the tab organization service
 
   #### Do not set window.opener for links targeting _blank (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 102.
+  #### Supported versions:
+
+  - On Windows and macOS since 88, until 102
+
+  #### Description
+
+  If you enable this policy or leave it unset, the window.opener property is set to null unless the anchor specifies rel="opener".
+
+If you disable this policy, popups that target _blank are permitted to access (via JavaScript) the page that requested to open the popup.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TargetBlankImpliesNoOpener
+  - GP name: Do not set window.opener for links targeting _blank (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: TargetBlankImpliesNoOpener
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TargetBlankImpliesNoOpener
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36562,7 +39175,65 @@ If you disable this policy, text predictions will not be provided in eligible te
 
   #### Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 123.
+  #### Supported versions:
+
+  - On Windows and macOS since 116, until 123
+
+  #### Description
+
+  Throttling of cross-origin frames that are display:none and non-visible is a feature designed to make cross-process and same-process cross-origin iframes consistent in their rendering behavior. For more details on cross-process vs. same-process throttling, refer to [https://go.microsoft.com/fwlink/?linkid=2239564](https://go.microsoft.com/fwlink/?linkid=2239564).
+
+This enterprise policy exists to allow administrators to control whether their users are able to turn the additional throttling on or not.
+
+If you enable or don't configure this policy, users can opt-in to throttling.
+
+If you disable this policy, users can't enable throttling.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - GP name: Allows enabling throttling of non-visible, cross-origin iframes (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: ThrottleNonVisibleCrossOriginIframesAllowed
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36776,7 +39447,66 @@ You can disable this policy to disable all built-in translate features.
 
   #### Enable travel assistance (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 105.
+  #### Supported versions:
+
+  - On Windows and macOS since 93, until 105
+
+  #### Description
+
+  This policy is obsolete as the feature is now contained within the Edge Sidebar and can be managed using the [HubsSidebarEnabled](#hubssidebarenabled) policy. It doesn't work in Microsoft Edge after version 105.
+Configure this policy to allow/disallow travel assistance.
+
+The travel assistance feature gives helpful and relevant information to a user who performs Travel related task within the browser. This feature provides trusted and validated suggestions / information  to the users from across sources gathered by Microsoft.
+
+If you enable or don't configure this setting, travel assistance will be enabled for the users when they are performing travel related tasks.
+
+If you disable this setting, travel assistance will be disabled and  users will not be able to see any travel related recommendations.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: Yes
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TravelAssistanceEnabled
+  - GP name: Enable travel assistance (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): Administrative Templates/Microsoft Edge - Default Settings (users can override)/
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Value Name: TravelAssistanceEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TravelAssistanceEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36784,7 +39514,61 @@ You can disable this policy to disable all built-in translate features.
 
   #### Enable 3DES cipher suites in TLS (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 96.
+  #### Supported versions:
+
+  - On Windows and macOS since 93, until 96
+
+  #### Description
+
+  'This policy was removed in version 97 after 3DES was removed from Microsoft Edge.
+
+If the policy is set to true, then 3DES cipher suites in TLS will be enabled. If it is set to false, they will be disabled. If the policy is unset, 3DES cipher suites are disabled by default. This policy may be used to temporarily retain compatibility with an outdated server. This is a stopgap measure and the server should be reconfigured.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: TripleDESEnabled
+  - GP name: Enable 3DES cipher suites in TLS (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: TripleDESEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: TripleDESEnabled
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -36792,7 +39576,63 @@ You can disable this policy to disable all built-in translate features.
 
   #### Allow using the deprecated U2F Security Key API (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 103.
+  #### Supported versions:
+
+  - On Windows and macOS since 98, until 103
+
+  #### Description
+
+  This policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It doesn't work in Microsoft Edge after version 103.
+
+If you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.
+
+If you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ended after Microsoft Edge version 103.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: U2fSecurityKeyApiEnabled
+  - GP name: Allow using the deprecated U2F Security Key API (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: U2fSecurityKeyApiEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: U2fSecurityKeyApiEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -37225,7 +40065,65 @@ If you disable this setting, URLs are not reported in optional diagnostic data.
 
   #### Enable the User-Agent Client Hints feature (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 93.
+  #### Supported versions:
+
+  - On Windows and macOS since 86, until 93
+
+  #### Description
+
+  This policy is obsolete because it was intended for short-term adaptation purposes only. It doesn't work in Microsoft Edge after version 93.
+
+When enabled the User-Agent Client Hints feature sends granular request headers that provide information about the user browser (for example, the browser version) and environment (for example, the system architecture).
+
+This is an additive feature, but the new headers may break some websites that restrict the characters that requests may contain.
+
+If you enable or don't configure this policy, the User-Agent Client Hints feature is enabled. If you disable this policy, this feature is unavailable.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: UserAgentClientHintsEnabled
+  - GP name: Enable the User-Agent Client Hints feature (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: UserAgentClientHintsEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: UserAgentClientHintsEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38350,7 +41248,63 @@ If you disable this policy, users can't access this feature in Microsoft Edge.
 
   #### Re-enable Web Components v0 API until M84 (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+  #### Supported versions:
+
+  - On Windows and macOS since 80, until 84
+
+  #### Description
+
+  This policy doesn't work because this policy allowed these features to be selectively re-enabled until Microsoft Edge version 85. The Web Components v0 APIs (Shadow DOM v0, Custom Elements v0, and HTML Imports) were deprecated in 2018, and have been disabled by default starting in Microsoft Edge version 80.
+
+If you set this policy is set to True, the Web Components v0 features will be enabled for all sites.
+
+If you set this policy to False or don't set this policy, the Web Components v0 features will be disabled by default, starting in Microsoft Edge version 80.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebComponentsV0Enabled
+  - GP name: Re-enable Web Components v0 API until M84 (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebComponentsV0Enabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebComponentsV0Enabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38358,7 +41312,69 @@ If you disable this policy, users can't access this feature in Microsoft Edge.
 
   #### Allow WebDriver to Override Incompatible Policies (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 84.
+  #### Supported versions:
+
+  - On Windows and macOS since 77, until 84
+
+  #### Description
+
+  This policy doesn't work because WebDriver is now compatible with all existing policies.
+
+This policy allows users of the WebDriver feature to override
+policies which can interfere with its operation.
+
+Currently this policy disables [SitePerProcess](#siteperprocess) and [IsolateOrigins](#isolateorigins) policies.
+
+If the policy is enabled, WebDriver will be able to override incomaptible
+policies.
+If the policy is disabled or not configured, WebDriver will not be allowed
+to override incompatible policies.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebDriverOverridesIncompatiblePolicies
+  - GP name: Allow WebDriver to Override Incompatible Policies (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebDriverOverridesIncompatiblePolicies
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebDriverOverridesIncompatiblePolicies
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38366,7 +41382,64 @@ If you disable this policy, users can't access this feature in Microsoft Edge.
 
   #### Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 120.
+  #### Supported versions:
+
+  - On Windows and macOS since 88, until 120
+
+  #### Description
+
+  If you enable this policy, WebRTC peer connections can downgrade to obsolete
+versions of the TLS/DTLS (DTLS 1.0, TLS 1.0 and TLS 1.1) protocols.
+If you disable or don't set this policy, these TLS/DTLS versions are
+disabled.
+
+This policy was removed in Microsoft Edge 121 and is ignored if set.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebRtcAllowLegacyTLSProtocols
+  - GP name: Allow legacy TLS/DTLS downgrade in WebRTC (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebRtcAllowLegacyTLSProtocols
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000000
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebRtcAllowLegacyTLSProtocols
+  - Example value:
+``` xml
+<false/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38650,7 +41723,63 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Force WebSQL to be enabled (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 123.
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 123
+
+  #### Description
+
+  This policy was removed in Microsoft Edge 124 and is ignored if set.
+
+WebSQL is on by default as of Microsoft Edge version 101, but can be disabled via a Microsoft Edge flag.
+If you enable this policy, WebSQL cannot be disabled.
+If you disable or don't configure this policy, WebSQL can be disabled.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLAccess
+  - GP name: Force WebSQL to be enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLAccess
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebSQLAccess
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38658,7 +41787,65 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Force WebSQL in third-party contexts to be re-enabled (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 100.
+  #### Supported versions:
+
+  - On Windows and macOS since 97, until 100
+
+  #### Description
+
+  This policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to disable WebSQL in third-party contexts. It doesn't work in Microsoft Edge after version 100.
+
+WebSQL in third-party contexts (for example, cross-site iframes) is off by default as of Microsoft Edge version 97 and was fully removed in version 101.
+
+If you enable this policy, WebSQL in third-party contexts will be re-enabled.
+
+If you disable this policy or don't configure it, WebSQL in third-party contexts will stay off.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: No
+  - Applies to a profile that is signed in with a Microsoft account: Yes
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLInThirdPartyContextEnabled
+  - GP name: Force WebSQL in third-party contexts to be re-enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLInThirdPartyContextEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebSQLInThirdPartyContextEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38666,7 +41853,63 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Force WebSQL in non-secure contexts to be enabled (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 112.
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 112
+
+  #### Description
+
+  This policy doesn't work because WebSQL in non-secure contexts is on by default as of Microsoft Edge 105.
+If you enable this policy, WebSQL in non-secure contexts will be enabled.
+If you disable or don't configure this policy, WebSQL in non-secure contexts will follow the default settings of the browser.
+
+This policy was removed in Microsoft Edge 113 and is ignored if configured.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: No - Requires browser restart
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSQLNonSecureContextEnabled
+  - GP name: Force WebSQL in non-secure contexts to be enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSQLNonSecureContextEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebSQLNonSecureContextEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
@@ -38674,7 +41917,65 @@ If you don't configure this policy, or if you set it to an empty string or inval
 
   #### Web Select Enabled (obsolete)
 
+  
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 116.
+  #### Supported versions:
+
+  - On Windows and macOS since 107, until 116
+
+  #### Description
+
+  This policy is obsoleted because Web Select is part of Web Capture and can be controlled by [WebCaptureEnabled](#webcaptureenabled). This policy won't work in Microsoft Edge version 117. If Web Capture is disabled by [WebCaptureEnabled](#webcaptureenabled), Web select will not be available in Web Capture.
+
+Web select lets users select and copy web content while preserving its formatting when pasted in most cases. It also allows more targeted selection on some web elements, such as copying a single column in a table.
+
+If you enable or don't configure this policy, Web select is available in Web Capture and can be accessed directly using the CTRL+SHIFT+X keyboard shortcut.
+
+If you disable this policy, Web select will not be available in Web Capture and the CTRL+SHIFT+X keyboard shortcut will also not work.
+
+  #### Supported features:
+
+  - Can be mandatory: Yes
+  - Can be recommended: No
+  - Dynamic Policy Refresh: Yes
+  - Per Profile: Yes
+  - Applies to a profile that is signed in with a Microsoft account: No
+
+  #### Data Type:
+
+  - Boolean
+
+  #### Windows information and settings
+
+  ##### Group Policy (ADMX) info
+
+  - GP unique name: WebSelectEnabled
+  - GP name: Web Select Enabled (obsolete)
+  - GP path (Mandatory): Administrative Templates/Microsoft Edge/
+  - GP path (Recommended): N/A
+  - GP ADMX file name: MSEdge.admx
+
+  ##### Windows Registry Settings
+
+  - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+  - Path (Recommended): N/A
+  - Value Name: WebSelectEnabled
+  - Value Type: REG_DWORD
+
+  ##### Example value:
+
+```
+0x00000001
+```
+
+  #### Mac information and settings
+
+  - Preference Key Name: WebSelectEnabled
+  - Example value:
+``` xml
+<true/>
+```
+  
 
   [Back to top](#microsoft-edge---policies)
 
