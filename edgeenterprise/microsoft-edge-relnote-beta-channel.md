@@ -3,7 +3,7 @@ title: "Microsoft Edge release notes for Beta Channel"
 ms.author: archandr
 author: dan-wesley
 manager: likuba
-ms.date: 06/13/2024
+ms.date: 06/17/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-edge
