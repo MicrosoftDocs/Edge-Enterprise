@@ -24960,7 +24960,7 @@ As such, this policy is a temporary measure to control the initial experimental 
   
   #### Supported versions:
 
-  - On Windows and macOS since 113 or later
+  - On Windows and macOS since 113, until 128
 
   #### Description
 
@@ -24976,7 +24976,7 @@ If you disable this policy, Microsoft Edge will not enforce constraints encoded 
 
 This policy has no effect if the [MicrosoftRootStoreEnabled](#microsoftrootstoreenabled) policy is disabled.
 
-This policy is planned to be removed in Microsoft Edge version 118.
+This policy is planned to be removed in Microsoft Edge version 128.
 
   #### Supported features:
 
