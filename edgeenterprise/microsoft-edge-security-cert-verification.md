@@ -77,11 +77,11 @@ If your enterprise enables the **[RequireOnlineRevocationChecksForLocalAnchors](
 
 Before Microsoft Edge 114, the new Chromium-based verifier enforces "Baseline Requirement" max ages for CRLs. For leaf revocations, the current maximum age is 7 days and for intermediate revocations, the current maximum age is 366 days. The check is performed by checking that the current time minus the "This Update" ("Effective Date") doesn't exceed those maximums. In Microsoft Edge 114, these requirements are no longer enforced for non-publicly trusted certificates. For more information, see [Chromium issue 971714](https://crbug.com/971714).
 
-Since the new verifier downloads revocation information via the browser's networking stack, HTTP Strict Transport Security (HSTS) upgrades also apply. This upgrade can create an incompatibility with the requirement that the CRL information is hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. If this scenario negatively impacts your environment, we encourage you to share more information about the impact via [Chromium issue 1432246](https://crbug.com/1432246).
+For Edge version 120 and below, the built-in verifier downloads revocation information via the browser's networking stack, such that HTTP Strict Transport Security (HSTS) upgrades apply. This upgrade can create an incompatibility with the requirement that the CRL information is hosted via HTTP (not HTTPS) if the host has an HSTS pin configured. This scenario has seen been addressed and fixed. More information can be found via [Chromium issue 1432246](https://crbug.com/1432246).
 
 If you encounter `ERR_CERT_NO_REVOCATION_MECHANISM`, you should confirm that the CRL at the URI specified by the certificate returns a **DER encoded** (not PEM encoded) response.
 
-If you encounter `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors, you should confirm that the certificate issuer is also the CRL issuer, the certificate's `cRLIssuer` field isn't set, the URI hosting the CRL both uses the HTTP protocol and isn't on a host configured to use HSTS, and that the CRL was issued recently enough.
+If you encounter `ERR_CERT_UNABLE_TO_CHECK_REVOCATION` errors, you should confirm that the certificate issuer is also the CRL issuer, the certificate's `cRLIssuer` field isn't set, and that the CRL was issued recently enough. If you are on a version of Edge 120 or below, ensure that the URI hosting the CRL both uses the HTTP protocol and isn't on a host configured to use HSTS.
 
 ## See also
 
