@@ -1,9 +1,9 @@
 ---
-title: "Configure Web Content Filtering on Edge using Edge management service "
+title: "Configure Web Content Filtering on Edge using Edge management service"
 ms.author: ssatti
 author: dan-wesley
 manager: vesesha
-ms.date: 06/14/2024
+ms.date: 06/19/2024
 audience: ITPro
 ms.topic: reference
 ms.service: microsoft-edge
@@ -22,6 +22,9 @@ This article describes how to configure Web Content Filtering (WCF) for Microsof
 Microsoft Edge is already one of the most secure browsers with features like phishing protection, typosquatting, and more to protect users when they're browsing online. Adding to these security features, Microsoft Edge is introducing Web Content Filtering (WCF) for Educational Institutions to help them keep students safe online. Using this feature, you can choose categories of websites that students aren't allowed to access while using Microsoft Edge.
 
 To use this feature, set it up via the Microsoft Edge management service using the following the steps.
+
+> [!NOTE]
+> The feature is in private preview and if you are not seeing the Web Content Filtering option on the Edge Management Service portal, fill in the [Web Content Filtering on Edge Sign Up](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbR3CvGGcWzIJGnMv7feIR0J1UQ1NWNURZWVU2T1RWWVA2VzUwOEFBNkUwMi4u) form to apply for access.
 
 ## Prerequisites
 
@@ -74,8 +77,11 @@ To create a group on Edge management service, open the Microsoft 365 admin cente
 
 ![Pick members on the Add members list.](media/microsoft-edge-web-content-filtering/edge-wcf5-pick-members.png)
 
-> [!NOTE]
+> [!TIP]
 > We recommend that you test the policy on a small set of user groups (the IT team and/or teachers) before rolling the WCF policy out to students.
+
+> [!NOTE]
+> Microsoft Edge management service currently only supports assignment of policies to user groups and not device groups.
 
 ### Enable WCF for a Security group
 
